@@ -1,0 +1,94 @@
+"use client";
+
+import maplibregl, { Map as MapLibreMap, Marker } from "maplibre-gl";
+import "maplibre-gl/dist/maplibre-gl.css";
+import type { Poi } from "@/types/Poi";
+
+const MAP_STYLE_URL = "https://tiles.openfreemap.org/styles/liberty";
+
+export type MapView = {
+  center: [number, number];
+  zoom: number;
+};
+
+export interface MapAdapter {
+  mount: (container: HTMLDivElement) => void;
+  updateView: (view: MapView) => void;
+  updatePois: (points: Poi[]) => void;
+  destroy: () => void;
+}
+
+const createMarker = (map: MapLibreMap, poi: Poi) =>
+  new maplibregl.Marker()
+    .setLngLat([poi.coordinates.lng, poi.coordinates.lat])
+    .setPopup(
+      new maplibregl.Popup({ offset: 16 }).setHTML(`
+        <strong>${poi.name}</strong><br/>
+        <em>${poi.period}</em><br/>
+        <small>${poi.shortDescription}</small>
+      `),
+    )
+    .addTo(map);
+
+export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
+  let map: MapLibreMap | null = null;
+  let markers: Marker[] = [];
+  let isLoaded = false;
+  let pendingPois: Poi[] | null = null;
+
+  const setMarkers = (points: Poi[]) => {
+    if (!map) {
+      return;
+    }
+
+    markers.forEach((marker) => marker.remove());
+    markers = points.map((poi) => createMarker(map as MapLibreMap, poi));
+  };
+
+  return {
+    mount(container) {
+      if (map) {
+        return;
+      }
+
+      map = new maplibregl.Map({
+        container,
+        style: MAP_STYLE_URL,
+        center: initialView.center,
+        zoom: initialView.zoom,
+      });
+
+      map.addControl(new maplibregl.NavigationControl(), "top-right");
+      map.once("load", () => {
+        isLoaded = true;
+        if (pendingPois) {
+          setMarkers(pendingPois);
+          pendingPois = null;
+        }
+      });
+    },
+    updateView(view) {
+      map?.easeTo({ center: view.center, zoom: view.zoom });
+    },
+    updatePois(points) {
+      if (!map) {
+        return;
+      }
+
+      if (!isLoaded) {
+        pendingPois = points;
+        return;
+      }
+
+      setMarkers(points);
+    },
+    destroy() {
+      markers.forEach((marker) => marker.remove());
+      markers = [];
+      map?.remove();
+      map = null;
+      pendingPois = null;
+      isLoaded = false;
+    },
+  };
+};
