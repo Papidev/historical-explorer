@@ -81,7 +81,7 @@ const asPoi = (feature: GeoJsonFeature, index: number): Poi | null => {
 };
 
 const loadGeoJson = (): GeoJson => {
-  const filePath = path.join(process.cwd(), "src", "data", "rome.geojson");
+  const filePath = path.join(process.cwd(),  "data", "rome.geojson");
   const raw = readFileSync(filePath, "utf-8");
   return JSON.parse(raw) as GeoJson;
 };
