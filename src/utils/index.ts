@@ -80,18 +80,22 @@ const asPoi = (feature: GeoJsonFeature, index: number): Poi | null => {
   };
 };
 
-const loadGeoJson = (): GeoJson => {
-  const filePath = path.join(process.cwd(),  "data", "rome.geojson");
+const DEFAULT_GEOJSON_FILE = "rome.geojson";
+
+const loadGeoJson = (fileName: string = DEFAULT_GEOJSON_FILE): GeoJson => {
+  const filePath = path.join(process.cwd(), "public", fileName);
   const raw = readFileSync(filePath, "utf-8");
   return JSON.parse(raw) as GeoJson;
 };
 
-const toPois = (): Poi[] => {
-  const features = loadGeoJson().features ?? [];
+export const createPoisFromGeoJson = (
+  fileName: string = DEFAULT_GEOJSON_FILE,
+): Poi[] => {
+  const features = loadGeoJson(fileName).features ?? [];
 
   return features
     .map(asPoi)
     .filter((poi): poi is Poi => Boolean(poi));
 };
 
-export const pois = toPois();
+export const pois = createPoisFromGeoJson();
