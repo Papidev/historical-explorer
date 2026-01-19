@@ -1,4 +1,4 @@
-import { pois } from "@/data";
+import { pois } from "@/utils";
 import { Map } from "@/app/components/Map";
 
 export const RomeMap = () => {
