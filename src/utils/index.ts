@@ -26,7 +26,11 @@ const pickString = (properties: Record<string, unknown>, ...keys: string[]) => {
   return undefined;
 };
 
-const asPoi = (feature: GeoJsonFeature, index: number): Poi | null => {
+const asPoi = (
+  feature: GeoJsonFeature,
+  index: number,
+  fallbackCity: string,
+): Poi | null => {
   if (feature.geometry?.type !== "Point") {
     return null;
   }
@@ -60,7 +64,8 @@ const asPoi = (feature: GeoJsonFeature, index: number): Poi | null => {
     pickString(properties, "short_description", "description") ??
     (historic ? `Historic feature: ${historic}` : undefined) ??
     "Historic place sourced from OpenStreetMap.";
-  const city = pickString(properties, "addr:city", "is_in:city") ?? "Rome";
+  const city =
+    pickString(properties, "addr:city", "is_in:city") ?? fallbackCity;
 
   const funFacts = [
     pickString(properties, "wikidata")?.replace(/^/, "Wikidata: "),
@@ -80,22 +85,28 @@ const asPoi = (feature: GeoJsonFeature, index: number): Poi | null => {
   };
 };
 
-const DEFAULT_GEOJSON_FILE = "rome-pois.geojson";
+const toCitySlug = (city: string) =>
+  city
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 
-const loadGeoJson = (fileName: string = DEFAULT_GEOJSON_FILE): GeoJson => {
-  const filePath = path.join(process.cwd(), "public", "data", fileName);
+const buildGeoJsonFilePath = (city: string) => {
+  const slug = toCitySlug(city);
+  return path.join(process.cwd(), "public", "data", `${slug}-pois.geojson`);
+};
+
+const loadGeoJsonForCity = (city: string): GeoJson => {
+  const filePath = buildGeoJsonFilePath(city);
   const raw = readFileSync(filePath, "utf-8");
   return JSON.parse(raw) as GeoJson;
 };
 
-export const createPoisFromGeoJson = (
-  fileName: string = DEFAULT_GEOJSON_FILE,
-): Poi[] => {
-  const features = loadGeoJson(fileName).features ?? [];
+export const createPoisForCity = (city: string): Poi[] => {
+  const features = loadGeoJsonForCity(city).features ?? [];
 
   return features
-    .map(asPoi)
+    .map((feature, index) => asPoi(feature, index, city))
     .filter((poi): poi is Poi => Boolean(poi));
 };
-
-export const pois = createPoisFromGeoJson();
