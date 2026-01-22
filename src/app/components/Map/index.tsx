@@ -19,15 +19,18 @@ export const Map = ({ coordinates, zoom, pois, onZoomChange }: Props) => {
   const lastZoomFromMapRef = useRef<number | null>(null);
   const onZoomChangeRef = useRef<Props["onZoomChange"]>(onZoomChange);
   const lastCenterRef = useRef<[number, number] | null>(null);
+  const initialViewRef = useRef({ center: coordinates, zoom });
 
-  onZoomChangeRef.current = onZoomChange;
+  useEffect(() => {
+    onZoomChangeRef.current = onZoomChange;
+  }, [onZoomChange]);
 
   useEffect(() => {
     if (adapterRef.current || !containerRef.current) {
       return;
     }
 
-    const adapter = createMapLibreAdapter({ center: coordinates, zoom });
+    const adapter = createMapLibreAdapter(initialViewRef.current);
     adapter.setOnZoomChange((value) => {
       lastZoomFromMapRef.current = value;
       onZoomChangeRef.current?.(value);
