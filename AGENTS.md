@@ -30,6 +30,7 @@
 
 ## Coding Standards & A11y
 - Write new components/hooks in TypeScript using PascalCase filenames; keep shared UI under `src/app/components` and domain-specific helpers beside their routes until they merit a shared home in `src/lib`.
+- Favor a lightweight Domain-Driven Design mindset: model features around the domain language (cities, POIs, timelines) and keep logic close to the data source, but resist extra indirection unless it delivers clear value.
 - Keep React components declarative and push imperative map logic into adapters/utilities. Any `maplibre-gl` interaction must guard against double-mounts and clean up markers in `destroy()`.
 - Tailwind is the default styling layer—extend via `@theme` tokens in `globals.css` instead of ad-hoc CSS when possible. Ensure interactive elements pass accessible names and color contrast checks surfaced by Next linting.
 
