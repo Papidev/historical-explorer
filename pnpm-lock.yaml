@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@tanstack/react-query':
-        specifier: ^5.90.19
-        version: 5.90.19(react@19.2.3)
       maplibre-gl:
         specifier: ^5.16.0
         version: 5.16.0
@@ -553,14 +550,6 @@ packages:
 
   '@tailwindcss/postcss@4.1.18':
     resolution: {integrity: sha512-Ce0GFnzAOuPyfV5SxjXGn0CubwGcuDB0zcdaPuCSzAa/2vII24JTkH+I6jcbXLb1ctjZMZZI6OjDaLPJQL1S0g==}
-
-  '@tanstack/query-core@5.90.19':
-    resolution: {integrity: sha512-GLW5sjPVIvH491VV1ufddnfldyVB+teCnpPIvweEfkpRx7CfUmUGhoh9cdcUKBh/KwVxk22aNEDxeTsvmyB/WA==}
-
-  '@tanstack/react-query@5.90.19':
-    resolution: {integrity: sha512-qTZRZ4QyTzQc+M0IzrbKHxSeISUmRB3RPGmao5bT+sI6ayxSRhn0FXEnT5Hg3as8SBFcRosrXXRFB+yAcxVxJQ==}
-    peerDependencies:
-      react: ^18 || ^19
 
   '@tybys/wasm-util@0.10.1':
     resolution: {integrity: sha512-9tTaPJLSiejZKx+Bmog4uSubteqTvFrVrURwkmHixBo0G4seD0zUxp98E1DzUBJxLQ3NPwXrGKDiVjwx/DpPsg==}
@@ -2559,13 +2548,6 @@ snapshots:
       '@tailwindcss/oxide': 4.1.18
       postcss: 8.5.6
       tailwindcss: 4.1.18
-
-  '@tanstack/query-core@5.90.19': {}
-
-  '@tanstack/react-query@5.90.19(react@19.2.3)':
-    dependencies:
-      '@tanstack/query-core': 5.90.19
-      react: 19.2.3
 
   '@tybys/wasm-util@0.10.1':
     dependencies:
