@@ -45,6 +45,7 @@ const mdxToHtml = (source: string) => {
   const lines = source.split(/\r?\n/);
   const html: string[] = [];
   let listItems: string[] = [];
+  let index = 0;
 
   const flushList = () => {
     if (listItems.length === 0) {
@@ -54,10 +55,39 @@ const mdxToHtml = (source: string) => {
     listItems = [];
   };
 
-  for (const rawLine of lines) {
+  while (index < lines.length) {
+    const rawLine = lines[index];
     const line = rawLine.trim();
     if (!line) {
       flushList();
+      index += 1;
+      continue;
+    }
+
+    const calloutMatch = line.match(/^<Callout(?:\s+title="([^"]+)")?\s*>$/);
+    if (calloutMatch) {
+      flushList();
+      const title = calloutMatch[1] ? escapeHtml(calloutMatch[1]) : undefined;
+      const calloutParagraphs: string[] = [];
+      index += 1;
+
+      while (index < lines.length && lines[index].trim() !== "</Callout>") {
+        const calloutLine = lines[index].trim();
+        if (calloutLine) {
+          calloutParagraphs.push(
+            `<p>${markdownInlineToHtml(escapeHtml(calloutLine))}</p>`,
+          );
+        }
+        index += 1;
+      }
+
+      const titleHtml = title
+        ? `<p class="poi-callout-title">${title}</p>`
+        : "";
+      html.push(
+        `<section class="poi-callout">${titleHtml}${calloutParagraphs.join("")}</section>`,
+      );
+      index += 1;
       continue;
     }
 
@@ -65,28 +95,33 @@ const mdxToHtml = (source: string) => {
     if (safe.startsWith("### ")) {
       flushList();
       html.push(`<h3>${markdownInlineToHtml(safe.slice(4))}</h3>`);
+      index += 1;
       continue;
     }
 
     if (safe.startsWith("## ")) {
       flushList();
       html.push(`<h2>${markdownInlineToHtml(safe.slice(3))}</h2>`);
+      index += 1;
       continue;
     }
 
     if (safe.startsWith("# ")) {
       flushList();
       html.push(`<h1>${markdownInlineToHtml(safe.slice(2))}</h1>`);
+      index += 1;
       continue;
     }
 
     if (safe.startsWith("- ")) {
       listItems.push(`<li>${markdownInlineToHtml(safe.slice(2))}</li>`);
+      index += 1;
       continue;
     }
 
     flushList();
     html.push(`<p>${markdownInlineToHtml(safe)}</p>`);
+    index += 1;
   }
 
   flushList();

@@ -52,3 +52,17 @@ body {
   color: #0b57d0;
   text-decoration: underline;
 }
+
+.maplibregl-popup-content .poi-dialog-content .poi-callout {
+  margin-top: 8px;
+  border-left: 3px solid #b91c1c;
+  background: #fee2e2;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+.maplibregl-popup-content .poi-dialog-content .poi-callout-title {
+  margin: 0 0 4px;
+  font-weight: 700;
+  color: #7f1d1d;
+}
