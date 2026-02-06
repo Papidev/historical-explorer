@@ -11,10 +11,17 @@ export type MapView = {
   zoom: number;
 };
 
+export type MapViewUpdate = {
+  center?: [number, number];
+  zoom?: number;
+};
+
 export interface MapAdapter {
   mount: (container: HTMLDivElement) => void;
-  updateView: (view: MapView) => void;
+  updateView: (view: MapViewUpdate) => void;
   updatePois: (points: Poi[]) => void;
+  getZoom: () => number | null;
+  setOnZoomChange: (handler: ((zoom: number) => void) | null) => void;
   destroy: () => void;
 }
 
@@ -35,6 +42,7 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
   let markers: Marker[] = [];
   let isLoaded = false;
   let pendingPois: Poi[] | null = null;
+  let onZoomChange: ((zoom: number) => void) | null = null;
 
   const setMarkers = (points: Poi[]) => {
     if (!map) {
@@ -59,6 +67,12 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
       });
 
       map.addControl(new maplibregl.NavigationControl(), "top-right");
+      map.on("zoomend", () => {
+        if (!map || !onZoomChange) {
+          return;
+        }
+        onZoomChange(map.getZoom());
+      });
       map.once("load", () => {
         isLoaded = true;
         if (pendingPois) {
@@ -68,7 +82,25 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
       });
     },
     updateView(view) {
-      map?.easeTo({ center: view.center, zoom: view.zoom });
+      if (!map) {
+        return;
+      }
+
+      const nextView: { center?: [number, number]; zoom?: number } = {};
+
+      if (view.center) {
+        nextView.center = view.center;
+      }
+
+      if (view.zoom !== undefined) {
+        nextView.zoom = view.zoom;
+      }
+
+      if (Object.keys(nextView).length === 0) {
+        return;
+      }
+
+      map.easeTo(nextView);
     },
     updatePois(points) {
       if (!map) {
@@ -81,6 +113,12 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
       }
 
       setMarkers(points);
+    },
+    getZoom() {
+      return map ? map.getZoom() : null;
+    },
+    setOnZoomChange(handler) {
+      onZoomChange = handler;
     },
     destroy() {
       markers.forEach((marker) => marker.remove());

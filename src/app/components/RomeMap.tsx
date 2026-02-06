@@ -1,6 +1,10 @@
-import { pois } from "@/data";
-import { Map } from "@/app/components/Map";
+import { createPoisForCity } from "@/utils";
+import { RomeMapClient } from "@/app/components/RomeMapClient";
 
 export const RomeMap = () => {
-  return <Map coordinates={[12.4964, 41.9028]} zoom={10} pois={pois} />;
+  const pois = createPoisForCity("rome");
+
+  return (
+    <RomeMapClient coordinates={[12.4922, 41.8902]} initialZoom={15} pois={pois} />
+  );
 };
