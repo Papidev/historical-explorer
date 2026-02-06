@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import type { Poi } from "@/types/Poi";
 
@@ -24,6 +24,82 @@ const pickString = (properties: Record<string, unknown>, ...keys: string[]) => {
   }
 
   return undefined;
+};
+
+const escapeHtml = (value: string) =>
+  value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+
+const markdownInlineToHtml = (line: string) =>
+  line
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
+    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+    .replace(/\*([^*]+)\*/g, "<em>$1</em>")
+    .replace(/`([^`]+)`/g, "<code>$1</code>");
+
+const mdxToHtml = (source: string) => {
+  const lines = source.split(/\r?\n/);
+  const html: string[] = [];
+  let listItems: string[] = [];
+
+  const flushList = () => {
+    if (listItems.length === 0) {
+      return;
+    }
+    html.push(`<ul>${listItems.join("")}</ul>`);
+    listItems = [];
+  };
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+    if (!line) {
+      flushList();
+      continue;
+    }
+
+    const safe = escapeHtml(line);
+    if (safe.startsWith("### ")) {
+      flushList();
+      html.push(`<h3>${markdownInlineToHtml(safe.slice(4))}</h3>`);
+      continue;
+    }
+
+    if (safe.startsWith("## ")) {
+      flushList();
+      html.push(`<h2>${markdownInlineToHtml(safe.slice(3))}</h2>`);
+      continue;
+    }
+
+    if (safe.startsWith("# ")) {
+      flushList();
+      html.push(`<h1>${markdownInlineToHtml(safe.slice(2))}</h1>`);
+      continue;
+    }
+
+    if (safe.startsWith("- ")) {
+      listItems.push(`<li>${markdownInlineToHtml(safe.slice(2))}</li>`);
+      continue;
+    }
+
+    flushList();
+    html.push(`<p>${markdownInlineToHtml(safe)}</p>`);
+  }
+
+  flushList();
+  return html.join("");
+};
+
+const readPoiDialogContent = (city: string, id: string) => {
+  const filePath = path.join(process.cwd(), "content", "pois", toCitySlug(city), `${id}.mdx`);
+  if (!existsSync(filePath)) {
+    return undefined;
+  }
+  const raw = readFileSync(filePath, "utf-8").trim();
+  return raw ? mdxToHtml(raw) : undefined;
 };
 
 const asPoi = (
@@ -73,6 +149,7 @@ const asPoi = (
     pickString(properties, "heritage")?.replace(/^/, "Heritage status: "),
     pickString(properties, "charge")?.replace(/^/, "Ticket: "),
   ].filter((value): value is string => Boolean(value));
+  const dialogContentHtml = readPoiDialogContent(fallbackCity, rawId);
 
   return {
     id: rawId,
@@ -81,6 +158,7 @@ const asPoi = (
     coordinates: { lat, lng },
     period,
     shortDescription: description,
+    dialogContentHtml,
     funFacts,
   };
 };

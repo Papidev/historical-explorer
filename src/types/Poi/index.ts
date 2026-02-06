@@ -5,5 +5,6 @@ export type Poi = {
   coordinates: { lat: number; lng: number };
   period: string;
   shortDescription: string;
+  dialogContentHtml?: string;
   funFacts: string[];
 };

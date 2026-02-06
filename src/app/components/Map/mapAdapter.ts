@@ -33,6 +33,7 @@ const createMarker = (map: MapLibreMap, poi: Poi) =>
         <strong>${poi.name}</strong><br/>
         <em>${poi.period}</em><br/>
         <small>${poi.shortDescription}</small>
+        ${poi.dialogContentHtml ? `<div class="poi-dialog-content">${poi.dialogContentHtml}</div>` : ""}
       `),
     )
     .addTo(map);
