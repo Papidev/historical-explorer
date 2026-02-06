@@ -1,3 +1,5 @@
+import type { MDXRemoteSerializeResult } from "next-mdx-remote";
+
 export type Poi = {
   id: string;
   name: string;
@@ -5,6 +7,6 @@ export type Poi = {
   coordinates: { lat: number; lng: number };
   period: string;
   shortDescription: string;
-  dialogContentHtml?: string;
+  dialogContentMdx?: MDXRemoteSerializeResult;
   funFacts: string[];
 };

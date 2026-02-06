@@ -1,5 +1,6 @@
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
+import { serialize } from "next-mdx-remote/serialize";
 import type { Poi } from "@/types/Poi";
 
 type GeoJson = {
@@ -26,122 +27,29 @@ const pickString = (properties: Record<string, unknown>, ...keys: string[]) => {
   return undefined;
 };
 
-const escapeHtml = (value: string) =>
-  value
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#39;");
-
-const markdownInlineToHtml = (line: string) =>
-  line
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
-    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
-    .replace(/\*([^*]+)\*/g, "<em>$1</em>")
-    .replace(/`([^`]+)`/g, "<code>$1</code>");
-
-const mdxToHtml = (source: string) => {
-  const lines = source.split(/\r?\n/);
-  const html: string[] = [];
-  let listItems: string[] = [];
-  let index = 0;
-
-  const flushList = () => {
-    if (listItems.length === 0) {
-      return;
-    }
-    html.push(`<ul>${listItems.join("")}</ul>`);
-    listItems = [];
-  };
-
-  while (index < lines.length) {
-    const rawLine = lines[index];
-    const line = rawLine.trim();
-    if (!line) {
-      flushList();
-      index += 1;
-      continue;
-    }
-
-    const calloutMatch = line.match(/^<Callout(?:\s+title="([^"]+)")?\s*>$/);
-    if (calloutMatch) {
-      flushList();
-      const title = calloutMatch[1] ? escapeHtml(calloutMatch[1]) : undefined;
-      const calloutParagraphs: string[] = [];
-      index += 1;
-
-      while (index < lines.length && lines[index].trim() !== "</Callout>") {
-        const calloutLine = lines[index].trim();
-        if (calloutLine) {
-          calloutParagraphs.push(
-            `<p>${markdownInlineToHtml(escapeHtml(calloutLine))}</p>`,
-          );
-        }
-        index += 1;
-      }
-
-      const titleHtml = title
-        ? `<p class="poi-callout-title">${title}</p>`
-        : "";
-      html.push(
-        `<section class="poi-callout">${titleHtml}${calloutParagraphs.join("")}</section>`,
-      );
-      index += 1;
-      continue;
-    }
-
-    const safe = escapeHtml(line);
-    if (safe.startsWith("### ")) {
-      flushList();
-      html.push(`<h3>${markdownInlineToHtml(safe.slice(4))}</h3>`);
-      index += 1;
-      continue;
-    }
-
-    if (safe.startsWith("## ")) {
-      flushList();
-      html.push(`<h2>${markdownInlineToHtml(safe.slice(3))}</h2>`);
-      index += 1;
-      continue;
-    }
-
-    if (safe.startsWith("# ")) {
-      flushList();
-      html.push(`<h1>${markdownInlineToHtml(safe.slice(2))}</h1>`);
-      index += 1;
-      continue;
-    }
-
-    if (safe.startsWith("- ")) {
-      listItems.push(`<li>${markdownInlineToHtml(safe.slice(2))}</li>`);
-      index += 1;
-      continue;
-    }
-
-    flushList();
-    html.push(`<p>${markdownInlineToHtml(safe)}</p>`);
-    index += 1;
-  }
-
-  flushList();
-  return html.join("");
-};
-
-const readPoiDialogContent = (city: string, id: string) => {
+const readPoiDialogContent = async (city: string, id: string) => {
   const filePath = path.join(process.cwd(), "content", "pois", toCitySlug(city), `${id}.mdx`);
   if (!existsSync(filePath)) {
     return undefined;
   }
+
   const raw = readFileSync(filePath, "utf-8").trim();
-  return raw ? mdxToHtml(raw) : undefined;
+  if (!raw) {
+    return undefined;
+  }
+
+  try {
+    return await serialize(raw);
+  } catch {
+    return undefined;
+  }
 };
 
-const asPoi = (
+const asPoi = async (
   feature: GeoJsonFeature,
   index: number,
   fallbackCity: string,
-): Poi | null => {
+): Promise<Poi | null> => {
   if (feature.geometry?.type !== "Point") {
     return null;
   }
@@ -184,8 +92,6 @@ const asPoi = (
     pickString(properties, "heritage")?.replace(/^/, "Heritage status: "),
     pickString(properties, "charge")?.replace(/^/, "Ticket: "),
   ].filter((value): value is string => Boolean(value));
-  const dialogContentHtml = readPoiDialogContent(fallbackCity, rawId);
-
   return {
     id: rawId,
     name,
@@ -193,7 +99,7 @@ const asPoi = (
     coordinates: { lat, lng },
     period,
     shortDescription: description,
-    dialogContentHtml,
+    dialogContentMdx: await readPoiDialogContent(fallbackCity, rawId),
     funFacts,
   };
 };
@@ -223,10 +129,11 @@ const loadGeoJsonForCity = (city: string): GeoJson => {
   }
 };
 
-export const createPoisForCity = (city: string): Poi[] => {
+export const createPoisForCity = async (city: string): Promise<Poi[]> => {
   const features = loadGeoJsonForCity(city).features ?? [];
+  const pois = await Promise.all(
+    features.map((feature, index) => asPoi(feature, index, city)),
+  );
 
-  return features
-    .map((feature, index) => asPoi(feature, index, city))
-    .filter((poi): poi is Poi => Boolean(poi));
+  return pois.filter((poi): poi is Poi => Boolean(poi));
 };

@@ -9,21 +9,27 @@ type Props = {
   zoom: number;
   pois: Poi[];
   onZoomChange?: (zoom: number) => void;
+  onOpenPoiDetails?: (poiId: string) => void;
 };
 
 const ZOOM_EPSILON = 0.001;
 
-export const Map = ({ coordinates, zoom, pois, onZoomChange }: Props) => {
+export const Map = ({ coordinates, zoom, pois, onZoomChange, onOpenPoiDetails }: Props) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const adapterRef = useRef<MapAdapter | null>(null);
   const lastZoomFromMapRef = useRef<number | null>(null);
   const onZoomChangeRef = useRef<Props["onZoomChange"]>(onZoomChange);
+  const onOpenPoiDetailsRef = useRef<Props["onOpenPoiDetails"]>(onOpenPoiDetails);
   const lastCenterRef = useRef<[number, number] | null>(null);
   const initialViewRef = useRef({ center: coordinates, zoom });
 
   useEffect(() => {
     onZoomChangeRef.current = onZoomChange;
   }, [onZoomChange]);
+
+  useEffect(() => {
+    onOpenPoiDetailsRef.current = onOpenPoiDetails;
+  }, [onOpenPoiDetails]);
 
   useEffect(() => {
     if (adapterRef.current || !containerRef.current) {
@@ -35,6 +41,7 @@ export const Map = ({ coordinates, zoom, pois, onZoomChange }: Props) => {
       lastZoomFromMapRef.current = value;
       onZoomChangeRef.current?.(value);
     });
+    adapter.setOnOpenPoiDetails((poiId) => onOpenPoiDetailsRef.current?.(poiId));
     adapter.mount(containerRef.current);
     adapterRef.current = adapter;
 

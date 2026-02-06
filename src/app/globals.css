@@ -25,35 +25,35 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.maplibregl-popup-content .poi-dialog-content {
+.poi-dialog-content {
   margin-top: 8px;
   font-size: 12px;
   line-height: 1.45;
 }
 
-.maplibregl-popup-content .poi-dialog-content h1,
-.maplibregl-popup-content .poi-dialog-content h2,
-.maplibregl-popup-content .poi-dialog-content h3 {
+.poi-dialog-content h1,
+.poi-dialog-content h2,
+.poi-dialog-content h3 {
   margin: 8px 0 4px;
   font-weight: 700;
 }
 
-.maplibregl-popup-content .poi-dialog-content p {
+.poi-dialog-content p {
   margin: 4px 0;
 }
 
-.maplibregl-popup-content .poi-dialog-content ul {
+.poi-dialog-content ul {
   margin: 4px 0;
   padding-left: 16px;
   list-style: disc;
 }
 
-.maplibregl-popup-content .poi-dialog-content a {
+.poi-dialog-content a {
   color: #0b57d0;
   text-decoration: underline;
 }
 
-.maplibregl-popup-content .poi-dialog-content .poi-callout {
+.poi-dialog-content .poi-callout {
   margin-top: 8px;
   border-left: 3px solid #b91c1c;
   background: #fee2e2;
@@ -61,7 +61,7 @@ body {
   border-radius: 6px;
 }
 
-.maplibregl-popup-content .poi-dialog-content .poi-callout-title {
+.poi-dialog-content .poi-callout-title {
   margin: 0 0 4px;
   font-weight: 700;
   color: #7f1d1d;
