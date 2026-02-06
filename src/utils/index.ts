@@ -47,7 +47,7 @@ const asPoi = (
       ? feature.id
       : typeof feature.id === "number"
         ? `${feature.id}`
-        : pickString(properties, "@id") ?? fallbackId;
+        : pickString(properties, "id", "@id") ?? fallbackId;
 
   const name =
     pickString(properties, "name", "name:en", "name:it", "int_name") ?? rawId;
@@ -100,7 +100,14 @@ const buildGeoJsonFilePath = (city: string) => {
 const loadGeoJsonForCity = (city: string): GeoJson => {
   const filePath = buildGeoJsonFilePath(city);
   const raw = readFileSync(filePath, "utf-8");
-  return JSON.parse(raw) as GeoJson;
+
+  try {
+    return JSON.parse(raw) as GeoJson;
+  } catch {
+    // Accept manually edited GeoJSON with trailing commas.
+    const withoutTrailingCommas = raw.replace(/,\s*([}\]])/g, "$1");
+    return JSON.parse(withoutTrailingCommas) as GeoJson;
+  }
 };
 
 export const createPoisForCity = (city: string): Poi[] => {
