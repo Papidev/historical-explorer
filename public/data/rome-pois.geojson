@@ -4,7 +4,6 @@
   "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
   "timestamp": "2026-01-16T23:50:59Z",
   "features": [
-
     {
       "type": "Feature",
       "properties": {
@@ -14,6 +13,7 @@
         "addr:housenumber": "9",
         "addr:postcode": "00196",
         "addr:street": "Piazzale di Villa Giulia",
+        "content_slug": "museo-nazionale-etrusco-di-villa-giulia",
         "email": "mn-etru@beniculturali.it",
         "museum": "history",
         "name": "Museo Nazionale Etrusco di Villa Giulia",
@@ -24,7 +24,7 @@
         "website": "https://www.museoetru.it",
         "wikidata": "Q15055388",
         "wikimedia_commons": "Category:Museo nazionale etrusco di Villa Giulia",
-        "wikipedia": "it:Museo nazionale etrusco di Villa Giulia",
+        "wikipedia": "it:Museo nazionale etrusco di Villa Giulia"
       },
       "geometry": {
         "type": "Point",
