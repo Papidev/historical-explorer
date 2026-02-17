@@ -42,6 +42,14 @@
 - Apply TypeScript’s quick-fix suggestions where feasible, especially for type safety and nullability, unless they conflict with product or UX intent.
 - Tailwind is the default styling layer—extend via `@theme` tokens in `globals.css` instead of ad-hoc CSS when possible. Ensure interactive elements pass accessible names and color contrast checks surfaced by Next linting.
 
+## Feature Implementation Approach
+- Build every feature in small intermediate steps that can be tested end-to-end.
+- Start with the thinnest vertical slice that works, then iterate.
+- Prefer extending existing files/components before introducing new abstractions.
+- Keep data flow explicit and local; avoid “smart” indirection unless it clearly reduces complexity.
+- After each step, run the smallest useful verification (`dev` manual check, then `build`/`lint` as needed) before moving on.
+- If a simpler solution exists with similar behavior, choose the simpler one.
+
 ## Testing & Verification
 - There is no automated map test harness yet; add colocated `*.test.tsx` files when introducing logic-heavy components and stub MapLibre APIs if needed.
 - Always: (1) run `pnpm dev` to verify Rome loads, pan/zoom controls work, POI popup "Apri dettagli" opens the side panel, and MDX content renders when present; (2) run `pnpm lint`; (3) run `pnpm build` before raising a PR.
