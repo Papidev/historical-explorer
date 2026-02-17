@@ -4,28 +4,28 @@
 - Next.js 16 App Router + React 19 live entirely under `src/app`; `src/app/page.tsx` renders the landing narrative, while `src/app/rome/page.tsx` mounts the interactive view.
 - Tailwind CSS v4 is imported once from `src/app/globals.css`; custom colors/fonts piggyback on CSS variables set there and the Geist font pair configured in `layout.tsx`.
 - Map rendering relies on `maplibre-gl@5` plus a thin adapter (`src/app/components/Map`) that isolates MapLibre lifecycle code from React. Always treat `Map` as a `"use client"` component and keep imperative map logic inside the adapter.
-- POI long-form content is MDX-driven via `next-mdx-remote` (`serialize` on the server, `MDXRemote` on the client). MDX files live under `content/pois/<city-slug>/<poi-id>.mdx`.
+- POI long-form content is MDX-driven via `next-mdx-remote` (`serialize` on the server, `MDXRemote` on the client). Naming convention is strict: use `content_slug` in GeoJSON and store content at `content/pois/<city-slug>/<content-slug>.mdx`.
 
 ## Directory Highlights
 - `src/app/components/Map/` – generic map wrapper (`index.tsx`) and the MapLibre adapter (`mapAdapter.ts`) that handles mount/destroy, `NavigationControl`, and popup markup.
 - `src/app/components/RomeMap.tsx` + `src/app/components/RomeMapClient.tsx` – server/client split: server loads POIs, client owns map state and the details panel UI.
 - `src/app/components/mdx/Callout.tsx` – custom MDX component used inside POI detail content.
-- `src/utils/index.ts` – async `createPoisForCity` plus helpers for slugging city names, reading `public/data/<slug>-pois.geojson`, coercing GeoJSON features into the strongly typed `Poi` shape, loading optional MDX content, and inferring fallbacks.
-- `src/types/Poi` – canonical POI contract (`id`, `name`, `city`, `coordinates`, `period`, `shortDescription`, optional `dialogContentMdx`, `funFacts`). Extend this first if new UI needs more fields.
+- `src/utils/index.ts` – async `createPoisForCity` plus helpers for slugging city names, reading `public/data/<slug>-pois.geojson`, coercing GeoJSON features into the strongly typed `Poi` shape, and loading optional MDX content from `content_slug`.
+- `src/types/Poi` – canonical POI contract (`id`, optional `contentSlug`, `name`, `city`, `coordinates`, `period`, `shortDescription`, `funFacts`). Extend this first if new UI needs more fields.
 - `public/data/` – runtime GeoJSON bundles consumed by the app; keep raw exports or scratch data under top-level `data/` if you need to preprocess outside the build.
 - `content/pois/` – optional per-POI MDX detail content keyed by city slug and POI id.
 
 ## POI & Map Data Flow
 1. A server feature component (e.g., `RomeMap`) calls async `createPoisForCity("rome")`. The helper slugifies city names (`rome` → `rome-pois.geojson`), reads the GeoJSON file on the server, and filters out non-`Point` features.
 2. Each feature becomes a `Poi`. Missing ids fall back to `poi-<index>` or the `@id` tag; `name`, `period`, and `shortDescription` look at multiple OSM keys before falling back to friendly defaults to keep the UI resilient.
-3. During POI mapping, optional MDX content is loaded from `content/pois/<city-slug>/<poi-id>.mdx` and serialized into `dialogContentMdx`. Missing/empty/invalid MDX should fail soft (no runtime throw, just no extra content).
+3. POI details request optional MDX content on demand through `/api/pois/<city>/<poiId>/dialog-content?contentSlug=<content-slug>`. The server resolves only `content/pois/<city-slug>/<content-slug>.mdx` (no id/name fallbacks). Missing/empty/invalid MDX should fail soft (no runtime throw, just no extra content).
 4. The `Map` client component mounts MapLibre once per page load, updates the view via `easeTo`, and re-syncs markers whenever the POI array changes. Popup HTML currently includes a details trigger button (`data-poi-open-details`); keep click handling delegated in the adapter.
 5. Map style defaults to `https://tiles.openfreemap.org/styles/liberty`. Change the constant in the adapter if we ever swap basemaps.
 
 ### Adding a New City
 - Drop a GeoJSON export at `public/data/<city-slug>-pois.geojson` (slug logic matches `toCitySlug` in `src/utils/index.ts`). Only `Point` geometries render markers; convert polygons/lines to representative points upstream if needed.
 - Create `<CityName>Map.tsx` (server) next to `RomeMap.tsx` that calls `createPoisForCity("<city>")`, then pass POIs and view defaults into a client component (pattern: `RomeMapClient.tsx`).
-- Add optional MDX files at `content/pois/<city-slug>/<poi-id>.mdx` when a POI needs long-form details in the side panel.
+- Add `content_slug` to each POI that needs long-form details, and create the matching file at `content/pois/<city-slug>/<content-slug>.mdx`.
 - Add a route at `src/app/<city>/page.tsx` to mount the new map and any descriptive copy.
 
 ## Tooling & Commands
