@@ -1,22 +1,77 @@
 "use client";
 
-import { useState } from "react";
-import { MDXRemote } from "next-mdx-remote";
+import { useEffect, useState } from "react";
+import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote";
 import type { Poi } from "@/types/Poi";
 import { Map } from "@/app/components/Map";
 import { Callout } from "@/app/components/mdx/Callout";
 
 type Props = {
+  citySlug: string;
   coordinates: [number, number];
   initialZoom: number;
   pois: Poi[];
 };
 
-export const RomeMapClient = ({ coordinates, initialZoom, pois }: Props) => {
+export const RomeMapClient = ({ citySlug, coordinates, initialZoom, pois }: Props) => {
   const [zoom, setZoom] = useState(initialZoom);
   const [selectedPoiId, setSelectedPoiId] = useState<string | null>(null);
+  const [dialogContentMdx, setDialogContentMdx] = useState<MDXRemoteSerializeResult | null>(null);
+  const [isLoadingDialogContent, setIsLoadingDialogContent] = useState(false);
   const displayZoom = Number(zoom.toFixed(2));
   const selectedPoi = selectedPoiId ? pois.find((poi) => poi.id === selectedPoiId) : undefined;
+
+  useEffect(() => {
+    if (!selectedPoi) {
+      setDialogContentMdx(null);
+      setIsLoadingDialogContent(false);
+      return;
+    }
+
+    if (!selectedPoi.contentSlug) {
+      setDialogContentMdx(null);
+      setIsLoadingDialogContent(false);
+      return;
+    }
+    const contentSlug = selectedPoi.contentSlug;
+
+    const abortController = new AbortController();
+    setDialogContentMdx(null);
+    setIsLoadingDialogContent(true);
+
+    const loadDialogContent = async () => {
+      try {
+        const response = await fetch(
+          `/api/pois/${encodeURIComponent(citySlug)}/${encodeURIComponent(selectedPoi.id)}/dialog-content?contentSlug=${encodeURIComponent(contentSlug)}`,
+          { signal: abortController.signal },
+        );
+
+        if (!response.ok) {
+          setDialogContentMdx(null);
+          return;
+        }
+
+        const payload = (await response.json()) as {
+          content?: MDXRemoteSerializeResult | null;
+        };
+        setDialogContentMdx(payload.content ?? null);
+      } catch {
+        if (!abortController.signal.aborted) {
+          setDialogContentMdx(null);
+        }
+      } finally {
+        if (!abortController.signal.aborted) {
+          setIsLoadingDialogContent(false);
+        }
+      }
+    };
+
+    void loadDialogContent();
+
+    return () => {
+      abortController.abort();
+    };
+  }, [citySlug, selectedPoi]);
 
   return (
     <div className="relative h-full w-full">
@@ -76,9 +131,11 @@ export const RomeMapClient = ({ coordinates, initialZoom, pois }: Props) => {
             {selectedPoi ? (
               <>
                 <p>{selectedPoi.shortDescription}</p>
-                {selectedPoi.dialogContentMdx ? (
+                {isLoadingDialogContent ? (
+                  <p className="mt-4 text-black/60">Caricamento contenuto aggiuntivo...</p>
+                ) : dialogContentMdx ? (
                   <div className="poi-dialog-content mt-4">
-                    <MDXRemote {...selectedPoi.dialogContentMdx} components={{ Callout }} />
+                    <MDXRemote {...dialogContentMdx} components={{ Callout }} />
                   </div>
                 ) : (
                   <p className="mt-4 text-black/60">

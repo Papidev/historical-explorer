@@ -8,6 +8,6 @@ export const RomeMap = async () => {
     : [12.4922, 41.8902];
 
   return (
-    <RomeMapClient coordinates={coordinates} initialZoom={15} pois={pois} />
+    <RomeMapClient citySlug="rome" coordinates={coordinates} initialZoom={15} pois={pois} />
   );
 };

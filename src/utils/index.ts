@@ -27,8 +27,24 @@ const pickString = (properties: Record<string, unknown>, ...keys: string[]) => {
   return undefined;
 };
 
-const readPoiDialogContent = async (city: string, id: string) => {
-  const filePath = path.join(process.cwd(), "content", "pois", toCitySlug(city), `${id}.mdx`);
+const toCitySlug = (city: string) =>
+  city
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
+export const getPoiDialogContent = async (
+  city: string,
+  contentSlug: string,
+) => {
+  const filePath = path.join(
+    process.cwd(),
+    "content",
+    "pois",
+    toCitySlug(city),
+    `${contentSlug}.mdx`,
+  );
   if (!existsSync(filePath)) {
     return undefined;
   }
@@ -45,11 +61,7 @@ const readPoiDialogContent = async (city: string, id: string) => {
   }
 };
 
-const asPoi = async (
-  feature: GeoJsonFeature,
-  index: number,
-  fallbackCity: string,
-): Promise<Poi | null> => {
+const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Poi | null => {
   if (feature.geometry?.type !== "Point") {
     return null;
   }
@@ -70,6 +82,7 @@ const asPoi = async (
 
   const name =
     pickString(properties, "name", "name:en", "name:it", "int_name") ?? rawId;
+  const contentSlug = pickString(properties, "content_slug", "content:slug", "mdx_slug");
   const historic = pickString(properties, "historic");
   const period =
     pickString(
@@ -92,24 +105,18 @@ const asPoi = async (
     pickString(properties, "heritage")?.replace(/^/, "Heritage status: "),
     pickString(properties, "charge")?.replace(/^/, "Ticket: "),
   ].filter((value): value is string => Boolean(value));
+
   return {
     id: rawId,
+    contentSlug,
     name,
     city,
     coordinates: { lat, lng },
     period,
     shortDescription: description,
-    dialogContentMdx: await readPoiDialogContent(fallbackCity, rawId),
     funFacts,
   };
 };
-
-const toCitySlug = (city: string) =>
-  city
-    .trim()
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
 
 const buildGeoJsonFilePath = (city: string) => {
   const slug = toCitySlug(city);
@@ -131,9 +138,7 @@ const loadGeoJsonForCity = (city: string): GeoJson => {
 
 export const createPoisForCity = async (city: string): Promise<Poi[]> => {
   const features = loadGeoJsonForCity(city).features ?? [];
-  const pois = await Promise.all(
-    features.map((feature, index) => asPoi(feature, index, city)),
-  );
+  const pois = features.map((feature, index) => asPoi(feature, index, city));
 
   return pois.filter((poi): poi is Poi => Boolean(poi));
 };
