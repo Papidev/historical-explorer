@@ -22,17 +22,33 @@ export interface MapAdapter {
   updatePois: (points: Poi[]) => void;
   getZoom: () => number | null;
   setOnZoomChange: (handler: ((zoom: number) => void) | null) => void;
+  setOnOpenPoiDetails: (handler: ((poiId: string) => void) | null) => void;
   destroy: () => void;
 }
+
+const escapeHtml = (value: string) =>
+  value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
 
 const createMarker = (map: MapLibreMap, poi: Poi) =>
   new maplibregl.Marker()
     .setLngLat([poi.coordinates.lng, poi.coordinates.lat])
     .setPopup(
       new maplibregl.Popup({ offset: 16 }).setHTML(`
-        <strong>${poi.name}</strong><br/>
-        <em>${poi.period}</em><br/>
-        <small>${poi.shortDescription}</small>
+        <strong>${escapeHtml(poi.name)}</strong><br/>
+        <em>${escapeHtml(poi.period)}</em><br/>
+        <small>${escapeHtml(poi.shortDescription)}</small><br/>
+        <button
+          type="button"
+          data-poi-open-details="${escapeHtml(poi.id)}"
+          class="mt-2 rounded-md bg-black px-2 py-1 text-xs font-medium text-white"
+        >
+          Apri dettagli
+        </button>
       `),
     )
     .addTo(map);
@@ -43,6 +59,26 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
   let isLoaded = false;
   let pendingPois: Poi[] | null = null;
   let onZoomChange: ((zoom: number) => void) | null = null;
+  let onOpenPoiDetails: ((poiId: string) => void) | null = null;
+
+  const handleMapClick = (event: MouseEvent) => {
+    const target = event.target;
+    if (!(target instanceof Element)) {
+      return;
+    }
+
+    const trigger = target.closest("[data-poi-open-details]");
+    if (!trigger) {
+      return;
+    }
+
+    const poiId = trigger.getAttribute("data-poi-open-details");
+    if (!poiId) {
+      return;
+    }
+
+    onOpenPoiDetails?.(poiId);
+  };
 
   const setMarkers = (points: Poi[]) => {
     if (!map) {
@@ -80,6 +116,7 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
           pendingPois = null;
         }
       });
+      map.getContainer().addEventListener("click", handleMapClick);
     },
     updateView(view) {
       if (!map) {
@@ -120,7 +157,11 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
     setOnZoomChange(handler) {
       onZoomChange = handler;
     },
+    setOnOpenPoiDetails(handler) {
+      onOpenPoiDetails = handler;
+    },
     destroy() {
+      map?.getContainer().removeEventListener("click", handleMapClick);
       markers.forEach((marker) => marker.remove());
       markers = [];
       map?.remove();

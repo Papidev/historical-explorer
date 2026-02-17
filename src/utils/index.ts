@@ -1,5 +1,6 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
+import { serialize } from "next-mdx-remote/serialize";
 import type { Poi } from "@/types/Poi";
 
 type GeoJson = {
@@ -26,19 +27,47 @@ const pickString = (properties: Record<string, unknown>, ...keys: string[]) => {
   return undefined;
 };
 
-const asPoi = (
-  feature: GeoJsonFeature,
-  index: number,
-  fallbackCity: string,
-): Poi | null => {
+const toCitySlug = (city: string) =>
+  city
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
+export const getPoiDialogContent = async (
+  city: string,
+  contentSlug: string,
+) => {
+  const filePath = path.join(
+    process.cwd(),
+    "content",
+    "pois",
+    toCitySlug(city),
+    `${contentSlug}.mdx`,
+  );
+  if (!existsSync(filePath)) {
+    return undefined;
+  }
+
+  const raw = readFileSync(filePath, "utf-8").trim();
+  if (!raw) {
+    return undefined;
+  }
+
+  try {
+    return await serialize(raw);
+  } catch {
+    return undefined;
+  }
+};
+
+const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Poi | null => {
   if (feature.geometry?.type !== "Point") {
     return null;
   }
 
   const [lng, lat] = feature.geometry.coordinates ?? [];
-  if (typeof lat !== "number" || typeof lng !== "number") {
-    return null;
-  }
+
 
   const properties = feature.properties ?? {};
   const fallbackId = `poi-${index}`;
@@ -47,10 +76,11 @@ const asPoi = (
       ? feature.id
       : typeof feature.id === "number"
         ? `${feature.id}`
-        : pickString(properties, "@id") ?? fallbackId;
+        : pickString(properties, "id", "@id") ?? fallbackId;
 
   const name =
     pickString(properties, "name", "name:en", "name:it", "int_name") ?? rawId;
+  const contentSlug = pickString(properties, "content_slug", "content:slug", "mdx_slug");
   const historic = pickString(properties, "historic");
   const period =
     pickString(
@@ -76,6 +106,7 @@ const asPoi = (
 
   return {
     id: rawId,
+    contentSlug,
     name,
     city,
     coordinates: { lat, lng },
@@ -85,13 +116,6 @@ const asPoi = (
   };
 };
 
-const toCitySlug = (city: string) =>
-  city
-    .trim()
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-
 const buildGeoJsonFilePath = (city: string) => {
   const slug = toCitySlug(city);
   return path.join(process.cwd(), "public", "data", `${slug}-pois.geojson`);
@@ -100,13 +124,19 @@ const buildGeoJsonFilePath = (city: string) => {
 const loadGeoJsonForCity = (city: string): GeoJson => {
   const filePath = buildGeoJsonFilePath(city);
   const raw = readFileSync(filePath, "utf-8");
-  return JSON.parse(raw) as GeoJson;
+
+  try {
+    return JSON.parse(raw) as GeoJson;
+  } catch {
+    // Accept manually edited GeoJSON with trailing commas.
+    const withoutTrailingCommas = raw.replace(/,\s*([}\]])/g, "$1");
+    return JSON.parse(withoutTrailingCommas) as GeoJson;
+  }
 };
 
-export const createPoisForCity = (city: string): Poi[] => {
+export const createPoisForCity = async (city: string): Promise<Poi[]> => {
   const features = loadGeoJsonForCity(city).features ?? [];
+  const pois = features.map((feature, index) => asPoi(feature, index, city));
 
-  return features
-    .map((feature, index) => asPoi(feature, index, city))
-    .filter((poi): poi is Poi => Boolean(poi));
+  return pois.filter((poi): poi is Poi => Boolean(poi));
 };

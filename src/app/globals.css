@@ -24,3 +24,45 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.poi-dialog-content {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.poi-dialog-content h1,
+.poi-dialog-content h2,
+.poi-dialog-content h3 {
+  margin: 8px 0 4px;
+  font-weight: 700;
+}
+
+.poi-dialog-content p {
+  margin: 4px 0;
+}
+
+.poi-dialog-content ul {
+  margin: 4px 0;
+  padding-left: 16px;
+  list-style: disc;
+}
+
+.poi-dialog-content a {
+  color: #0b57d0;
+  text-decoration: underline;
+}
+
+.poi-dialog-content .poi-callout {
+  margin-top: 8px;
+  border-left: 3px solid #b91c1c;
+  background: #fee2e2;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+.poi-dialog-content .poi-callout-title {
+  margin: 0 0 4px;
+  font-weight: 700;
+  color: #7f1d1d;
+}

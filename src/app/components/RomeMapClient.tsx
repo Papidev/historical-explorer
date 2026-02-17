@@ -1,18 +1,77 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote";
 import type { Poi } from "@/types/Poi";
 import { Map } from "@/app/components/Map";
+import { Callout } from "@/app/components/mdx/Callout";
 
 type Props = {
+  citySlug: string;
   coordinates: [number, number];
   initialZoom: number;
   pois: Poi[];
 };
 
-export const RomeMapClient = ({ coordinates, initialZoom, pois }: Props) => {
+export const RomeMapClient = ({ citySlug, coordinates, initialZoom, pois }: Props) => {
   const [zoom, setZoom] = useState(initialZoom);
+  const [selectedPoiId, setSelectedPoiId] = useState<string | null>(null);
+  const [dialogContentMdx, setDialogContentMdx] = useState<MDXRemoteSerializeResult | null>(null);
+  const [isLoadingDialogContent, setIsLoadingDialogContent] = useState(false);
   const displayZoom = Number(zoom.toFixed(2));
+  const selectedPoi = selectedPoiId ? pois.find((poi) => poi.id === selectedPoiId) : undefined;
+
+  useEffect(() => {
+    if (!selectedPoi) {
+      setDialogContentMdx(null);
+      setIsLoadingDialogContent(false);
+      return;
+    }
+
+    if (!selectedPoi.contentSlug) {
+      setDialogContentMdx(null);
+      setIsLoadingDialogContent(false);
+      return;
+    }
+    const contentSlug = selectedPoi.contentSlug;
+
+    const abortController = new AbortController();
+    setDialogContentMdx(null);
+    setIsLoadingDialogContent(true);
+
+    const loadDialogContent = async () => {
+      try {
+        const response = await fetch(
+          `/api/pois/${encodeURIComponent(citySlug)}/${encodeURIComponent(selectedPoi.id)}/dialog-content?contentSlug=${encodeURIComponent(contentSlug)}`,
+          { signal: abortController.signal },
+        );
+
+        if (!response.ok) {
+          setDialogContentMdx(null);
+          return;
+        }
+
+        const payload = (await response.json()) as {
+          content?: MDXRemoteSerializeResult | null;
+        };
+        setDialogContentMdx(payload.content ?? null);
+      } catch {
+        if (!abortController.signal.aborted) {
+          setDialogContentMdx(null);
+        }
+      } finally {
+        if (!abortController.signal.aborted) {
+          setIsLoadingDialogContent(false);
+        }
+      }
+    };
+
+    void loadDialogContent();
+
+    return () => {
+      abortController.abort();
+    };
+  }, [citySlug, selectedPoi]);
 
   return (
     <div className="relative h-full w-full">
@@ -46,7 +105,48 @@ export const RomeMapClient = ({ coordinates, initialZoom, pois }: Props) => {
         zoom={zoom}
         pois={pois}
         onZoomChange={(value) => setZoom(value)}
+        onOpenPoiDetails={(poiId) => setSelectedPoiId(poiId)}
       />
+      <aside
+        className={`absolute right-0 top-0 z-20 h-full w-full max-w-md border-l border-black/10 bg-white shadow-2xl transition-transform duration-300 ${
+          selectedPoi ? "translate-x-0" : "translate-x-full"
+        }`}
+        aria-hidden={!selectedPoi}
+      >
+        <div className="flex h-full flex-col">
+          <div className="flex items-start justify-between border-b border-black/10 px-5 py-4">
+            <div>
+              <h2 className="text-lg font-semibold text-black">{selectedPoi?.name ?? "Dettagli POI"}</h2>
+              <p className="mt-1 text-sm text-black/60">{selectedPoi?.period}</p>
+            </div>
+            <button
+              type="button"
+              className="rounded-md border border-black/20 px-2 py-1 text-sm text-black hover:bg-black/5"
+              onClick={() => setSelectedPoiId(null)}
+            >
+              Chiudi
+            </button>
+          </div>
+          <div className="overflow-y-auto px-5 py-4 text-sm leading-6 text-black/80">
+            {selectedPoi ? (
+              <>
+                <p>{selectedPoi.shortDescription}</p>
+                {isLoadingDialogContent ? (
+                  <p className="mt-4 text-black/60">Caricamento contenuto aggiuntivo...</p>
+                ) : dialogContentMdx ? (
+                  <div className="poi-dialog-content mt-4">
+                    <MDXRemote {...dialogContentMdx} components={{ Callout }} />
+                  </div>
+                ) : (
+                  <p className="mt-4 text-black/60">
+                    Nessun contenuto aggiuntivo disponibile per questo punto.
+                  </p>
+                )}
+              </>
+            ) : null}
+          </div>
+        </div>
+      </aside>
     </div>
   );
 };
