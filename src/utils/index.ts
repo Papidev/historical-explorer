@@ -67,9 +67,7 @@ const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Po
   }
 
   const [lng, lat] = feature.geometry.coordinates ?? [];
-  if (typeof lat !== "number" || typeof lng !== "number") {
-    return null;
-  }
+
 
   const properties = feature.properties ?? {};
   const fallbackId = `poi-${index}`;
