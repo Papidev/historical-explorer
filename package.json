@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "wiki:bootstrap": "tsx scripts/wiki/bootstrap.ts"
   },
   "dependencies": {
     "@mdx-js/mdx": "^3.1.1",
@@ -30,6 +31,7 @@
     "prettier": "^3.8.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4.1.18",
+    "tsx": "^4.20.6",
     "typescript": "^5.9.3"
   }
 }
