@@ -118,7 +118,7 @@ const main = () => {
   }
 
   const contentSlug = resolveContentSlugForPoi(geoJsonPath, poiId);
-  const outputPath = path.join(outputDir, `${contentSlug}.mdx`);
+  const outputPath = path.join(outputDir, `${poiId}-${contentSlug}.mdx`);
 
   if (existsSync(outputPath) && !options.force) {
     console.log(`Skip: ${outputPath} already exists. Use --force to overwrite.`);

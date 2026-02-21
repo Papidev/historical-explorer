@@ -37,15 +37,22 @@ const toCitySlug = (city: string) =>
 export const getPoiDialogContent = async (
   city: string,
   contentSlug: string,
+  poiId?: string,
 ) => {
-  const filePath = path.join(
+  const cityDir = path.join(
     process.cwd(),
     "content",
     "pois",
     toCitySlug(city),
-    `${contentSlug}.mdx`,
   );
-  if (!existsSync(filePath)) {
+
+  const candidateFilePaths = [
+    poiId ? path.join(cityDir, `${poiId}-${contentSlug}.mdx`) : undefined,
+    path.join(cityDir, `${contentSlug}.mdx`),
+  ].filter((value): value is string => Boolean(value));
+
+  const filePath = candidateFilePaths.find((candidate) => existsSync(candidate));
+  if (!filePath) {
     return undefined;
   }
 
