@@ -5,6 +5,7 @@ import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote";
 import type { Poi } from "@/types/Poi";
 import { Map } from "@/app/components/Map";
 import { Callout } from "@/app/components/mdx/Callout";
+import { MdxLink } from "@/app/components/mdx/MdxLink";
 
 type Props = {
   citySlug: string;
@@ -135,7 +136,7 @@ export const RomeMapClient = ({ citySlug, coordinates, initialZoom, pois }: Prop
                   <p className="mt-4 text-black/60">Caricamento contenuto aggiuntivo...</p>
                 ) : dialogContentMdx ? (
                   <div className="poi-dialog-content mt-4">
-                    <MDXRemote {...dialogContentMdx} components={{ Callout }} />
+                    <MDXRemote {...dialogContentMdx} components={{ Callout, a: MdxLink }} />
                   </div>
                 ) : (
                   <p className="mt-4 text-black/60">

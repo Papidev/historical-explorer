@@ -1,6 +1,11 @@
 import type { WikiSnapshot } from "./types";
 
 const WIKIPEDIA_API = "https://en.wikipedia.org/w/api.php";
+const WIKIDATA_API = "https://www.wikidata.org/w/api.php";
+const REFERENCES_HEADING = /^==\s*References\s*==$/i;
+const SEE_ALSO_HEADING = /^==\s*See also\s*==$/i;
+const LEVEL2_HEADING = /^==\s*.*?\s*==$/;
+const LEVEL3_HEADING = /^===\s*.*?\s*===$/;
 
 const fetchJson = async <T>(url: URL, attempts = 2): Promise<T> => {
   let lastError: unknown;
@@ -25,12 +30,82 @@ const fetchJson = async <T>(url: URL, attempts = 2): Promise<T> => {
   throw new Error(`Request failed after ${attempts} attempts: ${String(lastError)}`);
 };
 
+const stripReferencesSection = (content: string) => {
+  const lines = content.replace(/\r\n/g, "\n").split("\n");
+  const output: string[] = [];
+
+  let skipReferences = false;
+  for (const line of lines) {
+    const trimmed = line.trim();
+
+    if (!skipReferences && (REFERENCES_HEADING.test(trimmed) || SEE_ALSO_HEADING.test(trimmed))) {
+      skipReferences = true;
+      continue;
+    }
+
+    if (skipReferences) {
+      if (LEVEL3_HEADING.test(trimmed)) {
+        continue;
+      }
+      if (LEVEL2_HEADING.test(trimmed)) {
+        skipReferences = false;
+      } else {
+        continue;
+      }
+    }
+
+    output.push(line);
+  }
+
+  return output.join("\n").trim();
+};
+
+const toWikiPathSegment = (value: string) => encodeURIComponent(value.trim().replace(/\s+/g, "_"));
+
+const resolveCommonsTitleFromWikidata = async (wikidataId: string) => {
+  const url = new URL(WIKIDATA_API);
+  url.searchParams.set("action", "wbgetentities");
+  url.searchParams.set("ids", wikidataId);
+  url.searchParams.set("props", "sitelinks");
+  url.searchParams.set("sitefilter", "commonswiki");
+  url.searchParams.set("format", "json");
+
+  type WikidataResponse = {
+    entities?: Record<
+      string,
+      {
+        sitelinks?: {
+          commonswiki?: {
+            title?: string;
+          };
+        };
+      }
+    >;
+  };
+
+  const data = await fetchJson<WikidataResponse>(url);
+  return data.entities?.[wikidataId]?.sitelinks?.commonswiki?.title;
+};
+
+const replaceCommonsInlineTemplate = (content: string, articleTitle: string, commonsTitle?: string) => {
+  const commonsTemplatePattern = /\{\{\s*commons-inline(?:\|([^}]+))?\s*\}\}/gi;
+
+  return content.replace(commonsTemplatePattern, (_match, rawParam: string | undefined) => {
+    const firstParam = rawParam?.split("|")[0]?.trim();
+    const targetTitle = firstParam || commonsTitle || articleTitle;
+    const displayTitle = targetTitle.replace(/_/g, " ");
+    const href = `https://commons.wikimedia.org/wiki/${toWikiPathSegment(targetTitle)}`;
+    return `[${href} Media related to ${displayTitle} at Wikimedia Commons]`;
+  });
+};
+
 export const fetchWikiSnapshot = async (title: string): Promise<WikiSnapshot> => {
   const url = new URL(WIKIPEDIA_API);
   url.searchParams.set("action", "query");
-  url.searchParams.set("prop", "extracts");
+  url.searchParams.set("prop", "revisions|pageprops");
   url.searchParams.set("titles", title);
-  url.searchParams.set("explaintext", "1");
+  url.searchParams.set("rvprop", "content");
+  url.searchParams.set("rvslots", "main");
   url.searchParams.set("redirects", "1");
   url.searchParams.set("format", "json");
   url.searchParams.set("formatversion", "2");
@@ -38,8 +113,17 @@ export const fetchWikiSnapshot = async (title: string): Promise<WikiSnapshot> =>
   type QueryResponse = {
     query?: {
       pages?: Array<{
-        extract?: string;
         missing?: boolean;
+        pageprops?: {
+          wikibase_item?: string;
+        };
+        revisions?: Array<{
+          slots?: {
+            main?: {
+              content?: string;
+            };
+          };
+        }>;
       }>;
     };
   };
@@ -50,7 +134,15 @@ export const fetchWikiSnapshot = async (title: string): Promise<WikiSnapshot> =>
     throw new Error(`Wikipedia page not found for title "${title}".`);
   }
 
+  const wikidataId = page.pageprops?.wikibase_item;
+  const commonsTitle = wikidataId ? await resolveCommonsTitleFromWikidata(wikidataId) : undefined;
+  const withExpandedCommons = replaceCommonsInlineTemplate(
+    page.revisions?.[0]?.slots?.main?.content ?? "",
+    title,
+    commonsTitle,
+  );
+
   return {
-    fullText: page.extract ?? "",
+    fullText: stripReferencesSection(withExpandedCommons),
   };
 };
