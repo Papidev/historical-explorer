@@ -6,8 +6,6 @@ const escapeMdxText = (value: string) =>
 
 const escapeMdxUrl = (value: string) => value.replace(/ /g, "%20").replace(/\)/g, "%29");
 
-const SKIPPED_LEVEL2_SECTIONS = new Set(["references", "see also"]);
-
 const normalizeWikiInline = (value: string) => {
   const withoutExternalLinks = value
     .replace(/\[((?:https?:)?\/\/[^\s\]]+)\s+([^\]]+)\]/g, "$2")
@@ -71,7 +69,6 @@ export const wikiTextToMdx = (content: string) => {
   const output: string[] = [];
   let currentLevel2Heading = "";
   let templateBlockDepth = 0;
-  let skipCurrentLevel2Section = false;
 
   let paragraph: string[] = [];
   const flushParagraph = () => {
@@ -116,15 +113,8 @@ export const wikiTextToMdx = (content: string) => {
       flushParagraph();
       if (heading.level === 2) {
         currentLevel2Heading = heading.title.toLowerCase();
-        skipCurrentLevel2Section = SKIPPED_LEVEL2_SECTIONS.has(currentLevel2Heading);
       }
-      if (!skipCurrentLevel2Section) {
-        output.push(heading.mdx);
-      }
-      continue;
-    }
-
-    if (skipCurrentLevel2Section) {
+      output.push(heading.mdx);
       continue;
     }
 
@@ -155,7 +145,6 @@ export const wikiTextToMdx = (content: string) => {
   flushParagraph();
 
   const mdx = `${output.join("\n\n")}\n`
-    .replace(/\n##\s*(References|See also)\s*\n/gi, "\n")
     .replace(/^\s*-\s*$/gm, "")
     .replace(/\(\s*\)/g, "")
     .replace(/\n{3,}/g, "\n\n");

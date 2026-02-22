@@ -1,10 +1,9 @@
+import wtf from "wtf_wikipedia";
 import type { WikiSnapshot } from "./types";
 
 const WIKIPEDIA_API = "https://en.wikipedia.org/w/api.php";
 const WIKIDATA_API = "https://www.wikidata.org/w/api.php";
-const REFERENCES_HEADING = /^==\s*References\s*==$/i;
-const SEE_ALSO_HEADING = /^==\s*See also\s*==$/i;
-const LEVEL2_HEADING = /^==\s*.*?\s*==$/;
+const EXCLUDED_SECTION_TITLES = ["References", "See also"];
 
 const fetchJson = async <T>(url: URL, attempts = 2): Promise<T> => {
   let lastError: unknown;
@@ -29,31 +28,19 @@ const fetchJson = async <T>(url: URL, attempts = 2): Promise<T> => {
   throw new Error(`Request failed after ${attempts} attempts: ${String(lastError)}`);
 };
 
-const stripSkippedSections = (content: string) => {
-  const lines = content.replace(/\r\n/g, "\n").split("\n");
-  const output: string[] = [];
+const stripExcludedSections = (content: string) => {
+  const doc = wtf(content);
 
-  let skipSection = false;
-  for (const line of lines) {
-    const trimmed = line.trim();
-
-    if (!skipSection && (REFERENCES_HEADING.test(trimmed) || SEE_ALSO_HEADING.test(trimmed))) {
-      skipSection = true;
-      continue;
+  // Remove all matching sections (and nested content), preserving the rest of the article wikitext.
+  for (const sectionTitle of EXCLUDED_SECTION_TITLES) {
+    let section = doc.section(sectionTitle);
+    while (section) {
+      section.remove();
+      section = doc.section(sectionTitle);
     }
-
-    if (skipSection) {
-      if (LEVEL2_HEADING.test(trimmed)) {
-        skipSection = false;
-      } else {
-        continue;
-      }
-    }
-
-    output.push(line);
   }
 
-  return output.join("\n").trim();
+  return doc.wikitext().trim();
 };
 
 const toWikiPathSegment = (value: string) => encodeURIComponent(value.trim().replace(/\s+/g, "_"));
@@ -139,6 +126,6 @@ export const fetchWikiSnapshot = async (title: string): Promise<WikiSnapshot> =>
   );
 
   return {
-    fullText: stripSkippedSections(withExpandedCommons),
+    fullText: stripExcludedSections(withExpandedCommons),
   };
 };
