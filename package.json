@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "wiki:bootstrap": "tsx scripts/wiki/bootstrap.ts",
-    "wiki:to-mdx": "tsx scripts/wiki/toMdx.ts"
+    "wiki:to-mdx": "tsx scripts/wiki/toMdx.ts",
+    "wiki:sync": "tsx scripts/wiki/sync.ts"
   },
   "dependencies": {
     "@mdx-js/mdx": "^3.1.1",
