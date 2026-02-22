@@ -4,15 +4,7 @@ const escapeMdxText = (value: string) =>
     .replace(/</g, "\\<")
     .replace(/{/g, "\\{");
 
-const escapeHtmlText = (value: string) =>
-  value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-
-const escapeHtmlAttribute = (value: string) =>
-  value
-    .replace(/&/g, "&amp;")
-    .replace(/"/g, "&quot;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+const escapeMdxUrl = (value: string) => value.replace(/ /g, "%20").replace(/\)/g, "%29");
 
 const SKIPPED_LEVEL2_SECTIONS = new Set(["references", "see also"]);
 
@@ -57,7 +49,7 @@ const toExternalLinkMdx = (value: string) => {
   const withLabel = value.match(/^\[((?:https?:)?\/\/[^\s\]]+)\s+([^\]]+)\]$/i);
   if (withLabel) {
     const href = withLabel[1].startsWith("//") ? `https:${withLabel[1]}` : withLabel[1];
-    const safeHref = escapeHtmlAttribute(href);
+    const safeHref = escapeMdxUrl(href);
     const label = escapeMdxText(withLabel[2].trim());
     return `[${label}](${safeHref})`;
   }
@@ -65,7 +57,7 @@ const toExternalLinkMdx = (value: string) => {
   const bare = value.match(/^\[((?:https?:)?\/\/[^\s\]]+)\]$/i);
   if (bare) {
     const href = bare[1].startsWith("//") ? `https:${bare[1]}` : bare[1];
-    const safeHref = escapeHtmlAttribute(href);
+    const safeHref = escapeMdxUrl(href);
     const label = escapeMdxText(href);
     return `[${label}](${safeHref})`;
   }
@@ -100,9 +92,11 @@ export const wikiTextToMdx = (content: string) => {
       continue;
     }
 
-    // Skip multiline top-level template blocks (infobox/navbox/etc.).
-    if (trimmed.startsWith("{{") && (templateOpenCount > templateCloseCount || /^\{\{[^{}]+\}\}$/.test(trimmed) === false)) {
-      templateBlockDepth = Math.max(0, templateOpenCount - templateCloseCount);
+    // Skip top-level templates (infobox/navbox/single-line template directives).
+    if (trimmed.startsWith("{{")) {
+      if (templateOpenCount > templateCloseCount) {
+        templateBlockDepth = Math.max(0, templateOpenCount - templateCloseCount);
+      }
       continue;
     }
 
@@ -123,23 +117,14 @@ export const wikiTextToMdx = (content: string) => {
       if (heading.level === 2) {
         currentLevel2Heading = heading.title.toLowerCase();
         skipCurrentLevel2Section = SKIPPED_LEVEL2_SECTIONS.has(currentLevel2Heading);
-        if (skipCurrentLevel2Section) {
-          continue;
-        }
       }
-      if (skipCurrentLevel2Section) {
-        continue;
+      if (!skipCurrentLevel2Section) {
+        output.push(heading.mdx);
       }
-      output.push(heading.mdx);
       continue;
     }
 
     if (skipCurrentLevel2Section) {
-      continue;
-    }
-
-    if (trimmed.length === 0) {
-      flushParagraph();
       continue;
     }
 
@@ -155,18 +140,16 @@ export const wikiTextToMdx = (content: string) => {
       }
 
       const itemText = normalizeWikiInline(listValue);
-      if (!itemText) {
-        continue;
+      if (itemText) {
+        output.push(`- ${escapeMdxText(itemText)}`);
       }
-      output.push(`- ${escapeMdxText(itemText)}`);
       continue;
     }
 
     const normalizedLine = normalizeWikiInline(trimmed);
-    if (!normalizedLine) {
-      continue;
+    if (normalizedLine) {
+      paragraph.push(normalizedLine);
     }
-    paragraph.push(normalizedLine);
   }
 
   flushParagraph();

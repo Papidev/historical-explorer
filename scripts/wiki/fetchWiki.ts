@@ -5,7 +5,6 @@ const WIKIDATA_API = "https://www.wikidata.org/w/api.php";
 const REFERENCES_HEADING = /^==\s*References\s*==$/i;
 const SEE_ALSO_HEADING = /^==\s*See also\s*==$/i;
 const LEVEL2_HEADING = /^==\s*.*?\s*==$/;
-const LEVEL3_HEADING = /^===\s*.*?\s*===$/;
 
 const fetchJson = async <T>(url: URL, attempts = 2): Promise<T> => {
   let lastError: unknown;
@@ -30,25 +29,22 @@ const fetchJson = async <T>(url: URL, attempts = 2): Promise<T> => {
   throw new Error(`Request failed after ${attempts} attempts: ${String(lastError)}`);
 };
 
-const stripReferencesSection = (content: string) => {
+const stripSkippedSections = (content: string) => {
   const lines = content.replace(/\r\n/g, "\n").split("\n");
   const output: string[] = [];
 
-  let skipReferences = false;
+  let skipSection = false;
   for (const line of lines) {
     const trimmed = line.trim();
 
-    if (!skipReferences && (REFERENCES_HEADING.test(trimmed) || SEE_ALSO_HEADING.test(trimmed))) {
-      skipReferences = true;
+    if (!skipSection && (REFERENCES_HEADING.test(trimmed) || SEE_ALSO_HEADING.test(trimmed))) {
+      skipSection = true;
       continue;
     }
 
-    if (skipReferences) {
-      if (LEVEL3_HEADING.test(trimmed)) {
-        continue;
-      }
+    if (skipSection) {
       if (LEVEL2_HEADING.test(trimmed)) {
-        skipReferences = false;
+        skipSection = false;
       } else {
         continue;
       }
@@ -143,6 +139,6 @@ export const fetchWikiSnapshot = async (title: string): Promise<WikiSnapshot> =>
   );
 
   return {
-    fullText: stripReferencesSection(withExpandedCommons),
+    fullText: stripSkippedSections(withExpandedCommons),
   };
 };
