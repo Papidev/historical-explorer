@@ -1,27 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Historical Explorer
+
+Next.js 16 + React 19 app for exploring historical points of interest on an interactive map.
 
 ## Getting Started
 
-This project uses **pnpm** exclusively—do not use npm, yarn, or bun. Install dependencies and start the dev server with:
+Use **pnpm only**.
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
-Then open [http://localhost:3000](http://localhost:3000) to see the app. Modify files under `src/app` (for example `src/app/page.tsx`) and the browser will hot-reload.
+Then open [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+## Scripts
 
-To learn more about Next.js, take a look at the following resources:
+- `pnpm dev` - run the local development server.
+- `pnpm build` - build for production.
+- `pnpm start` - start the production server.
+- `pnpm lint` - run ESLint.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Wiki to MDX Pipeline (Single POI)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Use the unified command when generating content for a single POI:
 
-## Deploy on Vercel
+```bash
+pnpm wiki:sync --city <city-slug> --poi-id <poi-id>
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This runs both steps in sequence:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. `wiki:bootstrap` (fetches and stores wiki snapshot JSON in `data/wiki/`)
+2. `wiki:to-mdx` (converts the snapshot into MDX under `content/pois/<city-slug>/`)
+
+Optional flags:
+
+- `--force` overwrite existing JSON/MDX output
+- `--geojson <path>` custom GeoJSON input path
+- `--wiki-dir <path>` custom wiki JSON directory
+- `--output-dir <path>` custom MDX output directory
+
+Example:
+
+```bash
+pnpm wiki:sync --city rome --poi-id 2505 --force
+```

@@ -36,6 +36,8 @@
 ## Tooling & Commands
 - Use `pnpm` exclusively for dependency management and scripts (do not use npm or yarn).
 - Use `pnpm install` to fetch deps, then the standard scripts: `pnpm dev`, `pnpm build`, `pnpm start`, `pnpm lint`. The dev server must boot without runtime or TypeScript errors before shipping changes.
+- Wiki content pipeline for a single POI: prefer `pnpm wiki:sync --city <city-slug> --poi-id <poi-id>` to run fetch + MDX conversion in one command.
+- Keep lower-level scripts for focused debugging: `pnpm wiki:bootstrap` (snapshot fetch) and `pnpm wiki:to-mdx` (JSON to MDX conversion).
 - `pnpm lint` runs ESLint with the Next `core-web-vitals` rules plus `eslint-config-prettier` to keep formatting conflicts out.
 - Prettier is configured with `prettier-plugin-tailwindcss` and `@ianvs/prettier-plugin-sort-imports`; rely on `pnpm prettier --write` or your editor integration so imports stay grouped and Tailwind classes remain sorted.
 
