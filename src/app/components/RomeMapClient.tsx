@@ -107,6 +107,7 @@ export const RomeMapClient = ({ citySlug, coordinates, initialZoom, pois }: Prop
         pois={pois}
         onZoomChange={(value) => setZoom(value)}
         onOpenPoiDetails={(poiId) => setSelectedPoiId(poiId)}
+        onMapClick={() => setSelectedPoiId(null)}
       />
       <aside
         className={`absolute right-0 top-0 z-20 h-full w-full max-w-md border-l border-black/10 bg-white shadow-2xl transition-transform duration-300 ${

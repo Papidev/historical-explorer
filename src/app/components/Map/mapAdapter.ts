@@ -23,6 +23,7 @@ export interface MapAdapter {
   getZoom: () => number | null;
   setOnZoomChange: (handler: ((zoom: number) => void) | null) => void;
   setOnOpenPoiDetails: (handler: ((poiId: string) => void) | null) => void;
+  setOnMapClick: (handler: (() => void) | null) => void;
   destroy: () => void;
 }
 
@@ -60,6 +61,7 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
   let pendingPois: Poi[] | null = null;
   let onZoomChange: ((zoom: number) => void) | null = null;
   let onOpenPoiDetails: ((poiId: string) => void) | null = null;
+  let onMapClick: (() => void) | null = null;
 
   const handleMapClick = (event: MouseEvent) => {
     const target = event.target;
@@ -69,6 +71,7 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
 
     const trigger = target.closest("[data-poi-open-details]");
     if (!trigger) {
+      onMapClick?.();
       return;
     }
 
@@ -159,6 +162,9 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
     },
     setOnOpenPoiDetails(handler) {
       onOpenPoiDetails = handler;
+    },
+    setOnMapClick(handler) {
+      onMapClick = handler;
     },
     destroy() {
       map?.getContainer().removeEventListener("click", handleMapClick);
