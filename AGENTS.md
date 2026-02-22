@@ -1,5 +1,10 @@
 # AGENTS – Implementation Notes
 
+## Before Starting Work
+- Always work on a branch, never on `main`.
+- Check your current branch with `git branch --show-current`.
+- If needed, create a branch before coding (example: `git checkout -b feat/<short-name>`).
+
 ## Current Stack & Entry Points
 - Next.js 16 App Router + React 19 live entirely under `src/app`; `src/app/page.tsx` renders the landing narrative, while `src/app/rome/page.tsx` mounts the interactive view.
 - Tailwind CSS v4 is imported once from `src/app/globals.css`; custom colors/fonts piggyback on CSS variables set there and the Geist font pair configured in `layout.tsx`.
@@ -29,12 +34,15 @@
 - Add a route at `src/app/<city>/page.tsx` to mount the new map and any descriptive copy.
 
 ## Tooling & Commands
+- Use `pnpm` exclusively for dependency management and scripts (do not use npm or yarn).
 - Use `pnpm install` to fetch deps, then the standard scripts: `pnpm dev`, `pnpm build`, `pnpm start`, `pnpm lint`. The dev server must boot without runtime or TypeScript errors before shipping changes.
 - `pnpm lint` runs ESLint with the Next `core-web-vitals` rules plus `eslint-config-prettier` to keep formatting conflicts out.
 - Prettier is configured with `prettier-plugin-tailwindcss` and `@ianvs/prettier-plugin-sort-imports`; rely on `pnpm prettier --write` or your editor integration so imports stay grouped and Tailwind classes remain sorted.
 
 ## Coding Standards & A11y
 - Write new components/hooks in TypeScript using PascalCase filenames; keep shared UI under `src/app/components` and domain-specific helpers beside their routes until they merit a shared home in `src/lib`.
+- Use `camelCase` for variables/functions, `PascalCase` for components/types/interfaces, and `SCREAMING_SNAKE_CASE` for constants.
+- Name hooks with a `use` prefix and factory helpers with a `create` prefix.
 - Favor a lightweight Domain-Driven Design mindset: model features around the domain language (cities, POIs, timelines) and keep logic close to the data source, but resist extra indirection unless it delivers clear value.
 - Keep React components declarative and push imperative map logic into adapters/utilities. Any `maplibre-gl` interaction must guard against double-mounts and clean up markers in `destroy()`.
 - Keep MDX boundaries strict: read and `serialize` MDX only in server code (`src/utils`/server components), and render with `MDXRemote` only in client components.
@@ -51,7 +59,11 @@
 - If a simpler solution exists with similar behavior, choose the simpler one.
 
 ## Testing & Verification
+- Do not write automated tests prematurely; add or expand tests only after the feature behavior and API shape are stable enough to avoid churn.
 - There is no automated map test harness yet; add colocated `*.test.tsx` files when introducing logic-heavy components and stub MapLibre APIs if needed.
+- Keep tests user-centric: verify visible behavior, interactions, and outcomes rather than implementation details.
+- Prefer accessible queries (for example `getByRole`, `getByLabelText`) and avoid brittle selectors.
+- Minimize mocking; only mock network boundaries when needed, and otherwise test real component behavior.
 - Always: (1) run `pnpm dev` to verify Rome loads, pan/zoom controls work, POI popup "Apri dettagli" opens the side panel, and MDX content renders when present; (2) run `pnpm lint`; (3) run `pnpm build` before raising a PR.
 - Document any manual QA (e.g., “verified zoom-to markers on Chrome + Safari”) in PR descriptions until automated coverage exists.
 
