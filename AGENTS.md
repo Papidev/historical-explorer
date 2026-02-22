@@ -56,6 +56,8 @@
 ## Feature Implementation Approach
 - Build every feature in small intermediate steps that can be tested end-to-end.
 - Start with the thinnest vertical slice that works, then iterate.
+- Before starting dense implementations, first check whether a consolidated, widely used, and up-to-date dependency can solve the problem.
+- Prefer adopting proven dependencies over re-inventing the wheel when the tradeoffs are acceptable for this project.
 - Prefer extending existing files/components before introducing new abstractions.
 - Keep data flow explicit and local; avoid “smart” indirection unless it clearly reduces complexity.
 - After each step, run the smallest useful verification (`dev` manual check, then `build`/`lint` as needed) before moving on.
