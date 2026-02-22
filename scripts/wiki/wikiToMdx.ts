@@ -1,3 +1,5 @@
+import wtf from "wtf_wikipedia";
+
 const escapeMdxText = (value: string) =>
   value
     .replace(/\\/g, "\\\\")
@@ -6,148 +8,111 @@ const escapeMdxText = (value: string) =>
 
 const escapeMdxUrl = (value: string) => value.replace(/ /g, "%20").replace(/\)/g, "%29");
 
-const normalizeWikiInline = (value: string) => {
-  const withoutExternalLinks = value
-    .replace(/\[((?:https?:)?\/\/[^\s\]]+)\s+([^\]]+)\]/g, "$2")
-    .replace(/\[((?:https?:)?\/\/[^\s\]]+)\]/g, "$1");
+const normalizeText = (value: string) => value.replace(/\(\s*\)/g, "").replace(/\s+/g, " ").trim();
 
-  const withInternalLinks = withoutExternalLinks
-    .replace(/\[\[[^|\]]+\|([^\]]+)\]\]/g, "$1")
-    .replace(/\[\[([^\]]+)\]\]/g, "$1");
-
-  const withoutTemplateTokens = withInternalLinks.replace(/\{\{[^{}]*\}\}/g, "");
-  const withoutReferences = withoutTemplateTokens
-    .replace(/<ref[^>]*\/>/gi, "")
-    .replace(/<ref[^>]*>[\s\S]*?<\/ref>/gi, "");
-
-  const withoutEmphasisMarkers = withoutReferences
-    .replace(/'''(.*?)'''/g, "$1")
-    .replace(/''(.*?)''/g, "$1");
-
-  return withoutEmphasisMarkers.replace(/\(\s*\)/g, "").replace(/\s+/g, " ").trim();
+const toHeading = (title: string, depth: number) => {
+  const level = Math.max(2, Math.min(6, depth + 2));
+  return `${"#".repeat(level)} ${escapeMdxText(title)}`;
 };
 
-const toHeadingIfWikiSyntax = (line: string) => {
-  const trimmed = line.trim();
-
-  const level3 = trimmed.match(/^===\s*(.*?)\s*===$/);
-  if (level3) {
-    return { level: 3 as const, title: level3[1].trim(), mdx: `### ${escapeMdxText(level3[1])}` };
+const toPlainSectionBlocks = (text: string) => {
+  const cleaned = text.replace(/\r\n/g, "\n").trim();
+  if (!cleaned) {
+    return [];
   }
 
-  const level2 = trimmed.match(/^==\s*(.*?)\s*==$/);
-  if (level2) {
-    return { level: 2 as const, title: level2[1].trim(), mdx: `## ${escapeMdxText(level2[1])}` };
-  }
-
-  return null;
+  return cleaned
+    .split(/\n{2,}/)
+    .map((block) => block.trim())
+    .filter(Boolean);
 };
 
-const toExternalLinkMdx = (value: string) => {
-  const withLabel = value.match(/^\[((?:https?:)?\/\/[^\s\]]+)\s+([^\]]+)\]$/i);
-  if (withLabel) {
-    const href = withLabel[1].startsWith("//") ? `https:${withLabel[1]}` : withLabel[1];
-    const safeHref = escapeMdxUrl(href);
-    const label = escapeMdxText(withLabel[2].trim());
-    return `[${label}](${safeHref})`;
+const toBulletItems = (block: string) => {
+  const lines = block
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean);
+
+  if (lines.length === 0 || !lines.every((line) => /^[*-]\s+/.test(line))) {
+    return [];
   }
 
-  const bare = value.match(/^\[((?:https?:)?\/\/[^\s\]]+)\]$/i);
-  if (bare) {
-    const href = bare[1].startsWith("//") ? `https:${bare[1]}` : bare[1];
-    const safeHref = escapeMdxUrl(href);
-    const label = escapeMdxText(href);
-    return `[${label}](${safeHref})`;
+  return lines
+    .map((line) => normalizeText(line.replace(/^[*-]\s+/, "")))
+    .filter(Boolean)
+    .map((line) => `- ${escapeMdxText(line)}`);
+};
+
+type LinkJson = {
+  text?: string;
+  type?: string;
+  site?: string;
+};
+
+type SectionLike = {
+  links: () => object | object[];
+};
+
+type LinkLike = {
+  json: () => unknown;
+};
+
+const toExternalLinks = (section: SectionLike | null) => {
+  if (!section) {
+    return [];
   }
 
-  return null;
+  const rawLinks = section.links();
+  const linkObjects = (Array.isArray(rawLinks) ? rawLinks : [rawLinks]) as LinkLike[];
+
+  const links = linkObjects
+    .map((link) => link.json() as LinkJson)
+    .filter((link) => link.type === "external" && typeof link.site === "string")
+    .map((link) => {
+      const href = link.site as string;
+      const safeHref = escapeMdxUrl(href);
+      const label = normalizeText(link.text ?? href);
+      return `- [${escapeMdxText(label)}](${safeHref})`;
+    });
+
+  return Array.from(new Set(links));
 };
 
 export const wikiTextToMdx = (content: string) => {
-  const normalized = content.replace(/\r\n/g, "\n").trim();
-  const lines = normalized.split("\n");
+  const doc = wtf(content);
+  const sections = doc.sections();
   const output: string[] = [];
-  let currentLevel2Heading = "";
-  let templateBlockDepth = 0;
 
-  let paragraph: string[] = [];
-  const flushParagraph = () => {
-    if (paragraph.length === 0) {
-      return;
-    }
-    output.push(escapeMdxText(paragraph.join(" ").replace(/\s+/g, " ").trim()));
-    paragraph = [];
-  };
+  for (const section of sections) {
+    const title = section.title().trim();
+    const lowerTitle = title.toLowerCase();
 
-  for (const rawLine of lines) {
-    const trimmed = rawLine.trim();
-    const templateOpenCount = (rawLine.match(/\{\{/g) ?? []).length;
-    const templateCloseCount = (rawLine.match(/\}\}/g) ?? []).length;
-
-    if (templateBlockDepth > 0) {
-      templateBlockDepth = Math.max(0, templateBlockDepth + templateOpenCount - templateCloseCount);
-      continue;
+    if (title) {
+      output.push(toHeading(title, section.depth()));
     }
 
-    // Skip top-level templates (infobox/navbox/single-line template directives).
-    if (trimmed.startsWith("{{")) {
-      if (templateOpenCount > templateCloseCount) {
-        templateBlockDepth = Math.max(0, templateOpenCount - templateCloseCount);
+    if (lowerTitle === "external links") {
+      const externalLinks = toExternalLinks(doc.section(title));
+      if (externalLinks.length > 0) {
+        output.push(externalLinks.join("\n"));
       }
       continue;
     }
 
-    if (
-      trimmed.length === 0 ||
-      trimmed.startsWith("__") ||
-      trimmed.startsWith("[[Category:") ||
-      trimmed.startsWith("[[File:") ||
-      trimmed.startsWith("<!--")
-    ) {
-      flushParagraph();
-      continue;
-    }
-
-    const heading = toHeadingIfWikiSyntax(rawLine);
-    if (heading) {
-      flushParagraph();
-      if (heading.level === 2) {
-        currentLevel2Heading = heading.title.toLowerCase();
-      }
-      output.push(heading.mdx);
-      continue;
-    }
-
-    if (trimmed.startsWith("*")) {
-      flushParagraph();
-      const listValue = trimmed.replace(/^\*\s*/, "");
-      if (currentLevel2Heading === "external links") {
-        const externalLinkMdx = toExternalLinkMdx(listValue);
-        if (externalLinkMdx) {
-          output.push(`- ${externalLinkMdx}`);
-          continue;
-        }
+    const blocks = toPlainSectionBlocks(section.text({}));
+    for (const block of blocks) {
+      const bullets = toBulletItems(block);
+      if (bullets.length > 0) {
+        output.push(bullets.join("\n"));
+        continue;
       }
 
-      const itemText = normalizeWikiInline(listValue);
-      if (itemText) {
-        output.push(`- ${escapeMdxText(itemText)}`);
+      const paragraph = normalizeText(block);
+      if (paragraph) {
+        output.push(escapeMdxText(paragraph));
       }
-      continue;
-    }
-
-    const normalizedLine = normalizeWikiInline(trimmed);
-    if (normalizedLine) {
-      paragraph.push(normalizedLine);
     }
   }
 
-  flushParagraph();
-
-  const mdx = `${output.join("\n\n")}\n`
-    .replace(/^\s*-\s*$/gm, "")
-    .replace(/\(\s*\)/g, "")
-    .replace(/\n{3,}/g, "\n\n");
-
-  return mdx;
+  return `${output.join("\n\n").replace(/\n{3,}/g, "\n\n").trim()}\n`;
 };
