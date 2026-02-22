@@ -59,6 +59,7 @@
 - Keep data flow explicit and local; avoid “smart” indirection unless it clearly reduces complexity.
 - After each step, run the smallest useful verification (`dev` manual check, then `build`/`lint` as needed) before moving on.
 - If a simpler solution exists with similar behavior, choose the simpler one.
+- When a feature is stable enough (behavior/API unlikely to change soon), update documentation accordingly: `README.md` for user/developer usage and `AGENTS.md` for implementation guidance/process updates.
 
 ## Testing & Verification
 - Do not write automated tests prematurely; add or expand tests only after the feature behavior and API shape are stable enough to avoid churn.
