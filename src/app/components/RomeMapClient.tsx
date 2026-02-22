@@ -11,16 +11,27 @@ type Props = {
   citySlug: string;
   coordinates: [number, number];
   initialZoom: number;
+  initialSelectedPoiId?: string | null;
   pois: Poi[];
 };
 
-export const RomeMapClient = ({ citySlug, coordinates, initialZoom, pois }: Props) => {
+export const RomeMapClient = ({
+  citySlug,
+  coordinates,
+  initialZoom,
+  initialSelectedPoiId = null,
+  pois,
+}: Props) => {
   const [zoom, setZoom] = useState(initialZoom);
-  const [selectedPoiId, setSelectedPoiId] = useState<string | null>(null);
+  const [selectedPoiId, setSelectedPoiId] = useState<string | null>(initialSelectedPoiId);
   const [dialogContentMdx, setDialogContentMdx] = useState<MDXRemoteSerializeResult | null>(null);
   const [isLoadingDialogContent, setIsLoadingDialogContent] = useState(false);
   const displayZoom = Number(zoom.toFixed(2));
   const selectedPoi = selectedPoiId ? pois.find((poi) => poi.id === selectedPoiId) : undefined;
+
+  useEffect(() => {
+    setSelectedPoiId(initialSelectedPoiId);
+  }, [initialSelectedPoiId]);
 
   useEffect(() => {
     if (!selectedPoi) {
