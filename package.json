@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "wiki:bootstrap": "tsx scripts/wiki/bootstrap.ts",
+    "wiki:to-mdx": "tsx scripts/wiki/toMdx.ts",
+    "wiki:sync": "tsx scripts/wiki/sync.ts",
+    "pp": "pnpm wiki:sync --city rome --poi-id 2505 --force"
   },
   "dependencies": {
     "@mdx-js/mdx": "^3.1.1",
@@ -15,7 +19,8 @@
     "next": "16.1.6",
     "next-mdx-remote": "^6.0.0",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "wtf_wikipedia": "^10.4.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.18",
@@ -24,12 +29,13 @@
     "@types/react-dom": "^19.2.3",
     "babel-plugin-react-compiler": "1.0.0",
     "baseline-browser-mapping": "^2.9.19",
-    "eslint": "^10.0.0",
+    "eslint": "^9.0.0",
     "eslint-config-next": "16.1.6",
     "eslint-config-prettier": "^10.1.8",
     "prettier": "^3.8.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4.1.18",
+    "tsx": "^4.20.6",
     "typescript": "^5.9.3"
   }
 }

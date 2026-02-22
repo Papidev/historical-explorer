@@ -5,21 +5,33 @@ import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote";
 import type { Poi } from "@/types/Poi";
 import { Map } from "@/app/components/Map";
 import { Callout } from "@/app/components/mdx/Callout";
+import { MdxLink } from "@/app/components/mdx/MdxLink";
 
 type Props = {
   citySlug: string;
   coordinates: [number, number];
   initialZoom: number;
+  initialSelectedPoiId?: string | null;
   pois: Poi[];
 };
 
-export const RomeMapClient = ({ citySlug, coordinates, initialZoom, pois }: Props) => {
+export const RomeMapClient = ({
+  citySlug,
+  coordinates,
+  initialZoom,
+  initialSelectedPoiId = null,
+  pois,
+}: Props) => {
   const [zoom, setZoom] = useState(initialZoom);
-  const [selectedPoiId, setSelectedPoiId] = useState<string | null>(null);
+  const [selectedPoiId, setSelectedPoiId] = useState<string | null>(initialSelectedPoiId);
   const [dialogContentMdx, setDialogContentMdx] = useState<MDXRemoteSerializeResult | null>(null);
   const [isLoadingDialogContent, setIsLoadingDialogContent] = useState(false);
   const displayZoom = Number(zoom.toFixed(2));
   const selectedPoi = selectedPoiId ? pois.find((poi) => poi.id === selectedPoiId) : undefined;
+
+  useEffect(() => {
+    setSelectedPoiId(initialSelectedPoiId);
+  }, [initialSelectedPoiId]);
 
   useEffect(() => {
     if (!selectedPoi) {
@@ -106,6 +118,7 @@ export const RomeMapClient = ({ citySlug, coordinates, initialZoom, pois }: Prop
         pois={pois}
         onZoomChange={(value) => setZoom(value)}
         onOpenPoiDetails={(poiId) => setSelectedPoiId(poiId)}
+        onMapClick={() => setSelectedPoiId(null)}
       />
       <aside
         className={`absolute right-0 top-0 z-20 h-full w-full max-w-md border-l border-black/10 bg-white shadow-2xl transition-transform duration-300 ${
@@ -135,7 +148,7 @@ export const RomeMapClient = ({ citySlug, coordinates, initialZoom, pois }: Prop
                   <p className="mt-4 text-black/60">Caricamento contenuto aggiuntivo...</p>
                 ) : dialogContentMdx ? (
                   <div className="poi-dialog-content mt-4">
-                    <MDXRemote {...dialogContentMdx} components={{ Callout }} />
+                    <MDXRemote {...dialogContentMdx} components={{ Callout, a: MdxLink }} />
                   </div>
                 ) : (
                   <p className="mt-4 text-black/60">
