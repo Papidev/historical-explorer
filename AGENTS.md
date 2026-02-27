@@ -10,6 +10,8 @@
 - If dependency installation fails, stop immediately and ask for help. Do not continue with alternative approaches intended to bypass the failed installation.
 - Wiki content pipeline for a single POI: prefer `pnpm wiki:sync --city <city-slug> --poi-id <poi-id>` to run fetch + MDX conversion in one command.
 - `pnpm lint` runs ESLint with the Next `core-web-vitals` rules plus `eslint-config-prettier` to keep formatting conflicts out.
+- During iteration, run the smallest useful verification; `pnpm lint` is a required final gate before handoff/PR, not after every tiny edit.
+- `pnpm lint` is not a full TypeScript type-check in this repo; when touching TS-heavy logic, also run `pnpm build` (or `tsc --noEmit` if a script is available) before considering the change complete.
 - Prettier is configured with `prettier-plugin-tailwindcss` and `@ianvs/prettier-plugin-sort-imports`; rely on `pnpm prettier --write` or your editor integration so imports stay grouped and Tailwind classes remain sorted.
 
 ## Coding Standards & A11y
