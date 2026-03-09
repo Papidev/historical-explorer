@@ -22,6 +22,7 @@
         "operator:type": "government",
         "tourism": "museum",
         "website": "https://www.museoetru.it",
+        "wikidata": "Q15055388",
         "wikimedia_commons": "Category:Museo nazionale etrusco di Villa Giulia",
         "wikipedia": "it:Museo nazionale etrusco di Villa Giulia"
       },
@@ -32,25 +33,7 @@
           41.9183575
         ]
       },
-      "id": "Q15055388"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Statua equestre di Marco Aurelio",
-        "name:en": "Equestrian statue of Marcus Aurelius (replica)",
-        "tourism": "artwork",
-        "wikimedia_commons": "Category:Replica of the Equestrian statue of Marcus Aurelius (Rome)",
-        "content_slug": "statua-equestre-di-marco-aurelio"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          12.4829351,
-          41.8933201
-        ]
-      },
-      "id": "Q21141671"
+      "id": "2505"
     }
   ]
 }
