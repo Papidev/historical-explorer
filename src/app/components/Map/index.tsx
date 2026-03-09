@@ -13,29 +13,25 @@ type Props = {
   onMapClick?: () => void;
 };
 
+type MapHandlers = {
+  onZoomChange?: Props["onZoomChange"];
+  onOpenPoiDetails?: Props["onOpenPoiDetails"];
+  onMapClick?: Props["onMapClick"];
+};
+
 const ZOOM_EPSILON = 0.001;
 
 export const Map = ({ coordinates, zoom, pois, onZoomChange, onOpenPoiDetails, onMapClick }: Props) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const adapterRef = useRef<MapAdapter | null>(null);
   const lastZoomFromMapRef = useRef<number | null>(null);
-  const onZoomChangeRef = useRef<Props["onZoomChange"]>(onZoomChange);
-  const onOpenPoiDetailsRef = useRef<Props["onOpenPoiDetails"]>(onOpenPoiDetails);
-  const onMapClickRef = useRef<Props["onMapClick"]>(onMapClick);
+  const handlersRef = useRef<MapHandlers>({ onZoomChange, onOpenPoiDetails, onMapClick });
   const lastCenterRef = useRef<[number, number] | null>(null);
   const initialViewRef = useRef({ center: coordinates, zoom });
 
   useEffect(() => {
-    onZoomChangeRef.current = onZoomChange;
-  }, [onZoomChange]);
-
-  useEffect(() => {
-    onOpenPoiDetailsRef.current = onOpenPoiDetails;
-  }, [onOpenPoiDetails]);
-
-  useEffect(() => {
-    onMapClickRef.current = onMapClick;
-  }, [onMapClick]);
+    handlersRef.current = { onZoomChange, onOpenPoiDetails, onMapClick };
+  }, [onZoomChange, onOpenPoiDetails, onMapClick]);
 
   useEffect(() => {
     if (adapterRef.current || !containerRef.current) {
@@ -45,10 +41,10 @@ export const Map = ({ coordinates, zoom, pois, onZoomChange, onOpenPoiDetails, o
     const adapter = createMapLibreAdapter(initialViewRef.current);
     adapter.setOnZoomChange((value) => {
       lastZoomFromMapRef.current = value;
-      onZoomChangeRef.current?.(value);
+      handlersRef.current.onZoomChange?.(value);
     });
-    adapter.setOnOpenPoiDetails((poiId) => onOpenPoiDetailsRef.current?.(poiId));
-    adapter.setOnMapClick(() => onMapClickRef.current?.());
+    adapter.setOnOpenPoiDetails((poiId) => handlersRef.current.onOpenPoiDetails?.(poiId));
+    adapter.setOnMapClick(() => handlersRef.current.onMapClick?.());
     adapter.mount(containerRef.current);
     adapterRef.current = adapter;
 
