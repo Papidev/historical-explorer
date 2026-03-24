@@ -120,6 +120,52 @@ const writeMdxFile = (poiId: string) => {
   writeFileSync(outputFilePath, wikiTextToMdx(parsed.content), "utf-8");
 };
 
+const refreshTransformedPoiPipeline = async (poiId: string) => {
+  const { rawFeature, rawFeatureIndex, rawGeoJson } = findRawFeatureByPoiId(poiId);
+  const refreshedPoiId = writeTransformedPoi(rawFeature, rawFeatureIndex, rawGeoJson);
+  await writeWikiSnapshot(refreshedPoiId);
+  writeMdxFile(refreshedPoiId);
+};
+
+const refreshWikiPipeline = async (poiId: string) => {
+  await writeWikiSnapshot(poiId);
+  writeMdxFile(poiId);
+};
+
+const deleteMdxFile = (poiId: string) => {
+  const outputFilePath = path.join(mdxDirectoryPath, `${sanitizePoiIdForFile(poiId)}.mdx`);
+  if (existsSync(outputFilePath)) {
+    unlinkSync(outputFilePath);
+  }
+};
+
+const deleteWikiSnapshotFile = (poiId: string) => {
+  const outputFilePath = buildOutputFilePath(getDefaultOutputDir(), poiId);
+  if (existsSync(outputFilePath)) {
+    unlinkSync(outputFilePath);
+  }
+};
+
+const deleteWikiPipeline = (poiId: string) => {
+  deleteWikiSnapshotFile(poiId);
+  deleteMdxFile(poiId);
+};
+
+const deleteTransformedPoiPipeline = (poiId: string) => {
+  const transformedGeoJson = parseGeoJson(transformedPath);
+  const nextFeatures = (transformedGeoJson.features ?? []).filter((feature) => feature.wikidataId !== poiId);
+  const nextGeoJson = {
+    type: transformedGeoJson.type ?? "FeatureCollection",
+    generator: transformedGeoJson.generator,
+    copyright: transformedGeoJson.copyright,
+    timestamp: transformedGeoJson.timestamp,
+    features: nextFeatures,
+  };
+
+  writeFileSync(transformedPath, `${JSON.stringify(nextGeoJson, null, 2)}\n`, "utf-8");
+  deleteWikiPipeline(poiId);
+};
+
 export const generateSinglePoiJson = async (formData: FormData) => {
   const rawFeatureIndex = Number(formData.get("rawFeatureIndex"));
   if (!Number.isInteger(rawFeatureIndex) || rawFeatureIndex < 0) {
@@ -145,8 +191,7 @@ export const refreshTransformedPoiJson = async (formData: FormData) => {
     throw new Error("Invalid POI id.");
   }
 
-  const { rawFeature, rawFeatureIndex, rawGeoJson } = findRawFeatureByPoiId(poiId);
-  writeTransformedPoi(rawFeature, rawFeatureIndex, rawGeoJson);
+  await refreshTransformedPoiPipeline(poiId);
   revalidatePath("/admin");
 };
 
@@ -156,7 +201,7 @@ export const refreshWikiJson = async (formData: FormData) => {
     throw new Error("Invalid POI id.");
   }
 
-  await writeWikiSnapshot(poiId);
+  await refreshWikiPipeline(poiId);
   revalidatePath("/admin");
 };
 
@@ -176,17 +221,7 @@ export const deleteTransformedPoiJson = async (formData: FormData) => {
     throw new Error("Invalid POI id.");
   }
 
-  const transformedGeoJson = parseGeoJson(transformedPath);
-  const nextFeatures = (transformedGeoJson.features ?? []).filter((feature) => feature.wikidataId !== poiId);
-  const nextGeoJson = {
-    type: transformedGeoJson.type ?? "FeatureCollection",
-    generator: transformedGeoJson.generator,
-    copyright: transformedGeoJson.copyright,
-    timestamp: transformedGeoJson.timestamp,
-    features: nextFeatures,
-  };
-
-  writeFileSync(transformedPath, `${JSON.stringify(nextGeoJson, null, 2)}\n`, "utf-8");
+  deleteTransformedPoiPipeline(poiId);
   revalidatePath("/admin");
 };
 
@@ -196,11 +231,7 @@ export const deleteWikiJson = async (formData: FormData) => {
     throw new Error("Invalid POI id.");
   }
 
-  const outputFilePath = buildOutputFilePath(getDefaultOutputDir(), poiId);
-  if (existsSync(outputFilePath)) {
-    unlinkSync(outputFilePath);
-  }
-
+  deleteWikiPipeline(poiId);
   revalidatePath("/admin");
 };
 
@@ -210,10 +241,6 @@ export const deleteMdx = async (formData: FormData) => {
     throw new Error("Invalid POI id.");
   }
 
-  const outputFilePath = path.join(mdxDirectoryPath, `${sanitizePoiIdForFile(poiId)}.mdx`);
-  if (existsSync(outputFilePath)) {
-    unlinkSync(outputFilePath);
-  }
-
+  deleteMdxFile(poiId);
   revalidatePath("/admin");
 };

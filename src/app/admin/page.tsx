@@ -12,8 +12,8 @@ import { loadPoiLists } from "./lib/loadPoiLists";
 
 export const dynamic = "force-dynamic";
 
-export default function AdminPage() {
-  const { rows, error } = loadPoiLists();
+export default async function AdminPage() {
+  const { rows, error } = await loadPoiLists();
 
   return (
     <main className="flex h-screen min-h-screen flex-col bg-neutral-50 p-4 sm:p-6">

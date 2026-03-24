@@ -1,3 +1,5 @@
+import type { MDXRemoteSerializeResult } from "next-mdx-remote";
+
 export type GeoJsonFeature = {
   id?: string | number;
   wikidataId?: string;
@@ -21,7 +23,12 @@ export type AdminPoiRow = {
   transformedPoi?: PoiItem;
   wikiPoi?: PoiItem;
   mdxPoi?: PoiItem;
+  rawUpdatedAt?: string;
+  transformedUpdatedAt?: string;
+  wikiUpdatedAt?: string;
+  mdxUpdatedAt?: string;
   transformedJson?: string;
   wikiJson?: string;
   mdxContent?: string;
+  mdxSource?: MDXRemoteSerializeResult<Record<string, unknown>, Record<string, unknown>>;
 };

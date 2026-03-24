@@ -1,5 +1,7 @@
-import { readdirSync, readFileSync } from "node:fs";
+import { readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
+import type { MDXRemoteSerializeResult } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
 import type { AdminPoiRow, GeoJson, GeoJsonFeature, PoiItem } from "./types";
 
 const toRowKey = (value: string) => value.trim().toLowerCase();
@@ -9,6 +11,12 @@ const parseGeoJson = (filePath: string) => {
 
   return JSON.parse(raw) as GeoJson;
 };
+
+const formatUpdatedAt = (filePath: string) =>
+  new Intl.DateTimeFormat("it-IT", {
+    dateStyle: "short",
+    timeStyle: "short",
+  }).format(statSync(filePath).mtime);
 
 const toPoiItems = (features: GeoJsonFeature[] | undefined) =>
   (features ?? []).map((feature, index) => {
@@ -41,72 +49,89 @@ const loadWikiSnapshots = (directoryPath: string) =>
       return {
         item: { id, name: `${id}.json`, featureIndex: index } satisfies PoiItem,
         json: raw,
+        updatedAt: formatUpdatedAt(filePath),
       };
     });
 
-const loadMdxFiles = (directoryPath: string) =>
-  readdirSync(directoryPath)
-    .filter((fileName) => fileName.endsWith(".mdx"))
-    .sort()
-    .map((fileName, index) => {
-      const filePath = path.join(directoryPath, fileName);
-      const raw = readFileSync(filePath, "utf-8");
-      const id = fileName.replace(/\.mdx$/u, "") || `missing-id-${index}`;
+const loadMdxFiles = async (directoryPath: string) =>
+  Promise.all(
+    readdirSync(directoryPath)
+      .filter((fileName) => fileName.endsWith(".mdx"))
+      .sort()
+      .map(async (fileName, index) => {
+        const filePath = path.join(directoryPath, fileName);
+        const raw = readFileSync(filePath, "utf-8");
+        const id = fileName.replace(/\.mdx$/u, "") || `missing-id-${index}`;
 
-      return {
-        item: { id, name: fileName, featureIndex: index } satisfies PoiItem,
-        content: raw,
-      };
-    });
+        return {
+          item: { id, name: fileName, featureIndex: index } satisfies PoiItem,
+          content: raw,
+          source: (await serialize(raw)) as MDXRemoteSerializeResult<Record<string, unknown>, Record<string, unknown>>,
+          updatedAt: formatUpdatedAt(filePath),
+        };
+      }),
+  );
 
 const toPoiRows = (
   rawPois: PoiItem[],
-  transformedPois: Array<{ item: PoiItem; json: string }>,
-  wikiPois: Array<{ item: PoiItem; json: string }>,
-  mdxPois: Array<{ item: PoiItem; content: string }>,
+  rawUpdatedAt: string,
+  transformedPois: Array<{ item: PoiItem; json: string; updatedAt: string }>,
+  wikiPois: Array<{ item: PoiItem; json: string; updatedAt: string }>,
+  mdxPois: Array<{
+    item: PoiItem;
+    content: string;
+    source: MDXRemoteSerializeResult<Record<string, unknown>, Record<string, unknown>>;
+    updatedAt: string;
+  }>,
 ) => {
   const rowsById = new Map<string, AdminPoiRow>();
 
   for (const rawPoi of rawPois) {
-    rowsById.set(toRowKey(rawPoi.id), { id: rawPoi.id, rawPoi });
+    rowsById.set(toRowKey(rawPoi.id), { id: rawPoi.id, rawPoi, rawUpdatedAt });
   }
 
-  for (const { item, json } of transformedPois) {
+  for (const { item, json, updatedAt } of transformedPois) {
     const rowKey = toRowKey(item.id);
     const row = rowsById.get(rowKey);
     rowsById.set(
       rowKey,
-      row ? { ...row, transformedPoi: item, transformedJson: json } : { id: item.id, transformedPoi: item, transformedJson: json },
+      row
+        ? { ...row, transformedPoi: item, transformedJson: json, transformedUpdatedAt: updatedAt }
+        : { id: item.id, transformedPoi: item, transformedJson: json, transformedUpdatedAt: updatedAt },
     );
   }
 
-  for (const { item, json } of wikiPois) {
+  for (const { item, json, updatedAt } of wikiPois) {
     const rowKey = toRowKey(item.id);
     const row = rowsById.get(rowKey);
     rowsById.set(
       rowKey,
-      row ? { ...row, wikiPoi: item, wikiJson: json } : { id: item.id, wikiPoi: item, wikiJson: json },
+      row ? { ...row, wikiPoi: item, wikiJson: json, wikiUpdatedAt: updatedAt } : { id: item.id, wikiPoi: item, wikiJson: json, wikiUpdatedAt: updatedAt },
     );
   }
 
-  for (const { item, content } of mdxPois) {
+  for (const { item, content, source, updatedAt } of mdxPois) {
     const rowKey = toRowKey(item.id);
     const row = rowsById.get(rowKey);
     rowsById.set(
       rowKey,
-      row ? { ...row, mdxPoi: item, mdxContent: content } : { id: item.id, mdxPoi: item, mdxContent: content },
+      row
+        ? { ...row, mdxPoi: item, mdxContent: content, mdxSource: source, mdxUpdatedAt: updatedAt }
+        : { id: item.id, mdxPoi: item, mdxContent: content, mdxSource: source, mdxUpdatedAt: updatedAt },
     );
   }
 
   return Array.from(rowsById.values());
 };
 
-export const loadPoiLists = () => {
+export const loadPoiLists = async () => {
   try {
     const rawPath = path.join(process.cwd(), "public", "data", "raw", "rome-pois-raw.geojson");
     const transformedPath = path.join(process.cwd(), "public", "data", "rome-pois.geojson");
     const wikiDirectoryPath = path.join(process.cwd(), "data", "wiki");
     const mdxDirectoryPath = path.join(process.cwd(), "content", "pois", "rome");
+    const rawUpdatedAt = formatUpdatedAt(rawPath);
+    const transformedUpdatedAt = formatUpdatedAt(transformedPath);
 
     const rawPois = toPoiItems(parseGeoJson(rawPath).features);
     const transformedGeoJson = parseGeoJson(transformedPath);
@@ -117,10 +142,11 @@ export const loadPoiLists = () => {
         featureIndex: index,
       },
       json: JSON.stringify(feature, null, 2),
+      updatedAt: transformedUpdatedAt,
     }));
     const wikiPois = loadWikiSnapshots(wikiDirectoryPath);
-    const mdxPois = loadMdxFiles(mdxDirectoryPath);
-    const rows = toPoiRows(rawPois, transformedPois, wikiPois, mdxPois);
+    const mdxPois = await loadMdxFiles(mdxDirectoryPath);
+    const rows = toPoiRows(rawPois, rawUpdatedAt, transformedPois, wikiPois, mdxPois);
 
     return { rows, error: null };
   } catch (error) {

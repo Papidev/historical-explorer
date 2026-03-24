@@ -24,21 +24,6 @@
     },
     {
       "type": "Feature",
-      "wikidataId": "Q111193124",
-      "properties": {
-        "name": "Torre Valca",
-        "content_slug": "torre-valca"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          12.5292531,
-          41.8581318
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "wikidataId": "Q124154237",
       "properties": {
         "name": "Basilica costantiniana di S. Agnese",
