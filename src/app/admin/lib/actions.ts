@@ -3,8 +3,8 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { revalidatePath } from "next/cache";
-import { toCitySlug } from "../../../scripts/wiki/normalize";
-import { transformRawPoiFeature } from "../../../scripts/wiki/transformRawPoiFeature";
+import { toCitySlug } from "../../../../scripts/wiki/normalize";
+import { transformRawPoiFeature } from "../../../../scripts/wiki/transformRawPoiFeature";
 
 type GeoJsonFeature = {
   id?: string | number;
