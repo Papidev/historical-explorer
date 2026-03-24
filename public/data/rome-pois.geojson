@@ -21,6 +21,21 @@
           41.8953968
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "wikidataId": "Q111193124",
+      "properties": {
+        "name": "Torre Valca",
+        "content_slug": "torre-valca"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.5292531,
+          41.8581318
+        ]
+      }
     }
   ]
 }
