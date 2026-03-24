@@ -36,6 +36,22 @@
           41.8581318
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "wikidataId": "Q124154237",
+      "properties": {
+        "name": "Basilica costantiniana di S. Agnese",
+        "wikimedia_commons": "Category:Sant'Agnese fuori le mura (Rome) - Basilica costantiniana",
+        "content_slug": "basilica-costantiniana-di-s-agnese"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.5173079,
+          41.9231188
+        ]
+      }
     }
   ]
 }
