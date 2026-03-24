@@ -1,7 +1,6 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import { resolveContentSlugForPoi } from "./contentSlugResolver";
-import { toCitySlug } from "./normalize";
+import { sanitizePoiIdForFile, toCitySlug } from "./normalize";
 import { wikiTextToMdx } from "./wikiToMdx";
 
 type CliOptions = {
@@ -69,9 +68,6 @@ const printHelpAndExit = (code: number): never => {
   process.exit(code);
 };
 
-const buildDefaultGeoJsonPath = (city: string) =>
-  path.join(process.cwd(), "public", "data", `${toCitySlug(city)}-pois.geojson`);
-
 const buildDefaultInputDir = () => path.join(process.cwd(), "data", "wiki");
 
 const buildDefaultOutputDir = (city: string) =>
@@ -108,7 +104,6 @@ const main = () => {
   const city = options.city as string;
   const poiId = options.poiId as string;
   const inputDir = options.inputDir ? path.resolve(options.inputDir) : buildDefaultInputDir();
-  const geoJsonPath = options.geoJsonPath ? path.resolve(options.geoJsonPath) : buildDefaultGeoJsonPath(city);
   const outputDir = options.outputDir ? path.resolve(options.outputDir) : buildDefaultOutputDir(city);
 
   const wikiJsonPath = path.join(inputDir, `${poiId}.json`);
@@ -117,8 +112,7 @@ const main = () => {
     throw new Error(`POI id mismatch: expected ${poiId} but found ${wiki.id} in ${wikiJsonPath}`);
   }
 
-  const contentSlug = resolveContentSlugForPoi(geoJsonPath, poiId);
-  const outputPath = path.join(outputDir, `${poiId}-${contentSlug}.mdx`);
+  const outputPath = path.join(outputDir, `${sanitizePoiIdForFile(poiId)}.mdx`);
 
   if (existsSync(outputPath) && !options.force) {
     console.log(`Skip: ${outputPath} already exists. Use --force to overwrite.`);

@@ -1,11 +1,19 @@
-import { PoiColumn } from "./components/PoiColumn";
-import { deleteSinglePoiJson, generateSinglePoiJson } from "./lib/actions";
+import { PoiRowsTable } from "./components/PoiRowsTable";
+import {
+  deleteTransformedPoiJson,
+  deleteMdx,
+  deleteWikiJson,
+  generateSinglePoiJson,
+  refreshMdx,
+  refreshTransformedPoiJson,
+  refreshWikiJson,
+} from "./lib/actions";
 import { loadPoiLists } from "./lib/loadPoiLists";
 
 export const dynamic = "force-dynamic";
 
 export default function AdminPage() {
-  const { rawPois, transformedPois, error } = loadPoiLists();
+  const { rows, error } = loadPoiLists();
 
   return (
     <main className="flex h-screen min-h-screen flex-col bg-neutral-50 p-4 sm:p-6">
@@ -16,26 +24,16 @@ export default function AdminPage() {
       {error ? (
         <section className="rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-900">{error}</section>
       ) : (
-        <section className="grid min-h-0 flex-1 grid-cols-1 gap-4 lg:grid-cols-2">
-          <PoiColumn
-            title="Raw POIs"
-            items={rawPois}
-            action={generateSinglePoiJson}
-            actionFieldName="rawFeatureIndex"
-            submitLabel="Generate JSON"
-            pendingLabel="Generating..."
-            submitTone="primary"
-          />
-          <PoiColumn
-            title="Transformed POIs"
-            items={transformedPois}
-            action={deleteSinglePoiJson}
-            actionFieldName="poiId"
-            submitLabel="Delete"
-            pendingLabel="Deleting..."
-            submitTone="danger"
-          />
-        </section>
+        <PoiRowsTable
+          rows={rows}
+          generateAction={generateSinglePoiJson}
+          refreshTransformedAction={refreshTransformedPoiJson}
+          refreshWikiAction={refreshWikiJson}
+          refreshMdxAction={refreshMdx}
+          deleteTransformedAction={deleteTransformedPoiJson}
+          deleteWikiAction={deleteWikiJson}
+          deleteMdxAction={deleteMdx}
+        />
       )}
     </main>
   );

@@ -29,6 +29,10 @@ export const pickString = (properties: Record<string, unknown>, ...keys: string[
 };
 
 export const getFeatureId = (feature: GeoJsonFeature, fallback: string) => {
+  if (typeof feature.wikidataId === "string" && feature.wikidataId.trim().length > 0) {
+    return feature.wikidataId;
+  }
+
   if (typeof feature.id === "string" && feature.id.trim().length > 0) {
     return feature.id;
   }

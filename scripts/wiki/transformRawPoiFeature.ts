@@ -15,7 +15,6 @@ const SINGLE_POI_PROPERTY_KEYS = [
   "operator:type",
   "tourism",
   "website",
-  "wikidata",
   "wikimedia_commons",
   "wikipedia",
 ] as const;
@@ -38,7 +37,7 @@ export const transformRawPoiFeature = (
 
   return {
     type: "Feature",
-    id: poiId,
+    wikidataId: poiId,
     properties: transformedProperties,
     geometry: feature.geometry,
   };

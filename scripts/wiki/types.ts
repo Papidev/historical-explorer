@@ -4,6 +4,7 @@ export type GeoJson = {
 
 export type GeoJsonFeature = {
   id?: string | number;
+  wikidataId?: string;
   properties?: Record<string, unknown>;
   geometry?: {
     type?: string;

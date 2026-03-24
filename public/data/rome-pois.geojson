@@ -6,34 +6,21 @@
   "features": [
     {
       "type": "Feature",
+      "wikidataId": "Q1541068",
       "properties": {
-        "addr:city": "Roma",
-        "addr:country": "IT",
-        "addr:housename": "Villa Giulia",
-        "addr:housenumber": "9",
-        "addr:postcode": "00196",
-        "addr:street": "Piazzale di Villa Giulia",
-        "content_slug": "museo-nazionale-etrusco-di-villa-giulia",
-        "email": "mn-etru@beniculturali.it",
-        "museum": "history",
-        "name": "Museo Nazionale Etrusco di Villa Giulia",
-        "name:en": "National Etruscan Museum",
-        "operator": "Ministero della cultura",
-        "operator:type": "government",
-        "tourism": "museum",
-        "website": "https://www.museoetru.it",
-        "wikidata": "Q15055388",
-        "wikimedia_commons": "Category:Museo nazionale etrusco di Villa Giulia",
-        "wikipedia": "it:Museo nazionale etrusco di Villa Giulia"
+        "name": "Area sacra dell'Argentina",
+        "tourism": "attraction",
+        "wikimedia_commons": "Category:Largo di Torre Argentina",
+        "wikipedia": "it:Largo di Torre Argentina",
+        "content_slug": "area-sacra-dell-argentina"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          12.4778078,
-          41.9183575
+          12.4768864,
+          41.8953968
         ]
-      },
-      "id": "2505"
+      }
     }
   ]
 }

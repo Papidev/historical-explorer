@@ -17,7 +17,7 @@ export const SubmitButton = ({
     <button
       type="submit"
       disabled={pending}
-      className={`mt-3 inline-flex items-center rounded-md px-3 py-1.5 text-xs font-medium text-white transition disabled:cursor-not-allowed disabled:opacity-50 ${
+      className={`inline-flex items-center rounded-md px-3 py-1.5 text-xs font-medium text-white transition disabled:cursor-not-allowed disabled:opacity-50 ${
         tone === "danger"
           ? "border border-red-700/20 bg-red-700 hover:bg-red-700/90"
           : "border border-black/15 bg-black hover:bg-black/85"
