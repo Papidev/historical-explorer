@@ -7,6 +7,7 @@ import {
   refreshMdx,
   refreshTransformedPoiJson,
   refreshWikiJson,
+  saveMdx,
 } from "./lib/actions";
 import { loadPoiLists } from "./lib/loadPoiLists";
 
@@ -30,6 +31,7 @@ export default async function AdminPage() {
           refreshTransformedAction={refreshTransformedPoiJson}
           refreshWikiAction={refreshWikiJson}
           refreshMdxAction={refreshMdx}
+          saveMdxAction={saveMdx}
           deleteTransformedAction={deleteTransformedPoiJson}
           deleteWikiAction={deleteWikiJson}
           deleteMdxAction={deleteMdx}

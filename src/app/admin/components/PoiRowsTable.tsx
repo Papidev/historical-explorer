@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
 import { MDXRemote } from "next-mdx-remote";
 import { Callout } from "@/app/components/mdx/Callout";
 import { MdxLink } from "@/app/components/mdx/MdxLink";
@@ -49,6 +49,8 @@ type SelectedPanel =
   | {
       title: string;
       kind: "mdx";
+      poiId: string;
+      content: string;
       source: NonNullable<AdminPoiRow["mdxSource"]>;
     };
 
@@ -58,6 +60,7 @@ export const PoiRowsTable = ({
   refreshTransformedAction,
   refreshWikiAction,
   refreshMdxAction,
+  saveMdxAction,
   deleteTransformedAction,
   deleteWikiAction,
   deleteMdxAction,
@@ -67,11 +70,15 @@ export const PoiRowsTable = ({
   refreshTransformedAction: (formData: FormData) => Promise<void>;
   refreshWikiAction: (formData: FormData) => Promise<void>;
   refreshMdxAction: (formData: FormData) => Promise<void>;
+  saveMdxAction: (formData: FormData) => Promise<void>;
   deleteTransformedAction: (formData: FormData) => Promise<void>;
   deleteWikiAction: (formData: FormData) => Promise<void>;
   deleteMdxAction: (formData: FormData) => Promise<void>;
 }) => {
   const [selectedPanel, setSelectedPanel] = useState<SelectedPanel | null>(null);
+  const [mdxMode, setMdxMode] = useState<"preview" | "edit">("preview");
+  const [draftMdx, setDraftMdx] = useState("");
+  const [isSavingMdx, startSavingMdx] = useTransition();
 
   return (
     <>
@@ -111,7 +118,9 @@ export const PoiRowsTable = ({
                           type="button"
                           onClick={() =>
                             row.transformedJson
-                              ? setSelectedPanel({ title: `${row.id} Rome JSON`, kind: "text", content: row.transformedJson })
+                              ? (setSelectedPanel({ title: `${row.id} Rome JSON`, kind: "text", content: row.transformedJson }),
+                                setMdxMode("preview"),
+                                setDraftMdx(""))
                               : null
                           }
                           className="inline-flex items-center rounded-md border border-black/15 bg-white px-3 py-1.5 text-xs font-medium text-black transition hover:bg-black/[0.03]"
@@ -146,7 +155,11 @@ export const PoiRowsTable = ({
                         <button
                           type="button"
                           onClick={() =>
-                            row.wikiJson ? setSelectedPanel({ title: `${row.id} Wiki JSON`, kind: "text", content: row.wikiJson }) : null
+                            row.wikiJson
+                              ? (setSelectedPanel({ title: `${row.id} Wiki JSON`, kind: "text", content: row.wikiJson }),
+                                setMdxMode("preview"),
+                                setDraftMdx(""))
+                              : null
                           }
                           className="inline-flex items-center rounded-md border border-black/15 bg-white px-3 py-1.5 text-xs font-medium text-black transition hover:bg-black/[0.03]"
                         >
@@ -180,7 +193,17 @@ export const PoiRowsTable = ({
                         <button
                           type="button"
                           onClick={() =>
-                            row.mdxSource ? setSelectedPanel({ title: `${row.id} MDX`, kind: "mdx", source: row.mdxSource }) : null
+                            row.mdxSource
+                              ? (setSelectedPanel({
+                                  title: `${row.id} MDX`,
+                                  kind: "mdx",
+                                  poiId: row.id,
+                                  content: row.mdxContent ?? "",
+                                  source: row.mdxSource,
+                                }),
+                                setMdxMode("preview"),
+                                setDraftMdx(row.mdxContent ?? ""))
+                              : null
                           }
                           className="inline-flex items-center rounded-md border border-black/15 bg-white px-3 py-1.5 text-xs font-medium text-black transition hover:bg-black/[0.03]"
                         >
@@ -217,25 +240,85 @@ export const PoiRowsTable = ({
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/25 p-6">
           <div className="flex h-[min(80vh,720px)] w-[min(960px,100%)] flex-col overflow-hidden rounded-2xl border border-black/10 bg-white shadow-2xl">
             <div className="flex items-center justify-between border-b border-black/10 px-5 py-4">
-              <p className="text-sm font-semibold text-black">{selectedPanel.title}</p>
-              <button
-                type="button"
-                onClick={() => setSelectedPanel(null)}
-                className="inline-flex items-center rounded-md border border-black/15 bg-white px-3 py-1.5 text-xs font-medium text-black transition hover:bg-black/[0.03]"
-              >
-                Close
-              </button>
+              <div className="flex items-center gap-3">
+                <p className="text-sm font-semibold text-black">{selectedPanel.title}</p>
+                {selectedPanel.kind === "mdx" ? (
+                  <div className="flex rounded-md border border-black/10 bg-neutral-100 p-1">
+                    <button
+                      type="button"
+                      onClick={() => setMdxMode("preview")}
+                      className={`rounded px-2 py-1 text-xs font-medium transition ${
+                        mdxMode === "preview" ? "bg-white text-black shadow-sm" : "text-black/60 hover:text-black"
+                      }`}
+                    >
+                      Preview
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setMdxMode("edit")}
+                      className={`rounded px-2 py-1 text-xs font-medium transition ${
+                        mdxMode === "edit" ? "bg-white text-black shadow-sm" : "text-black/60 hover:text-black"
+                      }`}
+                    >
+                      Edit
+                    </button>
+                  </div>
+                ) : null}
+              </div>
+              <div className="flex items-center gap-2">
+                {selectedPanel.kind === "mdx" && mdxMode === "edit" ? (
+                  <button
+                    type="button"
+                    disabled={isSavingMdx}
+                    onClick={() => {
+                      startSavingMdx(async () => {
+                        const formData = new FormData();
+                        formData.set("poiId", selectedPanel.poiId);
+                        formData.set("content", draftMdx);
+                        await saveMdxAction(formData);
+                        setSelectedPanel(null);
+                        setMdxMode("preview");
+                        setDraftMdx("");
+                      });
+                    }}
+                    className="inline-flex items-center rounded-md border border-black/15 bg-black px-3 py-1.5 text-xs font-medium text-white transition hover:bg-black/85 disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    {isSavingMdx ? "Saving..." : "Save"}
+                  </button>
+                ) : null}
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSelectedPanel(null);
+                    setMdxMode("preview");
+                    setDraftMdx("");
+                  }}
+                  className="inline-flex items-center rounded-md border border-black/15 bg-white px-3 py-1.5 text-xs font-medium text-black transition hover:bg-black/[0.03]"
+                >
+                  Close
+                </button>
+              </div>
             </div>
             {selectedPanel.kind === "text" ? (
               <pre className="flex-1 overflow-auto whitespace-pre-wrap break-words bg-neutral-50 px-5 py-4 text-xs leading-5 text-black">
                 {selectedPanel.content}
               </pre>
             ) : null}
-            {selectedPanel.kind === "mdx" ? (
+            {selectedPanel.kind === "mdx" && mdxMode === "preview" ? (
               <div className="flex-1 overflow-auto bg-neutral-50 px-5 py-4 text-sm leading-6 text-black">
                 <div className="poi-dialog-content">
                   <MDXRemote {...selectedPanel.source} components={{ Callout, a: MdxLink }} />
                 </div>
+              </div>
+            ) : null}
+            {selectedPanel.kind === "mdx" && mdxMode === "edit" ? (
+              <div className="flex-1 overflow-auto bg-neutral-50 p-5">
+                <textarea
+                  value={draftMdx}
+                  onChange={(event) => setDraftMdx(event.target.value)}
+                  spellCheck={false}
+                  className="h-full min-h-full w-full resize-none rounded-xl border border-black/10 bg-white p-4 font-mono text-sm leading-6 text-black shadow-inner outline-none"
+                />
               </div>
             ) : null}
           </div>

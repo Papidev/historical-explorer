@@ -244,3 +244,20 @@ export const deleteMdx = async (formData: FormData) => {
   deleteMdxFile(poiId);
   revalidatePath("/admin");
 };
+
+export const saveMdx = async (formData: FormData) => {
+  const poiId = formData.get("poiId");
+  if (typeof poiId !== "string" || poiId.trim().length === 0) {
+    throw new Error("Invalid POI id.");
+  }
+
+  const content = formData.get("content");
+  if (typeof content !== "string") {
+    throw new Error("Invalid MDX content.");
+  }
+
+  const outputFilePath = path.join(mdxDirectoryPath, `${sanitizePoiIdForFile(poiId)}.mdx`);
+  writeFileSync(outputFilePath, content, "utf-8");
+  revalidatePath("/admin");
+  revalidatePath("/rome");
+};
