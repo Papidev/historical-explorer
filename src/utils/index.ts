@@ -9,6 +9,7 @@ type GeoJson = {
 
 type GeoJsonFeature = {
   id?: string | number;
+  wikidataId?: string;
   properties?: Record<string, unknown>;
   geometry?: {
     type?: string;
@@ -34,6 +35,13 @@ const toCitySlug = (city: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
 
+const sanitizePoiIdForFile = (poiId: string) =>
+  poiId
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "") || "unknown-poi";
+
 export const getPoiDialogContent = async (
   city: string,
   contentSlug: string,
@@ -43,13 +51,10 @@ export const getPoiDialogContent = async (
     return undefined;
   }
 
-  const filePath = path.join(
-    process.cwd(),
-    "content",
-    "pois",
-    toCitySlug(city),
-    `${poiId}-${contentSlug}.mdx`,
-  );
+  const directoryPath = path.join(process.cwd(), "content", "pois", toCitySlug(city));
+  const preferredFilePath = path.join(directoryPath, `${sanitizePoiIdForFile(poiId)}.mdx`);
+  const legacyFilePath = path.join(directoryPath, `${poiId}-${contentSlug}.mdx`);
+  const filePath = existsSync(preferredFilePath) ? preferredFilePath : legacyFilePath;
   if (!existsSync(filePath)) {
     return undefined;
   }
@@ -84,7 +89,9 @@ const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Po
   const properties = feature.properties ?? {};
   const fallbackId = `poi-${index}`;
   const rawId =
-    typeof feature.id === "string"
+    typeof feature.wikidataId === "string"
+      ? feature.wikidataId
+      : typeof feature.id === "string"
       ? feature.id
       : typeof feature.id === "number"
         ? `${feature.id}`
@@ -110,7 +117,7 @@ const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Po
     pickString(properties, "addr:city", "is_in:city") ?? fallbackCity;
 
   const funFacts = [
-    pickString(properties, "wikidata")?.replace(/^/, "Wikidata: "),
+    rawId.replace(/^/, "Wikidata: "),
     pickString(properties, "wikipedia")?.replace(/^/, "Wikipedia: "),
     pickString(properties, "heritage")?.replace(/^/, "Heritage status: "),
     pickString(properties, "charge")?.replace(/^/, "Ticket: "),
