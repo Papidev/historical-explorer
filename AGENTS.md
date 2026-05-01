@@ -32,6 +32,9 @@
 
 Update `AGENTS.md` only with important stuff that cannot be clearly/quickly derived from an exploration of the codebase.
 
+## Wikipedia Pipeline Notes
+- Before implementing Wikipedia parsing, enrichment, conversion, or output logic, check whether `wtf_wikipedia` already has an external plugin that covers the need. Potentially useful plugins include `markdown` for conversion experiments, `image` for richer detail panels, `classify` for category filtering, `summary` for short descriptions, and `i18n` if ingesting non-English articles directly.
+
 ## Testing & Verification
 - Do not write automated tests prematurely; add or expand tests only after the feature behavior and API shape are stable enough to avoid churn.
 - There is no automated map test harness yet; add colocated `*.test.tsx` files when introducing logic-heavy components and stub MapLibre APIs if needed.
