@@ -4,7 +4,7 @@ export type Poi = {
   name: string;
   city: string;
   coordinates: { lat: number; lng: number };
-  period: string;
-  shortDescription: string;
+  period?: string;
+  shortDescription?: string;
   funFacts: string[];
 };

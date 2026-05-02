@@ -15,6 +15,12 @@ type Props = {
   pois: Poi[];
 };
 
+type DialogContentState = {
+  content: MDXRemoteSerializeResult | null;
+  isLoading: boolean;
+  poiId: string | null;
+};
+
 export const RomeMapClient = ({
   citySlug,
   coordinates,
@@ -24,56 +30,46 @@ export const RomeMapClient = ({
 }: Props) => {
   const [zoom, setZoom] = useState(initialZoom);
   const [selectedPoiId, setSelectedPoiId] = useState<string | null>(initialSelectedPoiId);
-  const [dialogContentMdx, setDialogContentMdx] = useState<MDXRemoteSerializeResult | null>(null);
-  const [isLoadingDialogContent, setIsLoadingDialogContent] = useState(false);
+  const [dialogContentState, setDialogContentState] = useState<DialogContentState>({
+    content: null,
+    isLoading: false,
+    poiId: null,
+  });
   const displayZoom = Number(zoom.toFixed(2));
   const selectedPoi = selectedPoiId ? pois.find((poi) => poi.id === selectedPoiId) : undefined;
+  const dialogContentMdx = dialogContentState.poiId === selectedPoi?.id ? dialogContentState.content : null;
+  const isLoadingDialogContent = dialogContentState.poiId === selectedPoi?.id && dialogContentState.isLoading;
 
   useEffect(() => {
-    setSelectedPoiId(initialSelectedPoiId);
-  }, [initialSelectedPoiId]);
-
-  useEffect(() => {
-    if (!selectedPoi) {
-      setDialogContentMdx(null);
-      setIsLoadingDialogContent(false);
-      return;
-    }
-
-    if (!selectedPoi.contentSlug) {
-      setDialogContentMdx(null);
-      setIsLoadingDialogContent(false);
+    if (!selectedPoi?.contentSlug) {
       return;
     }
     const contentSlug = selectedPoi.contentSlug;
+    const poiId = selectedPoi.id;
 
     const abortController = new AbortController();
-    setDialogContentMdx(null);
-    setIsLoadingDialogContent(true);
 
     const loadDialogContent = async () => {
+      setDialogContentState({ content: null, isLoading: true, poiId });
+
       try {
         const response = await fetch(
-          `/api/pois/${encodeURIComponent(citySlug)}/${encodeURIComponent(selectedPoi.id)}/dialog-content?contentSlug=${encodeURIComponent(contentSlug)}`,
+          `/api/pois/${encodeURIComponent(citySlug)}/${encodeURIComponent(poiId)}/dialog-content?contentSlug=${encodeURIComponent(contentSlug)}`,
           { signal: abortController.signal },
         );
 
         if (!response.ok) {
-          setDialogContentMdx(null);
+          setDialogContentState({ content: null, isLoading: false, poiId });
           return;
         }
 
         const payload = (await response.json()) as {
           content?: MDXRemoteSerializeResult | null;
         };
-        setDialogContentMdx(payload.content ?? null);
+        setDialogContentState({ content: payload.content ?? null, isLoading: false, poiId });
       } catch {
         if (!abortController.signal.aborted) {
-          setDialogContentMdx(null);
-        }
-      } finally {
-        if (!abortController.signal.aborted) {
-          setIsLoadingDialogContent(false);
+          setDialogContentState({ content: null, isLoading: false, poiId });
         }
       }
     };
@@ -83,7 +79,7 @@ export const RomeMapClient = ({
     return () => {
       abortController.abort();
     };
-  }, [citySlug, selectedPoi]);
+  }, [citySlug, selectedPoi?.contentSlug, selectedPoi?.id]);
 
   return (
     <div className="relative h-full w-full">
@@ -129,8 +125,7 @@ export const RomeMapClient = ({
         <div className="flex h-full flex-col">
           <div className="flex items-start justify-between border-b border-black/10 px-5 py-4">
             <div>
-              <h2 className="text-lg font-semibold text-black">{selectedPoi?.name ?? "Dettagli POI"}</h2>
-              <p className="mt-1 text-sm text-black/60">{selectedPoi?.period}</p>
+              <h2 className="text-2xl font-semibold leading-tight text-black">{selectedPoi?.name ?? "Dettagli POI"}</h2>
             </div>
             <button
               type="button"
@@ -143,7 +138,7 @@ export const RomeMapClient = ({
           <div className="overflow-y-auto px-5 py-4 text-sm leading-6 text-black/80">
             {selectedPoi ? (
               <>
-                <p>{selectedPoi.shortDescription}</p>
+                {selectedPoi.shortDescription ? <p>{selectedPoi.shortDescription}</p> : null}
                 {isLoadingDialogContent ? (
                   <p className="mt-4 text-black/60">Caricamento contenuto aggiuntivo...</p>
                 ) : dialogContentMdx ? (

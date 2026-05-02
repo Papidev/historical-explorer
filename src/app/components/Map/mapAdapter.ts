@@ -41,8 +41,7 @@ const createMarker = (map: MapLibreMap, poi: Poi) =>
     .setPopup(
       new maplibregl.Popup({ offset: 16 }).setHTML(`
         <strong>${escapeHtml(poi.name)}</strong><br/>
-        <em>${escapeHtml(poi.period)}</em><br/>
-        <small>${escapeHtml(poi.shortDescription)}</small><br/>
+        ${poi.shortDescription ? `<small>${escapeHtml(poi.shortDescription)}</small><br/>` : ""}
         <button
           type="button"
           data-poi-open-details="${escapeHtml(poi.id)}"
