@@ -121,7 +121,16 @@ const toPoiRows = (
     );
   }
 
-  return Array.from(rowsById.values());
+  return Array.from(rowsById.values()).sort((firstRow, secondRow) => {
+    const firstHasGeneratedContent = Boolean(firstRow.transformedPoi || firstRow.wikiPoi || firstRow.mdxPoi);
+    const secondHasGeneratedContent = Boolean(secondRow.transformedPoi || secondRow.wikiPoi || secondRow.mdxPoi);
+
+    if (firstHasGeneratedContent === secondHasGeneratedContent) {
+      return 0;
+    }
+
+    return firstHasGeneratedContent ? -1 : 1;
+  });
 };
 
 export const loadPoiLists = async () => {
