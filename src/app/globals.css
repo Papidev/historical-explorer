@@ -26,43 +26,104 @@ body {
 }
 
 .poi-dialog-content {
-  margin-top: 8px;
-  font-size: 12px;
-  line-height: 1.45;
+  color: #27272a;
+  font-size: 0.875rem;
+  line-height: 1.65;
 }
 
-.poi-dialog-content h1,
+.poi-dialog-content > :first-child {
+  margin-top: 0;
+}
+
 .poi-dialog-content h2,
-.poi-dialog-content h3 {
-  margin: 8px 0 4px;
+.poi-dialog-content h3,
+.poi-dialog-content h4 {
+  color: #18181b;
   font-weight: 700;
+  letter-spacing: 0;
+}
+
+.poi-dialog-content h2 {
+  margin: 24px 0 8px;
+  border-top: 1px solid #e4e4e7;
+  padding-top: 18px;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.poi-dialog-content h3 {
+  margin: 18px 0 6px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.poi-dialog-content h4 {
+  margin: 14px 0 4px;
+  font-size: 0.875rem;
+  line-height: 1.4;
 }
 
 .poi-dialog-content p {
-  margin: 4px 0;
+  margin: 10px 0;
 }
 
 .poi-dialog-content ul {
-  margin: 4px 0;
-  padding-left: 16px;
+  margin: 10px 0;
+  padding-left: 1.1rem;
   list-style: disc;
 }
 
+.poi-dialog-content li {
+  margin: 6px 0;
+  padding-left: 2px;
+}
+
 .poi-dialog-content a {
-  color: #0b57d0;
+  color: #075985;
+  font-weight: 600;
   text-decoration: underline;
+  text-decoration-color: #7dd3fc;
+  text-underline-offset: 3px;
+}
+
+.poi-dialog-content strong {
+  color: #18181b;
+  font-weight: 700;
+}
+
+.poi-dialog-content em {
+  color: #52525b;
+}
+
+.poi-dialog-content code {
+  border: 1px solid #e4e4e7;
+  border-radius: 4px;
+  background: #f4f4f5;
+  padding: 1px 4px;
+  color: #18181b;
+  font-size: 0.8em;
+}
+
+.poi-dialog-content blockquote {
+  margin: 14px 0;
+  border-left: 3px solid #d4a373;
+  background: #fffbeb;
+  padding: 8px 12px;
+  color: #3f3f46;
 }
 
 .poi-dialog-content .poi-callout {
-  margin-top: 8px;
-  border-left: 3px solid #b91c1c;
-  background: #fee2e2;
-  padding: 8px 10px;
-  border-radius: 6px;
+  margin: 16px 0;
+  border: 1px solid #fed7aa;
+  border-left: 4px solid #c2410c;
+  border-radius: 8px;
+  background: #fff7ed;
+  padding: 10px 12px;
+  color: #431407;
 }
 
 .poi-dialog-content .poi-callout-title {
-  margin: 0 0 4px;
+  margin: 0 0 6px;
   font-weight: 700;
-  color: #7f1d1d;
+  color: #7c2d12;
 }
