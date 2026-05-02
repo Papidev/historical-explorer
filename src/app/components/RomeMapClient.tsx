@@ -129,8 +129,7 @@ export const RomeMapClient = ({
         <div className="flex h-full flex-col">
           <div className="flex items-start justify-between border-b border-black/10 px-5 py-4">
             <div>
-              <h2 className="text-lg font-semibold text-black">{selectedPoi?.name ?? "Dettagli POI"}</h2>
-              <p className="mt-1 text-sm text-black/60">{selectedPoi?.period}</p>
+              <h2 className="text-2xl font-semibold leading-tight text-black">{selectedPoi?.name ?? "Dettagli POI"}</h2>
             </div>
             <button
               type="button"
@@ -143,7 +142,7 @@ export const RomeMapClient = ({
           <div className="overflow-y-auto px-5 py-4 text-sm leading-6 text-black/80">
             {selectedPoi ? (
               <>
-                <p>{selectedPoi.shortDescription}</p>
+                {selectedPoi.shortDescription ? <p>{selectedPoi.shortDescription}</p> : null}
                 {isLoadingDialogContent ? (
                   <p className="mt-4 text-black/60">Caricamento contenuto aggiuntivo...</p>
                 ) : dialogContentMdx ? (

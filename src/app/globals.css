@@ -27,8 +27,8 @@ body {
 
 .poi-dialog-content {
   color: #27272a;
-  font-size: 0.875rem;
-  line-height: 1.65;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
 .poi-dialog-content > :first-child {
@@ -44,37 +44,76 @@ body {
 }
 
 .poi-dialog-content h2 {
-  margin: 24px 0 8px;
-  border-top: 1px solid #e4e4e7;
-  padding-top: 18px;
-  font-size: 1.05rem;
-  line-height: 1.35;
+  margin: 28px 0 12px;
+  border: 1px solid var(--poi-section-border, #e4e4e7);
+  border-left: 4px solid var(--poi-section-accent, #71717a);
+  border-radius: 8px;
+  background: var(--poi-section-bg, #f4f4f5);
+  padding: 12px 14px;
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.poi-dialog-content h2:nth-of-type(6n + 1) {
+  --poi-section-bg: #fef3c7;
+  --poi-section-border: #fde68a;
+  --poi-section-accent: #b45309;
+}
+
+.poi-dialog-content h2:nth-of-type(6n + 2) {
+  --poi-section-bg: #dcfce7;
+  --poi-section-border: #bbf7d0;
+  --poi-section-accent: #15803d;
+}
+
+.poi-dialog-content h2:nth-of-type(6n + 3) {
+  --poi-section-bg: #e0f2fe;
+  --poi-section-border: #bae6fd;
+  --poi-section-accent: #0369a1;
+}
+
+.poi-dialog-content h2:nth-of-type(6n + 4) {
+  --poi-section-bg: #fce7f3;
+  --poi-section-border: #fbcfe8;
+  --poi-section-accent: #be185d;
+}
+
+.poi-dialog-content h2:nth-of-type(6n + 5) {
+  --poi-section-bg: #ede9fe;
+  --poi-section-border: #ddd6fe;
+  --poi-section-accent: #6d28d9;
+}
+
+.poi-dialog-content h2:nth-of-type(6n) {
+  --poi-section-bg: #ffedd5;
+  --poi-section-border: #fed7aa;
+  --poi-section-accent: #c2410c;
 }
 
 .poi-dialog-content h3 {
-  margin: 18px 0 6px;
-  font-size: 0.95rem;
+  margin: 22px 0 8px;
+  font-size: 1.15rem;
   line-height: 1.4;
 }
 
 .poi-dialog-content h4 {
-  margin: 14px 0 4px;
-  font-size: 0.875rem;
+  margin: 18px 0 6px;
+  font-size: 1rem;
   line-height: 1.4;
 }
 
 .poi-dialog-content p {
-  margin: 10px 0;
+  margin: 12px 0;
 }
 
 .poi-dialog-content ul {
-  margin: 10px 0;
-  padding-left: 1.1rem;
+  margin: 12px 0;
+  padding-left: 1.25rem;
   list-style: disc;
 }
 
 .poi-dialog-content li {
-  margin: 6px 0;
+  margin: 8px 0;
   padding-left: 2px;
 }
 
@@ -105,20 +144,20 @@ body {
 }
 
 .poi-dialog-content blockquote {
-  margin: 14px 0;
+  margin: 16px 0;
   border-left: 3px solid #d4a373;
   background: #fffbeb;
-  padding: 8px 12px;
+  padding: 10px 14px;
   color: #3f3f46;
 }
 
 .poi-dialog-content .poi-callout {
-  margin: 16px 0;
+  margin: 18px 0;
   border: 1px solid #fed7aa;
   border-left: 4px solid #c2410c;
   border-radius: 8px;
   background: #fff7ed;
-  padding: 10px 12px;
+  padding: 12px 14px;
   color: #431407;
 }
 

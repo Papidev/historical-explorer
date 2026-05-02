@@ -86,32 +86,38 @@ export const wikiTextToMdx = (content: string) => {
   for (const section of sections) {
     const title = section.title().trim();
     const lowerTitle = title.toLowerCase();
+    const sectionOutput: string[] = [];
+
+    if (lowerTitle === "external links") {
+      const externalLinks = toExternalLinks(doc.section(title));
+      if (externalLinks.length > 0) {
+        sectionOutput.push(externalLinks.join("\n"));
+      }
+    } else {
+      const blocks = toPlainSectionBlocks(section.text({}));
+      for (const block of blocks) {
+        const bullets = toBulletItems(block);
+        if (bullets.length > 0) {
+          sectionOutput.push(bullets.join("\n"));
+          continue;
+        }
+
+        const paragraph = normalizeText(block);
+        if (paragraph) {
+          sectionOutput.push(escapeMdxText(paragraph));
+        }
+      }
+    }
+
+    if (sectionOutput.length === 0) {
+      continue;
+    }
 
     if (title) {
       output.push(toHeading(title, section.depth()));
     }
 
-    if (lowerTitle === "external links") {
-      const externalLinks = toExternalLinks(doc.section(title));
-      if (externalLinks.length > 0) {
-        output.push(externalLinks.join("\n"));
-      }
-      continue;
-    }
-
-    const blocks = toPlainSectionBlocks(section.text({}));
-    for (const block of blocks) {
-      const bullets = toBulletItems(block);
-      if (bullets.length > 0) {
-        output.push(bullets.join("\n"));
-        continue;
-      }
-
-      const paragraph = normalizeText(block);
-      if (paragraph) {
-        output.push(escapeMdxText(paragraph));
-      }
-    }
+    output.push(...sectionOutput);
   }
 
   return `${output.join("\n\n").replace(/\n{3,}/g, "\n\n").trim()}\n`;

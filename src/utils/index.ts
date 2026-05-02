@@ -108,11 +108,10 @@ const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Po
       "start_date",
       "historic:period",
       "historic:civilization",
-    ) ?? historic ?? "Historic period unavailable";
+    ) ?? historic;
   const description =
     pickString(properties, "short_description", "description") ??
-    (historic ? `Historic feature: ${historic}` : undefined) ??
-    "Historic place sourced from OpenStreetMap.";
+    (historic ? `Historic feature: ${historic}` : undefined);
   const city =
     pickString(properties, "addr:city", "is_in:city") ?? fallbackCity;
 
