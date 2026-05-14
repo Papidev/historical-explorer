@@ -22,13 +22,27 @@ export type AdminPoiRow = {
   rawPoi?: PoiItem;
   transformedPoi?: PoiItem;
   wikiPoi?: PoiItem;
+  aiPoi?: PoiItem;
   mdxPoi?: PoiItem;
   rawUpdatedAt?: string;
   transformedUpdatedAt?: string;
   wikiUpdatedAt?: string;
+  aiUpdatedAt?: string;
   mdxUpdatedAt?: string;
+  transformedGenerationDuration?: string;
+  wikiGenerationDuration?: string;
+  aiGenerationDuration?: string;
+  mdxGenerationDuration?: string;
   transformedJson?: string;
-  wikiJson?: string;
+  wikiText?: string;
+  aiText?: string;
+  aiSource?: MDXRemoteSerializeResult<
+    Record<string, unknown>,
+    Record<string, unknown>
+  >;
   mdxContent?: string;
-  mdxSource?: MDXRemoteSerializeResult<Record<string, unknown>, Record<string, unknown>>;
+  mdxSource?: MDXRemoteSerializeResult<
+    Record<string, unknown>,
+    Record<string, unknown>
+  >;
 };

@@ -6,24 +6,6 @@
   "features": [
     {
       "type": "Feature",
-      "wikidataId": "Q1541068",
-      "properties": {
-        "name": "Area sacra dell'Argentina",
-        "tourism": "attraction",
-        "wikimedia_commons": "Category:Largo di Torre Argentina",
-        "wikipedia": "it:Largo di Torre Argentina",
-        "content_slug": "area-sacra-dell-argentina"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          12.4768864,
-          41.8953968
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "wikidataId": "Q124154237",
       "properties": {
         "name": "Basilica costantiniana di S. Agnese",

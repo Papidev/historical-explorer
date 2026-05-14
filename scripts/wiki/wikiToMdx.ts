@@ -10,6 +10,17 @@ const escapeMdxUrl = (value: string) => value.replace(/ /g, "%20").replace(/\)/g
 
 const normalizeText = (value: string) => value.replace(/\(\s*\)/g, "").replace(/\s+/g, " ").trim();
 
+const normalizeMdxLine = (value: string) => {
+  const leadingWhitespace = value.match(/^\s*/)?.[0] ?? "";
+  const content = value
+    .slice(leadingWhitespace.length)
+    .replace(/\(\s*\)/g, "")
+    .replace(/[^\S\n]+/g, " ")
+    .trim();
+
+  return `${leadingWhitespace.replace(/\t/g, "  ")}${content}`.trimEnd();
+};
+
 const toHeading = (title: string, depth: number) => {
   const level = Math.max(2, Math.min(6, depth + 2));
   return `${"#".repeat(level)} ${escapeMdxText(title)}`;
@@ -25,6 +36,48 @@ const toPlainSectionBlocks = (text: string) => {
     .split(/\n{2,}/)
     .map((block) => block.trim())
     .filter(Boolean);
+};
+
+export const wikiTextToPlainText = (content: string) => {
+  const doc = wtf(content);
+  const sections = doc.sections();
+  const output: string[] = [];
+
+  for (const section of sections) {
+    const title = section.title().trim();
+    const lowerTitle = title.toLowerCase();
+
+    if (lowerTitle === "external links") {
+      continue;
+    }
+
+    if (title) {
+      output.push(title);
+    }
+
+    for (const block of toPlainSectionBlocks(section.text({}))) {
+      const paragraph = normalizeText(block);
+      if (paragraph) {
+        output.push(paragraph);
+      }
+    }
+  }
+
+  return `${output.join("\n\n").replace(/\n{3,}/g, "\n\n").trim()}\n`;
+};
+
+export const plainTextToMdx = (content: string) => {
+  const output = toPlainSectionBlocks(content)
+    .map((block) =>
+      block
+        .split("\n")
+        .map((line) => escapeMdxText(normalizeMdxLine(line)))
+        .filter(Boolean)
+        .join("\n"),
+    )
+    .filter(Boolean);
+
+  return `${output.join("\n\n").replace(/\n{3,}/g, "\n\n").trim()}\n`;
 };
 
 const toBulletItems = (block: string) => {

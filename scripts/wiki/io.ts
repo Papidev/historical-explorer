@@ -1,7 +1,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { getFeatureId, pickString, sanitizePoiIdForFile, toCitySlug } from "./normalize";
-import type { GeoJson, PoiInput, WikiSnapshotFile } from "./types";
+import type { GeoJson, PoiInput } from "./types";
 
 const parseGeoJson = (raw: string): GeoJson => {
   try {
@@ -58,11 +58,11 @@ export const findPoiInGeoJson = (inputPath: string, poiId: string, fallbackCity:
 };
 
 export const buildOutputFilePath = (outputDir: string, poiId: string) =>
-  path.join(outputDir, `${sanitizePoiIdForFile(poiId)}.json`);
+  path.join(outputDir, `${sanitizePoiIdForFile(poiId)}.txt`);
 
 export const outputExists = (outputFilePath: string) => existsSync(outputFilePath);
 
-export const writeSnapshotFile = (outputFilePath: string, data: WikiSnapshotFile) => {
+export const writeSnapshotFile = (outputFilePath: string, data: string) => {
   mkdirSync(path.dirname(outputFilePath), { recursive: true });
-  writeFileSync(outputFilePath, `${JSON.stringify(data, null, 2)}\n`, "utf-8");
+  writeFileSync(outputFilePath, `${data.trim()}\n`, "utf-8");
 };

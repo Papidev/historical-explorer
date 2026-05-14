@@ -47,8 +47,3 @@ export type ResolvedPage = {
 export type WikiSnapshot = {
   fullText: string;
 };
-
-export type WikiSnapshotFile = {
-  id: string;
-  content: string;
-};
