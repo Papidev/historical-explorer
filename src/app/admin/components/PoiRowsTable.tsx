@@ -1,9 +1,11 @@
 "use client";
 
 import { useState, useTransition } from "react";
+import type { ReactNode } from "react";
 import { MDXRemote } from "next-mdx-remote";
 import { Callout } from "@/app/components/mdx/Callout";
 import { MdxLink } from "@/app/components/mdx/MdxLink";
+import type { AiModelOption } from "../lib/aiModels";
 import type { AdminPoiRow } from "../lib/types";
 import { SubmitButton } from "./SubmitButton";
 
@@ -29,35 +31,71 @@ const deleteConfirmMessages = {
 const viewButtonClassName =
   "inline-flex items-center rounded-md border border-black/15 bg-white px-3 py-1.5 text-xs font-medium text-black transition hover:bg-black/[0.03] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-white";
 
+const sanitizeDownloadNamePart = (value: string) =>
+  value
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/gu, "-")
+    .replace(/^-|-$/gu, "");
+
+const getAiDownloadFileName = (row: AdminPoiRow) =>
+  `${sanitizeDownloadNamePart(row.id)}--${sanitizeDownloadNamePart(row.aiGenerationModel ?? "unknown-model")}.txt`;
+
+const getAiDownloadHref = (content: string) =>
+  `data:text/plain;charset=utf-8,${encodeURIComponent(content)}`;
+
+const EmptyLine = ({ className = "" }: { className?: string }) => (
+  <p className={`invisible ${className}`} aria-hidden="true">
+    -
+  </p>
+);
+
 const CellContent = ({
   title,
   subtitle,
   updatedAt,
   generationDuration,
+  generationModel,
 }: {
   title?: string;
   subtitle?: string;
   updatedAt?: string;
   generationDuration?: string;
+  generationModel?: string;
 }) =>
-  title ? (
-    <>
-      <p className="text-sm font-medium text-black">{title}</p>
+  (
+    <div className="min-h-24">
+      <p className={`text-sm ${title ? "font-medium text-black" : "text-black/45"}`}>
+        {title ?? "Not generated"}
+      </p>
       {subtitle ? (
         <p className="mt-1 font-mono text-xs text-black/65">{subtitle}</p>
-      ) : null}
+      ) : (
+        <EmptyLine className="mt-1 font-mono text-xs" />
+      )}
       {updatedAt ? (
         <p className="mt-1 text-xs text-black/55">Updated {updatedAt}</p>
-      ) : null}
+      ) : (
+        <EmptyLine className="mt-1 text-xs" />
+      )}
       {generationDuration ? (
         <p className="mt-1 text-xs text-black/55">
           Generated in {generationDuration}
         </p>
-      ) : null}
-    </>
-  ) : (
-    <p className="text-sm text-black/45">Not generated</p>
+      ) : (
+        <EmptyLine className="mt-1 text-xs" />
+      )}
+      {generationModel ? (
+        <p className="mt-1 text-xs text-black/55">Model {generationModel}</p>
+      ) : (
+        <EmptyLine className="mt-1 text-xs" />
+      )}
+    </div>
   );
+
+const CellActions = ({ children }: { children?: ReactNode }) => (
+  <div className="mt-3 min-h-20">{children}</div>
+);
 
 type SelectedPanel =
   | {
@@ -82,6 +120,8 @@ type SelectedPanel =
 
 export const PoiRowsTable = ({
   rows,
+  aiModelOptions,
+  defaultAiModel,
   generateAction,
   refreshTransformedAction,
   refreshWikiAction,
@@ -94,6 +134,8 @@ export const PoiRowsTable = ({
   deleteMdxAction,
 }: {
   rows: AdminPoiRow[];
+  aiModelOptions: readonly AiModelOption[];
+  defaultAiModel: string;
   generateAction: (formData: FormData) => Promise<void>;
   refreshTransformedAction: (formData: FormData) => Promise<void>;
   refreshWikiAction: (formData: FormData) => Promise<void>;
@@ -108,6 +150,7 @@ export const PoiRowsTable = ({
   const [selectedPanel, setSelectedPanel] = useState<SelectedPanel | null>(
     null,
   );
+  const [selectedAiModel, setSelectedAiModel] = useState(defaultAiModel);
   const [mdxMode, setMdxMode] = useState<"preview" | "edit">("preview");
   const [draftMdx, setDraftMdx] = useState("");
   const [versionInProgressPoiId, setVersionInProgressPoiId] = useState<
@@ -134,6 +177,31 @@ export const PoiRowsTable = ({
 
   return (
     <>
+      <section className="mb-3 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-black/10 bg-white px-4 py-3">
+        <div>
+          <p className="text-sm font-medium text-black">AI model</p>
+          <p className="text-xs text-black/55">
+            Used for the next AI generations in this admin session.
+          </p>
+        </div>
+        <label className="flex items-center gap-2 text-sm text-black">
+          <span className="text-xs font-medium uppercase tracking-[0.08em] text-black/55">
+            Model
+          </span>
+          <select
+            value={selectedAiModel}
+            onChange={(event) => setSelectedAiModel(event.target.value)}
+            disabled={versionInProgressPoiId !== null || aiModelOptions.length === 0}
+            className="rounded-md border border-black/15 bg-white px-3 py-2 text-sm font-medium text-black outline-none transition hover:bg-black/[0.03] disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            {aiModelOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </label>
+      </section>
       <section className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-lg border border-black/10 bg-white">
         <div className="grid shrink-0 grid-cols-5 border-b border-black/10 bg-black/[0.03] text-xs font-semibold uppercase tracking-[0.08em] text-black/65">
           <div className="px-4 py-3">Raw</div>
@@ -163,26 +231,36 @@ export const PoiRowsTable = ({
                         subtitle={row.id}
                         updatedAt={row.rawUpdatedAt}
                       />
-                      {row.rawPoi ? (
-                        <form
-                          action={(formData) =>
-                            runVersionAction(row.id, generateAction, formData)
-                          }
-                          className="mt-3"
-                        >
-                          <input
-                            type="hidden"
-                            name="rawFeatureIndex"
-                            value={row.rawPoi.featureIndex}
-                          />
-                          <SubmitButton
-                            idleLabel="Generate"
-                            pendingLabel="Generating..."
-                            confirmMessage={generateConfirmMessage}
-                            tone="primary"
-                          />
-                        </form>
-                      ) : null}
+                      <CellActions>
+                        {row.rawPoi ? (
+                          <form
+                            action={(formData) =>
+                              runVersionAction(
+                                row.id,
+                                generateAction,
+                                formData,
+                              )
+                            }
+                          >
+                            <input
+                              type="hidden"
+                              name="rawFeatureIndex"
+                              value={row.rawPoi.featureIndex}
+                            />
+                            <input
+                              type="hidden"
+                              name="aiModel"
+                              value={selectedAiModel}
+                            />
+                            <SubmitButton
+                              idleLabel="Generate"
+                              pendingLabel="Generating..."
+                              confirmMessage={generateConfirmMessage}
+                              tone="primary"
+                            />
+                          </form>
+                        ) : null}
+                      </CellActions>
                     </div>
                     <div className="px-4 py-3">
                       <CellContent
@@ -190,8 +268,9 @@ export const PoiRowsTable = ({
                         updatedAt={row.transformedUpdatedAt}
                         generationDuration={row.transformedGenerationDuration}
                       />
-                      {row.transformedPoi ? (
-                        <div className="mt-3 flex flex-col items-start gap-2">
+                      <CellActions>
+                        {row.transformedPoi ? (
+                          <div className="flex flex-col items-start gap-2">
                           <button
                             type="button"
                             disabled={isVisualizationDisabled}
@@ -222,6 +301,11 @@ export const PoiRowsTable = ({
                               }
                             >
                               <input type="hidden" name="poiId" value={row.id} />
+                              <input
+                                type="hidden"
+                                name="aiModel"
+                                value={selectedAiModel}
+                              />
                               <SubmitButton
                                 idleLabel="Refresh"
                                 pendingLabel="Refreshing..."
@@ -251,8 +335,9 @@ export const PoiRowsTable = ({
                               />
                             </form>
                           </div>
-                        </div>
-                      ) : null}
+                          </div>
+                        ) : null}
+                      </CellActions>
                     </div>
                     <div className="px-4 py-3">
                       <CellContent
@@ -260,8 +345,9 @@ export const PoiRowsTable = ({
                         updatedAt={row.wikiUpdatedAt}
                         generationDuration={row.wikiGenerationDuration}
                       />
-                      {row.wikiPoi ? (
-                        <div className="mt-3 flex flex-col items-start gap-2">
+                      <CellActions>
+                        {row.wikiPoi ? (
+                          <div className="flex flex-col items-start gap-2">
                           <button
                             type="button"
                             disabled={isVisualizationDisabled}
@@ -292,6 +378,11 @@ export const PoiRowsTable = ({
                               }
                             >
                               <input type="hidden" name="poiId" value={row.id} />
+                              <input
+                                type="hidden"
+                                name="aiModel"
+                                value={selectedAiModel}
+                              />
                               <SubmitButton
                                 idleLabel="Refresh"
                                 pendingLabel="Refreshing..."
@@ -317,36 +408,54 @@ export const PoiRowsTable = ({
                               />
                             </form>
                           </div>
-                        </div>
-                      ) : null}
+                          </div>
+                        ) : null}
+                      </CellActions>
                     </div>
                     <div className="px-4 py-3">
                       <CellContent
                         title={row.aiPoi ? "Available" : undefined}
                         updatedAt={row.aiUpdatedAt}
                         generationDuration={row.aiGenerationDuration}
+                        generationModel={
+                          row.aiPoi
+                            ? (row.aiGenerationModel ?? "unknown")
+                            : undefined
+                        }
                       />
-                      {row.aiPoi ? (
-                        <div className="mt-3 flex flex-col items-start gap-2">
-                          <button
-                            type="button"
-                            disabled={isVisualizationDisabled}
-                            onClick={() =>
-                              row.aiSource
-                                ? (setSelectedPanel({
-                                    poiId: row.id,
-                                    title: `${row.id} AI Text`,
-                                    kind: "rendered",
-                                    source: row.aiSource,
-                                  }),
-                                  setMdxMode("preview"),
-                                  setDraftMdx(""))
-                                : null
-                            }
-                            className={viewButtonClassName}
-                          >
-                            View
-                          </button>
+                      <CellActions>
+                        {row.aiPoi ? (
+                          <div className="flex flex-col items-start gap-2">
+                          <div className="flex flex-wrap gap-2">
+                            <button
+                              type="button"
+                              disabled={isVisualizationDisabled}
+                              onClick={() =>
+                                row.aiSource
+                                  ? (setSelectedPanel({
+                                      poiId: row.id,
+                                      title: `${row.id} AI Text`,
+                                      kind: "rendered",
+                                      source: row.aiSource,
+                                    }),
+                                    setMdxMode("preview"),
+                                    setDraftMdx(""))
+                                  : null
+                              }
+                              className={viewButtonClassName}
+                            >
+                              View
+                            </button>
+                            {row.aiText ? (
+                              <a
+                                href={getAiDownloadHref(row.aiText)}
+                                download={getAiDownloadFileName(row)}
+                                className={viewButtonClassName}
+                              >
+                                Download
+                              </a>
+                            ) : null}
+                          </div>
                           <div className="flex flex-wrap gap-2">
                             <form
                               action={(formData) =>
@@ -358,6 +467,11 @@ export const PoiRowsTable = ({
                               }
                             >
                               <input type="hidden" name="poiId" value={row.id} />
+                              <input
+                                type="hidden"
+                                name="aiModel"
+                                value={selectedAiModel}
+                              />
                               <SubmitButton
                                 idleLabel="Refresh"
                                 pendingLabel="Refreshing..."
@@ -383,23 +497,32 @@ export const PoiRowsTable = ({
                               />
                             </form>
                           </div>
-                        </div>
-                      ) : row.wikiPoi ? (
-                        <form
-                          action={(formData) =>
-                            runVersionAction(row.id, refreshAiAction, formData)
-                          }
-                          className="mt-3"
-                        >
-                          <input type="hidden" name="poiId" value={row.id} />
-                          <SubmitButton
-                            idleLabel="Generate"
-                            pendingLabel="Generating..."
-                            confirmMessage={refreshConfirmMessages.ai}
-                            tone="primary"
-                          />
-                        </form>
-                      ) : null}
+                          </div>
+                        ) : row.wikiPoi ? (
+                          <form
+                            action={(formData) =>
+                              runVersionAction(
+                                row.id,
+                                refreshAiAction,
+                                formData,
+                              )
+                            }
+                          >
+                            <input type="hidden" name="poiId" value={row.id} />
+                            <input
+                              type="hidden"
+                              name="aiModel"
+                              value={selectedAiModel}
+                            />
+                            <SubmitButton
+                              idleLabel="Generate"
+                              pendingLabel="Generating..."
+                              confirmMessage={refreshConfirmMessages.ai}
+                              tone="primary"
+                            />
+                          </form>
+                        ) : null}
+                      </CellActions>
                     </div>
                     <div className="px-4 py-3">
                       <CellContent
@@ -407,8 +530,9 @@ export const PoiRowsTable = ({
                         updatedAt={row.mdxUpdatedAt}
                         generationDuration={row.mdxGenerationDuration}
                       />
-                      {row.mdxPoi ? (
-                        <div className="mt-3 flex flex-col items-start gap-2">
+                      <CellActions>
+                        {row.mdxPoi ? (
+                          <div className="flex flex-col items-start gap-2">
                           <button
                             type="button"
                             disabled={isVisualizationDisabled}
@@ -465,23 +589,27 @@ export const PoiRowsTable = ({
                               />
                             </form>
                           </div>
-                        </div>
-                      ) : row.aiPoi ? (
-                        <form
-                          action={(formData) =>
-                            runVersionAction(row.id, refreshMdxAction, formData)
-                          }
-                          className="mt-3"
-                        >
-                          <input type="hidden" name="poiId" value={row.id} />
-                          <SubmitButton
-                            idleLabel="Generate"
-                            pendingLabel="Generating..."
-                            confirmMessage={refreshConfirmMessages.mdx}
-                            tone="primary"
-                          />
-                        </form>
-                      ) : null}
+                          </div>
+                        ) : row.aiPoi ? (
+                          <form
+                            action={(formData) =>
+                              runVersionAction(
+                                row.id,
+                                refreshMdxAction,
+                                formData,
+                              )
+                            }
+                          >
+                            <input type="hidden" name="poiId" value={row.id} />
+                            <SubmitButton
+                              idleLabel="Generate"
+                              pendingLabel="Generating..."
+                              confirmMessage={refreshConfirmMessages.mdx}
+                              tone="primary"
+                            />
+                          </form>
+                        ) : null}
+                      </CellActions>
                     </div>
                   </li>
                 );

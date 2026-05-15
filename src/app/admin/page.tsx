@@ -11,12 +11,23 @@ import {
   refreshWikiJson,
   saveMdx,
 } from "./lib/actions";
+import { defaultAiModel, loadInstalledAiModelOptions } from "./lib/aiModels";
 import { loadPoiLists } from "./lib/loadPoiLists";
 
 export const dynamic = "force-dynamic";
 
 export default async function AdminPage() {
   const { rows, error } = await loadPoiLists();
+  const aiModelOptions = await loadInstalledAiModelOptions();
+  const configuredAiModel = process.env.OLLAMA_MODEL;
+  const initialAiModel =
+    configuredAiModel &&
+    aiModelOptions.some((option) => option.value === configuredAiModel)
+      ? configuredAiModel
+      : (aiModelOptions.find((option) => option.value === defaultAiModel)
+          ?.value ??
+        aiModelOptions[0]?.value ??
+        "");
 
   return (
     <main className="flex h-screen min-h-screen flex-col bg-neutral-50 p-4 sm:p-6">
@@ -29,6 +40,8 @@ export default async function AdminPage() {
       ) : (
         <PoiRowsTable
           rows={rows}
+          aiModelOptions={aiModelOptions}
+          defaultAiModel={initialAiModel}
           generateAction={generateSinglePoiJson}
           refreshTransformedAction={refreshTransformedPoiJson}
           refreshWikiAction={refreshWikiJson}

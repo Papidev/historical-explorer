@@ -8,7 +8,7 @@ type GenerationStep = "transformed" | "wiki" | "ai" | "mdx";
 
 type GenerationMetadata = Record<
   string,
-  Partial<Record<GenerationStep, { durationMs: number }>>
+  Partial<Record<GenerationStep, { durationMs: number; aiModel?: string }>>
 >;
 
 const toRowKey = (value: string) => value.trim().toLowerCase();
@@ -222,6 +222,7 @@ const toPoiRows = (
             aiGenerationDuration: generationMetadata[rowKey]?.ai
               ? formatDuration(generationMetadata[rowKey].ai.durationMs)
               : undefined,
+            aiGenerationModel: generationMetadata[rowKey]?.ai?.aiModel,
           }
         : {
             id: item.id,
@@ -232,6 +233,7 @@ const toPoiRows = (
             aiGenerationDuration: generationMetadata[rowKey]?.ai
               ? formatDuration(generationMetadata[rowKey].ai.durationMs)
               : undefined,
+            aiGenerationModel: generationMetadata[rowKey]?.ai?.aiModel,
           },
     );
   }

@@ -1,8 +1,13 @@
 {
   "q124154237": {
     "mdx": {
-      "durationMs": 3,
-      "completedAt": "2026-05-14T23:15:45.420Z"
+      "durationMs": 5,
+      "completedAt": "2026-05-15T00:11:26.804Z"
+    },
+    "ai": {
+      "durationMs": 70585,
+      "completedAt": "2026-05-15T00:11:26.797Z",
+      "aiModel": "mistral-nemo:12b"
     }
   }
 }

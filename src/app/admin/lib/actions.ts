@@ -27,12 +27,22 @@ import {
   plainTextToMdx,
   wikiTextToPlainText,
 } from "../../../../scripts/wiki/wikiToMdx";
+import {
+  defaultAiModel,
+  loadInstalledAiModelOptions,
+  type AiModel,
+} from "./aiModels";
 
 type GenerationStep = "transformed" | "wiki" | "ai" | "mdx";
 
 type GenerationMetadata = Record<
   string,
-  Partial<Record<GenerationStep, { durationMs: number; completedAt: string }>>
+  Partial<
+    Record<
+      GenerationStep,
+      { durationMs: number; completedAt: string; aiModel?: AiModel }
+    >
+  >
 >;
 
 type GeoJsonFeature = {
@@ -83,6 +93,40 @@ const generationMetadataPath = path.join(
   "admin-generation-metadata.json",
 );
 
+const resolveAiModelFromFormData = async (formData: FormData) => {
+  const installedModelOptions = await loadInstalledAiModelOptions();
+  const aiModel = formData.get("aiModel");
+  if (typeof aiModel === "string" && aiModel.trim().length > 0) {
+    if (!installedModelOptions.some((option) => option.value === aiModel)) {
+      throw new Error("Invalid AI model.");
+    }
+
+    return aiModel;
+  }
+
+  const configuredAiModel = process.env.OLLAMA_MODEL;
+  if (
+    configuredAiModel &&
+    installedModelOptions.some((option) => option.value === configuredAiModel)
+  ) {
+    return configuredAiModel;
+  }
+
+  const installedDefaultAiModel = installedModelOptions.find(
+    (option) => option.value === defaultAiModel,
+  )?.value;
+  if (installedDefaultAiModel) {
+    return installedDefaultAiModel;
+  }
+
+  const firstInstalledAiModel = installedModelOptions[0]?.value;
+  if (firstInstalledAiModel) {
+    return firstInstalledAiModel;
+  }
+
+  throw new Error("No installed Ollama models found.");
+};
+
 const readGenerationMetadata = () => {
   if (!existsSync(generationMetadataPath)) {
     return {} as GenerationMetadata;
@@ -106,6 +150,7 @@ const recordGenerationDuration = (
   poiId: string,
   step: GenerationStep,
   durationMs: number,
+  extraMetadata?: { aiModel?: AiModel },
 ) => {
   const normalizedPoiId = sanitizePoiIdForFile(poiId);
   const metadata = readGenerationMetadata();
@@ -117,6 +162,7 @@ const recordGenerationDuration = (
       [step]: {
         durationMs,
         completedAt: new Date().toISOString(),
+        ...extraMetadata,
       },
     },
   });
@@ -147,10 +193,11 @@ const measureGeneration = async <Result>(
   poiId: string,
   step: GenerationStep,
   action: () => Result | Promise<Result>,
+  metadata?: { aiModel?: AiModel },
 ) => {
   const startedAt = Date.now();
   const result = await action();
-  recordGenerationDuration(poiId, step, Date.now() - startedAt);
+  recordGenerationDuration(poiId, step, Date.now() - startedAt, metadata);
 
   return result;
 };
@@ -271,8 +318,10 @@ const writeMdxFile = async (poiId: string) => {
   console.info(`[wiki-mdx] Saved MDX for ${poiId} to ${outputFilePath}.`);
 };
 
-const writeAiTextFile = async (poiId: string) => {
-  console.info(`[wiki-ai] Generating AI text for ${poiId}.`);
+const writeAiTextFile = async (poiId: string, aiModel: AiModel) => {
+  console.info(
+    `[wiki-ai] Generating AI text for ${poiId} with ${aiModel}.`,
+  );
   const wikiTextPath = buildOutputFilePath(getDefaultOutputDir(), poiId);
   if (!existsSync(wikiTextPath)) {
     throw new Error(`Wiki text not found for ${poiId}.`);
@@ -285,11 +334,18 @@ const writeAiTextFile = async (poiId: string) => {
 
   const outputFilePath = buildOutputFilePath(aiDirectoryPath, poiId);
   mkdirSync(path.dirname(outputFilePath), { recursive: true });
-  writeFileSync(outputFilePath, await enrichWikiText(wikiText), "utf-8");
+  writeFileSync(
+    outputFilePath,
+    await enrichWikiText(wikiText, aiModel),
+    "utf-8",
+  );
   console.info(`[wiki-ai] Saved AI text for ${poiId} to ${outputFilePath}.`);
 };
 
-const refreshTransformedPoiPipeline = async (poiId: string) => {
+const refreshTransformedPoiPipeline = async (
+  poiId: string,
+  aiModel: AiModel,
+) => {
   const { rawFeature, rawFeatureIndex, rawGeoJson } =
     findRawFeatureByPoiId(poiId);
   const refreshedPoiId = await measureGeneration(poiId, "transformed", () =>
@@ -299,21 +355,32 @@ const refreshTransformedPoiPipeline = async (poiId: string) => {
     writeWikiSnapshot(refreshedPoiId),
   );
   await measureGeneration(refreshedPoiId, "ai", () =>
-    writeAiTextFile(refreshedPoiId),
+    writeAiTextFile(refreshedPoiId, aiModel),
+    { aiModel },
   );
   await measureGeneration(refreshedPoiId, "mdx", () =>
     writeMdxFile(refreshedPoiId),
   );
 };
 
-const refreshWikiPipeline = async (poiId: string) => {
+const refreshWikiPipeline = async (poiId: string, aiModel: AiModel) => {
   await measureGeneration(poiId, "wiki", () => writeWikiSnapshot(poiId));
-  await measureGeneration(poiId, "ai", () => writeAiTextFile(poiId));
+  await measureGeneration(
+    poiId,
+    "ai",
+    () => writeAiTextFile(poiId, aiModel),
+    { aiModel },
+  );
   await measureGeneration(poiId, "mdx", () => writeMdxFile(poiId));
 };
 
-const refreshAiPipeline = async (poiId: string) => {
-  await measureGeneration(poiId, "ai", () => writeAiTextFile(poiId));
+const refreshAiPipeline = async (poiId: string, aiModel: AiModel) => {
+  await measureGeneration(
+    poiId,
+    "ai",
+    () => writeAiTextFile(poiId, aiModel),
+    { aiModel },
+  );
   await measureGeneration(poiId, "mdx", () => writeMdxFile(poiId));
 };
 
@@ -377,6 +444,7 @@ const deleteTransformedPoiPipeline = (poiId: string) => {
 };
 
 export const generateSinglePoiJson = async (formData: FormData) => {
+  const aiModel = await resolveAiModelFromFormData(formData);
   const rawFeatureIndex = Number(formData.get("rawFeatureIndex"));
   if (!Number.isInteger(rawFeatureIndex) || rawFeatureIndex < 0) {
     throw new Error("Invalid raw feature index.");
@@ -394,38 +462,46 @@ export const generateSinglePoiJson = async (formData: FormData) => {
     writeTransformedPoi(rawFeature, rawFeatureIndex, rawGeoJson),
   );
   await measureGeneration(poiId, "wiki", () => writeWikiSnapshot(poiId));
-  await measureGeneration(poiId, "ai", () => writeAiTextFile(poiId));
+  await measureGeneration(
+    poiId,
+    "ai",
+    () => writeAiTextFile(poiId, aiModel),
+    { aiModel },
+  );
   await measureGeneration(poiId, "mdx", () => writeMdxFile(poiId));
   revalidatePath("/admin");
 };
 
 export const refreshTransformedPoiJson = async (formData: FormData) => {
+  const aiModel = await resolveAiModelFromFormData(formData);
   const poiId = formData.get("poiId");
   if (typeof poiId !== "string" || poiId.trim().length === 0) {
     throw new Error("Invalid POI id.");
   }
 
-  await refreshTransformedPoiPipeline(poiId);
+  await refreshTransformedPoiPipeline(poiId, aiModel);
   revalidatePath("/admin");
 };
 
 export const refreshWikiJson = async (formData: FormData) => {
+  const aiModel = await resolveAiModelFromFormData(formData);
   const poiId = formData.get("poiId");
   if (typeof poiId !== "string" || poiId.trim().length === 0) {
     throw new Error("Invalid POI id.");
   }
 
-  await refreshWikiPipeline(poiId);
+  await refreshWikiPipeline(poiId, aiModel);
   revalidatePath("/admin");
 };
 
 export const refreshAiText = async (formData: FormData) => {
+  const aiModel = await resolveAiModelFromFormData(formData);
   const poiId = formData.get("poiId");
   if (typeof poiId !== "string" || poiId.trim().length === 0) {
     throw new Error("Invalid POI id.");
   }
 
-  await refreshAiPipeline(poiId);
+  await refreshAiPipeline(poiId, aiModel);
   revalidatePath("/admin");
 };
 
