@@ -1,60 +1,7 @@
 # AGENTS – Implementation Notes
 
-## Project Context
-Historical Explorer is a visit companion for art, history, and cultural discovery.
-
-The app helps tourists understand what they are seeing while visiting a city. It turns points of interest into concise, engaging cultural discoveries using text, images, maps, timelines, and other media when they are the best medium for the insight.
-
-The app is not a Wikipedia clone, a generic tourist guide, or an AI-generated article system. Each POI should become a small curated visitor experience, not a complete encyclopedia page.
-
-The goal is to help visitors:
-- Notice meaningful details.
-- Understand what they are looking at.
-- Connect a place to art, history, culture, people, and the city.
-- Remember something valuable after the visit.
-
-## Production World vs Visitor World
-There are two separate worlds:
-
-- Production world: the internal editorial workflow. A POI starts from source material such as Wikipedia, Wikidata, and Wikimedia Commons. AI helps create a first draft by extracting visitor-oriented insights, proposing concise text, suggesting which medium best communicates each insight, proposing candidate media, and explaining why each insight is useful. The AI draft is only a proposal; a human curator reviews, edits, rejects, enriches, and approves the final content.
-- Visitor world: the public app experience. The visitor only sees polished, approved content. They should not see AI reasoning, drafts, source processing, or editorial metadata.
-
-The visitor experience should be quick, pleasant, low-friction, and useful while physically looking at a place.
-
-## Core Content Principle
-Insight first. Medium second.
-
-Use text, image, map, timeline, or another medium only when that medium best communicates the specific cultural insight. Do not add media just because it makes the page look rich. If concise, engaging text communicates the idea best, use text.
-
-Every published discovery should help the visitor do at least one of these:
-- See: notice something visible.
-- Understand: grasp what they are looking at.
-- Connect: relate the POI to history, art, culture, people, or the city.
-- Remember: leave with a meaningful cultural takeaway.
-- Navigate: understand a nearby or spatial relationship.
-
-A true fact is not automatically worth publishing. The final experience should contain the best few discoveries, not all available information.
-
-## AI and Editorial Role
-AI is a junior cultural editor, not the final authority.
-
-AI may help draft, classify, summarize, rank, and propose. The human curator has the final word. Do not design flows where AI directly publishes final POI content without human review.
-
-Avoid:
-- Long article-like summaries.
-- Generic tourist-guide prose.
-- Too many cards, clicks, or sections.
-- Decorative media with no clear purpose.
-- Unsupported claims.
-- Invented facts, coordinates, media, or licenses.
-- Treating all POIs with the same rigid template.
-
-Prefer:
-- Concise, engaging, source-grounded insights.
-- Block-by-block human review.
-- Visible source support for draft content.
-- Media chosen because it communicates an insight better.
-- Optional depth only when it adds value.
+## Product Context
+- For product context, read `docs/product/vision.md` before making architecture or UX decisions.
 
 ## Before Starting Work
 - Always work on a branch, never on `main`.
