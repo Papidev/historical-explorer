@@ -41,6 +41,28 @@ The visitor only sees polished, approved content. They should not see AI reasoni
 
 The visitor experience should be quick, pleasant, low-friction, and useful while physically looking at a place.
 
+## Current product decisions
+
+The primary product mode is a visitor who is near, or interested in, a specific POI and wants a concise cultural explanation. Planning, nearby discovery, post-visit review, and deeper reading are interesting future modes, but the first product shape should optimize the POI visit companion experience.
+
+Each POI should have one canonical English visitor narrative. The narrative should be self-contained, source-grounded, and concise: aim for 120-180 words, with about 220 words as a soft upper bound. It should be written as continuous prose, stored as one narrative body, not as a rigid set of cards or encyclopedia sections.
+
+The tone should be warm, precise, and visitor-facing without becoming promotional, academic, or presence-assuming. Avoid wording like "you are looking at" or "in front of you" because the visitor may be browsing away from the POI. Soft observation prompts are acceptable when useful, such as "a detail worth noticing is..."
+
+AI may propose lightweight bold highlights inside the narrative body, but highlights are plain editorial markup, not structured metadata. They should emphasize scan anchors such as visible details, central names, dates or periods, cultural movements, and the main takeaway. A human curator can adjust or remove them before approval.
+
+Each POI needs one required lead image. The lead image should help the visitor recognize the place or notice an important visible detail, not merely decorate the page. It should live as structured POI content outside the narrative body and include source, author or rights status, license, and attribution metadata before approval.
+
+For the first AI draft workflow, AI should produce:
+- a concise English visitor narrative
+- proposed lightweight bold highlights
+- 2-4 candidate lead images with source, license, and attribution metadata
+- source material used to ground the narrative
+
+The first source pipeline should stay limited to Wikipedia, Wikidata, and Wikimedia Commons. Source material and draft metadata belong to the draft workflow and should not be shown in the visitor experience.
+
+The map remains the entry point for discovery, but POI content is the main value moment. Selecting a marker should first show a lightweight identifiable preview, because a marker alone does not tell the visitor what it represents. The preview should include the POI name, a small thumbnail, a short descriptor, and an action to open the full POI content.
+
 ## Core content principle
 
 Insight first. Medium second.
