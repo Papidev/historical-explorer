@@ -2,14 +2,11 @@ import { PoiRowsTable } from "./components/PoiRowsTable";
 import {
   deleteTransformedPoiJson,
   deleteAiText,
-  deleteMdx,
   deleteWikiJson,
   generateSinglePoiJson,
   refreshAiText,
-  refreshMdx,
   refreshTransformedPoiJson,
   refreshWikiJson,
-  saveMdx,
 } from "./lib/actions";
 import { defaultAiModel, loadInstalledAiModelOptions } from "./lib/aiModels";
 import { loadPoiLists } from "./lib/loadPoiLists";
@@ -36,7 +33,9 @@ export default async function AdminPage() {
       </header>
 
       {error ? (
-        <section className="rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-900">{error}</section>
+        <section className="rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-900">
+          {error}
+        </section>
       ) : (
         <PoiRowsTable
           rows={rows}
@@ -46,12 +45,9 @@ export default async function AdminPage() {
           refreshTransformedAction={refreshTransformedPoiJson}
           refreshWikiAction={refreshWikiJson}
           refreshAiAction={refreshAiText}
-          refreshMdxAction={refreshMdx}
-          saveMdxAction={saveMdx}
           deleteTransformedAction={deleteTransformedPoiJson}
           deleteWikiAction={deleteWikiJson}
           deleteAiAction={deleteAiText}
-          deleteMdxAction={deleteMdx}
         />
       )}
     </main>

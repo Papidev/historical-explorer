@@ -1,10 +1,8 @@
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
-import type { MDXRemoteSerializeResult } from "next-mdx-remote";
-import { serialize } from "next-mdx-remote/serialize";
 import type { AdminPoiRow, GeoJson, GeoJsonFeature, PoiItem } from "./types";
 
-type GenerationStep = "transformed" | "wiki" | "ai" | "mdx";
+type GenerationStep = "transformed" | "wiki" | "ai";
 
 type GenerationMetadata = Record<
   string,
@@ -83,63 +81,13 @@ const loadWikiSnapshots = (directoryPath: string) =>
       };
     });
 
-const loadMdxFiles = async (directoryPath: string) =>
-  Promise.all(
-    readdirSync(directoryPath)
-      .filter((fileName) => fileName.endsWith(".mdx"))
-      .sort()
-      .map(async (fileName, index) => {
-        const filePath = path.join(directoryPath, fileName);
-        const raw = readFileSync(filePath, "utf-8");
-        const id = fileName.replace(/\.mdx$/u, "") || `missing-id-${index}`;
-
-        return {
-          item: { id, name: fileName, featureIndex: index } satisfies PoiItem,
-          content: raw,
-          source: (await serialize(raw)) as MDXRemoteSerializeResult<
-            Record<string, unknown>,
-            Record<string, unknown>
-          >,
-          updatedAt: formatUpdatedAt(filePath),
-        };
-      }),
-  );
-
-const loadAiFiles = async (directoryPath: string) =>
-  Promise.all(
-    loadWikiSnapshots(directoryPath).map(async (file) => ({
-      ...file,
-      source: (await serialize(file.json)) as MDXRemoteSerializeResult<
-        Record<string, unknown>,
-        Record<string, unknown>
-      >,
-    })),
-  );
-
 const toPoiRows = (
   rawPois: PoiItem[],
   rawUpdatedAt: string,
   generationMetadata: GenerationMetadata,
   transformedPois: Array<{ item: PoiItem; json: string; updatedAt: string }>,
   wikiPois: Array<{ item: PoiItem; json: string; updatedAt: string }>,
-  aiPois: Array<{
-    item: PoiItem;
-    json: string;
-    source: MDXRemoteSerializeResult<
-      Record<string, unknown>,
-      Record<string, unknown>
-    >;
-    updatedAt: string;
-  }>,
-  mdxPois: Array<{
-    item: PoiItem;
-    content: string;
-    source: MDXRemoteSerializeResult<
-      Record<string, unknown>,
-      Record<string, unknown>
-    >;
-    updatedAt: string;
-  }>,
+  aiPois: Array<{ item: PoiItem; json: string; updatedAt: string }>,
 ) => {
   const rowsById = new Map<string, AdminPoiRow>();
 
@@ -207,7 +155,7 @@ const toPoiRows = (
     );
   }
 
-  for (const { item, json, source, updatedAt } of aiPois) {
+  for (const { item, json, updatedAt } of aiPois) {
     const rowKey = toRowKey(item.id);
     const row = rowsById.get(rowKey);
     rowsById.set(
@@ -217,7 +165,6 @@ const toPoiRows = (
             ...row,
             aiPoi: item,
             aiText: json,
-            aiSource: source,
             aiUpdatedAt: updatedAt,
             aiGenerationDuration: generationMetadata[rowKey]?.ai
               ? formatDuration(generationMetadata[rowKey].ai.durationMs)
@@ -228,41 +175,11 @@ const toPoiRows = (
             id: item.id,
             aiPoi: item,
             aiText: json,
-            aiSource: source,
             aiUpdatedAt: updatedAt,
             aiGenerationDuration: generationMetadata[rowKey]?.ai
               ? formatDuration(generationMetadata[rowKey].ai.durationMs)
               : undefined,
             aiGenerationModel: generationMetadata[rowKey]?.ai?.aiModel,
-          },
-    );
-  }
-
-  for (const { item, content, source, updatedAt } of mdxPois) {
-    const rowKey = toRowKey(item.id);
-    const row = rowsById.get(rowKey);
-    rowsById.set(
-      rowKey,
-      row
-        ? {
-            ...row,
-            mdxPoi: item,
-            mdxContent: content,
-            mdxSource: source,
-            mdxUpdatedAt: updatedAt,
-            mdxGenerationDuration: generationMetadata[rowKey]?.mdx
-              ? formatDuration(generationMetadata[rowKey].mdx.durationMs)
-              : undefined,
-          }
-        : {
-            id: item.id,
-            mdxPoi: item,
-            mdxContent: content,
-            mdxSource: source,
-            mdxUpdatedAt: updatedAt,
-            mdxGenerationDuration: generationMetadata[rowKey]?.mdx
-              ? formatDuration(generationMetadata[rowKey].mdx.durationMs)
-              : undefined,
           },
     );
   }
@@ -272,13 +189,11 @@ const toPoiRows = (
       left.transformedPoi,
       left.wikiPoi,
       left.aiPoi,
-      left.mdxPoi,
     ].filter(Boolean).length;
     const rightGeneratedCount = [
       right.transformedPoi,
       right.wikiPoi,
       right.aiPoi,
-      right.mdxPoi,
     ].filter(Boolean).length;
 
     return rightGeneratedCount - leftGeneratedCount;
@@ -302,12 +217,6 @@ export const loadPoiLists = async () => {
     );
     const wikiDirectoryPath = path.join(process.cwd(), "data", "wiki");
     const aiDirectoryPath = path.join(process.cwd(), "data", "wiki-ai");
-    const mdxDirectoryPath = path.join(
-      process.cwd(),
-      "content",
-      "pois",
-      "rome",
-    );
     const generationMetadataPath = path.join(
       process.cwd(),
       "data",
@@ -331,8 +240,7 @@ export const loadPoiLists = async () => {
       }),
     );
     const wikiPois = loadWikiSnapshots(wikiDirectoryPath);
-    const aiPois = await loadAiFiles(aiDirectoryPath);
-    const mdxPois = await loadMdxFiles(mdxDirectoryPath);
+    const aiPois = loadWikiSnapshots(aiDirectoryPath);
     const rows = toPoiRows(
       rawPois,
       rawUpdatedAt,
@@ -340,7 +248,6 @@ export const loadPoiLists = async () => {
       transformedPois,
       wikiPois,
       aiPois,
-      mdxPois,
     );
 
     return { rows, error: null };

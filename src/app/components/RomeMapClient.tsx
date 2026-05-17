@@ -1,11 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote";
 import type { Poi } from "@/types/Poi";
 import { Map } from "@/app/components/Map";
-import { Callout } from "@/app/components/mdx/Callout";
-import { MdxLink } from "@/app/components/mdx/MdxLink";
+import { MarkdownContent } from "@/app/components/MarkdownContent";
 
 type Props = {
   citySlug: string;
@@ -16,7 +14,7 @@ type Props = {
 };
 
 type DialogContentState = {
-  content: MDXRemoteSerializeResult | null;
+  content: string | null;
   isLoading: boolean;
   poiId: string | null;
 };
@@ -29,22 +27,31 @@ export const RomeMapClient = ({
   pois,
 }: Props) => {
   const [zoom, setZoom] = useState(initialZoom);
-  const [selectedPoiId, setSelectedPoiId] = useState<string | null>(initialSelectedPoiId);
-  const [dialogContentState, setDialogContentState] = useState<DialogContentState>({
-    content: null,
-    isLoading: false,
-    poiId: null,
-  });
+  const [selectedPoiId, setSelectedPoiId] = useState<string | null>(
+    initialSelectedPoiId,
+  );
+  const [dialogContentState, setDialogContentState] =
+    useState<DialogContentState>({
+      content: null,
+      isLoading: false,
+      poiId: null,
+    });
   const displayZoom = Number(zoom.toFixed(2));
-  const selectedPoi = selectedPoiId ? pois.find((poi) => poi.id === selectedPoiId) : undefined;
-  const dialogContentMdx = dialogContentState.poiId === selectedPoi?.id ? dialogContentState.content : null;
-  const isLoadingDialogContent = dialogContentState.poiId === selectedPoi?.id && dialogContentState.isLoading;
+  const selectedPoi = selectedPoiId
+    ? pois.find((poi) => poi.id === selectedPoiId)
+    : undefined;
+  const dialogContent =
+    dialogContentState.poiId === selectedPoi?.id
+      ? dialogContentState.content
+      : null;
+  const isLoadingDialogContent =
+    dialogContentState.poiId === selectedPoi?.id &&
+    dialogContentState.isLoading;
 
   useEffect(() => {
-    if (!selectedPoi?.contentSlug) {
+    if (!selectedPoi) {
       return;
     }
-    const contentSlug = selectedPoi.contentSlug;
     const poiId = selectedPoi.id;
 
     const abortController = new AbortController();
@@ -54,7 +61,7 @@ export const RomeMapClient = ({
 
       try {
         const response = await fetch(
-          `/api/pois/${encodeURIComponent(citySlug)}/${encodeURIComponent(poiId)}/dialog-content?contentSlug=${encodeURIComponent(contentSlug)}`,
+          `/api/pois/${encodeURIComponent(citySlug)}/${encodeURIComponent(poiId)}/dialog-content`,
           { signal: abortController.signal },
         );
 
@@ -64,9 +71,13 @@ export const RomeMapClient = ({
         }
 
         const payload = (await response.json()) as {
-          content?: MDXRemoteSerializeResult | null;
+          content?: string | null;
         };
-        setDialogContentState({ content: payload.content ?? null, isLoading: false, poiId });
+        setDialogContentState({
+          content: payload.content ?? null,
+          isLoading: false,
+          poiId,
+        });
       } catch {
         if (!abortController.signal.aborted) {
           setDialogContentState({ content: null, isLoading: false, poiId });
@@ -79,7 +90,7 @@ export const RomeMapClient = ({
     return () => {
       abortController.abort();
     };
-  }, [citySlug, selectedPoi?.contentSlug, selectedPoi?.id]);
+  }, [citySlug, selectedPoi]);
 
   return (
     <div className="relative h-full w-full">
@@ -88,7 +99,10 @@ export const RomeMapClient = ({
           <span className="font-semibold">Zoom</span>
           <span className="tabular-nums">{displayZoom}</span>
         </div>
-        <label className="mt-2 block text-[11px] font-medium text-white/70" htmlFor="rome-zoom">
+        <label
+          className="mt-2 block text-[11px] font-medium text-white/70"
+          htmlFor="rome-zoom"
+        >
           Change zoom
         </label>
         <input
@@ -125,7 +139,9 @@ export const RomeMapClient = ({
         <div className="flex h-full flex-col">
           <div className="flex items-start justify-between border-b border-black/10 px-5 py-4">
             <div>
-              <h2 className="text-2xl font-semibold leading-tight text-black">{selectedPoi?.name ?? "Dettagli POI"}</h2>
+              <h2 className="text-2xl font-semibold leading-tight text-black">
+                {selectedPoi?.name ?? "Dettagli POI"}
+              </h2>
             </div>
             <button
               type="button"
@@ -138,13 +154,15 @@ export const RomeMapClient = ({
           <div className="overflow-y-auto px-5 py-4 text-sm leading-6 text-black/80">
             {selectedPoi ? (
               <>
-                {selectedPoi.shortDescription ? <p>{selectedPoi.shortDescription}</p> : null}
+                {selectedPoi.shortDescription ? (
+                  <p>{selectedPoi.shortDescription}</p>
+                ) : null}
                 {isLoadingDialogContent ? (
-                  <p className="mt-4 text-black/60">Caricamento contenuto aggiuntivo...</p>
-                ) : dialogContentMdx ? (
-                  <div className="poi-dialog-content mt-4">
-                    <MDXRemote {...dialogContentMdx} components={{ Callout, a: MdxLink }} />
-                  </div>
+                  <p className="mt-4 text-black/60">
+                    Caricamento contenuto aggiuntivo...
+                  </p>
+                ) : dialogContent ? (
+                  <MarkdownContent content={dialogContent} className="mt-4" />
                 ) : (
                   <p className="mt-4 text-black/60">
                     Nessun contenuto aggiuntivo disponibile per questo punto.

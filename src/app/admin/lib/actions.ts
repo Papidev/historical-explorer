@@ -23,17 +23,14 @@ import {
 } from "../../../../scripts/wiki/normalize";
 import { resolvePageForPoi } from "../../../../scripts/wiki/resolve";
 import { transformRawPoiFeature } from "../../../../scripts/wiki/transformRawPoiFeature";
-import {
-  plainTextToMdx,
-  wikiTextToPlainText,
-} from "../../../../scripts/wiki/wikiToMdx";
+import { wikiTextToPlainText } from "../../../../scripts/wiki/wikiText";
 import {
   defaultAiModel,
   loadInstalledAiModelOptions,
   type AiModel,
 } from "./aiModels";
 
-type GenerationStep = "transformed" | "wiki" | "ai" | "mdx";
+type GenerationStep = "transformed" | "wiki" | "ai";
 
 type GenerationMetadata = Record<
   string,
@@ -81,12 +78,6 @@ const transformedPath = path.join(
   "rome-pois.geojson",
 );
 const aiDirectoryPath = path.join(process.cwd(), "data", "wiki-ai");
-const mdxDirectoryPath = path.join(
-  process.cwd(),
-  "content",
-  "pois",
-  toCitySlug(city),
-);
 const generationMetadataPath = path.join(
   process.cwd(),
   "data",
@@ -298,30 +289,8 @@ const writeWikiSnapshot = async (poiId: string) => {
   );
 };
 
-const writeMdxFile = async (poiId: string) => {
-  console.info(`[wiki-mdx] Generating MDX for ${poiId}.`);
-  const aiTextPath = buildOutputFilePath(aiDirectoryPath, poiId);
-  if (!existsSync(aiTextPath)) {
-    throw new Error(`AI text not found for ${poiId}.`);
-  }
-
-  const aiText = readFileSync(aiTextPath, "utf-8");
-  if (aiText.trim().length === 0) {
-    throw new Error(`Invalid AI text for ${poiId}.`);
-  }
-
-  const outputFilePath = path.join(
-    mdxDirectoryPath,
-    `${sanitizePoiIdForFile(poiId)}.mdx`,
-  );
-  writeFileSync(outputFilePath, plainTextToMdx(aiText), "utf-8");
-  console.info(`[wiki-mdx] Saved MDX for ${poiId} to ${outputFilePath}.`);
-};
-
 const writeAiTextFile = async (poiId: string, aiModel: AiModel) => {
-  console.info(
-    `[wiki-ai] Generating AI text for ${poiId} with ${aiModel}.`,
-  );
+  console.info(`[wiki-ai] Generating AI text for ${poiId} with ${aiModel}.`);
   const wikiTextPath = buildOutputFilePath(getDefaultOutputDir(), poiId);
   if (!existsSync(wikiTextPath)) {
     throw new Error(`Wiki text not found for ${poiId}.`);
@@ -354,44 +323,25 @@ const refreshTransformedPoiPipeline = async (
   await measureGeneration(refreshedPoiId, "wiki", () =>
     writeWikiSnapshot(refreshedPoiId),
   );
-  await measureGeneration(refreshedPoiId, "ai", () =>
-    writeAiTextFile(refreshedPoiId, aiModel),
+  await measureGeneration(
+    refreshedPoiId,
+    "ai",
+    () => writeAiTextFile(refreshedPoiId, aiModel),
     { aiModel },
-  );
-  await measureGeneration(refreshedPoiId, "mdx", () =>
-    writeMdxFile(refreshedPoiId),
   );
 };
 
 const refreshWikiPipeline = async (poiId: string, aiModel: AiModel) => {
   await measureGeneration(poiId, "wiki", () => writeWikiSnapshot(poiId));
-  await measureGeneration(
-    poiId,
-    "ai",
-    () => writeAiTextFile(poiId, aiModel),
-    { aiModel },
-  );
-  await measureGeneration(poiId, "mdx", () => writeMdxFile(poiId));
+  await measureGeneration(poiId, "ai", () => writeAiTextFile(poiId, aiModel), {
+    aiModel,
+  });
 };
 
 const refreshAiPipeline = async (poiId: string, aiModel: AiModel) => {
-  await measureGeneration(
-    poiId,
-    "ai",
-    () => writeAiTextFile(poiId, aiModel),
-    { aiModel },
-  );
-  await measureGeneration(poiId, "mdx", () => writeMdxFile(poiId));
-};
-
-const deleteMdxFile = (poiId: string) => {
-  const outputFilePath = path.join(
-    mdxDirectoryPath,
-    `${sanitizePoiIdForFile(poiId)}.mdx`,
-  );
-  if (existsSync(outputFilePath)) {
-    unlinkSync(outputFilePath);
-  }
+  await measureGeneration(poiId, "ai", () => writeAiTextFile(poiId, aiModel), {
+    aiModel,
+  });
 };
 
 const deleteWikiSnapshotFile = (poiId: string) => {
@@ -411,14 +361,12 @@ const deleteAiTextFile = (poiId: string) => {
 const deleteWikiPipeline = (poiId: string) => {
   deleteWikiSnapshotFile(poiId);
   deleteAiTextFile(poiId);
-  deleteMdxFile(poiId);
-  clearGenerationDurations(poiId, ["wiki", "ai", "mdx"]);
+  clearGenerationDurations(poiId, ["wiki", "ai"]);
 };
 
 const deleteAiPipeline = (poiId: string) => {
   deleteAiTextFile(poiId);
-  deleteMdxFile(poiId);
-  clearGenerationDurations(poiId, ["ai", "mdx"]);
+  clearGenerationDurations(poiId, ["ai"]);
 };
 
 const deleteTransformedPoiPipeline = (poiId: string) => {
@@ -462,13 +410,9 @@ export const generateSinglePoiJson = async (formData: FormData) => {
     writeTransformedPoi(rawFeature, rawFeatureIndex, rawGeoJson),
   );
   await measureGeneration(poiId, "wiki", () => writeWikiSnapshot(poiId));
-  await measureGeneration(
-    poiId,
-    "ai",
-    () => writeAiTextFile(poiId, aiModel),
-    { aiModel },
-  );
-  await measureGeneration(poiId, "mdx", () => writeMdxFile(poiId));
+  await measureGeneration(poiId, "ai", () => writeAiTextFile(poiId, aiModel), {
+    aiModel,
+  });
   revalidatePath("/admin");
 };
 
@@ -505,16 +449,6 @@ export const refreshAiText = async (formData: FormData) => {
   revalidatePath("/admin");
 };
 
-export const refreshMdx = async (formData: FormData) => {
-  const poiId = formData.get("poiId");
-  if (typeof poiId !== "string" || poiId.trim().length === 0) {
-    throw new Error("Invalid POI id.");
-  }
-
-  await measureGeneration(poiId, "mdx", () => writeMdxFile(poiId));
-  revalidatePath("/admin");
-};
-
 export const deleteTransformedPoiJson = async (formData: FormData) => {
   const poiId = formData.get("poiId");
   if (typeof poiId !== "string" || poiId.trim().length === 0) {
@@ -543,35 +477,4 @@ export const deleteAiText = async (formData: FormData) => {
 
   deleteAiPipeline(poiId);
   revalidatePath("/admin");
-};
-
-export const deleteMdx = async (formData: FormData) => {
-  const poiId = formData.get("poiId");
-  if (typeof poiId !== "string" || poiId.trim().length === 0) {
-    throw new Error("Invalid POI id.");
-  }
-
-  deleteMdxFile(poiId);
-  clearGenerationDurations(poiId, ["mdx"]);
-  revalidatePath("/admin");
-};
-
-export const saveMdx = async (formData: FormData) => {
-  const poiId = formData.get("poiId");
-  if (typeof poiId !== "string" || poiId.trim().length === 0) {
-    throw new Error("Invalid POI id.");
-  }
-
-  const content = formData.get("content");
-  if (typeof content !== "string") {
-    throw new Error("Invalid MDX content.");
-  }
-
-  const outputFilePath = path.join(
-    mdxDirectoryPath,
-    `${sanitizePoiIdForFile(poiId)}.mdx`,
-  );
-  writeFileSync(outputFilePath, content, "utf-8");
-  revalidatePath("/admin");
-  revalidatePath("/rome");
 };

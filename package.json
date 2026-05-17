@@ -9,13 +9,11 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^3.1.1",
-    "@mdx-js/react": "^3.1.1",
     "maplibre-gl": "^5.24.0",
     "next": "16.2.4",
-    "next-mdx-remote": "^6.0.0",
     "react": "19.2.5",
     "react-dom": "19.2.5",
+    "react-markdown": "^10.1.0",
     "wtf_wikipedia": "^10.4.1"
   },
   "devDependencies": {

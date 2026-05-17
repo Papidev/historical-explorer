@@ -1,6 +1,5 @@
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
-import { serialize } from "next-mdx-remote/serialize";
 import type { Poi } from "@/types/Poi";
 
 type GeoJson = {
@@ -42,19 +41,16 @@ const sanitizePoiIdForFile = (poiId: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "") || "unknown-poi";
 
-export const getPoiDialogContent = async (
-  city: string,
-  contentSlug: string,
-  poiId?: string,
-) => {
+export const getPoiDialogContent = async (city: string, poiId?: string) => {
   if (!poiId) {
     return undefined;
   }
 
-  const directoryPath = path.join(process.cwd(), "content", "pois", toCitySlug(city));
-  const preferredFilePath = path.join(directoryPath, `${sanitizePoiIdForFile(poiId)}.mdx`);
-  const legacyFilePath = path.join(directoryPath, `${poiId}-${contentSlug}.mdx`);
-  const filePath = existsSync(preferredFilePath) ? preferredFilePath : legacyFilePath;
+  const directoryPath = path.join(process.cwd(), "data", "wiki-ai");
+  const filePath = path.join(
+    directoryPath,
+    `${sanitizePoiIdForFile(poiId)}.txt`,
+  );
   if (!existsSync(filePath)) {
     return undefined;
   }
@@ -64,14 +60,14 @@ export const getPoiDialogContent = async (
     return undefined;
   }
 
-  try {
-    return await serialize(raw);
-  } catch {
-    return undefined;
-  }
+  return raw;
 };
 
-const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Poi | null => {
+const asPoi = (
+  feature: GeoJsonFeature,
+  index: number,
+  fallbackCity: string,
+): Poi | null => {
   if (feature.geometry?.type !== "Point") {
     return null;
   }
@@ -92,14 +88,14 @@ const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Po
     typeof feature.wikidataId === "string"
       ? feature.wikidataId
       : typeof feature.id === "string"
-      ? feature.id
-      : typeof feature.id === "number"
-        ? `${feature.id}`
-        : pickString(properties, "id", "@id") ?? fallbackId;
+        ? feature.id
+        : typeof feature.id === "number"
+          ? `${feature.id}`
+          : (pickString(properties, "id", "@id") ?? fallbackId);
 
   const name =
     pickString(properties, "name", "name:en", "name:it", "int_name") ?? rawId;
-  const contentSlug = pickString(properties, "content_slug", "content:slug", "mdx_slug");
+  const contentSlug = pickString(properties, "content_slug", "content:slug");
   const historic = pickString(properties, "historic");
   const period =
     pickString(
