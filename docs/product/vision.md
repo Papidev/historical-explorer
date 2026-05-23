@@ -49,7 +49,7 @@ Each POI should have one canonical English visitor narrative. The narrative shou
 
 The tone should be warm, precise, and visitor-facing without becoming promotional, academic, or presence-assuming. Avoid wording like "you are looking at" or "in front of you" because the visitor may be browsing away from the POI. Soft observation prompts are acceptable when useful, such as "a detail worth noticing is..."
 
-AI may propose lightweight bold highlights inside the narrative body, but highlights are plain editorial markup, not structured metadata. They should emphasize scan anchors such as visible details, central names, dates or periods, cultural movements, and the main takeaway. A human curator can adjust or remove them before approval.
+AI may propose lightweight bold highlights inside the narrative body, but highlights are plain editorial markup, not structured metadata. They should only emphasize proper names of places, named people or historical figures, dates or periods, named historical events, and named artistic movements. Apart from dates and periods, a highlighted phrase must be a named entity. Generic nouns, roles, amenities, facilities, services, functions, materials, objects, and concepts should not be bold unless they are part of one of those allowed proper names. A human curator can adjust or remove them before approval.
 
 Each POI needs one required lead image. The lead image should help the visitor recognize the place or notice an important visible detail, not merely decorate the page. It should live as structured POI content outside the narrative body and include source, author or rights status, license, and attribution metadata before approval.
 
