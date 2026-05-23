@@ -14,6 +14,7 @@ import { fetchWikiSnapshot } from "../../../../scripts/wiki/fetchWiki";
 import {
   buildOutputFilePath,
   findPoiInGeoJson,
+  getDefaultInputPath,
   getDefaultOutputDir,
   writeSnapshotFile,
 } from "../../../../scripts/wiki/io";
@@ -71,12 +72,7 @@ const rawPath = path.join(
   "raw",
   "rome-pois-raw.geojson",
 );
-const transformedPath = path.join(
-  process.cwd(),
-  "public",
-  "data",
-  "rome-pois.geojson",
-);
+const transformedPath = getDefaultInputPath(city);
 const aiDirectoryPath = path.join(process.cwd(), "data", "wiki-ai");
 const generationMetadataPath = path.join(
   process.cwd(),
@@ -235,7 +231,15 @@ const writeTransformedPoi = (
   rawGeoJson: GeoJson,
 ) => {
   const poiId = getPoiIdFromRawFeature(rawFeature, rawFeatureIndex);
-  const transformedGeoJson = parseGeoJson(transformedPath);
+  const transformedGeoJson = existsSync(transformedPath)
+    ? parseGeoJson(transformedPath)
+    : {
+        type: rawGeoJson.type ?? "FeatureCollection",
+        generator: rawGeoJson.generator,
+        copyright: rawGeoJson.copyright,
+        timestamp: rawGeoJson.timestamp,
+        features: [],
+      };
   const properties = rawFeature.properties ?? {};
   const name =
     (typeof properties.name === "string" && properties.name.trim()) || poiId;
@@ -261,6 +265,7 @@ const writeTransformedPoi = (
     features: nextFeatures,
   };
 
+  mkdirSync(path.dirname(transformedPath), { recursive: true });
   writeFileSync(
     transformedPath,
     `${JSON.stringify(nextGeoJson, null, 2)}\n`,
@@ -271,14 +276,8 @@ const writeTransformedPoi = (
 
 const writeWikiSnapshot = async (poiId: string) => {
   console.info(`[wiki] Fetching Wikipedia text for ${poiId}.`);
-  const inputPath = path.join(
-    process.cwd(),
-    "public",
-    "data",
-    `${toCitySlug(city)}-pois.geojson`,
-  );
-  const outputDir = getDefaultOutputDir();
-  const poi = findPoiInGeoJson(inputPath, poiId, city);
+  const outputDir = getDefaultOutputDir(city);
+  const poi = findPoiInGeoJson(getDefaultInputPath(city), poiId, city);
   const outputFilePath = buildOutputFilePath(outputDir, poi.id);
   const resolved = await resolvePageForPoi(poi);
   const snapshot = await fetchWikiSnapshot(resolved.selected.title);
@@ -291,7 +290,7 @@ const writeWikiSnapshot = async (poiId: string) => {
 
 const writeAiTextFile = async (poiId: string, aiModel: AiModel) => {
   console.info(`[wiki-ai] Generating AI text for ${poiId} with ${aiModel}.`);
-  const wikiTextPath = buildOutputFilePath(getDefaultOutputDir(), poiId);
+  const wikiTextPath = buildOutputFilePath(getDefaultOutputDir(city), poiId);
   if (!existsSync(wikiTextPath)) {
     throw new Error(`Wiki text not found for ${poiId}.`);
   }
@@ -311,31 +310,16 @@ const writeAiTextFile = async (poiId: string, aiModel: AiModel) => {
   console.info(`[wiki-ai] Saved AI text for ${poiId} to ${outputFilePath}.`);
 };
 
-const refreshTransformedPoiPipeline = async (
-  poiId: string,
-  aiModel: AiModel,
-) => {
+const refreshTransformedPoiPipeline = async (poiId: string) => {
   const { rawFeature, rawFeatureIndex, rawGeoJson } =
     findRawFeatureByPoiId(poiId);
-  const refreshedPoiId = await measureGeneration(poiId, "transformed", () =>
+  await measureGeneration(poiId, "transformed", () =>
     writeTransformedPoi(rawFeature, rawFeatureIndex, rawGeoJson),
-  );
-  await measureGeneration(refreshedPoiId, "wiki", () =>
-    writeWikiSnapshot(refreshedPoiId),
-  );
-  await measureGeneration(
-    refreshedPoiId,
-    "ai",
-    () => writeAiTextFile(refreshedPoiId, aiModel),
-    { aiModel },
   );
 };
 
-const refreshWikiPipeline = async (poiId: string, aiModel: AiModel) => {
+const refreshWikiPipeline = async (poiId: string) => {
   await measureGeneration(poiId, "wiki", () => writeWikiSnapshot(poiId));
-  await measureGeneration(poiId, "ai", () => writeAiTextFile(poiId, aiModel), {
-    aiModel,
-  });
 };
 
 const refreshAiPipeline = async (poiId: string, aiModel: AiModel) => {
@@ -345,7 +329,7 @@ const refreshAiPipeline = async (poiId: string, aiModel: AiModel) => {
 };
 
 const deleteWikiSnapshotFile = (poiId: string) => {
-  const outputFilePath = buildOutputFilePath(getDefaultOutputDir(), poiId);
+  const outputFilePath = buildOutputFilePath(getDefaultOutputDir(city), poiId);
   if (existsSync(outputFilePath)) {
     unlinkSync(outputFilePath);
   }
@@ -370,6 +354,12 @@ const deleteAiPipeline = (poiId: string) => {
 };
 
 const deleteTransformedPoiPipeline = (poiId: string) => {
+  if (!existsSync(transformedPath)) {
+    deleteWikiPipeline(poiId);
+    clearGenerationDurations(poiId, ["transformed"]);
+    return;
+  }
+
   const transformedGeoJson = parseGeoJson(transformedPath);
   const nextFeatures = (transformedGeoJson.features ?? []).filter(
     (feature) => feature.wikidataId !== poiId,
@@ -382,6 +372,7 @@ const deleteTransformedPoiPipeline = (poiId: string) => {
     features: nextFeatures,
   };
 
+  mkdirSync(path.dirname(transformedPath), { recursive: true });
   writeFileSync(
     transformedPath,
     `${JSON.stringify(nextGeoJson, null, 2)}\n`,
@@ -391,8 +382,7 @@ const deleteTransformedPoiPipeline = (poiId: string) => {
   clearGenerationDurations(poiId, ["transformed"]);
 };
 
-export const generateSinglePoiJson = async (formData: FormData) => {
-  const aiModel = await resolveAiModelFromFormData(formData);
+export const generateTransformedPoiJson = async (formData: FormData) => {
   const rawFeatureIndex = Number(formData.get("rawFeatureIndex"));
   if (!Number.isInteger(rawFeatureIndex) || rawFeatureIndex < 0) {
     throw new Error("Invalid raw feature index.");
@@ -409,33 +399,24 @@ export const generateSinglePoiJson = async (formData: FormData) => {
   await measureGeneration(poiId, "transformed", () =>
     writeTransformedPoi(rawFeature, rawFeatureIndex, rawGeoJson),
   );
-  await measureGeneration(poiId, "wiki", () => writeWikiSnapshot(poiId));
-  await measureGeneration(poiId, "ai", () => writeAiTextFile(poiId, aiModel), {
-    aiModel,
-  });
-  revalidatePath("/admin");
 };
 
 export const refreshTransformedPoiJson = async (formData: FormData) => {
-  const aiModel = await resolveAiModelFromFormData(formData);
   const poiId = formData.get("poiId");
   if (typeof poiId !== "string" || poiId.trim().length === 0) {
     throw new Error("Invalid POI id.");
   }
 
-  await refreshTransformedPoiPipeline(poiId, aiModel);
-  revalidatePath("/admin");
+  await refreshTransformedPoiPipeline(poiId);
 };
 
 export const refreshWikiJson = async (formData: FormData) => {
-  const aiModel = await resolveAiModelFromFormData(formData);
   const poiId = formData.get("poiId");
   if (typeof poiId !== "string" || poiId.trim().length === 0) {
     throw new Error("Invalid POI id.");
   }
 
-  await refreshWikiPipeline(poiId, aiModel);
-  revalidatePath("/admin");
+  await refreshWikiPipeline(poiId);
 };
 
 export const refreshAiText = async (formData: FormData) => {

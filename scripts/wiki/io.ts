@@ -1,6 +1,11 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import { getFeatureId, pickString, sanitizePoiIdForFile, toCitySlug } from "./normalize";
+import {
+  getFeatureId,
+  pickString,
+  sanitizePoiIdForFile,
+  toCitySlug,
+} from "./normalize";
 import type { GeoJson, PoiInput } from "./types";
 
 const parseGeoJson = (raw: string): GeoJson => {
@@ -13,11 +18,22 @@ const parseGeoJson = (raw: string): GeoJson => {
 };
 
 export const getDefaultInputPath = (city: string) =>
-  path.join(process.cwd(), "public", "data", `${toCitySlug(city)}-pois.geojson`);
+  path.join(
+    process.cwd(),
+    "data",
+    "generated",
+    toCitySlug(city),
+    "pois.geojson",
+  );
 
-export const getDefaultOutputDir = () => path.join(process.cwd(), "data", "wiki");
+export const getDefaultOutputDir = (city: string) =>
+  path.join(process.cwd(), "data", "generated", toCitySlug(city), "wiki");
 
-export const findPoiInGeoJson = (inputPath: string, poiId: string, fallbackCity: string): PoiInput => {
+export const findPoiInGeoJson = (
+  inputPath: string,
+  poiId: string,
+  fallbackCity: string,
+): PoiInput => {
   const raw = readFileSync(inputPath, "utf-8");
   const geoJson = parseGeoJson(raw);
   const features = geoJson.features ?? [];
@@ -39,8 +55,10 @@ export const findPoiInGeoJson = (inputPath: string, poiId: string, fallbackCity:
     }
 
     const properties = feature.properties ?? {};
-    const name = pickString(properties, "name", "name:en", "name:it", "int_name") ?? id;
-    const city = pickString(properties, "addr:city", "is_in:city") ?? fallbackCity;
+    const name =
+      pickString(properties, "name", "name:en", "name:it", "int_name") ?? id;
+    const city =
+      pickString(properties, "addr:city", "is_in:city") ?? fallbackCity;
 
     return {
       id,
@@ -60,7 +78,8 @@ export const findPoiInGeoJson = (inputPath: string, poiId: string, fallbackCity:
 export const buildOutputFilePath = (outputDir: string, poiId: string) =>
   path.join(outputDir, `${sanitizePoiIdForFile(poiId)}.txt`);
 
-export const outputExists = (outputFilePath: string) => existsSync(outputFilePath);
+export const outputExists = (outputFilePath: string) =>
+  existsSync(outputFilePath);
 
 export const writeSnapshotFile = (outputFilePath: string, data: string) => {
   mkdirSync(path.dirname(outputFilePath), { recursive: true });
