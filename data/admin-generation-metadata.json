@@ -5,9 +5,32 @@
       "completedAt": "2026-05-15T00:11:26.804Z"
     },
     "ai": {
-      "durationMs": 70585,
-      "completedAt": "2026-05-15T00:11:26.797Z",
-      "aiModel": "mistral-nemo:12b"
+      "durationMs": 77337,
+      "completedAt": "2026-05-23T01:02:43.472Z",
+      "aiModel": "qwen3:8b"
+    },
+    "transformed": {
+      "durationMs": 1,
+      "completedAt": "2026-05-23T01:01:23.982Z"
+    },
+    "wiki": {
+      "durationMs": 697,
+      "completedAt": "2026-05-23T01:01:25.500Z"
+    }
+  },
+  "q25100007": {
+    "transformed": {
+      "durationMs": 1,
+      "completedAt": "2026-05-23T01:00:03.438Z"
+    },
+    "wiki": {
+      "durationMs": 480,
+      "completedAt": "2026-05-23T01:00:04.299Z"
+    },
+    "ai": {
+      "durationMs": 24204,
+      "completedAt": "2026-05-23T01:00:29.405Z",
+      "aiModel": "qwen3:8b"
     }
   }
 }
