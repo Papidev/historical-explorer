@@ -8,19 +8,24 @@ import type { AdminPoiRow } from "../lib/types";
 import { SubmitButton } from "./SubmitButton";
 
 const refreshConfirmMessages = {
-  transformed:
-    "Refresh transformed JSON, wiki text, and AI Markdown for this POI?",
-  wiki: "Refresh wiki text and AI Markdown for this POI?",
   ai: "Refresh AI Markdown for this POI?",
 } as const;
 
 const generateConfirmMessage =
   "Generate transformed JSON, wiki text, and AI Markdown for this POI?";
 
+type ProgressStep = {
+  description: string;
+  action: (formData: FormData) => Promise<void>;
+  formData: FormData;
+};
+
+type ProgressState = {
+  poiId: string;
+  description: string;
+};
+
 const deleteConfirmMessages = {
-  transformed:
-    "Delete transformed JSON, wiki text, and AI Markdown for this POI?",
-  wiki: "Delete wiki text and AI Markdown for this POI?",
   ai: "Delete AI Markdown for this POI?",
 } as const;
 
@@ -94,6 +99,12 @@ const CellActions = ({ children }: { children?: ReactNode }) => (
   <div className="mt-3 min-h-20">{children}</div>
 );
 
+const ProgressMessage = ({ description }: { description: string }) => (
+  <p className="mt-2 text-xs font-medium text-black/65" aria-live="polite">
+    {description}
+  </p>
+);
+
 type SelectedPanel =
   | {
       title: string;
@@ -110,47 +121,59 @@ export const PoiRowsTable = ({
   rows,
   aiModelOptions,
   defaultAiModel,
-  generateAction,
-  refreshTransformedAction,
+  generateTransformedAction,
   refreshWikiAction,
   refreshAiAction,
-  deleteTransformedAction,
-  deleteWikiAction,
   deleteAiAction,
 }: {
   rows: AdminPoiRow[];
   aiModelOptions: readonly AiModelOption[];
   defaultAiModel: string;
-  generateAction: (formData: FormData) => Promise<void>;
-  refreshTransformedAction: (formData: FormData) => Promise<void>;
+  generateTransformedAction: (formData: FormData) => Promise<void>;
   refreshWikiAction: (formData: FormData) => Promise<void>;
   refreshAiAction: (formData: FormData) => Promise<void>;
-  deleteTransformedAction: (formData: FormData) => Promise<void>;
-  deleteWikiAction: (formData: FormData) => Promise<void>;
   deleteAiAction: (formData: FormData) => Promise<void>;
 }) => {
   const [selectedPanel, setSelectedPanel] = useState<SelectedPanel | null>(
     null,
   );
   const [selectedAiModel, setSelectedAiModel] = useState(defaultAiModel);
-  const [versionInProgressPoiId, setVersionInProgressPoiId] = useState<
-    string | null
-  >(null);
+  const [progress, setProgress] = useState<ProgressState | null>(null);
 
-  const runVersionAction = async (
-    poiId: string,
-    action: (formData: FormData) => Promise<void>,
-    formData: FormData,
-  ) => {
-    setVersionInProgressPoiId(poiId);
+  const createPoiFormData = (poiId: string) => {
+    const formData = new FormData();
+    formData.set("poiId", poiId);
+    formData.set("aiModel", selectedAiModel);
+
+    return formData;
+  };
+
+  const runPipeline = async (poiId: string, steps: ProgressStep[]) => {
     setSelectedPanel(null);
 
     try {
-      await action(formData);
+      for (const step of steps) {
+        setProgress({ poiId, description: step.description });
+        await step.action(step.formData);
+      }
     } finally {
-      setVersionInProgressPoiId(null);
+      setProgress(null);
     }
   };
+
+  const runSingleAction = async (
+    poiId: string,
+    description: string,
+    action: (formData: FormData) => Promise<void>,
+    formData: FormData,
+  ) =>
+    runPipeline(poiId, [
+      {
+        description,
+        action,
+        formData,
+      },
+    ]);
 
   return (
     <>
@@ -168,9 +191,7 @@ export const PoiRowsTable = ({
           <select
             value={selectedAiModel}
             onChange={(event) => setSelectedAiModel(event.target.value)}
-            disabled={
-              versionInProgressPoiId !== null || aiModelOptions.length === 0
-            }
+            disabled={progress !== null || aiModelOptions.length === 0}
             className="rounded-md border border-black/15 bg-white px-3 py-2 text-sm font-medium text-black outline-none transition hover:bg-black/[0.03] disabled:cursor-not-allowed disabled:opacity-50"
           >
             {aiModelOptions.map((option) => (
@@ -196,7 +217,9 @@ export const PoiRowsTable = ({
           ) : (
             <ul>
               {rows.map((row) => {
-                const isVisualizationDisabled = versionInProgressPoiId !== null;
+                const isVisualizationDisabled = progress !== null;
+                const progressDescription =
+                  progress?.poiId === row.id ? progress.description : null;
 
                 return (
                   <li
@@ -213,7 +236,23 @@ export const PoiRowsTable = ({
                         {row.rawPoi ? (
                           <form
                             action={(formData) =>
-                              runVersionAction(row.id, generateAction, formData)
+                              runPipeline(row.id, [
+                                {
+                                  description: "Polishing POI metadata...",
+                                  action: generateTransformedAction,
+                                  formData,
+                                },
+                                {
+                                  description: "Fetching Wikipedia text...",
+                                  action: refreshWikiAction,
+                                  formData: createPoiFormData(row.id),
+                                },
+                                {
+                                  description: "Generating AI Markdown...",
+                                  action: refreshAiAction,
+                                  formData: createPoiFormData(row.id),
+                                },
+                              ])
                             }
                           >
                             <input
@@ -231,10 +270,14 @@ export const PoiRowsTable = ({
                               pendingLabel="Generating..."
                               confirmMessage={generateConfirmMessage}
                               tone="primary"
+                              disabled={progress !== null}
                             />
                           </form>
                         ) : null}
                       </CellActions>
+                      {progressDescription ? (
+                        <ProgressMessage description={progressDescription} />
+                      ) : null}
                     </div>
                     <div className="px-4 py-3">
                       <CellContent
@@ -244,77 +287,22 @@ export const PoiRowsTable = ({
                       />
                       <CellActions>
                         {row.transformedPoi ? (
-                          <div className="flex flex-col items-start gap-2">
-                            <button
-                              type="button"
-                              disabled={isVisualizationDisabled}
-                              onClick={() =>
-                                row.transformedJson
-                                  ? setSelectedPanel({
-                                      title: `${row.id} Rome JSON`,
-                                      kind: "text",
-                                      content: row.transformedJson,
-                                    })
-                                  : null
-                              }
-                              className={viewButtonClassName}
-                            >
-                              View
-                            </button>
-                            <div className="flex flex-wrap gap-2">
-                              <form
-                                action={(formData) =>
-                                  runVersionAction(
-                                    row.id,
-                                    refreshTransformedAction,
-                                    formData,
-                                  )
-                                }
-                              >
-                                <input
-                                  type="hidden"
-                                  name="poiId"
-                                  value={row.id}
-                                />
-                                <input
-                                  type="hidden"
-                                  name="aiModel"
-                                  value={selectedAiModel}
-                                />
-                                <SubmitButton
-                                  idleLabel="Refresh"
-                                  pendingLabel="Refreshing..."
-                                  confirmMessage={
-                                    refreshConfirmMessages.transformed
-                                  }
-                                  tone="primary"
-                                />
-                              </form>
-                              <form
-                                action={(formData) =>
-                                  runVersionAction(
-                                    row.id,
-                                    deleteTransformedAction,
-                                    formData,
-                                  )
-                                }
-                              >
-                                <input
-                                  type="hidden"
-                                  name="poiId"
-                                  value={row.id}
-                                />
-                                <SubmitButton
-                                  idleLabel="Delete"
-                                  pendingLabel="Deleting..."
-                                  confirmMessage={
-                                    deleteConfirmMessages.transformed
-                                  }
-                                  tone="danger"
-                                />
-                              </form>
-                            </div>
-                          </div>
+                          <button
+                            type="button"
+                            disabled={isVisualizationDisabled}
+                            onClick={() =>
+                              row.transformedJson
+                                ? setSelectedPanel({
+                                    title: `${row.id} Rome JSON`,
+                                    kind: "text",
+                                    content: row.transformedJson,
+                                  })
+                                : null
+                            }
+                            className={viewButtonClassName}
+                          >
+                            View
+                          </button>
                         ) : null}
                       </CellActions>
                     </div>
@@ -326,73 +314,22 @@ export const PoiRowsTable = ({
                       />
                       <CellActions>
                         {row.wikiPoi ? (
-                          <div className="flex flex-col items-start gap-2">
-                            <button
-                              type="button"
-                              disabled={isVisualizationDisabled}
-                              onClick={() =>
-                                row.wikiText
-                                  ? setSelectedPanel({
-                                      title: `${row.id} Wiki Text`,
-                                      kind: "text",
-                                      content: row.wikiText,
-                                    })
-                                  : null
-                              }
-                              className={viewButtonClassName}
-                            >
-                              View
-                            </button>
-                            <div className="flex flex-wrap gap-2">
-                              <form
-                                action={(formData) =>
-                                  runVersionAction(
-                                    row.id,
-                                    refreshWikiAction,
-                                    formData,
-                                  )
-                                }
-                              >
-                                <input
-                                  type="hidden"
-                                  name="poiId"
-                                  value={row.id}
-                                />
-                                <input
-                                  type="hidden"
-                                  name="aiModel"
-                                  value={selectedAiModel}
-                                />
-                                <SubmitButton
-                                  idleLabel="Refresh"
-                                  pendingLabel="Refreshing..."
-                                  confirmMessage={refreshConfirmMessages.wiki}
-                                  tone="primary"
-                                />
-                              </form>
-                              <form
-                                action={(formData) =>
-                                  runVersionAction(
-                                    row.id,
-                                    deleteWikiAction,
-                                    formData,
-                                  )
-                                }
-                              >
-                                <input
-                                  type="hidden"
-                                  name="poiId"
-                                  value={row.id}
-                                />
-                                <SubmitButton
-                                  idleLabel="Delete"
-                                  pendingLabel="Deleting..."
-                                  confirmMessage={deleteConfirmMessages.wiki}
-                                  tone="danger"
-                                />
-                              </form>
-                            </div>
-                          </div>
+                          <button
+                            type="button"
+                            disabled={isVisualizationDisabled}
+                            onClick={() =>
+                              row.wikiText
+                                ? setSelectedPanel({
+                                    title: `${row.id} Wiki Text`,
+                                    kind: "text",
+                                    content: row.wikiText,
+                                  })
+                                : null
+                            }
+                            className={viewButtonClassName}
+                          >
+                            View
+                          </button>
                         ) : null}
                       </CellActions>
                     </div>
@@ -428,20 +365,30 @@ export const PoiRowsTable = ({
                                 View
                               </button>
                               {row.aiText ? (
-                                <a
-                                  href={getAiDownloadHref(row.aiText)}
-                                  download={getAiDownloadFileName(row)}
-                                  className={viewButtonClassName}
-                                >
-                                  Download
-                                </a>
+                                isVisualizationDisabled ? (
+                                  <span
+                                    className={`${viewButtonClassName} cursor-not-allowed opacity-50 hover:bg-white`}
+                                    aria-disabled="true"
+                                  >
+                                    Download
+                                  </span>
+                                ) : (
+                                  <a
+                                    href={getAiDownloadHref(row.aiText)}
+                                    download={getAiDownloadFileName(row)}
+                                    className={viewButtonClassName}
+                                  >
+                                    Download
+                                  </a>
+                                )
                               ) : null}
                             </div>
                             <div className="flex flex-wrap gap-2">
                               <form
                                 action={(formData) =>
-                                  runVersionAction(
+                                  runSingleAction(
                                     row.id,
+                                    "Generating AI Markdown...",
                                     refreshAiAction,
                                     formData,
                                   )
@@ -462,12 +409,14 @@ export const PoiRowsTable = ({
                                   pendingLabel="Refreshing..."
                                   confirmMessage={refreshConfirmMessages.ai}
                                   tone="primary"
+                                  disabled={progress !== null}
                                 />
                               </form>
                               <form
                                 action={(formData) =>
-                                  runVersionAction(
+                                  runSingleAction(
                                     row.id,
+                                    "Deleting AI Markdown...",
                                     deleteAiAction,
                                     formData,
                                   )
@@ -483,6 +432,7 @@ export const PoiRowsTable = ({
                                   pendingLabel="Deleting..."
                                   confirmMessage={deleteConfirmMessages.ai}
                                   tone="danger"
+                                  disabled={progress !== null}
                                 />
                               </form>
                             </div>
@@ -490,8 +440,9 @@ export const PoiRowsTable = ({
                         ) : row.wikiPoi ? (
                           <form
                             action={(formData) =>
-                              runVersionAction(
+                              runSingleAction(
                                 row.id,
+                                "Generating AI Markdown...",
                                 refreshAiAction,
                                 formData,
                               )
@@ -508,6 +459,7 @@ export const PoiRowsTable = ({
                               pendingLabel="Generating..."
                               confirmMessage={refreshConfirmMessages.ai}
                               tone="primary"
+                              disabled={progress !== null}
                             />
                           </form>
                         ) : null}

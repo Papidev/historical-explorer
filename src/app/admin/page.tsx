@@ -1,11 +1,8 @@
 import { PoiRowsTable } from "./components/PoiRowsTable";
 import {
-  deleteTransformedPoiJson,
   deleteAiText,
-  deleteWikiJson,
-  generateSinglePoiJson,
+  generateTransformedPoiJson,
   refreshAiText,
-  refreshTransformedPoiJson,
   refreshWikiJson,
 } from "./lib/actions";
 import { defaultAiModel, loadInstalledAiModelOptions } from "./lib/aiModels";
@@ -41,12 +38,9 @@ export default async function AdminPage() {
           rows={rows}
           aiModelOptions={aiModelOptions}
           defaultAiModel={initialAiModel}
-          generateAction={generateSinglePoiJson}
-          refreshTransformedAction={refreshTransformedPoiJson}
+          generateTransformedAction={generateTransformedPoiJson}
           refreshWikiAction={refreshWikiJson}
           refreshAiAction={refreshAiText}
-          deleteTransformedAction={deleteTransformedPoiJson}
-          deleteWikiAction={deleteWikiJson}
           deleteAiAction={deleteAiText}
         />
       )}

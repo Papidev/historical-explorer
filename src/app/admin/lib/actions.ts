@@ -310,31 +310,16 @@ const writeAiTextFile = async (poiId: string, aiModel: AiModel) => {
   console.info(`[wiki-ai] Saved AI text for ${poiId} to ${outputFilePath}.`);
 };
 
-const refreshTransformedPoiPipeline = async (
-  poiId: string,
-  aiModel: AiModel,
-) => {
+const refreshTransformedPoiPipeline = async (poiId: string) => {
   const { rawFeature, rawFeatureIndex, rawGeoJson } =
     findRawFeatureByPoiId(poiId);
-  const refreshedPoiId = await measureGeneration(poiId, "transformed", () =>
+  await measureGeneration(poiId, "transformed", () =>
     writeTransformedPoi(rawFeature, rawFeatureIndex, rawGeoJson),
-  );
-  await measureGeneration(refreshedPoiId, "wiki", () =>
-    writeWikiSnapshot(refreshedPoiId),
-  );
-  await measureGeneration(
-    refreshedPoiId,
-    "ai",
-    () => writeAiTextFile(refreshedPoiId, aiModel),
-    { aiModel },
   );
 };
 
-const refreshWikiPipeline = async (poiId: string, aiModel: AiModel) => {
+const refreshWikiPipeline = async (poiId: string) => {
   await measureGeneration(poiId, "wiki", () => writeWikiSnapshot(poiId));
-  await measureGeneration(poiId, "ai", () => writeAiTextFile(poiId, aiModel), {
-    aiModel,
-  });
 };
 
 const refreshAiPipeline = async (poiId: string, aiModel: AiModel) => {
@@ -397,8 +382,7 @@ const deleteTransformedPoiPipeline = (poiId: string) => {
   clearGenerationDurations(poiId, ["transformed"]);
 };
 
-export const generateSinglePoiJson = async (formData: FormData) => {
-  const aiModel = await resolveAiModelFromFormData(formData);
+export const generateTransformedPoiJson = async (formData: FormData) => {
   const rawFeatureIndex = Number(formData.get("rawFeatureIndex"));
   if (!Number.isInteger(rawFeatureIndex) || rawFeatureIndex < 0) {
     throw new Error("Invalid raw feature index.");
@@ -415,33 +399,24 @@ export const generateSinglePoiJson = async (formData: FormData) => {
   await measureGeneration(poiId, "transformed", () =>
     writeTransformedPoi(rawFeature, rawFeatureIndex, rawGeoJson),
   );
-  await measureGeneration(poiId, "wiki", () => writeWikiSnapshot(poiId));
-  await measureGeneration(poiId, "ai", () => writeAiTextFile(poiId, aiModel), {
-    aiModel,
-  });
-  revalidatePath("/admin");
 };
 
 export const refreshTransformedPoiJson = async (formData: FormData) => {
-  const aiModel = await resolveAiModelFromFormData(formData);
   const poiId = formData.get("poiId");
   if (typeof poiId !== "string" || poiId.trim().length === 0) {
     throw new Error("Invalid POI id.");
   }
 
-  await refreshTransformedPoiPipeline(poiId, aiModel);
-  revalidatePath("/admin");
+  await refreshTransformedPoiPipeline(poiId);
 };
 
 export const refreshWikiJson = async (formData: FormData) => {
-  const aiModel = await resolveAiModelFromFormData(formData);
   const poiId = formData.get("poiId");
   if (typeof poiId !== "string" || poiId.trim().length === 0) {
     throw new Error("Invalid POI id.");
   }
 
-  await refreshWikiPipeline(poiId, aiModel);
-  revalidatePath("/admin");
+  await refreshWikiPipeline(poiId);
 };
 
 export const refreshAiText = async (formData: FormData) => {
