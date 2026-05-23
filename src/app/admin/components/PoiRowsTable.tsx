@@ -45,58 +45,54 @@ const getAiDownloadFileName = (row: AdminPoiRow) =>
 const getAiDownloadHref = (content: string) =>
   `data:text/markdown;charset=utf-8,${encodeURIComponent(content)}`;
 
-const EmptyLine = ({ className = "" }: { className?: string }) => (
-  <p className={`invisible ${className}`} aria-hidden="true">
-    -
-  </p>
-);
-
 const CellContent = ({
   title,
   subtitle,
   updatedAt,
   generationDuration,
   generationModel,
+  titleTone = "status",
 }: {
   title?: string;
   subtitle?: string;
   updatedAt?: string;
   generationDuration?: string;
   generationModel?: string;
+  titleTone?: "poi" | "status";
 }) => (
-  <div className="min-h-24">
+  <div className="min-w-0">
     <p
-      className={`text-sm ${title ? "font-medium text-black" : "text-black/45"}`}
+      className={`break-words ${
+        title
+          ? titleTone === "poi"
+            ? "text-base font-semibold text-black"
+            : "text-xs font-semibold text-emerald-700"
+          : "text-sm text-black/35"
+      }`}
     >
       {title ?? "Not generated"}
     </p>
     {subtitle ? (
-      <p className="mt-1 font-mono text-xs text-black/65">{subtitle}</p>
-    ) : (
-      <EmptyLine className="mt-1 font-mono text-xs" />
-    )}
+      <p className="mt-1 break-words font-mono text-xs text-black/65">
+        {subtitle}
+      </p>
+    ) : null}
     {updatedAt ? (
       <p className="mt-1 text-xs text-black/55">Updated {updatedAt}</p>
-    ) : (
-      <EmptyLine className="mt-1 text-xs" />
-    )}
+    ) : null}
     {generationDuration ? (
       <p className="mt-1 text-xs text-black/55">
         Generated in {generationDuration}
       </p>
-    ) : (
-      <EmptyLine className="mt-1 text-xs" />
-    )}
+    ) : null}
     {generationModel ? (
       <p className="mt-1 text-xs text-black/55">Model {generationModel}</p>
-    ) : (
-      <EmptyLine className="mt-1 text-xs" />
-    )}
+    ) : null}
   </div>
 );
 
 const CellActions = ({ children }: { children?: ReactNode }) => (
-  <div className="mt-3 min-h-20">{children}</div>
+  children ? <div className="mt-2">{children}</div> : null
 );
 
 const ProgressMessage = ({ description }: { description: string }) => (
@@ -203,34 +199,55 @@ export const PoiRowsTable = ({
         </label>
       </section>
       <section className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-lg border border-black/10 bg-white">
-        <div className="grid shrink-0 grid-cols-4 border-b border-black/10 bg-black/[0.03] text-xs font-semibold uppercase tracking-[0.08em] text-black/65">
-          <div className="px-4 py-3">Raw</div>
-          <div className="border-l border-black/10 px-4 py-3">Polished</div>
-          <div className="border-l border-black/10 px-4 py-3">Wiki Text</div>
-          <div className="border-l border-black/10 px-4 py-3">AI Markdown</div>
-        </div>
-        <div className="min-h-0 flex-1 overflow-y-auto">
+        <div className="min-h-0 flex-1 overflow-auto">
           {rows.length === 0 ? (
             <p className="px-4 py-4 text-sm text-black/55">
               No POIs available.
             </p>
           ) : (
-            <ul>
-              {rows.map((row) => {
-                const isVisualizationDisabled = progress !== null;
-                const progressDescription =
-                  progress?.poiId === row.id ? progress.description : null;
-
-                return (
-                  <li
-                    key={row.id}
-                    className="grid grid-cols-4 divide-x divide-black/10 border-b border-black/10 last:border-b-0"
+            <table className="w-full table-fixed border-collapse">
+              <thead className="sticky top-0 z-10 bg-black/[0.03] text-xs font-semibold uppercase tracking-[0.08em] text-black/65">
+                <tr>
+                  <th
+                    scope="col"
+                    className="border-b border-r border-black/10 px-4 py-2 text-left"
                   >
-                    <div className="px-4 py-3">
+                    Raw
+                  </th>
+                  <th
+                    scope="col"
+                    className="border-b border-r border-black/10 px-4 py-2 text-left"
+                  >
+                    Polished
+                  </th>
+                  <th
+                    scope="col"
+                    className="border-b border-r border-black/10 px-4 py-2 text-left"
+                  >
+                    Wiki Text
+                  </th>
+                  <th
+                    scope="col"
+                    className="border-b border-black/10 px-4 py-2 text-left"
+                  >
+                    AI Markdown
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {rows.map((row) => {
+                  const isVisualizationDisabled = progress !== null;
+                  const progressDescription =
+                    progress?.poiId === row.id ? progress.description : null;
+
+                  return (
+                    <tr key={row.id} className="border-b border-black/10">
+                      <td className="min-w-0 border-r border-black/10 px-4 py-2 align-top">
                       <CellContent
                         title={row.rawPoi?.name}
                         subtitle={row.id}
                         updatedAt={row.rawUpdatedAt}
+                        titleTone="poi"
                       />
                       <CellActions>
                         {row.rawPoi ? (
@@ -278,8 +295,8 @@ export const PoiRowsTable = ({
                       {progressDescription ? (
                         <ProgressMessage description={progressDescription} />
                       ) : null}
-                    </div>
-                    <div className="px-4 py-3">
+                      </td>
+                      <td className="min-w-0 border-r border-black/10 px-4 py-2 align-top">
                       <CellContent
                         title={row.transformedPoi ? "Available" : undefined}
                         updatedAt={row.transformedUpdatedAt}
@@ -305,8 +322,8 @@ export const PoiRowsTable = ({
                           </button>
                         ) : null}
                       </CellActions>
-                    </div>
-                    <div className="px-4 py-3">
+                      </td>
+                      <td className="min-w-0 border-r border-black/10 px-4 py-2 align-top">
                       <CellContent
                         title={row.wikiPoi ? "Available" : undefined}
                         updatedAt={row.wikiUpdatedAt}
@@ -332,8 +349,8 @@ export const PoiRowsTable = ({
                           </button>
                         ) : null}
                       </CellActions>
-                    </div>
-                    <div className="px-4 py-3">
+                      </td>
+                      <td className="min-w-0 px-4 py-2 align-top">
                       <CellContent
                         title={row.aiPoi ? "Available" : undefined}
                         updatedAt={row.aiUpdatedAt}
@@ -464,11 +481,12 @@ export const PoiRowsTable = ({
                           </form>
                         ) : null}
                       </CellActions>
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
           )}
         </div>
       </section>
