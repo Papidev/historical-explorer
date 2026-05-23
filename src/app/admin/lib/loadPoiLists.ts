@@ -1,5 +1,9 @@
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
+import {
+  getDefaultInputPath,
+  getDefaultOutputDir,
+} from "../../../../scripts/wiki/io";
 import type { AdminPoiRow, GeoJson, GeoJsonFeature, PoiItem } from "./types";
 
 type GenerationStep = "transformed" | "wiki" | "ai";
@@ -209,13 +213,8 @@ export const loadPoiLists = async () => {
       "raw",
       "rome-pois-raw.geojson",
     );
-    const transformedPath = path.join(
-      process.cwd(),
-      "data",
-      "generated",
-      "rome-pois.geojson",
-    );
-    const wikiDirectoryPath = path.join(process.cwd(), "data", "wiki");
+    const transformedPath = getDefaultInputPath("rome");
+    const wikiDirectoryPath = getDefaultOutputDir("rome");
     const aiDirectoryPath = path.join(process.cwd(), "data", "wiki-ai");
     const generationMetadataPath = path.join(
       process.cwd(),

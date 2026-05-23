@@ -22,11 +22,12 @@ export const getDefaultInputPath = (city: string) =>
     process.cwd(),
     "data",
     "generated",
-    `${toCitySlug(city)}-pois.geojson`,
+    toCitySlug(city),
+    "pois.geojson",
   );
 
-export const getDefaultOutputDir = () =>
-  path.join(process.cwd(), "data", "wiki");
+export const getDefaultOutputDir = (city: string) =>
+  path.join(process.cwd(), "data", "generated", toCitySlug(city), "wiki");
 
 export const findPoiInGeoJson = (
   inputPath: string,

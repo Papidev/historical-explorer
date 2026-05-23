@@ -72,12 +72,7 @@ const rawPath = path.join(
   "raw",
   "rome-pois-raw.geojson",
 );
-const transformedPath = path.join(
-  process.cwd(),
-  "data",
-  "generated",
-  "rome-pois.geojson",
-);
+const transformedPath = getDefaultInputPath(city);
 const aiDirectoryPath = path.join(process.cwd(), "data", "wiki-ai");
 const generationMetadataPath = path.join(
   process.cwd(),
@@ -281,7 +276,7 @@ const writeTransformedPoi = (
 
 const writeWikiSnapshot = async (poiId: string) => {
   console.info(`[wiki] Fetching Wikipedia text for ${poiId}.`);
-  const outputDir = getDefaultOutputDir();
+  const outputDir = getDefaultOutputDir(city);
   const poi = findPoiInGeoJson(getDefaultInputPath(city), poiId, city);
   const outputFilePath = buildOutputFilePath(outputDir, poi.id);
   const resolved = await resolvePageForPoi(poi);
@@ -295,7 +290,7 @@ const writeWikiSnapshot = async (poiId: string) => {
 
 const writeAiTextFile = async (poiId: string, aiModel: AiModel) => {
   console.info(`[wiki-ai] Generating AI text for ${poiId} with ${aiModel}.`);
-  const wikiTextPath = buildOutputFilePath(getDefaultOutputDir(), poiId);
+  const wikiTextPath = buildOutputFilePath(getDefaultOutputDir(city), poiId);
   if (!existsSync(wikiTextPath)) {
     throw new Error(`Wiki text not found for ${poiId}.`);
   }
@@ -349,7 +344,7 @@ const refreshAiPipeline = async (poiId: string, aiModel: AiModel) => {
 };
 
 const deleteWikiSnapshotFile = (poiId: string) => {
-  const outputFilePath = buildOutputFilePath(getDefaultOutputDir(), poiId);
+  const outputFilePath = buildOutputFilePath(getDefaultOutputDir(city), poiId);
   if (existsSync(outputFilePath)) {
     unlinkSync(outputFilePath);
   }

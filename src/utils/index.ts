@@ -132,7 +132,7 @@ const asPoi = (
 
 const buildGeoJsonFilePath = (city: string) => {
   const slug = toCitySlug(city);
-  return path.join(process.cwd(), "data", "generated", `${slug}-pois.geojson`);
+  return path.join(process.cwd(), "data", "generated", slug, "pois.geojson");
 };
 
 const loadGeoJsonForCity = (city: string): GeoJson => {
