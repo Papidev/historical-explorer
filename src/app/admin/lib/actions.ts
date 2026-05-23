@@ -9,22 +9,18 @@ import {
 } from "node:fs";
 import path from "node:path";
 import { revalidatePath } from "next/cache";
+import { extractWikipediaContent } from "@/server/wikiPipeline/extractWikipediaContent";
 import { enrichWikiText } from "../../../../scripts/wiki/enrichWiki";
-import { fetchWikiSnapshot } from "../../../../scripts/wiki/fetchWiki";
 import {
   buildOutputFilePath,
-  findPoiInGeoJson,
   getDefaultInputPath,
   getDefaultOutputDir,
-  writeSnapshotFile,
 } from "../../../../scripts/wiki/io";
 import {
   sanitizePoiIdForFile,
   toCitySlug,
 } from "../../../../scripts/wiki/normalize";
-import { resolvePageForPoi } from "../../../../scripts/wiki/resolve";
 import { transformRawPoiFeature } from "../../../../scripts/wiki/transformRawPoiFeature";
-import { wikiTextToPlainText } from "../../../../scripts/wiki/wikiText";
 import {
   defaultAiModel,
   loadInstalledAiModelOptions,
@@ -274,20 +270,6 @@ const writeTransformedPoi = (
   return poiId;
 };
 
-const writeWikiSnapshot = async (poiId: string) => {
-  console.info(`[wiki] Fetching Wikipedia text for ${poiId}.`);
-  const outputDir = getDefaultOutputDir(city);
-  const poi = findPoiInGeoJson(getDefaultInputPath(city), poiId, city);
-  const outputFilePath = buildOutputFilePath(outputDir, poi.id);
-  const resolved = await resolvePageForPoi(poi);
-  const snapshot = await fetchWikiSnapshot(resolved.selected.title);
-
-  writeSnapshotFile(outputFilePath, wikiTextToPlainText(snapshot.fullText));
-  console.info(
-    `[wiki] Saved readable Wikipedia text for ${poiId} to ${outputFilePath}.`,
-  );
-};
-
 const writeAiTextFile = async (poiId: string, aiModel: AiModel) => {
   console.info(`[wiki-ai] Generating AI text for ${poiId} with ${aiModel}.`);
   const wikiTextPath = buildOutputFilePath(getDefaultOutputDir(city), poiId);
@@ -319,7 +301,9 @@ const refreshTransformedPoiPipeline = async (poiId: string) => {
 };
 
 const refreshWikiPipeline = async (poiId: string) => {
-  await measureGeneration(poiId, "wiki", () => writeWikiSnapshot(poiId));
+  await measureGeneration(poiId, "wiki", () =>
+    extractWikipediaContent({ city, poiId }),
+  );
 };
 
 const refreshAiPipeline = async (poiId: string, aiModel: AiModel) => {
