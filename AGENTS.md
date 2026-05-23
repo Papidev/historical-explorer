@@ -44,4 +44,5 @@ Update `AGENTS.md` only with important stuff that cannot be clearly/quickly deri
 
 ## Commits & PR Hygiene
 - Use short, imperative commit subjects ("Add Alexandria map data"). Keep formatting-only commits separate from feature work so reviewers can skim diffs quickly.
-- PRs should summarize the change, call out new data sources or env vars, include screenshots/recordings for UI updates, and list executed commands (`dev`, `build`, `lint`, manual map QA). Wait for local checks to finish before requesting review.
+- For push/publish requests, use the repo-local `push-branch` skill to decide whether a generic local branch should be renamed before creating the remote branch.
+- For pull request creation, use the repo-local `pr-generation` skill for title, body, review state, and assignment conventions.
