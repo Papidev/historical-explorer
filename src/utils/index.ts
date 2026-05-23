@@ -132,11 +132,15 @@ const asPoi = (
 
 const buildGeoJsonFilePath = (city: string) => {
   const slug = toCitySlug(city);
-  return path.join(process.cwd(), "public", "data", `${slug}-pois.geojson`);
+  return path.join(process.cwd(), "data", "generated", `${slug}-pois.geojson`);
 };
 
 const loadGeoJsonForCity = (city: string): GeoJson => {
   const filePath = buildGeoJsonFilePath(city);
+  if (!existsSync(filePath)) {
+    return { features: [] };
+  }
+
   const raw = readFileSync(filePath, "utf-8");
 
   try {

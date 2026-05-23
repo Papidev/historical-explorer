@@ -211,8 +211,8 @@ export const loadPoiLists = async () => {
     );
     const transformedPath = path.join(
       process.cwd(),
-      "public",
       "data",
+      "generated",
       "rome-pois.geojson",
     );
     const wikiDirectoryPath = path.join(process.cwd(), "data", "wiki");
@@ -223,11 +223,15 @@ export const loadPoiLists = async () => {
       "admin-generation-metadata.json",
     );
     const rawUpdatedAt = formatUpdatedAt(rawPath);
-    const transformedUpdatedAt = formatUpdatedAt(transformedPath);
+    const transformedUpdatedAt = existsSync(transformedPath)
+      ? formatUpdatedAt(transformedPath)
+      : undefined;
     const generationMetadata = loadGenerationMetadata(generationMetadataPath);
 
     const rawPois = toPoiItems(parseGeoJson(rawPath).features);
-    const transformedGeoJson = parseGeoJson(transformedPath);
+    const transformedGeoJson = existsSync(transformedPath)
+      ? parseGeoJson(transformedPath)
+      : ({ features: [] } as GeoJson);
     const transformedPois = (transformedGeoJson.features ?? []).map(
       (feature, index) => ({
         item: toPoiItems([feature])[0] ?? {
@@ -236,7 +240,7 @@ export const loadPoiLists = async () => {
           featureIndex: index,
         },
         json: JSON.stringify(feature, null, 2),
-        updatedAt: transformedUpdatedAt,
+        updatedAt: transformedUpdatedAt ?? "",
       }),
     );
     const wikiPois = loadWikiSnapshots(wikiDirectoryPath);

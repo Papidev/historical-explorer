@@ -14,6 +14,7 @@ import { fetchWikiSnapshot } from "../../../../scripts/wiki/fetchWiki";
 import {
   buildOutputFilePath,
   findPoiInGeoJson,
+  getDefaultInputPath,
   getDefaultOutputDir,
   writeSnapshotFile,
 } from "../../../../scripts/wiki/io";
@@ -73,8 +74,8 @@ const rawPath = path.join(
 );
 const transformedPath = path.join(
   process.cwd(),
-  "public",
   "data",
+  "generated",
   "rome-pois.geojson",
 );
 const aiDirectoryPath = path.join(process.cwd(), "data", "wiki-ai");
@@ -235,7 +236,15 @@ const writeTransformedPoi = (
   rawGeoJson: GeoJson,
 ) => {
   const poiId = getPoiIdFromRawFeature(rawFeature, rawFeatureIndex);
-  const transformedGeoJson = parseGeoJson(transformedPath);
+  const transformedGeoJson = existsSync(transformedPath)
+    ? parseGeoJson(transformedPath)
+    : {
+        type: rawGeoJson.type ?? "FeatureCollection",
+        generator: rawGeoJson.generator,
+        copyright: rawGeoJson.copyright,
+        timestamp: rawGeoJson.timestamp,
+        features: [],
+      };
   const properties = rawFeature.properties ?? {};
   const name =
     (typeof properties.name === "string" && properties.name.trim()) || poiId;
@@ -261,6 +270,7 @@ const writeTransformedPoi = (
     features: nextFeatures,
   };
 
+  mkdirSync(path.dirname(transformedPath), { recursive: true });
   writeFileSync(
     transformedPath,
     `${JSON.stringify(nextGeoJson, null, 2)}\n`,
@@ -271,14 +281,8 @@ const writeTransformedPoi = (
 
 const writeWikiSnapshot = async (poiId: string) => {
   console.info(`[wiki] Fetching Wikipedia text for ${poiId}.`);
-  const inputPath = path.join(
-    process.cwd(),
-    "public",
-    "data",
-    `${toCitySlug(city)}-pois.geojson`,
-  );
   const outputDir = getDefaultOutputDir();
-  const poi = findPoiInGeoJson(inputPath, poiId, city);
+  const poi = findPoiInGeoJson(getDefaultInputPath(city), poiId, city);
   const outputFilePath = buildOutputFilePath(outputDir, poi.id);
   const resolved = await resolvePageForPoi(poi);
   const snapshot = await fetchWikiSnapshot(resolved.selected.title);
@@ -370,6 +374,12 @@ const deleteAiPipeline = (poiId: string) => {
 };
 
 const deleteTransformedPoiPipeline = (poiId: string) => {
+  if (!existsSync(transformedPath)) {
+    deleteWikiPipeline(poiId);
+    clearGenerationDurations(poiId, ["transformed"]);
+    return;
+  }
+
   const transformedGeoJson = parseGeoJson(transformedPath);
   const nextFeatures = (transformedGeoJson.features ?? []).filter(
     (feature) => feature.wikidataId !== poiId,
@@ -382,6 +392,7 @@ const deleteTransformedPoiPipeline = (poiId: string) => {
     features: nextFeatures,
   };
 
+  mkdirSync(path.dirname(transformedPath), { recursive: true });
   writeFileSync(
     transformedPath,
     `${JSON.stringify(nextGeoJson, null, 2)}\n`,
