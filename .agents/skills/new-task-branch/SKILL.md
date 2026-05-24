@@ -15,8 +15,9 @@ Use this skill at the start of a distinct new task.
 4. If the task purpose is clear, use the branch name format `feat/<short-task-name>` based on that purpose.
 5. If the task is exploratory or the user does not yet know what will enter the branch, use a general branch name such as `feat/new-task`, `feat/new-work`, or `feat/exploration`.
 6. Keep the branch name lowercase, concise, and hyphen-separated.
-7. If the request is not explicit new work and the current branch starts with `feat/`, stay on it unless the user asks for a new branch.
-8. If the user asks for code or file changes and the current branch is `main`, `master`, or another non-feature branch, automatically create a new `feat/` branch before coding, even when the user did not explicitly say this is a new task or new job.
+7. If the current branch is a feature branch that has already been merged into `main`, create a new branch before making new changes.
+8. If the request is not explicit new work and the current branch starts with `feat/`, stay on it unless the user asks for a new branch.
+9. If the user asks for code or file changes and the current branch is `main`, `master`, or another non-feature branch, automatically create a new `feat/` branch before coding, even when the user did not explicitly say this is a new task or new job.
 
 ## Safety
 
