@@ -62,7 +62,7 @@ const CellContent = ({
 }) => (
   <div className="min-w-0">
     <p
-      className={`break-words ${
+      className={`leading-snug break-words ${
         title
           ? titleTone === "poi"
             ? "text-base font-semibold text-black"
@@ -73,27 +73,22 @@ const CellContent = ({
       {title ?? "Not generated"}
     </p>
     {subtitle ? (
-      <p className="mt-1 break-words font-mono text-xs text-black/65">
-        {subtitle}
-      </p>
+      <p className="mt-1 font-mono text-xs leading-snug break-words text-black/65">{subtitle}</p>
     ) : null}
     {updatedAt ? (
-      <p className="mt-1 text-xs text-black/55">Updated {updatedAt}</p>
+      <p className="mt-1 text-xs leading-snug text-black/55">Updated {updatedAt}</p>
     ) : null}
     {generationDuration ? (
-      <p className="mt-1 text-xs text-black/55">
-        Generated in {generationDuration}
-      </p>
+      <p className="mt-1 text-xs leading-snug text-black/55">Generated in {generationDuration}</p>
     ) : null}
     {generationModel ? (
-      <p className="mt-1 text-xs text-black/55">Model {generationModel}</p>
+      <p className="mt-1 text-xs leading-snug text-black/55">Model {generationModel}</p>
     ) : null}
   </div>
 );
 
-const CellActions = ({ children }: { children?: ReactNode }) => (
-  children ? <div className="mt-2">{children}</div> : null
-);
+const CellActions = ({ children }: { children?: ReactNode }) =>
+  children ? <div className="mt-2">{children}</div> : null;
 
 const ProgressMessage = ({ description }: { description: string }) => (
   <p className="mt-2 text-xs font-medium text-black/65" aria-live="polite">
@@ -130,9 +125,7 @@ export const PoiRowsTable = ({
   refreshAiAction: (formData: FormData) => Promise<void>;
   deleteAiAction: (formData: FormData) => Promise<void>;
 }) => {
-  const [selectedPanel, setSelectedPanel] = useState<SelectedPanel | null>(
-    null,
-  );
+  const [selectedPanel, setSelectedPanel] = useState<SelectedPanel | null>(null);
   const [selectedAiModel, setSelectedAiModel] = useState(defaultAiModel);
   const [progress, setProgress] = useState<ProgressState | null>(null);
 
@@ -181,14 +174,14 @@ export const PoiRowsTable = ({
           </p>
         </div>
         <label className="flex items-center gap-2 text-sm text-black">
-          <span className="text-xs font-medium uppercase tracking-[0.08em] text-black/55">
+          <span className="text-xs font-medium tracking-[0.08em] text-black/55 uppercase">
             Model
           </span>
           <select
             value={selectedAiModel}
             onChange={(event) => setSelectedAiModel(event.target.value)}
             disabled={progress !== null || aiModelOptions.length === 0}
-            className="rounded-md border border-black/15 bg-white px-3 py-2 text-sm font-medium text-black outline-none transition hover:bg-black/[0.03] disabled:cursor-not-allowed disabled:opacity-50"
+            className="rounded-md border border-black/15 bg-white px-3 py-2 text-sm font-medium text-black transition outline-none hover:bg-black/[0.03] disabled:cursor-not-allowed disabled:opacity-50"
           >
             {aiModelOptions.map((option) => (
               <option key={option.value} value={option.value}>
@@ -201,35 +194,21 @@ export const PoiRowsTable = ({
       <section className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-lg border border-black/10 bg-white">
         <div className="min-h-0 flex-1 overflow-auto">
           {rows.length === 0 ? (
-            <p className="px-4 py-4 text-sm text-black/55">
-              No POIs available.
-            </p>
+            <p className="px-4 py-4 text-sm text-black/55">No POIs available.</p>
           ) : (
             <table className="w-full table-fixed border-collapse">
-              <thead className="sticky top-0 z-10 bg-black/[0.03] text-xs font-semibold uppercase tracking-[0.08em] text-black/65">
+              <thead className="sticky top-0 z-10 bg-neutral-100 text-xs font-semibold tracking-[0.08em] text-black/65 uppercase">
                 <tr>
-                  <th
-                    scope="col"
-                    className="border-b border-r border-black/10 px-4 py-2 text-left"
-                  >
+                  <th scope="col" className="border-r border-b border-black/10 px-4 py-2 text-left">
                     Raw
                   </th>
-                  <th
-                    scope="col"
-                    className="border-b border-r border-black/10 px-4 py-2 text-left"
-                  >
+                  <th scope="col" className="border-r border-b border-black/10 px-4 py-2 text-left">
                     Polished
                   </th>
-                  <th
-                    scope="col"
-                    className="border-b border-r border-black/10 px-4 py-2 text-left"
-                  >
+                  <th scope="col" className="border-r border-b border-black/10 px-4 py-2 text-left">
                     Wiki Text
                   </th>
-                  <th
-                    scope="col"
-                    className="border-b border-black/10 px-4 py-2 text-left"
-                  >
+                  <th scope="col" className="border-b border-black/10 px-4 py-2 text-left">
                     AI Markdown
                   </th>
                 </tr>
@@ -243,244 +222,222 @@ export const PoiRowsTable = ({
                   return (
                     <tr key={row.id} className="border-b border-black/10">
                       <td className="min-w-0 border-r border-black/10 px-4 py-2 align-top">
-                      <CellContent
-                        title={row.rawPoi?.name}
-                        subtitle={row.id}
-                        updatedAt={row.rawUpdatedAt}
-                        titleTone="poi"
-                      />
-                      <CellActions>
-                        {row.rawPoi ? (
-                          <form
-                            action={(formData) =>
-                              runPipeline(row.id, [
-                                {
-                                  description: "Polishing POI metadata...",
-                                  action: generateTransformedAction,
-                                  formData,
-                                },
-                                {
-                                  description: "Fetching Wikipedia text...",
-                                  action: refreshWikiAction,
-                                  formData: createPoiFormData(row.id),
-                                },
-                                {
-                                  description: "Generating AI Markdown...",
-                                  action: refreshAiAction,
-                                  formData: createPoiFormData(row.id),
-                                },
-                              ])
-                            }
-                          >
-                            <input
-                              type="hidden"
-                              name="rawFeatureIndex"
-                              value={row.rawPoi.featureIndex}
-                            />
-                            <input
-                              type="hidden"
-                              name="aiModel"
-                              value={selectedAiModel}
-                            />
-                            <SubmitButton
-                              idleLabel="Generate"
-                              pendingLabel="Generating..."
-                              confirmMessage={generateConfirmMessage}
-                              tone="primary"
-                              disabled={progress !== null}
-                            />
-                          </form>
+                        <CellContent
+                          title={row.rawPoi?.name}
+                          subtitle={row.id}
+                          updatedAt={row.rawUpdatedAt}
+                          titleTone="poi"
+                        />
+                        <CellActions>
+                          {row.rawPoi ? (
+                            <form
+                              action={(formData) =>
+                                runPipeline(row.id, [
+                                  {
+                                    description: "Polishing POI metadata...",
+                                    action: generateTransformedAction,
+                                    formData,
+                                  },
+                                  {
+                                    description: "Fetching Wikipedia text...",
+                                    action: refreshWikiAction,
+                                    formData: createPoiFormData(row.id),
+                                  },
+                                  {
+                                    description: "Generating AI Markdown...",
+                                    action: refreshAiAction,
+                                    formData: createPoiFormData(row.id),
+                                  },
+                                ])
+                              }
+                            >
+                              <input
+                                type="hidden"
+                                name="rawFeatureIndex"
+                                value={row.rawPoi.featureIndex}
+                              />
+                              <input type="hidden" name="aiModel" value={selectedAiModel} />
+                              <SubmitButton
+                                idleLabel="Generate"
+                                pendingLabel="Generating..."
+                                confirmMessage={generateConfirmMessage}
+                                tone="primary"
+                                disabled={progress !== null}
+                              />
+                            </form>
+                          ) : null}
+                        </CellActions>
+                        {progressDescription ? (
+                          <ProgressMessage description={progressDescription} />
                         ) : null}
-                      </CellActions>
-                      {progressDescription ? (
-                        <ProgressMessage description={progressDescription} />
-                      ) : null}
                       </td>
                       <td className="min-w-0 border-r border-black/10 px-4 py-2 align-top">
-                      <CellContent
-                        title={row.transformedPoi ? "Available" : undefined}
-                        updatedAt={row.transformedUpdatedAt}
-                        generationDuration={row.transformedGenerationDuration}
-                      />
-                      <CellActions>
-                        {row.transformedPoi ? (
-                          <button
-                            type="button"
-                            disabled={isVisualizationDisabled}
-                            onClick={() =>
-                              row.transformedJson
-                                ? setSelectedPanel({
-                                    title: `${row.id} Rome JSON`,
-                                    kind: "text",
-                                    content: row.transformedJson,
-                                  })
-                                : null
-                            }
-                            className={viewButtonClassName}
-                          >
-                            View
-                          </button>
-                        ) : null}
-                      </CellActions>
+                        <CellContent
+                          title={row.transformedPoi ? "Available" : undefined}
+                          updatedAt={row.transformedUpdatedAt}
+                          generationDuration={row.transformedGenerationDuration}
+                        />
+                        <CellActions>
+                          {row.transformedPoi ? (
+                            <button
+                              type="button"
+                              disabled={isVisualizationDisabled}
+                              onClick={() =>
+                                row.transformedJson
+                                  ? setSelectedPanel({
+                                      title: `${row.id} Rome JSON`,
+                                      kind: "text",
+                                      content: row.transformedJson,
+                                    })
+                                  : null
+                              }
+                              className={viewButtonClassName}
+                            >
+                              View
+                            </button>
+                          ) : null}
+                        </CellActions>
                       </td>
                       <td className="min-w-0 border-r border-black/10 px-4 py-2 align-top">
-                      <CellContent
-                        title={row.wikiPoi ? "Available" : undefined}
-                        updatedAt={row.wikiUpdatedAt}
-                        generationDuration={row.wikiGenerationDuration}
-                      />
-                      <CellActions>
-                        {row.wikiPoi ? (
-                          <button
-                            type="button"
-                            disabled={isVisualizationDisabled}
-                            onClick={() =>
-                              row.wikiText
-                                ? setSelectedPanel({
-                                    title: `${row.id} Wiki Text`,
-                                    kind: "text",
-                                    content: row.wikiText,
-                                  })
-                                : null
-                            }
-                            className={viewButtonClassName}
-                          >
-                            View
-                          </button>
-                        ) : null}
-                      </CellActions>
+                        <CellContent
+                          title={row.wikiPoi ? "Available" : undefined}
+                          updatedAt={row.wikiUpdatedAt}
+                          generationDuration={row.wikiGenerationDuration}
+                        />
+                        <CellActions>
+                          {row.wikiPoi ? (
+                            <button
+                              type="button"
+                              disabled={isVisualizationDisabled}
+                              onClick={() =>
+                                row.wikiText
+                                  ? setSelectedPanel({
+                                      title: `${row.id} Wiki Text`,
+                                      kind: "text",
+                                      content: row.wikiText,
+                                    })
+                                  : null
+                              }
+                              className={viewButtonClassName}
+                            >
+                              View
+                            </button>
+                          ) : null}
+                        </CellActions>
                       </td>
                       <td className="min-w-0 px-4 py-2 align-top">
-                      <CellContent
-                        title={row.aiPoi ? "Available" : undefined}
-                        updatedAt={row.aiUpdatedAt}
-                        generationDuration={row.aiGenerationDuration}
-                        generationModel={
-                          row.aiPoi
-                            ? (row.aiGenerationModel ?? "unknown")
-                            : undefined
-                        }
-                      />
-                      <CellActions>
-                        {row.aiPoi ? (
-                          <div className="flex flex-col items-start gap-2">
-                            <div className="flex flex-wrap gap-2">
-                              <button
-                                type="button"
-                                disabled={isVisualizationDisabled}
-                                onClick={() =>
-                                  row.aiText
-                                    ? setSelectedPanel({
-                                        title: `${row.id} AI Markdown`,
-                                        kind: "markdown",
-                                        content: row.aiText,
-                                      })
-                                    : null
-                                }
-                                className={viewButtonClassName}
-                              >
-                                View
-                              </button>
-                              {row.aiText ? (
-                                isVisualizationDisabled ? (
-                                  <span
-                                    className={`${viewButtonClassName} cursor-not-allowed opacity-50 hover:bg-white`}
-                                    aria-disabled="true"
-                                  >
-                                    Download
-                                  </span>
-                                ) : (
-                                  <a
-                                    href={getAiDownloadHref(row.aiText)}
-                                    download={getAiDownloadFileName(row)}
-                                    className={viewButtonClassName}
-                                  >
-                                    Download
-                                  </a>
+                        <CellContent
+                          title={row.aiPoi ? "Available" : undefined}
+                          updatedAt={row.aiUpdatedAt}
+                          generationDuration={row.aiGenerationDuration}
+                          generationModel={
+                            row.aiPoi ? (row.aiGenerationModel ?? "unknown") : undefined
+                          }
+                        />
+                        <CellActions>
+                          {row.aiPoi ? (
+                            <div className="flex flex-col items-start gap-2">
+                              <div className="flex flex-wrap gap-2">
+                                <button
+                                  type="button"
+                                  disabled={isVisualizationDisabled}
+                                  onClick={() =>
+                                    row.aiText
+                                      ? setSelectedPanel({
+                                          title: `${row.id} AI Markdown`,
+                                          kind: "markdown",
+                                          content: row.aiText,
+                                        })
+                                      : null
+                                  }
+                                  className={viewButtonClassName}
+                                >
+                                  View
+                                </button>
+                                {row.aiText ? (
+                                  isVisualizationDisabled ? (
+                                    <span
+                                      className={`${viewButtonClassName} cursor-not-allowed opacity-50 hover:bg-white`}
+                                      aria-disabled="true"
+                                    >
+                                      Download
+                                    </span>
+                                  ) : (
+                                    <a
+                                      href={getAiDownloadHref(row.aiText)}
+                                      download={getAiDownloadFileName(row)}
+                                      className={viewButtonClassName}
+                                    >
+                                      Download
+                                    </a>
+                                  )
+                                ) : null}
+                              </div>
+                              <div className="flex flex-wrap gap-2">
+                                <form
+                                  action={(formData) =>
+                                    runSingleAction(
+                                      row.id,
+                                      "Generating AI Markdown...",
+                                      refreshAiAction,
+                                      formData,
+                                    )
+                                  }
+                                >
+                                  <input type="hidden" name="poiId" value={row.id} />
+                                  <input type="hidden" name="aiModel" value={selectedAiModel} />
+                                  <SubmitButton
+                                    idleLabel="Refresh"
+                                    pendingLabel="Refreshing..."
+                                    confirmMessage={refreshConfirmMessages.ai}
+                                    tone="primary"
+                                    disabled={progress !== null}
+                                  />
+                                </form>
+                                <form
+                                  action={(formData) =>
+                                    runSingleAction(
+                                      row.id,
+                                      "Deleting AI Markdown...",
+                                      deleteAiAction,
+                                      formData,
+                                    )
+                                  }
+                                >
+                                  <input type="hidden" name="poiId" value={row.id} />
+                                  <SubmitButton
+                                    idleLabel="Delete"
+                                    pendingLabel="Deleting..."
+                                    confirmMessage={deleteConfirmMessages.ai}
+                                    tone="danger"
+                                    disabled={progress !== null}
+                                  />
+                                </form>
+                              </div>
+                            </div>
+                          ) : row.wikiPoi ? (
+                            <form
+                              action={(formData) =>
+                                runSingleAction(
+                                  row.id,
+                                  "Generating AI Markdown...",
+                                  refreshAiAction,
+                                  formData,
                                 )
-                              ) : null}
-                            </div>
-                            <div className="flex flex-wrap gap-2">
-                              <form
-                                action={(formData) =>
-                                  runSingleAction(
-                                    row.id,
-                                    "Generating AI Markdown...",
-                                    refreshAiAction,
-                                    formData,
-                                  )
-                                }
-                              >
-                                <input
-                                  type="hidden"
-                                  name="poiId"
-                                  value={row.id}
-                                />
-                                <input
-                                  type="hidden"
-                                  name="aiModel"
-                                  value={selectedAiModel}
-                                />
-                                <SubmitButton
-                                  idleLabel="Refresh"
-                                  pendingLabel="Refreshing..."
-                                  confirmMessage={refreshConfirmMessages.ai}
-                                  tone="primary"
-                                  disabled={progress !== null}
-                                />
-                              </form>
-                              <form
-                                action={(formData) =>
-                                  runSingleAction(
-                                    row.id,
-                                    "Deleting AI Markdown...",
-                                    deleteAiAction,
-                                    formData,
-                                  )
-                                }
-                              >
-                                <input
-                                  type="hidden"
-                                  name="poiId"
-                                  value={row.id}
-                                />
-                                <SubmitButton
-                                  idleLabel="Delete"
-                                  pendingLabel="Deleting..."
-                                  confirmMessage={deleteConfirmMessages.ai}
-                                  tone="danger"
-                                  disabled={progress !== null}
-                                />
-                              </form>
-                            </div>
-                          </div>
-                        ) : row.wikiPoi ? (
-                          <form
-                            action={(formData) =>
-                              runSingleAction(
-                                row.id,
-                                "Generating AI Markdown...",
-                                refreshAiAction,
-                                formData,
-                              )
-                            }
-                          >
-                            <input type="hidden" name="poiId" value={row.id} />
-                            <input
-                              type="hidden"
-                              name="aiModel"
-                              value={selectedAiModel}
-                            />
-                            <SubmitButton
-                              idleLabel="Generate"
-                              pendingLabel="Generating..."
-                              confirmMessage={refreshConfirmMessages.ai}
-                              tone="primary"
-                              disabled={progress !== null}
-                            />
-                          </form>
-                        ) : null}
-                      </CellActions>
+                              }
+                            >
+                              <input type="hidden" name="poiId" value={row.id} />
+                              <input type="hidden" name="aiModel" value={selectedAiModel} />
+                              <SubmitButton
+                                idleLabel="Generate"
+                                pendingLabel="Generating..."
+                                confirmMessage={refreshConfirmMessages.ai}
+                                tone="primary"
+                                disabled={progress !== null}
+                              />
+                            </form>
+                          ) : null}
+                        </CellActions>
                       </td>
                     </tr>
                   );
@@ -494,9 +451,7 @@ export const PoiRowsTable = ({
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/25 p-6">
           <div className="flex h-[min(80vh,720px)] w-[min(960px,100%)] flex-col overflow-hidden rounded-2xl border border-black/10 bg-white shadow-2xl">
             <div className="flex items-center justify-between border-b border-black/10 px-5 py-4">
-              <p className="text-sm font-semibold text-black">
-                {selectedPanel.title}
-              </p>
+              <p className="text-sm font-semibold text-black">{selectedPanel.title}</p>
               <button
                 type="button"
                 onClick={() => setSelectedPanel(null)}
@@ -506,7 +461,7 @@ export const PoiRowsTable = ({
               </button>
             </div>
             {selectedPanel.kind === "text" ? (
-              <pre className="flex-1 overflow-auto whitespace-pre-wrap break-words bg-neutral-50 px-5 py-4 text-xs leading-5 text-black">
+              <pre className="flex-1 overflow-auto bg-neutral-50 px-5 py-4 text-xs leading-5 break-words whitespace-pre-wrap text-black">
                 {selectedPanel.content}
               </pre>
             ) : null}
