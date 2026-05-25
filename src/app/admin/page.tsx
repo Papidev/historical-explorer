@@ -13,13 +13,14 @@ export const dynamic = "force-dynamic";
 export default async function AdminPage() {
   const { rows, error } = await loadPoiLists();
   const aiModelOptions = await loadInstalledAiModelOptions();
-  const configuredAiModel = process.env.OLLAMA_MODEL;
+  const configuredAiModel =
+    process.env.AI_PROVIDER?.trim().toLowerCase() === "gemini"
+      ? process.env.AI_MODEL
+      : process.env.OLLAMA_MODEL;
   const initialAiModel =
-    configuredAiModel &&
-    aiModelOptions.some((option) => option.value === configuredAiModel)
+    configuredAiModel && aiModelOptions.some((option) => option.value === configuredAiModel)
       ? configuredAiModel
-      : (aiModelOptions.find((option) => option.value === defaultAiModel)
-          ?.value ??
+      : (aiModelOptions.find((option) => option.value === defaultAiModel)?.value ??
         aiModelOptions[0]?.value ??
         "");
 

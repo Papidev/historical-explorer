@@ -87,7 +87,10 @@ const resolveAiModelFromFormData = async (formData: FormData) => {
     return aiModel;
   }
 
-  const configuredAiModel = process.env.OLLAMA_MODEL;
+  const configuredAiModel =
+    process.env.AI_PROVIDER?.trim().toLowerCase() === "gemini"
+      ? process.env.AI_MODEL
+      : process.env.OLLAMA_MODEL;
   if (
     configuredAiModel &&
     installedModelOptions.some((option) => option.value === configuredAiModel)
