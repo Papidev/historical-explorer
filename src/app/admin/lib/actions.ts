@@ -3,6 +3,7 @@
 import {
   existsSync,
   mkdirSync,
+  readdirSync,
   readFileSync,
   unlinkSync,
   writeFileSync,
@@ -76,11 +77,33 @@ const generationMetadataPath = path.join(
   "admin-generation-metadata.json",
 );
 
-const buildAiMarkdownFilePath = (poiId: string) =>
-  path.join(aiDirectoryPath, `${sanitizePoiIdForFile(poiId)}.md`);
+const sanitizePoiNameForFile = (poiName: string) =>
+  toCitySlug(poiName) || "unknown-name";
+
+const buildAiMarkdownFileName = (poiId: string, poiName: string) =>
+  `${sanitizePoiIdForFile(poiId)}--${sanitizePoiNameForFile(poiName)}.md`;
+
+const buildAiMarkdownFilePath = (poiId: string, poiName: string) =>
+  path.join(aiDirectoryPath, buildAiMarkdownFileName(poiId, poiName));
 
 const buildLegacyAiTextFilePath = (poiId: string) =>
   buildOutputFilePath(aiDirectoryPath, poiId);
+
+const getAiMarkdownFilePaths = (poiId: string) => {
+  const normalizedPoiId = sanitizePoiIdForFile(poiId);
+  if (!existsSync(aiDirectoryPath)) {
+    return [] as string[];
+  }
+
+  return readdirSync(aiDirectoryPath)
+    .filter(
+      (fileName) =>
+        fileName === `${normalizedPoiId}.md` ||
+        (fileName.startsWith(`${normalizedPoiId}--`) &&
+          fileName.endsWith(".md")),
+    )
+    .map((fileName) => path.join(aiDirectoryPath, fileName));
+};
 
 const pickString = (properties: Record<string, unknown>, ...keys: string[]) => {
   for (const key of keys) {
@@ -306,7 +329,7 @@ const writeAiTextFile = async (poiId: string, aiModel: AiModel) => {
   const poiName =
     pickString(rawFeature.properties ?? {}, "name:en", "name", "int_name") ??
     poiId;
-  const outputFilePath = buildAiMarkdownFilePath(poiId);
+  const outputFilePath = buildAiMarkdownFilePath(poiId, poiName);
   mkdirSync(path.dirname(outputFilePath), { recursive: true });
   writeFileSync(
     outputFilePath,
@@ -345,7 +368,7 @@ const deleteWikiSnapshotFile = (poiId: string) => {
 
 const deleteAiTextFile = (poiId: string) => {
   for (const outputFilePath of [
-    buildAiMarkdownFilePath(poiId),
+    ...getAiMarkdownFilePaths(poiId),
     buildLegacyAiTextFilePath(poiId),
   ]) {
     if (existsSync(outputFilePath)) {

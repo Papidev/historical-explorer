@@ -89,8 +89,8 @@ const loadAiMarkdownFiles = (directoryPath: string) =>
   (existsSync(directoryPath) ? readdirSync(directoryPath) : [])
     .filter((fileName) => fileName.endsWith(".md") || fileName.endsWith(".txt"))
     .sort((left, right) => {
-      const leftId = left.replace(/\.(md|txt)$/u, "");
-      const rightId = right.replace(/\.(md|txt)$/u, "");
+      const leftId = left.replace(/\.(md|txt)$/u, "").split("--")[0] ?? "";
+      const rightId = right.replace(/\.(md|txt)$/u, "").split("--")[0] ?? "";
       if (leftId !== rightId) {
         return leftId.localeCompare(rightId);
       }
@@ -100,7 +100,9 @@ const loadAiMarkdownFiles = (directoryPath: string) =>
     .map((fileName, index) => {
       const filePath = path.join(directoryPath, fileName);
       const raw = readFileSync(filePath, "utf-8");
-      const id = fileName.replace(/\.(md|txt)$/u, "") || `missing-id-${index}`;
+      const id =
+        fileName.replace(/\.(md|txt)$/u, "").split("--")[0] ||
+        `missing-id-${index}`;
 
       return {
         item: { id, name: fileName, featureIndex: index } satisfies PoiItem,
