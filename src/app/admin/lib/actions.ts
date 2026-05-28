@@ -3,6 +3,7 @@
 import {
   existsSync,
   mkdirSync,
+  readdirSync,
   readFileSync,
   unlinkSync,
   writeFileSync,
@@ -76,6 +77,45 @@ const generationMetadataPath = path.join(
   "admin-generation-metadata.json",
 );
 
+const sanitizePoiNameForFile = (poiName: string) =>
+  toCitySlug(poiName) || "unknown-name";
+
+const buildAiMarkdownFileName = (poiId: string, poiName: string) =>
+  `${sanitizePoiIdForFile(poiId)}--${sanitizePoiNameForFile(poiName)}.md`;
+
+const buildAiMarkdownFilePath = (poiId: string, poiName: string) =>
+  path.join(aiDirectoryPath, buildAiMarkdownFileName(poiId, poiName));
+
+const buildLegacyAiTextFilePath = (poiId: string) =>
+  buildOutputFilePath(aiDirectoryPath, poiId);
+
+const getAiMarkdownFilePaths = (poiId: string) => {
+  const normalizedPoiId = sanitizePoiIdForFile(poiId);
+  if (!existsSync(aiDirectoryPath)) {
+    return [] as string[];
+  }
+
+  return readdirSync(aiDirectoryPath)
+    .filter(
+      (fileName) =>
+        fileName === `${normalizedPoiId}.md` ||
+        (fileName.startsWith(`${normalizedPoiId}--`) &&
+          fileName.endsWith(".md")),
+    )
+    .map((fileName) => path.join(aiDirectoryPath, fileName));
+};
+
+const pickString = (properties: Record<string, unknown>, ...keys: string[]) => {
+  for (const key of keys) {
+    const value = properties[key];
+    if (typeof value === "string" && value.trim().length > 0) {
+      return value.trim();
+    }
+  }
+
+  return undefined;
+};
+
 const resolveAiModelFromFormData = async (formData: FormData) => {
   const installedModelOptions = await loadInstalledAiModelOptions();
   const aiModel = formData.get("aiModel");
@@ -87,7 +127,10 @@ const resolveAiModelFromFormData = async (formData: FormData) => {
     return aiModel;
   }
 
-  const configuredAiModel = process.env.OLLAMA_MODEL;
+  const configuredAiModel =
+    process.env.AI_PROVIDER?.trim().toLowerCase() === "gemini"
+      ? process.env.AI_MODEL
+      : process.env.OLLAMA_MODEL;
   if (
     configuredAiModel &&
     installedModelOptions.some((option) => option.value === configuredAiModel)
@@ -282,11 +325,15 @@ const writeAiTextFile = async (poiId: string, aiModel: AiModel) => {
     throw new Error(`Invalid wiki text for ${poiId}.`);
   }
 
-  const outputFilePath = buildOutputFilePath(aiDirectoryPath, poiId);
+  const { rawFeature } = findRawFeatureByPoiId(poiId);
+  const poiName =
+    pickString(rawFeature.properties ?? {}, "name:en", "name", "int_name") ??
+    poiId;
+  const outputFilePath = buildAiMarkdownFilePath(poiId, poiName);
   mkdirSync(path.dirname(outputFilePath), { recursive: true });
   writeFileSync(
     outputFilePath,
-    await enrichWikiText(wikiText, aiModel),
+    `# ${poiName} (${poiId})\n\n${(await enrichWikiText(wikiText, aiModel)).trim()}\n`,
     "utf-8",
   );
   console.info(`[wiki-ai] Saved AI text for ${poiId} to ${outputFilePath}.`);
@@ -320,9 +367,13 @@ const deleteWikiSnapshotFile = (poiId: string) => {
 };
 
 const deleteAiTextFile = (poiId: string) => {
-  const outputFilePath = buildOutputFilePath(aiDirectoryPath, poiId);
-  if (existsSync(outputFilePath)) {
-    unlinkSync(outputFilePath);
+  for (const outputFilePath of [
+    ...getAiMarkdownFilePaths(poiId),
+    buildLegacyAiTextFilePath(poiId),
+  ]) {
+    if (existsSync(outputFilePath)) {
+      unlinkSync(outputFilePath);
+    }
   }
 };
 

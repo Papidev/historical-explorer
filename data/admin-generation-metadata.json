@@ -32,5 +32,20 @@
       "completedAt": "2026-05-23T01:45:13.177Z",
       "aiModel": "qwen3:8b"
     }
+  },
+  "q283650": {
+    "transformed": {
+      "durationMs": 1,
+      "completedAt": "2026-05-28T23:04:53.422Z"
+    },
+    "wiki": {
+      "durationMs": 737,
+      "completedAt": "2026-05-28T23:04:55.019Z"
+    },
+    "ai": {
+      "durationMs": 18442,
+      "completedAt": "2026-05-28T23:14:15.411Z",
+      "aiModel": "gemini-2.5-flash"
+    }
   }
 }

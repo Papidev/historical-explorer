@@ -1,4 +1,4 @@
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import type { Poi } from "@/types/Poi";
 
@@ -47,10 +47,25 @@ export const getPoiDialogContent = async (city: string, poiId?: string) => {
   }
 
   const directoryPath = path.join(process.cwd(), "data", "wiki-ai");
-  const filePath = path.join(
+  const normalizedPoiId = sanitizePoiIdForFile(poiId);
+  const markdownFilePath = existsSync(directoryPath)
+    ? readdirSync(directoryPath)
+        .filter(
+          (fileName) =>
+            fileName === `${normalizedPoiId}.md` ||
+            (fileName.startsWith(`${normalizedPoiId}--`) &&
+              fileName.endsWith(".md")),
+        )
+        .sort()
+        .at(-1)
+    : undefined;
+  const legacyTextFilePath = path.join(
     directoryPath,
-    `${sanitizePoiIdForFile(poiId)}.txt`,
+    `${normalizedPoiId}.txt`,
   );
+  const filePath = markdownFilePath
+    ? path.join(directoryPath, markdownFilePath)
+    : legacyTextFilePath;
   if (!existsSync(filePath)) {
     return undefined;
   }
