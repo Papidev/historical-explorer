@@ -27,11 +27,14 @@ Keep the title concise and scoped to the PR's main change.
 
 ## Body
 
-Include:
+Include only sections that add concrete review value. Do not add placeholder
+sections or sections whose content is effectively "none", "not captured", or
+just a list of routine verification commands.
 
 - Summary of what changed
-- New data sources or environment variables, if any
-- Screenshots or recordings for visible UI changes when available
-- Verification commands and manual QA performed
+- New data sources or environment variables, when added or changed
+- Screenshots or recordings, only when they are available and useful for review
+- Verification notes, only when they explain a non-obvious manual check, risk,
+  failure, limitation, or reviewer-relevant result
 
 Wait for local checks to finish before requesting review.
