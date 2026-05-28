@@ -85,6 +85,30 @@ const loadWikiSnapshots = (directoryPath: string) =>
       };
     });
 
+const loadAiMarkdownFiles = (directoryPath: string) =>
+  (existsSync(directoryPath) ? readdirSync(directoryPath) : [])
+    .filter((fileName) => fileName.endsWith(".md") || fileName.endsWith(".txt"))
+    .sort((left, right) => {
+      const leftId = left.replace(/\.(md|txt)$/u, "");
+      const rightId = right.replace(/\.(md|txt)$/u, "");
+      if (leftId !== rightId) {
+        return leftId.localeCompare(rightId);
+      }
+
+      return left.endsWith(".txt") ? -1 : 1;
+    })
+    .map((fileName, index) => {
+      const filePath = path.join(directoryPath, fileName);
+      const raw = readFileSync(filePath, "utf-8");
+      const id = fileName.replace(/\.(md|txt)$/u, "") || `missing-id-${index}`;
+
+      return {
+        item: { id, name: fileName, featureIndex: index } satisfies PoiItem,
+        json: raw,
+        updatedAt: formatUpdatedAt(filePath),
+      };
+    });
+
 const toPoiRows = (
   rawPois: PoiItem[],
   rawUpdatedAt: string,
@@ -243,7 +267,7 @@ export const loadPoiLists = async () => {
       }),
     );
     const wikiPois = loadWikiSnapshots(wikiDirectoryPath);
-    const aiPois = loadWikiSnapshots(aiDirectoryPath);
+    const aiPois = loadAiMarkdownFiles(aiDirectoryPath);
     const rows = toPoiRows(
       rawPois,
       rawUpdatedAt,

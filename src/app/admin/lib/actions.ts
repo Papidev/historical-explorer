@@ -76,6 +76,23 @@ const generationMetadataPath = path.join(
   "admin-generation-metadata.json",
 );
 
+const buildAiMarkdownFilePath = (poiId: string) =>
+  path.join(aiDirectoryPath, `${sanitizePoiIdForFile(poiId)}.md`);
+
+const buildLegacyAiTextFilePath = (poiId: string) =>
+  buildOutputFilePath(aiDirectoryPath, poiId);
+
+const pickString = (properties: Record<string, unknown>, ...keys: string[]) => {
+  for (const key of keys) {
+    const value = properties[key];
+    if (typeof value === "string" && value.trim().length > 0) {
+      return value.trim();
+    }
+  }
+
+  return undefined;
+};
+
 const resolveAiModelFromFormData = async (formData: FormData) => {
   const installedModelOptions = await loadInstalledAiModelOptions();
   const aiModel = formData.get("aiModel");
@@ -285,11 +302,15 @@ const writeAiTextFile = async (poiId: string, aiModel: AiModel) => {
     throw new Error(`Invalid wiki text for ${poiId}.`);
   }
 
-  const outputFilePath = buildOutputFilePath(aiDirectoryPath, poiId);
+  const { rawFeature } = findRawFeatureByPoiId(poiId);
+  const poiName =
+    pickString(rawFeature.properties ?? {}, "name:en", "name", "int_name") ??
+    poiId;
+  const outputFilePath = buildAiMarkdownFilePath(poiId);
   mkdirSync(path.dirname(outputFilePath), { recursive: true });
   writeFileSync(
     outputFilePath,
-    await enrichWikiText(wikiText, aiModel),
+    `# ${poiName} (${poiId})\n\n${(await enrichWikiText(wikiText, aiModel)).trim()}\n`,
     "utf-8",
   );
   console.info(`[wiki-ai] Saved AI text for ${poiId} to ${outputFilePath}.`);
@@ -323,9 +344,13 @@ const deleteWikiSnapshotFile = (poiId: string) => {
 };
 
 const deleteAiTextFile = (poiId: string) => {
-  const outputFilePath = buildOutputFilePath(aiDirectoryPath, poiId);
-  if (existsSync(outputFilePath)) {
-    unlinkSync(outputFilePath);
+  for (const outputFilePath of [
+    buildAiMarkdownFilePath(poiId),
+    buildLegacyAiTextFilePath(poiId),
+  ]) {
+    if (existsSync(outputFilePath)) {
+      unlinkSync(outputFilePath);
+    }
   }
 };
 

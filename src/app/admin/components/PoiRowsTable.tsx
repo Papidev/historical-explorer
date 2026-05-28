@@ -215,9 +215,10 @@ export const PoiRowsTable = ({
               </thead>
               <tbody>
                 {rows.map((row) => {
-                  const isVisualizationDisabled = progress !== null;
+                  const isRowInProgress = progress?.poiId === row.id;
+                  const isVisualizationDisabled = isRowInProgress;
                   const progressDescription =
-                    progress?.poiId === row.id ? progress.description : null;
+                    isRowInProgress ? progress.description : null;
 
                   return (
                     <tr key={row.id} className="border-b border-black/10">
@@ -262,7 +263,7 @@ export const PoiRowsTable = ({
                                 pendingLabel="Generating..."
                                 confirmMessage={generateConfirmMessage}
                                 tone="primary"
-                                disabled={progress !== null}
+                                disabled={isRowInProgress}
                               />
                             </form>
                           ) : null}
@@ -391,7 +392,7 @@ export const PoiRowsTable = ({
                                     pendingLabel="Refreshing..."
                                     confirmMessage={refreshConfirmMessages.ai}
                                     tone="primary"
-                                    disabled={progress !== null}
+                                    disabled={isRowInProgress}
                                   />
                                 </form>
                                 <form
@@ -410,7 +411,7 @@ export const PoiRowsTable = ({
                                     pendingLabel="Deleting..."
                                     confirmMessage={deleteConfirmMessages.ai}
                                     tone="danger"
-                                    disabled={progress !== null}
+                                    disabled={isRowInProgress}
                                   />
                                 </form>
                               </div>
@@ -433,7 +434,7 @@ export const PoiRowsTable = ({
                                 pendingLabel="Generating..."
                                 confirmMessage={refreshConfirmMessages.ai}
                                 tone="primary"
-                                disabled={progress !== null}
+                                disabled={isRowInProgress}
                               />
                             </form>
                           ) : null}

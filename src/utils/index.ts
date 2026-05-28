@@ -47,10 +47,17 @@ export const getPoiDialogContent = async (city: string, poiId?: string) => {
   }
 
   const directoryPath = path.join(process.cwd(), "data", "wiki-ai");
-  const filePath = path.join(
+  const markdownFilePath = path.join(
+    directoryPath,
+    `${sanitizePoiIdForFile(poiId)}.md`,
+  );
+  const legacyTextFilePath = path.join(
     directoryPath,
     `${sanitizePoiIdForFile(poiId)}.txt`,
   );
+  const filePath = existsSync(markdownFilePath)
+    ? markdownFilePath
+    : legacyTextFilePath;
   if (!existsSync(filePath)) {
     return undefined;
   }
