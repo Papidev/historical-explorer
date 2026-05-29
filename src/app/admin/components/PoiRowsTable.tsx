@@ -8,11 +8,11 @@ import type { AdminPoiRow } from "../lib/types";
 import { SubmitButton } from "./SubmitButton";
 
 const refreshConfirmMessages = {
-  ai: "Refresh AI Markdown for this POI?",
+  ai: "Refresh Draft Story for this POI?",
 } as const;
 
 const generateConfirmMessage =
-  "Generate transformed JSON, wiki text, and AI Markdown for this POI?";
+  "Generate POI, Wikipedia Text, and Draft Story for this Raw POI?";
 
 type ProgressStep = {
   description: string;
@@ -26,7 +26,7 @@ type ProgressState = {
 };
 
 const deleteConfirmMessages = {
-  ai: "Delete AI Markdown for this POI?",
+  ai: "Delete Draft Story for this POI?",
 } as const;
 
 const viewButtonClassName =
@@ -203,13 +203,13 @@ export const PoiRowsTable = ({
                     Raw
                   </th>
                   <th scope="col" className="border-r border-b border-black/10 px-4 py-2 text-left">
-                    Polished
+                    POI
                   </th>
                   <th scope="col" className="border-r border-b border-black/10 px-4 py-2 text-left">
-                    Wiki Text
+                    Wikipedia Text
                   </th>
                   <th scope="col" className="border-b border-black/10 px-4 py-2 text-left">
-                    AI Markdown
+                    Draft Story
                   </th>
                 </tr>
               </thead>
@@ -235,17 +235,17 @@ export const PoiRowsTable = ({
                               action={(formData) =>
                                 runPipeline(row.id, [
                                   {
-                                    description: "Polishing POI metadata...",
+                                    description: "Generating POI...",
                                     action: generateTransformedAction,
                                     formData,
                                   },
                                   {
-                                    description: "Fetching Wikipedia text...",
+                                    description: "Fetching Wikipedia Text...",
                                     action: refreshWikiAction,
                                     formData: createPoiFormData(row.id),
                                   },
                                   {
-                                    description: "Generating AI Markdown...",
+                                    description: "Generating Draft Story...",
                                     action: refreshAiAction,
                                     formData: createPoiFormData(row.id),
                                   },
@@ -313,7 +313,7 @@ export const PoiRowsTable = ({
                               onClick={() =>
                                 row.wikiText
                                   ? setSelectedPanel({
-                                      title: `${row.id} Wiki Text`,
+                                      title: `${row.id} Wikipedia Text`,
                                       kind: "text",
                                       content: row.wikiText,
                                     })
@@ -345,7 +345,7 @@ export const PoiRowsTable = ({
                                   onClick={() =>
                                     row.aiText
                                       ? setSelectedPanel({
-                                          title: `${row.id} AI Markdown`,
+                                          title: `${row.id} Draft Story`,
                                           kind: "markdown",
                                           content: row.aiText,
                                         })
@@ -379,7 +379,7 @@ export const PoiRowsTable = ({
                                   action={(formData) =>
                                     runSingleAction(
                                       row.id,
-                                      "Generating AI Markdown...",
+                                      "Generating Draft Story...",
                                       refreshAiAction,
                                       formData,
                                     )
@@ -399,7 +399,7 @@ export const PoiRowsTable = ({
                                   action={(formData) =>
                                     runSingleAction(
                                       row.id,
-                                      "Deleting AI Markdown...",
+                                      "Deleting Draft Story...",
                                       deleteAiAction,
                                       formData,
                                     )
@@ -421,7 +421,7 @@ export const PoiRowsTable = ({
                               action={(formData) =>
                                 runSingleAction(
                                   row.id,
-                                  "Generating AI Markdown...",
+                                  "Generating Draft Story...",
                                   refreshAiAction,
                                   formData,
                                 )

@@ -5,9 +5,9 @@
       "completedAt": "2026-05-15T00:11:26.804Z"
     },
     "ai": {
-      "durationMs": 77337,
-      "completedAt": "2026-05-23T01:02:43.472Z",
-      "aiModel": "qwen3:8b"
+      "durationMs": 26264,
+      "completedAt": "2026-05-28T23:39:15.431Z",
+      "aiModel": "gemini-2.5-flash"
     },
     "transformed": {
       "durationMs": 1,
