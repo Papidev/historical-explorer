@@ -26,18 +26,18 @@ This is the internal editorial workflow.
 
 A POI starts from source material such as Wikipedia, Wikidata, and Wikimedia Commons. AI helps create a first draft by:
 - extracting visitor-oriented insights
-- proposing concise text
+- proposing concise story prose
 - suggesting which medium best communicates each insight
-- proposing candidate media
+- proposing one main image
 - explaining why each insight is useful
 
-The AI draft is only a proposal. A human curator reviews, edits, rejects, enriches, and approves the final content.
+The AI draft is only a proposal. A human curator reviews, edits, enriches, or approves draft stories.
 
 ### Visitor world
 
 This is the public app experience.
 
-The visitor only sees polished, approved content. They should not see AI reasoning, drafts, source processing, or editorial metadata.
+The visitor only sees approved stories. They should not see AI reasoning, drafts, source processing, visitor insights, or editorial metadata.
 
 The visitor experience should be quick, pleasant, low-friction, and useful while physically looking at a place.
 
@@ -45,23 +45,23 @@ The visitor experience should be quick, pleasant, low-friction, and useful while
 
 The primary product mode is a visitor who is near, or interested in, a specific POI and wants a concise cultural explanation. Planning, nearby discovery, post-visit review, and deeper reading are interesting future modes, but the first product shape should optimize the POI visit companion experience.
 
-Each POI should have one canonical English visitor narrative. The narrative should be self-contained, source-grounded, and concise: aim for 120-180 words, with about 220 words as a soft upper bound. It should be written as continuous prose, stored as one narrative body, not as a rigid set of cards or encyclopedia sections.
+Each POI should have one canonical English story. The story prose should be self-contained, source-grounded, and concise: aim for 120-180 words, with about 220 words as a soft upper bound. It should be written as continuous prose, not as a rigid set of cards or encyclopedia sections.
 
 The tone should be warm, precise, and visitor-facing without becoming promotional, academic, or presence-assuming. Avoid wording like "you are looking at" or "in front of you" because the visitor may be browsing away from the POI. Soft observation prompts are acceptable when useful, such as "a detail worth noticing is..."
 
-AI may propose lightweight bold highlights inside the narrative body, but highlights are plain editorial markup, not structured metadata. They should only emphasize proper names of places, named people or historical figures, dates or periods, named historical events, and named artistic movements. Apart from dates and periods, a highlighted phrase must be a named entity. Generic nouns, roles, amenities, facilities, services, functions, materials, objects, and concepts should not be bold unless they are part of one of those allowed proper names. A human curator can adjust or remove them before approval.
+AI may propose lightweight bold highlights inside the story prose, but highlights are plain editorial markup, not structured metadata. They should only emphasize proper names of places, named people or historical figures, dates or periods, named historical events, and named artistic movements. Apart from dates and periods, a highlighted phrase must be a named entity. Generic nouns, roles, amenities, facilities, services, functions, materials, objects, and concepts should not be bold unless they are part of one of those allowed proper names. A human curator can adjust or remove them before approval.
 
-Each POI needs one required lead image. The lead image should help the visitor recognize the place or notice an important visible detail, not merely decorate the page. It should live as structured POI content outside the narrative body and include source, author or rights status, license, and attribution metadata before approval.
+Each story needs one required main image. The main image should help the visitor recognize the place or notice an important visible detail, not merely decorate the page. It should live outside the story prose and include source, author or rights status, license, and attribution metadata before approval.
 
-For the first AI draft workflow, AI should produce:
-- a concise English visitor narrative
+For the first AI story workflow, AI should produce:
+- a concise English draft story
 - proposed lightweight bold highlights
-- 2-4 candidate lead images with source, license, and attribution metadata
-- source material used to ground the narrative
+- one proposed main image with source, license, and attribution metadata
+- source material used to ground the draft story
 
-The first source pipeline should stay limited to Wikipedia, Wikidata, and Wikimedia Commons. Source material and draft metadata belong to the draft workflow and should not be shown in the visitor experience.
+The first source pipeline should stay limited to Wikipedia, Wikidata, and Wikimedia Commons. Source material and draft metadata belong to the story workflow and should not be shown in the default visitor experience. A future "learn more" section may expose selected sources when that adds useful depth without slowing down the core visit companion experience.
 
-The map remains the entry point for discovery, but POI content is the main value moment. Selecting a marker should first show a lightweight identifiable preview, because a marker alone does not tell the visitor what it represents. The preview should include the POI name, a small thumbnail, a short descriptor, and an action to open the full POI content.
+The map remains the entry point for discovery, but the story is the main value moment. Selecting a marker should first show a lightweight identifiable preview, because a marker alone does not tell the visitor what it represents. The preview should include the POI name, a small thumbnail, a short descriptor, and an action to open the full story.
 
 ## Core content principle
 
@@ -89,7 +89,7 @@ AI is a junior cultural editor, not the final authority.
 
 AI may help draft, classify, summarize, rank, and propose. The human curator has the final word.
 
-Do not design flows where AI directly publishes final POI content without human review.
+Do not design flows where AI directly publishes final stories without human review.
 
 ## Content quality risks
 
