@@ -10,7 +10,17 @@ type GenerationStep = "transformed" | "wiki" | "ai";
 
 type GenerationMetadata = Record<
   string,
-  Partial<Record<GenerationStep, { durationMs: number; aiModel?: string }>>
+  Partial<
+    Record<
+      GenerationStep,
+      {
+        durationMs: number;
+        aiMode?: string;
+        aiProvider?: string;
+        aiModel?: string;
+      }
+    >
+  >
 >;
 
 const toRowKey = (value: string) => value.trim().toLowerCase();
@@ -200,6 +210,8 @@ const toPoiRows = (
               ? formatDuration(generationMetadata[rowKey].ai.durationMs)
               : undefined,
             aiGenerationModel: generationMetadata[rowKey]?.ai?.aiModel,
+            aiGenerationProvider: generationMetadata[rowKey]?.ai?.aiProvider,
+            aiGenerationMode: generationMetadata[rowKey]?.ai?.aiMode,
           }
         : {
             id: item.id,
@@ -210,6 +222,8 @@ const toPoiRows = (
               ? formatDuration(generationMetadata[rowKey].ai.durationMs)
               : undefined,
             aiGenerationModel: generationMetadata[rowKey]?.ai?.aiModel,
+            aiGenerationProvider: generationMetadata[rowKey]?.ai?.aiProvider,
+            aiGenerationMode: generationMetadata[rowKey]?.ai?.aiMode,
           },
     );
   }

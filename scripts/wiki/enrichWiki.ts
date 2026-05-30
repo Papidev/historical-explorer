@@ -19,24 +19,30 @@ type GeminiGenerateContentResponse = {
   };
 };
 
+export type AiProvider = "ollama" | "gemini";
+
+export type AiGenerationConfig = {
+  provider: AiProvider;
+  model: string;
+};
+
 const systemPrompt =
   "Rewrite historical POI content for a map detail panel in plain, contemporary language. This is factual visitor information, not a novel, essay, or travel brochure. Write for someone who is deciding whether to visit the spot or is standing there now. Preserve facts, dates, names, and source meaning. Do not invent information. Use short, direct paragraphs with concrete context about what the place is, what happened there, and why it matters. Use markdown bold only for proper names of places, named people or historical figures, dates or periods, named historical events, and named artistic movements. Bold every important date, period, named person, historical figure, place name, historical event, or artistic movement that appears in the final text. Apart from dates and periods, a bold phrase must be a named entity, not a common noun. Do not bold generic nouns, roles, amenities, facilities, services, functions, materials, objects, or concepts unless they are part of an allowed proper name. Before returning, check every bold phrase and remove bold if it is not one of the allowed categories. Use emphasis sparingly: usually one to three highlighted terms per paragraph, only when it helps scanning. Keep the style dry, concise, clear, conversational, and sober. Avoid literary narration, scene-setting openings, poetic language, promotional tone, suspense, grand adjectives, and decorative phrasing. Avoid schematic label/value writing. Avoid bullet lists unless the source is only a compact inventory that cannot be made readable as prose. Use few section headings, only when they improve navigation. Return markdown-compatible text only.";
 
 const getOllamaBaseUrl = () => process.env.OLLAMA_BASE_URL ?? "http://localhost:11434";
 
-const getOllamaModel = (model?: string) => model?.trim() || process.env.OLLAMA_MODEL || "qwen3:8b";
+const getOllamaModel = (model?: string) =>
+  model?.trim() || process.env.LOCAL_AI_MODEL || "qwen3:8b";
 
 const getGeminiModel = (model?: string) =>
-  model?.trim() || process.env.AI_MODEL || "gemini-2.5-flash";
-
-const getAiProvider = () => process.env.AI_PROVIDER?.trim().toLowerCase() || "ollama";
+  model?.trim() || process.env.CLOUD_AI_MODEL || "gemini-2.5-flash";
 
 const enrichWithGemini = async (content: string, model?: string) => {
   const startedAt = Date.now();
   const geminiModel = getGeminiModel(model);
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
-    throw new Error("GEMINI_API_KEY is required when AI_PROVIDER=gemini.");
+    throw new Error("GEMINI_API_KEY is required when using Gemini.");
   }
 
   console.info(
@@ -186,15 +192,17 @@ const enrichWithOllama = async (content: string, model?: string) => {
   return `${trimmedContent}\n`;
 };
 
-export const enrichWikiText = async (content: string, model?: string) => {
-  const aiProvider = getAiProvider();
-  if (aiProvider === "gemini") {
-    return enrichWithGemini(content, model);
+export const enrichWikiText = async (
+  content: string,
+  config: AiGenerationConfig,
+) => {
+  if (config.provider === "gemini") {
+    return enrichWithGemini(content, config.model);
   }
 
-  if (aiProvider === "ollama") {
-    return enrichWithOllama(content, model);
+  if (config.provider === "ollama") {
+    return enrichWithOllama(content, config.model);
   }
 
-  throw new Error(`Unsupported AI_PROVIDER "${aiProvider}".`);
+  throw new Error(`Unsupported AI provider "${config.provider}".`);
 };

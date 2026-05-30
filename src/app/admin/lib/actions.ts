@@ -23,9 +23,11 @@ import {
 } from "../../../../scripts/wiki/normalize";
 import { transformRawPoiFeature } from "../../../../scripts/wiki/transformRawPoiFeature";
 import {
-  defaultAiModel,
-  loadInstalledAiModelOptions,
+  resolveAiSelection,
+  type AiMode,
   type AiModel,
+  type AiProvider,
+  type AiSelection,
 } from "./aiModels";
 
 type GenerationStep = "transformed" | "wiki" | "ai";
@@ -35,7 +37,13 @@ type GenerationMetadata = Record<
   Partial<
     Record<
       GenerationStep,
-      { durationMs: number; completedAt: string; aiModel?: AiModel }
+      {
+        durationMs: number;
+        completedAt: string;
+        aiMode?: AiMode;
+        aiProvider?: AiProvider;
+        aiModel?: AiModel;
+      }
     >
   >
 >;
@@ -116,43 +124,6 @@ const pickString = (properties: Record<string, unknown>, ...keys: string[]) => {
   return undefined;
 };
 
-const resolveAiModelFromFormData = async (formData: FormData) => {
-  const installedModelOptions = await loadInstalledAiModelOptions();
-  const aiModel = formData.get("aiModel");
-  if (typeof aiModel === "string" && aiModel.trim().length > 0) {
-    if (!installedModelOptions.some((option) => option.value === aiModel)) {
-      throw new Error("Invalid AI model.");
-    }
-
-    return aiModel;
-  }
-
-  const configuredAiModel =
-    process.env.AI_PROVIDER?.trim().toLowerCase() === "gemini"
-      ? process.env.AI_MODEL
-      : process.env.OLLAMA_MODEL;
-  if (
-    configuredAiModel &&
-    installedModelOptions.some((option) => option.value === configuredAiModel)
-  ) {
-    return configuredAiModel;
-  }
-
-  const installedDefaultAiModel = installedModelOptions.find(
-    (option) => option.value === defaultAiModel,
-  )?.value;
-  if (installedDefaultAiModel) {
-    return installedDefaultAiModel;
-  }
-
-  const firstInstalledAiModel = installedModelOptions[0]?.value;
-  if (firstInstalledAiModel) {
-    return firstInstalledAiModel;
-  }
-
-  throw new Error("No installed Ollama models found.");
-};
-
 const readGenerationMetadata = () => {
   if (!existsSync(generationMetadataPath)) {
     return {} as GenerationMetadata;
@@ -176,7 +147,11 @@ const recordGenerationDuration = (
   poiId: string,
   step: GenerationStep,
   durationMs: number,
-  extraMetadata?: { aiModel?: AiModel },
+  extraMetadata?: {
+    aiMode?: AiMode;
+    aiProvider?: AiProvider;
+    aiModel?: AiModel;
+  },
 ) => {
   const normalizedPoiId = sanitizePoiIdForFile(poiId);
   const metadata = readGenerationMetadata();
@@ -219,7 +194,11 @@ const measureGeneration = async <Result>(
   poiId: string,
   step: GenerationStep,
   action: () => Result | Promise<Result>,
-  metadata?: { aiModel?: AiModel },
+  metadata?: {
+    aiMode?: AiMode;
+    aiProvider?: AiProvider;
+    aiModel?: AiModel;
+  },
 ) => {
   const startedAt = Date.now();
   const result = await action();
@@ -313,8 +292,10 @@ const writeTransformedPoi = (
   return poiId;
 };
 
-const writeAiTextFile = async (poiId: string, aiModel: AiModel) => {
-  console.info(`[wiki-ai] Generating AI text for ${poiId} with ${aiModel}.`);
+const writeAiTextFile = async (poiId: string, aiSelection: AiSelection) => {
+  console.info(
+    `[wiki-ai] Generating AI text for ${poiId} with ${aiSelection.mode}/${aiSelection.provider}/${aiSelection.model}.`,
+  );
   const wikiTextPath = buildOutputFilePath(getDefaultOutputDir(city), poiId);
   if (!existsSync(wikiTextPath)) {
     throw new Error(`Wiki text not found for ${poiId}.`);
@@ -333,7 +314,7 @@ const writeAiTextFile = async (poiId: string, aiModel: AiModel) => {
   mkdirSync(path.dirname(outputFilePath), { recursive: true });
   writeFileSync(
     outputFilePath,
-    `# ${poiName} (${poiId})\n\n${(await enrichWikiText(wikiText, aiModel)).trim()}\n`,
+    `# ${poiName} (${poiId})\n\n${(await enrichWikiText(wikiText, aiSelection)).trim()}\n`,
     "utf-8",
   );
   console.info(`[wiki-ai] Saved AI text for ${poiId} to ${outputFilePath}.`);
@@ -353,10 +334,17 @@ const refreshWikiPipeline = async (poiId: string) => {
   );
 };
 
-const refreshAiPipeline = async (poiId: string, aiModel: AiModel) => {
-  await measureGeneration(poiId, "ai", () => writeAiTextFile(poiId, aiModel), {
-    aiModel,
-  });
+const refreshAiPipeline = async (poiId: string, aiSelection: AiSelection) => {
+  await measureGeneration(
+    poiId,
+    "ai",
+    () => writeAiTextFile(poiId, aiSelection),
+    {
+      aiMode: aiSelection.mode,
+      aiProvider: aiSelection.provider,
+      aiModel: aiSelection.model,
+    },
+  );
 };
 
 const deleteWikiSnapshotFile = (poiId: string) => {
@@ -455,13 +443,13 @@ export const refreshWikiJson = async (formData: FormData) => {
 };
 
 export const refreshAiText = async (formData: FormData) => {
-  const aiModel = await resolveAiModelFromFormData(formData);
+  const aiSelection = await resolveAiSelection(formData);
   const poiId = formData.get("poiId");
   if (typeof poiId !== "string" || poiId.trim().length === 0) {
     throw new Error("Invalid POI id.");
   }
 
-  await refreshAiPipeline(poiId, aiModel);
+  await refreshAiPipeline(poiId, aiSelection);
   revalidatePath("/admin");
 };
 

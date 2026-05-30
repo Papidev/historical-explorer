@@ -24,6 +24,20 @@ Then open [http://localhost:3000](http://localhost:3000).
 
 For project glossary terms such as Raw POI, Draft Story, Sources, and Main Image, see `CONTEXT.md`.
 
+## AI Configuration
+
+Admin AI actions use the new Local/Cloud configuration variables:
+
+```bash
+AI_MODE=cloud
+LOCAL_AI_PROVIDER=ollama
+LOCAL_AI_MODEL=qwen3:8b
+CLOUD_AI_PROVIDER=gemini
+CLOUD_AI_MODEL=gemini-2.5-flash
+```
+
+`AI_MODE` controls the initial admin selector value. Local currently maps to Ollama, and Cloud currently maps to Gemini.
+
 Raw POI input lives in `public/data/raw/`. Generated local-dev outputs live under `data/generated/` and are intentionally not committed.
 
 Each city has its own generated folder. For Rome, POI GeoJSON generated from Raw POI input is written to `data/generated/rome/pois.geojson`, and Wikipedia Text snapshots are generated into `data/generated/rome/wiki/`. They can be recreated by running the admin generation flows again.
