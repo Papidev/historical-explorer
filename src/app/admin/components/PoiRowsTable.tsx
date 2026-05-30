@@ -3,7 +3,7 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
 import { MarkdownContent } from "@/app/components/MarkdownContent";
-import type { AiModelOption } from "../lib/aiModels";
+import type { AiMode, AiModel } from "../lib/aiModels";
 import type { AdminPoiRow } from "../lib/types";
 import { SubmitButton } from "./SubmitButton";
 
@@ -110,28 +110,28 @@ type SelectedPanel =
 
 export const PoiRowsTable = ({
   rows,
-  aiModelOptions,
-  defaultAiModel,
+  selectedAiMode,
+  selectedAiModel,
   generateTransformedAction,
   refreshWikiAction,
   refreshAiAction,
   deleteAiAction,
 }: {
   rows: AdminPoiRow[];
-  aiModelOptions: readonly AiModelOption[];
-  defaultAiModel: string;
+  selectedAiMode: AiMode;
+  selectedAiModel: AiModel;
   generateTransformedAction: (formData: FormData) => Promise<void>;
   refreshWikiAction: (formData: FormData) => Promise<void>;
   refreshAiAction: (formData: FormData) => Promise<void>;
   deleteAiAction: (formData: FormData) => Promise<void>;
 }) => {
   const [selectedPanel, setSelectedPanel] = useState<SelectedPanel | null>(null);
-  const [selectedAiModel, setSelectedAiModel] = useState(defaultAiModel);
   const [progress, setProgress] = useState<ProgressState | null>(null);
 
   const createPoiFormData = (poiId: string) => {
     const formData = new FormData();
     formData.set("poiId", poiId);
+    formData.set("aiMode", selectedAiMode);
     formData.set("aiModel", selectedAiModel);
 
     return formData;
@@ -166,31 +166,6 @@ export const PoiRowsTable = ({
 
   return (
     <>
-      <section className="mb-3 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-black/10 bg-white px-4 py-3">
-        <div>
-          <p className="text-sm font-medium text-black">AI model</p>
-          <p className="text-xs text-black/55">
-            Used for the next AI generations in this admin session.
-          </p>
-        </div>
-        <label className="flex items-center gap-2 text-sm text-black">
-          <span className="text-xs font-medium tracking-[0.08em] text-black/55 uppercase">
-            Model
-          </span>
-          <select
-            value={selectedAiModel}
-            onChange={(event) => setSelectedAiModel(event.target.value)}
-            disabled={progress !== null || aiModelOptions.length === 0}
-            className="rounded-md border border-black/15 bg-white px-3 py-2 text-sm font-medium text-black transition outline-none hover:bg-black/[0.03] disabled:cursor-not-allowed disabled:opacity-50"
-          >
-            {aiModelOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-        </label>
-      </section>
       <section className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-lg border border-black/10 bg-white">
         <div className="min-h-0 flex-1 overflow-auto">
           {rows.length === 0 ? (
@@ -257,6 +232,7 @@ export const PoiRowsTable = ({
                                 name="rawFeatureIndex"
                                 value={row.rawPoi.featureIndex}
                               />
+                              <input type="hidden" name="aiMode" value={selectedAiMode} />
                               <input type="hidden" name="aiModel" value={selectedAiModel} />
                               <SubmitButton
                                 idleLabel="Generate"
@@ -332,7 +308,15 @@ export const PoiRowsTable = ({
                           updatedAt={row.aiUpdatedAt}
                           generationDuration={row.aiGenerationDuration}
                           generationModel={
-                            row.aiPoi ? (row.aiGenerationModel ?? "unknown") : undefined
+                            row.aiPoi
+                              ? [
+                                  row.aiGenerationMode,
+                                  row.aiGenerationProvider,
+                                  row.aiGenerationModel ?? "unknown",
+                                ]
+                                  .filter(Boolean)
+                                  .join(" / ")
+                              : undefined
                           }
                         />
                         <CellActions>
@@ -386,6 +370,7 @@ export const PoiRowsTable = ({
                                   }
                                 >
                                   <input type="hidden" name="poiId" value={row.id} />
+                                  <input type="hidden" name="aiMode" value={selectedAiMode} />
                                   <input type="hidden" name="aiModel" value={selectedAiModel} />
                                   <SubmitButton
                                     idleLabel="Refresh"
@@ -428,6 +413,7 @@ export const PoiRowsTable = ({
                               }
                             >
                               <input type="hidden" name="poiId" value={row.id} />
+                              <input type="hidden" name="aiMode" value={selectedAiMode} />
                               <input type="hidden" name="aiModel" value={selectedAiModel} />
                               <SubmitButton
                                 idleLabel="Generate"

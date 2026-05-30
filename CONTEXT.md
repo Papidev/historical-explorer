@@ -45,6 +45,10 @@ _Avoid_: Fact, section, card, reasoning
 The image in a story that helps visitors recognize a **Point of Interest** or notice an important visible detail.
 _Avoid_: Lead Image Candidate, decoration, gallery image
 
+**Main Image Candidate**:
+A workflow-only image option that helps identify a **Point of Interest** before a **Curator** chooses the **Main Image** for a **Draft Story**.
+_Avoid_: Alternative, gallery image, image result
+
 **Source**:
 External cultural material used to ground or review a draft story.
 _Avoid_: Source Material, claim reference, citation
@@ -68,8 +72,12 @@ _Avoid_: Production output, AI output
 - A **Story** is composed from the strongest few **Visitor Insights**, not from a complete article summary.
 - A **Draft Story** proposes the **Visitor Insights** that may shape the approved **Story**.
 - A **Draft Story** becomes a **Story** only when approved by a **Curator**.
-- A **Draft Story** contains draft prose and one or more **Sources**, and may include zero or more editorial highlights and one proposed **Main Image**.
+- A **Draft Story** contains draft prose and one or more **Sources**, and may include zero or more editorial highlights, one proposed **Main Image**, and one or more **Main Image Candidates**.
 - A **Draft Story** must include one proposed **Main Image** with source, rights, license, and attribution information before it becomes a **Story**.
+- The first **Story Workflow** proposes exactly three **Main Image Candidates** for each **Draft Story**.
+- **Main Image Candidates** should help visitors recognize the **Point of Interest**, not inspect a detail.
+- The first **Main Image Candidates** come from Wikimedia Commons.
+- **Main Image Candidates** belong to the **Story Workflow**, not to the visitor-facing **Story**.
 - The first **Main Images** come from Wikimedia Commons.
 - A **Visitor Insight** should prefer visible details when they can carry the cultural meaning.
 - The first **Sources** come from Wikipedia, Wikidata, and Wikimedia Commons.
@@ -94,3 +102,6 @@ _Avoid_: Production output, AI output
 - "MDX narrative" was used for the story body — resolved: describe it as lightweight editorial formatting in **Story Prose** and keep MDX out of the product language.
 - "AI Markdown" and "AI text" were used for the current reviewable artifact — resolved: call the domain object a **Draft Story**.
 - "lead image candidate" over-specified the current image model because the draft workflow proposes only one image for now — resolved: call the image inside a story the **Main Image**.
+- "alternatives" was used for images AI can propose to the curator — resolved: call these **Main Image Candidates**, and keep them out of the approved **Story**.
+- "detail image" was considered for candidates — resolved: the first **Main Image Candidates** should all be recognizers for the **Point of Interest**.
+- "image search" was ambiguous between Wikimedia Commons and broader web search — resolved: the first **Main Image Candidates** come from Wikimedia Commons only.

@@ -28,6 +28,8 @@ export type AdminPoiRow = {
   transformedGenerationDuration?: string;
   wikiGenerationDuration?: string;
   aiGenerationDuration?: string;
+  aiGenerationMode?: string;
+  aiGenerationProvider?: string;
   aiGenerationModel?: string;
   transformedJson?: string;
   wikiText?: string;
