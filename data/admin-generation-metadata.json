@@ -28,9 +28,11 @@
       "completedAt": "2026-05-23T01:00:04.299Z"
     },
     "ai": {
-      "durationMs": 33133,
-      "completedAt": "2026-05-23T01:45:13.177Z",
-      "aiModel": "qwen3:8b"
+      "durationMs": 8463,
+      "completedAt": "2026-05-30T00:26:40.659Z",
+      "aiMode": "cloud",
+      "aiProvider": "gemini",
+      "aiModel": "gemini-2.5-flash"
     }
   },
   "q283650": {
