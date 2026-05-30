@@ -18,6 +18,12 @@
 - `pnpm lint` is not a full TypeScript type-check in this repo; when touching TS-heavy logic, also run `pnpm build` (or `tsc --noEmit` if a script is available) before considering the change complete.
 - Prettier is configured with `prettier-plugin-tailwindcss`; rely on `pnpm prettier --write` or your editor integration so Tailwind classes remain sorted.
 
+## Tailwind Plus / Catalyst
+
+- `src/app/components/catalyst/` contains paid Tailwind Plus Catalyst source when present locally and is intentionally gitignored.
+- Do not commit copied Catalyst source files. Keep the local folder available only for licensed development machines.
+- The repo may commit Catalyst runtime dependencies, Tailwind theme/font setup, and app-specific components built from or inspired by Catalyst.
+
 ## Coding Standards & A11y
 
 - Favor a lightweight Domain-Driven Design mindset: model features around the domain language (cities, POIs, timelines) and keep logic close to the data source, but resist extra indirection unless it delivers clear value.

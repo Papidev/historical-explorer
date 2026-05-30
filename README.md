@@ -20,6 +20,12 @@ Then open [http://localhost:3000](http://localhost:3000).
 - `pnpm start` - start the production server.
 - `pnpm lint` - run ESLint.
 
+## Tailwind Plus / Catalyst
+
+The project is prepared to use Tailwind Plus Catalyst, but the paid Catalyst source is not committed.
+
+If you have a Tailwind Plus license, keep the copied Catalyst components locally in `src/app/components/catalyst/`. That folder is gitignored on purpose. Do not commit copied Catalyst source files; commit only app-specific code, runtime dependencies, and theme/font setup.
+
 ## Generated Data
 
 For project glossary terms such as Raw POI, Draft Story, Sources, and Main Image, see `CONTEXT.md`.
