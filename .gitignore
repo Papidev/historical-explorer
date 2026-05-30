@@ -23,6 +23,9 @@
 # generated local content
 /data/generated/
 
+# paid local UI kit source
+/src/app/components/catalyst/
+
 # misc
 .DS_Store
 *.pem
