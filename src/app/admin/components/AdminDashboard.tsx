@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { Label } from "@/app/components/catalyst/fieldset";
+import { Switch, SwitchField } from "@/app/components/catalyst/switch";
 import type { AiMode, AiModeOption, AiSelection } from "../lib/aiModels";
 import type { AdminPoiRow } from "../lib/types";
 import { PoiRowsTable } from "./PoiRowsTable";
@@ -60,32 +62,18 @@ export const AdminDashboard = ({
           </p>
         </div>
         <div className="flex flex-wrap items-end gap-3">
-          <div className="flex flex-col gap-1 text-sm text-black">
-            <span className="text-xs font-medium tracking-[0.08em] text-black/55 uppercase">
-              AI provider
-            </span>
-            <div
-              className="grid grid-cols-2 rounded-md border border-black/15 bg-white p-0.5"
-              role="group"
-              aria-label="AI provider"
-            >
-              {aiModeOptions.map((option) => (
-                <button
-                  key={option.mode}
-                  type="button"
-                  aria-pressed={selectedAiMode === option.mode}
-                  onClick={() => setSelectedAiMode(option.mode)}
-                  className={`rounded-[5px] px-3 py-1.5 text-sm font-medium transition ${
-                    selectedAiMode === option.mode
-                      ? "bg-black text-white"
-                      : "text-black hover:bg-black/[0.04]"
-                  }`}
-                >
-                  {option.label}
-                </button>
-              ))}
-            </div>
-          </div>
+          <SwitchField className="min-w-40">
+            <Label className="text-xs font-medium tracking-[0.08em] text-black/55 uppercase">
+              Cloud mode
+            </Label>
+            <Switch
+              checked={selectedAiMode === "cloud"}
+              onChange={(checked) =>
+                setSelectedAiMode(checked ? "cloud" : "local")
+              }
+              aria-label="Cloud mode"
+            />
+          </SwitchField>
           <label className="flex flex-col gap-1 text-sm text-black">
             <span className="text-xs font-medium tracking-[0.08em] text-black/55 uppercase">
               Model
