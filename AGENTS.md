@@ -23,6 +23,7 @@
 - `src/app/components/catalyst/` contains paid Tailwind Plus Catalyst source when present locally and is intentionally gitignored.
 - Do not commit copied Catalyst source files. Keep the local folder available only for licensed development machines.
 - The repo may commit Catalyst runtime dependencies, Tailwind theme/font setup, and app-specific components built from or inspired by Catalyst.
+- Before building UI controls or layout primitives, check the local Catalyst set for a matching building block and import the Catalyst component normally when it fits.
 
 ## Coding Standards & A11y
 
