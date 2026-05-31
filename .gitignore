@@ -26,6 +26,7 @@
 
 # paid local UI kit source
 /src/app/components/catalyst/
+/src/app/components/tailwindUi/
 
 # misc
 .DS_Store
