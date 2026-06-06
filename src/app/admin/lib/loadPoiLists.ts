@@ -1,12 +1,15 @@
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
-import {
-  getDefaultInputPath,
-  getDefaultOutputDir,
-} from "../../../../scripts/wiki/io";
-import type { AdminPoiRow, GeoJson, GeoJsonFeature, PoiItem } from "./types";
+import { getDefaultInputPath, getDefaultOutputDir } from "../../../../scripts/wiki/io";
+import type {
+  AdminPoiRow,
+  GeoJson,
+  GeoJsonFeature,
+  MainImageCandidatesArtifact,
+  PoiItem,
+} from "./types";
 
-type GenerationStep = "transformed" | "wiki" | "ai";
+type GenerationStep = "transformed" | "wiki" | "ai" | "image";
 
 type GenerationMetadata = Record<
   string,
@@ -69,12 +72,9 @@ const toPoiItems = (features: GeoJsonFeature[] | undefined) =>
       (typeof feature.id === "string" && feature.id.trim()) ||
       (typeof feature.id === "number" ? `${feature.id}` : "") ||
       `missing-id-${index}`;
-    const name =
-      (typeof properties.name === "string" && properties.name.trim()) || id;
+    const name = (typeof properties.name === "string" && properties.name.trim()) || id;
     const wikidata =
-      typeof properties.wikidata === "string"
-        ? properties.wikidata.trim()
-        : undefined;
+      typeof properties.wikidata === "string" ? properties.wikidata.trim() : undefined;
 
     return { id, name, wikidata, featureIndex: index } satisfies PoiItem;
   });
@@ -110,13 +110,27 @@ const loadAiMarkdownFiles = (directoryPath: string) =>
     .map((fileName, index) => {
       const filePath = path.join(directoryPath, fileName);
       const raw = readFileSync(filePath, "utf-8");
-      const id =
-        fileName.replace(/\.(md|txt)$/u, "").split("--")[0] ||
-        `missing-id-${index}`;
+      const id = fileName.replace(/\.(md|txt)$/u, "").split("--")[0] || `missing-id-${index}`;
 
       return {
         item: { id, name: fileName, featureIndex: index } satisfies PoiItem,
         json: raw,
+        updatedAt: formatUpdatedAt(filePath),
+      };
+    });
+
+const loadMainImageCandidateFiles = (directoryPath: string) =>
+  (existsSync(directoryPath) ? readdirSync(directoryPath) : [])
+    .filter((fileName) => fileName.endsWith(".images.json"))
+    .sort()
+    .map((fileName, index) => {
+      const filePath = path.join(directoryPath, fileName);
+      const raw = readFileSync(filePath, "utf-8");
+      const id = fileName.replace(/\.images\.json$/u, "").split("--")[0] || `missing-id-${index}`;
+
+      return {
+        item: { id, name: fileName, featureIndex: index } satisfies PoiItem,
+        artifact: JSON.parse(raw) as MainImageCandidatesArtifact,
         updatedAt: formatUpdatedAt(filePath),
       };
     });
@@ -128,6 +142,11 @@ const toPoiRows = (
   transformedPois: Array<{ item: PoiItem; json: string; updatedAt: string }>,
   wikiPois: Array<{ item: PoiItem; json: string; updatedAt: string }>,
   aiPois: Array<{ item: PoiItem; json: string; updatedAt: string }>,
+  mainImagePois: Array<{
+    item: PoiItem;
+    artifact: MainImageCandidatesArtifact;
+    updatedAt: string;
+  }>,
 ) => {
   const rowsById = new Map<string, AdminPoiRow>();
 
@@ -146,11 +165,8 @@ const toPoiRows = (
             transformedPoi: item,
             transformedJson: json,
             transformedUpdatedAt: updatedAt,
-            transformedGenerationDuration: generationMetadata[rowKey]
-              ?.transformed
-              ? formatDuration(
-                  generationMetadata[rowKey].transformed.durationMs,
-                )
+            transformedGenerationDuration: generationMetadata[rowKey]?.transformed
+              ? formatDuration(generationMetadata[rowKey].transformed.durationMs)
               : undefined,
           }
         : {
@@ -158,11 +174,8 @@ const toPoiRows = (
             transformedPoi: item,
             transformedJson: json,
             transformedUpdatedAt: updatedAt,
-            transformedGenerationDuration: generationMetadata[rowKey]
-              ?.transformed
-              ? formatDuration(
-                  generationMetadata[rowKey].transformed.durationMs,
-                )
+            transformedGenerationDuration: generationMetadata[rowKey]?.transformed
+              ? formatDuration(generationMetadata[rowKey].transformed.durationMs)
               : undefined,
           },
     );
@@ -228,16 +241,45 @@ const toPoiRows = (
     );
   }
 
+  for (const { item, artifact, updatedAt } of mainImagePois) {
+    const rowKey = toRowKey(item.id);
+    const row = rowsById.get(rowKey);
+    rowsById.set(
+      rowKey,
+      row
+        ? {
+            ...row,
+            mainImagePoi: item,
+            mainImageArtifact: artifact,
+            mainImageUpdatedAt: updatedAt,
+            mainImageGenerationDuration: generationMetadata[rowKey]?.image
+              ? formatDuration(generationMetadata[rowKey].image.durationMs)
+              : undefined,
+          }
+        : {
+            id: item.id,
+            mainImagePoi: item,
+            mainImageArtifact: artifact,
+            mainImageUpdatedAt: updatedAt,
+            mainImageGenerationDuration: generationMetadata[rowKey]?.image
+              ? formatDuration(generationMetadata[rowKey].image.durationMs)
+              : undefined,
+          },
+    );
+  }
+
   return Array.from(rowsById.values()).sort((left, right) => {
     const leftGeneratedCount = [
       left.transformedPoi,
       left.wikiPoi,
       left.aiPoi,
+      left.mainImagePoi,
     ].filter(Boolean).length;
     const rightGeneratedCount = [
       right.transformedPoi,
       right.wikiPoi,
       right.aiPoi,
+      right.mainImagePoi,
     ].filter(Boolean).length;
 
     return rightGeneratedCount - leftGeneratedCount;
@@ -246,13 +288,7 @@ const toPoiRows = (
 
 export const loadPoiLists = async () => {
   try {
-    const rawPath = path.join(
-      process.cwd(),
-      "public",
-      "data",
-      "raw",
-      "rome-pois-raw.geojson",
-    );
+    const rawPath = path.join(process.cwd(), "public", "data", "raw", "rome-pois-raw.geojson");
     const transformedPath = getDefaultInputPath("rome");
     const wikiDirectoryPath = getDefaultOutputDir("rome");
     const aiDirectoryPath = path.join(process.cwd(), "data", "wiki-ai");
@@ -271,19 +307,18 @@ export const loadPoiLists = async () => {
     const transformedGeoJson = existsSync(transformedPath)
       ? parseGeoJson(transformedPath)
       : ({ features: [] } as GeoJson);
-    const transformedPois = (transformedGeoJson.features ?? []).map(
-      (feature, index) => ({
-        item: toPoiItems([feature])[0] ?? {
-          id: `missing-id-${index}`,
-          name: `missing-id-${index}`,
-          featureIndex: index,
-        },
-        json: JSON.stringify(feature, null, 2),
-        updatedAt: transformedUpdatedAt ?? "",
-      }),
-    );
+    const transformedPois = (transformedGeoJson.features ?? []).map((feature, index) => ({
+      item: toPoiItems([feature])[0] ?? {
+        id: `missing-id-${index}`,
+        name: `missing-id-${index}`,
+        featureIndex: index,
+      },
+      json: JSON.stringify(feature, null, 2),
+      updatedAt: transformedUpdatedAt ?? "",
+    }));
     const wikiPois = loadWikiSnapshots(wikiDirectoryPath);
     const aiPois = loadAiMarkdownFiles(aiDirectoryPath);
+    const mainImagePois = loadMainImageCandidateFiles(aiDirectoryPath);
     const rows = toPoiRows(
       rawPois,
       rawUpdatedAt,
@@ -291,6 +326,7 @@ export const loadPoiLists = async () => {
       transformedPois,
       wikiPois,
       aiPois,
+      mainImagePois,
     );
 
     return { rows, error: null };

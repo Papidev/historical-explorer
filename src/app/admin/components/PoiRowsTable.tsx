@@ -1,22 +1,26 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import type { ReactNode } from "react";
 import { MarkdownContent } from "@/app/components/MarkdownContent";
 import type { AiMode, AiModel } from "../lib/aiModels";
-import type { AdminPoiRow } from "../lib/types";
+import type { AdminPoiRow, MainImageCandidate, MainImageCandidatesArtifact } from "../lib/types";
 import { SubmitButton } from "./SubmitButton";
 
 const refreshConfirmMessages = {
   ai: "Refresh Draft Story for this POI?",
+  mainImage: "Refresh Main Image Candidates for this POI?",
 } as const;
 
-const generateConfirmMessage = "Generate POI, Wikipedia Text, and Draft Story for this Raw POI?";
+const generateConfirmMessage =
+  "Generate POI, Wikipedia Text, Draft Story, and Main Image Candidates for this Raw POI?";
 
 type ProgressStep = {
   description: string;
   action: (formData: FormData) => Promise<void>;
   formData: FormData;
+  continueOnError?: boolean;
 };
 
 type ProgressState = {
@@ -26,6 +30,7 @@ type ProgressState = {
 
 const deleteConfirmMessages = {
   ai: "Delete Draft Story for this POI?",
+  mainImage: "Delete Main Image Candidates for this POI?",
 } as const;
 
 const viewButtonClassName =
@@ -92,7 +97,41 @@ type SelectedPanel =
       title: string;
       kind: "markdown";
       content: string;
+    }
+  | {
+      title: string;
+      kind: "mainImage";
+      poiId: string;
+      artifact: MainImageCandidatesArtifact;
     };
+
+const isCandidateSelectable = (candidate: MainImageCandidate) =>
+  Boolean(candidate.license && candidate.attribution);
+
+const getSelectedMainImageCandidate = (artifact?: MainImageCandidatesArtifact) =>
+  artifact?.candidates.find(
+    (candidate) => candidate.commonsFileName === artifact.selectedCommonsFileName,
+  );
+
+const getMainImageStatus = (artifact?: MainImageCandidatesArtifact) => {
+  if (!artifact) {
+    return undefined;
+  }
+
+  if (artifact.candidates.length === 0) {
+    return "No candidates";
+  }
+
+  if (getSelectedMainImageCandidate(artifact)) {
+    return "Selected";
+  }
+
+  if (artifact.candidates.every((candidate) => !isCandidateSelectable(candidate))) {
+    return "Missing metadata";
+  }
+
+  return "Needs selection";
+};
 
 export const PoiRowsTable = ({
   rows,
@@ -102,6 +141,9 @@ export const PoiRowsTable = ({
   refreshWikiAction,
   refreshAiAction,
   deleteAiAction,
+  refreshMainImageCandidatesAction,
+  deleteMainImageCandidatesAction,
+  selectMainImageCandidateAction,
 }: {
   rows: AdminPoiRow[];
   selectedAiMode: AiMode;
@@ -110,6 +152,9 @@ export const PoiRowsTable = ({
   refreshWikiAction: (formData: FormData) => Promise<void>;
   refreshAiAction: (formData: FormData) => Promise<void>;
   deleteAiAction: (formData: FormData) => Promise<void>;
+  refreshMainImageCandidatesAction: (formData: FormData) => Promise<void>;
+  deleteMainImageCandidatesAction: (formData: FormData) => Promise<void>;
+  selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => {
   const [selectedPanel, setSelectedPanel] = useState<SelectedPanel | null>(null);
   const [progress, setProgress] = useState<ProgressState | null>(null);
@@ -129,7 +174,15 @@ export const PoiRowsTable = ({
     try {
       for (const step of steps) {
         setProgress({ poiId, description: step.description });
-        await step.action(step.formData);
+        try {
+          await step.action(step.formData);
+        } catch (error) {
+          if (!step.continueOnError) {
+            throw error;
+          }
+
+          console.warn(error);
+        }
       }
     } finally {
       setProgress(null);
@@ -159,10 +212,11 @@ export const PoiRowsTable = ({
           ) : (
             <table className="min-w-full table-fixed divide-y divide-gray-300">
               <colgroup>
-                <col className="w-[26%]" />
-                <col className="w-[18%]" />
                 <col className="w-[22%]" />
-                <col className="w-[34%]" />
+                <col className="w-[14%]" />
+                <col className="w-[19%]" />
+                <col className="w-[27%]" />
+                <col className="w-[18%]" />
               </colgroup>
               <thead className="sticky top-0 z-10 bg-white">
                 <tr>
@@ -186,9 +240,15 @@ export const PoiRowsTable = ({
                   </th>
                   <th
                     scope="col"
-                    className="py-2 pr-4 pl-3 text-left text-xs font-semibold tracking-[0.08em] text-gray-600 uppercase"
+                    className="border-r border-gray-200 px-3 py-2 text-left text-xs font-semibold tracking-[0.08em] text-gray-600 uppercase"
                   >
                     Draft Story
+                  </th>
+                  <th
+                    scope="col"
+                    className="py-2 pr-4 pl-3 text-left text-xs font-semibold tracking-[0.08em] text-gray-600 uppercase"
+                  >
+                    Main Image
                   </th>
                 </tr>
               </thead>
@@ -229,6 +289,12 @@ export const PoiRowsTable = ({
                                     description: "Generating Draft Story...",
                                     action: refreshAiAction,
                                     formData: createPoiFormData(row.id),
+                                  },
+                                  {
+                                    description: "Generating Main Image Candidates...",
+                                    action: refreshMainImageCandidatesAction,
+                                    formData: createPoiFormData(row.id),
+                                    continueOnError: true,
                                   },
                                 ])
                               }
@@ -305,7 +371,7 @@ export const PoiRowsTable = ({
                           ) : null}
                         </CellActions>
                       </td>
-                      <td className="min-w-0 py-2 pr-4 pl-3 align-top">
+                      <td className="min-w-0 border-r border-gray-100 px-3 py-2 align-top">
                         <CellContent
                           title={row.aiPoi ? "Available" : undefined}
                           updatedAt={row.aiUpdatedAt}
@@ -408,6 +474,102 @@ export const PoiRowsTable = ({
                           ) : null}
                         </CellActions>
                       </td>
+                      <td className="min-w-0 py-2 pr-4 pl-3 align-top">
+                        <CellContent
+                          title={getMainImageStatus(row.mainImageArtifact)}
+                          subtitle={
+                            row.mainImageArtifact
+                              ? `${row.mainImageArtifact.candidates.length} candidate${
+                                  row.mainImageArtifact.candidates.length === 1 ? "" : "s"
+                                }`
+                              : undefined
+                          }
+                          updatedAt={row.mainImageUpdatedAt}
+                          generationDuration={row.mainImageGenerationDuration}
+                        />
+                        <CellActions>
+                          {row.mainImageArtifact ? (
+                            <div className="flex flex-wrap items-center gap-2">
+                              <button
+                                type="button"
+                                disabled={isVisualizationDisabled}
+                                onClick={() =>
+                                  row.mainImageArtifact
+                                    ? setSelectedPanel({
+                                        title: `${row.id} Main Image Candidates`,
+                                        kind: "mainImage",
+                                        poiId: row.id,
+                                        artifact: row.mainImageArtifact,
+                                      })
+                                    : null
+                                }
+                                className={viewButtonClassName}
+                              >
+                                View
+                              </button>
+                              <form
+                                action={(formData) =>
+                                  runSingleAction(
+                                    row.id,
+                                    "Generating Main Image Candidates...",
+                                    refreshMainImageCandidatesAction,
+                                    formData,
+                                  )
+                                }
+                              >
+                                <input type="hidden" name="poiId" value={row.id} />
+                                <SubmitButton
+                                  idleLabel="Refresh"
+                                  pendingLabel="Refreshing..."
+                                  confirmMessage={refreshConfirmMessages.mainImage}
+                                  tone="primary"
+                                  disabled={isRowInProgress}
+                                />
+                              </form>
+                              <form
+                                className="ml-auto"
+                                action={(formData) =>
+                                  runSingleAction(
+                                    row.id,
+                                    "Deleting Main Image Candidates...",
+                                    deleteMainImageCandidatesAction,
+                                    formData,
+                                  )
+                                }
+                              >
+                                <input type="hidden" name="poiId" value={row.id} />
+                                <SubmitButton
+                                  idleLabel="Delete"
+                                  pendingLabel="Deleting..."
+                                  confirmMessage={deleteConfirmMessages.mainImage}
+                                  tone="danger"
+                                  disabled={isRowInProgress}
+                                />
+                              </form>
+                            </div>
+                          ) : row.aiPoi ? (
+                            <form
+                              action={(formData) =>
+                                runSingleAction(
+                                  row.id,
+                                  "Generating Main Image Candidates...",
+                                  refreshMainImageCandidatesAction,
+                                  formData,
+                                )
+                              }
+                            >
+                              <input type="hidden" name="poiId" value={row.id} />
+                              <SubmitButton
+                                idleLabel="Generate"
+                                pendingLabel="Generating..."
+                                confirmMessage={refreshConfirmMessages.mainImage}
+                                tone="primary"
+                                disabled={isRowInProgress}
+                              />
+                            </form>
+                          ) : null}
+                        </CellActions>
+                      </td>
                     </tr>
                   );
                 })}
@@ -437,6 +599,110 @@ export const PoiRowsTable = ({
             {selectedPanel.kind === "markdown" ? (
               <div className="flex-1 overflow-auto bg-neutral-50 px-5 py-4 text-sm leading-6 text-black">
                 <MarkdownContent content={selectedPanel.content} />
+              </div>
+            ) : null}
+            {selectedPanel.kind === "mainImage" ? (
+              <div className="flex-1 overflow-auto bg-neutral-50 px-5 py-4 text-sm text-black">
+                {selectedPanel.artifact.candidates.length === 0 ? (
+                  <p className="text-sm text-black/55">No candidates found.</p>
+                ) : (
+                  <div className="grid gap-4 md:grid-cols-2">
+                    {selectedPanel.artifact.candidates.map((candidate) => {
+                      const isSelected =
+                        candidate.commonsFileName ===
+                        selectedPanel.artifact.selectedCommonsFileName;
+                      const isSelectable = isCandidateSelectable(candidate);
+
+                      return (
+                        <article
+                          key={candidate.commonsFileName}
+                          className="overflow-hidden rounded-lg border border-black/10 bg-white"
+                        >
+                          <a
+                            href={candidate.commonsPageUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="block bg-neutral-100"
+                          >
+                            <Image
+                              src={candidate.thumbnailUrl}
+                              alt={candidate.commonsFileName}
+                              width={candidate.width ?? 640}
+                              height={candidate.height ?? 360}
+                              sizes="(min-width: 768px) 448px, 100vw"
+                              unoptimized
+                              className="h-56 w-full object-contain"
+                            />
+                          </a>
+                          <div className="space-y-2 p-4">
+                            <div className="flex flex-wrap items-center gap-2">
+                              {candidate.isProposed ? (
+                                <span className="rounded bg-amber-100 px-2 py-1 text-xs font-medium text-amber-900">
+                                  Proposed
+                                </span>
+                              ) : null}
+                              {isSelected ? (
+                                <span className="rounded bg-emerald-100 px-2 py-1 text-xs font-medium text-emerald-900">
+                                  Selected
+                                </span>
+                              ) : null}
+                              {!isSelectable ? (
+                                <span className="rounded bg-red-100 px-2 py-1 text-xs font-medium text-red-900">
+                                  Missing license or attribution
+                                </span>
+                              ) : null}
+                            </div>
+                            <p className="font-mono text-xs break-words text-black/75">
+                              {candidate.commonsFileName}
+                            </p>
+                            <dl className="space-y-1 text-xs text-black/65">
+                              <div>
+                                <dt className="font-semibold text-black">License</dt>
+                                <dd>{candidate.license ?? "Missing"}</dd>
+                              </div>
+                              <div>
+                                <dt className="font-semibold text-black">Attribution</dt>
+                                <dd>{candidate.attribution ?? "Missing"}</dd>
+                              </div>
+                              {candidate.author ? (
+                                <div>
+                                  <dt className="font-semibold text-black">Author</dt>
+                                  <dd>{candidate.author}</dd>
+                                </div>
+                              ) : null}
+                              <div>
+                                <dt className="font-semibold text-black">Discovery</dt>
+                                <dd>{candidate.discoveredVia}</dd>
+                              </div>
+                              {candidate.width && candidate.height ? (
+                                <div>
+                                  <dt className="font-semibold text-black">Size</dt>
+                                  <dd>
+                                    {candidate.width} x {candidate.height}
+                                  </dd>
+                                </div>
+                              ) : null}
+                            </dl>
+                            <form action={selectMainImageCandidateAction}>
+                              <input type="hidden" name="poiId" value={selectedPanel.poiId} />
+                              <input
+                                type="hidden"
+                                name="commonsFileName"
+                                value={candidate.commonsFileName}
+                              />
+                              <SubmitButton
+                                idleLabel={isSelected ? "Selected" : "Select"}
+                                pendingLabel="Selecting..."
+                                tone="primary"
+                                disabled={isSelected || !isSelectable}
+                              />
+                            </form>
+                          </div>
+                        </article>
+                      );
+                    })}
+                  </div>
+                )}
               </div>
             ) : null}
           </div>

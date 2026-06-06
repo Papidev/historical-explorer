@@ -1,9 +1,12 @@
 import { AdminDashboard } from "./components/AdminDashboard";
 import {
   deleteAiText,
+  deleteMainImageCandidates,
   generateTransformedPoiJson,
   refreshAiText,
+  refreshMainImageCandidates,
   refreshWikiJson,
+  selectMainImageCandidate,
 } from "./lib/actions";
 import { getInitialAiSelection, loadAiModeOptions } from "./lib/aiModels";
 import { loadPoiLists } from "./lib/loadPoiLists";
@@ -35,6 +38,9 @@ export default async function AdminPage() {
           refreshWikiAction={refreshWikiJson}
           refreshAiAction={refreshAiText}
           deleteAiAction={deleteAiText}
+          refreshMainImageCandidatesAction={refreshMainImageCandidates}
+          deleteMainImageCandidatesAction={deleteMainImageCandidates}
+          selectMainImageCandidateAction={selectMainImageCandidate}
         />
       )}
     </>

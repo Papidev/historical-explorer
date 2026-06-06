@@ -18,6 +18,9 @@ export const AdminDashboard = ({
   refreshWikiAction,
   refreshAiAction,
   deleteAiAction,
+  refreshMainImageCandidatesAction,
+  deleteMainImageCandidatesAction,
+  selectMainImageCandidateAction,
 }: {
   rows: AdminPoiRow[];
   aiModeOptions: readonly AiModeOption[];
@@ -26,6 +29,9 @@ export const AdminDashboard = ({
   refreshWikiAction: (formData: FormData) => Promise<void>;
   refreshAiAction: (formData: FormData) => Promise<void>;
   deleteAiAction: (formData: FormData) => Promise<void>;
+  refreshMainImageCandidatesAction: (formData: FormData) => Promise<void>;
+  deleteMainImageCandidatesAction: (formData: FormData) => Promise<void>;
+  selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => {
   const [selectedAiMode, setSelectedAiMode] = useState(initialAiSelection.mode);
   const [selectedAiModelByMode, setSelectedAiModelByMode] = useState<Record<AiMode, string>>({
@@ -84,6 +90,9 @@ export const AdminDashboard = ({
         refreshWikiAction={refreshWikiAction}
         refreshAiAction={refreshAiAction}
         deleteAiAction={deleteAiAction}
+        refreshMainImageCandidatesAction={refreshMainImageCandidatesAction}
+        deleteMainImageCandidatesAction={deleteMainImageCandidatesAction}
+        selectMainImageCandidateAction={selectMainImageCandidateAction}
       />
     </main>
   );

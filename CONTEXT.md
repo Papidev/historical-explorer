@@ -74,11 +74,13 @@ _Avoid_: Production output, AI output
 - A **Draft Story** becomes a **Story** only when approved by a **Curator**.
 - A **Draft Story** contains draft prose and one or more **Sources**, and may include zero or more editorial highlights, one proposed **Main Image**, and one or more **Main Image Candidates**.
 - A **Draft Story** must include one proposed **Main Image** with source, rights, license, and attribution information before it becomes a **Story**.
-- The first **Story Workflow** proposes exactly three **Main Image Candidates** for each **Draft Story**.
+- The first **Story Workflow** proposes up to three **Main Image Candidates** for each **Draft Story**.
 - **Main Image Candidates** should help visitors recognize the **Point of Interest**, not inspect a detail.
 - The first **Main Image Candidates** come from Wikimedia Commons.
 - **Main Image Candidates** belong to the **Story Workflow**, not to the visitor-facing **Story**.
 - The first **Main Images** come from Wikimedia Commons.
+- A **Curator** may select a **Main Image Candidate** as the current **Main Image** for a **Draft Story**, and may change that selection before approving the **Draft Story**.
+- **Main Image Candidates** and the current selected **Main Image** are reviewable parts of a **Draft Story**.
 - A **Visitor Insight** should prefer visible details when they can carry the cultural meaning.
 - The first **Sources** come from Wikipedia, Wikidata, and Wikimedia Commons.
 - A **Curator** may edit a **Draft Story** before approving it.
@@ -105,3 +107,7 @@ _Avoid_: Production output, AI output
 - "alternatives" was used for images AI can propose to the curator — resolved: call these **Main Image Candidates**, and keep them out of the approved **Story**.
 - "detail image" was considered for candidates — resolved: the first **Main Image Candidates** should all be recognizers for the **Point of Interest**.
 - "image search" was ambiguous between Wikimedia Commons and broader web search — resolved: the first **Main Image Candidates** come from Wikimedia Commons only.
+- "main image from Wikipedia" was ambiguous between using a Wikipedia article thumbnail as the source and discovering images through Wikipedia/Wikidata — resolved: Wikipedia/Wikidata may help discover images, but the image source and attribution should come from Wikimedia Commons.
+- "exactly three candidates" overstated the first direct-source workflow because Wikidata and Wikipedia page images may provide fewer than three distinct usable images — resolved: the first **Story Workflow** proposes up to three **Main Image Candidates**.
+- "show the selected image" was ambiguous between the **Story Workflow** and the **Visitor Experience** — resolved: the first image-candidate implementation stays workflow-only until the approved **Story** shape is explicit.
+- "selected image" was ambiguous with final story approval — resolved: selecting a **Main Image Candidate** is a mutable **Story Workflow** decision until the **Draft Story** becomes an approved **Story**.
