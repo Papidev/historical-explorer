@@ -328,11 +328,14 @@ const writeMainImageCandidatesFile = async (poiId: string) => {
   const candidates = await fetchMainImageCandidates(
     findPoiInGeoJson(getDefaultInputPath(city), poiId, city),
   );
-  const selectedCommonsFileName = candidates.some(
-    (candidate) => candidate.commonsFileName === previousArtifact?.selectedCommonsFileName,
-  )
-    ? previousArtifact?.selectedCommonsFileName
-    : undefined;
+  const selectableCandidates = candidates.filter(
+    (candidate) => candidate.license && candidate.attribution,
+  );
+  const selectedCommonsFileName =
+    candidates.find(
+      (candidate) => candidate.commonsFileName === previousArtifact?.selectedCommonsFileName,
+    )?.commonsFileName ??
+    (selectableCandidates.length === 1 ? selectableCandidates[0]?.commonsFileName : undefined);
   const outputFilePath = buildMainImageCandidatesFilePath(poiId, getPoiNameFromRawFeature(poiId));
 
   mkdirSync(path.dirname(outputFilePath), { recursive: true });

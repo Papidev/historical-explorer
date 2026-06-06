@@ -27,6 +27,20 @@ body {
   color: var(--foreground);
 }
 
+button[aria-haspopup="listbox"] > svg,
+[role="option"] svg {
+  height: 1.25rem;
+  flex-shrink: 0;
+  width: 1.25rem;
+}
+
+@media (min-width: 40rem) {
+  button[aria-haspopup="listbox"] > svg {
+    height: 1rem;
+    width: 1rem;
+  }
+}
+
 .poi-dialog-content {
   color: #27272a;
   font-size: 1rem;
