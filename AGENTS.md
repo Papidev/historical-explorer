@@ -21,8 +21,10 @@
 ## Tailwind Plus / Catalyst
 
 - `src/app/components/catalyst/` contains paid Tailwind Plus Catalyst source when present locally and is intentionally gitignored.
-- Do not commit copied Catalyst source files. Keep the local folder available only for licensed development machines.
+- `src/app/components/tailwindUi/` contains paid Tailwind Plus UI Block source when present locally and is intentionally gitignored.
+- Do not commit copied Tailwind Plus or Catalyst source files. Keep the local folders available only for licensed development machines.
 - The repo may commit Catalyst runtime dependencies, Tailwind theme/font setup, and app-specific components built from or inspired by Catalyst.
+- Before building UI controls or layout primitives, first check `src/app/components/tailwindUi/` for a matching Tailwind Plus UI Block pattern. If none fits, check the local Catalyst set. Commit only app-specific components built from or inspired by those local paid sources.
 
 ## Coding Standards & A11y
 
