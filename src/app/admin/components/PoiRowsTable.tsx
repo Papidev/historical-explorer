@@ -1,8 +1,17 @@
 "use client";
 
+import {
+  ArrowPathIcon,
+  DocumentTextIcon,
+  EyeIcon,
+  PhotoIcon,
+  PlusIcon,
+  TrashIcon,
+} from "@heroicons/react/20/solid";
 import Image from "next/image";
 import { useState } from "react";
 import type { ReactNode } from "react";
+import { IconButton } from "@/app/components/tailwindUi/IconButton";
 import { MarkdownContent } from "@/app/components/MarkdownContent";
 import type { AiMode, AiModel } from "../lib/aiModels";
 import type { AdminPoiRow, MainImageCandidate, MainImageCandidatesArtifact } from "../lib/types";
@@ -33,8 +42,7 @@ const deleteConfirmMessages = {
   mainImage: "Delete Main Image Candidates for this POI?",
 } as const;
 
-const viewButtonClassName =
-  "inline-flex items-center rounded-md border border-black/15 bg-white px-3 py-1.5 text-xs font-medium text-black transition hover:bg-black/[0.03] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-white";
+const actionGroupClassName = "flex flex-wrap items-center gap-1.5";
 
 const CellContent = ({
   title,
@@ -81,6 +89,17 @@ const CellContent = ({
 const CellActions = ({ children }: { children?: ReactNode }) =>
   children ? <div className="pt-3">{children}</div> : null;
 
+const ColumnHeader = ({ title, path }: { title: string; path?: string }) => (
+  <div>
+    <p className="text-xs font-semibold tracking-[0.08em] text-gray-600 uppercase">{title}</p>
+    {path ? (
+      <p className="mt-1 max-w-full font-mono text-[0.6875rem] leading-snug break-all text-gray-400 normal-case">
+        {path}
+      </p>
+    ) : null}
+  </div>
+);
+
 const ProgressMessage = ({ description }: { description: string }) => (
   <p className="mt-2 text-xs font-medium text-black/65" aria-live="polite">
     {description}
@@ -112,6 +131,32 @@ const getSelectedMainImageCandidate = (artifact?: MainImageCandidatesArtifact) =
   artifact?.candidates.find(
     (candidate) => candidate.commonsFileName === artifact.selectedCommonsFileName,
   );
+
+const MainImageCellPreview = ({ artifact }: { artifact?: MainImageCandidatesArtifact }) => {
+  const selectedCandidate = getSelectedMainImageCandidate(artifact);
+  if (!selectedCandidate) {
+    return null;
+  }
+
+  return (
+    <a
+      href={selectedCandidate.commonsPageUrl}
+      target="_blank"
+      rel="noreferrer"
+      className="mb-2 block h-20 w-28 overflow-hidden rounded-md border border-black/10 bg-neutral-100"
+    >
+      <Image
+        src={selectedCandidate.thumbnailUrl}
+        alt={selectedCandidate.commonsFileName}
+        width={selectedCandidate.width ?? 160}
+        height={selectedCandidate.height ?? 120}
+        sizes="112px"
+        unoptimized
+        className="h-full w-full object-cover"
+      />
+    </a>
+  );
+};
 
 const getMainImageStatus = (artifact?: MainImageCandidatesArtifact) => {
   if (!artifact) {
@@ -210,45 +255,42 @@ export const PoiRowsTable = ({
           {rows.length === 0 ? (
             <p className="px-4 py-4 text-sm text-black/55">No POIs available.</p>
           ) : (
-            <table className="min-w-full table-fixed divide-y divide-gray-300">
+            <table className="min-w-[1120px] table-fixed divide-y divide-gray-300">
               <colgroup>
-                <col className="w-[22%]" />
-                <col className="w-[14%]" />
-                <col className="w-[19%]" />
-                <col className="w-[27%]" />
-                <col className="w-[18%]" />
+                <col className="w-[20%]" />
+                <col className="w-[8%]" />
+                <col className="w-[15%]" />
+                <col className="w-[29%]" />
+                <col className="w-[28%]" />
               </colgroup>
               <thead className="sticky top-0 z-10 bg-white">
                 <tr>
                   <th
                     scope="col"
-                    className="border-r border-gray-200 py-2 pr-3 pl-4 text-left text-xs font-semibold tracking-[0.08em] text-gray-600 uppercase"
+                    className="border-r border-gray-200 py-2 pr-3 pl-4 text-left align-top"
                   >
-                    Raw
+                    <ColumnHeader title="Raw" path="public/data/raw/rome-pois-raw.geojson" />
                   </th>
                   <th
                     scope="col"
-                    className="border-r border-gray-200 px-3 py-2 text-left text-xs font-semibold tracking-[0.08em] text-gray-600 uppercase"
+                    className="border-r border-gray-200 px-3 py-2 text-left align-top"
                   >
-                    POI
+                    <ColumnHeader title="POI" path="data/generated/rome/pois.geojson" />
                   </th>
                   <th
                     scope="col"
-                    className="border-r border-gray-200 px-3 py-2 text-left text-xs font-semibold tracking-[0.08em] text-gray-600 uppercase"
+                    className="border-r border-gray-200 px-3 py-2 text-left align-top"
                   >
-                    Wikipedia Text
+                    <ColumnHeader title="Wikipedia Text" path="data/generated/rome/wiki/*.txt" />
                   </th>
                   <th
                     scope="col"
-                    className="border-r border-gray-200 px-3 py-2 text-left text-xs font-semibold tracking-[0.08em] text-gray-600 uppercase"
+                    className="border-r border-gray-200 px-3 py-2 text-left align-top"
                   >
-                    Draft Story
+                    <ColumnHeader title="Draft Story" path="data/wiki-ai/*.md" />
                   </th>
-                  <th
-                    scope="col"
-                    className="py-2 pr-4 pl-3 text-left text-xs font-semibold tracking-[0.08em] text-gray-600 uppercase"
-                  >
-                    Main Image
+                  <th scope="col" className="py-2 pr-4 pl-3 text-left align-top">
+                    <ColumnHeader title="Main Image" path="data/wiki-ai/*.images.json" />
                   </th>
                 </tr>
               </thead>
@@ -310,6 +352,7 @@ export const PoiRowsTable = ({
                                 idleLabel="Generate"
                                 pendingLabel="Generating..."
                                 confirmMessage={generateConfirmMessage}
+                                icon={<PlusIcon />}
                                 tone="primary"
                                 disabled={isRowInProgress}
                               />
@@ -325,8 +368,9 @@ export const PoiRowsTable = ({
                         />
                         <CellActions>
                           {row.transformedPoi ? (
-                            <button
+                            <IconButton
                               type="button"
+                              label="View POI JSON"
                               disabled={isVisualizationDisabled}
                               onClick={() =>
                                 row.transformedJson
@@ -337,10 +381,9 @@ export const PoiRowsTable = ({
                                     })
                                   : null
                               }
-                              className={viewButtonClassName}
                             >
-                              View
-                            </button>
+                              <EyeIcon />
+                            </IconButton>
                           ) : null}
                         </CellActions>
                       </td>
@@ -352,8 +395,9 @@ export const PoiRowsTable = ({
                         />
                         <CellActions>
                           {row.wikiPoi ? (
-                            <button
+                            <IconButton
                               type="button"
+                              label="View Wikipedia Text"
                               disabled={isVisualizationDisabled}
                               onClick={() =>
                                 row.wikiText
@@ -364,10 +408,9 @@ export const PoiRowsTable = ({
                                     })
                                   : null
                               }
-                              className={viewButtonClassName}
                             >
-                              View
-                            </button>
+                              <EyeIcon />
+                            </IconButton>
                           ) : null}
                         </CellActions>
                       </td>
@@ -390,9 +433,10 @@ export const PoiRowsTable = ({
                         />
                         <CellActions>
                           {row.aiPoi ? (
-                            <div className="flex flex-wrap items-center gap-2">
-                              <button
+                            <div className={actionGroupClassName}>
+                              <IconButton
                                 type="button"
+                                label="View Draft Story"
                                 disabled={isVisualizationDisabled}
                                 onClick={() =>
                                   row.aiText
@@ -403,10 +447,9 @@ export const PoiRowsTable = ({
                                       })
                                     : null
                                 }
-                                className={viewButtonClassName}
                               >
-                                View
-                              </button>
+                                <DocumentTextIcon />
+                              </IconButton>
                               <form
                                 action={(formData) =>
                                   runSingleAction(
@@ -424,12 +467,12 @@ export const PoiRowsTable = ({
                                   idleLabel="Refresh"
                                   pendingLabel="Refreshing..."
                                   confirmMessage={refreshConfirmMessages.ai}
+                                  icon={<ArrowPathIcon />}
                                   tone="primary"
                                   disabled={isRowInProgress}
                                 />
                               </form>
                               <form
-                                className="ml-auto"
                                 action={(formData) =>
                                   runSingleAction(
                                     row.id,
@@ -444,6 +487,7 @@ export const PoiRowsTable = ({
                                   idleLabel="Delete"
                                   pendingLabel="Deleting..."
                                   confirmMessage={deleteConfirmMessages.ai}
+                                  icon={<TrashIcon />}
                                   tone="danger"
                                   disabled={isRowInProgress}
                                 />
@@ -467,6 +511,7 @@ export const PoiRowsTable = ({
                                 idleLabel="Generate"
                                 pendingLabel="Generating..."
                                 confirmMessage={refreshConfirmMessages.ai}
+                                icon={<DocumentTextIcon />}
                                 tone="primary"
                                 disabled={isRowInProgress}
                               />
@@ -475,6 +520,7 @@ export const PoiRowsTable = ({
                         </CellActions>
                       </td>
                       <td className="min-w-0 py-2 pr-4 pl-3 align-top">
+                        <MainImageCellPreview artifact={row.mainImageArtifact} />
                         <CellContent
                           title={getMainImageStatus(row.mainImageArtifact)}
                           subtitle={
@@ -489,9 +535,10 @@ export const PoiRowsTable = ({
                         />
                         <CellActions>
                           {row.mainImageArtifact ? (
-                            <div className="flex flex-wrap items-center gap-2">
-                              <button
+                            <div className={actionGroupClassName}>
+                              <IconButton
                                 type="button"
+                                label="View Main Image Candidates"
                                 disabled={isVisualizationDisabled}
                                 onClick={() =>
                                   row.mainImageArtifact
@@ -503,10 +550,9 @@ export const PoiRowsTable = ({
                                       })
                                     : null
                                 }
-                                className={viewButtonClassName}
                               >
-                                View
-                              </button>
+                                <PhotoIcon />
+                              </IconButton>
                               <form
                                 action={(formData) =>
                                   runSingleAction(
@@ -522,12 +568,12 @@ export const PoiRowsTable = ({
                                   idleLabel="Refresh"
                                   pendingLabel="Refreshing..."
                                   confirmMessage={refreshConfirmMessages.mainImage}
+                                  icon={<ArrowPathIcon />}
                                   tone="primary"
                                   disabled={isRowInProgress}
                                 />
                               </form>
                               <form
-                                className="ml-auto"
                                 action={(formData) =>
                                   runSingleAction(
                                     row.id,
@@ -542,6 +588,7 @@ export const PoiRowsTable = ({
                                   idleLabel="Delete"
                                   pendingLabel="Deleting..."
                                   confirmMessage={deleteConfirmMessages.mainImage}
+                                  icon={<TrashIcon />}
                                   tone="danger"
                                   disabled={isRowInProgress}
                                 />
@@ -563,6 +610,7 @@ export const PoiRowsTable = ({
                                 idleLabel="Generate"
                                 pendingLabel="Generating..."
                                 confirmMessage={refreshConfirmMessages.mainImage}
+                                icon={<PhotoIcon />}
                                 tone="primary"
                                 disabled={isRowInProgress}
                               />

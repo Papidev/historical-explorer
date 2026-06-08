@@ -37,6 +37,10 @@
       "aiMode": "cloud",
       "aiProvider": "gemini",
       "aiModel": "gemini-2.5-flash"
+    },
+    "image": {
+      "durationMs": 625,
+      "completedAt": "2026-06-06T00:41:15.025Z"
     }
   },
   "q283650": {
@@ -52,6 +56,10 @@
       "durationMs": 18442,
       "completedAt": "2026-05-28T23:14:15.411Z",
       "aiModel": "gemini-2.5-flash"
+    },
+    "image": {
+      "durationMs": 626,
+      "completedAt": "2026-06-06T00:39:29.128Z"
     }
   }
 }
