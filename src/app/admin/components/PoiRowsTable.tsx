@@ -255,13 +255,13 @@ export const PoiRowsTable = ({
           {rows.length === 0 ? (
             <p className="px-4 py-4 text-sm text-black/55">No POIs available.</p>
           ) : (
-            <table className="min-w-[1120px] table-fixed divide-y divide-gray-300">
+            <table className="min-w-[1200px] table-fixed divide-y divide-gray-300">
               <colgroup>
-                <col className="w-[20%]" />
-                <col className="w-[8%]" />
-                <col className="w-[15%]" />
-                <col className="w-[29%]" />
-                <col className="w-[28%]" />
+                <col className="w-1/5" />
+                <col className="w-1/5" />
+                <col className="w-1/5" />
+                <col className="w-1/5" />
+                <col className="w-1/5" />
               </colgroup>
               <thead className="sticky top-0 z-10 bg-white">
                 <tr>
