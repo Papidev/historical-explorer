@@ -2,7 +2,7 @@ import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { listDraftStoryArtifactFiles } from "@/server/storyWorkflow/draftStoryArtifacts";
 import { listMainImageCandidateArtifactFiles } from "@/server/storyWorkflow/mainImageCandidateArtifacts";
-import { getDefaultInputPath, getDefaultOutputDir } from "../../../../scripts/wiki/io";
+import { getDefaultInputPath, getDefaultOutputDir } from "@/server/wikiPipeline/io";
 import type {
   AdminPoiRow,
   GeoJson,

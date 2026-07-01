@@ -1,13 +1,13 @@
-import { fetchWikiSnapshot } from "../../../scripts/wiki/fetchWiki";
+import { fetchWikiSnapshot } from "./fetchWiki";
 import {
   buildOutputFilePath,
   findPoiInGeoJson,
   getDefaultInputPath,
   getDefaultOutputDir,
   writeSnapshotFile,
-} from "../../../scripts/wiki/io";
-import { resolvePageForPoi } from "../../../scripts/wiki/resolve";
-import { wikiTextToPlainText } from "../../../scripts/wiki/wikiText";
+} from "./io";
+import { resolvePageForPoi } from "./resolve";
+import { wikiTextToPlainText } from "./wikiText";
 
 type ExtractWikipediaContentParams = {
   city: string;

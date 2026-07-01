@@ -1,7 +1,7 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
-import { sanitizePoiIdForFile, toCitySlug } from "../../../scripts/wiki/normalize";
-import type { MainImageCandidatesArtifact } from "../../../scripts/wiki/types";
+import { sanitizePoiIdForFile, toCitySlug } from "@/server/wikiPipeline/normalize";
+import type { MainImageCandidatesArtifact } from "@/server/wikiPipeline/types";
 
 const artifactDirectoryPath = () => path.join(process.cwd(), "data", "wiki-ai");
 

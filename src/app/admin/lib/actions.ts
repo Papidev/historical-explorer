@@ -13,17 +13,17 @@ import {
   listMainImageCandidateArtifactFilePathsForPoi,
   readMainImageCandidateArtifact,
 } from "@/server/storyWorkflow/mainImageCandidateArtifacts";
+import { enrichWikiText } from "@/server/storyWorkflow/enrichWikiText";
+import { fetchMainImageCandidates } from "@/server/storyWorkflow/mainImageCandidates";
 import { extractWikipediaContent } from "@/server/wikiPipeline/extractWikipediaContent";
-import { enrichWikiText } from "../../../../scripts/wiki/enrichWiki";
-import { fetchMainImageCandidates } from "../../../../scripts/wiki/fetchMainImageCandidates";
 import {
   buildOutputFilePath,
   findPoiInGeoJson,
   getDefaultInputPath,
   getDefaultOutputDir,
-} from "../../../../scripts/wiki/io";
-import { sanitizePoiIdForFile, toCitySlug } from "../../../../scripts/wiki/normalize";
-import { transformRawPoiFeature } from "../../../../scripts/wiki/transformRawPoiFeature";
+} from "@/server/wikiPipeline/io";
+import { sanitizePoiIdForFile, toCitySlug } from "@/server/wikiPipeline/normalize";
+import { transformRawPoiFeature } from "@/server/wikiPipeline/transformRawPoiFeature";
 import {
   resolveAiSelection,
   type AiMode,
