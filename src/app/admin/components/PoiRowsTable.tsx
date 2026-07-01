@@ -38,6 +38,8 @@ type ProgressState = {
 };
 
 const deleteConfirmMessages = {
+  transformed:
+    "Reset this row? This deletes generated POI, Wikipedia Text, Draft Story, and Main Image Candidates for this POI.",
   ai: "Delete Draft Story for this POI?",
   mainImage: "Delete Main Image Candidates for this POI?",
 } as const;
@@ -189,6 +191,7 @@ export const PoiRowsTable = ({
   selectedAiMode,
   selectedAiModel,
   generateTransformedAction,
+  deleteTransformedAction,
   refreshWikiAction,
   refreshAiAction,
   deleteAiAction,
@@ -200,6 +203,7 @@ export const PoiRowsTable = ({
   selectedAiMode: AiMode;
   selectedAiModel: AiModel;
   generateTransformedAction: (formData: FormData) => Promise<void>;
+  deleteTransformedAction: (formData: FormData) => Promise<void>;
   refreshWikiAction: (formData: FormData) => Promise<void>;
   refreshAiAction: (formData: FormData) => Promise<void>;
   deleteAiAction: (formData: FormData) => Promise<void>;
@@ -308,6 +312,8 @@ export const PoiRowsTable = ({
                   const isRowInProgress = progress?.poiId === row.id;
                   const isVisualizationDisabled = isRowInProgress;
                   const progressDescription = isRowInProgress ? progress.description : null;
+                  const isRowEmpty =
+                    !row.transformedPoi && !row.wikiPoi && !row.aiPoi && !row.mainImageArtifact;
 
                   return (
                     <tr key={row.id} className="hover:bg-gray-50/60">
@@ -323,49 +329,72 @@ export const PoiRowsTable = ({
                         ) : null}
                         <CellActions>
                           {row.rawPoi ? (
-                            <form
-                              action={(formData) =>
-                                runPipeline(row.id, [
-                                  {
-                                    description: "Generating POI...",
-                                    action: generateTransformedAction,
+                            isRowEmpty ? (
+                              <form
+                                action={(formData) =>
+                                  runPipeline(row.id, [
+                                    {
+                                      description: "Generating POI...",
+                                      action: generateTransformedAction,
+                                      formData,
+                                    },
+                                    {
+                                      description: "Fetching Wikipedia Text...",
+                                      action: refreshWikiAction,
+                                      formData: createPoiFormData(row.id),
+                                    },
+                                    {
+                                      description: "Generating Draft Story...",
+                                      action: refreshAiAction,
+                                      formData: createPoiFormData(row.id),
+                                    },
+                                    {
+                                      description: "Generating Main Image Candidates...",
+                                      action: refreshMainImageCandidatesAction,
+                                      formData: createPoiFormData(row.id),
+                                      continueOnError: true,
+                                    },
+                                  ])
+                                }
+                              >
+                                <input
+                                  type="hidden"
+                                  name="rawFeatureIndex"
+                                  value={row.rawPoi.featureIndex}
+                                />
+                                <input type="hidden" name="aiMode" value={selectedAiMode} />
+                                <input type="hidden" name="aiModel" value={selectedAiModel} />
+                                <SubmitButton
+                                  idleLabel="Generate"
+                                  pendingLabel="Generating..."
+                                  confirmMessage={generateConfirmMessage}
+                                  icon={<PlusIcon />}
+                                  tone="primary"
+                                  disabled={isRowInProgress}
+                                />
+                              </form>
+                            ) : (
+                              <form
+                                action={(formData) =>
+                                  runSingleAction(
+                                    row.id,
+                                    "Resetting row...",
+                                    deleteTransformedAction,
                                     formData,
-                                  },
-                                  {
-                                    description: "Fetching Wikipedia Text...",
-                                    action: refreshWikiAction,
-                                    formData: createPoiFormData(row.id),
-                                  },
-                                  {
-                                    description: "Generating Draft Story...",
-                                    action: refreshAiAction,
-                                    formData: createPoiFormData(row.id),
-                                  },
-                                  {
-                                    description: "Generating Main Image Candidates...",
-                                    action: refreshMainImageCandidatesAction,
-                                    formData: createPoiFormData(row.id),
-                                    continueOnError: true,
-                                  },
-                                ])
-                              }
-                            >
-                              <input
-                                type="hidden"
-                                name="rawFeatureIndex"
-                                value={row.rawPoi.featureIndex}
-                              />
-                              <input type="hidden" name="aiMode" value={selectedAiMode} />
-                              <input type="hidden" name="aiModel" value={selectedAiModel} />
-                              <SubmitButton
-                                idleLabel="Generate"
-                                pendingLabel="Generating..."
-                                confirmMessage={generateConfirmMessage}
-                                icon={<PlusIcon />}
-                                tone="primary"
-                                disabled={isRowInProgress}
-                              />
-                            </form>
+                                  )
+                                }
+                              >
+                                <input type="hidden" name="poiId" value={row.id} />
+                                <SubmitButton
+                                  idleLabel="Reset"
+                                  pendingLabel="Resetting..."
+                                  confirmMessage={deleteConfirmMessages.transformed}
+                                  icon={<ArrowPathIcon />}
+                                  tone="danger"
+                                  disabled={isRowInProgress}
+                                />
+                              </form>
+                            )
                           ) : null}
                         </CellActions>
                       </td>
@@ -377,22 +406,24 @@ export const PoiRowsTable = ({
                         />
                         <CellActions>
                           {row.transformedPoi ? (
-                            <IconButton
-                              type="button"
-                              label="View POI JSON"
-                              disabled={isVisualizationDisabled}
-                              onClick={() =>
-                                row.transformedJson
-                                  ? setSelectedPanel({
-                                      title: `${row.id} Rome JSON`,
-                                      kind: "text",
-                                      content: row.transformedJson,
-                                    })
-                                  : null
-                              }
-                            >
-                              <EyeIcon />
-                            </IconButton>
+                            <div className={actionGroupClassName}>
+                              <IconButton
+                                type="button"
+                                label="View POI JSON"
+                                disabled={isVisualizationDisabled}
+                                onClick={() =>
+                                  row.transformedJson
+                                    ? setSelectedPanel({
+                                        title: `${row.id} Rome JSON`,
+                                        kind: "text",
+                                        content: row.transformedJson,
+                                      })
+                                    : null
+                                }
+                              >
+                                <EyeIcon />
+                              </IconButton>
+                            </div>
                           ) : null}
                         </CellActions>
                       </td>
@@ -457,7 +488,7 @@ export const PoiRowsTable = ({
                                     : null
                                 }
                               >
-                                <DocumentTextIcon />
+                                <EyeIcon />
                               </IconButton>
                               <form
                                 action={(formData) =>
@@ -562,7 +593,7 @@ export const PoiRowsTable = ({
                                     : null
                                 }
                               >
-                                <PhotoIcon />
+                                <EyeIcon />
                               </IconButton>
                               <form
                                 action={(formData) =>

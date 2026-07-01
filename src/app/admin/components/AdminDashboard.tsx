@@ -15,6 +15,7 @@ export const AdminDashboard = ({
   aiModeOptions,
   initialAiSelection,
   generateTransformedAction,
+  deleteTransformedAction,
   refreshWikiAction,
   refreshAiAction,
   deleteAiAction,
@@ -26,6 +27,7 @@ export const AdminDashboard = ({
   aiModeOptions: readonly AiModeOption[];
   initialAiSelection: AiSelection;
   generateTransformedAction: (formData: FormData) => Promise<void>;
+  deleteTransformedAction: (formData: FormData) => Promise<void>;
   refreshWikiAction: (formData: FormData) => Promise<void>;
   refreshAiAction: (formData: FormData) => Promise<void>;
   deleteAiAction: (formData: FormData) => Promise<void>;
@@ -87,6 +89,7 @@ export const AdminDashboard = ({
         selectedAiMode={selectedAiMode}
         selectedAiModel={selectedAiModel}
         generateTransformedAction={generateTransformedAction}
+        deleteTransformedAction={deleteTransformedAction}
         refreshWikiAction={refreshWikiAction}
         refreshAiAction={refreshAiAction}
         deleteAiAction={deleteAiAction}
