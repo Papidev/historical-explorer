@@ -12,16 +12,16 @@ import path from "node:path";
 import { revalidatePath } from "next/cache";
 import { extractWikipediaContent } from "@/server/wikiPipeline/extractWikipediaContent";
 import { enrichWikiText } from "../../../../scripts/wiki/enrichWiki";
+import { fetchMainImageCandidates } from "../../../../scripts/wiki/fetchMainImageCandidates";
 import {
   buildOutputFilePath,
+  findPoiInGeoJson,
   getDefaultInputPath,
   getDefaultOutputDir,
 } from "../../../../scripts/wiki/io";
-import {
-  sanitizePoiIdForFile,
-  toCitySlug,
-} from "../../../../scripts/wiki/normalize";
+import { sanitizePoiIdForFile, toCitySlug } from "../../../../scripts/wiki/normalize";
 import { transformRawPoiFeature } from "../../../../scripts/wiki/transformRawPoiFeature";
+import type { MainImageCandidatesArtifact } from "../../../../scripts/wiki/types";
 import {
   resolveAiSelection,
   type AiMode,
@@ -30,7 +30,7 @@ import {
   type AiSelection,
 } from "./aiModels";
 
-type GenerationStep = "transformed" | "wiki" | "ai";
+type GenerationStep = "transformed" | "wiki" | "ai" | "image";
 
 type GenerationMetadata = Record<
   string,
@@ -66,27 +66,15 @@ type GeoJson = {
   features?: GeoJsonFeature[];
 };
 
-const parseGeoJson = (filePath: string) =>
-  JSON.parse(readFileSync(filePath, "utf-8")) as GeoJson;
+const parseGeoJson = (filePath: string) => JSON.parse(readFileSync(filePath, "utf-8")) as GeoJson;
 
 const city = "rome";
-const rawPath = path.join(
-  process.cwd(),
-  "public",
-  "data",
-  "raw",
-  "rome-pois-raw.geojson",
-);
+const rawPath = path.join(process.cwd(), "public", "data", "raw", "rome-pois-raw.geojson");
 const transformedPath = getDefaultInputPath(city);
 const aiDirectoryPath = path.join(process.cwd(), "data", "wiki-ai");
-const generationMetadataPath = path.join(
-  process.cwd(),
-  "data",
-  "admin-generation-metadata.json",
-);
+const generationMetadataPath = path.join(process.cwd(), "data", "admin-generation-metadata.json");
 
-const sanitizePoiNameForFile = (poiName: string) =>
-  toCitySlug(poiName) || "unknown-name";
+const sanitizePoiNameForFile = (poiName: string) => toCitySlug(poiName) || "unknown-name";
 
 const buildAiMarkdownFileName = (poiId: string, poiName: string) =>
   `${sanitizePoiIdForFile(poiId)}--${sanitizePoiNameForFile(poiName)}.md`;
@@ -94,8 +82,13 @@ const buildAiMarkdownFileName = (poiId: string, poiName: string) =>
 const buildAiMarkdownFilePath = (poiId: string, poiName: string) =>
   path.join(aiDirectoryPath, buildAiMarkdownFileName(poiId, poiName));
 
-const buildLegacyAiTextFilePath = (poiId: string) =>
-  buildOutputFilePath(aiDirectoryPath, poiId);
+const buildMainImageCandidatesFileName = (poiId: string, poiName: string) =>
+  `${sanitizePoiIdForFile(poiId)}--${sanitizePoiNameForFile(poiName)}.images.json`;
+
+const buildMainImageCandidatesFilePath = (poiId: string, poiName: string) =>
+  path.join(aiDirectoryPath, buildMainImageCandidatesFileName(poiId, poiName));
+
+const buildLegacyAiTextFilePath = (poiId: string) => buildOutputFilePath(aiDirectoryPath, poiId);
 
 const getAiMarkdownFilePaths = (poiId: string) => {
   const normalizedPoiId = sanitizePoiIdForFile(poiId);
@@ -107,8 +100,22 @@ const getAiMarkdownFilePaths = (poiId: string) => {
     .filter(
       (fileName) =>
         fileName === `${normalizedPoiId}.md` ||
-        (fileName.startsWith(`${normalizedPoiId}--`) &&
-          fileName.endsWith(".md")),
+        (fileName.startsWith(`${normalizedPoiId}--`) && fileName.endsWith(".md")),
+    )
+    .map((fileName) => path.join(aiDirectoryPath, fileName));
+};
+
+const getMainImageCandidatesFilePaths = (poiId: string) => {
+  const normalizedPoiId = sanitizePoiIdForFile(poiId);
+  if (!existsSync(aiDirectoryPath)) {
+    return [] as string[];
+  }
+
+  return readdirSync(aiDirectoryPath)
+    .filter(
+      (fileName) =>
+        fileName === `${normalizedPoiId}.images.json` ||
+        (fileName.startsWith(`${normalizedPoiId}--`) && fileName.endsWith(".images.json")),
     )
     .map((fileName) => path.join(aiDirectoryPath, fileName));
 };
@@ -129,18 +136,12 @@ const readGenerationMetadata = () => {
     return {} as GenerationMetadata;
   }
 
-  return JSON.parse(
-    readFileSync(generationMetadataPath, "utf-8"),
-  ) as GenerationMetadata;
+  return JSON.parse(readFileSync(generationMetadataPath, "utf-8")) as GenerationMetadata;
 };
 
 const writeGenerationMetadata = (metadata: GenerationMetadata) => {
   mkdirSync(path.dirname(generationMetadataPath), { recursive: true });
-  writeFileSync(
-    generationMetadataPath,
-    `${JSON.stringify(metadata, null, 2)}\n`,
-    "utf-8",
-  );
+  writeFileSync(generationMetadataPath, `${JSON.stringify(metadata, null, 2)}\n`, "utf-8");
 };
 
 const recordGenerationDuration = (
@@ -207,13 +208,9 @@ const measureGeneration = async <Result>(
   return result;
 };
 
-const getPoiIdFromRawFeature = (
-  rawFeature: GeoJsonFeature,
-  rawFeatureIndex: number,
-) => {
+const getPoiIdFromRawFeature = (rawFeature: GeoJsonFeature, rawFeatureIndex: number) => {
   const properties = rawFeature.properties ?? {};
-  const poiId =
-    typeof properties.wikidata === "string" ? properties.wikidata.trim() : "";
+  const poiId = typeof properties.wikidata === "string" ? properties.wikidata.trim() : "";
   if (!poiId) {
     throw new Error(`Raw feature ${rawFeatureIndex} has no wikidata id.`);
   }
@@ -226,9 +223,7 @@ const findRawFeatureByPoiId = (poiId: string) => {
   const rawFeatures = rawGeoJson.features ?? [];
   const rawFeatureIndex = rawFeatures.findIndex((feature) => {
     const wikidata =
-      typeof feature.properties?.wikidata === "string"
-        ? feature.properties.wikidata.trim()
-        : "";
+      typeof feature.properties?.wikidata === "string" ? feature.properties.wikidata.trim() : "";
     return wikidata === poiId;
   });
   if (rawFeatureIndex < 0) {
@@ -259,8 +254,7 @@ const writeTransformedPoi = (
         features: [],
       };
   const properties = rawFeature.properties ?? {};
-  const name =
-    (typeof properties.name === "string" && properties.name.trim()) || poiId;
+  const name = (typeof properties.name === "string" && properties.name.trim()) || poiId;
   const transformedFeature = transformRawPoiFeature(rawFeature, {
     poiId,
     contentSlug: toCitySlug(name),
@@ -284,11 +278,7 @@ const writeTransformedPoi = (
   };
 
   mkdirSync(path.dirname(transformedPath), { recursive: true });
-  writeFileSync(
-    transformedPath,
-    `${JSON.stringify(nextGeoJson, null, 2)}\n`,
-    "utf-8",
-  );
+  writeFileSync(transformedPath, `${JSON.stringify(nextGeoJson, null, 2)}\n`, "utf-8");
   return poiId;
 };
 
@@ -307,9 +297,7 @@ const writeAiTextFile = async (poiId: string, aiSelection: AiSelection) => {
   }
 
   const { rawFeature } = findRawFeatureByPoiId(poiId);
-  const poiName =
-    pickString(rawFeature.properties ?? {}, "name:en", "name", "int_name") ??
-    poiId;
+  const poiName = pickString(rawFeature.properties ?? {}, "name:en", "name", "int_name") ?? poiId;
   const outputFilePath = buildAiMarkdownFilePath(poiId, poiName);
   mkdirSync(path.dirname(outputFilePath), { recursive: true });
   writeFileSync(
@@ -320,31 +308,73 @@ const writeAiTextFile = async (poiId: string, aiSelection: AiSelection) => {
   console.info(`[wiki-ai] Saved AI text for ${poiId} to ${outputFilePath}.`);
 };
 
+const getPoiNameFromRawFeature = (poiId: string) => {
+  const { rawFeature } = findRawFeatureByPoiId(poiId);
+  return pickString(rawFeature.properties ?? {}, "name:en", "name", "int_name") ?? poiId;
+};
+
+const readMainImageCandidatesArtifact = (poiId: string) => {
+  const [filePath] = getMainImageCandidatesFilePaths(poiId);
+  if (!filePath) {
+    return undefined;
+  }
+
+  return JSON.parse(readFileSync(filePath, "utf-8")) as MainImageCandidatesArtifact;
+};
+
+const writeMainImageCandidatesFile = async (poiId: string) => {
+  console.info(`[wiki-images] Generating Main Image Candidates for ${poiId}.`);
+  const previousArtifact = readMainImageCandidatesArtifact(poiId);
+  const candidates = await fetchMainImageCandidates(
+    findPoiInGeoJson(getDefaultInputPath(city), poiId, city),
+  );
+  const selectableCandidates = candidates.filter(
+    (candidate) => candidate.license && candidate.attribution,
+  );
+  const selectedCommonsFileName =
+    candidates.find(
+      (candidate) => candidate.commonsFileName === previousArtifact?.selectedCommonsFileName,
+    )?.commonsFileName ??
+    (selectableCandidates.length === 1 ? selectableCandidates[0]?.commonsFileName : undefined);
+  const outputFilePath = buildMainImageCandidatesFilePath(poiId, getPoiNameFromRawFeature(poiId));
+
+  mkdirSync(path.dirname(outputFilePath), { recursive: true });
+  for (const existingFilePath of getMainImageCandidatesFilePaths(poiId)) {
+    if (existingFilePath !== outputFilePath && existsSync(existingFilePath)) {
+      unlinkSync(existingFilePath);
+    }
+  }
+  writeFileSync(
+    outputFilePath,
+    `${JSON.stringify({ candidates, selectedCommonsFileName }, null, 2)}\n`,
+    "utf-8",
+  );
+  console.info(
+    `[wiki-images] Saved ${candidates.length} Main Image Candidates for ${poiId} to ${outputFilePath}.`,
+  );
+};
+
 const refreshTransformedPoiPipeline = async (poiId: string) => {
-  const { rawFeature, rawFeatureIndex, rawGeoJson } =
-    findRawFeatureByPoiId(poiId);
+  const { rawFeature, rawFeatureIndex, rawGeoJson } = findRawFeatureByPoiId(poiId);
   await measureGeneration(poiId, "transformed", () =>
     writeTransformedPoi(rawFeature, rawFeatureIndex, rawGeoJson),
   );
 };
 
 const refreshWikiPipeline = async (poiId: string) => {
-  await measureGeneration(poiId, "wiki", () =>
-    extractWikipediaContent({ city, poiId }),
-  );
+  await measureGeneration(poiId, "wiki", () => extractWikipediaContent({ city, poiId }));
 };
 
 const refreshAiPipeline = async (poiId: string, aiSelection: AiSelection) => {
-  await measureGeneration(
-    poiId,
-    "ai",
-    () => writeAiTextFile(poiId, aiSelection),
-    {
-      aiMode: aiSelection.mode,
-      aiProvider: aiSelection.provider,
-      aiModel: aiSelection.model,
-    },
-  );
+  await measureGeneration(poiId, "ai", () => writeAiTextFile(poiId, aiSelection), {
+    aiMode: aiSelection.mode,
+    aiProvider: aiSelection.provider,
+    aiModel: aiSelection.model,
+  });
+};
+
+const refreshMainImageCandidatesPipeline = async (poiId: string) => {
+  await measureGeneration(poiId, "image", () => writeMainImageCandidatesFile(poiId));
 };
 
 const deleteWikiSnapshotFile = (poiId: string) => {
@@ -365,15 +395,29 @@ const deleteAiTextFile = (poiId: string) => {
   }
 };
 
+const deleteMainImageCandidatesFile = (poiId: string) => {
+  for (const outputFilePath of getMainImageCandidatesFilePaths(poiId)) {
+    if (existsSync(outputFilePath)) {
+      unlinkSync(outputFilePath);
+    }
+  }
+};
+
 const deleteWikiPipeline = (poiId: string) => {
   deleteWikiSnapshotFile(poiId);
   deleteAiTextFile(poiId);
-  clearGenerationDurations(poiId, ["wiki", "ai"]);
+  deleteMainImageCandidatesFile(poiId);
+  clearGenerationDurations(poiId, ["wiki", "ai", "image"]);
 };
 
 const deleteAiPipeline = (poiId: string) => {
   deleteAiTextFile(poiId);
   clearGenerationDurations(poiId, ["ai"]);
+};
+
+const deleteMainImageCandidatesPipeline = (poiId: string) => {
+  deleteMainImageCandidatesFile(poiId);
+  clearGenerationDurations(poiId, ["image"]);
 };
 
 const deleteTransformedPoiPipeline = (poiId: string) => {
@@ -396,11 +440,7 @@ const deleteTransformedPoiPipeline = (poiId: string) => {
   };
 
   mkdirSync(path.dirname(transformedPath), { recursive: true });
-  writeFileSync(
-    transformedPath,
-    `${JSON.stringify(nextGeoJson, null, 2)}\n`,
-    "utf-8",
-  );
+  writeFileSync(transformedPath, `${JSON.stringify(nextGeoJson, null, 2)}\n`, "utf-8");
   deleteWikiPipeline(poiId);
   clearGenerationDurations(poiId, ["transformed"]);
 };
@@ -453,6 +493,57 @@ export const refreshAiText = async (formData: FormData) => {
   revalidatePath("/admin");
 };
 
+export const refreshMainImageCandidates = async (formData: FormData) => {
+  const poiId = formData.get("poiId");
+  if (typeof poiId !== "string" || poiId.trim().length === 0) {
+    throw new Error("Invalid POI id.");
+  }
+
+  await refreshMainImageCandidatesPipeline(poiId);
+  revalidatePath("/admin");
+};
+
+export const selectMainImageCandidate = async (formData: FormData) => {
+  const poiId = formData.get("poiId");
+  const commonsFileName = formData.get("commonsFileName");
+  if (typeof poiId !== "string" || poiId.trim().length === 0) {
+    throw new Error("Invalid POI id.");
+  }
+
+  if (typeof commonsFileName !== "string" || commonsFileName.trim().length === 0) {
+    throw new Error("Invalid Commons file name.");
+  }
+
+  const artifact = readMainImageCandidatesArtifact(poiId);
+  const candidate = artifact?.candidates.find((item) => item.commonsFileName === commonsFileName);
+  if (!artifact || !candidate) {
+    throw new Error(`Main Image Candidate ${commonsFileName} not found.`);
+  }
+
+  if (!candidate.license || !candidate.attribution) {
+    throw new Error(`Main Image Candidate ${commonsFileName} is missing license or attribution.`);
+  }
+
+  const [filePath] = getMainImageCandidatesFilePaths(poiId);
+  if (!filePath) {
+    throw new Error(`Main Image Candidates for ${poiId} not found.`);
+  }
+
+  writeFileSync(
+    filePath,
+    `${JSON.stringify(
+      {
+        ...artifact,
+        selectedCommonsFileName: candidate.commonsFileName,
+      },
+      null,
+      2,
+    )}\n`,
+    "utf-8",
+  );
+  revalidatePath("/admin");
+};
+
 export const deleteTransformedPoiJson = async (formData: FormData) => {
   const poiId = formData.get("poiId");
   if (typeof poiId !== "string" || poiId.trim().length === 0) {
@@ -480,5 +571,15 @@ export const deleteAiText = async (formData: FormData) => {
   }
 
   deleteAiPipeline(poiId);
+  revalidatePath("/admin");
+};
+
+export const deleteMainImageCandidates = async (formData: FormData) => {
+  const poiId = formData.get("poiId");
+  if (typeof poiId !== "string" || poiId.trim().length === 0) {
+    throw new Error("Invalid POI id.");
+  }
+
+  deleteMainImageCandidatesPipeline(poiId);
   revalidatePath("/admin");
 };

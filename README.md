@@ -52,7 +52,7 @@ Use `/admin` to run the current Rome generation flow:
 3. Generate the AI draft story markdown.
 
 Draft stories generated from the Wikipedia snapshot live as `.md` files in `data/wiki-ai/`, named with both the POI id and a readable slug, for example `q283650--forum-boarium.md`. Unlike the generated source snapshots, this is a reviewable content artifact and should be committed after AI generation and human editing.
-Today these files contain draft story prose; the broader Draft Story will also include Sources and a proposed Main Image as the workflow grows.
+Today these files contain draft story prose; the broader Draft Story will also include Sources and a proposed Main Image as the workflow grows. Main Image Candidates should live beside the draft story prose as `.images.json` files in `data/wiki-ai/`; these files are also reviewable workflow artifacts and should be committed after generation and curator selection.
 
 For now, the filesystem is the only cache for generated POI data. If repeated reads of `data/generated/rome/pois.geojson` become expensive, consider adding a small in-memory read-through cache with filesystem `mtime` invalidation.
 

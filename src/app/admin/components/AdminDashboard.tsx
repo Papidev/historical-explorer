@@ -15,17 +15,25 @@ export const AdminDashboard = ({
   aiModeOptions,
   initialAiSelection,
   generateTransformedAction,
+  deleteTransformedAction,
   refreshWikiAction,
   refreshAiAction,
   deleteAiAction,
+  refreshMainImageCandidatesAction,
+  deleteMainImageCandidatesAction,
+  selectMainImageCandidateAction,
 }: {
   rows: AdminPoiRow[];
   aiModeOptions: readonly AiModeOption[];
   initialAiSelection: AiSelection;
   generateTransformedAction: (formData: FormData) => Promise<void>;
+  deleteTransformedAction: (formData: FormData) => Promise<void>;
   refreshWikiAction: (formData: FormData) => Promise<void>;
   refreshAiAction: (formData: FormData) => Promise<void>;
   deleteAiAction: (formData: FormData) => Promise<void>;
+  refreshMainImageCandidatesAction: (formData: FormData) => Promise<void>;
+  deleteMainImageCandidatesAction: (formData: FormData) => Promise<void>;
+  selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => {
   const [selectedAiMode, setSelectedAiMode] = useState(initialAiSelection.mode);
   const [selectedAiModelByMode, setSelectedAiModelByMode] = useState<Record<AiMode, string>>({
@@ -81,9 +89,13 @@ export const AdminDashboard = ({
         selectedAiMode={selectedAiMode}
         selectedAiModel={selectedAiModel}
         generateTransformedAction={generateTransformedAction}
+        deleteTransformedAction={deleteTransformedAction}
         refreshWikiAction={refreshWikiAction}
         refreshAiAction={refreshAiAction}
         deleteAiAction={deleteAiAction}
+        refreshMainImageCandidatesAction={refreshMainImageCandidatesAction}
+        deleteMainImageCandidatesAction={deleteMainImageCandidatesAction}
+        selectMainImageCandidateAction={selectMainImageCandidateAction}
       />
     </main>
   );
