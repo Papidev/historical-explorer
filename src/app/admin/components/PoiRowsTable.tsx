@@ -75,13 +75,19 @@ const CellContent = ({
       <p className="mt-1 font-mono text-xs leading-snug break-words text-black/65">{subtitle}</p>
     ) : null}
     {updatedAt ? (
-      <p className="mt-1 text-xs leading-snug text-black/55">Updated: {updatedAt}</p>
+      <p className="mt-1 text-xs leading-snug text-black/55">
+        Updated: <span className="font-bold">{updatedAt}</span>
+      </p>
     ) : null}
     {generationDuration ? (
-      <p className="mt-1 text-xs leading-snug text-black/55">Generated: {generationDuration}</p>
+      <p className="mt-1 text-xs leading-snug text-black/55">
+        Generated: <span className="font-bold">{generationDuration}</span>
+      </p>
     ) : null}
     {generationModel ? (
-      <p className="mt-1 text-xs leading-snug text-black/55">Model: {generationModel}</p>
+      <p className="mt-1 text-xs leading-snug text-black/55">
+        Model: <span className="font-bold">{generationModel}</span>
+      </p>
     ) : null}
   </div>
 );
@@ -257,11 +263,11 @@ export const PoiRowsTable = ({
           ) : (
             <table className="min-w-[1200px] table-fixed divide-y divide-gray-300">
               <colgroup>
-                <col className="w-1/5" />
-                <col className="w-1/5" />
-                <col className="w-1/5" />
-                <col className="w-1/5" />
-                <col className="w-1/5" />
+                <col className="w-[19%]" />
+                <col className="w-[19%]" />
+                <col className="w-[19%]" />
+                <col className="w-[19%]" />
+                <col className="w-[24%]" />
               </colgroup>
               <thead className="sticky top-0 z-10 bg-amber-50">
                 <tr>
