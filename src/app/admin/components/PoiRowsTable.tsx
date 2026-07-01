@@ -59,7 +59,7 @@ const CellContent = ({
   generationModel?: string;
   titleTone?: "poi" | "status";
 }) => (
-  <div className="min-h-[5.25rem] min-w-0">
+  <div className="min-h-32 min-w-0">
     <p
       className={`leading-snug break-words ${
         title
@@ -75,13 +75,13 @@ const CellContent = ({
       <p className="mt-1 font-mono text-xs leading-snug break-words text-black/65">{subtitle}</p>
     ) : null}
     {updatedAt ? (
-      <p className="mt-1 text-xs leading-snug text-black/55">Updated {updatedAt}</p>
+      <p className="mt-1 text-xs leading-snug text-black/55">Updated: {updatedAt}</p>
     ) : null}
     {generationDuration ? (
-      <p className="mt-1 text-xs leading-snug text-black/55">Generated in {generationDuration}</p>
+      <p className="mt-1 text-xs leading-snug text-black/55">Generated: {generationDuration}</p>
     ) : null}
     {generationModel ? (
-      <p className="mt-1 text-xs leading-snug text-black/55">Model {generationModel}</p>
+      <p className="mt-1 text-xs leading-snug text-black/55">Model: {generationModel}</p>
     ) : null}
   </div>
 );
@@ -93,7 +93,7 @@ const ColumnHeader = ({ title, path }: { title: string; path?: string }) => (
   <div>
     <p className="text-xs font-semibold tracking-[0.08em] text-gray-600 uppercase">{title}</p>
     {path ? (
-      <p className="mt-1 max-w-full font-mono text-[0.6875rem] leading-snug break-all text-gray-400 normal-case">
+      <p className="mt-1 max-w-full truncate font-mono text-[0.6875rem] leading-snug text-gray-400 normal-case">
         {path}
       </p>
     ) : null}
@@ -143,7 +143,7 @@ const MainImageCellPreview = ({ artifact }: { artifact?: MainImageCandidatesArti
       href={selectedCandidate.commonsPageUrl}
       target="_blank"
       rel="noreferrer"
-      className="mb-2 block h-20 w-28 overflow-hidden rounded-md border border-black/10 bg-neutral-100"
+      className="block h-20 w-28 shrink-0 overflow-hidden rounded-md border border-black/10 bg-neutral-100"
     >
       <Image
         src={selectedCandidate.thumbnailUrl}
@@ -168,7 +168,7 @@ const getMainImageStatus = (artifact?: MainImageCandidatesArtifact) => {
   }
 
   if (getSelectedMainImageCandidate(artifact)) {
-    return "Selected";
+    return "Available";
   }
 
   if (artifact.candidates.every((candidate) => !isCandidateSelectable(candidate))) {
@@ -263,33 +263,36 @@ export const PoiRowsTable = ({
                 <col className="w-1/5" />
                 <col className="w-1/5" />
               </colgroup>
-              <thead className="sticky top-0 z-10 bg-white">
+              <thead className="sticky top-0 z-10 bg-amber-50">
                 <tr>
                   <th
                     scope="col"
-                    className="border-r border-gray-200 py-2 pr-3 pl-4 text-left align-top"
+                    className="border-r border-b border-gray-200 py-2 pr-3 pl-4 text-left align-top"
                   >
                     <ColumnHeader title="Raw" path="public/data/raw/rome-pois-raw.geojson" />
                   </th>
                   <th
                     scope="col"
-                    className="border-r border-gray-200 px-3 py-2 text-left align-top"
+                    className="border-r border-b border-gray-200 px-3 py-2 text-left align-top"
                   >
                     <ColumnHeader title="POI" path="data/generated/rome/pois.geojson" />
                   </th>
                   <th
                     scope="col"
-                    className="border-r border-gray-200 px-3 py-2 text-left align-top"
+                    className="border-r border-b border-gray-200 px-3 py-2 text-left align-top"
                   >
                     <ColumnHeader title="Wikipedia Text" path="data/generated/rome/wiki/*.txt" />
                   </th>
                   <th
                     scope="col"
-                    className="border-r border-gray-200 px-3 py-2 text-left align-top"
+                    className="border-r border-b border-gray-200 px-3 py-2 text-left align-top"
                   >
                     <ColumnHeader title="Draft Story" path="data/wiki-ai/*.md" />
                   </th>
-                  <th scope="col" className="py-2 pr-4 pl-3 text-left align-top">
+                  <th
+                    scope="col"
+                    className="border-b border-gray-200 py-2 pr-4 pl-3 text-left align-top"
+                  >
                     <ColumnHeader title="Main Image" path="data/wiki-ai/*.images.json" />
                   </th>
                 </tr>
@@ -520,19 +523,21 @@ export const PoiRowsTable = ({
                         </CellActions>
                       </td>
                       <td className="min-w-0 py-2 pr-4 pl-3 align-top">
-                        <MainImageCellPreview artifact={row.mainImageArtifact} />
-                        <CellContent
-                          title={getMainImageStatus(row.mainImageArtifact)}
-                          subtitle={
-                            row.mainImageArtifact
-                              ? `${row.mainImageArtifact.candidates.length} candidate${
-                                  row.mainImageArtifact.candidates.length === 1 ? "" : "s"
-                                }`
-                              : undefined
-                          }
-                          updatedAt={row.mainImageUpdatedAt}
-                          generationDuration={row.mainImageGenerationDuration}
-                        />
+                        <div className="flex min-h-32 min-w-0 items-start gap-3">
+                          <MainImageCellPreview artifact={row.mainImageArtifact} />
+                          <CellContent
+                            title={getMainImageStatus(row.mainImageArtifact)}
+                            subtitle={
+                              row.mainImageArtifact
+                                ? `${row.mainImageArtifact.candidates.length} candidate${
+                                    row.mainImageArtifact.candidates.length === 1 ? "" : "s"
+                                  }`
+                                : undefined
+                            }
+                            updatedAt={row.mainImageUpdatedAt}
+                            generationDuration={row.mainImageGenerationDuration}
+                          />
+                        </div>
                         <CellActions>
                           {row.mainImageArtifact ? (
                             <div className={actionGroupClassName}>
