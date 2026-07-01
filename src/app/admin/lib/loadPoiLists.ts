@@ -1,5 +1,7 @@
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
+import { listDraftStoryArtifactFiles } from "@/server/storyWorkflow/draftStoryArtifacts";
+import { listMainImageCandidateArtifactFiles } from "@/server/storyWorkflow/mainImageCandidateArtifacts";
 import { getDefaultInputPath, getDefaultOutputDir } from "../../../../scripts/wiki/io";
 import type {
   AdminPoiRow,
@@ -95,45 +97,35 @@ const loadWikiSnapshots = (directoryPath: string) =>
       };
     });
 
-const loadAiMarkdownFiles = (directoryPath: string) =>
-  (existsSync(directoryPath) ? readdirSync(directoryPath) : [])
-    .filter((fileName) => fileName.endsWith(".md") || fileName.endsWith(".txt"))
-    .sort((left, right) => {
-      const leftId = left.replace(/\.(md|txt)$/u, "").split("--")[0] ?? "";
-      const rightId = right.replace(/\.(md|txt)$/u, "").split("--")[0] ?? "";
-      if (leftId !== rightId) {
-        return leftId.localeCompare(rightId);
-      }
+const loadAiMarkdownFiles = () =>
+  listDraftStoryArtifactFiles().map(({ fileName, filePath, poiId }, index) => {
+    const raw = readFileSync(filePath, "utf-8");
 
-      return left.endsWith(".txt") ? -1 : 1;
-    })
-    .map((fileName, index) => {
-      const filePath = path.join(directoryPath, fileName);
-      const raw = readFileSync(filePath, "utf-8");
-      const id = fileName.replace(/\.(md|txt)$/u, "").split("--")[0] || `missing-id-${index}`;
+    return {
+      item: {
+        id: poiId || `missing-id-${index}`,
+        name: fileName,
+        featureIndex: index,
+      } satisfies PoiItem,
+      json: raw,
+      updatedAt: formatUpdatedAt(filePath),
+    };
+  });
 
-      return {
-        item: { id, name: fileName, featureIndex: index } satisfies PoiItem,
-        json: raw,
-        updatedAt: formatUpdatedAt(filePath),
-      };
-    });
+const loadMainImageCandidateFiles = () =>
+  listMainImageCandidateArtifactFiles().map(({ fileName, filePath, poiId }, index) => {
+    const raw = readFileSync(filePath, "utf-8");
 
-const loadMainImageCandidateFiles = (directoryPath: string) =>
-  (existsSync(directoryPath) ? readdirSync(directoryPath) : [])
-    .filter((fileName) => fileName.endsWith(".images.json"))
-    .sort()
-    .map((fileName, index) => {
-      const filePath = path.join(directoryPath, fileName);
-      const raw = readFileSync(filePath, "utf-8");
-      const id = fileName.replace(/\.images\.json$/u, "").split("--")[0] || `missing-id-${index}`;
-
-      return {
-        item: { id, name: fileName, featureIndex: index } satisfies PoiItem,
-        artifact: JSON.parse(raw) as MainImageCandidatesArtifact,
-        updatedAt: formatUpdatedAt(filePath),
-      };
-    });
+    return {
+      item: {
+        id: poiId || `missing-id-${index}`,
+        name: fileName,
+        featureIndex: index,
+      } satisfies PoiItem,
+      artifact: JSON.parse(raw) as MainImageCandidatesArtifact,
+      updatedAt: formatUpdatedAt(filePath),
+    };
+  });
 
 const toPoiRows = (
   rawPois: PoiItem[],
@@ -291,7 +283,6 @@ export const loadPoiLists = async () => {
     const rawPath = path.join(process.cwd(), "public", "data", "raw", "rome-pois-raw.geojson");
     const transformedPath = getDefaultInputPath("rome");
     const wikiDirectoryPath = getDefaultOutputDir("rome");
-    const aiDirectoryPath = path.join(process.cwd(), "data", "wiki-ai");
     const generationMetadataPath = path.join(
       process.cwd(),
       "data",
@@ -317,8 +308,8 @@ export const loadPoiLists = async () => {
       updatedAt: transformedUpdatedAt ?? "",
     }));
     const wikiPois = loadWikiSnapshots(wikiDirectoryPath);
-    const aiPois = loadAiMarkdownFiles(aiDirectoryPath);
-    const mainImagePois = loadMainImageCandidateFiles(aiDirectoryPath);
+    const aiPois = loadAiMarkdownFiles();
+    const mainImagePois = loadMainImageCandidateFiles();
     const rows = toPoiRows(
       rawPois,
       rawUpdatedAt,

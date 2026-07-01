@@ -1,15 +1,18 @@
 "use server";
 
-import {
-  existsSync,
-  mkdirSync,
-  readdirSync,
-  readFileSync,
-  unlinkSync,
-  writeFileSync,
-} from "node:fs";
+import { existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { revalidatePath } from "next/cache";
+import {
+  buildDraftStoryArtifactFilePath,
+  buildLegacyDraftStoryArtifactFilePath,
+  listDraftStoryArtifactFilePathsForPoi,
+} from "@/server/storyWorkflow/draftStoryArtifacts";
+import {
+  buildMainImageCandidateArtifactFilePath,
+  listMainImageCandidateArtifactFilePathsForPoi,
+  readMainImageCandidateArtifact,
+} from "@/server/storyWorkflow/mainImageCandidateArtifacts";
 import { extractWikipediaContent } from "@/server/wikiPipeline/extractWikipediaContent";
 import { enrichWikiText } from "../../../../scripts/wiki/enrichWiki";
 import { fetchMainImageCandidates } from "../../../../scripts/wiki/fetchMainImageCandidates";
@@ -21,7 +24,6 @@ import {
 } from "../../../../scripts/wiki/io";
 import { sanitizePoiIdForFile, toCitySlug } from "../../../../scripts/wiki/normalize";
 import { transformRawPoiFeature } from "../../../../scripts/wiki/transformRawPoiFeature";
-import type { MainImageCandidatesArtifact } from "../../../../scripts/wiki/types";
 import {
   resolveAiSelection,
   type AiMode,
@@ -71,54 +73,7 @@ const parseGeoJson = (filePath: string) => JSON.parse(readFileSync(filePath, "ut
 const city = "rome";
 const rawPath = path.join(process.cwd(), "public", "data", "raw", "rome-pois-raw.geojson");
 const transformedPath = getDefaultInputPath(city);
-const aiDirectoryPath = path.join(process.cwd(), "data", "wiki-ai");
 const generationMetadataPath = path.join(process.cwd(), "data", "admin-generation-metadata.json");
-
-const sanitizePoiNameForFile = (poiName: string) => toCitySlug(poiName) || "unknown-name";
-
-const buildAiMarkdownFileName = (poiId: string, poiName: string) =>
-  `${sanitizePoiIdForFile(poiId)}--${sanitizePoiNameForFile(poiName)}.md`;
-
-const buildAiMarkdownFilePath = (poiId: string, poiName: string) =>
-  path.join(aiDirectoryPath, buildAiMarkdownFileName(poiId, poiName));
-
-const buildMainImageCandidatesFileName = (poiId: string, poiName: string) =>
-  `${sanitizePoiIdForFile(poiId)}--${sanitizePoiNameForFile(poiName)}.images.json`;
-
-const buildMainImageCandidatesFilePath = (poiId: string, poiName: string) =>
-  path.join(aiDirectoryPath, buildMainImageCandidatesFileName(poiId, poiName));
-
-const buildLegacyAiTextFilePath = (poiId: string) => buildOutputFilePath(aiDirectoryPath, poiId);
-
-const getAiMarkdownFilePaths = (poiId: string) => {
-  const normalizedPoiId = sanitizePoiIdForFile(poiId);
-  if (!existsSync(aiDirectoryPath)) {
-    return [] as string[];
-  }
-
-  return readdirSync(aiDirectoryPath)
-    .filter(
-      (fileName) =>
-        fileName === `${normalizedPoiId}.md` ||
-        (fileName.startsWith(`${normalizedPoiId}--`) && fileName.endsWith(".md")),
-    )
-    .map((fileName) => path.join(aiDirectoryPath, fileName));
-};
-
-const getMainImageCandidatesFilePaths = (poiId: string) => {
-  const normalizedPoiId = sanitizePoiIdForFile(poiId);
-  if (!existsSync(aiDirectoryPath)) {
-    return [] as string[];
-  }
-
-  return readdirSync(aiDirectoryPath)
-    .filter(
-      (fileName) =>
-        fileName === `${normalizedPoiId}.images.json` ||
-        (fileName.startsWith(`${normalizedPoiId}--`) && fileName.endsWith(".images.json")),
-    )
-    .map((fileName) => path.join(aiDirectoryPath, fileName));
-};
 
 const pickString = (properties: Record<string, unknown>, ...keys: string[]) => {
   for (const key of keys) {
@@ -298,7 +253,7 @@ const writeAiTextFile = async (poiId: string, aiSelection: AiSelection) => {
 
   const { rawFeature } = findRawFeatureByPoiId(poiId);
   const poiName = pickString(rawFeature.properties ?? {}, "name:en", "name", "int_name") ?? poiId;
-  const outputFilePath = buildAiMarkdownFilePath(poiId, poiName);
+  const outputFilePath = buildDraftStoryArtifactFilePath(poiId, poiName);
   mkdirSync(path.dirname(outputFilePath), { recursive: true });
   writeFileSync(
     outputFilePath,
@@ -313,18 +268,9 @@ const getPoiNameFromRawFeature = (poiId: string) => {
   return pickString(rawFeature.properties ?? {}, "name:en", "name", "int_name") ?? poiId;
 };
 
-const readMainImageCandidatesArtifact = (poiId: string) => {
-  const [filePath] = getMainImageCandidatesFilePaths(poiId);
-  if (!filePath) {
-    return undefined;
-  }
-
-  return JSON.parse(readFileSync(filePath, "utf-8")) as MainImageCandidatesArtifact;
-};
-
 const writeMainImageCandidatesFile = async (poiId: string) => {
   console.info(`[wiki-images] Generating Main Image Candidates for ${poiId}.`);
-  const previousArtifact = readMainImageCandidatesArtifact(poiId);
+  const previousArtifact = readMainImageCandidateArtifact(poiId);
   const candidates = await fetchMainImageCandidates(
     findPoiInGeoJson(getDefaultInputPath(city), poiId, city),
   );
@@ -336,10 +282,13 @@ const writeMainImageCandidatesFile = async (poiId: string) => {
       (candidate) => candidate.commonsFileName === previousArtifact?.selectedCommonsFileName,
     )?.commonsFileName ??
     (selectableCandidates.length === 1 ? selectableCandidates[0]?.commonsFileName : undefined);
-  const outputFilePath = buildMainImageCandidatesFilePath(poiId, getPoiNameFromRawFeature(poiId));
+  const outputFilePath = buildMainImageCandidateArtifactFilePath(
+    poiId,
+    getPoiNameFromRawFeature(poiId),
+  );
 
   mkdirSync(path.dirname(outputFilePath), { recursive: true });
-  for (const existingFilePath of getMainImageCandidatesFilePaths(poiId)) {
+  for (const existingFilePath of listMainImageCandidateArtifactFilePathsForPoi(poiId)) {
     if (existingFilePath !== outputFilePath && existsSync(existingFilePath)) {
       unlinkSync(existingFilePath);
     }
@@ -386,8 +335,8 @@ const deleteWikiSnapshotFile = (poiId: string) => {
 
 const deleteAiTextFile = (poiId: string) => {
   for (const outputFilePath of [
-    ...getAiMarkdownFilePaths(poiId),
-    buildLegacyAiTextFilePath(poiId),
+    ...listDraftStoryArtifactFilePathsForPoi(poiId),
+    buildLegacyDraftStoryArtifactFilePath(poiId),
   ]) {
     if (existsSync(outputFilePath)) {
       unlinkSync(outputFilePath);
@@ -396,7 +345,7 @@ const deleteAiTextFile = (poiId: string) => {
 };
 
 const deleteMainImageCandidatesFile = (poiId: string) => {
-  for (const outputFilePath of getMainImageCandidatesFilePaths(poiId)) {
+  for (const outputFilePath of listMainImageCandidateArtifactFilePathsForPoi(poiId)) {
     if (existsSync(outputFilePath)) {
       unlinkSync(outputFilePath);
     }
@@ -514,7 +463,7 @@ export const selectMainImageCandidate = async (formData: FormData) => {
     throw new Error("Invalid Commons file name.");
   }
 
-  const artifact = readMainImageCandidatesArtifact(poiId);
+  const artifact = readMainImageCandidateArtifact(poiId);
   const candidate = artifact?.candidates.find((item) => item.commonsFileName === commonsFileName);
   if (!artifact || !candidate) {
     throw new Error(`Main Image Candidate ${commonsFileName} not found.`);
@@ -524,7 +473,7 @@ export const selectMainImageCandidate = async (formData: FormData) => {
     throw new Error(`Main Image Candidate ${commonsFileName} is missing license or attribution.`);
   }
 
-  const [filePath] = getMainImageCandidatesFilePaths(poiId);
+  const [filePath] = listMainImageCandidateArtifactFilePathsForPoi(poiId);
   if (!filePath) {
     throw new Error(`Main Image Candidates for ${poiId} not found.`);
   }
