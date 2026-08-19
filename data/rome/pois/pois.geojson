@@ -5,12 +5,12 @@
   "timestamp": "2026-01-16T23:50:59Z",
   "features": [
     {
-      "type": "Feature",
+      "id": "basilica-costantiniana-di-s-agnese",
       "wikidataId": "Q124154237",
+      "type": "Feature",
       "properties": {
         "name": "Basilica costantiniana di S. Agnese",
-        "wikimedia_commons": "Category:Sant'Agnese fuori le mura (Rome) - Basilica costantiniana",
-        "content_slug": "basilica-costantiniana-di-s-agnese"
+        "wikimedia_commons": "Category:Sant'Agnese fuori le mura (Rome) - Basilica costantiniana"
       },
       "geometry": {
         "type": "Point",
@@ -21,8 +21,9 @@
       }
     },
     {
-      "type": "Feature",
+      "id": "cloisters-of-bramante",
       "wikidataId": "Q25100007",
+      "type": "Feature",
       "properties": {
         "addr:city": "Roma",
         "addr:housenumber": "5",
@@ -33,8 +34,7 @@
         "tourism": "museum",
         "website": "https://www.chiostrodelbramante.it/",
         "wikimedia_commons": "Category:Santa Maria della Pace (Rome) - Cloister",
-        "wikipedia": "en:Chiostro del Bramante",
-        "content_slug": "chiostro-del-bramante"
+        "wikipedia": "en:Chiostro del Bramante"
       },
       "geometry": {
         "type": "Point",
@@ -45,14 +45,14 @@
       }
     },
     {
-      "type": "Feature",
+      "id": "forum-boarium",
       "wikidataId": "Q283650",
+      "type": "Feature",
       "properties": {
         "name": "Foro Boario",
         "name:en": "Forum Boarium",
         "wikimedia_commons": "Category:Foro Boario (Rome)",
-        "wikipedia": "it:Foro Boario",
-        "content_slug": "foro-boario"
+        "wikipedia": "it:Foro Boario"
       },
       "geometry": {
         "type": "Point",

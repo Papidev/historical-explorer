@@ -1,20 +1,18 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
-import { sanitizePoiIdForFile, toCitySlug } from "@/server/wikiPipeline/normalize";
+import { sanitizePoiIdForFile } from "@/server/wikiPipeline/normalize";
 import type { MainImageCandidatesArtifact } from "@/server/wikiPipeline/types";
 
 const artifactDirectoryPath = () => path.join(process.cwd(), "data", "rome", "wiki-ai");
 
-const sanitizePoiNameForFile = (poiName: string) => toCitySlug(poiName) || "unknown-name";
-
 const getNormalizedPoiIdFromFileName = (fileName: string) =>
   fileName.replace(/\.images\.json$/u, "").split("--")[0] ?? "";
 
-export const buildMainImageCandidateArtifactFileName = (poiId: string, poiName: string) =>
-  `${sanitizePoiIdForFile(poiId)}--${sanitizePoiNameForFile(poiName)}.images.json`;
+export const buildMainImageCandidateArtifactFileName = (poiId: string) =>
+  `${sanitizePoiIdForFile(poiId)}.images.json`;
 
-export const buildMainImageCandidateArtifactFilePath = (poiId: string, poiName: string) =>
-  path.join(artifactDirectoryPath(), buildMainImageCandidateArtifactFileName(poiId, poiName));
+export const buildMainImageCandidateArtifactFilePath = (poiId: string) =>
+  path.join(artifactDirectoryPath(), buildMainImageCandidateArtifactFileName(poiId));
 
 export const listMainImageCandidateArtifactFiles = () =>
   (existsSync(artifactDirectoryPath()) ? readdirSync(artifactDirectoryPath()) : [])

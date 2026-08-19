@@ -320,7 +320,7 @@ export const PoiRowsTable = ({
                       <td className="min-w-0 border-r border-gray-100 py-2 pr-3 pl-4 align-top">
                         <CellContent
                           title={row.rawPoi?.name}
-                          subtitle={row.id}
+                          subtitle={row.rawPoi?.wikidata ?? row.rawPoi?.id}
                           updatedAt={row.rawUpdatedAt}
                           titleTone="poi"
                         />
@@ -401,6 +401,7 @@ export const PoiRowsTable = ({
                       <td className="min-w-0 border-r border-gray-100 px-3 py-2 align-top">
                         <CellContent
                           title={row.transformedPoi ? "Available" : undefined}
+                          subtitle={row.transformedPoi?.id}
                           updatedAt={row.transformedUpdatedAt}
                           generationDuration={row.transformedGenerationDuration}
                         />

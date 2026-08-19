@@ -43,7 +43,7 @@ For project glossary terms such as Raw POI, Draft Story, Sources, and Main Image
 
 Each city's data lives under `data/<city>/`. The Raw POI input and app-ready POI catalog live together in the city's `pois/` folder and are versioned. Rebuildable local outputs live under `generated/` and are intentionally not committed.
 
-For Rome, the Raw POI input lives at `data/rome/pois/raw.geojson`, while app-ready POIs are progressively added to `data/rome/pois/pois.geojson`. Wikipedia Text snapshots are generated into `data/rome/generated/wiki/`.
+For Rome, the Raw POI input lives at `data/rome/pois/raw.geojson`, while app-ready POIs are progressively added to `data/rome/pois/pois.geojson`. Each app-ready POI has a stable, human-readable `id`; external identifiers such as `wikidataId` are optional and separate. Wikipedia Text snapshots are generated into `data/rome/generated/wiki/`.
 
 Use `/admin` to run the current Rome generation flow:
 
@@ -51,7 +51,7 @@ Use `/admin` to run the current Rome generation flow:
 2. Generate the Wikipedia Text snapshot.
 3. Generate the AI draft story markdown.
 
-Draft stories generated from the Wikipedia snapshot live as `.md` files in the city's `wiki-ai/` folder, such as `data/rome/wiki-ai/`. They are named with both the POI id and a readable slug, for example `q283650--forum-boarium.md`. Unlike the generated source snapshots, this is a reviewable content artifact and should be committed after AI generation and human editing.
+Draft stories generated from the Wikipedia snapshot live as `.md` files in the city's `wiki-ai/` folder, such as `data/rome/wiki-ai/`. They use the POI ID as their file name, for example `forum-boarium.md`. Unlike the generated source snapshots, this is a reviewable content artifact and should be committed after AI generation and human editing.
 Today these files contain draft story prose; the broader Draft Story will also include Sources and a proposed Main Image as the workflow grows. Main Image Candidates should live beside the draft story prose as `.images.json` files in the city's `wiki-ai/` folder; these files are also reviewable workflow artifacts and should be committed after generation and curator selection.
 
 ## AI Configuration

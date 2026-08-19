@@ -21,7 +21,7 @@ const SINGLE_POI_PROPERTY_KEYS = [
 
 export const transformRawPoiFeature = (
   feature: GeoJsonFeature,
-  { poiId, contentSlug }: { poiId: string; contentSlug: string },
+  { poiId, wikidataId }: { poiId: string; wikidataId?: string },
 ) => {
   const properties = feature.properties ?? {};
   const transformedProperties = SINGLE_POI_PROPERTY_KEYS.reduce<Record<string, unknown>>((acc, key) => {
@@ -33,11 +33,10 @@ export const transformRawPoiFeature = (
     return acc;
   }, {});
 
-  transformedProperties.content_slug = contentSlug;
-
   return {
+    id: poiId,
+    ...(wikidataId ? { wikidataId } : {}),
     type: "Feature",
-    wikidataId: poiId,
     properties: transformedProperties,
     geometry: feature.geometry,
   };

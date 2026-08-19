@@ -61,16 +61,13 @@ const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Po
   const properties = feature.properties ?? {};
   const fallbackId = `poi-${index}`;
   const rawId =
-    typeof feature.wikidataId === "string"
-      ? feature.wikidataId
-      : typeof feature.id === "string"
-        ? feature.id
-        : typeof feature.id === "number"
-          ? `${feature.id}`
-          : (pickString(properties, "id", "@id") ?? fallbackId);
+    typeof feature.id === "string"
+      ? feature.id
+      : typeof feature.id === "number"
+        ? `${feature.id}`
+        : (pickString(properties, "id", "@id") ?? fallbackId);
 
   const name = pickString(properties, "name", "name:en", "name:it", "int_name") ?? rawId;
-  const contentSlug = pickString(properties, "content_slug", "content:slug");
   const historic = pickString(properties, "historic");
   const period =
     pickString(properties, "period", "start_date", "historic:period", "historic:civilization") ??
@@ -81,7 +78,7 @@ const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Po
   const city = pickString(properties, "addr:city", "is_in:city") ?? fallbackCity;
 
   const funFacts = [
-    rawId.replace(/^/, "Wikidata: "),
+    feature.wikidataId?.replace(/^/, "Wikidata: "),
     pickString(properties, "wikipedia")?.replace(/^/, "Wikipedia: "),
     pickString(properties, "heritage")?.replace(/^/, "Heritage status: "),
     pickString(properties, "charge")?.replace(/^/, "Ticket: "),
@@ -89,7 +86,6 @@ const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Po
 
   return {
     id: rawId,
-    contentSlug,
     name,
     city,
     coordinates: { lat, lng },

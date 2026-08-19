@@ -1,20 +1,18 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { buildOutputFilePath } from "@/server/wikiPipeline/io";
-import { sanitizePoiIdForFile, toCitySlug } from "@/server/wikiPipeline/normalize";
+import { sanitizePoiIdForFile } from "@/server/wikiPipeline/normalize";
 
 const artifactDirectoryPath = () => path.join(process.cwd(), "data", "rome", "wiki-ai");
-
-const sanitizePoiNameForFile = (poiName: string) => toCitySlug(poiName) || "unknown-name";
 
 const getNormalizedPoiIdFromFileName = (fileName: string) =>
   fileName.replace(/\.(md|txt)$/u, "").split("--")[0] ?? "";
 
-export const buildDraftStoryArtifactFileName = (poiId: string, poiName: string) =>
-  `${sanitizePoiIdForFile(poiId)}--${sanitizePoiNameForFile(poiName)}.md`;
+export const buildDraftStoryArtifactFileName = (poiId: string) =>
+  `${sanitizePoiIdForFile(poiId)}.md`;
 
-export const buildDraftStoryArtifactFilePath = (poiId: string, poiName: string) =>
-  path.join(artifactDirectoryPath(), buildDraftStoryArtifactFileName(poiId, poiName));
+export const buildDraftStoryArtifactFilePath = (poiId: string) =>
+  path.join(artifactDirectoryPath(), buildDraftStoryArtifactFileName(poiId));
 
 export const buildLegacyDraftStoryArtifactFilePath = (poiId: string) =>
   buildOutputFilePath(artifactDirectoryPath(), poiId);

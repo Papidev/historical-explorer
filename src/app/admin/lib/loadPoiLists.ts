@@ -65,18 +65,20 @@ const loadGenerationMetadata = (filePath: string) => {
   return JSON.parse(readFileSync(filePath, "utf-8")) as GenerationMetadata;
 };
 
-const toPoiItems = (features: GeoJsonFeature[] | undefined) =>
+const toPoiItems = (features: GeoJsonFeature[] | undefined, raw = false) =>
   (features ?? []).map((feature, index) => {
     const properties = feature.properties ?? {};
-    const id =
+    const wikidata =
       (typeof feature.wikidataId === "string" && feature.wikidataId.trim()) ||
       (typeof properties.wikidata === "string" && properties.wikidata.trim()) ||
+      undefined;
+    const id =
+      (raw ? wikidata : undefined) ||
       (typeof feature.id === "string" && feature.id.trim()) ||
       (typeof feature.id === "number" ? `${feature.id}` : "") ||
+      wikidata ||
       `missing-id-${index}`;
     const name = (typeof properties.name === "string" && properties.name.trim()) || id;
-    const wikidata =
-      typeof properties.wikidata === "string" ? properties.wikidata.trim() : undefined;
 
     return { id, name, wikidata, featureIndex: index } satisfies PoiItem;
   });
@@ -148,12 +150,21 @@ const toPoiRows = (
 
   for (const { item, json, updatedAt } of transformedPois) {
     const rowKey = toRowKey(item.id);
-    const row = rowsById.get(rowKey);
+    const rawRowEntry = item.wikidata
+      ? Array.from(rowsById.entries()).find(
+          ([, candidate]) => candidate.rawPoi?.wikidata === item.wikidata,
+        )
+      : undefined;
+    const row = rowsById.get(rowKey) ?? rawRowEntry?.[1];
+    if (rawRowEntry && rawRowEntry[0] !== rowKey) {
+      rowsById.delete(rawRowEntry[0]);
+    }
     rowsById.set(
       rowKey,
       row
         ? {
             ...row,
+            id: item.id,
             transformedPoi: item,
             transformedJson: json,
             transformedUpdatedAt: updatedAt,
@@ -295,7 +306,7 @@ export const loadPoiLists = async () => {
       : undefined;
     const generationMetadata = loadGenerationMetadata(generationMetadataPath);
 
-    const rawPois = toPoiItems(parseGeoJson(rawPath).features);
+    const rawPois = toPoiItems(parseGeoJson(rawPath).features, true);
     const transformedGeoJson = existsSync(transformedPath)
       ? parseGeoJson(transformedPath)
       : ({ features: [] } as GeoJson);
