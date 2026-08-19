@@ -18,12 +18,12 @@ import type { AdminPoiRow, MainImageCandidate, MainImageCandidatesArtifact } fro
 import { SubmitButton } from "./SubmitButton";
 
 const refreshConfirmMessages = {
-  ai: "Refresh Draft Story for this POI?",
+  ai: "Refresh Story for this POI?",
   mainImage: "Refresh Main Image Candidates for this POI?",
 } as const;
 
 const generateConfirmMessage =
-  "Generate POI, Wikipedia Text, Draft Story, and Main Image Candidates for this Raw POI?";
+  "Generate POI, Wikipedia Text, Story, and Main Image Candidates for this Raw POI?";
 
 type ProgressStep = {
   description: string;
@@ -39,8 +39,8 @@ type ProgressState = {
 
 const deleteConfirmMessages = {
   transformed:
-    "Reset this row? This deletes generated POI, Wikipedia Text, Draft Story, and Main Image Candidates for this POI.",
-  ai: "Delete Draft Story for this POI?",
+    "Reset this row? This deletes generated POI, Wikipedia Text, Story, and Main Image Candidates for this POI.",
+  ai: "Delete Story for this POI?",
   mainImage: "Delete Main Image Candidates for this POI?",
 } as const;
 
@@ -279,31 +279,37 @@ export const PoiRowsTable = ({
                     scope="col"
                     className="border-r border-b border-gray-200 py-2 pr-3 pl-4 text-left align-top"
                   >
-                    <ColumnHeader title="Raw" path="public/data/raw/rome-pois-raw.geojson" />
+                    <ColumnHeader title="Raw" path="data/rome/pois/raw.geojson" />
                   </th>
                   <th
                     scope="col"
                     className="border-r border-b border-gray-200 px-3 py-2 text-left align-top"
                   >
-                    <ColumnHeader title="POI" path="data/generated/rome/pois.geojson" />
+                    <ColumnHeader title="POI" path="data/rome/pois/pois.geojson" />
                   </th>
                   <th
                     scope="col"
                     className="border-r border-b border-gray-200 px-3 py-2 text-left align-top"
                   >
-                    <ColumnHeader title="Wikipedia Text" path="data/generated/rome/wiki/*.txt" />
+                    <ColumnHeader title="Wikipedia Text" path="data/rome/generated/wiki/*.txt" />
                   </th>
                   <th
                     scope="col"
                     className="border-r border-b border-gray-200 px-3 py-2 text-left align-top"
                   >
-                    <ColumnHeader title="Draft Story" path="data/wiki-ai/*.md" />
+                    <ColumnHeader
+                      title="Story"
+                      path="data/rome/stories/<poi-id>/story.md"
+                    />
                   </th>
                   <th
                     scope="col"
                     className="border-b border-gray-200 py-2 pr-4 pl-3 text-left align-top"
                   >
-                    <ColumnHeader title="Main Image" path="data/wiki-ai/*.images.json" />
+                    <ColumnHeader
+                      title="Main Image"
+                      path="data/rome/stories/<poi-id>/images.json"
+                    />
                   </th>
                 </tr>
               </thead>
@@ -320,7 +326,7 @@ export const PoiRowsTable = ({
                       <td className="min-w-0 border-r border-gray-100 py-2 pr-3 pl-4 align-top">
                         <CellContent
                           title={row.rawPoi?.name}
-                          subtitle={row.id}
+                          subtitle={row.rawPoi?.wikidata ?? row.rawPoi?.id}
                           updatedAt={row.rawUpdatedAt}
                           titleTone="poi"
                         />
@@ -344,7 +350,7 @@ export const PoiRowsTable = ({
                                       formData: createPoiFormData(row.id),
                                     },
                                     {
-                                      description: "Generating Draft Story...",
+                                      description: "Generating Story...",
                                       action: refreshAiAction,
                                       formData: createPoiFormData(row.id),
                                     },
@@ -401,6 +407,7 @@ export const PoiRowsTable = ({
                       <td className="min-w-0 border-r border-gray-100 px-3 py-2 align-top">
                         <CellContent
                           title={row.transformedPoi ? "Available" : undefined}
+                          subtitle={row.transformedPoi?.id}
                           updatedAt={row.transformedUpdatedAt}
                           generationDuration={row.transformedGenerationDuration}
                         />
@@ -476,12 +483,12 @@ export const PoiRowsTable = ({
                             <div className={actionGroupClassName}>
                               <IconButton
                                 type="button"
-                                label="View Draft Story"
+                                label="View Story"
                                 disabled={isVisualizationDisabled}
                                 onClick={() =>
                                   row.aiText
                                     ? setSelectedPanel({
-                                        title: `${row.id} Draft Story`,
+                                        title: `${row.id} Story`,
                                         kind: "markdown",
                                         content: row.aiText,
                                       })
@@ -494,7 +501,7 @@ export const PoiRowsTable = ({
                                 action={(formData) =>
                                   runSingleAction(
                                     row.id,
-                                    "Generating Draft Story...",
+                                    "Generating Story...",
                                     refreshAiAction,
                                     formData,
                                   )
@@ -516,7 +523,7 @@ export const PoiRowsTable = ({
                                 action={(formData) =>
                                   runSingleAction(
                                     row.id,
-                                    "Deleting Draft Story...",
+                                    "Deleting Story...",
                                     deleteAiAction,
                                     formData,
                                   )
@@ -538,7 +545,7 @@ export const PoiRowsTable = ({
                               action={(formData) =>
                                 runSingleAction(
                                   row.id,
-                                  "Generating Draft Story...",
+                                  "Generating Story...",
                                   refreshAiAction,
                                   formData,
                                 )

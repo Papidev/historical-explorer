@@ -4,10 +4,9 @@ import { existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from "
 import path from "node:path";
 import { revalidatePath } from "next/cache";
 import {
-  buildDraftStoryArtifactFilePath,
-  buildLegacyDraftStoryArtifactFilePath,
-  listDraftStoryArtifactFilePathsForPoi,
-} from "@/server/storyWorkflow/draftStoryArtifacts";
+  buildStoryFilePath,
+  listStoryFilePathsForPoi,
+} from "@/server/storyWorkflow/storyArtifacts";
 import {
   buildMainImageCandidateArtifactFilePath,
   listMainImageCandidateArtifactFilePathsForPoi,
@@ -71,9 +70,15 @@ type GeoJson = {
 const parseGeoJson = (filePath: string) => JSON.parse(readFileSync(filePath, "utf-8")) as GeoJson;
 
 const city = "rome";
-const rawPath = path.join(process.cwd(), "public", "data", "raw", "rome-pois-raw.geojson");
+const rawPath = path.join(process.cwd(), "data", "rome", "pois", "raw.geojson");
 const transformedPath = getDefaultInputPath(city);
-const generationMetadataPath = path.join(process.cwd(), "data", "admin-generation-metadata.json");
+const generationMetadataPath = path.join(
+  process.cwd(),
+  "data",
+  "rome",
+  "generated",
+  "generation-metadata.json",
+);
 
 const pickString = (properties: Record<string, unknown>, ...keys: string[]) => {
   for (const key of keys) {
@@ -163,23 +168,45 @@ const measureGeneration = async <Result>(
   return result;
 };
 
-const getPoiIdFromRawFeature = (rawFeature: GeoJsonFeature, rawFeatureIndex: number) => {
+const getWikidataIdFromRawFeature = (rawFeature: GeoJsonFeature) => {
   const properties = rawFeature.properties ?? {};
-  const poiId = typeof properties.wikidata === "string" ? properties.wikidata.trim() : "";
-  if (!poiId) {
-    throw new Error(`Raw feature ${rawFeatureIndex} has no wikidata id.`);
+  const wikidataId =
+    typeof properties.wikidata === "string" ? properties.wikidata.trim() : "";
+
+  return wikidataId || undefined;
+};
+
+const resolvePoiId = (poiId: string) => {
+  if (!existsSync(transformedPath)) {
+    return poiId;
   }
 
-  return poiId;
+  const feature = (parseGeoJson(transformedPath).features ?? []).find(
+    (item) => item.id === poiId || item.wikidataId === poiId,
+  );
+
+  return typeof feature?.id === "string" && feature.id.trim() ? feature.id : poiId;
 };
 
 const findRawFeatureByPoiId = (poiId: string) => {
+  const poiGeoJson = parseGeoJson(transformedPath);
+  const poiFeature = (poiGeoJson.features ?? []).find((feature) => feature.id === poiId);
+  if (!poiFeature) {
+    throw new Error(`POI ${poiId} not found.`);
+  }
+
   const rawGeoJson = parseGeoJson(rawPath);
   const rawFeatures = rawGeoJson.features ?? [];
   const rawFeatureIndex = rawFeatures.findIndex((feature) => {
-    const wikidata =
-      typeof feature.properties?.wikidata === "string" ? feature.properties.wikidata.trim() : "";
-    return wikidata === poiId;
+    const wikidataId = getWikidataIdFromRawFeature(feature);
+    if (poiFeature.wikidataId && wikidataId) {
+      return wikidataId === poiFeature.wikidataId;
+    }
+
+    const properties = feature.properties ?? {};
+    return (
+      toCitySlug(pickString(properties, "name:en", "name", "int_name") ?? "") === poiId
+    );
   });
   if (rawFeatureIndex < 0) {
     throw new Error(`Raw feature for ${poiId} not found.`);
@@ -198,7 +225,6 @@ const writeTransformedPoi = (
   rawFeatureIndex: number,
   rawGeoJson: GeoJson,
 ) => {
-  const poiId = getPoiIdFromRawFeature(rawFeature, rawFeatureIndex);
   const transformedGeoJson = existsSync(transformedPath)
     ? parseGeoJson(transformedPath)
     : {
@@ -209,15 +235,30 @@ const writeTransformedPoi = (
         features: [],
       };
   const properties = rawFeature.properties ?? {};
-  const name = (typeof properties.name === "string" && properties.name.trim()) || poiId;
+  const wikidataId = getWikidataIdFromRawFeature(rawFeature);
+  const existingFeatures = transformedGeoJson.features ?? [];
+  const existingFeature = wikidataId
+    ? existingFeatures.find((feature) => feature.wikidataId === wikidataId)
+    : undefined;
+  const basePoiId =
+    toCitySlug(pickString(properties, "name:en", "name", "int_name") ?? "") ||
+    `poi-${rawFeatureIndex + 1}`;
+  let poiId =
+    typeof existingFeature?.id === "string" && existingFeature.id.trim()
+      ? existingFeature.id
+      : basePoiId;
+  let suffix = 2;
+  while (existingFeatures.some((feature) => feature !== existingFeature && feature.id === poiId)) {
+    poiId = `${basePoiId}-${suffix}`;
+    suffix += 1;
+  }
   const transformedFeature = transformRawPoiFeature(rawFeature, {
     poiId,
-    contentSlug: toCitySlug(name),
+    wikidataId,
   });
-  const existingFeatures = transformedGeoJson.features ?? [];
-  const existingFeatureIndex = existingFeatures.findIndex(
-    (feature) => feature.wikidataId === poiId,
-  );
+  const existingFeatureIndex = existingFeature
+    ? existingFeatures.indexOf(existingFeature)
+    : -1;
   const nextFeatures =
     existingFeatureIndex >= 0
       ? existingFeatures.map((feature, index) =>
@@ -253,7 +294,7 @@ const writeAiTextFile = async (poiId: string, aiSelection: AiSelection) => {
 
   const { rawFeature } = findRawFeatureByPoiId(poiId);
   const poiName = pickString(rawFeature.properties ?? {}, "name:en", "name", "int_name") ?? poiId;
-  const outputFilePath = buildDraftStoryArtifactFilePath(poiId, poiName);
+  const outputFilePath = buildStoryFilePath(poiId);
   mkdirSync(path.dirname(outputFilePath), { recursive: true });
   writeFileSync(
     outputFilePath,
@@ -261,11 +302,6 @@ const writeAiTextFile = async (poiId: string, aiSelection: AiSelection) => {
     "utf-8",
   );
   console.info(`[wiki-ai] Saved AI text for ${poiId} to ${outputFilePath}.`);
-};
-
-const getPoiNameFromRawFeature = (poiId: string) => {
-  const { rawFeature } = findRawFeatureByPoiId(poiId);
-  return pickString(rawFeature.properties ?? {}, "name:en", "name", "int_name") ?? poiId;
 };
 
 const writeMainImageCandidatesFile = async (poiId: string) => {
@@ -282,10 +318,7 @@ const writeMainImageCandidatesFile = async (poiId: string) => {
       (candidate) => candidate.commonsFileName === previousArtifact?.selectedCommonsFileName,
     )?.commonsFileName ??
     (selectableCandidates.length === 1 ? selectableCandidates[0]?.commonsFileName : undefined);
-  const outputFilePath = buildMainImageCandidateArtifactFilePath(
-    poiId,
-    getPoiNameFromRawFeature(poiId),
-  );
+  const outputFilePath = buildMainImageCandidateArtifactFilePath(poiId);
 
   mkdirSync(path.dirname(outputFilePath), { recursive: true });
   for (const existingFilePath of listMainImageCandidateArtifactFilePathsForPoi(poiId)) {
@@ -304,18 +337,23 @@ const writeMainImageCandidatesFile = async (poiId: string) => {
 };
 
 const refreshTransformedPoiPipeline = async (poiId: string) => {
-  const { rawFeature, rawFeatureIndex, rawGeoJson } = findRawFeatureByPoiId(poiId);
-  await measureGeneration(poiId, "transformed", () =>
+  const resolvedPoiId = resolvePoiId(poiId);
+  const { rawFeature, rawFeatureIndex, rawGeoJson } = findRawFeatureByPoiId(resolvedPoiId);
+  await measureGeneration(resolvedPoiId, "transformed", () =>
     writeTransformedPoi(rawFeature, rawFeatureIndex, rawGeoJson),
   );
 };
 
 const refreshWikiPipeline = async (poiId: string) => {
-  await measureGeneration(poiId, "wiki", () => extractWikipediaContent({ city, poiId }));
+  const resolvedPoiId = resolvePoiId(poiId);
+  await measureGeneration(resolvedPoiId, "wiki", () =>
+    extractWikipediaContent({ city, poiId: resolvedPoiId }),
+  );
 };
 
 const refreshAiPipeline = async (poiId: string, aiSelection: AiSelection) => {
-  await measureGeneration(poiId, "ai", () => writeAiTextFile(poiId, aiSelection), {
+  const resolvedPoiId = resolvePoiId(poiId);
+  await measureGeneration(resolvedPoiId, "ai", () => writeAiTextFile(resolvedPoiId, aiSelection), {
     aiMode: aiSelection.mode,
     aiProvider: aiSelection.provider,
     aiModel: aiSelection.model,
@@ -323,7 +361,10 @@ const refreshAiPipeline = async (poiId: string, aiSelection: AiSelection) => {
 };
 
 const refreshMainImageCandidatesPipeline = async (poiId: string) => {
-  await measureGeneration(poiId, "image", () => writeMainImageCandidatesFile(poiId));
+  const resolvedPoiId = resolvePoiId(poiId);
+  await measureGeneration(resolvedPoiId, "image", () =>
+    writeMainImageCandidatesFile(resolvedPoiId),
+  );
 };
 
 const deleteWikiSnapshotFile = (poiId: string) => {
@@ -334,10 +375,7 @@ const deleteWikiSnapshotFile = (poiId: string) => {
 };
 
 const deleteAiTextFile = (poiId: string) => {
-  for (const outputFilePath of [
-    ...listDraftStoryArtifactFilePathsForPoi(poiId),
-    buildLegacyDraftStoryArtifactFilePath(poiId),
-  ]) {
+  for (const outputFilePath of listStoryFilePathsForPoi(poiId)) {
     if (existsSync(outputFilePath)) {
       unlinkSync(outputFilePath);
     }
@@ -378,7 +416,7 @@ const deleteTransformedPoiPipeline = (poiId: string) => {
 
   const transformedGeoJson = parseGeoJson(transformedPath);
   const nextFeatures = (transformedGeoJson.features ?? []).filter(
-    (feature) => feature.wikidataId !== poiId,
+    (feature) => feature.id !== poiId,
   );
   const nextGeoJson = {
     type: transformedGeoJson.type ?? "FeatureCollection",
@@ -407,10 +445,9 @@ export const generateTransformedPoiJson = async (formData: FormData) => {
     throw new Error(`Raw feature ${rawFeatureIndex} not found.`);
   }
 
-  const poiId = getPoiIdFromRawFeature(rawFeature, rawFeatureIndex);
-  await measureGeneration(poiId, "transformed", () =>
-    writeTransformedPoi(rawFeature, rawFeatureIndex, rawGeoJson),
-  );
+  const startedAt = Date.now();
+  const poiId = writeTransformedPoi(rawFeature, rawFeatureIndex, rawGeoJson);
+  recordGenerationDuration(poiId, "transformed", Date.now() - startedAt);
 };
 
 export const refreshTransformedPoiJson = async (formData: FormData) => {

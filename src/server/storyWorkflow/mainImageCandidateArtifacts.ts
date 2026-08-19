@@ -1,41 +1,31 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
-import { sanitizePoiIdForFile, toCitySlug } from "@/server/wikiPipeline/normalize";
+import { sanitizePoiIdForFile } from "@/server/wikiPipeline/normalize";
 import type { MainImageCandidatesArtifact } from "@/server/wikiPipeline/types";
 
-const artifactDirectoryPath = () => path.join(process.cwd(), "data", "wiki-ai");
+const storiesDirectoryPath = () => path.join(process.cwd(), "data", "rome", "stories");
 
-const sanitizePoiNameForFile = (poiName: string) => toCitySlug(poiName) || "unknown-name";
-
-const getNormalizedPoiIdFromFileName = (fileName: string) =>
-  fileName.replace(/\.images\.json$/u, "").split("--")[0] ?? "";
-
-export const buildMainImageCandidateArtifactFileName = (poiId: string, poiName: string) =>
-  `${sanitizePoiIdForFile(poiId)}--${sanitizePoiNameForFile(poiName)}.images.json`;
-
-export const buildMainImageCandidateArtifactFilePath = (poiId: string, poiName: string) =>
-  path.join(artifactDirectoryPath(), buildMainImageCandidateArtifactFileName(poiId, poiName));
+export const buildMainImageCandidateArtifactFilePath = (poiId: string) =>
+  path.join(storiesDirectoryPath(), sanitizePoiIdForFile(poiId), "images.json");
 
 export const listMainImageCandidateArtifactFiles = () =>
-  (existsSync(artifactDirectoryPath()) ? readdirSync(artifactDirectoryPath()) : [])
-    .filter((fileName) => fileName.endsWith(".images.json"))
+  (existsSync(storiesDirectoryPath())
+    ? readdirSync(storiesDirectoryPath(), { withFileTypes: true })
+    : []
+  )
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name)
     .sort()
-    .map((fileName) => ({
-      fileName,
-      filePath: path.join(artifactDirectoryPath(), fileName),
-      poiId: getNormalizedPoiIdFromFileName(fileName),
-    }));
+    .flatMap((poiId) => {
+      const filePath = buildMainImageCandidateArtifactFilePath(poiId);
+
+      return existsSync(filePath) ? [{ fileName: `${poiId}/images.json`, filePath, poiId }] : [];
+    });
 
 export const listMainImageCandidateArtifactFilePathsForPoi = (poiId: string) => {
-  const normalizedPoiId = sanitizePoiIdForFile(poiId);
+  const filePath = buildMainImageCandidateArtifactFilePath(poiId);
 
-  return listMainImageCandidateArtifactFiles()
-    .filter(
-      ({ fileName }) =>
-        fileName === `${normalizedPoiId}.images.json` ||
-        (fileName.startsWith(`${normalizedPoiId}--`) && fileName.endsWith(".images.json")),
-    )
-    .map(({ filePath }) => filePath);
+  return existsSync(filePath) ? [filePath] : [];
 };
 
 export const readMainImageCandidateArtifact = (poiId: string) => {

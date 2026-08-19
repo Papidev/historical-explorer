@@ -1,6 +1,6 @@
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
-import { listDraftStoryArtifactFiles } from "@/server/storyWorkflow/draftStoryArtifacts";
+import { listStoryFiles } from "@/server/storyWorkflow/storyArtifacts";
 import { listMainImageCandidateArtifactFiles } from "@/server/storyWorkflow/mainImageCandidateArtifacts";
 import { getDefaultInputPath, getDefaultOutputDir } from "@/server/wikiPipeline/io";
 import type {
@@ -65,18 +65,20 @@ const loadGenerationMetadata = (filePath: string) => {
   return JSON.parse(readFileSync(filePath, "utf-8")) as GenerationMetadata;
 };
 
-const toPoiItems = (features: GeoJsonFeature[] | undefined) =>
+const toPoiItems = (features: GeoJsonFeature[] | undefined, raw = false) =>
   (features ?? []).map((feature, index) => {
     const properties = feature.properties ?? {};
-    const id =
+    const wikidata =
       (typeof feature.wikidataId === "string" && feature.wikidataId.trim()) ||
       (typeof properties.wikidata === "string" && properties.wikidata.trim()) ||
+      undefined;
+    const id =
+      (raw ? wikidata : undefined) ||
       (typeof feature.id === "string" && feature.id.trim()) ||
       (typeof feature.id === "number" ? `${feature.id}` : "") ||
+      wikidata ||
       `missing-id-${index}`;
     const name = (typeof properties.name === "string" && properties.name.trim()) || id;
-    const wikidata =
-      typeof properties.wikidata === "string" ? properties.wikidata.trim() : undefined;
 
     return { id, name, wikidata, featureIndex: index } satisfies PoiItem;
   });
@@ -97,8 +99,8 @@ const loadWikiSnapshots = (directoryPath: string) =>
       };
     });
 
-const loadAiMarkdownFiles = () =>
-  listDraftStoryArtifactFiles().map(({ fileName, filePath, poiId }, index) => {
+const loadStoryFiles = () =>
+  listStoryFiles().map(({ fileName, filePath, poiId }, index) => {
     const raw = readFileSync(filePath, "utf-8");
 
     return {
@@ -148,12 +150,21 @@ const toPoiRows = (
 
   for (const { item, json, updatedAt } of transformedPois) {
     const rowKey = toRowKey(item.id);
-    const row = rowsById.get(rowKey);
+    const rawRowEntry = item.wikidata
+      ? Array.from(rowsById.entries()).find(
+          ([, candidate]) => candidate.rawPoi?.wikidata === item.wikidata,
+        )
+      : undefined;
+    const row = rowsById.get(rowKey) ?? rawRowEntry?.[1];
+    if (rawRowEntry && rawRowEntry[0] !== rowKey) {
+      rowsById.delete(rawRowEntry[0]);
+    }
     rowsById.set(
       rowKey,
       row
         ? {
             ...row,
+            id: item.id,
             transformedPoi: item,
             transformedJson: json,
             transformedUpdatedAt: updatedAt,
@@ -280,13 +291,15 @@ const toPoiRows = (
 
 export const loadPoiLists = async () => {
   try {
-    const rawPath = path.join(process.cwd(), "public", "data", "raw", "rome-pois-raw.geojson");
+    const rawPath = path.join(process.cwd(), "data", "rome", "pois", "raw.geojson");
     const transformedPath = getDefaultInputPath("rome");
     const wikiDirectoryPath = getDefaultOutputDir("rome");
     const generationMetadataPath = path.join(
       process.cwd(),
       "data",
-      "admin-generation-metadata.json",
+      "rome",
+      "generated",
+      "generation-metadata.json",
     );
     const rawUpdatedAt = formatUpdatedAt(rawPath);
     const transformedUpdatedAt = existsSync(transformedPath)
@@ -294,7 +307,7 @@ export const loadPoiLists = async () => {
       : undefined;
     const generationMetadata = loadGenerationMetadata(generationMetadataPath);
 
-    const rawPois = toPoiItems(parseGeoJson(rawPath).features);
+    const rawPois = toPoiItems(parseGeoJson(rawPath).features, true);
     const transformedGeoJson = existsSync(transformedPath)
       ? parseGeoJson(transformedPath)
       : ({ features: [] } as GeoJson);
@@ -308,7 +321,7 @@ export const loadPoiLists = async () => {
       updatedAt: transformedUpdatedAt ?? "",
     }));
     const wikiPois = loadWikiSnapshots(wikiDirectoryPath);
-    const aiPois = loadAiMarkdownFiles();
+    const aiPois = loadStoryFiles();
     const mainImagePois = loadMainImageCandidateFiles();
     const rows = toPoiRows(
       rawPois,

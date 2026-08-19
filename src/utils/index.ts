@@ -1,6 +1,6 @@
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
-import { readCurrentDraftStoryArtifact } from "@/server/storyWorkflow/draftStoryArtifacts";
+import { readStory } from "@/server/storyWorkflow/storyArtifacts";
 import type { Poi } from "@/types/Poi";
 
 type GeoJson = {
@@ -40,7 +40,7 @@ export const getPoiDialogContent = async (city: string, poiId?: string) => {
     return undefined;
   }
 
-  return readCurrentDraftStoryArtifact(poiId)?.content;
+  return readStory(poiId)?.content;
 };
 
 const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Poi | null => {
@@ -61,16 +61,13 @@ const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Po
   const properties = feature.properties ?? {};
   const fallbackId = `poi-${index}`;
   const rawId =
-    typeof feature.wikidataId === "string"
-      ? feature.wikidataId
-      : typeof feature.id === "string"
-        ? feature.id
-        : typeof feature.id === "number"
-          ? `${feature.id}`
-          : (pickString(properties, "id", "@id") ?? fallbackId);
+    typeof feature.id === "string"
+      ? feature.id
+      : typeof feature.id === "number"
+        ? `${feature.id}`
+        : (pickString(properties, "id", "@id") ?? fallbackId);
 
   const name = pickString(properties, "name", "name:en", "name:it", "int_name") ?? rawId;
-  const contentSlug = pickString(properties, "content_slug", "content:slug");
   const historic = pickString(properties, "historic");
   const period =
     pickString(properties, "period", "start_date", "historic:period", "historic:civilization") ??
@@ -81,7 +78,7 @@ const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Po
   const city = pickString(properties, "addr:city", "is_in:city") ?? fallbackCity;
 
   const funFacts = [
-    rawId.replace(/^/, "Wikidata: "),
+    feature.wikidataId?.replace(/^/, "Wikidata: "),
     pickString(properties, "wikipedia")?.replace(/^/, "Wikipedia: "),
     pickString(properties, "heritage")?.replace(/^/, "Heritage status: "),
     pickString(properties, "charge")?.replace(/^/, "Ticket: "),
@@ -89,7 +86,6 @@ const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Po
 
   return {
     id: rawId,
-    contentSlug,
     name,
     city,
     coordinates: { lat, lng },
@@ -101,7 +97,7 @@ const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Po
 
 const buildGeoJsonFilePath = (city: string) => {
   const slug = toCitySlug(city);
-  return path.join(process.cwd(), "data", "generated", slug, "pois.geojson");
+  return path.join(process.cwd(), "data", slug, "pois", "pois.geojson");
 };
 
 const loadGeoJsonForCity = (city: string): GeoJson => {

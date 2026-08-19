@@ -1,6 +1,5 @@
 export type Poi = {
   id: string;
-  contentSlug?: string;
   name: string;
   city: string;
   coordinates: { lat: number; lng: number };

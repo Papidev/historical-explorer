@@ -15,14 +15,14 @@ pnpm dev
 
 Then open [http://localhost:3000](http://localhost:3000).
 
-The Rome map reads generated POI data from `data/generated/rome/pois.geojson`. That folder is intentionally gitignored, so a fresh checkout may need local generation from the admin UI before map markers appear.
+The Rome map reads its versioned POI catalog from `data/rome/pois/pois.geojson`.
 
 ## Routes
 
 - `/` - project home page.
 - `/rome` - Rome visitor map.
 - `/rome?poiId=<id>` - Rome visitor map with a POI detail panel opened.
-- `/admin` - temporary local editorial workflow for generating POI data, Wikipedia snapshots, and draft story markdown.
+- `/admin` - temporary local editorial workflow for generating POI data, Wikipedia snapshots, and Story content.
 
 ## Scripts
 
@@ -41,20 +41,19 @@ If you have a Tailwind Plus license, keep the copied Catalyst components locally
 
 For project glossary terms such as Raw POI, Draft Story, Sources, and Main Image, see `CONTEXT.md`.
 
-Raw POI input lives in `public/data/raw/`. Generated local-dev outputs live under `data/generated/` and are intentionally not committed.
+Each city's data lives under `data/<city>/`. The Raw POI input and app-ready POI catalog live together in the city's `pois/` folder and are versioned. Rebuildable local outputs live under `generated/` and are intentionally not committed.
 
-Each city has its own generated folder. For Rome, POI GeoJSON generated from Raw POI input is written to `data/generated/rome/pois.geojson`, and Wikipedia Text snapshots are generated into `data/generated/rome/wiki/`.
+For Rome, the Raw POI input lives at `data/rome/pois/raw.geojson`, while app-ready POIs are progressively added to `data/rome/pois/pois.geojson`. Each app-ready POI has a stable, human-readable `id`; external identifiers such as `wikidataId` are optional and separate. Wikipedia Text snapshots are generated into `data/rome/generated/wiki/`, while local pipeline timings and execution details live in `data/rome/generated/generation-metadata.json`.
 
 Use `/admin` to run the current Rome generation flow:
 
-1. Generate transformed POI JSON from the Raw POI.
+1. Add app-ready POI metadata from the Raw POI.
 2. Generate the Wikipedia Text snapshot.
-3. Generate the AI draft story markdown.
+3. Generate the Story markdown.
 
-Draft stories generated from the Wikipedia snapshot live as `.md` files in `data/wiki-ai/`, named with both the POI id and a readable slug, for example `q283650--forum-boarium.md`. Unlike the generated source snapshots, this is a reviewable content artifact and should be committed after AI generation and human editing.
-Today these files contain draft story prose; the broader Draft Story will also include Sources and a proposed Main Image as the workflow grows. Main Image Candidates should live beside the draft story prose as `.images.json` files in `data/wiki-ai/`; these files are also reviewable workflow artifacts and should be committed after generation and curator selection.
+Stories live under the city's `stories/` folder, with one directory per POI ID. For example, `data/rome/stories/forum-boarium/` contains the Story prose in `story.md` and its Main Image Candidates in `images.json`. These are reviewable content artifacts and should be committed after generation and human editing.
 
-For now, the filesystem is the only cache for generated POI data. If repeated reads of `data/generated/rome/pois.geojson` become expensive, consider adding a small in-memory read-through cache with filesystem `mtime` invalidation.
+Story status is not represented yet, so the same structure currently holds content whether it is still a draft or already finalized. When approval status is introduced, the visitor experience should only expose approved Stories.
 
 ## AI Configuration
 

@@ -13,6 +13,10 @@ _Avoid_: Clean POI, polished POI, transformed POI, spot, location, attraction
 A point of interest as it arrives from a source dataset before irrelevant fields are removed.
 _Avoid_: Raw feature, source feature
 
+**POI ID**:
+A stable, human-readable identifier assigned by Historical Explorer to a **Point of Interest**, independent of identifiers from external sources.
+_Avoid_: Wikidata ID, content slug
+
 **Story Workflow**:
 The internal process that gathers sources and creates, reviews, edits, enriches, and approves draft stories.
 _Avoid_: Draft Workflow, production workflow, admin workflow
@@ -60,6 +64,7 @@ _Avoid_: Production output, AI output
 ## Relationships
 
 - A **Raw POI** may become a **Point of Interest** when source data is cleaned for app use.
+- A **Point of Interest** has exactly one **POI ID** and may retain optional external identifiers such as a Wikidata ID.
 - A **Story Workflow** creates or updates the current **Draft Story** for a **Point of Interest**.
 - A **Story** belongs to exactly one **Point of Interest**.
 - A **Point of Interest** has at most one approved **Story** in the current product.
