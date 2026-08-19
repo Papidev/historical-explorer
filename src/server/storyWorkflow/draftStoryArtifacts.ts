@@ -3,7 +3,7 @@ import path from "node:path";
 import { buildOutputFilePath } from "@/server/wikiPipeline/io";
 import { sanitizePoiIdForFile, toCitySlug } from "@/server/wikiPipeline/normalize";
 
-const artifactDirectoryPath = () => path.join(process.cwd(), "data", "wiki-ai");
+const artifactDirectoryPath = () => path.join(process.cwd(), "data", "rome", "wiki-ai");
 
 const sanitizePoiNameForFile = (poiName: string) => toCitySlug(poiName) || "unknown-name";
 

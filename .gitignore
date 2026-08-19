@@ -22,7 +22,7 @@
 /build
 
 # generated local content
-/data/generated/
+/data/*/generated/
 
 # paid local UI kit source
 /src/app/components/catalyst/

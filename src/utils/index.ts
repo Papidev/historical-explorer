@@ -101,7 +101,7 @@ const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Po
 
 const buildGeoJsonFilePath = (city: string) => {
   const slug = toCitySlug(city);
-  return path.join(process.cwd(), "data", "generated", slug, "pois.geojson");
+  return path.join(process.cwd(), "data", slug, "generated", "pois.geojson");
 };
 
 const loadGeoJsonForCity = (city: string): GeoJson => {

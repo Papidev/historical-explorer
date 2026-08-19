@@ -280,13 +280,14 @@ const toPoiRows = (
 
 export const loadPoiLists = async () => {
   try {
-    const rawPath = path.join(process.cwd(), "data", "raw", "rome-pois-raw.geojson");
+    const rawPath = path.join(process.cwd(), "data", "rome", "raw", "pois.geojson");
     const transformedPath = getDefaultInputPath("rome");
     const wikiDirectoryPath = getDefaultOutputDir("rome");
     const generationMetadataPath = path.join(
       process.cwd(),
       "data",
-      "admin-generation-metadata.json",
+      "rome",
+      "generation-metadata.json",
     );
     const rawUpdatedAt = formatUpdatedAt(rawPath);
     const transformedUpdatedAt = existsSync(transformedPath)

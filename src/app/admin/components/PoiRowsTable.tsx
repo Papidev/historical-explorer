@@ -279,31 +279,31 @@ export const PoiRowsTable = ({
                     scope="col"
                     className="border-r border-b border-gray-200 py-2 pr-3 pl-4 text-left align-top"
                   >
-                    <ColumnHeader title="Raw" path="data/raw/rome-pois-raw.geojson" />
+                    <ColumnHeader title="Raw" path="data/rome/raw/pois.geojson" />
                   </th>
                   <th
                     scope="col"
                     className="border-r border-b border-gray-200 px-3 py-2 text-left align-top"
                   >
-                    <ColumnHeader title="POI" path="data/generated/rome/pois.geojson" />
+                    <ColumnHeader title="POI" path="data/rome/generated/pois.geojson" />
                   </th>
                   <th
                     scope="col"
                     className="border-r border-b border-gray-200 px-3 py-2 text-left align-top"
                   >
-                    <ColumnHeader title="Wikipedia Text" path="data/generated/rome/wiki/*.txt" />
+                    <ColumnHeader title="Wikipedia Text" path="data/rome/generated/wiki/*.txt" />
                   </th>
                   <th
                     scope="col"
                     className="border-r border-b border-gray-200 px-3 py-2 text-left align-top"
                   >
-                    <ColumnHeader title="Draft Story" path="data/wiki-ai/*.md" />
+                    <ColumnHeader title="Draft Story" path="data/rome/wiki-ai/*.md" />
                   </th>
                   <th
                     scope="col"
                     className="border-b border-gray-200 py-2 pr-4 pl-3 text-left align-top"
                   >
-                    <ColumnHeader title="Main Image" path="data/wiki-ai/*.images.json" />
+                    <ColumnHeader title="Main Image" path="data/rome/wiki-ai/*.images.json" />
                   </th>
                 </tr>
               </thead>
