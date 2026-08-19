@@ -71,7 +71,7 @@ type GeoJson = {
 const parseGeoJson = (filePath: string) => JSON.parse(readFileSync(filePath, "utf-8")) as GeoJson;
 
 const city = "rome";
-const rawPath = path.join(process.cwd(), "public", "data", "raw", "rome-pois-raw.geojson");
+const rawPath = path.join(process.cwd(), "data", "raw", "rome-pois-raw.geojson");
 const transformedPath = getDefaultInputPath(city);
 const generationMetadataPath = path.join(process.cwd(), "data", "admin-generation-metadata.json");
 

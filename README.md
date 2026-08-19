@@ -41,7 +41,7 @@ If you have a Tailwind Plus license, keep the copied Catalyst components locally
 
 For project glossary terms such as Raw POI, Draft Story, Sources, and Main Image, see `CONTEXT.md`.
 
-Raw POI input lives in `public/data/raw/`. Generated local-dev outputs live under `data/generated/` and are intentionally not committed.
+Raw POI input lives in `data/raw/`. Generated local-dev outputs live under `data/generated/` and are intentionally not committed.
 
 Each city has its own generated folder. For Rome, POI GeoJSON generated from Raw POI input is written to `data/generated/rome/pois.geojson`, and Wikipedia Text snapshots are generated into `data/generated/rome/wiki/`.
 
