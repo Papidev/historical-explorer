@@ -73,7 +73,13 @@ const parseGeoJson = (filePath: string) => JSON.parse(readFileSync(filePath, "ut
 const city = "rome";
 const rawPath = path.join(process.cwd(), "data", "rome", "pois", "raw.geojson");
 const transformedPath = getDefaultInputPath(city);
-const generationMetadataPath = path.join(process.cwd(), "data", "rome", "generation-metadata.json");
+const generationMetadataPath = path.join(
+  process.cwd(),
+  "data",
+  "rome",
+  "generated",
+  "generation-metadata.json",
+);
 
 const pickString = (properties: Record<string, unknown>, ...keys: string[]) => {
   for (const key of keys) {

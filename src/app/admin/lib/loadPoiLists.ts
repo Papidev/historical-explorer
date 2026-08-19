@@ -298,6 +298,7 @@ export const loadPoiLists = async () => {
       process.cwd(),
       "data",
       "rome",
+      "generated",
       "generation-metadata.json",
     );
     const rawUpdatedAt = formatUpdatedAt(rawPath);
