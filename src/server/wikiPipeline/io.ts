@@ -22,7 +22,7 @@ export const getDefaultInputPath = (city: string) =>
     process.cwd(),
     "data",
     toCitySlug(city),
-    "generated",
+    "pois",
     "pois.geojson",
   );
 

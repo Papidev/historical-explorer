@@ -280,7 +280,7 @@ const toPoiRows = (
 
 export const loadPoiLists = async () => {
   try {
-    const rawPath = path.join(process.cwd(), "data", "rome", "raw", "pois.geojson");
+    const rawPath = path.join(process.cwd(), "data", "rome", "pois", "raw.geojson");
     const transformedPath = getDefaultInputPath("rome");
     const wikiDirectoryPath = getDefaultOutputDir("rome");
     const generationMetadataPath = path.join(

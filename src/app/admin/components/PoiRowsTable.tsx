@@ -279,13 +279,13 @@ export const PoiRowsTable = ({
                     scope="col"
                     className="border-r border-b border-gray-200 py-2 pr-3 pl-4 text-left align-top"
                   >
-                    <ColumnHeader title="Raw" path="data/rome/raw/pois.geojson" />
+                    <ColumnHeader title="Raw" path="data/rome/pois/raw.geojson" />
                   </th>
                   <th
                     scope="col"
                     className="border-r border-b border-gray-200 px-3 py-2 text-left align-top"
                   >
-                    <ColumnHeader title="POI" path="data/rome/generated/pois.geojson" />
+                    <ColumnHeader title="POI" path="data/rome/pois/pois.geojson" />
                   </th>
                   <th
                     scope="col"
