@@ -26,12 +26,10 @@ export type PoiInput = {
   };
 };
 
-export type ResolutionMethod = "wikipedia_tag_en" | "wikidata_enwiki" | "geosearch_en";
+export type ResolutionMethod = "wikipedia_tag_en" | "wikidata_enwiki";
 
 export type ResolutionCandidate = {
-  pageid?: number;
   title: string;
-  distance?: number;
   source: ResolutionMethod;
 };
 
@@ -39,7 +37,6 @@ export type ResolvedPage = {
   method: ResolutionMethod;
   candidates: ResolutionCandidate[];
   selected: {
-    pageid?: number;
     title: string;
   };
 };
