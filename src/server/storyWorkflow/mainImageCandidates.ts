@@ -1,5 +1,5 @@
-import { resolvePageForPoi } from "./resolve";
-import type { MainImageCandidate, MainImageDiscoveredVia, PoiInput } from "./types";
+import { resolvePageForPoi } from "@/server/wikiPipeline/resolve";
+import type { MainImageCandidate, MainImageDiscoveredVia, PoiInput } from "@/server/wikiPipeline/types";
 
 const WIKIPEDIA_API = "https://en.wikipedia.org/w/api.php";
 const WIKIDATA_API = "https://www.wikidata.org/w/api.php";

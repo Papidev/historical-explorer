@@ -1,5 +1,6 @@
-import { existsSync, readdirSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
+import { readCurrentDraftStoryArtifact } from "@/server/storyWorkflow/draftStoryArtifacts";
 import type { Poi } from "@/types/Poi";
 
 type GeoJson = {
@@ -34,55 +35,15 @@ const toCitySlug = (city: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
 
-const sanitizePoiIdForFile = (poiId: string) =>
-  poiId
-    .trim()
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "") || "unknown-poi";
-
 export const getPoiDialogContent = async (city: string, poiId?: string) => {
   if (!poiId) {
     return undefined;
   }
 
-  const directoryPath = path.join(process.cwd(), "data", "wiki-ai");
-  const normalizedPoiId = sanitizePoiIdForFile(poiId);
-  const markdownFilePath = existsSync(directoryPath)
-    ? readdirSync(directoryPath)
-        .filter(
-          (fileName) =>
-            fileName === `${normalizedPoiId}.md` ||
-            (fileName.startsWith(`${normalizedPoiId}--`) &&
-              fileName.endsWith(".md")),
-        )
-        .sort()
-        .at(-1)
-    : undefined;
-  const legacyTextFilePath = path.join(
-    directoryPath,
-    `${normalizedPoiId}.txt`,
-  );
-  const filePath = markdownFilePath
-    ? path.join(directoryPath, markdownFilePath)
-    : legacyTextFilePath;
-  if (!existsSync(filePath)) {
-    return undefined;
-  }
-
-  const raw = readFileSync(filePath, "utf-8").trim();
-  if (!raw) {
-    return undefined;
-  }
-
-  return raw;
+  return readCurrentDraftStoryArtifact(poiId)?.content;
 };
 
-const asPoi = (
-  feature: GeoJsonFeature,
-  index: number,
-  fallbackCity: string,
-): Poi | null => {
+const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Poi | null => {
   if (feature.geometry?.type !== "Point") {
     return null;
   }
@@ -108,23 +69,16 @@ const asPoi = (
           ? `${feature.id}`
           : (pickString(properties, "id", "@id") ?? fallbackId);
 
-  const name =
-    pickString(properties, "name", "name:en", "name:it", "int_name") ?? rawId;
+  const name = pickString(properties, "name", "name:en", "name:it", "int_name") ?? rawId;
   const contentSlug = pickString(properties, "content_slug", "content:slug");
   const historic = pickString(properties, "historic");
   const period =
-    pickString(
-      properties,
-      "period",
-      "start_date",
-      "historic:period",
-      "historic:civilization",
-    ) ?? historic;
+    pickString(properties, "period", "start_date", "historic:period", "historic:civilization") ??
+    historic;
   const description =
     pickString(properties, "short_description", "description") ??
     (historic ? `Historic feature: ${historic}` : undefined);
-  const city =
-    pickString(properties, "addr:city", "is_in:city") ?? fallbackCity;
+  const city = pickString(properties, "addr:city", "is_in:city") ?? fallbackCity;
 
   const funFacts = [
     rawId.replace(/^/, "Wikidata: "),
