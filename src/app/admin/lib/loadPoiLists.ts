@@ -1,6 +1,6 @@
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
-import { listDraftStoryArtifactFiles } from "@/server/storyWorkflow/draftStoryArtifacts";
+import { listStoryFiles } from "@/server/storyWorkflow/storyArtifacts";
 import { listMainImageCandidateArtifactFiles } from "@/server/storyWorkflow/mainImageCandidateArtifacts";
 import { getDefaultInputPath, getDefaultOutputDir } from "@/server/wikiPipeline/io";
 import type {
@@ -99,8 +99,8 @@ const loadWikiSnapshots = (directoryPath: string) =>
       };
     });
 
-const loadAiMarkdownFiles = () =>
-  listDraftStoryArtifactFiles().map(({ fileName, filePath, poiId }, index) => {
+const loadStoryFiles = () =>
+  listStoryFiles().map(({ fileName, filePath, poiId }, index) => {
     const raw = readFileSync(filePath, "utf-8");
 
     return {
@@ -321,7 +321,7 @@ export const loadPoiLists = async () => {
       updatedAt: transformedUpdatedAt ?? "",
     }));
     const wikiPois = loadWikiSnapshots(wikiDirectoryPath);
-    const aiPois = loadAiMarkdownFiles();
+    const aiPois = loadStoryFiles();
     const mainImagePois = loadMainImageCandidateFiles();
     const rows = toPoiRows(
       rawPois,

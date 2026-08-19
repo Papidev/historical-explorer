@@ -22,7 +22,7 @@ The Rome map reads its versioned POI catalog from `data/rome/pois/pois.geojson`.
 - `/` - project home page.
 - `/rome` - Rome visitor map.
 - `/rome?poiId=<id>` - Rome visitor map with a POI detail panel opened.
-- `/admin` - temporary local editorial workflow for generating POI data, Wikipedia snapshots, and draft story markdown.
+- `/admin` - temporary local editorial workflow for generating POI data, Wikipedia snapshots, and Story content.
 
 ## Scripts
 
@@ -49,10 +49,11 @@ Use `/admin` to run the current Rome generation flow:
 
 1. Add app-ready POI metadata from the Raw POI.
 2. Generate the Wikipedia Text snapshot.
-3. Generate the AI draft story markdown.
+3. Generate the Story markdown.
 
-Draft stories generated from the Wikipedia snapshot live as `.md` files in the city's `wiki-ai/` folder, such as `data/rome/wiki-ai/`. They use the POI ID as their file name, for example `forum-boarium.md`. Unlike the generated source snapshots, this is a reviewable content artifact and should be committed after AI generation and human editing.
-Today these files contain draft story prose; the broader Draft Story will also include Sources and a proposed Main Image as the workflow grows. Main Image Candidates should live beside the draft story prose as `.images.json` files in the city's `wiki-ai/` folder; these files are also reviewable workflow artifacts and should be committed after generation and curator selection.
+Stories live under the city's `stories/` folder, with one directory per POI ID. For example, `data/rome/stories/forum-boarium/` contains the Story prose in `story.md` and its Main Image Candidates in `images.json`. These are reviewable content artifacts and should be committed after generation and human editing.
+
+Story status is not represented yet, so the same structure currently holds content whether it is still a draft or already finalized. When approval status is introduced, the visitor experience should only expose approved Stories.
 
 ## AI Configuration
 

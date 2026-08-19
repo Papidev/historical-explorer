@@ -1,6 +1,6 @@
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
-import { readCurrentDraftStoryArtifact } from "@/server/storyWorkflow/draftStoryArtifacts";
+import { readStory } from "@/server/storyWorkflow/storyArtifacts";
 import type { Poi } from "@/types/Poi";
 
 type GeoJson = {
@@ -40,7 +40,7 @@ export const getPoiDialogContent = async (city: string, poiId?: string) => {
     return undefined;
   }
 
-  return readCurrentDraftStoryArtifact(poiId)?.content;
+  return readStory(poiId)?.content;
 };
 
 const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Poi | null => {

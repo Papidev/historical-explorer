@@ -4,10 +4,9 @@ import { existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from "
 import path from "node:path";
 import { revalidatePath } from "next/cache";
 import {
-  buildDraftStoryArtifactFilePath,
-  buildLegacyDraftStoryArtifactFilePath,
-  listDraftStoryArtifactFilePathsForPoi,
-} from "@/server/storyWorkflow/draftStoryArtifacts";
+  buildStoryFilePath,
+  listStoryFilePathsForPoi,
+} from "@/server/storyWorkflow/storyArtifacts";
 import {
   buildMainImageCandidateArtifactFilePath,
   listMainImageCandidateArtifactFilePathsForPoi,
@@ -295,7 +294,7 @@ const writeAiTextFile = async (poiId: string, aiSelection: AiSelection) => {
 
   const { rawFeature } = findRawFeatureByPoiId(poiId);
   const poiName = pickString(rawFeature.properties ?? {}, "name:en", "name", "int_name") ?? poiId;
-  const outputFilePath = buildDraftStoryArtifactFilePath(poiId);
+  const outputFilePath = buildStoryFilePath(poiId);
   mkdirSync(path.dirname(outputFilePath), { recursive: true });
   writeFileSync(
     outputFilePath,
@@ -376,10 +375,7 @@ const deleteWikiSnapshotFile = (poiId: string) => {
 };
 
 const deleteAiTextFile = (poiId: string) => {
-  for (const outputFilePath of [
-    ...listDraftStoryArtifactFilePathsForPoi(poiId),
-    buildLegacyDraftStoryArtifactFilePath(poiId),
-  ]) {
+  for (const outputFilePath of listStoryFilePathsForPoi(poiId)) {
     if (existsSync(outputFilePath)) {
       unlinkSync(outputFilePath);
     }
