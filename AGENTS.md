@@ -16,7 +16,7 @@
 - `pnpm lint` runs ESLint with the Next `core-web-vitals` rules plus `eslint-config-prettier` to keep formatting conflicts out.
 - During iteration, run the smallest useful verification; `pnpm lint` is a required final gate before handoff/PR, not after every tiny edit.
 - `pnpm lint` is not a full TypeScript type-check in this repo; when touching TS-heavy logic, also run `pnpm build` (or `tsc --noEmit` if a script is available) before considering the change complete.
-- Prettier is configured with `prettier-plugin-tailwindcss`; rely on `pnpm prettier --write` or your editor integration so Tailwind classes remain sorted.
+- The pre-commit hook runs Prettier and ESLint automatically on staged files. Do not run them after every modification; use targeted checks during iteration and let the hook format staged Tailwind classes with `prettier-plugin-tailwindcss`.
 
 ## Tailwind Plus / Catalyst
 

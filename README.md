@@ -13,6 +13,8 @@ pnpm install
 pnpm dev
 ```
 
+`pnpm install` activates the Husky Git hooks. Before each commit, staged files are formatted with Prettier and staged JavaScript/TypeScript files are checked and fixed with ESLint. Run `pnpm lint` for a full-project check before opening a pull request.
+
 Then open [http://localhost:3000](http://localhost:3000).
 
 The Rome map reads its versioned POI catalog from `data/rome/pois/pois.geojson`.
