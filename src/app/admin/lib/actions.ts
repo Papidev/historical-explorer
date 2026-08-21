@@ -316,8 +316,7 @@ const writeMainImageCandidatesFile = async (poiId: string) => {
   const selectedCommonsFileName =
     candidates.find(
       (candidate) => candidate.commonsFileName === previousArtifact?.selectedCommonsFileName,
-    )?.commonsFileName ??
-    (selectableCandidates.length === 1 ? selectableCandidates[0]?.commonsFileName : undefined);
+    )?.commonsFileName ?? selectableCandidates[0]?.commonsFileName;
   const outputFilePath = buildMainImageCandidateArtifactFilePath(poiId);
 
   mkdirSync(path.dirname(outputFilePath), { recursive: true });

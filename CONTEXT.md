@@ -18,8 +18,16 @@ A stable, human-readable identifier assigned by Historical Explorer to a **Point
 _Avoid_: Wikidata ID, content slug
 
 **Story Workflow**:
-The internal process that gathers sources and creates, reviews, edits, enriches, and approves draft stories.
+The internal process that takes a **Point of Interest** through **Draft Story Generation** and **Story Curation** until it has an approved **Story**.
 _Avoid_: Draft Workflow, production workflow, admin workflow
+
+**Draft Story Generation**:
+The automated part of the **Story Workflow** that gathers **Sources** and creates or updates a **Draft Story**, its **Main Image Candidates**, and its **Draft Main Image**.
+_Avoid_: Generation Pipeline, AI pipeline, draft workflow
+
+**Story Curation**:
+The human part of the **Story Workflow** in which a **Curator** reviews and edits a **Draft Story**, may change its **Draft Main Image**, and approves it as a **Story**.
+_Avoid_: Review Workflow, approval workflow, manual workflow
 
 **Curator**:
 The human decision-maker who reviews, edits, enriches, and approves draft stories.
@@ -49,8 +57,12 @@ _Avoid_: Fact, section, card, reasoning
 The image in a story that helps visitors recognize a **Point of Interest** or notice an important visible detail.
 _Avoid_: Lead Image Candidate, decoration, gallery image
 
+**Draft Main Image**:
+The current image selected for a **Draft Story** before approval. It becomes the **Main Image** only when the **Draft Story** becomes a **Story**.
+_Avoid_: Proposed Main Image, selected image, temporary Main Image
+
 **Main Image Candidate**:
-A workflow-only image option that helps identify a **Point of Interest** before a **Curator** chooses the **Main Image** for a **Draft Story**.
+A workflow-only image option from which **Draft Story Generation** or a **Curator** selects the **Draft Main Image**.
 _Avoid_: Alternative, gallery image, image result
 
 **Source**:
@@ -65,7 +77,10 @@ _Avoid_: Production output, AI output
 
 - A **Raw POI** may become a **Point of Interest** when source data is cleaned for app use.
 - A **Point of Interest** has exactly one **POI ID** and may retain optional external identifiers such as a Wikidata ID.
-- A **Story Workflow** creates or updates the current **Draft Story** for a **Point of Interest**.
+- A **Story Workflow** comprises **Draft Story Generation** followed by **Story Curation**.
+- **Draft Story Generation** starts from an existing **Point of Interest** and creates or updates its current **Draft Story**.
+- Creating a **Point of Interest** from a **Raw POI** happens before, and does not belong to, the **Story Workflow**.
+- **Story Curation** begins after **Draft Story Generation** has produced a reviewable **Draft Story**.
 - A **Story** belongs to exactly one **Point of Interest**.
 - A **Point of Interest** has at most one approved **Story** in the current product.
 - A **Point of Interest** has at most one current **Draft Story**.
@@ -77,15 +92,17 @@ _Avoid_: Production output, AI output
 - A **Story** is composed from the strongest few **Visitor Insights**, not from a complete article summary.
 - A **Draft Story** proposes the **Visitor Insights** that may shape the approved **Story**.
 - A **Draft Story** becomes a **Story** only when approved by a **Curator**.
-- A **Draft Story** contains draft prose and one or more **Sources**, and may include zero or more editorial highlights, one proposed **Main Image**, and one or more **Main Image Candidates**.
-- A **Draft Story** must include one proposed **Main Image** with source, rights, license, and attribution information before it becomes a **Story**.
-- The first **Story Workflow** proposes up to three **Main Image Candidates** for each **Draft Story**.
+- A **Draft Story** contains draft prose and one or more **Sources**, and may include zero or more editorial highlights, one **Draft Main Image**, and one or more **Main Image Candidates**.
+- A **Draft Story** must include one **Draft Main Image** with source, rights, license, and attribution information before it becomes a **Story**.
+- The first **Draft Story Generation** proposes up to three **Main Image Candidates** for each **Draft Story**.
 - **Main Image Candidates** should help visitors recognize the **Point of Interest**, not inspect a detail.
 - The first **Main Image Candidates** come from Wikimedia Commons.
-- **Main Image Candidates** belong to the **Story Workflow**, not to the visitor-facing **Story**.
+- **Main Image Candidates** belong to the **Draft Story**, not to the visitor-facing **Story**.
 - The first **Main Images** come from Wikimedia Commons.
-- A **Curator** may select a **Main Image Candidate** as the current **Main Image** for a **Draft Story**, and may change that selection before approving the **Draft Story**.
-- **Main Image Candidates** and the current selected **Main Image** are reviewable parts of a **Draft Story**.
+- **Draft Story Generation** preserves the current **Draft Main Image** when it remains an available candidate; otherwise it automatically selects the first candidate with license and attribution information.
+- A **Curator** may select a **Main Image Candidate** as the current **Draft Main Image**, and may change that selection before approving the **Draft Story**.
+- **Main Image Candidates** and the **Draft Main Image** are reviewable parts of a **Draft Story**.
+- When a **Curator** approves a **Draft Story**, its **Draft Main Image** becomes the **Main Image** of the resulting **Story**.
 - A **Visitor Insight** should prefer visible details when they can carry the cultural meaning.
 - The first **Sources** come from Wikipedia, Wikidata, and Wikimedia Commons.
 - A **Curator** may edit a **Draft Story** before approving it.
@@ -98,8 +115,8 @@ _Avoid_: Production output, AI output
 
 ## Example dialogue
 
-> **Dev:** "Can the **Story Workflow** publish a generated story directly to the **Visitor Experience**?"
-> **Domain expert:** "No — it can only create a **Draft Story**. A **Curator** must approve it before it becomes a **Story**."
+> **Dev:** "Does **Draft Story Generation** choose the final **Main Image**?"
+> **Domain expert:** "It automatically selects a **Draft Main Image**. During **Story Curation**, a **Curator** may change it; it becomes the **Main Image** only when the **Draft Story** is approved as a **Story**."
 
 ## Flagged ambiguities
 
@@ -115,4 +132,4 @@ _Avoid_: Production output, AI output
 - "main image from Wikipedia" was ambiguous between using a Wikipedia article thumbnail as the source and discovering images through Wikipedia/Wikidata — resolved: Wikipedia/Wikidata may help discover images, but the image source and attribution should come from Wikimedia Commons.
 - "exactly three candidates" overstated the first direct-source workflow because Wikidata and Wikipedia page images may provide fewer than three distinct usable images — resolved: the first **Story Workflow** proposes up to three **Main Image Candidates**.
 - "show the selected image" was ambiguous between the **Story Workflow** and the **Visitor Experience** — resolved: the first image-candidate implementation stays workflow-only until the approved **Story** shape is explicit.
-- "selected image" was ambiguous with final story approval — resolved: selecting a **Main Image Candidate** is a mutable **Story Workflow** decision until the **Draft Story** becomes an approved **Story**.
+- "selected image" was ambiguous with final story approval — resolved: call the mutable selection on a **Draft Story** the **Draft Main Image**; it becomes the **Main Image** only upon approval.

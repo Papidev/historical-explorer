@@ -350,15 +350,15 @@ export const PoiRowsTable = ({
                                       formData: createPoiFormData(row.id),
                                     },
                                     {
-                                      description: "Generating Story...",
-                                      action: refreshAiAction,
-                                      formData: createPoiFormData(row.id),
-                                    },
-                                    {
                                       description: "Generating Main Image Candidates...",
                                       action: refreshMainImageCandidatesAction,
                                       formData: createPoiFormData(row.id),
                                       continueOnError: true,
+                                    },
+                                    {
+                                      description: "Generating Story...",
+                                      action: refreshAiAction,
+                                      formData: createPoiFormData(row.id),
                                     },
                                   ])
                                 }

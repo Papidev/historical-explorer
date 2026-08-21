@@ -59,7 +59,7 @@ For the first AI story workflow, AI should produce:
 - one proposed main image with source, license, and attribution metadata, chosen from three Wikimedia Commons recognizer candidates
 - source material used to ground the draft story
 
-Main image candidate discovery should be the last Story Workflow step and should be started manually, after the draft story prose exists. It should be retryable independently from story prose generation.
+Main image candidate discovery should run after Wikipedia source acquisition and before draft story prose generation. It should remain retryable independently from story prose generation. The workflow should keep an existing available selection or automatically select the first candidate with license and attribution; the curator may review and change that selection.
 
 The admin dashboard should let the curator choose the AI provider for the current admin session, switching between local AI through Ollama and cloud AI through Gemini without rewriting environment configuration. The selector should use the concise choices "Local" and "Cloud", with a secondary line explaining the concrete provider, model, and cost implication. `AI_MODE` should choose the initial Local/Cloud selection, while `LOCAL_AI_PROVIDER`, `LOCAL_AI_MODEL`, `CLOUD_AI_PROVIDER`, and `CLOUD_AI_MODEL` configure the concrete backends. These variables are the primary AI configuration shape. The selected provider and model should be submitted with each manual AI workflow action.
 

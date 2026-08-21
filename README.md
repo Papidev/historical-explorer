@@ -51,7 +51,8 @@ Use `/admin` to run the current Rome generation flow:
 
 1. Add app-ready POI metadata from the Raw POI.
 2. Generate the Wikipedia Text snapshot.
-3. Generate the Story markdown.
+3. Generate Main Image Candidates and select the first candidate with license and attribution.
+4. Generate the Story markdown.
 
 Stories live under the city's `stories/` folder, with one directory per POI ID. For example, `data/rome/stories/forum-boarium/` contains the Story prose in `story.md` and its Main Image Candidates in `images.json`. These are reviewable content artifacts and should be committed after generation and human editing.
 
