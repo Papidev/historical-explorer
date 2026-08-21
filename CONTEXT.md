@@ -50,7 +50,7 @@ The image in a story that helps visitors recognize a **Point of Interest** or no
 _Avoid_: Lead Image Candidate, decoration, gallery image
 
 **Main Image Candidate**:
-A workflow-only image option that helps identify a **Point of Interest** before a **Curator** chooses the **Main Image** for a **Draft Story**.
+A workflow-only image option that helps identify a **Point of Interest** and belongs to the set from which the **Story Workflow** selects the **Main Image** for a **Draft Story**.
 _Avoid_: Alternative, gallery image, image result
 
 **Source**:
@@ -84,6 +84,7 @@ _Avoid_: Production output, AI output
 - The first **Main Image Candidates** come from Wikimedia Commons.
 - **Main Image Candidates** belong to the **Story Workflow**, not to the visitor-facing **Story**.
 - The first **Main Images** come from Wikimedia Commons.
+- The **Story Workflow** keeps an available current **Main Image** selection or selects the first candidate with license and attribution.
 - A **Curator** may select a **Main Image Candidate** as the current **Main Image** for a **Draft Story**, and may change that selection before approving the **Draft Story**.
 - **Main Image Candidates** and the current selected **Main Image** are reviewable parts of a **Draft Story**.
 - A **Visitor Insight** should prefer visible details when they can carry the cultural meaning.

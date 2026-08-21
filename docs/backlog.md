@@ -49,7 +49,7 @@ Use one Story storage Module that reads, writes, lists, validates, and removes t
 ## Run the Story Workflow server-side
 
 **Observation**  
-The admin browser currently knows and executes the sequence Point of Interest, Wikipedia Text, Story, and Main Image Candidates through separate server actions.
+The admin browser currently knows and executes the sequence Point of Interest, Wikipedia Text, Main Image Candidates, and Story through separate server actions.
 
 **Risk**  
 Workflow ordering and identifier transitions leak into the browser, interrupted runs leave partial state, and another caller would need to reproduce the same orchestration.
