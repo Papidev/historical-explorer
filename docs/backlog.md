@@ -46,20 +46,6 @@ A Story gains another artifact, partial directories cause real workflow problems
 **Possible direction**  
 Use one Story storage Module that reads, writes, lists, validates, and removes the whole per-POI aggregate while keeping the files physically separate.
 
-## Run the Story Workflow server-side
-
-**Observation**  
-The admin browser currently knows and executes the sequence Point of Interest, Wikipedia Text, Main Image Candidates, and Story through separate server actions.
-
-**Risk**  
-Workflow ordering and identifier transitions leak into the browser, interrupted runs leave partial state, and another caller would need to reproduce the same orchestration.
-
-**Revisit when**  
-The Story Workflow gains another step, needs resume behavior, or must be invoked outside the admin browser.
-
-**Possible direction**  
-Move ordering, identifier resolution, partial-failure behavior, and cascade deletion into a deep Story Workflow Module while retaining independent retry operations.
-
 ## Report Story Workflow progress to the browser
 
 **Observation**

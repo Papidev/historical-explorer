@@ -1,0 +1,266 @@
+import type { MainImageCandidate, PoiInput } from "@/server/wikiPipeline/types";
+import {
+  StoryWorkflowError,
+  type AiSelection,
+  type DraftStoryGenerationStatus,
+  type DraftStorySnapshot,
+  type Source,
+  type StoryWorkflow,
+} from "./types";
+
+export type StoryWorkflowRepository = {
+  get(poiId: string): Promise<DraftStorySnapshot | undefined>;
+  replaceSources(
+    poiId: string,
+    sources: Source[],
+    checkpoint: NonNullable<DraftStoryGenerationStatus["sources"]>,
+  ): Promise<void>;
+  replaceMainImageCandidates(
+    poiId: string,
+    candidates: MainImageCandidate[],
+    selectedCommonsFileName: string | undefined,
+    checkpoint: NonNullable<DraftStoryGenerationStatus["mainImageCandidates"]>,
+  ): Promise<void>;
+  replaceStoryProse(
+    poiId: string,
+    storyProse: string,
+    checkpoint: NonNullable<DraftStoryGenerationStatus["storyProse"]>,
+  ): Promise<void>;
+  deleteStoryProse(poiId: string): Promise<void>;
+  deleteMainImageCandidates(poiId: string): Promise<void>;
+  reset(poiId: string): Promise<void>;
+};
+
+export type StoryWorkflowDependencies = {
+  findPointOfInterest(poiId: string): Promise<PoiInput | undefined>;
+  acquireSources(pointOfInterest: PoiInput): Promise<Source[]>;
+  generateMainImageCandidates(pointOfInterest: PoiInput): Promise<MainImageCandidate[]>;
+  generateStoryProse(input: {
+    pointOfInterest: PoiInput;
+    sources: Source[];
+    ai: AiSelection;
+  }): Promise<{ content: string; provider: "ollama" | "gemini" }>;
+  repository: StoryWorkflowRepository;
+  now?: () => Date;
+};
+
+const toCheckpoint = (startedAt: number, now: () => Date) => ({
+  durationMs: now().getTime() - startedAt,
+  completedAt: now().toISOString(),
+});
+
+const persistenceError = (cause: unknown) =>
+  new StoryWorkflowError({
+    code: "persistence-failed",
+    stage: "persistence",
+    retryable: true,
+    cause,
+  });
+
+const findPointOfInterest = async (
+  poiId: string,
+  dependencies: StoryWorkflowDependencies,
+) => {
+  const pointOfInterest = await dependencies.findPointOfInterest(poiId);
+  if (!pointOfInterest) {
+    throw new StoryWorkflowError({
+      code: "point-of-interest-not-found",
+      stage: "sources",
+      retryable: false,
+    });
+  }
+
+  return pointOfInterest;
+};
+
+const selectDraftMainImage = (
+  candidates: MainImageCandidate[],
+  currentCommonsFileName?: string,
+) =>
+  candidates.find(
+    (candidate) =>
+      candidate.commonsFileName === currentCommonsFileName &&
+      candidate.license &&
+      candidate.attribution,
+  )?.commonsFileName ??
+  candidates.find((candidate) => candidate.license && candidate.attribution)
+    ?.commonsFileName;
+
+export const createStoryWorkflow = (
+  dependencies: StoryWorkflowDependencies,
+): StoryWorkflow => {
+  const now = dependencies.now ?? (() => new Date());
+
+  const acquireAndPersistSources = async (pointOfInterest: PoiInput) => {
+    const startedAt = now().getTime();
+    let sources: Source[];
+    try {
+      sources = await dependencies.acquireSources(pointOfInterest);
+      if (sources.length === 0 || sources.some((source) => !source.content.trim())) {
+        throw new Error("No usable sources were returned.");
+      }
+    } catch (cause) {
+      throw new StoryWorkflowError({
+        code: "sources-unavailable",
+        stage: "sources",
+        retryable: true,
+        cause,
+      });
+    }
+
+    try {
+      await dependencies.repository.replaceSources(
+        pointOfInterest.id,
+        sources,
+        toCheckpoint(startedAt, now),
+      );
+    } catch (cause) {
+      throw persistenceError(cause);
+    }
+
+    return sources;
+  };
+
+  const generateAndPersistCandidates = async (pointOfInterest: PoiInput) => {
+    const startedAt = now().getTime();
+    const previous = await dependencies.repository.get(pointOfInterest.id);
+    let candidates: MainImageCandidate[];
+    try {
+      candidates = await dependencies.generateMainImageCandidates(pointOfInterest);
+    } catch (cause) {
+      throw new StoryWorkflowError({
+        code: "main-image-candidates-generation-failed",
+        stage: "mainImageCandidates",
+        retryable: true,
+        cause,
+      });
+    }
+
+    const selectedCommonsFileName = selectDraftMainImage(
+      candidates,
+      previous?.draftMainImage?.commonsFileName,
+    );
+    try {
+      await dependencies.repository.replaceMainImageCandidates(
+        pointOfInterest.id,
+        candidates,
+        selectedCommonsFileName,
+        toCheckpoint(startedAt, now),
+      );
+    } catch (cause) {
+      throw persistenceError(cause);
+    }
+
+    return selectedCommonsFileName;
+  };
+
+  const generateAndPersistStoryProse = async (
+    pointOfInterest: PoiInput,
+    sources: Source[],
+    ai: AiSelection,
+  ) => {
+    const startedAt = now().getTime();
+    let generated: { content: string; provider: "ollama" | "gemini" };
+    try {
+      generated = await dependencies.generateStoryProse({
+        pointOfInterest,
+        sources,
+        ai,
+      });
+      if (!generated.content.trim()) {
+        throw new Error("Story Prose was empty.");
+      }
+    } catch (cause) {
+      throw new StoryWorkflowError({
+        code: "story-prose-generation-failed",
+        stage: "storyProse",
+        retryable: true,
+        cause,
+      });
+    }
+
+    try {
+      await dependencies.repository.replaceStoryProse(
+        pointOfInterest.id,
+        generated.content,
+        {
+          ...toCheckpoint(startedAt, now),
+          aiMode: ai.mode,
+          aiProvider: generated.provider,
+          aiModel: ai.model,
+        },
+      );
+    } catch (cause) {
+      throw persistenceError(cause);
+    }
+  };
+
+  return {
+    draftStory: {
+      generate: async ({ poiId, ai }) => {
+        const pointOfInterest = await findPointOfInterest(poiId, dependencies);
+        const sources = await acquireAndPersistSources(pointOfInterest);
+        let mainImageCandidates: "generated" | "failed" = "generated";
+        let selectedCommonsFileName: string | undefined;
+        try {
+          selectedCommonsFileName = await generateAndPersistCandidates(pointOfInterest);
+        } catch {
+          mainImageCandidates = "failed";
+          selectedCommonsFileName = (await dependencies.repository.get(poiId))
+            ?.draftMainImage?.commonsFileName;
+        }
+        await generateAndPersistStoryProse(pointOfInterest, sources, ai);
+
+        return {
+          poiId,
+          mainImageCandidates,
+          draftMainImage: selectedCommonsFileName ? "available" : "missing",
+          storyProse: "generated",
+        };
+      },
+      get: ({ poiId }) => dependencies.repository.get(poiId),
+      reset: async ({ poiId }) => {
+        try {
+          await dependencies.repository.reset(poiId);
+        } catch (cause) {
+          throw persistenceError(cause);
+        }
+      },
+    },
+    storyProse: {
+      generate: async ({ poiId, ai }) => {
+        const pointOfInterest = await findPointOfInterest(poiId, dependencies);
+        const sources = (await dependencies.repository.get(poiId))?.sources ?? [];
+        if (sources.length === 0) {
+          throw new StoryWorkflowError({
+            code: "sources-unavailable",
+            stage: "sources",
+            retryable: true,
+          });
+        }
+        await generateAndPersistStoryProse(pointOfInterest, sources, ai);
+      },
+      delete: async ({ poiId }) => {
+        try {
+          await dependencies.repository.deleteStoryProse(poiId);
+        } catch (cause) {
+          throw persistenceError(cause);
+        }
+      },
+    },
+    mainImageCandidates: {
+      generate: async ({ poiId }) => {
+        await generateAndPersistCandidates(
+          await findPointOfInterest(poiId, dependencies),
+        );
+      },
+      delete: async ({ poiId }) => {
+        try {
+          await dependencies.repository.deleteMainImageCandidates(poiId);
+        } catch (cause) {
+          throw persistenceError(cause);
+        }
+      },
+    },
+  };
+};

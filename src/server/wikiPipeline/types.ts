@@ -1,4 +1,8 @@
 export type GeoJson = {
+  type?: string;
+  generator?: string;
+  copyright?: string;
+  timestamp?: string;
   features?: GeoJsonFeature[];
 };
 

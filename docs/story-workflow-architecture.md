@@ -1,6 +1,6 @@
 # Story Workflow Module Architecture
 
-Status: design agreed, implementation not started.
+Status: implemented.
 
 ## Goal
 

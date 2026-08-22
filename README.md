@@ -47,7 +47,7 @@ Each city's data lives under `data/<city>/`. The Geo Place input and app-ready P
 
 For Rome, the Geo Place input lives at `data/rome/pois/raw.geojson`, while app-ready POIs are progressively added to `data/rome/pois/pois.geojson`. Each app-ready POI has a stable, human-readable `id`; external identifiers such as `wikidataId` are optional and separate. Wikipedia Text snapshots are generated into `data/rome/generated/wiki/`, while local pipeline timings and execution details live in `data/rome/generated/generation-metadata.json`.
 
-Use `/admin` to run the current Rome generation flow:
+Use the single Generate action in `/admin` to run the current Rome generation flow:
 
 1. Add app-ready POI metadata from the Geo Place.
 2. Generate the Wikipedia Text snapshot.

@@ -14,9 +14,8 @@ export const AdminDashboard = ({
   rows,
   aiModeOptions,
   initialAiSelection,
-  generateTransformedAction,
-  deleteTransformedAction,
-  refreshWikiAction,
+  generateDraftStoryAction,
+  resetDraftStoryAction,
   refreshAiAction,
   deleteAiAction,
   refreshMainImageCandidatesAction,
@@ -26,9 +25,8 @@ export const AdminDashboard = ({
   rows: AdminPoiRow[];
   aiModeOptions: readonly AiModeOption[];
   initialAiSelection: AiSelection;
-  generateTransformedAction: (formData: FormData) => Promise<void>;
-  deleteTransformedAction: (formData: FormData) => Promise<void>;
-  refreshWikiAction: (formData: FormData) => Promise<void>;
+  generateDraftStoryAction: (formData: FormData) => Promise<void>;
+  resetDraftStoryAction: (formData: FormData) => Promise<void>;
   refreshAiAction: (formData: FormData) => Promise<void>;
   deleteAiAction: (formData: FormData) => Promise<void>;
   refreshMainImageCandidatesAction: (formData: FormData) => Promise<void>;
@@ -88,9 +86,8 @@ export const AdminDashboard = ({
         rows={rows}
         selectedAiMode={selectedAiMode}
         selectedAiModel={selectedAiModel}
-        generateTransformedAction={generateTransformedAction}
-        deleteTransformedAction={deleteTransformedAction}
-        refreshWikiAction={refreshWikiAction}
+        generateDraftStoryAction={generateDraftStoryAction}
+        resetDraftStoryAction={resetDraftStoryAction}
         refreshAiAction={refreshAiAction}
         deleteAiAction={deleteAiAction}
         refreshMainImageCandidatesAction={refreshMainImageCandidatesAction}

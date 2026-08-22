@@ -1,8 +1,7 @@
-import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
+import { existsSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
-import { listStoryFiles } from "@/server/storyWorkflow/storyArtifacts";
-import { listMainImageCandidateArtifactFiles } from "@/server/storyWorkflow/mainImageCandidateArtifacts";
-import { getDefaultInputPath, getDefaultOutputDir } from "@/server/wikiPipeline/io";
+import { storyWorkflow, type DraftStorySnapshot } from "@/server/storyWorkflow";
+import { getDefaultInputPath } from "@/server/wikiPipeline/io";
 import type {
   AdminPoiRow,
   GeoJson,
@@ -41,6 +40,14 @@ const formatUpdatedAt = (filePath: string) =>
     dateStyle: "short",
     timeStyle: "short",
   }).format(statSync(filePath).mtime);
+
+const formatCompletedAt = (completedAt?: string) =>
+  completedAt
+    ? new Intl.DateTimeFormat("it-IT", {
+        dateStyle: "short",
+        timeStyle: "short",
+      }).format(new Date(completedAt))
+    : "";
 
 const formatDuration = (durationMs: number) => {
   if (durationMs < 1000) {
@@ -83,51 +90,11 @@ const toPoiItems = (features: GeoJsonFeature[] | undefined, raw = false) =>
     return { id, name, wikidata, featureIndex: index } satisfies PoiItem;
   });
 
-const loadWikiSnapshots = (directoryPath: string) =>
-  (existsSync(directoryPath) ? readdirSync(directoryPath) : [])
-    .filter((fileName) => fileName.endsWith(".txt"))
-    .sort()
-    .map((fileName, index) => {
-      const filePath = path.join(directoryPath, fileName);
-      const raw = readFileSync(filePath, "utf-8");
-      const id = fileName.replace(/\.txt$/u, "") || `missing-id-${index}`;
-
-      return {
-        item: { id, name: `${id}.txt`, featureIndex: index } satisfies PoiItem,
-        json: raw,
-        updatedAt: formatUpdatedAt(filePath),
-      };
-    });
-
-const loadStoryFiles = () =>
-  listStoryFiles().map(({ fileName, filePath, poiId }, index) => {
-    const raw = readFileSync(filePath, "utf-8");
-
-    return {
-      item: {
-        id: poiId || `missing-id-${index}`,
-        name: fileName,
-        featureIndex: index,
-      } satisfies PoiItem,
-      json: raw,
-      updatedAt: formatUpdatedAt(filePath),
-    };
-  });
-
-const loadMainImageCandidateFiles = () =>
-  listMainImageCandidateArtifactFiles().map(({ fileName, filePath, poiId }, index) => {
-    const raw = readFileSync(filePath, "utf-8");
-
-    return {
-      item: {
-        id: poiId || `missing-id-${index}`,
-        name: fileName,
-        featureIndex: index,
-      } satisfies PoiItem,
-      artifact: JSON.parse(raw) as MainImageCandidatesArtifact,
-      updatedAt: formatUpdatedAt(filePath),
-    };
-  });
+const toSnapshotItem = (snapshot: DraftStorySnapshot, index: number) => ({
+  id: snapshot.poiId,
+  name: snapshot.poiId,
+  featureIndex: index,
+});
 
 const toPoiRows = (
   rawPois: PoiItem[],
@@ -293,7 +260,6 @@ export const loadPoiLists = async () => {
   try {
     const rawPath = path.join(process.cwd(), "data", "rome", "pois", "raw.geojson");
     const transformedPath = getDefaultInputPath("rome");
-    const wikiDirectoryPath = getDefaultOutputDir("rome");
     const generationMetadataPath = path.join(
       process.cwd(),
       "data",
@@ -320,9 +286,43 @@ export const loadPoiLists = async () => {
       json: JSON.stringify(feature, null, 2),
       updatedAt: transformedUpdatedAt ?? "",
     }));
-    const wikiPois = loadWikiSnapshots(wikiDirectoryPath);
-    const aiPois = loadStoryFiles();
-    const mainImagePois = loadMainImageCandidateFiles();
+    const snapshots = (
+      await Promise.all(
+        transformedPois.map(({ item }) =>
+          storyWorkflow.draftStory.get({ poiId: item.id }),
+        ),
+      )
+    ).filter((snapshot): snapshot is DraftStorySnapshot => Boolean(snapshot));
+    const wikiPois = snapshots
+      .filter((snapshot) => snapshot.sources.length > 0)
+      .map((snapshot, index) => ({
+        item: toSnapshotItem(snapshot, index),
+        json: snapshot.sources.map((source) => source.content).join("\n\n"),
+        updatedAt: formatCompletedAt(snapshot.generation.sources?.completedAt),
+      }));
+    const aiPois = snapshots
+      .filter((snapshot) => snapshot.storyProse)
+      .map((snapshot, index) => ({
+        item: toSnapshotItem(snapshot, index),
+        json: snapshot.storyProse ?? "",
+        updatedAt: formatCompletedAt(snapshot.generation.storyProse?.completedAt),
+      }));
+    const mainImagePois = snapshots
+      .filter(
+        (snapshot) =>
+          snapshot.mainImageCandidates.length > 0 ||
+          snapshot.generation.mainImageCandidates,
+      )
+      .map((snapshot, index) => ({
+        item: toSnapshotItem(snapshot, index),
+        artifact: {
+          candidates: snapshot.mainImageCandidates,
+          selectedCommonsFileName: snapshot.draftMainImage?.commonsFileName,
+        },
+        updatedAt: formatCompletedAt(
+          snapshot.generation.mainImageCandidates?.completedAt,
+        ),
+      }));
     const rows = toPoiRows(
       rawPois,
       rawUpdatedAt,
