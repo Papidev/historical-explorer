@@ -2,11 +2,10 @@ import { AdminDashboard } from "./components/AdminDashboard";
 import {
   deleteAiText,
   deleteMainImageCandidates,
-  deleteTransformedPoiJson,
-  generateTransformedPoiJson,
+  generateDraftStory,
   refreshAiText,
   refreshMainImageCandidates,
-  refreshWikiJson,
+  resetDraftStory,
   selectMainImageCandidate,
 } from "./lib/actions";
 import { getInitialAiSelection, loadAiModeOptions } from "./lib/aiModels";
@@ -35,9 +34,8 @@ export default async function AdminPage() {
           rows={rows}
           aiModeOptions={aiModeOptions}
           initialAiSelection={initialAiSelection}
-          generateTransformedAction={generateTransformedPoiJson}
-          deleteTransformedAction={deleteTransformedPoiJson}
-          refreshWikiAction={refreshWikiJson}
+          generateDraftStoryAction={generateDraftStory}
+          resetDraftStoryAction={resetDraftStory}
           refreshAiAction={refreshAiText}
           deleteAiAction={deleteAiText}
           refreshMainImageCandidatesAction={refreshMainImageCandidates}

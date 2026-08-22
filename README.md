@@ -41,15 +41,15 @@ If you have a Tailwind Plus license, keep the copied Catalyst components locally
 
 ## Generated Data
 
-For project glossary terms such as Raw POI, Draft Story, Sources, and Main Image, see `CONTEXT.md`.
+For project glossary terms such as Geo Place, Draft Story, Sources, and Main Image, see `CONTEXT.md`.
 
-Each city's data lives under `data/<city>/`. The Raw POI input and app-ready POI catalog live together in the city's `pois/` folder and are versioned. Rebuildable local outputs live under `generated/` and are intentionally not committed.
+Each city's data lives under `data/<city>/`. The Geo Place input and app-ready POI catalog live together in the city's `pois/` folder and are versioned. Rebuildable local outputs live under `generated/` and are intentionally not committed.
 
-For Rome, the Raw POI input lives at `data/rome/pois/raw.geojson`, while app-ready POIs are progressively added to `data/rome/pois/pois.geojson`. Each app-ready POI has a stable, human-readable `id`; external identifiers such as `wikidataId` are optional and separate. Wikipedia Text snapshots are generated into `data/rome/generated/wiki/`, while local pipeline timings and execution details live in `data/rome/generated/generation-metadata.json`.
+For Rome, the Geo Place input lives at `data/rome/pois/raw.geojson`, while app-ready POIs are progressively added to `data/rome/pois/pois.geojson`. Each app-ready POI has a stable, human-readable `id`; external identifiers such as `wikidataId` are optional and separate. Wikipedia Text snapshots are generated into `data/rome/generated/wiki/`, while local pipeline timings and execution details live in `data/rome/generated/generation-metadata.json`.
 
-Use `/admin` to run the current Rome generation flow:
+Use the single Generate action in `/admin` to run the current Rome generation flow:
 
-1. Add app-ready POI metadata from the Raw POI.
+1. Add app-ready POI metadata from the Geo Place.
 2. Generate the Wikipedia Text snapshot.
 3. Generate Main Image Candidates and select the first candidate with license and attribution.
 4. Generate the Story markdown.

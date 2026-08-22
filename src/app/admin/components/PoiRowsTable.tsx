@@ -23,14 +23,7 @@ const refreshConfirmMessages = {
 } as const;
 
 const generateConfirmMessage =
-  "Generate POI, Wikipedia Text, Story, and Main Image Candidates for this Raw POI?";
-
-type ProgressStep = {
-  description: string;
-  action: (formData: FormData) => Promise<void>;
-  formData: FormData;
-  continueOnError?: boolean;
-};
+  "Generate a Point of Interest and Draft Story for this Geo Place?";
 
 type ProgressState = {
   poiId: string;
@@ -190,9 +183,8 @@ export const PoiRowsTable = ({
   rows,
   selectedAiMode,
   selectedAiModel,
-  generateTransformedAction,
-  deleteTransformedAction,
-  refreshWikiAction,
+  generateDraftStoryAction,
+  resetDraftStoryAction,
   refreshAiAction,
   deleteAiAction,
   refreshMainImageCandidatesAction,
@@ -202,9 +194,8 @@ export const PoiRowsTable = ({
   rows: AdminPoiRow[];
   selectedAiMode: AiMode;
   selectedAiModel: AiModel;
-  generateTransformedAction: (formData: FormData) => Promise<void>;
-  deleteTransformedAction: (formData: FormData) => Promise<void>;
-  refreshWikiAction: (formData: FormData) => Promise<void>;
+  generateDraftStoryAction: (formData: FormData) => Promise<void>;
+  resetDraftStoryAction: (formData: FormData) => Promise<void>;
   refreshAiAction: (formData: FormData) => Promise<void>;
   deleteAiAction: (formData: FormData) => Promise<void>;
   refreshMainImageCandidatesAction: (formData: FormData) => Promise<void>;
@@ -214,49 +205,20 @@ export const PoiRowsTable = ({
   const [selectedPanel, setSelectedPanel] = useState<SelectedPanel | null>(null);
   const [progress, setProgress] = useState<ProgressState | null>(null);
 
-  const createPoiFormData = (poiId: string) => {
-    const formData = new FormData();
-    formData.set("poiId", poiId);
-    formData.set("aiMode", selectedAiMode);
-    formData.set("aiModel", selectedAiModel);
-
-    return formData;
-  };
-
-  const runPipeline = async (poiId: string, steps: ProgressStep[]) => {
-    setSelectedPanel(null);
-
-    try {
-      for (const step of steps) {
-        setProgress({ poiId, description: step.description });
-        try {
-          await step.action(step.formData);
-        } catch (error) {
-          if (!step.continueOnError) {
-            throw error;
-          }
-
-          console.warn(error);
-        }
-      }
-    } finally {
-      setProgress(null);
-    }
-  };
-
   const runSingleAction = async (
     poiId: string,
     description: string,
     action: (formData: FormData) => Promise<void>,
     formData: FormData,
-  ) =>
-    runPipeline(poiId, [
-      {
-        description,
-        action,
-        formData,
-      },
-    ]);
+  ) => {
+    setSelectedPanel(null);
+    setProgress({ poiId, description });
+    try {
+      await action(formData);
+    } finally {
+      setProgress(null);
+    }
+  };
 
   return (
     <>
@@ -279,7 +241,7 @@ export const PoiRowsTable = ({
                     scope="col"
                     className="border-r border-b border-gray-200 py-2 pr-3 pl-4 text-left align-top"
                   >
-                    <ColumnHeader title="Raw" path="data/rome/pois/raw.geojson" />
+                    <ColumnHeader title="Geo Place" path="data/rome/pois/raw.geojson" />
                   </th>
                   <th
                     scope="col"
@@ -338,35 +300,18 @@ export const PoiRowsTable = ({
                             isRowEmpty ? (
                               <form
                                 action={(formData) =>
-                                  runPipeline(row.id, [
-                                    {
-                                      description: "Generating POI...",
-                                      action: generateTransformedAction,
-                                      formData,
-                                    },
-                                    {
-                                      description: "Fetching Wikipedia Text...",
-                                      action: refreshWikiAction,
-                                      formData: createPoiFormData(row.id),
-                                    },
-                                    {
-                                      description: "Generating Main Image Candidates...",
-                                      action: refreshMainImageCandidatesAction,
-                                      formData: createPoiFormData(row.id),
-                                      continueOnError: true,
-                                    },
-                                    {
-                                      description: "Generating Story...",
-                                      action: refreshAiAction,
-                                      formData: createPoiFormData(row.id),
-                                    },
-                                  ])
+                                  runSingleAction(
+                                    row.id,
+                                    "Generating Draft Story...",
+                                    generateDraftStoryAction,
+                                    formData,
+                                  )
                                 }
                               >
                                 <input
                                   type="hidden"
-                                  name="rawFeatureIndex"
-                                  value={row.rawPoi.featureIndex}
+                                  name="geoPlaceId"
+                                  value={row.rawPoi.id}
                                 />
                                 <input type="hidden" name="aiMode" value={selectedAiMode} />
                                 <input type="hidden" name="aiModel" value={selectedAiModel} />
@@ -385,7 +330,7 @@ export const PoiRowsTable = ({
                                   runSingleAction(
                                     row.id,
                                     "Resetting row...",
-                                    deleteTransformedAction,
+                                    resetDraftStoryAction,
                                     formData,
                                   )
                                 }
@@ -643,7 +588,7 @@ export const PoiRowsTable = ({
                                 />
                               </form>
                             </div>
-                          ) : row.aiPoi ? (
+                          ) : row.transformedPoi ? (
                             <form
                               action={(formData) =>
                                 runSingleAction(
