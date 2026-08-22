@@ -9,9 +9,9 @@ An app-ready place or object on the map that may have metadata and a story.
 _Also_: POI
 _Avoid_: Clean POI, polished POI, transformed POI, spot, location, attraction
 
-**Raw POI**:
-A point of interest as it arrives from a source dataset before irrelevant fields are removed.
-_Avoid_: Raw feature, source feature
+**Geo Place**:
+The geographic representation of a place from a source dataset before irrelevant fields are removed and it becomes a **Point of Interest**.
+_Avoid_: Raw POI, Raw Place, Raw Location, Raw feature, source feature
 
 **POI ID**:
 A stable, human-readable identifier assigned by Historical Explorer to a **Point of Interest**, independent of identifiers from external sources.
@@ -75,12 +75,14 @@ _Avoid_: Production output, AI output
 
 ## Relationships
 
-- A **Raw POI** may become a **Point of Interest** when source data is cleaned for app use.
+- A **Geo Place** may become a **Point of Interest** when source data is cleaned for app use.
 - A **Point of Interest** has exactly one **POI ID** and may retain optional external identifiers such as a Wikidata ID.
 - A **Story Workflow** comprises **Draft Story Generation** followed by **Story Curation**.
 - **Draft Story Generation** starts from an existing **Point of Interest** and creates or updates its current **Draft Story**.
-- Creating a **Point of Interest** from a **Raw POI** happens before, and does not belong to, the **Story Workflow**.
+- Manually regenerating **Story Prose** or **Main Image Candidates** belongs to **Draft Story Generation** because it recreates automated artifacts.
+- Creating a **Point of Interest** from a **Geo Place** happens before, and does not belong to, the **Story Workflow**.
 - **Story Curation** begins after **Draft Story Generation** has produced a reviewable **Draft Story**.
+- A **Curator** selecting a **Main Image Candidate** as the **Draft Main Image** belongs to **Story Curation**.
 - A **Story** belongs to exactly one **Point of Interest**.
 - A **Point of Interest** has at most one approved **Story** in the current product.
 - A **Point of Interest** has at most one current **Draft Story**.
@@ -120,6 +122,7 @@ _Avoid_: Production output, AI output
 
 ## Flagged ambiguities
 
+- "Raw POI" made a source-dataset place sound like it was already a **Point of Interest** in the app — resolved: call the source representation a **Geo Place**.
 - "production workflow" was used to mean the internal AI-assisted editorial process — resolved: call this the **Story Workflow**.
 - "Wikipedia-only source material" was used for the current first slice — resolved: first **Sources** may come from Wikipedia, Wikidata, and Wikimedia Commons, while implementation may begin with Wikipedia article text.
 - "published POI content" implied a release destination — resolved: call the human-approved visitor-facing output a **Story**.
@@ -133,3 +136,4 @@ _Avoid_: Production output, AI output
 - "exactly three candidates" overstated the first direct-source workflow because Wikidata and Wikipedia page images may provide fewer than three distinct usable images — resolved: the first **Story Workflow** proposes up to three **Main Image Candidates**.
 - "show the selected image" was ambiguous between the **Story Workflow** and the **Visitor Experience** — resolved: the first image-candidate implementation stays workflow-only until the approved **Story** shape is explicit.
 - "selected image" was ambiguous with final story approval — resolved: call the mutable selection on a **Draft Story** the **Draft Main Image**; it becomes the **Main Image** only upon approval.
+- "manual refresh" was ambiguous between automated generation and human curation — resolved: regenerating **Story Prose** or **Main Image Candidates** belongs to **Draft Story Generation**, while selecting the **Draft Main Image** belongs to **Story Curation**.
