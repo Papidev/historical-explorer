@@ -54,7 +54,7 @@ export const SubmitButton = ({
         title={pending ? pendingLabel : idleLabel}
         className={`inline-flex items-center justify-center text-white transition disabled:cursor-not-allowed disabled:opacity-50 ${
           icon
-            ? "admin-icon-button rounded-full p-1.5 shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2"
+            ? "rounded-full p-1.5 shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-5 [&_svg]:shrink-0"
             : "rounded-md px-2 py-1 text-xs font-medium"
         } ${
           tone === "danger"

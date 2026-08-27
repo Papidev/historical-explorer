@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { ListboxSelect } from "@/app/components/tailwindUi/ListboxSelect";
-import { Toggle } from "@/app/components/tailwindUi/Toggle";
+import { ListboxSelect } from "@/app/components/ui/ListboxSelect";
+import { Toggle } from "@/app/components/ui/Toggle";
 import type { AiMode, AiModeOption, AiSelection } from "../lib/aiModels";
 import type { AdminPoiRow } from "../lib/types";
 import { PoiRowsTable } from "./PoiRowsTable";

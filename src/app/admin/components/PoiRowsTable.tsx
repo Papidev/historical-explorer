@@ -11,8 +11,8 @@ import {
 import Image from "next/image";
 import { useState } from "react";
 import type { ReactNode } from "react";
-import { IconButton } from "@/app/components/tailwindUi/IconButton";
 import { MarkdownContent } from "@/app/components/MarkdownContent";
+import { IconButton } from "@/app/components/ui/IconButton";
 import type { AiMode, AiModel } from "../lib/aiModels";
 import type { AdminPoiRow, MainImageCandidate, MainImageCandidatesArtifact } from "../lib/types";
 import { SubmitButton } from "./SubmitButton";
