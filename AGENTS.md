@@ -20,17 +20,20 @@
 
 ## Tailwind Plus / Catalyst
 
-- `src/app/components/catalyst/` contains paid Tailwind Plus Catalyst source when present locally and is intentionally gitignored.
-- `src/app/components/tailwindUi/` contains paid Tailwind Plus UI Block source when present locally and is intentionally gitignored.
-- Do not commit copied Tailwind Plus or Catalyst source files. Keep the local folders available only for licensed development machines.
-- The repo may commit Catalyst runtime dependencies, Tailwind theme/font setup, and app-specific components built from or inspired by Catalyst.
-- Before building UI controls or layout primitives, first check `src/app/components/tailwindUi/` for a matching Tailwind Plus UI Block pattern. If none fits, check the local Catalyst set. Commit only app-specific components built from or inspired by those local paid sources.
+- `.tailwind-plus/` contains paid Tailwind Plus source when present locally and is intentionally gitignored. Treat it only as a reference catalog and never import it from production code.
+- `src/app/components/ui/` contains committed, app-owned base components built from or inspired by Tailwind Plus examples.
+- Do not commit the local Tailwind Plus catalog. Commit only app-specific components needed by this product, and keep paid source material available only on licensed development machines.
+- The repo may commit Catalyst runtime dependencies, Tailwind theme/font setup, and app-specific components built from or inspired by Catalyst or Tailwind Plus examples.
+- Before building UI, first check `src/app/components/ui/` for a matching app-owned component.
+- If none fits, inspect Tailwind Plus UI Blocks through the authenticated Chrome session and evaluate the available React variants before designing the component.
+- Check the local Catalyst reference after UI Blocks when lower-level primitives are needed, then implement only the app-owned adaptation in `src/app/components/ui/` or the relevant feature.
 
 ## Coding Standards & A11y
 
 - Favor a lightweight Domain-Driven Design mindset: model features around the domain language (cities, POIs, timelines) and keep logic close to the data source, but resist extra indirection unless it delivers clear value.
 - Keep React components declarative and push imperative map logic into adapters/utilities. Any `maplibre-gl` interaction must guard against double-mounts and clean up markers in `destroy()`.
 - Apply TypeScript’s quick-fix suggestions where feasible, especially for type safety and nullability, unless they conflict with product or UX intent.
+- Prefer Tailwind utilities directly in owned JSX. Keep custom global CSS for generated or third-party markup that cannot be styled directly and place component rules in `@layer components`. When writing custom CSS, use Tailwind theme variables whenever possible for colors, spacing, typography, radii, shadows, and other design tokens; use literal values only for deliberate exceptions not covered by the theme.
 
 ## Feature Implementation Approach
 
@@ -53,7 +56,7 @@ Update `AGENTS.md` only with important stuff that cannot be clearly/quickly deri
 - There is no automated map test harness yet; add colocated `*.test.tsx` files when introducing logic-heavy components and stub MapLibre APIs if needed.
 - Keep tests user-centric: verify visible behavior, interactions, and outcomes rather than implementation details.
 - Prefer accessible queries (for example `getByRole`, `getByLabelText`) and avoid brittle selectors.
-- Always: (1) run `pnpm dev` to verify Rome loads, pan/zoom controls work, POI popup "Apri dettagli" opens the side panel, and Draft Story content renders when present; (2) run `pnpm lint`; (3) run `pnpm build` before raising a PR.
+- Immediately before raising a PR, run `pnpm lint`, `pnpm build`, and start `pnpm dev` to verify the app starts without errors. Do not require browser smoke checks unless explicitly requested.
 - Document any manual QA (e.g., “verified zoom-to markers on Chrome + Safari”) in PR descriptions until automated coverage exists.
 
 ## Commits & PR Hygiene

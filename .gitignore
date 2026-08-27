@@ -24,9 +24,8 @@
 # generated local content
 /data/*/generated/
 
-# paid local UI kit source
-/src/app/components/catalyst/
-/src/app/components/tailwindUi/
+# paid local Tailwind Plus source
+/.tailwind-plus/
 
 # misc
 .DS_Store
