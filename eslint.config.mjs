@@ -14,7 +14,7 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
-    "src/app/components/catalyst/**",
+    ".tailwind-plus/**",
   ]),
 ]);
 

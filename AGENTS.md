@@ -20,11 +20,13 @@
 
 ## Tailwind Plus / Catalyst
 
-- `src/app/components/catalyst/` contains paid Tailwind Plus Catalyst source when present locally and is intentionally gitignored.
+- `.tailwind-plus/` contains paid Tailwind Plus source when present locally and is intentionally gitignored. Treat it only as a reference catalog and never import it from production code.
 - `src/app/components/ui/` contains committed, app-owned base components built from or inspired by Tailwind Plus examples.
-- Do not commit copied Tailwind Plus or Catalyst source files. Commit only original app components derived from those references, and keep paid source material available only on licensed development machines.
+- Do not commit the local Tailwind Plus catalog. Commit only app-specific components needed by this product, and keep paid source material available only on licensed development machines.
 - The repo may commit Catalyst runtime dependencies, Tailwind theme/font setup, and app-specific components built from or inspired by Catalyst or Tailwind Plus examples.
-- Before building UI controls or layout primitives, first check `src/app/components/ui/` for a matching base component. If none fits, check the local Tailwind Plus or Catalyst references, then implement the app-owned adaptation in `src/app/components/ui/`.
+- Before building UI, first check `src/app/components/ui/` for a matching app-owned component.
+- If none fits, inspect Tailwind Plus UI Blocks through the authenticated Chrome session and evaluate the available React variants before designing the component.
+- Check the local Catalyst reference after UI Blocks when lower-level primitives are needed, then implement only the app-owned adaptation in `src/app/components/ui/` or the relevant feature.
 
 ## Coding Standards & A11y
 

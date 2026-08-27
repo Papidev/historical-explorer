@@ -35,9 +35,9 @@ The Rome map reads its versioned POI catalog from `data/rome/pois/pois.geojson`.
 
 ## Tailwind Plus / Catalyst
 
-The project is prepared to use Tailwind Plus Catalyst, but the paid Catalyst source is not committed.
+The project uses Tailwind Plus as a local reference catalog, not as a runtime dependency. The paid source is not committed.
 
-If you have a Tailwind Plus license, keep the copied Catalyst components locally in `src/app/components/catalyst/`. That folder is gitignored on purpose. Do not commit copied Catalyst source files; commit only app-specific code, runtime dependencies, and theme/font setup.
+If you have a Tailwind Plus license, keep the downloaded source locally in `.tailwind-plus/`. That folder is gitignored on purpose and must not be imported by production code. When a Tailwind Plus or Catalyst component is useful, adapt only the app-specific component needed in `src/app/components/ui/` and commit that implementation together with any runtime dependencies and theme/font setup.
 
 ## Generated Data
 
