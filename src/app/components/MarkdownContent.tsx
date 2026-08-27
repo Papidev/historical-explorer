@@ -6,7 +6,13 @@ type Props = {
 };
 
 export const MarkdownContent = ({ content, className = "" }: Props) => (
-  <div className={`poi-dialog-content ${className}`}>
-    <ReactMarkdown>{content}</ReactMarkdown>
+  <div className={`poi-dialog-content text-base leading-[1.7] text-zinc-800 ${className}`}>
+    <ReactMarkdown
+      components={{
+        strong: ({ children }) => <strong className="font-bold text-orange-700">{children}</strong>,
+      }}
+    >
+      {content}
+    </ReactMarkdown>
   </div>
 );
