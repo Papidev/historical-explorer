@@ -1,3 +1,5 @@
+import type { Source, StoryContent } from "@/server/storyWorkflow";
+
 export type GeoJsonFeature = {
   id?: string | number;
   wikidataId?: string;
@@ -53,8 +55,15 @@ export type AdminPoiRow = {
   aiGenerationMode?: string;
   aiGenerationProvider?: string;
   aiGenerationModel?: string;
+  storyContentUpdatedAt?: string;
+  storyContentGenerationDuration?: string;
+  storyContentGenerationMode?: string;
+  storyContentGenerationProvider?: string;
+  storyContentGenerationModel?: string;
   transformedJson?: string;
   wikiText?: string;
   aiText?: string;
+  storyContent?: StoryContent;
+  storyContentSources?: Source[];
   mainImageArtifact?: MainImageCandidatesArtifact;
 };

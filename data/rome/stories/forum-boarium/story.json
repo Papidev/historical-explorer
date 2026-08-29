@@ -1,0 +1,116 @@
+{
+  "introduction": {
+    "text": "The Forum Boarium was the ancient cattle market of Rome, located near the Tiber River between the Capitoline, Palatine, and Aventine hills. As the site of Rome's original docks and adjacent to the earliest stone bridge, it was a hub of intense commercial activity and a significant religious center.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "ara-maxima-dedication",
+        "description": "According to legend, the Ara Maxima, a massive altar, was dedicated to Hercules by the ancient dwellers of the Palatine hill after he slew the giant Cacus, who had stolen his oxen.",
+        "relatedPersonIds": ["hercules", "cacus"],
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -600,
+          "endYear": -401,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "first-gladiatorial-contest",
+        "description": "The Forum Boarium hosted Rome's first gladiatorial contest in 264 BC, organized by Marcus and Decimus Junius Brutus Scaeva as a funeral gift for their deceased father.",
+        "relatedPersonIds": ["marcus-junius-brutus-scaeva", "decimus-junius-brutus-scaeva"],
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -264,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "human-sacrifices",
+        "description": "In 215 BC, four victims were buried alive under the Forum Boarium as human sacrifices, a practice repulsive to Roman feelings, to appease the gods after a series of perceived portents of disaster. Following this, Marcus Claudius Marcellus sent troops to garrison Rome.",
+        "relatedPersonIds": ["marcus-claudius-marcellus"],
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -215,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "temple-conversions",
+        "description": "During the late period of the Western Roman Empire, the area became filled with shops, and both the Temple of Hercules Victor and the Temple of Portunus were deconsecrated and converted into Christian churches.",
+        "relatedPersonIds": [],
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "modern-conservation",
+        "description": "Beginning in the late 1990s, a partnership between the Soprintendenza speciale per i beni archeologici di Roma and World Monuments Fund undertook conservation efforts for both temples in the Forum Boarium, including new landscaping.",
+        "relatedPersonIds": [],
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "temple-hercules-victor",
+        "description": "The Temple of Hercules Victor, dating from the 2nd century BC, is Rome's earliest surviving marble building. It is a circular peristyle structure with a colonnade of Corinthian columns arranged around a cylindrical cella, resting on a tuff foundation.",
+        "relatedPersonIds": [],
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "temple-portunus",
+        "description": "The Temple of Portunus, built between 100 and 80 BC, is a rectangular building featuring a tetrastyle portico and cella on a podium. It incorporates four free-standing Ionic columns at the front and engaged columns along its sides and rear, constructed from tuff and travertine with a stucco surface.",
+        "relatedPersonIds": [],
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "myron-statue",
+        "description": "The Forum Boarium is believed to have been the site for a statue by the sculptor Myron, possibly a statuary group of Theseus defeating the Minotaur, which was looted from Aegina.",
+        "relatedPersonIds": ["myron"],
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "id": "hercules",
+      "name": "Hercules",
+      "relationship": "Legendary figure associated with the site",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "id": "cacus",
+      "name": "Cacus",
+      "relationship": "Legendary giant",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "id": "marcus-junius-brutus-scaeva",
+      "name": "Marcus Junius Brutus Scaeva",
+      "relationship": "Organizer of the first gladiatorial contest",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "id": "decimus-junius-brutus-scaeva",
+      "name": "Decimus Junius Brutus Scaeva",
+      "relationship": "Organizer of the first gladiatorial contest",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "id": "marcus-claudius-marcellus",
+      "name": "Marcus Claudius Marcellus",
+      "relationship": "Roman commander",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "id": "myron",
+      "name": "Myron",
+      "relationship": "Sculptor",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

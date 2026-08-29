@@ -9,6 +9,7 @@ The app helps tourists understand what they are seeing while they are visiting a
 The app is not a Wikipedia clone, a generic tourist guide, or an AI-generated article system.
 
 The goal is to help visitors:
+
 - notice meaningful details
 - understand what they are looking at
 - connect a place to art, history, culture, people, and the city
@@ -25,8 +26,9 @@ There are two separate worlds:
 This is the internal editorial workflow.
 
 A POI starts from source material such as Wikipedia, Wikidata, and Wikimedia Commons. AI helps create a first draft by:
+
 - extracting visitor-oriented insights
-- proposing concise story prose
+- proposing concise structured Story Content
 - suggesting which medium best communicates each insight
 - proposing one main image
 - explaining why each insight is useful
@@ -45,21 +47,21 @@ The visitor experience should be quick, pleasant, low-friction, and useful while
 
 The primary product mode is a visitor who is near, or interested in, a specific POI and wants a concise cultural explanation. Planning, nearby discovery, post-visit review, and deeper reading are interesting future modes, but the first product shape should optimize the POI visit companion experience.
 
-Each POI should have one canonical English story. The story prose should be self-contained, source-grounded, and concise: aim for 120-180 words, with about 220 words as a soft upper bound. It should be written as continuous prose, not as a rigid set of cards or encyclopedia sections.
+Each POI should have one canonical English story. Its primary content is structured, source-grounded, and concise: a required introduction followed by supported history, design, and art insights, plus related people. Topics may be empty and unsupported material must be omitted. The structure carries content semantics, while React components own its public presentation.
 
 The tone should be warm, precise, and visitor-facing without becoming promotional, academic, or presence-assuming. Avoid wording like "you are looking at" or "in front of you" because the visitor may be browsing away from the POI. Soft observation prompts are acceptable when useful, such as "a detail worth noticing is..."
 
-AI may propose lightweight bold highlights inside the story prose, but highlights are plain editorial markup, not structured metadata. They should only emphasize proper names of places, named people or historical figures, dates or periods, named historical events, and named artistic movements. Apart from dates and periods, a highlighted phrase must be a named entity. Generic nouns, roles, amenities, facilities, services, functions, materials, objects, and concepts should not be bold unless they are part of one of those allowed proper names. A human curator can adjust or remove them before approval.
+Story Content contains plain text without Markdown, inline highlights, CSS, or presentation components. A separate Story Prose Markdown artifact remains available to curators and may contain lightweight editorial formatting, but it is generated, refreshed, and deleted independently and is not a public fallback. MDX and configurable React renderers remain future decisions.
 
 Each story needs one required main image. The main image should help the visitor recognize the place or notice an important visible detail, not merely decorate the page. It should live outside the story prose and include source, author or rights status, license, and attribution metadata before approval.
 
 For the first AI story workflow, AI should produce:
-- a concise English draft story
-- proposed lightweight bold highlights
+
+- concise English Story Content with source references on its introduction, insights, and related people
 - one proposed main image with source, license, and attribution metadata, chosen from three Wikimedia Commons recognizer candidates
 - source material used to ground the draft story
 
-Main image candidate discovery should run after Wikipedia source acquisition and before draft story prose generation. It should remain retryable independently from story prose generation. The workflow should keep an existing available selection or automatically select the first candidate with license and attribution; the curator may review and change that selection.
+Main image candidate discovery should run after Wikipedia source acquisition and before Story Content generation. It should remain retryable independently from Story Content and Story Prose generation. The workflow should keep an existing available selection or automatically select the first candidate with license and attribution; the curator may review and change that selection. Full Generate produces Story Content and does not regenerate Story Prose.
 
 The admin dashboard should let the curator choose the AI provider for the current admin session, switching between local AI through Ollama and cloud AI through Gemini without rewriting environment configuration. The selector should use the concise choices "Local" and "Cloud", with a secondary line explaining the concrete provider, model, and cost implication. `AI_MODE` should choose the initial Local/Cloud selection, while `LOCAL_AI_PROVIDER`, `LOCAL_AI_MODEL`, `CLOUD_AI_PROVIDER`, and `CLOUD_AI_MODEL` configure the concrete backends. These variables are the primary AI configuration shape. The selected provider and model should be submitted with each manual AI workflow action.
 
@@ -98,6 +100,7 @@ Do not design flows where AI directly publishes final stories without human revi
 ## Content quality risks
 
 Avoid:
+
 - long article-like summaries
 - generic tourist-guide prose
 - too many cards, clicks, or sections
@@ -107,6 +110,7 @@ Avoid:
 - treating all POIs with the same rigid template
 
 Prefer:
+
 - concise, engaging, source-grounded insights
 - block-by-block human review
 - visible source support for draft content

@@ -13,17 +13,18 @@ import { useState } from "react";
 import type { ReactNode } from "react";
 import { MarkdownContent } from "@/app/components/MarkdownContent";
 import { IconButton } from "@/app/components/ui/IconButton";
+import type { Source, StoryContent } from "@/server/storyWorkflow";
 import type { AiMode, AiModel } from "../lib/aiModels";
 import type { AdminPoiRow, MainImageCandidate, MainImageCandidatesArtifact } from "../lib/types";
 import { SubmitButton } from "./SubmitButton";
 
 const refreshConfirmMessages = {
-  ai: "Refresh Story for this POI?",
+  ai: "Refresh Story Markdown for this POI?",
+  storyContent: "Refresh Story Content for this POI?",
   mainImage: "Refresh Main Image Candidates for this POI?",
 } as const;
 
-const generateConfirmMessage =
-  "Generate a Point of Interest and Draft Story for this Geo Place?";
+const generateConfirmMessage = "Generate a Point of Interest and Draft Story for this Geo Place?";
 
 type ProgressState = {
   poiId: string;
@@ -33,7 +34,8 @@ type ProgressState = {
 const deleteConfirmMessages = {
   transformed:
     "Reset this row? This deletes generated POI, Wikipedia Text, Story, and Main Image Candidates for this POI.",
-  ai: "Delete Story for this POI?",
+  ai: "Delete Story Markdown for this POI?",
+  storyContent: "Delete Story Content for this POI?",
   mainImage: "Delete Main Image Candidates for this POI?",
 } as const;
 
@@ -120,6 +122,12 @@ type SelectedPanel =
     }
   | {
       title: string;
+      kind: "storyContent";
+      content: StoryContent;
+      sources: Source[];
+    }
+  | {
+      title: string;
       kind: "mainImage";
       poiId: string;
       artifact: MainImageCandidatesArtifact;
@@ -179,6 +187,76 @@ const getMainImageStatus = (artifact?: MainImageCandidatesArtifact) => {
   return "Needs selection";
 };
 
+const SourceLinks = ({ sourceIds, sources }: { sourceIds: string[]; sources: Source[] }) => (
+  <p className="mt-1 flex flex-wrap gap-2 text-xs text-black/50">
+    Sources:
+    {sourceIds.map((sourceId) => {
+      const source = sources.find((item) => item.id === sourceId);
+      return source ? (
+        <a
+          key={sourceId}
+          href={source.url}
+          target="_blank"
+          rel="noreferrer"
+          className="font-medium text-blue-700 underline"
+        >
+          {source.title}
+        </a>
+      ) : (
+        <span key={sourceId}>{sourceId}</span>
+      );
+    })}
+  </p>
+);
+
+const StoryContentPreview = ({
+  content,
+  sources,
+}: {
+  content: StoryContent;
+  sources: Source[];
+}) => (
+  <div className="flex-1 space-y-6 overflow-auto bg-neutral-50 px-5 py-4 text-sm leading-6 text-black">
+    <section>
+      <h3 className="font-semibold">Introduction</h3>
+      <p>{content.introduction.text}</p>
+      <SourceLinks sourceIds={content.introduction.sourceIds} sources={sources} />
+    </section>
+    {Object.entries(content.topics).map(([topic, insights]) =>
+      insights.length > 0 ? (
+        <section key={topic}>
+          <h3 className="font-semibold capitalize">{topic}</h3>
+          <div className="mt-2 space-y-4">
+            {insights.map((insight) => (
+              <article key={insight.id} className="rounded-lg border border-black/10 bg-white p-3">
+                {"time" in insight && insight.time ? (
+                  <p className="font-mono text-xs text-black/55">{JSON.stringify(insight.time)}</p>
+                ) : null}
+                <p>{insight.description}</p>
+                <SourceLinks sourceIds={insight.sourceIds} sources={sources} />
+              </article>
+            ))}
+          </div>
+        </section>
+      ) : null,
+    )}
+    {content.relatedPeople.length > 0 ? (
+      <section>
+        <h3 className="font-semibold">Related People</h3>
+        <div className="mt-2 space-y-4">
+          {content.relatedPeople.map((person) => (
+            <article key={person.id} className="rounded-lg border border-black/10 bg-white p-3">
+              <p className="font-semibold">{person.name}</p>
+              <p>{person.relationship}</p>
+              <SourceLinks sourceIds={person.sourceIds} sources={sources} />
+            </article>
+          ))}
+        </div>
+      </section>
+    ) : null}
+  </div>
+);
+
 export const PoiRowsTable = ({
   rows,
   selectedAiMode,
@@ -187,6 +265,8 @@ export const PoiRowsTable = ({
   resetDraftStoryAction,
   refreshAiAction,
   deleteAiAction,
+  refreshStoryContentAction,
+  deleteStoryContentAction,
   refreshMainImageCandidatesAction,
   deleteMainImageCandidatesAction,
   selectMainImageCandidateAction,
@@ -198,6 +278,8 @@ export const PoiRowsTable = ({
   resetDraftStoryAction: (formData: FormData) => Promise<void>;
   refreshAiAction: (formData: FormData) => Promise<void>;
   deleteAiAction: (formData: FormData) => Promise<void>;
+  refreshStoryContentAction: (formData: FormData) => Promise<void>;
+  deleteStoryContentAction: (formData: FormData) => Promise<void>;
   refreshMainImageCandidatesAction: (formData: FormData) => Promise<void>;
   deleteMainImageCandidatesAction: (formData: FormData) => Promise<void>;
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
@@ -261,7 +343,7 @@ export const PoiRowsTable = ({
                   >
                     <ColumnHeader
                       title="Story"
-                      path="data/rome/stories/<poi-id>/story.md"
+                      path="data/rome/stories/<poi-id>/story.json + story.md"
                     />
                   </th>
                   <th
@@ -281,7 +363,11 @@ export const PoiRowsTable = ({
                   const isVisualizationDisabled = isRowInProgress;
                   const progressDescription = isRowInProgress ? progress.description : null;
                   const isRowEmpty =
-                    !row.transformedPoi && !row.wikiPoi && !row.aiPoi && !row.mainImageArtifact;
+                    !row.transformedPoi &&
+                    !row.wikiPoi &&
+                    !row.storyContent &&
+                    !row.aiPoi &&
+                    !row.mainImageArtifact;
 
                   return (
                     <tr key={row.id} className="hover:bg-gray-50/60">
@@ -308,11 +394,7 @@ export const PoiRowsTable = ({
                                   )
                                 }
                               >
-                                <input
-                                  type="hidden"
-                                  name="geoPlaceId"
-                                  value={row.rawPoi.id}
-                                />
+                                <input type="hidden" name="geoPlaceId" value={row.rawPoi.id} />
                                 <input type="hidden" name="aiMode" value={selectedAiMode} />
                                 <input type="hidden" name="aiModel" value={selectedAiModel} />
                                 <SubmitButton
@@ -407,109 +489,181 @@ export const PoiRowsTable = ({
                         </CellActions>
                       </td>
                       <td className="min-w-0 border-r border-gray-100 px-3 py-2 align-top">
-                        <CellContent
-                          title={row.aiPoi ? "Available" : undefined}
-                          updatedAt={row.aiUpdatedAt}
-                          generationDuration={row.aiGenerationDuration}
-                          generationModel={
-                            row.aiPoi
-                              ? [
-                                  row.aiGenerationMode,
-                                  row.aiGenerationProvider,
-                                  row.aiGenerationModel ?? "unknown",
-                                ]
-                                  .filter(Boolean)
-                                  .join(" / ")
-                              : undefined
-                          }
-                        />
-                        <CellActions>
-                          {row.aiPoi ? (
-                            <div className={actionGroupClassName}>
-                              <IconButton
-                                type="button"
-                                label="View Story"
-                                disabled={isVisualizationDisabled}
-                                onClick={() =>
-                                  row.aiText
-                                    ? setSelectedPanel({
-                                        title: `${row.id} Story`,
-                                        kind: "markdown",
-                                        content: row.aiText,
-                                      })
-                                    : null
-                                }
-                              >
-                                <EyeIcon />
-                              </IconButton>
-                              <form
-                                action={(formData) =>
-                                  runSingleAction(
-                                    row.id,
-                                    "Generating Story...",
-                                    refreshAiAction,
-                                    formData,
-                                  )
-                                }
-                              >
-                                <input type="hidden" name="poiId" value={row.id} />
-                                <input type="hidden" name="aiMode" value={selectedAiMode} />
-                                <input type="hidden" name="aiModel" value={selectedAiModel} />
-                                <SubmitButton
-                                  idleLabel="Refresh"
-                                  pendingLabel="Refreshing..."
-                                  confirmMessage={refreshConfirmMessages.ai}
-                                  icon={<ArrowPathIcon />}
-                                  tone="primary"
-                                  disabled={isRowInProgress}
-                                />
-                              </form>
-                              <form
-                                action={(formData) =>
-                                  runSingleAction(
-                                    row.id,
-                                    "Deleting Story...",
-                                    deleteAiAction,
-                                    formData,
-                                  )
-                                }
-                              >
-                                <input type="hidden" name="poiId" value={row.id} />
-                                <SubmitButton
-                                  idleLabel="Delete"
-                                  pendingLabel="Deleting..."
-                                  confirmMessage={deleteConfirmMessages.ai}
-                                  icon={<TrashIcon />}
-                                  tone="danger"
-                                  disabled={isRowInProgress}
-                                />
-                              </form>
-                            </div>
-                          ) : row.wikiPoi ? (
-                            <form
-                              action={(formData) =>
-                                runSingleAction(
-                                  row.id,
-                                  "Generating Story...",
-                                  refreshAiAction,
-                                  formData,
-                                )
+                        <div className="space-y-4">
+                          <div>
+                            <p className="text-xs font-semibold text-black">Story Content</p>
+                            <p
+                              className={
+                                row.storyContent
+                                  ? "text-xs text-emerald-700"
+                                  : "text-xs text-black/35"
                               }
                             >
-                              <input type="hidden" name="poiId" value={row.id} />
-                              <input type="hidden" name="aiMode" value={selectedAiMode} />
-                              <input type="hidden" name="aiModel" value={selectedAiModel} />
-                              <SubmitButton
-                                idleLabel="Generate"
-                                pendingLabel="Generating..."
-                                confirmMessage={refreshConfirmMessages.ai}
-                                icon={<DocumentTextIcon />}
-                                tone="primary"
-                                disabled={isRowInProgress}
-                              />
-                            </form>
-                          ) : null}
-                        </CellActions>
+                              {row.storyContent ? "Available" : "Not generated"}
+                            </p>
+                            {row.storyContentGenerationModel ? (
+                              <p className="mt-1 text-xs text-black/55">
+                                Model:{" "}
+                                {[
+                                  row.storyContentGenerationMode,
+                                  row.storyContentGenerationProvider,
+                                  row.storyContentGenerationModel,
+                                ]
+                                  .filter(Boolean)
+                                  .join(" / ")}
+                              </p>
+                            ) : null}
+                            <CellActions>
+                              <div className={actionGroupClassName}>
+                                {row.storyContent ? (
+                                  <IconButton
+                                    type="button"
+                                    label="View Story Content"
+                                    disabled={isVisualizationDisabled}
+                                    onClick={() =>
+                                      row.storyContent
+                                        ? setSelectedPanel({
+                                            title: `${row.id} Story Content`,
+                                            kind: "storyContent",
+                                            content: row.storyContent,
+                                            sources: row.storyContentSources ?? [],
+                                          })
+                                        : null
+                                    }
+                                  >
+                                    <EyeIcon />
+                                  </IconButton>
+                                ) : null}
+                                {row.wikiPoi ? (
+                                  <form
+                                    action={(formData) =>
+                                      runSingleAction(
+                                        row.id,
+                                        "Generating Story Content...",
+                                        refreshStoryContentAction,
+                                        formData,
+                                      )
+                                    }
+                                  >
+                                    <input type="hidden" name="poiId" value={row.id} />
+                                    <input type="hidden" name="aiMode" value={selectedAiMode} />
+                                    <input type="hidden" name="aiModel" value={selectedAiModel} />
+                                    <SubmitButton
+                                      idleLabel={row.storyContent ? "Refresh" : "Generate"}
+                                      pendingLabel="Generating..."
+                                      confirmMessage={refreshConfirmMessages.storyContent}
+                                      icon={
+                                        row.storyContent ? <ArrowPathIcon /> : <DocumentTextIcon />
+                                      }
+                                      tone="primary"
+                                      disabled={isRowInProgress}
+                                    />
+                                  </form>
+                                ) : null}
+                                {row.storyContent ? (
+                                  <form
+                                    action={(formData) =>
+                                      runSingleAction(
+                                        row.id,
+                                        "Deleting Story Content...",
+                                        deleteStoryContentAction,
+                                        formData,
+                                      )
+                                    }
+                                  >
+                                    <input type="hidden" name="poiId" value={row.id} />
+                                    <SubmitButton
+                                      idleLabel="Delete"
+                                      pendingLabel="Deleting..."
+                                      confirmMessage={deleteConfirmMessages.storyContent}
+                                      icon={<TrashIcon />}
+                                      tone="danger"
+                                      disabled={isRowInProgress}
+                                    />
+                                  </form>
+                                ) : null}
+                              </div>
+                            </CellActions>
+                          </div>
+                          <div className="border-t border-black/10 pt-3">
+                            <p className="text-xs font-semibold text-black">Story Markdown</p>
+                            <p
+                              className={
+                                row.aiPoi ? "text-xs text-emerald-700" : "text-xs text-black/35"
+                              }
+                            >
+                              {row.aiPoi ? "Available" : "Not generated"}
+                            </p>
+                            <CellActions>
+                              <div className={actionGroupClassName}>
+                                {row.aiPoi ? (
+                                  <IconButton
+                                    type="button"
+                                    label="View Story Markdown"
+                                    disabled={isVisualizationDisabled}
+                                    onClick={() =>
+                                      row.aiText
+                                        ? setSelectedPanel({
+                                            title: `${row.id} Story Markdown`,
+                                            kind: "markdown",
+                                            content: row.aiText,
+                                          })
+                                        : null
+                                    }
+                                  >
+                                    <EyeIcon />
+                                  </IconButton>
+                                ) : null}
+                                {row.wikiPoi ? (
+                                  <form
+                                    action={(formData) =>
+                                      runSingleAction(
+                                        row.id,
+                                        "Generating Story Markdown...",
+                                        refreshAiAction,
+                                        formData,
+                                      )
+                                    }
+                                  >
+                                    <input type="hidden" name="poiId" value={row.id} />
+                                    <input type="hidden" name="aiMode" value={selectedAiMode} />
+                                    <input type="hidden" name="aiModel" value={selectedAiModel} />
+                                    <SubmitButton
+                                      idleLabel={row.aiPoi ? "Refresh" : "Generate"}
+                                      pendingLabel="Generating..."
+                                      confirmMessage={refreshConfirmMessages.ai}
+                                      icon={row.aiPoi ? <ArrowPathIcon /> : <DocumentTextIcon />}
+                                      tone="primary"
+                                      disabled={isRowInProgress}
+                                    />
+                                  </form>
+                                ) : null}
+                                {row.aiPoi ? (
+                                  <form
+                                    action={(formData) =>
+                                      runSingleAction(
+                                        row.id,
+                                        "Deleting Story Markdown...",
+                                        deleteAiAction,
+                                        formData,
+                                      )
+                                    }
+                                  >
+                                    <input type="hidden" name="poiId" value={row.id} />
+                                    <SubmitButton
+                                      idleLabel="Delete"
+                                      pendingLabel="Deleting..."
+                                      confirmMessage={deleteConfirmMessages.ai}
+                                      icon={<TrashIcon />}
+                                      tone="danger"
+                                      disabled={isRowInProgress}
+                                    />
+                                  </form>
+                                ) : null}
+                              </div>
+                            </CellActions>
+                          </div>
+                        </div>
                       </td>
                       <td className="min-w-0 py-2 pr-4 pl-3 align-top">
                         <div className="flex min-h-32 min-w-0 items-start gap-3">
@@ -642,6 +796,12 @@ export const PoiRowsTable = ({
               <div className="flex-1 overflow-auto bg-neutral-50 px-5 py-4 text-sm leading-6 text-black">
                 <MarkdownContent content={selectedPanel.content} />
               </div>
+            ) : null}
+            {selectedPanel.kind === "storyContent" ? (
+              <StoryContentPreview
+                content={selectedPanel.content}
+                sources={selectedPanel.sources}
+              />
             ) : null}
             {selectedPanel.kind === "mainImage" ? (
               <div className="flex-1 overflow-auto bg-neutral-50 px-5 py-4 text-sm text-black">

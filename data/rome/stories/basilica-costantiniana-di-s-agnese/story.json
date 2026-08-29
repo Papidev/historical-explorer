@@ -1,0 +1,67 @@
+{
+  "introduction": {
+    "text": "The Constantinian Basilica of Saint Agnes is the ruined 4th-century funerary hall beside Santa Costanza in Rome. Its surviving wall foundations mark a building created close to the tomb of Saint Agnes and the catacombs beneath the complex.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "basilica-construction",
+        "description": "The funerary hall was built from 338 during the reign of Constantine I. Its position over part of the earlier Catacombs of Saint Agnes reflects the early Christian desire to be buried close to a martyr.",
+        "relatedPersonIds": ["constantine-i", "saint-agnes"],
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 338,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "mausoleum-added",
+        "description": "The mausoleum now known as Santa Costanza was built around 350 beside the earlier basilica and was traditionally associated with Constantina, the daughter of Constantine I.",
+        "relatedPersonIds": ["constantina", "constantine-i"],
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 350,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "basilica-ruin",
+        "description": "The basilica gradually fell out of use and into ruins. The base of its wall now survives for roughly one third of the original exterior circuit, while the adjoining mausoleum remains largely intact.",
+        "relatedPersonIds": [],
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "basilica-mausoleum-connection",
+        "description": "A doorway from the mausoleum originally opened directly into the Constantinian basilica about halfway along the funerary hall, revealing how the two buildings once formed a connected complex.",
+        "relatedPersonIds": [],
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "id": "constantine-i",
+      "name": "Constantine I",
+      "relationship": "Roman emperor during whose reign the funerary basilica was built",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "id": "constantina",
+      "name": "Constantina",
+      "relationship": "Daughter of Constantine I and the figure traditionally associated with the adjoining mausoleum",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "id": "saint-agnes",
+      "name": "Saint Agnes",
+      "relationship": "Christian martyr whose tomb and catacombs drew burials to the site",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

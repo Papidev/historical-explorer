@@ -18,6 +18,8 @@ export const AdminDashboard = ({
   resetDraftStoryAction,
   refreshAiAction,
   deleteAiAction,
+  refreshStoryContentAction,
+  deleteStoryContentAction,
   refreshMainImageCandidatesAction,
   deleteMainImageCandidatesAction,
   selectMainImageCandidateAction,
@@ -29,6 +31,8 @@ export const AdminDashboard = ({
   resetDraftStoryAction: (formData: FormData) => Promise<void>;
   refreshAiAction: (formData: FormData) => Promise<void>;
   deleteAiAction: (formData: FormData) => Promise<void>;
+  refreshStoryContentAction: (formData: FormData) => Promise<void>;
+  deleteStoryContentAction: (formData: FormData) => Promise<void>;
   refreshMainImageCandidatesAction: (formData: FormData) => Promise<void>;
   deleteMainImageCandidatesAction: (formData: FormData) => Promise<void>;
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
@@ -90,6 +94,8 @@ export const AdminDashboard = ({
         resetDraftStoryAction={resetDraftStoryAction}
         refreshAiAction={refreshAiAction}
         deleteAiAction={deleteAiAction}
+        refreshStoryContentAction={refreshStoryContentAction}
+        deleteStoryContentAction={deleteStoryContentAction}
         refreshMainImageCandidatesAction={refreshMainImageCandidatesAction}
         deleteMainImageCandidatesAction={deleteMainImageCandidatesAction}
         selectMainImageCandidateAction={selectMainImageCandidateAction}

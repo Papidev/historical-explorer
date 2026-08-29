@@ -42,6 +42,14 @@ export const refreshAiText = async (formData: FormData) => {
   revalidatePath("/admin");
 };
 
+export const refreshStoryContent = async (formData: FormData) => {
+  await storyWorkflow.storyContent.generate({
+    poiId: getRequiredString(formData, "poiId", "POI id"),
+    ai: await getWorkflowAiSelection(formData),
+  });
+  revalidatePath("/admin");
+};
+
 export const refreshMainImageCandidates = async (formData: FormData) => {
   await storyWorkflow.mainImageCandidates.generate({
     poiId: getRequiredString(formData, "poiId", "POI id"),
@@ -51,6 +59,13 @@ export const refreshMainImageCandidates = async (formData: FormData) => {
 
 export const deleteAiText = async (formData: FormData) => {
   await storyWorkflow.storyProse.delete({
+    poiId: getRequiredString(formData, "poiId", "POI id"),
+  });
+  revalidatePath("/admin");
+};
+
+export const deleteStoryContent = async (formData: FormData) => {
+  await storyWorkflow.storyContent.delete({
     poiId: getRequiredString(formData, "poiId", "POI id"),
   });
   revalidatePath("/admin");
@@ -66,11 +81,7 @@ export const deleteMainImageCandidates = async (formData: FormData) => {
 export const selectMainImageCandidate = async (formData: FormData) => {
   await storyCuration.selectDraftMainImage({
     poiId: getRequiredString(formData, "poiId", "POI id"),
-    commonsFileName: getRequiredString(
-      formData,
-      "commonsFileName",
-      "Commons file name",
-    ),
+    commonsFileName: getRequiredString(formData, "commonsFileName", "Commons file name"),
   });
   revalidatePath("/admin");
 };

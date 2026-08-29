@@ -1,9 +1,11 @@
 import { enrichWikiText } from "./enrichWikiText";
+import { generateStoryContent } from "./generateStoryContent";
 import { createStoryWorkflow } from "./createStoryWorkflow";
 import { filesystemStoryWorkflowRepository } from "./filesystemRepository";
 import { fetchMainImageCandidates } from "./mainImageCandidates";
 import { fetchWikiSnapshot } from "@/server/wikiPipeline/fetchWiki";
 import {
+  buildWikipediaPageUrl,
   findPoiInGeoJson,
   getDefaultInputPath,
 } from "@/server/wikiPipeline/io";
@@ -26,15 +28,16 @@ export const storyWorkflow = createStoryWorkflow({
     const snapshot = await fetchWikiSnapshot(resolved.selected.title);
     return [
       {
+        id: "wikipedia",
         kind: "wikipedia",
+        title: resolved.selected.title,
+        url: buildWikipediaPageUrl(resolved.selected.title),
         content: wikiTextToPlainText(snapshot.fullText),
       },
     ];
   },
   generateMainImageCandidates: async (pointOfInterest) => {
-    console.info(
-      `[wiki-images] Generating Main Image Candidates for ${pointOfInterest.id}.`,
-    );
+    console.info(`[wiki-images] Generating Main Image Candidates for ${pointOfInterest.id}.`);
     return fetchMainImageCandidates(pointOfInterest);
   },
   generateStoryProse: async ({ pointOfInterest, sources, ai }) => {
@@ -51,11 +54,28 @@ export const storyWorkflow = createStoryWorkflow({
     );
     return {
       content: `# ${pointOfInterest.name} (${pointOfInterest.id})\n\n${(
-        await enrichWikiText(
-          sources.map((source) => source.content).join("\n\n"),
-          { provider, model: ai.model },
-        )
+        await enrichWikiText(sources.map((source) => source.content).join("\n\n"), {
+          provider,
+          model: ai.model,
+        })
       ).trim()}`,
+      provider,
+    };
+  },
+  generateStoryContent: async ({ pointOfInterest, sources, ai }) => {
+    const provider =
+      ai.mode === "local"
+        ? process.env.LOCAL_AI_PROVIDER === "gemini"
+          ? "gemini"
+          : "ollama"
+        : process.env.CLOUD_AI_PROVIDER === "ollama"
+          ? "ollama"
+          : "gemini";
+    return {
+      content: await generateStoryContent(pointOfInterest, sources, {
+        provider,
+        model: ai.model,
+      }),
       provider,
     };
   },
@@ -73,4 +93,11 @@ export type {
   StoryWorkflowErrorCode,
   StoryWorkflowErrorStage,
 } from "./types";
+export type {
+  HistoryInsight,
+  PublicStoryContent,
+  RelatedPerson,
+  StoryContent,
+  StoryInsight,
+} from "./storyContent";
 export { StoryWorkflowError } from "./types";

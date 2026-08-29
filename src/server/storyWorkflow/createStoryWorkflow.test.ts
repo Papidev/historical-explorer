@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { mkdtempSync, rmSync } from "node:fs";
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, unlinkSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import type { MainImageCandidate, PoiInput } from "@/server/wikiPipeline/types";
@@ -8,10 +8,8 @@ import {
   type StoryWorkflowDependencies,
   type StoryWorkflowRepository,
 } from "./createStoryWorkflow";
-import {
-  StoryWorkflowError,
-  type DraftStorySnapshot,
-} from "./types";
+import { StoryWorkflowError, type DraftStorySnapshot } from "./types";
+import type { StoryContent } from "./storyContent";
 import { filesystemStoryWorkflowRepository } from "./filesystemRepository";
 
 const pointOfInterest: PoiInput = {
@@ -22,10 +20,26 @@ const pointOfInterest: PoiInput = {
   sourceHints: { wikidata: "Q152834" },
 };
 
-const candidate = (
-  commonsFileName: string,
-  metadata = true,
-): MainImageCandidate => ({
+const source = {
+  id: "wikipedia",
+  kind: "wikipedia" as const,
+  title: "Forum Boarium",
+  url: "https://en.wikipedia.org/wiki/Forum_Boarium",
+  content: "Source version one",
+};
+
+const storyContent = (introduction = "Forum Boarium was Rome's cattle market.") =>
+  ({
+    introduction: { text: introduction, sourceIds: ["wikipedia"] },
+    topics: {
+      history: [],
+      design: [],
+      art: [],
+    },
+    relatedPeople: [],
+  }) satisfies StoryContent;
+
+const candidate = (commonsFileName: string, metadata = true): MainImageCandidate => ({
   commonsFileName,
   commonsPageUrl: `https://commons.wikimedia.org/wiki/File:${commonsFileName}`,
   thumbnailUrl: `https://example.com/${commonsFileName}`,
@@ -58,12 +72,7 @@ const createMemoryRepository = () => {
       snapshot.sources = structuredClone(sources);
       snapshot.generation.sources = checkpoint;
     },
-    replaceMainImageCandidates: async (
-      poiId,
-      candidates,
-      selectedCommonsFileName,
-      checkpoint,
-    ) => {
+    replaceMainImageCandidates: async (poiId, candidates, selectedCommonsFileName, checkpoint) => {
       const snapshot = getOrCreate(poiId);
       snapshot.mainImageCandidates = structuredClone(candidates);
       snapshot.draftMainImage = candidates.find(
@@ -76,11 +85,23 @@ const createMemoryRepository = () => {
       snapshot.storyProse = storyProse;
       snapshot.generation.storyProse = checkpoint;
     },
+    replaceStoryContent: async (poiId, content, checkpoint) => {
+      const snapshot = getOrCreate(poiId);
+      snapshot.storyContent = structuredClone(content);
+      snapshot.generation.storyContent = checkpoint;
+    },
     deleteStoryProse: async (poiId) => {
       const snapshot = snapshots.get(poiId);
       if (snapshot) {
         delete snapshot.storyProse;
         delete snapshot.generation.storyProse;
+      }
+    },
+    deleteStoryContent: async (poiId) => {
+      const snapshot = snapshots.get(poiId);
+      if (snapshot) {
+        delete snapshot.storyContent;
+        delete snapshot.generation.storyContent;
       }
     },
     deleteMainImageCandidates: async (poiId) => {
@@ -98,20 +119,20 @@ const createMemoryRepository = () => {
   return { repository, snapshots };
 };
 
-const createDependencies = (
-  overrides: Partial<StoryWorkflowDependencies> = {},
-) => {
+const createDependencies = (overrides: Partial<StoryWorkflowDependencies> = {}) => {
   const { repository, snapshots } = createMemoryRepository();
   return {
     dependencies: {
       findPointOfInterest: async (poiId) =>
         poiId === pointOfInterest.id ? pointOfInterest : undefined,
-      acquireSources: async () => [
-        { kind: "wikipedia" as const, content: "Source version one" },
-      ],
+      acquireSources: async () => [source],
       generateMainImageCandidates: async () => [candidate("first.jpg")],
       generateStoryProse: async ({ sources }) => ({
         content: `Story from ${sources[0]?.content}`,
+        provider: "ollama" as const,
+      }),
+      generateStoryContent: async () => ({
+        content: storyContent(),
         provider: "ollama" as const,
       }),
       repository,
@@ -129,15 +150,15 @@ describe("Story Workflow Interface", () => {
     const { dependencies } = createDependencies({
       acquireSources: async () => {
         order.push("sources");
-        return [{ kind: "wikipedia", content: "Source" }];
+        return [{ ...source, content: "Source" }];
       },
       generateMainImageCandidates: async () => {
         order.push("mainImageCandidates");
         return [candidate("first.jpg")];
       },
-      generateStoryProse: async () => {
-        order.push("storyProse");
-        return { content: "Story", provider: "ollama" };
+      generateStoryContent: async () => {
+        order.push("storyContent");
+        return { content: storyContent(), provider: "ollama" };
       },
     });
 
@@ -150,9 +171,9 @@ describe("Story Workflow Interface", () => {
       poiId: pointOfInterest.id,
       mainImageCandidates: "generated",
       draftMainImage: "available",
-      storyProse: "generated",
+      storyContent: "generated",
     });
-    expect(order).toEqual(["sources", "mainImageCandidates", "storyProse"]);
+    expect(order).toEqual(["sources", "mainImageCandidates", "storyContent"]);
   });
 
   it("stops before downstream work when Sources are unavailable", async () => {
@@ -165,9 +186,9 @@ describe("Story Workflow Interface", () => {
         downstream.push("candidates");
         return [];
       },
-      generateStoryProse: async () => {
-        downstream.push("prose");
-        return { content: "Story", provider: "ollama" };
+      generateStoryContent: async () => {
+        downstream.push("content");
+        return { content: storyContent(), provider: "ollama" };
       },
     });
 
@@ -185,7 +206,7 @@ describe("Story Workflow Interface", () => {
     expect(await repository.get(pointOfInterest.id)).toBeUndefined();
   });
 
-  it("continues Story Prose and reports partial success after candidate failure", async () => {
+  it("continues Story Content and reports partial success after candidate failure", async () => {
     const { dependencies, repository } = createDependencies({
       generateMainImageCandidates: async () => {
         throw new Error("Commons unavailable");
@@ -202,18 +223,18 @@ describe("Story Workflow Interface", () => {
       poiId: pointOfInterest.id,
       mainImageCandidates: "failed",
       draftMainImage: "missing",
-      storyProse: "generated",
+      storyContent: "generated",
     });
     expect(await repository.get(pointOfInterest.id)).toMatchObject({
       sources: [{ content: "Source version one" }],
       mainImageCandidates: [],
-      storyProse: "Story from Source version one",
+      storyContent: storyContent(),
     });
   });
 
-  it("preserves successful Source and candidate checkpoints when prose fails", async () => {
+  it("preserves successful Source and candidate checkpoints when Story Content fails", async () => {
     const { dependencies, repository } = createDependencies({
-      generateStoryProse: async () => {
+      generateStoryContent: async () => {
         throw new Error("AI unavailable");
       },
     });
@@ -224,8 +245,8 @@ describe("Story Workflow Interface", () => {
         ai: { mode: "cloud", model: "gemini-2.5-flash" },
       }),
     ).rejects.toMatchObject({
-      code: "story-prose-generation-failed",
-      stage: "storyProse",
+      code: "story-content-generation-failed",
+      stage: "storyContent",
     });
     expect(await repository.get(pointOfInterest.id)).toMatchObject({
       sources: [{ content: "Source version one" }],
@@ -236,13 +257,19 @@ describe("Story Workflow Interface", () => {
 
   it("uses create-or-replace semantics and preserves previous artifacts on explicit failure", async () => {
     let prose = "First story";
+    let content = storyContent("First structured story.");
     let candidates = [candidate("first.jpg")];
     let failProse = false;
+    let failContent = false;
     let failCandidates = false;
     const { dependencies, repository } = createDependencies({
       generateStoryProse: async () => {
         if (failProse) throw new Error("AI unavailable");
         return { content: prose, provider: "ollama" };
+      },
+      generateStoryContent: async () => {
+        if (failContent) throw new Error("AI unavailable");
+        return { content, provider: "ollama" };
       },
       generateMainImageCandidates: async () => {
         if (failCandidates) throw new Error("Commons unavailable");
@@ -256,18 +283,25 @@ describe("Story Workflow Interface", () => {
     });
 
     prose = "Replacement story";
+    content = storyContent("Replacement structured story.");
     candidates = [candidate("replacement.jpg")];
     await workflow.storyProse.generate({
+      poiId: pointOfInterest.id,
+      ai: { mode: "local", model: "qwen3:8b" },
+    });
+    await workflow.storyContent.generate({
       poiId: pointOfInterest.id,
       ai: { mode: "local", model: "qwen3:8b" },
     });
     await workflow.mainImageCandidates.generate({ poiId: pointOfInterest.id });
     expect(await repository.get(pointOfInterest.id)).toMatchObject({
       storyProse: "Replacement story",
+      storyContent: content,
       mainImageCandidates: [{ commonsFileName: "replacement.jpg" }],
     });
 
     failProse = true;
+    failContent = true;
     failCandidates = true;
     await expect(
       workflow.storyProse.generate({
@@ -276,12 +310,19 @@ describe("Story Workflow Interface", () => {
       }),
     ).rejects.toBeInstanceOf(StoryWorkflowError);
     await expect(
+      workflow.storyContent.generate({
+        poiId: pointOfInterest.id,
+        ai: { mode: "local", model: "qwen3:8b" },
+      }),
+    ).rejects.toMatchObject({ code: "story-content-generation-failed" });
+    await expect(
       workflow.mainImageCandidates.generate({ poiId: pointOfInterest.id }),
     ).rejects.toMatchObject({
       code: "main-image-candidates-generation-failed",
     });
     expect(await repository.get(pointOfInterest.id)).toMatchObject({
       storyProse: "Replacement story",
+      storyContent: content,
       mainImageCandidates: [{ commonsFileName: "replacement.jpg" }],
     });
   });
@@ -317,8 +358,13 @@ describe("Story Workflow Interface", () => {
       poiId: pointOfInterest.id,
       ai: { mode: "local", model: "qwen3:8b" },
     });
+    await workflow.storyProse.generate({
+      poiId: pointOfInterest.id,
+      ai: { mode: "local", model: "qwen3:8b" },
+    });
 
     await workflow.storyProse.delete({ poiId: pointOfInterest.id });
+    await workflow.storyContent.delete({ poiId: pointOfInterest.id });
     await workflow.mainImageCandidates.delete({ poiId: pointOfInterest.id });
     expect(await workflow.draftStory.get({ poiId: pointOfInterest.id })).toMatchObject({
       sources: [{ content: "Source version one" }],
@@ -369,6 +415,12 @@ describe("Story Workflow Interface", () => {
     );
     process.chdir(temporaryDirectory);
     try {
+      const markdownFilePath = path.join(
+        temporaryDirectory,
+        "data/rome/stories/forum-boarium/story.md",
+      );
+      mkdirSync(path.dirname(markdownFilePath), { recursive: true });
+      writeFileSync(markdownFilePath, "Existing independent Markdown\n", "utf-8");
       const workflow = createStoryWorkflow({
         ...createDependencies().dependencies,
         repository: filesystemStoryWorkflowRepository,
@@ -377,20 +429,27 @@ describe("Story Workflow Interface", () => {
         poiId: pointOfInterest.id,
         ai: { mode: "local", model: "qwen3:8b" },
       });
-      await expect(
-        workflow.draftStory.get({ poiId: pointOfInterest.id }),
-      ).resolves.toMatchObject({
+      await expect(workflow.draftStory.get({ poiId: pointOfInterest.id })).resolves.toMatchObject({
         poiId: pointOfInterest.id,
         sources: [{ content: "Source version one" }],
-        storyProse: "Story from Source version one",
+        storyContent: storyContent(),
         mainImageCandidates: [{ commonsFileName: "first.jpg" }],
         draftMainImage: { commonsFileName: "first.jpg" },
       });
+      expect(readFileSync(markdownFilePath, "utf-8")).toBe("Existing independent Markdown\n");
+
+      unlinkSync(path.join(temporaryDirectory, "data/rome/generated/wiki/forum-boarium.txt"));
+      unlinkSync(
+        path.join(temporaryDirectory, "data/rome/generated/wiki/forum-boarium.metadata.json"),
+      );
+      await expect(workflow.draftStory.get({ poiId: pointOfInterest.id })).resolves.toMatchObject({
+        sources: [],
+        storyContent: storyContent(),
+        storyProse: "Existing independent Markdown",
+      });
 
       await workflow.draftStory.reset({ poiId: pointOfInterest.id });
-      await expect(
-        workflow.draftStory.get({ poiId: pointOfInterest.id }),
-      ).resolves.toBeUndefined();
+      await expect(workflow.draftStory.get({ poiId: pointOfInterest.id })).resolves.toBeUndefined();
     } finally {
       process.chdir(originalWorkingDirectory);
       rmSync(temporaryDirectory, { recursive: true, force: true });
