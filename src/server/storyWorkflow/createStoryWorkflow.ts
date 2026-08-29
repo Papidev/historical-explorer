@@ -1,4 +1,5 @@
 import type { MainImageCandidate, PoiInput } from "@/server/wikiPipeline/types";
+import type { StoryContent } from "./storyContent";
 import {
   StoryWorkflowError,
   type AiSelection,
@@ -26,7 +27,13 @@ export type StoryWorkflowRepository = {
     storyProse: string,
     checkpoint: NonNullable<DraftStoryGenerationStatus["storyProse"]>,
   ): Promise<void>;
+  replaceStoryContent(
+    poiId: string,
+    storyContent: StoryContent,
+    checkpoint: NonNullable<DraftStoryGenerationStatus["storyContent"]>,
+  ): Promise<void>;
   deleteStoryProse(poiId: string): Promise<void>;
+  deleteStoryContent(poiId: string): Promise<void>;
   deleteMainImageCandidates(poiId: string): Promise<void>;
   reset(poiId: string): Promise<void>;
 };
@@ -40,6 +47,11 @@ export type StoryWorkflowDependencies = {
     sources: Source[];
     ai: AiSelection;
   }): Promise<{ content: string; provider: "ollama" | "gemini" }>;
+  generateStoryContent(input: {
+    pointOfInterest: PoiInput;
+    sources: Source[];
+    ai: AiSelection;
+  }): Promise<{ content: StoryContent; provider: "ollama" | "gemini" }>;
   repository: StoryWorkflowRepository;
   now?: () => Date;
 };
@@ -57,10 +69,7 @@ const persistenceError = (cause: unknown) =>
     cause,
   });
 
-const findPointOfInterest = async (
-  poiId: string,
-  dependencies: StoryWorkflowDependencies,
-) => {
+const findPointOfInterest = async (poiId: string, dependencies: StoryWorkflowDependencies) => {
   const pointOfInterest = await dependencies.findPointOfInterest(poiId);
   if (!pointOfInterest) {
     throw new StoryWorkflowError({
@@ -73,22 +82,16 @@ const findPointOfInterest = async (
   return pointOfInterest;
 };
 
-const selectDraftMainImage = (
-  candidates: MainImageCandidate[],
-  currentCommonsFileName?: string,
-) =>
+const selectDraftMainImage = (candidates: MainImageCandidate[], currentCommonsFileName?: string) =>
   candidates.find(
     (candidate) =>
       candidate.commonsFileName === currentCommonsFileName &&
       candidate.license &&
       candidate.attribution,
   )?.commonsFileName ??
-  candidates.find((candidate) => candidate.license && candidate.attribution)
-    ?.commonsFileName;
+  candidates.find((candidate) => candidate.license && candidate.attribution)?.commonsFileName;
 
-export const createStoryWorkflow = (
-  dependencies: StoryWorkflowDependencies,
-): StoryWorkflow => {
+export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): StoryWorkflow => {
   const now = dependencies.now ?? (() => new Date());
 
   const acquireAndPersistSources = async (pointOfInterest: PoiInput) => {
@@ -180,16 +183,46 @@ export const createStoryWorkflow = (
     }
 
     try {
-      await dependencies.repository.replaceStoryProse(
-        pointOfInterest.id,
-        generated.content,
-        {
-          ...toCheckpoint(startedAt, now),
-          aiMode: ai.mode,
-          aiProvider: generated.provider,
-          aiModel: ai.model,
-        },
-      );
+      await dependencies.repository.replaceStoryProse(pointOfInterest.id, generated.content, {
+        ...toCheckpoint(startedAt, now),
+        aiMode: ai.mode,
+        aiProvider: generated.provider,
+        aiModel: ai.model,
+      });
+    } catch (cause) {
+      throw persistenceError(cause);
+    }
+  };
+
+  const generateAndPersistStoryContent = async (
+    pointOfInterest: PoiInput,
+    sources: Source[],
+    ai: AiSelection,
+  ) => {
+    const startedAt = now().getTime();
+    let generated: { content: StoryContent; provider: "ollama" | "gemini" };
+    try {
+      generated = await dependencies.generateStoryContent({
+        pointOfInterest,
+        sources,
+        ai,
+      });
+    } catch (cause) {
+      throw new StoryWorkflowError({
+        code: "story-content-generation-failed",
+        stage: "storyContent",
+        retryable: true,
+        cause,
+      });
+    }
+
+    try {
+      await dependencies.repository.replaceStoryContent(pointOfInterest.id, generated.content, {
+        ...toCheckpoint(startedAt, now),
+        aiMode: ai.mode,
+        aiProvider: generated.provider,
+        aiModel: ai.model,
+      });
     } catch (cause) {
       throw persistenceError(cause);
     }
@@ -206,16 +239,16 @@ export const createStoryWorkflow = (
           selectedCommonsFileName = await generateAndPersistCandidates(pointOfInterest);
         } catch {
           mainImageCandidates = "failed";
-          selectedCommonsFileName = (await dependencies.repository.get(poiId))
-            ?.draftMainImage?.commonsFileName;
+          selectedCommonsFileName = (await dependencies.repository.get(poiId))?.draftMainImage
+            ?.commonsFileName;
         }
-        await generateAndPersistStoryProse(pointOfInterest, sources, ai);
+        await generateAndPersistStoryContent(pointOfInterest, sources, ai);
 
         return {
           poiId,
           mainImageCandidates,
           draftMainImage: selectedCommonsFileName ? "available" : "missing",
-          storyProse: "generated",
+          storyContent: "generated",
         };
       },
       get: ({ poiId }) => dependencies.repository.get(poiId),
@@ -248,11 +281,30 @@ export const createStoryWorkflow = (
         }
       },
     },
+    storyContent: {
+      generate: async ({ poiId, ai }) => {
+        const pointOfInterest = await findPointOfInterest(poiId, dependencies);
+        const sources = (await dependencies.repository.get(poiId))?.sources ?? [];
+        if (sources.length === 0) {
+          throw new StoryWorkflowError({
+            code: "sources-unavailable",
+            stage: "sources",
+            retryable: true,
+          });
+        }
+        await generateAndPersistStoryContent(pointOfInterest, sources, ai);
+      },
+      delete: async ({ poiId }) => {
+        try {
+          await dependencies.repository.deleteStoryContent(poiId);
+        } catch (cause) {
+          throw persistenceError(cause);
+        }
+      },
+    },
     mainImageCandidates: {
       generate: async ({ poiId }) => {
-        await generateAndPersistCandidates(
-          await findPointOfInterest(poiId, dependencies),
-        );
+        await generateAndPersistCandidates(await findPointOfInterest(poiId, dependencies));
       },
       delete: async ({ poiId }) => {
         try {

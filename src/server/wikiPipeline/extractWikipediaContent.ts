@@ -1,10 +1,13 @@
 import { fetchWikiSnapshot } from "./fetchWiki";
 import {
   buildOutputFilePath,
+  buildSourceMetadataFilePath,
+  buildWikipediaPageUrl,
   findPoiInGeoJson,
   getDefaultInputPath,
   getDefaultOutputDir,
   writeSnapshotFile,
+  writeSourceMetadataFile,
 } from "./io";
 import { resolvePageForPoi } from "./resolve";
 import { wikiTextToPlainText } from "./wikiText";
@@ -14,10 +17,7 @@ type ExtractWikipediaContentParams = {
   poiId: string;
 };
 
-export const extractWikipediaContent = async ({
-  city,
-  poiId,
-}: ExtractWikipediaContentParams) => {
+export const extractWikipediaContent = async ({ city, poiId }: ExtractWikipediaContentParams) => {
   console.info(`[wiki] Fetching Wikipedia text for ${poiId}.`);
 
   const outputDir = getDefaultOutputDir(city);
@@ -27,8 +27,12 @@ export const extractWikipediaContent = async ({
   const snapshot = await fetchWikiSnapshot(resolved.selected.title);
 
   writeSnapshotFile(outputFilePath, wikiTextToPlainText(snapshot.fullText));
+  writeSourceMetadataFile(buildSourceMetadataFilePath(outputDir, poi.id), {
+    id: "wikipedia",
+    kind: "wikipedia",
+    title: resolved.selected.title,
+    url: buildWikipediaPageUrl(resolved.selected.title),
+  });
 
-  console.info(
-    `[wiki] Saved readable Wikipedia text for ${poiId} to ${outputFilePath}.`,
-  );
+  console.info(`[wiki] Saved readable Wikipedia text for ${poiId} to ${outputFilePath}.`);
 };

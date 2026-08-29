@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import type { Poi } from "@/types/Poi";
+import type { PublicStoryContent } from "@/server/storyWorkflow";
 import { Map } from "@/app/components/Map";
-import { MarkdownContent } from "@/app/components/MarkdownContent";
+import { StoryContent } from "@/app/components/StoryContent";
 
 type Props = {
   citySlug: string;
@@ -14,7 +15,7 @@ type Props = {
 };
 
 type DialogContentState = {
-  content: string | null;
+  content: PublicStoryContent | null;
   isLoading: boolean;
   poiId: string | null;
 };
@@ -27,26 +28,18 @@ export const RomeMapClient = ({
   pois,
 }: Props) => {
   const [zoom, setZoom] = useState(initialZoom);
-  const [selectedPoiId, setSelectedPoiId] = useState<string | null>(
-    initialSelectedPoiId,
-  );
-  const [dialogContentState, setDialogContentState] =
-    useState<DialogContentState>({
-      content: null,
-      isLoading: false,
-      poiId: null,
-    });
+  const [selectedPoiId, setSelectedPoiId] = useState<string | null>(initialSelectedPoiId);
+  const [dialogContentState, setDialogContentState] = useState<DialogContentState>({
+    content: null,
+    isLoading: false,
+    poiId: null,
+  });
   const displayZoom = Number(zoom.toFixed(2));
-  const selectedPoi = selectedPoiId
-    ? pois.find((poi) => poi.id === selectedPoiId)
-    : undefined;
+  const selectedPoi = selectedPoiId ? pois.find((poi) => poi.id === selectedPoiId) : undefined;
   const dialogContent =
-    dialogContentState.poiId === selectedPoi?.id
-      ? dialogContentState.content
-      : null;
+    dialogContentState.poiId === selectedPoi?.id ? dialogContentState.content : null;
   const isLoadingDialogContent =
-    dialogContentState.poiId === selectedPoi?.id &&
-    dialogContentState.isLoading;
+    dialogContentState.poiId === selectedPoi?.id && dialogContentState.isLoading;
 
   useEffect(() => {
     if (!selectedPoi) {
@@ -71,10 +64,10 @@ export const RomeMapClient = ({
         }
 
         const payload = (await response.json()) as {
-          content?: string | null;
+          storyContent?: PublicStoryContent | null;
         };
         setDialogContentState({
-          content: payload.content ?? null,
+          content: payload.storyContent ?? null,
           isLoading: false,
           poiId,
         });
@@ -94,15 +87,12 @@ export const RomeMapClient = ({
 
   return (
     <div className="relative h-full w-full">
-      <div className="absolute left-4 top-4 z-10 rounded-lg border border-white/10 bg-amber-100 px-3 py-2 text-xs text-black shadow-lg backdrop-blur">
+      <div className="absolute top-4 left-4 z-10 rounded-lg border border-white/10 bg-amber-100 px-3 py-2 text-xs text-black shadow-lg backdrop-blur">
         <div className="flex items-center gap-2">
           <span className="font-semibold">Zoom</span>
           <span className="tabular-nums">{displayZoom}</span>
         </div>
-        <label
-          className="mt-2 block text-[11px] font-medium text-white/70"
-          htmlFor="rome-zoom"
-        >
+        <label className="mt-2 block text-[11px] font-medium text-white/70" htmlFor="rome-zoom">
           Change zoom
         </label>
         <input
@@ -131,7 +121,7 @@ export const RomeMapClient = ({
         onMapClick={() => setSelectedPoiId(null)}
       />
       <aside
-        className={`absolute right-0 top-0 z-20 h-full w-full max-w-md border-l border-black/10 bg-white shadow-2xl transition-transform duration-300 ${
+        className={`absolute top-0 right-0 z-20 h-full w-full max-w-md border-l border-black/10 bg-white shadow-2xl transition-transform duration-300 ${
           selectedPoi ? "translate-x-0" : "translate-x-full"
         }`}
         aria-hidden={!selectedPoi}
@@ -139,7 +129,7 @@ export const RomeMapClient = ({
         <div className="flex h-full flex-col">
           <div className="flex items-start justify-between border-b border-black/10 px-5 py-4">
             <div>
-              <h2 className="text-2xl font-semibold leading-tight text-black">
+              <h2 className="text-2xl leading-tight font-semibold text-black">
                 {selectedPoi?.name ?? "Dettagli POI"}
               </h2>
             </div>
@@ -154,15 +144,15 @@ export const RomeMapClient = ({
           <div className="overflow-y-auto px-5 py-4 text-sm leading-6 text-black/80">
             {selectedPoi ? (
               <>
-                {selectedPoi.shortDescription ? (
-                  <p>{selectedPoi.shortDescription}</p>
-                ) : null}
+                {selectedPoi.shortDescription ? <p>{selectedPoi.shortDescription}</p> : null}
                 {isLoadingDialogContent ? (
-                  <p className="mt-4 text-black/60">
-                    Caricamento contenuto aggiuntivo...
-                  </p>
+                  <p className="mt-4 text-black/60">Caricamento contenuto aggiuntivo...</p>
                 ) : dialogContent ? (
-                  <MarkdownContent content={dialogContent} className="mt-4" />
+                  <StoryContent
+                    content={dialogContent}
+                    period={selectedPoi.period}
+                    address={selectedPoi.address}
+                  />
                 ) : (
                   <p className="mt-4 text-black/60">
                     Nessun contenuto aggiuntivo disponibile per questo punto.

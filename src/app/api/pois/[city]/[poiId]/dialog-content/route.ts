@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getPoiDialogContent } from "@/utils";
+import { getPoiStoryContent } from "@/utils";
 
 type Context = {
   params: Promise<{
@@ -11,10 +11,10 @@ type Context = {
 export const GET = async (_request: Request, { params }: Context) => {
   const { city, poiId } = await params;
 
-  const content = await getPoiDialogContent(
+  const storyContent = await getPoiStoryContent(
     decodeURIComponent(city),
     decodeURIComponent(poiId),
   );
 
-  return NextResponse.json({ content: content ?? null });
+  return NextResponse.json({ storyContent: storyContent ?? null });
 };

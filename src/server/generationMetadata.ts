@@ -3,7 +3,7 @@ import path from "node:path";
 import type { GenerationCheckpoint } from "@/server/storyWorkflow/types";
 import { sanitizePoiIdForFile } from "@/server/wikiPipeline/normalize";
 
-export type GenerationStep = "transformed" | "wiki" | "ai" | "image";
+export type GenerationStep = "transformed" | "wiki" | "ai" | "storyContent" | "image";
 
 export type GenerationMetadata = Record<
   string,
@@ -39,10 +39,7 @@ export const replaceGenerationCheckpoint = (
   });
 };
 
-export const deleteGenerationCheckpoints = (
-  poiId: string,
-  steps: GenerationStep[],
-) => {
+export const deleteGenerationCheckpoints = (poiId: string, steps: GenerationStep[]) => {
   const key = sanitizePoiIdForFile(poiId);
   const metadata = readGenerationMetadata();
   const poiMetadata = metadata[key];

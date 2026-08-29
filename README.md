@@ -45,16 +45,18 @@ For project glossary terms such as Geo Place, Draft Story, Sources, and Main Ima
 
 Each city's data lives under `data/<city>/`. The Geo Place input and app-ready POI catalog live together in the city's `pois/` folder and are versioned. Rebuildable local outputs live under `generated/` and are intentionally not committed.
 
-For Rome, the Geo Place input lives at `data/rome/pois/raw.geojson`, while app-ready POIs are progressively added to `data/rome/pois/pois.geojson`. Each app-ready POI has a stable, human-readable `id`; external identifiers such as `wikidataId` are optional and separate. Wikipedia Text snapshots are generated into `data/rome/generated/wiki/`, while local pipeline timings and execution details live in `data/rome/generated/generation-metadata.json`.
+For Rome, the Geo Place input lives at `data/rome/pois/raw.geojson`, while app-ready POIs are progressively added to `data/rome/pois/pois.geojson`. Each app-ready POI has a stable, human-readable `id`; external identifiers such as `wikidataId` are optional and separate. Wikipedia Text snapshots and local Source metadata are generated into `data/rome/generated/wiki/`, while local pipeline timings and execution details live in `data/rome/generated/generation-metadata.json`.
 
 Use the single Generate action in `/admin` to run the current Rome generation flow:
 
 1. Add app-ready POI metadata from the Geo Place.
 2. Generate the Wikipedia Text snapshot.
 3. Generate Main Image Candidates and select the first candidate with license and attribution.
-4. Generate the Story markdown.
+4. Generate structured Story Content.
 
-Stories live under the city's `stories/` folder, with one directory per POI ID. For example, `data/rome/stories/forum-boarium/` contains the Story prose in `story.md` and its Main Image Candidates in `images.json`. These are reviewable content artifacts and should be committed after generation and human editing.
+Stories live under the city's `stories/` folder, with one directory per POI ID. For example, `data/rome/stories/forum-boarium/` contains structured Story Content in `story.json`, independent Story Prose in `story.md`, and Main Image Candidates in `images.json`. Full Generate creates or replaces `story.json` without changing `story.md`; the Curator UI provides separate preview, Refresh, and Delete actions for both artifacts. The Visitor Experience reads only `story.json` and does not fall back to Markdown. These are reviewable content artifacts and should be committed after generation and human editing.
+
+Locally generated Wikipedia Sources use a text snapshot plus a metadata file containing the conventional `wikipedia` source ID, title, and URL. Source references are validated during generation and are shown in the Curator UI when the local Source is available, but are omitted from the public Story response.
 
 Story status is not represented yet, so the same structure currently holds content whether it is still a draft or already finalized. When approval status is introduced, the visitor experience should only expose approved Stories.
 

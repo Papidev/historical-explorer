@@ -1,4 +1,5 @@
 import type { MainImageCandidate } from "@/server/wikiPipeline/types";
+import type { StoryContent } from "./storyContent";
 
 export type AiSelection = {
   mode: "local" | "cloud";
@@ -6,7 +7,10 @@ export type AiSelection = {
 };
 
 export type Source = {
+  id: string;
   kind: "wikipedia";
+  title: string;
+  url: string;
   content: string;
 };
 
@@ -23,12 +27,14 @@ export type GenerationCheckpoint = {
 export type DraftStoryGenerationStatus = {
   sources?: GenerationCheckpoint;
   mainImageCandidates?: GenerationCheckpoint;
+  storyContent?: GenerationCheckpoint;
   storyProse?: GenerationCheckpoint;
 };
 
 export type DraftStorySnapshot = {
   poiId: string;
   sources: Source[];
+  storyContent?: StoryContent;
   storyProse?: string;
   mainImageCandidates: MainImageCandidate[];
   draftMainImage?: DraftMainImage;
@@ -39,12 +45,13 @@ export type DraftStoryGenerationResult = {
   poiId: string;
   mainImageCandidates: "generated" | "failed";
   draftMainImage: "available" | "missing";
-  storyProse: "generated";
+  storyContent: "generated";
 };
 
 export type StoryWorkflowErrorCode =
   | "point-of-interest-not-found"
   | "sources-unavailable"
+  | "story-content-generation-failed"
   | "story-prose-generation-failed"
   | "main-image-candidates-generation-failed"
   | "persistence-failed";
@@ -52,6 +59,7 @@ export type StoryWorkflowErrorCode =
 export type StoryWorkflowErrorStage =
   | "sources"
   | "mainImageCandidates"
+  | "storyContent"
   | "storyProse"
   | "persistence";
 
@@ -81,14 +89,15 @@ export class StoryWorkflowError extends Error {
 
 export type StoryWorkflow = {
   draftStory: {
-    generate(input: {
-      poiId: string;
-      ai: AiSelection;
-    }): Promise<DraftStoryGenerationResult>;
+    generate(input: { poiId: string; ai: AiSelection }): Promise<DraftStoryGenerationResult>;
     get(input: { poiId: string }): Promise<DraftStorySnapshot | undefined>;
     reset(input: { poiId: string }): Promise<void>;
   };
   storyProse: {
+    generate(input: { poiId: string; ai: AiSelection }): Promise<void>;
+    delete(input: { poiId: string }): Promise<void>;
+  };
+  storyContent: {
     generate(input: { poiId: string; ai: AiSelection }): Promise<void>;
     delete(input: { poiId: string }): Promise<void>;
   };

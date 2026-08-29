@@ -35,7 +35,7 @@ Concentrate POI, Story, and generated-data paths in one city-scoped Module witho
 ## Treat each Story directory as one aggregate
 
 **Observation**  
-Each Story directory contains `story.md` and `images.json`, but separate Modules currently discover and manage the two files.
+Each Story directory contains `story.json`, `story.md`, and `images.json`, but separate Modules currently discover and manage the files.
 
 **Risk**  
 Callers can observe or create partial Story directories, and each caller must understand how the two files relate.
@@ -58,7 +58,7 @@ Long-running generation may appear stalled, and a Curator may not understand whi
 Draft Story Generation latency or partial failures make the single overall progress state insufficient for Curators.
 
 **Possible direction**
-Let the Story Workflow Module emit progress events for Source acquisition, Main Image Candidate generation, and Story Prose generation. A server Adapter could deliver those events to the browser so it can show in-progress, completed, and failed steps without moving orchestration back into the client.
+Let the Story Workflow Module emit progress events for Source acquisition, Main Image Candidate generation, and Story Content generation. A server Adapter could deliver those events to the browser so it can show in-progress, completed, and failed steps without moving orchestration back into the client.
 
 ## Introduce Story approval before visitor visibility
 
@@ -73,3 +73,39 @@ We introduce Curator approval or need to prevent unfinished content from appeari
 
 **Possible direction**  
 Represent the Draft Story to Story transition explicitly and make visitor-facing reads return only approved Stories.
+
+## Model multiple Story Sources
+
+### Current state
+
+The first Story Content slice uses one locally generated Wikipedia snapshot with the conventional Source ID `wikipedia`. Its readable text and metadata sidecar live under the ignored `data/<city>/generated/wiki/` directory. Source References are validated while generating Story Content, but the Visitor Experience can read the versioned `story.json` without requiring that local snapshot.
+
+### Current limitation
+
+The conventional ID and local sidecar are intentionally narrow. They do not define identity, versioning, replacement, citation granularity, or persistence rules for multiple Wikipedia pages or heterogeneous providers.
+
+### Trigger
+
+We add a second source to one Story, need Source history across regenerations, or expose selected Sources to visitors.
+
+### Direction
+
+Design a city-scoped Source model only when the trigger occurs. Decide stable identity, ownership, versioning, storage location, and whether Source References address whole documents or individual claims. Migrate the current Wikipedia snapshot without requiring Story Content or the public renderer to know its physical file layout.
+
+## Localize historical date formatting
+
+**Observation**
+
+Story Content stores language-neutral numeric years and the current English renderer displays historical dates with `AD` and `BC`, for example `338 AD` and `264 BC`.
+
+**Risk**
+
+Date labels may use the wrong vocabulary or ordering when the Visitor Experience supports another language. English may require `AD 338`, `338 CE`, or `338 AD` according to the chosen editorial convention, while Italian typically uses forms such as `338 d.C.` and `264 a.C.`.
+
+**Revisit when**
+
+The Visitor Experience adds language selection or localized Story Content.
+
+**Possible direction**
+
+Move historical date formatting behind a locale-aware formatter. Keep numeric years, precision, and granularity in Story Content, and let the selected locale determine era labels, label placement, abbreviations, and century formatting.

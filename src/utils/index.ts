@@ -1,6 +1,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
-import { readStory } from "@/server/storyWorkflow/storyArtifacts";
+import { storyWorkflow } from "@/server/storyWorkflow";
+import { toPublicStoryContent } from "@/server/storyWorkflow/storyContent";
 import type { Poi } from "@/types/Poi";
 
 type GeoJson = {
@@ -35,12 +36,13 @@ const toCitySlug = (city: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
 
-export const getPoiDialogContent = async (city: string, poiId?: string) => {
+export const getPoiStoryContent = async (city: string, poiId?: string) => {
   if (!poiId) {
     return undefined;
   }
 
-  return readStory(poiId)?.content;
+  const storyContent = (await storyWorkflow.draftStory.get({ poiId }))?.storyContent;
+  return storyContent ? toPublicStoryContent(storyContent) : undefined;
 };
 
 const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Poi | null => {
@@ -76,6 +78,15 @@ const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Po
     pickString(properties, "short_description", "description") ??
     (historic ? `Historic feature: ${historic}` : undefined);
   const city = pickString(properties, "addr:city", "is_in:city") ?? fallbackCity;
+  const street = pickString(properties, "addr:street", "addr:housename");
+  const houseNumber = pickString(properties, "addr:housenumber");
+  const postcode = pickString(properties, "addr:postcode");
+  const address = street
+    ? [
+        [street, houseNumber].filter(Boolean).join(" "),
+        [postcode, city].filter(Boolean).join(" "),
+      ].join(", ")
+    : undefined;
 
   const funFacts = [
     feature.wikidataId?.replace(/^/, "Wikidata: "),
@@ -89,6 +100,7 @@ const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Po
     name,
     city,
     coordinates: { lat, lng },
+    address,
     period,
     shortDescription: description,
     funFacts,

@@ -10,7 +10,7 @@ import type {
   PoiItem,
 } from "./types";
 
-type GenerationStep = "transformed" | "wiki" | "ai" | "image";
+type GenerationStep = "transformed" | "wiki" | "ai" | "storyContent" | "image";
 
 type GenerationMetadata = Record<
   string,
@@ -103,6 +103,12 @@ const toPoiRows = (
   transformedPois: Array<{ item: PoiItem; json: string; updatedAt: string }>,
   wikiPois: Array<{ item: PoiItem; json: string; updatedAt: string }>,
   aiPois: Array<{ item: PoiItem; json: string; updatedAt: string }>,
+  storyContentPois: Array<{
+    item: PoiItem;
+    storyContent: NonNullable<DraftStorySnapshot["storyContent"]>;
+    sources: DraftStorySnapshot["sources"];
+    updatedAt: string;
+  }>,
   mainImagePois: Array<{
     item: PoiItem;
     artifact: MainImageCandidatesArtifact;
@@ -211,6 +217,24 @@ const toPoiRows = (
     );
   }
 
+  for (const { item, storyContent, sources, updatedAt } of storyContentPois) {
+    const rowKey = toRowKey(item.id);
+    const row = rowsById.get(rowKey);
+    rowsById.set(rowKey, {
+      ...row,
+      id: item.id,
+      storyContent,
+      storyContentSources: sources,
+      storyContentUpdatedAt: updatedAt,
+      storyContentGenerationDuration: generationMetadata[rowKey]?.storyContent
+        ? formatDuration(generationMetadata[rowKey].storyContent.durationMs)
+        : undefined,
+      storyContentGenerationMode: generationMetadata[rowKey]?.storyContent?.aiMode,
+      storyContentGenerationProvider: generationMetadata[rowKey]?.storyContent?.aiProvider,
+      storyContentGenerationModel: generationMetadata[rowKey]?.storyContent?.aiModel,
+    });
+  }
+
   for (const { item, artifact, updatedAt } of mainImagePois) {
     const rowKey = toRowKey(item.id);
     const row = rowsById.get(rowKey);
@@ -243,12 +267,14 @@ const toPoiRows = (
       left.transformedPoi,
       left.wikiPoi,
       left.aiPoi,
+      left.storyContent,
       left.mainImagePoi,
     ].filter(Boolean).length;
     const rightGeneratedCount = [
       right.transformedPoi,
       right.wikiPoi,
       right.aiPoi,
+      right.storyContent,
       right.mainImagePoi,
     ].filter(Boolean).length;
 
@@ -288,9 +314,7 @@ export const loadPoiLists = async () => {
     }));
     const snapshots = (
       await Promise.all(
-        transformedPois.map(({ item }) =>
-          storyWorkflow.draftStory.get({ poiId: item.id }),
-        ),
+        transformedPois.map(({ item }) => storyWorkflow.draftStory.get({ poiId: item.id })),
       )
     ).filter((snapshot): snapshot is DraftStorySnapshot => Boolean(snapshot));
     const wikiPois = snapshots
@@ -307,11 +331,24 @@ export const loadPoiLists = async () => {
         json: snapshot.storyProse ?? "",
         updatedAt: formatCompletedAt(snapshot.generation.storyProse?.completedAt),
       }));
+    const storyContentPois = snapshots
+      .filter(
+        (
+          snapshot,
+        ): snapshot is DraftStorySnapshot & {
+          storyContent: NonNullable<DraftStorySnapshot["storyContent"]>;
+        } => Boolean(snapshot.storyContent),
+      )
+      .map((snapshot, index) => ({
+        item: toSnapshotItem(snapshot, index),
+        storyContent: snapshot.storyContent,
+        sources: snapshot.sources,
+        updatedAt: formatCompletedAt(snapshot.generation.storyContent?.completedAt),
+      }));
     const mainImagePois = snapshots
       .filter(
         (snapshot) =>
-          snapshot.mainImageCandidates.length > 0 ||
-          snapshot.generation.mainImageCandidates,
+          snapshot.mainImageCandidates.length > 0 || snapshot.generation.mainImageCandidates,
       )
       .map((snapshot, index) => ({
         item: toSnapshotItem(snapshot, index),
@@ -319,9 +356,7 @@ export const loadPoiLists = async () => {
           candidates: snapshot.mainImageCandidates,
           selectedCommonsFileName: snapshot.draftMainImage?.commonsFileName,
         },
-        updatedAt: formatCompletedAt(
-          snapshot.generation.mainImageCandidates?.completedAt,
-        ),
+        updatedAt: formatCompletedAt(snapshot.generation.mainImageCandidates?.completedAt),
       }));
     const rows = toPoiRows(
       rawPois,
@@ -330,6 +365,7 @@ export const loadPoiLists = async () => {
       transformedPois,
       wikiPois,
       aiPois,
+      storyContentPois,
       mainImagePois,
     );
 

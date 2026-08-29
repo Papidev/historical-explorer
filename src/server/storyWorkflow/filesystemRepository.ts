@@ -17,9 +17,15 @@ import {
   readMainImageCandidateArtifact,
 } from "./mainImageCandidateArtifacts";
 import { buildStoryFilePath, readStory } from "./storyArtifacts";
+import { buildStoryContentFilePath, readStoryContent } from "./storyContentArtifacts";
 import type { StoryWorkflowRepository } from "./createStoryWorkflow";
-import { buildOutputFilePath, getDefaultOutputDir } from "@/server/wikiPipeline/io";
+import {
+  buildOutputFilePath,
+  buildSourceMetadataFilePath,
+  getDefaultOutputDir,
+} from "@/server/wikiPipeline/io";
 import { sanitizePoiIdForFile } from "@/server/wikiPipeline/normalize";
+import type { Source } from "./types";
 
 const city = "rome";
 
@@ -39,17 +45,29 @@ const deleteFile = (filePath: string) => {
 export const filesystemStoryWorkflowRepository: StoryWorkflowRepository = {
   get: async (poiId) => {
     const sourceFilePath = buildOutputFilePath(getDefaultOutputDir(city), poiId);
+    const sourceMetadataFilePath = buildSourceMetadataFilePath(getDefaultOutputDir(city), poiId);
     const sourceContent = existsSync(sourceFilePath)
       ? readFileSync(sourceFilePath, "utf-8").trim()
       : undefined;
+    const sourceMetadata = existsSync(sourceMetadataFilePath)
+      ? (JSON.parse(readFileSync(sourceMetadataFilePath, "utf-8")) as Omit<Source, "content">)
+      : undefined;
+    const sources =
+      sourceContent && sourceMetadata ? [{ ...sourceMetadata, content: sourceContent }] : [];
+    const storyContent = readStoryContent(
+      poiId,
+      sources.length > 0 ? sources.map((source) => source.id) : undefined,
+    )?.content;
     const storyProse = readStory(poiId)?.content;
     const mainImageArtifact = readMainImageCandidateArtifact(poiId);
     const metadata = readGenerationMetadata()[sanitizePoiIdForFile(poiId)] ?? {};
     if (
       !sourceContent &&
+      !storyContent &&
       !storyProse &&
       !mainImageArtifact &&
       !metadata.wiki &&
+      !metadata.storyContent &&
       !metadata.ai &&
       !metadata.image
     ) {
@@ -57,37 +75,50 @@ export const filesystemStoryWorkflowRepository: StoryWorkflowRepository = {
     }
 
     const draftMainImage = mainImageArtifact?.candidates.find(
-      (candidate) =>
-        candidate.commonsFileName === mainImageArtifact.selectedCommonsFileName,
+      (candidate) => candidate.commonsFileName === mainImageArtifact.selectedCommonsFileName,
     );
     return {
       poiId,
-      sources: sourceContent ? [{ kind: "wikipedia", content: sourceContent }] : [],
+      sources,
+      storyContent,
       storyProse,
       mainImageCandidates: mainImageArtifact?.candidates ?? [],
       draftMainImage,
       generation: {
         sources: metadata.wiki,
         mainImageCandidates: metadata.image,
+        storyContent: metadata.storyContent,
         storyProse: metadata.ai,
       },
     };
   },
   replaceSources: async (poiId, sources, checkpoint) => {
+    if (sources.length !== 1) {
+      throw new Error("Filesystem Source persistence currently requires one Source.");
+    }
+    const [source] = sources;
+    if (!source) {
+      throw new Error("A Source is required.");
+    }
     const outputFilePath = buildOutputFilePath(getDefaultOutputDir(city), poiId);
+    writeAtomically(outputFilePath, `${source.content.trim()}\n`);
     writeAtomically(
-      outputFilePath,
-      `${sources.map((source) => source.content.trim()).join("\n\n")}\n`,
+      buildSourceMetadataFilePath(getDefaultOutputDir(city), poiId),
+      `${JSON.stringify(
+        {
+          id: source.id,
+          kind: source.kind,
+          title: source.title,
+          url: source.url,
+        },
+        null,
+        2,
+      )}\n`,
     );
     replaceGenerationCheckpoint(poiId, "wiki", checkpoint);
     console.info(`[wiki] Saved readable Wikipedia text for ${poiId} to ${outputFilePath}.`);
   },
-  replaceMainImageCandidates: async (
-    poiId,
-    candidates,
-    selectedCommonsFileName,
-    checkpoint,
-  ) => {
+  replaceMainImageCandidates: async (poiId, candidates, selectedCommonsFileName, checkpoint) => {
     const outputFilePath = buildMainImageCandidateArtifactFilePath(poiId);
     writeAtomically(
       outputFilePath,
@@ -104,9 +135,19 @@ export const filesystemStoryWorkflowRepository: StoryWorkflowRepository = {
     replaceGenerationCheckpoint(poiId, "ai", checkpoint);
     console.info(`[wiki-ai] Saved AI text for ${poiId} to ${outputFilePath}.`);
   },
+  replaceStoryContent: async (poiId, storyContent, checkpoint) => {
+    const outputFilePath = buildStoryContentFilePath(poiId);
+    writeAtomically(outputFilePath, `${JSON.stringify(storyContent, null, 2)}\n`);
+    replaceGenerationCheckpoint(poiId, "storyContent", checkpoint);
+    console.info(`[story-content] Saved Story Content for ${poiId} to ${outputFilePath}.`);
+  },
   deleteStoryProse: async (poiId) => {
     deleteFile(buildStoryFilePath(poiId));
     deleteGenerationCheckpoints(poiId, ["ai"]);
+  },
+  deleteStoryContent: async (poiId) => {
+    deleteFile(buildStoryContentFilePath(poiId));
+    deleteGenerationCheckpoints(poiId, ["storyContent"]);
   },
   deleteMainImageCandidates: async (poiId) => {
     deleteFile(buildMainImageCandidateArtifactFilePath(poiId));
@@ -114,8 +155,10 @@ export const filesystemStoryWorkflowRepository: StoryWorkflowRepository = {
   },
   reset: async (poiId) => {
     deleteFile(buildOutputFilePath(getDefaultOutputDir(city), poiId));
+    deleteFile(buildSourceMetadataFilePath(getDefaultOutputDir(city), poiId));
+    deleteFile(buildStoryContentFilePath(poiId));
     deleteFile(buildStoryFilePath(poiId));
     deleteFile(buildMainImageCandidateArtifactFilePath(poiId));
-    deleteGenerationCheckpoints(poiId, ["wiki", "ai", "image"]);
+    deleteGenerationCheckpoints(poiId, ["wiki", "ai", "storyContent", "image"]);
   },
 };

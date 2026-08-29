@@ -1,11 +1,6 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import {
-  getFeatureId,
-  pickString,
-  sanitizePoiIdForFile,
-  toCitySlug,
-} from "./normalize";
+import { getFeatureId, pickString, sanitizePoiIdForFile, toCitySlug } from "./normalize";
 import type { GeoJson, PoiInput } from "./types";
 
 const parseGeoJson = (raw: string): GeoJson => {
@@ -18,13 +13,7 @@ const parseGeoJson = (raw: string): GeoJson => {
 };
 
 export const getDefaultInputPath = (city: string) =>
-  path.join(
-    process.cwd(),
-    "data",
-    toCitySlug(city),
-    "pois",
-    "pois.geojson",
-  );
+  path.join(process.cwd(), "data", toCitySlug(city), "pois", "pois.geojson");
 
 export const getDefaultOutputDir = (city: string) =>
   path.join(process.cwd(), "data", toCitySlug(city), "generated", "wiki");
@@ -55,10 +44,8 @@ export const findPoiInGeoJson = (
     }
 
     const properties = feature.properties ?? {};
-    const name =
-      pickString(properties, "name", "name:en", "name:it", "int_name") ?? id;
-    const city =
-      pickString(properties, "addr:city", "is_in:city") ?? fallbackCity;
+    const name = pickString(properties, "name", "name:en", "name:it", "int_name") ?? id;
+    const city = pickString(properties, "addr:city", "is_in:city") ?? fallbackCity;
 
     return {
       id,
@@ -78,10 +65,23 @@ export const findPoiInGeoJson = (
 export const buildOutputFilePath = (outputDir: string, poiId: string) =>
   path.join(outputDir, `${sanitizePoiIdForFile(poiId)}.txt`);
 
-export const outputExists = (outputFilePath: string) =>
-  existsSync(outputFilePath);
+export const buildSourceMetadataFilePath = (outputDir: string, poiId: string) =>
+  path.join(outputDir, `${sanitizePoiIdForFile(poiId)}.metadata.json`);
+
+export const buildWikipediaPageUrl = (title: string) =>
+  `https://en.wikipedia.org/wiki/${encodeURIComponent(title.trim().replace(/\s+/g, "_"))}`;
+
+export const outputExists = (outputFilePath: string) => existsSync(outputFilePath);
 
 export const writeSnapshotFile = (outputFilePath: string, data: string) => {
   mkdirSync(path.dirname(outputFilePath), { recursive: true });
   writeFileSync(outputFilePath, `${data.trim()}\n`, "utf-8");
+};
+
+export const writeSourceMetadataFile = (
+  outputFilePath: string,
+  metadata: { id: string; kind: "wikipedia"; title: string; url: string },
+) => {
+  mkdirSync(path.dirname(outputFilePath), { recursive: true });
+  writeFileSync(outputFilePath, `${JSON.stringify(metadata, null, 2)}\n`, "utf-8");
 };

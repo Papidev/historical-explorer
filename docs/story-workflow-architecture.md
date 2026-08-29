@@ -12,13 +12,9 @@ The Point of Interest Module has its own **Interface** and **Implementation**. I
 
 ```ts
 type PointOfInterestModule = {
-  generate(input: {
-    geoPlaceId: string;
-  }): Promise<{ poiId: string }>;
+  generate(input: { geoPlaceId: string }): Promise<{ poiId: string }>;
 
-  reset(input: {
-    poiId: string;
-  }): Promise<void>;
+  reset(input: { poiId: string }): Promise<void>;
 };
 ```
 
@@ -47,9 +43,18 @@ type AiSelection = {
   model: string;
 };
 
+type Source = {
+  id: string;
+  kind: "wikipedia";
+  title: string;
+  url: string;
+  content: string;
+};
+
 type DraftStorySnapshot = {
   poiId: string;
   sources: Source[];
+  storyContent?: StoryContent;
   storyProse?: string;
   mainImageCandidates: MainImageCandidate[];
   draftMainImage?: DraftMainImage;
@@ -58,50 +63,40 @@ type DraftStorySnapshot = {
 
 type StoryWorkflow = {
   draftStory: {
-    generate(input: {
-      poiId: string;
-      ai: AiSelection;
-    }): Promise<DraftStoryGenerationResult>;
+    generate(input: { poiId: string; ai: AiSelection }): Promise<DraftStoryGenerationResult>;
 
-    get(input: {
-      poiId: string;
-    }): Promise<DraftStorySnapshot | undefined>;
+    get(input: { poiId: string }): Promise<DraftStorySnapshot | undefined>;
 
-    reset(input: {
-      poiId: string;
-    }): Promise<void>;
+    reset(input: { poiId: string }): Promise<void>;
   };
 
   storyProse: {
-    generate(input: {
-      poiId: string;
-      ai: AiSelection;
-    }): Promise<void>;
+    generate(input: { poiId: string; ai: AiSelection }): Promise<void>;
 
-    delete(input: {
-      poiId: string;
-    }): Promise<void>;
+    delete(input: { poiId: string }): Promise<void>;
+  };
+
+  storyContent: {
+    generate(input: { poiId: string; ai: AiSelection }): Promise<void>;
+
+    delete(input: { poiId: string }): Promise<void>;
   };
 
   mainImageCandidates: {
-    generate(input: {
-      poiId: string;
-    }): Promise<void>;
+    generate(input: { poiId: string }): Promise<void>;
 
-    delete(input: {
-      poiId: string;
-    }): Promise<void>;
+    delete(input: { poiId: string }): Promise<void>;
   };
 };
 ```
 
-`storyProse.generate` and `mainImageCandidates.generate` belong to **Draft Story Generation**. Each has create-or-replace semantics: it creates a missing artifact or generates a replacement for the current one. These operations are not idempotent because AI output and external Sources may change between calls.
+`storyContent.generate`, `storyProse.generate`, and `mainImageCandidates.generate` belong to **Draft Story Generation**. Each has create-or-replace semantics: it creates a missing artifact or generates a replacement for the current one. These operations are not idempotent because AI output and external Sources may change between calls. Story Content and Story Prose are independent: replacing or deleting either one never changes the other.
 
 The Curator UI may label the same operation Generate when its artifact is missing and Refresh when one already exists.
 
-The two deletion operations preserve the current Curator recovery actions while keeping artifact paths and cascade rules inside the Story Workflow Module.
+The three deletion operations preserve the current Curator recovery actions while keeping artifact paths and cascade rules inside the Story Workflow Module.
 
-`draftStory.reset` removes all Sources, Story Prose, Main Image Candidates, Draft Main Image state, and generation metadata owned by the Story Workflow. It does not remove the Point of Interest or its Geo Place.
+`draftStory.reset` removes all Sources, Story Content, Story Prose, Main Image Candidates, Draft Main Image state, and generation metadata owned by the Story Workflow. It does not remove the Point of Interest or its Geo Place.
 
 Selecting a **Draft Main Image**, editing a **Draft Story**, and approving it as a **Story** belong to **Story Curation** and cross a separate **Seam**.
 
@@ -116,17 +111,17 @@ Selecting a **Draft Main Image**, editing a **Draft Story**, and approving it as
 1. Acquire and clean **Sources**.
 2. Generate **Main Image Candidates**.
 3. Preserve the current **Draft Main Image** when it remains eligible; otherwise select the first candidate with license and attribution information.
-4. Generate **Story Prose**.
+4. Generate **Story Content**.
 
-The caller cannot choose, reorder, or skip these steps.
+The caller cannot choose, reorder, or skip these steps. Full generation does not generate or replace Story Prose.
 
 ## Partial-failure behavior
 
 Generation uses checkpoint semantics rather than rollback:
 
 - Source failure stops full generation.
-- Main Image Candidate failure is reported, but Story Prose generation continues.
-- Story Prose failure preserves already generated Sources and Main Image Candidates.
+- Main Image Candidate failure is reported, but Story Content generation continues.
+- Story Content failure preserves already generated Sources and Main Image Candidates.
 - An explicitly requested artifact generation failure preserves the previous artifact and rejects that operation.
 
 Successfully persisted artifacts remain available for independent retry.
@@ -140,7 +135,7 @@ type DraftStoryGenerationResult = {
   poiId: string;
   mainImageCandidates: "generated" | "failed";
   draftMainImage: "available" | "missing";
-  storyProse: "generated";
+  storyContent: "generated";
 };
 ```
 
@@ -153,10 +148,11 @@ type StoryWorkflowError = {
   code:
     | "point-of-interest-not-found"
     | "sources-unavailable"
+    | "story-content-generation-failed"
     | "story-prose-generation-failed"
     | "main-image-candidates-generation-failed"
     | "persistence-failed";
-  stage: "sources" | "mainImageCandidates" | "storyProse" | "persistence";
+  stage: "sources" | "mainImageCandidates" | "storyContent" | "storyProse" | "persistence";
   retryable: boolean;
 };
 ```
@@ -201,7 +197,7 @@ Tests cross the same Interface as production callers and verify observable outco
 
 - fixed generation order;
 - Source failure stopping downstream work;
-- Story Prose continuing after candidate failure;
+- Story Content continuing after candidate failure;
 - preservation of successful checkpoints;
 - independent artifact generation with create-or-replace semantics;
 - Draft Main Image preservation and automatic fallback selection;

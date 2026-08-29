@@ -1,0 +1,57 @@
+{
+  "introduction": {
+    "text": "The Chiostro del Bramante, or Cloisters of Bramante, is an Italian Renaissance building in Rome, notable for its architectural design and its connection to significant Renaissance figures.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "commissioning",
+        "description": "Cardinal Oliviero Carafa commissioned the construction of the Chiostro del Bramante around 1500.",
+        "relatedPersonIds": ["oliviero-carafa"],
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1500,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "architectural-design",
+        "description": "The building was designed by the renowned architect Donato Bramante.",
+        "relatedPersonIds": ["donato-bramante"],
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "raphael-fresco",
+        "description": "From the first floor of the Chiostro del Bramante, visitors can view 'The Sibyls,' a fresco painting by Raphael located in the adjacent church of Santa Maria della Pace.",
+        "relatedPersonIds": ["raphael"],
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "id": "oliviero-carafa",
+      "name": "Cardinal Oliviero Carafa",
+      "relationship": "Commissioner of the building",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "id": "donato-bramante",
+      "name": "Donato Bramante",
+      "relationship": "Architect of the building",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "id": "raphael",
+      "name": "Raphael",
+      "relationship": "Artist of 'The Sibyls' fresco visible from the building",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}
