@@ -91,3 +91,21 @@ We add a second source to one Story, need Source history across regenerations, o
 ### Direction
 
 Design a city-scoped Source model only when the trigger occurs. Decide stable identity, ownership, versioning, storage location, and whether Source References address whole documents or individual claims. Migrate the current Wikipedia snapshot without requiring Story Content or the public renderer to know its physical file layout.
+
+## Localize historical date formatting
+
+**Observation**
+
+Story Content stores language-neutral numeric years and the current English renderer displays historical dates with `AD` and `BC`, for example `338 AD` and `264 BC`.
+
+**Risk**
+
+Date labels may use the wrong vocabulary or ordering when the Visitor Experience supports another language. English may require `AD 338`, `338 CE`, or `338 AD` according to the chosen editorial convention, while Italian typically uses forms such as `338 d.C.` and `264 a.C.`.
+
+**Revisit when**
+
+The Visitor Experience adds language selection or localized Story Content.
+
+**Possible direction**
+
+Move historical date formatting behind a locale-aware formatter. Keep numeric years, precision, and granularity in Story Content, and let the selected locale determine era labels, label placement, abbreviations, and century formatting.

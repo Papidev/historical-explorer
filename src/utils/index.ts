@@ -81,12 +81,12 @@ const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Po
   const street = pickString(properties, "addr:street", "addr:housename");
   const houseNumber = pickString(properties, "addr:housenumber");
   const postcode = pickString(properties, "addr:postcode");
-  const address = [
-    [street, houseNumber].filter(Boolean).join(" "),
-    [postcode, city].filter(Boolean).join(" "),
-  ]
-    .filter(Boolean)
-    .join(", ");
+  const address = street
+    ? [
+        [street, houseNumber].filter(Boolean).join(" "),
+        [postcode, city].filter(Boolean).join(" "),
+      ].join(", ")
+    : undefined;
 
   const funFacts = [
     feature.wikidataId?.replace(/^/, "Wikidata: "),
@@ -100,7 +100,7 @@ const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Po
     name,
     city,
     coordinates: { lat, lng },
-    address: address || undefined,
+    address,
     period,
     shortDescription: description,
     funFacts,

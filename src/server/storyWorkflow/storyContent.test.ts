@@ -59,7 +59,11 @@ describe("Story Content", () => {
       },
     );
 
-    expect(parseStoryContent(content, ["wikipedia"])).toEqual(content);
+    expect(parseStoryContent(content, ["wikipedia"]).topics.history.map(({ id }) => id)).toEqual([
+      "ancient-period",
+      "construction",
+      "later-use",
+    ]);
   });
 
   it.each([

@@ -82,8 +82,24 @@ export type StoryInsight = z.infer<typeof storyInsightSchema>;
 export type HistoryInsight = z.infer<typeof historyInsightSchema>;
 export type RelatedPerson = z.infer<typeof relatedPersonSchema>;
 
-export const parseStoryContentStructure = (value: unknown) =>
-  storyContentStructureSchema.parse(value);
+const sortHistoryInsights = (insights: HistoryInsight[]) =>
+  [...insights].sort((left, right) => {
+    if (!left.time && !right.time) return 0;
+    if (!left.time) return 1;
+    if (!right.time) return -1;
+    return left.time.startYear - right.time.startYear;
+  });
+
+export const parseStoryContentStructure = (value: unknown) => {
+  const storyContent = storyContentStructureSchema.parse(value);
+  return {
+    ...storyContent,
+    topics: {
+      ...storyContent.topics,
+      history: sortHistoryInsights(storyContent.topics.history),
+    },
+  };
+};
 
 export const parseStoryContent = (value: unknown, sourceIds: string[]) => {
   const storyContent = parseStoryContentStructure(value);

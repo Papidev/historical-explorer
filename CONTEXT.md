@@ -112,6 +112,7 @@ _Avoid_: Production output, AI output
 - A **Draft Story** organizes its proposed **Visitor Insights** into the supported **Story Topics**.
 - A **Story Topic** appears only when supported by the **Sources**; a **Draft Story** does not fill every available **Story Topic**.
 - A **Story Topic** provides content semantics but does not own the React presentation used by the **Visitor Experience**.
+- Dated **Visitor Insights** in the history **Story Topic** appear from oldest to newest; undated historical insights follow them.
 - Editorial highlights are optional lightweight markup within **Story Prose**, not separate metadata.
 - A **Story** may make substantive claims only when they are supported by its **Sources**.
 - A **Story** retains the **Sources** and resolvable **Source References** used to support curator review.
