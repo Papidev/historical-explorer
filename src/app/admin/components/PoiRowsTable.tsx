@@ -19,7 +19,7 @@ import type { AdminPoiRow, MainImageCandidate, MainImageCandidatesArtifact } fro
 import { SubmitButton } from "./SubmitButton";
 
 const refreshConfirmMessages = {
-  ai: "Refresh Story Markdown for this POI?",
+  ai: "Refresh Story Prose for this POI?",
   storyContent: "Refresh Story Content for this POI?",
   mainImage: "Refresh Main Image Candidates for this POI?",
 } as const;
@@ -34,7 +34,7 @@ type ProgressState = {
 const deleteConfirmMessages = {
   transformed:
     "Reset this row? This deletes generated POI, Wikipedia Text, Story, and Main Image Candidates for this POI.",
-  ai: "Delete Story Markdown for this POI?",
+  ai: "Delete Story Prose for this POI?",
   storyContent: "Delete Story Content for this POI?",
   mainImage: "Delete Main Image Candidates for this POI?",
 } as const;
@@ -586,7 +586,7 @@ export const PoiRowsTable = ({
                             </CellActions>
                           </div>
                           <div className="border-t border-black/10 pt-3">
-                            <p className="text-xs font-semibold text-black">Story Markdown</p>
+                            <p className="text-xs font-semibold text-black">Story Prose</p>
                             <p
                               className={
                                 row.aiPoi ? "text-xs text-emerald-700" : "text-xs text-black/35"
@@ -599,12 +599,12 @@ export const PoiRowsTable = ({
                                 {row.aiPoi ? (
                                   <IconButton
                                     type="button"
-                                    label="View Story Markdown"
+                                    label="View Story Prose"
                                     disabled={isVisualizationDisabled}
                                     onClick={() =>
                                       row.aiText
                                         ? setSelectedPanel({
-                                            title: `${row.id} Story Markdown`,
+                                            title: `${row.id} Story Prose`,
                                             kind: "markdown",
                                             content: row.aiText,
                                           })
@@ -619,7 +619,7 @@ export const PoiRowsTable = ({
                                     action={(formData) =>
                                       runSingleAction(
                                         row.id,
-                                        "Generating Story Markdown...",
+                                        "Generating Story Prose...",
                                         refreshAiAction,
                                         formData,
                                       )
@@ -643,7 +643,7 @@ export const PoiRowsTable = ({
                                     action={(formData) =>
                                       runSingleAction(
                                         row.id,
-                                        "Deleting Story Markdown...",
+                                        "Deleting Story Prose...",
                                         deleteAiAction,
                                         formData,
                                       )
