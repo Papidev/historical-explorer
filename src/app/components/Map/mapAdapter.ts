@@ -1,10 +1,14 @@
 "use client";
 
+import { createElement } from "react";
+import { createRoot, type Root } from "react-dom/client";
 import maplibregl, { Map as MapLibreMap, Marker } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import type { Poi } from "@/types/Poi";
+import { PoiPreviewCard } from "./PoiPreviewCard";
 
 const MAP_STYLE_URL = "https://tiles.openfreemap.org/styles/liberty";
+const PREVIEW_CLOSE_DELAY_MS = 180;
 
 export type MapView = {
   center: [number, number];
@@ -27,59 +31,99 @@ export interface MapAdapter {
   destroy: () => void;
 }
 
-const escapeHtml = (value: string) =>
-  value
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#39;");
-
-const createMarker = (map: MapLibreMap, poi: Poi) =>
-  new maplibregl.Marker()
-    .setLngLat([poi.coordinates.lng, poi.coordinates.lat])
-    .setPopup(
-      new maplibregl.Popup({ offset: 16 }).setHTML(`
-        <strong>${escapeHtml(poi.name)}</strong><br/>
-        ${poi.shortDescription ? `<small>${escapeHtml(poi.shortDescription)}</small><br/>` : ""}
-        <button
-          type="button"
-          data-poi-open-details="${escapeHtml(poi.id)}"
-          class="mt-2 rounded-md bg-black px-2 py-1 text-xs font-medium text-white"
-        >
-          Apri dettagli
-        </button>
-      `),
-    )
-    .addTo(map);
+type MarkerBinding = {
+  marker: Marker;
+  removeListeners: () => void;
+};
 
 export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
   let map: MapLibreMap | null = null;
-  let markers: Marker[] = [];
+  let markers: MarkerBinding[] = [];
+  let previewPopup: maplibregl.Popup | null = null;
+  let previewRoot: Root | null = null;
+  let previewContainer: HTMLDivElement | null = null;
+  let activePreviewPoiId: string | null = null;
+  let previewCloseTimeout: ReturnType<typeof setTimeout> | null = null;
   let isLoaded = false;
   let pendingPois: Poi[] | null = null;
   let onZoomChange: ((zoom: number) => void) | null = null;
   let onOpenPoiDetails: ((poiId: string) => void) | null = null;
   let onMapClick: (() => void) | null = null;
 
-  const handleMapClick = (event: MouseEvent) => {
-    const target = event.target;
-    if (!(target instanceof Element)) {
+  const handleMapClick = () => onMapClick?.();
+
+  const cancelPreviewClose = () => {
+    if (previewCloseTimeout) {
+      clearTimeout(previewCloseTimeout);
+      previewCloseTimeout = null;
+    }
+  };
+
+  const closePreview = (poiId?: string) => {
+    if (poiId && activePreviewPoiId !== poiId) {
       return;
     }
 
-    const trigger = target.closest("[data-poi-open-details]");
-    if (!trigger) {
-      onMapClick?.();
+    cancelPreviewClose();
+    previewPopup?.remove();
+    activePreviewPoiId = null;
+  };
+
+  const schedulePreviewClose = (poiId?: string) => {
+    cancelPreviewClose();
+    previewCloseTimeout = setTimeout(() => {
+      previewCloseTimeout = null;
+      closePreview(poiId);
+    }, PREVIEW_CLOSE_DELAY_MS);
+  };
+
+  const handlePreviewPointerEnter = () => cancelPreviewClose();
+  const handlePreviewPointerLeave = () => schedulePreviewClose(activePreviewPoiId ?? undefined);
+  const handlePreviewFocusIn = () => cancelPreviewClose();
+  const handlePreviewFocusOut = (event: FocusEvent) => {
+    if (!previewContainer?.contains(event.relatedTarget as Node | null)) {
+      schedulePreviewClose(activePreviewPoiId ?? undefined);
+    }
+  };
+
+  const openPreview = (poi: Poi) => {
+    if (!map || !previewPopup || !previewRoot) {
       return;
     }
 
-    const poiId = trigger.getAttribute("data-poi-open-details");
-    if (!poiId) {
-      return;
+    cancelPreviewClose();
+    activePreviewPoiId = poi.id;
+    previewRoot.render(
+      createElement(PoiPreviewCard, {
+        key: poi.id,
+        poi,
+        onOpenDetails: () => {
+          closePreview();
+          onOpenPoiDetails?.(poi.id);
+        },
+      }),
+    );
+    previewPopup.setLngLat([poi.coordinates.lng, poi.coordinates.lat]).addTo(map);
+    const popupElement = previewPopup.getElement();
+    const popupContent = popupElement.querySelector<HTMLElement>(".maplibregl-popup-content");
+    popupElement.style.pointerEvents = "auto";
+    if (popupContent) {
+      popupContent.style.overflow = "hidden";
+      popupContent.style.borderRadius = "var(--radius-xl)";
+      popupContent.style.background = "transparent";
+      popupContent.style.padding = "0";
+      popupContent.style.boxShadow = "none";
+      popupContent.style.pointerEvents = "auto";
     }
+  };
 
-    onOpenPoiDetails?.(poiId);
+  const removeMarkers = () => {
+    closePreview();
+    markers.forEach(({ marker, removeListeners }) => {
+      removeListeners();
+      marker.remove();
+    });
+    markers = [];
   };
 
   const setMarkers = (points: Poi[]) => {
@@ -87,8 +131,75 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
       return;
     }
 
-    markers.forEach((marker) => marker.remove());
-    markers = points.map((poi) => createMarker(map as MapLibreMap, poi));
+    removeMarkers();
+    markers = points.map((poi) => {
+      const marker = new maplibregl.Marker()
+        .setLngLat([poi.coordinates.lng, poi.coordinates.lat])
+        .addTo(map as MapLibreMap);
+      const element = marker.getElement();
+      let isTouchInteraction = false;
+
+      element.style.cursor = "pointer";
+      element.tabIndex = 0;
+      element.setAttribute("role", "button");
+      element.setAttribute("aria-label", `Open details for ${poi.name}`);
+
+      const handlePointerDown = (event: PointerEvent) => {
+        isTouchInteraction = event.pointerType === "touch";
+      };
+      const handlePointerEnter = (event: PointerEvent) => {
+        if (event.pointerType !== "touch") {
+          openPreview(poi);
+        }
+      };
+      const handlePointerLeave = () => schedulePreviewClose(poi.id);
+      const handleFocus = () => {
+        if (!isTouchInteraction) {
+          openPreview(poi);
+        }
+      };
+      const handleBlur = () => {
+        isTouchInteraction = false;
+        schedulePreviewClose(poi.id);
+      };
+      const handleClick = (event: MouseEvent) => {
+        event.stopPropagation();
+        isTouchInteraction = false;
+        closePreview();
+        onOpenPoiDetails?.(poi.id);
+      };
+      const handleKeyDown = (event: KeyboardEvent) => {
+        if (event.key !== "Enter" && event.key !== " ") {
+          return;
+        }
+
+        event.preventDefault();
+        event.stopPropagation();
+        closePreview();
+        onOpenPoiDetails?.(poi.id);
+      };
+
+      element.addEventListener("pointerdown", handlePointerDown);
+      element.addEventListener("pointerenter", handlePointerEnter);
+      element.addEventListener("pointerleave", handlePointerLeave);
+      element.addEventListener("focus", handleFocus);
+      element.addEventListener("blur", handleBlur);
+      element.addEventListener("click", handleClick);
+      element.addEventListener("keydown", handleKeyDown);
+
+      return {
+        marker,
+        removeListeners: () => {
+          element.removeEventListener("pointerdown", handlePointerDown);
+          element.removeEventListener("pointerenter", handlePointerEnter);
+          element.removeEventListener("pointerleave", handlePointerLeave);
+          element.removeEventListener("focus", handleFocus);
+          element.removeEventListener("blur", handleBlur);
+          element.removeEventListener("click", handleClick);
+          element.removeEventListener("keydown", handleKeyDown);
+        },
+      };
+    });
   };
 
   return {
@@ -105,6 +216,19 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
       });
 
       map.addControl(new maplibregl.NavigationControl(), "top-right");
+      previewContainer = document.createElement("div");
+      previewContainer.addEventListener("pointerenter", handlePreviewPointerEnter);
+      previewContainer.addEventListener("pointerleave", handlePreviewPointerLeave);
+      previewContainer.addEventListener("focusin", handlePreviewFocusIn);
+      previewContainer.addEventListener("focusout", handlePreviewFocusOut);
+      previewRoot = createRoot(previewContainer);
+      previewPopup = new maplibregl.Popup({
+        closeButton: false,
+        closeOnClick: false,
+        focusAfterOpen: false,
+        maxWidth: "calc(100vw - 2rem)",
+        offset: 16,
+      }).setDOMContent(previewContainer);
       map.on("zoomend", () => {
         if (!map || !onZoomChange) {
           return;
@@ -167,8 +291,16 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
     },
     destroy() {
       map?.getContainer().removeEventListener("click", handleMapClick);
-      markers.forEach((marker) => marker.remove());
-      markers = [];
+      removeMarkers();
+      previewContainer?.removeEventListener("pointerenter", handlePreviewPointerEnter);
+      previewContainer?.removeEventListener("pointerleave", handlePreviewPointerLeave);
+      previewContainer?.removeEventListener("focusin", handlePreviewFocusIn);
+      previewContainer?.removeEventListener("focusout", handlePreviewFocusOut);
+      previewRoot?.unmount();
+      previewRoot = null;
+      previewContainer = null;
+      previewPopup?.remove();
+      previewPopup = null;
       map?.remove();
       map = null;
       pendingPois = null;

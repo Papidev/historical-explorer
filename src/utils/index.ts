@@ -133,5 +133,16 @@ export const createPoisForCity = async (city: string): Promise<Poi[]> => {
   const features = loadGeoJsonForCity(city).features ?? [];
   const pois = features.map((feature, index) => asPoi(feature, index, city));
 
-  return pois.filter((poi): poi is Poi => Boolean(poi));
+  return Promise.all(
+    pois
+      .filter((poi): poi is Poi => Boolean(poi))
+      .map(async (poi) => {
+        const draftStory = await storyWorkflow.draftStory.get({ poiId: poi.id });
+        const mainImageUrl = draftStory?.draftMainImage?.thumbnailUrl;
+        const previewDescription =
+          poi.shortDescription ?? draftStory?.storyContent?.introduction.text;
+
+        return { ...poi, mainImageUrl, previewDescription };
+      }),
+  );
 };
