@@ -6,5 +6,7 @@ export type Poi = {
   address?: string;
   period?: string;
   shortDescription?: string;
+  previewDescription?: string;
+  mainImageUrl?: string;
   funFacts: string[];
 };

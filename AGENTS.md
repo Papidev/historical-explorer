@@ -33,7 +33,7 @@
 - Favor a lightweight Domain-Driven Design mindset: model features around the domain language (cities, POIs, timelines) and keep logic close to the data source, but resist extra indirection unless it delivers clear value.
 - Keep React components declarative and push imperative map logic into adapters/utilities. Any `maplibre-gl` interaction must guard against double-mounts and clean up markers in `destroy()`.
 - Apply TypeScript’s quick-fix suggestions where feasible, especially for type safety and nullability, unless they conflict with product or UX intent.
-- Prefer Tailwind utilities directly in owned JSX. Keep custom global CSS for generated or third-party markup that cannot be styled directly and place component rules in `@layer components`. When writing custom CSS, use Tailwind theme variables whenever possible for colors, spacing, typography, radii, shadows, and other design tokens; use literal values only for deliberate exceptions not covered by the theme.
+- Prefer Tailwind utilities directly in owned JSX. Keep `globals.css` limited to genuinely shared styles: feature-specific styles belong in the owned component or its integration adapter, including narrowly scoped DOM styles at third-party boundaries. Use global CSS for generated or third-party markup only when no local styling hook exists, and place component rules in `@layer components`. When writing custom CSS, use Tailwind theme variables whenever possible for colors, spacing, typography, radii, shadows, and other design tokens; use literal values only for deliberate exceptions not covered by the theme.
 
 ## Feature Implementation Approach
 
