@@ -28,14 +28,14 @@ export const PoiPreviewCard = ({ poi, onOpenDetails }: Props) => {
           // eslint-disable-next-line @next/next/no-img-element -- Map previews use runtime-selected Wikimedia URLs.
           <img
             src={poi.mainImageUrl}
-            alt={`Immagine principale di ${poi.name}`}
+            alt={`Main image of ${poi.name}`}
             className="absolute inset-0 size-full object-cover"
             onError={() => setHasImageError(true)}
           />
         ) : (
           <div className="flex size-full flex-col items-center justify-center gap-2 text-zinc-500">
             <PhotoIcon className="size-8" aria-hidden="true" />
-            <span className="text-xs font-medium">Immagine non disponibile</span>
+            <span className="text-xs font-medium">Image unavailable</span>
           </div>
         )}
         <div className="pointer-events-none absolute inset-0 ring-1 ring-black/10 ring-inset" />

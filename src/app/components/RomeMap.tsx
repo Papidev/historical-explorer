@@ -1,5 +1,5 @@
 import { createPoisForCity } from "@/utils";
-import { RomeMapClient } from "@/app/components/RomeMapClient";
+import { CityExplorer } from "@/app/components/CityExplorer";
 
 type Props = {
   initialSelectedPoiId?: string;
@@ -17,7 +17,7 @@ export const RomeMap = async ({ initialSelectedPoiId }: Props = {}) => {
       : [12.4922, 41.8902];
 
   return (
-    <RomeMapClient
+    <CityExplorer
       citySlug="rome"
       coordinates={coordinates}
       initialZoom={15}

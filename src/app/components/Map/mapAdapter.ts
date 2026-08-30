@@ -142,7 +142,7 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
       element.style.cursor = "pointer";
       element.tabIndex = 0;
       element.setAttribute("role", "button");
-      element.setAttribute("aria-label", `Apri dettagli per ${poi.name}`);
+      element.setAttribute("aria-label", `Open details for ${poi.name}`);
 
       const handlePointerDown = (event: PointerEvent) => {
         isTouchInteraction = event.pointerType === "touch";

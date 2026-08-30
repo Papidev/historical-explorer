@@ -38,7 +38,7 @@ export const IconButton = ({
     aria-label={label}
     title={props.title ?? label}
     className={clsx(
-      "inline-flex items-center justify-center rounded-full shadow-xs transition focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:shadow-none [&_svg]:size-5 [&_svg]:shrink-0",
+      "inline-flex cursor-pointer items-center justify-center rounded-full shadow-xs transition focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:shadow-none [&_svg]:size-5 [&_svg]:shrink-0",
       sizes[size],
       tones[tone],
       className,

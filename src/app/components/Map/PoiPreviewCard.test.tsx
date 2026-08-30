@@ -24,9 +24,10 @@ describe("PoiPreviewCard", () => {
 
     expect(screen.getByRole("heading", { name: "Forum Boarium" })).toBeInTheDocument();
     expect(screen.getByText("The ancient cattle market beside the Tiber.")).toBeInTheDocument();
-    expect(
-      screen.getByRole("img", { name: "Immagine principale di Forum Boarium" }),
-    ).toHaveAttribute("src", poi.mainImageUrl);
+    expect(screen.getByRole("img", { name: "Main image of Forum Boarium" })).toHaveAttribute(
+      "src",
+      poi.mainImageUrl,
+    );
   });
 
   it("shows the placeholder when the main image is unavailable or fails to load", () => {
@@ -34,12 +35,12 @@ describe("PoiPreviewCard", () => {
       <PoiPreviewCard poi={{ ...poi, mainImageUrl: undefined }} onOpenDetails={() => {}} />,
     );
 
-    expect(screen.getByText("Immagine non disponibile")).toBeInTheDocument();
+    expect(screen.getByText("Image unavailable")).toBeInTheDocument();
 
     rerender(<PoiPreviewCard key="with-image" poi={poi} onOpenDetails={() => {}} />);
     fireEvent.error(screen.getByRole("img"));
 
-    expect(screen.getByText("Immagine non disponibile")).toBeInTheDocument();
+    expect(screen.getByText("Image unavailable")).toBeInTheDocument();
   });
 
   it("omits the description when the POI does not provide one", () => {
