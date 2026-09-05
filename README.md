@@ -1,8 +1,8 @@
-# Historical Explorer
+# Cultural Atlas
 
 Next.js 16 + React 19 app for exploring historical points of interest on an interactive map.
 
-Historical Explorer is a visit companion for cultural discovery: the map helps visitors pick a place, and the POI story explains why that place matters.
+Cultural Atlas is a visit companion for cultural discovery across history, art, and culture: the map helps visitors pick a place, and the POI story explains why that place matters.
 
 ## Getting Started
 

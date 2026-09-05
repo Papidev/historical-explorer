@@ -1,4 +1,5 @@
 import type { HistoryInsight, PublicStoryContent } from "@/server/storyWorkflow";
+import { Topic } from "@/app/components/Topic/Topic";
 
 const toOrdinal = (value: number) => {
   const remainder = value % 100;
@@ -39,18 +40,6 @@ const formatHistoricalTime = (time: NonNullable<HistoryInsight["time"]>) =>
       : formatYearRange(time.startYear, time.endYear)
   }`;
 
-const Topic = ({ title, insights }: { title: string; insights: string[] }) =>
-  insights.length > 0 ? (
-    <section>
-      <h3 className="text-sm font-semibold tracking-wide text-zinc-950 uppercase">{title}</h3>
-      <div className="mt-2 space-y-3">
-        {insights.map((description, index) => (
-          <p key={`${title}-${index}`}>{description}</p>
-        ))}
-      </div>
-    </section>
-  ) : null;
-
 export const StoryContent = ({
   content,
   period,
@@ -87,20 +76,20 @@ export const StoryContent = ({
         </dl>
       ) : null}
       {history.length > 0 ? (
-        <section>
+        <section className="rounded-xl bg-orange-50/55 px-4 py-3 ring-1 ring-orange-950/5">
           <h3 className="text-sm font-semibold tracking-wide text-zinc-950 uppercase">History</h3>
-          <div className="mt-2 space-y-3">
+          <ul className="mt-3 list-disc space-y-3 pl-5 marker:text-orange-400">
             {history.map(({ description, time }, index) => (
-              <div key={`history-${index}`}>
+              <li key={`history-${index}`} className="pl-1">
                 {time ? (
                   <p className="text-sm font-semibold text-orange-700">
                     {formatHistoricalTime(time)}
                   </p>
                 ) : null}
                 <p>{description}</p>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </section>
       ) : null}
       <Topic
@@ -109,13 +98,16 @@ export const StoryContent = ({
       />
       <Topic title="Art" insights={content.topics.art.map(({ description }) => description)} />
       {content.relatedPeople.length > 0 ? (
-        <section>
+        <section className="rounded-xl bg-sky-50/55 px-4 py-3 ring-1 ring-sky-950/5">
           <h3 className="text-sm font-semibold tracking-wide text-zinc-950 uppercase">
             Related People
           </h3>
-          <dl className="mt-2 space-y-3">
+          <dl className="mt-3 space-y-3">
             {content.relatedPeople.map(({ name, relationship }) => (
-              <div key={name}>
+              <div
+                key={name}
+                className="relative pl-5 before:absolute before:top-0 before:left-1 before:text-sky-400 before:content-['•']"
+              >
                 <dt className="font-semibold text-zinc-950">{name}</dt>
                 <dd>{relationship}</dd>
               </div>
