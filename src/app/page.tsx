@@ -6,6 +6,7 @@ import {
   MapPinIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { WorkInProgressBadge } from "@/app/components/ui/WorkInProgressBadge";
 
 const highlights = [
   {
@@ -30,8 +31,16 @@ const highlightIcons = [MapIcon, BookOpenIcon, LinkIcon];
 export default function Home() {
   return (
     <div className="min-h-screen bg-zinc-50 text-zinc-900">
-      <main className="mx-auto flex min-h-screen w-full max-w-5xl flex-col gap-14 px-6 py-12 sm:py-20">
-        <section className="relative overflow-hidden rounded-3xl bg-zinc-950 px-7 py-10 text-white shadow-xl shadow-zinc-900/10 sm:px-12 sm:py-14">
+      <main className="relative mx-auto flex min-h-screen w-full max-w-6xl flex-col gap-14 px-4 py-12 sm:px-6 sm:py-20">
+        <div className="fixed top-0 right-0 z-10">
+          <div className="flex size-64 items-start justify-end bg-amber-100 pt-5 pr-5 text-left text-amber-900 shadow-sm shadow-amber-900/10 [clip-path:polygon(100%_0,100%_100%,0_0)]">
+            <div className="max-w-28">
+              <p className="text-sm font-bold tracking-wide uppercase">Early preview</p>
+              <p className="mt-1 text-xs leading-4 text-amber-800">Cultural Atlas is still taking shape.</p>
+            </div>
+          </div>
+        </div>
+        <section className="relative overflow-hidden rounded-3xl bg-zinc-950 px-7 py-10 text-white shadow-xl shadow-zinc-900/10 sm:px-12 sm:py-14 lg:mr-56">
           <div className="absolute -top-24 -right-20 size-72 rounded-full bg-rose-500/20 blur-3xl" />
           <p className="relative text-sm font-semibold tracking-[0.2em] text-rose-300 uppercase">
             Cultural Atlas
@@ -66,10 +75,13 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <ArrowRightIcon
-                className="mt-1 size-5 shrink-0 text-zinc-400 transition group-hover:translate-x-1 group-hover:text-rose-600"
-                aria-hidden="true"
-              />
+              <div className="flex shrink-0 items-center gap-3">
+                <WorkInProgressBadge />
+                <ArrowRightIcon
+                  className="mt-1 size-5 text-zinc-400 transition group-hover:translate-x-1 group-hover:text-rose-600"
+                  aria-hidden="true"
+                />
+              </div>
             </div>
           </Link>
         </section>

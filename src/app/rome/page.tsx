@@ -1,5 +1,6 @@
 import { MapPinIcon } from "@heroicons/react/24/outline";
 import { RomeMap } from "@/app/components/RomeMap";
+import { WorkInProgressBadge } from "@/app/components/ui/WorkInProgressBadge";
 
 type Props = {
   searchParams: Promise<{
@@ -19,12 +20,13 @@ export default async function RomePage({ searchParams }: Props) {
             <MapPinIcon className="size-5" aria-hidden="true" />
           </div>
           <div className="min-w-0">
-            <h1 className="truncate text-xl font-semibold tracking-tight text-zinc-950 sm:text-2xl">
-              Cultural Atlas – Rome
-            </h1>
-            <p className="mt-0.5 text-sm text-zinc-500">
-              A simple starting point: a map centered on Rome.
-            </p>
+            <div className="flex flex-wrap items-center gap-2">
+              <h1 className="truncate text-xl font-semibold tracking-tight text-zinc-950 sm:text-2xl">
+                Cultural Atlas – Rome
+              </h1>
+              <WorkInProgressBadge />
+            </div>
+            <p className="mt-0.5 text-sm text-zinc-500">A simple starting point: a map centered on Rome.</p>
           </div>
         </div>
       </header>
