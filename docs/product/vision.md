@@ -1,6 +1,6 @@
-# Historical Explorer - Project Context
+# Cultural Atlas - Project Context
 
-Historical Explorer is a visit companion for art, history, and cultural discovery.
+Cultural Atlas is a visit companion for art, history, and cultural discovery.
 
 The app helps tourists understand what they are seeing while they are visiting a city. It turns points of interest into concise, engaging cultural discoveries using text, images, maps, timelines, and other media when they are the best medium for the insight.
 

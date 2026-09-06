@@ -9,7 +9,7 @@ import {
   TrashIcon,
 } from "@heroicons/react/20/solid";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
 import { MarkdownContent } from "@/app/components/MarkdownContent";
 import { IconButton } from "@/app/components/ui/IconButton";
@@ -30,6 +30,9 @@ type ProgressState = {
   poiId: string;
   description: string;
 };
+
+const getActionErrorMessage = (error: unknown) =>
+  error instanceof Error ? error.message : "The action failed. Please try again.";
 
 const deleteConfirmMessages = {
   transformed:
@@ -108,6 +111,32 @@ const ProgressMessage = ({ description }: { description: string }) => (
     {description}
   </p>
 );
+
+const ErrorToast = ({ message, onDismiss }: { message: string; onDismiss: () => void }) => {
+  useEffect(() => {
+    const timeout = window.setTimeout(onDismiss, 8000);
+    return () => window.clearTimeout(timeout);
+  }, [message, onDismiss]);
+
+  return (
+    <div
+      role="alert"
+      className="fixed top-4 right-4 z-50 flex max-w-md items-start gap-4 rounded-lg border border-red-200 bg-white px-4 py-3 text-sm text-red-800 shadow-lg ring-1 ring-black/5"
+    >
+      <p className="flex-1">
+        <span className="font-semibold">Story refresh failed.</span> {message}
+      </p>
+      <button
+        type="button"
+        aria-label="Dismiss error"
+        className="-m-1 rounded p-1 text-red-700/70 hover:bg-red-50 hover:text-red-900"
+        onClick={onDismiss}
+      >
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+  );
+};
 
 type SelectedPanel =
   | {
@@ -286,6 +315,7 @@ export const PoiRowsTable = ({
 }) => {
   const [selectedPanel, setSelectedPanel] = useState<SelectedPanel | null>(null);
   const [progress, setProgress] = useState<ProgressState | null>(null);
+  const [actionError, setActionError] = useState<string | null>(null);
 
   const runSingleAction = async (
     poiId: string,
@@ -294,9 +324,12 @@ export const PoiRowsTable = ({
     formData: FormData,
   ) => {
     setSelectedPanel(null);
+    setActionError(null);
     setProgress({ poiId, description });
     try {
       await action(formData);
+    } catch (error) {
+      setActionError(getActionErrorMessage(error));
     } finally {
       setProgress(null);
     }
@@ -304,6 +337,9 @@ export const PoiRowsTable = ({
 
   return (
     <>
+      {actionError ? (
+        <ErrorToast message={actionError} onDismiss={() => setActionError(null)} />
+      ) : null}
       <section className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-gray-950/10">
         <div className="min-h-0 flex-1 overflow-auto">
           {rows.length === 0 ? (

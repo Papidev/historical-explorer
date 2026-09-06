@@ -1,6 +1,9 @@
-# Historical Explorer
+# Cultural Atlas
 
-Historical Explorer helps visitors understand cultural points of interest through concise, curated discoveries.
+Cultural Atlas helps visitors understand cities through concise, curated discoveries across history, art, and culture.
+
+**Cultural Atlas**:
+The product name for the visitor experience and its editorial tools. The core perspectives are **History**, **Art**, and **Culture**.
 
 ## Language
 
@@ -58,7 +61,7 @@ The required plain-text opening of **Story Content** that gives the visitor a co
 _Avoid_: Summary, title, lead Markdown
 
 **Story Topic**:
-One of the supported cultural perspectives—history, design, or art—that groups related **Visitor Insights** in **Story Content**. A topic may be empty when the **Sources** do not support it.
+One of the supported cultural perspectives—currently history, design, or art—that groups related **Visitor Insights** in **Story Content**. These topics contribute to Cultural Atlas's broader focus on history, art, and culture. A topic may be empty when the **Sources** do not support it.
 _Avoid_: Required section, content slot, card
 
 **Visitor Insight**:
