@@ -69,7 +69,7 @@ describe("Story Content", () => {
   it.each([
     [{ startYear: 0, precision: "exact", granularity: "year" }, "Year zero"],
     [{ startYear: 400, endYear: 301, precision: "exact", granularity: "century" }, "End year"],
-    [{ startYear: 301, precision: "exact", granularity: "century" }, "Century"],
+    [{ startYear: 301, precision: "exact", granularity: "century" }, "expected number"],
   ])("rejects invalid historical time %o", (time, message) => {
     const content = validStoryContent();
     content.topics.history.push({

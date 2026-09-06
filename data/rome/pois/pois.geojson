@@ -61,6 +61,45 @@
           41.8888528
         ]
       }
+    },
+    {
+      "id": "piazza-navona",
+      "wikidataId": "Q463400",
+      "type": "Feature",
+      "properties": {
+        "name": "Piazza Navona",
+        "tourism": "attraction",
+        "wikimedia_commons": "Category:Piazza Navona (Rome)",
+        "wikipedia": "it:Piazza Navona"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.4730991,
+          41.8989256
+        ]
+      }
+    },
+    {
+      "id": "castle-of-the-holy-angel",
+      "wikidataId": "Q486382",
+      "type": "Feature",
+      "properties": {
+        "email": "sspsae-rm.castelsantangelo@beniculturali.it",
+        "name": "Castel Sant’Angelo",
+        "name:en": "Castle of the Holy Angel",
+        "tourism": "museum",
+        "website": "https://direzionemuseiroma.cultura.gov.it/museo-nazionale-di-castel-santangelo/",
+        "wikimedia_commons": "Category:Castel Sant'Angelo (Rome)",
+        "wikipedia": "it:Castel Sant'Angelo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.4663312,
+          41.9030762
+        ]
+      }
     }
   ]
 }

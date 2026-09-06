@@ -54,7 +54,10 @@ export const findPoiInGeoJson = (
       coordinates: { lat, lng },
       sourceHints: {
         wikipedia: pickString(properties, "wikipedia"),
-        wikidata: pickString(properties, "wikidata"),
+        wikidata:
+          typeof feature.wikidataId === "string" && feature.wikidataId.trim()
+            ? feature.wikidataId.trim()
+            : pickString(properties, "wikidata"),
       },
     };
   }
