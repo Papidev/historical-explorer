@@ -1,6 +1,6 @@
 import { generateStoryContent } from "./generateStoryContent";
 import { createStoryWorkflow } from "./createStoryWorkflow";
-import { filesystemStoryWorkflowRepository } from "./filesystemRepository";
+import { createFilesystemStoryWorkflowRepository } from "./filesystemRepository";
 import { fetchMainImageCandidates } from "./mainImageCandidates";
 import { fetchWikiSnapshot } from "@/server/wikiPipeline/fetchWiki";
 import {
@@ -11,9 +11,7 @@ import {
 import { resolvePageForPoi } from "@/server/wikiPipeline/resolve";
 import { wikiTextToPlainText } from "@/server/wikiPipeline/wikiText";
 
-const city = "rome";
-
-export const storyWorkflow = createStoryWorkflow({
+export const createStoryWorkflowForCity = (city: string) => createStoryWorkflow({
   findPointOfInterest: async (poiId) => {
     try {
       return findPoiInGeoJson(getDefaultInputPath(city), poiId, city);
@@ -56,8 +54,10 @@ export const storyWorkflow = createStoryWorkflow({
       provider,
     };
   },
-  repository: filesystemStoryWorkflowRepository,
+  repository: createFilesystemStoryWorkflowRepository(city),
 });
+
+export const storyWorkflow = createStoryWorkflowForCity("rome");
 
 export type {
   AiSelection,

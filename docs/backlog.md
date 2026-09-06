@@ -18,20 +18,6 @@ We want to create the first Point of Interest from a Geo Place that has no Wikid
 **Possible direction**  
 Concentrate Point of Interest creation from a Geo Place, POI ID allocation, external identifiers, and catalog persistence in one Point of Interest catalog Module.
 
-## Scope local data access by city
-
-**Observation**  
-The filesystem layout is city-scoped under `data/<city>/`, but some Story and admin paths still assume Rome internally even when their callers provide a city.
-
-**Risk**  
-A future city could read or modify Rome data, especially when two cities contain the same POI ID.
-
-**Revisit when**  
-We start implementing a second city or another caller begins using the city parameter.
-
-**Possible direction**  
-Concentrate POI, Story, and generated-data paths in one city-scoped Module without introducing a storage Adapter until a second storage implementation exists.
-
 ## Treat each Story directory as one aggregate
 
 **Observation**  
@@ -59,6 +45,34 @@ Draft Story Generation latency or partial failures make the single overall progr
 
 **Possible direction**
 Let the Story Workflow Module emit progress events for Source acquisition, Main Image Candidate generation, and Story Content generation. A server Adapter could deliver those events to the browser so it can show in-progress, completed, and failed steps without moving orchestration back into the client.
+
+## Introduce a Curator read model
+
+**Observation**
+`loadPoiLists` builds the Curator table by joining Geo Places, Points of Interest, Sources, Story Content, Main Image Candidates, and generation metadata in several passes.
+
+**Risk**
+As the Story Workflow gains states or artifacts, the loader can become a second orchestration layer whose row-merging rules are difficult to understand and test.
+
+**Revisit when**
+The Curator table gains another workflow state, artifact, filter, or city-specific view, or its merge logic starts causing defects.
+
+**Possible direction**
+Introduce one Curator-facing read model assembled server-side from the Point of Interest and Story Workflow Modules. Keep it a query projection rather than adding write behavior or moving workflow decisions into the UI.
+
+## Use one generation metadata model
+
+**Observation**
+The Curator loader declares its own `GenerationStep` and `GenerationMetadata` shapes while the canonical persistence types live in the generation metadata Module and the Story Workflow snapshot.
+
+**Risk**
+A new checkpoint field or generation step can be added to persistence without being reflected in the Curator projection, causing silent drift between stored and displayed metadata.
+
+**Revisit when**
+We add or rename a generation step, display more checkpoint information, or otherwise modify generation metadata.
+
+**Possible direction**
+Make the Curator projection consume the canonical generation metadata type or, preferably, the generation status already exposed by the relevant domain Module. Avoid exposing filesystem paths or storage-specific JSON shapes.
 
 ## Introduce Story approval before visitor visibility
 

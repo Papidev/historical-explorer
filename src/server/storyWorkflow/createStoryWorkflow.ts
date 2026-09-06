@@ -27,6 +27,7 @@ export type StoryWorkflowRepository = {
     storyContent: StoryContent,
     checkpoint: NonNullable<DraftStoryGenerationStatus["storyContent"]>,
   ): Promise<void>;
+  selectDraftMainImage(poiId: string, commonsFileName: string): Promise<void>;
   deleteStoryContent(poiId: string): Promise<void>;
   deleteMainImageCandidates(poiId: string): Promise<void>;
   reset(poiId: string): Promise<void>;
@@ -189,7 +190,13 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         let selectedCommonsFileName: string | undefined;
         try {
           selectedCommonsFileName = await generateAndPersistCandidates(pointOfInterest);
-        } catch {
+        } catch (error) {
+          if (
+            !(error instanceof StoryWorkflowError) ||
+            error.code !== "main-image-candidates-generation-failed"
+          ) {
+            throw error;
+          }
           mainImageCandidates = "failed";
           selectedCommonsFileName = (await dependencies.repository.get(poiId))?.draftMainImage
             ?.commonsFileName;
