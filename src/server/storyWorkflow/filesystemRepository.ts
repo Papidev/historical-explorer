@@ -16,7 +16,6 @@ import {
   buildMainImageCandidateArtifactFilePath,
   readMainImageCandidateArtifact,
 } from "./mainImageCandidateArtifacts";
-import { buildStoryFilePath, readStory } from "./storyArtifacts";
 import { buildStoryContentFilePath, readStoryContent } from "./storyContentArtifacts";
 import type { StoryWorkflowRepository } from "./createStoryWorkflow";
 import {
@@ -58,17 +57,14 @@ export const filesystemStoryWorkflowRepository: StoryWorkflowRepository = {
       poiId,
       sources.length > 0 ? sources.map((source) => source.id) : undefined,
     )?.content;
-    const storyProse = readStory(poiId)?.content;
     const mainImageArtifact = readMainImageCandidateArtifact(poiId);
     const metadata = readGenerationMetadata()[sanitizePoiIdForFile(poiId)] ?? {};
     if (
       !sourceContent &&
       !storyContent &&
-      !storyProse &&
       !mainImageArtifact &&
       !metadata.wiki &&
       !metadata.storyContent &&
-      !metadata.ai &&
       !metadata.image
     ) {
       return undefined;
@@ -81,14 +77,12 @@ export const filesystemStoryWorkflowRepository: StoryWorkflowRepository = {
       poiId,
       sources,
       storyContent,
-      storyProse,
       mainImageCandidates: mainImageArtifact?.candidates ?? [],
       draftMainImage,
       generation: {
         sources: metadata.wiki,
         mainImageCandidates: metadata.image,
         storyContent: metadata.storyContent,
-        storyProse: metadata.ai,
       },
     };
   },
@@ -129,21 +123,11 @@ export const filesystemStoryWorkflowRepository: StoryWorkflowRepository = {
       `[wiki-images] Saved ${candidates.length} Main Image Candidates for ${poiId} to ${outputFilePath}.`,
     );
   },
-  replaceStoryProse: async (poiId, storyProse, checkpoint) => {
-    const outputFilePath = buildStoryFilePath(poiId);
-    writeAtomically(outputFilePath, `${storyProse.trim()}\n`);
-    replaceGenerationCheckpoint(poiId, "ai", checkpoint);
-    console.info(`[wiki-ai] Saved AI text for ${poiId} to ${outputFilePath}.`);
-  },
   replaceStoryContent: async (poiId, storyContent, checkpoint) => {
     const outputFilePath = buildStoryContentFilePath(poiId);
     writeAtomically(outputFilePath, `${JSON.stringify(storyContent, null, 2)}\n`);
     replaceGenerationCheckpoint(poiId, "storyContent", checkpoint);
     console.info(`[story-content] Saved Story Content for ${poiId} to ${outputFilePath}.`);
-  },
-  deleteStoryProse: async (poiId) => {
-    deleteFile(buildStoryFilePath(poiId));
-    deleteGenerationCheckpoints(poiId, ["ai"]);
   },
   deleteStoryContent: async (poiId) => {
     deleteFile(buildStoryContentFilePath(poiId));
@@ -157,8 +141,7 @@ export const filesystemStoryWorkflowRepository: StoryWorkflowRepository = {
     deleteFile(buildOutputFilePath(getDefaultOutputDir(city), poiId));
     deleteFile(buildSourceMetadataFilePath(getDefaultOutputDir(city), poiId));
     deleteFile(buildStoryContentFilePath(poiId));
-    deleteFile(buildStoryFilePath(poiId));
     deleteFile(buildMainImageCandidateArtifactFilePath(poiId));
-    deleteGenerationCheckpoints(poiId, ["wiki", "ai", "storyContent", "image"]);
+    deleteGenerationCheckpoints(poiId, ["wiki", "storyContent", "image"]);
   },
 };

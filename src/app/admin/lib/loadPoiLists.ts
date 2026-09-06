@@ -10,7 +10,7 @@ import type {
   PoiItem,
 } from "./types";
 
-type GenerationStep = "transformed" | "wiki" | "ai" | "storyContent" | "image";
+type GenerationStep = "transformed" | "wiki" | "storyContent" | "image";
 
 type GenerationMetadata = Record<
   string,
@@ -102,7 +102,6 @@ const toPoiRows = (
   generationMetadata: GenerationMetadata,
   transformedPois: Array<{ item: PoiItem; json: string; updatedAt: string }>,
   wikiPois: Array<{ item: PoiItem; json: string; updatedAt: string }>,
-  aiPois: Array<{ item: PoiItem; json: string; updatedAt: string }>,
   storyContentPois: Array<{
     item: PoiItem;
     storyContent: NonNullable<DraftStorySnapshot["storyContent"]>;
@@ -184,39 +183,6 @@ const toPoiRows = (
     );
   }
 
-  for (const { item, json, updatedAt } of aiPois) {
-    const rowKey = toRowKey(item.id);
-    const row = rowsById.get(rowKey);
-    rowsById.set(
-      rowKey,
-      row
-        ? {
-            ...row,
-            aiPoi: item,
-            aiText: json,
-            aiUpdatedAt: updatedAt,
-            aiGenerationDuration: generationMetadata[rowKey]?.ai
-              ? formatDuration(generationMetadata[rowKey].ai.durationMs)
-              : undefined,
-            aiGenerationModel: generationMetadata[rowKey]?.ai?.aiModel,
-            aiGenerationProvider: generationMetadata[rowKey]?.ai?.aiProvider,
-            aiGenerationMode: generationMetadata[rowKey]?.ai?.aiMode,
-          }
-        : {
-            id: item.id,
-            aiPoi: item,
-            aiText: json,
-            aiUpdatedAt: updatedAt,
-            aiGenerationDuration: generationMetadata[rowKey]?.ai
-              ? formatDuration(generationMetadata[rowKey].ai.durationMs)
-              : undefined,
-            aiGenerationModel: generationMetadata[rowKey]?.ai?.aiModel,
-            aiGenerationProvider: generationMetadata[rowKey]?.ai?.aiProvider,
-            aiGenerationMode: generationMetadata[rowKey]?.ai?.aiMode,
-          },
-    );
-  }
-
   for (const { item, storyContent, sources, updatedAt } of storyContentPois) {
     const rowKey = toRowKey(item.id);
     const row = rowsById.get(rowKey);
@@ -266,14 +232,12 @@ const toPoiRows = (
     const leftGeneratedCount = [
       left.transformedPoi,
       left.wikiPoi,
-      left.aiPoi,
       left.storyContent,
       left.mainImagePoi,
     ].filter(Boolean).length;
     const rightGeneratedCount = [
       right.transformedPoi,
       right.wikiPoi,
-      right.aiPoi,
       right.storyContent,
       right.mainImagePoi,
     ].filter(Boolean).length;
@@ -324,13 +288,6 @@ export const loadPoiLists = async () => {
         json: snapshot.sources.map((source) => source.content).join("\n\n"),
         updatedAt: formatCompletedAt(snapshot.generation.sources?.completedAt),
       }));
-    const aiPois = snapshots
-      .filter((snapshot) => snapshot.storyProse)
-      .map((snapshot, index) => ({
-        item: toSnapshotItem(snapshot, index),
-        json: snapshot.storyProse ?? "",
-        updatedAt: formatCompletedAt(snapshot.generation.storyProse?.completedAt),
-      }));
     const storyContentPois = snapshots
       .filter(
         (
@@ -364,7 +321,6 @@ export const loadPoiLists = async () => {
       generationMetadata,
       transformedPois,
       wikiPois,
-      aiPois,
       storyContentPois,
       mainImagePois,
     );

@@ -51,9 +51,9 @@ Each POI should have one canonical English story. Its primary content is structu
 
 The tone should be warm, precise, and visitor-facing without becoming promotional, academic, or presence-assuming. Avoid wording like "you are looking at" or "in front of you" because the visitor may be browsing away from the POI. Soft observation prompts are acceptable when useful, such as "a detail worth noticing is..."
 
-Story Content contains plain text without Markdown, inline highlights, CSS, or presentation components. A separate Story Prose Markdown artifact remains available to curators and may contain lightweight editorial formatting, but it is generated, refreshed, and deleted independently and is not a public fallback. MDX and configurable React renderers remain future decisions.
+Story Content contains plain text without Markdown, inline highlights, CSS, or presentation components. It is the sole textual content artifact for a story. MDX and configurable React renderers remain future decisions.
 
-Each story needs one required main image. The main image should help the visitor recognize the place or notice an important visible detail, not merely decorate the page. It should live outside the story prose and include source, author or rights status, license, and attribution metadata before approval.
+Each story needs one required main image. The main image should help the visitor recognize the place or notice an important visible detail, not merely decorate the page. It should live outside Story Content and include source, author or rights status, license, and attribution metadata before approval.
 
 For the first AI story workflow, AI should produce:
 
@@ -61,7 +61,7 @@ For the first AI story workflow, AI should produce:
 - one proposed main image with source, license, and attribution metadata, chosen from three Wikimedia Commons recognizer candidates
 - source material used to ground the draft story
 
-Main image candidate discovery should run after Wikipedia source acquisition and before Story Content generation. It should remain retryable independently from Story Content and Story Prose generation. The workflow should keep an existing available selection or automatically select the first candidate with license and attribution; the curator may review and change that selection. Full Generate produces Story Content and does not regenerate Story Prose.
+Main image candidate discovery should run after Wikipedia source acquisition and before Story Content generation. It should remain retryable independently from Story Content generation. The workflow should keep an existing available selection or automatically select the first candidate with license and attribution; the curator may review and change that selection. Full Generate produces Story Content.
 
 The admin dashboard should let the curator choose the AI provider for the current admin session, switching between local AI through Ollama and cloud AI through Gemini without rewriting environment configuration. The selector should use the concise choices "Local" and "Cloud", with a secondary line explaining the concrete provider, model, and cost implication. `AI_MODE` should choose the initial Local/Cloud selection, while `LOCAL_AI_PROVIDER`, `LOCAL_AI_MODEL`, `CLOUD_AI_PROVIDER`, and `CLOUD_AI_MODEL` configure the concrete backends. These variables are the primary AI configuration shape. The selected provider and model should be submitted with each manual AI workflow action.
 

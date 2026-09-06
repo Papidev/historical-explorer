@@ -1,4 +1,3 @@
-import { enrichWikiText } from "./enrichWikiText";
 import { generateStoryContent } from "./generateStoryContent";
 import { createStoryWorkflow } from "./createStoryWorkflow";
 import { filesystemStoryWorkflowRepository } from "./filesystemRepository";
@@ -39,28 +38,6 @@ export const storyWorkflow = createStoryWorkflow({
   generateMainImageCandidates: async (pointOfInterest) => {
     console.info(`[wiki-images] Generating Main Image Candidates for ${pointOfInterest.id}.`);
     return fetchMainImageCandidates(pointOfInterest);
-  },
-  generateStoryProse: async ({ pointOfInterest, sources, ai }) => {
-    const provider =
-      ai.mode === "local"
-        ? process.env.LOCAL_AI_PROVIDER === "gemini"
-          ? "gemini"
-          : "ollama"
-        : process.env.CLOUD_AI_PROVIDER === "ollama"
-          ? "ollama"
-          : "gemini";
-    console.info(
-      `[wiki-ai] Generating AI text for ${pointOfInterest.id} with ${ai.mode}/${provider}/${ai.model}.`,
-    );
-    return {
-      content: `# ${pointOfInterest.name} (${pointOfInterest.id})\n\n${(
-        await enrichWikiText(sources.map((source) => source.content).join("\n\n"), {
-          provider,
-          model: ai.model,
-        })
-      ).trim()}`,
-      provider,
-    };
   },
   generateStoryContent: async ({ pointOfInterest, sources, ai }) => {
     const provider =
