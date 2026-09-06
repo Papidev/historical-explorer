@@ -48,13 +48,9 @@ _Avoid_: POI Story, Visitor Narrative, article, summary, description, AI text, M
 A source-grounded visitor-facing story for one **Point of Interest** before curator approval.
 _Avoid_: Draft POI Story, POI Draft, draft narrative, AI Markdown, AI text, Markdown, generated output
 
-**Story Prose**:
-A standalone Markdown artifact that a **Curator** may generate, review, and edit independently from **Story Content**. It is not currently used by the **Visitor Experience**.
-_Avoid_: Story body, canonical Story, structured content
-
 **Story Content**:
 The structured, source-grounded content that supplies the **Visitor Experience**, composed of one **Story Introduction**, optional **Story Topics**, and **Related People**.
-_Avoid_: Story Prose, Markdown, MDX, rendered page
+_Avoid_: Story body, Markdown, MDX, rendered page
 
 **Story Introduction**:
 The required plain-text opening of **Story Content** that gives the visitor a concise orientation to the **Point of Interest**.
@@ -102,7 +98,7 @@ _Avoid_: Production output, AI output
 - A **Point of Interest** has exactly one **POI ID** and may retain optional external identifiers such as a Wikidata ID.
 - A **Story Workflow** comprises **Draft Story Generation** followed by **Story Curation**.
 - **Draft Story Generation** starts from an existing **Point of Interest** and creates or updates its current **Draft Story**.
-- Manually regenerating **Story Content**, **Story Prose**, or **Main Image Candidates** belongs to **Draft Story Generation** because it recreates automated artifacts.
+- Manually regenerating **Story Content** or **Main Image Candidates** belongs to **Draft Story Generation** because it recreates automated artifacts.
 - Creating a **Point of Interest** from a **Geo Place** happens before, and does not belong to, the **Story Workflow**.
 - **Story Curation** begins after **Draft Story Generation** has produced a reviewable **Draft Story**.
 - A **Curator** selecting a **Main Image Candidate** as the **Draft Main Image** belongs to **Story Curation**.
@@ -111,18 +107,16 @@ _Avoid_: Production output, AI output
 - A **Point of Interest** has at most one current **Draft Story**.
 - A **Story** contains one **Story Content** and one **Main Image**.
 - **Story Content** contains plain text rather than Markdown or presentation styling.
-- **Story Prose** may include lightweight editorial formatting and remains independent from **Story Content**.
 - A **Draft Story** organizes its proposed **Visitor Insights** into the supported **Story Topics**.
 - A **Story Topic** appears only when supported by the **Sources**; a **Draft Story** does not fill every available **Story Topic**.
 - A **Story Topic** provides content semantics but does not own the React presentation used by the **Visitor Experience**.
 - Dated **Visitor Insights** in the history **Story Topic** appear from oldest to newest; undated historical insights follow them.
-- Editorial highlights are optional lightweight markup within **Story Prose**, not separate metadata.
 - A **Story** may make substantive claims only when they are supported by its **Sources**.
 - A **Story** retains the **Sources** and resolvable **Source References** used to support curator review.
 - A **Story** is composed from the strongest few **Visitor Insights**, not from a complete article summary.
 - A **Draft Story** proposes the **Visitor Insights** that may shape the approved **Story**.
 - A **Draft Story** becomes a **Story** only when approved by a **Curator**.
-- A **Draft Story** contains **Story Content** and one or more **Sources**, and may also include independent **Story Prose**, one **Draft Main Image**, and one or more **Main Image Candidates**.
+- A **Draft Story** contains **Story Content** and one or more **Sources**, and may also include one **Draft Main Image** and one or more **Main Image Candidates**.
 - A **Draft Story** must include one **Draft Main Image** with source, rights, license, and attribution information before it becomes a **Story**.
 - The first **Draft Story Generation** proposes up to three **Main Image Candidates** for each **Draft Story**.
 - **Main Image Candidates** should help visitors recognize the **Point of Interest**, not inspect a detail.
@@ -167,5 +161,5 @@ _Avoid_: Production output, AI output
 - "exactly three candidates" overstated the first direct-source workflow because Wikidata and Wikipedia page images may provide fewer than three distinct usable images — resolved: the first **Story Workflow** proposes up to three **Main Image Candidates**.
 - "show the selected image" was ambiguous between the **Story Workflow** and the **Visitor Experience** — resolved: the first image-candidate implementation stays workflow-only until the approved **Story** shape is explicit.
 - "selected image" was ambiguous with final story approval — resolved: call the mutable selection on a **Draft Story** the **Draft Main Image**; it becomes the **Main Image** only upon approval.
-- "manual refresh" was ambiguous between automated generation and human curation — resolved: regenerating **Story Content**, **Story Prose**, or **Main Image Candidates** belongs to **Draft Story Generation**, while selecting the **Draft Main Image** belongs to **Story Curation**.
+- "manual refresh" was ambiguous between automated generation and human curation — resolved: regenerating **Story Content** or **Main Image Candidates** belongs to **Draft Story Generation**, while selecting the **Draft Main Image** belongs to **Story Curation**.
 - "section" was ambiguous between generated cultural content and its public presentation — resolved: use optional **Story Topics** to organize proposed **Visitor Insights**, without requiring a corresponding section in the **Visitor Experience**.

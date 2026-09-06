@@ -54,7 +54,7 @@ Use the single Generate action in `/admin` to run the current Rome generation fl
 3. Generate Main Image Candidates and select the first candidate with license and attribution.
 4. Generate structured Story Content.
 
-Stories live under the city's `stories/` folder, with one directory per POI ID. For example, `data/rome/stories/forum-boarium/` contains structured Story Content in `story.json`, independent Story Prose in `story.md`, and Main Image Candidates in `images.json`. Full Generate creates or replaces `story.json` without changing `story.md`; the Curator UI provides separate preview, Refresh, and Delete actions for both artifacts. The Visitor Experience reads only `story.json` and does not fall back to Markdown. These are reviewable content artifacts and should be committed after generation and human editing.
+Stories live under the city's `stories/` folder, with one directory per POI ID. For example, `data/rome/stories/forum-boarium/` contains structured Story Content in `story.json` and Main Image Candidates in `images.json`. Full Generate creates or replaces `story.json`, and the Curator UI provides preview, Refresh, and Delete actions for that content. These are reviewable content artifacts and should be committed after generation and human editing.
 
 Locally generated Wikipedia Sources use a text snapshot plus a metadata file containing the conventional `wikipedia` source ID, title, and URL. Source references are validated during generation and are shown in the Curator UI when the local Source is available, but are omitted from the public Story response.
 

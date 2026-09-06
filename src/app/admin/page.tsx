@@ -1,10 +1,8 @@
 import { AdminDashboard } from "./components/AdminDashboard";
 import {
-  deleteAiText,
   deleteStoryContent,
   deleteMainImageCandidates,
   generateDraftStory,
-  refreshAiText,
   refreshStoryContent,
   refreshMainImageCandidates,
   resetDraftStory,
@@ -38,8 +36,6 @@ export default async function AdminPage() {
           initialAiSelection={initialAiSelection}
           generateDraftStoryAction={generateDraftStory}
           resetDraftStoryAction={resetDraftStory}
-          refreshAiAction={refreshAiText}
-          deleteAiAction={deleteAiText}
           refreshStoryContentAction={refreshStoryContent}
           deleteStoryContentAction={deleteStoryContent}
           refreshMainImageCandidatesAction={refreshMainImageCandidates}

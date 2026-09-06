@@ -3,7 +3,7 @@ import path from "node:path";
 import type { GenerationCheckpoint } from "@/server/storyWorkflow/types";
 import { sanitizePoiIdForFile } from "@/server/wikiPipeline/normalize";
 
-export type GenerationStep = "transformed" | "wiki" | "ai" | "storyContent" | "image";
+export type GenerationStep = "transformed" | "wiki" | "storyContent" | "image";
 
 export type GenerationMetadata = Record<
   string,

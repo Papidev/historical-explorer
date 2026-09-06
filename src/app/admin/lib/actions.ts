@@ -34,14 +34,6 @@ export const resetDraftStory = async (formData: FormData) => {
   revalidatePath("/admin");
 };
 
-export const refreshAiText = async (formData: FormData) => {
-  await storyWorkflow.storyProse.generate({
-    poiId: getRequiredString(formData, "poiId", "POI id"),
-    ai: await getWorkflowAiSelection(formData),
-  });
-  revalidatePath("/admin");
-};
-
 export const refreshStoryContent = async (formData: FormData) => {
   await storyWorkflow.storyContent.generate({
     poiId: getRequiredString(formData, "poiId", "POI id"),
@@ -52,13 +44,6 @@ export const refreshStoryContent = async (formData: FormData) => {
 
 export const refreshMainImageCandidates = async (formData: FormData) => {
   await storyWorkflow.mainImageCandidates.generate({
-    poiId: getRequiredString(formData, "poiId", "POI id"),
-  });
-  revalidatePath("/admin");
-};
-
-export const deleteAiText = async (formData: FormData) => {
-  await storyWorkflow.storyProse.delete({
     poiId: getRequiredString(formData, "poiId", "POI id"),
   });
   revalidatePath("/admin");

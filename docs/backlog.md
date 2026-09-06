@@ -35,7 +35,7 @@ Concentrate POI, Story, and generated-data paths in one city-scoped Module witho
 ## Treat each Story directory as one aggregate
 
 **Observation**  
-Each Story directory contains `story.json`, `story.md`, and `images.json`, but separate Modules currently discover and manage the files.
+Each Story directory contains `story.json` and `images.json`, but separate Modules currently discover and manage the files.
 
 **Risk**  
 Callers can observe or create partial Story directories, and each caller must understand how the two files relate.

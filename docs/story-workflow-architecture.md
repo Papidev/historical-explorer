@@ -55,7 +55,6 @@ type DraftStorySnapshot = {
   poiId: string;
   sources: Source[];
   storyContent?: StoryContent;
-  storyProse?: string;
   mainImageCandidates: MainImageCandidate[];
   draftMainImage?: DraftMainImage;
   generation: DraftStoryGenerationStatus;
@@ -68,12 +67,6 @@ type StoryWorkflow = {
     get(input: { poiId: string }): Promise<DraftStorySnapshot | undefined>;
 
     reset(input: { poiId: string }): Promise<void>;
-  };
-
-  storyProse: {
-    generate(input: { poiId: string; ai: AiSelection }): Promise<void>;
-
-    delete(input: { poiId: string }): Promise<void>;
   };
 
   storyContent: {
@@ -90,13 +83,13 @@ type StoryWorkflow = {
 };
 ```
 
-`storyContent.generate`, `storyProse.generate`, and `mainImageCandidates.generate` belong to **Draft Story Generation**. Each has create-or-replace semantics: it creates a missing artifact or generates a replacement for the current one. These operations are not idempotent because AI output and external Sources may change between calls. Story Content and Story Prose are independent: replacing or deleting either one never changes the other.
+`storyContent.generate` and `mainImageCandidates.generate` belong to **Draft Story Generation**. Each has create-or-replace semantics: it creates a missing artifact or generates a replacement for the current one. These operations are not idempotent because AI output and external Sources may change between calls.
 
 The Curator UI may label the same operation Generate when its artifact is missing and Refresh when one already exists.
 
-The three deletion operations preserve the current Curator recovery actions while keeping artifact paths and cascade rules inside the Story Workflow Module.
+The two deletion operations preserve the current Curator recovery actions while keeping artifact paths and cascade rules inside the Story Workflow Module.
 
-`draftStory.reset` removes all Sources, Story Content, Story Prose, Main Image Candidates, Draft Main Image state, and generation metadata owned by the Story Workflow. It does not remove the Point of Interest or its Geo Place.
+`draftStory.reset` removes all Sources, Story Content, Main Image Candidates, Draft Main Image state, and generation metadata owned by the Story Workflow. It does not remove the Point of Interest or its Geo Place.
 
 Selecting a **Draft Main Image**, editing a **Draft Story**, and approving it as a **Story** belong to **Story Curation** and cross a separate **Seam**.
 
@@ -113,7 +106,7 @@ Selecting a **Draft Main Image**, editing a **Draft Story**, and approving it as
 3. Preserve the current **Draft Main Image** when it remains eligible; otherwise select the first candidate with license and attribution information.
 4. Generate **Story Content**.
 
-The caller cannot choose, reorder, or skip these steps. Full generation does not generate or replace Story Prose.
+The caller cannot choose, reorder, or skip these steps.
 
 ## Partial-failure behavior
 
@@ -149,10 +142,9 @@ type StoryWorkflowError = {
     | "point-of-interest-not-found"
     | "sources-unavailable"
     | "story-content-generation-failed"
-    | "story-prose-generation-failed"
     | "main-image-candidates-generation-failed"
     | "persistence-failed";
-  stage: "sources" | "mainImageCandidates" | "storyContent" | "storyProse" | "persistence";
+  stage: "sources" | "mainImageCandidates" | "storyContent" | "persistence";
   retryable: boolean;
 };
 ```

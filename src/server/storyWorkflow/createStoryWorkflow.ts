@@ -22,17 +22,11 @@ export type StoryWorkflowRepository = {
     selectedCommonsFileName: string | undefined,
     checkpoint: NonNullable<DraftStoryGenerationStatus["mainImageCandidates"]>,
   ): Promise<void>;
-  replaceStoryProse(
-    poiId: string,
-    storyProse: string,
-    checkpoint: NonNullable<DraftStoryGenerationStatus["storyProse"]>,
-  ): Promise<void>;
   replaceStoryContent(
     poiId: string,
     storyContent: StoryContent,
     checkpoint: NonNullable<DraftStoryGenerationStatus["storyContent"]>,
   ): Promise<void>;
-  deleteStoryProse(poiId: string): Promise<void>;
   deleteStoryContent(poiId: string): Promise<void>;
   deleteMainImageCandidates(poiId: string): Promise<void>;
   reset(poiId: string): Promise<void>;
@@ -42,11 +36,6 @@ export type StoryWorkflowDependencies = {
   findPointOfInterest(poiId: string): Promise<PoiInput | undefined>;
   acquireSources(pointOfInterest: PoiInput): Promise<Source[]>;
   generateMainImageCandidates(pointOfInterest: PoiInput): Promise<MainImageCandidate[]>;
-  generateStoryProse(input: {
-    pointOfInterest: PoiInput;
-    sources: Source[];
-    ai: AiSelection;
-  }): Promise<{ content: string; provider: "ollama" | "gemini" }>;
   generateStoryContent(input: {
     pointOfInterest: PoiInput;
     sources: Source[];
@@ -157,43 +146,6 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
     return selectedCommonsFileName;
   };
 
-  const generateAndPersistStoryProse = async (
-    pointOfInterest: PoiInput,
-    sources: Source[],
-    ai: AiSelection,
-  ) => {
-    const startedAt = now().getTime();
-    let generated: { content: string; provider: "ollama" | "gemini" };
-    try {
-      generated = await dependencies.generateStoryProse({
-        pointOfInterest,
-        sources,
-        ai,
-      });
-      if (!generated.content.trim()) {
-        throw new Error("Story Prose was empty.");
-      }
-    } catch (cause) {
-      throw new StoryWorkflowError({
-        code: "story-prose-generation-failed",
-        stage: "storyProse",
-        retryable: true,
-        cause,
-      });
-    }
-
-    try {
-      await dependencies.repository.replaceStoryProse(pointOfInterest.id, generated.content, {
-        ...toCheckpoint(startedAt, now),
-        aiMode: ai.mode,
-        aiProvider: generated.provider,
-        aiModel: ai.model,
-      });
-    } catch (cause) {
-      throw persistenceError(cause);
-    }
-  };
-
   const generateAndPersistStoryContent = async (
     pointOfInterest: PoiInput,
     sources: Source[],
@@ -255,27 +207,6 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
       reset: async ({ poiId }) => {
         try {
           await dependencies.repository.reset(poiId);
-        } catch (cause) {
-          throw persistenceError(cause);
-        }
-      },
-    },
-    storyProse: {
-      generate: async ({ poiId, ai }) => {
-        const pointOfInterest = await findPointOfInterest(poiId, dependencies);
-        const sources = (await dependencies.repository.get(poiId))?.sources ?? [];
-        if (sources.length === 0) {
-          throw new StoryWorkflowError({
-            code: "sources-unavailable",
-            stage: "sources",
-            retryable: true,
-          });
-        }
-        await generateAndPersistStoryProse(pointOfInterest, sources, ai);
-      },
-      delete: async ({ poiId }) => {
-        try {
-          await dependencies.repository.deleteStoryProse(poiId);
         } catch (cause) {
           throw persistenceError(cause);
         }

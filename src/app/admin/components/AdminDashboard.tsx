@@ -16,8 +16,6 @@ export const AdminDashboard = ({
   initialAiSelection,
   generateDraftStoryAction,
   resetDraftStoryAction,
-  refreshAiAction,
-  deleteAiAction,
   refreshStoryContentAction,
   deleteStoryContentAction,
   refreshMainImageCandidatesAction,
@@ -29,8 +27,6 @@ export const AdminDashboard = ({
   initialAiSelection: AiSelection;
   generateDraftStoryAction: (formData: FormData) => Promise<void>;
   resetDraftStoryAction: (formData: FormData) => Promise<void>;
-  refreshAiAction: (formData: FormData) => Promise<void>;
-  deleteAiAction: (formData: FormData) => Promise<void>;
   refreshStoryContentAction: (formData: FormData) => Promise<void>;
   deleteStoryContentAction: (formData: FormData) => Promise<void>;
   refreshMainImageCandidatesAction: (formData: FormData) => Promise<void>;
@@ -92,8 +88,6 @@ export const AdminDashboard = ({
         selectedAiModel={selectedAiModel}
         generateDraftStoryAction={generateDraftStoryAction}
         resetDraftStoryAction={resetDraftStoryAction}
-        refreshAiAction={refreshAiAction}
-        deleteAiAction={deleteAiAction}
         refreshStoryContentAction={refreshStoryContentAction}
         deleteStoryContentAction={deleteStoryContentAction}
         refreshMainImageCandidatesAction={refreshMainImageCandidatesAction}

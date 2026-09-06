@@ -1,7 +1,11 @@
 import type { PoiInput } from "@/server/wikiPipeline/types";
 import { parseStoryContent, storyContentJsonSchema, type StoryContent } from "./storyContent";
-import type { AiGenerationConfig } from "./enrichWikiText";
 import type { Source } from "./types";
+
+type AiGenerationConfig = {
+  provider: "ollama" | "gemini";
+  model: string;
+};
 
 type OllamaChatResponse = {
   message?: {

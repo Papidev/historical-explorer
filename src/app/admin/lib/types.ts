@@ -41,20 +41,14 @@ export type AdminPoiRow = {
   rawPoi?: PoiItem;
   transformedPoi?: PoiItem;
   wikiPoi?: PoiItem;
-  aiPoi?: PoiItem;
   mainImagePoi?: PoiItem;
   rawUpdatedAt?: string;
   transformedUpdatedAt?: string;
   wikiUpdatedAt?: string;
-  aiUpdatedAt?: string;
   mainImageUpdatedAt?: string;
   transformedGenerationDuration?: string;
   wikiGenerationDuration?: string;
-  aiGenerationDuration?: string;
   mainImageGenerationDuration?: string;
-  aiGenerationMode?: string;
-  aiGenerationProvider?: string;
-  aiGenerationModel?: string;
   storyContentUpdatedAt?: string;
   storyContentGenerationDuration?: string;
   storyContentGenerationMode?: string;
@@ -62,7 +56,6 @@ export type AdminPoiRow = {
   storyContentGenerationModel?: string;
   transformedJson?: string;
   wikiText?: string;
-  aiText?: string;
   storyContent?: StoryContent;
   storyContentSources?: Source[];
   mainImageArtifact?: MainImageCandidatesArtifact;
