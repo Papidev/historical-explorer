@@ -1,8 +1,5 @@
-import { renameSync, writeFileSync } from "node:fs";
-import {
-  listMainImageCandidateArtifactFilePathsForPoi,
-  readMainImageCandidateArtifact,
-} from "@/server/storyWorkflow/mainImageCandidateArtifacts";
+import { filesystemStoryWorkflowRepository } from "@/server/storyWorkflow/filesystemRepository";
+import type { StoryWorkflowRepository } from "@/server/storyWorkflow/createStoryWorkflow";
 
 export type StoryCuration = {
   selectDraftMainImage(input: {
@@ -11,13 +8,15 @@ export type StoryCuration = {
   }): Promise<void>;
 };
 
-export const storyCuration: StoryCuration = {
+export const createStoryCuration = (
+  repository: Pick<StoryWorkflowRepository, "get" | "selectDraftMainImage">,
+): StoryCuration => ({
   selectDraftMainImage: async ({ poiId, commonsFileName }) => {
-    const artifact = readMainImageCandidateArtifact(poiId);
-    const candidate = artifact?.candidates.find(
+    const draftStory = await repository.get(poiId);
+    const candidate = draftStory?.mainImageCandidates.find(
       (item) => item.commonsFileName === commonsFileName,
     );
-    if (!artifact || !candidate) {
+    if (!candidate) {
       throw new Error(`Main Image Candidate ${commonsFileName} not found.`);
     }
     if (!candidate.license || !candidate.attribution) {
@@ -25,20 +24,8 @@ export const storyCuration: StoryCuration = {
         `Main Image Candidate ${commonsFileName} is missing license or attribution.`,
       );
     }
-    const [filePath] = listMainImageCandidateArtifactFilePathsForPoi(poiId);
-    if (!filePath) {
-      throw new Error(`Main Image Candidates for ${poiId} not found.`);
-    }
-    const temporaryFilePath = `${filePath}.tmp`;
-    writeFileSync(
-      temporaryFilePath,
-      `${JSON.stringify(
-        { ...artifact, selectedCommonsFileName: candidate.commonsFileName },
-        null,
-        2,
-      )}\n`,
-      "utf-8",
-    );
-    renameSync(temporaryFilePath, filePath);
+    await repository.selectDraftMainImage(poiId, candidate.commonsFileName);
   },
-};
+});
+
+export const storyCuration = createStoryCuration(filesystemStoryWorkflowRepository);

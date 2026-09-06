@@ -10,7 +10,7 @@ import {
 } from "./createStoryWorkflow";
 import type { DraftStorySnapshot } from "./types";
 import type { StoryContent } from "./storyContent";
-import { filesystemStoryWorkflowRepository } from "./filesystemRepository";
+import { createFilesystemStoryWorkflowRepository } from "./filesystemRepository";
 
 const pointOfInterest: PoiInput = {
   id: "forum-boarium",
@@ -84,6 +84,12 @@ const createMemoryRepository = () => {
       const snapshot = getOrCreate(poiId);
       snapshot.storyContent = structuredClone(content);
       snapshot.generation.storyContent = checkpoint;
+    },
+    selectDraftMainImage: async (poiId, commonsFileName) => {
+      const snapshot = getOrCreate(poiId);
+      snapshot.draftMainImage = snapshot.mainImageCandidates.find(
+        (item) => item.commonsFileName === commonsFileName,
+      );
     },
     deleteStoryContent: async (poiId) => {
       const snapshot = snapshots.get(poiId);
@@ -213,6 +219,28 @@ describe("Story Workflow Interface", () => {
       sources: [{ content: "Source version one" }],
       mainImageCandidates: [],
       storyContent: storyContent(),
+    });
+  });
+
+  it("does not hide candidate persistence failures during full generation", async () => {
+    const { dependencies, repository } = createDependencies();
+
+    await expect(
+      createStoryWorkflow({
+        ...dependencies,
+        repository: {
+          ...repository,
+          replaceMainImageCandidates: async () => {
+            throw new Error("Disk full");
+          },
+        },
+      }).draftStory.generate({
+        poiId: pointOfInterest.id,
+        ai: { mode: "local", model: "qwen3:8b" },
+      }),
+    ).rejects.toMatchObject({
+      code: "persistence-failed",
+      stage: "persistence",
     });
   });
 
@@ -375,7 +403,7 @@ describe("Story Workflow Interface", () => {
     try {
       const workflow = createStoryWorkflow({
         ...createDependencies().dependencies,
-        repository: filesystemStoryWorkflowRepository,
+        repository: createFilesystemStoryWorkflowRepository("rome"),
       });
       await workflow.draftStory.generate({
         poiId: pointOfInterest.id,
@@ -388,6 +416,9 @@ describe("Story Workflow Interface", () => {
         mainImageCandidates: [{ commonsFileName: "first.jpg" }],
         draftMainImage: { commonsFileName: "first.jpg" },
       });
+      await expect(
+        createFilesystemStoryWorkflowRepository("alexandria").get(pointOfInterest.id),
+      ).resolves.toBeUndefined();
       unlinkSync(path.join(temporaryDirectory, "data/rome/generated/wiki/forum-boarium.txt"));
       unlinkSync(
         path.join(temporaryDirectory, "data/rome/generated/wiki/forum-boarium.metadata.json"),

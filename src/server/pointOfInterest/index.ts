@@ -105,7 +105,7 @@ export const pointOfInterest: PointOfInterestModule = {
           )
         : [...features, pointOfInterest],
     });
-    replaceGenerationCheckpoint(poiId, "transformed", {
+    replaceGenerationCheckpoint(city, poiId, "transformed", {
       durationMs: Date.now() - startedAt,
       completedAt: new Date().toISOString(),
     });
@@ -122,6 +122,6 @@ export const pointOfInterest: PointOfInterestModule = {
         ),
       });
     }
-    deleteGenerationCheckpoints(poiId, ["transformed"]);
+    deleteGenerationCheckpoints(city, poiId, ["transformed"]);
   },
 };

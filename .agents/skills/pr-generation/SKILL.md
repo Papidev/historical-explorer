@@ -7,6 +7,10 @@ description: Use when the user asks to create, open, update, prepare, or describ
 
 Use this skill together with the GitHub publish flow when preparing or opening a pull request.
 
+## GitHub Access
+
+Create and manage pull requests through the GitHub connector, including assignment and other PR metadata. Use Git only for local commits and publishing the branch; do not use the `gh` CLI for pull request operations in this repository.
+
 ## Title
 
 Use a lowercase prefix and colon:
