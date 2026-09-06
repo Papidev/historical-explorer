@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Paolo_Monti_-_Servizio_fotografico_(Roma,_1966)_-_BEIC_6329173.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Paolo_Monti_-_Servizio_fotografico_(Roma%2C_1966)_-_BEIC_6329173.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Paolo_Monti_-_Servizio_fotografico_%28Roma%2C_1966%29_-_BEIC_6329173.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Paolo_Monti_-_Servizio_fotografico_%28Roma%2C_1966%29_-_BEIC_6329173.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Paolo Monti",
+      "author": "Paolo Monti",
+      "width": 816,
+      "height": 1280,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Piazza_Navona_(Rome)_at_night.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Piazza_Navona_(Rome)_at_night.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Piazza_Navona_%28Rome%29_at_night.jpg/960px-Piazza_Navona_%28Rome%29_at_night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/08/Piazza_Navona_%28Rome%29_at_night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "NikonZ7II",
+      "author": "NikonZ7II",
+      "width": 9031,
+      "height": 6389,
+      "discoveredVia": "wikipedia-page-image",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Paolo_Monti_-_Servizio_fotografico_(Roma,_1966)_-_BEIC_6329173.jpg"
+}

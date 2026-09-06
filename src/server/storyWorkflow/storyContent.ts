@@ -11,22 +11,18 @@ const storyInsightSchema = z
   })
   .strict();
 
-const historicalTimeSchema = z
-  .object({
-    startYear: z
-      .number()
-      .int()
-      .refine((year) => year !== 0, "Year zero is not supported."),
-    endYear: z
-      .number()
-      .int()
-      .refine((year) => year !== 0, "Year zero is not supported.")
-      .optional(),
-    precision: z.enum(["exact", "approximate"]),
-    granularity: z.enum(["year", "century"]),
-  })
-  .strict()
-  .superRefine(({ startYear, endYear, granularity }, context) => {
+const historicalTimeFields = {
+  startYear: z
+    .number()
+    .int()
+    .refine((year) => year !== 0, "Year zero is not supported."),
+  precision: z.enum(["exact", "approximate"]),
+};
+
+const validateHistoricalTimeRange = (
+  { startYear, endYear }: { startYear: number; endYear?: number },
+  context: z.RefinementCtx,
+) => {
     if (endYear !== undefined && endYear < startYear) {
       context.addIssue({
         code: "custom",
@@ -34,14 +30,33 @@ const historicalTimeSchema = z
         message: "End year must not precede start year.",
       });
     }
-    if (granularity === "century" && endYear === undefined) {
-      context.addIssue({
-        code: "custom",
-        path: ["endYear"],
-        message: "Century values require an end year.",
-      });
-    }
-  });
+};
+
+const historicalTimeSchema = z.discriminatedUnion("granularity", [
+  z
+    .object({
+      ...historicalTimeFields,
+      endYear: z
+        .number()
+        .int()
+        .refine((year) => year !== 0, "Year zero is not supported.")
+        .optional(),
+      granularity: z.literal("year"),
+    })
+    .strict()
+    .superRefine(validateHistoricalTimeRange),
+  z
+    .object({
+      ...historicalTimeFields,
+      endYear: z
+        .number()
+        .int()
+        .refine((year) => year !== 0, "Year zero is not supported."),
+      granularity: z.literal("century"),
+    })
+    .strict()
+    .superRefine(validateHistoricalTimeRange),
+]);
 
 const historyInsightSchema = storyInsightSchema.extend({
   time: historicalTimeSchema.optional(),

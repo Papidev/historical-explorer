@@ -64,6 +64,33 @@ describe("Story Content AI adapters", () => {
       }),
     ).resolves.toEqual(generated);
     expect(requestedSchema).toMatchObject({ type: "object" });
+    const historyTimeSchema = (
+      requestedSchema as {
+        properties: {
+          topics: {
+            properties: {
+              history: {
+                items: {
+                  properties: {
+                    time: {
+                      oneOf: Array<{
+                        properties: { granularity: { const: string } };
+                        required: string[];
+                      }>;
+                    };
+                  };
+                };
+              };
+            };
+          };
+        };
+      }
+    ).properties.topics.properties.history.items.properties.time;
+    expect(
+      historyTimeSchema.oneOf.find(
+        ({ properties }) => properties.granularity.const === "century",
+      )?.required,
+    ).toContain("endYear");
   });
 
   it("requests and validates Ollama structured output", async () => {

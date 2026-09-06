@@ -1,0 +1,468 @@
+{
+  "introduction": {
+    "text": "Castel Sant'Angelo, also known as the Mausoleum of Hadrian, is a towering cylindrical building in Rome, Italy. It was initially commissioned by the Roman Emperor Hadrian as a mausoleum for himself and his family, later served as a papal fortress and castle, and is now a museum. It was once the tallest building in Rome.",
+    "sourceIds": [
+      "wikipedia"
+    ]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-1",
+        "description": "The tomb of Roman Emperor Hadrian, also called Hadrian's mole, was erected on the right bank of the Tiber between 134 and 139 AD.",
+        "relatedPersonIds": [
+          "hadrian"
+        ],
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 134,
+          "endYear": 139,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-2",
+        "description": "Hadrian's ashes were placed here in 138 AD, along with those of his wife Sabina and his first adopted son, Lucius Aelius, who also died in 138 AD.",
+        "relatedPersonIds": [
+          "hadrian",
+          "sabina",
+          "lucius-aelius"
+        ],
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 138,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-3",
+        "description": "The remains of succeeding emperors were also interred here, with the last recorded deposition being Caracalla in 217 AD.",
+        "relatedPersonIds": [
+          "caracalla"
+        ],
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 217,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-4",
+        "description": "The building was converted into a military fortress in 401 AD and subsequently included in the Aurelian Walls by Flavius Honorius Augustus.",
+        "relatedPersonIds": [
+          "flavius-honorius-augustus"
+        ],
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 401,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-5",
+        "description": "Visigoth looters scattered the urns and ashes during Alaric's sacking of Rome in 410 AD.",
+        "relatedPersonIds": [
+          "alaric"
+        ],
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 410,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-6",
+        "description": "Original decorative bronze and stone statuary was thrown down upon attacking Goths when they besieged Rome in 537 AD, as recounted by Procopius.",
+        "relatedPersonIds": [
+          "procopius"
+        ],
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 537,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-7",
+        "description": "Legend states that the Archangel Michael appeared atop the mausoleum in 590 AD, sheathing his sword as a sign of the end of a plague, thus giving the castle its present name. Pope Gregory I also had a vision of an angel atop the castle.",
+        "relatedPersonIds": [
+          "pope-gregory-i"
+        ],
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 590,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-8",
+        "description": "Popes began converting the structure into a castle during the 14th century.",
+        "relatedPersonIds": [],
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 1301,
+          "endYear": 1400,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-9",
+        "description": "Pope Clement VII took refuge in the fortress from the siege of Charles V's Landsknechte during the Sack of Rome in 1527.",
+        "relatedPersonIds": [
+          "pope-clement-vii",
+          "charles-v"
+        ],
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 1527,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-10",
+        "description": "In 1676, Cornelis de Bruijn noted a custom where, upon a pope's death like Pope Clement X, all prisoners with heavy sentences were moved to Sant'Angelo, and then all other prisoners in Rome were released except those in Sant'Angelo.",
+        "relatedPersonIds": [
+          "cornelis-de-bruijn",
+          "pope-clement-x"
+        ],
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 1676,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-11",
+        "description": "Cornelis de Bruijn also mentioned an annual fireworks display at the castle on St. Peter's Day, which he observed in 1676.",
+        "relatedPersonIds": [
+          "cornelis-de-bruijn"
+        ],
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 1676,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-12",
+        "description": "The castle was decommissioned in 1901 and is now a museum, the Museo Nazionale di Castel Sant'Angelo.",
+        "relatedPersonIds": [],
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 1901,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-13",
+        "description": "Pope Nicholas III connected the castle to St Peter's Basilica by a covered fortified corridor called the Passetto di Borgo.",
+        "relatedPersonIds": [
+          "pope-nicholas-iii"
+        ],
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "history-14",
+        "description": "The Papal State used Sant'Angelo as a prison for notable figures such as Giordano Bruno, Benvenuto Cellini, and Cagliostro, with executions performed in the small inner courtyard.",
+        "relatedPersonIds": [
+          "giordano-bruno",
+          "benvenuto-cellini",
+          "cagliostro"
+        ],
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "history-15",
+        "description": "Giorgio Vasari noted in the 16th century that stone columns from Hadrian's tomb were taken to decorate Saint Peter's Basilica.",
+        "relatedPersonIds": [
+          "giorgio-vasari"
+        ],
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "history-16",
+        "description": "An ongoing project aims to connect Castel Sant'Angelo to St. Peter's Basilica via a fully pedestrian path, by creating an underground tunnel.",
+        "relatedPersonIds": [],
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "Originally, the mausoleum was a decorated cylinder with a garden top and a golden quadriga.",
+        "relatedPersonIds": [],
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "design-2",
+        "description": "Emperor Hadrian also built the Pons Aelius bridge, which still provides a scenic approach from the center of Rome and features Baroque additions of statues of angels.",
+        "relatedPersonIds": [
+          "hadrian"
+        ],
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-1",
+        "description": "Pope Leo X built a chapel within the castle that featured a Madonna by Raffaello da Montelupo.",
+        "relatedPersonIds": [
+          "leo-x",
+          "raffaello-da-montelupo"
+        ],
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "art-2",
+        "description": "In 1536, Raffaello da Montelupo created a marble statue of Saint Michael holding his sword to surmount the Castel.",
+        "relatedPersonIds": [
+          "raffaello-da-montelupo"
+        ],
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "art-3",
+        "description": "In 1753, Peter Anton von Verschaffelt created a bronze statue of Saint Michael to replace Montelupo's on the castle's summit; Montelupo's original statue can now be seen in an open court inside the castle.",
+        "relatedPersonIds": [
+          "peter-anton-von-verschaffelt",
+          "raffaello-da-montelupo"
+        ],
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "art-4",
+        "description": "The castle served as the setting for the third act of Giacomo Puccini's 1900 opera Tosca.",
+        "relatedPersonIds": [
+          "giacomo-puccini"
+        ],
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "id": "hadrian",
+      "name": "Hadrian",
+      "relationship": "Roman Emperor, commissioner and occupant of the mausoleum",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "id": "sabina",
+      "name": "Sabina",
+      "relationship": "Hadrian's wife, buried in the mausoleum",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "id": "lucius-aelius",
+      "name": "Lucius Aelius",
+      "relationship": "Hadrian's adopted son, buried in the mausoleum",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "id": "caracalla",
+      "name": "Caracalla",
+      "relationship": "Roman Emperor, buried in the mausoleum",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "id": "flavius-honorius-augustus",
+      "name": "Flavius Honorius Augustus",
+      "relationship": "Roman Emperor, integrated the castle into the Aurelian Walls",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "id": "alaric",
+      "name": "Alaric",
+      "relationship": "Visigoth leader, responsible for looting the mausoleum",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "id": "procopius",
+      "name": "Procopius",
+      "relationship": "Historian, chronicled events at the castle",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "id": "giorgio-vasari",
+      "name": "Giorgio Vasari",
+      "relationship": "Writer and art historian, noted the use of spolia from the tomb",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "id": "pope-gregory-i",
+      "name": "Pope Gregory I",
+      "relationship": "Pope, associated with the legend of Archangel Michael",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "id": "pope-nicholas-iii",
+      "name": "Pope Nicholas III",
+      "relationship": "Pope, connected the castle to St Peter's Basilica",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "id": "pope-clement-vii",
+      "name": "Pope Clement VII",
+      "relationship": "Pope, took refuge in the fortress during the Sack of Rome",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "id": "charles-v",
+      "name": "Charles V",
+      "relationship": "Emperor, whose forces besieged Rome",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "id": "benvenuto-cellini",
+      "name": "Benvenuto Cellini",
+      "relationship": "Sculptor and goldsmith, imprisoned at the castle",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "id": "leo-x",
+      "name": "Leo X",
+      "relationship": "Pope, commissioned a chapel within the castle",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "id": "raffaello-da-montelupo",
+      "name": "Raffaello da Montelupo",
+      "relationship": "Sculptor, created a Madonna and a Saint Michael statue for the castle",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "id": "peter-anton-von-verschaffelt",
+      "name": "Peter Anton von Verschaffelt",
+      "relationship": "Flemish sculptor, created a bronze Saint Michael statue for the castle",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "id": "giordano-bruno",
+      "name": "Giordano Bruno",
+      "relationship": "Philosopher, imprisoned at the castle",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "id": "cagliostro",
+      "name": "Cagliostro",
+      "relationship": "Magician and charlatan, imprisoned at the castle",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "id": "giacomo-puccini",
+      "name": "Giacomo Puccini",
+      "relationship": "Composer, whose opera Tosca is set at the castle",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "id": "cornelis-de-bruijn",
+      "name": "Cornelis de Bruijn",
+      "relationship": "Traveler and writer, noted customs and events at the castle",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "id": "pope-clement-x",
+      "name": "Pope Clement X",
+      "relationship": "Pope, whose death influenced prison customs at the castle",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    }
+  ]
+}
