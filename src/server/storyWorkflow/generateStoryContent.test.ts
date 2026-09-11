@@ -59,6 +59,7 @@ describe("Story Content AI adapters", () => {
 
     await expect(
       generateStoryContent(pointOfInterest, sources, {
+        mode: "cloud",
         provider: "gemini",
         model: "test-model",
       }),
@@ -105,11 +106,45 @@ describe("Story Content AI adapters", () => {
 
     await expect(
       generateStoryContent(pointOfInterest, sources, {
+        mode: "local",
         provider: "ollama",
         model: "test-model",
       }),
     ).resolves.toEqual(generated);
     expect(requestedFormat).toMatchObject({ type: "object" });
+  });
+
+  it("prompts Ollama Cloud with the schema and retries invalid output", async () => {
+    const requests: Array<{
+      format?: unknown;
+      messages: Array<{ role: string; content: string }>;
+    }> = [];
+    server.use(
+      http.post("http://localhost:11434/api/chat", async ({ request }) => {
+        const body = (await request.json()) as (typeof requests)[number];
+        requests.push(body);
+        return HttpResponse.json({
+          message: { content: JSON.stringify(requests.length === 1 ? {} : generated) },
+        });
+      }),
+    );
+
+    await expect(
+      generateStoryContent(pointOfInterest, sources, {
+        mode: "cloud",
+        provider: "ollama",
+        model: "gpt-oss:20b-cloud",
+      }),
+    ).resolves.toEqual(generated);
+    expect(requests).toHaveLength(2);
+    expect(requests[0].format).toBeUndefined();
+    expect(requests[0].messages[0].content).toContain('"introduction"');
+    expect(requests[1].messages).toContainEqual(
+      expect.objectContaining({
+        role: "user",
+        content: expect.stringContaining("previous response was invalid"),
+      }),
+    );
   });
 
   it("rejects structured output with unknown Source References", async () => {
@@ -128,6 +163,7 @@ describe("Story Content AI adapters", () => {
 
     await expect(
       generateStoryContent(pointOfInterest, sources, {
+        mode: "local",
         provider: "ollama",
         model: "test-model",
       }),

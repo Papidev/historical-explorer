@@ -100,6 +100,82 @@
           41.9030762
         ]
       }
+    },
+    {
+      "id": "basilica-of-saint-paul-outside-the-walls",
+      "wikidataId": "Q231699",
+      "type": "Feature",
+      "properties": {
+        "addr:city": "Roma",
+        "addr:housenumber": "1",
+        "addr:postcode": "00146",
+        "addr:street": "Piazzale San Paolo",
+        "email": "info@basilicasanpaolo.org",
+        "name": "Basilica di San Paolo fuori le mura",
+        "name:en": "Basilica of Saint Paul Outside the Walls",
+        "tourism": "attraction",
+        "website": "https://www.basilicasanpaolo.org/",
+        "wikimedia_commons": "Category:Basilica of Saint Paul Outside the Walls",
+        "wikipedia": "it:Basilica di San Paolo fuori le mura"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.4768291,
+          41.8586828
+        ]
+      }
+    },
+    {
+      "id": "torre-valca",
+      "wikidataId": "Q111193124",
+      "type": "Feature",
+      "properties": {
+        "name": "Torre Valca"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.5292531,
+          41.8581318
+        ]
+      }
+    },
+    {
+      "id": "palazzo-rondinini",
+      "wikidataId": "Q48809118",
+      "type": "Feature",
+      "properties": {
+        "name": "Palazzo Rondinini",
+        "wikimedia_commons": "Category:Palazzo Rondinini",
+        "wikipedia": "it:Palazzo Rondinini"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.4768992,
+          41.9088977
+        ]
+      }
+    },
+    {
+      "id": "capitol-square",
+      "wikidataId": "Q34921",
+      "type": "Feature",
+      "properties": {
+        "name": "Piazza del Campidoglio",
+        "name:en": "Capitol Square",
+        "tourism": "attraction",
+        "wikimedia_commons": "Category:Piazza del Campidoglio (Rome)",
+        "wikipedia": "it:Piazza del Campidoglio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.4829654,
+          41.8932288
+        ]
+      }
     }
   ]
 }
