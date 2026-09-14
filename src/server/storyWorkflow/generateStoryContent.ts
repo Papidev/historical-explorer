@@ -3,6 +3,7 @@ import { parseStoryContent, storyContentJsonSchema, type StoryContent } from "./
 import type { Source } from "./types";
 
 type AiGenerationConfig = {
+  mode: "local" | "cloud";
   provider: "ollama" | "gemini";
   model: string;
 };
@@ -35,6 +36,11 @@ Use only the optional Story Topics history, design, and art. Omit unsupported to
 Use plain contemporary English. Do not use Markdown, HTML, JSX, headings, bullets, promotional language, poetic narration, or invented facts. Use only Source IDs supplied in the input. Define each Related Person once and link that person only to Visitor Insights where the relationship is relevant. Do not include an unlinked Related Person.
 
 For History, include structured time only when the Source supports it. Use negative years for BC/BCE, positive years for AD/CE, and never use year zero. Preserve approximate dates and century granularity. Order dated History Insights from oldest to newest and place undated History Insights after them.`;
+
+const cloudOllamaSystemPrompt = `${systemPrompt}
+
+JSON schema:
+${JSON.stringify(storyContentJsonSchema)}`;
 
 const getOllamaBaseUrl = () => process.env.OLLAMA_BASE_URL ?? "http://localhost:11434";
 
@@ -109,30 +115,56 @@ const generateWithGemini = async (pointOfInterest: PoiInput, sources: Source[], 
   return parseGeneratedContent(content, sources);
 };
 
-const generateWithOllama = async (pointOfInterest: PoiInput, sources: Source[], model: string) => {
-  const response = await fetch(`${getOllamaBaseUrl()}/api/chat`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      model,
-      stream: false,
-      format: storyContentJsonSchema,
-      options: { temperature: 0.2 },
-      messages: [
-        { role: "system", content: systemPrompt },
-        { role: "user", content: toPrompt(pointOfInterest, sources) },
-      ],
-    }),
-  });
-  if (!response.ok) {
-    throw new Error(`Ollama failed: HTTP ${response.status}`);
+const generateWithOllama = async (
+  pointOfInterest: PoiInput,
+  sources: Source[],
+  model: string,
+  mode: AiGenerationConfig["mode"],
+) => {
+  const messages = [
+    { role: "system", content: mode === "cloud" ? cloudOllamaSystemPrompt : systemPrompt },
+    { role: "user", content: toPrompt(pointOfInterest, sources) },
+  ];
+  const attempts = mode === "cloud" ? 2 : 1;
+
+  for (let attempt = 0; attempt < attempts; attempt += 1) {
+    const response = await fetch(`${getOllamaBaseUrl()}/api/chat`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        model,
+        stream: false,
+        ...(mode === "local" ? { format: storyContentJsonSchema } : {}),
+        options: { temperature: 0.2 },
+        messages,
+      }),
+    });
+    if (!response.ok) {
+      throw new Error(`Ollama failed: HTTP ${response.status}`);
+    }
+    const data = (await response.json()) as OllamaChatResponse;
+    const content = data.message?.content?.trim() ?? "";
+    if (!content) {
+      throw new Error("Ollama returned empty Story Content.");
+    }
+
+    try {
+      return parseGeneratedContent(content, sources);
+    } catch (error) {
+      if (attempt === attempts - 1) throw error;
+      messages.push(
+        { role: "assistant", content },
+        {
+          role: "user",
+          content: `The previous response was invalid: ${
+            error instanceof Error ? error.message : "Unknown validation error"
+          }. Return corrected JSON only, matching the provided schema.`,
+        },
+      );
+    }
   }
-  const data = (await response.json()) as OllamaChatResponse;
-  const content = data.message?.content?.trim() ?? "";
-  if (!content) {
-    throw new Error("Ollama returned empty Story Content.");
-  }
-  return parseGeneratedContent(content, sources);
+
+  throw new Error("Ollama failed to generate Story Content.");
 };
 
 export const generateStoryContent = async (
@@ -145,7 +177,7 @@ export const generateStoryContent = async (
   const storyContent =
     config.provider === "gemini"
       ? await generateWithGemini(pointOfInterest, sources, config.model)
-      : await generateWithOllama(pointOfInterest, sources, config.model);
+      : await generateWithOllama(pointOfInterest, sources, config.model, config.mode);
   console.info(
     `[story-content] Completed ${config.provider} generation in ${Math.round((Date.now() - startedAt) / 1000)}s.`,
   );

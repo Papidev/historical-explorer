@@ -74,7 +74,18 @@ CLOUD_AI_MODEL=gemini-2.5-flash
 GEMINI_API_KEY=your-gemini-api-key
 ```
 
-`AI_MODE` controls the initial admin selector value. Local currently maps to Ollama, and Cloud currently maps to Gemini. Local generation expects Ollama to be running with the configured model available. Cloud generation requires `GEMINI_API_KEY`.
+`AI_MODE` controls the initial admin selector value. Local generation expects Ollama to be running with the configured model available. Cloud generation supports Gemini or an Ollama Cloud model routed through the local Ollama service. Gemini requires `GEMINI_API_KEY`.
+
+To use an Ollama Cloud model after signing in to Ollama and pulling its cloud reference, configure:
+
+```bash
+AI_MODE=cloud
+CLOUD_AI_PROVIDER=ollama
+CLOUD_AI_MODEL=gpt-oss:20b-cloud
+OLLAMA_BASE_URL=http://localhost:11434
+```
+
+Ollama Cloud does not support schema-constrained output. The Story Workflow includes the schema in the prompt instead and retries once when the response fails JSON or domain validation.
 
 ## Security Notes
 
