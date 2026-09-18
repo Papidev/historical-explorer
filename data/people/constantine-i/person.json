@@ -1,0 +1,91 @@
+{
+  "id": "constantine-i",
+  "name": "Constantine I",
+  "wikidataId": "Q8413",
+  "wikipediaTitle": "Constantine the Great",
+  "content": {
+    "description": [
+      {
+        "text": "Constantine I (27 February 272 – 22 May 337) rose from a provincial officer in the Roman army to become the sole emperor of the Roman Empire by 324. After his father Constantius died in 306, Constantine was proclaimed augustus by his troops in Eboracum (York) and quickly defeated rival claimants Maxentius and Licinius, consolidating power across the western and eastern provinces. He implemented sweeping administrative reforms, separating civil and military authority, disbanding the Praetorian Guard, and reorganising the army into mobile field units (comitatenses) and frontier garrisons (limitanei). His monetary reform introduced the gold solidus, a coin that would become the standard for Byzantine and European currencies for more than a millennium.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Constantine’s reign is most noted for its religious transformation of the empire. In 313 he co‑issued the Edict of Milan with Licinius, legalising Christianity and restoring confiscated church property, a decisive step in the Christianisation of the Roman world. He convened the First Council of Nicaea in 325, which produced the Nicene Creed and established a unified Christian doctrine. On his orders, the Church of the Holy Sepulchre was built in Jerusalem, and he founded the city of Constantinople in 330, naming it after himself and making it the new capital of the empire. These actions cemented his legacy as the first Roman emperor to embrace Christianity and reshaped the political and cultural landscape of late antiquity.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Constantine introduced the gold solidus, a coin that remained the standard for Byzantine and European currencies for more than a thousand years.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He was the first Roman emperor to issue an edict that decriminalised Christian worship, the Edict of Milan, which also restored confiscated church property.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Constantine convened the First Council of Nicaea in 325, producing the Nicene Creed that established a unified Christian doctrine.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He founded the city of Constantinople in 330, naming it after himself and making it the new capital of the Roman Empire.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Constantine disbanded the Praetorian Guard, a powerful imperial bodyguard that had supported his rival Maxentius, and reorganised the Roman army into mobile field units and frontier garrisons.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": 272,
+      "month": 2,
+      "day": 27,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 337,
+      "month": 5,
+      "day": 22,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Rome-Capitole-StatueConstantin.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Rome-Capitole-StatueConstantin.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Rome-Capitole-StatueConstantin.jpg/960px-Rome-Capitole-StatueConstantin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Rome-Capitole-StatueConstantin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 2.5",
+    "attribution": "I, Jean-Christophe BENOIST",
+    "author": "Jean-Christophe BENOIST",
+    "width": 2448,
+    "height": 3264,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Constantine the Great",
+    "url": "https://en.wikipedia.org/wiki/Constantine_the_Great"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-18T23:09:25.331Z"
+  }
+}

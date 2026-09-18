@@ -1,0 +1,75 @@
+{
+  "id": "constantina-constantia",
+  "name": "Constantina (Constantia)",
+  "wikidataId": "Q464452",
+  "wikipediaTitle": "Constantina",
+  "content": {
+    "description": [
+      {
+        "text": "Flavia Valeria Constantina, eldest daughter of Emperor Constantine the Great and his second wife Fausta, was born sometime after 307 and before 317. She entered the imperial court as a young woman and was married twice to secure political alliances: first to her cousin Hannibalianus, the son of Flavius Dalmatius, and later to Constantius Gallus, a cousin of her brother Constantius II who had been elevated to Caesar of the East. Through these marriages she was at times accorded the title of Augusta, and she used her position to influence imperial politics, including supporting her brother’s campaigns against rivals such as Magnentius.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Constantina died in 354 in Bithynia while traveling to meet her brother, Constantius II, to negotiate political matters. Her body was returned to Rome and interred in a mausoleum that her father had begun to build, which later became the Church of Santa Costanza. She was venerated as a saint, and her porphyry sarcophagus is now displayed in the Vatican Museums. Her feast day is celebrated on 18 February.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The mausoleum where Constantina was buried was later converted into the Church of Santa Costanza, a notable example of early Christian architecture in Rome.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Constantina’s porphyry sarcophagus, a rare example of imperial burial art, is on exhibit in the Vatican Museums.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Her feast day is observed on 18 February, and she is sometimes commemorated together with Attica and Artemia on 25 February and 25 June.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": 307,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 354,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pietro_da_Cortona_-_Saint_Constantia's_Vision_before_the_Tomb_of_Saints_Agnes_and_Emerentiana_-_Google_Art_Project.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pietro_da_Cortona_-_Saint_Constantia's_Vision_before_the_Tomb_of_Saints_Agnes_and_Emerentiana_-_Google_Art_Project.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Pietro_da_Cortona_-_Saint_Constantia%27s_Vision_before_the_Tomb_of_Saints_Agnes_and_Emerentiana_-_Google_Art_Project.jpg/960px-Pietro_da_Cortona_-_Saint_Constantia%27s_Vision_before_the_Tomb_of_Saints_Agnes_and_Emerentiana_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Pietro_da_Cortona_-_Saint_Constantia%27s_Vision_before_the_Tomb_of_Saints_Agnes_and_Emerentiana_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Pietro da Cortona",
+    "author": "Pietro da Cortona",
+    "width": 2401,
+    "height": 1757,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Constantina",
+    "url": "https://en.wikipedia.org/wiki/Constantina"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-18T23:00:36.449Z"
+  }
+}

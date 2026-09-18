@@ -1,0 +1,67 @@
+{
+  "id": "domitian",
+  "name": "Domitian",
+  "wikidataId": "Q1423",
+  "wikipediaTitle": "Domitian",
+  "content": {
+    "description": [
+      {
+        "text": "Domitian ruled Rome from 81 to 96 AD, tightening imperial power and curbing the Senate’s influence. He revalued the Roman coinage, raising the silver content of the denarius to 98 % and boosting the economy. His reign also saw a massive building program that restored Rome’s damaged monuments and added new public works, such as the Stadium of Domitian, which later became the site of Piazza Navona.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "In September 96 AD, Domitian was assassinated by a conspiracy of court officials, including the freedman Maximus. The Senate immediately condemned his memory, melting his coins and erasing his name from public monuments. His death marked the end of the Flavian dynasty and the beginning of the Nerva–Trajanic era, which would restore a more moderate imperial rule.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Domitian increased the silver purity of the denarius from 90 % to 98 %, a move that temporarily strengthened the Roman economy.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "The Stadium of Domitian, built during his reign, was later transformed into the Piazza Navona that dominates Rome’s historic center today.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Domitian’s assassination was carried out by a freedman named Maximus, who was part of a broader plot involving several members of the imperial household.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Busto_di_Domiziano_-_Napoli_museo_Archeologico.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Busto_di_Domiziano_-_Napoli_museo_Archeologico.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Busto_di_Domiziano_-_Napoli_museo_Archeologico.jpg/960px-Busto_di_Domiziano_-_Napoli_museo_Archeologico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/74/Busto_di_Domiziano_-_Napoli_museo_Archeologico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Castro Pretorio",
+    "author": "Castro Pretorio",
+    "width": 5320,
+    "height": 7800,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Domitian",
+    "url": "https://en.wikipedia.org/wiki/Domitian"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-18T23:37:56.992Z"
+  }
+}

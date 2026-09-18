@@ -1,0 +1,157 @@
+{
+  "introduction": {
+    "text": "Piazza Navona is a historic public square in Rome built on the site of the 1st‑century AD Stadium of Domitian. It is renowned for its Baroque architecture, iconic fountains, and its role as a cultural gathering place.",
+    "sourceIds": [
+      "wikipedia"
+    ]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "stadium-of-domitian",
+        "description": "The original stadium was constructed by Emperor Domitian in 80 AD.",
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 80,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "fountains-1574-1575",
+        "description": "The Fountain of Neptune (1574) and the Fountain of the Moor (1575) were created by Giacomo della Porta.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "fontana-quattro-fiumi-1651",
+        "description": "The Fountain of the Four Rivers (1651) was designed by Gian Lorenzo Bernini.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "baroque-transformation",
+        "description": "During the pontificate of Innocent X (1644‑1655) the piazza was transformed into a Baroque masterpiece.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "flooding-1652-1866",
+        "description": "From 1652 until 1866 the piazza was flooded on weekends in August for Pamphili family celebrations.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "market-move-1869",
+        "description": "In 1869 the market was moved to Campo de' Fiori.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "vandalism-2011",
+        "description": "In September 2011 the Fountain of the Moor was damaged by vandalism.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "design": [
+      {
+        "id": "baroque-design",
+        "description": "The piazza exemplifies Baroque design with contributions from Bernini, Borromini, and other architects.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "art": [
+      {
+        "id": "fontana-quattro-fiumi",
+        "description": "Bernini’s Fountain of the Four Rivers features four river gods and an obelisk.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "fontana-moro",
+        "description": "The Fountain of the Moor displays a Moor wrestling with a dolphin.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "fountain-neptune",
+        "description": "The Fountain of Neptune, added in 1878, balances the Moor fountain.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Domitian",
+      "personId": "domitian",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Gian Lorenzo Bernini",
+      "personId": "gian-lorenzo-bernini",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Francesco Borromini",
+      "personId": "francesco-borromini",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Giacomo della Porta",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Innocent X",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Girolamo Rainaldi",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Carlo Rainaldi",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Pietro da Cortona",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Antonio Della Bitta",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    }
+  ]
+}
