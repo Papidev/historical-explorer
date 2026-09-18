@@ -52,6 +52,7 @@ export const createStoryWorkflowForCity = (city: string) => createStoryWorkflow(
           : "gemini";
     return {
       content: await generateStoryContent(pointOfInterest, sources, {
+        mode: ai.mode,
         provider,
         model: ai.model,
       }),

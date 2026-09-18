@@ -108,57 +108,77 @@ const deleteConfirmMessages = {
 } as const;
 
 const actionGroupClassName = "flex flex-wrap items-center gap-1.5";
+const cellLayoutClassName = "flex h-full min-h-32 min-w-0 flex-col";
 
 const CellContent = ({
   title,
   subtitle,
-  updatedAt,
-  generationDuration,
   generationModel,
+  isAvailable = false,
   titleTone = "status",
 }: {
   title?: string;
   subtitle?: string;
-  updatedAt?: string;
-  generationDuration?: string;
   generationModel?: string;
+  isAvailable?: boolean;
   titleTone?: "poi" | "status";
 }) => (
-  <div className="min-h-32 min-w-0">
-    <p
-      className={`leading-snug break-words ${
-        title
-          ? titleTone === "poi"
-            ? "text-base font-semibold text-black"
-            : "text-xs font-semibold text-emerald-700"
-          : "text-sm text-black/35"
-      }`}
-    >
-      {title ?? "Not generated"}
-    </p>
-    {subtitle ? (
-      <p className="mt-1 font-mono text-xs leading-snug break-words text-black/65">{subtitle}</p>
-    ) : null}
-    {updatedAt ? (
-      <p className="mt-1 text-xs leading-snug text-black/55">
-        Updated: <span className="font-bold">{updatedAt}</span>
-      </p>
-    ) : null}
-    {generationDuration ? (
-      <p className="mt-1 text-xs leading-snug text-black/55">
-        Generated: <span className="font-bold">{generationDuration}</span>
-      </p>
-    ) : null}
-    {generationModel ? (
-      <p className="mt-1 text-xs leading-snug text-black/55">
-        Model: <span className="font-bold">{generationModel}</span>
-      </p>
-    ) : null}
+  <div className="grid min-w-0 grid-rows-[2.5rem_1rem]">
+    <div className="overflow-hidden">
+      {title || !isAvailable ? (
+        <p
+          className={`line-clamp-2 break-words ${
+            title
+              ? titleTone === "poi"
+                ? "text-base leading-5 font-semibold text-black"
+                : "text-xs leading-4 font-semibold text-emerald-700"
+              : "text-sm leading-5 text-black/35"
+          }`}
+        >
+          {title ?? "Not generated"}
+        </p>
+      ) : null}
+    </div>
+    <div className="overflow-hidden">
+      {subtitle ? (
+        <p className="truncate font-mono text-xs leading-4 text-black/65" title={subtitle}>
+          {subtitle}
+        </p>
+      ) : generationModel ? (
+        <p className="truncate text-xs leading-4 text-black/55" title={`Model: ${generationModel}`}>
+          Model: <span className="font-bold">{generationModel}</span>
+        </p>
+      ) : null}
+    </div>
   </div>
 );
 
-const CellActions = ({ children }: { children?: ReactNode }) =>
-  children ? <div className="pt-3">{children}</div> : null;
+const CellFooter = ({
+  children,
+  updatedAt,
+  generationDuration,
+}: {
+  children?: ReactNode;
+  updatedAt?: string;
+  generationDuration?: string;
+}) =>
+  updatedAt || generationDuration || children ? (
+    <div className="mt-auto flex items-end justify-between gap-2 pt-3">
+      <div className="min-w-0 text-[0.6875rem] leading-4 text-black/55">
+        {updatedAt ? (
+          <p className="truncate" title={`Updated: ${updatedAt}`}>
+            Updated: <span className="font-bold">{updatedAt}</span>
+          </p>
+        ) : null}
+        {generationDuration ? (
+          <p className="truncate" title={`Generated: ${generationDuration}`}>
+            Generated: <span className="font-bold">{generationDuration}</span>
+          </p>
+        ) : null}
+      </div>
+      {children ? <div className="shrink-0">{children}</div> : null}
+    </div>
+  ) : null;
 
 const ColumnHeader = ({ title, path }: { title: string; path?: string }) => (
   <div>
@@ -276,7 +296,7 @@ const getMainImageStatus = (artifact?: MainImageCandidatesArtifact) => {
   }
 
   if (getSelectedMainImageCandidate(artifact)) {
-    return "Available";
+    return undefined;
   }
 
   if (artifact.candidates.every((candidate) => !isCandidateSelectable(candidate))) {
@@ -418,7 +438,7 @@ export const PoiRowsTable = ({
           {rows.length === 0 ? (
             <p className="px-4 py-4 text-sm text-black/55">No POIs available.</p>
           ) : (
-            <table className="min-w-[1200px] table-fixed divide-y divide-gray-300">
+            <table className="min-w-[1600px] table-fixed divide-y divide-gray-300">
               <colgroup>
                 <col className="w-[19%]" />
                 <col className="w-[19%]" />
@@ -476,148 +496,156 @@ export const PoiRowsTable = ({
 
                   return (
                     <tr key={row.id} className="hover:bg-gray-50/60">
-                      <td className="min-w-0 border-r border-gray-100 py-2 pr-3 pl-4 align-top">
-                        <CellContent
-                          title={row.rawPoi?.name}
-                          subtitle={row.rawPoi?.wikidata ?? row.rawPoi?.id}
-                          updatedAt={row.rawUpdatedAt}
-                          titleTone="poi"
-                        />
-                        {progressDescription ? (
-                          <ProgressMessage description={progressDescription} />
-                        ) : null}
-                        <CellActions>
-                          {row.rawPoi ? (
-                            isRowEmpty ? (
-                              <form
-                                action={(formData) =>
-                                  runSingleAction(
-                                    row.id,
-                                    "Generating Draft Story...",
-                                    generateDraftStoryAction,
-                                    formData,
-                                  )
-                                }
-                              >
-                                <input type="hidden" name="geoPlaceId" value={row.rawPoi.id} />
-                                <input type="hidden" name="aiMode" value={selectedAiMode} />
-                                <input type="hidden" name="aiModel" value={selectedAiModel} />
-                                <SubmitButton
-                                  idleLabel="Generate"
-                                  pendingLabel="Generating..."
-                                  confirmMessage={generateConfirmMessage}
-                                  icon={<PlusIcon />}
-                                  tone="primary"
-                                  disabled={isRowInProgress}
-                                />
-                              </form>
-                            ) : (
-                              <form
-                                action={(formData) =>
-                                  runSingleAction(
-                                    row.id,
-                                    "Resetting row...",
-                                    resetDraftStoryAction,
-                                    formData,
-                                  )
-                                }
-                              >
-                                <input type="hidden" name="poiId" value={row.id} />
-                                <SubmitButton
-                                  idleLabel="Reset"
-                                  pendingLabel="Resetting..."
-                                  confirmMessage={deleteConfirmMessages.transformed}
-                                  icon={<ArrowPathIcon />}
-                                  tone="danger"
-                                  disabled={isRowInProgress}
-                                />
-                              </form>
-                            )
+                      <td className="h-px min-w-0 border-r border-gray-100 py-2 pr-3 pl-4 align-top">
+                        <div className={cellLayoutClassName}>
+                          <CellContent
+                            title={row.rawPoi?.name}
+                            subtitle={row.rawPoi?.wikidata ?? row.rawPoi?.id}
+                            titleTone="poi"
+                          />
+                          {progressDescription ? (
+                            <ProgressMessage description={progressDescription} />
                           ) : null}
-                        </CellActions>
+                          <CellFooter>
+                            {row.rawPoi ? (
+                              isRowEmpty ? (
+                                <form
+                                  action={(formData) =>
+                                    runSingleAction(
+                                      row.id,
+                                      "Generating Draft Story...",
+                                      generateDraftStoryAction,
+                                      formData,
+                                    )
+                                  }
+                                >
+                                  <input type="hidden" name="geoPlaceId" value={row.rawPoi.id} />
+                                  <input type="hidden" name="aiMode" value={selectedAiMode} />
+                                  <input type="hidden" name="aiModel" value={selectedAiModel} />
+                                  <SubmitButton
+                                    idleLabel="Generate"
+                                    pendingLabel="Generating..."
+                                    confirmMessage={generateConfirmMessage}
+                                    icon={<PlusIcon />}
+                                    tone="primary"
+                                    disabled={isRowInProgress}
+                                  />
+                                </form>
+                              ) : (
+                                <form
+                                  action={(formData) =>
+                                    runSingleAction(
+                                      row.id,
+                                      "Resetting row...",
+                                      resetDraftStoryAction,
+                                      formData,
+                                    )
+                                  }
+                                >
+                                  <input type="hidden" name="poiId" value={row.id} />
+                                  <SubmitButton
+                                    idleLabel="Reset"
+                                    pendingLabel="Resetting..."
+                                    confirmMessage={deleteConfirmMessages.transformed}
+                                    icon={<ArrowPathIcon />}
+                                    tone="danger"
+                                    disabled={isRowInProgress}
+                                  />
+                                </form>
+                              )
+                            ) : null}
+                          </CellFooter>
+                        </div>
                       </td>
-                      <td className="min-w-0 border-r border-gray-100 px-3 py-2 align-top">
-                        <CellContent
-                          title={row.transformedPoi ? "Available" : undefined}
-                          subtitle={row.transformedPoi?.id}
-                          updatedAt={row.transformedUpdatedAt}
-                          generationDuration={row.transformedGenerationDuration}
-                        />
-                        <CellActions>
-                          {row.transformedPoi ? (
-                            <div className={actionGroupClassName}>
+                      <td
+                        className={`h-px min-w-0 border-r border-gray-100 px-3 py-2 align-top ${
+                          row.transformedPoi ? "bg-emerald-50/60" : ""
+                        }`}
+                      >
+                        <div className={cellLayoutClassName}>
+                          <CellContent
+                            subtitle={row.transformedPoi?.id}
+                            isAvailable={Boolean(row.transformedPoi)}
+                          />
+                          <CellFooter
+                            updatedAt={row.transformedUpdatedAt}
+                            generationDuration={row.transformedGenerationDuration}
+                          >
+                            {row.transformedPoi ? (
+                              <div className={actionGroupClassName}>
+                                <IconButton
+                                  type="button"
+                                  label="View POI JSON"
+                                  disabled={isVisualizationDisabled}
+                                  onClick={() =>
+                                    row.transformedJson
+                                      ? setSelectedPanel({
+                                          title: `${row.id} Rome JSON`,
+                                          kind: "text",
+                                          content: row.transformedJson,
+                                        })
+                                      : null
+                                  }
+                                >
+                                  <EyeIcon />
+                                </IconButton>
+                              </div>
+                            ) : null}
+                          </CellFooter>
+                        </div>
+                      </td>
+                      <td
+                        className={`h-px min-w-0 border-r border-gray-100 px-3 py-2 align-top ${
+                          row.wikiPoi ? "bg-emerald-50/60" : ""
+                        }`}
+                      >
+                        <div className={cellLayoutClassName}>
+                          <CellContent isAvailable={Boolean(row.wikiPoi)} />
+                          <CellFooter
+                            updatedAt={row.wikiUpdatedAt}
+                            generationDuration={row.wikiGenerationDuration}
+                          >
+                            {row.wikiPoi ? (
                               <IconButton
                                 type="button"
-                                label="View POI JSON"
+                                label="View Wikipedia Text"
                                 disabled={isVisualizationDisabled}
                                 onClick={() =>
-                                  row.transformedJson
+                                  row.wikiText
                                     ? setSelectedPanel({
-                                        title: `${row.id} Rome JSON`,
+                                        title: `${row.id} Wikipedia Text`,
                                         kind: "text",
-                                        content: row.transformedJson,
+                                        content: row.wikiText,
                                       })
                                     : null
                                 }
                               >
                                 <EyeIcon />
                               </IconButton>
-                            </div>
-                          ) : null}
-                        </CellActions>
+                            ) : null}
+                          </CellFooter>
+                        </div>
                       </td>
-                      <td className="min-w-0 border-r border-gray-100 px-3 py-2 align-top">
-                        <CellContent
-                          title={row.wikiPoi ? "Available" : undefined}
-                          updatedAt={row.wikiUpdatedAt}
-                          generationDuration={row.wikiGenerationDuration}
-                        />
-                        <CellActions>
-                          {row.wikiPoi ? (
-                            <IconButton
-                              type="button"
-                              label="View Wikipedia Text"
-                              disabled={isVisualizationDisabled}
-                              onClick={() =>
-                                row.wikiText
-                                  ? setSelectedPanel({
-                                      title: `${row.id} Wikipedia Text`,
-                                      kind: "text",
-                                      content: row.wikiText,
-                                    })
-                                  : null
-                              }
-                            >
-                              <EyeIcon />
-                            </IconButton>
-                          ) : null}
-                        </CellActions>
-                      </td>
-                      <td className="min-w-0 border-r border-gray-100 px-3 py-2 align-top">
-                        <div>
-                          <p className="text-xs font-semibold text-black">Story Content</p>
-                          <p
-                            className={
-                              row.storyContent
-                                ? "text-xs text-emerald-700"
-                                : "text-xs text-black/35"
-                            }
+                      <td
+                        className={`h-px min-w-0 border-r border-gray-100 px-3 py-2 align-top ${
+                          row.storyContent ? "bg-emerald-50/60" : ""
+                        }`}
+                      >
+                        <div className={cellLayoutClassName}>
+                          <CellContent
+                            generationModel={[
+                              row.storyContentGenerationMode,
+                              row.storyContentGenerationProvider,
+                              row.storyContentGenerationModel,
+                            ]
+                              .filter(Boolean)
+                              .join(" / ")}
+                            isAvailable={Boolean(row.storyContent)}
+                          />
+                          <CellFooter
+                            updatedAt={row.storyContentUpdatedAt}
+                            generationDuration={row.storyContentGenerationDuration}
                           >
-                            {row.storyContent ? "Available" : "Not generated"}
-                          </p>
-                          {row.storyContentGenerationModel ? (
-                            <p className="mt-1 text-xs text-black/55">
-                              Model:{" "}
-                              {[
-                                row.storyContentGenerationMode,
-                                row.storyContentGenerationProvider,
-                                row.storyContentGenerationModel,
-                              ]
-                                .filter(Boolean)
-                                .join(" / ")}
-                            </p>
-                          ) : null}
-                          <CellActions>
                             <div className={actionGroupClassName}>
                               {row.storyContent ? (
                                 <IconButton
@@ -711,45 +739,98 @@ export const PoiRowsTable = ({
                                 </form>
                               ) : null}
                             </div>
-                          </CellActions>
+                          </CellFooter>
                         </div>
                       </td>
-                      <td className="min-w-0 py-2 pr-4 pl-3 align-top">
-                        <div className="flex min-h-32 min-w-0 items-start gap-3">
-                          <MainImageCellPreview artifact={row.mainImageArtifact} />
-                          <CellContent
-                            title={getMainImageStatus(row.mainImageArtifact)}
-                            subtitle={
-                              row.mainImageArtifact
-                                ? `${row.mainImageArtifact.candidates.length} candidate${
-                                    row.mainImageArtifact.candidates.length === 1 ? "" : "s"
-                                  }`
-                                : undefined
-                            }
+                      <td
+                        className={`h-px min-w-0 py-2 pr-4 pl-3 align-top ${
+                          getSelectedMainImageCandidate(row.mainImageArtifact)
+                            ? "bg-emerald-50/60"
+                            : ""
+                        }`}
+                      >
+                        <div className={cellLayoutClassName}>
+                          <div className="flex min-w-0 items-start gap-3">
+                            <MainImageCellPreview artifact={row.mainImageArtifact} />
+                            <CellContent
+                              title={getMainImageStatus(row.mainImageArtifact)}
+                              subtitle={
+                                row.mainImageArtifact
+                                  ? `${row.mainImageArtifact.candidates.length} candidate${
+                                      row.mainImageArtifact.candidates.length === 1 ? "" : "s"
+                                    }`
+                                  : undefined
+                              }
+                              isAvailable={Boolean(
+                                getSelectedMainImageCandidate(row.mainImageArtifact),
+                              )}
+                            />
+                          </div>
+                          <CellFooter
                             updatedAt={row.mainImageUpdatedAt}
                             generationDuration={row.mainImageGenerationDuration}
-                          />
-                        </div>
-                        <CellActions>
-                          {row.mainImageArtifact ? (
-                            <div className={actionGroupClassName}>
-                              <IconButton
-                                type="button"
-                                label="View Main Image Candidates"
-                                disabled={isVisualizationDisabled}
-                                onClick={() =>
-                                  row.mainImageArtifact
-                                    ? setSelectedPanel({
-                                        title: `${row.id} Main Image Candidates`,
-                                        kind: "mainImage",
-                                        poiId: row.id,
-                                        artifact: row.mainImageArtifact,
-                                      })
-                                    : null
-                                }
-                              >
-                                <EyeIcon />
-                              </IconButton>
+                          >
+                            {row.mainImageArtifact ? (
+                              <div className={actionGroupClassName}>
+                                <IconButton
+                                  type="button"
+                                  label="View Main Image Candidates"
+                                  disabled={isVisualizationDisabled}
+                                  onClick={() =>
+                                    row.mainImageArtifact
+                                      ? setSelectedPanel({
+                                          title: `${row.id} Main Image Candidates`,
+                                          kind: "mainImage",
+                                          poiId: row.id,
+                                          artifact: row.mainImageArtifact,
+                                        })
+                                      : null
+                                  }
+                                >
+                                  <EyeIcon />
+                                </IconButton>
+                                <form
+                                  action={(formData) =>
+                                    runSingleAction(
+                                      row.id,
+                                      "Generating Main Image Candidates...",
+                                      refreshMainImageCandidatesAction,
+                                      formData,
+                                    )
+                                  }
+                                >
+                                  <input type="hidden" name="poiId" value={row.id} />
+                                  <SubmitButton
+                                    idleLabel="Refresh"
+                                    pendingLabel="Refreshing..."
+                                    confirmMessage={refreshConfirmMessages.mainImage}
+                                    icon={<ArrowPathIcon />}
+                                    tone="primary"
+                                    disabled={isRowInProgress}
+                                  />
+                                </form>
+                                <form
+                                  action={(formData) =>
+                                    runSingleAction(
+                                      row.id,
+                                      "Deleting Main Image Candidates...",
+                                      deleteMainImageCandidatesAction,
+                                      formData,
+                                    )
+                                  }
+                                >
+                                  <input type="hidden" name="poiId" value={row.id} />
+                                  <SubmitButton
+                                    idleLabel="Delete"
+                                    pendingLabel="Deleting..."
+                                    confirmMessage={deleteConfirmMessages.mainImage}
+                                    icon={<TrashIcon />}
+                                    tone="danger"
+                                    disabled={isRowInProgress}
+                                  />
+                                </form>
+                              </div>
+                            ) : row.transformedPoi ? (
                               <form
                                 action={(formData) =>
                                   runSingleAction(
@@ -762,58 +843,17 @@ export const PoiRowsTable = ({
                               >
                                 <input type="hidden" name="poiId" value={row.id} />
                                 <SubmitButton
-                                  idleLabel="Refresh"
-                                  pendingLabel="Refreshing..."
+                                  idleLabel="Generate"
+                                  pendingLabel="Generating..."
                                   confirmMessage={refreshConfirmMessages.mainImage}
-                                  icon={<ArrowPathIcon />}
+                                  icon={<PhotoIcon />}
                                   tone="primary"
                                   disabled={isRowInProgress}
                                 />
                               </form>
-                              <form
-                                action={(formData) =>
-                                  runSingleAction(
-                                    row.id,
-                                    "Deleting Main Image Candidates...",
-                                    deleteMainImageCandidatesAction,
-                                    formData,
-                                  )
-                                }
-                              >
-                                <input type="hidden" name="poiId" value={row.id} />
-                                <SubmitButton
-                                  idleLabel="Delete"
-                                  pendingLabel="Deleting..."
-                                  confirmMessage={deleteConfirmMessages.mainImage}
-                                  icon={<TrashIcon />}
-                                  tone="danger"
-                                  disabled={isRowInProgress}
-                                />
-                              </form>
-                            </div>
-                          ) : row.transformedPoi ? (
-                            <form
-                              action={(formData) =>
-                                runSingleAction(
-                                  row.id,
-                                  "Generating Main Image Candidates...",
-                                  refreshMainImageCandidatesAction,
-                                  formData,
-                                )
-                              }
-                            >
-                              <input type="hidden" name="poiId" value={row.id} />
-                              <SubmitButton
-                                idleLabel="Generate"
-                                pendingLabel="Generating..."
-                                confirmMessage={refreshConfirmMessages.mainImage}
-                                icon={<PhotoIcon />}
-                                tone="primary"
-                                disabled={isRowInProgress}
-                              />
-                            </form>
-                          ) : null}
-                        </CellActions>
+                            ) : null}
+                          </CellFooter>
+                        </div>
                       </td>
                     </tr>
                   );

@@ -1,0 +1,191 @@
+{
+  "introduction": {
+    "text": "Piazza del Campidoglio is a historic square on Rome's Capitoline Hill, redesigned by Michelangelo in the 16th century to serve as a civic center and showcase Rome's imperial heritage.",
+    "sourceIds": [
+      "wikipedia"
+    ]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "h3",
+        "description": "The Palazzo dei Conservatori was originally built in 1453 by Pope Nicholas V on the site of a 6th‑century temple.",
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 1453,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h2",
+        "description": "The Capitoline Museums were founded in 1471 when Pope Sixtus IV donated key statues, including the Capitoline Wolf.",
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 1471,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h1",
+        "description": "The square was redesigned by Michelangelo between 1534 and 1538 at the behest of Pope Paul III to impress Emperor Charles V.",
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 1534,
+          "precision": "exact",
+          "endYear": 1538,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h4",
+        "description": "The square’s oval pavement and star pattern were completed in 1546, reflecting Michelangelo’s geometric vision.",
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 1546,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h5",
+        "description": "The Palazzo Nuovo was constructed in 1603 and finished in 1654, completing the symmetrical ensemble.",
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 1603,
+          "precision": "exact",
+          "endYear": 1654,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h7",
+        "description": "In 1940, Antonio Muñoz completed the paving of the square according to Michelangelo’s design.",
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 1940,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h6",
+        "description": "The Cordonata ramp was built in the 16th century to allow horse riders to ascend the hill.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "design": [
+      {
+        "id": "d1",
+        "description": "Michelangelo’s redesign turned the square’s orientation toward St. Peter’s Basilica, moving the civic focus from the Forum.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "d2",
+        "description": "The double staircase (Cordonata) provides a dramatic ascent to the Palazzo Senatorio, a hallmark of Renaissance urban design.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "d3",
+        "description": "The oval pavement features a twelve‑pointed star at its centre, a geometric motif that guides visitors to the equestrian statue.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "d4",
+        "description": "The façades of the Palazzo dei Conservatori and Palazzo Nuovo were redesigned with giant order pilasters and balustraded cornices, creating visual harmony.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "d5",
+        "description": "The Cordonata ramp is decorated with statues of the Tiber and Nile river gods, symbolising Rome’s dominion over the seas.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "art": [
+      {
+        "id": "a1",
+        "description": "The equestrian statue of Marcus Aurelius, originally placed in the square, is a bronze copy of the original kept in the museum.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "a2",
+        "description": "The Capitoline Wolf sculpture, donated by Pope Sixtus IV in 1471, is displayed in the Palazzo dei Conservatori.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "a3",
+        "description": "The marble statues of the Tiber and Nile river gods flank the staircase, representing Rome’s maritime power.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Michelangelo di Lodovico Buonarroti",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Pope Paul III",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Pope Sixtus IV",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Pope Nicholas V",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Antonio Muñoz",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Marcus Aurelius",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    }
+  ]
+}
