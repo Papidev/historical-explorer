@@ -6,12 +6,15 @@ import { Toggle } from "@/app/components/ui/Toggle";
 import type { AiMode, AiModeOption, AiSelection } from "../lib/aiModels";
 import type { AdminPoiRow } from "../lib/types";
 import { PoiRowsTable } from "./PoiRowsTable";
+import { PeopleTable } from "./PeopleTable";
+import type { PersonProfile } from "@/server/personProfile";
 
 const getModeOption = (aiModeOptions: readonly AiModeOption[], mode: AiMode) =>
   aiModeOptions.find((option) => option.mode === mode) ?? aiModeOptions[0];
 
 export const AdminDashboard = ({
   rows,
+  people,
   aiModeOptions,
   initialAiSelection,
   generateDraftStoryAction,
@@ -21,8 +24,10 @@ export const AdminDashboard = ({
   refreshMainImageCandidatesAction,
   deleteMainImageCandidatesAction,
   selectMainImageCandidateAction,
+  regeneratePersonProfileAction,
 }: {
   rows: AdminPoiRow[];
+  people: PersonProfile[];
   aiModeOptions: readonly AiModeOption[];
   initialAiSelection: AiSelection;
   generateDraftStoryAction: (formData: FormData) => Promise<void>;
@@ -32,6 +37,7 @@ export const AdminDashboard = ({
   refreshMainImageCandidatesAction: (formData: FormData) => Promise<void>;
   deleteMainImageCandidatesAction: (formData: FormData) => Promise<void>;
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
+  regeneratePersonProfileAction: (formData: FormData) => Promise<void>;
 }) => {
   const [selectedAiMode, setSelectedAiMode] = useState(initialAiSelection.mode);
   const [selectedAiModelByMode, setSelectedAiModelByMode] = useState<Record<AiMode, string>>({
@@ -82,6 +88,12 @@ export const AdminDashboard = ({
           </div>
         </div>
       </header>
+      <PeopleTable
+        people={people}
+        selectedAiMode={selectedAiMode}
+        selectedAiModel={selectedAiModel}
+        regenerateAction={regeneratePersonProfileAction}
+      />
       <PoiRowsTable
         rows={rows}
         selectedAiMode={selectedAiMode}

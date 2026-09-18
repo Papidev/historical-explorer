@@ -123,3 +123,21 @@ The Visitor Experience adds language selection or localized Story Content.
 **Possible direction**
 
 Move historical date formatting behind a locale-aware formatter. Keep numeric years, precision, and granularity in Story Content, and let the selected locale determine era labels, label placement, abbreviations, and century formatting.
+
+## Show related Points of Interest in Person Profiles
+
+**Observation**
+
+A global Person Profile may be referenced by multiple Stories, but the first visitor flow only opens that profile from the current Story and returns to the same Point of Interest.
+
+**Risk**
+
+Visitors cannot use a Person as a path for discovering the other places connected to them.
+
+**Revisit when**
+
+We introduce standalone Person Profile navigation or prioritize discovering Points of Interest through people.
+
+**Possible direction**
+
+Derive the related Points of Interest from Story references to the Person ID instead of storing a second list on the Person Profile. Present only approved, visitor-facing Stories.

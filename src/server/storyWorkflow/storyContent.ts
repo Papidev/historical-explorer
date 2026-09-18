@@ -6,7 +6,6 @@ const storyInsightSchema = z
   .object({
     id: z.string().min(1),
     description: z.string().min(1),
-    relatedPersonIds: z.array(z.string().min(1)),
     sourceIds: sourceIdsSchema,
   })
   .strict();
@@ -64,9 +63,8 @@ const historyInsightSchema = storyInsightSchema.extend({
 
 const relatedPersonSchema = z
   .object({
-    id: z.string().min(1),
     name: z.string().min(1),
-    relationship: z.string().min(1),
+    personId: z.string().min(1).optional(),
     sourceIds: sourceIdsSchema,
   })
   .strict();
@@ -86,7 +84,7 @@ const storyContentStructureSchema = z
         art: z.array(storyInsightSchema),
       })
       .strict(),
-    relatedPeople: z.array(relatedPersonSchema),
+    relatedPeople: z.array(relatedPersonSchema).max(10),
   })
   .strict();
 
@@ -119,8 +117,6 @@ export const parseStoryContentStructure = (value: unknown) => {
 export const parseStoryContent = (value: unknown, sourceIds: string[]) => {
   const storyContent = parseStoryContentStructure(value);
   const knownSourceIds = new Set(sourceIds);
-  const knownPersonIds = new Set<string>();
-  const referencedPersonIds = new Set<string>();
   const contentIds = new Set<string>();
 
   const validateSourceIds = (references: string[], label: string) => {
@@ -134,12 +130,7 @@ export const parseStoryContent = (value: unknown, sourceIds: string[]) => {
   validateSourceIds(storyContent.introduction.sourceIds, "Introduction");
 
   for (const person of storyContent.relatedPeople) {
-    if (contentIds.has(person.id)) {
-      throw new Error(`Story Content ID ${person.id} is duplicated.`);
-    }
-    contentIds.add(person.id);
-    knownPersonIds.add(person.id);
-    validateSourceIds(person.sourceIds, `Related Person ${person.id}`);
+    validateSourceIds(person.sourceIds, `Related Person ${person.name}`);
   }
 
   for (const [topic, insights] of Object.entries(storyContent.topics)) {
@@ -149,20 +140,6 @@ export const parseStoryContent = (value: unknown, sourceIds: string[]) => {
       }
       contentIds.add(insight.id);
       validateSourceIds(insight.sourceIds, `Visitor Insight ${insight.id}`);
-      for (const personId of insight.relatedPersonIds) {
-        if (!knownPersonIds.has(personId)) {
-          throw new Error(
-            `Visitor Insight ${insight.id} in ${topic} references unknown Related Person ${personId}.`,
-          );
-        }
-        referencedPersonIds.add(personId);
-      }
-    }
-  }
-
-  for (const personId of knownPersonIds) {
-    if (!referencedPersonIds.has(personId)) {
-      throw new Error(`Related Person ${personId} is not linked to a Visitor Insight.`);
     }
   }
 
@@ -176,7 +153,7 @@ export type PublicStoryContent = {
     design: Array<Pick<StoryInsight, "description">>;
     art: Array<Pick<StoryInsight, "description">>;
   };
-  relatedPeople: Array<Pick<RelatedPerson, "name" | "relationship">>;
+  relatedPeople: Array<Pick<RelatedPerson, "name" | "personId">>;
 };
 
 export const toPublicStoryContent = (storyContent: StoryContent): PublicStoryContent => ({
@@ -189,8 +166,8 @@ export const toPublicStoryContent = (storyContent: StoryContent): PublicStoryCon
     design: storyContent.topics.design.map(({ description }) => ({ description })),
     art: storyContent.topics.art.map(({ description }) => ({ description })),
   },
-  relatedPeople: storyContent.relatedPeople.map(({ name, relationship }) => ({
+  relatedPeople: storyContent.relatedPeople.map(({ name, personId }) => ({
     name,
-    relationship,
+    ...(personId ? { personId } : {}),
   })),
 });

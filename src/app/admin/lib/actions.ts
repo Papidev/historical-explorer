@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { pointOfInterest } from "@/server/pointOfInterest";
 import { storyCuration } from "@/server/storyCuration";
 import { storyWorkflow } from "@/server/storyWorkflow";
+import { personProfiles } from "@/server/personProfile";
 import { resolveAiSelection } from "./aiModels";
 
 const getRequiredString = (formData: FormData, key: string, label: string) => {
@@ -67,6 +68,14 @@ export const selectMainImageCandidate = async (formData: FormData) => {
   await storyCuration.selectDraftMainImage({
     poiId: getRequiredString(formData, "poiId", "POI id"),
     commonsFileName: getRequiredString(formData, "commonsFileName", "Commons file name"),
+  });
+  revalidatePath("/admin");
+};
+
+export const regeneratePersonProfile = async (formData: FormData) => {
+  await personProfiles.regenerate({
+    personId: getRequiredString(formData, "personId", "Person id"),
+    ai: await getWorkflowAiSelection(formData),
   });
   revalidatePath("/admin");
 };

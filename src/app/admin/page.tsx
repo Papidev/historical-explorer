@@ -7,9 +7,11 @@ import {
   refreshMainImageCandidates,
   resetDraftStory,
   selectMainImageCandidate,
+  regeneratePersonProfile,
 } from "./lib/actions";
 import { getInitialAiSelection, loadAiModeOptions } from "./lib/aiModels";
 import { loadPoiLists } from "./lib/loadPoiLists";
+import { personProfiles } from "@/server/personProfile";
 
 export const dynamic = "force-dynamic";
 
@@ -17,6 +19,7 @@ export default async function AdminPage() {
   const { rows, error } = await loadPoiLists();
   const aiModeOptions = await loadAiModeOptions();
   const initialAiSelection = await getInitialAiSelection();
+  const people = personProfiles.list();
 
   return (
     <>
@@ -32,6 +35,7 @@ export default async function AdminPage() {
       ) : (
         <AdminDashboard
           rows={rows}
+          people={people}
           aiModeOptions={aiModeOptions}
           initialAiSelection={initialAiSelection}
           generateDraftStoryAction={generateDraftStory}
@@ -41,6 +45,7 @@ export default async function AdminPage() {
           refreshMainImageCandidatesAction={refreshMainImageCandidates}
           deleteMainImageCandidatesAction={deleteMainImageCandidates}
           selectMainImageCandidateAction={selectMainImageCandidate}
+          regeneratePersonProfileAction={regeneratePersonProfile}
         />
       )}
     </>

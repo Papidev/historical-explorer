@@ -34,7 +34,7 @@ describe("StoryContent", () => {
             design: [{ description: "Design insight" }],
             art: [{ description: "Art insight" }],
           },
-          relatedPeople: [{ name: "Related Person", relationship: "Relationship" }],
+          relatedPeople: [{ name: "Related Person", personId: "related-person" }],
         }}
       />,
     );

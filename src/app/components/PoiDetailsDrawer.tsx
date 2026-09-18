@@ -1,11 +1,13 @@
 "use client";
 
-import { useState } from "react";
-import { XMarkIcon } from "@heroicons/react/24/outline";
+import { useEffect, useState } from "react";
+import { ArrowLeftIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import type { Poi } from "@/types/Poi";
 import { StoryContent } from "@/app/components/StoryContent";
 import { IconButton } from "@/app/components/ui/IconButton";
 import { usePoiStoryContent } from "@/app/components/usePoiStoryContent";
+import { PersonProfile } from "@/app/components/PersonProfile";
+import { usePersonProfile } from "@/app/components/usePersonProfile";
 
 export const PoiDetailsDrawer = ({
   citySlug,
@@ -17,7 +19,11 @@ export const PoiDetailsDrawer = ({
   poi?: Poi;
 }) => {
   const [failedMainImageUrl, setFailedMainImageUrl] = useState<string | null>(null);
+  const [selectedPersonId, setSelectedPersonId] = useState<string>();
   const { content, isLoading } = usePoiStoryContent({ citySlug, poiId: poi?.id });
+  const { profile, isLoading: isPersonLoading } = usePersonProfile(selectedPersonId);
+
+  useEffect(() => setSelectedPersonId(undefined), [poi?.id]);
 
   return (
     <aside
@@ -32,11 +38,24 @@ export const PoiDetailsDrawer = ({
             label="Close"
             size="large"
             className="absolute top-4 right-4 z-10 bg-white/90 shadow-md backdrop-blur hover:bg-white"
-            onClick={onClose}
+            onClick={() => {
+              setSelectedPersonId(undefined);
+              onClose();
+            }}
           >
             <XMarkIcon aria-hidden="true" />
           </IconButton>
-          {poi.mainImageUrl && poi.mainImageUrl !== failedMainImageUrl ? (
+          {selectedPersonId ? (
+            <button
+              type="button"
+              onClick={() => setSelectedPersonId(undefined)}
+              className="absolute top-5 left-5 z-10 inline-flex cursor-pointer items-center gap-2 rounded-full bg-white/90 px-3 py-2 text-sm font-semibold shadow-md backdrop-blur hover:bg-white"
+            >
+              <ArrowLeftIcon className="size-4" aria-hidden="true" />
+              Back to {poi.name}
+            </button>
+          ) : null}
+          {!selectedPersonId && poi.mainImageUrl && poi.mainImageUrl !== failedMainImageUrl ? (
             <div className="aspect-video w-full shrink-0 overflow-hidden bg-zinc-100">
               {/* eslint-disable-next-line @next/next/no-img-element -- POI images use runtime-selected Wikimedia URLs. */}
               <img
@@ -48,19 +67,23 @@ export const PoiDetailsDrawer = ({
             </div>
           ) : null}
           <div className="border-b border-black/10 px-5 py-4 pr-16">
-            <h2 className="text-2xl leading-tight font-semibold text-black">{poi.name}</h2>
+            <h2 className="text-2xl leading-tight font-semibold text-black">
+              {selectedPersonId ? (profile?.name ?? "Person profile") : poi.name}
+            </h2>
           </div>
           <div className="overflow-y-auto px-5 py-4 text-sm leading-6 text-black/80">
-            {poi.shortDescription ? <p>{poi.shortDescription}</p> : null}
-            {isLoading ? (
+            {selectedPersonId ? (
+              isPersonLoading ? <p className="text-black/60">Loading person profile...</p> : profile ? <PersonProfile profile={profile} /> : <p className="text-black/60">This person profile is unavailable.</p>
+            ) : poi.shortDescription ? <p>{poi.shortDescription}</p> : null}
+            {!selectedPersonId && (isLoading ? (
               <p className="mt-4 text-black/60">Loading additional content...</p>
             ) : content ? (
-              <StoryContent content={content} period={poi.period} address={poi.address} />
+              <StoryContent content={content} period={poi.period} address={poi.address} onOpenPerson={setSelectedPersonId} />
             ) : (
               <p className="mt-4 text-black/60">
                 No additional content is available for this point.
               </p>
-            )}
+            ))}
           </div>
         </div>
       ) : null}

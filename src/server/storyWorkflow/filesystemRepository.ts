@@ -105,6 +105,7 @@ export const createFilesystemStoryWorkflowRepository = (
           kind: source.kind,
           title: source.title,
           url: source.url,
+          links: source.links,
         },
         null,
         2,

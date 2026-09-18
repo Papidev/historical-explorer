@@ -64,9 +64,25 @@ _Avoid_: Required section, content slot, card
 A selected idea that makes a **Point of Interest** worth noticing, understanding, connecting to, remembering, or navigating.
 _Avoid_: Fact, section, card, reasoning
 
+**Person**:
+A historical, mythological, or imaginary individual represented by one reusable global profile in Cultural Atlas.
+_Avoid_: Cultural Figure, character
+
+**Person ID**:
+A stable identifier assigned by Cultural Atlas to a **Person**, independent of identifiers from external sources.
+_Avoid_: Wikidata ID, person slug
+
+**Person Profile**:
+The canonical visitor-facing description of a **Person**, including a source-grounded two-paragraph description and optional source-grounded curiosities, birth and death dates, and an image.
+_Avoid_: Biography article, Story-specific person description
+
 **Related Person**:
-A named person whose documented relationship to the **Point of Interest** supports one or more **Visitor Insights**.
+A **Person** referenced by name in a **Story** because the person is relevant to explaining its **Point of Interest**. The name may link to the canonical **Person Profile**.
 _Avoid_: Mention, character, unreferenced biography
+
+**Unresolved Person Reference**:
+A person reference found during **Draft Story Generation** whose identity cannot yet be matched safely to a **Person ID**.
+_Avoid_: Person, guessed identity, duplicate Person
 
 **Main Image**:
 The image in a story that helps visitors recognize a **Point of Interest** or notice an important visible detail.
@@ -106,6 +122,22 @@ _Avoid_: Production output, AI output
 - A **Point of Interest** has at most one approved **Story** in the current product.
 - A **Point of Interest** has at most one current **Draft Story**.
 - A **Story** contains one **Story Content** and one **Main Image**.
+- A **Story** may reference zero or more **Persons** as **Related Persons**.
+- A **Person** has exactly one **Person ID**, may retain an optional external identifier such as a Wikidata ID, and may be referenced by multiple **Stories**.
+- A **Person** has one canonical **Person Profile**, reused wherever that **Person** appears.
+- A **Person Profile** may omit birth or death dates when they are unknown or do not apply.
+- A **Person Profile** may represent birth and death dates as exact or approximate.
+- A **Person Profile** requires a resolved identity, name, source-grounded description, and Sources; curiosities, dates, and its single image are optional.
+- A **Person Profile** includes a curiosity only when the Sources support it; unsupported curiosities are omitted.
+- A **Person Profile** has its own Sources, separate from the Sources of any **Story** that references it.
+- The first **Person Profile** Sources come from Wikipedia, Wikidata, and Wikimedia Commons.
+- A **Person Profile** is approved independently from any **Story** that references it.
+- Removing a **Related Person** from a **Story** removes only that reference; it does not remove the **Person** or **Person Profile**.
+- **Draft Story Generation** preserves an ambiguous person reference as an **Unresolved Person Reference** rather than creating a guessed **Person**.
+- The **Visitor Experience** may show an **Unresolved Person Reference** as a non-navigable name.
+- The **Visitor Experience** links a resolved **Related Person** from a **Story** to that person's **Person Profile** and shows an **Unresolved Person Reference** as a name without a link.
+- The default **Visitor Experience** does not show **Person Profile** Sources.
+- A **Story** selects at most ten **Related Persons** that are significant to understanding its **Point of Interest** and orders them from most to least significant.
 - **Story Content** contains plain text rather than Markdown or presentation styling.
 - A **Draft Story** organizes its proposed **Visitor Insights** into the supported **Story Topics**.
 - A **Story Topic** appears only when supported by the **Sources**; a **Draft Story** does not fill every available **Story Topic**.

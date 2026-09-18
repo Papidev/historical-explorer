@@ -35,13 +35,18 @@ export type StoryWorkflowRepository = {
 
 export type StoryWorkflowDependencies = {
   findPointOfInterest(poiId: string): Promise<PoiInput | undefined>;
-  acquireSources(pointOfInterest: PoiInput): Promise<Source[]>;
+  acquireSources(pointOfInterest: PoiInput, previousSources?: Source[]): Promise<Source[]>;
   generateMainImageCandidates(pointOfInterest: PoiInput): Promise<MainImageCandidate[]>;
   generateStoryContent(input: {
     pointOfInterest: PoiInput;
     sources: Source[];
     ai: AiSelection;
   }): Promise<{ content: StoryContent; provider: "ollama" | "gemini" }>;
+  resolveRelatedPeople(input: {
+    relatedPeople: StoryContent["relatedPeople"];
+    sources: Source[];
+    ai: AiSelection;
+  }): Promise<StoryContent["relatedPeople"]>;
   repository: StoryWorkflowRepository;
   now?: () => Date;
 };
@@ -84,15 +89,19 @@ const selectDraftMainImage = (candidates: MainImageCandidate[], currentCommonsFi
 export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): StoryWorkflow => {
   const now = dependencies.now ?? (() => new Date());
 
-  const acquireAndPersistSources = async (pointOfInterest: PoiInput) => {
+  const acquireAndPersistSources = async (
+    pointOfInterest: PoiInput,
+    previousSources?: Source[],
+  ) => {
     const startedAt = now().getTime();
     let sources: Source[];
     try {
-      sources = await dependencies.acquireSources(pointOfInterest);
+      sources = await dependencies.acquireSources(pointOfInterest, previousSources);
       if (sources.length === 0 || sources.some((source) => !source.content.trim())) {
         throw new Error("No usable sources were returned.");
       }
     } catch (cause) {
+      console.error(`[sources] Acquisition failed for ${pointOfInterest.id}.`, cause);
       throw new StoryWorkflowError({
         code: "sources-unavailable",
         stage: "sources",
@@ -160,6 +169,11 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         sources,
         ai,
       });
+      generated.content.relatedPeople = await dependencies.resolveRelatedPeople({
+        relatedPeople: generated.content.relatedPeople,
+        sources,
+        ai,
+      });
     } catch (cause) {
       throw new StoryWorkflowError({
         code: "story-content-generation-failed",
@@ -185,7 +199,10 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
     draftStory: {
       generate: async ({ poiId, ai }) => {
         const pointOfInterest = await findPointOfInterest(poiId, dependencies);
-        const sources = await acquireAndPersistSources(pointOfInterest);
+        const sources = await acquireAndPersistSources(
+          pointOfInterest,
+          (await dependencies.repository.get(poiId))?.sources,
+        );
         let mainImageCandidates: "generated" | "failed" = "generated";
         let selectedCommonsFileName: string | undefined;
         try {
@@ -222,14 +239,10 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
     storyContent: {
       generate: async ({ poiId, ai }) => {
         const pointOfInterest = await findPointOfInterest(poiId, dependencies);
-        const sources = (await dependencies.repository.get(poiId))?.sources ?? [];
-        if (sources.length === 0) {
-          throw new StoryWorkflowError({
-            code: "sources-unavailable",
-            stage: "sources",
-            retryable: true,
-          });
-        }
+        const sources = await acquireAndPersistSources(
+          pointOfInterest,
+          (await dependencies.repository.get(poiId))?.sources,
+        );
         await generateAndPersistStoryContent(pointOfInterest, sources, ai);
       },
       delete: async ({ poiId }) => {

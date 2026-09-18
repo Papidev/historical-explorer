@@ -12,6 +12,7 @@ export type Source = {
   title: string;
   url: string;
   content: string;
+  links?: Array<{ label: string; title: string }>;
 };
 
 export type DraftMainImage = MainImageCandidate;

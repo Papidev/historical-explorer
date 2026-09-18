@@ -125,6 +125,7 @@ const createDependencies = (overrides: Partial<StoryWorkflowDependencies> = {}) 
         content: storyContent(),
         provider: "ollama" as const,
       }),
+      resolveRelatedPeople: async ({ relatedPeople }) => relatedPeople,
       repository,
       now: () => new Date("2026-08-22T10:00:00.000Z"),
       ...overrides,
@@ -150,6 +151,10 @@ describe("Story Workflow Interface", () => {
         order.push("storyContent");
         return { content: storyContent(), provider: "ollama" };
       },
+      resolveRelatedPeople: async ({ relatedPeople, ai }) => {
+        order.push(`people:${ai.model}`);
+        return relatedPeople;
+      },
     });
 
     await expect(
@@ -163,7 +168,12 @@ describe("Story Workflow Interface", () => {
       draftMainImage: "available",
       storyContent: "generated",
     });
-    expect(order).toEqual(["sources", "mainImageCandidates", "storyContent"]);
+    expect(order).toEqual([
+      "sources",
+      "mainImageCandidates",
+      "storyContent",
+      "people:qwen3:8b",
+    ]);
   });
 
   it("stops before downstream work when Sources are unavailable", async () => {
@@ -269,10 +279,16 @@ describe("Story Workflow Interface", () => {
 
   it("uses create-or-replace semantics and preserves previous artifacts on explicit failure", async () => {
     let content = storyContent("First structured story.");
+    let currentSource = source;
+    const previousSourceContents: Array<string | undefined> = [];
     let candidates = [candidate("first.jpg")];
     let failContent = false;
     let failCandidates = false;
     const { dependencies, repository } = createDependencies({
+      acquireSources: async (_pointOfInterest, previousSources) => {
+        previousSourceContents.push(previousSources?.[0]?.content);
+        return [currentSource];
+      },
       generateStoryContent: async () => {
         if (failContent) throw new Error("AI unavailable");
         return { content, provider: "ollama" };
@@ -289,6 +305,7 @@ describe("Story Workflow Interface", () => {
     });
 
     content = storyContent("Replacement structured story.");
+    currentSource = { ...source, content: "Source version two" };
     candidates = [candidate("replacement.jpg")];
     await workflow.storyContent.generate({
       poiId: pointOfInterest.id,
@@ -296,6 +313,7 @@ describe("Story Workflow Interface", () => {
     });
     await workflow.mainImageCandidates.generate({ poiId: pointOfInterest.id });
     expect(await repository.get(pointOfInterest.id)).toMatchObject({
+      sources: [{ content: "Source version two" }],
       storyContent: content,
       mainImageCandidates: [{ commonsFileName: "replacement.jpg" }],
     });
@@ -317,6 +335,11 @@ describe("Story Workflow Interface", () => {
       storyContent: content,
       mainImageCandidates: [{ commonsFileName: "replacement.jpg" }],
     });
+    expect(previousSourceContents).toEqual([
+      undefined,
+      "Source version one",
+      "Source version two",
+    ]);
   });
 
   it("preserves an eligible Draft Main Image and otherwise selects the first eligible candidate", async () => {

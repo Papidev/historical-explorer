@@ -266,9 +266,11 @@ const StoryContentPreview = ({
         <h3 className="font-semibold">Related People</h3>
         <div className="mt-2 space-y-4">
           {content.relatedPeople.map((person) => (
-            <article key={person.id} className="rounded-lg border border-black/10 bg-white p-3">
+            <article key={person.name} className="rounded-lg border border-black/10 bg-white p-3">
               <p className="font-semibold">{person.name}</p>
-              <p>{person.relationship}</p>
+              <p className="font-mono text-xs text-black/55">
+                {person.personId ?? "Unresolved"}
+              </p>
               <SourceLinks sourceIds={person.sourceIds} sources={sources} />
             </article>
           ))}

@@ -10,6 +10,7 @@ import {
 } from "@/server/wikiPipeline/io";
 import { resolvePageForPoi } from "@/server/wikiPipeline/resolve";
 import { wikiTextToPlainText } from "@/server/wikiPipeline/wikiText";
+import { personProfiles } from "@/server/personProfile";
 
 export const createStoryWorkflowForCity = (city: string) => createStoryWorkflow({
   findPointOfInterest: async (poiId) => {
@@ -19,17 +20,20 @@ export const createStoryWorkflowForCity = (city: string) => createStoryWorkflow(
       return undefined;
     }
   },
-  acquireSources: async (pointOfInterest) => {
+  acquireSources: async (pointOfInterest, previousSources) => {
     console.info(`[wiki] Fetching Wikipedia text for ${pointOfInterest.id}.`);
-    const resolved = await resolvePageForPoi(pointOfInterest);
-    const snapshot = await fetchWikiSnapshot(resolved.selected.title);
+    const title =
+      previousSources?.find(({ kind }) => kind === "wikipedia")?.title ??
+      (await resolvePageForPoi(pointOfInterest)).selected.title;
+    const snapshot = await fetchWikiSnapshot(title);
     return [
       {
         id: "wikipedia",
         kind: "wikipedia",
-        title: resolved.selected.title,
-        url: buildWikipediaPageUrl(resolved.selected.title),
+        title: snapshot.title,
+        url: buildWikipediaPageUrl(snapshot.title),
         content: wikiTextToPlainText(snapshot.fullText),
+        links: snapshot.links,
       },
     ];
   },
@@ -54,6 +58,8 @@ export const createStoryWorkflowForCity = (city: string) => createStoryWorkflow(
       provider,
     };
   },
+  resolveRelatedPeople: ({ relatedPeople, sources, ai }) =>
+    personProfiles.resolveAndGenerateMissing({ relatedPeople, storySources: sources, ai }),
   repository: createFilesystemStoryWorkflowRepository(city),
 });
 

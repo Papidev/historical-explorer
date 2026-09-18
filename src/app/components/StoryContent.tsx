@@ -44,10 +44,12 @@ export const StoryContent = ({
   content,
   period,
   address,
+  onOpenPerson,
 }: {
   content: PublicStoryContent;
   period?: string;
   address?: string;
+  onOpenPerson?: (personId: string) => void;
 }) => {
   const history = [...content.topics.history].sort((left, right) => {
     if (!left.time && !right.time) return 0;
@@ -102,17 +104,24 @@ export const StoryContent = ({
           <h3 className="text-sm font-semibold tracking-wide text-zinc-950 uppercase">
             Related People
           </h3>
-          <dl className="mt-3 space-y-3">
-            {content.relatedPeople.map(({ name, relationship }) => (
-              <div
+          <ul className="mt-3 space-y-3">
+            {content.relatedPeople.map(({ name, personId }) => (
+              <li
                 key={name}
                 className="relative pl-5 before:absolute before:top-0 before:left-1 before:text-sky-400 before:content-['•']"
               >
-                <dt className="font-semibold text-zinc-950">{name}</dt>
-                <dd>{relationship}</dd>
-              </div>
+                {personId && onOpenPerson ? (
+                  <button
+                    type="button"
+                    onClick={() => onOpenPerson(personId)}
+                    className="cursor-pointer font-semibold text-sky-800 underline decoration-sky-300 underline-offset-4 hover:text-sky-950"
+                  >
+                    {name}
+                  </button>
+                ) : <span className="font-semibold text-zinc-950">{name}</span>}
+              </li>
             ))}
-          </dl>
+          </ul>
         </section>
       ) : null}
     </div>
