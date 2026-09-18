@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ArrowLeftIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import type { Poi } from "@/types/Poi";
 import { StoryContent } from "@/app/components/StoryContent";
 import { IconButton } from "@/app/components/ui/IconButton";
 import { usePoiStoryContent } from "@/app/components/usePoiStoryContent";
-import { PersonProfile } from "@/app/components/PersonProfile";
-import { usePersonProfile } from "@/app/components/usePersonProfile";
+import { Person } from "@/app/components/Person";
+import { usePerson } from "@/app/components/usePerson";
 
 export const PoiDetailsDrawer = ({
   citySlug,
@@ -21,9 +21,7 @@ export const PoiDetailsDrawer = ({
   const [failedMainImageUrl, setFailedMainImageUrl] = useState<string | null>(null);
   const [selectedPersonId, setSelectedPersonId] = useState<string>();
   const { content, isLoading } = usePoiStoryContent({ citySlug, poiId: poi?.id });
-  const { profile, isLoading: isPersonLoading } = usePersonProfile(selectedPersonId);
-
-  useEffect(() => setSelectedPersonId(undefined), [poi?.id]);
+  const { person, isLoading: isPersonLoading } = usePerson(selectedPersonId);
 
   return (
     <aside
@@ -68,22 +66,34 @@ export const PoiDetailsDrawer = ({
           ) : null}
           <div className="border-b border-black/10 px-5 py-4 pr-16">
             <h2 className="text-2xl leading-tight font-semibold text-black">
-              {selectedPersonId ? (profile?.name ?? "Person profile") : poi.name}
+              {selectedPersonId ? (person?.name ?? "Person") : poi.name}
             </h2>
           </div>
           <div className="overflow-y-auto px-5 py-4 text-sm leading-6 text-black/80">
             {selectedPersonId ? (
-              isPersonLoading ? <p className="text-black/60">Loading person profile...</p> : profile ? <PersonProfile profile={profile} /> : <p className="text-black/60">This person profile is unavailable.</p>
+              isPersonLoading ? (
+                <p className="text-black/60">Loading person...</p>
+              ) : person ? (
+                <Person person={person} />
+              ) : (
+                <p className="text-black/60">This person is unavailable.</p>
+              )
             ) : poi.shortDescription ? <p>{poi.shortDescription}</p> : null}
-            {!selectedPersonId && (isLoading ? (
-              <p className="mt-4 text-black/60">Loading additional content...</p>
-            ) : content ? (
-              <StoryContent content={content} period={poi.period} address={poi.address} onOpenPerson={setSelectedPersonId} />
-            ) : (
-              <p className="mt-4 text-black/60">
-                No additional content is available for this point.
-              </p>
-            ))}
+            {!selectedPersonId &&
+              (isLoading ? (
+                <p className="mt-4 text-black/60">Loading additional content...</p>
+              ) : content ? (
+                <StoryContent
+                  content={content}
+                  period={poi.period}
+                  address={poi.address}
+                  onOpenPerson={setSelectedPersonId}
+                />
+              ) : (
+                <p className="mt-4 text-black/60">
+                  No additional content is available for this point.
+                </p>
+              ))}
           </div>
         </div>
       ) : null}

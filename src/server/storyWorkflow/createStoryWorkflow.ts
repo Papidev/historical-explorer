@@ -5,6 +5,7 @@ import {
   type AiSelection,
   type DraftStoryGenerationStatus,
   type DraftStorySnapshot,
+  type RelatedPeopleResolutionResult,
   type Source,
   type StoryWorkflow,
 } from "./types";
@@ -46,7 +47,7 @@ export type StoryWorkflowDependencies = {
     relatedPeople: StoryContent["relatedPeople"];
     sources: Source[];
     ai: AiSelection;
-  }): Promise<StoryContent["relatedPeople"]>;
+  }): Promise<RelatedPeopleResolutionResult>;
   repository: StoryWorkflowRepository;
   now?: () => Date;
 };
@@ -169,11 +170,6 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         sources,
         ai,
       });
-      generated.content.relatedPeople = await dependencies.resolveRelatedPeople({
-        relatedPeople: generated.content.relatedPeople,
-        sources,
-        ai,
-      });
     } catch (cause) {
       throw new StoryWorkflowError({
         code: "story-content-generation-failed",
@@ -181,6 +177,25 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         retryable: true,
         cause,
       });
+    }
+
+    let resolution: RelatedPeopleResolutionResult;
+    try {
+      resolution = await dependencies.resolveRelatedPeople({
+        relatedPeople: generated.content.relatedPeople,
+        sources,
+        ai,
+      });
+      generated.content.relatedPeople = resolution.relatedPeople;
+    } catch (cause) {
+      const message = cause instanceof Error ? cause.message : String(cause);
+      console.warn(`[related-people] Resolution failed for ${pointOfInterest.id}.`, cause);
+      resolution = {
+        relatedPeople: generated.content.relatedPeople,
+        failures: generated.content.relatedPeople
+          .filter(({ personId }) => !personId)
+          .map(({ name }) => ({ name, message })),
+      };
     }
 
     try {
@@ -193,6 +208,8 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
     } catch (cause) {
       throw persistenceError(cause);
     }
+
+    return resolution;
   };
 
   return {
@@ -218,13 +235,15 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
           selectedCommonsFileName = (await dependencies.repository.get(poiId))?.draftMainImage
             ?.commonsFileName;
         }
-        await generateAndPersistStoryContent(pointOfInterest, sources, ai);
+        const relatedPeople = await generateAndPersistStoryContent(pointOfInterest, sources, ai);
 
         return {
           poiId,
           mainImageCandidates,
           draftMainImage: selectedCommonsFileName ? "available" : "missing",
           storyContent: "generated",
+          relatedPeople: relatedPeople.failures.length > 0 ? "partial" : "resolved",
+          relatedPeopleFailures: relatedPeople.failures,
         };
       },
       get: ({ poiId }) => dependencies.repository.get(poiId),
@@ -243,7 +262,7 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
           pointOfInterest,
           (await dependencies.repository.get(poiId))?.sources,
         );
-        await generateAndPersistStoryContent(pointOfInterest, sources, ai);
+        return generateAndPersistStoryContent(pointOfInterest, sources, ai);
       },
       delete: async ({ poiId }) => {
         try {
@@ -251,6 +270,36 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         } catch (cause) {
           throw persistenceError(cause);
         }
+      },
+    },
+    relatedPeople: {
+      resolve: async ({ poiId, ai }) => {
+        const snapshot = await dependencies.repository.get(poiId);
+        if (!snapshot?.storyContent || snapshot.sources.length === 0) {
+          throw new StoryWorkflowError({
+            code: "sources-unavailable",
+            stage: "sources",
+            retryable: true,
+          });
+        }
+        const resolution = await dependencies.resolveRelatedPeople({
+          relatedPeople: snapshot.storyContent.relatedPeople,
+          sources: snapshot.sources,
+          ai,
+        });
+        try {
+          await dependencies.repository.replaceStoryContent(
+            poiId,
+            { ...snapshot.storyContent, relatedPeople: resolution.relatedPeople },
+            snapshot.generation.storyContent ?? {
+              durationMs: 0,
+              completedAt: now().toISOString(),
+            },
+          );
+        } catch (cause) {
+          throw persistenceError(cause);
+        }
+        return resolution;
       },
     },
     mainImageCandidates: {

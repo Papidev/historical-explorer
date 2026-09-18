@@ -1,5 +1,17 @@
 import type { Source, StoryContent } from "@/server/storyWorkflow";
 
+export type AdminActionWarning = {
+  title: string;
+  description: string;
+  details: string;
+};
+
+export type AdminActionResult = {
+  warning?: AdminActionWarning;
+};
+
+export type AdminAction = (formData: FormData) => Promise<AdminActionResult | void>;
+
 export type GeoJsonFeature = {
   id?: string | number;
   wikidataId?: string;

@@ -10,7 +10,7 @@ import {
 } from "@/server/wikiPipeline/io";
 import { resolvePageForPoi } from "@/server/wikiPipeline/resolve";
 import { wikiTextToPlainText } from "@/server/wikiPipeline/wikiText";
-import { personProfiles } from "@/server/personProfile";
+import { people } from "@/server/person";
 
 export const createStoryWorkflowForCity = (city: string) => createStoryWorkflow({
   findPointOfInterest: async (poiId) => {
@@ -59,7 +59,7 @@ export const createStoryWorkflowForCity = (city: string) => createStoryWorkflow(
     };
   },
   resolveRelatedPeople: ({ relatedPeople, sources, ai }) =>
-    personProfiles.resolveAndGenerateMissing({ relatedPeople, storySources: sources, ai }),
+    people.resolveAndGenerateMissing({ relatedPeople, storySources: sources, ai }),
   repository: createFilesystemStoryWorkflowRepository(city),
 });
 
@@ -71,6 +71,8 @@ export type {
   DraftStoryGenerationResult,
   DraftStoryGenerationStatus,
   DraftStorySnapshot,
+  RelatedPeopleResolutionFailure,
+  RelatedPeopleResolutionResult,
   Source,
   StoryWorkflow,
   StoryWorkflowErrorCode,

@@ -37,6 +37,7 @@ export const CityExplorer = ({
         onMapClick={() => setSelectedPoiId(null)}
       />
       <PoiDetailsDrawer
+        key={selectedPoi?.id ?? "closed"}
         citySlug={citySlug}
         poi={selectedPoi}
         onClose={() => setSelectedPoiId(null)}

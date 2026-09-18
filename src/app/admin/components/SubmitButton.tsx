@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { useFormStatus } from "react-dom";
 import type { ReactNode } from "react";
 
@@ -16,10 +16,11 @@ export const SubmitButton = ({
   pendingLabel: string;
   confirmMessage?: string;
   icon?: ReactNode;
-  tone?: "primary" | "danger";
+  tone?: "primary" | "secondary" | "danger";
   disabled?: boolean;
 }) => {
   const { pending } = useFormStatus();
+  const tooltipId = useId();
   const buttonRef = useRef<HTMLButtonElement>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
   const [isConfirmOpen, setIsConfirmOpen] = useState(false);
@@ -51,18 +52,29 @@ export const SubmitButton = ({
           setIsConfirmOpen(true);
         }}
         aria-label={icon ? idleLabel : undefined}
-        title={pending ? pendingLabel : idleLabel}
-        className={`inline-flex items-center justify-center text-white transition disabled:cursor-not-allowed disabled:opacity-50 ${
+        aria-describedby={icon ? tooltipId : undefined}
+        className={`group relative inline-flex cursor-pointer items-center justify-center transition disabled:cursor-not-allowed disabled:opacity-50 ${
           icon
             ? "rounded-full p-1.5 shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-5 [&_svg]:shrink-0"
             : "rounded-md px-2 py-1 text-xs font-medium"
         } ${
           tone === "danger"
-            ? "border border-red-700/20 bg-red-700 hover:bg-red-700/90 focus-visible:outline-red-700"
-            : "border border-black/15 bg-black hover:bg-black/85 focus-visible:outline-black"
+            ? "border border-red-700/20 bg-red-700 text-white hover:bg-red-700/90 focus-visible:outline-red-700"
+            : tone === "secondary"
+              ? "border border-black/15 bg-white text-black hover:bg-black/5 focus-visible:outline-black"
+              : "border border-black/15 bg-black text-white hover:bg-black/85 focus-visible:outline-black"
         }`}
       >
-        {icon ?? (pending ? pendingLabel : idleLabel)}
+        {icon ? <span aria-hidden="true">{icon}</span> : pending ? pendingLabel : idleLabel}
+        {icon ? (
+          <span
+            id={tooltipId}
+            role="tooltip"
+            className="pointer-events-none absolute bottom-full left-1/2 z-50 mb-2 -translate-x-1/2 rounded bg-neutral-900 px-2 py-1 text-xs font-medium whitespace-nowrap text-white opacity-0 shadow-md transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100"
+          >
+            {pending ? pendingLabel : idleLabel}
+          </span>
+        ) : null}
       </button>
       {isConfirmOpen ? (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/25 p-6">
@@ -93,14 +105,14 @@ export const SubmitButton = ({
               <button
                 type="button"
                 onClick={() => setIsConfirmOpen(false)}
-                className="inline-flex items-center rounded-md border border-black/15 bg-white px-3 py-1.5 text-xs font-medium text-black transition hover:bg-black/[0.03]"
+                className="inline-flex cursor-pointer items-center rounded-md border border-black/15 bg-white px-3 py-1.5 text-xs font-medium text-black transition hover:bg-black/[0.03]"
               >
                 Cancel
               </button>
               <button
                 type="button"
                 onClick={confirmSubmit}
-                className={`inline-flex items-center rounded-md px-3 py-1.5 text-xs font-medium text-white transition ${
+                className={`inline-flex cursor-pointer items-center rounded-md px-3 py-1.5 text-xs font-medium text-white transition ${
                   tone === "danger"
                     ? "border border-red-700/20 bg-red-700 hover:bg-red-700/90"
                     : "border border-black/15 bg-black hover:bg-black/85"

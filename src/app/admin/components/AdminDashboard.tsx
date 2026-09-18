@@ -4,40 +4,36 @@ import { useState } from "react";
 import { ListboxSelect } from "@/app/components/ui/ListboxSelect";
 import { Toggle } from "@/app/components/ui/Toggle";
 import type { AiMode, AiModeOption, AiSelection } from "../lib/aiModels";
-import type { AdminPoiRow } from "../lib/types";
+import type { AdminAction, AdminPoiRow } from "../lib/types";
 import { PoiRowsTable } from "./PoiRowsTable";
-import { PeopleTable } from "./PeopleTable";
-import type { PersonProfile } from "@/server/personProfile";
 
 const getModeOption = (aiModeOptions: readonly AiModeOption[], mode: AiMode) =>
   aiModeOptions.find((option) => option.mode === mode) ?? aiModeOptions[0];
 
 export const AdminDashboard = ({
   rows,
-  people,
   aiModeOptions,
   initialAiSelection,
   generateDraftStoryAction,
   resetDraftStoryAction,
   refreshStoryContentAction,
+  resolveRelatedPeopleAction,
   deleteStoryContentAction,
   refreshMainImageCandidatesAction,
   deleteMainImageCandidatesAction,
   selectMainImageCandidateAction,
-  regeneratePersonProfileAction,
 }: {
   rows: AdminPoiRow[];
-  people: PersonProfile[];
   aiModeOptions: readonly AiModeOption[];
   initialAiSelection: AiSelection;
-  generateDraftStoryAction: (formData: FormData) => Promise<void>;
-  resetDraftStoryAction: (formData: FormData) => Promise<void>;
-  refreshStoryContentAction: (formData: FormData) => Promise<void>;
-  deleteStoryContentAction: (formData: FormData) => Promise<void>;
-  refreshMainImageCandidatesAction: (formData: FormData) => Promise<void>;
-  deleteMainImageCandidatesAction: (formData: FormData) => Promise<void>;
+  generateDraftStoryAction: AdminAction;
+  resetDraftStoryAction: AdminAction;
+  refreshStoryContentAction: AdminAction;
+  resolveRelatedPeopleAction: AdminAction;
+  deleteStoryContentAction: AdminAction;
+  refreshMainImageCandidatesAction: AdminAction;
+  deleteMainImageCandidatesAction: AdminAction;
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
-  regeneratePersonProfileAction: (formData: FormData) => Promise<void>;
 }) => {
   const [selectedAiMode, setSelectedAiMode] = useState(initialAiSelection.mode);
   const [selectedAiModelByMode, setSelectedAiModelByMode] = useState<Record<AiMode, string>>({
@@ -88,12 +84,6 @@ export const AdminDashboard = ({
           </div>
         </div>
       </header>
-      <PeopleTable
-        people={people}
-        selectedAiMode={selectedAiMode}
-        selectedAiModel={selectedAiModel}
-        regenerateAction={regeneratePersonProfileAction}
-      />
       <PoiRowsTable
         rows={rows}
         selectedAiMode={selectedAiMode}
@@ -101,6 +91,7 @@ export const AdminDashboard = ({
         generateDraftStoryAction={generateDraftStoryAction}
         resetDraftStoryAction={resetDraftStoryAction}
         refreshStoryContentAction={refreshStoryContentAction}
+        resolveRelatedPeopleAction={resolveRelatedPeopleAction}
         deleteStoryContentAction={deleteStoryContentAction}
         refreshMainImageCandidatesAction={refreshMainImageCandidatesAction}
         deleteMainImageCandidatesAction={deleteMainImageCandidatesAction}

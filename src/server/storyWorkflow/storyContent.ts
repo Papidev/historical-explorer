@@ -133,7 +133,7 @@ export const parseStoryContent = (value: unknown, sourceIds: string[]) => {
     validateSourceIds(person.sourceIds, `Related Person ${person.name}`);
   }
 
-  for (const [topic, insights] of Object.entries(storyContent.topics)) {
+  for (const insights of Object.values(storyContent.topics)) {
     for (const insight of insights) {
       if (contentIds.has(insight.id)) {
         throw new Error(`Story Content ID ${insight.id} is duplicated.`);

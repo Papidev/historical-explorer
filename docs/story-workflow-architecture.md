@@ -70,9 +70,13 @@ type StoryWorkflow = {
   };
 
   storyContent: {
-    generate(input: { poiId: string; ai: AiSelection }): Promise<void>;
+    generate(input: { poiId: string; ai: AiSelection }): Promise<RelatedPeopleResolutionResult>;
 
     delete(input: { poiId: string }): Promise<void>;
+  };
+
+  relatedPeople: {
+    resolve(input: { poiId: string; ai: AiSelection }): Promise<RelatedPeopleResolutionResult>;
   };
 
   mainImageCandidates: {
@@ -83,7 +87,7 @@ type StoryWorkflow = {
 };
 ```
 
-`storyContent.generate` and `mainImageCandidates.generate` belong to **Draft Story Generation**. Each has create-or-replace semantics: it creates a missing artifact or generates a replacement for the current one. These operations are not idempotent because AI output and external Sources may change between calls.
+`storyContent.generate` and `mainImageCandidates.generate` belong to **Draft Story Generation**. Each has create-or-replace semantics: it creates a missing artifact or generates a replacement for the current one. These operations are not idempotent because AI output and external Sources may change between calls. `relatedPeople.resolve` is narrower: it retries unresolved People against the saved Story Content and preserves already resolved People without regenerating the Story.
 
 The Curator UI may label the same operation Generate when its artifact is missing and Refresh when one already exists.
 
@@ -115,6 +119,8 @@ Generation uses checkpoint semantics rather than rollback:
 - Source failure stops full generation.
 - Main Image Candidate failure is reported, but Story Content generation continues.
 - Story Content failure preserves already generated Sources and Main Image Candidates.
+- Related People failure preserves Story Content, leaves failed names unresolved, and reports partial success.
+- A Related People retry processes unresolved references without regenerating Story Content.
 - An explicitly requested artifact generation failure preserves the previous artifact and rejects that operation.
 
 Successfully persisted artifacts remain available for independent retry.
@@ -129,6 +135,8 @@ type DraftStoryGenerationResult = {
   mainImageCandidates: "generated" | "failed";
   draftMainImage: "available" | "missing";
   storyContent: "generated";
+  relatedPeople: "resolved" | "partial";
+  relatedPeopleFailures: RelatedPeopleResolutionFailure[];
 };
 ```
 

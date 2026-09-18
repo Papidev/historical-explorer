@@ -1,6 +1,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { createStoryWorkflowForCity } from "@/server/storyWorkflow";
+import type { DraftStorySnapshot } from "@/server/storyWorkflow";
 import { toPublicStoryContent } from "@/server/storyWorkflow/storyContent";
 import type { Poi } from "@/types/Poi";
 
@@ -130,7 +131,10 @@ const loadGeoJsonForCity = (city: string): GeoJson => {
   }
 };
 
-export const createPoisForCity = async (city: string): Promise<Poi[]> => {
+export const createPoisForCity = async (
+  city: string,
+  getDraftStory?: (poiId: string) => Promise<DraftStorySnapshot | undefined>,
+): Promise<Poi[]> => {
   const features = loadGeoJsonForCity(city).features ?? [];
   const pois = features.map((feature, index) => asPoi(feature, index, city));
   const storyWorkflow = createStoryWorkflowForCity(city);
@@ -139,7 +143,9 @@ export const createPoisForCity = async (city: string): Promise<Poi[]> => {
     pois
       .filter((poi): poi is Poi => Boolean(poi))
       .map(async (poi) => {
-        const draftStory = await storyWorkflow.draftStory.get({ poiId: poi.id });
+        const draftStory = await (getDraftStory
+          ? getDraftStory(poi.id)
+          : storyWorkflow.draftStory.get({ poiId: poi.id }));
         const mainImageUrl = draftStory?.draftMainImage?.thumbnailUrl;
         const previewDescription =
           poi.shortDescription ?? draftStory?.storyContent?.introduction.text;

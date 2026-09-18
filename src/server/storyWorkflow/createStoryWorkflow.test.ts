@@ -125,7 +125,7 @@ const createDependencies = (overrides: Partial<StoryWorkflowDependencies> = {}) 
         content: storyContent(),
         provider: "ollama" as const,
       }),
-      resolveRelatedPeople: async ({ relatedPeople }) => relatedPeople,
+      resolveRelatedPeople: async ({ relatedPeople }) => ({ relatedPeople, failures: [] }),
       repository,
       now: () => new Date("2026-08-22T10:00:00.000Z"),
       ...overrides,
@@ -153,7 +153,7 @@ describe("Story Workflow Interface", () => {
       },
       resolveRelatedPeople: async ({ relatedPeople, ai }) => {
         order.push(`people:${ai.model}`);
-        return relatedPeople;
+        return { relatedPeople, failures: [] };
       },
     });
 
@@ -167,6 +167,8 @@ describe("Story Workflow Interface", () => {
       mainImageCandidates: "generated",
       draftMainImage: "available",
       storyContent: "generated",
+      relatedPeople: "resolved",
+      relatedPeopleFailures: [],
     });
     expect(order).toEqual([
       "sources",
@@ -192,16 +194,19 @@ describe("Story Workflow Interface", () => {
       },
     });
 
-    await expect(
-      createStoryWorkflow(dependencies).draftStory.generate({
+    const generation = createStoryWorkflow(dependencies).draftStory.generate({
         poiId: pointOfInterest.id,
         ai: { mode: "local", model: "qwen3:8b" },
-      }),
-    ).rejects.toMatchObject({
+      });
+
+    await expect(generation).rejects.toMatchObject({
       code: "sources-unavailable",
       stage: "sources",
       retryable: true,
     });
+    await expect(generation).rejects.toThrow(
+      "sources-unavailable: Wikipedia unavailable",
+    );
     expect(downstream).toEqual([]);
     expect(await repository.get(pointOfInterest.id)).toBeUndefined();
   });
@@ -224,6 +229,8 @@ describe("Story Workflow Interface", () => {
       mainImageCandidates: "failed",
       draftMainImage: "missing",
       storyContent: "generated",
+      relatedPeople: "resolved",
+      relatedPeopleFailures: [],
     });
     expect(await repository.get(pointOfInterest.id)).toMatchObject({
       sources: [{ content: "Source version one" }],
@@ -274,6 +281,84 @@ describe("Story Workflow Interface", () => {
       sources: [{ content: "Source version one" }],
       mainImageCandidates: [{ commonsFileName: "first.jpg" }],
       draftMainImage: { commonsFileName: "first.jpg" },
+    });
+  });
+
+  it("persists Story Content and reports Related People failures separately", async () => {
+    const unresolvedPerson = { name: "Hercules", sourceIds: ["wikipedia"] };
+    const { dependencies, repository } = createDependencies({
+      generateStoryContent: async () => ({
+        content: { ...storyContent(), relatedPeople: [unresolvedPerson] },
+        provider: "ollama",
+      }),
+      resolveRelatedPeople: async ({ relatedPeople }) => ({
+        relatedPeople,
+        failures: [
+          {
+            name: "Hercules",
+            message: "Request failed after 2 attempts: Error: HTTP 429 Too Many Requests",
+          },
+        ],
+      }),
+    });
+
+    await expect(
+      createStoryWorkflow(dependencies).storyContent.generate({
+        poiId: pointOfInterest.id,
+        ai: { mode: "cloud", model: "gpt-oss:20b-cloud" },
+      }),
+    ).resolves.toEqual({
+      relatedPeople: [unresolvedPerson],
+      failures: [
+        {
+          name: "Hercules",
+          message: "Request failed after 2 attempts: Error: HTTP 429 Too Many Requests",
+        },
+      ],
+    });
+    expect(await repository.get(pointOfInterest.id)).toMatchObject({
+      storyContent: { relatedPeople: [unresolvedPerson] },
+    });
+  });
+
+  it("retries only unresolved People without regenerating Story Content", async () => {
+    let storyGenerationCount = 0;
+    let shouldResolve = false;
+    const unresolvedPerson = { name: "Hercules", sourceIds: ["wikipedia"] };
+    const resolvedPerson = { ...unresolvedPerson, personId: "hercules" };
+    const { dependencies, repository } = createDependencies({
+      generateStoryContent: async () => {
+        storyGenerationCount += 1;
+        return {
+          content: { ...storyContent(), relatedPeople: [unresolvedPerson] },
+          provider: "ollama",
+        };
+      },
+      resolveRelatedPeople: async () =>
+        shouldResolve
+          ? { relatedPeople: [resolvedPerson], failures: [] }
+          : {
+              relatedPeople: [unresolvedPerson],
+              failures: [{ name: "Hercules", message: "AI unavailable" }],
+            },
+    });
+    const workflow = createStoryWorkflow(dependencies);
+
+    await workflow.storyContent.generate({
+      poiId: pointOfInterest.id,
+      ai: { mode: "local", model: "person-model" },
+    });
+    shouldResolve = true;
+    await expect(
+      workflow.relatedPeople.resolve({
+        poiId: pointOfInterest.id,
+        ai: { mode: "local", model: "person-model" },
+      }),
+    ).resolves.toEqual({ relatedPeople: [resolvedPerson], failures: [] });
+
+    expect(storyGenerationCount).toBe(1);
+    expect(await repository.get(pointOfInterest.id)).toMatchObject({
+      storyContent: { relatedPeople: [resolvedPerson] },
     });
   });
 

@@ -160,7 +160,7 @@ export const generateStoryContent = async (
     throw error;
   }
   console.info(
-    `[story-content] Completed ${config.provider} generation in ${Math.round((Date.now() - startedAt) / 1000)}s.`,
+    `[story-content] Received ${config.provider} Story Content in ${Math.round((Date.now() - startedAt) / 1000)}s.`,
   );
   return storyContent;
 };

@@ -19,7 +19,7 @@ const sourcedTextSchema = z
   })
   .strict();
 
-export const personProfileContentSchema = z
+export const personContentSchema = z
   .object({
     description: z.tuple([sourcedTextSchema, sourcedTextSchema]),
     curiosities: z.array(sourcedTextSchema),
@@ -28,11 +28,11 @@ export const personProfileContentSchema = z
   })
   .strict();
 
-export const personProfileContentJsonSchema = z.toJSONSchema(personProfileContentSchema);
+export const personContentJsonSchema = z.toJSONSchema(personContentSchema);
 
-export type PersonProfileContent = z.infer<typeof personProfileContentSchema>;
+export type PersonContent = z.infer<typeof personContentSchema>;
 
-export type PersonProfileSource = {
+export type PersonSource = {
   id: string;
   kind: "wikipedia";
   title: string;
@@ -40,14 +40,14 @@ export type PersonProfileSource = {
   content: string;
 };
 
-export type PersonProfile = {
+export type Person = {
   id: string;
   name: string;
   wikidataId: string;
   wikipediaTitle: string;
-  content: PersonProfileContent;
+  content: PersonContent;
   image?: MainImageCandidate;
-  source: Omit<PersonProfileSource, "content">;
+  source: Omit<PersonSource, "content">;
   generation: {
     aiMode: "local" | "cloud";
     aiProvider: "ollama" | "gemini";
@@ -56,30 +56,30 @@ export type PersonProfile = {
   };
 };
 
-export type PublicPersonProfile = {
+export type PublicPerson = {
   id: string;
   name: string;
   description: [string, string];
   curiosities: string[];
-  birthDate?: PersonProfileContent["birthDate"];
-  deathDate?: PersonProfileContent["deathDate"];
+  birthDate?: PersonContent["birthDate"];
+  deathDate?: PersonContent["deathDate"];
   image?: Pick<MainImageCandidate, "thumbnailUrl" | "originalImageUrl" | "attribution" | "license">;
 };
 
-export const toPublicPersonProfile = (profile: PersonProfile): PublicPersonProfile => ({
-  id: profile.id,
-  name: profile.name,
-  description: profile.content.description.map(({ text }) => text) as [string, string],
-  curiosities: profile.content.curiosities.map(({ text }) => text),
-  ...(profile.content.birthDate ? { birthDate: profile.content.birthDate } : {}),
-  ...(profile.content.deathDate ? { deathDate: profile.content.deathDate } : {}),
-  ...(profile.image
+export const toPublicPerson = (person: Person): PublicPerson => ({
+  id: person.id,
+  name: person.name,
+  description: person.content.description.map(({ text }) => text) as [string, string],
+  curiosities: person.content.curiosities.map(({ text }) => text),
+  ...(person.content.birthDate ? { birthDate: person.content.birthDate } : {}),
+  ...(person.content.deathDate ? { deathDate: person.content.deathDate } : {}),
+  ...(person.image
     ? {
         image: {
-          thumbnailUrl: profile.image.thumbnailUrl,
-          originalImageUrl: profile.image.originalImageUrl,
-          license: profile.image.license,
-          attribution: profile.image.attribution,
+          thumbnailUrl: person.image.thumbnailUrl,
+          originalImageUrl: person.image.originalImageUrl,
+          license: person.image.license,
+          attribution: person.image.attribution,
         },
       }
     : {}),
