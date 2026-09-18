@@ -110,4 +110,44 @@ describe("POI details person navigation", () => {
     await user.click(screen.getByRole("button", { name: "Back to Forum Boarium" }));
     expect(screen.getByText("A visitor-facing introduction.")).toBeInTheDocument();
   });
+
+  it("returns to the POI when the same POI is opened again", async () => {
+    useStoryResponse();
+    server.use(
+      http.get("*/api/people/hercules", () =>
+        HttpResponse.json({
+          person: {
+            id: "hercules",
+            name: "Hercules",
+            description: ["First Person paragraph.", "Second Person paragraph."],
+            curiosities: [],
+          },
+        }),
+      ),
+    );
+    const user = userEvent.setup();
+    const { rerender } = render(
+      <PoiDetailsDrawer
+        citySlug="rome"
+        poi={poi}
+        openRequestId={1}
+        onClose={() => {}}
+      />,
+    );
+
+    await user.click(await screen.findByRole("button", { name: "Hercules" }));
+    expect(await screen.findByRole("heading", { name: "Hercules" })).toBeInTheDocument();
+
+    rerender(
+      <PoiDetailsDrawer
+        citySlug="rome"
+        poi={poi}
+        openRequestId={2}
+        onClose={() => {}}
+      />,
+    );
+
+    expect(screen.getByRole("heading", { name: "Forum Boarium" })).toBeInTheDocument();
+    expect(screen.getByText("A visitor-facing introduction.")).toBeInTheDocument();
+  });
 });
