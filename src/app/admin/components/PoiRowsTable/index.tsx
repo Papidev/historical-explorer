@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import type { AiMode, AiModel } from "../../lib/aiModels";
+import type { RefObject } from "react";
+import type { AiSelection } from "../../lib/aiModels";
 import type { AdminAction, AdminPoiRow } from "../../lib/types";
 import { ActionToast, getActionError, type Toast } from "../ActionToast";
 import { Preview, type SelectedPanel } from "./Preview";
@@ -20,8 +21,7 @@ const ColumnHeader = ({ title, path }: { title: string; path?: string }) => (
 
 export const PoiRowsTable = ({
   rows,
-  selectedAiMode,
-  selectedAiModel,
+  aiSelectionRef,
   generateDraftStoryAction,
   resetDraftStoryAction,
   refreshStoryContentAction,
@@ -32,8 +32,7 @@ export const PoiRowsTable = ({
   selectMainImageCandidateAction,
 }: {
   rows: AdminPoiRow[];
-  selectedAiMode: AiMode;
-  selectedAiModel: AiModel;
+  aiSelectionRef: RefObject<Pick<AiSelection, "mode" | "model">>;
   generateDraftStoryAction: AdminAction;
   resetDraftStoryAction: AdminAction;
   refreshStoryContentAction: AdminAction;
@@ -62,7 +61,12 @@ export const PoiRowsTable = ({
     description: string,
     action: AdminAction,
     formData: FormData,
+    includeAiSelection = false,
   ) => {
+    if (includeAiSelection) {
+      formData.set("aiMode", aiSelectionRef.current.mode);
+      formData.set("aiModel", aiSelectionRef.current.model);
+    }
     setSelectedPanel(null);
     setActionToast(null);
     setProgress({ poiId, description });
@@ -138,8 +142,6 @@ export const PoiRowsTable = ({
                   <Row
                     key={row.id}
                     row={row}
-                    selectedAiMode={selectedAiMode}
-                    selectedAiModel={selectedAiModel}
                     actions={actions}
                     isInProgress={progress?.poiId === row.id}
                     progressDescription={

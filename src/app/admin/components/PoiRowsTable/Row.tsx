@@ -10,7 +10,6 @@ import {
 import Image from "next/image";
 import type { ReactNode } from "react";
 import { IconButton } from "@/app/components/ui/IconButton";
-import type { AiMode, AiModel } from "../../lib/aiModels";
 import type {
   AdminAction,
   AdminPoiRow,
@@ -204,8 +203,6 @@ const ProgressMessage = ({ description }: { description: string }) => (
 
 export const Row = ({
   row,
-  selectedAiMode,
-  selectedAiModel,
   actions,
   isInProgress,
   progressDescription,
@@ -213,8 +210,6 @@ export const Row = ({
   runSingleAction,
 }: {
   row: AdminPoiRow;
-  selectedAiMode: AiMode;
-  selectedAiModel: AiModel;
   actions: Actions;
   isInProgress: boolean;
   progressDescription: string | null;
@@ -224,6 +219,7 @@ export const Row = ({
     description: string,
     action: AdminAction,
     formData: FormData,
+    includeAiSelection?: boolean,
   ) => Promise<void>;
 }) => {
   const isRowEmpty =
@@ -249,12 +245,11 @@ export const Row = ({
                       "Generating Draft Story...",
                       actions.generateDraftStory,
                       formData,
+                      true,
                     )
                   }
                 >
                   <input type="hidden" name="geoPlaceId" value={row.rawPoi.id} />
-                  <input type="hidden" name="aiMode" value={selectedAiMode} />
-                  <input type="hidden" name="aiModel" value={selectedAiModel} />
                   <SubmitButton
                     idleLabel="Generate"
                     pendingLabel="Generating..."
@@ -403,12 +398,11 @@ export const Row = ({
                       "Generating Story Content...",
                       actions.refreshStoryContent,
                       formData,
+                      true,
                     )
                   }
                 >
                   <input type="hidden" name="poiId" value={row.id} />
-                  <input type="hidden" name="aiMode" value={selectedAiMode} />
-                  <input type="hidden" name="aiModel" value={selectedAiModel} />
                   <SubmitButton
                     idleLabel={row.storyContent ? "Refresh" : "Generate"}
                     pendingLabel="Generating..."
@@ -427,12 +421,11 @@ export const Row = ({
                       "Resolving Related People...",
                       actions.resolveRelatedPeople,
                       formData,
+                      true,
                     )
                   }
                 >
                   <input type="hidden" name="poiId" value={row.id} />
-                  <input type="hidden" name="aiMode" value={selectedAiMode} />
-                  <input type="hidden" name="aiModel" value={selectedAiModel} />
                   <SubmitButton
                     idleLabel="Resolve People"
                     pendingLabel="Resolving..."
