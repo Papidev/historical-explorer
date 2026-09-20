@@ -5,6 +5,7 @@ import {
   type AiSelection,
   type DraftStoryGenerationStatus,
   type DraftStorySnapshot,
+  type RelatedPeopleResolutionResult,
   type Source,
   type StoryWorkflow,
 } from "./types";
@@ -26,6 +27,7 @@ export type StoryWorkflowRepository = {
     poiId: string,
     storyContent: StoryContent,
     checkpoint: NonNullable<DraftStoryGenerationStatus["storyContent"]>,
+    relatedPeopleCheckpoint?: NonNullable<DraftStoryGenerationStatus["relatedPeople"]>,
   ): Promise<void>;
   selectDraftMainImage(poiId: string, commonsFileName: string): Promise<void>;
   deleteStoryContent(poiId: string): Promise<void>;
@@ -35,13 +37,18 @@ export type StoryWorkflowRepository = {
 
 export type StoryWorkflowDependencies = {
   findPointOfInterest(poiId: string): Promise<PoiInput | undefined>;
-  acquireSources(pointOfInterest: PoiInput): Promise<Source[]>;
+  acquireSources(pointOfInterest: PoiInput, previousSources?: Source[]): Promise<Source[]>;
   generateMainImageCandidates(pointOfInterest: PoiInput): Promise<MainImageCandidate[]>;
   generateStoryContent(input: {
     pointOfInterest: PoiInput;
     sources: Source[];
     ai: AiSelection;
   }): Promise<{ content: StoryContent; provider: "ollama" | "gemini" }>;
+  resolveRelatedPeople(input: {
+    relatedPeople: StoryContent["relatedPeople"];
+    sources: Source[];
+    ai: AiSelection;
+  }): Promise<RelatedPeopleResolutionResult>;
   repository: StoryWorkflowRepository;
   now?: () => Date;
 };
@@ -84,15 +91,19 @@ const selectDraftMainImage = (candidates: MainImageCandidate[], currentCommonsFi
 export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): StoryWorkflow => {
   const now = dependencies.now ?? (() => new Date());
 
-  const acquireAndPersistSources = async (pointOfInterest: PoiInput) => {
+  const acquireAndPersistSources = async (
+    pointOfInterest: PoiInput,
+    previousSources?: Source[],
+  ) => {
     const startedAt = now().getTime();
     let sources: Source[];
     try {
-      sources = await dependencies.acquireSources(pointOfInterest);
+      sources = await dependencies.acquireSources(pointOfInterest, previousSources);
       if (sources.length === 0 || sources.some((source) => !source.content.trim())) {
         throw new Error("No usable sources were returned.");
       }
     } catch (cause) {
+      console.error(`[sources] Acquisition failed for ${pointOfInterest.id}.`, cause);
       throw new StoryWorkflowError({
         code: "sources-unavailable",
         stage: "sources",
@@ -168,24 +179,60 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         cause,
       });
     }
+    const storyContentCheckpoint = {
+      ...toCheckpoint(startedAt, now),
+      aiMode: ai.mode,
+      aiProvider: generated.provider,
+      aiModel: ai.model,
+    };
+
+    const relatedPeopleStartedAt = now().getTime();
+    let resolution: RelatedPeopleResolutionResult;
+    try {
+      resolution = await dependencies.resolveRelatedPeople({
+        relatedPeople: generated.content.relatedPeople,
+        sources,
+        ai,
+      });
+      generated.content.relatedPeople = resolution.relatedPeople;
+    } catch (cause) {
+      const message = cause instanceof Error ? cause.message : String(cause);
+      console.warn(`[related-people] Resolution failed for ${pointOfInterest.id}.`, cause);
+      resolution = {
+        relatedPeople: generated.content.relatedPeople,
+        failures: generated.content.relatedPeople
+          .filter(({ personId }) => !personId)
+          .map(({ name }) => ({ name, message })),
+      };
+    }
 
     try {
-      await dependencies.repository.replaceStoryContent(pointOfInterest.id, generated.content, {
-        ...toCheckpoint(startedAt, now),
-        aiMode: ai.mode,
-        aiProvider: generated.provider,
-        aiModel: ai.model,
-      });
+      await dependencies.repository.replaceStoryContent(
+        pointOfInterest.id,
+        generated.content,
+        storyContentCheckpoint,
+        {
+          ...toCheckpoint(relatedPeopleStartedAt, now),
+          aiMode: ai.mode,
+          aiProvider: generated.provider,
+          aiModel: ai.model,
+        },
+      );
     } catch (cause) {
       throw persistenceError(cause);
     }
+
+    return resolution;
   };
 
   return {
     draftStory: {
       generate: async ({ poiId, ai }) => {
         const pointOfInterest = await findPointOfInterest(poiId, dependencies);
-        const sources = await acquireAndPersistSources(pointOfInterest);
+        const sources = await acquireAndPersistSources(
+          pointOfInterest,
+          (await dependencies.repository.get(poiId))?.sources,
+        );
         let mainImageCandidates: "generated" | "failed" = "generated";
         let selectedCommonsFileName: string | undefined;
         try {
@@ -201,13 +248,15 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
           selectedCommonsFileName = (await dependencies.repository.get(poiId))?.draftMainImage
             ?.commonsFileName;
         }
-        await generateAndPersistStoryContent(pointOfInterest, sources, ai);
+        const relatedPeople = await generateAndPersistStoryContent(pointOfInterest, sources, ai);
 
         return {
           poiId,
           mainImageCandidates,
           draftMainImage: selectedCommonsFileName ? "available" : "missing",
           storyContent: "generated",
+          relatedPeople: relatedPeople.failures.length > 0 ? "partial" : "resolved",
+          relatedPeopleFailures: relatedPeople.failures,
         };
       },
       get: ({ poiId }) => dependencies.repository.get(poiId),
@@ -222,15 +271,11 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
     storyContent: {
       generate: async ({ poiId, ai }) => {
         const pointOfInterest = await findPointOfInterest(poiId, dependencies);
-        const sources = (await dependencies.repository.get(poiId))?.sources ?? [];
-        if (sources.length === 0) {
-          throw new StoryWorkflowError({
-            code: "sources-unavailable",
-            stage: "sources",
-            retryable: true,
-          });
-        }
-        await generateAndPersistStoryContent(pointOfInterest, sources, ai);
+        const sources = await acquireAndPersistSources(
+          pointOfInterest,
+          (await dependencies.repository.get(poiId))?.sources,
+        );
+        return generateAndPersistStoryContent(pointOfInterest, sources, ai);
       },
       delete: async ({ poiId }) => {
         try {
@@ -238,6 +283,42 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         } catch (cause) {
           throw persistenceError(cause);
         }
+      },
+    },
+    relatedPeople: {
+      resolve: async ({ poiId, ai }) => {
+        const startedAt = now().getTime();
+        const snapshot = await dependencies.repository.get(poiId);
+        if (!snapshot?.storyContent || snapshot.sources.length === 0) {
+          throw new StoryWorkflowError({
+            code: "sources-unavailable",
+            stage: "sources",
+            retryable: true,
+          });
+        }
+        const resolution = await dependencies.resolveRelatedPeople({
+          relatedPeople: snapshot.storyContent.relatedPeople,
+          sources: snapshot.sources,
+          ai,
+        });
+        try {
+          await dependencies.repository.replaceStoryContent(
+            poiId,
+            { ...snapshot.storyContent, relatedPeople: resolution.relatedPeople },
+            snapshot.generation.storyContent ?? {
+              durationMs: 0,
+              completedAt: now().toISOString(),
+            },
+            {
+              ...toCheckpoint(startedAt, now),
+              aiMode: ai.mode,
+              aiModel: ai.model,
+            },
+          );
+        } catch (cause) {
+          throw persistenceError(cause);
+        }
+        return resolution;
       },
     },
     mainImageCandidates: {

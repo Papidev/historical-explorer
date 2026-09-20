@@ -13,6 +13,8 @@
 
 # testing
 /coverage
+/.playwright-cli/
+/.playwright-mcp/
 
 # next.js
 /.next/
@@ -23,6 +25,7 @@
 
 # generated local content
 /data/*/generated/
+/data/generated/
 
 # paid local Tailwind Plus source
 /.tailwind-plus/

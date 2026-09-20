@@ -1,0 +1,89 @@
+{
+  "id": "pope-alexander-iv",
+  "name": "Pope Alexander IV",
+  "wikidataId": "Q169915",
+  "wikipediaTitle": "Pope Alexander IV",
+  "content": {
+    "description": [
+      {
+        "text": "Rinaldo di Jenne, later Pope Alexander IV, was elected to the papacy on 12 December 1254 in Naples after the death of Pope Innocent IV. During his reign he sought to reunite the Eastern Orthodox churches with Rome, established the Inquisition in France, and favoured the mendicant orders, especially the Franciscans. He also attempted to organize a crusade against the Mongols following their raid on Poland in 1259.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Alexander’s pontificate is noted for several significant acts: the canonisation of Saint Clare of Assisi on 26 September 1255, his declaration of personal knowledge of Saint Francis’s stigmata in the bull *Benigna Operatio* on 29 October 1255, and the condemnation of Joachim of Fiore’s millenarian theories in 1256. He issued the bull *Quod super nonnullis* on 27 September 1258, stating that magic should not be investigated by Inquisitors, and he confirmed the grant of Sicily to Edmund, son of Henry III, in 1255, demanding substantial gold payments and military support.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Alexander canonised Saint Clare of Assisi, the founder of the Poor Clares, on 26 September 1255.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "In the bull *Benigna Operatio* issued on 29 October 1255, Alexander declared that he personally knew the stigmata attributed to Saint Francis of Assisi.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He condemned the millenarian ideas of Joachim of Fiore in 1256, preventing the proposed Third Age that would have rendered the Church hierarchy unnecessary.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "The bull *Quod super nonnullis* (27 September 1258) ruled that magic and sorcery were not to be investigated by Inquisitors, leaving such matters to local authorities unless they involved manifest heresy.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Alexander confirmed the grant of Sicily to Edmund, son of King Henry III of England, in 1255, demanding 2,000 ounces of gold per year and the service of 300 knights for three months when required.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": 1185,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1261,
+      "month": 5,
+      "day": 25,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "C_o_a_Innocenzo_III.svg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:C_o_a_Innocenzo_III.svg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/C_o_a_Innocenzo_III.svg/960px-C_o_a_Innocenzo_III.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/20/C_o_a_Innocenzo_III.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Odejea. Design of \"eagle displayed\" by fr:Utilisateur:Rinaldum (2004)",
+    "author": "Odejea. Design of \"eagle displayed\" by fr:Utilisateur:Rinaldum (2004)",
+    "width": 1143,
+    "height": 1384,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": false
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Alexander IV",
+    "url": "https://en.wikipedia.org/wiki/Pope_Alexander_IV"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-18T23:29:41.769Z"
+  }
+}

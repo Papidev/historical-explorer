@@ -1,5 +1,17 @@
 import type { Source, StoryContent } from "@/server/storyWorkflow";
 
+export type AdminActionWarning = {
+  title: string;
+  description: string;
+  details: string;
+};
+
+export type AdminActionResult = {
+  warning?: AdminActionWarning;
+};
+
+export type AdminAction = (formData: FormData) => Promise<AdminActionResult | void>;
+
 export type GeoJsonFeature = {
   id?: string | number;
   wikidataId?: string;
@@ -51,6 +63,8 @@ export type AdminPoiRow = {
   mainImageGenerationDuration?: string;
   storyContentUpdatedAt?: string;
   storyContentGenerationDuration?: string;
+  relatedPeopleUpdatedAt?: string;
+  relatedPeopleGenerationDuration?: string;
   storyContentGenerationMode?: string;
   storyContentGenerationProvider?: string;
   storyContentGenerationModel?: string;

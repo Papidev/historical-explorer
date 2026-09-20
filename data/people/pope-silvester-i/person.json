@@ -1,0 +1,91 @@
+{
+  "id": "pope-silvester-i",
+  "name": "Pope Silvester I",
+  "wikidataId": "Q47149",
+  "wikipediaTitle": "Pope Sylvester I",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Sylvester I served as bishop of Rome from 31 January 314 until his death on 31 December 335, a period that coincided with the consolidation of Christianity within the Roman Empire.  During his pontificate he convened the Council of Arles in 314, which condemned the separatist Donatist sect, and presided over the First Council of Nicaea in 325, a pivotal assembly that addressed the Arian controversy and helped define core Christian doctrines.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Sylvester’s reign also saw the construction of several major churches, including Old St. Peter’s Basilica, the Basilica of the Holy Cross in Jerusalem, and the Archbasilica of Saint John Lateran.  His legacy endures in the liturgical calendar, where his feast is celebrated on 31 December in the Western Church and on 2 January in the Eastern Church; in German‑speaking regions this day is known as Silvester, a tradition that has even inspired the annual Saint Silvester Road Race in São Paulo.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Sylvester convened the Council of Arles in 314, which condemned the Donatist sect.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He presided over the First Council of Nicaea in 325, which sought to resolve the Arian controversy.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "During his pontificate, major churches such as Old St. Peter’s Basilica, the Basilica of the Holy Cross in Jerusalem, and the Archbasilica of Saint John Lateran were founded or expanded.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "His feast day is celebrated on 31 December in the Western Church and on 2 January in the Eastern Church, and the name Silvester is used for New Year’s Eve in German‑speaking countries.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "The forged Donation of Constantine claims that Sylvester was offered the imperial crown, which he allegedly refused.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Legendary accounts state that Sylvester baptized Emperor Constantine and cured him of leprosy, a story that has been cited in medieval political theology.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Some medieval fables depict Sylvester slaying a dragon, a motif that appears in artistic representations of the saint.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Sylvester_I.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Sylvester_I.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Sylvester_I.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Sylvester_I.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Sylvester_I_and_Constantine.jpg: User:Alex1011 derivative work: Kostisl (talk)",
+    "author": "Sylvester_I_and_Constantine.jpg: User:Alex1011 derivative work: Kostisl (talk)",
+    "width": 145,
+    "height": 203,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Sylvester I",
+    "url": "https://en.wikipedia.org/wiki/Pope_Sylvester_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-18T23:12:32.672Z"
+  }
+}

@@ -97,6 +97,7 @@ export const fetchWikiSnapshot = async (title: string): Promise<WikiSnapshot> =>
     query?: {
       pages?: Array<{
         missing?: boolean;
+        title?: string;
         pageprops?: {
           wikibase_item?: string;
         };
@@ -125,7 +126,24 @@ export const fetchWikiSnapshot = async (title: string): Promise<WikiSnapshot> =>
     commonsTitle,
   );
 
+  const fullText = stripExcludedSections(withExpandedCommons);
+  const links = (wtf(fullText).links() as unknown as Array<{
+    page(): string;
+    text(): string;
+    type(): string;
+  }>).filter((link) => link.type() === "internal");
+
   return {
-    fullText: stripExcludedSections(withExpandedCommons),
+    fullText,
+    links: Array.from(
+      new Map(
+        links.map((link) => [
+          `${link.text()}\0${link.page()}`,
+          { label: link.text(), title: link.page() },
+        ]),
+      ).values(),
+    ),
+    title: page.title ?? title,
+    ...(wikidataId ? { wikidataId } : {}),
   };
 };

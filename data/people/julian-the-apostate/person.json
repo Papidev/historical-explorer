@@ -1,0 +1,81 @@
+{
+  "id": "julian-the-apostate",
+  "name": "Julian the Apostate",
+  "wikidataId": "Q33941",
+  "wikipediaTitle": "Julian (emperor)",
+  "content": {
+    "description": [
+      {
+        "text": "Julian was born in 331 in Constantinople to Julius Constantius, a half‑brother of Emperor Constantine I, and Basilina, a Bithynian noblewoman.  After his mother died shortly after his birth, he was raised in the imperial court and received a Greek education that would later shape his philosophical outlook.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "In 355 he was appointed Caesar of the Western Empire, where he successfully defended Gaul against Germanic incursions and restored provincial prosperity.  After Constantius II’s death in 361, Julian became sole emperor and pursued a policy of religious restoration, reviving pagan temples, expelling Christians from the army, and attempting to rebuild the Jewish Temple in Jerusalem.  His reign ended in 363 when he was mortally wounded during a campaign against the Sasanian Empire.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Julian was the last non‑Christian ruler of the Roman Empire.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "During his reign he attempted to rebuild the Jewish Temple in Jerusalem, a project that was ultimately abandoned.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He was a noted philosopher and author in Greek, producing works that combined Neoplatonic thought with pagan religious practice.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Julian served as Caesar of the Western Roman Empire from 355 to 360 before becoming emperor in 361.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": 331,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 363,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Gold_Solidus_of_Julian_the_Apostate,_Sirmium.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Gold_Solidus_of_Julian_the_Apostate%2C_Sirmium.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Gold_Solidus_of_Julian_the_Apostate%2C_Sirmium.jpg/960px-Gold_Solidus_of_Julian_the_Apostate%2C_Sirmium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Gold_Solidus_of_Julian_the_Apostate%2C_Sirmium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "ANS",
+    "author": "ANS",
+    "width": 2652,
+    "height": 2678,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Julian (emperor)",
+    "url": "https://en.wikipedia.org/wiki/Julian_(emperor)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-18T23:30:04.275Z"
+  }
+}

@@ -12,6 +12,7 @@ export type Source = {
   title: string;
   url: string;
   content: string;
+  links?: Array<{ label: string; title: string }>;
 };
 
 export type DraftMainImage = MainImageCandidate;
@@ -28,6 +29,7 @@ export type DraftStoryGenerationStatus = {
   sources?: GenerationCheckpoint;
   mainImageCandidates?: GenerationCheckpoint;
   storyContent?: GenerationCheckpoint;
+  relatedPeople?: GenerationCheckpoint;
 };
 
 export type DraftStorySnapshot = {
@@ -44,6 +46,18 @@ export type DraftStoryGenerationResult = {
   mainImageCandidates: "generated" | "failed";
   draftMainImage: "available" | "missing";
   storyContent: "generated";
+  relatedPeople: "resolved" | "partial";
+  relatedPeopleFailures: RelatedPeopleResolutionFailure[];
+};
+
+export type RelatedPeopleResolutionFailure = {
+  name: string;
+  message: string;
+};
+
+export type RelatedPeopleResolutionResult = {
+  relatedPeople: StoryContent["relatedPeople"];
+  failures: RelatedPeopleResolutionFailure[];
 };
 
 export type StoryWorkflowErrorCode =
@@ -75,7 +89,10 @@ export class StoryWorkflowError extends Error {
     retryable: boolean;
     cause?: unknown;
   }) {
-    super(code, { cause });
+    super(
+      cause instanceof Error && cause.message ? `${code}: ${cause.message}` : code,
+      { cause },
+    );
     this.name = "StoryWorkflowError";
     this.code = code;
     this.stage = stage;
@@ -90,8 +107,17 @@ export type StoryWorkflow = {
     reset(input: { poiId: string }): Promise<void>;
   };
   storyContent: {
-    generate(input: { poiId: string; ai: AiSelection }): Promise<void>;
+    generate(input: {
+      poiId: string;
+      ai: AiSelection;
+    }): Promise<RelatedPeopleResolutionResult>;
     delete(input: { poiId: string }): Promise<void>;
+  };
+  relatedPeople: {
+    resolve(input: {
+      poiId: string;
+      ai: AiSelection;
+    }): Promise<RelatedPeopleResolutionResult>;
   };
   mainImageCandidates: {
     generate(input: { poiId: string }): Promise<void>;

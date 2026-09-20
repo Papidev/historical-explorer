@@ -4,7 +4,7 @@ import { useState } from "react";
 import { ListboxSelect } from "@/app/components/ui/ListboxSelect";
 import { Toggle } from "@/app/components/ui/Toggle";
 import type { AiMode, AiModeOption, AiSelection } from "../lib/aiModels";
-import type { AdminPoiRow } from "../lib/types";
+import type { AdminAction, AdminPoiRow } from "../lib/types";
 import { PoiRowsTable } from "./PoiRowsTable";
 
 const getModeOption = (aiModeOptions: readonly AiModeOption[], mode: AiMode) =>
@@ -17,6 +17,7 @@ export const AdminDashboard = ({
   generateDraftStoryAction,
   resetDraftStoryAction,
   refreshStoryContentAction,
+  resolveRelatedPeopleAction,
   deleteStoryContentAction,
   refreshMainImageCandidatesAction,
   deleteMainImageCandidatesAction,
@@ -25,12 +26,13 @@ export const AdminDashboard = ({
   rows: AdminPoiRow[];
   aiModeOptions: readonly AiModeOption[];
   initialAiSelection: AiSelection;
-  generateDraftStoryAction: (formData: FormData) => Promise<void>;
-  resetDraftStoryAction: (formData: FormData) => Promise<void>;
-  refreshStoryContentAction: (formData: FormData) => Promise<void>;
-  deleteStoryContentAction: (formData: FormData) => Promise<void>;
-  refreshMainImageCandidatesAction: (formData: FormData) => Promise<void>;
-  deleteMainImageCandidatesAction: (formData: FormData) => Promise<void>;
+  generateDraftStoryAction: AdminAction;
+  resetDraftStoryAction: AdminAction;
+  refreshStoryContentAction: AdminAction;
+  resolveRelatedPeopleAction: AdminAction;
+  deleteStoryContentAction: AdminAction;
+  refreshMainImageCandidatesAction: AdminAction;
+  deleteMainImageCandidatesAction: AdminAction;
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => {
   const [selectedAiMode, setSelectedAiMode] = useState(initialAiSelection.mode);
@@ -89,6 +91,7 @@ export const AdminDashboard = ({
         generateDraftStoryAction={generateDraftStoryAction}
         resetDraftStoryAction={resetDraftStoryAction}
         refreshStoryContentAction={refreshStoryContentAction}
+        resolveRelatedPeopleAction={resolveRelatedPeopleAction}
         deleteStoryContentAction={deleteStoryContentAction}
         refreshMainImageCandidatesAction={refreshMainImageCandidatesAction}
         deleteMainImageCandidatesAction={deleteMainImageCandidatesAction}

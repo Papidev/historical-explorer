@@ -47,6 +47,9 @@ export type ResolvedPage = {
 
 export type WikiSnapshot = {
   fullText: string;
+  links: Array<{ label: string; title: string }>;
+  title: string;
+  wikidataId?: string;
 };
 
 export type MainImageDiscoveredVia = "wikidata-p18" | "wikipedia-page-image";

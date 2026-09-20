@@ -1,0 +1,85 @@
+{
+  "id": "gian-lorenzo-bernini",
+  "name": "Gian Lorenzo Bernini",
+  "wikidataId": "Q160538",
+  "wikipediaTitle": "Gian Lorenzo Bernini",
+  "content": {
+    "description": [
+      {
+        "text": "Gian Lorenzo Bernini was born on 7 December 1598 in Naples to the sculptor Pietro Bernini and his wife Angelica Galante.  From the age of eight he was already recognised as a prodigy, and his talent was quickly noticed by the papal court.  In 1606 the family moved to Rome, where Bernini’s early works—such as the marble reliefs for the Cappella Paolina of Santa Maria Maggiore—were produced in collaboration with his father.  By 1619 he had completed a series of celebrated sculptures for the Borghese family, including the dramatic group of Apollo and Daphne, which established him as the leading sculptor of his generation.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Bernini’s career expanded beyond sculpture into architecture, city planning and even theatre.  He designed the magnificent Baldacchino over St. Peter’s altar, the Four Rivers Fountain in Piazza Navona, and the colonnades of St. Peter’s Square, all of which exemplify the Baroque style’s theatrical dynamism.  His ambition also led him to Rome’s most important civic projects, but a disastrous bell‑tower scheme for St. Peter’s caused a temporary fall from favour.  In 1665 he travelled to Paris for five months to work for King Louis XIV, though his designs for the Louvre were ultimately rejected.  Throughout his life Bernini remained a central figure in Rome’s artistic and architectural life, shaping the city’s visual identity for generations.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Pope Paul V famously called Bernini the “Michelangelo of his age,” a comparison that underscored the young artist’s extraordinary skill.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Beyond sculpture, Bernini wrote, directed, and acted in Carnival satires, designing elaborate stage sets and theatrical machinery for his performances.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "The failed bell‑tower project at St. Peter’s, which collapsed under criticism, led to Bernini’s temporary disgrace during the papacy of Innocent X.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "During his five‑month stay in Paris, Bernini presented designs for the east façade of the Louvre, but the French court rejected them, and the project was never built.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": 1598,
+      "month": 12,
+      "day": 7,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1680,
+      "month": 11,
+      "day": 28,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Gian_Lorenzo_Bernini,_self-portrait,_c1623.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Gian_Lorenzo_Bernini%2C_self-portrait%2C_c1623.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Gian_Lorenzo_Bernini%2C_self-portrait%2C_c1623.jpg/960px-Gian_Lorenzo_Bernini%2C_self-portrait%2C_c1623.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Gian_Lorenzo_Bernini%2C_self-portrait%2C_c1623.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Gian Lorenzo Bernini",
+    "author": "Gian Lorenzo Bernini",
+    "width": 3485,
+    "height": 4532,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Gian Lorenzo Bernini",
+    "url": "https://en.wikipedia.org/wiki/Gian_Lorenzo_Bernini"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-18T23:38:14.648Z"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "introduction": {
-    "text": "Piazza Navona is a public open space in Rome, Italy, built on the site of the 1st century AD Stadium of Domitian. It retains the stadium's elongated oval form and became a significant showcase for Baroque design in the 17th century.",
+    "text": "Piazza Navona is a historic public square in Rome built on the site of the 1st‑century AD Stadium of Domitian. It is renowned for its Baroque architecture, iconic fountains, and its role as a cultural gathering place.",
     "sourceIds": [
       "wikipedia"
     ]
@@ -8,11 +8,8 @@
   "topics": {
     "history": [
       {
-        "id": "history-1",
-        "description": "The site of Piazza Navona was originally the Stadium of Domitian, constructed by Emperor Titus Flavius Domitianus.",
-        "relatedPersonIds": [
-          "domitian"
-        ],
+        "id": "stadium-of-domitian",
+        "description": "The original stadium was constructed by Emperor Domitian in 80 AD.",
         "sourceIds": [
           "wikipedia"
         ],
@@ -23,101 +20,43 @@
         }
       },
       {
-        "id": "history-2",
-        "description": "The area was defined as a public space in the last years of the 15th century when the city market was moved there from the Campidoglio.",
-        "relatedPersonIds": [],
-        "sourceIds": [
-          "wikipedia"
-        ],
-        "time": {
-          "startYear": 1400,
-          "precision": "approximate",
-          "endYear": 1499,
-          "granularity": "century"
-        }
-      },
-      {
-        "id": "history-3",
-        "description": "Piazza Navona was transformed into a significant example of Baroque Roman architecture and art during the pontificate of Innocent X.",
-        "relatedPersonIds": [
-          "innocent-x"
-        ],
-        "sourceIds": [
-          "wikipedia"
-        ],
-        "time": {
-          "startYear": 1644,
-          "precision": "exact",
-          "endYear": 1655,
-          "granularity": "year"
-        }
-      },
-      {
-        "id": "history-4",
-        "description": "From 1652 until 1866, the piazza was intentionally flooded on Saturdays and Sundays in August for elaborate celebrations by the Pamphili family.",
-        "relatedPersonIds": [],
-        "sourceIds": [
-          "wikipedia"
-        ],
-        "time": {
-          "startYear": 1652,
-          "precision": "exact",
-          "endYear": 1866,
-          "granularity": "year"
-        }
-      },
-      {
-        "id": "history-5",
-        "description": "The pavement level of the piazza was raised during the 19th century.",
-        "relatedPersonIds": [],
-        "sourceIds": [
-          "wikipedia"
-        ],
-        "time": {
-          "startYear": 1800,
-          "precision": "approximate",
-          "endYear": 1899,
-          "granularity": "century"
-        }
-      },
-      {
-        "id": "history-6",
-        "description": "The market was moved from Piazza Navona to the nearby Campo de' Fiori in 1869.",
-        "relatedPersonIds": [],
-        "sourceIds": [
-          "wikipedia"
-        ],
-        "time": {
-          "startYear": 1869,
-          "precision": "exact",
-          "granularity": "year"
-        }
-      },
-      {
-        "id": "history-7",
-        "description": "In 2011, the Fontana del Moro was damaged by a vandal who decapitated some of its figures.",
-        "relatedPersonIds": [],
-        "sourceIds": [
-          "wikipedia"
-        ],
-        "time": {
-          "startYear": 2011,
-          "precision": "exact",
-          "granularity": "year"
-        }
-      },
-      {
-        "id": "history-8",
-        "description": "After the Fall of the Western Roman Empire, the stadium fell into ruin and its materials were quarried for other buildings.",
-        "relatedPersonIds": [],
+        "id": "fountains-1574-1575",
+        "description": "The Fountain of Neptune (1574) and the Fountain of the Moor (1575) were created by Giacomo della Porta.",
         "sourceIds": [
           "wikipedia"
         ]
       },
       {
-        "id": "history-9",
-        "description": "A Christmas market is held annually in the piazza from early December to early January.",
-        "relatedPersonIds": [],
+        "id": "fontana-quattro-fiumi-1651",
+        "description": "The Fountain of the Four Rivers (1651) was designed by Gian Lorenzo Bernini.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "baroque-transformation",
+        "description": "During the pontificate of Innocent X (1644‑1655) the piazza was transformed into a Baroque masterpiece.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "flooding-1652-1866",
+        "description": "From 1652 until 1866 the piazza was flooded on weekends in August for Pamphili family celebrations.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "market-move-1869",
+        "description": "In 1869 the market was moved to Campo de' Fiori.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "vandalism-2011",
+        "description": "In September 2011 the Fountain of the Moor was damaged by vandalism.",
         "sourceIds": [
           "wikipedia"
         ]
@@ -125,70 +64,8 @@
     ],
     "design": [
       {
-        "id": "design-1",
-        "description": "Piazza Navona retains the elongated oval form of the 1st century AD Stadium of Domitian, on which it was built.",
-        "relatedPersonIds": [],
-        "sourceIds": [
-          "wikipedia"
-        ]
-      },
-      {
-        "id": "design-2",
-        "description": "The piazza became a significant showcase for Baroque design in the 17th century, featuring works by prominent architects and sculptors.",
-        "relatedPersonIds": [],
-        "sourceIds": [
-          "wikipedia"
-        ]
-      },
-      {
-        "id": "design-3",
-        "description": "The central Fontana dei Quattro Fiumi, completed in 1651, was designed by Gian Lorenzo Bernini and features an obelisk.",
-        "relatedPersonIds": [
-          "gian-lorenzo-bernini"
-        ],
-        "sourceIds": [
-          "wikipedia"
-        ]
-      },
-      {
-        "id": "design-4",
-        "description": "The Church of Sant'Agnese in Agone was designed by Francesco Borromini, Girolamo Rainaldi, and Carlo Rainaldi.",
-        "relatedPersonIds": [
-          "francesco-borromini",
-          "girolamo-rainaldi",
-          "carlo-rainaldi"
-        ],
-        "sourceIds": [
-          "wikipedia"
-        ]
-      },
-      {
-        "id": "design-5",
-        "description": "The Palazzo Pamphili, facing the piazza, was designed by Girolamo Rainaldi and includes a long gallery by Francesco Borromini.",
-        "relatedPersonIds": [
-          "girolamo-rainaldi",
-          "francesco-borromini"
-        ],
-        "sourceIds": [
-          "wikipedia"
-        ]
-      },
-      {
-        "id": "design-6",
-        "description": "At the southern end, the Fontana del Moro features a basin and four Tritons sculpted by Giacomo della Porta in 1575.",
-        "relatedPersonIds": [
-          "giacomo-della-porta"
-        ],
-        "sourceIds": [
-          "wikipedia"
-        ]
-      },
-      {
-        "id": "design-7",
-        "description": "The Fountain of Neptune at the northern end was also created by Giacomo della Porta in 1574.",
-        "relatedPersonIds": [
-          "giacomo-della-porta"
-        ],
+        "id": "baroque-design",
+        "description": "The piazza exemplifies Baroque design with contributions from Bernini, Borromini, and other architects.",
         "sourceIds": [
           "wikipedia"
         ]
@@ -196,43 +73,22 @@
     ],
     "art": [
       {
-        "id": "art-1",
-        "description": "Gian Lorenzo Bernini sculpted the Fontana dei Quattro Fiumi, completed in 1651, which is topped by the Obelisk of Domitian.",
-        "relatedPersonIds": [
-          "gian-lorenzo-bernini"
-        ],
+        "id": "fontana-quattro-fiumi",
+        "description": "Bernini’s Fountain of the Four Rivers features four river gods and an obelisk.",
         "sourceIds": [
           "wikipedia"
         ]
       },
       {
-        "id": "art-2",
-        "description": "The long gallery within the Palazzo Pamphili features frescoes by Pietro da Cortona.",
-        "relatedPersonIds": [
-          "pietro-da-cortona"
-        ],
+        "id": "fontana-moro",
+        "description": "The Fountain of the Moor displays a Moor wrestling with a dolphin.",
         "sourceIds": [
           "wikipedia"
         ]
       },
       {
-        "id": "art-3",
-        "description": "In 1673, Gian Lorenzo Bernini added a statue of a Moor wrestling with a dolphin to Giacomo della Porta's Fontana del Moro.",
-        "relatedPersonIds": [
-          "gian-lorenzo-bernini",
-          "giacomo-della-porta"
-        ],
-        "sourceIds": [
-          "wikipedia"
-        ]
-      },
-      {
-        "id": "art-4",
-        "description": "Antonio Della Bitta added the statue of Neptune to Giacomo della Porta's Fountain of Neptune in 1878 to balance the Fontana del Moro.",
-        "relatedPersonIds": [
-          "antonio-della-bitta",
-          "giacomo-della-porta"
-        ],
+        "id": "fountain-neptune",
+        "description": "The Fountain of Neptune, added in 1878, balances the Moor fountain.",
         "sourceIds": [
           "wikipedia"
         ]
@@ -241,73 +97,58 @@
   },
   "relatedPeople": [
     {
-      "id": "domitian",
-      "name": "Emperor Titus Flavius Domitianus",
-      "relationship": "Roman Emperor who built the original stadium.",
+      "name": "Domitian",
+      "personId": "domitian",
       "sourceIds": [
         "wikipedia"
       ]
     },
     {
-      "id": "innocent-x",
-      "name": "Pope Innocent X",
-      "relationship": "Pope during the Baroque transformation of Piazza Navona.",
-      "sourceIds": [
-        "wikipedia"
-      ]
-    },
-    {
-      "id": "gian-lorenzo-bernini",
       "name": "Gian Lorenzo Bernini",
-      "relationship": "Sculptor of the Fontana dei Quattro Fiumi and contributor to the Fontana del Moro.",
+      "personId": "gian-lorenzo-bernini",
       "sourceIds": [
         "wikipedia"
       ]
     },
     {
-      "id": "francesco-borromini",
       "name": "Francesco Borromini",
-      "relationship": "Architect of Sant'Agnese in Agone and designer of the Palazzo Pamphili long gallery.",
+      "personId": "francesco-borromini",
       "sourceIds": [
         "wikipedia"
       ]
     },
     {
-      "id": "girolamo-rainaldi",
-      "name": "Girolamo Rainaldi",
-      "relationship": "Architect of Sant'Agnese in Agone and Palazzo Pamphili.",
-      "sourceIds": [
-        "wikipedia"
-      ]
-    },
-    {
-      "id": "carlo-rainaldi",
-      "name": "Carlo Rainaldi",
-      "relationship": "Architect of Sant'Agnese in Agone.",
-      "sourceIds": [
-        "wikipedia"
-      ]
-    },
-    {
-      "id": "pietro-da-cortona",
-      "name": "Pietro da Cortona",
-      "relationship": "Artist who frescoed the long gallery in Palazzo Pamphili.",
-      "sourceIds": [
-        "wikipedia"
-      ]
-    },
-    {
-      "id": "giacomo-della-porta",
       "name": "Giacomo della Porta",
-      "relationship": "Sculptor of the Fontana del Moro basin and Tritons, and creator of the Fountain of Neptune.",
       "sourceIds": [
         "wikipedia"
       ]
     },
     {
-      "id": "antonio-della-bitta",
+      "name": "Innocent X",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Girolamo Rainaldi",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Carlo Rainaldi",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Pietro da Cortona",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
       "name": "Antonio Della Bitta",
-      "relationship": "Sculptor of the Neptune statue for the Fountain of Neptune.",
       "sourceIds": [
         "wikipedia"
       ]

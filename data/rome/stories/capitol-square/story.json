@@ -10,9 +10,6 @@
       {
         "id": "h3",
         "description": "The Palazzo dei Conservatori was originally built in 1453 by Pope Nicholas V on the site of a 6th‑century temple.",
-        "relatedPersonIds": [
-          "p4"
-        ],
         "sourceIds": [
           "wikipedia"
         ],
@@ -25,9 +22,6 @@
       {
         "id": "h2",
         "description": "The Capitoline Museums were founded in 1471 when Pope Sixtus IV donated key statues, including the Capitoline Wolf.",
-        "relatedPersonIds": [
-          "p3"
-        ],
         "sourceIds": [
           "wikipedia"
         ],
@@ -40,10 +34,6 @@
       {
         "id": "h1",
         "description": "The square was redesigned by Michelangelo between 1534 and 1538 at the behest of Pope Paul III to impress Emperor Charles V.",
-        "relatedPersonIds": [
-          "p1",
-          "p2"
-        ],
         "sourceIds": [
           "wikipedia"
         ],
@@ -57,9 +47,6 @@
       {
         "id": "h4",
         "description": "The square’s oval pavement and star pattern were completed in 1546, reflecting Michelangelo’s geometric vision.",
-        "relatedPersonIds": [
-          "p1"
-        ],
         "sourceIds": [
           "wikipedia"
         ],
@@ -72,7 +59,6 @@
       {
         "id": "h5",
         "description": "The Palazzo Nuovo was constructed in 1603 and finished in 1654, completing the symmetrical ensemble.",
-        "relatedPersonIds": [],
         "sourceIds": [
           "wikipedia"
         ],
@@ -86,9 +72,6 @@
       {
         "id": "h7",
         "description": "In 1940, Antonio Muñoz completed the paving of the square according to Michelangelo’s design.",
-        "relatedPersonIds": [
-          "p5"
-        ],
         "sourceIds": [
           "wikipedia"
         ],
@@ -101,9 +84,6 @@
       {
         "id": "h6",
         "description": "The Cordonata ramp was built in the 16th century to allow horse riders to ascend the hill.",
-        "relatedPersonIds": [
-          "p1"
-        ],
         "sourceIds": [
           "wikipedia"
         ]
@@ -113,9 +93,6 @@
       {
         "id": "d1",
         "description": "Michelangelo’s redesign turned the square’s orientation toward St. Peter’s Basilica, moving the civic focus from the Forum.",
-        "relatedPersonIds": [
-          "p1"
-        ],
         "sourceIds": [
           "wikipedia"
         ]
@@ -123,9 +100,6 @@
       {
         "id": "d2",
         "description": "The double staircase (Cordonata) provides a dramatic ascent to the Palazzo Senatorio, a hallmark of Renaissance urban design.",
-        "relatedPersonIds": [
-          "p1"
-        ],
         "sourceIds": [
           "wikipedia"
         ]
@@ -133,9 +107,6 @@
       {
         "id": "d3",
         "description": "The oval pavement features a twelve‑pointed star at its centre, a geometric motif that guides visitors to the equestrian statue.",
-        "relatedPersonIds": [
-          "p1"
-        ],
         "sourceIds": [
           "wikipedia"
         ]
@@ -143,9 +114,6 @@
       {
         "id": "d4",
         "description": "The façades of the Palazzo dei Conservatori and Palazzo Nuovo were redesigned with giant order pilasters and balustraded cornices, creating visual harmony.",
-        "relatedPersonIds": [
-          "p1"
-        ],
         "sourceIds": [
           "wikipedia"
         ]
@@ -153,9 +121,6 @@
       {
         "id": "d5",
         "description": "The Cordonata ramp is decorated with statues of the Tiber and Nile river gods, symbolising Rome’s dominion over the seas.",
-        "relatedPersonIds": [
-          "p1"
-        ],
         "sourceIds": [
           "wikipedia"
         ]
@@ -165,9 +130,6 @@
       {
         "id": "a1",
         "description": "The equestrian statue of Marcus Aurelius, originally placed in the square, is a bronze copy of the original kept in the museum.",
-        "relatedPersonIds": [
-          "p6"
-        ],
         "sourceIds": [
           "wikipedia"
         ]
@@ -175,9 +137,6 @@
       {
         "id": "a2",
         "description": "The Capitoline Wolf sculpture, donated by Pope Sixtus IV in 1471, is displayed in the Palazzo dei Conservatori.",
-        "relatedPersonIds": [
-          "p3"
-        ],
         "sourceIds": [
           "wikipedia"
         ]
@@ -185,9 +144,6 @@
       {
         "id": "a3",
         "description": "The marble statues of the Tiber and Nile river gods flank the staircase, representing Rome’s maritime power.",
-        "relatedPersonIds": [
-          "p1"
-        ],
         "sourceIds": [
           "wikipedia"
         ]
@@ -196,49 +152,37 @@
   },
   "relatedPeople": [
     {
-      "id": "p1",
       "name": "Michelangelo di Lodovico Buonarroti",
-      "relationship": "designer",
       "sourceIds": [
         "wikipedia"
       ]
     },
     {
-      "id": "p2",
       "name": "Pope Paul III",
-      "relationship": "patron",
       "sourceIds": [
         "wikipedia"
       ]
     },
     {
-      "id": "p3",
       "name": "Pope Sixtus IV",
-      "relationship": "patron",
       "sourceIds": [
         "wikipedia"
       ]
     },
     {
-      "id": "p4",
       "name": "Pope Nicholas V",
-      "relationship": "patron",
       "sourceIds": [
         "wikipedia"
       ]
     },
     {
-      "id": "p5",
       "name": "Antonio Muñoz",
-      "relationship": "paving architect",
       "sourceIds": [
         "wikipedia"
       ]
     },
     {
-      "id": "p6",
       "name": "Marcus Aurelius",
-      "relationship": "subject of statue",
       "sourceIds": [
         "wikipedia"
       ]

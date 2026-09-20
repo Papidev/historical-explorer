@@ -5,6 +5,7 @@ import {
   generateDraftStory,
   refreshStoryContent,
   refreshMainImageCandidates,
+  resolveRelatedPeople,
   resetDraftStory,
   selectMainImageCandidate,
 } from "./lib/actions";
@@ -37,6 +38,7 @@ export default async function AdminPage() {
           generateDraftStoryAction={generateDraftStory}
           resetDraftStoryAction={resetDraftStory}
           refreshStoryContentAction={refreshStoryContent}
+          resolveRelatedPeopleAction={resolveRelatedPeople}
           deleteStoryContentAction={deleteStoryContent}
           refreshMainImageCandidatesAction={refreshMainImageCandidates}
           deleteMainImageCandidatesAction={deleteMainImageCandidates}

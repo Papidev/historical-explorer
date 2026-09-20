@@ -66,6 +66,7 @@ export const createFilesystemStoryWorkflowRepository = (
       !mainImageArtifact &&
       !metadata.wiki &&
       !metadata.storyContent &&
+      !metadata.relatedPeople &&
       !metadata.image
     ) {
       return undefined;
@@ -84,6 +85,7 @@ export const createFilesystemStoryWorkflowRepository = (
         sources: metadata.wiki,
         mainImageCandidates: metadata.image,
         storyContent: metadata.storyContent,
+        relatedPeople: metadata.relatedPeople,
       },
     };
   },
@@ -105,6 +107,7 @@ export const createFilesystemStoryWorkflowRepository = (
           kind: source.kind,
           title: source.title,
           url: source.url,
+          links: source.links,
         },
         null,
         2,
@@ -124,10 +127,13 @@ export const createFilesystemStoryWorkflowRepository = (
       `[wiki-images] Saved ${candidates.length} Main Image Candidates for ${poiId} to ${outputFilePath}.`,
     );
   },
-  replaceStoryContent: async (poiId, storyContent, checkpoint) => {
+  replaceStoryContent: async (poiId, storyContent, checkpoint, relatedPeopleCheckpoint) => {
     const outputFilePath = buildStoryContentFilePath(city, poiId);
     writeAtomically(outputFilePath, `${JSON.stringify(storyContent, null, 2)}\n`);
     replaceGenerationCheckpoint(city, poiId, "storyContent", checkpoint);
+    if (relatedPeopleCheckpoint) {
+      replaceGenerationCheckpoint(city, poiId, "relatedPeople", relatedPeopleCheckpoint);
+    }
     console.info(`[story-content] Saved Story Content for ${poiId} to ${outputFilePath}.`);
   },
   selectDraftMainImage: async (poiId, commonsFileName) => {
@@ -142,7 +148,7 @@ export const createFilesystemStoryWorkflowRepository = (
   },
   deleteStoryContent: async (poiId) => {
     deleteFile(buildStoryContentFilePath(city, poiId));
-    deleteGenerationCheckpoints(city, poiId, ["storyContent"]);
+    deleteGenerationCheckpoints(city, poiId, ["storyContent", "relatedPeople"]);
   },
   deleteMainImageCandidates: async (poiId) => {
     deleteFile(buildMainImageCandidateArtifactFilePath(city, poiId));
@@ -153,7 +159,7 @@ export const createFilesystemStoryWorkflowRepository = (
     deleteFile(buildSourceMetadataFilePath(getDefaultOutputDir(city), poiId));
     deleteFile(buildStoryContentFilePath(city, poiId));
     deleteFile(buildMainImageCandidateArtifactFilePath(city, poiId));
-    deleteGenerationCheckpoints(city, poiId, ["wiki", "storyContent", "image"]);
+    deleteGenerationCheckpoints(city, poiId, ["wiki", "storyContent", "relatedPeople", "image"]);
   },
 });
 

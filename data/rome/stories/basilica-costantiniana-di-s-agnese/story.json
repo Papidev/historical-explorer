@@ -1,6 +1,6 @@
 {
   "introduction": {
-    "text": "The Mausoleum of Constantina, also known as Santa Costanza, is a 4th-century circular building in Rome, originally constructed for Constantina, daughter of Emperor Constantine I. It is considered one of the best-preserved examples of Late Antique and Early Christian art and architecture in Rome, featuring original mosaics.",
+    "text": "The Basilica costantiniana di S. Agnese, also known as Santa Costanza, is a Roman mausoleum-turned-church located just outside Rome's ancient walls. It is one of the best preserved examples of Late Antique architecture and contains some of the finest surviving mosaics from the 4th century, making it a key monument for understanding early Christian art and imperial funerary practices.",
     "sourceIds": [
       "wikipedia"
     ]
@@ -8,12 +8,8 @@
   "topics": {
     "history": [
       {
-        "id": "history-1",
-        "description": "Emperor Constantine I began building a funerary hall, an earlier basilica, in 338 AD. This basilica was adjacent to the Catacombs of Saint Agnes, where the martyr Saint Agnes was believed to be buried.",
-        "relatedPersonIds": [
-          "constantine-i",
-          "saint-agnes"
-        ],
+        "id": "history1",
+        "description": "Construction of the Constantinian basilica (funerary hall) began in 338 AD under Emperor Constantine I.",
         "sourceIds": [
           "wikipedia"
         ],
@@ -24,28 +20,32 @@
         }
       },
       {
-        "id": "history-2",
-        "description": "The mausoleum itself was constructed around 350 AD for Constantina, the daughter of Emperor Constantine I. Excavations in 1992 suggest an earlier building, possibly a baptistry, existed beneath, where Constantina and her paternal aunt were baptized by Pope Silvester I.",
-        "relatedPersonIds": [
-          "constantina",
-          "constantine-i",
-          "pope-silvester-i"
-        ],
+        "id": "history2",
+        "description": "The mausoleum of Constantina was built around 350 AD, adjacent to the earlier basilica.",
         "sourceIds": [
           "wikipedia"
         ],
         "time": {
           "startYear": 350,
-          "precision": "approximate",
+          "precision": "exact",
           "granularity": "year"
         }
       },
       {
-        "id": "history-5",
-        "description": "Pope Nicholas I celebrated mass in the building in 865 AD, which is the first recorded instance of it being referred to as 'Santa Costanza'.",
-        "relatedPersonIds": [
-          "pope-nicholas-i"
+        "id": "history3",
+        "description": "Constantina died in 354 AD, and her sarcophagus was placed in the mausoleum.",
+        "sourceIds": [
+          "wikipedia"
         ],
+        "time": {
+          "startYear": 354,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Pope Nicholas I celebrated mass in the building in 865 AD, the first recorded use of the name Santa Costanza.",
         "sourceIds": [
           "wikipedia"
         ],
@@ -56,12 +56,8 @@
         }
       },
       {
-        "id": "history-6",
-        "description": "The mausoleum was formally consecrated as a church in 1254 AD by Pope Alexander IV, who then moved Constantina's presumed remains from her sarcophagus to a central altar.",
-        "relatedPersonIds": [
-          "pope-alexander-iv",
-          "constantina"
-        ],
+        "id": "history5",
+        "description": "The building was consecrated as a church in 1254 by Pope Alexander IV.",
         "sourceIds": [
           "wikipedia"
         ],
@@ -72,93 +68,22 @@
         }
       },
       {
-        "id": "history-7",
-        "description": "The veneration of Constantina as 'Santa Costanza' (Saint Constance) became known from the 16th century onward.",
-        "relatedPersonIds": [
-          "constantina"
-        ],
+        "id": "history6",
+        "description": "Excavations in 1992 uncovered an earlier building beneath the mausoleum, providing evidence of its early use.",
         "sourceIds": [
           "wikipedia"
         ],
         "time": {
-          "startYear": 1500,
-          "endYear": 1599,
-          "precision": "approximate",
-          "granularity": "century"
+          "startYear": 1992,
+          "precision": "exact",
+          "granularity": "year"
         }
-      },
-      {
-        "id": "history-3",
-        "description": "Constantina's body was transported from Bithynia, and her sister Helena's from Gaul, to be interred in the mausoleum.",
-        "relatedPersonIds": [
-          "constantina",
-          "helena"
-        ],
-        "sourceIds": [
-          "wikipedia"
-        ]
-      },
-      {
-        "id": "history-4",
-        "description": "The Constantinian basilica gradually fell into disuse and ruin, but the Mausoleum of Constantina remained largely intact.",
-        "relatedPersonIds": [],
-        "sourceIds": [
-          "wikipedia"
-        ]
-      },
-      {
-        "id": "history-8",
-        "description": "An alternative theory suggests the current church might be a second Christian building on the site, possibly built decades later as a mausoleum for Constantina's sister Helena during the reign of her husband Julian the Apostate.",
-        "relatedPersonIds": [
-          "helena",
-          "julian-the-apostate",
-          "constantina"
-        ],
-        "sourceIds": [
-          "wikipedia"
-        ]
       }
     ],
     "design": [
       {
-        "id": "design-1",
-        "description": "The structure's original purpose was a mausoleum for Constantina or her sister Helena, rather than a church, which influenced its centralized design.",
-        "relatedPersonIds": [
-          "constantina",
-          "helena"
-        ],
-        "sourceIds": [
-          "wikipedia"
-        ]
-      },
-      {
-        "id": "design-2",
-        "description": "It features a circular, centralized plan with an ambulatory encircling a high central space topped by a shallow dome, which is raised on a round drum.",
-        "relatedPersonIds": [],
-        "sourceIds": [
-          "wikipedia"
-        ]
-      },
-      {
-        "id": "design-3",
-        "description": "Constructed from brick-faced concrete, the building's structure consists of two rings supported by twelve pairs of granite columns with composite capitals, separating the ambulatory from the central area.",
-        "relatedPersonIds": [],
-        "sourceIds": [
-          "wikipedia"
-        ]
-      },
-      {
-        "id": "design-4",
-        "description": "The design creates a contrast between the darker ambulatory and the brightly lit central dome, which receives light from twelve clerestory windows.",
-        "relatedPersonIds": [],
-        "sourceIds": [
-          "wikipedia"
-        ]
-      },
-      {
-        "id": "design-5",
-        "description": "The roof, designed as a dome and vault, represented a new architectural type, departing from earlier flat wooden roofs.",
-        "relatedPersonIds": [],
+        "id": "design1",
+        "description": "Santa Costanza is a circular, centralized structure with an ambulatory surrounding a shallow central dome on a drum, supported by twelve pairs of granite columns and twelve clerestory windows, creating a contrast between light and dark spaces.",
         "sourceIds": [
           "wikipedia"
         ]
@@ -166,67 +91,8 @@
     ],
     "art": [
       {
-        "id": "art-1",
-        "description": "The mausoleum contains significant examples of Early Christian art, particularly the well-preserved Late Roman mosaics in the ambulatory vaults and apses.",
-        "relatedPersonIds": [],
-        "sourceIds": [
-          "wikipedia"
-        ]
-      },
-      {
-        "id": "art-2",
-        "description": "The 4th-century mosaics in the ambulatory vault are contemporary with the building and feature largely secular designs, including vine and plant ornaments, geometric patterns, birds, and cupids harvesting grapes, reflecting a transition between pagan and Christian imagery.",
-        "relatedPersonIds": [],
-        "sourceIds": [
-          "wikipedia"
-        ]
-      },
-      {
-        "id": "art-3",
-        "description": "Two shallow apses in the ambulatory wall contain 5th or 7th-century mosaics depicting Christ as the Pantocrator, showing him giving the law to Saints Peter and Paul, and enthroned on a blue sphere handing keys to Saint Peter.",
-        "relatedPersonIds": [
-          "saint-peter",
-          "saint-paul"
-        ],
-        "sourceIds": [
-          "wikipedia"
-        ]
-      },
-      {
-        "id": "art-4",
-        "description": "These apse mosaics are early examples of Christian art incorporating Roman imperial imagery, portraying Christ with the power and authority of an emperor.",
-        "relatedPersonIds": [],
-        "sourceIds": [
-          "wikipedia"
-        ]
-      },
-      {
-        "id": "art-5",
-        "description": "The mosaics of the central dome are no longer extant, but watercolor copies made by Francisco de Holanda between 1538 and 1540 show biblical scenes.",
-        "relatedPersonIds": [
-          "francisco-de-holanda"
-        ],
-        "sourceIds": [
-          "wikipedia"
-        ]
-      },
-      {
-        "id": "art-6",
-        "description": "Two magnificent porphyry sarcophagi, traditionally associated with Constantina and her sister Helena, are now housed in the Vatican Museums.",
-        "relatedPersonIds": [
-          "constantina",
-          "helena"
-        ],
-        "sourceIds": [
-          "wikipedia"
-        ]
-      },
-      {
-        "id": "art-7",
-        "description": "Constantina's sarcophagus is adorned with complex relief designs of stylized vine-stems, cherubs, peacocks, and portraits, crafted from porphyry, a purple stone reserved for the imperial family.",
-        "relatedPersonIds": [
-          "constantina"
-        ],
+        "id": "art1",
+        "description": "The building houses well-preserved 4th‑century mosaics in the ambulatory and apses, featuring secular motifs such as vines, grapes, and cupids, as well as early Christian iconography like Christ Pantocrator and the Traditio Legis.",
         "sourceIds": [
           "wikipedia"
         ]
@@ -235,89 +101,55 @@
   },
   "relatedPeople": [
     {
-      "id": "constantina",
-      "name": "Constantina",
-      "relationship": "Daughter of Emperor Constantine I, for whom the mausoleum was built",
+      "name": "Constantina (Constantia)",
+      "personId": "constantina-constantia",
       "sourceIds": [
         "wikipedia"
       ]
     },
     {
-      "id": "constantine-i",
+      "name": "Helena (Constantine's mother)",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
       "name": "Constantine I",
-      "relationship": "Roman Emperor, father of Constantina, who built the adjacent basilica",
+      "personId": "constantine-i",
       "sourceIds": [
         "wikipedia"
       ]
     },
     {
-      "id": "saint-agnes",
       "name": "Saint Agnes",
-      "relationship": "Martyr, buried in nearby catacombs, inspiring Constantina's devotion",
       "sourceIds": [
         "wikipedia"
       ]
     },
     {
-      "id": "pope-silvester-i",
       "name": "Pope Silvester I",
-      "relationship": "Pope who baptized Constantina",
+      "personId": "pope-silvester-i",
       "sourceIds": [
         "wikipedia"
       ]
     },
     {
-      "id": "helena",
-      "name": "Helena",
-      "relationship": "Sister of Constantina, possibly also interred in the mausoleum",
-      "sourceIds": [
-        "wikipedia"
-      ]
-    },
-    {
-      "id": "pope-nicholas-i",
       "name": "Pope Nicholas I",
-      "relationship": "Pope who celebrated mass in the building in 865 AD",
+      "personId": "pope-nicholas-i",
       "sourceIds": [
         "wikipedia"
       ]
     },
     {
-      "id": "pope-alexander-iv",
       "name": "Pope Alexander IV",
-      "relationship": "Pope who consecrated the building as a church in 1254 AD",
+      "personId": "pope-alexander-iv",
       "sourceIds": [
         "wikipedia"
       ]
     },
     {
-      "id": "julian-the-apostate",
       "name": "Julian the Apostate",
-      "relationship": "Husband of Helena, associated with an alternative theory for the mausoleum's construction",
-      "sourceIds": [
-        "wikipedia"
-      ]
-    },
-    {
-      "id": "francisco-de-holanda",
-      "name": "Francisco de Holanda",
-      "relationship": "Artist who made watercolor copies of the central dome mosaics",
-      "sourceIds": [
-        "wikipedia"
-      ]
-    },
-    {
-      "id": "saint-peter",
-      "name": "Saint Peter",
-      "relationship": "Apostle, depicted in the apse mosaics receiving the law and keys from Christ",
-      "sourceIds": [
-        "wikipedia"
-      ]
-    },
-    {
-      "id": "saint-paul",
-      "name": "Saint Paul",
-      "relationship": "Apostle, depicted in an apse mosaic receiving the law from Christ",
+      "personId": "julian-the-apostate",
       "sourceIds": [
         "wikipedia"
       ]

@@ -1,0 +1,85 @@
+{
+  "id": "francesco-borromini",
+  "name": "Francesco Borromini",
+  "wikidataId": "Q123150",
+  "wikipediaTitle": "Francesco Borromini",
+  "content": {
+    "description": [
+      {
+        "text": "Francesco Borromini (25 September 1599 – 2 August 1667) was an Italian architect from the Swiss canton of Ticino who, alongside Gian Lorenzo Bernini and Pietro da Cortona, helped shape Roman Baroque architecture. Born in Bissone to a stonemason, he moved to Milan to study architecture and later to Rome in 1619, where he worked for Carlo Maderno on St. Peter’s and the Palazzo Barberini. He adopted the name Borromini after his mother’s family and possibly in honor of St. Charles Borromeo. His temperament—melancholic and quick‑to‑temper—often caused him to withdraw from commissions, and he ultimately took his own life in 1667.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Borromini’s designs are noted for their inventive manipulation of classical forms, geometric rationality, and symbolic meaning. He pioneered the use of interlocking geometries in the ground plan of San Carlo alle Quattro Fontane, creating a serpentine façade and a dome that integrates octagons, hexagons, and an oval opening. His work on the Oratory of Saint Philip Neri, Sant’Ivo alla Sapienza, and Sant’Agnese in Agone further exemplifies his idiosyncratic style, though later critics such as Francesco Milizia and Sir John Soane were harsh. Interest in his architecture revived in the late nineteenth century, and his influence can be seen in the Piedmontese works of Guarino Guarini and in Northern European late Baroque architecture.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "By the end of his life, Borromini had amassed a large personal library, reflecting his self‑taught scholarship.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He was featured on Swiss franc banknotes, a fact that sparked debate in Switzerland about his national identity.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Borromini committed suicide in 1667 by drawing his sword, a dramatic end that has been noted by historians.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He changed his surname from Castelli to Borromini, a name derived from his mother’s family and possibly in regard to St. Charles Borromeo.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": 1599,
+      "month": 9,
+      "day": 25,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1667,
+      "month": 8,
+      "day": 2,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Borromini.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Borromini.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Borromini.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Borromini.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "AnonymousUnknown author",
+    "author": "AnonymousUnknown author",
+    "width": 310,
+    "height": 418,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Francesco Borromini",
+    "url": "https://en.wikipedia.org/wiki/Francesco_Borromini"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-18T23:38:37.195Z"
+  }
+}

@@ -80,10 +80,11 @@ const createMemoryRepository = () => {
       );
       snapshot.generation.mainImageCandidates = checkpoint;
     },
-    replaceStoryContent: async (poiId, content, checkpoint) => {
+    replaceStoryContent: async (poiId, content, checkpoint, relatedPeopleCheckpoint) => {
       const snapshot = getOrCreate(poiId);
       snapshot.storyContent = structuredClone(content);
       snapshot.generation.storyContent = checkpoint;
+      snapshot.generation.relatedPeople = relatedPeopleCheckpoint;
     },
     selectDraftMainImage: async (poiId, commonsFileName) => {
       const snapshot = getOrCreate(poiId);
@@ -96,6 +97,7 @@ const createMemoryRepository = () => {
       if (snapshot) {
         delete snapshot.storyContent;
         delete snapshot.generation.storyContent;
+        delete snapshot.generation.relatedPeople;
       }
     },
     deleteMainImageCandidates: async (poiId) => {
@@ -125,6 +127,7 @@ const createDependencies = (overrides: Partial<StoryWorkflowDependencies> = {}) 
         content: storyContent(),
         provider: "ollama" as const,
       }),
+      resolveRelatedPeople: async ({ relatedPeople }) => ({ relatedPeople, failures: [] }),
       repository,
       now: () => new Date("2026-08-22T10:00:00.000Z"),
       ...overrides,
@@ -150,6 +153,10 @@ describe("Story Workflow Interface", () => {
         order.push("storyContent");
         return { content: storyContent(), provider: "ollama" };
       },
+      resolveRelatedPeople: async ({ relatedPeople, ai }) => {
+        order.push(`people:${ai.model}`);
+        return { relatedPeople, failures: [] };
+      },
     });
 
     await expect(
@@ -162,8 +169,15 @@ describe("Story Workflow Interface", () => {
       mainImageCandidates: "generated",
       draftMainImage: "available",
       storyContent: "generated",
+      relatedPeople: "resolved",
+      relatedPeopleFailures: [],
     });
-    expect(order).toEqual(["sources", "mainImageCandidates", "storyContent"]);
+    expect(order).toEqual([
+      "sources",
+      "mainImageCandidates",
+      "storyContent",
+      "people:qwen3:8b",
+    ]);
   });
 
   it("stops before downstream work when Sources are unavailable", async () => {
@@ -182,16 +196,19 @@ describe("Story Workflow Interface", () => {
       },
     });
 
-    await expect(
-      createStoryWorkflow(dependencies).draftStory.generate({
+    const generation = createStoryWorkflow(dependencies).draftStory.generate({
         poiId: pointOfInterest.id,
         ai: { mode: "local", model: "qwen3:8b" },
-      }),
-    ).rejects.toMatchObject({
+      });
+
+    await expect(generation).rejects.toMatchObject({
       code: "sources-unavailable",
       stage: "sources",
       retryable: true,
     });
+    await expect(generation).rejects.toThrow(
+      "sources-unavailable: Wikipedia unavailable",
+    );
     expect(downstream).toEqual([]);
     expect(await repository.get(pointOfInterest.id)).toBeUndefined();
   });
@@ -214,6 +231,8 @@ describe("Story Workflow Interface", () => {
       mainImageCandidates: "failed",
       draftMainImage: "missing",
       storyContent: "generated",
+      relatedPeople: "resolved",
+      relatedPeopleFailures: [],
     });
     expect(await repository.get(pointOfInterest.id)).toMatchObject({
       sources: [{ content: "Source version one" }],
@@ -267,12 +286,104 @@ describe("Story Workflow Interface", () => {
     });
   });
 
+  it("persists Story Content and reports Related People failures separately", async () => {
+    const unresolvedPerson = { name: "Hercules", sourceIds: ["wikipedia"] };
+    const { dependencies, repository } = createDependencies({
+      generateStoryContent: async () => ({
+        content: { ...storyContent(), relatedPeople: [unresolvedPerson] },
+        provider: "ollama",
+      }),
+      resolveRelatedPeople: async ({ relatedPeople }) => ({
+        relatedPeople,
+        failures: [
+          {
+            name: "Hercules",
+            message: "Request failed after 2 attempts: Error: HTTP 429 Too Many Requests",
+          },
+        ],
+      }),
+    });
+
+    await expect(
+      createStoryWorkflow(dependencies).storyContent.generate({
+        poiId: pointOfInterest.id,
+        ai: { mode: "cloud", model: "gpt-oss:20b-cloud" },
+      }),
+    ).resolves.toEqual({
+      relatedPeople: [unresolvedPerson],
+      failures: [
+        {
+          name: "Hercules",
+          message: "Request failed after 2 attempts: Error: HTTP 429 Too Many Requests",
+        },
+      ],
+    });
+    expect(await repository.get(pointOfInterest.id)).toMatchObject({
+      storyContent: { relatedPeople: [unresolvedPerson] },
+    });
+  });
+
+  it("retries only unresolved People without regenerating Story Content", async () => {
+    let storyGenerationCount = 0;
+    let shouldResolve = false;
+    const unresolvedPerson = { name: "Hercules", sourceIds: ["wikipedia"] };
+    const resolvedPerson = { ...unresolvedPerson, personId: "hercules" };
+    const { dependencies, repository } = createDependencies({
+      generateStoryContent: async () => {
+        storyGenerationCount += 1;
+        return {
+          content: { ...storyContent(), relatedPeople: [unresolvedPerson] },
+          provider: "ollama",
+        };
+      },
+      resolveRelatedPeople: async () =>
+        shouldResolve
+          ? { relatedPeople: [resolvedPerson], failures: [] }
+          : {
+              relatedPeople: [unresolvedPerson],
+              failures: [{ name: "Hercules", message: "AI unavailable" }],
+            },
+    });
+    const workflow = createStoryWorkflow(dependencies);
+
+    await workflow.storyContent.generate({
+      poiId: pointOfInterest.id,
+      ai: { mode: "local", model: "person-model" },
+    });
+    shouldResolve = true;
+    await expect(
+      workflow.relatedPeople.resolve({
+        poiId: pointOfInterest.id,
+        ai: { mode: "local", model: "person-model" },
+      }),
+    ).resolves.toEqual({ relatedPeople: [resolvedPerson], failures: [] });
+
+    expect(storyGenerationCount).toBe(1);
+    expect(await repository.get(pointOfInterest.id)).toMatchObject({
+      storyContent: { relatedPeople: [resolvedPerson] },
+      generation: {
+        relatedPeople: {
+          durationMs: 0,
+          completedAt: "2026-08-22T10:00:00.000Z",
+          aiMode: "local",
+          aiModel: "person-model",
+        },
+      },
+    });
+  });
+
   it("uses create-or-replace semantics and preserves previous artifacts on explicit failure", async () => {
     let content = storyContent("First structured story.");
+    let currentSource = source;
+    const previousSourceContents: Array<string | undefined> = [];
     let candidates = [candidate("first.jpg")];
     let failContent = false;
     let failCandidates = false;
     const { dependencies, repository } = createDependencies({
+      acquireSources: async (_pointOfInterest, previousSources) => {
+        previousSourceContents.push(previousSources?.[0]?.content);
+        return [currentSource];
+      },
       generateStoryContent: async () => {
         if (failContent) throw new Error("AI unavailable");
         return { content, provider: "ollama" };
@@ -289,6 +400,7 @@ describe("Story Workflow Interface", () => {
     });
 
     content = storyContent("Replacement structured story.");
+    currentSource = { ...source, content: "Source version two" };
     candidates = [candidate("replacement.jpg")];
     await workflow.storyContent.generate({
       poiId: pointOfInterest.id,
@@ -296,6 +408,7 @@ describe("Story Workflow Interface", () => {
     });
     await workflow.mainImageCandidates.generate({ poiId: pointOfInterest.id });
     expect(await repository.get(pointOfInterest.id)).toMatchObject({
+      sources: [{ content: "Source version two" }],
       storyContent: content,
       mainImageCandidates: [{ commonsFileName: "replacement.jpg" }],
     });
@@ -317,6 +430,11 @@ describe("Story Workflow Interface", () => {
       storyContent: content,
       mainImageCandidates: [{ commonsFileName: "replacement.jpg" }],
     });
+    expect(previousSourceContents).toEqual([
+      undefined,
+      "Source version one",
+      "Source version two",
+    ]);
   });
 
   it("preserves an eligible Draft Main Image and otherwise selects the first eligible candidate", async () => {
@@ -415,6 +533,15 @@ describe("Story Workflow Interface", () => {
         storyContent: storyContent(),
         mainImageCandidates: [{ commonsFileName: "first.jpg" }],
         draftMainImage: { commonsFileName: "first.jpg" },
+        generation: {
+          relatedPeople: {
+            durationMs: 0,
+            completedAt: "2026-08-22T10:00:00.000Z",
+            aiMode: "local",
+            aiProvider: "ollama",
+            aiModel: "qwen3:8b",
+          },
+        },
       });
       await expect(
         createFilesystemStoryWorkflowRepository("alexandria").get(pointOfInterest.id),

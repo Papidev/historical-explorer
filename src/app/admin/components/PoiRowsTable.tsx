@@ -7,6 +7,7 @@ import {
   PhotoIcon,
   PlusIcon,
   TrashIcon,
+  UserGroupIcon,
 } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -14,11 +15,19 @@ import type { ReactNode } from "react";
 import { IconButton } from "@/app/components/ui/IconButton";
 import type { Source, StoryContent } from "@/server/storyWorkflow";
 import type { AiMode, AiModel } from "../lib/aiModels";
-import type { AdminPoiRow, MainImageCandidate, MainImageCandidatesArtifact } from "../lib/types";
+import type {
+  AdminAction,
+  AdminActionWarning,
+  AdminPoiRow,
+  MainImageCandidate,
+  MainImageCandidatesArtifact,
+} from "../lib/types";
 import { SubmitButton } from "./SubmitButton";
 
 const refreshConfirmMessages = {
   storyContent: "Refresh Story Content for this POI?",
+  relatedPeople:
+    "Retry resolving only the unresolved People for this Story without regenerating Story Content?",
   mainImage: "Refresh Main Image Candidates for this POI?",
 } as const;
 
@@ -29,8 +38,67 @@ type ProgressState = {
   description: string;
 };
 
-const getActionErrorMessage = (error: unknown) =>
-  error instanceof Error ? error.message : "The action failed. Please try again.";
+type ActionToast = AdminActionWarning & { tone: "error" | "warning" };
+
+const getActionError = (error: unknown): ActionToast => {
+  const details = error instanceof Error ? error.message : "The action failed. Please try again.";
+
+  if (/\b429\b|too many requests/i.test(details)) {
+    return {
+      tone: "error",
+      title: "Service temporarily unavailable",
+      description: "An external service rate limit was reached. Wait a few minutes and try again.",
+      details,
+    };
+  }
+  if (details.includes("sources-unavailable")) {
+    return {
+      tone: "error",
+      title: "Source acquisition failed",
+      description: "A usable Wikipedia source could not be retrieved for this POI.",
+      details,
+    };
+  }
+  if (details.includes("story-content-generation-failed") || details.includes("ZodError")) {
+    return {
+      tone: "error",
+      title: "Content generation failed",
+      description: "The AI-generated Story or Person content could not be generated or validated.",
+      details,
+    };
+  }
+  if (details.includes("main-image-candidates-generation-failed")) {
+    return {
+      tone: "error",
+      title: "Image generation failed",
+      description: "Wikimedia image candidates could not be retrieved or processed.",
+      details,
+    };
+  }
+  if (details.includes("persistence-failed")) {
+    return {
+      tone: "error",
+      title: "Save failed",
+      description: "The generated content could not be saved safely.",
+      details,
+    };
+  }
+  if (details.includes("point-of-interest-not-found")) {
+    return {
+      tone: "error",
+      title: "POI not found",
+      description: "The requested Point of Interest is no longer available.",
+      details,
+    };
+  }
+
+  return {
+    tone: "error",
+    title: "Action failed",
+    description: "An unexpected error interrupted the requested action.",
+    details,
+  };
+};
 
 const deleteConfirmMessages = {
   transformed:
@@ -55,11 +123,12 @@ const CellContent = ({
   isAvailable?: boolean;
   titleTone?: "poi" | "status";
 }) => (
-  <div className="grid min-w-0 grid-rows-[2.5rem_1rem]">
+  <div className="grid min-w-0 grid-rows-[1.5rem_1rem]">
     <div className="overflow-hidden">
       {title || !isAvailable ? (
         <p
-          className={`line-clamp-2 break-words ${
+          title={title}
+          className={`truncate ${
             title
               ? titleTone === "poi"
                 ? "text-base leading-5 font-semibold text-black"
@@ -89,26 +158,48 @@ const CellFooter = ({
   children,
   updatedAt,
   generationDuration,
+  updatedAtLabel = "Updated",
+  generationDurationLabel = "Generated",
+  relatedPeopleUpdatedAt,
+  relatedPeopleGenerationDuration,
 }: {
   children?: ReactNode;
   updatedAt?: string;
   generationDuration?: string;
+  updatedAtLabel?: string;
+  generationDurationLabel?: string;
+  relatedPeopleUpdatedAt?: string;
+  relatedPeopleGenerationDuration?: string;
 }) =>
-  updatedAt || generationDuration || children ? (
-    <div className="mt-auto flex items-end justify-between gap-2 pt-3">
+  updatedAt ||
+  generationDuration ||
+  relatedPeopleUpdatedAt ||
+  relatedPeopleGenerationDuration ||
+  children ? (
+    <div className="mt-auto flex flex-col items-stretch gap-2 pt-3">
       <div className="min-w-0 text-[0.6875rem] leading-4 text-black/55">
         {updatedAt ? (
-          <p className="truncate" title={`Updated: ${updatedAt}`}>
-            Updated: <span className="font-bold">{updatedAt}</span>
+          <p className="truncate" title={`${updatedAtLabel}: ${updatedAt}`}>
+            {updatedAtLabel}: <span className="font-bold">{updatedAt}</span>
           </p>
         ) : null}
         {generationDuration ? (
-          <p className="truncate" title={`Generated: ${generationDuration}`}>
-            Generated: <span className="font-bold">{generationDuration}</span>
+          <p className="truncate" title={`${generationDurationLabel}: ${generationDuration}`}>
+            {generationDurationLabel}: <span className="font-bold">{generationDuration}</span>
+          </p>
+        ) : null}
+        {relatedPeopleUpdatedAt ? (
+          <p className="truncate" title={`People updated: ${relatedPeopleUpdatedAt}`}>
+            People updated: <span className="font-bold">{relatedPeopleUpdatedAt}</span>
+          </p>
+        ) : null}
+        {relatedPeopleGenerationDuration ? (
+          <p className="truncate" title={`People generated: ${relatedPeopleGenerationDuration}`}>
+            People generated: <span className="font-bold">{relatedPeopleGenerationDuration}</span>
           </p>
         ) : null}
       </div>
-      {children ? <div className="shrink-0">{children}</div> : null}
+      {children ? <div className="self-end">{children}</div> : null}
     </div>
   ) : null;
 
@@ -129,24 +220,34 @@ const ProgressMessage = ({ description }: { description: string }) => (
   </p>
 );
 
-const ErrorToast = ({ message, onDismiss }: { message: string; onDismiss: () => void }) => {
+const ActionToast = ({ toast, onDismiss }: { toast: ActionToast; onDismiss: () => void }) => {
   useEffect(() => {
-    const timeout = window.setTimeout(onDismiss, 8000);
+    const timeout = window.setTimeout(onDismiss, 12_000);
     return () => window.clearTimeout(timeout);
-  }, [message, onDismiss]);
+  }, [toast, onDismiss]);
+
+  const isWarning = toast.tone === "warning";
 
   return (
     <div
       role="alert"
-      className="fixed top-4 right-4 z-50 flex max-w-md items-start gap-4 rounded-lg border border-red-200 bg-white px-4 py-3 text-sm text-red-800 shadow-lg ring-1 ring-black/5"
+      className={`fixed right-4 bottom-4 z-50 flex max-w-md items-start gap-4 rounded-lg border bg-white px-4 py-3 text-sm shadow-lg ring-1 ring-black/5 ${
+        isWarning ? "border-amber-200 text-amber-900" : "border-red-200 text-red-800"
+      }`}
     >
-      <p className="flex-1">
-        <span className="font-semibold">Story refresh failed.</span> {message}
-      </p>
+      <div className="flex-1">
+        <p className="font-semibold">{toast.title}</p>
+        <p className="mt-0.5 opacity-80">{toast.description}</p>
+        <p className="mt-1 font-mono text-xs break-words opacity-75">{toast.details}</p>
+      </div>
       <button
         type="button"
-        aria-label="Dismiss error"
-        className="-m-1 rounded p-1 text-red-700/70 hover:bg-red-50 hover:text-red-900"
+        aria-label="Dismiss notification"
+        className={`-m-1 cursor-pointer rounded p-1 ${
+          isWarning
+            ? "text-amber-800/70 hover:bg-amber-50 hover:text-amber-950"
+            : "text-red-700/70 hover:bg-red-50 hover:text-red-900"
+        }`}
         onClick={onDismiss}
       >
         <span aria-hidden="true">×</span>
@@ -286,9 +387,9 @@ const StoryContentPreview = ({
         <h3 className="font-semibold">Related People</h3>
         <div className="mt-2 space-y-4">
           {content.relatedPeople.map((person) => (
-            <article key={person.id} className="rounded-lg border border-black/10 bg-white p-3">
+            <article key={person.name} className="rounded-lg border border-black/10 bg-white p-3">
               <p className="font-semibold">{person.name}</p>
-              <p>{person.relationship}</p>
+              <p className="font-mono text-xs text-black/55">{person.personId ?? "Unresolved"}</p>
               <SourceLinks sourceIds={person.sourceIds} sources={sources} />
             </article>
           ))}
@@ -305,6 +406,7 @@ export const PoiRowsTable = ({
   generateDraftStoryAction,
   resetDraftStoryAction,
   refreshStoryContentAction,
+  resolveRelatedPeopleAction,
   deleteStoryContentAction,
   refreshMainImageCandidatesAction,
   deleteMainImageCandidatesAction,
@@ -313,31 +415,35 @@ export const PoiRowsTable = ({
   rows: AdminPoiRow[];
   selectedAiMode: AiMode;
   selectedAiModel: AiModel;
-  generateDraftStoryAction: (formData: FormData) => Promise<void>;
-  resetDraftStoryAction: (formData: FormData) => Promise<void>;
-  refreshStoryContentAction: (formData: FormData) => Promise<void>;
-  deleteStoryContentAction: (formData: FormData) => Promise<void>;
-  refreshMainImageCandidatesAction: (formData: FormData) => Promise<void>;
-  deleteMainImageCandidatesAction: (formData: FormData) => Promise<void>;
+  generateDraftStoryAction: AdminAction;
+  resetDraftStoryAction: AdminAction;
+  refreshStoryContentAction: AdminAction;
+  resolveRelatedPeopleAction: AdminAction;
+  deleteStoryContentAction: AdminAction;
+  refreshMainImageCandidatesAction: AdminAction;
+  deleteMainImageCandidatesAction: AdminAction;
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => {
   const [selectedPanel, setSelectedPanel] = useState<SelectedPanel | null>(null);
   const [progress, setProgress] = useState<ProgressState | null>(null);
-  const [actionError, setActionError] = useState<string | null>(null);
+  const [actionToast, setActionToast] = useState<ActionToast | null>(null);
 
   const runSingleAction = async (
     poiId: string,
     description: string,
-    action: (formData: FormData) => Promise<void>,
+    action: AdminAction,
     formData: FormData,
   ) => {
     setSelectedPanel(null);
-    setActionError(null);
+    setActionToast(null);
     setProgress({ poiId, description });
     try {
-      await action(formData);
+      const result = await action(formData);
+      if (result?.warning) {
+        setActionToast({ tone: "warning", ...result.warning });
+      }
     } catch (error) {
-      setActionError(getActionErrorMessage(error));
+      setActionToast(getActionError(error));
     } finally {
       setProgress(null);
     }
@@ -345,8 +451,8 @@ export const PoiRowsTable = ({
 
   return (
     <>
-      {actionError ? (
-        <ErrorToast message={actionError} onDismiss={() => setActionError(null)} />
+      {actionToast ? (
+        <ActionToast toast={actionToast} onDismiss={() => setActionToast(null)} />
       ) : null}
       <section className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-gray-950/10">
         <div className="min-h-0 flex-1 overflow-auto">
@@ -474,7 +580,7 @@ export const PoiRowsTable = ({
                       </td>
                       <td
                         className={`h-px min-w-0 border-r border-gray-100 px-3 py-2 align-top ${
-                          row.transformedPoi ? "bg-emerald-50/60" : ""
+                          row.transformedPoi ? "bg-teal-50/20" : ""
                         }`}
                       >
                         <div className={cellLayoutClassName}>
@@ -511,7 +617,7 @@ export const PoiRowsTable = ({
                       </td>
                       <td
                         className={`h-px min-w-0 border-r border-gray-100 px-3 py-2 align-top ${
-                          row.wikiPoi ? "bg-emerald-50/60" : ""
+                          row.wikiPoi ? "bg-teal-50/20" : ""
                         }`}
                       >
                         <div className={cellLayoutClassName}>
@@ -543,7 +649,7 @@ export const PoiRowsTable = ({
                       </td>
                       <td
                         className={`h-px min-w-0 border-r border-gray-100 px-3 py-2 align-top ${
-                          row.storyContent ? "bg-emerald-50/60" : ""
+                          row.storyContent ? "bg-teal-50/20" : ""
                         }`}
                       >
                         <div className={cellLayoutClassName}>
@@ -560,6 +666,10 @@ export const PoiRowsTable = ({
                           <CellFooter
                             updatedAt={row.storyContentUpdatedAt}
                             generationDuration={row.storyContentGenerationDuration}
+                            updatedAtLabel="Story updated"
+                            generationDurationLabel="Story generated"
+                            relatedPeopleUpdatedAt={row.relatedPeopleUpdatedAt}
+                            relatedPeopleGenerationDuration={row.relatedPeopleGenerationDuration}
                           >
                             <div className={actionGroupClassName}>
                               {row.storyContent ? (
@@ -607,6 +717,30 @@ export const PoiRowsTable = ({
                                   />
                                 </form>
                               ) : null}
+                              {row.storyContent?.relatedPeople.some(({ personId }) => !personId) ? (
+                                <form
+                                  action={(formData) =>
+                                    runSingleAction(
+                                      row.id,
+                                      "Resolving Related People...",
+                                      resolveRelatedPeopleAction,
+                                      formData,
+                                    )
+                                  }
+                                >
+                                  <input type="hidden" name="poiId" value={row.id} />
+                                  <input type="hidden" name="aiMode" value={selectedAiMode} />
+                                  <input type="hidden" name="aiModel" value={selectedAiModel} />
+                                  <SubmitButton
+                                    idleLabel="Resolve People"
+                                    pendingLabel="Resolving..."
+                                    confirmMessage={refreshConfirmMessages.relatedPeople}
+                                    icon={<UserGroupIcon />}
+                                    tone="secondary"
+                                    disabled={isRowInProgress}
+                                  />
+                                </form>
+                              ) : null}
                               {row.storyContent ? (
                                 <form
                                   action={(formData) =>
@@ -636,7 +770,7 @@ export const PoiRowsTable = ({
                       <td
                         className={`h-px min-w-0 py-2 pr-4 pl-3 align-top ${
                           getSelectedMainImageCandidate(row.mainImageArtifact)
-                            ? "bg-emerald-50/60"
+                            ? "bg-teal-50/20"
                             : ""
                         }`}
                       >
@@ -762,7 +896,7 @@ export const PoiRowsTable = ({
               <button
                 type="button"
                 onClick={() => setSelectedPanel(null)}
-                className="inline-flex items-center rounded-md border border-black/15 bg-white px-3 py-1.5 text-xs font-medium text-black transition hover:bg-black/[0.03]"
+                className="inline-flex cursor-pointer items-center rounded-md border border-black/15 bg-white px-3 py-1.5 text-xs font-medium text-black transition hover:bg-black/[0.03]"
               >
                 Close
               </button>

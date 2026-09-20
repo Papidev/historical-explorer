@@ -1,0 +1,77 @@
+{
+  "id": "pope-nicholas-i",
+  "name": "Pope Nicholas I",
+  "wikidataId": "Q170503",
+  "wikipediaTitle": "Pope Nicholas I",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Nicholas I, who reigned from 24 April 858 until his death on 13 November 867, is remembered as a decisive consolidator of papal authority. He asserted that the pope should exercise suzerainty over all Christians, even royalty, in matters of faith and morals. His refusal to annul King Lothair II’s marriage to Teutberga, and his subsequent deposition of the council that had approved the annulment, demonstrated his willingness to confront secular power even when it meant facing a siege by the Carolingians. Throughout his pontificate he worked to strengthen the Papal States, reinforced fortifications against Muslim incursions, and sought to bring bishops under tighter papal discipline.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Nicholas’s tenure was also marked by a fierce struggle with the Eastern Church. He supported Patriarch Ignatios of Constantinople against the emperor‑appointed Photius, excommunicating the latter and sending legates to the 861 Council of Constantinople. The Greeks later excommunicated Nicholas at the fourth Council of Constantinople in 867, a decision that reached Rome only after his death. In addition to ecclesiastical disputes, he issued a curious pastoral letter to the Bulgarians asking whether it was sinful for Christians to wear pants, and he famously ordered Christians to abstain from eating warm‑blooded meat on Wednesdays and Fridays, a practice that echoes the modern Catholic Lenten fast.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Nicholas excommunicated Patriarch Photius of Constantinople in 863, a move that intensified the East–West schism and led to the Greek excommunication of the pope in 867.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "In a letter to the Bulgarians in 866, Nicholas addressed the question of whether Christians should wear pants, concluding that it was neither sinful nor virtuous, and used the term to discuss the virtue of a temperate life.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He ordered all Christians to abstain from eating the flesh, blood, or marrow of warm‑blooded animals on Wednesdays and Fridays, a rule that has influenced the Catholic tradition of Friday meat abstinence during Lent.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": 800,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 867,
+      "month": 11,
+      "day": 13,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_Nicholas_I.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Nicholas_I.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Pope_Nicholas_I.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Pope_Nicholas_I.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Artaud de Montor (1772–1849)",
+    "author": "Artaud de Montor (1772–1849)",
+    "width": 432,
+    "height": 626,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Nicholas I",
+    "url": "https://en.wikipedia.org/wiki/Pope_Nicholas_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-18T23:12:45.257Z"
+  }
+}

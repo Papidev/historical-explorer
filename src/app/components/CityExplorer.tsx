@@ -23,6 +23,7 @@ export const CityExplorer = ({
 }: Props) => {
   const [zoom, setZoom] = useState(initialZoom);
   const [selectedPoiId, setSelectedPoiId] = useState<string | null>(initialSelectedPoiId);
+  const [openRequestId, setOpenRequestId] = useState(0);
   const selectedPoi = selectedPoiId ? pois.find((poi) => poi.id === selectedPoiId) : undefined;
 
   return (
@@ -33,11 +34,16 @@ export const CityExplorer = ({
         zoom={zoom}
         pois={pois}
         onZoomChange={setZoom}
-        onOpenPoiDetails={setSelectedPoiId}
+        onOpenPoiDetails={(poiId) => {
+          setSelectedPoiId(poiId);
+          setOpenRequestId((current) => current + 1);
+        }}
         onMapClick={() => setSelectedPoiId(null)}
       />
       <PoiDetailsDrawer
+        key={selectedPoi?.id ?? "closed"}
         citySlug={citySlug}
+        openRequestId={openRequestId}
         poi={selectedPoi}
         onClose={() => setSelectedPoiId(null)}
       />
