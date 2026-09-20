@@ -58,31 +58,36 @@ export const AdminDashboard = ({
             Generate and review Rome POI content from raw source data.
           </p>
         </div>
-        <div className="flex flex-wrap items-end gap-3">
-          <Toggle
-            checked={selectedAiMode === "cloud"}
-            description={`(${selectedModeOption.providerLabel}, ${
-              selectedAiMode === "cloud" ? "paid" : "free"
-            })`}
-            id="cloud-mode"
-            label="Cloud mode"
-            name="cloud-mode"
-            onChange={(checked) => setSelectedAiMode(checked ? "cloud" : "local")}
-          />
-          <div className="min-w-72">
-            <ListboxSelect
-              label="Model"
-              value={selectedAiModel}
-              onChange={(value) =>
-                setSelectedAiModelByMode({
-                  ...selectedAiModelByMode,
-                  [selectedAiMode]: value,
-                })
-              }
-              options={selectedModeOption.modelOptions}
+        <fieldset className="rounded-lg border border-black/10 bg-white px-3 pb-3 shadow-xs">
+          <legend className="px-1 text-xs font-semibold tracking-wide text-black/55 uppercase">
+            AI generation
+          </legend>
+          <div className="flex flex-wrap items-end gap-x-4 gap-y-3">
+            <Toggle
+              checked={selectedAiMode === "cloud"}
+              description={`(${selectedModeOption.providerLabel}, ${
+                selectedAiMode === "cloud" ? "paid" : "free"
+              })`}
+              id="cloud-mode"
+              label="Cloud mode"
+              name="cloud-mode"
+              onChange={(checked) => setSelectedAiMode(checked ? "cloud" : "local")}
             />
+            <div className="min-w-72">
+              <ListboxSelect
+                label="Model"
+                value={selectedAiModel}
+                onChange={(value) =>
+                  setSelectedAiModelByMode({
+                    ...selectedAiModelByMode,
+                    [selectedAiMode]: value,
+                  })
+                }
+                options={selectedModeOption.modelOptions}
+              />
+            </div>
           </div>
-        </div>
+        </fieldset>
       </header>
       <PoiRowsTable
         rows={rows}

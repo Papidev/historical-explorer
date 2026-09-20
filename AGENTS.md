@@ -31,6 +31,7 @@
 ## Coding Standards & A11y
 
 - Keep all user-facing application copy in English until localization support is introduced.
+- When a UI module grows into multiple implementation files, place it in a folder named after its public component. Put the public component implementation in `index.tsx` (for example `PoiRowsTable/index.tsx` exports `PoiRowsTable`); use short contextual names for private files and components (for example `Row.tsx` exports `Row`) instead of repeating the public prefix. The index file should own the implementation rather than act as a barrel that only re-exports other files.
 - Favor a lightweight Domain-Driven Design mindset: model features around the domain language (cities, POIs, timelines) and keep logic close to the data source, but resist extra indirection unless it delivers clear value.
 - Keep React components declarative and push imperative map logic into adapters/utilities. Any `maplibre-gl` interaction must guard against double-mounts and clean up markers in `destroy()`.
 - Apply TypeScript’s quick-fix suggestions where feasible, especially for type safety and nullability, unless they conflict with product or UX intent.
