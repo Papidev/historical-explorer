@@ -123,11 +123,12 @@ const CellContent = ({
   isAvailable?: boolean;
   titleTone?: "poi" | "status";
 }) => (
-  <div className="grid min-w-0 grid-rows-[2.5rem_1rem]">
+  <div className="grid min-w-0 grid-rows-[1.5rem_1rem]">
     <div className="overflow-hidden">
       {title || !isAvailable ? (
         <p
-          className={`line-clamp-2 break-words ${
+          title={title}
+          className={`truncate ${
             title
               ? titleTone === "poi"
                 ? "text-base leading-5 font-semibold text-black"
@@ -157,26 +158,48 @@ const CellFooter = ({
   children,
   updatedAt,
   generationDuration,
+  updatedAtLabel = "Updated",
+  generationDurationLabel = "Generated",
+  relatedPeopleUpdatedAt,
+  relatedPeopleGenerationDuration,
 }: {
   children?: ReactNode;
   updatedAt?: string;
   generationDuration?: string;
+  updatedAtLabel?: string;
+  generationDurationLabel?: string;
+  relatedPeopleUpdatedAt?: string;
+  relatedPeopleGenerationDuration?: string;
 }) =>
-  updatedAt || generationDuration || children ? (
-    <div className="mt-auto flex items-end justify-between gap-2 pt-3">
+  updatedAt ||
+  generationDuration ||
+  relatedPeopleUpdatedAt ||
+  relatedPeopleGenerationDuration ||
+  children ? (
+    <div className="mt-auto flex flex-col items-stretch gap-2 pt-3">
       <div className="min-w-0 text-[0.6875rem] leading-4 text-black/55">
         {updatedAt ? (
-          <p className="truncate" title={`Updated: ${updatedAt}`}>
-            Updated: <span className="font-bold">{updatedAt}</span>
+          <p className="truncate" title={`${updatedAtLabel}: ${updatedAt}`}>
+            {updatedAtLabel}: <span className="font-bold">{updatedAt}</span>
           </p>
         ) : null}
         {generationDuration ? (
-          <p className="truncate" title={`Generated: ${generationDuration}`}>
-            Generated: <span className="font-bold">{generationDuration}</span>
+          <p className="truncate" title={`${generationDurationLabel}: ${generationDuration}`}>
+            {generationDurationLabel}: <span className="font-bold">{generationDuration}</span>
+          </p>
+        ) : null}
+        {relatedPeopleUpdatedAt ? (
+          <p className="truncate" title={`People updated: ${relatedPeopleUpdatedAt}`}>
+            People updated: <span className="font-bold">{relatedPeopleUpdatedAt}</span>
+          </p>
+        ) : null}
+        {relatedPeopleGenerationDuration ? (
+          <p className="truncate" title={`People generated: ${relatedPeopleGenerationDuration}`}>
+            People generated: <span className="font-bold">{relatedPeopleGenerationDuration}</span>
           </p>
         ) : null}
       </div>
-      {children ? <div className="shrink-0">{children}</div> : null}
+      {children ? <div className="self-end">{children}</div> : null}
     </div>
   ) : null;
 
@@ -366,9 +389,7 @@ const StoryContentPreview = ({
           {content.relatedPeople.map((person) => (
             <article key={person.name} className="rounded-lg border border-black/10 bg-white p-3">
               <p className="font-semibold">{person.name}</p>
-              <p className="font-mono text-xs text-black/55">
-                {person.personId ?? "Unresolved"}
-              </p>
+              <p className="font-mono text-xs text-black/55">{person.personId ?? "Unresolved"}</p>
               <SourceLinks sourceIds={person.sourceIds} sources={sources} />
             </article>
           ))}
@@ -559,7 +580,7 @@ export const PoiRowsTable = ({
                       </td>
                       <td
                         className={`h-px min-w-0 border-r border-gray-100 px-3 py-2 align-top ${
-                          row.transformedPoi ? "bg-emerald-50/60" : ""
+                          row.transformedPoi ? "bg-teal-50/20" : ""
                         }`}
                       >
                         <div className={cellLayoutClassName}>
@@ -596,7 +617,7 @@ export const PoiRowsTable = ({
                       </td>
                       <td
                         className={`h-px min-w-0 border-r border-gray-100 px-3 py-2 align-top ${
-                          row.wikiPoi ? "bg-emerald-50/60" : ""
+                          row.wikiPoi ? "bg-teal-50/20" : ""
                         }`}
                       >
                         <div className={cellLayoutClassName}>
@@ -628,7 +649,7 @@ export const PoiRowsTable = ({
                       </td>
                       <td
                         className={`h-px min-w-0 border-r border-gray-100 px-3 py-2 align-top ${
-                          row.storyContent ? "bg-emerald-50/60" : ""
+                          row.storyContent ? "bg-teal-50/20" : ""
                         }`}
                       >
                         <div className={cellLayoutClassName}>
@@ -645,6 +666,10 @@ export const PoiRowsTable = ({
                           <CellFooter
                             updatedAt={row.storyContentUpdatedAt}
                             generationDuration={row.storyContentGenerationDuration}
+                            updatedAtLabel="Story updated"
+                            generationDurationLabel="Story generated"
+                            relatedPeopleUpdatedAt={row.relatedPeopleUpdatedAt}
+                            relatedPeopleGenerationDuration={row.relatedPeopleGenerationDuration}
                           >
                             <div className={actionGroupClassName}>
                               {row.storyContent ? (
@@ -745,7 +770,7 @@ export const PoiRowsTable = ({
                       <td
                         className={`h-px min-w-0 py-2 pr-4 pl-3 align-top ${
                           getSelectedMainImageCandidate(row.mainImageArtifact)
-                            ? "bg-emerald-50/60"
+                            ? "bg-teal-50/20"
                             : ""
                         }`}
                       >

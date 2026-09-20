@@ -27,6 +27,7 @@ export type StoryWorkflowRepository = {
     poiId: string,
     storyContent: StoryContent,
     checkpoint: NonNullable<DraftStoryGenerationStatus["storyContent"]>,
+    relatedPeopleCheckpoint?: NonNullable<DraftStoryGenerationStatus["relatedPeople"]>,
   ): Promise<void>;
   selectDraftMainImage(poiId: string, commonsFileName: string): Promise<void>;
   deleteStoryContent(poiId: string): Promise<void>;
@@ -178,7 +179,14 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         cause,
       });
     }
+    const storyContentCheckpoint = {
+      ...toCheckpoint(startedAt, now),
+      aiMode: ai.mode,
+      aiProvider: generated.provider,
+      aiModel: ai.model,
+    };
 
+    const relatedPeopleStartedAt = now().getTime();
     let resolution: RelatedPeopleResolutionResult;
     try {
       resolution = await dependencies.resolveRelatedPeople({
@@ -199,12 +207,17 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
     }
 
     try {
-      await dependencies.repository.replaceStoryContent(pointOfInterest.id, generated.content, {
-        ...toCheckpoint(startedAt, now),
-        aiMode: ai.mode,
-        aiProvider: generated.provider,
-        aiModel: ai.model,
-      });
+      await dependencies.repository.replaceStoryContent(
+        pointOfInterest.id,
+        generated.content,
+        storyContentCheckpoint,
+        {
+          ...toCheckpoint(relatedPeopleStartedAt, now),
+          aiMode: ai.mode,
+          aiProvider: generated.provider,
+          aiModel: ai.model,
+        },
+      );
     } catch (cause) {
       throw persistenceError(cause);
     }
@@ -274,6 +287,7 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
     },
     relatedPeople: {
       resolve: async ({ poiId, ai }) => {
+        const startedAt = now().getTime();
         const snapshot = await dependencies.repository.get(poiId);
         if (!snapshot?.storyContent || snapshot.sources.length === 0) {
           throw new StoryWorkflowError({
@@ -294,6 +308,11 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
             snapshot.generation.storyContent ?? {
               durationMs: 0,
               completedAt: now().toISOString(),
+            },
+            {
+              ...toCheckpoint(startedAt, now),
+              aiMode: ai.mode,
+              aiModel: ai.model,
             },
           );
         } catch (cause) {

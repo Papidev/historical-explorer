@@ -125,6 +125,8 @@ Generation uses checkpoint semantics rather than rollback:
 
 Successfully persisted artifacts remain available for independent retry.
 
+Story Content generation and Related People resolution have separate generation checkpoints. The Curator UI can therefore show the duration and completion time of each phase, and a Related People retry updates only the Related People checkpoint.
+
 ## Result
 
 Full generation returns a compact domain result:

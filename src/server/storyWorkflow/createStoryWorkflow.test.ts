@@ -80,10 +80,11 @@ const createMemoryRepository = () => {
       );
       snapshot.generation.mainImageCandidates = checkpoint;
     },
-    replaceStoryContent: async (poiId, content, checkpoint) => {
+    replaceStoryContent: async (poiId, content, checkpoint, relatedPeopleCheckpoint) => {
       const snapshot = getOrCreate(poiId);
       snapshot.storyContent = structuredClone(content);
       snapshot.generation.storyContent = checkpoint;
+      snapshot.generation.relatedPeople = relatedPeopleCheckpoint;
     },
     selectDraftMainImage: async (poiId, commonsFileName) => {
       const snapshot = getOrCreate(poiId);
@@ -96,6 +97,7 @@ const createMemoryRepository = () => {
       if (snapshot) {
         delete snapshot.storyContent;
         delete snapshot.generation.storyContent;
+        delete snapshot.generation.relatedPeople;
       }
     },
     deleteMainImageCandidates: async (poiId) => {
@@ -359,6 +361,14 @@ describe("Story Workflow Interface", () => {
     expect(storyGenerationCount).toBe(1);
     expect(await repository.get(pointOfInterest.id)).toMatchObject({
       storyContent: { relatedPeople: [resolvedPerson] },
+      generation: {
+        relatedPeople: {
+          durationMs: 0,
+          completedAt: "2026-08-22T10:00:00.000Z",
+          aiMode: "local",
+          aiModel: "person-model",
+        },
+      },
     });
   });
 
@@ -523,6 +533,15 @@ describe("Story Workflow Interface", () => {
         storyContent: storyContent(),
         mainImageCandidates: [{ commonsFileName: "first.jpg" }],
         draftMainImage: { commonsFileName: "first.jpg" },
+        generation: {
+          relatedPeople: {
+            durationMs: 0,
+            completedAt: "2026-08-22T10:00:00.000Z",
+            aiMode: "local",
+            aiProvider: "ollama",
+            aiModel: "qwen3:8b",
+          },
+        },
       });
       await expect(
         createFilesystemStoryWorkflowRepository("alexandria").get(pointOfInterest.id),

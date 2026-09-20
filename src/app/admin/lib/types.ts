@@ -63,6 +63,8 @@ export type AdminPoiRow = {
   mainImageGenerationDuration?: string;
   storyContentUpdatedAt?: string;
   storyContentGenerationDuration?: string;
+  relatedPeopleUpdatedAt?: string;
+  relatedPeopleGenerationDuration?: string;
   storyContentGenerationMode?: string;
   storyContentGenerationProvider?: string;
   storyContentGenerationModel?: string;

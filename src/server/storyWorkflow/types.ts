@@ -29,6 +29,7 @@ export type DraftStoryGenerationStatus = {
   sources?: GenerationCheckpoint;
   mainImageCandidates?: GenerationCheckpoint;
   storyContent?: GenerationCheckpoint;
+  relatedPeople?: GenerationCheckpoint;
 };
 
 export type DraftStorySnapshot = {

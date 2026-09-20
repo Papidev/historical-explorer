@@ -10,7 +10,7 @@ import type {
   PoiItem,
 } from "./types";
 
-type GenerationStep = "transformed" | "wiki" | "storyContent" | "image";
+type GenerationStep = "transformed" | "wiki" | "storyContent" | "relatedPeople" | "image";
 
 type GenerationMetadata = Record<
   string,
@@ -19,6 +19,7 @@ type GenerationMetadata = Record<
       GenerationStep,
       {
         durationMs: number;
+        completedAt?: string;
         aiMode?: string;
         aiProvider?: string;
         aiModel?: string;
@@ -194,6 +195,12 @@ const toPoiRows = (
       storyContentUpdatedAt: updatedAt,
       storyContentGenerationDuration: generationMetadata[rowKey]?.storyContent
         ? formatDuration(generationMetadata[rowKey].storyContent.durationMs)
+        : undefined,
+      relatedPeopleUpdatedAt: formatCompletedAt(
+        generationMetadata[rowKey]?.relatedPeople?.completedAt,
+      ),
+      relatedPeopleGenerationDuration: generationMetadata[rowKey]?.relatedPeople
+        ? formatDuration(generationMetadata[rowKey].relatedPeople.durationMs)
         : undefined,
       storyContentGenerationMode: generationMetadata[rowKey]?.storyContent?.aiMode,
       storyContentGenerationProvider: generationMetadata[rowKey]?.storyContent?.aiProvider,
