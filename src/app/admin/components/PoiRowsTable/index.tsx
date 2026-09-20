@@ -88,11 +88,11 @@ export const PoiRowsTable = ({
         <ActionToast toast={actionToast} onDismiss={() => setActionToast(null)} />
       ) : null}
       <section className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-gray-950/10">
-        <div className="min-h-0 flex-1 overflow-auto">
+        <div className="min-h-0 flex-1 overflow-x-hidden overflow-y-auto">
           {rows.length === 0 ? (
             <p className="px-4 py-4 text-sm text-black/55">No POIs available.</p>
           ) : (
-            <table className="min-w-[1600px] table-fixed divide-y divide-gray-300">
+            <table className="w-full table-fixed divide-y divide-gray-300">
               <colgroup>
                 <col className="w-[19%]" />
                 <col className="w-[19%]" />
