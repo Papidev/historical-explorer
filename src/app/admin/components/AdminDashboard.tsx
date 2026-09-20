@@ -1,14 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import { ListboxSelect } from "@/app/components/ui/ListboxSelect";
-import { Toggle } from "@/app/components/ui/Toggle";
-import type { AiMode, AiModeOption, AiSelection } from "../lib/aiModels";
+import { useRef } from "react";
+import type { AiModeOption, AiSelection } from "../lib/aiModels";
 import type { AdminAction, AdminPoiRow } from "../lib/types";
+import { AiGenerationSettings } from "./AiGenerationSettings";
 import { PoiRowsTable } from "./PoiRowsTable";
-
-const getModeOption = (aiModeOptions: readonly AiModeOption[], mode: AiMode) =>
-  aiModeOptions.find((option) => option.mode === mode) ?? aiModeOptions[0];
 
 export const AdminDashboard = ({
   rows,
@@ -35,19 +31,7 @@ export const AdminDashboard = ({
   deleteMainImageCandidatesAction: AdminAction;
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => {
-  const [selectedAiMode, setSelectedAiMode] = useState(initialAiSelection.mode);
-  const [selectedAiModelByMode, setSelectedAiModelByMode] = useState<Record<AiMode, string>>({
-    local:
-      initialAiSelection.mode === "local"
-        ? initialAiSelection.model
-        : (getModeOption(aiModeOptions, "local").defaultModel ?? ""),
-    cloud:
-      initialAiSelection.mode === "cloud"
-        ? initialAiSelection.model
-        : (getModeOption(aiModeOptions, "cloud").defaultModel ?? ""),
-  });
-  const selectedModeOption = getModeOption(aiModeOptions, selectedAiMode);
-  const selectedAiModel = selectedAiModelByMode[selectedAiMode] || selectedModeOption.defaultModel;
+  const aiSelectionRef = useRef(initialAiSelection);
 
   return (
     <main className="flex h-screen min-h-screen flex-col bg-neutral-50 p-4 sm:p-6">
@@ -58,36 +42,15 @@ export const AdminDashboard = ({
             Generate and review Rome POI content from raw source data.
           </p>
         </div>
-        <div className="flex flex-wrap items-end gap-3">
-          <Toggle
-            checked={selectedAiMode === "cloud"}
-            description={`(${selectedModeOption.providerLabel}, ${
-              selectedAiMode === "cloud" ? "paid" : "free"
-            })`}
-            id="cloud-mode"
-            label="Cloud mode"
-            name="cloud-mode"
-            onChange={(checked) => setSelectedAiMode(checked ? "cloud" : "local")}
-          />
-          <div className="min-w-72">
-            <ListboxSelect
-              label="Model"
-              value={selectedAiModel}
-              onChange={(value) =>
-                setSelectedAiModelByMode({
-                  ...selectedAiModelByMode,
-                  [selectedAiMode]: value,
-                })
-              }
-              options={selectedModeOption.modelOptions}
-            />
-          </div>
-        </div>
+        <AiGenerationSettings
+          aiModeOptions={aiModeOptions}
+          initialAiSelection={initialAiSelection}
+          selectionRef={aiSelectionRef}
+        />
       </header>
       <PoiRowsTable
         rows={rows}
-        selectedAiMode={selectedAiMode}
-        selectedAiModel={selectedAiModel}
+        aiSelectionRef={aiSelectionRef}
         generateDraftStoryAction={generateDraftStoryAction}
         resetDraftStoryAction={resetDraftStoryAction}
         refreshStoryContentAction={refreshStoryContentAction}
