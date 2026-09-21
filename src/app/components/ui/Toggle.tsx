@@ -30,7 +30,7 @@ export const Toggle = ({
       />
     </div>
     <div className="text-sm">
-      <label id={`${id}-label`} htmlFor={id} className="font-medium text-gray-900">
+      <label id={`${id}-label`} htmlFor={id} className="cursor-pointer font-medium text-gray-900">
         {label}
       </label>{" "}
       <span id={`${id}-description`} className="text-gray-500">

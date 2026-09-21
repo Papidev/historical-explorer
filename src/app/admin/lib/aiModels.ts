@@ -29,6 +29,8 @@ export type AiSelection = {
 type OllamaTagsResponse = {
   models?: Array<{
     name?: string;
+    remote_model?: string;
+    remote_host?: string;
   }>;
 };
 
@@ -49,16 +51,12 @@ const aiProviderLabels: Record<AiProvider, string> = {
   ollama: "Ollama",
 };
 
-const getOllamaBaseUrl = () =>
-  process.env.OLLAMA_BASE_URL ?? "http://localhost:11434";
+const getOllamaBaseUrl = () => process.env.OLLAMA_BASE_URL ?? "http://localhost:11434";
 
 const pickAiMode = (value: string | undefined): AiMode =>
   value?.trim().toLowerCase() === "cloud" ? "cloud" : defaultAiMode;
 
-const pickAiProvider = (
-  value: string | undefined,
-  fallback: AiProvider,
-): AiProvider => {
+const pickAiProvider = (value: string | undefined, fallback: AiProvider): AiProvider => {
   const normalized = value?.trim().toLowerCase();
   if (normalized === "gemini" || normalized === "ollama") {
     return normalized;
@@ -69,27 +67,20 @@ const pickAiProvider = (
 
 const getConfiguredAiMode = () => pickAiMode(process.env.AI_MODE);
 
-const getLocalAiProvider = () =>
-  pickAiProvider(process.env.LOCAL_AI_PROVIDER, "ollama");
+const getLocalAiProvider = () => pickAiProvider(process.env.LOCAL_AI_PROVIDER, "ollama");
 
-const getCloudAiProvider = () =>
-  pickAiProvider(process.env.CLOUD_AI_PROVIDER, "gemini");
+const getCloudAiProvider = () => pickAiProvider(process.env.CLOUD_AI_PROVIDER, "gemini");
 
-const getLocalAiModel = () =>
-  process.env.LOCAL_AI_MODEL?.trim() || defaultLocalAiModel;
+const getLocalAiModel = () => process.env.LOCAL_AI_MODEL?.trim() || defaultLocalAiModel;
 
-const getCloudAiModel = () =>
-  process.env.CLOUD_AI_MODEL?.trim() || defaultGeminiModel;
+const getCloudAiModel = () => process.env.CLOUD_AI_MODEL?.trim() || defaultGeminiModel;
 
 const toAiModelOption = (name: string) => ({
   value: name,
   label: aiModelLabels[name] ?? name,
 });
 
-const ensureModelOption = (
-  options: AiModelOption[],
-  configuredModel: AiModel,
-) =>
+const ensureModelOption = (options: AiModelOption[], configuredModel: AiModel) =>
   options.some((option) => option.value === configuredModel)
     ? options
     : [toAiModelOption(configuredModel), ...options];
@@ -106,14 +97,23 @@ const loadLocalAiModelOptions = async () => {
     }
 
     const data = (await response.json()) as OllamaTagsResponse;
+    const remoteModelNames = new Set(
+      (data.models ?? [])
+        .filter((model) => model.remote_model || model.remote_host)
+        .map((model) => model.name?.trim())
+        .filter((name): name is string => Boolean(name)),
+    );
 
     const ollamaModelOptions = (data.models ?? [])
+      .filter((model) => !model.remote_model && !model.remote_host)
       .map((model) => model.name?.trim())
       .filter((name): name is string => Boolean(name))
       .sort()
       .map(toAiModelOption);
 
-    return ensureModelOption(ollamaModelOptions, configuredModel);
+    return ensureModelOption(ollamaModelOptions, configuredModel).filter(
+      (model) => !remoteModelNames.has(model.value),
+    );
   } catch (error) {
     console.warn(
       `[wiki-ai] Failed to load Ollama models: ${
@@ -162,8 +162,7 @@ export const resolveAiSelection = async (formData: FormData) => {
   const options = await loadAiModeOptions();
   const modeValue = formData.get("aiMode");
   const modelValue = formData.get("aiModel");
-  const mode =
-    typeof modeValue === "string" ? pickAiMode(modeValue) : getConfiguredAiMode();
+  const mode = typeof modeValue === "string" ? pickAiMode(modeValue) : getConfiguredAiMode();
   const option = options.find((item) => item.mode === mode);
   if (!option) {
     throw new Error("Invalid AI mode.");
