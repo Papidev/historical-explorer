@@ -12,7 +12,7 @@ import { loadPoiLists } from "./lib/loadPoiLists";
 export const dynamic = "force-dynamic";
 
 export default async function AdminPage() {
-  const { rows, error } = await loadPoiLists();
+  const { rows, globalArtifacts, error } = await loadPoiLists();
   const aiModeOptions = await loadAiModeOptions();
   const initialAiSelection = await getInitialAiSelection();
 
@@ -30,6 +30,7 @@ export default async function AdminPage() {
       ) : (
         <AdminDashboard
           rows={rows}
+          globalArtifacts={globalArtifacts}
           aiModeOptions={aiModeOptions}
           initialAiSelection={initialAiSelection}
           generateDraftStoryAction={generateDraftStory}

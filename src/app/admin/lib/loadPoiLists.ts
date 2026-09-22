@@ -3,6 +3,7 @@ import path from "node:path";
 import { storyWorkflow, type DraftStorySnapshot } from "@/server/storyWorkflow";
 import { getDefaultInputPath } from "@/server/wikiPipeline/io";
 import type {
+  AdminArtifact,
   AdminPoiRow,
   GeoJson,
   GeoJsonFeature,
@@ -71,6 +72,26 @@ const loadGenerationMetadata = (filePath: string) => {
   }
 
   return JSON.parse(readFileSync(filePath, "utf-8")) as GenerationMetadata;
+};
+
+const readArtifact = ({
+  label,
+  relativePath,
+  versioned,
+}: {
+  label: string;
+  relativePath: string;
+  versioned: boolean;
+}): AdminArtifact | undefined => {
+  const filePath = path.join(process.cwd(), "data", relativePath);
+  return existsSync(filePath)
+    ? {
+        label,
+        path: `data/${relativePath}`,
+        content: readFileSync(filePath, "utf-8"),
+        versioned,
+      }
+    : undefined;
 };
 
 const toPoiItems = (features: GeoJsonFeature[] | undefined, raw = false) =>
@@ -265,12 +286,15 @@ export const loadPoiLists = async () => {
       "generation-metadata.json",
     );
     const rawUpdatedAt = formatUpdatedAt(rawPath);
+    const rawContent = readFileSync(rawPath, "utf-8");
     const transformedUpdatedAt = existsSync(transformedPath)
       ? formatUpdatedAt(transformedPath)
       : undefined;
     const generationMetadata = loadGenerationMetadata(generationMetadataPath);
+    const globalArtifacts: AdminArtifact[] = [];
 
-    const rawPois = toPoiItems(parseGeoJson(rawPath).features, true);
+    const rawGeoJson = JSON.parse(rawContent) as GeoJson;
+    const rawPois = toPoiItems(rawGeoJson.features, true);
     const transformedGeoJson = existsSync(transformedPath)
       ? parseGeoJson(transformedPath)
       : ({ features: [] } as GeoJson);
@@ -330,12 +354,44 @@ export const loadPoiLists = async () => {
       wikiPois,
       storyContentPois,
       mainImagePois,
-    );
+    ).map((row) => {
+      const rawFeature = rawGeoJson.features?.[row.rawPoi?.featureIndex ?? -1];
+      return {
+        ...row,
+        artifacts: {
+          geoPlace: rawFeature
+            ? {
+                label: "Geo Place JSON",
+                path: `data/rome/pois/raw.geojson#${row.id}`,
+                content: JSON.stringify(rawFeature, null, 2),
+                versioned: true,
+              }
+            : undefined,
+          wikipediaMetadata: readArtifact({
+            label: "Wikipedia Source Metadata",
+            relativePath: `rome/generated/wiki/${row.id}.metadata.json`,
+            versioned: false,
+          }),
+          storyContent: readArtifact({
+            label: "Story JSON",
+            relativePath: `rome/stories/${row.id}/story.json`,
+            versioned: true,
+          }),
+          mainImageCandidates: readArtifact({
+            label: "Main Image Candidates JSON",
+            relativePath: `rome/stories/${row.id}/images.json`,
+            versioned: true,
+          }),
+          relatedPeople: [],
+        },
+      } satisfies AdminPoiRow;
+    });
 
-    return { rows, error: null };
+    return { rows, globalArtifacts, error: null };
   } catch (error) {
     return {
       rows: [] as AdminPoiRow[],
+      globalArtifacts: [] as AdminArtifact[],
       error: error instanceof Error ? error.message : "Unknown error",
     };
   }

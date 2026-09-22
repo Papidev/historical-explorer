@@ -17,6 +17,7 @@ import type {
 } from "../../lib/types";
 import { PipelineCell } from "./PipelineCell";
 import type { SelectedPanel } from "./Preview";
+import { ArtifactViewButton } from "./ArtifactViewButton";
 import { SubmitButton } from "../SubmitButton";
 
 export type Actions = {
@@ -235,51 +236,60 @@ export const Row = ({
         {progressDescription ? <ProgressMessage description={progressDescription} /> : null}
         <CellFooter>
           {row.rawPoi ? (
-            isRowEmpty ? (
-              <form
-                action={(formData) =>
-                  runSingleAction(
-                    row.id,
-                    "Generating Draft Story...",
-                    actions.generateDraftStory,
-                    formData,
-                    true,
-                  )
-                }
-              >
-                <input type="hidden" name="geoPlaceId" value={row.rawPoi.id} />
-                <SubmitButton
-                  idleLabel="Generate"
-                  pendingLabel="Generating..."
-                  confirmMessage={generateConfirmMessage}
-                  icon={<PlusIcon />}
-                  tone="primary"
+            <div className="flex flex-wrap items-center gap-1.5">
+              {row.artifacts?.geoPlace ? (
+                <ArtifactViewButton
+                  artifact={row.artifacts.geoPlace}
+                  onSelectPanel={onSelectPanel}
                   disabled={isInProgress}
                 />
-              </form>
-            ) : (
-              <form
-                action={(formData) =>
-                  runSingleAction(
-                    row.id,
-                    "Refreshing Draft Story...",
-                    actions.generateDraftStory,
-                    formData,
-                    true,
-                  )
-                }
-              >
-                <input type="hidden" name="geoPlaceId" value={row.rawPoi.id} />
-                <SubmitButton
-                  idleLabel="Refresh"
-                  pendingLabel="Refreshing..."
-                  confirmMessage={refreshDraftStoryConfirmMessage}
-                  icon={<ArrowPathIcon />}
-                  tone="danger"
-                  disabled={isInProgress}
-                />
-              </form>
-            )
+              ) : null}
+              {isRowEmpty ? (
+                <form
+                  action={(formData) =>
+                    runSingleAction(
+                      row.id,
+                      "Generating Draft Story...",
+                      actions.generateDraftStory,
+                      formData,
+                      true,
+                    )
+                  }
+                >
+                  <input type="hidden" name="geoPlaceId" value={row.rawPoi.id} />
+                  <SubmitButton
+                    idleLabel="Generate"
+                    pendingLabel="Generating..."
+                    confirmMessage={generateConfirmMessage}
+                    icon={<PlusIcon />}
+                    tone="primary"
+                    disabled={isInProgress}
+                  />
+                </form>
+              ) : (
+                <form
+                  action={(formData) =>
+                    runSingleAction(
+                      row.id,
+                      "Refreshing Draft Story...",
+                      actions.generateDraftStory,
+                      formData,
+                      true,
+                    )
+                  }
+                >
+                  <input type="hidden" name="geoPlaceId" value={row.rawPoi.id} />
+                  <SubmitButton
+                    idleLabel="Refresh"
+                    pendingLabel="Refreshing..."
+                    confirmMessage={refreshDraftStoryConfirmMessage}
+                    icon={<ArrowPathIcon />}
+                    tone="danger"
+                    disabled={isInProgress}
+                  />
+                </form>
+              )}
+            </div>
           ) : null}
         </CellFooter>
       </PipelineCell>
@@ -315,22 +325,31 @@ export const Row = ({
         <CellContent isAvailable={Boolean(row.wikiPoi)} />
         <CellFooter updatedAt={row.wikiUpdatedAt} generationDuration={row.wikiGenerationDuration}>
           {row.wikiPoi ? (
-            <IconButton
-              type="button"
-              label="View Wikipedia Text"
-              disabled={isInProgress}
-              onClick={() =>
-                row.wikiText
-                  ? onSelectPanel({
-                      title: `${row.id} Wikipedia Text`,
-                      kind: "text",
-                      content: row.wikiText,
-                    })
-                  : null
-              }
-            >
-              <EyeIcon />
-            </IconButton>
+            <div className="flex flex-wrap items-center gap-1.5">
+              <IconButton
+                type="button"
+                label="View Wikipedia Text"
+                disabled={isInProgress}
+                onClick={() =>
+                  row.wikiText
+                    ? onSelectPanel({
+                        title: `${row.id} Wikipedia Text`,
+                        kind: "text",
+                        content: row.wikiText,
+                      })
+                    : null
+                }
+              >
+                <EyeIcon />
+              </IconButton>
+              {row.artifacts?.wikipediaMetadata ? (
+                <ArtifactViewButton
+                  artifact={row.artifacts.wikipediaMetadata}
+                  onSelectPanel={onSelectPanel}
+                  disabled={isInProgress}
+                />
+              ) : null}
+            </div>
           ) : null}
         </CellFooter>
       </PipelineCell>
@@ -372,6 +391,13 @@ export const Row = ({
               >
                 <EyeIcon />
               </IconButton>
+            ) : null}
+            {row.artifacts?.storyContent ? (
+              <ArtifactViewButton
+                artifact={row.artifacts.storyContent}
+                onSelectPanel={onSelectPanel}
+                disabled={isInProgress}
+              />
             ) : null}
             {row.wikiPoi ? (
               <form
@@ -463,6 +489,13 @@ export const Row = ({
               >
                 <EyeIcon />
               </IconButton>
+              {row.artifacts?.mainImageCandidates ? (
+                <ArtifactViewButton
+                  artifact={row.artifacts.mainImageCandidates}
+                  onSelectPanel={onSelectPanel}
+                  disabled={isInProgress}
+                />
+              ) : null}
               <form
                 action={(formData) =>
                   runSingleAction(

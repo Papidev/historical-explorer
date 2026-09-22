@@ -3,10 +3,11 @@
 import { useOptimistic, useState } from "react";
 import type { RefObject } from "react";
 import type { AiSelection } from "../../lib/aiModels";
-import type { AdminAction, AdminPoiRow } from "../../lib/types";
+import type { AdminAction, AdminArtifact, AdminPoiRow } from "../../lib/types";
 import { ActionToast, getActionError, type Toast } from "../ActionToast";
 import { Preview, type SelectedPanel } from "./Preview";
 import { Row, type Actions } from "./Row";
+import { GlobalArtifacts } from "./GlobalArtifacts";
 
 const ColumnHeader = ({
   title,
@@ -44,6 +45,7 @@ const ColumnHeader = ({
 
 export const PoiRowsTable = ({
   rows,
+  globalArtifacts,
   aiSelectionRef,
   generateDraftStoryAction,
   refreshStoryContentAction,
@@ -52,6 +54,7 @@ export const PoiRowsTable = ({
   selectMainImageCandidateAction,
 }: {
   rows: AdminPoiRow[];
+  globalArtifacts: AdminArtifact[];
   aiSelectionRef: RefObject<Pick<AiSelection, "mode" | "model">>;
   generateDraftStoryAction: AdminAction;
   refreshStoryContentAction: AdminAction;
@@ -103,6 +106,7 @@ export const PoiRowsTable = ({
         <ActionToast toast={actionToast} onDismiss={() => setActionToast(null)} />
       ) : null}
       <section className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-gray-950/10">
+        <GlobalArtifacts artifacts={globalArtifacts} onSelectPanel={setSelectedPanel} />
         <div className="min-h-0 flex-1 overflow-x-hidden overflow-y-auto">
           {rows.length === 0 ? (
             <p className="px-4 py-4 text-sm text-black/55">No POIs available.</p>

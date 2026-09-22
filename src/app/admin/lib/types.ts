@@ -48,6 +48,30 @@ export type MainImageCandidatesArtifact = {
   selectedCommonsFileName?: string;
 };
 
+export type AdminArtifact = {
+  label: string;
+  path: string;
+  content: string;
+  versioned: boolean;
+};
+
+export type RelatedPersonArtifacts = {
+  name: string;
+  personId?: string;
+  artifacts: AdminArtifact[];
+};
+
+export type AdminPoiArtifacts = {
+  geoPlace?: AdminArtifact;
+  pointOfInterest?: AdminArtifact;
+  wikipediaText?: AdminArtifact;
+  wikipediaMetadata?: AdminArtifact;
+  storyContent?: AdminArtifact;
+  mainImageCandidates?: AdminArtifact;
+  generationMetadata?: AdminArtifact;
+  relatedPeople: RelatedPersonArtifacts[];
+};
+
 export type AdminPoiRow = {
   id: string;
   rawPoi?: PoiItem;
@@ -73,4 +97,5 @@ export type AdminPoiRow = {
   storyContent?: StoryContent;
   storyContentSources?: Source[];
   mainImageArtifact?: MainImageCandidatesArtifact;
+  artifacts?: AdminPoiArtifacts;
 };
