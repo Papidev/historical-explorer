@@ -30,7 +30,12 @@ export const AiGenerationSettings = ({
         : (getModeOption(aiModeOptions, "cloud").defaultModel ?? ""),
   });
   const selectedModeOption = getModeOption(aiModeOptions, selectedAiMode);
+  const localModeOption = getModeOption(aiModeOptions, "local");
   const selectedAiModel = selectedAiModelByMode[selectedAiMode] || selectedModeOption.defaultModel;
+  const localPeopleModel = localModeOption.defaultModel;
+  const localPeopleModelLabel =
+    localModeOption.modelOptions.find(({ value }) => value === localPeopleModel)?.label ??
+    localPeopleModel;
 
   return (
     <fieldset className="rounded-lg border border-black/10 bg-white px-3 pb-3 shadow-xs">
@@ -57,7 +62,9 @@ export const AiGenerationSettings = ({
         />
         <div className="min-w-72">
           <ListboxSelect
-            label="Model"
+            label={
+              selectedAiMode === "cloud" ? "Story model · Cloud" : "Story and People model · Local"
+            }
             value={selectedAiModel}
             onChange={(model) => {
               selectionRef.current = { mode: selectedAiMode, model };
@@ -69,6 +76,15 @@ export const AiGenerationSettings = ({
             options={selectedModeOption.modelOptions}
           />
         </div>
+        {selectedAiMode === "cloud" ? (
+          <div className="min-w-72">
+            <p className="text-sm/6 font-medium text-gray-900">People model · Local</p>
+            <div className="mt-2 flex min-h-9 items-center justify-between gap-3 rounded-md bg-amber-50 py-1.5 pr-2 pl-3 text-sm/6 text-gray-900 outline-1 -outline-offset-1 outline-amber-300">
+              <span className="truncate">{localPeopleModelLabel}</span>
+              <span className="shrink-0 text-xs font-medium text-amber-800">Ollama · free</span>
+            </div>
+          </div>
+        ) : null}
       </div>
     </fieldset>
   );

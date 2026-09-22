@@ -49,13 +49,6 @@ export const generateDraftStory = async (formData: FormData) => {
   return toRelatedPeopleWarning(result.relatedPeopleFailures);
 };
 
-export const resetDraftStory = async (formData: FormData) => {
-  const poiId = getRequiredString(formData, "poiId", "POI id");
-  await storyWorkflow.draftStory.reset({ poiId });
-  await pointOfInterest.reset({ poiId });
-  revalidatePath("/admin");
-};
-
 export const refreshStoryContent = async (formData: FormData) => {
   const result = await storyWorkflow.storyContent.generate({
     poiId: getRequiredString(formData, "poiId", "POI id"),

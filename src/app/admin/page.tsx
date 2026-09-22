@@ -1,12 +1,9 @@
 import { AdminDashboard } from "./components/AdminDashboard";
 import {
-  deleteStoryContent,
-  deleteMainImageCandidates,
   generateDraftStory,
   refreshStoryContent,
   refreshMainImageCandidates,
   resolveRelatedPeople,
-  resetDraftStory,
   selectMainImageCandidate,
 } from "./lib/actions";
 import { getInitialAiSelection, loadAiModeOptions } from "./lib/aiModels";
@@ -36,12 +33,9 @@ export default async function AdminPage() {
           aiModeOptions={aiModeOptions}
           initialAiSelection={initialAiSelection}
           generateDraftStoryAction={generateDraftStory}
-          resetDraftStoryAction={resetDraftStory}
           refreshStoryContentAction={refreshStoryContent}
           resolveRelatedPeopleAction={resolveRelatedPeople}
-          deleteStoryContentAction={deleteStoryContent}
           refreshMainImageCandidatesAction={refreshMainImageCandidates}
-          deleteMainImageCandidatesAction={deleteMainImageCandidates}
           selectMainImageCandidateAction={selectMainImageCandidate}
         />
       )}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useOptimistic, useState } from "react";
 import type { RefObject } from "react";
 import type { AiSelection } from "../../lib/aiModels";
 import type { AdminAction, AdminPoiRow } from "../../lib/types";
@@ -8,14 +8,37 @@ import { ActionToast, getActionError, type Toast } from "../ActionToast";
 import { Preview, type SelectedPanel } from "./Preview";
 import { Row, type Actions } from "./Row";
 
-const ColumnHeader = ({ title, path }: { title: string; path?: string }) => (
+const ColumnHeader = ({
+  title,
+  path,
+  description,
+  versioned,
+}: {
+  title: string;
+  path: string;
+  description: string;
+  versioned: boolean;
+}) => (
   <div>
     <p className="text-xs font-semibold tracking-[0.08em] text-gray-600 uppercase">{title}</p>
-    {path ? (
-      <p className="mt-1 max-w-full truncate font-mono text-[0.6875rem] leading-snug text-gray-400 normal-case">
-        {path}
-      </p>
-    ) : null}
+    <p
+      title={path}
+      className="mt-1 max-w-full truncate font-mono text-[0.6875rem] leading-snug text-gray-400 normal-case"
+    >
+      {path}
+    </p>
+    <div className="mt-1 text-[0.6875rem] leading-snug normal-case">
+      <span
+        className={
+          versioned
+            ? "rounded bg-emerald-100 px-1.5 py-0.5 font-medium text-emerald-800"
+            : "rounded bg-gray-200 px-1.5 py-0.5 font-medium text-gray-600"
+        }
+      >
+        {versioned ? "Versioned" : "Gitignored"}
+      </span>
+      <p className="mt-1 text-gray-500">{description}</p>
+    </div>
   </div>
 );
 
@@ -23,37 +46,31 @@ export const PoiRowsTable = ({
   rows,
   aiSelectionRef,
   generateDraftStoryAction,
-  resetDraftStoryAction,
   refreshStoryContentAction,
   resolveRelatedPeopleAction,
-  deleteStoryContentAction,
   refreshMainImageCandidatesAction,
-  deleteMainImageCandidatesAction,
   selectMainImageCandidateAction,
 }: {
   rows: AdminPoiRow[];
   aiSelectionRef: RefObject<Pick<AiSelection, "mode" | "model">>;
   generateDraftStoryAction: AdminAction;
-  resetDraftStoryAction: AdminAction;
   refreshStoryContentAction: AdminAction;
   resolveRelatedPeopleAction: AdminAction;
-  deleteStoryContentAction: AdminAction;
   refreshMainImageCandidatesAction: AdminAction;
-  deleteMainImageCandidatesAction: AdminAction;
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => {
   const [selectedPanel, setSelectedPanel] = useState<SelectedPanel | null>(null);
-  const [progress, setProgress] = useState<{ poiId: string; description: string } | null>(null);
+  const [progress, setProgress] = useOptimistic<{
+    poiId: string;
+    description: string;
+  } | null>(null);
   const [actionToast, setActionToast] = useState<Toast | null>(null);
 
   const actions: Actions = {
     generateDraftStory: generateDraftStoryAction,
-    resetDraftStory: resetDraftStoryAction,
     refreshStoryContent: refreshStoryContentAction,
     resolveRelatedPeople: resolveRelatedPeopleAction,
-    deleteStoryContent: deleteStoryContentAction,
     refreshMainImageCandidates: refreshMainImageCandidatesAction,
-    deleteMainImageCandidates: deleteMainImageCandidatesAction,
   };
 
   const runSingleAction = async (
@@ -77,8 +94,6 @@ export const PoiRowsTable = ({
       }
     } catch (error) {
       setActionToast(getActionError(error));
-    } finally {
-      setProgress(null);
     }
   };
 
@@ -106,25 +121,45 @@ export const PoiRowsTable = ({
                     scope="col"
                     className="border-r border-b border-gray-200 py-2 pr-3 pl-4 text-left align-top"
                   >
-                    <ColumnHeader title="Geo Place" path="data/rome/pois/raw.geojson" />
+                    <ColumnHeader
+                      title="Geo Place"
+                      path="data/rome/pois/raw.geojson"
+                      description="Source input"
+                      versioned
+                    />
                   </th>
                   <th
                     scope="col"
                     className="border-r border-b border-gray-200 px-3 py-2 text-left align-top"
                   >
-                    <ColumnHeader title="POI" path="data/rome/pois/pois.geojson" />
+                    <ColumnHeader
+                      title="POI"
+                      path="data/rome/pois/pois.geojson"
+                      description="Generated catalog entry"
+                      versioned
+                    />
                   </th>
                   <th
                     scope="col"
                     className="border-r border-b border-gray-200 px-3 py-2 text-left align-top"
                   >
-                    <ColumnHeader title="Wikipedia Text" path="data/rome/generated/wiki/*.txt" />
+                    <ColumnHeader
+                      title="Wikipedia Text"
+                      path="data/rome/generated/wiki/*.txt"
+                      description="Local snapshot; overwritten with each Story generation"
+                      versioned={false}
+                    />
                   </th>
                   <th
                     scope="col"
                     className="border-r border-b border-gray-200 px-3 py-2 text-left align-top"
                   >
-                    <ColumnHeader title="Story" path="data/rome/stories/<poi-id>/story.json" />
+                    <ColumnHeader
+                      title="Story"
+                      path="data/rome/stories/<poi-id>/story.json"
+                      description="View opens an editorial preview"
+                      versioned
+                    />
                   </th>
                   <th
                     scope="col"
@@ -133,6 +168,8 @@ export const PoiRowsTable = ({
                     <ColumnHeader
                       title="Main Image"
                       path="data/rome/stories/<poi-id>/images.json"
+                      description="Candidate list; Select changes the chosen image"
+                      versioned
                     />
                   </th>
                 </tr>
