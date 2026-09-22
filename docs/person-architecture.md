@@ -4,7 +4,7 @@ The Story Workflow discovers significant people while generating Story Content. 
 
 Each Person is stored once under `data/people/<person-id>/person.json`. Its `id` is app-owned and its `wikidataId` is retained as an external identifier, following the same identity pattern as Points of Interest. Person source text is stored separately under `data/generated/people/`.
 
-After Story Content generation, the workflow resolves each generated name against links preserved from the POI's Wikipedia source. It reuses a Person with the same Wikidata ID or, when none exists, acquires that person's Wikipedia source and performs one additional structured generation using the same AI mode and model selected for the Story. Existing People are never regenerated as a side effect of Story generation.
+After Story Content generation, the workflow resolves each generated name against links preserved from the POI's Wikipedia source. It reuses a Person with the same Wikidata ID or, when none exists, acquires that person's Wikipedia source and performs one additional structured generation. It normally uses the AI mode and model selected for the Story. Because Ollama Cloud does not support structured outputs, a Story generated with Cloud Ollama automatically uses the configured local Ollama model (`LOCAL_AI_MODEL`) for new People. Existing People are never regenerated as a side effect of Story generation.
 
 A Person contains a two-paragraph description, any number of source-grounded curiosities, optional exact or approximate birth and death dates, and at most one optional Wikimedia Commons image. Its Wikipedia content Source is separate from the Story Sources and remains internal; Wikidata supplies canonical identity, while Commons supplies image and rights metadata.
 

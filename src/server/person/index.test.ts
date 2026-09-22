@@ -1,7 +1,7 @@
 import { mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
-import { afterEach, describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import type { MainImageCandidate, WikiSnapshot } from "@/server/wikiPipeline/types";
 import { createFilesystemPersonRepository } from "./filesystemRepository";
 import { createPeople } from ".";
@@ -42,12 +42,51 @@ const snapshot = (title: string, wikidataId?: string): WikiSnapshot => ({
 });
 
 afterEach(() => {
+  vi.unstubAllEnvs();
   for (const directory of directories.splice(0)) {
     rmSync(directory, { recursive: true, force: true });
   }
 });
 
 describe("People", () => {
+  it("uses the configured local Ollama model when the Story uses Ollama Cloud", async () => {
+    vi.stubEnv("CLOUD_AI_PROVIDER", "ollama");
+    vi.stubEnv("LOCAL_AI_MODEL", "qwen3:8b");
+    const repository = createRepository();
+    let generationConfig: { provider: "ollama" | "gemini"; model: string } | undefined;
+    const people = createPeople({
+      repository,
+      fetchSnapshot: async (title) => snapshot(title, "Q100"),
+      generateContent: async (_person, _sources, config) => {
+        generationConfig = config;
+        return content;
+      },
+      fetchImageCandidates: async () => [],
+    });
+
+    await people.resolveAndGenerateMissing({
+      relatedPeople: [{ name: "Hercules", sourceIds: ["wikipedia"] }],
+      storySources: [
+        {
+          id: "wikipedia",
+          kind: "wikipedia",
+          title: "Forum Boarium",
+          url: "https://en.wikipedia.org/wiki/Forum_Boarium",
+          content: "Story source",
+          links: [{ label: "Hercules", title: "Hercules" }],
+        },
+      ],
+      ai: { mode: "cloud", model: "gpt-oss:20b-cloud" },
+    });
+
+    expect(generationConfig).toEqual({ provider: "ollama", model: "qwen3:8b" });
+    expect(repository.get("hercules")?.generation).toMatchObject({
+      aiMode: "local",
+      aiProvider: "ollama",
+      aiModel: "qwen3:8b",
+    });
+  });
+
   it("resolves a unique Wikipedia link and retains source and image rights metadata", async () => {
     const repository = createRepository();
     const generatedSources: string[] = [];
@@ -78,9 +117,7 @@ describe("People", () => {
         ai: { mode: "local", model: "person-model" },
       }),
     ).resolves.toEqual({
-      relatedPeople: [
-        { name: "Hercules", personId: "hercules", sourceIds: ["wikipedia"] },
-      ],
+      relatedPeople: [{ name: "Hercules", personId: "hercules", sourceIds: ["wikipedia"] }],
       failures: [],
     });
 

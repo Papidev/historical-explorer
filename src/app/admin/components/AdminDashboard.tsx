@@ -11,24 +11,18 @@ export const AdminDashboard = ({
   aiModeOptions,
   initialAiSelection,
   generateDraftStoryAction,
-  resetDraftStoryAction,
   refreshStoryContentAction,
   resolveRelatedPeopleAction,
-  deleteStoryContentAction,
   refreshMainImageCandidatesAction,
-  deleteMainImageCandidatesAction,
   selectMainImageCandidateAction,
 }: {
   rows: AdminPoiRow[];
   aiModeOptions: readonly AiModeOption[];
   initialAiSelection: AiSelection;
   generateDraftStoryAction: AdminAction;
-  resetDraftStoryAction: AdminAction;
   refreshStoryContentAction: AdminAction;
   resolveRelatedPeopleAction: AdminAction;
-  deleteStoryContentAction: AdminAction;
   refreshMainImageCandidatesAction: AdminAction;
-  deleteMainImageCandidatesAction: AdminAction;
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => {
   const aiSelectionRef = useRef(initialAiSelection);
@@ -52,12 +46,9 @@ export const AdminDashboard = ({
         rows={rows}
         aiSelectionRef={aiSelectionRef}
         generateDraftStoryAction={generateDraftStoryAction}
-        resetDraftStoryAction={resetDraftStoryAction}
         refreshStoryContentAction={refreshStoryContentAction}
         resolveRelatedPeopleAction={resolveRelatedPeopleAction}
-        deleteStoryContentAction={deleteStoryContentAction}
         refreshMainImageCandidatesAction={refreshMainImageCandidatesAction}
-        deleteMainImageCandidatesAction={deleteMainImageCandidatesAction}
         selectMainImageCandidateAction={selectMainImageCandidateAction}
       />
     </main>

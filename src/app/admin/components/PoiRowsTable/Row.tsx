@@ -4,7 +4,6 @@ import {
   EyeIcon,
   PhotoIcon,
   PlusIcon,
-  TrashIcon,
   UserGroupIcon,
 } from "@heroicons/react/20/solid";
 import Image from "next/image";
@@ -22,12 +21,9 @@ import { SubmitButton } from "../SubmitButton";
 
 export type Actions = {
   generateDraftStory: AdminAction;
-  resetDraftStory: AdminAction;
   refreshStoryContent: AdminAction;
   resolveRelatedPeople: AdminAction;
-  deleteStoryContent: AdminAction;
   refreshMainImageCandidates: AdminAction;
-  deleteMainImageCandidates: AdminAction;
 };
 
 const refreshConfirmMessages = {
@@ -37,14 +33,10 @@ const refreshConfirmMessages = {
   mainImage: "Refresh Main Image Candidates for this POI?",
 } as const;
 
-const generateConfirmMessage = "Generate a Point of Interest and Draft Story for this Geo Place?";
-
-const deleteConfirmMessages = {
-  transformed:
-    "Reset this row? This deletes generated POI, Wikipedia Text, Story, and Main Image Candidates for this POI.",
-  storyContent: "Delete Story Content for this POI?",
-  mainImage: "Delete Main Image Candidates for this POI?",
-} as const;
+const generateConfirmMessage =
+  "Generate this row? This will run the complete pipeline: Point of Interest, Wikipedia Text, Main Image Candidates, Story Content, and Related People.";
+const refreshDraftStoryConfirmMessage =
+  "Refresh this row? This will rerun the complete pipeline and replace each generated artifact without deleting the current artifacts first.";
 
 const CellContent = ({
   title,
@@ -194,9 +186,13 @@ const getMainImageStatus = (artifact?: MainImageCandidatesArtifact) => {
 };
 
 const ProgressMessage = ({ description }: { description: string }) => (
-  <p className="mt-2 text-xs font-medium text-black/65" aria-live="polite">
-    {description}
-  </p>
+  <div
+    role="status"
+    className="mt-3 inline-flex w-fit items-center gap-2 rounded-full bg-amber-200 px-2.5 py-1 text-xs font-semibold text-amber-950 shadow-sm"
+  >
+    <span className="size-2 animate-pulse rounded-full bg-amber-600" aria-hidden="true" />
+    <span>{description}</span>
+  </div>
 );
 
 export const Row = ({
@@ -224,8 +220,13 @@ export const Row = ({
     !row.transformedPoi && !row.wikiPoi && !row.storyContent && !row.mainImageArtifact;
 
   return (
-    <tr className="hover:bg-gray-50/60">
-      <PipelineCell>
+    <tr
+      aria-busy={isInProgress}
+      className={
+        isInProgress ? "shadow-[inset_0_0_0_1px_var(--color-amber-300)]" : "hover:bg-gray-50/60"
+      }
+    >
+      <PipelineCell inProgress={isInProgress}>
         <CellContent
           title={row.rawPoi?.name}
           subtitle={row.rawPoi?.wikidata ?? row.rawPoi?.id}
@@ -259,14 +260,20 @@ export const Row = ({
             ) : (
               <form
                 action={(formData) =>
-                  runSingleAction(row.id, "Resetting row...", actions.resetDraftStory, formData)
+                  runSingleAction(
+                    row.id,
+                    "Refreshing Draft Story...",
+                    actions.generateDraftStory,
+                    formData,
+                    true,
+                  )
                 }
               >
-                <input type="hidden" name="poiId" value={row.id} />
+                <input type="hidden" name="geoPlaceId" value={row.rawPoi.id} />
                 <SubmitButton
-                  idleLabel="Reset"
-                  pendingLabel="Resetting..."
-                  confirmMessage={deleteConfirmMessages.transformed}
+                  idleLabel="Refresh"
+                  pendingLabel="Refreshing..."
+                  confirmMessage={refreshDraftStoryConfirmMessage}
                   icon={<ArrowPathIcon />}
                   tone="danger"
                   disabled={isInProgress}
@@ -276,7 +283,7 @@ export const Row = ({
           ) : null}
         </CellFooter>
       </PipelineCell>
-      <PipelineCell available={Boolean(row.transformedPoi)}>
+      <PipelineCell available={Boolean(row.transformedPoi)} inProgress={isInProgress}>
         <CellContent subtitle={row.transformedPoi?.id} isAvailable={Boolean(row.transformedPoi)} />
         <CellFooter
           updatedAt={row.transformedUpdatedAt}
@@ -304,7 +311,7 @@ export const Row = ({
           ) : null}
         </CellFooter>
       </PipelineCell>
-      <PipelineCell available={Boolean(row.wikiPoi)}>
+      <PipelineCell available={Boolean(row.wikiPoi)} inProgress={isInProgress}>
         <CellContent isAvailable={Boolean(row.wikiPoi)} />
         <CellFooter updatedAt={row.wikiUpdatedAt} generationDuration={row.wikiGenerationDuration}>
           {row.wikiPoi ? (
@@ -327,7 +334,7 @@ export const Row = ({
           ) : null}
         </CellFooter>
       </PipelineCell>
-      <PipelineCell available={Boolean(row.storyContent)}>
+      <PipelineCell available={Boolean(row.storyContent)} inProgress={isInProgress}>
         <CellContent
           generationModel={[
             row.storyContentGenerationMode,
@@ -384,7 +391,7 @@ export const Row = ({
                   pendingLabel="Generating..."
                   confirmMessage={refreshConfirmMessages.storyContent}
                   icon={row.storyContent ? <ArrowPathIcon /> : <DocumentTextIcon />}
-                  tone="primary"
+                  tone={row.storyContent ? "danger" : "primary"}
                   disabled={isInProgress}
                 />
               </form>
@@ -407,28 +414,6 @@ export const Row = ({
                   pendingLabel="Resolving..."
                   confirmMessage={refreshConfirmMessages.relatedPeople}
                   icon={<UserGroupIcon />}
-                  tone="secondary"
-                  disabled={isInProgress}
-                />
-              </form>
-            ) : null}
-            {row.storyContent ? (
-              <form
-                action={(formData) =>
-                  runSingleAction(
-                    row.id,
-                    "Deleting Story Content...",
-                    actions.deleteStoryContent,
-                    formData,
-                  )
-                }
-              >
-                <input type="hidden" name="poiId" value={row.id} />
-                <SubmitButton
-                  idleLabel="Delete"
-                  pendingLabel="Deleting..."
-                  confirmMessage={deleteConfirmMessages.storyContent}
-                  icon={<TrashIcon />}
                   tone="danger"
                   disabled={isInProgress}
                 />
@@ -437,7 +422,10 @@ export const Row = ({
           </div>
         </CellFooter>
       </PipelineCell>
-      <PipelineCell available={Boolean(getSelectedMainImageCandidate(row.mainImageArtifact))}>
+      <PipelineCell
+        available={Boolean(getSelectedMainImageCandidate(row.mainImageArtifact))}
+        inProgress={isInProgress}
+      >
         <div className="flex min-w-0 items-start gap-3">
           <MainImageCellPreview artifact={row.mainImageArtifact} />
           <CellContent
@@ -491,26 +479,6 @@ export const Row = ({
                   pendingLabel="Refreshing..."
                   confirmMessage={refreshConfirmMessages.mainImage}
                   icon={<ArrowPathIcon />}
-                  tone="primary"
-                  disabled={isInProgress}
-                />
-              </form>
-              <form
-                action={(formData) =>
-                  runSingleAction(
-                    row.id,
-                    "Deleting Main Image Candidates...",
-                    actions.deleteMainImageCandidates,
-                    formData,
-                  )
-                }
-              >
-                <input type="hidden" name="poiId" value={row.id} />
-                <SubmitButton
-                  idleLabel="Delete"
-                  pendingLabel="Deleting..."
-                  confirmMessage={deleteConfirmMessages.mainImage}
-                  icon={<TrashIcon />}
                   tone="danger"
                   disabled={isInProgress}
                 />

@@ -47,12 +47,14 @@ Each city's data lives under `data/<city>/`. The Geo Place input and app-ready P
 
 For Rome, the Geo Place input lives at `data/rome/pois/raw.geojson`, while app-ready POIs are progressively added to `data/rome/pois/pois.geojson`. Each app-ready POI has a stable, human-readable `id`; external identifiers such as `wikidataId` are optional and separate. Wikipedia Text snapshots and local Source metadata are generated into `data/rome/generated/wiki/`, while local pipeline timings and execution details live in `data/rome/generated/generation-metadata.json`.
 
-Use the single Generate action in `/admin` to run the current Rome generation flow:
+Use Generate on an empty row or Refresh on an existing row in `/admin` to run the complete Rome generation flow:
 
 1. Add app-ready POI metadata from the Geo Place.
 2. Generate the Wikipedia Text snapshot.
 3. Generate Main Image Candidates and select the first candidate with license and attribution.
 4. Generate structured Story Content.
+
+Refresh reruns this entire pipeline with the selected AI configuration. It does not clear the row before generation, so the current artifacts are not removed as a preliminary step if regeneration fails.
 
 Stories live under the city's `stories/` folder, with one directory per POI ID. For example, `data/rome/stories/forum-boarium/` contains structured Story Content in `story.json` and Main Image Candidates in `images.json`. Full Generate creates or replaces `story.json`, and the Curator UI provides preview, Refresh, and Delete actions for that content. These are reviewable content artifacts and should be committed after generation and human editing.
 
@@ -86,6 +88,7 @@ OLLAMA_BASE_URL=http://localhost:11434
 ```
 
 Ollama Cloud does not support schema-constrained output. The Story Workflow includes the schema in the prompt instead and retries once when the response fails JSON or domain validation.
+When Ollama Cloud is selected, Story Content uses the configured Cloud model while new People automatically use the local Ollama model from `LOCAL_AI_MODEL`. The admin AI Generation panel shows both active models together.
 
 ## Security Notes
 

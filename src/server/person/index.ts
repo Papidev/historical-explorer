@@ -12,12 +12,7 @@ import type { MainImageCandidate, WikiSnapshot } from "@/server/wikiPipeline/typ
 import { wikiTextToPlainText } from "@/server/wikiPipeline/wikiText";
 import { personRepository, type PersonRepository } from "./filesystemRepository";
 import { generatePerson } from "./generatePerson";
-import {
-  toPublicPerson,
-  type Person,
-  type PersonContent,
-  type PersonSource,
-} from "./types";
+import { toPublicPerson, type Person, type PersonContent, type PersonSource } from "./types";
 
 const normalizeName = (value: string) =>
   value
@@ -26,10 +21,9 @@ const normalizeName = (value: string) =>
     .trim()
     .toLocaleLowerCase("en");
 
-const normalizeTitle = (value: string) =>
-  value.replace(/_/g, " ").trim().toLocaleLowerCase("en");
+const normalizeTitle = (value: string) => value.replace(/_/g, " ").trim().toLocaleLowerCase("en");
 
-const getProvider = (ai: AiSelection) =>
+const getProvider = (ai: AiSelection): "ollama" | "gemini" =>
   ai.mode === "local"
     ? process.env.LOCAL_AI_PROVIDER === "gemini"
       ? "gemini"
@@ -37,6 +31,17 @@ const getProvider = (ai: AiSelection) =>
     : process.env.CLOUD_AI_PROVIDER === "ollama"
       ? "ollama"
       : "gemini";
+
+const getPersonAiSelection = (ai: AiSelection) => {
+  const provider = getProvider(ai);
+  return ai.mode === "cloud" && provider === "ollama"
+    ? {
+        mode: "local" as const,
+        provider: "ollama" as const,
+        model: process.env.LOCAL_AI_MODEL?.trim() || "qwen3:8b",
+      }
+    : { ...ai, provider };
+};
 
 type PersonDependencies = {
   repository: PersonRepository;
@@ -80,7 +85,7 @@ const generateAndPersist = async ({
   name: string;
   wikidataId: string;
   snapshot: WikiSnapshot;
-  ai: AiSelection;
+  ai: AiSelection & { provider: "ollama" | "gemini" };
   dependencies: PersonDependencies;
 }) => {
   const source: PersonSource = {
@@ -90,9 +95,8 @@ const generateAndPersist = async ({
     url: buildWikipediaPageUrl(snapshot.title),
     content: wikiTextToPlainText(snapshot.fullText),
   };
-  const provider = getProvider(ai);
   const content = await dependencies.generateContent({ name, wikidataId }, [source], {
-    provider,
+    provider: ai.provider,
     model: ai.model,
   });
   const image = (
@@ -119,7 +123,7 @@ const generateAndPersist = async ({
     },
     generation: {
       aiMode: ai.mode,
-      aiProvider: provider,
+      aiProvider: ai.provider,
       aiModel: ai.model,
       completedAt: dependencies.now().toISOString(),
     },
@@ -149,6 +153,7 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
       ai: AiSelection;
     }) => {
       const links = storySources.flatMap((source) => source.links ?? []);
+      const personAi = getPersonAiSelection(ai);
       const resolved: RelatedPerson[] = [];
       const failures: RelatedPeopleResolutionResult["failures"] = [];
 
@@ -189,7 +194,7 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
               name: person.name,
               wikidataId: snapshot.wikidataId,
               snapshot,
-              ai,
+              ai: personAi,
               dependencies,
             }));
           resolved.push({
