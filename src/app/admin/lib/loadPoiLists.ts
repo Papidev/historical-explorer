@@ -382,7 +382,24 @@ export const loadPoiLists = async () => {
             relativePath: `rome/stories/${row.id}/images.json`,
             versioned: true,
           }),
-          relatedPeople: [],
+          relatedPeople: (row.storyContent?.relatedPeople ?? []).map(({ name, personId }) => ({
+            name,
+            personId,
+            artifacts: personId
+              ? [
+                  readArtifact({
+                    label: `${name} Person JSON`,
+                    relativePath: `people/${personId}/person.json`,
+                    versioned: true,
+                  }),
+                  readArtifact({
+                    label: `${name} Wikipedia Text`,
+                    relativePath: `generated/people/${personId}.txt`,
+                    versioned: false,
+                  }),
+                ].filter((artifact): artifact is AdminArtifact => Boolean(artifact))
+              : [],
+          })),
         },
       } satisfies AdminPoiRow;
     });

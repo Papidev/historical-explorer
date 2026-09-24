@@ -1,4 +1,4 @@
-import { CodeBracketSquareIcon } from "@heroicons/react/20/solid";
+import { CodeBracketIcon } from "@heroicons/react/24/outline";
 import { IconButton } from "@/app/components/ui/IconButton";
 import type { AdminArtifact } from "../../lib/types";
 import type { SelectedPanel } from "./Preview";
@@ -14,7 +14,6 @@ export const ArtifactViewButton = ({
 }) => (
   <IconButton
     label={`View ${artifact.label}`}
-    size="small"
     disabled={disabled}
     onClick={() =>
       onSelectPanel({
@@ -24,6 +23,6 @@ export const ArtifactViewButton = ({
       })
     }
   >
-    <CodeBracketSquareIcon />
+    <CodeBracketIcon />
   </IconButton>
 );

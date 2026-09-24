@@ -7,6 +7,7 @@ import type { AdminAction, AdminArtifact, AdminPoiRow } from "../../lib/types";
 import { ActionToast, getActionError, type Toast } from "../ActionToast";
 import { Preview, type SelectedPanel } from "./Preview";
 import { Row, type Actions } from "./Row";
+import { RelatedPeopleDrawer } from "./RelatedPeopleDrawer";
 import { GlobalArtifacts } from "./GlobalArtifacts";
 
 const ColumnHeader = ({
@@ -32,7 +33,7 @@ const ColumnHeader = ({
       <span
         className={
           versioned
-            ? "rounded bg-emerald-100 px-1.5 py-0.5 font-medium text-emerald-800"
+            ? "rounded bg-sky-100 px-1.5 py-0.5 font-medium text-sky-800"
             : "rounded bg-gray-200 px-1.5 py-0.5 font-medium text-gray-600"
         }
       >
@@ -62,6 +63,8 @@ export const PoiRowsTable = ({
   refreshMainImageCandidatesAction: AdminAction;
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => {
+  const [relatedPeoplePoiId, setRelatedPeoplePoiId] = useState<string | null>(null);
+  const relatedPeopleRow = rows.find((row) => row.id === relatedPeoplePoiId);
   const [selectedPanel, setSelectedPanel] = useState<SelectedPanel | null>(null);
   const [progress, setProgress] = useOptimistic<{
     poiId: string;
@@ -88,6 +91,7 @@ export const PoiRowsTable = ({
       formData.set("aiModel", aiSelectionRef.current.model);
     }
     setSelectedPanel(null);
+    setRelatedPeoplePoiId(null);
     setActionToast(null);
     setProgress({ poiId, description });
     try {
@@ -189,6 +193,7 @@ export const PoiRowsTable = ({
                       progress && progress.poiId === row.id ? progress.description : null
                     }
                     onSelectPanel={setSelectedPanel}
+                    onViewRelatedPeople={setRelatedPeoplePoiId}
                     runSingleAction={runSingleAction}
                   />
                 ))}
@@ -197,6 +202,18 @@ export const PoiRowsTable = ({
           )}
         </div>
       </section>
+      {relatedPeopleRow ? (
+        <RelatedPeopleDrawer
+          poiName={
+            relatedPeopleRow.transformedPoi?.name ??
+            relatedPeopleRow.rawPoi?.name ??
+            relatedPeopleRow.id
+          }
+          people={relatedPeopleRow.artifacts?.relatedPeople ?? []}
+          onClose={() => setRelatedPeoplePoiId(null)}
+          selectMainImageCandidateAction={selectMainImageCandidateAction}
+        />
+      ) : null}
       {selectedPanel ? (
         <Preview
           panel={selectedPanel}

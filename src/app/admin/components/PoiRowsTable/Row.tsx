@@ -1,11 +1,12 @@
 import {
   ArrowPathIcon,
+  CodeBracketIcon,
   DocumentTextIcon,
-  EyeIcon,
   PhotoIcon,
   PlusIcon,
   UserGroupIcon,
-} from "@heroicons/react/20/solid";
+} from "@heroicons/react/24/outline";
+import { EyeIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import type { ReactNode } from "react";
 import { IconButton } from "@/app/components/ui/IconButton";
@@ -202,6 +203,7 @@ export const Row = ({
   isInProgress,
   progressDescription,
   onSelectPanel,
+  onViewRelatedPeople,
   runSingleAction,
 }: {
   row: AdminPoiRow;
@@ -209,6 +211,7 @@ export const Row = ({
   isInProgress: boolean;
   progressDescription: string | null;
   onSelectPanel: (panel: SelectedPanel) => void;
+  onViewRelatedPeople: (poiId: string) => void;
   runSingleAction: (
     poiId: string,
     description: string,
@@ -315,7 +318,7 @@ export const Row = ({
                     : null
                 }
               >
-                <EyeIcon />
+                <CodeBracketIcon />
               </IconButton>
             </div>
           ) : null}
@@ -364,6 +367,21 @@ export const Row = ({
             .join(" / ")}
           isAvailable={Boolean(row.storyContent)}
         />
+        {row.storyContent ? (
+          <button
+            type="button"
+            aria-haspopup="dialog"
+            onClick={() => onViewRelatedPeople(row.id)}
+            disabled={isInProgress}
+            className="mt-2 inline-flex w-fit cursor-pointer items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium text-gray-700 ring-1 ring-gray-200 ring-inset hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            <UserGroupIcon className="size-4" aria-hidden="true" />
+            Related People
+            <span className="rounded bg-gray-100 px-1.5 tabular-nums">
+              {row.storyContent.relatedPeople.length}
+            </span>
+          </button>
+        ) : null}
         <CellFooter
           updatedAt={row.storyContentUpdatedAt}
           generationDuration={row.storyContentGenerationDuration}
