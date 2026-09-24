@@ -45,7 +45,7 @@
 - Before starting dense implementations, first check whether a consolidated, widely used, and up-to-date dependency can solve the problem.
 - Prefer adopting proven dependencies over re-inventing the wheel when the tradeoffs are acceptable for this project.
 - Keep data flow explicit and local; avoid “smart” indirection unless it clearly reduces complexity.
-- After each step, run the smallest useful verification (`dev` manual check) before moving on.
+- After each step, run the smallest useful verification before moving on.
 - When a feature is stable enough (behavior/API unlikely to change soon), update documentation accordingly: `README.md` for user/developer usage and `AGENTS.md` for implementation guidance/process updates.
 
 Update `AGENTS.md` only with important stuff that cannot be clearly/quickly derived from an exploration of the codebase.
@@ -59,7 +59,7 @@ Update `AGENTS.md` only with important stuff that cannot be clearly/quickly deri
 - There is no automated map test harness yet; add colocated `*.test.tsx` files when introducing logic-heavy components and stub MapLibre APIs if needed.
 - Keep tests user-centric: verify visible behavior, interactions, and outcomes rather than implementation details.
 - Prefer accessible queries (for example `getByRole`, `getByLabelText`) and avoid brittle selectors.
-- Immediately before raising a PR, run `pnpm lint`, `pnpm build`, and start `pnpm dev` to verify the app starts without errors. Do not require browser smoke checks unless explicitly requested.
+- Immediately before raising a PR, run `pnpm lint` and `pnpm build`. CI checks that the built app starts and responds on the PR. Do not require browser smoke checks unless explicitly requested.
 - Document any manual QA (e.g., “verified zoom-to markers on Chrome + Safari”) in PR descriptions until automated coverage exists.
 
 ## Commits & PR Hygiene
