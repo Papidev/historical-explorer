@@ -1,0 +1,199 @@
+{
+  "introduction": {
+    "text": "Castel Sant’Angelo, a towering cylindrical building in Rome, was originally built as Emperor Hadrian’s mausoleum and later served as a papal fortress, prison, and museum. Its layered history and iconic silhouette make it a symbol of Rome’s imperial, religious, and cultural heritage.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "hadrian-mausoleum-construction",
+        "description": "Construction of Hadrian’s mausoleum on the right bank of the Tiber, begun between 134 and 139 AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 134,
+          "precision": "approximate",
+          "endYear": 139,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "hadrian-ashes",
+        "description": "Hadrian’s ashes, along with those of his wife Sabina and adopted son Lucius Aelius, were interred in the mausoleum in 138 AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 138,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "caracalla-deposition",
+        "description": "Caracalla’s ashes were deposited in the mausoleum in 217 AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 217,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "fortress-conversion",
+        "description": "The mausoleum was converted into a military fortress in 401 AD and incorporated into the Aurelian Walls.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 401,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "sack-rome-410",
+        "description": "The Visigothic sacking of Rome in 410 AD led to the scattering of the mausoleum’s urns and ashes.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 410,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "plague-590",
+        "description": "Legend of Archangel Michael appearing atop the mausoleum in 590 AD, ending the plague.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 590,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "papal-fortress-14th-century",
+        "description": "Beginning in the 14th century, the popes converted the structure into a castle.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1300,
+          "precision": "approximate",
+          "endYear": 1399,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "sack-rome-1527",
+        "description": "The fortress served as refuge during the Sack of Rome in 1527.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1527,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "cellini-prison",
+        "description": "Benvenuto Cellini was imprisoned in the castle during the 16th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1550,
+          "precision": "approximate",
+          "endYear": 1599,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "decommission-1901",
+        "description": "The castle was decommissioned as a fortress and became a museum in 1901.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1901,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "modern-museum-2016",
+        "description": "In 2016, the museum attracted 1,234,443 visitors.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2016,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "cylindrical-rotunda",
+        "description": "The building’s design features a massive cylindrical rotunda with a conical roof, originally intended as a mausoleum.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "fortress-defenses",
+        "description": "Later additions include thick walls, a moat, and a fortified corridor (Passetto di Borgo) connecting to St. Peter’s Basilica.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "modern-tunnel-project",
+        "description": "An ongoing project aims to create a pedestrian tunnel linking the castle to St. Peter’s Basilica beneath Piazza Pia.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "st-michael-statue",
+        "description": "A bronze statue of Saint Michael, executed by Peter Anton von Verschaffelt in 1753, crowns the castle’s roof.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "montelupo-statue",
+        "description": "An earlier marble statue of Saint Michael by Raffaello da Montelupo, created in 1536, once stood atop the castle.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "other-artifacts",
+        "description": "The museum houses various artifacts, including the capstone of a funerary urn that once adorned Saint Peter’s Basilica.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Hadrian",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Sabina",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Lucius Aelius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Caracalla",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Nicholas III",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Clement VII",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Benvenuto Cellini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giordano Bruno",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Peter Anton von Verschaffelt",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Alaric",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

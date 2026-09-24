@@ -172,12 +172,7 @@ describe("Story Workflow Interface", () => {
       relatedPeople: "resolved",
       relatedPeopleFailures: [],
     });
-    expect(order).toEqual([
-      "sources",
-      "mainImageCandidates",
-      "storyContent",
-      "people:qwen3:8b",
-    ]);
+    expect(order).toEqual(["sources", "mainImageCandidates", "storyContent", "people:qwen3:8b"]);
   });
 
   it("stops before downstream work when Sources are unavailable", async () => {
@@ -197,18 +192,16 @@ describe("Story Workflow Interface", () => {
     });
 
     const generation = createStoryWorkflow(dependencies).draftStory.generate({
-        poiId: pointOfInterest.id,
-        ai: { mode: "local", model: "qwen3:8b" },
-      });
+      poiId: pointOfInterest.id,
+      ai: { mode: "local", model: "qwen3:8b" },
+    });
 
     await expect(generation).rejects.toMatchObject({
       code: "sources-unavailable",
       stage: "sources",
       retryable: true,
     });
-    await expect(generation).rejects.toThrow(
-      "sources-unavailable: Wikipedia unavailable",
-    );
+    await expect(generation).rejects.toThrow("sources-unavailable: Wikipedia unavailable");
     expect(downstream).toEqual([]);
     expect(await repository.get(pointOfInterest.id)).toBeUndefined();
   });
@@ -320,6 +313,16 @@ describe("Story Workflow Interface", () => {
     });
     expect(await repository.get(pointOfInterest.id)).toMatchObject({
       storyContent: { relatedPeople: [unresolvedPerson] },
+      generation: {
+        relatedPeople: {
+          relatedPeopleFailures: [
+            {
+              name: "Hercules",
+              message: "Request failed after 2 attempts: Error: HTTP 429 Too Many Requests",
+            },
+          ],
+        },
+      },
     });
   });
 
@@ -367,6 +370,7 @@ describe("Story Workflow Interface", () => {
           completedAt: "2026-08-22T10:00:00.000Z",
           aiMode: "local",
           aiModel: "person-model",
+          relatedPeopleFailures: [],
         },
       },
     });
@@ -430,11 +434,7 @@ describe("Story Workflow Interface", () => {
       storyContent: content,
       mainImageCandidates: [{ commonsFileName: "replacement.jpg" }],
     });
-    expect(previousSourceContents).toEqual([
-      undefined,
-      "Source version one",
-      "Source version two",
-    ]);
+    expect(previousSourceContents).toEqual([undefined, "Source version one", "Source version two"]);
   });
 
   it("preserves an eligible Draft Main Image and otherwise selects the first eligible candidate", async () => {

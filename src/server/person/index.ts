@@ -175,6 +175,13 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
         );
         if (matchingLinks.size !== 1) {
           resolved.push({ name: person.name, sourceIds: person.sourceIds });
+          failures.push({
+            name: person.name,
+            message:
+              matchingLinks.size === 0
+                ? "No matching Wikipedia link was found in the Story source."
+                : "Multiple Wikipedia links match this name; the identity is ambiguous.",
+          });
           continue;
         }
 
@@ -183,6 +190,10 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
           const snapshot = await dependencies.fetchSnapshot(link.title);
           if (!snapshot.wikidataId) {
             resolved.push({ name: person.name, sourceIds: person.sourceIds });
+            failures.push({
+              name: person.name,
+              message: "The linked Wikipedia page has no Wikidata ID.",
+            });
             continue;
           }
 

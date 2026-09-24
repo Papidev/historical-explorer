@@ -3,10 +3,12 @@
 import { useOptimistic, useState } from "react";
 import type { RefObject } from "react";
 import type { AiSelection } from "../../lib/aiModels";
-import type { AdminAction, AdminPoiRow } from "../../lib/types";
+import type { AdminAction, AdminArtifact, AdminPoiRow } from "../../lib/types";
 import { ActionToast, getActionError, type Toast } from "../ActionToast";
 import { Preview, type SelectedPanel } from "./Preview";
-import { Row, type Actions } from "./Row";
+import { Row } from "./Row";
+import type { Actions } from "./RowTypes";
+import { GlobalArtifacts } from "./GlobalArtifacts";
 
 const ColumnHeader = ({
   title,
@@ -31,7 +33,7 @@ const ColumnHeader = ({
       <span
         className={
           versioned
-            ? "rounded bg-emerald-100 px-1.5 py-0.5 font-medium text-emerald-800"
+            ? "rounded bg-sky-100 px-1.5 py-0.5 font-medium text-sky-800"
             : "rounded bg-gray-200 px-1.5 py-0.5 font-medium text-gray-600"
         }
       >
@@ -44,6 +46,7 @@ const ColumnHeader = ({
 
 export const PoiRowsTable = ({
   rows,
+  globalArtifacts,
   aiSelectionRef,
   generateDraftStoryAction,
   refreshStoryContentAction,
@@ -52,6 +55,7 @@ export const PoiRowsTable = ({
   selectMainImageCandidateAction,
 }: {
   rows: AdminPoiRow[];
+  globalArtifacts: AdminArtifact[];
   aiSelectionRef: RefObject<Pick<AiSelection, "mode" | "model">>;
   generateDraftStoryAction: AdminAction;
   refreshStoryContentAction: AdminAction;
@@ -103,6 +107,7 @@ export const PoiRowsTable = ({
         <ActionToast toast={actionToast} onDismiss={() => setActionToast(null)} />
       ) : null}
       <section className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-gray-950/10">
+        <GlobalArtifacts artifacts={globalArtifacts} onSelectPanel={setSelectedPanel} />
         <div className="min-h-0 flex-1 overflow-x-hidden overflow-y-auto">
           {rows.length === 0 ? (
             <p className="px-4 py-4 text-sm text-black/55">No POIs available.</p>
@@ -111,8 +116,8 @@ export const PoiRowsTable = ({
               <colgroup>
                 <col className="w-[19%]" />
                 <col className="w-[19%]" />
-                <col className="w-[19%]" />
-                <col className="w-[19%]" />
+                <col className="w-[17%]" />
+                <col className="w-[21%]" />
                 <col className="w-[24%]" />
               </colgroup>
               <thead className="sticky top-0 z-10 bg-amber-50">
@@ -186,6 +191,7 @@ export const PoiRowsTable = ({
                     }
                     onSelectPanel={setSelectedPanel}
                     runSingleAction={runSingleAction}
+                    selectMainImageCandidateAction={selectMainImageCandidateAction}
                   />
                 ))}
               </tbody>

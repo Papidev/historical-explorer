@@ -186,7 +186,17 @@ describe("People", () => {
         { name: "Alexander", sourceIds: ["wikipedia"] },
         { name: "Known link", sourceIds: ["wikipedia"] },
       ],
-      failures: [],
+      failures: [
+        {
+          name: "Missing",
+          message: "Multiple Wikipedia links match this name; the identity is ambiguous.",
+        },
+        {
+          name: "Alexander",
+          message: "Multiple Wikipedia links match this name; the identity is ambiguous.",
+        },
+        { name: "Known link", message: "The linked Wikipedia page has no Wikidata ID." },
+      ],
     });
     expect(repository.list()).toEqual([]);
   });

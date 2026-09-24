@@ -2,12 +2,13 @@
 
 import { useRef } from "react";
 import type { AiModeOption, AiSelection } from "../lib/aiModels";
-import type { AdminAction, AdminPoiRow } from "../lib/types";
+import type { AdminAction, AdminArtifact, AdminPoiRow } from "../lib/types";
 import { AiGenerationSettings } from "./AiGenerationSettings";
 import { PoiRowsTable } from "./PoiRowsTable";
 
 export const AdminDashboard = ({
   rows,
+  globalArtifacts,
   aiModeOptions,
   initialAiSelection,
   generateDraftStoryAction,
@@ -17,6 +18,7 @@ export const AdminDashboard = ({
   selectMainImageCandidateAction,
 }: {
   rows: AdminPoiRow[];
+  globalArtifacts: AdminArtifact[];
   aiModeOptions: readonly AiModeOption[];
   initialAiSelection: AiSelection;
   generateDraftStoryAction: AdminAction;
@@ -44,6 +46,7 @@ export const AdminDashboard = ({
       </header>
       <PoiRowsTable
         rows={rows}
+        globalArtifacts={globalArtifacts}
         aiSelectionRef={aiSelectionRef}
         generateDraftStoryAction={generateDraftStoryAction}
         refreshStoryContentAction={refreshStoryContentAction}

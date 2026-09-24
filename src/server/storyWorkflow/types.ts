@@ -23,6 +23,7 @@ export type GenerationCheckpoint = {
   aiMode?: AiSelection["mode"];
   aiProvider?: "ollama" | "gemini";
   aiModel?: string;
+  relatedPeopleFailures?: RelatedPeopleResolutionFailure[];
 };
 
 export type DraftStoryGenerationStatus = {
@@ -89,10 +90,7 @@ export class StoryWorkflowError extends Error {
     retryable: boolean;
     cause?: unknown;
   }) {
-    super(
-      cause instanceof Error && cause.message ? `${code}: ${cause.message}` : code,
-      { cause },
-    );
+    super(cause instanceof Error && cause.message ? `${code}: ${cause.message}` : code, { cause });
     this.name = "StoryWorkflowError";
     this.code = code;
     this.stage = stage;
@@ -107,17 +105,11 @@ export type StoryWorkflow = {
     reset(input: { poiId: string }): Promise<void>;
   };
   storyContent: {
-    generate(input: {
-      poiId: string;
-      ai: AiSelection;
-    }): Promise<RelatedPeopleResolutionResult>;
+    generate(input: { poiId: string; ai: AiSelection }): Promise<RelatedPeopleResolutionResult>;
     delete(input: { poiId: string }): Promise<void>;
   };
   relatedPeople: {
-    resolve(input: {
-      poiId: string;
-      ai: AiSelection;
-    }): Promise<RelatedPeopleResolutionResult>;
+    resolve(input: { poiId: string; ai: AiSelection }): Promise<RelatedPeopleResolutionResult>;
   };
   mainImageCandidates: {
     generate(input: { poiId: string }): Promise<void>;
