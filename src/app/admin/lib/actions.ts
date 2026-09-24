@@ -31,11 +31,10 @@ const toRelatedPeopleWarning = (
   const rateLimited = failures.some(({ message }) => /\b429\b|too many requests/i.test(message));
   return {
     warning: {
-      title: "Story saved with unresolved People",
+      title: "Some Related People remain unresolved",
       description: rateLimited
-        ? "The Story is available, but an external rate limit interrupted Related People. Retry in a few minutes."
-        : "The Story is available, but some Related People could not be resolved.",
-      details: failures.map(({ name, message }) => `${name}: ${message}`).join("\n"),
+        ? "An external rate limit interrupted resolution. Retry in a few minutes; open Related People for details."
+        : "Open Related People to see what prevented resolution.",
     },
   };
 };

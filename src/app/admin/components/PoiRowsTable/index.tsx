@@ -116,8 +116,8 @@ export const PoiRowsTable = ({
               <colgroup>
                 <col className="w-[19%]" />
                 <col className="w-[19%]" />
-                <col className="w-[19%]" />
-                <col className="w-[19%]" />
+                <col className="w-[17%]" />
+                <col className="w-[21%]" />
                 <col className="w-[24%]" />
               </colgroup>
               <thead className="sticky top-0 z-10 bg-amber-50">
