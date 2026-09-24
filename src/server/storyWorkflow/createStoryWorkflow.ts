@@ -216,6 +216,7 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
           aiMode: ai.mode,
           aiProvider: generated.provider,
           aiModel: ai.model,
+          relatedPeopleFailures: resolution.failures,
         },
       );
     } catch (cause) {
@@ -313,6 +314,7 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
               ...toCheckpoint(startedAt, now),
               aiMode: ai.mode,
               aiModel: ai.model,
+              relatedPeopleFailures: resolution.failures,
             },
           );
         } catch (cause) {

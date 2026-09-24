@@ -58,6 +58,7 @@ export type AdminArtifact = {
 export type RelatedPersonArtifacts = {
   name: string;
   personId?: string;
+  resolutionError?: string;
   artifacts: AdminArtifact[];
 };
 

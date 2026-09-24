@@ -1,6 +1,6 @@
 import { existsSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
-import { storyWorkflow, type DraftStorySnapshot } from "@/server/storyWorkflow";
+import { storyWorkflow, type DraftStorySnapshot, type Source } from "@/server/storyWorkflow";
 import { getDefaultInputPath } from "@/server/wikiPipeline/io";
 import type {
   AdminArtifact,
@@ -24,12 +24,42 @@ type GenerationMetadata = Record<
         aiMode?: string;
         aiProvider?: string;
         aiModel?: string;
+        relatedPeopleFailures?: Array<{ name: string; message: string }>;
       }
     >
   >
 >;
 
 const toRowKey = (value: string) => value.trim().toLowerCase();
+
+const getSourceLinkIssue = (name: string, sources: Source[]) => {
+  if (sources.length === 0) return undefined;
+
+  const normalizeName = (value: string) =>
+    value
+      .replace(/_/g, " ")
+      .replace(/\s*\([^)]*\)\s*$/, "")
+      .trim()
+      .toLocaleLowerCase("en");
+  const matchingTitles = new Set(
+    sources
+      .flatMap((source) => source.links ?? [])
+      .filter(
+        ({ label, title }) =>
+          normalizeName(label) === normalizeName(name) ||
+          normalizeName(title) === normalizeName(name),
+      )
+      .map(({ title }) => title.replace(/_/g, " ").trim().toLocaleLowerCase("en")),
+  );
+
+  if (matchingTitles.size === 0) {
+    return "No matching Wikipedia link exists in the current Story source.";
+  }
+  if (matchingTitles.size > 1) {
+    return "Multiple Wikipedia links match this name in the current Story source.";
+  }
+  return undefined;
+};
 
 const parseGeoJson = (filePath: string) => {
   const raw = readFileSync(filePath, "utf-8");
@@ -385,6 +415,11 @@ export const loadPoiLists = async () => {
           relatedPeople: (row.storyContent?.relatedPeople ?? []).map(({ name, personId }) => ({
             name,
             personId,
+            resolutionError: !personId
+              ? (generationMetadata[toRowKey(row.id)]?.relatedPeople?.relatedPeopleFailures?.find(
+                  (failure) => failure.name === name,
+                )?.message ?? getSourceLinkIssue(name, row.storyContentSources ?? []))
+              : undefined,
             artifacts: personId
               ? [
                   readArtifact({

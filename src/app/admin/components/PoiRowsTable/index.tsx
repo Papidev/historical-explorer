@@ -6,7 +6,8 @@ import type { AiSelection } from "../../lib/aiModels";
 import type { AdminAction, AdminArtifact, AdminPoiRow } from "../../lib/types";
 import { ActionToast, getActionError, type Toast } from "../ActionToast";
 import { Preview, type SelectedPanel } from "./Preview";
-import { Row, type Actions } from "./Row";
+import { Row } from "./Row";
+import type { Actions } from "./RowTypes";
 import { RelatedPeopleDrawer } from "./RelatedPeopleDrawer";
 import { GlobalArtifacts } from "./GlobalArtifacts";
 

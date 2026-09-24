@@ -25,10 +25,10 @@ export const RelatedPeopleDrawer = ({
       <div className="fixed inset-0 overflow-hidden">
         <div className="pointer-events-none absolute inset-y-0 right-0 flex max-w-full pl-6">
           <DialogPanel className="pointer-events-auto flex h-full w-screen max-w-md flex-col bg-white shadow-xl [&_[role=tooltip]]:right-0 [&_[role=tooltip]]:left-auto [&_[role=tooltip]]:translate-x-0">
-            <div className="border-b border-gray-200 bg-amber-50 px-5 py-5">
+            <div className="border-b border-violet-200 bg-violet-50 px-5 py-5">
               <div className="flex items-start justify-between gap-4">
                 <div className="min-w-0">
-                  <DialogTitle className="text-base font-semibold text-black">
+                  <DialogTitle className="text-base font-semibold text-violet-900">
                     Related People
                   </DialogTitle>
                   <p className="mt-1 text-sm break-words text-black/65">{poiName}</p>
@@ -50,7 +50,7 @@ export const RelatedPeopleDrawer = ({
                   {people.map((person, index) => (
                     <li key={`${person.name}-${index}`} className="py-5">
                       <div className="flex items-start justify-between gap-3">
-                        <h3 className="min-w-0 text-sm font-semibold break-words text-black">
+                        <h3 className="min-w-0 text-sm font-semibold break-words text-violet-900">
                           {person.name}
                         </h3>
                         <span
@@ -102,9 +102,19 @@ export const RelatedPeopleDrawer = ({
                           </ul>
                         </>
                       ) : (
-                        <p className="mt-2 text-xs text-black/55">
-                          Not linked to a canonical Person yet.
-                        </p>
+                        <div className="mt-3 rounded-md bg-orange-50 px-3 py-2 text-sm text-orange-950">
+                          {person.resolutionError ? (
+                            <>
+                              <p className="font-semibold">Resolution error</p>
+                              <p className="mt-1 break-words">{person.resolutionError}</p>
+                            </>
+                          ) : (
+                            <p>
+                              No resolution error was saved for this earlier attempt. Retry Resolve
+                              People to capture the cause.
+                            </p>
+                          )}
+                        </div>
                       )}
                     </li>
                   ))}
@@ -112,20 +122,11 @@ export const RelatedPeopleDrawer = ({
               )}
             </div>
             {selectedPanel ? (
-              <Dialog
-                open
+              <Preview
+                panel={selectedPanel}
                 onClose={() => setSelectedPanel(null)}
-                className="relative z-50"
-                aria-label={selectedPanel.title}
-              >
-                <DialogPanel>
-                  <Preview
-                    panel={selectedPanel}
-                    onClose={() => setSelectedPanel(null)}
-                    selectMainImageCandidateAction={selectMainImageCandidateAction}
-                  />
-                </DialogPanel>
-              </Dialog>
+                selectMainImageCandidateAction={selectMainImageCandidateAction}
+              />
             ) : null}
           </DialogPanel>
         </div>
