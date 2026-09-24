@@ -2,7 +2,7 @@ import type { Source, StoryContent } from "@/server/storyWorkflow";
 
 export type AdminActionWarning = {
   title: string;
-  description: string;
+  description?: string;
   details?: string;
 };
 

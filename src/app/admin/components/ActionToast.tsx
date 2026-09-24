@@ -82,7 +82,7 @@ export const ActionToast = ({ toast, onDismiss }: { toast: Toast; onDismiss: () 
     >
       <div className="flex-1">
         <p className="font-semibold">{toast.title}</p>
-        <p className="mt-0.5 opacity-80">{toast.description}</p>
+        {toast.description ? <p className="mt-0.5 opacity-80">{toast.description}</p> : null}
         {toast.details ? (
           <p className="mt-1 font-mono text-xs break-words opacity-75">{toast.details}</p>
         ) : null}

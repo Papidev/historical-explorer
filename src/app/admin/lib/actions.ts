@@ -28,13 +28,9 @@ const toRelatedPeopleWarning = (
     return undefined;
   }
 
-  const rateLimited = failures.some(({ message }) => /\b429\b|too many requests/i.test(message));
   return {
     warning: {
       title: "Some Related People remain unresolved",
-      description: rateLimited
-        ? "An external rate limit interrupted resolution. Retry in a few minutes; open Related People for details."
-        : "Open Related People to see what prevented resolution.",
     },
   };
 };

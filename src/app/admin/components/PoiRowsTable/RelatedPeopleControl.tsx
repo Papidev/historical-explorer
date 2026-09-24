@@ -28,13 +28,13 @@ export const RelatedPeopleControl = ({
 
   return (
     <>
-      <div className="mt-2 inline-flex max-w-full items-stretch rounded-md border border-violet-200 bg-violet-50">
+      <div className="mt-2 flex w-full items-stretch rounded-md border border-violet-200 bg-violet-50">
         <button
           type="button"
           aria-haspopup="dialog"
           onClick={() => setIsDrawerOpen(true)}
           disabled={isInProgress}
-          className="inline-flex min-w-0 cursor-pointer flex-wrap items-center gap-1.5 rounded-l-md px-2 py-1 text-xs font-medium text-violet-900 hover:bg-violet-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-700 disabled:cursor-not-allowed disabled:opacity-50 [&>*]:pointer-events-none"
+          className="inline-flex min-w-0 flex-1 cursor-pointer flex-wrap items-center gap-1.5 rounded-l-md px-2 py-1 text-xs font-medium text-violet-900 hover:bg-violet-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-700 disabled:cursor-not-allowed disabled:opacity-50 [&>*]:pointer-events-none"
         >
           <UserGroupIcon className="size-4" aria-hidden="true" />
           Related People
@@ -47,7 +47,7 @@ export const RelatedPeopleControl = ({
         </button>
         {unresolvedCount ? (
           <form
-            className="flex items-center border-l border-violet-200 px-1"
+            className="ml-auto flex shrink-0 items-center pr-1 pl-0.5"
             action={(formData) => {
               setIsDrawerOpen(false);
               return runSingleAction(
