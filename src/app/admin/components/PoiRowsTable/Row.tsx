@@ -3,6 +3,7 @@ import { MainImageCell } from "./MainImageCell";
 import { PoiCell } from "./PoiCell";
 import type { ActionCellProps } from "./RowTypes";
 import { StoryCell } from "./StoryCell";
+import { WikidataTypesCell } from "./WikidataTypesCell";
 import { WikipediaCell } from "./WikipediaCell";
 
 export const Row = ({
@@ -32,6 +33,13 @@ export const Row = ({
       runSingleAction={runSingleAction}
     />
     <PoiCell row={row} isInProgress={isInProgress} onSelectPanel={onSelectPanel} />
+    <WikidataTypesCell
+      row={row}
+      actions={actions}
+      isInProgress={isInProgress}
+      onSelectPanel={onSelectPanel}
+      runSingleAction={runSingleAction}
+    />
     <WikipediaCell row={row} isInProgress={isInProgress} onSelectPanel={onSelectPanel} />
     <StoryCell
       row={row}

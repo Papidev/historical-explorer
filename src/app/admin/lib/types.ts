@@ -1,4 +1,5 @@
 import type { Source, StoryContent } from "@/server/storyWorkflow";
+import type { PoiTypesResult } from "@/server/poiTypes";
 
 export type AdminActionWarning = {
   title: string;
@@ -99,4 +100,6 @@ export type AdminPoiRow = {
   storyContentSources?: Source[];
   mainImageArtifact?: MainImageCandidatesArtifact;
   artifacts?: AdminPoiArtifacts;
+  poiTypes?: PoiTypesResult;
+  wikidataId?: string;
 };

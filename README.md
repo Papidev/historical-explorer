@@ -45,7 +45,7 @@ For project glossary terms such as Geo Place, Draft Story, Sources, and Main Ima
 
 Each city's data lives under `data/<city>/`. The Geo Place input and app-ready POI catalog live together in the city's `pois/` folder and are versioned. Rebuildable local outputs live under `generated/` and are intentionally not committed.
 
-For Rome, the Geo Place input lives at `data/rome/pois/raw.geojson`, while app-ready POIs are progressively added to `data/rome/pois/pois.geojson`. Each app-ready POI has a stable, human-readable `id`; external identifiers such as `wikidataId` are optional and separate. Wikipedia Text snapshots and local Source metadata are generated into `data/rome/generated/wiki/`, while local pipeline timings and execution details live in `data/rome/generated/generation-metadata.json`.
+For Rome, the Geo Place input lives at `data/rome/pois/raw.geojson`, while app-ready POIs are progressively added to `data/rome/pois/pois.geojson`. Each app-ready POI has a stable, human-readable `id`; external identifiers such as `wikidataId` are optional and separate. Wikipedia Text snapshots and local Source metadata are generated into `data/rome/generated/wikipedia/`. Wikidata POI types are stored separately in `data/rome/generated/wikidata/`. Local pipeline timings and execution details live in `data/rome/generated/generation-metadata.json`.
 
 Use Generate on an empty row or Refresh on an existing row in `/admin` to run the complete Rome generation flow:
 

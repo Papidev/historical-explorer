@@ -7,6 +7,7 @@
 ## Before Starting Work
 
 - Always work on a branch, never on `main`.
+- Before creating a feature branch, fetch `origin/main` and verify that local `main` points to the same commit. If they differ, align `main` before creating the branch.
 - If needed, create a branch before coding (example: `git checkout -b feat/<short-name>`).
 
 ## Tooling & Commands

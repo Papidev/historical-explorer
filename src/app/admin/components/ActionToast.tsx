@@ -52,7 +52,7 @@ export const getActionError = (error: unknown): Toast => {
     return {
       tone: "error",
       title: "POI not found",
-      description: "The requested Point of Interest is no longer available.",
+      description: "The requested POI is no longer available.",
       details,
     };
   }

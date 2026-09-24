@@ -52,6 +52,7 @@ export const PoiRowsTable = ({
   refreshStoryContentAction,
   resolveRelatedPeopleAction,
   refreshMainImageCandidatesAction,
+  refreshPoiTypesAction,
   selectMainImageCandidateAction,
 }: {
   rows: AdminPoiRow[];
@@ -61,6 +62,7 @@ export const PoiRowsTable = ({
   refreshStoryContentAction: AdminAction;
   resolveRelatedPeopleAction: AdminAction;
   refreshMainImageCandidatesAction: AdminAction;
+  refreshPoiTypesAction: AdminAction;
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => {
   const [selectedPanel, setSelectedPanel] = useState<SelectedPanel | null>(null);
@@ -75,6 +77,7 @@ export const PoiRowsTable = ({
     refreshStoryContent: refreshStoryContentAction,
     resolveRelatedPeople: resolveRelatedPeopleAction,
     refreshMainImageCandidates: refreshMainImageCandidatesAction,
+    refreshPoiTypes: refreshPoiTypesAction,
   };
 
   const runSingleAction = async (
@@ -108,17 +111,18 @@ export const PoiRowsTable = ({
       ) : null}
       <section className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-gray-950/10">
         <GlobalArtifacts artifacts={globalArtifacts} onSelectPanel={setSelectedPanel} />
-        <div className="min-h-0 flex-1 overflow-x-hidden overflow-y-auto">
+        <div className="min-h-0 flex-1 overflow-auto">
           {rows.length === 0 ? (
             <p className="px-4 py-4 text-sm text-black/55">No POIs available.</p>
           ) : (
-            <table className="w-full table-fixed divide-y divide-gray-300">
+            <table className="w-full min-w-[1100px] table-fixed divide-y divide-gray-300">
               <colgroup>
-                <col className="w-[19%]" />
-                <col className="w-[19%]" />
-                <col className="w-[17%]" />
-                <col className="w-[21%]" />
-                <col className="w-[24%]" />
+                <col className="w-[16%]" />
+                <col className="w-[16%]" />
+                <col className="w-[16%]" />
+                <col className="w-[16%]" />
+                <col className="w-[16%]" />
+                <col className="w-[20%]" />
               </colgroup>
               <thead className="sticky top-0 z-10 bg-amber-50">
                 <tr>
@@ -149,8 +153,19 @@ export const PoiRowsTable = ({
                     className="border-r border-b border-gray-200 px-3 py-2 text-left align-top"
                   >
                     <ColumnHeader
+                      title="Wikidata Types"
+                      path="data/rome/generated/wikidata/*.json"
+                      description="Source types for future filters"
+                      versioned={false}
+                    />
+                  </th>
+                  <th
+                    scope="col"
+                    className="border-r border-b border-gray-200 px-3 py-2 text-left align-top"
+                  >
+                    <ColumnHeader
                       title="Wikipedia Text"
-                      path="data/rome/generated/wiki/*.txt"
+                      path="data/rome/generated/wikipedia/*.txt"
                       description="Local snapshot; overwritten with each Story generation"
                       versioned={false}
                     />

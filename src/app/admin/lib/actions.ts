@@ -2,6 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { pointOfInterest } from "@/server/pointOfInterest";
+import { poiTypes } from "@/server/poiTypes";
 import { storyCuration } from "@/server/storyCuration";
 import { storyWorkflow } from "@/server/storyWorkflow";
 import type { RelatedPeopleResolutionFailure } from "@/server/storyWorkflow";
@@ -39,6 +40,11 @@ export const generateDraftStory = async (formData: FormData) => {
   const geoPlaceId = getRequiredString(formData, "geoPlaceId", "Geo Place id");
   const ai = await getWorkflowAiSelection(formData);
   const { poiId } = await pointOfInterest.generate({ geoPlaceId });
+  try {
+    await poiTypes.refresh(poiId);
+  } catch (error) {
+    console.warn(`[poi-types] Refresh failed for ${poiId}.`, error);
+  }
   const result = await storyWorkflow.draftStory.generate({ poiId, ai });
   revalidatePath("/admin");
   return toRelatedPeopleWarning(result.relatedPeopleFailures);
@@ -51,6 +57,20 @@ export const refreshStoryContent = async (formData: FormData) => {
   });
   revalidatePath("/admin");
   return toRelatedPeopleWarning(result.failures);
+};
+
+export const refreshPoiTypes = async (formData: FormData): Promise<AdminActionResult | void> => {
+  const result = await poiTypes.refresh(getRequiredString(formData, "poiId", "POI id"));
+  revalidatePath("/admin");
+  if (result.error) {
+    return {
+      warning: {
+        title: "POI types could not be refreshed",
+        description: "Previously saved types remain available when present.",
+        details: result.error,
+      },
+    };
+  }
 };
 
 export const resolveRelatedPeople = async (formData: FormData) => {

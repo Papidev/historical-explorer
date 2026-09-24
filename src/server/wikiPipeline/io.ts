@@ -16,7 +16,7 @@ export const getDefaultInputPath = (city: string) =>
   path.join(process.cwd(), "data", toCitySlug(city), "pois", "pois.geojson");
 
 export const getDefaultOutputDir = (city: string) =>
-  path.join(process.cwd(), "data", toCitySlug(city), "generated", "wiki");
+  path.join(process.cwd(), "data", toCitySlug(city), "generated", "wikipedia");
 
 export const findPoiInGeoJson = (
   inputPath: string,

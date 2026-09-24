@@ -15,6 +15,7 @@ export const AdminDashboard = ({
   refreshStoryContentAction,
   resolveRelatedPeopleAction,
   refreshMainImageCandidatesAction,
+  refreshPoiTypesAction,
   selectMainImageCandidateAction,
 }: {
   rows: AdminPoiRow[];
@@ -25,6 +26,7 @@ export const AdminDashboard = ({
   refreshStoryContentAction: AdminAction;
   resolveRelatedPeopleAction: AdminAction;
   refreshMainImageCandidatesAction: AdminAction;
+  refreshPoiTypesAction: AdminAction;
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => {
   const aiSelectionRef = useRef(initialAiSelection);
@@ -52,6 +54,7 @@ export const AdminDashboard = ({
         refreshStoryContentAction={refreshStoryContentAction}
         resolveRelatedPeopleAction={resolveRelatedPeopleAction}
         refreshMainImageCandidatesAction={refreshMainImageCandidatesAction}
+        refreshPoiTypesAction={refreshPoiTypesAction}
         selectMainImageCandidateAction={selectMainImageCandidateAction}
       />
     </main>
