@@ -7,7 +7,7 @@ import { PipelineCell } from "./PipelineCell";
 import type { ActionCellProps } from "./RowTypes";
 
 const generateConfirmMessage =
-  "Generate this row? This will run the complete pipeline: Point of Interest, Wikipedia Text, Main Image Candidates, Story Content, and Related People.";
+  "Generate this row? This will run the complete pipeline: POI, Wikipedia Text, Main Image Candidates, Story Content, and Related People.";
 const refreshDraftStoryConfirmMessage =
   "Refresh this row? This will rerun the complete pipeline and replace each generated artifact without deleting the current artifacts first.";
 

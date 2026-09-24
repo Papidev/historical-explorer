@@ -3,6 +3,7 @@ import {
   generateDraftStory,
   refreshStoryContent,
   refreshMainImageCandidates,
+  refreshPoiTypes,
   resolveRelatedPeople,
   selectMainImageCandidate,
 } from "./lib/actions";
@@ -37,6 +38,7 @@ export default async function AdminPage() {
           refreshStoryContentAction={refreshStoryContent}
           resolveRelatedPeopleAction={resolveRelatedPeople}
           refreshMainImageCandidatesAction={refreshMainImageCandidates}
+          refreshPoiTypesAction={refreshPoiTypes}
           selectMainImageCandidateAction={selectMainImageCandidate}
         />
       )}

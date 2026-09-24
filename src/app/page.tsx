@@ -16,13 +16,11 @@ const highlights = [
   },
   {
     title: "Visitor-first stories",
-    description:
-      "Short, source-grounded stories help you notice what matters at each point of interest.",
+    description: "Short, source-grounded stories help you notice what matters at each POI.",
   },
   {
     title: "Cultural connections",
-    description:
-      "Connect places with the people, art, and history that shaped them.",
+    description: "Connect places with the people, art, and history that shaped them.",
   },
 ];
 
@@ -36,7 +34,9 @@ export default function Home() {
           <div className="flex size-64 items-start justify-end bg-amber-100 pt-5 pr-5 text-left text-amber-900 shadow-sm shadow-amber-900/10 [clip-path:polygon(100%_0,100%_100%,0_0)]">
             <div className="max-w-28">
               <p className="text-sm font-bold tracking-wide uppercase">Early preview</p>
-              <p className="mt-1 text-xs leading-4 text-amber-800">Cultural Atlas is still taking shape.</p>
+              <p className="mt-1 text-xs leading-4 text-amber-800">
+                Cultural Atlas is still taking shape.
+              </p>
             </div>
           </div>
         </div>
@@ -49,15 +49,19 @@ export default function Home() {
             Step inside the cities that shaped world history.
           </h1>
           <p className="relative mt-6 max-w-3xl text-lg leading-8 text-zinc-300">
-            Cultural Atlas pairs interactive city maps with concise, source-grounded stories that help you
-            notice, understand, and remember the places around you.
+            Cultural Atlas pairs interactive city maps with concise, source-grounded stories that
+            help you notice, understand, and remember the places around you.
           </p>
         </section>
 
         <section>
           <div className="mb-5">
-            <p className="text-sm font-semibold tracking-[0.18em] text-rose-600 uppercase">Explore a city</p>
-            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-zinc-950">Begin with Rome</h2>
+            <p className="text-sm font-semibold tracking-[0.18em] text-rose-600 uppercase">
+              Explore a city
+            </p>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-zinc-950">
+              Begin with Rome
+            </h2>
           </div>
           <Link
             href="/rome"
@@ -71,7 +75,8 @@ export default function Home() {
                 <div>
                   <h3 className="text-xl font-semibold text-zinc-950">Rome</h3>
                   <p className="mt-1 max-w-xl text-sm leading-6 text-zinc-600">
-                    Explore monuments, stories, and details from the city’s ancient and enduring landscape.
+                    Explore monuments, stories, and details from the city’s ancient and enduring
+                    landscape.
                   </p>
                 </div>
               </div>
@@ -100,7 +105,7 @@ export default function Home() {
                 </div>
                 <h2 className="mt-4 text-lg font-semibold text-zinc-950">{highlight.title}</h2>
                 <p className="mt-2 text-sm leading-6 text-zinc-600">{highlight.description}</p>
-            </article>
+              </article>
             );
           })}
         </section>

@@ -7,16 +7,16 @@ An entry should become a GitHub Issue only when its **Revisit when** condition o
 ## Support Geo Places without Wikidata
 
 **Observation**  
-The current Geo Place to Point of Interest flow relies mainly on Wikidata to reconnect the source item with the newly assigned POI ID.
+The current Geo Place to POI flow relies mainly on Wikidata to reconnect the source item with the newly assigned POI ID.
 
 **Risk**  
-After creating a Point of Interest from a Geo Place without Wikidata, later Story Workflow steps may still use the source identifier and fail to find the new Point of Interest.
+After creating a POI from a Geo Place without Wikidata, later Story Workflow steps may still use the source identifier and fail to find the new POI.
 
 **Revisit when**  
-We want to create the first Point of Interest from a Geo Place that has no Wikidata ID.
+We want to create the first POI from a Geo Place that has no Wikidata ID.
 
 **Possible direction**  
-Concentrate Point of Interest creation from a Geo Place, POI ID allocation, external identifiers, and catalog persistence in one Point of Interest catalog Module.
+Concentrate POI creation from a Geo Place, POI ID allocation, external identifiers, and catalog persistence in one POI catalog Module.
 
 ## Treat each Story directory as one aggregate
 
@@ -58,7 +58,7 @@ As the Story Workflow gains states or artifacts, the loader can become a second 
 The Curator table gains another workflow state, artifact, filter, or city-specific view, or its merge logic starts causing defects.
 
 **Possible direction**
-Introduce one Curator-facing read model assembled server-side from the Point of Interest and Story Workflow Modules. Keep it a query projection rather than adding write behavior or moving workflow decisions into the UI.
+Introduce one Curator-facing read model assembled server-side from the POI and Story Workflow Modules. Keep it a query projection rather than adding write behavior or moving workflow decisions into the UI.
 
 ## Use one generation metadata model
 
@@ -92,7 +92,7 @@ Represent the Draft Story to Story transition explicitly and make visitor-facing
 
 ### Current state
 
-The first Story Content slice uses one locally generated Wikipedia snapshot with the conventional Source ID `wikipedia`. Its readable text and metadata sidecar live under the ignored `data/<city>/generated/wiki/` directory. Source References are validated while generating Story Content, but the Visitor Experience can read the versioned `story.json` without requiring that local snapshot.
+The first Story Content slice uses one locally generated Wikipedia snapshot with the conventional Source ID `wikipedia`. Its readable text and metadata sidecar live under the ignored `data/<city>/generated/wikipedia/` directory. Source References are validated while generating Story Content, but the Visitor Experience can read the versioned `story.json` without requiring that local snapshot.
 
 ### Current limitation
 
@@ -105,6 +105,24 @@ We add a second source to one Story, need Source history across regenerations, o
 ### Direction
 
 Design a city-scoped Source model only when the trigger occurs. Decide stable identity, ownership, versioning, storage location, and whether Source References address whole documents or individual claims. Migrate the current Wikipedia snapshot without requiring Story Content or the public renderer to know its physical file layout.
+
+## Check POI categories against Story Content
+
+**Observation**
+
+Wikidata can classify a POI in several ways, while its Story may describe a different historical or present-day use. A difference is not necessarily a contradiction.
+
+**Risk**
+
+A visitor filter such as "Churches" could include a POI whose Story does not explain why it belongs there.
+
+**Revisit when**
+
+The first Wikidata-backed category filter is implemented in #38 and its mapped POIs can be reviewed alongside their Stories.
+
+**Possible direction**
+
+Review concrete mismatches with a Curator before adding any automated warning. Keep category mapping separate from Story Content and account for changes of use over time.
 
 ## Localize historical date formatting
 
@@ -128,7 +146,7 @@ Move historical date formatting behind a locale-aware formatter. Keep numeric ye
 
 **Observation**
 
-A global Person may be referenced by multiple Stories, but the first visitor flow only opens that Person from the current Story and returns to the same Point of Interest.
+A global Person may be referenced by multiple Stories, but the first visitor flow only opens that Person from the current Story and returns to the same POI.
 
 **Risk**
 

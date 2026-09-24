@@ -1,7 +1,13 @@
 import { existsSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
+import { readGenerationMetadata, type GenerationMetadata } from "@/server/generationMetadata";
 import { storyWorkflow, type DraftStorySnapshot, type Source } from "@/server/storyWorkflow";
-import { getDefaultInputPath } from "@/server/wikiPipeline/io";
+import { poiTypes } from "@/server/poiTypes";
+import {
+  buildSourceMetadataFilePath,
+  getDefaultInputPath,
+  getDefaultOutputDir,
+} from "@/server/wikiPipeline/io";
 import type {
   AdminArtifact,
   AdminPoiRow,
@@ -10,25 +16,6 @@ import type {
   MainImageCandidatesArtifact,
   PoiItem,
 } from "./types";
-
-type GenerationStep = "transformed" | "wiki" | "storyContent" | "relatedPeople" | "image";
-
-type GenerationMetadata = Record<
-  string,
-  Partial<
-    Record<
-      GenerationStep,
-      {
-        durationMs: number;
-        completedAt?: string;
-        aiMode?: string;
-        aiProvider?: string;
-        aiModel?: string;
-        relatedPeopleFailures?: Array<{ name: string; message: string }>;
-      }
-    >
-  >
->;
 
 const toRowKey = (value: string) => value.trim().toLowerCase();
 
@@ -94,14 +81,6 @@ const formatDuration = (durationMs: number) => {
   const seconds = Math.round((durationMs % 60_000) / 1000);
 
   return `${minutes}m ${seconds}s`;
-};
-
-const loadGenerationMetadata = (filePath: string) => {
-  if (!existsSync(filePath)) {
-    return {} as GenerationMetadata;
-  }
-
-  return JSON.parse(readFileSync(filePath, "utf-8")) as GenerationMetadata;
 };
 
 const readArtifact = ({
@@ -308,19 +287,12 @@ export const loadPoiLists = async () => {
   try {
     const rawPath = path.join(process.cwd(), "data", "rome", "pois", "raw.geojson");
     const transformedPath = getDefaultInputPath("rome");
-    const generationMetadataPath = path.join(
-      process.cwd(),
-      "data",
-      "rome",
-      "generated",
-      "generation-metadata.json",
-    );
     const rawUpdatedAt = formatUpdatedAt(rawPath);
     const rawContent = readFileSync(rawPath, "utf-8");
     const transformedUpdatedAt = existsSync(transformedPath)
       ? formatUpdatedAt(transformedPath)
       : undefined;
-    const generationMetadata = loadGenerationMetadata(generationMetadataPath);
+    const generationMetadata = readGenerationMetadata("rome");
     const globalArtifacts: AdminArtifact[] = [];
 
     const rawGeoJson = JSON.parse(rawContent) as GeoJson;
@@ -399,7 +371,10 @@ export const loadPoiLists = async () => {
             : undefined,
           wikipediaMetadata: readArtifact({
             label: "Wikipedia Source Metadata",
-            relativePath: `rome/generated/wiki/${row.id}.metadata.json`,
+            relativePath: path.relative(
+              path.join(process.cwd(), "data"),
+              buildSourceMetadataFilePath(getDefaultOutputDir("rome"), row.id),
+            ),
             versioned: false,
           }),
           storyContent: readArtifact({
@@ -438,6 +413,13 @@ export const loadPoiLists = async () => {
         },
       } satisfies AdminPoiRow;
     });
+
+    for (const row of rows) {
+      row.wikidataId = row.transformedPoi?.wikidata ?? row.rawPoi?.wikidata;
+      if (row.transformedPoi) {
+        row.poiTypes = poiTypes.get(row.id);
+      }
+    }
 
     return { rows, globalArtifacts, error: null };
   } catch (error) {

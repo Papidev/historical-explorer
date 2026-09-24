@@ -3,6 +3,7 @@ import type { SelectedPanel } from "./Preview";
 
 export type Actions = {
   generateDraftStory: AdminAction;
+  refreshPoiTypes: AdminAction;
   refreshStoryContent: AdminAction;
   resolveRelatedPeople: AdminAction;
   refreshMainImageCandidates: AdminAction;

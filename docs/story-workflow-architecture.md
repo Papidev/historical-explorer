@@ -6,9 +6,9 @@ Status: implemented.
 
 Deepen the server-side **Story Workflow Module** so callers use a small **Interface** while ordering, partial-failure behavior, persistence, and external integrations remain in its **Implementation**.
 
-The browser exposes the same full-pipeline action as Generate for an empty row and Refresh for an existing row. Its Next server-action **Adapter** first uses a separate **Point of Interest Module** to create or replace a **Point of Interest** from a **Geo Place**, then invokes the Story Workflow with the resulting **POI ID**.
+The browser exposes the same full-pipeline action as Generate for an empty row and Refresh for an existing row. Its Next server-action **Adapter** creates or replaces a **POI** from a **Geo Place**, refreshes its **POI Types**, then invokes the Story Workflow with the resulting **POI ID**. POI Type acquisition belongs to the Adapter, outside **Draft Story Generation**.
 
-The Point of Interest Module has its own **Interface** and **Implementation**. It hides Geo Place access, source-data cleaning, POI ID allocation, external-identifier preservation, and POI catalog persistence.
+The POI Module has its own **Interface** and **Implementation**. It hides Geo Place access, source-data cleaning, POI ID allocation, external-identifier preservation, and POI catalog persistence.
 
 ```ts
 type PointOfInterestModule = {
@@ -18,18 +18,24 @@ type PointOfInterestModule = {
 };
 ```
 
-`generate({ geoPlaceId })` creates or replaces the Point of Interest and returns its stable POI ID. `reset({ poiId })` is a lower-level cleanup operation that removes the derived Point of Interest state from the POI catalog while preserving the Geo Place; it is not exposed as the row-level refresh action.
+`generate({ geoPlaceId })` creates or replaces the POI and returns its stable POI ID. `reset({ poiId })` is a lower-level cleanup operation that removes the derived POI state from the POI catalog while preserving the Geo Place; it is not exposed as the row-level refresh action.
 
-Creating a Point of Interest from a Geo Place does not belong to the Story Workflow. The Story Workflow starts from an existing Point of Interest and does not know how it was created.
+Creating a POI from a Geo Place does not belong to the Story Workflow. The Story Workflow starts from an existing POI and does not know how it was created.
 
 ```text
-Geo Place -> Point of Interest Module -> Point of Interest -> Story Workflow Module -> Draft Story
+Geo Place -> POI Module -> POI -> POI Types
+                            -> Story Workflow Module -> Draft Story
 ```
 
 The Next server-action Adapter behind the Generate/Refresh action composes the two Modules:
 
 ```ts
 const { poiId } = await pointOfInterest.generate({ geoPlaceId });
+try {
+  await poiTypes.refresh(poiId);
+} catch (error) {
+  console.warn(error);
+}
 return storyWorkflow.draftStory.generate({ poiId, ai });
 ```
 
@@ -93,11 +99,11 @@ The Curator UI may label the same operation Generate when its artifact is missin
 
 The two deletion operations preserve the current Curator recovery actions while keeping artifact paths and cascade rules inside the Story Workflow Module.
 
-`draftStory.reset` removes all Sources, Story Content, Main Image Candidates, Draft Main Image state, and generation metadata owned by the Story Workflow. It does not remove the Point of Interest or its Geo Place.
+`draftStory.reset` removes all Sources, Story Content, Main Image Candidates, Draft Main Image state, and generation metadata owned by the Story Workflow. It does not remove the POI or its Geo Place.
 
 Selecting a **Draft Main Image**, editing a **Draft Story**, and approving it as a **Story** belong to **Story Curation** and cross a separate **Seam**.
 
-`draftStory.get` returns domain data for the Curator UI without exposing artifact paths or file formats. The admin loader may combine this snapshot with Geo Place and Point of Interest data owned outside the Story Workflow.
+`draftStory.get` returns domain data for the Curator UI without exposing artifact paths or file formats. The admin loader may combine this snapshot with Geo Place and POI data owned outside the Story Workflow.
 
 `draftStory.generate` orchestrates full generation through private Implementation functions rather than by calling the public artifact-generation operations. Full generation has different partial-failure behavior from an explicitly requested artifact generation.
 
@@ -188,8 +194,9 @@ Per-step server events are a possible future improvement recorded in `docs/backl
 
 The browser exposes Refresh for a populated row. It submits the original Geo Place ID and current AI selection to the same server-action Adapter used by Generate, which coordinates two responsibilities:
 
-1. Call `pointOfInterest.generate({ geoPlaceId })` to create or replace the app-ready Point of Interest while retaining its stable POI ID.
-2. Call `storyWorkflow.draftStory.generate({ poiId, ai })` to reacquire Sources, regenerate Main Image Candidates, regenerate Story Content, and resolve Related People.
+1. Call `pointOfInterest.generate({ geoPlaceId })` to create or replace the app-ready POI while retaining its stable POI ID.
+2. Refresh POI Types independently; a failure does not stop Story generation.
+3. Call `storyWorkflow.draftStory.generate({ poiId, ai })` to reacquire Sources, regenerate Main Image Candidates, regenerate Story Content, and resolve Related People.
 
 Refresh never invokes either reset operation. Existing artifacts are replaced only when their newly generated replacements are ready, following the workflow's checkpoint and partial-failure rules.
 

@@ -7,21 +7,28 @@ The product name for the visitor experience and its editorial tools. The core pe
 
 ## Language
 
-**Point of Interest**:
+**POI**:
 An app-ready place or object on the map that may have metadata and a story.
-_Also_: POI
 _Avoid_: Clean POI, polished POI, transformed POI, spot, location, attraction
 
 **Geo Place**:
-The geographic representation of a place from a source dataset before irrelevant fields are removed and it becomes a **Point of Interest**.
+The geographic representation of a place from a source dataset before irrelevant fields are removed and it becomes a **POI**.
 _Avoid_: Raw POI, Raw Place, Raw Location, Raw feature, source feature
 
 **POI ID**:
-A stable, human-readable identifier assigned by Historical Explorer to a **Point of Interest**, independent of identifiers from external sources.
+A stable, human-readable identifier assigned by Historical Explorer to a **POI**, independent of identifiers from external sources.
 _Avoid_: Wikidata ID, content slug
 
+**POI Type**:
+A Wikidata classification assigned to a **POI**, identified by a Wikidata item and readable label. It is source data that may inform **POI Categories**.
+_Avoid_: P31, category
+
+**POI Category**:
+An app-owned grouping used to filter **POIs** in the **Visitor Experience**. A **POI** may belong to several categories.
+_Avoid_: POI Type, Wikidata category
+
 **Story Workflow**:
-The internal process that takes a **Point of Interest** through **Draft Story Generation** and **Story Curation** until it has an approved **Story**.
+The internal process that takes a **POI** through **Draft Story Generation** and **Story Curation** until it has an approved **Story**.
 _Avoid_: Draft Workflow, production workflow, admin workflow
 
 **Draft Story Generation**:
@@ -37,15 +44,15 @@ The human decision-maker who reviews, edits, enriches, and approves draft storie
 _Avoid_: Admin, editor, reviewer
 
 **POI Metadata**:
-Basic identifying information for a **Point of Interest**, such as name, location, city, period, Wikidata ID, and short descriptor.
+Basic identifying information for a **POI**, such as name, location, city, period, Wikidata ID, and short descriptor.
 _Avoid_: Visitor narrative, curated content, story metadata
 
 **Story**:
-The approved source-grounded visitor-facing explanation for one **Point of Interest**, including **Story Content** and a main image.
+The approved source-grounded visitor-facing explanation for one **POI**, including **Story Content** and a main image.
 _Avoid_: POI Story, Visitor Narrative, article, summary, description, AI text, Markdown
 
 **Draft Story**:
-A source-grounded visitor-facing story for one **Point of Interest** before curator approval.
+A source-grounded visitor-facing story for one **POI** before curator approval.
 _Avoid_: Draft POI Story, POI Draft, draft narrative, AI Markdown, AI text, Markdown, generated output
 
 **Story Content**:
@@ -53,7 +60,7 @@ The structured, source-grounded content that supplies the **Visitor Experience**
 _Avoid_: Story body, Markdown, MDX, rendered page
 
 **Story Introduction**:
-The required plain-text opening of **Story Content** that gives the visitor a concise orientation to the **Point of Interest**.
+The required plain-text opening of **Story Content** that gives the visitor a concise orientation to the **POI**.
 _Avoid_: Summary, title, lead Markdown
 
 **Story Topic**:
@@ -61,7 +68,7 @@ One of the supported cultural perspectives—currently history, design, or art�
 _Avoid_: Required section, content slot, card
 
 **Visitor Insight**:
-A selected idea that makes a **Point of Interest** worth noticing, understanding, connecting to, remembering, or navigating.
+A selected idea that makes a **POI** worth noticing, understanding, connecting to, remembering, or navigating.
 _Avoid_: Fact, section, card, reasoning
 
 **Person**:
@@ -69,7 +76,7 @@ A historical, mythological, or imaginary individual represented once in Cultural
 _Avoid_: Person Profile, Cultural Figure, character, biography article
 
 **Related Person**:
-A **Person** referenced by name in a **Story** because the person is relevant to explaining its **Point of Interest**. The name may link to the canonical **Person**.
+A **Person** referenced by name in a **Story** because the person is relevant to explaining its **POI**. The name may link to the canonical **Person**.
 _Avoid_: Mention, character, unreferenced biography
 
 **Unresolved Person Reference**:
@@ -77,7 +84,7 @@ A person reference found during **Draft Story Generation** whose identity cannot
 _Avoid_: Person, guessed identity, duplicate Person
 
 **Main Image**:
-The image in a story that helps visitors recognize a **Point of Interest** or notice an important visible detail.
+The image in a story that helps visitors recognize a **POI** or notice an important visible detail.
 _Avoid_: Lead Image Candidate, decoration, gallery image
 
 **Draft Main Image**:
@@ -102,17 +109,18 @@ _Avoid_: Production output, AI output
 
 ## Relationships
 
-- A **Geo Place** may become a **Point of Interest** when source data is cleaned for app use.
-- A **Point of Interest** has exactly one **POI ID** and may retain optional external identifiers such as a Wikidata ID.
+- A **Geo Place** may become a **POI** when source data is cleaned for app use.
+- A **POI** has exactly one **POI ID** and may retain optional external identifiers such as a Wikidata ID.
+- A **POI** may have multiple **POI Types** from Wikidata and multiple app-owned **POI Categories**.
 - A **Story Workflow** comprises **Draft Story Generation** followed by **Story Curation**.
-- **Draft Story Generation** starts from an existing **Point of Interest** and creates or updates its current **Draft Story**.
+- **Draft Story Generation** starts from an existing **POI** and creates or updates its current **Draft Story**.
 - Manually regenerating **Story Content** or **Main Image Candidates** belongs to **Draft Story Generation** because it recreates automated artifacts.
-- Creating a **Point of Interest** from a **Geo Place** happens before, and does not belong to, the **Story Workflow**.
+- Creating a **POI** from a **Geo Place** happens before, and does not belong to, the **Story Workflow**.
 - **Story Curation** begins after **Draft Story Generation** has produced a reviewable **Draft Story**.
 - A **Curator** selecting a **Main Image Candidate** as the **Draft Main Image** belongs to **Story Curation**.
-- A **Story** belongs to exactly one **Point of Interest**.
-- A **Point of Interest** has at most one approved **Story** in the current product.
-- A **Point of Interest** has at most one current **Draft Story**.
+- A **Story** belongs to exactly one **POI**.
+- A **POI** has at most one approved **Story** in the current product.
+- A **POI** has at most one current **Draft Story**.
 - A **Story** contains one **Story Content** and one **Main Image**.
 - A **Story** may reference zero or more **Persons** as **Related Persons**.
 - A **Person** has exactly one internal `id`, retains its Wikidata ID as external identity, and may be referenced by multiple **Stories**.
@@ -130,7 +138,7 @@ _Avoid_: Production output, AI output
 - The **Visitor Experience** may show an **Unresolved Person Reference** as a non-navigable name.
 - The **Visitor Experience** links a resolved **Related Person** from a **Story** to that **Person** and shows an **Unresolved Person Reference** as a name without a link.
 - The default **Visitor Experience** does not show **Person** Sources.
-- A **Story** selects at most ten **Related Persons** that are significant to understanding its **Point of Interest** and orders them from most to least significant.
+- A **Story** selects at most ten **Related Persons** that are significant to understanding its **POI** and orders them from most to least significant.
 - **Story Content** contains plain text rather than Markdown or presentation styling.
 - A **Draft Story** organizes its proposed **Visitor Insights** into the supported **Story Topics**.
 - A **Story Topic** appears only when supported by the **Sources**; a **Draft Story** does not fill every available **Story Topic**.
@@ -144,7 +152,7 @@ _Avoid_: Production output, AI output
 - A **Draft Story** contains **Story Content** and one or more **Sources**, and may also include one **Draft Main Image** and one or more **Main Image Candidates**.
 - A **Draft Story** must include one **Draft Main Image** with source, rights, license, and attribution information before it becomes a **Story**.
 - The first **Draft Story Generation** proposes up to three **Main Image Candidates** for each **Draft Story**.
-- **Main Image Candidates** should help visitors recognize the **Point of Interest**, not inspect a detail.
+- **Main Image Candidates** should help visitors recognize the **POI**, not inspect a detail.
 - The first **Main Image Candidates** come from Wikimedia Commons.
 - **Main Image Candidates** belong to the **Draft Story**, not to the visitor-facing **Story**.
 - The first **Main Images** come from Wikimedia Commons.
@@ -156,7 +164,7 @@ _Avoid_: Production output, AI output
 - The first **Sources** come from Wikipedia, Wikidata, and Wikimedia Commons.
 - A **Curator** may edit a **Draft Story** before approving it.
 - A **Story** may become visitor-facing only when approved by a **Curator**, regardless of whether it began as AI-generated or manually written content.
-- **POI Metadata** identifies a **Point of Interest** but is separate from its **Story**.
+- **POI Metadata** identifies a **POI** but is separate from its **Story**.
 - The **Visitor Experience** shows **Story** content.
 - The default **Visitor Experience** does not show **Sources**.
 - The default **Visitor Experience** does not show **Visitor Insights** directly.
@@ -172,7 +180,7 @@ _Avoid_: Production output, AI output
 
 ## Flagged ambiguities
 
-- "Raw POI" made a source-dataset place sound like it was already a **Point of Interest** in the app — resolved: call the source representation a **Geo Place**.
+- "Raw POI" made a source-dataset place sound like it was already a **POI** in the app — resolved: call the source representation a **Geo Place**.
 - "production workflow" was used to mean the internal AI-assisted editorial process — resolved: call this the **Story Workflow**.
 - "Wikipedia-only source material" was used for the current first slice — resolved: first **Sources** may come from Wikipedia, Wikidata, and Wikimedia Commons, while implementation may begin with Wikipedia article text.
 - "published POI content" implied a release destination — resolved: call the human-approved visitor-facing output a **Story**.
@@ -180,7 +188,7 @@ _Avoid_: Production output, AI output
 - "AI Markdown" and "AI text" were used for the current reviewable artifact — resolved: call the domain object a **Draft Story**.
 - "lead image candidate" over-specified the current image model because the draft workflow proposes only one image for now — resolved: call the image inside a story the **Main Image**.
 - "alternatives" was used for images AI can propose to the curator — resolved: call these **Main Image Candidates**, and keep them out of the approved **Story**.
-- "detail image" was considered for candidates — resolved: the first **Main Image Candidates** should all be recognizers for the **Point of Interest**.
+- "detail image" was considered for candidates — resolved: the first **Main Image Candidates** should all be recognizers for the **POI**.
 - "image search" was ambiguous between Wikimedia Commons and broader web search — resolved: the first **Main Image Candidates** come from Wikimedia Commons only.
 - "main image from Wikipedia" was ambiguous between using a Wikipedia article thumbnail as the source and discovering images through Wikipedia/Wikidata — resolved: Wikipedia/Wikidata may help discover images, but the image source and attribution should come from Wikimedia Commons.
 - "exactly three candidates" overstated the first direct-source workflow because Wikidata and Wikipedia page images may provide fewer than three distinct usable images — resolved: the first **Story Workflow** proposes up to three **Main Image Candidates**.

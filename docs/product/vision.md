@@ -15,7 +15,7 @@ The goal is to help visitors:
 - connect a place to art, history, culture, people, and the city
 - remember something valuable after the visit
 
-Each point of interest should become a small curated visitor experience, not a complete encyclopedia page.
+Each POI should become a small curated visitor experience, not a complete encyclopedia page.
 
 ## Production world vs visitor world
 

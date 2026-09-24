@@ -546,9 +546,9 @@ describe("Story Workflow Interface", () => {
       await expect(
         createFilesystemStoryWorkflowRepository("alexandria").get(pointOfInterest.id),
       ).resolves.toBeUndefined();
-      unlinkSync(path.join(temporaryDirectory, "data/rome/generated/wiki/forum-boarium.txt"));
+      unlinkSync(path.join(temporaryDirectory, "data/rome/generated/wikipedia/forum-boarium.txt"));
       unlinkSync(
-        path.join(temporaryDirectory, "data/rome/generated/wiki/forum-boarium.metadata.json"),
+        path.join(temporaryDirectory, "data/rome/generated/wikipedia/forum-boarium.metadata.json"),
       );
       await expect(workflow.draftStory.get({ poiId: pointOfInterest.id })).resolves.toMatchObject({
         sources: [],
