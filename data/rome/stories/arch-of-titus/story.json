@@ -1,0 +1,179 @@
+{
+  "introduction": {
+    "text": "The Arch of Titus is a 1st‑century AD triumphal arch in Rome that commemorates Emperor Titus's victory over the Jewish rebellion and serves as a key monument in Roman architecture and Jewish history.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "arch-1st-century",
+        "description": "The arch was erected in the 1st century AD to honor Titus and the Roman victory over the Jewish rebellion.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1,
+          "precision": "approximate",
+          "endYear": 100,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "triumphal-procession-71",
+        "description": "Panels on the arch depict the triumphal procession of 71 AD after the Roman victory in Jerusalem.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 71,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "construction-81",
+        "description": "The arch was constructed around 81 AD by Emperor Domitian to commemorate his brother Titus.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 81,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "papal-ritual-16th-century",
+        "description": "During Pope Paul IV's papacy (1555–1599), the arch became a site for yearly oaths of submission by Jewish elders.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1500,
+          "precision": "approximate",
+          "endYear": 1599,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "reland-1716",
+        "description": "In 1716, Adriaan Reland published a work on the spoils of the temple visible on the Arch of Titus.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1716,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "restoration-1817",
+        "description": "Raffaele Stern began a modern restoration of the arch in 1817.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1817,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "restoration-1821",
+        "description": "Valadier continued the restoration under Pope Pius VII in 1821, adding new capitals and travertine masonry.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1821,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "ban-1947",
+        "description": "A local ban on Jews walking under the arch was in place until the foundation of the State of Israel in 1947.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1947,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "ban-rescinded-1997",
+        "description": "In 1997, the ban was rescinded during a Hanukkah event.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1997,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "symbolic-diaspora",
+        "description": "The arch has become a symbol of the Jewish diaspora.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "architecture",
+        "description": "The arch features fluted and unfluted columns, with a large inner archway measuring 8.3 meters in height and 5.36 meters in width.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "decorative-sculpture",
+        "description": "Spandrels depict personifications of victory; panels show spoils from the Temple in Jerusalem and Titus as triumphator.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "restoration-design",
+        "description": "19th‑century restorations added new capitals and travertine masonry to distinguish original marble.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "menorah-relief",
+        "description": "The south inner panel features a detailed menorah, a key symbol of Jewish heritage.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "titus-triumph",
+        "description": "The north inner panel depicts Titus in a chariot, flanked by winged Victory.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Titus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Domitian",
+      "personId": "domitian",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Vespasian",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Josephus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Cassius Dio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Paul IV",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Adriaan Reland",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Raffaele Stern",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Valadier",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Pius VII",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

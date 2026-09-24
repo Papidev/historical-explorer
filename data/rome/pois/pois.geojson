@@ -176,6 +176,25 @@
           41.8932288
         ]
       }
+    },
+    {
+      "id": "arch-of-titus",
+      "wikidataId": "Q723887",
+      "type": "Feature",
+      "properties": {
+        "name": "Arco di Tito",
+        "name:en": "Arch of Titus",
+        "tourism": "attraction",
+        "wikimedia_commons": "Category:Arch of Titus (Rome)",
+        "wikipedia": "en:Arch of Titus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.4885842,
+          41.8906722
+        ]
+      }
     }
   ]
 }
