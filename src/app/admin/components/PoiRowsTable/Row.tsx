@@ -1,4 +1,3 @@
-import type { AdminPoiRow } from "../../lib/types";
 import { GeoPlaceCell } from "./GeoPlaceCell";
 import { MainImageCell } from "./MainImageCell";
 import { PoiCell } from "./PoiCell";
@@ -12,11 +11,11 @@ export const Row = ({
   isInProgress,
   progressDescription,
   onSelectPanel,
-  onViewRelatedPeople,
   runSingleAction,
+  selectMainImageCandidateAction,
 }: ActionCellProps & {
   progressDescription: string | null;
-  onViewRelatedPeople: (poiId: AdminPoiRow["id"]) => void;
+  selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => (
   <tr
     aria-busy={isInProgress}
@@ -39,8 +38,8 @@ export const Row = ({
       actions={actions}
       isInProgress={isInProgress}
       onSelectPanel={onSelectPanel}
-      onViewRelatedPeople={onViewRelatedPeople}
       runSingleAction={runSingleAction}
+      selectMainImageCandidateAction={selectMainImageCandidateAction}
     />
     <MainImageCell
       row={row}

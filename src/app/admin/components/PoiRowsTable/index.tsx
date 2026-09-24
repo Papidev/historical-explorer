@@ -8,7 +8,6 @@ import { ActionToast, getActionError, type Toast } from "../ActionToast";
 import { Preview, type SelectedPanel } from "./Preview";
 import { Row } from "./Row";
 import type { Actions } from "./RowTypes";
-import { RelatedPeopleDrawer } from "./RelatedPeopleDrawer";
 import { GlobalArtifacts } from "./GlobalArtifacts";
 
 const ColumnHeader = ({
@@ -64,8 +63,6 @@ export const PoiRowsTable = ({
   refreshMainImageCandidatesAction: AdminAction;
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => {
-  const [relatedPeoplePoiId, setRelatedPeoplePoiId] = useState<string | null>(null);
-  const relatedPeopleRow = rows.find((row) => row.id === relatedPeoplePoiId);
   const [selectedPanel, setSelectedPanel] = useState<SelectedPanel | null>(null);
   const [progress, setProgress] = useOptimistic<{
     poiId: string;
@@ -92,7 +89,6 @@ export const PoiRowsTable = ({
       formData.set("aiModel", aiSelectionRef.current.model);
     }
     setSelectedPanel(null);
-    setRelatedPeoplePoiId(null);
     setActionToast(null);
     setProgress({ poiId, description });
     try {
@@ -194,8 +190,8 @@ export const PoiRowsTable = ({
                       progress && progress.poiId === row.id ? progress.description : null
                     }
                     onSelectPanel={setSelectedPanel}
-                    onViewRelatedPeople={setRelatedPeoplePoiId}
                     runSingleAction={runSingleAction}
+                    selectMainImageCandidateAction={selectMainImageCandidateAction}
                   />
                 ))}
               </tbody>
@@ -203,18 +199,6 @@ export const PoiRowsTable = ({
           )}
         </div>
       </section>
-      {relatedPeopleRow ? (
-        <RelatedPeopleDrawer
-          poiName={
-            relatedPeopleRow.transformedPoi?.name ??
-            relatedPeopleRow.rawPoi?.name ??
-            relatedPeopleRow.id
-          }
-          people={relatedPeopleRow.artifacts?.relatedPeople ?? []}
-          onClose={() => setRelatedPeoplePoiId(null)}
-          selectMainImageCandidateAction={selectMainImageCandidateAction}
-        />
-      ) : null}
       {selectedPanel ? (
         <Preview
           panel={selectedPanel}

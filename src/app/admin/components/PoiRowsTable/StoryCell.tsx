@@ -16,9 +16,11 @@ export const StoryCell = ({
   actions,
   isInProgress,
   onSelectPanel,
-  onViewRelatedPeople,
   runSingleAction,
-}: ActionCellProps & { onViewRelatedPeople: (poiId: string) => void }) => (
+  selectMainImageCandidateAction,
+}: ActionCellProps & {
+  selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
+}) => (
   <PipelineCell available={Boolean(row.storyContent)} inProgress={isInProgress}>
     <CellContent
       generationModel={[
@@ -34,8 +36,8 @@ export const StoryCell = ({
       row={row}
       actions={actions}
       isInProgress={isInProgress}
-      onViewRelatedPeople={onViewRelatedPeople}
       runSingleAction={runSingleAction}
+      selectMainImageCandidateAction={selectMainImageCandidateAction}
     />
     <CellFooter
       updatedAt={row.storyContentUpdatedAt}
