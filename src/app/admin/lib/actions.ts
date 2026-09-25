@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { pointOfInterest } from "@/server/pointOfInterest";
 import { poiTypes } from "@/server/poiTypes";
+import { withGenerationRun } from "@/server/generationRunLog";
 import { storyCuration } from "@/server/storyCuration";
 import { storyWorkflow } from "@/server/storyWorkflow";
 import type { RelatedPeopleResolutionFailure } from "@/server/storyWorkflow";
@@ -39,22 +40,57 @@ const toRelatedPeopleWarning = (
 export const generateDraftStory = async (formData: FormData) => {
   const geoPlaceId = getRequiredString(formData, "geoPlaceId", "Geo Place id");
   const ai = await getWorkflowAiSelection(formData);
-  const { poiId } = await pointOfInterest.generate({ geoPlaceId });
-  try {
-    await poiTypes.refresh(poiId);
-  } catch (error) {
-    console.warn(`[poi-types] Refresh failed for ${poiId}.`, error);
-  }
-  const result = await storyWorkflow.draftStory.generate({ poiId, ai });
+  const { result } = await withGenerationRun(
+    { city: "rome", operation: "draftStory.generate", geoPlaceId, ai },
+    async () => {
+      const { poiId } = await pointOfInterest.generate({ geoPlaceId });
+      try {
+        await poiTypes.refresh(poiId);
+      } catch (error) {
+        console.warn(`[poi-types] Refresh failed for ${poiId}.`, error);
+      }
+      return { poiId, result: await storyWorkflow.draftStory.generate({ poiId, ai }) };
+    },
+    ({ poiId, result }) => ({
+      poiId,
+      status:
+        result.mainImageCandidates === "failed" || result.relatedPeopleFailures.length > 0
+          ? "partial"
+          : "success",
+      failedSteps: [
+        ...(result.mainImageCandidates === "failed" ? ["mainImageCandidates"] : []),
+        ...(result.relatedPeopleFailures.length > 0 ? ["relatedPeople"] : []),
+      ],
+      relatedPeopleFailureCount: result.relatedPeopleFailures.length,
+      errors: [
+        ...(result.mainImageCandidatesError
+          ? [{ stage: "mainImageCandidates", message: result.mainImageCandidatesError }]
+          : []),
+        ...result.relatedPeopleFailures.map(({ name, message }) => ({
+          stage: "relatedPeople",
+          name,
+          message,
+        })),
+      ],
+    }),
+  );
   revalidatePath("/admin");
   return toRelatedPeopleWarning(result.relatedPeopleFailures);
 };
 
 export const refreshStoryContent = async (formData: FormData) => {
-  const result = await storyWorkflow.storyContent.generate({
-    poiId: getRequiredString(formData, "poiId", "POI id"),
-    ai: await getWorkflowAiSelection(formData),
-  });
+  const poiId = getRequiredString(formData, "poiId", "POI id");
+  const ai = await getWorkflowAiSelection(formData);
+  const result = await withGenerationRun(
+    { city: "rome", operation: "storyContent.generate", poiId, ai },
+    () => storyWorkflow.storyContent.generate({ poiId, ai }),
+    ({ failures }) => ({
+      status: failures.length > 0 ? "partial" : "success",
+      failedSteps: failures.length > 0 ? ["relatedPeople"] : [],
+      relatedPeopleFailureCount: failures.length,
+      errors: failures.map(({ name, message }) => ({ stage: "relatedPeople", name, message })),
+    }),
+  );
   revalidatePath("/admin");
   return toRelatedPeopleWarning(result.failures);
 };
@@ -74,18 +110,27 @@ export const refreshPoiTypes = async (formData: FormData): Promise<AdminActionRe
 };
 
 export const resolveRelatedPeople = async (formData: FormData) => {
-  const result = await storyWorkflow.relatedPeople.resolve({
-    poiId: getRequiredString(formData, "poiId", "POI id"),
-    ai: await getWorkflowAiSelection(formData),
-  });
+  const poiId = getRequiredString(formData, "poiId", "POI id");
+  const ai = await getWorkflowAiSelection(formData);
+  const result = await withGenerationRun(
+    { city: "rome", operation: "relatedPeople.resolve", poiId, ai },
+    () => storyWorkflow.relatedPeople.resolve({ poiId, ai }),
+    ({ failures }) => ({
+      status: failures.length > 0 ? "partial" : "success",
+      failedSteps: failures.length > 0 ? ["relatedPeople"] : [],
+      relatedPeopleFailureCount: failures.length,
+      errors: failures.map(({ name, message }) => ({ stage: "relatedPeople", name, message })),
+    }),
+  );
   revalidatePath("/admin");
   return toRelatedPeopleWarning(result.failures);
 };
 
 export const refreshMainImageCandidates = async (formData: FormData) => {
-  await storyWorkflow.mainImageCandidates.generate({
-    poiId: getRequiredString(formData, "poiId", "POI id"),
-  });
+  const poiId = getRequiredString(formData, "poiId", "POI id");
+  await withGenerationRun({ city: "rome", operation: "mainImageCandidates.generate", poiId }, () =>
+    storyWorkflow.mainImageCandidates.generate({ poiId }),
+  );
   revalidatePath("/admin");
 };
 

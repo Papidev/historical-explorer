@@ -222,6 +222,7 @@ describe("Story Workflow Interface", () => {
     ).resolves.toEqual({
       poiId: pointOfInterest.id,
       mainImageCandidates: "failed",
+      mainImageCandidatesError: "main-image-candidates-generation-failed: Commons unavailable",
       draftMainImage: "missing",
       storyContent: "generated",
       relatedPeople: "resolved",

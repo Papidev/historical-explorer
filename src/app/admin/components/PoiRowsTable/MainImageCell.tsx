@@ -6,6 +6,7 @@ import { SubmitButton } from "../SubmitButton";
 import { ArtifactViewButton } from "./ArtifactViewButton";
 import { CellContent } from "./CellContent";
 import { CellFooter } from "./CellFooter";
+import { GenerationErrorDetails } from "./GenerationErrorDetails";
 import { MainImageCellPreview, getSelectedMainImageCandidate } from "./MainImageCellPreview";
 import { PipelineCell } from "./PipelineCell";
 import type { ActionCellProps } from "./RowTypes";
@@ -60,6 +61,10 @@ export const MainImageCell = ({
         isAvailable={Boolean(getSelectedMainImageCandidate(row.mainImageArtifact))}
       />
     </div>
+    <GenerationErrorDetails
+      errors={(row.generationErrors ?? []).filter(({ stage }) => stage === "mainImageCandidates")}
+      label="Image errors"
+    />
     <CellFooter
       updatedAt={row.mainImageUpdatedAt}
       generationDuration={row.mainImageGenerationDuration}

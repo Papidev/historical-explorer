@@ -235,6 +235,7 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
           (await dependencies.repository.get(poiId))?.sources,
         );
         let mainImageCandidates: "generated" | "failed" = "generated";
+        let mainImageCandidatesError: string | undefined;
         let selectedCommonsFileName: string | undefined;
         try {
           selectedCommonsFileName = await generateAndPersistCandidates(pointOfInterest);
@@ -246,6 +247,7 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
             throw error;
           }
           mainImageCandidates = "failed";
+          mainImageCandidatesError = error.message;
           selectedCommonsFileName = (await dependencies.repository.get(poiId))?.draftMainImage
             ?.commonsFileName;
         }
@@ -254,6 +256,7 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         return {
           poiId,
           mainImageCandidates,
+          ...(mainImageCandidatesError ? { mainImageCandidatesError } : {}),
           draftMainImage: selectedCommonsFileName ? "available" : "missing",
           storyContent: "generated",
           relatedPeople: relatedPeople.failures.length > 0 ? "partial" : "resolved",

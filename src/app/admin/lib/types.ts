@@ -74,8 +74,22 @@ export type AdminPoiArtifacts = {
   relatedPeople: RelatedPersonArtifacts[];
 };
 
+export type GenerationError = {
+  at: string;
+  operation: string;
+  stage: string;
+  message: string;
+  name?: string;
+};
+
 export type AdminPoiRow = {
   id: string;
+  lastGenerationRun?: {
+    operation: string;
+    status: "success" | "partial" | "failed" | "incomplete";
+    at: string;
+  };
+  generationErrors?: GenerationError[];
   rawPoi?: PoiItem;
   transformedPoi?: PoiItem;
   wikiPoi?: PoiItem;

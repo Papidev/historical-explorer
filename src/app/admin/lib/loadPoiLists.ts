@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { readGenerationMetadata, type GenerationMetadata } from "@/server/generationMetadata";
+import { readGenerationRuns } from "@/server/generationRunLog";
 import { storyWorkflow, type DraftStorySnapshot, type Source } from "@/server/storyWorkflow";
 import { poiTypes } from "@/server/poiTypes";
 import {
@@ -293,6 +294,7 @@ export const loadPoiLists = async () => {
       ? formatUpdatedAt(transformedPath)
       : undefined;
     const generationMetadata = readGenerationMetadata("rome");
+    const generationRuns = readGenerationRuns(process.cwd(), "rome");
     const globalArtifacts: AdminArtifact[] = [];
 
     const rawGeoJson = JSON.parse(rawContent) as GeoJson;
@@ -358,8 +360,42 @@ export const loadPoiLists = async () => {
       mainImagePois,
     ).map((row) => {
       const rawFeature = rawGeoJson.features?.[row.rawPoi?.featureIndex ?? -1];
+      const matchingRuns = generationRuns.filter(
+        (run) =>
+          (run.poiId && run.poiId === row.id) ||
+          (run.geoPlaceId && run.geoPlaceId === row.rawPoi?.id),
+      );
+      const [lastRun] = matchingRuns;
       return {
         ...row,
+        generationErrors: matchingRuns.flatMap((run) =>
+          run.event === "failed"
+            ? [
+                {
+                  at: formatCompletedAt(run.at),
+                  operation: run.operation,
+                  stage: run.errorStage ?? "generation",
+                  message: run.errorMessage ?? run.errorCode ?? "Unknown error",
+                },
+              ]
+            : (run.errors ?? []).map((error) => ({
+                ...error,
+                at: formatCompletedAt(run.at),
+                operation: run.operation,
+              })),
+        ),
+        lastGenerationRun: lastRun
+          ? {
+              operation: lastRun.operation,
+              status:
+                lastRun.event === "failed"
+                  ? "failed"
+                  : lastRun.event === "started"
+                    ? "incomplete"
+                    : (lastRun.status ?? "success"),
+              at: formatCompletedAt(lastRun.at),
+            }
+          : undefined,
         artifacts: {
           geoPlace: rawFeature
             ? {

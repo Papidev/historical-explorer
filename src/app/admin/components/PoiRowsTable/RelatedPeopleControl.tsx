@@ -44,6 +44,11 @@ export const RelatedPeopleControl = ({
               {unresolvedCount} unresolved
             </span>
           ) : null}
+          {(row.generationErrors ?? []).some(({ stage }) => stage === "relatedPeople") ? (
+            <span className="rounded bg-red-100 px-1.5 py-0.5 text-xs font-medium text-red-800">
+              Errors
+            </span>
+          ) : null}
         </button>
         {unresolvedCount ? (
           <form
@@ -75,6 +80,7 @@ export const RelatedPeopleControl = ({
         <RelatedPeopleDrawer
           poiName={row.transformedPoi?.name ?? row.rawPoi?.name ?? row.id}
           people={row.artifacts?.relatedPeople ?? []}
+          errors={(row.generationErrors ?? []).filter(({ stage }) => stage === "relatedPeople")}
           onClose={() => setIsDrawerOpen(false)}
           selectMainImageCandidateAction={selectMainImageCandidateAction}
         />

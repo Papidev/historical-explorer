@@ -45,6 +45,7 @@ export type DraftStorySnapshot = {
 export type DraftStoryGenerationResult = {
   poiId: string;
   mainImageCandidates: "generated" | "failed";
+  mainImageCandidatesError?: string;
   draftMainImage: "available" | "missing";
   storyContent: "generated";
   relatedPeople: "resolved" | "partial";

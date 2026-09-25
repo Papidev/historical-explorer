@@ -3,12 +3,17 @@ import { IconButton } from "@/app/components/ui/IconButton";
 import { ArtifactViewButton } from "./ArtifactViewButton";
 import { CellContent } from "./CellContent";
 import { CellFooter } from "./CellFooter";
+import { GenerationErrorDetails } from "./GenerationErrorDetails";
 import { PipelineCell } from "./PipelineCell";
 import type { CellProps } from "./RowTypes";
 
 export const WikipediaCell = ({ row, isInProgress, onSelectPanel }: CellProps) => (
   <PipelineCell available={Boolean(row.wikiPoi)} inProgress={isInProgress}>
     <CellContent isAvailable={Boolean(row.wikiPoi)} />
+    <GenerationErrorDetails
+      errors={(row.generationErrors ?? []).filter(({ stage }) => stage === "sources")}
+      label="Source errors"
+    />
     <CellFooter updatedAt={row.wikiUpdatedAt} generationDuration={row.wikiGenerationDuration}>
       {row.wikiPoi ? (
         <div className="flex flex-wrap items-center gap-1.5">

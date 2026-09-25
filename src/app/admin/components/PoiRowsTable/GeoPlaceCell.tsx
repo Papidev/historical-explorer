@@ -3,6 +3,7 @@ import { SubmitButton } from "../SubmitButton";
 import { ArtifactViewButton } from "./ArtifactViewButton";
 import { CellContent } from "./CellContent";
 import { CellFooter } from "./CellFooter";
+import { GenerationErrorDetails } from "./GenerationErrorDetails";
 import { PipelineCell } from "./PipelineCell";
 import type { ActionCellProps } from "./RowTypes";
 
@@ -40,6 +41,29 @@ export const GeoPlaceCell = ({
         titleTone="poi"
       />
       {progressDescription ? <ProgressMessage description={progressDescription} /> : null}
+      {row.lastGenerationRun ? (
+        <p
+          title={`${row.lastGenerationRun.operation} · ${row.lastGenerationRun.at}`}
+          className={`mt-3 w-fit rounded-full px-2.5 py-1 text-xs font-medium ${
+            row.lastGenerationRun.status === "failed"
+              ? "bg-red-100 text-red-800"
+              : row.lastGenerationRun.status === "success"
+                ? "bg-teal-100 text-teal-800"
+                : "bg-amber-100 text-amber-900"
+          }`}
+        >
+          Last generation: {row.lastGenerationRun.status}
+        </p>
+      ) : null}
+      <GenerationErrorDetails
+        errors={(row.generationErrors ?? []).filter(
+          ({ stage }) =>
+            stage !== "sources" &&
+            stage !== "storyContent" &&
+            stage !== "mainImageCandidates" &&
+            stage !== "relatedPeople",
+        )}
+      />
       <CellFooter>
         {row.rawPoi ? (
           <div className="flex flex-wrap items-center gap-1.5">

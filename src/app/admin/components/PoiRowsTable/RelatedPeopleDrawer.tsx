@@ -2,18 +2,21 @@ import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from "@headlessui/re
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { IconButton } from "@/app/components/ui/IconButton";
-import type { RelatedPersonArtifacts } from "../../lib/types";
+import type { GenerationError, RelatedPersonArtifacts } from "../../lib/types";
 import { ArtifactViewButton } from "./ArtifactViewButton";
+import { GenerationErrorDetails } from "./GenerationErrorDetails";
 import { Preview, type SelectedPanel } from "./Preview";
 
 export const RelatedPeopleDrawer = ({
   poiName,
   people,
+  errors,
   onClose,
   selectMainImageCandidateAction,
 }: {
   poiName: string;
   people: RelatedPersonArtifacts[];
+  errors: GenerationError[];
   onClose: () => void;
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => {
@@ -43,6 +46,10 @@ export const RelatedPeopleDrawer = ({
               </p>
             </div>
             <div className="min-h-0 flex-1 overflow-y-auto px-5">
+              <GenerationErrorDetails
+                errors={errors.filter(({ name }) => !name)}
+                label="Related People errors"
+              />
               {people.length === 0 ? (
                 <p className="py-6 text-sm text-black/55">This Story has no related people.</p>
               ) : (
@@ -63,6 +70,24 @@ export const RelatedPeopleDrawer = ({
                           {person.personId ? "Resolved" : "Unresolved"}
                         </span>
                       </div>
+                      <GenerationErrorDetails
+                        errors={
+                          errors.some(({ name }) => name === person.name)
+                            ? errors.filter(({ name }) => name === person.name)
+                            : person.resolutionError
+                              ? [
+                                  {
+                                    at: "Previous attempt",
+                                    operation: "relatedPeople.resolve",
+                                    stage: "relatedPeople",
+                                    name: person.name,
+                                    message: person.resolutionError,
+                                  },
+                                ]
+                              : []
+                        }
+                        label="Resolution errors"
+                      />
                       {person.personId ? (
                         <>
                           <p className="mt-1 font-mono text-xs break-all text-black/55">
@@ -101,21 +126,17 @@ export const RelatedPeopleDrawer = ({
                             ) : null}
                           </ul>
                         </>
-                      ) : (
+                      ) : null}
+                      {!person.personId &&
+                      !person.resolutionError &&
+                      !errors.some(({ name }) => name === person.name) ? (
                         <div className="mt-3 rounded-md bg-orange-50 px-3 py-2 text-sm text-orange-950">
-                          {person.resolutionError ? (
-                            <>
-                              <p className="font-semibold">Resolution error</p>
-                              <p className="mt-1 break-words">{person.resolutionError}</p>
-                            </>
-                          ) : (
-                            <p>
-                              No resolution error was saved for this earlier attempt. Retry Resolve
-                              People to capture the cause.
-                            </p>
-                          )}
+                          <p>
+                            No resolution error was saved for this earlier attempt. Retry Resolve
+                            People to capture the cause.
+                          </p>
                         </div>
-                      )}
+                      ) : null}
                     </li>
                   ))}
                 </ul>
