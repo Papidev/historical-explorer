@@ -5,6 +5,7 @@ import { pointOfInterest } from "@/server/pointOfInterest";
 import { poiTypes } from "@/server/poiTypes";
 import { storyCuration } from "@/server/storyCuration";
 import { storyWorkflow } from "@/server/storyWorkflow";
+import { appendAiProgress, finishAiProgress, startAiProgress } from "@/server/aiProgress";
 import type { RelatedPeopleResolutionFailure } from "@/server/storyWorkflow";
 import { resolveAiSelection } from "./aiModels";
 import type { AdminActionResult } from "./types";
@@ -36,28 +37,55 @@ const toRelatedPeopleWarning = (
   };
 };
 
-export const generateDraftStory = async (formData: FormData) => {
-  const geoPlaceId = getRequiredString(formData, "geoPlaceId", "Geo Place id");
-  const ai = await getWorkflowAiSelection(formData);
-  const { poiId } = await pointOfInterest.generate({ geoPlaceId });
+const runAiAction = async (
+  formData: FormData,
+  work: (onProgress: (message: string) => void) => Promise<AdminActionResult | undefined>,
+) => {
+  const progressId = formData.get("progressId");
+  const runId = typeof progressId === "string" ? progressId : undefined;
+  if (runId) startAiProgress(runId);
+  const onProgress = (message: string) => {
+    if (runId) appendAiProgress(runId, message);
+  };
+
   try {
-    await poiTypes.refresh(poiId);
+    const result = await work(onProgress);
+    onProgress(result?.warning ? result.warning.title : "AI generation completed.");
+    if (runId) finishAiProgress(runId, result?.warning ? "failed" : "succeeded");
+    revalidatePath("/admin");
+    return result;
   } catch (error) {
-    console.warn(`[poi-types] Refresh failed for ${poiId}.`, error);
+    onProgress(`AI generation stopped: ${error instanceof Error ? error.message : String(error)}`);
+    if (runId) finishAiProgress(runId, "failed");
+    throw error;
   }
-  const result = await storyWorkflow.draftStory.generate({ poiId, ai });
-  revalidatePath("/admin");
-  return toRelatedPeopleWarning(result.relatedPeopleFailures);
 };
 
-export const refreshStoryContent = async (formData: FormData) => {
-  const result = await storyWorkflow.storyContent.generate({
-    poiId: getRequiredString(formData, "poiId", "POI id"),
-    ai: await getWorkflowAiSelection(formData),
+export const generateDraftStory = async (formData: FormData) =>
+  runAiAction(formData, async (onProgress) => {
+    const geoPlaceId = getRequiredString(formData, "geoPlaceId", "Geo Place id");
+    const ai = await getWorkflowAiSelection(formData);
+    onProgress("Creating the Point of Interest.");
+    const { poiId } = await pointOfInterest.generate({ geoPlaceId });
+    try {
+      onProgress("Refreshing POI types.");
+      await poiTypes.refresh(poiId);
+    } catch (error) {
+      console.warn(`[poi-types] Refresh failed for ${poiId}.`, error);
+    }
+    const result = await storyWorkflow.draftStory.generate({ poiId, ai, onProgress });
+    return toRelatedPeopleWarning(result.relatedPeopleFailures);
   });
-  revalidatePath("/admin");
-  return toRelatedPeopleWarning(result.failures);
-};
+
+export const refreshStoryContent = async (formData: FormData) =>
+  runAiAction(formData, async (onProgress) => {
+    const result = await storyWorkflow.storyContent.generate({
+      poiId: getRequiredString(formData, "poiId", "POI id"),
+      ai: await getWorkflowAiSelection(formData),
+      onProgress,
+    });
+    return toRelatedPeopleWarning(result.failures);
+  });
 
 export const refreshPoiTypes = async (formData: FormData): Promise<AdminActionResult | void> => {
   const result = await poiTypes.refresh(getRequiredString(formData, "poiId", "POI id"));
@@ -73,14 +101,15 @@ export const refreshPoiTypes = async (formData: FormData): Promise<AdminActionRe
   }
 };
 
-export const resolveRelatedPeople = async (formData: FormData) => {
-  const result = await storyWorkflow.relatedPeople.resolve({
-    poiId: getRequiredString(formData, "poiId", "POI id"),
-    ai: await getWorkflowAiSelection(formData),
+export const resolveRelatedPeople = async (formData: FormData) =>
+  runAiAction(formData, async (onProgress) => {
+    const result = await storyWorkflow.relatedPeople.resolve({
+      poiId: getRequiredString(formData, "poiId", "POI id"),
+      ai: await getWorkflowAiSelection(formData),
+      onProgress,
+    });
+    return toRelatedPeopleWarning(result.failures);
   });
-  revalidatePath("/admin");
-  return toRelatedPeopleWarning(result.failures);
-};
 
 export const refreshMainImageCandidates = async (formData: FormData) => {
   await storyWorkflow.mainImageCandidates.generate({

@@ -376,6 +376,43 @@ describe("Story Workflow Interface", () => {
     });
   });
 
+  it("reacquires missing Sources when retrying People from a saved Story", async () => {
+    const unresolvedPerson = { name: "Hercules", sourceIds: ["wikipedia"] };
+    const resolvedPerson = { ...unresolvedPerson, personId: "hercules" };
+    const acquiredPoiIds: string[] = [];
+    const { dependencies, repository } = createDependencies({
+      acquireSources: async (poi) => {
+        acquiredPoiIds.push(poi.id);
+        return [source];
+      },
+      generateStoryContent: async () => {
+        throw new Error("Story Content must not be regenerated");
+      },
+      resolveRelatedPeople: async ({ relatedPeople, sources }) => {
+        expect(relatedPeople).toEqual([unresolvedPerson]);
+        expect(sources).toEqual([source]);
+        return { relatedPeople: [resolvedPerson], failures: [] };
+      },
+    });
+    await repository.replaceStoryContent(
+      pointOfInterest.id,
+      { ...storyContent(), relatedPeople: [unresolvedPerson] },
+      { durationMs: 0, completedAt: "2026-08-22T10:00:00.000Z" },
+    );
+
+    await expect(
+      createStoryWorkflow(dependencies).relatedPeople.resolve({
+        poiId: pointOfInterest.id,
+        ai: { mode: "local", model: "person-model" },
+      }),
+    ).resolves.toEqual({ relatedPeople: [resolvedPerson], failures: [] });
+    expect(acquiredPoiIds).toEqual([pointOfInterest.id]);
+    expect(await repository.get(pointOfInterest.id)).toMatchObject({
+      sources: [source],
+      storyContent: { relatedPeople: [resolvedPerson] },
+    });
+  });
+
   it("uses create-or-replace semantics and preserves previous artifacts on explicit failure", async () => {
     let content = storyContent("First structured story.");
     let currentSource = source;

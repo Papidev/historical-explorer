@@ -1,32 +1,10 @@
 import wtf from "wtf_wikipedia";
+import { fetchWikimediaJson } from "./fetchWikimediaJson";
 import type { WikiSnapshot } from "./types";
 
 const WIKIPEDIA_API = "https://en.wikipedia.org/w/api.php";
 const WIKIDATA_API = "https://www.wikidata.org/w/api.php";
 const EXCLUDED_SECTION_TITLES = ["References", "See also"];
-
-const fetchJson = async <T>(url: URL, attempts = 2): Promise<T> => {
-  let lastError: unknown;
-
-  for (let attempt = 1; attempt <= attempts; attempt += 1) {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 12_000);
-    try {
-      const response = await fetch(url, { signal: controller.signal });
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status} ${response.statusText}`);
-      }
-
-      return (await response.json()) as T;
-    } catch (error) {
-      lastError = error;
-    } finally {
-      clearTimeout(timeout);
-    }
-  }
-
-  throw new Error(`Request failed after ${attempts} attempts: ${String(lastError)}`);
-};
 
 const stripExcludedSections = (content: string) => {
   const doc = wtf(content);
@@ -66,11 +44,15 @@ const resolveCommonsTitleFromWikidata = async (wikidataId: string) => {
     >;
   };
 
-  const data = await fetchJson<WikidataResponse>(url);
+  const data = await fetchWikimediaJson<WikidataResponse>(url);
   return data.entities?.[wikidataId]?.sitelinks?.commonswiki?.title;
 };
 
-const replaceCommonsInlineTemplate = (content: string, articleTitle: string, commonsTitle?: string) => {
+const replaceCommonsInlineTemplate = (
+  content: string,
+  articleTitle: string,
+  commonsTitle?: string,
+) => {
   const commonsTemplatePattern = /\{\{\s*commons-inline(?:\|([^}]+))?\s*\}\}/gi;
 
   return content.replace(commonsTemplatePattern, (_match, rawParam: string | undefined) => {
@@ -112,26 +94,28 @@ export const fetchWikiSnapshot = async (title: string): Promise<WikiSnapshot> =>
     };
   };
 
-  const data = await fetchJson<QueryResponse>(url);
+  const data = await fetchWikimediaJson<QueryResponse>(url);
   const page = data.query?.pages?.[0];
   if (!page || page.missing) {
     throw new Error(`Wikipedia page not found for title "${title}".`);
   }
 
   const wikidataId = page.pageprops?.wikibase_item;
-  const commonsTitle = wikidataId ? await resolveCommonsTitleFromWikidata(wikidataId) : undefined;
-  const withExpandedCommons = replaceCommonsInlineTemplate(
-    page.revisions?.[0]?.slots?.main?.content ?? "",
-    title,
-    commonsTitle,
-  );
+  const articleText = page.revisions?.[0]?.slots?.main?.content ?? "";
+  const commonsTitle =
+    wikidataId && /\{\{\s*commons-inline/i.test(articleText)
+      ? await resolveCommonsTitleFromWikidata(wikidataId)
+      : undefined;
+  const withExpandedCommons = replaceCommonsInlineTemplate(articleText, title, commonsTitle);
 
   const fullText = stripExcludedSections(withExpandedCommons);
-  const links = (wtf(fullText).links() as unknown as Array<{
-    page(): string;
-    text(): string;
-    type(): string;
-  }>).filter((link) => link.type() === "internal");
+  const links = (
+    wtf(fullText).links() as unknown as Array<{
+      page(): string;
+      text(): string;
+      type(): string;
+    }>
+  ).filter((link) => link.type() === "internal");
 
   return {
     fullText,

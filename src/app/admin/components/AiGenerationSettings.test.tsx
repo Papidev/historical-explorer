@@ -8,7 +8,7 @@ import { AiGenerationSettings } from "./AiGenerationSettings";
 afterEach(cleanup);
 
 describe("AI Generation settings", () => {
-  it("shows the Cloud Story model and Local People model together in Cloud mode", () => {
+  it("shows one Cloud model for Story and People", () => {
     render(
       <AiGenerationSettings
         aiModeOptions={[
@@ -38,10 +38,8 @@ describe("AI Generation settings", () => {
       />,
     );
 
-    expect(screen.getByText("Story model · Cloud")).toBeInTheDocument();
+    expect(screen.getByText("Story and People model · Cloud")).toBeInTheDocument();
     expect(screen.getByText("gpt-oss:20b-cloud")).toBeInTheDocument();
-    expect(screen.getByText("People model · Local")).toBeInTheDocument();
-    expect(screen.getByText("Qwen3 8B")).toBeInTheDocument();
-    expect(screen.getByText("Ollama · free")).toBeInTheDocument();
+    expect(screen.queryByText("People model · Local")).not.toBeInTheDocument();
   });
 });
