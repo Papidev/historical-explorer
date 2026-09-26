@@ -48,6 +48,7 @@ export type StoryWorkflowDependencies = {
     relatedPeople: StoryContent["relatedPeople"];
     sources: Source[];
     ai: AiSelection;
+    onProgress?: (message: string) => void;
   }): Promise<RelatedPeopleResolutionResult>;
   repository: StoryWorkflowRepository;
   now?: () => Date;
@@ -162,10 +163,12 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
     pointOfInterest: PoiInput,
     sources: Source[],
     ai: AiSelection,
+    onProgress?: (message: string) => void,
   ) => {
     const startedAt = now().getTime();
     let generated: { content: StoryContent; provider: "ollama" | "gemini" };
     try {
+      onProgress?.(`Generating Story Content with ${ai.model}.`);
       generated = await dependencies.generateStoryContent({
         pointOfInterest,
         sources,
@@ -189,15 +192,18 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
     const relatedPeopleStartedAt = now().getTime();
     let resolution: RelatedPeopleResolutionResult;
     try {
+      onProgress?.(`Resolving ${generated.content.relatedPeople.length} Related People.`);
       resolution = await dependencies.resolveRelatedPeople({
         relatedPeople: generated.content.relatedPeople,
         sources,
         ai,
+        onProgress,
       });
       generated.content.relatedPeople = resolution.relatedPeople;
     } catch (cause) {
       const message = cause instanceof Error ? cause.message : String(cause);
       console.warn(`[related-people] Resolution failed for ${pointOfInterest.id}.`, cause);
+      onProgress?.(`Related People resolution failed: ${message}`);
       resolution = {
         relatedPeople: generated.content.relatedPeople,
         failures: generated.content.relatedPeople
@@ -206,6 +212,7 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
       };
     }
 
+    onProgress?.("Saving Story Content and Related People.");
     try {
       await dependencies.repository.replaceStoryContent(
         pointOfInterest.id,
@@ -228,8 +235,10 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
 
   return {
     draftStory: {
-      generate: async ({ poiId, ai }) => {
+      generate: async ({ poiId, ai, onProgress }) => {
+        onProgress?.("Finding the Point of Interest.");
         const pointOfInterest = await findPointOfInterest(poiId, dependencies);
+        onProgress?.("Fetching the Wikipedia Source.");
         const sources = await acquireAndPersistSources(
           pointOfInterest,
           (await dependencies.repository.get(poiId))?.sources,
@@ -237,6 +246,7 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         let mainImageCandidates: "generated" | "failed" = "generated";
         let selectedCommonsFileName: string | undefined;
         try {
+          onProgress?.("Finding Main Image Candidates.");
           selectedCommonsFileName = await generateAndPersistCandidates(pointOfInterest);
         } catch (error) {
           if (
@@ -246,10 +256,16 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
             throw error;
           }
           mainImageCandidates = "failed";
+          onProgress?.("Main Image Candidates could not be refreshed; continuing.");
           selectedCommonsFileName = (await dependencies.repository.get(poiId))?.draftMainImage
             ?.commonsFileName;
         }
-        const relatedPeople = await generateAndPersistStoryContent(pointOfInterest, sources, ai);
+        const relatedPeople = await generateAndPersistStoryContent(
+          pointOfInterest,
+          sources,
+          ai,
+          onProgress,
+        );
 
         return {
           poiId,
@@ -270,13 +286,15 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
       },
     },
     storyContent: {
-      generate: async ({ poiId, ai }) => {
+      generate: async ({ poiId, ai, onProgress }) => {
+        onProgress?.("Finding the Point of Interest.");
         const pointOfInterest = await findPointOfInterest(poiId, dependencies);
+        onProgress?.("Fetching the Wikipedia Source.");
         const sources = await acquireAndPersistSources(
           pointOfInterest,
           (await dependencies.repository.get(poiId))?.sources,
         );
-        return generateAndPersistStoryContent(pointOfInterest, sources, ai);
+        return generateAndPersistStoryContent(pointOfInterest, sources, ai, onProgress);
       },
       delete: async ({ poiId }) => {
         try {
@@ -287,21 +305,29 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
       },
     },
     relatedPeople: {
-      resolve: async ({ poiId, ai }) => {
+      resolve: async ({ poiId, ai, onProgress }) => {
         const startedAt = now().getTime();
+        onProgress?.("Loading the saved Story and its Sources.");
         const snapshot = await dependencies.repository.get(poiId);
-        if (!snapshot?.storyContent || snapshot.sources.length === 0) {
+        if (!snapshot?.storyContent) {
           throw new StoryWorkflowError({
             code: "sources-unavailable",
             stage: "sources",
             retryable: true,
           });
         }
+        if (snapshot.sources.length === 0) onProgress?.("Fetching the missing Wikipedia Source.");
+        const sources =
+          snapshot.sources.length > 0
+            ? snapshot.sources
+            : await acquireAndPersistSources(await findPointOfInterest(poiId, dependencies));
         const resolution = await dependencies.resolveRelatedPeople({
           relatedPeople: snapshot.storyContent.relatedPeople,
-          sources: snapshot.sources,
+          sources,
           ai,
+          onProgress,
         });
+        onProgress?.("Saving the updated Related People.");
         try {
           await dependencies.repository.replaceStoryContent(
             poiId,

@@ -87,11 +87,10 @@ CLOUD_AI_MODEL=gpt-oss:20b-cloud
 OLLAMA_BASE_URL=http://localhost:11434
 ```
 
-Ollama Cloud does not support schema-constrained output. The Story Workflow includes the schema in the prompt instead and retries once when the response fails JSON or domain validation.
-When Ollama Cloud is selected, Story Content uses the configured Cloud model while new People automatically use the local Ollama model from `LOCAL_AI_MODEL`. The admin AI Generation panel shows both active models together.
+Ollama Cloud does not support schema-constrained output. Story Content and new People include their schemas in the prompt and retry once when a response fails JSON or domain validation. Both use the selected Cloud model.
 
 ## Security Notes
 
 The current `/admin` route is temporary and has no authentication. Keep it for local development only; do not expose it publicly until access control is added.
 
-Do not commit real API keys. Cloud AI generation sends source text to Gemini and may incur paid usage.
+Do not commit real API keys. Cloud AI generation sends source text to the configured provider and may incur paid usage.

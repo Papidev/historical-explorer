@@ -100,16 +100,28 @@ export class StoryWorkflowError extends Error {
 
 export type StoryWorkflow = {
   draftStory: {
-    generate(input: { poiId: string; ai: AiSelection }): Promise<DraftStoryGenerationResult>;
+    generate(input: {
+      poiId: string;
+      ai: AiSelection;
+      onProgress?: (message: string) => void;
+    }): Promise<DraftStoryGenerationResult>;
     get(input: { poiId: string }): Promise<DraftStorySnapshot | undefined>;
     reset(input: { poiId: string }): Promise<void>;
   };
   storyContent: {
-    generate(input: { poiId: string; ai: AiSelection }): Promise<RelatedPeopleResolutionResult>;
+    generate(input: {
+      poiId: string;
+      ai: AiSelection;
+      onProgress?: (message: string) => void;
+    }): Promise<RelatedPeopleResolutionResult>;
     delete(input: { poiId: string }): Promise<void>;
   };
   relatedPeople: {
-    resolve(input: { poiId: string; ai: AiSelection }): Promise<RelatedPeopleResolutionResult>;
+    resolve(input: {
+      poiId: string;
+      ai: AiSelection;
+      onProgress?: (message: string) => void;
+    }): Promise<RelatedPeopleResolutionResult>;
   };
   mainImageCandidates: {
     generate(input: { poiId: string }): Promise<void>;
