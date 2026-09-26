@@ -1,10 +1,12 @@
 "use client";
 
 import { useOptimistic, useState } from "react";
+import { flushSync } from "react-dom";
 import type { RefObject } from "react";
 import type { AiSelection } from "../../lib/aiModels";
 import type { AdminAction, AdminArtifact, AdminPoiRow } from "../../lib/types";
 import { ActionToast, getActionError, type Toast } from "../ActionToast";
+import { AiProgressDialog } from "./AiProgressDialog";
 import { Preview, type SelectedPanel } from "./Preview";
 import { Row } from "./Row";
 import type { Actions } from "./RowTypes";
@@ -71,6 +73,11 @@ export const PoiRowsTable = ({
     description: string;
   } | null>(null);
   const [actionToast, setActionToast] = useState<Toast | null>(null);
+  const [aiProgressDialog, setAiProgressDialog] = useState<{
+    runId: string;
+    title: string;
+    isFinished: boolean;
+  } | null>(null);
 
   const actions: Actions = {
     generateDraftStory: generateDraftStoryAction,
@@ -87,9 +94,20 @@ export const PoiRowsTable = ({
     formData: FormData,
     includeAiSelection = false,
   ) => {
+    const runId = includeAiSelection ? crypto.randomUUID() : undefined;
     if (includeAiSelection) {
       formData.set("aiMode", aiSelectionRef.current.mode);
       formData.set("aiModel", aiSelectionRef.current.model);
+    }
+    if (runId) {
+      formData.set("progressId", runId);
+      flushSync(() => {
+        setAiProgressDialog({
+          runId,
+          title: description.replace(/\.\.\.$/, ""),
+          isFinished: false,
+        });
+      });
     }
     setSelectedPanel(null);
     setActionToast(null);
@@ -99,13 +117,35 @@ export const PoiRowsTable = ({
       if (result?.warning) {
         setActionToast({ tone: "warning", ...result.warning });
       }
+      if (runId) {
+        setAiProgressDialog((current) =>
+          current?.runId === runId
+            ? result?.warning
+              ? { ...current, isFinished: true }
+              : null
+            : current,
+        );
+      }
     } catch (error) {
       setActionToast(getActionError(error));
+      if (runId) {
+        setAiProgressDialog((current) =>
+          current?.runId === runId ? { ...current, isFinished: true } : current,
+        );
+      }
     }
   };
 
   return (
     <>
+      {aiProgressDialog ? (
+        <AiProgressDialog
+          runId={aiProgressDialog.runId}
+          title={aiProgressDialog.title}
+          isFinished={aiProgressDialog.isFinished}
+          onClose={() => setAiProgressDialog(null)}
+        />
+      ) : null}
       {actionToast ? (
         <ActionToast toast={actionToast} onDismiss={() => setActionToast(null)} />
       ) : null}

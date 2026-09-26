@@ -1,33 +1,15 @@
 import { resolvePageForPoi } from "@/server/wikiPipeline/resolve";
-import type { MainImageCandidate, MainImageDiscoveredVia, PoiInput } from "@/server/wikiPipeline/types";
+import { fetchWikimediaJson } from "@/server/wikiPipeline/fetchWikimediaJson";
+import type {
+  MainImageCandidate,
+  MainImageDiscoveredVia,
+  PoiInput,
+} from "@/server/wikiPipeline/types";
 
 const WIKIPEDIA_API = "https://en.wikipedia.org/w/api.php";
 const WIKIDATA_API = "https://www.wikidata.org/w/api.php";
 const COMMONS_API = "https://commons.wikimedia.org/w/api.php";
 const COMMONS_FILE_BASE_URL = "https://commons.wikimedia.org/wiki/File:";
-
-const fetchJson = async <T>(url: URL, attempts = 2): Promise<T> => {
-  let lastError: unknown;
-
-  for (let attempt = 1; attempt <= attempts; attempt += 1) {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 12_000);
-    try {
-      const response = await fetch(url, { signal: controller.signal });
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status} ${response.statusText}`);
-      }
-
-      return (await response.json()) as T;
-    } catch (error) {
-      lastError = error;
-    } finally {
-      clearTimeout(timeout);
-    }
-  }
-
-  throw new Error(`Request failed after ${attempts} attempts: ${String(lastError)}`);
-};
 
 const normalizeCommonsFileName = (fileName: string) =>
   fileName
@@ -85,7 +67,7 @@ const discoverP18FileName = async (wikidataId?: string) => {
     >;
   };
 
-  const data = await fetchJson<WikidataResponse>(url);
+  const data = await fetchWikimediaJson<WikidataResponse>(url);
   const value = data.entities?.[wikidataId]?.claims?.P18?.[0]?.mainsnak?.datavalue?.value;
 
   return typeof value === "string" ? value : undefined;
@@ -109,7 +91,7 @@ const discoverPageImageFileName = async (title: string) => {
     };
   };
 
-  const data = await fetchJson<PageImageResponse>(url);
+  const data = await fetchWikimediaJson<PageImageResponse>(url);
   return data.query?.pages?.[0]?.pageimage;
 };
 
@@ -142,7 +124,7 @@ const fetchCommonsCandidate = async (
     };
   };
 
-  const data = await fetchJson<CommonsResponse>(url);
+  const data = await fetchWikimediaJson<CommonsResponse>(url);
   const page = data.query?.pages?.[0];
   const imageInfo = page?.imageinfo?.[0];
   if (page?.missing || !imageInfo?.url || !imageInfo.thumburl) {

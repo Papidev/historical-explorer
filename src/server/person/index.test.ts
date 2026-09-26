@@ -49,11 +49,12 @@ afterEach(() => {
 });
 
 describe("People", () => {
-  it("uses the configured local Ollama model when the Story uses Ollama Cloud", async () => {
+  it("uses the selected Ollama Cloud model for People", async () => {
     vi.stubEnv("CLOUD_AI_PROVIDER", "ollama");
-    vi.stubEnv("LOCAL_AI_MODEL", "qwen3:8b");
     const repository = createRepository();
-    let generationConfig: { provider: "ollama" | "gemini"; model: string } | undefined;
+    let generationConfig:
+      | { mode: "local" | "cloud"; provider: "ollama" | "gemini"; model: string }
+      | undefined;
     const people = createPeople({
       repository,
       fetchSnapshot: async (title) => snapshot(title, "Q100"),
@@ -79,11 +80,15 @@ describe("People", () => {
       ai: { mode: "cloud", model: "gpt-oss:20b-cloud" },
     });
 
-    expect(generationConfig).toEqual({ provider: "ollama", model: "qwen3:8b" });
+    expect(generationConfig).toEqual({
+      mode: "cloud",
+      provider: "ollama",
+      model: "gpt-oss:20b-cloud",
+    });
     expect(repository.get("hercules")?.generation).toMatchObject({
-      aiMode: "local",
+      aiMode: "cloud",
       aiProvider: "ollama",
-      aiModel: "qwen3:8b",
+      aiModel: "gpt-oss:20b-cloud",
     });
   });
 
@@ -277,6 +282,39 @@ describe("People", () => {
       failures: [{ name: "Hercules", message: "AI unavailable" }],
     });
     expect(repository.list()).toEqual([]);
+  });
+
+  it("resolves a Person without an optional image when image discovery is rate limited", async () => {
+    const repository = createRepository();
+    const people = createPeople({
+      repository,
+      fetchSnapshot: async (title) => snapshot(title, "Q100"),
+      generateContent: async () => content,
+      fetchImageCandidates: async () => {
+        throw new Error("HTTP 429 Too Many Requests");
+      },
+    });
+
+    await expect(
+      people.resolveAndGenerateMissing({
+        relatedPeople: [{ name: "Hercules", sourceIds: ["wikipedia"] }],
+        storySources: [
+          {
+            id: "wikipedia",
+            kind: "wikipedia",
+            title: "Example",
+            url: "https://en.wikipedia.org/wiki/Example",
+            content: "Story source",
+            links: [{ label: "Hercules", title: "Hercules" }],
+          },
+        ],
+        ai: { mode: "local", model: "person-model" },
+      }),
+    ).resolves.toEqual({
+      relatedPeople: [{ name: "Hercules", personId: "hercules", sourceIds: ["wikipedia"] }],
+      failures: [],
+    });
+    expect(repository.get("hercules")?.image).toBeUndefined();
   });
 
   it("keeps existing resolutions and stops new requests after a rate limit", async () => {

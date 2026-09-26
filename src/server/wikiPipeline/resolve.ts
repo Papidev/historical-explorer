@@ -1,30 +1,8 @@
 import { parseEnglishWikipediaTitle } from "./normalize";
+import { fetchWikimediaJson } from "./fetchWikimediaJson";
 import type { PoiInput, ResolvedPage } from "./types";
 
 const WIKIDATA_API = "https://www.wikidata.org/w/api.php";
-
-const fetchJson = async <T>(url: URL, attempts = 2): Promise<T> => {
-  let lastError: unknown;
-
-  for (let attempt = 1; attempt <= attempts; attempt += 1) {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 12_000);
-    try {
-      const response = await fetch(url, { signal: controller.signal });
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status} ${response.statusText}`);
-      }
-
-      return (await response.json()) as T;
-    } catch (error) {
-      lastError = error;
-    } finally {
-      clearTimeout(timeout);
-    }
-  }
-
-  throw new Error(`Request failed after ${attempts} attempts: ${String(lastError)}`);
-};
 
 const resolveViaWikidata = async (wikidataId: string): Promise<string | undefined> => {
   const url = new URL(WIKIDATA_API);
@@ -47,7 +25,7 @@ const resolveViaWikidata = async (wikidataId: string): Promise<string | undefine
     >;
   };
 
-  const data = await fetchJson<WikidataResponse>(url);
+  const data = await fetchWikimediaJson<WikidataResponse>(url);
   const entity = data.entities?.[wikidataId];
   return entity?.sitelinks?.enwiki?.title;
 };

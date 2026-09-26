@@ -12,57 +12,58 @@ import { resolvePageForPoi } from "@/server/wikiPipeline/resolve";
 import { wikiTextToPlainText } from "@/server/wikiPipeline/wikiText";
 import { people } from "@/server/person";
 
-export const createStoryWorkflowForCity = (city: string) => createStoryWorkflow({
-  findPointOfInterest: async (poiId) => {
-    try {
-      return findPoiInGeoJson(getDefaultInputPath(city), poiId, city);
-    } catch {
-      return undefined;
-    }
-  },
-  acquireSources: async (pointOfInterest, previousSources) => {
-    console.info(`[wiki] Fetching Wikipedia text for ${pointOfInterest.id}.`);
-    const title =
-      previousSources?.find(({ kind }) => kind === "wikipedia")?.title ??
-      (await resolvePageForPoi(pointOfInterest)).selected.title;
-    const snapshot = await fetchWikiSnapshot(title);
-    return [
-      {
-        id: "wikipedia",
-        kind: "wikipedia",
-        title: snapshot.title,
-        url: buildWikipediaPageUrl(snapshot.title),
-        content: wikiTextToPlainText(snapshot.fullText),
-        links: snapshot.links,
-      },
-    ];
-  },
-  generateMainImageCandidates: async (pointOfInterest) => {
-    console.info(`[wiki-images] Generating Main Image Candidates for ${pointOfInterest.id}.`);
-    return fetchMainImageCandidates(pointOfInterest);
-  },
-  generateStoryContent: async ({ pointOfInterest, sources, ai }) => {
-    const provider =
-      ai.mode === "local"
-        ? process.env.LOCAL_AI_PROVIDER === "gemini"
-          ? "gemini"
-          : "ollama"
-        : process.env.CLOUD_AI_PROVIDER === "ollama"
-          ? "ollama"
-          : "gemini";
-    return {
-      content: await generateStoryContent(pointOfInterest, sources, {
-        mode: ai.mode,
+export const createStoryWorkflowForCity = (city: string) =>
+  createStoryWorkflow({
+    findPointOfInterest: async (poiId) => {
+      try {
+        return findPoiInGeoJson(getDefaultInputPath(city), poiId, city);
+      } catch {
+        return undefined;
+      }
+    },
+    acquireSources: async (pointOfInterest, previousSources) => {
+      console.info(`[wiki] Fetching Wikipedia text for ${pointOfInterest.id}.`);
+      const title =
+        previousSources?.find(({ kind }) => kind === "wikipedia")?.title ??
+        (await resolvePageForPoi(pointOfInterest)).selected.title;
+      const snapshot = await fetchWikiSnapshot(title);
+      return [
+        {
+          id: "wikipedia",
+          kind: "wikipedia",
+          title: snapshot.title,
+          url: buildWikipediaPageUrl(snapshot.title),
+          content: wikiTextToPlainText(snapshot.fullText),
+          links: snapshot.links,
+        },
+      ];
+    },
+    generateMainImageCandidates: async (pointOfInterest) => {
+      console.info(`[wiki-images] Generating Main Image Candidates for ${pointOfInterest.id}.`);
+      return fetchMainImageCandidates(pointOfInterest);
+    },
+    generateStoryContent: async ({ pointOfInterest, sources, ai }) => {
+      const provider =
+        ai.mode === "local"
+          ? process.env.LOCAL_AI_PROVIDER === "gemini"
+            ? "gemini"
+            : "ollama"
+          : process.env.CLOUD_AI_PROVIDER === "ollama"
+            ? "ollama"
+            : "gemini";
+      return {
+        content: await generateStoryContent(pointOfInterest, sources, {
+          mode: ai.mode,
+          provider,
+          model: ai.model,
+        }),
         provider,
-        model: ai.model,
-      }),
-      provider,
-    };
-  },
-  resolveRelatedPeople: ({ relatedPeople, sources, ai }) =>
-    people.resolveAndGenerateMissing({ relatedPeople, storySources: sources, ai }),
-  repository: createFilesystemStoryWorkflowRepository(city),
-});
+      };
+    },
+    resolveRelatedPeople: ({ relatedPeople, sources, ai, onProgress }) =>
+      people.resolveAndGenerateMissing({ relatedPeople, storySources: sources, ai, onProgress }),
+    repository: createFilesystemStoryWorkflowRepository(city),
+  });
 
 export const storyWorkflow = createStoryWorkflowForCity("rome");
 

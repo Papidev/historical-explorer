@@ -32,24 +32,13 @@ const getProvider = (ai: AiSelection): "ollama" | "gemini" =>
       ? "ollama"
       : "gemini";
 
-const getPersonAiSelection = (ai: AiSelection) => {
-  const provider = getProvider(ai);
-  return ai.mode === "cloud" && provider === "ollama"
-    ? {
-        mode: "local" as const,
-        provider: "ollama" as const,
-        model: process.env.LOCAL_AI_MODEL?.trim() || "qwen3:8b",
-      }
-    : { ...ai, provider };
-};
-
 type PersonDependencies = {
   repository: PersonRepository;
   fetchSnapshot: (title: string) => Promise<WikiSnapshot>;
   generateContent: (
     person: { name: string; wikidataId: string },
     sources: PersonSource[],
-    config: { provider: "ollama" | "gemini"; model: string },
+    config: { mode: "local" | "cloud"; provider: "ollama" | "gemini"; model: string },
   ) => Promise<PersonContent>;
   fetchImageCandidates: (input: {
     id: string;
@@ -80,6 +69,7 @@ const generateAndPersist = async ({
   snapshot,
   ai,
   dependencies,
+  onProgress,
 }: {
   id: string;
   name: string;
@@ -87,6 +77,7 @@ const generateAndPersist = async ({
   snapshot: WikiSnapshot;
   ai: AiSelection & { provider: "ollama" | "gemini" };
   dependencies: PersonDependencies;
+  onProgress?: (message: string) => void;
 }) => {
   const source: PersonSource = {
     id: "wikipedia",
@@ -95,18 +86,29 @@ const generateAndPersist = async ({
     url: buildWikipediaPageUrl(snapshot.title),
     content: wikiTextToPlainText(snapshot.fullText),
   };
+  onProgress?.(
+    `Generating ${name} with ${ai.provider === "ollama" ? "Ollama" : "Gemini"} (${ai.model}).`,
+  );
   const content = await dependencies.generateContent({ name, wikidataId }, [source], {
+    mode: ai.mode,
     provider: ai.provider,
     model: ai.model,
   });
+  onProgress?.(`Finding an optional image for ${name}.`);
   const image = (
-    await dependencies.fetchImageCandidates({
-      id,
-      name,
-      city: "",
-      coordinates: { lat: 0, lng: 0 },
-      sourceHints: { wikipedia: `en:${snapshot.title}`, wikidata: wikidataId },
-    })
+    await dependencies
+      .fetchImageCandidates({
+        id,
+        name,
+        city: "",
+        coordinates: { lat: 0, lng: 0 },
+        sourceHints: { wikipedia: `en:${snapshot.title}`, wikidata: wikidataId },
+      })
+      .catch((error: unknown) => {
+        if (!/\b429\b|too many requests/i.test(String(error))) throw error;
+        console.warn(`Person image discovery was rate limited for ${name}: ${String(error)}`);
+        return [];
+      })
   ).find(({ license, attribution }) => license && attribution);
   const person: Person = {
     id,
@@ -147,13 +149,15 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
       relatedPeople,
       storySources,
       ai,
+      onProgress,
     }: {
       relatedPeople: RelatedPerson[];
       storySources: Source[];
       ai: AiSelection;
+      onProgress?: (message: string) => void;
     }) => {
       const links = storySources.flatMap((source) => source.links ?? []);
-      const personAi = getPersonAiSelection(ai);
+      const personAi = { ...ai, provider: getProvider(ai) };
       const resolved: RelatedPerson[] = [];
       const failures: RelatedPeopleResolutionResult["failures"] = [];
 
@@ -163,6 +167,7 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
           resolved.push(person);
           continue;
         }
+        onProgress?.(`Checking ${person.name} (${index + 1}/${relatedPeople.length}).`);
 
         const matchingLinks = new Map(
           links
@@ -182,11 +187,13 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
                 ? "No matching Wikipedia link was found in the Story source."
                 : "Multiple Wikipedia links match this name; the identity is ambiguous.",
           });
+          onProgress?.(`Could not match ${person.name} to one Wikipedia link.`);
           continue;
         }
 
         try {
           const [link] = matchingLinks.values();
+          onProgress?.(`Fetching the Wikipedia article for ${person.name}.`);
           const snapshot = await dependencies.fetchSnapshot(link.title);
           if (!snapshot.wikidataId) {
             resolved.push({ name: person.name, sourceIds: person.sourceIds });
@@ -194,6 +201,7 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
               name: person.name,
               message: "The linked Wikipedia page has no Wikidata ID.",
             });
+            onProgress?.(`No Wikidata ID was found for ${person.name}.`);
             continue;
           }
 
@@ -207,24 +215,37 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
               snapshot,
               ai: personAi,
               dependencies,
+              onProgress,
             }));
           resolved.push({
             name: person.name,
             personId: resolvedPerson.id,
             sourceIds: person.sourceIds,
           });
+          onProgress?.(`Resolved ${person.name}.`);
         } catch (error) {
           const message = error instanceof Error ? error.message : String(error);
           resolved.push({ name: person.name, sourceIds: person.sourceIds });
           failures.push({ name: person.name, message });
+          onProgress?.(`Failed to resolve ${person.name}: ${message}`);
 
-          if (/\b429\b|too many requests/i.test(message)) {
+          if (/\b429\b|too many requests|Ollama timed out/i.test(message)) {
             for (const skipped of relatedPeople.slice(index + 1)) {
               resolved.push(skipped);
               if (!skipped.personId) {
-                failures.push({ name: skipped.name, message });
+                failures.push({
+                  name: skipped.name,
+                  message: /Ollama timed out/i.test(message)
+                    ? "Skipped after Ollama timed out for another Person."
+                    : message,
+                });
               }
             }
+            onProgress?.(
+              /Ollama timed out/i.test(message)
+                ? "Stopped after Ollama timed out. Try again later."
+                : "Stopped after a rate limit. Try again later.",
+            );
             break;
           }
         }
