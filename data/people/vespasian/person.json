@@ -1,0 +1,73 @@
+{
+  "id": "vespasian",
+  "name": "Vespasian",
+  "wikidataId": "Q1419",
+  "wikipediaTitle": "Vespasian",
+  "content": {
+    "description": [
+      {
+        "text": "Vespasian, born in 9 AD, began his career as a legionary commander in Britain and later led the suppression of the Jewish revolt. His military successes earned him the support of key legions, and when Nero died in 68 AD he was declared emperor by the Egyptian forces on 1 July 69. After defeating Vitellius at Bedriacum, the Senate formally recognized him as emperor on 21 December 69, ending the chaotic Year of the Four Emperors.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As emperor he focused on restoring Rome’s finances and stability. He introduced a new tax on urine, a move that gave rise to the Latin proverb 'Pecunia non olet', and he began the construction of the Flavian Amphitheatre, later known as the Colosseum, using funds from the spoils of Jerusalem. His reign also saw the completion of the Temple of Peace and the rebuilding of Rome’s public baths, cementing his reputation as a pragmatic ruler who combined fiscal prudence with ambitious building projects.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Vespasian introduced a tax on urine, which led to the Latin proverb 'Pecunia non olet' meaning 'money does not stink'.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first Roman emperor to visit Egypt, where he was hailed as a pharaoh and even claimed to be an incarnation of the god Serapis.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Colosseum was financed in part by the spoils taken from the Jewish Temple after its destruction in 70 AD.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Vespasian’s reign established the Flavian dynasty, the first Roman dynasty to be succeeded by a natural son.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 9,
+      "month": 11,
+      "day": 17,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 79,
+      "month": 6,
+      "day": 23,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Head_of_Vespasianus_in_Palazzo_Massimo_(Rome).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Head_of_Vespasianus_in_Palazzo_Massimo_(Rome).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Head_of_Vespasianus_in_Palazzo_Massimo_%28Rome%29.jpg/960px-Head_of_Vespasianus_in_Palazzo_Massimo_%28Rome%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/66/Head_of_Vespasianus_in_Palazzo_Massimo_%28Rome%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Livioandronico2013",
+    "author": "Livioandronico2013",
+    "width": 2640,
+    "height": 3480,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Vespasian",
+    "url": "https://en.wikipedia.org/wiki/Vespasian"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:10:30.808Z"
+  }
+}

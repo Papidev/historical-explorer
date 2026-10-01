@@ -1,4 +1,6 @@
 import { createPoisForCity } from "@/utils";
+import { isPoiRowComplete } from "@/app/admin/lib/isPoiRowComplete";
+import { loadPoiLists } from "@/app/admin/lib/loadPoiLists";
 import { CityExplorer } from "@/app/components/CityExplorer";
 
 type Props = {
@@ -6,7 +8,15 @@ type Props = {
 };
 
 export const RomeMap = async ({ initialSelectedPoiId }: Props = {}) => {
-  const pois = await createPoisForCity("rome");
+  const [catalogPois, { rows, error }] = await Promise.all([
+    createPoisForCity("rome"),
+    loadPoiLists(),
+  ]);
+  if (error) {
+    throw new Error(error);
+  }
+  const completePoiIds = new Set(rows.filter(isPoiRowComplete).map(({ id }) => id));
+  const pois = catalogPois.filter(({ id }) => completePoiIds.has(id));
   const initialSelectedPoi = initialSelectedPoiId
     ? pois.find((poi) => poi.id === initialSelectedPoiId)
     : undefined;
@@ -21,7 +31,7 @@ export const RomeMap = async ({ initialSelectedPoiId }: Props = {}) => {
       citySlug="rome"
       coordinates={coordinates}
       initialZoom={15}
-      initialSelectedPoiId={initialSelectedPoiId ?? null}
+      initialSelectedPoiId={initialSelectedPoi?.id ?? null}
       pois={pois}
     />
   );

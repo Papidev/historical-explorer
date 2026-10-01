@@ -1,0 +1,73 @@
+{
+  "id": "michelangelo-buonarroti",
+  "name": "Michelangelo Buonarroti",
+  "wikidataId": "Q5592",
+  "wikipediaTitle": "Michelangelo",
+  "content": {
+    "description": [
+      {
+        "text": "Michelangelo Buonarroti was born on 6 March 1475 in Caprese, a small Tuscan town, and grew up in Florence after his family returned there.  From a young age he was exposed to marble work, learning the craft from a stonecutter who lived with his family in Settignano.  By thirteen he was apprenticed to the painter Domenico Ghirlandaio, and within a few years he had already begun to carve the first marble figures that would later become world‑famous.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his career he produced masterpieces across all media: the marble David and Pietà, the Sistine Chapel ceiling and the Last Judgment, and the architectural design of St. Peter’s Basilica.  His work was celebrated for its dramatic intensity—his terribilità—and he was called Il Divino by contemporaries.  Michelangelo’s influence extended beyond sculpture and painting into architecture and poetry, making him a quintessential Renaissance man whose legacy shaped Western art for centuries.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Michelangelo was the first Western artist whose biography was published while he was still alive; three biographies appeared during his lifetime, including Giorgio Vasari’s famous account.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was known as Il Divino, or “the divine one,” and his contemporaries admired his ability to instill awe in viewers, a quality that later inspired the Mannerist movement.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Michelangelo wrote more than 300 sonnets and madrigals, many addressed to young men, making him one of the earliest modern poets to express same‑sex affection in a public literary form.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Despite his fame, he led a modest personal life, often sleeping in his clothes and describing himself as living like a poor man, and he was a devout Catholic who joined the Secular Franciscan Order.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1475,
+      "month": 3,
+      "day": 6,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1564,
+      "month": 2,
+      "day": 18,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Michelangelo_Daniele_da_Volterra_(dettaglio).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Michelangelo_Daniele_da_Volterra_(dettaglio).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Michelangelo_Daniele_da_Volterra_%28dettaglio%29.jpg/960px-Michelangelo_Daniele_da_Volterra_%28dettaglio%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Michelangelo_Daniele_da_Volterra_%28dettaglio%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Attributed to Daniele da Volterra",
+    "author": "Attributed to Daniele da Volterra",
+    "width": 1382,
+    "height": 1600,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Michelangelo",
+    "url": "https://en.wikipedia.org/wiki/Michelangelo"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:53:04.478Z"
+  }
+}

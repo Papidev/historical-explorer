@@ -1,7 +1,7 @@
 "use client";
 
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from "@headlessui/react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { AiProgress } from "@/server/aiProgress";
 
 export const AiProgressDialog = ({
@@ -16,6 +16,7 @@ export const AiProgressDialog = ({
   onClose: () => void;
 }) => {
   const [progress, setProgress] = useState<AiProgress>();
+  const logRef = useRef<HTMLOListElement>(null);
   const [startedAt] = useState(() => Date.now());
   const [now, setNow] = useState(startedAt);
 
@@ -39,6 +40,10 @@ export const AiProgressDialog = ({
       clearInterval(interval);
     };
   }, [runId]);
+
+  useEffect(() => {
+    if (logRef.current) logRef.current.scrollTop = logRef.current.scrollHeight;
+  }, [progress?.entries.length]);
 
   return (
     <Dialog open onClose={onClose} className="relative z-50">
@@ -80,10 +85,11 @@ export const AiProgressDialog = ({
                 ? "Generation completed."
                 : isFinished
                   ? "Waiting for the final result..."
-                  : `Working for ${Math.floor((now - startedAt) / 1_000)} seconds.`}
+                  : `Working for ${Math.floor((now - (progress ? new Date(progress.startedAt).getTime() : startedAt)) / 1_000)} seconds.`}
             </p>
           )}
           <ol
+            ref={logRef}
             role="log"
             aria-live="polite"
             className="mt-4 max-h-72 space-y-2 overflow-y-auto rounded-lg bg-gray-50 p-3"

@@ -1,0 +1,73 @@
+{
+  "id": "pope-sixtus-v",
+  "name": "Pope Sixtus V",
+  "wikidataId": "Q133350",
+  "wikipediaTitle": "Pope Sixtus V",
+  "content": {
+    "description": [
+      {
+        "text": "Felice Piergentile, later known as Pope Sixtus V, was born on 13 December 1521 in Grottammare, a small fishing village in the Papal States.  From a humble background he entered the Franciscan order at the age of nine, taking the name Fra Felice, and pursued a rigorous theological education that led to his ordination as a deacon and eventually to his appointment as a cardinal by Pope Pius V in 1570.  His reputation for scholarly diligence and austere preaching earned him the nickname Cardinal Montalto, and his political acumen secured his election to the papacy on 24 April 1585, where he adopted the name Sixtus V in honor of his Franciscan predecessor.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his brief but energetic pontificate, Sixtus V launched an ambitious program of urban renewal that reshaped Rome’s streets, aqueducts, and public buildings.  He commissioned the construction of the Acqua Felice aqueduct, opened six new streets, and demolished antiquities such as Trajan’s Column to repurpose their stone for Christian monuments.  His reforms extended beyond the city: he excommunicated King Henry IV of France and renewed the excommunication of Queen Elizabeth I of England, while issuing the Sixtine Vulgate in 1590 and the Sixtine Septuagint in 1587.  Sixtus also reorganized the Roman Curia, limiting the College of Cardinals to seventy and establishing fifteen congregations, and he created 33 new cardinals during his reign.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Sixtus V was the last pope elected from a poor background until Pope Pius X in 1903, making his rise to the papacy a notable example of social mobility within the Catholic hierarchy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He personally supervised the printing of an improved edition of Jerome’s Vulgate, a project that reflected his commitment to textual accuracy and doctrinal uniformity.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sixtus’s urban reforms included the demolition of the Septizodium of Septimius Severus to obtain building materials, illustrating his willingness to sacrifice ancient Roman heritage for the construction of new Christian monuments.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1588 he issued the bull *Effraenatum*, extending the penalty of excommunication to any form of contraception or abortion at any stage of fetal development, a significant shift in Church disciplinary policy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1521,
+      "month": 12,
+      "day": 13,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1590,
+      "month": 8,
+      "day": 27,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "(Albi)_Cathédrale_Sainte-Cécile_-_Trèsor_-_Portrait_du_pape_Sixte_V_-_PalissyIM81001477.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:(Albi)_Cath%C3%A9drale_Sainte-C%C3%A9cile_-_Tr%C3%A8sor_-_Portrait_du_pape_Sixte_V_-_PalissyIM81001477.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/%28Albi%29_Cath%C3%A9drale_Sainte-C%C3%A9cile_-_Tr%C3%A8sor_-_Portrait_du_pape_Sixte_V_-_PalissyIM81001477.jpg/960px-%28Albi%29_Cath%C3%A9drale_Sainte-C%C3%A9cile_-_Tr%C3%A8sor_-_Portrait_du_pape_Sixte_V_-_PalissyIM81001477.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/%28Albi%29_Cath%C3%A9drale_Sainte-C%C3%A9cile_-_Tr%C3%A8sor_-_Portrait_du_pape_Sixte_V_-_PalissyIM81001477.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Didier Descouens",
+    "author": "Didier Descouens",
+    "width": 4698,
+    "height": 6298,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Sixtus V",
+    "url": "https://en.wikipedia.org/wiki/Pope_Sixtus_V"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:53:39.268Z"
+  }
+}

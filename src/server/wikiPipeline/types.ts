@@ -51,6 +51,7 @@ export type WikiSnapshot = {
   links: Array<{ label: string; title: string }>;
   title: string;
   wikidataId?: string;
+  isDisambiguation?: boolean;
 };
 
 export type MainImageDiscoveredVia = "wikidata-p18" | "wikipedia-page-image" | "commons-category";

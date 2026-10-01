@@ -1,3 +1,4 @@
+import { getPoiRowStatusGroup } from "../../lib/getPoiRowStatusGroup";
 import { EyeIcon } from "@heroicons/react/20/solid";
 import { ArrowPathIcon, DocumentTextIcon } from "@heroicons/react/24/outline";
 import { IconButton } from "@/app/components/ui/IconButton";
@@ -22,10 +23,22 @@ export const StoryCell = ({
 }: ActionCellProps & {
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => (
-  <PipelineCell inProgress={isInProgress}>
+  <PipelineCell
+    inProgress={isInProgress}
+    needsAttention={
+      getPoiRowStatusGroup(row) === "needs-attention" &&
+      (!row.storyContent || row.storyContent.relatedPeople.some(({ personId }) => !personId))
+    }
+  >
     <CellContent
-      title={row.sourcePending ? "Waiting for source" : undefined}
-      titleTone={row.sourcePending ? "warning" : "status"}
+      title={
+        row.sourcePending
+          ? "Waiting for source"
+          : !row.storyContent
+            ? "Story Content not generated"
+            : undefined
+      }
+      titleTone={row.sourcePending || !row.storyContent ? "warning" : "status"}
       generationModel={[
         row.storyContentGenerationMode,
         row.storyContentGenerationProvider,

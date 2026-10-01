@@ -17,7 +17,7 @@ pnpm dev
 
 Then open [http://localhost:3000](http://localhost:3000).
 
-The Rome map reads its versioned POI catalog from `data/rome/pois/pois.geojson`.
+The Rome map reads its versioned POI catalog from `data/rome/pois/pois.geojson` and shows only POIs whose admin rows are green (Complete).
 
 ## Routes
 
@@ -49,7 +49,7 @@ For Rome, the Geo Place input lives at `data/rome/pois/raw.geojson`, while app-r
 
 Generation attempts are logged locally in `data/rome/generated/generation-logs/day-*.jsonl`. Each line records a start, completion, or failure with a shared run ID. Seven daily files are reused in rotation: when a slot is used again after seven days, its old contents are overwritten. The Curator table shows the latest run and expandable errors beside the affected source, story, or image; Related People errors appear inside the People drawer. Error messages are stored with known credentials redacted; stack traces remain in the server console. These files are ignored by Git and are not a durable audit store across machines or deployments.
 
-The admin POI table shows 50 rows per page. Status filters apply to the complete list and return to the first page when changed.
+The admin POI table shows 50 rows per page. Status filters and name search apply to the complete list and return to the first page when changed. Search matches original and generated POI names without distinguishing uppercase and lowercase. Empty rows are To do; rows with generated artifacts, attempted generation, or errors remain Needs attention until complete. Rows waiting for source acquisition are Needs source.
 
 Use Generate on an empty row or Refresh on an existing row in `/admin` to run the complete Rome generation flow:
 

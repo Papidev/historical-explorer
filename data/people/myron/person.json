@@ -1,0 +1,69 @@
+{
+  "id": "myron",
+  "name": "Myron",
+  "wikidataId": "Q192211",
+  "wikipediaTitle": "Myron",
+  "content": {
+    "description": [
+      {
+        "text": "Myron of Eleutherae was a mid‑5th‑century BC Athenian sculptor who, together with Polykleitos, Pheidias and Praxiteles, is regarded as one of the most important artists of classical antiquity. Born in Eleutherae on the border of Boeotia and Attica, he was a student of Ageladas of Argos and worked almost exclusively in bronze, a medium in which none of his original works survive but many Roman copies do, most famously the Discobolus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pliny the Elder praised Myron’s works as more numerous and more diligent than those of Polykleitos, suggesting that his sculptures were celebrated for their harmonious proportions and realistic detail. Myron’s oeuvre included a range of subjects—from the Discobolus and the Apollo of Ephesus to the satyr Marsyas and the heifer used as a peg for epigrams—many of which were commissioned to commemorate Olympic victors such as Chionis and Ladas and later copied by Roman writers who consistently ranked him among the greatest Greek sculptors.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Myron’s Discobolus introduced a bold, dynamic pose and a more perfect rhythm, revolutionizing the depiction of athletes in sculpture.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pliny noted that Myron’s works were more harmonious in proportion and more realistic, a quality that set him apart from his contemporaries.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Myron sculpted Olympic victors like Chionis and Ladas, and several of these statues were later replicated by Roman artists.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Marsyas sculpture attributed to Myron, depicting the satyr’s desire to pick up the aulos thrown by Athena, is almost certainly a copy of his original work.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -485,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": -440,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Discobolus_side_2.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Discobolus_side_2.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Discobolus_side_2.jpg/960px-Discobolus_side_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Discobolus_side_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC0",
+    "attribution": "RickyBennison",
+    "author": "RickyBennison",
+    "width": 2448,
+    "height": 3264,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Myron",
+    "url": "https://en.wikipedia.org/wiki/Myron"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:46:51.502Z"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "theodosius-i",
+  "name": "Theodosius I",
+  "wikidataId": "Q46696",
+  "wikipediaTitle": "Theodosius I",
+  "content": {
+    "description": [
+      {
+        "text": "Theodosius I, born on 11 January 347 in Hispania, rose through the Roman military ranks under the guidance of his father, a high‑ranking general. He first gained prominence as the commander of Moesia in 374, where he repelled a Sarmatian incursion, and later as the emperor who ended the Gothic War (376–382) by negotiating a treaty that allowed Goths to settle south of the Danube as autonomous allies. In 386 he signed a treaty with the Sasanian Empire that partitioned the contested Kingdom of Armenia, securing a durable peace between the two powers.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As emperor from 379 to 395, Theodosius convened the First Council of Constantinople in 381, which affirmed the Nicene Creed as orthodox and condemned Arianism as heresy. He issued the Edict of Thessalonica in 380, declaring that only Christians who adhered to the consubstantiality of the Father, Son, and Holy Spirit could be recognized as true Christians. His reign saw the last unbroken rule of the Roman Empire, after which his sons Arcadius and Honorius governed the eastern and western halves separately.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Theodosius was the last emperor to rule the entire Roman Empire before its permanent division into eastern and western halves.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He convened the First Council of Constantinople in 381, the second ecumenical council after Nicaea, which solidified Nicene orthodoxy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was born in Hispania, a fact that linked him culturally to the Spanish-born emperor Trajan and highlighted the geographic diversity of Roman leadership.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 386 he signed a treaty with the Sasanian Empire that partitioned Armenia, a strategic move that maintained peace on the eastern frontier.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He oversaw the removal of the obelisk from Karnak to Constantinople in 390, a monumental engineering feat that showcased the empire’s architectural ambition.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 347,
+      "month": 1,
+      "day": 11,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 395,
+      "month": 1,
+      "day": 17,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Theodosius1cng11100822obverse.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Theodosius1cng11100822obverse.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/92/Theodosius1cng11100822obverse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/92/Theodosius1cng11100822obverse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 2.5",
+    "attribution": "Classical Numismatic Group, Inc. http://www.cngcoins.com",
+    "author": "Classical Numismatic Group",
+    "width": 396,
+    "height": 368,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Theodosius I",
+    "url": "https://en.wikipedia.org/wiki/Theodosius_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:24:17.692Z"
+  }
+}

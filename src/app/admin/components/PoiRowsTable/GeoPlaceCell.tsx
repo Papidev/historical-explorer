@@ -41,20 +41,6 @@ export const GeoPlaceCell = ({
         titleTone="poi"
       />
       {progressDescription ? <ProgressMessage description={progressDescription} /> : null}
-      {row.lastGenerationRun ? (
-        <p
-          title={`${row.lastGenerationRun.operation} · ${row.lastGenerationRun.at}`}
-          className={`mt-3 w-fit rounded-full px-2.5 py-1 text-xs font-medium ${
-            row.lastGenerationRun.status === "failed" && !row.sourcePending
-              ? "bg-red-100 text-red-800"
-              : row.lastGenerationRun.status === "success" && !row.sourcePending
-                ? "bg-teal-100 text-teal-800"
-                : "bg-amber-100 text-amber-900"
-          }`}
-        >
-          Last generation: {row.sourcePending ? "needs source" : row.lastGenerationRun.status}
-        </p>
-      ) : null}
       {row.sourcePending ? (
         <GenerationErrorDetails
           errors={(row.generationErrors ?? []).filter(({ stage }) => stage === "sources")}

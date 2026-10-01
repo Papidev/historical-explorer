@@ -1,3 +1,4 @@
+import { getPoiRowStatusGroup } from "../../lib/getPoiRowStatusGroup";
 import { EyeIcon } from "@heroicons/react/20/solid";
 import { IconButton } from "@/app/components/ui/IconButton";
 import { ArtifactViewButton } from "./ArtifactViewButton";
@@ -8,8 +9,15 @@ import { PipelineCell } from "./PipelineCell";
 import type { CellProps } from "./RowTypes";
 
 export const WikipediaCell = ({ row, isInProgress, onSelectPanel }: CellProps) => (
-  <PipelineCell inProgress={isInProgress}>
-    <CellContent isAvailable={Boolean(row.wikiPoi)} />
+  <PipelineCell
+    inProgress={isInProgress}
+    needsAttention={getPoiRowStatusGroup(row) === "needs-attention" && !row.wikiPoi}
+  >
+    <CellContent
+      title={!row.wikiPoi ? "Wikipedia source not acquired" : undefined}
+      titleTone="warning"
+      isAvailable={Boolean(row.wikiPoi)}
+    />
     {row.sourcePending ? (
       <p role="status" className="mt-2 text-xs font-semibold text-amber-900">
         Story waiting for an English Wikipedia source
@@ -23,22 +31,24 @@ export const WikipediaCell = ({ row, isInProgress, onSelectPanel }: CellProps) =
     <CellFooter updatedAt={row.wikiUpdatedAt} generationDuration={row.wikiGenerationDuration}>
       {row.wikiPoi ? (
         <div className="flex flex-wrap items-center gap-1.5">
-          <IconButton
-            type="button"
-            label="View Wikipedia Text"
-            disabled={isInProgress}
-            onClick={() =>
-              row.wikiText
-                ? onSelectPanel({
-                    title: `${row.id} Wikipedia Text`,
-                    kind: "text",
-                    content: row.wikiText,
-                  })
-                : null
-            }
-          >
-            <EyeIcon />
-          </IconButton>
+          {row.wikiText?.trim() ? (
+            <IconButton
+              type="button"
+              label="View Wikipedia Text"
+              disabled={isInProgress}
+              onClick={() =>
+                row.wikiText
+                  ? onSelectPanel({
+                      title: `${row.id} Wikipedia Text`,
+                      kind: "text",
+                      content: row.wikiText,
+                    })
+                  : null
+              }
+            >
+              <EyeIcon />
+            </IconButton>
+          ) : null}
           {row.artifacts?.wikipediaMetadata ? (
             <ArtifactViewButton
               artifact={row.artifacts.wikipediaMetadata}

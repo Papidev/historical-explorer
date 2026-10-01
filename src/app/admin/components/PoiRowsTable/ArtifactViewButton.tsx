@@ -11,18 +11,19 @@ export const ArtifactViewButton = ({
   artifact: AdminArtifact;
   onSelectPanel: (panel: SelectedPanel) => void;
   disabled?: boolean;
-}) => (
-  <IconButton
-    label={`View ${artifact.label}`}
-    disabled={disabled}
-    onClick={() =>
-      onSelectPanel({
-        title: artifact.label,
-        kind: "text",
-        content: artifact.content,
-      })
-    }
-  >
-    <CodeBracketIcon />
-  </IconButton>
-);
+}) =>
+  artifact.content.trim() ? (
+    <IconButton
+      label={`View ${artifact.label}`}
+      disabled={disabled}
+      onClick={() =>
+        onSelectPanel({
+          title: artifact.label,
+          kind: "text",
+          content: artifact.content,
+        })
+      }
+    >
+      <CodeBracketIcon />
+    </IconButton>
+  ) : null;

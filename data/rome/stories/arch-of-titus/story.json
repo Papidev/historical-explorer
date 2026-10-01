@@ -136,6 +136,7 @@
   "relatedPeople": [
     {
       "name": "Titus",
+      "personId": "titus",
       "sourceIds": ["wikipedia"]
     },
     {
@@ -145,34 +146,42 @@
     },
     {
       "name": "Vespasian",
+      "personId": "vespasian",
       "sourceIds": ["wikipedia"]
     },
     {
       "name": "Josephus",
+      "personId": "josephus",
       "sourceIds": ["wikipedia"]
     },
     {
       "name": "Cassius Dio",
+      "personId": "cassius-dio",
       "sourceIds": ["wikipedia"]
     },
     {
       "name": "Pope Paul IV",
+      "personId": "pope-paul-iv",
       "sourceIds": ["wikipedia"]
     },
     {
       "name": "Adriaan Reland",
+      "personId": "adriaan-reland",
       "sourceIds": ["wikipedia"]
     },
     {
       "name": "Raffaele Stern",
+      "personId": "raffaele-stern",
       "sourceIds": ["wikipedia"]
     },
     {
       "name": "Valadier",
+      "personId": "valadier",
       "sourceIds": ["wikipedia"]
     },
     {
       "name": "Pope Pius VII",
+      "personId": "pope-pius-vii",
       "sourceIds": ["wikipedia"]
     }
   ]

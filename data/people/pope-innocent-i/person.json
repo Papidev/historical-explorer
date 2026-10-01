@@ -1,0 +1,71 @@
+{
+  "id": "pope-innocent-i",
+  "name": "Pope Innocent I",
+  "wikidataId": "Q134694",
+  "wikipediaTitle": "Pope Innocent I",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Innocent I served as bishop of Rome from 401 until his death in 417. From the outset of his papacy he was regarded as the ultimate arbitrator of ecclesiastical disputes across both the East and the West. He confirmed the prerogatives of the Archbishop of Thessalonica, issued a decretal on disciplinary matters referred to him by the Bishop of Rouen, and defended the exiled John Chrysostom. His energetic and highly gifted character was noted by the 16th‑century scholar Johann Peter Kirsch, who praised him for fulfilling the duties of his office admirably.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In the Pelagian controversy, Innocent consulted with African bishops and confirmed the decisions of the African synods, reinforcing the condemnation of Pelagianism in Carthage in 416. He also acted as metropolitan over the bishops of Italia Suburbicaria and sent a list of the sacred books to the Gallic bishop Exuperius of Toulouse in 405, a list that would later echo the canon used at Trent. He died on 12 March 417, and his feast day is now celebrated on that date, though it was previously observed on 28 July.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was regarded as the ultimate arbitrator of ecclesiastical disputes in both the East and the West.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He defended the exiled John Chrysostom against the authorities of Alexandria.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He confirmed the decisions of the African synods on the Pelagian controversy, reinforcing the condemnation of Pelagianism in Carthage.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 405 he sent a list of the sacred books to the Gallic bishop Exuperius of Toulouse, a list that would later echo the canon used at Trent.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Johann Peter Kirsch described him as a very energetic and highly gifted individual who fulfilled the duties of his office admirably.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 417,
+      "month": 3,
+      "day": 12,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Fresco_of_Pope_Innocent_I_-_Basilica_of_Saint_Paul_Outside_the_Walls_(Before_1823).png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Fresco_of_Pope_Innocent_I_-_Basilica_of_Saint_Paul_Outside_the_Walls_(Before_1823).png",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Fresco_of_Pope_Innocent_I_-_Basilica_of_Saint_Paul_Outside_the_Walls_%28Before_1823%29.png/960px-Fresco_of_Pope_Innocent_I_-_Basilica_of_Saint_Paul_Outside_the_Walls_%28Before_1823%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/26/Fresco_of_Pope_Innocent_I_-_Basilica_of_Saint_Paul_Outside_the_Walls_%28Before_1823%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 1314,
+    "height": 1336,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Innocent I",
+    "url": "https://en.wikipedia.org/wiki/Pope_Innocent_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:24:34.094Z"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "charles-v-of-habsburg",
+  "name": "Charles V of Habsburg",
+  "wikidataId": "Q32500",
+  "wikipediaTitle": "Charles V, Holy Roman Emperor",
+  "content": {
+    "description": [
+      {
+        "text": "Charles V (24 February 1500 – 21 September 1558) was Holy Roman Emperor and King of Spain, ruling an empire that spanned Europe and the Americas. He inherited the Habsburg Netherlands at age six, became King of Spain in 1516, and was elected Emperor in 1519. His reign was marked by wars against France, the Ottoman Empire, and the Protestant Reformation, and by the costly financing of Spanish colonial ventures that brought vast silver to Europe.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Despite the breadth of his dominions, Charles spent a significant portion of his life on the move, making 40 journeys across his territories and spending roughly a quarter of his reign traveling. He used these travels to maintain control, negotiate alliances, and oversee military campaigns, but the constant movement drained his treasury and contributed to the empire’s eventual fragmentation.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He made 40 journeys across his realms, spending a quarter of his reign traveling.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Charles V expanded the Taxis postal network, creating a continuous mail route that linked the Low Countries, Germany, France, and Spain, making him the first European ruler to operate a continent‑wide postal system.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1500,
+      "month": 2,
+      "day": 24,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1558,
+      "month": 9,
+      "day": 21,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Portrait_of_Charles_V,_Holy_Roman_Emperor,_seated_(1500–1558),_formerly_attributed_to_Titian_(Alte_Pinakothek,_Munich).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_Charles_V%2C_Holy_Roman_Emperor%2C_seated_(1500%E2%80%931558)%2C_formerly_attributed_to_Titian_(Alte_Pinakothek%2C_Munich).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Portrait_of_Charles_V%2C_Holy_Roman_Emperor%2C_seated_%281500%E2%80%931558%29%2C_formerly_attributed_to_Titian_%28Alte_Pinakothek%2C_Munich%29.jpg/960px-Portrait_of_Charles_V%2C_Holy_Roman_Emperor%2C_seated_%281500%E2%80%931558%29%2C_formerly_attributed_to_Titian_%28Alte_Pinakothek%2C_Munich%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Portrait_of_Charles_V%2C_Holy_Roman_Emperor%2C_seated_%281500%E2%80%931558%29%2C_formerly_attributed_to_Titian_%28Alte_Pinakothek%2C_Munich%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Attributed to Titian",
+    "author": "Attributed to Titian",
+    "width": 1783,
+    "height": 3000,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Charles V, Holy Roman Emperor",
+    "url": "https://en.wikipedia.org/wiki/Charles_V%2C_Holy_Roman_Emperor"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:53:26.251Z"
+  }
+}

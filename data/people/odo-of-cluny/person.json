@@ -1,0 +1,67 @@
+{
+  "id": "odo-of-cluny",
+  "name": "Odo of Cluny",
+  "wikidataId": "Q454553",
+  "wikipediaTitle": "Odo of Cluny",
+  "content": {
+    "description": [
+      {
+        "text": "Odo of Cluny (c. 878 – 18 November 942) was the second abbot of Cluny and a key figure in the Cluniac reform movement. Born to a noble family near Le Mans, he was raised in the Church of St. Martin in Tours and later studied theology in Paris under Remigius of Auxerre. Disillusioned with the laxity of the canonry at Tours, he entered the Benedictine abbey at Baume, where he became superior of the abbey school before joining Abbot Berno at Cluny. In 927 he succeeded Berno as abbot, overseeing the construction of the unfinished monastery and extending Cluny’s influence over other monasteries in France and Italy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As abbot, Odo enforced stricter observance of the Rule of Saint Benedict, reformed monasteries such as Fleury, Romainmôtier, and St. Martin’s in Limoges, and was granted by Pope John XI the privilege to supervise reforms across Aquitaine and beyond. He was given the Basilica of Saint Paul Outside the Walls in Rome in 937, where he continued his reform work and mediated conflicts among local nobles. Odo’s reforms included instituting an annual commemoration of the faithful departed the day after All Saints’ Day, and he was known for his kindness, often asking children to sing and rewarding them with small tokens. He died on 18 November 942 after a prolonged illness and was buried in the church of Saint Julian in Tours.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 937 Odo was given the Basilica of Saint Paul Outside the Walls in Rome, where he continued his reform work and served as a base for his missions in Italy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He instituted an annual commemoration of all the faithful departed on the day after All Saints’ Day in monasteries following Cluny.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Odo was known for asking children to sing and giving them small tokens, reflecting his kindness and pastoral care.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 878,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 942,
+      "month": 11,
+      "day": 18,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Odo_Cluny-11.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Odo_Cluny-11.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Odo_Cluny-11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Odo_Cluny-11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 345,
+    "height": 357,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Odo of Cluny",
+    "url": "https://en.wikipedia.org/wiki/Odo_of_Cluny"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:25:16.921Z"
+  }
+}

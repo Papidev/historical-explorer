@@ -1,0 +1,61 @@
+{
+  "id": "josephus",
+  "name": "Josephus",
+  "wikidataId": "Q134461",
+  "wikipediaTitle": "Josephus",
+  "content": {
+    "description": [
+      {
+        "text": "Flavius Josephus was born around AD 36 in Jerusalem to a priestly family whose mother claimed Hasmonean ancestry. He first fought against Rome as a general in Galilee during the First Jewish–Roman War, but after surrendering at Yodfat in 67 he was taken prisoner and later freed by Vespasian, who granted him Roman citizenship and the family name Flavius.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his release, Josephus became a close associate of Vespasian’s son Titus, serving as his translator during the siege of Jerusalem in 70 and later writing the major works *The Jewish War*, *Antiquities of the Jews*, and his autobiography *Life of Flavius Josephus*. His writings are the chief non‑biblical source for the history of Judea in the Second Temple period and provide extra‑biblical accounts of figures such as Pontius Pilate, Herod the Great, John the Baptist, and Jesus of Nazareth.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Josephus claimed to have received a divine revelation at Yodfat that predicted Vespasian would become emperor; after the prediction came true he was released and granted freedom.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was granted Roman citizenship and served as an advisor and translator to Titus during the siege of Jerusalem, giving him access to the inner workings of the Roman military.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Josephus’s works were widely read by early Christians and were translated into Latin and Greek, making him one of the most influential Jewish writers in the Roman world.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 36,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Portret_van_Flavius_Josephus,_RP-P-1906-2507.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Portret_van_Flavius_Josephus%2C_RP-P-1906-2507.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Portret_van_Flavius_Josephus%2C_RP-P-1906-2507.jpg/960px-Portret_van_Flavius_Josephus%2C_RP-P-1906-2507.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/63/Portret_van_Flavius_Josephus%2C_RP-P-1906-2507.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC0",
+    "attribution": "Rijksmuseum",
+    "author": "Rijksmuseum",
+    "width": 4128,
+    "height": 5596,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Josephus",
+    "url": "https://en.wikipedia.org/wiki/Josephus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:10:44.321Z"
+  }
+}

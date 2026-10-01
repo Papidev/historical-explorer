@@ -1,0 +1,110 @@
+{
+  "introduction": {
+    "text": "The Aqua Marcia is a 91‑km Roman aqueduct that supplied water to ancient Rome. It is the longest of Rome’s eleven aqueducts and was the first to use arches to bring water into the city, making it a landmark of Roman engineering.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "construction",
+        "description": "Construction of the Aqua Marcia began between 144 and 140 BC, making it the longest aqueduct of Rome.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -144,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "repair-agrippa",
+        "description": "In 33 BC, Marcus Vipsanius Agrippa repaired the aqueduct.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -33,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "rebuild-augustus",
+        "description": "Between 11 and 4 BC, Augustus rebuilt the Aqua Marcia, adding a new source and restoring its arches.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -11,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "later-restorations",
+        "description": "The aqueduct was later restored by emperors such as Trajan, Hadrian, Caracalla, and others, ensuring its continued operation into late antiquity.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "length-and-arches",
+        "description": "The Aqua Marcia stretches 91 km, with the final 11 km built on monumental arches to maintain water pressure for distribution in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "bridges",
+        "description": "Key bridges such as Ponte Lupo and Ponte Caipoli illustrate the aqueduct’s engineering, with arches spanning valleys and streams.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Quintus Marcius Rex",
+      "personId": "quintus-marcius-rex",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Cato the Elder",
+      "personId": "cato-the-elder",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Marcus Vipsanius Agrippa",
+      "personId": "marcus-vipsanius-agrippa",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Augustus",
+      "personId": "augustus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Trajan",
+      "personId": "trajan",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Hadrian",
+      "personId": "hadrian",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Caracalla",
+      "personId": "caracalla",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Frontinus",
+      "personId": "frontinus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Arcadius",
+      "personId": "arcadius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Honorius (emperor)",
+      "personId": "honorius-emperor",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

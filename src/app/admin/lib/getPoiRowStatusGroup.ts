@@ -4,8 +4,14 @@ import { isPoiRowComplete } from "./isPoiRowComplete";
 export const getPoiRowStatusGroup = (row: AdminPoiRow) =>
   row.sourcePending
     ? "needs-source"
-    : row.lastGenerationRun?.status === "failed" || row.lastGenerationRun?.status === "partial"
-      ? "needs-attention"
-      : isPoiRowComplete(row)
-        ? "complete"
+    : isPoiRowComplete(row)
+      ? "complete"
+      : row.lastGenerationRun ||
+          row.transformedPoi ||
+          row.wikiPoi ||
+          row.storyContent ||
+          row.mainImageArtifact ||
+          row.poiTypes ||
+          row.generationErrors?.length
+        ? "needs-attention"
         : "to-do";

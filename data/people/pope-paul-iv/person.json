@@ -1,0 +1,73 @@
+{
+  "id": "pope-paul-iv",
+  "name": "Pope Paul IV",
+  "wikidataId": "Q101430",
+  "wikipediaTitle": "Pope Paul IV",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Paul IV, born Gian Pietro Carafa on 28 June 1476, rose to the papacy in 1555 after a long career as a reformer and inquisitor.  His reign was marked by a fierce anti‑Spanish stance, a call for French intervention in the Italian wars, and a subsequent compromise that left Rome neutral between the Habsburgs and the French crown.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Paul IV is best remembered for his hard‑line policies against Protestants and Jews.  He established the Roman Ghetto, introduced the first modern Index Librorum Prohibitorum in 1557, and used the Inquisition to suppress dissent, all of which left a lasting legacy of persecution and censorship.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He cut off Michelangelo’s pension and ordered the removal of nudity from the Sistine Chapel, sparking the early Vatican fig‑leaf campaign.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1557 he promulgated the first modern Index Librorum Prohibitorum, banning works he deemed heretical and limiting the circulation of Protestant literature.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The papal bull *Cum nimis absurdum* forced Jews in Rome to wear yellow hats, restricted their professions, and confined them to a walled ghetto that remained in place until the late 19th century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his death on 18 August 1559, his body was buried without ceremony to prevent a popular uprising from desecrating the corpse.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1476,
+      "month": 6,
+      "day": 28,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1559,
+      "month": 8,
+      "day": 18,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_Paul_IV_–_Jacopino_Conte_(Manner),_ca._1560.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Paul_IV_%E2%80%93_Jacopino_Conte_(Manner)%2C_ca._1560.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Pope_Paul_IV_%E2%80%93_Jacopino_Conte_%28Manner%29%2C_ca._1560.jpg/960px-Pope_Paul_IV_%E2%80%93_Jacopino_Conte_%28Manner%29%2C_ca._1560.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Pope_Paul_IV_%E2%80%93_Jacopino_Conte_%28Manner%29%2C_ca._1560.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Manner of Jacopino del Conte",
+    "author": "Manner of Jacopino del Conte",
+    "width": 1777,
+    "height": 2220,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Paul IV",
+    "url": "https://en.wikipedia.org/wiki/Pope_Paul_IV"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:11:06.985Z"
+  }
+}

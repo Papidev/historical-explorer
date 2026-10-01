@@ -74,11 +74,16 @@ const toPrompt = (pointOfInterest: PoiInput, sources: Source[]) =>
     2,
   );
 
-const parseGeneratedContent = (content: string, sources: Source[]) =>
-  parseStoryContent(
+const parseGeneratedContent = (content: string, sources: Source[]) => {
+  const storyContent = parseStoryContent(
     JSON.parse(content),
     sources.map((source) => source.id),
   );
+  return {
+    ...storyContent,
+    relatedPeople: storyContent.relatedPeople.map(({ name, sourceIds }) => ({ name, sourceIds })),
+  };
+};
 
 const generateWithGemini = async (pointOfInterest: PoiInput, sources: Source[], model: string) => {
   const response = await fetch(

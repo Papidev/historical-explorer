@@ -1,0 +1,77 @@
+{
+  "id": "giovanni-battista-piranesi",
+  "name": "Giovanni Battista Piranesi",
+  "wikidataId": "Q316307",
+  "wikipediaTitle": "Giovanni Battista Piranesi",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Battista Piranesi was born in Venice on 4 October 1720 into a family of stonemasons. After his father’s death he was apprenticed to his uncle, Matteo Lucchesi, a leading architect in the Magistrato alle Acque, where he learned the fundamentals of architectural drawing. In 1740 he moved to Rome to work as a draughtsman for the Venetian ambassador Marco Foscarini, and there he studied under Giuseppe Vasi, who introduced him to the art of etching. Vasi recognised Piranesi’s talent and encouraged him to pursue engraving, leading to his first published work, Prima parte di Architettura e Prospettive, in 1743.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Piranesi’s reputation grew through a prolific series of vedute of Rome and a series of imaginative prisons, Carceri d’invenzione, that combined architectural precision with fantastical elements. He became a member of the Accademia di San Luca in 1761, opened his own printing house, and was knighted with the Golden Spur in 1767, allowing him to sign himself Cavaliere Piranesi. He also produced the Piranesi Vase in 1776 and was elected to the Society of Antiquaries of London, cementing his status as both artist and antiquarian. Piranesi died in Rome on 9 November 1778 after a long illness, and was buried in Santa Maria del Priorato, a church he had helped restore.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Piranesi was knighted with the Golden Spur in 1767, enabling him to sign himself Cavaliere Piranesi.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1776 he created the Piranesi Vase, a famous example of his work as a 'restorer' of ancient sculpture.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was elected to the Society of Antiquaries of London, reflecting his recognition as an archaeologist.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Piranesi opened his own printing house in 1761, which allowed him to publish his series of vedute and Carceri.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was appointed in 1764 by Cardinal Rezzonico to restore Santa Maria del Priorato, his only architectural project.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1720,
+      "month": 10,
+      "day": 4,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1778,
+      "month": 11,
+      "day": 9,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pietro_Labruzzi_portrait_of_Giovanni_Battista_Piranesi.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pietro_Labruzzi_portrait_of_Giovanni_Battista_Piranesi.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/Pietro_Labruzzi_portrait_of_Giovanni_Battista_Piranesi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/Pietro_Labruzzi_portrait_of_Giovanni_Battista_Piranesi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Pietro Labruzzi",
+    "author": "Pietro Labruzzi",
+    "width": 467,
+    "height": 619,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giovanni Battista Piranesi",
+    "url": "https://en.wikipedia.org/wiki/Giovanni_Battista_Piranesi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:54:53.193Z"
+  }
+}

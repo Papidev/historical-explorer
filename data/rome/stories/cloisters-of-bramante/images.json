@@ -1,18 +1,44 @@
 {
   "candidates": [
     {
-      "commonsFileName": "Santa_Maria_della_Pace_September_2015-1a.jpg",
-      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Santa_Maria_della_Pace_September_2015-1a.jpg",
-      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Santa_Maria_della_Pace_September_2015-1a.jpg/960px-Santa_Maria_della_Pace_September_2015-1a.jpg",
-      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/28/Santa_Maria_della_Pace_September_2015-1a.jpg",
-      "license": "CC BY-SA 4.0",
-      "attribution": "Alvesgaspar",
-      "author": "Alvesgaspar",
-      "width": 7176,
-      "height": 4846,
-      "discoveredVia": "wikipedia-page-image",
+      "commonsFileName": "Santa_maria_della_pace,_chiostro_del_bramante_01.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Santa_maria_della_pace%2C_chiostro_del_bramante_01.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Santa_maria_della_pace%2C_chiostro_del_bramante_01.JPG/960px-Santa_maria_della_pace%2C_chiostro_del_bramante_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/Santa_maria_della_pace%2C_chiostro_del_bramante_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "I, Sailko",
+      "author": "sailko",
+      "width": 2592,
+      "height": 1944,
+      "discoveredVia": "wikidata-p18",
       "isProposed": true
+    },
+    {
+      "commonsFileName": "2013-06-07_ROMA_S._MARIA_DELLA_PACE.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:2013-06-07_ROMA_S._MARIA_DELLA_PACE.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/2013-06-07_ROMA_S._MARIA_DELLA_PACE.JPG/960px-2013-06-07_ROMA_S._MARIA_DELLA_PACE.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/2013-06-07_ROMA_S._MARIA_DELLA_PACE.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Maludemi",
+      "author": "Maludemi",
+      "width": 4000,
+      "height": 3000,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Bramante_Cloister_Santa_Maria_della_Pace.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Bramante_Cloister_Santa_Maria_della_Pace.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Bramante_Cloister_Santa_Maria_della_Pace.jpg/960px-Bramante_Cloister_Santa_Maria_della_Pace.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Bramante_Cloister_Santa_Maria_della_Pace.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "NateBergin",
+      "author": "NateBergin",
+      "width": 6000,
+      "height": 6000,
+      "discoveredVia": "commons-category",
+      "isProposed": false
     }
   ],
-  "selectedCommonsFileName": "Santa_Maria_della_Pace_September_2015-1a.jpg"
+  "selectedCommonsFileName": "Santa_maria_della_pace,_chiostro_del_bramante_01.JPG"
 }

@@ -7,6 +7,7 @@ import type {
 import { fetchMainImageCandidates } from "@/server/storyWorkflow/mainImageCandidates";
 import { fetchWikiSnapshot } from "@/server/wikiPipeline/fetchWiki";
 import { buildWikipediaPageUrl } from "@/server/wikiPipeline/io";
+import { getPersonDisplayName } from "@/utils/getPersonDisplayName";
 import { toCitySlug } from "@/server/wikiPipeline/normalize";
 import type { MainImageCandidate, WikiSnapshot } from "@/server/wikiPipeline/types";
 import { wikiTextToPlainText } from "@/server/wikiPipeline/wikiText";
@@ -122,11 +123,15 @@ const generateAndPersist = async ({
   onProgress?.(
     `Generating ${name} with ${ai.provider === "ollama" ? "Ollama" : "Gemini"} (${ai.model}).`,
   );
-  const content = await dependencies.generateContent({ name, wikidataId }, [source], {
-    mode: ai.mode,
-    provider: ai.provider,
-    model: ai.model,
-  });
+  const content = await dependencies.generateContent(
+    { name: getPersonDisplayName(name), wikidataId },
+    [source],
+    {
+      mode: ai.mode,
+      provider: ai.provider,
+      model: ai.model,
+    },
+  );
   onProgress?.(`Finding an optional image for ${name}.`);
   const image = (
     await dependencies
@@ -145,7 +150,7 @@ const generateAndPersist = async ({
   ).find(({ license, attribution }) => license && attribution);
   const person: Person = {
     id,
-    name,
+    name: getPersonDisplayName(name),
     wikidataId,
     wikipediaTitle: snapshot.title,
     content,
@@ -191,7 +196,11 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
     }) => {
       const links = storySources.flatMap((source) => source.links ?? []);
       const uniquePeople = new Map<string, RelatedPerson>();
-      for (const person of references) {
+      for (const reference of references) {
+        const person =
+          reference.personId && dependencies.repository.get(reference.personId)
+            ? reference
+            : { name: reference.name, sourceIds: reference.sourceIds };
         const matchingLinks = findMatchingLinks(person.name, links);
         let key =
           matchingLinks.size === 1
@@ -226,6 +235,9 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
       for (let index = 0; index < relatedPeople.length; index += 1) {
         const person = relatedPeople[index];
         if (person.personId) {
+          onProgress?.(
+            `Skipping ${person.name} (${index + 1}/${relatedPeople.length}): already resolved.`,
+          );
           resolved.push(person);
           continue;
         }
@@ -236,20 +248,44 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
           onProgress?.(`Skipping ${person.name}: no matching Wikipedia link in the Story source.`);
           continue;
         }
-        if (matchingLinks.size > 1) {
-          resolved.push({ name: person.name, sourceIds: person.sourceIds });
-          failures.push({
-            name: person.name,
-            message: "Multiple Wikipedia links match this name; the identity is ambiguous.",
-          });
-          onProgress?.(`Could not match ${person.name} to one Wikipedia link.`);
-          continue;
-        }
-
         try {
-          const [link] = matchingLinks.values();
-          onProgress?.(`Fetching the Wikipedia article for ${person.name}.`);
-          const snapshot = await dependencies.fetchSnapshot(link.title);
+          const matchingSnapshots = new Map<string, WikiSnapshot>();
+          for (const link of matchingLinks.values()) {
+            onProgress?.(`Fetching the Wikipedia article for ${person.name}: ${link.title}.`);
+            try {
+              const snapshot = await dependencies.fetchSnapshot(link.title);
+              if (snapshot.isDisambiguation) {
+                onProgress?.(`Ignoring ${link.title}: Wikipedia disambiguation page.`);
+              } else {
+                matchingSnapshots.set(normalizeTitle(snapshot.title), snapshot);
+              }
+            } catch (error) {
+              if (
+                error instanceof Error &&
+                error.message.startsWith('Wikipedia page not found for title "')
+              ) {
+                onProgress?.(`Skipping ${person.name}: Wikipedia page not found.`);
+                continue;
+              }
+              throw error;
+            }
+          }
+          if (matchingSnapshots.size === 0) {
+            onProgress?.(
+              `Skipping ${person.name}: no personal Wikipedia article among the matching links.`,
+            );
+            continue;
+          }
+          if (matchingSnapshots.size > 1) {
+            resolved.push({ name: person.name, sourceIds: person.sourceIds });
+            failures.push({
+              name: person.name,
+              message: "Multiple Wikipedia links match this name; the identity is ambiguous.",
+            });
+            onProgress?.(`Could not match ${person.name} to one Wikipedia link.`);
+            continue;
+          }
+          const [snapshot] = matchingSnapshots.values();
           if (!snapshot.wikidataId) {
             resolved.push({ name: person.name, sourceIds: person.sourceIds });
             failures.push({
@@ -280,6 +316,10 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
           onProgress?.(`Resolved ${person.name}.`);
         } catch (error) {
           const message = error instanceof Error ? error.message : String(error);
+          if (message.startsWith('Wikipedia page not found for title "')) {
+            onProgress?.(`Skipping ${person.name}: Wikipedia page not found.`);
+            continue;
+          }
           resolved.push({ name: person.name, sourceIds: person.sourceIds });
           failures.push({ name: person.name, message });
           onProgress?.(`Failed to resolve ${person.name}: ${message}`);

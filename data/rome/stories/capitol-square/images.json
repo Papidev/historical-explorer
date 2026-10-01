@@ -12,6 +12,32 @@
       "height": 3648,
       "discoveredVia": "wikidata-p18",
       "isProposed": true
+    },
+    {
+      "commonsFileName": "0_Capitole_vu_de_la_via_del_Circo_Massimo.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:0_Capitole_vu_de_la_via_del_Circo_Massimo.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/0_Capitole_vu_de_la_via_del_Circo_Massimo.JPG/960px-0_Capitole_vu_de_la_via_del_Circo_Massimo.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5f/0_Capitole_vu_de_la_via_del_Circo_Massimo.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "Jean-Pol GRANDMONT",
+      "author": "Jean-Pol GRANDMONT",
+      "width": 3624,
+      "height": 2416,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "14_campidoglio-altointro_(1).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:14_campidoglio-altointro_(1).jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/14_campidoglio-altointro_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/14_campidoglio-altointro_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Orioloromano observatory",
+      "author": "Orioloromano observatory",
+      "width": 400,
+      "height": 545,
+      "discoveredVia": "commons-category",
+      "isProposed": false
     }
   ],
   "selectedCommonsFileName": "Piazza_del_Campidoglio_2015.jpg"

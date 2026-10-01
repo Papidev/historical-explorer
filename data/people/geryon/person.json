@@ -1,0 +1,61 @@
+{
+  "id": "geryon",
+  "name": "Geryon",
+  "wikidataId": "Q86805",
+  "wikipediaTitle": "Geryon",
+  "content": {
+    "description": [
+      {
+        "text": "Geryon was a fearsome giant in Greek mythology, often depicted with one body and three heads, or in some traditions with three bodies and a single head. Ancient vase painters and poets such as Hesiod and Stesichorus described him as having six hands and six feet, and even wings, giving him a truly monstrous appearance.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He is best known for the cattle of Geryon, a herd of magnificent red bulls guarded by his two‑headed hound Orthrus. Heracles was sent to Erytheia, the island of the Hesperides, to seize these cattle as his tenth labor. After slaying Orthrus and the herdsman Eurytion, Geryon pursued Heracles but was ultimately killed by a poisoned arrow.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Geryon possessed six hands and six feet and was described as winged.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Orthrus, Geryon's two‑headed dog, was the brother of Cerberus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The island of Erytheia, where Geryon dwelt, was later linked by Greeks to the Iberian region of Tartessos.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "According to medieval tradition, the Tower of Hercules in Coruña, Spain, was built on the severed head of Geryon.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Heracles_Geryon_Louvre_F55.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Heracles_Geryon_Louvre_F55.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Heracles_Geryon_Louvre_F55.jpg/960px-Heracles_Geryon_Louvre_F55.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Heracles_Geryon_Louvre_F55.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "E Group",
+    "author": "E Group",
+    "width": 2200,
+    "height": 1830,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Geryon",
+    "url": "https://en.wikipedia.org/wiki/Geryon"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:45:47.401Z"
+  }
+}

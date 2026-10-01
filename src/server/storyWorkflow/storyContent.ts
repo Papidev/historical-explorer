@@ -1,3 +1,4 @@
+import { getPersonDisplayName } from "@/utils/getPersonDisplayName";
 import { z } from "zod";
 
 const sourceIdsSchema = z.array(z.string().min(1)).min(1);
@@ -22,13 +23,13 @@ const validateHistoricalTimeRange = (
   { startYear, endYear }: { startYear: number; endYear?: number },
   context: z.RefinementCtx,
 ) => {
-    if (endYear !== undefined && endYear < startYear) {
-      context.addIssue({
-        code: "custom",
-        path: ["endYear"],
-        message: "End year must not precede start year.",
-      });
-    }
+  if (endYear !== undefined && endYear < startYear) {
+    context.addIssue({
+      code: "custom",
+      path: ["endYear"],
+      message: "End year must not precede start year.",
+    });
+  }
 };
 
 const historicalTimeSchema = z.discriminatedUnion("granularity", [
@@ -88,7 +89,11 @@ const storyContentStructureSchema = z
   })
   .strict();
 
-export const storyContentJsonSchema = z.toJSONSchema(storyContentStructureSchema);
+export const storyContentJsonSchema = z.toJSONSchema(
+  storyContentStructureSchema.extend({
+    relatedPeople: z.array(relatedPersonSchema.omit({ personId: true })).max(10),
+  }),
+);
 
 export type StoryContent = z.infer<typeof storyContentStructureSchema>;
 export type StoryInsight = z.infer<typeof storyInsightSchema>;
@@ -167,7 +172,7 @@ export const toPublicStoryContent = (storyContent: StoryContent): PublicStoryCon
     art: storyContent.topics.art.map(({ description }) => ({ description })),
   },
   relatedPeople: storyContent.relatedPeople.map(({ name, personId }) => ({
-    name,
+    name: getPersonDisplayName(name),
     ...(personId ? { personId } : {}),
   })),
 });

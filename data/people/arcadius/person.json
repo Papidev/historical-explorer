@@ -1,0 +1,67 @@
+{
+  "id": "arcadius",
+  "name": "Arcadius",
+  "wikidataId": "Q159369",
+  "wikipediaTitle": "Arcadius",
+  "content": {
+    "description": [
+      {
+        "text": "Arcadius was Roman emperor from 383 to 408, the eldest son of Theodosius I and Aelia Flaccilla. After his father’s death in 395 he ruled the eastern half of the empire, a position that was largely controlled by powerful ministers and his wife, Aelia Eudoxia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his reign he faced repeated Gothic revolts, the influence of the eunuch Eutropius, and later the Goth Gainas, while also dealing with religious disputes involving the Archbishop John Chrysostom. He died on 1 May 408 and was succeeded by his son Theodosius II.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Arcadius was buried in the Church of the Holy Apostles in a porphyry sarcophagus that was described by Constantine VII in the 10th‑century De Ceremoniis.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 399 he issued an edict ordering the demolition of all remaining non‑Christian temples, marking a decisive move toward the abolition of pagan worship in the eastern empire.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A forum was built in his name on the seventh hill of Constantinople, and a column was begun to commemorate his supposed victory over Gainas, though the column was finished only after his death.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 377,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 408,
+      "month": 5,
+      "day": 1,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Arcadius_Istanbul_Museum.PNG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Arcadius_Istanbul_Museum.PNG",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Arcadius_Istanbul_Museum.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Arcadius_Istanbul_Museum.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Gryffindor",
+    "author": "Gryffindor",
+    "width": 510,
+    "height": 850,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Arcadius",
+    "url": "https://en.wikipedia.org/wiki/Arcadius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:51:21.329Z"
+  }
+}

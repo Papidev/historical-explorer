@@ -1,0 +1,73 @@
+{
+  "id": "trajan",
+  "name": "Trajan",
+  "wikidataId": "Q1425",
+  "wikipediaTitle": "Trajan",
+  "content": {
+    "description": [
+      {
+        "text": "Marcus Ulpius Traianus was born on 18 September 53 in the Roman colony of Italica in Hispania Baetica, a town founded by Roman veterans in 206 BC.  He rose through the ranks of the army, serving as legate of Legio VII Gemina in Hispania and later as governor of Pannonia and Germania Superior.  In 98 AD, after the unpopular reign of Nerva, the Praetorian Guard forced the emperor to adopt Trajan as his heir, and he entered Rome as emperor with the support of the Senate.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his twenty‑year reign Trajan expanded the empire to its greatest territorial extent, annexing Dacia, Nabataea and parts of the Parthian Empire.  He is remembered for his building projects, including the Forum Traiani, the largest forum in Rome, and for establishing the welfare program alimenta that supported orphans and poor children.  Trajan died of a stroke in August 117 while sailing back to Rome, and the Senate deified him, entombing his ashes beneath the column that bears his name.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Roman Senate awarded Trajan the honorific title *optimus princeps* – meaning ‘the best ruler’ – a distinction that has survived in coinage and inscriptions.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Trajan’s Forum Traiani was the largest forum in Rome, covering an area of about 120 m by 90 m and featuring a massive basilica, libraries, and the famous Trajan’s Column, a monumental column that records his Dacian campaigns.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his death, Trajan’s ashes were placed in a small chamber beneath the base of Trajan’s Column, a practice that linked the emperor’s memory to the monument he had commissioned.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Trajan’s reign is often cited as the peak of the Roman Empire’s territorial expansion, with the borders stretching from Britain in the west to the Persian Gulf in the east.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 53,
+      "month": 9,
+      "day": 18,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 117,
+      "month": 8,
+      "day": 9,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Traianus_Glyptothek_Munich_336.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Traianus_Glyptothek_Munich_336.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Traianus_Glyptothek_Munich_336.jpg/960px-Traianus_Glyptothek_Munich_336.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Traianus_Glyptothek_Munich_336.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown artistUnknown artist",
+    "author": "Unknown artistUnknown artist",
+    "width": 1648,
+    "height": 2261,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Trajan",
+    "url": "https://en.wikipedia.org/wiki/Trajan"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:50:57.039Z"
+  }
+}

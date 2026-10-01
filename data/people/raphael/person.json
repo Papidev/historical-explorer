@@ -1,0 +1,65 @@
+{
+  "id": "raphael",
+  "name": "Raphael",
+  "wikidataId": "Q5597",
+  "wikipediaTitle": "Raphael",
+  "content": {
+    "description": [
+      {
+        "text": "Raffaello Sanzio da Urbino, known simply as Raphael, was born in the small but culturally rich city of Urbino in 1483. He grew up in a court that prized literature and art, and after his father Giovanni Santi died when Raphael was eleven, the young artist helped manage the family workshop and received training from the Umbrian master Pietro Perugino. By 1500 he was already considered a fully trained master and began producing altarpieces and small cabinet paintings for churches in Umbria and Perugia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1508 Raphael moved to Rome at the invitation of Pope Julius II, where he was commissioned to fresco the Apostolic Palace’s private library, producing the famous Raphael Rooms. His work there, especially The School of Athens, combined the clarity of Perugino with the dynamism of Leonardo and the monumental scale of Michelangelo, and it cemented his reputation as one of the High Renaissance’s greatest painters and architects. He died on Good Friday, 6 April 1520, at the age of 37, leaving a vast body of work and a workshop that would continue to influence artists after his death.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Raphael was born on Good Friday, 1483, and he also died on Good Friday, 1520.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was engaged to Maria Bibbiena, the niece of Cardinal Bibbiena, but the marriage never took place.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Raphael’s mistress, known as La Fornarina, was Margherita Luti, the daughter of a baker from Siena.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He held the court title of Groom of the Chamber of the Pope and was a Knight of the Papal Order of the Golden Spur.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His workshop employed around fifty assistants, making it one of the largest and most efficient studios of the Renaissance.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Raffaello_Sanzio.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Raffaello_Sanzio.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Raffaello_Sanzio.jpg/960px-Raffaello_Sanzio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Raffaello_Sanzio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Raphael",
+    "author": "Raphael",
+    "width": 3898,
+    "height": 5315,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Raphael",
+    "url": "https://en.wikipedia.org/wiki/Raphael"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:29:17.958Z"
+  }
+}

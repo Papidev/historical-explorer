@@ -1,0 +1,73 @@
+{
+  "id": "titus",
+  "name": "Titus",
+  "wikidataId": "Q1421",
+  "wikipediaTitle": "Titus",
+  "content": {
+    "description": [
+      {
+        "text": "Titus Flavius Vespasianus was born on 30 December AD 39 in Rome as the eldest son of Vespasian and Domitilla the Elder. He rose through the Roman military ranks, serving as a legionary commander in Judaea during the First Jewish–Roman War, where he captured Jerusalem in AD 70 and was awarded a triumph for his victory.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his father’s death on 23 June AD 79, Titus became emperor and is best remembered for completing the Colosseum, for his generous relief efforts following the eruption of Mount Vesuvius in AD 79 and the great fire of Rome in AD 80, and for his brief but popular reign that ended with his death of fever on 13 September AD 81.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Titus was the first Roman emperor to succeed his biological father, a precedent that had not been set before him.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He completed the construction of the Flavian Amphitheatre, now known as the Colosseum, which was inaugurated with a hundred‑day festival of games.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Roman Senate deified Titus after his death, a rare honor that reflected the high regard in which he was held by contemporary historians.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Titus personally donated large sums from the imperial treasury to aid the victims of the Vesuvius eruption and the subsequent fire in Rome, actions that earned him a reputation for generosity.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 39,
+      "month": 12,
+      "day": 30,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 81,
+      "month": 9,
+      "day": 13,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Titus.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Titus.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Titus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Titus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 424,
+    "height": 615,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Titus",
+    "url": "https://en.wikipedia.org/wiki/Titus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:10:12.854Z"
+  }
+}

@@ -82,6 +82,7 @@ export const fetchWikiSnapshot = async (title: string): Promise<WikiSnapshot> =>
         title?: string;
         pageprops?: {
           wikibase_item?: string;
+          disambiguation?: string;
         };
         revisions?: Array<{
           slots?: {
@@ -129,5 +130,6 @@ export const fetchWikiSnapshot = async (title: string): Promise<WikiSnapshot> =>
     ),
     title: page.title ?? title,
     ...(wikidataId ? { wikidataId } : {}),
+    ...(page.pageprops?.disambiguation !== undefined ? { isDisambiguation: true } : {}),
   };
 };

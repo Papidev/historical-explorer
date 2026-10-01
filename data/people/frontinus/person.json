@@ -1,0 +1,73 @@
+{
+  "id": "frontinus",
+  "name": "Frontinus",
+  "wikidataId": "Q297377",
+  "wikipediaTitle": "Frontinus",
+  "content": {
+    "description": [
+      {
+        "text": "Sextus Julius Frontinus, born around 40 AD, rose from an equestrian background to become a prominent Roman civil engineer, soldier, and senator. He served as a general under Emperor Domitian, commanding forces in Britain, the Rhine, and the Danube frontiers, and later governed Britain, subduing the Silures of South Wales before being succeeded by Gnaeus Julius Agricola in 77 AD. His political career peaked with three consulships, including a suffect consulship in 97 AD and an ordinary consulship in 99 AD, and he was appointed proconsul of Asia in 86 AD.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Frontinus is best remembered for his technical treatises. As curator aquarum appointed by Emperor Nerva, he produced a comprehensive report on Rome’s nine aqueducts, detailing their sources, capacities, and water quality, and he introduced lead pipe stamps bearing owners’ names to curb water theft. His surviving work, De aquaeductu, remains a foundational source on Roman hydraulic engineering, while his Stratagems, a collection of military tactics drawn from Greek and Roman history, illustrates his dual expertise in engineering and warfare.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Frontinus was a novus homo, the first member of his family to reach the Roman Senate.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was appointed curator aquarum, an office reserved for individuals of very high standing, by Emperor Nerva in 97 AD.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "To prevent water theft, Frontinus introduced lead pipe stamps bearing the owner’s name, a practice that helped enforce the aqueduct laws.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Frontinus authored a lost treatise on military science; his surviving Stratagems compile examples of tactics from Greek and Roman history.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a member of the College of Augurs, and his death created a vacancy that was filled by Pliny the Younger.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 40,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 103,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Sextus_Iulius_Frontinus_1788_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Sextus_Iulius_Frontinus_1788_(cropped).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Sextus_Iulius_Frontinus_1788_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Sextus_Iulius_Frontinus_1788_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 341,
+    "height": 336,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Frontinus",
+    "url": "https://en.wikipedia.org/wiki/Frontinus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:51:11.057Z"
+  }
+}

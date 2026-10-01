@@ -39,6 +39,26 @@ afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 
 describe("Story Content AI adapters", () => {
+  it("discards Person IDs supplied by AI so names must pass real identity resolution", async () => {
+    server.use(
+      http.post("http://localhost:11434/api/chat", () =>
+        HttpResponse.json({
+          message: {
+            content: JSON.stringify({
+              ...generated,
+              relatedPeople: [{ name: "Hercules", personId: "Hercules", sourceIds: ["wikipedia"] }],
+            }),
+          },
+        }),
+      ),
+    );
+    const result = await generateStoryContent(pointOfInterest, sources, {
+      mode: "local",
+      provider: "ollama",
+      model: "test-model",
+    });
+    expect(result.relatedPeople).toEqual([{ name: "Hercules", sourceIds: ["wikipedia"] }]);
+  });
   it("requests and validates Gemini structured output", async () => {
     process.env.GEMINI_API_KEY = "test-key";
     let requestedSchema: unknown;
@@ -88,9 +108,8 @@ describe("Story Content AI adapters", () => {
       }
     ).properties.topics.properties.history.items.properties.time;
     expect(
-      historyTimeSchema.oneOf.find(
-        ({ properties }) => properties.granularity.const === "century",
-      )?.required,
+      historyTimeSchema.oneOf.find(({ properties }) => properties.granularity.const === "century")
+        ?.required,
     ).toContain("endYear");
   });
 

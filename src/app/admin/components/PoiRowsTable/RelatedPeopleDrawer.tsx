@@ -1,5 +1,6 @@
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
+import { getPersonDisplayName } from "@/utils/getPersonDisplayName";
 import { useState } from "react";
 import { IconButton } from "@/app/components/ui/IconButton";
 import type { GenerationError, RelatedPersonArtifacts } from "../../lib/types";
@@ -58,7 +59,7 @@ export const RelatedPeopleDrawer = ({
                     <li key={`${person.name}-${index}`} className="py-5">
                       <div className="flex items-start justify-between gap-3">
                         <h3 className="min-w-0 text-sm font-semibold break-words text-violet-900">
-                          {person.name}
+                          {getPersonDisplayName(person.name)}
                         </h3>
                         <span
                           className={

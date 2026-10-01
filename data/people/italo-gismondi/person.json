@@ -1,0 +1,69 @@
+{
+  "id": "italo-gismondi",
+  "name": "Italo Gismondi",
+  "wikidataId": "Q1145409",
+  "wikipediaTitle": "Italo Gismondi",
+  "content": {
+    "description": [
+      {
+        "text": "Italo Gismondi (born 12 August 1887 in Rome, died 2 December 1974 in Rome) was an Italian archaeologist and practicing architect whose career spanned more than six decades. He entered the Amministrazione delle Antichità e Belle Arti in 1910 and was named Director of the Ostia excavations, a post he held for 44 years, during which he made fundamental contributions to the study of the ancient port city. From 1919 to 1938 he also served as the superintendent of antiquities for the city of Rome, overseeing a wide range of archaeological projects across the capital.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Gismondi is best known for Il Plastico, a massive scale model of imperial Rome under Constantine the Great that he built between 1935 and 1971 for the Museum of Roman Civilization in Rome's EUR area. The model, generally built on a scale of 1:250 but with the most important buildings slightly enlarged for greater detail, was commissioned by Benito Mussolini in 1933 to celebrate the 2000th anniversary of Augustus's birth and is principally based on Lanciani's edition of the 3rd‑century Severan Forma Urbis Romae while incorporating other archaeological work to represent the city in the early 4th century.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The model of imperial Rome, known as Il Plastico, was built on a scale of 1:250 but the most important buildings were slightly enlarged to allow greater detail.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The model was commissioned by Benito Mussolini in 1933 to celebrate the 2000th anniversary of Augustus's birth.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Gismondi served as director of the Ostia excavations for 44 years, making fundamental contributions to its study.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1887,
+      "month": 8,
+      "day": 12,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1974,
+      "month": 12,
+      "day": 2,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Détail_de_la_maquette_de_Rome_à_lépoque_de_Constantin_(5839479770).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:D%C3%A9tail_de_la_maquette_de_Rome_%C3%A0_l%C3%A9poque_de_Constantin_(5839479770).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/D%C3%A9tail_de_la_maquette_de_Rome_%C3%A0_l%C3%A9poque_de_Constantin_%285839479770%29.jpg/960px-D%C3%A9tail_de_la_maquette_de_Rome_%C3%A0_l%C3%A9poque_de_Constantin_%285839479770%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/D%C3%A9tail_de_la_maquette_de_Rome_%C3%A0_l%C3%A9poque_de_Constantin_%285839479770%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 2.0",
+    "attribution": "Jean-Pierre Dalbéra from Paris, France",
+    "author": "Jean-Pierre Dalbéra from Paris, France",
+    "width": 1800,
+    "height": 1200,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Italo Gismondi",
+    "url": "https://en.wikipedia.org/wiki/Italo_Gismondi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:46:38.868Z"
+  }
+}

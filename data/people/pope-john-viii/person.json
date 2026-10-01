@@ -1,0 +1,67 @@
+{
+  "id": "pope-john-viii",
+  "name": "Pope John VIII",
+  "wikidataId": "Q170504",
+  "wikipediaTitle": "Pope John VIII",
+  "content": {
+    "description": [
+      {
+        "text": "Pope John VIII, who reigned from 14 December 872 until his death in 882, is remembered as one of the most capable popes of the ninth century. He spent much of his pontificate trying to stem the advance of Muslim forces in southern Italy, seeking aid from the Franks and the Byzantines but ultimately turning to fortifying Rome’s own defenses. His support for Methodius of Thessalonica—authorizing the translation of the Bible into Old Church Slavonic and defending the use of Slavonic liturgy—demonstrated his commitment to extending the Church’s reach beyond Latin-speaking Christendom.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "John’s diplomatic efforts extended to the Balkans, where he recognized the reinstatement of Photios I as Patriarch of Constantinople and secured the independence of the Duchy of Croatia from Carolingian influence. Despite these achievements, his reign ended violently: he was assassinated in 882 by his own clerics, first poisoned and then clubbed to death, a fate that weakened papal authority in the years that followed.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He authorized the translation of the Bible into Old Church Slavonic, allowing the Slavic peoples to hear scripture in their native tongue.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He fortified the Basilica of Saint Paul Outside the Walls, a key religious site that had been damaged by Saracen raids.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was assassinated by his own clerics, first poisoned and then clubbed to death, an event that marked a turning point for the papacy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He recognized the reinstatement of Photios I as Patriarch of Constantinople, a move aimed at appeasing the Byzantines and countering Muslim influence in Italy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 882,
+      "month": 12,
+      "day": 16,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Ludvi2_Jan8.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ludvi2_Jan8.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Ludvi2_Jan8.jpg/960px-Ludvi2_Jan8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Ludvi2_Jan8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "AnonymousUnknown author",
+    "author": "AnonymousUnknown author",
+    "width": 961,
+    "height": 949,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope John VIII",
+    "url": "https://en.wikipedia.org/wiki/Pope_John_VIII"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:25:00.110Z"
+  }
+}

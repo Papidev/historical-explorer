@@ -17,7 +17,7 @@ export const MainImageCellPreview = ({ artifact }: { artifact?: MainImageCandida
       href={selectedCandidate.commonsPageUrl}
       target="_blank"
       rel="noreferrer"
-      className="block h-20 w-28 shrink-0 overflow-hidden rounded-md border border-black/10 bg-neutral-100"
+      className="block h-20 w-28 max-w-full shrink-0 overflow-hidden rounded-md border border-black/10 bg-neutral-100"
     >
       <Image
         src={selectedCandidate.thumbnailUrl}

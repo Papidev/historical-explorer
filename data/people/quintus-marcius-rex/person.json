@@ -1,0 +1,57 @@
+{
+  "id": "quintus-marcius-rex",
+  "name": "Quintus Marcius Rex",
+  "wikidataId": "Q1872296",
+  "wikipediaTitle": "Quintus Marcius Rex (praetor 144 BC)",
+  "content": {
+    "description": [
+      {
+        "text": "Quintus Marcius Rex was a Roman patrician of the Marcii Reges, a branch of the gens Marcia that claimed descent from the legendary king Ancus Marcius.  He lived in the second century BC and is noted as the maternal great‑grandfather of Julius Caesar, linking him to one of Rome’s most famous families.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 144 BC he was appointed praetor peregrinus, a position that entrusted him with the repair of Rome’s two major aqueducts, the Aqua Appia and the Aqua Anio Vetus, which had suffered extensive damage and misappropriation.  The Senate commissioned him to restore the channels, halt the diversion of water, and to build a new, larger aqueduct.  He received a budget of 8,400,000 sestertii, and although his term ended before the project was finished, the work was extended for an additional year.  The new aqueduct, which reached the Capitoline Hill and supplied water to the Caelius and Aventinus hills, was named Aqua Marcia in his honor.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The aqueduct constructed under Marcius’s direction was named Aqua Marcia, a lasting tribute that still appears on Roman maps of the period.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was granted an unprecedented 8,400,000 sestertii for the aqueduct project, illustrating the importance the Senate placed on securing Rome’s water supply.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Marcius’s lineage made him the maternal great‑grandfather of Julius Caesar, a connection that linked the Marcii Reges to the future emperor’s family tree.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Tivoli_Acquedotto_Arci_0511-03.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Tivoli_Acquedotto_Arci_0511-03.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Tivoli_Acquedotto_Arci_0511-03.JPG/960px-Tivoli_Acquedotto_Arci_0511-03.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tivoli_Acquedotto_Arci_0511-03.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Lalupa",
+    "author": "Lalupa",
+    "width": 2127,
+    "height": 1359,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Quintus Marcius Rex (praetor 144 BC)",
+    "url": "https://en.wikipedia.org/wiki/Quintus_Marcius_Rex_(praetor_144_BC)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:57:21.713Z"
+  }
+}

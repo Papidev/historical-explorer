@@ -1,0 +1,69 @@
+{
+  "id": "paul-the-apostle",
+  "name": "Paul the Apostle",
+  "wikidataId": "Q9200",
+  "wikipediaTitle": "Paul the Apostle",
+  "content": {
+    "description": [
+      {
+        "text": "Paul the Apostle, born Saul of Tarsus around 5 AD, was a Pharisee and Roman citizen who studied Jewish law under Gamaliel in Jerusalem before becoming a zealous persecutor of early Christians. His life changed dramatically on the road to Damascus, where a blinding light and the voice of the resurrected Jesus led to his conversion and baptism by the apostle Ananias.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his conversion, Paul embarked on three missionary journeys across Asia Minor, Greece, and the eastern Mediterranean, founding numerous churches and writing fourteen letters that form a significant portion of the New Testament. His writings emphasized faith in Christ over adherence to Jewish law, profoundly shaping Christian theology. Tradition holds that he was martyred in Rome under Emperor Nero, and his remains were later interred outside the city on the Via Ostiense.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Paul’s Hebrew name was Saul, but he is also called Paul, a Latin name he used in his letters and in the Acts of the Apostles.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Before his conversion, Paul worked as a tentmaker, a craft that later connected him with the missionary couple Priscilla and Aquila.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Paul was a Roman citizen by birth, a status that granted him legal protections and the right to appeal to Caesar when he was imprisoned in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "According to tradition, Paul was beheaded in Rome around 68 AD, and his tomb is located outside the city walls on the Via Ostiense, where a marble sarcophagus was later discovered.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 5,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 68,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Giovanni_Francesco_Barbieri_-_Saint_Paul.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Giovanni_Francesco_Barbieri_-_Saint_Paul.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Giovanni_Francesco_Barbieri_-_Saint_Paul.jpg/960px-Giovanni_Francesco_Barbieri_-_Saint_Paul.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/79/Giovanni_Francesco_Barbieri_-_Saint_Paul.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Guercino",
+    "author": "Guercino",
+    "width": 1458,
+    "height": 1991,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Paul the Apostle",
+    "url": "https://en.wikipedia.org/wiki/Paul_the_Apostle"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:23:46.808Z"
+  }
+}
