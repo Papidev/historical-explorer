@@ -195,6 +195,24 @@
           41.8906722
         ]
       }
+    },
+    {
+      "id": "basilica-parrocchiale-dei-santi-pietro-e-paolo",
+      "wikidataId": "Q774696",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica parrocchiale dei Santi Pietro e Paolo",
+        "tourism": "attraction",
+        "website": "https://www.santipietroepaoloroma.it/",
+        "wikipedia": "it:Basilica dei Santi Pietro e Paolo (Roma)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.4593082,
+          41.833704
+        ]
+      }
     }
   ]
 }

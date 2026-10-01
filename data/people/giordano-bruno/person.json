@@ -1,0 +1,64 @@
+{
+  "id": "giordano-bruno",
+  "name": "Giordano Bruno",
+  "wikidataId": "Q36330",
+  "wikipediaTitle": "Giordano Bruno",
+  "content": {
+    "description": [
+      {
+        "text": "Giordano Bruno, born Filippo Bruno in February 1548 in Nola, became a Dominican friar and a prolific writer. He is best known for extending Copernican heliocentrism to an infinite universe populated by countless worlds, a view that challenged the Church's cosmology and laid groundwork for modern astronomy. His work on the art of memory and Hermetic philosophy also earned him a reputation as a brilliant but controversial thinker.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1593 he was transferred to Rome where the Inquisition tried him for heresy. He was condemned for denying core Catholic doctrines and for his cosmological ideas, and on 17 February 1600 he was burned at the stake in Rome's Campo de' Fiori. Though executed, his ideas later influenced the scientific revolution and he is now remembered as a martyr for free thought.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the first to propose that the stars are distant suns with their own planets, a concept that anticipates modern exoplanet theory.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was burned at the stake in Rome's Campo de' Fiori on 17 February 1600.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1548,
+      "month": 2,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1600,
+      "month": 2,
+      "day": 17,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Portrait_of_Giordano_Bruno_in_\"Opere\"_Wellcome_L0015152_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_Giordano_Bruno_in_%22Opere%22_Wellcome_L0015152_(cropped).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Portrait_of_Giordano_Bruno_in_%22Opere%22_Wellcome_L0015152_%28cropped%29.jpg/960px-Portrait_of_Giordano_Bruno_in_%22Opere%22_Wellcome_L0015152_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Portrait_of_Giordano_Bruno_in_%22Opere%22_Wellcome_L0015152_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 4.0",
+    "attribution": "https://wellcomeimages.org/indexplus/obf_images/bc/3d/265d1be073eb34224006d0d35b02.jpg Gallery: https://wellcomeimages.org/indexplus/image/L0015152.html Wellcome Collection gallery (2018-04-01): https://wellcomecollection.org/works/qgt4dt8k CC-BY-4.0",
+    "author": "https://wellcomeimages.org/indexplus/obf_images/bc/3d/265d1be073eb34224006d0d35b02.jpg Gallery: https://wellcomeimages.org/indexplus/image/L0015152.html Wellcome Collection gallery (2018-04-01): https://wellcomecollection.org/works/qgt4dt8k CC-BY-4.0",
+    "width": 980,
+    "height": 1224,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giordano Bruno",
+    "url": "https://en.wikipedia.org/wiki/Giordano_Bruno"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-25T23:58:16.738Z"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "caracalla",
+  "name": "Caracalla",
+  "wikidataId": "Q1446",
+  "wikipediaTitle": "Caracalla",
+  "content": {
+    "description": [
+      {
+        "text": "Marcus Aurelius Antoninus, better known as Caracalla, was born on 4 April 188 in Lugdunum (modern Lyon, France) to Emperor Septimius Severus and Empress Julia Domna. He was raised in the imperial court and, at the age of nine, was made co‑emperor with his brother Geta, a position that gave him early experience in governance and military affairs.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his father’s death in 211, Caracalla eliminated his brother and became sole ruler, a reign marked by ambitious building projects such as the Baths of Caracalla, the introduction of the antoninianus coin, and the 212 Antonine Constitution that extended Roman citizenship to all free inhabitants of the empire. His rule ended abruptly when he was assassinated by a soldier on 8 April 217 while traveling from Edessa to Carrhae.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Caracalla’s nickname derived from a Gallic hooded tunic he wore and popularised during his campaigns on the Rhine and Danube.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 212 he issued the Antonine Constitution, granting Roman citizenship to all free inhabitants of the empire except the dediticii.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He introduced the antoninianus, a new Roman coin that was effectively a double denarius and helped finance his military expenditures.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Caracalla was assassinated by a soldier named Justin Martialis while traveling from Edessa to Carrhae, an event that ended his 19‑year reign.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 188,
+      "month": 4,
+      "day": 4,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 217,
+      "month": 4,
+      "day": 8,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Caracalla_MAN_Napoli_Inv6033_n01.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Caracalla_MAN_Napoli_Inv6033_n01.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Caracalla_MAN_Napoli_Inv6033_n01.jpg/960px-Caracalla_MAN_Napoli_Inv6033_n01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Caracalla_MAN_Napoli_Inv6033_n01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 2.5",
+    "attribution": "Marie-Lan Nguyen (2011)",
+    "author": "Marie-Lan Nguyen (2011)",
+    "width": 2617,
+    "height": 3459,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Caracalla",
+    "url": "https://en.wikipedia.org/wiki/Caracalla"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-25T23:57:22.871Z"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Roma_EUR_Basilica_santi_Pietro_e_Paolo.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Roma_EUR_Basilica_santi_Pietro_e_Paolo.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Roma_EUR_Basilica_santi_Pietro_e_Paolo.jpg/960px-Roma_EUR_Basilica_santi_Pietro_e_Paolo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Roma_EUR_Basilica_santi_Pietro_e_Paolo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "Utente:Blackcat",
+      "author": "Utente:Blackcat",
+      "width": 2700,
+      "height": 1800,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Santi_Petro_e_Paolo_a_Via_Ostiense,_Jul_21.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Santi_Petro_e_Paolo_a_Via_Ostiense%2C_Jul_21.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Santi_Petro_e_Paolo_a_Via_Ostiense%2C_Jul_21.jpg/960px-Santi_Petro_e_Paolo_a_Via_Ostiense%2C_Jul_21.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Santi_Petro_e_Paolo_a_Via_Ostiense%2C_Jul_21.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "LenaAvrelia",
+      "author": "LenaAvrelia",
+      "width": 2709,
+      "height": 3612,
+      "discoveredVia": "wikipedia-page-image",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Roma_EUR_Basilica_santi_Pietro_e_Paolo.jpg"
+}

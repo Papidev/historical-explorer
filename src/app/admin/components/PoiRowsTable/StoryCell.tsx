@@ -24,6 +24,8 @@ export const StoryCell = ({
 }) => (
   <PipelineCell available={Boolean(row.storyContent)} inProgress={isInProgress}>
     <CellContent
+      title={row.sourcePending ? "Waiting for source" : undefined}
+      titleTone={row.sourcePending ? "warning" : "status"}
       generationModel={[
         row.storyContentGenerationMode,
         row.storyContentGenerationProvider,
@@ -36,6 +38,7 @@ export const StoryCell = ({
     <GenerationErrorDetails
       errors={(row.generationErrors ?? []).filter(({ stage }) => stage === "storyContent")}
       label="Story errors"
+      latestOnly
     />
     <RelatedPeopleControl
       row={row}

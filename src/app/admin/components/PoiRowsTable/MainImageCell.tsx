@@ -50,7 +50,8 @@ export const MainImageCell = ({
     <div className="flex min-w-0 items-start gap-3">
       <MainImageCellPreview artifact={row.mainImageArtifact} />
       <CellContent
-        title={getMainImageStatus(row.mainImageArtifact)}
+        title={row.sourcePending ? "Waiting for source" : getMainImageStatus(row.mainImageArtifact)}
+        titleTone={row.sourcePending ? "warning" : "status"}
         subtitle={
           row.mainImageArtifact
             ? `${row.mainImageArtifact.candidates.length} candidate${
@@ -64,6 +65,7 @@ export const MainImageCell = ({
     <GenerationErrorDetails
       errors={(row.generationErrors ?? []).filter(({ stage }) => stage === "mainImageCandidates")}
       label="Image errors"
+      latestOnly
     />
     <CellFooter
       updatedAt={row.mainImageUpdatedAt}
@@ -116,7 +118,7 @@ export const MainImageCell = ({
             />
           </form>
         </div>
-      ) : row.transformedPoi ? (
+      ) : row.transformedPoi && !row.sourcePending ? (
         <form
           action={(formData) =>
             runSingleAction(

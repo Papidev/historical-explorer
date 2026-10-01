@@ -1,0 +1,93 @@
+{
+  "id": "sabina",
+  "name": "Sabina",
+  "wikidataId": "Q232716",
+  "wikipediaTitle": "Vibia Sabina",
+  "content": {
+    "description": [
+      {
+        "text": "Vibia Sabina, born in 83 AD, was the daughter of Matidia and Lucius Vibius Sabinus, making her a second cousin once removed of Emperor Hadrian. She was raised in the household of Trajan and Plotina after her father's death, and in 100 AD she married Hadrian at the request of Empress Plotina. As empress, Sabina accumulated more public honors than any imperial woman since Livia, and she was the first woman whose image appeared on a regular and continuous series of Roman coins. In 128 AD she was awarded the title of Augusta, further cementing her status.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sabina remained the most traveled and visible empress of her time, and she was described as beautiful and lovely in epigrams by Julia Balbilla during Hadrian's visit to Egypt in 130 AD. She had no children with Hadrian, and after her death in 136 or early 137 AD she was deified by her husband, who commissioned a relief depicting her apotheosis. A nearly complete statue of her was discovered in 1887 at Thasos, and the relief later found its way to the Capitoline Museums. Despite some ancient traditions that Hadrian treated her poorly, other sources suggest he respected her greatly.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "She was the first woman whose image appeared on a regular and continuous series of Roman coins.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 128 AD she was awarded the title of Augusta.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She was described as beautiful and lovely in epigrams by Julia Balbilla.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She had no children with Hadrian.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After her death she was deified by Hadrian, who commissioned a relief depicting her apotheosis.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A nearly complete statue of her was discovered in 1887 at Thasos.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The relief of her apotheosis was later reused as spolia on the Arch of Portugal and is now in the Capitoline Museums.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She was raised in the household of Trajan and Plotina after her father's death.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She was married to Hadrian at the request of Empress Plotina.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She was the most traveled and visible empress to date.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 83,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 136,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Vibia_Sabina_(Villa_Adriana)_01.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Vibia_Sabina_(Villa_Adriana)_01.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Vibia_Sabina_%28Villa_Adriana%29_01.jpg/960px-Vibia_Sabina_%28Villa_Adriana%29_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Vibia_Sabina_%28Villa_Adriana%29_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 2.0",
+    "attribution": "Flickr: Vibia. Author: Iessi, 10 October 2006.",
+    "author": "Flickr: Vibia. Author: Iessi, 10 October 2006.",
+    "width": 1207,
+    "height": 1607,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Vibia Sabina",
+    "url": "https://en.wikipedia.org/wiki/Vibia_Sabina"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-25T23:57:00.059Z"
+  }
+}

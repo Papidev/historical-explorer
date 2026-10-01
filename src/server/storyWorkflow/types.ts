@@ -65,6 +65,7 @@ export type RelatedPeopleResolutionResult = {
 export type StoryWorkflowErrorCode =
   | "point-of-interest-not-found"
   | "sources-unavailable"
+  | "source-not-found"
   | "story-content-generation-failed"
   | "main-image-candidates-generation-failed"
   | "persistence-failed";

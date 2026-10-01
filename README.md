@@ -56,7 +56,7 @@ Use Generate on an empty row or Refresh on an existing row in `/admin` to run th
 3. Generate Main Image Candidates and select the first candidate with license and attribution.
 4. Generate structured Story Content.
 
-Refresh reruns this entire pipeline with the selected AI configuration. It does not clear the row before generation, so the current artifacts are not removed as a preliminary step if regeneration fails.
+Refresh reruns this entire pipeline with the selected AI configuration and resolves the Wikipedia Source again from the POI. Existing artifacts remain if a temporary error interrupts regeneration. If the POI has no linked English Wikipedia page, the Curator marks its Story as waiting for a Source and removes that POI's saved Source, Story, and Main Image Candidates. Shared Person records and generation logs remain available.
 
 Stories live under the city's `stories/` folder, with one directory per POI ID. For example, `data/rome/stories/forum-boarium/` contains structured Story Content in `story.json` and Main Image Candidates in `images.json`. Full Generate creates or replaces `story.json`, and the Curator UI provides preview, Refresh, and Delete actions for that content. These are reviewable content artifacts and should be committed after generation and human editing.
 

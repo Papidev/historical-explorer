@@ -33,7 +33,7 @@ export type GenerationLogEntry = GenerationRun &
     errorMessage?: string;
   };
 
-const sanitizeErrorMessage = (message: string) =>
+export const sanitizeErrorMessage = (message: string) =>
   message
     .replace(/([?&](?:key|api_key|token)=)[^&\s]+/gi, "$1[REDACTED]")
     .replace(/(Bearer\s+)[^\s]+/gi, "$1[REDACTED]")

@@ -1,0 +1,73 @@
+{
+  "id": "pietro-da-cortona",
+  "name": "Pietro da Cortona",
+  "wikidataId": "Q333323",
+  "wikipediaTitle": "Pietro da Cortona",
+  "content": {
+    "description": [
+      {
+        "text": "Pietro da Cortona was born Pietro Berrettini in the Tuscan town of Cortona on 1 November 1596, although the exact year is uncertain. He trained as a painter in Florence under Andrea Commodi before moving to Rome around 1612/3, where he joined the studio of Baccio Ciarpi. Early commissions included fresco decorations at the Palazzo Mattei and a copy of Raphael's Galatea that brought him to the attention of papal officials, leading to a major commission in Santa Bibiana under the direction of Gian Lorenzo Bernini.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cortona's reputation grew with the monumental ceiling of the Palazzo Barberini, completed in 1640, which combined illusionistic architecture with a grand allegory of Urban VIII’s reign. He also served as director of the Academy of St Luke from 1634 to 1638, where he debated with Andrea Sacchi over the appropriate number of figures in a composition. In addition to painting, he designed churches such as Santi Luca e Martina and published a treatise on painting in 1652 under a pseudonym, while refusing offers to work in France and Spain.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was known primarily by the name of his native town, Cortona, although his birth name was Pietro Berrettini.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cortona refused invitations to both France and Spain, choosing to focus his career entirely in Italy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He published a treatise on painting in 1652 under a pseudonym and in collaboration with a theologian.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Before becoming famous as an architect, he drew anatomical plates that were not engraved and published until a hundred years after his death.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1596,
+      "month": 11,
+      "day": 1,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1669,
+      "month": 5,
+      "day": 16,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Ajaccio_Da_Cortona_Autoportrait.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ajaccio_Da_Cortona_Autoportrait.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Ajaccio_Da_Cortona_Autoportrait.JPG/960px-Ajaccio_Da_Cortona_Autoportrait.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/86/Ajaccio_Da_Cortona_Autoportrait.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Pietro da Cortona",
+    "author": "Pietro da Cortona",
+    "width": 1439,
+    "height": 2000,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pietro da Cortona",
+    "url": "https://en.wikipedia.org/wiki/Pietro_da_Cortona"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-26T00:56:09.860Z"
+  }
+}

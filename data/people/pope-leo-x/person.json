@@ -1,0 +1,73 @@
+{
+  "id": "pope-leo-x",
+  "name": "Pope Leo X",
+  "wikidataId": "Q49237",
+  "wikipediaTitle": "Pope Leo X",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni di Lorenzo de' Medici, later Pope Leo X, was born on 11 December 1475 in Florence into the powerful Medici family. He entered the ecclesiastical career at a young age, becoming a cardinal at thirteen and eventually being elected pope on 9 March 1513, the last non‑priest to ascend to the papacy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his pontificate he was a prolific patron of the arts and humanist scholarship, commissioning works by Raphael, supporting the rebuilding of St. Peter's Basilica, and encouraging the printing of Greek texts. His indulgence sales and the issuance of the bull Exsurge Domine in 1520, however, inflamed the Protestant Reformation and led to his excommunication of Martin Luther.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He created 42 new cardinals in eight consistories, including his own successor, Pope Clement VII.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the last pope not to have been in priestly orders at the time of his election.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He granted the first printing privilege to Ottaviano Petrucci for organ music, giving him exclusive rights for 15 years.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He allowed the Jews to establish a Hebrew printing press in Rome, producing the Talmud under his protection.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1475,
+      "month": 12,
+      "day": 11,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1521,
+      "month": 12,
+      "day": 1,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Raffaello,_ritratto_di_papa_leone_X_tra_i_cardinali_luigi_de'_rossi_e_giulio_de'_medici,_1518,_03.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Raffaello%2C_ritratto_di_papa_leone_X_tra_i_cardinali_luigi_de'_rossi_e_giulio_de'_medici%2C_1518%2C_03.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Raffaello%2C_ritratto_di_papa_leone_X_tra_i_cardinali_luigi_de%27_rossi_e_giulio_de%27_medici%2C_1518%2C_03.jpg/960px-Raffaello%2C_ritratto_di_papa_leone_X_tra_i_cardinali_luigi_de%27_rossi_e_giulio_de%27_medici%2C_1518%2C_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Raffaello%2C_ritratto_di_papa_leone_X_tra_i_cardinali_luigi_de%27_rossi_e_giulio_de%27_medici%2C_1518%2C_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Francesco Bini",
+    "author": "Francesco Bini",
+    "width": 3648,
+    "height": 4912,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Leo X",
+    "url": "https://en.wikipedia.org/wiki/Pope_Leo_X"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-26T00:59:28.835Z"
+  }
+}

@@ -3,9 +3,9 @@
 import { revalidatePath } from "next/cache";
 import { pointOfInterest } from "@/server/pointOfInterest";
 import { poiTypes } from "@/server/poiTypes";
-import { withGenerationRun } from "@/server/generationRunLog";
+import { sanitizeErrorMessage, withGenerationRun } from "@/server/generationRunLog";
 import { storyCuration } from "@/server/storyCuration";
-import { storyWorkflow } from "@/server/storyWorkflow";
+import { storyWorkflow, StoryWorkflowError } from "@/server/storyWorkflow";
 import { appendAiProgress, finishAiProgress, startAiProgress } from "@/server/aiProgress";
 import type { RelatedPeopleResolutionFailure } from "@/server/storyWorkflow";
 import { resolveAiSelection } from "./aiModels";
@@ -35,6 +35,7 @@ const toRelatedPeopleWarning = (
     warning: {
       title: "Some Related People remain unresolved",
     },
+    failedSteps: ["Related People"],
   };
 };
 
@@ -46,18 +47,35 @@ const runAiAction = async (
   const runId = typeof progressId === "string" ? progressId : undefined;
   if (runId) startAiProgress(runId);
   const onProgress = (message: string) => {
-    if (runId) appendAiProgress(runId, message);
+    if (runId) appendAiProgress(runId, sanitizeErrorMessage(message));
   };
 
   try {
     const result = await work(onProgress);
     onProgress(result?.warning ? result.warning.title : "AI generation completed.");
-    if (runId) finishAiProgress(runId, result?.warning ? "failed" : "succeeded");
+    if (runId)
+      finishAiProgress(runId, result?.warning ? "partial" : "succeeded", result?.failedSteps);
     revalidatePath("/admin");
     return result;
   } catch (error) {
-    onProgress(`AI generation stopped: ${error instanceof Error ? error.message : String(error)}`);
-    if (runId) finishAiProgress(runId, "failed");
+    onProgress("AI generation stopped.");
+    if (runId)
+      finishAiProgress(
+        runId,
+        error instanceof StoryWorkflowError && error.code === "source-not-found"
+          ? "waiting"
+          : "failed",
+        [
+          error instanceof StoryWorkflowError
+            ? {
+                sources: "Wikipedia Source",
+                mainImageCandidates: "Main Image Candidates",
+                storyContent: "Story Content",
+                persistence: "Saving generated data",
+              }[error.stage]
+            : "Generation",
+        ],
+      );
     throw error;
   }
 };
@@ -66,34 +84,42 @@ export const generateDraftStory = async (formData: FormData) =>
   runAiAction(formData, async (onProgress) => {
     const geoPlaceId = getRequiredString(formData, "geoPlaceId", "Geo Place id");
     const ai = await getWorkflowAiSelection(formData);
-    const { result } = await withGenerationRun(
+    const { result, poiTypesError } = await withGenerationRun(
       { city: "rome", operation: "draftStory.generate", geoPlaceId, ai },
       async () => {
         onProgress("Creating the Point of Interest.");
         const { poiId } = await pointOfInterest.generate({ geoPlaceId });
+        let poiTypesError: string | undefined;
         try {
           onProgress("Refreshing POI types.");
-          await poiTypes.refresh(poiId);
+          poiTypesError = (await poiTypes.refresh(poiId)).error;
         } catch (error) {
           console.warn(`[poi-types] Refresh failed for ${poiId}.`, error);
+          poiTypesError = error instanceof Error ? error.message : String(error);
         }
+        if (poiTypesError) onProgress("POI Types could not be refreshed; continuing.");
         return {
           poiId,
+          poiTypesError,
           result: await storyWorkflow.draftStory.generate({ poiId, ai, onProgress }),
         };
       },
-      ({ poiId, result }) => ({
+      ({ poiId, result, poiTypesError }) => ({
         poiId,
         status:
-          result.mainImageCandidates === "failed" || result.relatedPeopleFailures.length > 0
+          poiTypesError ||
+          result.mainImageCandidates === "failed" ||
+          result.relatedPeopleFailures.length > 0
             ? "partial"
             : "success",
         failedSteps: [
+          ...(poiTypesError ? ["poiTypes"] : []),
           ...(result.mainImageCandidates === "failed" ? ["mainImageCandidates"] : []),
           ...(result.relatedPeopleFailures.length > 0 ? ["relatedPeople"] : []),
         ],
         relatedPeopleFailureCount: result.relatedPeopleFailures.length,
         errors: [
+          ...(poiTypesError ? [{ stage: "poiTypes", message: poiTypesError }] : []),
           ...(result.mainImageCandidatesError
             ? [{ stage: "mainImageCandidates", message: result.mainImageCandidatesError }]
             : []),
@@ -105,7 +131,20 @@ export const generateDraftStory = async (formData: FormData) =>
         ],
       }),
     );
-    return toRelatedPeopleWarning(result.relatedPeopleFailures);
+    const failedSteps = [
+      ...(poiTypesError ? ["POI Types"] : []),
+      ...(result.mainImageCandidates === "failed" ? ["Main Image Candidates"] : []),
+      ...(result.relatedPeopleFailures.length ? ["Related People"] : []),
+    ];
+    return failedSteps.length
+      ? {
+          warning: {
+            title: "Draft generated with issues",
+            description: `Failed steps: ${failedSteps.join(", ")}.`,
+          },
+          failedSteps,
+        }
+      : undefined;
   });
 
 export const refreshStoryContent = async (formData: FormData) =>

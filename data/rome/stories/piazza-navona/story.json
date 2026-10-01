@@ -1,18 +1,14 @@
 {
   "introduction": {
-    "text": "Piazza Navona is a historic public square in Rome built on the site of the 1st‑century AD Stadium of Domitian. It is renowned for its Baroque architecture, iconic fountains, and its role as a cultural gathering place.",
-    "sourceIds": [
-      "wikipedia"
-    ]
+    "text": "Piazza Navona is a historic public square in Rome built on the site of the ancient Stadium of Domitian. It is renowned for its Baroque architecture, iconic fountains, and vibrant cultural life.",
+    "sourceIds": ["wikipedia"]
   },
   "topics": {
     "history": [
       {
-        "id": "stadium-of-domitian",
-        "description": "The original stadium was constructed by Emperor Domitian in 80 AD.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "id": "history1",
+        "description": "The site was originally the Stadium of Domitian, built by Emperor Titus Flavius Domitianus in 80 AD.",
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 80,
           "precision": "exact",
@@ -20,138 +16,217 @@
         }
       },
       {
-        "id": "fountains-1574-1575",
-        "description": "The Fountain of Neptune (1574) and the Fountain of the Moor (1575) were created by Giacomo della Porta.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "id": "history2",
+        "description": "After the fall of the Western Roman Empire in 476 AD, the stadium fell into ruin and was quarried for building materials.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 476,
+          "precision": "exact",
+          "granularity": "year"
+        }
       },
       {
-        "id": "fontana-quattro-fiumi-1651",
-        "description": "The Fountain of the Four Rivers (1651) was designed by Gian Lorenzo Bernini.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "id": "history3",
+        "description": "In the late 15th century, the city market was moved to the piazza, establishing it as a public space.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1400,
+          "precision": "approximate",
+          "endYear": 1499,
+          "granularity": "century"
+        }
       },
       {
-        "id": "baroque-transformation",
-        "description": "During the pontificate of Innocent X (1644‑1655) the piazza was transformed into a Baroque masterpiece.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "id": "history4",
+        "description": "In 1574, Giacomo della Porta sculpted the Fountain of Neptune.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1574,
+          "precision": "exact",
+          "granularity": "year"
+        }
       },
       {
-        "id": "flooding-1652-1866",
-        "description": "From 1652 until 1866 the piazza was flooded on weekends in August for Pamphili family celebrations.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "id": "history5",
+        "description": "In 1575, Giacomo della Porta created the Fontana del Moro.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1575,
+          "precision": "exact",
+          "granularity": "year"
+        }
       },
       {
-        "id": "market-move-1869",
-        "description": "In 1869 the market was moved to Campo de' Fiori.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "id": "history6",
+        "description": "During the pontificate of Pope Innocent X (1644–1655), the piazza was transformed into a Baroque masterpiece.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1644,
+          "precision": "exact",
+          "endYear": 1655,
+          "granularity": "year"
+        }
       },
       {
-        "id": "vandalism-2011",
-        "description": "In September 2011 the Fountain of the Moor was damaged by vandalism.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "id": "history7",
+        "description": "In 1651, Gian Lorenzo Bernini completed the Fontana dei Quattro Fiumi, the central fountain of the piazza.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1651,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history8",
+        "description": "From 1652 until 1866, the piazza hosted weekly festivals that flooded the square in August.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1652,
+          "precision": "exact",
+          "endYear": 1866,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history9",
+        "description": "In 1673, Bernini added a statue of a Moor wrestling with a dolphin to the Fontana del Moro.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1673,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history10",
+        "description": "In the 19th century, the pavement level was raised.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1800,
+          "precision": "approximate",
+          "endYear": 1899,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history11",
+        "description": "In 1869, the market was relocated from Piazza Navona to Campo de' Fiori.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1869,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history12",
+        "description": "In 1878, a statue of Neptune by Antonio Della Bitta was added to the Fountain of Neptune.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1878,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history13",
+        "description": "In 2011, the Fontana del Moro was vandalized when a man damaged the fountain.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2011,
+          "precision": "exact",
+          "granularity": "year"
+        }
       }
     ],
     "design": [
       {
-        "id": "baroque-design",
-        "description": "The piazza exemplifies Baroque design with contributions from Bernini, Borromini, and other architects.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "id": "design1",
+        "description": "The piazza showcases Baroque architecture, including the oval layout and the integration of fountains and churches.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The Church of Sant'Agnese in Agone, designed by Francesco Borromini, exemplifies Baroque church architecture.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "The Palazzo Pamphili, facing the piazza, was designed by Girolamo Rainaldi and features a long gallery by Borromini.",
+        "sourceIds": ["wikipedia"]
       }
     ],
     "art": [
       {
-        "id": "fontana-quattro-fiumi",
-        "description": "Bernini’s Fountain of the Four Rivers features four river gods and an obelisk.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "id": "art1",
+        "description": "The Fontana dei Quattro Fiumi, completed by Bernini in 1651, is the central fountain of the piazza.",
+        "sourceIds": ["wikipedia"]
       },
       {
-        "id": "fontana-moro",
-        "description": "The Fountain of the Moor displays a Moor wrestling with a dolphin.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "id": "art2",
+        "description": "The Fontana del Moro, created by Giacomo della Porta in 1575 and later enhanced by Bernini in 1673, features a Moor wrestling with a dolphin.",
+        "sourceIds": ["wikipedia"]
       },
       {
-        "id": "fountain-neptune",
-        "description": "The Fountain of Neptune, added in 1878, balances the Moor fountain.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "id": "art3",
+        "description": "The Fountain of Neptune, sculpted by Giacomo della Porta in 1574, was later balanced by a statue of Neptune added in 1878.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art4",
+        "description": "The obelisk of Domitian, originally from the Circus of Maxentius, crowns the Fontana dei Quattro Fiumi.",
+        "sourceIds": ["wikipedia"]
       }
     ]
   },
   "relatedPeople": [
     {
-      "name": "Domitian",
-      "personId": "domitian",
-      "sourceIds": [
-        "wikipedia"
-      ]
-    },
-    {
       "name": "Gian Lorenzo Bernini",
       "personId": "gian-lorenzo-bernini",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Francesco Borromini",
       "personId": "francesco-borromini",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Giacomo della Porta",
-      "sourceIds": [
-        "wikipedia"
-      ]
-    },
-    {
-      "name": "Innocent X",
-      "sourceIds": [
-        "wikipedia"
-      ]
-    },
-    {
-      "name": "Girolamo Rainaldi",
-      "sourceIds": [
-        "wikipedia"
-      ]
-    },
-    {
-      "name": "Carlo Rainaldi",
-      "sourceIds": [
-        "wikipedia"
-      ]
-    },
-    {
-      "name": "Pietro da Cortona",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "personId": "giacomo-della-porta",
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Antonio Della Bitta",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Innocent X",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Domitian",
+      "personId": "domitian",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Girolamo Rainaldi",
+      "personId": "girolamo-rainaldi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Carlo Rainaldi",
+      "personId": "carlo-rainaldi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pietro da Cortona",
+      "personId": "pietro-da-cortona",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Innocent X",
+      "sourceIds": ["wikipedia"]
     }
   ]
 }

@@ -95,6 +95,24 @@ const discoverPageImageFileName = async (title: string) => {
   return data.query?.pages?.[0]?.pageimage;
 };
 
+const discoverCategoryFileNames = async (category: string) => {
+  const url = new URL(COMMONS_API);
+  url.searchParams.set("action", "query");
+  url.searchParams.set("list", "categorymembers");
+  url.searchParams.set("cmtitle", category);
+  url.searchParams.set("cmtype", "file");
+  url.searchParams.set("cmlimit", "20");
+  url.searchParams.set("format", "json");
+  url.searchParams.set("formatversion", "2");
+
+  const data = await fetchWikimediaJson<{
+    query?: { categorymembers?: Array<{ title: string }> };
+  }>(url);
+  return (data.query?.categorymembers ?? [])
+    .filter(({ title }) => /^File:/i.test(title))
+    .map(({ title }) => title);
+};
+
 const fetchCommonsCandidate = async (
   commonsFileName: string,
   discoveredVia: MainImageDiscoveredVia,
@@ -156,17 +174,31 @@ const fetchCommonsCandidate = async (
   };
 };
 
-export const fetchMainImageCandidates = async (poi: PoiInput) => {
-  const resolvedPage = await resolvePageForPoi(poi);
-  const discoveredFiles = [
+export const fetchMainImageCandidates = async (poi: PoiInput, wikipediaTitle?: string) => {
+  const commonsCategory = poi.sourceHints.wikimediaCommons?.startsWith("Category:")
+    ? poi.sourceHints.wikimediaCommons
+    : undefined;
+  const discoveredFiles: Array<{
+    commonsFileName?: string;
+    discoveredVia: MainImageDiscoveredVia;
+  }> = [
     {
       commonsFileName: await discoverP18FileName(poi.sourceHints.wikidata),
-      discoveredVia: "wikidata-p18" as const,
+      discoveredVia: "wikidata-p18",
     },
-    {
-      commonsFileName: await discoverPageImageFileName(resolvedPage.selected.title),
-      discoveredVia: "wikipedia-page-image" as const,
-    },
+    ...(commonsCategory
+      ? (await discoverCategoryFileNames(commonsCategory)).map((commonsFileName) => ({
+          commonsFileName,
+          discoveredVia: "commons-category" as const,
+        }))
+      : [
+          {
+            commonsFileName: await discoverPageImageFileName(
+              wikipediaTitle ?? (await resolvePageForPoi(poi)).selected.title,
+            ),
+            discoveredVia: "wikipedia-page-image" as const,
+          },
+        ]),
   ];
   const seenFileNames = new Set<string>();
   const candidates: MainImageCandidate[] = [];
@@ -186,10 +218,11 @@ export const fetchMainImageCandidates = async (poi: PoiInput) => {
     const candidate = await fetchCommonsCandidate(normalizedFileName, discoveredFile.discoveredVia);
     if (candidate) {
       candidates.push(candidate);
+      if (candidates.length === 3) break;
     }
   }
 
-  return candidates.slice(0, 3).map((candidate, index) => ({
+  return candidates.map((candidate, index) => ({
     ...candidate,
     isProposed: index === 0,
   }));

@@ -1,0 +1,71 @@
+{
+  "id": "pedro-barreto",
+  "name": "Pedro Barreto",
+  "wikidataId": "Q1708436",
+  "wikipediaTitle": "Pedro Barreto",
+  "content": {
+    "description": [
+      {
+        "text": "Pedro Ricardo Barreto Jimeno was born on 12 February 1944 in Lima, Peru. He entered the Jesuit novitiate there and later studied philosophy at the Jesuit faculty in Alcalá de Henares, Spain, before completing his theological studies in Lima. He was ordained a priest of the Society of Jesus on 18 December 1971 and took his final vows as a Jesuit on 3 October 1976.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Barreto’s episcopal career began when Pope John Paul II named him titular bishop of Acufida and Apostolic Administrator of Jaén on 21 November 2001; he was consecrated a bishop on 1 January 2002. He was appointed Archbishop of Huancayo on 17 July 2004 and served there until his resignation on 12 February 2024, his 80th birthday. In 2018 Pope Francis created him a cardinal, assigning him the titular church of Santi Pietro e Paolo a Via Ostiense. Throughout his ministry he has led the Justice and Peace Section of CELAM, opposed the mining industry’s environmental impact on La Oroya, served as vice president of the Pan‑Amazonian Ecclesial Network (REPAM), and was a member of the organizing committee for the Pan‑Amazon Synod of Bishops. He was also appointed to the Pontifical Council for Justice and Peace in 2012 and delivered a notable address at the 2019 Synod of Bishops.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He entered the Jesuit novitiate in Lima before studying abroad in Spain.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Barreto has actively opposed the mining industry’s environmental impact on La Oroya.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as vice president of the Pan‑Amazonian Ecclesial Network (REPAM).",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Barreto was a member of the organizing committee for the Pan‑Amazon Synod of Bishops.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He resigned as Archbishop of Huancayo on his 80th birthday, 12 February 2024.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1944,
+      "month": 2,
+      "day": 12,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "D._Pedro_Barreto_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:D._Pedro_Barreto_(cropped).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/D._Pedro_Barreto_%28cropped%29.jpg/960px-D._Pedro_Barreto_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/D._Pedro_Barreto_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 4.0",
+    "attribution": "Miguel Angel Chong",
+    "author": "Miguel Angel Chong",
+    "width": 2712,
+    "height": 3134,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pedro Barreto",
+    "url": "https://en.wikipedia.org/wiki/Pedro_Barreto"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-26T00:03:52.791Z"
+  }
+}

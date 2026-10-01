@@ -45,15 +45,22 @@ export const GeoPlaceCell = ({
         <p
           title={`${row.lastGenerationRun.operation} · ${row.lastGenerationRun.at}`}
           className={`mt-3 w-fit rounded-full px-2.5 py-1 text-xs font-medium ${
-            row.lastGenerationRun.status === "failed"
+            row.lastGenerationRun.status === "failed" && !row.sourcePending
               ? "bg-red-100 text-red-800"
-              : row.lastGenerationRun.status === "success"
+              : row.lastGenerationRun.status === "success" && !row.sourcePending
                 ? "bg-teal-100 text-teal-800"
                 : "bg-amber-100 text-amber-900"
           }`}
         >
-          Last generation: {row.lastGenerationRun.status}
+          Last generation: {row.sourcePending ? "needs source" : row.lastGenerationRun.status}
         </p>
+      ) : null}
+      {row.sourcePending ? (
+        <GenerationErrorDetails
+          errors={(row.generationErrors ?? []).filter(({ stage }) => stage === "sources")}
+          label="Source errors"
+          latestOnly
+        />
       ) : null}
       <GenerationErrorDetails
         errors={(row.generationErrors ?? []).filter(
@@ -63,6 +70,7 @@ export const GeoPlaceCell = ({
             stage !== "mainImageCandidates" &&
             stage !== "relatedPeople",
         )}
+        latestOnly
       />
       <CellFooter>
         {row.rawPoi ? (

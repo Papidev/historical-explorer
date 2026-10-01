@@ -10,9 +10,15 @@ import type { CellProps } from "./RowTypes";
 export const WikipediaCell = ({ row, isInProgress, onSelectPanel }: CellProps) => (
   <PipelineCell available={Boolean(row.wikiPoi)} inProgress={isInProgress}>
     <CellContent isAvailable={Boolean(row.wikiPoi)} />
+    {row.sourcePending ? (
+      <p role="status" className="mt-2 text-xs font-semibold text-amber-900">
+        Story waiting for an English Wikipedia source
+      </p>
+    ) : null}
     <GenerationErrorDetails
       errors={(row.generationErrors ?? []).filter(({ stage }) => stage === "sources")}
       label="Source errors"
+      latestOnly
     />
     <CellFooter updatedAt={row.wikiUpdatedAt} generationDuration={row.wikiGenerationDuration}>
       {row.wikiPoi ? (

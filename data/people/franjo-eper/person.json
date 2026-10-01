@@ -1,0 +1,73 @@
+{
+  "id": "franjo-eper",
+  "name": "Franjo Šeper",
+  "wikidataId": "Q506548",
+  "wikipediaTitle": "Franjo Šeper",
+  "content": {
+    "description": [
+      {
+        "text": "Franjo Šeper was born on 2 October 1905 in Osijek, then part of the Austro‑Hungarian Kingdom of Croatia‑Slavonia. After his family moved to Zagreb in 1910, he entered the seminary there and later studied at the Pontifical Gregorian University in Rome. He was ordained a priest on 26 October 1930 by Archbishop Giuseppe Palica and served in various pastoral roles in the Archdiocese of Zagreb, eventually becoming the private secretary to the archbishop in 1934.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1960 Šeper succeeded Cardinal Aloysius Stepinac as Archbishop of Zagreb and was elevated to the cardinalate in 1965. He was appointed Prefect of the Congregation for the Doctrine of the Faith in 1968, a position he held until his resignation in 1981. During his tenure he authored key doctrinal documents such as Mysterium Ecclesiae (1973), Inter Insigniores (1976), and the CDF’s declaration on euthanasia (1980), and he presided over the first meeting of the International Theological Commission in 1969.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Šeper was a cardinal elector in both the August and October conclaves of 1978, which elected Pope John Paul I and Pope John Paul II.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as the first President of the International Theological Commission, an office created in April 1969 to promote theological dialogue within the Church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Under his leadership the Congregation for the Doctrine of the Faith supervised the Vatican’s early dialogue with Freemasonry, a rare engagement between the Catholic Church and the organization.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Šeper authored the 1973 document Mysterium Ecclesiae, which sought to re‑orient the Church’s ecclesiology in the post‑Vatican II era.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1905,
+      "month": 10,
+      "day": 2,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1981,
+      "month": 12,
+      "day": 30,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Franjo_Šeper.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Franjo_%C5%A0eper.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Franjo_%C5%A0eper.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Franjo_%C5%A0eper.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Duh",
+    "author": "Duh",
+    "width": 550,
+    "height": 800,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Franjo Šeper",
+    "url": "https://en.wikipedia.org/wiki/Franjo_%C5%A0eper"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-26T00:03:25.531Z"
+  }
+}

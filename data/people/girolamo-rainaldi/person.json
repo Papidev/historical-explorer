@@ -1,0 +1,65 @@
+{
+  "id": "girolamo-rainaldi",
+  "name": "Girolamo Rainaldi",
+  "wikidataId": "Q1418631",
+  "wikipediaTitle": "Girolamo Rainaldi",
+  "content": {
+    "description": [
+      {
+        "text": "Girolamo Rainaldi was an Italian architect born in Rome in 1570, trained under Domenico Fontana and Giacomo Della Porta, and became the papacy's chief architect. He worked mainly in a conservative Mannerist style, competing with Bernini, and designed many projects including the façade of the Chiesa di Gesù e Maria and the Palazzo Pamphilj in Piazza Navona.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Rainaldi also served the Farnese family, designing the Church of SS Maria e Silvestro in Caprarola and the fountains in Piazza Farnese, and worked in Parma and Bologna, where he vaulted San Petronio and designed Santa Lucia. He was appointed Prince of the Academy of St. Luke in 1641 and was buried in the Church of Santi Luca e Martina.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He temporarily eclipsed Bernini when Cardinal Pamphili became Pope Innocent X in 1644.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He designed the vaulting of the vast church of San Petronio in Bologna, a project finished on-site by Francesco Martini.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1570,
+      "month": 5,
+      "day": 4,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1655,
+      "month": 7,
+      "day": 15,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Girolamo_Rainaldi.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Girolamo_Rainaldi.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Girolamo_Rainaldi.jpg/960px-Girolamo_Rainaldi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Girolamo_Rainaldi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 1846,
+    "height": 2472,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Girolamo Rainaldi",
+    "url": "https://en.wikipedia.org/wiki/Girolamo_Rainaldi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-26T00:55:39.084Z"
+  }
+}

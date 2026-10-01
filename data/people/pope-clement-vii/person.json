@@ -1,0 +1,69 @@
+{
+  "id": "pope-clement-vii",
+  "name": "Pope Clement VII",
+  "wikidataId": "Q83159",
+  "wikipediaTitle": "Pope Clement VII",
+  "content": {
+    "description": [
+      {
+        "text": "Giulio di Giuliano de' Medici, later Pope Clement VII, was born on 26 May 1478 in Florence to an illegitimate son of the Medici family. Raised by his influential uncle Lorenzo the Magnificent, he entered the Church and rose rapidly, becoming a cardinal in 1513 and serving as chief advisor to Popes Leo X and Adrian VI before being elected pope in 1523. His papacy coincided with the height of the Protestant Reformation and the Italian Wars, and he struggled to maintain papal authority amid competing European powers.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Clement VII’s reign was marked by dramatic events: the Sack of Rome in 1527, which saw him imprisoned and later escape from Castel Sant’Angelo; his reluctant alliance with Emperor Charles V; and his involvement in the English Reformation, where he refused to annul Henry VIII’s marriage to Catherine of Aragon. Despite these crises, he continued to patronize the arts, commissioning works by Michelangelo, Raphael, and others, and he approved Copernicus’s heliocentric theory in 1533, reflecting his openness to scientific ideas.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "During his six‑month imprisonment after the Sack of Rome, Clement VII grew a full beard as a sign of mourning, a practice that was later adopted by 24 popes and became a lasting fashion trend in the papacy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1533 Clement VII approved Nicolaus Copernicus’s theory that the Earth revolves around the Sun, a decision that predated Galileo’s later trial by more than a century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He commissioned Michelangelo to paint The Last Judgment in the Sistine Chapel, a monumental work that remains one of the most celebrated frescoes in Christian art.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1478,
+      "month": 5,
+      "day": 26,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1534,
+      "month": 9,
+      "day": 25,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "El_papa_Clemente_VII,_por_Sebastiano_del_Piombo.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:El_papa_Clemente_VII%2C_por_Sebastiano_del_Piombo.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/El_papa_Clemente_VII%2C_por_Sebastiano_del_Piombo.jpg/960px-El_papa_Clemente_VII%2C_por_Sebastiano_del_Piombo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/El_papa_Clemente_VII%2C_por_Sebastiano_del_Piombo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Sebastiano del Piombo",
+    "author": "Sebastiano del Piombo",
+    "width": 7351,
+    "height": 8895,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Clement VII",
+    "url": "https://en.wikipedia.org/wiki/Pope_Clement_VII"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-25T23:57:44.193Z"
+  }
+}

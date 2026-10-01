@@ -1,0 +1,69 @@
+{
+  "id": "benvenuto-cellini",
+  "name": "Benvenuto Cellini",
+  "wikidataId": "Q190116",
+  "wikipediaTitle": "Benvenuto Cellini",
+  "content": {
+    "description": [
+      {
+        "text": "Benvenuto Cellini was born in Florence on 3 November 1500 to Giovanni Cellini and Maria Lisabetta Granacci. He was initially drawn to music, but at fifteen he was apprenticed to the goldsmith Antonio di Sandro, nicknamed Marcone. By sixteen he had already made a name for himself in Florence, though a youthful altercation led to a six‑month banishment to Siena, where he worked for the goldsmith Fracastoro. After stints in Bologna and Pisa, he moved to Rome at nineteen, where his silver casket, candlesticks and a vase for the bishop of Salamanca earned him the approval of Pope Clement VII and the patronage of the papal court.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cellini's career was marked by both artistic triumphs and violent episodes. He produced celebrated pieces such as the Cellini Salt Cellar, the bronze Perseus with the Head of Medusa, and a series of medals for the papal mint. His autobiography, begun in 1558, is regarded as one of the most important documents of the sixteenth century for its vivid, candid account of his life, including his numerous altercations, his alleged sodomy charges, and his time in prison. The autobiography was first printed in 1728 and has since been translated into several languages.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Cellini Salt Cellar, a 26‑cm high bronze sculpture known as the Saliera, was stolen from the Kunsthistorisches Museum in 2003 and recovered by Austrian police in 2006.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1544, while living in France, Cellini fathered an illegitimate daughter named Costanza with one of his female models.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cellini was imprisoned in Castel Sant'Angelo on a false charge of embezzling the pope's tiara gems, escaped, was recaptured, and survived an assassination attempt by ingestion of diamond dust.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1500,
+      "month": 11,
+      "day": 3,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1571,
+      "month": 2,
+      "day": 13,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Cellini,_Benvenuto_ÖNB.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Cellini%2C_Benvenuto_%C3%96NB.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Cellini%2C_Benvenuto_%C3%96NB.jpg/960px-Cellini%2C_Benvenuto_%C3%96NB.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Cellini%2C_Benvenuto_%C3%96NB.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Creator:Carlone Giovanni",
+    "author": "Creator:Carlone Giovanni",
+    "width": 2240,
+    "height": 3136,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Benvenuto Cellini",
+    "url": "https://en.wikipedia.org/wiki/Benvenuto_Cellini"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-25T23:58:05.195Z"
+  }
+}

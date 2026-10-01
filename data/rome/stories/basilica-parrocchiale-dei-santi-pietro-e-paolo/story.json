@@ -1,0 +1,120 @@
+{
+  "introduction": {
+    "text": "The Basilica parrocchiale dei Santi Pietro e Paolo, located in Rome's EUR district, is a modern church that exemplifies post‑war Roman architecture and serves as a titular church for the Catholic hierarchy.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-1936",
+        "description": "The site was originally part of the 1936 Fascist scheme to host the World Exhibition in 1942, which never materialised due to World War II.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1936,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1939",
+        "description": "Construction of the church began in 1939 under a committee of architects.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1939,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1955",
+        "description": "The building was completed in 1955.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1955,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1958",
+        "description": "It became a parish church in 1958.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1958,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1965",
+        "description": "The titular title was established on 5 February 1965 by Pope Paul VI.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1965,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "The church is a cube of brown brick with stone trim, featuring a Greek‑cross plan with four gigantic pylons and a hemispherical dome covered in hexagonal tiles.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-1",
+        "description": "The interior contains mosaics of Christ over the main altar, the Madonna and Child in the left chapel, and Francis of Assisi in the right chapel, along with reliefs of the Evangelists.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Pope Paul VI",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Arnaldo Foschini",
+      "personId": "arnaldo-foschini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Alfredo Energici",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Vittorio Grassi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Nello Ena",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Tullio Rossi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Costantino Vetriani",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Franjo Šeper",
+      "personId": "franjo-eper",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ricardo Vidal",
+      "personId": "ricardo-vidal",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pedro Barreto",
+      "personId": "pedro-barreto",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

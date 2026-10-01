@@ -4,6 +4,13 @@ import type { PoiInput, ResolvedPage } from "./types";
 
 const WIKIDATA_API = "https://www.wikidata.org/w/api.php";
 
+export class EnglishWikipediaSourceMissingError extends Error {
+  constructor(poiId: string) {
+    super(`No English Wikipedia page is linked to POI ${poiId}.`);
+    this.name = "EnglishWikipediaSourceMissingError";
+  }
+}
+
 const resolveViaWikidata = async (wikidataId: string): Promise<string | undefined> => {
   const url = new URL(WIKIDATA_API);
   url.searchParams.set("action", "wbgetentities");
@@ -51,7 +58,5 @@ export const resolvePageForPoi = async (poi: PoiInput): Promise<ResolvedPage> =>
     }
   }
 
-  throw new Error(
-    `Unable to resolve an English Wikipedia page for POI ${poi.id}: no valid English Wikipedia tag or Wikidata English sitelink was found.`,
-  );
+  throw new EnglishWikipediaSourceMissingError(poi.id);
 };
