@@ -17,7 +17,7 @@ import type {
   MainImageCandidatesArtifact,
   PoiItem,
 } from "./types";
-import { isPoiRowComplete } from "./isPoiRowComplete";
+import { getPoiRowStatusGroup } from "./getPoiRowStatusGroup";
 
 const toRowKey = (value: string) => value.trim().toLowerCase();
 
@@ -483,13 +483,9 @@ export const loadPoiLists = async () => {
     }
 
     const priority = (row: AdminPoiRow) =>
-      row.sourcePending
-        ? 3
-        : row.lastGenerationRun?.status === "failed" || row.lastGenerationRun?.status === "partial"
-          ? 0
-          : isPoiRowComplete(row)
-            ? 2
-            : 1;
+      ({ "needs-attention": 0, "to-do": 1, complete: 2, "needs-source": 3 })[
+        getPoiRowStatusGroup(row)
+      ];
     rows.sort(
       (left, right) =>
         priority(left) - priority(right) ||
