@@ -12,6 +12,32 @@
       "height": 3852,
       "discoveredVia": "wikidata-p18",
       "isProposed": true
+    },
+    {
+      "commonsFileName": "1991-04-XX_Italien_Rom_Fluss_Tiber_d.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:1991-04-XX_Italien_Rom_Fluss_Tiber_d.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/1991-04-XX_Italien_Rom_Fluss_Tiber_d.jpg/960px-1991-04-XX_Italien_Rom_Fluss_Tiber_d.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/1991-04-XX_Italien_Rom_Fluss_Tiber_d.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Lothar Weber",
+      "author": "Lothar Weber",
+      "width": 3435,
+      "height": 2262,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "1991-04-XX_Italien_Rom_Fluss_Tiber_f.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:1991-04-XX_Italien_Rom_Fluss_Tiber_f.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/1991-04-XX_Italien_Rom_Fluss_Tiber_f.jpg/960px-1991-04-XX_Italien_Rom_Fluss_Tiber_f.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/1991-04-XX_Italien_Rom_Fluss_Tiber_f.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Lothar Weber",
+      "author": "Lothar Weber",
+      "width": 3436,
+      "height": 2266,
+      "discoveredVia": "commons-category",
+      "isProposed": false
     }
   ],
   "selectedCommonsFileName": "Castel_Sant'Angelo_at_Night.jpg"

@@ -6,6 +6,7 @@ import { SubmitButton } from "../SubmitButton";
 import { ArtifactViewButton } from "./ArtifactViewButton";
 import { CellContent } from "./CellContent";
 import { CellFooter } from "./CellFooter";
+import { GenerationErrorDetails } from "./GenerationErrorDetails";
 import { MainImageCellPreview, getSelectedMainImageCandidate } from "./MainImageCellPreview";
 import { PipelineCell } from "./PipelineCell";
 import type { ActionCellProps } from "./RowTypes";
@@ -42,14 +43,12 @@ export const MainImageCell = ({
   onSelectPanel,
   runSingleAction,
 }: ActionCellProps) => (
-  <PipelineCell
-    available={Boolean(getSelectedMainImageCandidate(row.mainImageArtifact))}
-    inProgress={isInProgress}
-  >
+  <PipelineCell inProgress={isInProgress}>
     <div className="flex min-w-0 items-start gap-3">
       <MainImageCellPreview artifact={row.mainImageArtifact} />
       <CellContent
-        title={getMainImageStatus(row.mainImageArtifact)}
+        title={row.sourcePending ? "Waiting for source" : getMainImageStatus(row.mainImageArtifact)}
+        titleTone={row.sourcePending ? "warning" : "status"}
         subtitle={
           row.mainImageArtifact
             ? `${row.mainImageArtifact.candidates.length} candidate${
@@ -60,6 +59,11 @@ export const MainImageCell = ({
         isAvailable={Boolean(getSelectedMainImageCandidate(row.mainImageArtifact))}
       />
     </div>
+    <GenerationErrorDetails
+      errors={(row.generationErrors ?? []).filter(({ stage }) => stage === "mainImageCandidates")}
+      label="Image errors"
+      latestOnly
+    />
     <CellFooter
       updatedAt={row.mainImageUpdatedAt}
       generationDuration={row.mainImageGenerationDuration}
@@ -111,7 +115,7 @@ export const MainImageCell = ({
             />
           </form>
         </div>
-      ) : row.transformedPoi ? (
+      ) : row.transformedPoi && !row.sourcePending ? (
         <form
           action={(formData) =>
             runSingleAction(

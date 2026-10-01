@@ -8,9 +8,9 @@ import { transformRawPoiFeature } from "./transformRawPoiFeature";
 const temporaryDirectories: string[] = [];
 
 afterEach(() => {
-  temporaryDirectories.splice(0).forEach((directory) =>
-    rmSync(directory, { recursive: true, force: true }),
-  );
+  temporaryDirectories
+    .splice(0)
+    .forEach((directory) => rmSync(directory, { recursive: true, force: true }));
 });
 
 describe("findPoiInGeoJson", () => {
@@ -29,6 +29,7 @@ describe("findPoiInGeoJson", () => {
                 name: "Piazza Navona",
                 wikidata: "Q463400",
                 wikipedia: "it:Piazza Navona",
+                wikimedia_commons: "Category:Piazza Navona",
               },
               geometry: {
                 type: "Point",
@@ -44,6 +45,7 @@ describe("findPoiInGeoJson", () => {
     expect(findPoiInGeoJson(inputPath, "piazza-navona", "rome").sourceHints).toEqual({
       wikipedia: "it:Piazza Navona",
       wikidata: "Q463400",
+      wikimediaCommons: "Category:Piazza Navona",
     });
   });
 });

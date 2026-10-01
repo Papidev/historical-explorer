@@ -38,9 +38,9 @@ export const createStoryWorkflowForCity = (city: string) =>
         },
       ];
     },
-    generateMainImageCandidates: async (pointOfInterest) => {
+    generateMainImageCandidates: async (pointOfInterest, wikipediaTitle) => {
       console.info(`[wiki-images] Generating Main Image Candidates for ${pointOfInterest.id}.`);
-      return fetchMainImageCandidates(pointOfInterest);
+      return fetchMainImageCandidates(pointOfInterest, wikipediaTitle);
     },
     generateStoryContent: async ({ pointOfInterest, sources, ai }) => {
       const provider =

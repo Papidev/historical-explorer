@@ -3,6 +3,7 @@ import { mkdtempSync, rmSync, unlinkSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import type { MainImageCandidate, PoiInput } from "@/server/wikiPipeline/types";
+import { EnglishWikipediaSourceMissingError } from "@/server/wikiPipeline/resolve";
 import {
   createStoryWorkflow,
   type StoryWorkflowDependencies,
@@ -11,6 +12,7 @@ import {
 import type { DraftStorySnapshot } from "./types";
 import type { StoryContent } from "./storyContent";
 import { createFilesystemStoryWorkflowRepository } from "./filesystemRepository";
+import { readGenerationMetadata } from "@/server/generationMetadata";
 
 const pointOfInterest: PoiInput = {
   id: "forum-boarium",
@@ -52,6 +54,7 @@ const candidate = (commonsFileName: string, metadata = true): MainImageCandidate
 
 const createMemoryRepository = () => {
   const snapshots = new Map<string, DraftStorySnapshot>();
+  const missingSources = new Set<string>();
   const getOrCreate = (poiId: string) => {
     const current = snapshots.get(poiId) ?? {
       poiId,
@@ -68,6 +71,7 @@ const createMemoryRepository = () => {
       return snapshot ? structuredClone(snapshot) : undefined;
     },
     replaceSources: async (poiId, sources, checkpoint) => {
+      missingSources.delete(poiId);
       const snapshot = getOrCreate(poiId);
       snapshot.sources = structuredClone(sources);
       snapshot.generation.sources = checkpoint;
@@ -108,15 +112,17 @@ const createMemoryRepository = () => {
         delete snapshot.generation.mainImageCandidates;
       }
     },
-    reset: async (poiId) => {
+    reset: async (poiId, sourceMissing) => {
       snapshots.delete(poiId);
+      if (sourceMissing) missingSources.add(poiId);
+      else missingSources.delete(poiId);
     },
   };
-  return { repository, snapshots };
+  return { repository, snapshots, missingSources };
 };
 
 const createDependencies = (overrides: Partial<StoryWorkflowDependencies> = {}) => {
-  const { repository, snapshots } = createMemoryRepository();
+  const { repository, snapshots, missingSources } = createMemoryRepository();
   return {
     dependencies: {
       findPointOfInterest: async (poiId) =>
@@ -134,18 +140,21 @@ const createDependencies = (overrides: Partial<StoryWorkflowDependencies> = {}) 
     } satisfies StoryWorkflowDependencies,
     repository,
     snapshots,
+    missingSources,
   };
 };
 
 describe("Story Workflow Interface", () => {
   it("owns the full generation order and returns a stable domain result", async () => {
     const order: string[] = [];
+    const imageSourceTitles: Array<string | undefined> = [];
     const { dependencies } = createDependencies({
       acquireSources: async () => {
         order.push("sources");
         return [{ ...source, content: "Source" }];
       },
-      generateMainImageCandidates: async () => {
+      generateMainImageCandidates: async (_poi, wikipediaTitle) => {
+        imageSourceTitles.push(wikipediaTitle);
         order.push("mainImageCandidates");
         return [candidate("first.jpg")];
       },
@@ -173,6 +182,58 @@ describe("Story Workflow Interface", () => {
       relatedPeopleFailures: [],
     });
     expect(order).toEqual(["sources", "mainImageCandidates", "storyContent", "people:qwen3:8b"]);
+    expect(imageSourceTitles).toEqual(["Forum Boarium"]);
+  });
+
+  it("resolves the Wikipedia Source again on full refresh", async () => {
+    const previousSources: Array<string | undefined> = [];
+    let sourceTitle = "First page";
+    const { dependencies, repository } = createDependencies({
+      acquireSources: async (_poi, previous) => {
+        previousSources.push(previous?.[0]?.title);
+        return [{ ...source, title: sourceTitle }];
+      },
+    });
+    const workflow = createStoryWorkflow(dependencies);
+
+    await workflow.draftStory.generate({
+      poiId: pointOfInterest.id,
+      ai: { mode: "local", model: "qwen3:8b" },
+    });
+    sourceTitle = "Updated page";
+    await workflow.draftStory.generate({
+      poiId: pointOfInterest.id,
+      ai: { mode: "local", model: "qwen3:8b" },
+    });
+
+    expect(previousSources).toEqual([undefined, undefined]);
+    expect((await repository.get(pointOfInterest.id))?.sources[0]?.title).toBe("Updated page");
+  });
+
+  it("clears stale Story and Image artifacts when the POI has no English Wikipedia source", async () => {
+    let sourceMissing = false;
+    const { dependencies, repository, missingSources } = createDependencies({
+      acquireSources: async () => {
+        if (sourceMissing) throw new EnglishWikipediaSourceMissingError(pointOfInterest.id);
+        return [source];
+      },
+    });
+    const workflow = createStoryWorkflow(dependencies);
+    await workflow.draftStory.generate({
+      poiId: pointOfInterest.id,
+      ai: { mode: "local", model: "qwen3:8b" },
+    });
+    expect((await repository.get(pointOfInterest.id))?.storyContent).toBeDefined();
+
+    sourceMissing = true;
+    await expect(
+      workflow.draftStory.generate({
+        poiId: pointOfInterest.id,
+        ai: { mode: "local", model: "qwen3:8b" },
+      }),
+    ).rejects.toMatchObject({ code: "source-not-found", stage: "sources", retryable: false });
+    expect(await repository.get(pointOfInterest.id)).toBeUndefined();
+    expect(missingSources.has(pointOfInterest.id)).toBe(true);
   });
 
   it("stops before downstream work when Sources are unavailable", async () => {
@@ -222,6 +283,7 @@ describe("Story Workflow Interface", () => {
     ).resolves.toEqual({
       poiId: pointOfInterest.id,
       mainImageCandidates: "failed",
+      mainImageCandidatesError: "main-image-candidates-generation-failed: Commons unavailable",
       draftMainImage: "missing",
       storyContent: "generated",
       relatedPeople: "resolved",
@@ -417,6 +479,7 @@ describe("Story Workflow Interface", () => {
     let content = storyContent("First structured story.");
     let currentSource = source;
     const previousSourceContents: Array<string | undefined> = [];
+    const imageSourceTitles: Array<string | undefined> = [];
     let candidates = [candidate("first.jpg")];
     let failContent = false;
     let failCandidates = false;
@@ -429,7 +492,8 @@ describe("Story Workflow Interface", () => {
         if (failContent) throw new Error("AI unavailable");
         return { content, provider: "ollama" };
       },
-      generateMainImageCandidates: async () => {
+      generateMainImageCandidates: async (_poi, wikipediaTitle) => {
+        imageSourceTitles.push(wikipediaTitle);
         if (failCandidates) throw new Error("Commons unavailable");
         return candidates;
       },
@@ -472,6 +536,7 @@ describe("Story Workflow Interface", () => {
       mainImageCandidates: [{ commonsFileName: "replacement.jpg" }],
     });
     expect(previousSourceContents).toEqual([undefined, "Source version one", "Source version two"]);
+    expect(imageSourceTitles).toEqual(["Forum Boarium", "Forum Boarium", "Forum Boarium"]);
   });
 
   it("preserves an eligible Draft Main Image and otherwise selects the first eligible candidate", async () => {
@@ -594,6 +659,15 @@ describe("Story Workflow Interface", () => {
 
       await workflow.draftStory.reset({ poiId: pointOfInterest.id });
       await expect(workflow.draftStory.get({ poiId: pointOfInterest.id })).resolves.toBeUndefined();
+
+      const repository = createFilesystemStoryWorkflowRepository("rome");
+      await repository.reset(pointOfInterest.id, true);
+      expect(readGenerationMetadata("rome")[pointOfInterest.id]?.sourceMissing).toBe(true);
+      await repository.replaceSources(pointOfInterest.id, [source], {
+        durationMs: 1,
+        completedAt: "2026-08-22T10:00:00.000Z",
+      });
+      expect(readGenerationMetadata("rome")[pointOfInterest.id]?.sourceMissing).toBeUndefined();
     } finally {
       process.chdir(originalWorkingDirectory);
       rmSync(temporaryDirectory, { recursive: true, force: true });

@@ -1,0 +1,69 @@
+{
+  "id": "hadrian",
+  "name": "Hadrian",
+  "wikidataId": "Q1427",
+  "wikipediaTitle": "Hadrian",
+  "content": {
+    "description": [
+      {
+        "text": "Publius Aelius Hadrianus was born on 24 January 76 in Italica, a Roman town in Hispania Baetica, and became emperor in 117 after the death of Trajan. He was a member of the Nerva–Antonine dynasty, married Vibia Sabina, and is best known for his extensive travels and ambitious building projects, including the construction of Hadrian's Wall in Britain, the rebuilding of the Pantheon in Rome, and the erection of the Temple of Venus and Roma.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his twenty‑one‑year reign, Hadrian shifted Rome’s policy from expansion to consolidation, abandoning Trajan’s eastern conquests and focusing on stabilising borders. He suppressed the Bar Kokhba revolt in Judea, promoted Greek culture, and founded the city of Antinoöpolis in Egypt after the death of his beloved Antinous. He died on 10 July 138 at Baiae and was deified by his successor Antoninus Pius.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Hadrian personally oversaw the construction of Hadrian's Wall, a massive fortification that marked the northern limit of the Roman province of Britannia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He completed the reconstruction of the Pantheon in Rome, giving the building its iconic dome that still stands today.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the drowning of his lover Antinous in the Nile, Hadrian founded the city of Antinoöpolis in Egypt to honor him and established a cult around the young man.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 76,
+      "month": 1,
+      "day": 24,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 138,
+      "month": 7,
+      "day": 10,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Bust_Hadrian_Musei_Capitolini_MC817.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Bust_Hadrian_Musei_Capitolini_MC817.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Bust_Hadrian_Musei_Capitolini_MC817.jpg/960px-Bust_Hadrian_Musei_Capitolini_MC817.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Bust_Hadrian_Musei_Capitolini_MC817.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Marie-Lan Nguyen",
+    "author": "Marie-Lan Nguyen",
+    "width": 1700,
+    "height": 2125,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Hadrian",
+    "url": "https://en.wikipedia.org/wiki/Hadrian"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-25T23:56:36.166Z"
+  }
+}

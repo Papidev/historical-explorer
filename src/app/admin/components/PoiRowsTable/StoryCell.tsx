@@ -5,6 +5,7 @@ import { SubmitButton } from "../SubmitButton";
 import { ArtifactViewButton } from "./ArtifactViewButton";
 import { CellContent } from "./CellContent";
 import { CellFooter } from "./CellFooter";
+import { GenerationErrorDetails } from "./GenerationErrorDetails";
 import { PipelineCell } from "./PipelineCell";
 import { RelatedPeopleControl } from "./RelatedPeopleControl";
 import type { ActionCellProps } from "./RowTypes";
@@ -21,8 +22,10 @@ export const StoryCell = ({
 }: ActionCellProps & {
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => (
-  <PipelineCell available={Boolean(row.storyContent)} inProgress={isInProgress}>
+  <PipelineCell inProgress={isInProgress}>
     <CellContent
+      title={row.sourcePending ? "Waiting for source" : undefined}
+      titleTone={row.sourcePending ? "warning" : "status"}
       generationModel={[
         row.storyContentGenerationMode,
         row.storyContentGenerationProvider,
@@ -31,6 +34,11 @@ export const StoryCell = ({
         .filter(Boolean)
         .join(" / ")}
       isAvailable={Boolean(row.storyContent)}
+    />
+    <GenerationErrorDetails
+      errors={(row.generationErrors ?? []).filter(({ stage }) => stage === "storyContent")}
+      label="Story errors"
+      latestOnly
     />
     <RelatedPeopleControl
       row={row}

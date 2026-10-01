@@ -6,7 +6,7 @@ import { PipelineCell } from "./PipelineCell";
 import type { CellProps } from "./RowTypes";
 
 export const PoiCell = ({ row, isInProgress, onSelectPanel }: CellProps) => (
-  <PipelineCell available={Boolean(row.transformedPoi)} inProgress={isInProgress}>
+  <PipelineCell inProgress={isInProgress}>
     <CellContent subtitle={row.transformedPoi?.id} isAvailable={Boolean(row.transformedPoi)} />
     <CellFooter
       updatedAt={row.transformedUpdatedAt}

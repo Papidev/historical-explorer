@@ -1,0 +1,65 @@
+{
+  "id": "giacomo-della-porta",
+  "name": "Giacomo della Porta",
+  "wikidataId": "Q175566",
+  "wikipediaTitle": "Giacomo della Porta",
+  "content": {
+    "description": [
+      {
+        "text": "Giacomo della Porta was born in 1533 in Genoa or Porlezza, Italy, into a family of sculptors. He began his career as a sculptor in his uncle Bartolomeo's workshop in 1559, creating statues for the Cybo family in Genoa Cathedral. By 1560 he had shifted to architecture, designing the portal of the Vigna Grimani on the Quirinale and later collaborating with Guidetto Guidetti on the Oratory of Santissimo Crocifisso in Rome, where his style—rooted in Michelangelo’s Mannerism and Vignola’s Classicism—first emerged.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1564 he was elected Architetto del Popolo Romano, a position that made him the chief architect for Rome’s public works. Under this title he completed Michelangelo’s unfinished projects on the Capitoline Hill, oversaw the façade of the Palazzo dei Conservatori, and redesigned the Cordonata. He also designed the façade of Il Gesù, chosen over Vignola’s proposal, and contributed to the dome of St. Peter’s Basilica by simplifying its curvature and adding structural chains. His work on numerous fountains, including the Fontana delle Tartarughe in Piazza Navona, further cemented his reputation as a versatile architect and sculptor.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was elected Architetto del Popolo Romano in 1564, a title that granted him authority over Rome’s public architecture.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His design for the façade of Il Gesù, selected over Vignola’s, introduced a new vertical emphasis that influenced later Baroque façades.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He modified Michelangelo’s original dome design for St. Peter’s by steepening the curvature and inserting masonry chains, which helped the dome survive the 1703 earthquake.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1533,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1602,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Giovanni_Battista_della_Porta._Line_engraving,_1688._Wellcome_V0004749.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Giovanni_Battista_della_Porta._Line_engraving%2C_1688._Wellcome_V0004749.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Giovanni_Battista_della_Porta._Line_engraving%2C_1688._Wellcome_V0004749.jpg/960px-Giovanni_Battista_della_Porta._Line_engraving%2C_1688._Wellcome_V0004749.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Giovanni_Battista_della_Porta._Line_engraving%2C_1688._Wellcome_V0004749.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 4.0",
+    "attribution": "https://wellcomeimages.org/indexplus/obf_images/5d/aa/a289f1a58308e4157c80e8d4e21b.jpg Gallery: https://wellcomeimages.org/indexplus/image/V0004749.html Wellcome Collection gallery (2018-03-29): https://wellcomecollection.org/works/q5m6mfh7 CC-BY-4.0",
+    "author": "https://wellcomeimages.org/indexplus/obf_images/5d/aa/a289f1a58308e4157c80e8d4e21b.jpg Gallery: https://wellcomeimages.org/indexplus/image/V0004749.html Wellcome Collection gallery (2018-03-29): https://wellcomecollection.org/works/q5m6mfh7 CC-BY-4.0",
+    "width": 2100,
+    "height": 3485,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giacomo della Porta",
+    "url": "https://en.wikipedia.org/wiki/Giacomo_della_Porta"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-26T00:55:27.595Z"
+  }
+}

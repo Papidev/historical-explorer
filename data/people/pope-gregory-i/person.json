@@ -1,0 +1,75 @@
+{
+  "id": "pope-gregory-i",
+  "name": "Pope Gregory I",
+  "wikidataId": "Q42827",
+  "wikipediaTitle": "Pope Gregory I",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Gregory I, born around 540 in Rome, came from a wealthy senatorial family. His father Gordianus served as a senator and later as prefect of Rome, and Gregory himself became prefect at a young age. He turned his family villa on the Caelian Hill into a monastery dedicated to Saint Andrew, where he lived a contemplative life before being called to serve as the papal ambassador to Constantinople in 579. During his diplomatic mission he sought aid for Rome against the Lombards, but the Byzantine emperor Maurice was preoccupied with eastern wars, so Gregory returned to Rome in 585 and was elected pope in 590.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As pope, Gregory revitalised the Church’s missionary activity, sending Augustine of Canterbury and Paulinus of York to evangelise the Anglo‑Saxons. He also re‑ordered the Roman liturgy, moving the Lord’s Prayer to follow the Canon and adding the nine Kyries, earning him the title “Father of Christian Worship.” His prolific writings—most notably the Dialogues, Moralia in Job, and Pastoral Care—remain the most extensive surviving corpus of a medieval pope, and his administrative reforms established a systematic system of alms for Rome’s poor. Gregory’s influence extended into Eastern Christianity, where he is credited with shaping the Divine Liturgy of the Presanctified Gifts, and he was canonised by popular acclaim immediately after his death on 12 March 604.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the first pope to use the title “Servant of the Servants of God” as a papal title, a practice that has been followed by most subsequent popes.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Gregory is credited with influencing the Divine Liturgy of the Presanctified Gifts, a form of the Eastern Orthodox liturgy that is still used during Great Lent.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was canonised by popular acclaim immediately after his death, a rare honour that reflected his widespread veneration.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Because of his extensive liturgical reforms, he earned the title “Father of Christian Worship” in the Western Church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Gregory sent the Gregorian mission to England, which led to the conversion of the Anglo‑Saxons and laid the foundations for Christianity in Britain.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 540,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 604,
+      "month": 3,
+      "day": 12,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_Gregory_I_illustration.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Gregory_I_illustration.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Pope_Gregory_I_illustration.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Pope_Gregory_I_illustration.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "anonymous",
+    "author": "anonymous",
+    "width": 530,
+    "height": 727,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Gregory I",
+    "url": "https://en.wikipedia.org/wiki/Pope_Gregory_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-26T00:59:14.493Z"
+  }
+}

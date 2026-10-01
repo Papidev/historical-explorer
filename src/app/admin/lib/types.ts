@@ -9,6 +9,7 @@ export type AdminActionWarning = {
 
 export type AdminActionResult = {
   warning?: AdminActionWarning;
+  failedSteps?: string[];
 };
 
 export type AdminAction = (formData: FormData) => Promise<AdminActionResult | void>;
@@ -40,7 +41,7 @@ export type MainImageCandidate = {
   author?: string;
   width?: number;
   height?: number;
-  discoveredVia: "wikidata-p18" | "wikipedia-page-image";
+  discoveredVia: "wikidata-p18" | "wikipedia-page-image" | "commons-category";
   isProposed: boolean;
 };
 
@@ -74,8 +75,23 @@ export type AdminPoiArtifacts = {
   relatedPeople: RelatedPersonArtifacts[];
 };
 
+export type GenerationError = {
+  at: string;
+  operation: string;
+  stage: string;
+  message: string;
+  name?: string;
+};
+
 export type AdminPoiRow = {
   id: string;
+  sourcePending?: boolean;
+  lastGenerationRun?: {
+    operation: string;
+    status: "success" | "partial" | "failed" | "incomplete" | "needs-source";
+    at: string;
+  };
+  generationErrors?: GenerationError[];
   rawPoi?: PoiItem;
   transformedPoi?: PoiItem;
   wikiPoi?: PoiItem;

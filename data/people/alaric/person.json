@@ -1,0 +1,65 @@
+{
+  "id": "alaric",
+  "name": "Alaric",
+  "wikidataId": "Q102371",
+  "wikipediaTitle": "Alaric I",
+  "content": {
+    "description": [
+      {
+        "text": "Alaric I, born around 370 AD, rose from a background of Gothic federates in the Balkans to become the first king of the Visigoths.  After serving under the Gothic soldier Gainas and later joining the Roman army, he helped defeat the Frankish usurper Arbogast at the Battle of Frigidus in 394.  With the death of Emperor Theodosius in 395, Alaric was described by contemporary historians as king of the Visigoths, leading the only effective field force remaining in the Balkans and seeking Roman legitimacy while never fully satisfying either side.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Alaric’s most infamous act was the sack of Rome in 410, a three‑day assault that shocked the Western Roman Empire and marked a symbolic turning point in its decline.  After a series of invasions and negotiations with the Western emperor Honorius, Alaric finally entered the city, looted its wealth, and took the imperial sister Galla Placidia captive.  He died of fever in early 411 while returning northward through Italy, and his body was reportedly buried beneath the riverbed of the Busento in accordance with Visigothic custom.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Alaric was known by the epithet *Alarīks*, meaning 'ruler of all', a title that reflected his ambition to lead the Goths beyond mere federate status.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first king of the Visigoths, a title he held from 395 until his death in 411, establishing a precedent for subsequent Gothic monarchs.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Alaric’s death in 411 was caused by fever, and legend holds that his body was interred under the Busento River, a burial practice typical of the Visigothic people.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 370,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 411,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "02-ALARICO.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:02-ALARICO.JPG",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d9/02-ALARICO.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d9/02-ALARICO.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Upload by Basilio",
+    "author": "Upload by Basilio",
+    "width": 570,
+    "height": 837,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Alaric I",
+    "url": "https://en.wikipedia.org/wiki/Alaric_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-25T23:58:40.419Z"
+  }
+}

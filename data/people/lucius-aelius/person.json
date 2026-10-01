@@ -1,0 +1,73 @@
+{
+  "id": "lucius-aelius",
+  "name": "Lucius Aelius",
+  "wikidataId": "Q455034",
+  "wikipediaTitle": "Lucius Aelius Caesar",
+  "content": {
+    "description": [
+      {
+        "text": "Lucius Aelius Caesar was born on 13 January 101 as Lucius Ceionius Commodus, a member of the senatorial gens Ceionia whose ancestors traced their roots to Etruria. His father, also named Lucius Ceionius Commodus, served as consul in 106, and his paternal grandfather held the same office in 78, placing the family firmly within Rome’s elite. Aelius’s mother is believed to have been an unnamed Roman woman named Plautia, and his maternal lineage was likewise of consular rank according to the Historia Augusta.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 136, the reigning emperor Hadrian, after a near‑fatal haemorrhage, chose Aelius as his successor and adopted him as his son, thereby naming him heir to the throne. The decision was made against the wishes of many, including Hadrian’s former favourite, Lucius Julius Ursus Servianus, and led to the eventual deaths of Servianus and his grandson Salinator. Aelius’s adoption was short‑lived; he died of a haemorrhage on 1 January 138, before Hadrian’s own death, and was succeeded by Antoninus Pius.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Aelius was the father of Lucius Verus, who later co‑ruled the Roman Empire with Marcus Aurelius from 161 to 169.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was married to Avidia, daughter of senator Gaius Avidius Nigrinus, and together they had at least one son and two daughters.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Hadrian’s sudden change of heir from Servianus to Aelius in 136 was reportedly made while he was convalescent at his villa in Tivoli, and the adoption was described as being made “against the wishes of everyone.”",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Aelius’s death was caused by a haemorrhage, the same type of illness that had nearly killed Hadrian a year earlier.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 101,
+      "month": 1,
+      "day": 13,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 138,
+      "month": 1,
+      "day": 1,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Portrait_Lucius_Aelius_Louvre_Ma1167.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Portrait_Lucius_Aelius_Louvre_Ma1167.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Portrait_Lucius_Aelius_Louvre_Ma1167.jpg/960px-Portrait_Lucius_Aelius_Louvre_Ma1167.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Portrait_Lucius_Aelius_Louvre_Ma1167.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 2.5",
+    "attribution": "Jastrow (2008)",
+    "author": "Jastrow (2008)",
+    "width": 2200,
+    "height": 3333,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Lucius Aelius Caesar",
+    "url": "https://en.wikipedia.org/wiki/Lucius_Aelius_Caesar"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-25T23:57:10.241Z"
+  }
+}

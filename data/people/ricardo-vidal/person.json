@@ -1,0 +1,73 @@
+{
+  "id": "ricardo-vidal",
+  "name": "Ricardo Vidal",
+  "wikidataId": "Q532830",
+  "wikipediaTitle": "Ricardo Vidal",
+  "content": {
+    "description": [
+      {
+        "text": "Ricardo Tito Jamin Vidal was born on 6 February 1931 in Mogpog, Marinduque, Philippines, and entered the priesthood in 1956 after studying philosophy and theology at several seminaries in the country. He rose through the ranks of the Catholic hierarchy, becoming coadjutor bishop of Malolos in 1971, archbishop of Lipa in 1973, and archbishop of Cebu in 1982, where he served until 2010.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Elevated to the College of Cardinals by Pope John Paul II in 1985, Vidal became a key figure in the Philippine Church, presiding over the Catholic Bishops' Conference and participating in numerous synods. He was instrumental in the People Power movements of 1986 and 2001, using his influence to encourage peaceful transitions of power and to avert potential military coups.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Vidal was the only Filipino cardinal to serve as a cardinal elector in the 2005 papal conclave that elected Pope Benedict XVI.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1989 he persuaded General Jose Comendador to surrender peacefully, preventing a violent coup against President Corazon Aquino.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the 2001 People Power Revolution he convinced President Joseph Estrada to step down, later helping secure Estrada’s pardon in 2007.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Philippine Senate honored him with Resolution NO. 306 in 2010 for his service to Cebu and his role in averting crises, and he received the Order of Lapu‑Lapu from the Province of Cebu.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1931,
+      "month": 2,
+      "day": 6,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 2017,
+      "month": 10,
+      "day": 18,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Ricardo_Cardinal_Vidal.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ricardo_Cardinal_Vidal.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Ricardo_Cardinal_Vidal.jpg/960px-Ricardo_Cardinal_Vidal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Ricardo_Cardinal_Vidal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "GallifreyanBombadil",
+    "author": "GallifreyanBombadil",
+    "width": 1024,
+    "height": 1536,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": false
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Ricardo Vidal",
+    "url": "https://en.wikipedia.org/wiki/Ricardo_Vidal"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-26T00:03:34.300Z"
+  }
+}

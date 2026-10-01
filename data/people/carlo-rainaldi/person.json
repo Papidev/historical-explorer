@@ -1,0 +1,69 @@
+{
+  "id": "carlo-rainaldi",
+  "name": "Carlo Rainaldi",
+  "wikidataId": "Q372066",
+  "wikipediaTitle": "Carlo Rainaldi",
+  "content": {
+    "description": [
+      {
+        "text": "Carlo Rainaldi was born on 4 May 1611 in Rome, the son of the late Mannerist architect Girolamo Rainaldi. After his father's death, he fully embraced the monumental Baroque style that was sweeping Rome in the mid‑seventeenth century. Rainaldi’s talent quickly earned him a prominent position in the city, especially as the Barberini papacy of Pope Urban VIII gave way to the more austere Pamphilj papacy of Innocent X, a transition that opened new commissions for architects who could deliver grandeur and restraint in equal measure.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Rainaldi’s architectural legacy is most evident in the facades he designed for some of Rome’s most celebrated churches, including Sant’Andrea della Valle (1661–1665), San Girolamo della Carità (1657), Santa Maria dei Miracoli, Santa Maria in Montesanto, and Santa Maria in Campitelli (1663–1667). He also worked on the high altar of Santa Maria della Scala and attempted the facade of Sant’Agnese in Agone, though he was unable to complete it during 1653–1657. Beyond stone, Rainaldi was a versatile designer: he created elaborate stage sets for the Quarant’ore devotion in Il Gesù, designed a catafalque for the death of Philip IV of Spain in 1665, and was known to compose music.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Rainaldi’s work extended beyond architecture; he designed the elaborate stage sets for the Quarant’ore, or Forty Hours Devotion, held in the church of Il Gesù in 1650.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1665, he designed a catafalque commemorating the death of Philip IV of Spain, showcasing his skill in creating monumental funerary art.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Rainaldi was also a composer, indicating his artistic talents were not limited to the visual arts.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1611,
+      "month": 5,
+      "day": 4,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1691,
+      "month": 2,
+      "day": 8,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Apse_of_Santa_Maria_Maggiore.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Apse_of_Santa_Maria_Maggiore.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Apse_of_Santa_Maria_Maggiore.jpg/960px-Apse_of_Santa_Maria_Maggiore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Apse_of_Santa_Maria_Maggiore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 4.0",
+    "attribution": "Basilica Santa Maria Maggiore",
+    "author": "Basilica Santa Maria Maggiore",
+    "width": 8489,
+    "height": 5729,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Carlo Rainaldi",
+    "url": "https://en.wikipedia.org/wiki/Carlo_Rainaldi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-26T00:55:49.400Z"
+  }
+}

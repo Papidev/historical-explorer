@@ -9,6 +9,7 @@ import {
 import path from "node:path";
 import {
   deleteGenerationCheckpoints,
+  markSourceMissing,
   readGenerationMetadata,
   replaceGenerationCheckpoint,
 } from "@/server/generationMetadata";
@@ -39,9 +40,7 @@ const deleteFile = (filePath: string) => {
   }
 };
 
-export const createFilesystemStoryWorkflowRepository = (
-  city: string,
-): StoryWorkflowRepository => ({
+export const createFilesystemStoryWorkflowRepository = (city: string): StoryWorkflowRepository => ({
   get: async (poiId) => {
     const sourceFilePath = buildOutputFilePath(getDefaultOutputDir(city), poiId);
     const sourceMetadataFilePath = buildSourceMetadataFilePath(getDefaultOutputDir(city), poiId);
@@ -154,12 +153,13 @@ export const createFilesystemStoryWorkflowRepository = (
     deleteFile(buildMainImageCandidateArtifactFilePath(city, poiId));
     deleteGenerationCheckpoints(city, poiId, ["image"]);
   },
-  reset: async (poiId) => {
+  reset: async (poiId, sourceMissing) => {
     deleteFile(buildOutputFilePath(getDefaultOutputDir(city), poiId));
     deleteFile(buildSourceMetadataFilePath(getDefaultOutputDir(city), poiId));
     deleteFile(buildStoryContentFilePath(city, poiId));
     deleteFile(buildMainImageCandidateArtifactFilePath(city, poiId));
     deleteGenerationCheckpoints(city, poiId, ["wiki", "storyContent", "relatedPeople", "image"]);
+    if (sourceMissing) markSourceMissing(city, poiId);
   },
 });
 

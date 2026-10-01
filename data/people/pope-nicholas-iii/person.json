@@ -1,0 +1,67 @@
+{
+  "id": "pope-nicholas-iii",
+  "name": "Pope Nicholas III",
+  "wikidataId": "Q170859",
+  "wikipediaTitle": "Pope Nicholas III",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Gaetano Orsini, later Pope Nicholas III, was born around 1225 in Rome as the eldest son of Matteo Rosso Orsini, a powerful Roman nobleman.  He entered the Church and served under eight popes, becoming a cardinal‑deacon in 1244, protector of the Franciscans, and inquisitor‑general before being elected pope in a conclave that began in September 1277 and ended on 25 November 1277.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As pope, Nicholas III strengthened the papal position in Italy, negotiated a concordat with Rudolf I of Habsburg, and issued a constitution that forbade foreigners from holding civil office in Rome.  He focused on the Franciscan order, issuing the bull *Exiit qui seminat* in 1279, and was notorious for elevating close relatives to the cardinalate—an act of nepotism that drew criticism from contemporaries and from Dante, who condemned him in the *Inferno*.  He died suddenly on 22 August 1280 at his country retreat in Castro Soriano.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Nicholas III was a cardinal for over three decades before becoming pope, having been created a cardinal‑deacon by Pope Innocent IV in 1244.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was condemned by Dante Alighieri in the *Inferno* to the Third Bolgia of the Eighth Circle of Hell for simony, the practice of buying ecclesiastical offices.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his papacy he elevated three of his close relatives to the cardinalate, a practice that earned him the nickname “little bears” (orsetti) in contemporary cartoons and was later lampooned by Dante.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1225,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1280,
+      "month": 8,
+      "day": 22,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Scuola_romana,_affreschi_del_sancta_sanctorum,_1280_ca.,_Niccolò_III_dona_la_chiesa_ai_ss._pietro_e_paolo_03_(cropped)_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Scuola_romana%2C_affreschi_del_sancta_sanctorum%2C_1280_ca.%2C_Niccol%C3%B2_III_dona_la_chiesa_ai_ss._pietro_e_paolo_03_(cropped)_(cropped).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Scuola_romana%2C_affreschi_del_sancta_sanctorum%2C_1280_ca.%2C_Niccol%C3%B2_III_dona_la_chiesa_ai_ss._pietro_e_paolo_03_%28cropped%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Scuola_romana%2C_affreschi_del_sancta_sanctorum%2C_1280_ca.%2C_Niccol%C3%B2_III_dona_la_chiesa_ai_ss._pietro_e_paolo_03_%28cropped%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0",
+    "attribution": "Sailko",
+    "author": "Sailko",
+    "width": 571,
+    "height": 993,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Nicholas III",
+    "url": "https://en.wikipedia.org/wiki/Pope_Nicholas_III"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-25T23:57:34.162Z"
+  }
+}

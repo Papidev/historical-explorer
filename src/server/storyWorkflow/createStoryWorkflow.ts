@@ -1,4 +1,5 @@
 import type { MainImageCandidate, PoiInput } from "@/server/wikiPipeline/types";
+import { EnglishWikipediaSourceMissingError } from "@/server/wikiPipeline/resolve";
 import type { StoryContent } from "./storyContent";
 import {
   StoryWorkflowError,
@@ -32,13 +33,16 @@ export type StoryWorkflowRepository = {
   selectDraftMainImage(poiId: string, commonsFileName: string): Promise<void>;
   deleteStoryContent(poiId: string): Promise<void>;
   deleteMainImageCandidates(poiId: string): Promise<void>;
-  reset(poiId: string): Promise<void>;
+  reset(poiId: string, sourceMissing?: boolean): Promise<void>;
 };
 
 export type StoryWorkflowDependencies = {
   findPointOfInterest(poiId: string): Promise<PoiInput | undefined>;
   acquireSources(pointOfInterest: PoiInput, previousSources?: Source[]): Promise<Source[]>;
-  generateMainImageCandidates(pointOfInterest: PoiInput): Promise<MainImageCandidate[]>;
+  generateMainImageCandidates(
+    pointOfInterest: PoiInput,
+    wikipediaTitle?: string,
+  ): Promise<MainImageCandidate[]>;
   generateStoryContent(input: {
     pointOfInterest: PoiInput;
     sources: Source[];
@@ -106,9 +110,12 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
     } catch (cause) {
       console.error(`[sources] Acquisition failed for ${pointOfInterest.id}.`, cause);
       throw new StoryWorkflowError({
-        code: "sources-unavailable",
+        code:
+          cause instanceof EnglishWikipediaSourceMissingError
+            ? "source-not-found"
+            : "sources-unavailable",
         stage: "sources",
-        retryable: true,
+        retryable: !(cause instanceof EnglishWikipediaSourceMissingError),
         cause,
       });
     }
@@ -126,12 +133,15 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
     return sources;
   };
 
-  const generateAndPersistCandidates = async (pointOfInterest: PoiInput) => {
+  const generateAndPersistCandidates = async (pointOfInterest: PoiInput, sources?: Source[]) => {
     const startedAt = now().getTime();
     const previous = await dependencies.repository.get(pointOfInterest.id);
     let candidates: MainImageCandidate[];
     try {
-      candidates = await dependencies.generateMainImageCandidates(pointOfInterest);
+      candidates = await dependencies.generateMainImageCandidates(
+        pointOfInterest,
+        (sources ?? previous?.sources)?.find(({ kind }) => kind === "wikipedia")?.title,
+      );
     } catch (cause) {
       throw new StoryWorkflowError({
         code: "main-image-candidates-generation-failed",
@@ -203,7 +213,7 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
     } catch (cause) {
       const message = cause instanceof Error ? cause.message : String(cause);
       console.warn(`[related-people] Resolution failed for ${pointOfInterest.id}.`, cause);
-      onProgress?.(`Related People resolution failed: ${message}`);
+      onProgress?.("Related People resolution failed.");
       resolution = {
         relatedPeople: generated.content.relatedPeople,
         failures: generated.content.relatedPeople
@@ -239,15 +249,25 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         onProgress?.("Finding the Point of Interest.");
         const pointOfInterest = await findPointOfInterest(poiId, dependencies);
         onProgress?.("Fetching the Wikipedia Source.");
-        const sources = await acquireAndPersistSources(
-          pointOfInterest,
-          (await dependencies.repository.get(poiId))?.sources,
-        );
+        let sources: Source[];
+        try {
+          sources = await acquireAndPersistSources(pointOfInterest);
+        } catch (error) {
+          if (error instanceof StoryWorkflowError && error.code === "source-not-found") {
+            try {
+              await dependencies.repository.reset(poiId, true);
+            } catch (cause) {
+              throw persistenceError(cause);
+            }
+          }
+          throw error;
+        }
         let mainImageCandidates: "generated" | "failed" = "generated";
+        let mainImageCandidatesError: string | undefined;
         let selectedCommonsFileName: string | undefined;
         try {
           onProgress?.("Finding Main Image Candidates.");
-          selectedCommonsFileName = await generateAndPersistCandidates(pointOfInterest);
+          selectedCommonsFileName = await generateAndPersistCandidates(pointOfInterest, sources);
         } catch (error) {
           if (
             !(error instanceof StoryWorkflowError) ||
@@ -256,6 +276,7 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
             throw error;
           }
           mainImageCandidates = "failed";
+          mainImageCandidatesError = error.message;
           onProgress?.("Main Image Candidates could not be refreshed; continuing.");
           selectedCommonsFileName = (await dependencies.repository.get(poiId))?.draftMainImage
             ?.commonsFileName;
@@ -270,6 +291,7 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         return {
           poiId,
           mainImageCandidates,
+          ...(mainImageCandidatesError ? { mainImageCandidatesError } : {}),
           draftMainImage: selectedCommonsFileName ? "available" : "missing",
           storyContent: "generated",
           relatedPeople: relatedPeople.failures.length > 0 ? "partial" : "resolved",

@@ -1,0 +1,56 @@
+{
+  "id": "peter-anton-von-verschaffelt",
+  "name": "Peter Anton von Verschaffelt",
+  "wikidataId": "Q567395",
+  "wikipediaTitle": "Peter Anton von Verschaffelt",
+  "content": {
+    "description": [
+      {
+        "text": "Peter Anton von Verschaffelt was born in Ghent, Flanders, on 8 May 1710.  He began his artistic training in his grandfather’s workshop in Ghent and later worked in Brussels, Paris, and Rome from 1737 to 1751, where he completed the replacement of the damaged statue of the archangel Michael on the Castel Sant'Angelo in 1753.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1752 he moved to London and was appointed court sculptor to Charles Theodore, Elector of the Palatinate, in Mannheim.  There he designed the high altar of the Jesuit church, the arsenal, Bretzenheim Palace, and the Wallfahrtskirche Mariä Himmelfahrt in Oggersheim, and he created the deer and the group of rivers that are the key features of the Schwetzingen palace garden.  He died in Mannheim on 5 July 1793 at the age of 83.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Verschaffelt’s commission to replace the statue of the archangel Michael on the Castel Sant'Angelo in Rome was awarded in 1748 but the new sculpture was not installed until 1753.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After moving to London, he succeeded the sculptor Paul Egell as court sculptor to Charles Theodore, Elector of the Palatinate.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His landscaping work in the Schwetzingen palace garden included the creation of a life‑size deer sculpture and a group of rivers that remain central to the park’s design today.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1710,
+      "month": 5,
+      "day": 8,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1793,
+      "month": 7,
+      "day": 5,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Peter Anton von Verschaffelt",
+    "url": "https://en.wikipedia.org/wiki/Peter_Anton_von_Verschaffelt"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-25T23:58:28.784Z"
+  }
+}

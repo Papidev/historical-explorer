@@ -45,6 +45,7 @@ export type DraftStorySnapshot = {
 export type DraftStoryGenerationResult = {
   poiId: string;
   mainImageCandidates: "generated" | "failed";
+  mainImageCandidatesError?: string;
   draftMainImage: "available" | "missing";
   storyContent: "generated";
   relatedPeople: "resolved" | "partial";
@@ -64,6 +65,7 @@ export type RelatedPeopleResolutionResult = {
 export type StoryWorkflowErrorCode =
   | "point-of-interest-not-found"
   | "sources-unavailable"
+  | "source-not-found"
   | "story-content-generation-failed"
   | "main-image-candidates-generation-failed"
   | "persistence-failed";

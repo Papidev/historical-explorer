@@ -46,11 +46,43 @@ export const AiProgressDialog = ({
       <div className="fixed inset-0 flex items-center justify-center p-4">
         <DialogPanel className="w-full max-w-lg rounded-xl bg-white p-5 shadow-xl">
           <DialogTitle className="text-base font-semibold text-gray-900">{title}</DialogTitle>
-          <p className="mt-1 text-sm text-gray-600">
-            {isFinished
-              ? "Generation finished. Review the events below."
-              : `Working for ${Math.floor((now - startedAt) / 1_000)} seconds.`}
-          </p>
+          {progress?.status === "partial" ||
+          progress?.status === "failed" ||
+          progress?.status === "waiting" ? (
+            <div
+              role="alert"
+              className={`mt-4 rounded-lg border px-4 py-3 text-sm ${
+                progress.status === "failed"
+                  ? "border-red-300 bg-red-50 text-red-950"
+                  : "border-amber-300 bg-amber-50 text-amber-950"
+              }`}
+            >
+              <p className="font-semibold">
+                {progress.status === "failed"
+                  ? "Generation failed"
+                  : progress.status === "waiting"
+                    ? "Waiting for a source"
+                    : "Completed with issues"}
+              </p>
+              {progress.failedSteps?.length ? (
+                <ul className="mt-2 list-disc space-y-1 pl-5">
+                  {progress.failedSteps.map((step) => (
+                    <li key={step}>{step}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="mt-1">{progress.entries.at(-1)?.message}</p>
+              )}
+            </div>
+          ) : (
+            <p className="mt-1 text-sm text-gray-600">
+              {progress?.status === "succeeded"
+                ? "Generation completed."
+                : isFinished
+                  ? "Waiting for the final result..."
+                  : `Working for ${Math.floor((now - startedAt) / 1_000)} seconds.`}
+            </p>
+          )}
           <ol
             role="log"
             aria-live="polite"

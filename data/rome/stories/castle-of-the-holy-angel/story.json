@@ -1,24 +1,24 @@
 {
   "introduction": {
-    "text": "Castel Sant’Angelo, a towering cylindrical building in Rome, was originally built as Emperor Hadrian’s mausoleum and later served as a papal fortress, prison, and museum. Its layered history and iconic silhouette make it a symbol of Rome’s imperial, religious, and cultural heritage.",
+    "text": "Castel Sant'Angelo is a historic fortress and museum in Rome, originally built as Emperor Hadrian's mausoleum. Its strategic location on the Tiber and its evolution from mausoleum to papal fortress and prison make it a key monument in Roman history and culture.",
     "sourceIds": ["wikipedia"]
   },
   "topics": {
     "history": [
       {
-        "id": "hadrian-mausoleum-construction",
-        "description": "Construction of Hadrian’s mausoleum on the right bank of the Tiber, begun between 134 and 139 AD.",
+        "id": "history1",
+        "description": "Construction of the Mausoleum of Hadrian, a cylindrical rotunda commissioned by Emperor Hadrian to house his tomb and that of his family.",
         "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 134,
-          "precision": "approximate",
+          "precision": "exact",
           "endYear": 139,
           "granularity": "year"
         }
       },
       {
-        "id": "hadrian-ashes",
-        "description": "Hadrian’s ashes, along with those of his wife Sabina and adopted son Lucius Aelius, were interred in the mausoleum in 138 AD.",
+        "id": "history2",
+        "description": "Transfer of Hadrian's ashes to the mausoleum a year after his death in 138 AD.",
         "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 138,
@@ -27,18 +27,8 @@
         }
       },
       {
-        "id": "caracalla-deposition",
-        "description": "Caracalla’s ashes were deposited in the mausoleum in 217 AD.",
-        "sourceIds": ["wikipedia"],
-        "time": {
-          "startYear": 217,
-          "precision": "exact",
-          "granularity": "year"
-        }
-      },
-      {
-        "id": "fortress-conversion",
-        "description": "The mausoleum was converted into a military fortress in 401 AD and incorporated into the Aurelian Walls.",
+        "id": "history3",
+        "description": "Inclusion of the mausoleum into the Aurelian Walls and its conversion into a military fortress in 401 AD.",
         "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 401,
@@ -47,8 +37,8 @@
         }
       },
       {
-        "id": "sack-rome-410",
-        "description": "The Visigothic sacking of Rome in 410 AD led to the scattering of the mausoleum’s urns and ashes.",
+        "id": "history4",
+        "description": "Destruction of the mausoleum's contents during the Visigoth sacking of Rome in 410 AD.",
         "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 410,
@@ -57,8 +47,18 @@
         }
       },
       {
-        "id": "plague-590",
-        "description": "Legend of Archangel Michael appearing atop the mausoleum in 590 AD, ending the plague.",
+        "id": "history5",
+        "description": "Destruction of the mausoleum's bronze and stone statuary during the Gothic siege of Rome in 537 AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 537,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "Legend of Archangel Michael appearing atop the mausoleum during the plague of 590 AD, leading to its renaming as Castel Sant'Angelo.",
         "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 590,
@@ -67,8 +67,8 @@
         }
       },
       {
-        "id": "papal-fortress-14th-century",
-        "description": "Beginning in the 14th century, the popes converted the structure into a castle.",
+        "id": "history7",
+        "description": "Conversion of the structure into a papal castle in the 14th century, including the construction of the Passetto di Borgo.",
         "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 1300,
@@ -78,8 +78,8 @@
         }
       },
       {
-        "id": "sack-rome-1527",
-        "description": "The fortress served as refuge during the Sack of Rome in 1527.",
+        "id": "history8",
+        "description": "Use of the castle as a refuge during the Sack of Rome in 1527.",
         "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 1527,
@@ -88,19 +88,28 @@
         }
       },
       {
-        "id": "cellini-prison",
-        "description": "Benvenuto Cellini was imprisoned in the castle during the 16th century.",
+        "id": "history9",
+        "description": "Installation of a marble statue of Saint Michael by Raffaello da Montelupo in 1536.",
         "sourceIds": ["wikipedia"],
         "time": {
-          "startYear": 1550,
-          "precision": "approximate",
-          "endYear": 1599,
-          "granularity": "century"
+          "startYear": 1536,
+          "precision": "exact",
+          "granularity": "year"
         }
       },
       {
-        "id": "decommission-1901",
-        "description": "The castle was decommissioned as a fortress and became a museum in 1901.",
+        "id": "history10",
+        "description": "Replacement of Montelupo's statue with a bronze statue by Peter Anton von Verschaffelt in 1753.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1753,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history11",
+        "description": "Decommissioning of the castle as a fortress and its conversion into a museum in 1901.",
         "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 1901,
@@ -109,47 +118,62 @@
         }
       },
       {
-        "id": "modern-museum-2016",
-        "description": "In 2016, the museum attracted 1,234,443 visitors.",
+        "id": "history12",
+        "description": "The castle recorded 1,234,443 visitors in 2016.",
         "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 2016,
           "precision": "exact",
           "granularity": "year"
         }
+      },
+      {
+        "id": "history13",
+        "description": "The castle served as a prison for notable figures such as Giordano Bruno, Benvenuto Cellini, and Cagliostro.",
+        "sourceIds": ["wikipedia"]
       }
     ],
     "design": [
       {
-        "id": "cylindrical-rotunda",
-        "description": "The building’s design features a massive cylindrical rotunda with a conical roof, originally intended as a mausoleum.",
+        "id": "design1",
+        "description": "The original mausoleum was a cylindrical rotunda with a garden top and a golden quadriga.",
         "sourceIds": ["wikipedia"]
       },
       {
-        "id": "fortress-defenses",
-        "description": "Later additions include thick walls, a moat, and a fortified corridor (Passetto di Borgo) connecting to St. Peter’s Basilica.",
+        "id": "design2",
+        "description": "The Passetto di Borgo, a covered fortified corridor connecting the castle to St. Peter's Basilica, was added during the papal conversion.",
         "sourceIds": ["wikipedia"]
       },
       {
-        "id": "modern-tunnel-project",
-        "description": "An ongoing project aims to create a pedestrian tunnel linking the castle to St. Peter’s Basilica beneath Piazza Pia.",
+        "id": "design3",
+        "description": "The castle's interior includes a Treasury Room where the ashes of emperors were stored.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design4",
+        "description": "The castle's fortifications were reinforced during the 14th century to serve as a papal stronghold.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design5",
+        "description": "The museum layout now displays Roman art, medieval weapons, and papal artifacts.",
         "sourceIds": ["wikipedia"]
       }
     ],
     "art": [
       {
-        "id": "st-michael-statue",
-        "description": "A bronze statue of Saint Michael, executed by Peter Anton von Verschaffelt in 1753, crowns the castle’s roof.",
+        "id": "art1",
+        "description": "A bronze statue of Saint Michael holding his sword, created by Peter Anton von Verschaffelt in 1753, stands atop the castle.",
         "sourceIds": ["wikipedia"]
       },
       {
-        "id": "montelupo-statue",
-        "description": "An earlier marble statue of Saint Michael by Raffaello da Montelupo, created in 1536, once stood atop the castle.",
+        "id": "art2",
+        "description": "A marble statue of Saint Michael by Raffaello da Montelupo, erected in 1536, is located in an interior court.",
         "sourceIds": ["wikipedia"]
       },
       {
-        "id": "other-artifacts",
-        "description": "The museum houses various artifacts, including the capstone of a funerary urn that once adorned Saint Peter’s Basilica.",
+        "id": "art3",
+        "description": "The original golden quadriga that once crowned the mausoleum.",
         "sourceIds": ["wikipedia"]
       }
     ]
@@ -157,42 +181,52 @@
   "relatedPeople": [
     {
       "name": "Hadrian",
+      "personId": "hadrian",
       "sourceIds": ["wikipedia"]
     },
     {
       "name": "Sabina",
+      "personId": "sabina",
       "sourceIds": ["wikipedia"]
     },
     {
       "name": "Lucius Aelius",
+      "personId": "lucius-aelius",
       "sourceIds": ["wikipedia"]
     },
     {
       "name": "Caracalla",
+      "personId": "caracalla",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Gregory I",
+      "personId": "pope-gregory-i",
       "sourceIds": ["wikipedia"]
     },
     {
       "name": "Pope Nicholas III",
+      "personId": "pope-nicholas-iii",
       "sourceIds": ["wikipedia"]
     },
     {
-      "name": "Pope Clement VII",
+      "name": "Pope Leo X",
+      "personId": "pope-leo-x",
       "sourceIds": ["wikipedia"]
     },
     {
       "name": "Benvenuto Cellini",
+      "personId": "benvenuto-cellini",
       "sourceIds": ["wikipedia"]
     },
     {
       "name": "Giordano Bruno",
+      "personId": "giordano-bruno",
       "sourceIds": ["wikipedia"]
     },
     {
       "name": "Peter Anton von Verschaffelt",
-      "sourceIds": ["wikipedia"]
-    },
-    {
-      "name": "Alaric",
+      "personId": "peter-anton-von-verschaffelt",
       "sourceIds": ["wikipedia"]
     }
   ]

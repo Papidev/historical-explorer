@@ -2,8 +2,9 @@ import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from "
 import path from "node:path";
 
 export type AiProgress = {
-  status: "running" | "succeeded" | "failed";
+  status: "running" | "succeeded" | "partial" | "failed" | "waiting";
   startedAt: string;
+  failedSteps?: string[];
   entries: Array<{ at: string; message: string }>;
 };
 
@@ -41,7 +42,11 @@ export const appendAiProgress = (runId: string, message: string) => {
   });
 };
 
-export const finishAiProgress = (runId: string, status: "succeeded" | "failed") => {
+export const finishAiProgress = (
+  runId: string,
+  status: "succeeded" | "partial" | "failed" | "waiting",
+  failedSteps?: string[],
+) => {
   const progress = readAiProgress(runId);
-  if (progress) writeProgress(runId, { ...progress, status });
+  if (progress) writeProgress(runId, { ...progress, status, failedSteps });
 };

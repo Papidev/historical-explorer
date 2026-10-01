@@ -19,6 +19,52 @@ afterEach(() => {
 afterAll(() => server.close());
 
 describe("POI actions", () => {
+  it("filters rows by the same status groups used for ordering", async () => {
+    render(
+      <PoiRowsTable
+        rows={[
+          {
+            id: "failed-poi",
+            rawPoi: { id: "failed-poi", name: "Failed POI", featureIndex: 0 },
+            lastGenerationRun: {
+              operation: "draftStory.generate",
+              status: "failed",
+              at: "2026-09-25",
+            },
+          },
+          {
+            id: "pending-poi",
+            rawPoi: { id: "pending-poi", name: "Pending POI", featureIndex: 1 },
+          },
+          {
+            id: "source-poi",
+            rawPoi: { id: "source-poi", name: "Source POI", featureIndex: 2 },
+            sourcePending: true,
+          },
+        ]}
+        globalArtifacts={[]}
+        aiSelectionRef={{ current: { mode: "local", model: "qwen3.5:9b" } }}
+        generateDraftStoryAction={async () => {}}
+        refreshStoryContentAction={async () => {}}
+        resolveRelatedPeopleAction={async () => {}}
+        refreshMainImageCandidatesAction={async () => {}}
+        refreshPoiTypesAction={async () => {}}
+        selectMainImageCandidateAction={async () => {}}
+      />,
+    );
+
+    const user = userEvent.setup();
+    await user.click(screen.getByRole("checkbox", { name: "Needs attention" }));
+    expect(screen.queryByText("Failed POI")).not.toBeInTheDocument();
+    expect(screen.getByText("Pending POI")).toBeInTheDocument();
+    expect(screen.getByText("Source POI")).toBeInTheDocument();
+
+    await user.click(screen.getByRole("checkbox", { name: "Needs source" }));
+    expect(screen.queryByText("Source POI")).not.toBeInTheDocument();
+    await user.click(screen.getByRole("checkbox", { name: "To do" }));
+    expect(screen.getByText("No POIs match the selected statuses.")).toBeInTheDocument();
+  });
+
   it("shows AI progress while Related People resolution is still running", async () => {
     let finishResolution: (value: AdminActionResult) => void = () => {};
     const resolution = new Promise<AdminActionResult>((resolve) => {

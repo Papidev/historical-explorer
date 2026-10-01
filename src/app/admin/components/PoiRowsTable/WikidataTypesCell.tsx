@@ -16,27 +16,29 @@ export const WikidataTypesCell = ({
   const types = row.poiTypes?.types ?? [];
 
   return (
-    <PipelineCell available={types.length > 0} inProgress={isInProgress}>
-      <CellContent
-        title={
-          !row.wikidataId
-            ? "No Wikidata ID"
-            : row.poiTypes?.error
-              ? "Acquisition failed"
-              : row.poiTypes
-                ? types.length > 0
-                  ? types
-                      .slice(0, 2)
-                      .map(({ label }) => label)
-                      .join(", ")
-                  : "No types"
-                : undefined
-        }
-        subtitle={
-          row.poiTypes?.error ??
-          (types.length > 0 ? `${types.length} type${types.length === 1 ? "" : "s"}` : undefined)
-        }
-      />
+    <PipelineCell inProgress={isInProgress}>
+      <div className={types.length > 0 ? "pt-6" : undefined}>
+        <CellContent
+          title={
+            !row.wikidataId
+              ? "No Wikidata ID"
+              : row.poiTypes?.error
+                ? "Acquisition failed"
+                : row.poiTypes
+                  ? types.length > 0
+                    ? types
+                        .slice(0, 2)
+                        .map(({ label }) => label)
+                        .join(", ")
+                    : "No types"
+                  : undefined
+          }
+          subtitle={
+            row.poiTypes?.error ??
+            (types.length > 0 ? `${types.length} type${types.length === 1 ? "" : "s"}` : undefined)
+          }
+        />
+      </div>
       <CellFooter>
         <div className="flex flex-wrap items-center gap-1.5">
           {types.length > 0 ? (

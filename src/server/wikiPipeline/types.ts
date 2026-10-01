@@ -27,6 +27,7 @@ export type PoiInput = {
   sourceHints: {
     wikipedia?: string;
     wikidata?: string;
+    wikimediaCommons?: string;
   };
 };
 
@@ -52,7 +53,7 @@ export type WikiSnapshot = {
   wikidataId?: string;
 };
 
-export type MainImageDiscoveredVia = "wikidata-p18" | "wikipedia-page-image";
+export type MainImageDiscoveredVia = "wikidata-p18" | "wikipedia-page-image" | "commons-category";
 
 export type MainImageCandidate = {
   commonsFileName: string;

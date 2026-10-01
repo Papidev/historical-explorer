@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { readGenerationMetadata, type GenerationMetadata } from "@/server/generationMetadata";
+import { readGenerationRuns } from "@/server/generationRunLog";
 import { storyWorkflow, type DraftStorySnapshot, type Source } from "@/server/storyWorkflow";
 import { poiTypes } from "@/server/poiTypes";
 import {
@@ -16,6 +17,7 @@ import type {
   MainImageCandidatesArtifact,
   PoiItem,
 } from "./types";
+import { getPoiRowStatusGroup } from "./getPoiRowStatusGroup";
 
 const toRowKey = (value: string) => value.trim().toLowerCase();
 
@@ -265,22 +267,7 @@ const toPoiRows = (
     );
   }
 
-  return Array.from(rowsById.values()).sort((left, right) => {
-    const leftGeneratedCount = [
-      left.transformedPoi,
-      left.wikiPoi,
-      left.storyContent,
-      left.mainImagePoi,
-    ].filter(Boolean).length;
-    const rightGeneratedCount = [
-      right.transformedPoi,
-      right.wikiPoi,
-      right.storyContent,
-      right.mainImagePoi,
-    ].filter(Boolean).length;
-
-    return rightGeneratedCount - leftGeneratedCount;
-  });
+  return Array.from(rowsById.values());
 };
 
 export const loadPoiLists = async () => {
@@ -293,6 +280,7 @@ export const loadPoiLists = async () => {
       ? formatUpdatedAt(transformedPath)
       : undefined;
     const generationMetadata = readGenerationMetadata("rome");
+    const generationRuns = readGenerationRuns(process.cwd(), "rome");
     const globalArtifacts: AdminArtifact[] = [];
 
     const rawGeoJson = JSON.parse(rawContent) as GeoJson;
@@ -358,8 +346,73 @@ export const loadPoiLists = async () => {
       mainImagePois,
     ).map((row) => {
       const rawFeature = rawGeoJson.features?.[row.rawPoi?.featureIndex ?? -1];
+      const matchingRuns = generationRuns.filter(
+        (run) =>
+          (run.poiId && run.poiId === row.id) ||
+          (run.geoPlaceId && run.geoPlaceId === row.rawPoi?.id),
+      );
+      const [lastRun] = matchingRuns;
+      const latestDraftRun = matchingRuns.find(
+        (run) => run.operation === "draftStory.generate" && run.event !== "started",
+      );
+      const sourcePending =
+        generationMetadata[toRowKey(row.id)]?.sourceMissing ||
+        latestDraftRun?.errorCode === "source-not-found" ||
+        (latestDraftRun?.errorCode === "sources-unavailable" &&
+          latestDraftRun.errorMessage?.includes(
+            "no valid English Wikipedia tag or Wikidata English sitelink",
+          ));
       return {
         ...row,
+        sourcePending,
+        ...(sourcePending
+          ? {
+              wikiPoi: undefined,
+              wikiText: undefined,
+              wikiUpdatedAt: undefined,
+              wikiGenerationDuration: undefined,
+              storyContent: undefined,
+              storyContentSources: undefined,
+              storyContentUpdatedAt: undefined,
+              storyContentGenerationDuration: undefined,
+              mainImagePoi: undefined,
+              mainImageArtifact: undefined,
+              mainImageUpdatedAt: undefined,
+              mainImageGenerationDuration: undefined,
+              relatedPeopleUpdatedAt: undefined,
+              relatedPeopleGenerationDuration: undefined,
+            }
+          : {}),
+        generationErrors: matchingRuns.flatMap((run) =>
+          run.event === "failed"
+            ? [
+                {
+                  at: formatCompletedAt(run.at),
+                  operation: run.operation,
+                  stage: run.errorStage ?? "generation",
+                  message: run.errorMessage ?? run.errorCode ?? "Unknown error",
+                },
+              ]
+            : (run.errors ?? []).map((error) => ({
+                ...error,
+                at: formatCompletedAt(run.at),
+                operation: run.operation,
+              })),
+        ),
+        lastGenerationRun: lastRun
+          ? {
+              operation: lastRun.operation,
+              status:
+                lastRun.event === "failed"
+                  ? lastRun === latestDraftRun && sourcePending
+                    ? "needs-source"
+                    : "failed"
+                  : lastRun.event === "started"
+                    ? "incomplete"
+                    : (lastRun.status ?? "success"),
+              at: formatCompletedAt(lastRun.at),
+            }
+          : undefined,
         artifacts: {
           geoPlace: rawFeature
             ? {
@@ -369,47 +422,55 @@ export const loadPoiLists = async () => {
                 versioned: true,
               }
             : undefined,
-          wikipediaMetadata: readArtifact({
-            label: "Wikipedia Source Metadata",
-            relativePath: path.relative(
-              path.join(process.cwd(), "data"),
-              buildSourceMetadataFilePath(getDefaultOutputDir("rome"), row.id),
-            ),
-            versioned: false,
-          }),
-          storyContent: readArtifact({
-            label: "Story JSON",
-            relativePath: `rome/stories/${row.id}/story.json`,
-            versioned: true,
-          }),
-          mainImageCandidates: readArtifact({
-            label: "Main Image Candidates JSON",
-            relativePath: `rome/stories/${row.id}/images.json`,
-            versioned: true,
-          }),
-          relatedPeople: (row.storyContent?.relatedPeople ?? []).map(({ name, personId }) => ({
-            name,
-            personId,
-            resolutionError: !personId
-              ? (generationMetadata[toRowKey(row.id)]?.relatedPeople?.relatedPeopleFailures?.find(
-                  (failure) => failure.name === name,
-                )?.message ?? getSourceLinkIssue(name, row.storyContentSources ?? []))
-              : undefined,
-            artifacts: personId
-              ? [
-                  readArtifact({
-                    label: `${name} Person JSON`,
-                    relativePath: `people/${personId}/person.json`,
-                    versioned: true,
-                  }),
-                  readArtifact({
-                    label: `${name} Wikipedia Text`,
-                    relativePath: `generated/people/${personId}.txt`,
-                    versioned: false,
-                  }),
-                ].filter((artifact): artifact is AdminArtifact => Boolean(artifact))
-              : [],
-          })),
+          wikipediaMetadata: sourcePending
+            ? undefined
+            : readArtifact({
+                label: "Wikipedia Source Metadata",
+                relativePath: path.relative(
+                  path.join(process.cwd(), "data"),
+                  buildSourceMetadataFilePath(getDefaultOutputDir("rome"), row.id),
+                ),
+                versioned: false,
+              }),
+          storyContent: sourcePending
+            ? undefined
+            : readArtifact({
+                label: "Story JSON",
+                relativePath: `rome/stories/${row.id}/story.json`,
+                versioned: true,
+              }),
+          mainImageCandidates: sourcePending
+            ? undefined
+            : readArtifact({
+                label: "Main Image Candidates JSON",
+                relativePath: `rome/stories/${row.id}/images.json`,
+                versioned: true,
+              }),
+          relatedPeople: (sourcePending ? [] : (row.storyContent?.relatedPeople ?? [])).map(
+            ({ name, personId }) => ({
+              name,
+              personId,
+              resolutionError: !personId
+                ? (generationMetadata[toRowKey(row.id)]?.relatedPeople?.relatedPeopleFailures?.find(
+                    (failure) => failure.name === name,
+                  )?.message ?? getSourceLinkIssue(name, row.storyContentSources ?? []))
+                : undefined,
+              artifacts: personId
+                ? [
+                    readArtifact({
+                      label: `${name} Person JSON`,
+                      relativePath: `people/${personId}/person.json`,
+                      versioned: true,
+                    }),
+                    readArtifact({
+                      label: `${name} Wikipedia Text`,
+                      relativePath: `generated/people/${personId}.txt`,
+                      versioned: false,
+                    }),
+                  ].filter((artifact): artifact is AdminArtifact => Boolean(artifact))
+                : [],
+            }),
+          ),
         },
       } satisfies AdminPoiRow;
     });
@@ -420,6 +481,20 @@ export const loadPoiLists = async () => {
         row.poiTypes = poiTypes.get(row.id);
       }
     }
+
+    const priority = (row: AdminPoiRow) =>
+      ({ "needs-attention": 0, "to-do": 1, complete: 2, "needs-source": 3 })[
+        getPoiRowStatusGroup(row)
+      ];
+    rows.sort(
+      (left, right) =>
+        priority(left) - priority(right) ||
+        (left.rawPoi?.name ?? left.transformedPoi?.name ?? left.id).localeCompare(
+          right.rawPoi?.name ?? right.transformedPoi?.name ?? right.id,
+          "it",
+          { sensitivity: "base" },
+        ),
+    );
 
     return { rows, globalArtifacts, error: null };
   } catch (error) {

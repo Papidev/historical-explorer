@@ -1,0 +1,52 @@
+{
+  "id": "arnaldo-foschini",
+  "name": "Arnaldo Foschini",
+  "wikidataId": "Q3623501",
+  "wikipediaTitle": "Arnaldo Foschini",
+  "content": {
+    "description": [
+      {
+        "text": "Arnaldo Foschini was born in Rome on 26 September 1884 and studied architecture at the Accademia di Belle Arti di Roma. He later became a professor of architectural composition at the Sapienza University of Rome, where he taught and influenced a generation of Italian architects. Foschini’s architectural practice was largely centered in his native city, where he designed a number of significant public and religious buildings, including the Supercinema (1921–1927), the University City buildings (1932–1935), the Palazzo della Farnesina (1937–1959), and the church of Santi Pietro e Paolo at EUR (1937–1941).",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After World War II, Foschini played a pivotal role in shaping Italian housing policy as president of the INA‑Casa management board from 1949 to 1963, helping to organize post‑war social housing initiatives. He also served as president of the Accademia di San Luca (1951–1952) and of the National Council of Architects (1952–1954), positions that underscored his influence in both the artistic and professional communities of Italy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Supercinema, designed by Foschini between 1921 and 1927, was one of the first large‑scale cinema complexes in Rome and exemplified the modernist architectural trends of the interwar period.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As president of INA‑Casa, Foschini oversaw the production of thousands of affordable housing units, a key component of Italy’s post‑war reconstruction and social welfare strategy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1884,
+      "month": 9,
+      "day": 26,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1968,
+      "month": 3,
+      "day": 24,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Arnaldo Foschini",
+    "url": "https://en.wikipedia.org/wiki/Arnaldo_Foschini"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-09-26T00:03:11.952Z"
+  }
+}

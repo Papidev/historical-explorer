@@ -47,6 +47,8 @@ Each city's data lives under `data/<city>/`. The Geo Place input and app-ready P
 
 For Rome, the Geo Place input lives at `data/rome/pois/raw.geojson`, while app-ready POIs are progressively added to `data/rome/pois/pois.geojson`. Each app-ready POI has a stable, human-readable `id`; external identifiers such as `wikidataId` are optional and separate. Wikipedia Text snapshots and local Source metadata are generated into `data/rome/generated/wikipedia/`. Wikidata POI types are stored separately in `data/rome/generated/wikidata/`. Local pipeline timings and execution details live in `data/rome/generated/generation-metadata.json`.
 
+Generation attempts are logged locally in `data/rome/generated/generation-logs/day-*.jsonl`. Each line records a start, completion, or failure with a shared run ID. Seven daily files are reused in rotation: when a slot is used again after seven days, its old contents are overwritten. The Curator table shows the latest run and expandable errors beside the affected source, story, or image; Related People errors appear inside the People drawer. Error messages are stored with known credentials redacted; stack traces remain in the server console. These files are ignored by Git and are not a durable audit store across machines or deployments.
+
 Use Generate on an empty row or Refresh on an existing row in `/admin` to run the complete Rome generation flow:
 
 1. Add app-ready POI metadata from the Geo Place.
@@ -54,7 +56,7 @@ Use Generate on an empty row or Refresh on an existing row in `/admin` to run th
 3. Generate Main Image Candidates and select the first candidate with license and attribution.
 4. Generate structured Story Content.
 
-Refresh reruns this entire pipeline with the selected AI configuration. It does not clear the row before generation, so the current artifacts are not removed as a preliminary step if regeneration fails.
+Refresh reruns this entire pipeline with the selected AI configuration and resolves the Wikipedia Source again from the POI. Existing artifacts remain if a temporary error interrupts regeneration. If the POI has no linked English Wikipedia page, the Curator marks its Story as waiting for a Source and removes that POI's saved Source, Story, and Main Image Candidates. Shared Person records and generation logs remain available.
 
 Stories live under the city's `stories/` folder, with one directory per POI ID. For example, `data/rome/stories/forum-boarium/` contains structured Story Content in `story.json` and Main Image Candidates in `images.json`. Full Generate creates or replaces `story.json`, and the Curator UI provides preview, Refresh, and Delete actions for that content. These are reviewable content artifacts and should be committed after generation and human editing.
 

@@ -5,12 +5,14 @@ import { flushSync } from "react-dom";
 import type { RefObject } from "react";
 import type { AiSelection } from "../../lib/aiModels";
 import type { AdminAction, AdminArtifact, AdminPoiRow } from "../../lib/types";
+import { getPoiRowStatusGroup } from "../../lib/getPoiRowStatusGroup";
 import { ActionToast, getActionError, type Toast } from "../ActionToast";
 import { AiProgressDialog } from "./AiProgressDialog";
 import { Preview, type SelectedPanel } from "./Preview";
 import { Row } from "./Row";
 import type { Actions } from "./RowTypes";
 import { GlobalArtifacts } from "./GlobalArtifacts";
+import { statusGroupStyles } from "./statusGroupStyles";
 
 const ColumnHeader = ({
   title,
@@ -73,6 +75,9 @@ export const PoiRowsTable = ({
     description: string;
   } | null>(null);
   const [actionToast, setActionToast] = useState<Toast | null>(null);
+  const [visibleStatusGroups, setVisibleStatusGroups] = useState<string[]>(
+    Object.keys(statusGroupStyles),
+  );
   const [aiProgressDialog, setAiProgressDialog] = useState<{
     runId: string;
     title: string;
@@ -86,6 +91,7 @@ export const PoiRowsTable = ({
     refreshMainImageCandidates: refreshMainImageCandidatesAction,
     refreshPoiTypes: refreshPoiTypesAction,
   };
+  const visibleRows = rows.filter((row) => visibleStatusGroups.includes(getPoiRowStatusGroup(row)));
 
   const runSingleAction = async (
     poiId: string,
@@ -151,9 +157,40 @@ export const PoiRowsTable = ({
       ) : null}
       <section className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-gray-950/10">
         <GlobalArtifacts artifacts={globalArtifacts} onSelectPanel={setSelectedPanel} />
+        <div
+          role="group"
+          aria-label="Show status"
+          className="flex flex-wrap items-center gap-x-5 gap-y-2 border-b border-gray-200 px-4 py-3 text-sm"
+        >
+          <span className="font-semibold text-gray-800">Show status</span>
+          {Object.entries(statusGroupStyles).map(([value, { label, filter, checkbox }]) => (
+            <label
+              key={value}
+              className={`flex cursor-pointer items-center gap-2 rounded-md border px-2.5 py-1.5 ${filter} ${
+                visibleStatusGroups.includes(value) ? "" : "opacity-55 hover:opacity-100"
+              }`}
+            >
+              <input
+                type="checkbox"
+                checked={visibleStatusGroups.includes(value)}
+                onChange={(event) =>
+                  setVisibleStatusGroups((current) =>
+                    event.target.checked
+                      ? [...current, value]
+                      : current.filter((group) => group !== value),
+                  )
+                }
+                className={`size-4 cursor-pointer ${checkbox}`}
+              />
+              {label}
+            </label>
+          ))}
+        </div>
         <div className="min-h-0 flex-1 overflow-auto">
           {rows.length === 0 ? (
             <p className="px-4 py-4 text-sm text-black/55">No POIs available.</p>
+          ) : visibleRows.length === 0 ? (
+            <p className="px-4 py-4 text-sm text-black/55">No POIs match the selected statuses.</p>
           ) : (
             <table className="w-full min-w-[1100px] table-fixed divide-y divide-gray-300">
               <colgroup>
@@ -235,7 +272,7 @@ export const PoiRowsTable = ({
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200 bg-white">
-                {rows.map((row) => (
+                {visibleRows.map((row) => (
                   <Row
                     key={row.id}
                     row={row}
