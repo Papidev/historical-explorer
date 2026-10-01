@@ -8,7 +8,7 @@ import { PipelineCell } from "./PipelineCell";
 import type { CellProps } from "./RowTypes";
 
 export const WikipediaCell = ({ row, isInProgress, onSelectPanel }: CellProps) => (
-  <PipelineCell available={Boolean(row.wikiPoi)} inProgress={isInProgress}>
+  <PipelineCell inProgress={isInProgress}>
     <CellContent isAvailable={Boolean(row.wikiPoi)} />
     {row.sourcePending ? (
       <p role="status" className="mt-2 text-xs font-semibold text-amber-900">

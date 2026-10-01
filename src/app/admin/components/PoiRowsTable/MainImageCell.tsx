@@ -43,10 +43,7 @@ export const MainImageCell = ({
   onSelectPanel,
   runSingleAction,
 }: ActionCellProps) => (
-  <PipelineCell
-    available={Boolean(getSelectedMainImageCandidate(row.mainImageArtifact))}
-    inProgress={isInProgress}
-  >
+  <PipelineCell inProgress={isInProgress}>
     <div className="flex min-w-0 items-start gap-3">
       <MainImageCellPreview artifact={row.mainImageArtifact} />
       <CellContent

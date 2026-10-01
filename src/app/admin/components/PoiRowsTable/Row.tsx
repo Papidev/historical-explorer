@@ -2,11 +2,12 @@ import { GeoPlaceCell } from "./GeoPlaceCell";
 import { MainImageCell } from "./MainImageCell";
 import { PipelineCell } from "./PipelineCell";
 import { PoiCell } from "./PoiCell";
-import { isPoiRowComplete } from "../../lib/isPoiRowComplete";
+import { getPoiRowStatusGroup } from "../../lib/getPoiRowStatusGroup";
 import type { ActionCellProps } from "./RowTypes";
 import { StoryCell } from "./StoryCell";
 import { WikidataTypesCell } from "./WikidataTypesCell";
 import { WikipediaCell } from "./WikipediaCell";
+import { statusGroupStyles } from "./statusGroupStyles";
 
 export const Row = ({
   row,
@@ -26,11 +27,7 @@ export const Row = ({
       className={
         isInProgress
           ? "shadow-[inset_0_0_0_1px_var(--color-amber-300)]"
-          : row.sourcePending
-            ? "bg-gray-100 hover:bg-gray-200/70"
-            : isPoiRowComplete(row)
-              ? "bg-lime-50 [&>td]:bg-lime-50 hover:[&>td]:bg-lime-100"
-              : "hover:bg-gray-50/60"
+          : statusGroupStyles[getPoiRowStatusGroup(row)].row
       }
     >
       <GeoPlaceCell

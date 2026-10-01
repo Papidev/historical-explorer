@@ -22,7 +22,7 @@ export const StoryCell = ({
 }: ActionCellProps & {
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => (
-  <PipelineCell available={Boolean(row.storyContent)} inProgress={isInProgress}>
+  <PipelineCell inProgress={isInProgress}>
     <CellContent
       title={row.sourcePending ? "Waiting for source" : undefined}
       titleTone={row.sourcePending ? "warning" : "status"}

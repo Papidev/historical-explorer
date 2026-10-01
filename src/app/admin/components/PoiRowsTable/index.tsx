@@ -12,13 +12,7 @@ import { Preview, type SelectedPanel } from "./Preview";
 import { Row } from "./Row";
 import type { Actions } from "./RowTypes";
 import { GlobalArtifacts } from "./GlobalArtifacts";
-
-const statusGroups = [
-  { value: "needs-attention", label: "Needs attention" },
-  { value: "to-do", label: "To do" },
-  { value: "complete", label: "Complete" },
-  { value: "needs-source", label: "Needs source" },
-] as const;
+import { statusGroupStyles } from "./statusGroupStyles";
 
 const ColumnHeader = ({
   title,
@@ -82,7 +76,7 @@ export const PoiRowsTable = ({
   } | null>(null);
   const [actionToast, setActionToast] = useState<Toast | null>(null);
   const [visibleStatusGroups, setVisibleStatusGroups] = useState<string[]>(
-    statusGroups.map(({ value }) => value),
+    Object.keys(statusGroupStyles),
   );
   const [aiProgressDialog, setAiProgressDialog] = useState<{
     runId: string;
@@ -169,8 +163,13 @@ export const PoiRowsTable = ({
           className="flex flex-wrap items-center gap-x-5 gap-y-2 border-b border-gray-200 px-4 py-3 text-sm"
         >
           <span className="font-semibold text-gray-800">Show status</span>
-          {statusGroups.map(({ value, label }) => (
-            <label key={value} className="flex cursor-pointer items-center gap-2 text-gray-700">
+          {Object.entries(statusGroupStyles).map(([value, { label, filter, checkbox }]) => (
+            <label
+              key={value}
+              className={`flex cursor-pointer items-center gap-2 rounded-md border px-2.5 py-1.5 ${filter} ${
+                visibleStatusGroups.includes(value) ? "" : "opacity-55 hover:opacity-100"
+              }`}
+            >
               <input
                 type="checkbox"
                 checked={visibleStatusGroups.includes(value)}
@@ -181,7 +180,7 @@ export const PoiRowsTable = ({
                       : current.filter((group) => group !== value),
                   )
                 }
-                className="size-4 cursor-pointer accent-indigo-600"
+                className={`size-4 cursor-pointer ${checkbox}`}
               />
               {label}
             </label>
