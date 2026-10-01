@@ -151,6 +151,198 @@ describe("People", () => {
     });
   });
 
+  it.each([
+    ["Emperor Marcus Aurelius", "Marcus Aurelius"],
+    ["Queen Elizabeth II", "Elizabeth II"],
+    ["St. Catherine of Siena", "Catherine of Siena"],
+    ["Sir Isaac Newton", "Isaac Newton"],
+    ["Gregorio Zappala", "Gregorio Zappalà"],
+    ["Jean–Baptiste d’Anville", "Jean-Baptiste d'Anville"],
+    ["Marcus Aurelius", "Marcus_Aurelius#Life"],
+  ])("resolves the sourced name variant %s to %s", async (name, title) => {
+    const fetchedTitles: string[] = [];
+    const people = createPeople({
+      repository: createRepository(),
+      fetchSnapshot: async (title) => {
+        fetchedTitles.push(title);
+        return snapshot(title, "Q100");
+      },
+      generateContent: async () => content,
+      fetchImageCandidates: async () => [],
+    });
+    const result = await people.resolveAndGenerateMissing({
+      relatedPeople: [{ name, sourceIds: ["wikipedia"] }],
+      storySources: [
+        {
+          id: "wikipedia",
+          kind: "wikipedia",
+          title: "Example",
+          url: "https://en.wikipedia.org/wiki/Example",
+          content: "Source text",
+          links: [{ label: title, title }],
+        },
+      ],
+      ai: { mode: "local", model: "person-model" },
+    });
+    expect(result.failures).toEqual([]);
+    expect(result.relatedPeople).toHaveLength(1);
+    expect(result.relatedPeople[0].personId).toBeDefined();
+    expect(fetchedTitles).toEqual([title.split("#")[0]]);
+  });
+
+  it("prefers an exact identity and keeps distinct resolved people with the same name", async () => {
+    const fetchedTitles: string[] = [];
+    const people = createPeople({
+      repository: createRepository(),
+      fetchSnapshot: async (title) => {
+        fetchedTitles.push(title);
+        return snapshot(title, "Q100");
+      },
+      generateContent: async () => content,
+      fetchImageCandidates: async () => [],
+    });
+    const result = await people.resolveAndGenerateMissing({
+      relatedPeople: [
+        { name: "John Smith (architect)", sourceIds: ["wikipedia"] },
+        { name: "John Smith", personId: "smith-artist", sourceIds: ["wikipedia"] },
+        { name: "John Smith", personId: "smith-explorer", sourceIds: ["wikipedia"] },
+      ],
+      storySources: [
+        {
+          id: "wikipedia",
+          kind: "wikipedia",
+          title: "Example",
+          url: "https://en.wikipedia.org/wiki/Example",
+          content: "Source text",
+          links: [
+            { label: "John Smith", title: "John Smith (architect)" },
+            { label: "John Smith", title: "John Smith (artist)" },
+          ],
+        },
+      ],
+      ai: { mode: "local", model: "person-model" },
+    });
+    expect(result.failures).toEqual([]);
+    expect(result.relatedPeople).toHaveLength(3);
+    expect(result.relatedPeople.map(({ personId }) => personId)).toEqual([
+      "john-smith-architect",
+      "smith-artist",
+      "smith-explorer",
+    ]);
+    expect(fetchedTitles).toEqual(["John Smith (architect)"]);
+  });
+
+  it("keeps ambiguous normalized matches unresolved and never matches a surname alone", async () => {
+    const people = createPeople({
+      repository: createRepository(),
+      fetchSnapshot: async () => {
+        throw new Error("An uncertain identity must not be fetched.");
+      },
+    });
+    const result = await people.resolveAndGenerateMissing({
+      relatedPeople: [
+        { name: "King Alexander", sourceIds: ["wikipedia"] },
+        { name: "Newton", sourceIds: ["wikipedia"] },
+      ],
+      storySources: [
+        {
+          id: "wikipedia",
+          kind: "wikipedia",
+          title: "Example",
+          url: "https://en.wikipedia.org/wiki/Example",
+          content: "Source text",
+          links: [
+            { label: "Alexander", title: "Alexander I" },
+            { label: "Alexander", title: "Alexander II" },
+            { label: "Isaac Newton", title: "Isaac Newton" },
+          ],
+        },
+      ],
+      ai: { mode: "local", model: "person-model" },
+    });
+    expect(result.relatedPeople).toEqual([{ name: "King Alexander", sourceIds: ["wikipedia"] }]);
+    expect(result.failures).toEqual([
+      {
+        name: "King Alexander",
+        message: "Multiple Wikipedia links match this name; the identity is ambiguous.",
+      },
+    ]);
+  });
+
+  it("matches papal names and Unicode spaces and checks duplicate references only once", async () => {
+    const repository = createRepository();
+    const fetchedTitles: string[] = [];
+    const progress: string[] = [];
+    const people = createPeople({
+      repository,
+      fetchSnapshot: async (title) => {
+        fetchedTitles.push(title);
+        return snapshot(title, "Q1020");
+      },
+      generateContent: async () => content,
+      fetchImageCandidates: async () => [],
+    });
+
+    const result = await people.resolveAndGenerateMissing({
+      relatedPeople: [
+        { name: "Pope Innocent X", sourceIds: ["wikipedia"] },
+        { name: "Antonio Della Bitta", sourceIds: ["wikipedia"] },
+        { name: "Pope Innocent X", sourceIds: ["other"] },
+        { name: "Innocent\u202fX", sourceIds: ["wikipedia"] },
+        { name: "Antonio Della Bitta", sourceIds: ["other"] },
+      ],
+      storySources: [
+        {
+          id: "wikipedia",
+          kind: "wikipedia",
+          title: "Piazza Navona",
+          url: "https://en.wikipedia.org/wiki/Piazza_Navona",
+          content: "Innocent X commissioned the piazza. Antonio Della Bitta sculpted Neptune.",
+          links: [{ label: "Innocent\u00a0X", title: "Innocent X" }],
+        },
+      ],
+      ai: { mode: "local", model: "person-model" },
+      onProgress: (message) => progress.push(message),
+    });
+
+    expect(result).toEqual({
+      relatedPeople: [
+        { name: "Pope Innocent X", personId: "pope-innocent-x", sourceIds: ["wikipedia", "other"] },
+      ],
+      failures: [],
+    });
+    expect(fetchedTitles).toEqual(["Innocent X"]);
+    expect(progress.filter((message) => message.startsWith("Checking "))).toEqual([
+      "Checking Pope Innocent X (1/2).",
+      "Checking Antonio Della Bitta (2/2).",
+    ]);
+  });
+
+  it("preserves an existing Person ID when an unresolved duplicate comes first", async () => {
+    const people = createPeople({
+      repository: createRepository(),
+      fetchSnapshot: async () => {
+        throw new Error("Resolved People must not be fetched again.");
+      },
+    });
+
+    await expect(
+      people.resolveAndGenerateMissing({
+        relatedPeople: [
+          { name: "Pope Innocent X", sourceIds: ["wikipedia"] },
+          { name: "Innocent X", personId: "innocent-x", sourceIds: ["other"] },
+        ],
+        storySources: [],
+        ai: { mode: "local", model: "person-model" },
+      }),
+    ).resolves.toEqual({
+      relatedPeople: [
+        { name: "Pope Innocent X", personId: "innocent-x", sourceIds: ["wikipedia", "other"] },
+      ],
+      failures: [],
+    });
+  });
+
   it("leaves missing, ambiguous, and identity-less references unresolved", async () => {
     const repository = createRepository();
     const people = createPeople({

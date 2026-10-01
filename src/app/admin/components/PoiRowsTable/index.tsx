@@ -2,6 +2,7 @@
 
 import { useOptimistic, useState } from "react";
 import { flushSync } from "react-dom";
+import { Pagination } from "./Pagination";
 import type { RefObject } from "react";
 import type { AiSelection } from "../../lib/aiModels";
 import type { AdminAction, AdminArtifact, AdminPoiRow } from "../../lib/types";
@@ -69,6 +70,7 @@ export const PoiRowsTable = ({
   refreshPoiTypesAction: AdminAction;
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => {
+  const [page, setPage] = useState(0);
   const [selectedPanel, setSelectedPanel] = useState<SelectedPanel | null>(null);
   const [progress, setProgress] = useOptimistic<{
     poiId: string;
@@ -92,6 +94,7 @@ export const PoiRowsTable = ({
     refreshPoiTypes: refreshPoiTypesAction,
   };
   const visibleRows = rows.filter((row) => visibleStatusGroups.includes(getPoiRowStatusGroup(row)));
+  const currentPage = Math.min(page, Math.max(0, Math.ceil(visibleRows.length / 50) - 1));
 
   const runSingleAction = async (
     poiId: string,
@@ -173,13 +176,14 @@ export const PoiRowsTable = ({
               <input
                 type="checkbox"
                 checked={visibleStatusGroups.includes(value)}
-                onChange={(event) =>
+                onChange={(event) => {
+                  setPage(0);
                   setVisibleStatusGroups((current) =>
                     event.target.checked
                       ? [...current, value]
                       : current.filter((group) => group !== value),
-                  )
-                }
+                  );
+                }}
                 className={`size-4 cursor-pointer ${checkbox}`}
               />
               {label}
@@ -272,7 +276,7 @@ export const PoiRowsTable = ({
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200 bg-white">
-                {visibleRows.map((row) => (
+                {visibleRows.slice(currentPage * 50, (currentPage + 1) * 50).map((row) => (
                   <Row
                     key={row.id}
                     row={row}
@@ -290,6 +294,9 @@ export const PoiRowsTable = ({
             </table>
           )}
         </div>
+        {visibleRows.length > 0 ? (
+          <Pagination page={currentPage} totalRows={visibleRows.length} onPageChange={setPage} />
+        ) : null}
       </section>
       {selectedPanel ? (
         <Preview

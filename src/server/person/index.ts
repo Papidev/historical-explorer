@@ -14,14 +14,47 @@ import { personRepository, type PersonRepository } from "./filesystemRepository"
 import { generatePerson } from "./generatePerson";
 import { toPublicPerson, type Person, type PersonContent, type PersonSource } from "./types";
 
-const normalizeName = (value: string) =>
+const normalizeTitle = (value: string) =>
   value
+    .split("#")[0]
+    .normalize("NFKC")
     .replace(/_/g, " ")
-    .replace(/\s*\([^)]*\)\s*$/, "")
+    .replace(/\s+/g, " ")
     .trim()
     .toLocaleLowerCase("en");
 
-const normalizeTitle = (value: string) => value.replace(/_/g, " ").trim().toLocaleLowerCase("en");
+const normalizeName = (value: string) =>
+  normalizeTitle(value)
+    .normalize("NFKD")
+    .replace(/\p{M}/gu, "")
+    .replace(/[’‘ʼ']/g, "")
+    .replace(/[\p{Pd}.]/gu, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(
+      /^(?:(?:pope|emperor|empress|king|queen|prince|princess|saint|st|sir|dame|cardinal|bishop|archbishop|doctor|dr)\s+)+/,
+      "",
+    );
+
+const findMatchingLinks = (name: string, links: WikiSnapshot["links"]) => {
+  const exact = links.filter(
+    ({ label, title }) =>
+      normalizeTitle(label) === normalizeTitle(name) ||
+      normalizeTitle(title) === normalizeTitle(name),
+  );
+  return new Map(
+    (exact.length > 0
+      ? exact
+      : links.filter(
+          ({ label, title }) =>
+            normalizeName(label) === normalizeName(name) ||
+            normalizeName(title) === normalizeName(name) ||
+            (!/\([^)]*\)\s*$/.test(name) &&
+              normalizeName(title.replace(/\s*\([^)]*\)\s*$/, "")) === normalizeName(name)),
+        )
+    ).map((link) => [normalizeTitle(link.title), { ...link, title: link.title.split("#")[0] }]),
+  );
+};
 
 const getProvider = (ai: AiSelection): "ollama" | "gemini" =>
   ai.mode === "local"
@@ -146,7 +179,7 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
 
   return {
     resolveAndGenerateMissing: async ({
-      relatedPeople,
+      relatedPeople: references,
       storySources,
       ai,
       onProgress,
@@ -157,6 +190,35 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
       onProgress?: (message: string) => void;
     }) => {
       const links = storySources.flatMap((source) => source.links ?? []);
+      const uniquePeople = new Map<string, RelatedPerson>();
+      for (const person of references) {
+        const matchingLinks = findMatchingLinks(person.name, links);
+        let key =
+          matchingLinks.size === 1
+            ? `wikipedia:${matchingLinks.keys().next().value}`
+            : `name:${normalizeName(person.name)}`;
+        if (
+          person.personId &&
+          uniquePeople.get(key)?.personId &&
+          uniquePeople.get(key)?.personId !== person.personId
+        ) {
+          key = `${key}\0${person.personId}`;
+        }
+        const existing = uniquePeople.get(key);
+        uniquePeople.set(
+          key,
+          existing
+            ? {
+                ...existing,
+                ...(existing.personId || person.personId
+                  ? { personId: existing.personId ?? person.personId }
+                  : {}),
+                sourceIds: Array.from(new Set([...existing.sourceIds, ...person.sourceIds])),
+              }
+            : { ...person, sourceIds: [...person.sourceIds] },
+        );
+      }
+      const relatedPeople = Array.from(uniquePeople.values());
       const personAi = { ...ai, provider: getProvider(ai) };
       const resolved: RelatedPerson[] = [];
       const failures: RelatedPeopleResolutionResult["failures"] = [];
@@ -169,23 +231,16 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
         }
         onProgress?.(`Checking ${person.name} (${index + 1}/${relatedPeople.length}).`);
 
-        const matchingLinks = new Map(
-          links
-            .filter(
-              ({ label, title }) =>
-                normalizeName(label) === normalizeName(person.name) ||
-                normalizeName(title) === normalizeName(person.name),
-            )
-            .map((link) => [normalizeTitle(link.title), link]),
-        );
-        if (matchingLinks.size !== 1) {
+        const matchingLinks = findMatchingLinks(person.name, links);
+        if (matchingLinks.size === 0) {
+          onProgress?.(`Skipping ${person.name}: no matching Wikipedia link in the Story source.`);
+          continue;
+        }
+        if (matchingLinks.size > 1) {
           resolved.push({ name: person.name, sourceIds: person.sourceIds });
           failures.push({
             name: person.name,
-            message:
-              matchingLinks.size === 0
-                ? "No matching Wikipedia link was found in the Story source."
-                : "Multiple Wikipedia links match this name; the identity is ambiguous.",
+            message: "Multiple Wikipedia links match this name; the identity is ambiguous.",
           });
           onProgress?.(`Could not match ${person.name} to one Wikipedia link.`);
           continue;

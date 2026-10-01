@@ -197,11 +197,8 @@
       "sourceIds": ["wikipedia"]
     },
     {
-      "name": "Antonio Della Bitta",
-      "sourceIds": ["wikipedia"]
-    },
-    {
       "name": "Pope Innocent X",
+      "personId": "pope-innocent-x",
       "sourceIds": ["wikipedia"]
     },
     {
@@ -222,10 +219,6 @@
     {
       "name": "Pietro da Cortona",
       "personId": "pietro-da-cortona",
-      "sourceIds": ["wikipedia"]
-    },
-    {
-      "name": "Pope Innocent X",
       "sourceIds": ["wikipedia"]
     }
   ]

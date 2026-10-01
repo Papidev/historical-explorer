@@ -72,19 +72,21 @@ export const RelatedPeopleDrawer = ({
                       </div>
                       <GenerationErrorDetails
                         errors={
-                          errors.some(({ name }) => name === person.name)
-                            ? errors.filter(({ name }) => name === person.name)
-                            : person.resolutionError
-                              ? [
-                                  {
-                                    at: "Previous attempt",
-                                    operation: "relatedPeople.resolve",
-                                    stage: "relatedPeople",
-                                    name: person.name,
-                                    message: person.resolutionError,
-                                  },
-                                ]
-                              : []
+                          person.personId
+                            ? []
+                            : errors.some(({ name }) => name === person.name)
+                              ? errors.filter(({ name }) => name === person.name)
+                              : person.resolutionError
+                                ? [
+                                    {
+                                      at: "Previous attempt",
+                                      operation: "relatedPeople.resolve",
+                                      stage: "relatedPeople",
+                                      name: person.name,
+                                      message: person.resolutionError,
+                                    },
+                                  ]
+                                : []
                         }
                         label="Resolution errors"
                       />
