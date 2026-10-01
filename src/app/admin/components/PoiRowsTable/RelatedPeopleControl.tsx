@@ -25,6 +25,11 @@ export const RelatedPeopleControl = ({
   }
 
   const unresolvedCount = relatedPeople.filter(({ personId }) => !personId).length;
+  const resolutionErrors = (row.generationErrors ?? []).filter(
+    ({ stage, name }) =>
+      stage === "relatedPeople" &&
+      relatedPeople.some((person) => !person.personId && (!name || person.name === name)),
+  );
 
   return (
     <>
@@ -44,7 +49,7 @@ export const RelatedPeopleControl = ({
               {unresolvedCount} unresolved
             </span>
           ) : null}
-          {(row.generationErrors ?? []).some(({ stage }) => stage === "relatedPeople") ? (
+          {resolutionErrors.length > 0 ? (
             <span className="rounded bg-red-100 px-1.5 py-0.5 text-xs font-medium text-red-800">
               Errors
             </span>
@@ -80,7 +85,7 @@ export const RelatedPeopleControl = ({
         <RelatedPeopleDrawer
           poiName={row.transformedPoi?.name ?? row.rawPoi?.name ?? row.id}
           people={row.artifacts?.relatedPeople ?? []}
-          errors={(row.generationErrors ?? []).filter(({ stage }) => stage === "relatedPeople")}
+          errors={resolutionErrors}
           onClose={() => setIsDrawerOpen(false)}
           selectMainImageCandidateAction={selectMainImageCandidateAction}
         />

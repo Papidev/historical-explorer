@@ -49,6 +49,8 @@ For Rome, the Geo Place input lives at `data/rome/pois/raw.geojson`, while app-r
 
 Generation attempts are logged locally in `data/rome/generated/generation-logs/day-*.jsonl`. Each line records a start, completion, or failure with a shared run ID. Seven daily files are reused in rotation: when a slot is used again after seven days, its old contents are overwritten. The Curator table shows the latest run and expandable errors beside the affected source, story, or image; Related People errors appear inside the People drawer. Error messages are stored with known credentials redacted; stack traces remain in the server console. These files are ignored by Git and are not a durable audit store across machines or deployments.
 
+The admin POI table shows 50 rows per page. Status filters apply to the complete list and return to the first page when changed.
+
 Use Generate on an empty row or Refresh on an existing row in `/admin` to run the complete Rome generation flow:
 
 1. Add app-ready POI metadata from the Geo Place.

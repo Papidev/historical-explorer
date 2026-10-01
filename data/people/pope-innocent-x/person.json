@@ -1,0 +1,77 @@
+{
+  "id": "pope-innocent-x",
+  "name": "Pope Innocent X",
+  "wikidataId": "Q101266",
+  "wikipediaTitle": "Pope Innocent X",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Battista Pamphili was born on 7 May 1574 in Rome to a family that traced its roots to Gubbio in Umbria. He studied law at the Collegio Romano, graduating in 1594, and entered the Roman Curia as a consistorial lawyer in 1601. His legal career advanced steadily: in 1604 he succeeded his uncle as auditor of the Roman Rota, and by 1623 he had been appointed apostolic nuncio to the courts of Naples, France and Spain, gaining a reputation as a skilled diplomat.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Elected pope on 15 September 1644, Innocent X used his papacy to strengthen the temporal power of the Holy See. He confiscated the property of the Barberini family, issued a papal bull that threatened cardinals who left the Papal States without permission, and condemned the Jansenist propositions in the bull Cum occasione. His reign also saw the destruction of Castro in 1649 during the First War of Castro, the celebration of a Jubilee in 1650 with major architectural projects in Rome, and the founding of the University of Santo Tomás in Manila. He died on 7 January 1655 after a long illness.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Innocent X was the subject of a famous portrait by Diego Velázquez, which later inspired Francis Bacon’s “Screaming Pope” series.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He ordered the construction of the Palazzo Nuovo at the Campidoglio, a grand palace that still stands in Rome today.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his papacy he raised the Colegio de Santo Tomás de Nuestra Señora del Santísimo Rosario to university status, making it the oldest existing university in Asia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1646 he issued a papal bull declaring that cardinals who left the Papal States for six months without papal permission would lose their benefices and possibly their cardinalate.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was known to be irritable in his later years, expelling his long‑time physician Gabriel da Fonseca in March 1654 after Fonseca defended a barber who had bled the pope.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1574,
+      "month": 5,
+      "day": 7,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1655,
+      "month": 1,
+      "day": 7,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Diego_Velázquez,_Portrait_du_pape_Innocent_X,_1650,_huile_sur_toile,_140_×_120_cm,_Rome,_Galleria_Doria_Pamphilj_(inv._237).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Diego_Vel%C3%A1zquez%2C_Portrait_du_pape_Innocent_X%2C_1650%2C_huile_sur_toile%2C_140_%C3%97_120_cm%2C_Rome%2C_Galleria_Doria_Pamphilj_(inv._237).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Diego_Vel%C3%A1zquez%2C_Portrait_du_pape_Innocent_X%2C_1650%2C_huile_sur_toile%2C_140_%C3%97_120_cm%2C_Rome%2C_Galleria_Doria_Pamphilj_%28inv._237%29.jpg/960px-Diego_Vel%C3%A1zquez%2C_Portrait_du_pape_Innocent_X%2C_1650%2C_huile_sur_toile%2C_140_%C3%97_120_cm%2C_Rome%2C_Galleria_Doria_Pamphilj_%28inv._237%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Diego_Vel%C3%A1zquez%2C_Portrait_du_pape_Innocent_X%2C_1650%2C_huile_sur_toile%2C_140_%C3%97_120_cm%2C_Rome%2C_Galleria_Doria_Pamphilj_%28inv._237%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Matthieu.lett.ube",
+    "author": "Matthieu.lett.ube",
+    "width": 5613,
+    "height": 6731,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Innocent X",
+    "url": "https://en.wikipedia.org/wiki/Pope_Innocent_X"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T22:40:15.140Z"
+  }
+}
