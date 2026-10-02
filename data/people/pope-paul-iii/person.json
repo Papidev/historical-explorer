@@ -1,0 +1,69 @@
+{
+  "id": "pope-paul-iii",
+  "name": "Pope Paul III",
+  "wikidataId": "Q133001",
+  "wikipediaTitle": "Pope Paul III",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Paul III, born Alessandro Farnese in 1468, rose to the papacy at a time of great turmoil, following the sack of Rome and the spread of the Protestant Reformation. His reign, from 1534 to 1549, is best remembered for initiating the Counter‑Reformation, convening the Council of Trent in 1545 to address doctrinal and disciplinary reforms, and formally approving the Society of Jesus, which would become a leading force in Catholic missionary work.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond his theological reforms, Paul III was a prolific patron of the arts, commissioning Michelangelo’s Last Judgment for the Sistine Chapel and overseeing the construction of the Palazzo Farnese in Rome. His patronage extended to other artists such as Titian, and he played a key role in the architectural and artistic revitalization of the Vatican, leaving a lasting cultural legacy that intertwined with his political and religious initiatives.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He issued the bull *Sublimis Deus* in 1537, declaring that indigenous peoples of the Americas were human beings and should not be enslaved, a pioneering statement on human rights that was later annulled by the Spanish crown.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Paul III excommunicated King Henry VIII of England in 1538, a move that intensified the religious conflict between England and the Catholic Church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first pope to formally approve the Jesuit order in 1540, granting it a papal charter that allowed it to expand rapidly across Europe and the New World.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1468,
+      "month": 2,
+      "day": 29,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1549,
+      "month": 11,
+      "day": 10,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Portrait_of_Pope_Paul_III_Farnese_(by_Titian)_-_National_Museum_of_Capodimonte.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_Pope_Paul_III_Farnese_(by_Titian)_-_National_Museum_of_Capodimonte.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Portrait_of_Pope_Paul_III_Farnese_%28by_Titian%29_-_National_Museum_of_Capodimonte.jpg/960px-Portrait_of_Pope_Paul_III_Farnese_%28by_Titian%29_-_National_Museum_of_Capodimonte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Portrait_of_Pope_Paul_III_Farnese_%28by_Titian%29_-_National_Museum_of_Capodimonte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Titian",
+    "author": "Titian",
+    "width": 2922,
+    "height": 3813,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Paul III",
+    "url": "https://en.wikipedia.org/wiki/Pope_Paul_III"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:53:13.080Z"
+  }
+}

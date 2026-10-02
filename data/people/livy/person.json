@@ -1,0 +1,65 @@
+{
+  "id": "livy",
+  "name": "Livy",
+  "wikidataId": "Q2039",
+  "wikipediaTitle": "Livy",
+  "content": {
+    "description": [
+      {
+        "text": "Titus Livius, known as Livy, was a Roman historian born in Patavium (modern Padua) around 59 BC. Educated in philosophy and rhetoric, he never held a senatorial office and devoted his life to writing the monumental History of Rome, which covers the city’s legendary founding in 753 BC through the reign of Augustus. Livy was a friend of Augustus and encouraged the future emperor Claudius to pursue historiography.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Livy’s History emphasizes Roman heroism and the triumphs of the new imperial order, aiming to preserve the memory of Rome’s deeds. Although his accounts of earlier events are sometimes questioned for accuracy, the work remained a foundational source for later historians and was widely read and copied throughout the empire and beyond.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Livy encouraged the future emperor Claudius to write history during his childhood.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Livy never served in the Roman army and made elementary mistakes on military matters in his writings.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Livy’s popularity was such that a man from Cádiz travelled to Rome and back just to meet him.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -59,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 17,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Titus_Livius.png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Titus_Livius.png",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/Titus_Livius.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/Titus_Livius.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Scanned by User:Gabor",
+    "author": "Scanned by User:Gabor",
+    "width": 400,
+    "height": 484,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Livy",
+    "url": "https://en.wikipedia.org/wiki/Livy"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:46:21.596Z"
+  }
+}

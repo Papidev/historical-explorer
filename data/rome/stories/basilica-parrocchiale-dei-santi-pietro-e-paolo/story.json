@@ -74,31 +74,12 @@
   "relatedPeople": [
     {
       "name": "Pope Paul VI",
+      "personId": "pope-paul-vi",
       "sourceIds": ["wikipedia"]
     },
     {
       "name": "Arnaldo Foschini",
       "personId": "arnaldo-foschini",
-      "sourceIds": ["wikipedia"]
-    },
-    {
-      "name": "Alfredo Energici",
-      "sourceIds": ["wikipedia"]
-    },
-    {
-      "name": "Vittorio Grassi",
-      "sourceIds": ["wikipedia"]
-    },
-    {
-      "name": "Nello Ena",
-      "sourceIds": ["wikipedia"]
-    },
-    {
-      "name": "Tullio Rossi",
-      "sourceIds": ["wikipedia"]
-    },
-    {
-      "name": "Costantino Vetriani",
       "sourceIds": ["wikipedia"]
     },
     {

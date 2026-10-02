@@ -1,0 +1,69 @@
+{
+  "id": "adriaan-reland",
+  "name": "Adriaan Reland",
+  "wikidataId": "Q247320",
+  "wikipediaTitle": "Adriaan Reland",
+  "content": {
+    "description": [
+      {
+        "text": "Adriaan Reland was born on 17 July 1676 in the small North Holland village of De Rijp.  From an early age he displayed a prodigious aptitude for languages, beginning Latin studies at eleven and later enrolling at the University of Utrecht in 1693 to study theology and philosophy.  By 1699, after earning his doctorate, he moved to Leiden to tutor the son of Hans Willem Bentinck, but declined an invitation to England because of his father’s ill health.  That same year he was appointed Professor of Physics and Metaphysics at the University of Harderwijk, and in 1701 he secured the chair of Oriental Languages at Utrecht, where he would spend the rest of his career.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Reland’s scholarly output was remarkably broad.  He produced pioneering comparative studies of Arabic, Hebrew, and Persian, and in 1705 published *De religione Mohammedica libri duo*, the first systematic European survey of Islamic beliefs that quickly became a reference work across the continent.  His cartographic achievements included a 1705 map of the Persian Empire that integrated Persian place‑names into European maps, and a 1715 map of Japan that relied heavily on Japanese sources and later served as the basis for Engelbert Kaempfer’s *History of Japan* (1729).  Despite never leaving the Netherlands, his research on biblical Palestine, East Asian myths, and the Malay language left a lasting imprint on Oriental studies.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Reland never travelled to the regions he described; all his geographic and linguistic work was based on texts and reports he compiled in the Netherlands.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His 1715 map of Japan was adopted by Engelbert Kaempfer and became the standard European representation of the island for several decades.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Reland died of smallpox in Utrecht on 5 February 1718 at the age of 41, a common but tragic fate for scholars of the era.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1676,
+      "month": 7,
+      "day": 17,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1718,
+      "month": 2,
+      "day": 5,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Portret_van_Adriaan_Reland,_RP-P-1905-255.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Portret_van_Adriaan_Reland%2C_RP-P-1905-255.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Portret_van_Adriaan_Reland%2C_RP-P-1905-255.jpg/960px-Portret_van_Adriaan_Reland%2C_RP-P-1905-255.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Portret_van_Adriaan_Reland%2C_RP-P-1905-255.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC0",
+    "attribution": "Rijksmuseum",
+    "author": "Rijksmuseum",
+    "width": 4418,
+    "height": 6428,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Adriaan Reland",
+    "url": "https://en.wikipedia.org/wiki/Adriaan_Reland"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:11:16.800Z"
+  }
+}

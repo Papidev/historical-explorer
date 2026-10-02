@@ -1,0 +1,64 @@
+{
+  "id": "benito-mussolini",
+  "name": "Benito Mussolini",
+  "wikidataId": "Q23559",
+  "wikipediaTitle": "Benito Mussolini",
+  "content": {
+    "description": [
+      {
+        "text": "Benito Amilcare Andrea Mussolini was born on 29 July 1883 in Predappio, a town in the province of Forlì in Romagna. His father, Alessandro, was a blacksmith and socialist, while his mother, Rosa, was a devout Catholic schoolteacher. Named after the Mexican president Benito Juárez, Mussolini began his career as a radical socialist journalist at Avanti! before turning to nationalist politics and founding the fascist movement in 1919.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the March on Rome in 1922, Mussolini was appointed Prime Minister and established a totalitarian fascist dictatorship. He aligned Italy with Nazi Germany, invaded Ethiopia in 1935, signed the Lateran Treaty in 1929 to establish Vatican City, and entered World II in 1940. Overthrown in 1943, he was rescued by German paratroopers in the Gran Sasso raid, led the Italian Social Republic, and was executed by the Italian resistance on 28 April 1945.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Mussolini was originally a radical socialist journalist at Avanti! before founding the fascist movement.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He founded the newspaper Il Popolo d'Italia in 1914, which became the mouthpiece of his nationalist and later fascist ideology.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Mussolini signed the Lateran Treaty in 1929, establishing Vatican City as an independent state and recognizing Catholicism as Italy’s state religion.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was rescued from captivity by German paratroopers during the Gran Sasso raid in September 1943 and became the figurehead of the Italian Social Republic.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Mussolini was executed by the Italian resistance near the end of World War II, on 28 April 1945, after being captured in the village of Giulino di Mezzegra.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1883,
+      "month": 7,
+      "day": 29,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1945,
+      "month": 4,
+      "day": 28,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Benito Mussolini",
+    "url": "https://en.wikipedia.org/wiki/Benito_Mussolini"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:55:14.877Z"
+  }
+}

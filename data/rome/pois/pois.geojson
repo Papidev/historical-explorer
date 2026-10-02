@@ -213,6 +213,40 @@
           41.833704
         ]
       }
+    },
+    {
+      "id": "accademia-di-san-luca",
+      "type": "Feature",
+      "properties": {
+        "addr:housenumber": "77",
+        "addr:postcode": "00187",
+        "addr:street": "Piazza dell'Accademia di San Luca",
+        "name": "Accademia di San Luca",
+        "tourism": "museum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.4836806,
+          41.9016166
+        ]
+      }
+    },
+    {
+      "id": "acqua-marcia",
+      "wikidataId": "Q622943",
+      "type": "Feature",
+      "properties": {
+        "name": "Acqua Marcia",
+        "wikipedia": "en:Aqua Marcia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.5390264,
+          41.8712135
+        ]
+      }
     }
   ]
 }

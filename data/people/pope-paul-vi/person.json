@@ -1,0 +1,81 @@
+{
+  "id": "pope-paul-vi",
+  "name": "Pope Paul VI",
+  "wikidataId": "Q16975",
+  "wikipediaTitle": "Pope Paul VI",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Battista Enrico Antonio Maria Montini was born on 26 September 1897 in Concesio, Lombardy, and entered the seminary in 1916. After his ordination in 1920 he spent more than three decades working in the Secretariat of State, serving closely under Popes Pius XII and John XXIII. In 1954 he was appointed Archbishop of Milan, and in 1958 he was created a cardinal. When John XXIII died in 1963, Montini was elected pope on 21 June and took the name Paul VI, becoming the first pope elected by a unanimous vote after a single ballot.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As pope, Paul VI closed the Second Vatican Council in 1965 and oversaw the implementation of its reforms, including the liturgical changes of the new Roman Missal. He pursued an unprecedented ecumenical agenda, meeting the Patriarch of Constantinople in 1964 and the Archbishop of Canterbury in 1965, and becoming the first reigning pontiff to visit six continents, the Holy Land, and to fly to Jordan in 1964. His papacy also saw the promulgation of Humanae vitae in 1968, the first papal encyclical to reaffirm the Church’s opposition to artificial birth control, and the establishment of the Synod of Bishops in 1965.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Paul VI was the first pope to fly to Jordan in 1964, marking the first time a reigning pontiff had left Italy in more than a century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first reigning pontiff to visit six continents, a milestone that earned him the nickname “the Pilgrim Pope.”",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Paul VI was the first pope to visit the Holy Land on pilgrimage, a historic first for a reigning pontiff.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first pope to use an airplane for a pilgrimage, setting a new precedent for papal travel.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Paul VI closed the Second Vatican Council in 1965, completing the work begun by his predecessor John XXIII.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He issued the encyclical Humanae vitae in 1968, reaffirming the Church’s opposition to artificial birth control.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1965 he established the Synod of Bishops, creating a permanent advisory body to the papacy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Paul VI was the first pope to meet the Archbishop of Canterbury, fostering a historic ecumenical relationship between the Catholic and Anglican churches.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first pope to meet the Patriarch of Constantinople, a significant step toward healing the schism between the Catholic and Eastern Orthodox churches.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Pope_Paul_VI_1969_Portrait_(4x5_cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Paul_VI_1969_Portrait_(4x5_cropped).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Pope_Paul_VI_1969_Portrait_%284x5_cropped%29.jpg/960px-Pope_Paul_VI_1969_Portrait_%284x5_cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Pope_Paul_VI_1969_Portrait_%284x5_cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Fotografia Felici",
+    "author": "Fotografia Felici",
+    "width": 2713,
+    "height": 3393,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Paul VI",
+    "url": "https://en.wikipedia.org/wiki/Pope_Paul_VI"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:26:51.399Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "decimus-junius-brutus-scaeva-consul-292",
+  "name": "Decimus Junius Brutus Scaeva",
+  "wikidataId": "Q3656280",
+  "wikipediaTitle": "Decimus Junius Brutus Scaeva (consul 292)",
+  "content": {
+    "description": [
+      {
+        "text": "Decimus Junius Brutus Scaeva was a Roman politician and military man who served as a legate in 293 BC in the army of the consul Spurius Carvilius Maximus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The following year, in 292 BC, he was elected consul, one of the highest magistracies in the Roman Republic, indicating his prominence in Roman politics.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He served as a legate in 293 BC in the army of consul Spurius Carvilius Maximus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was elected consul in 292 BC.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Decimus Junius Brutus Scaeva (consul 292)",
+    "url": "https://en.wikipedia.org/wiki/Decimus_Junius_Brutus_Scaeva_(consul_292)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:45:58.598Z"
+  }
+}

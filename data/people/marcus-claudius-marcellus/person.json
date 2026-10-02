@@ -1,0 +1,73 @@
+{
+  "id": "marcus-claudius-marcellus",
+  "name": "Marcus Claudius Marcellus",
+  "wikidataId": "Q312306",
+  "wikipediaTitle": "Marcus Claudius Marcellus",
+  "content": {
+    "description": [
+      {
+        "text": "Marcus Claudius Marcellus was a Roman general and statesman who rose to prominence in the early third century BC. Born around 270 BC, he entered public life as a curule aedile and augur before being elected consul for the first time in 222 BC, a position he would hold five times over the next fifteen years. His military career was marked by decisive victories against the Gauls, including the single‑combat triumph over the Gallic king Viridomarus, which earned him the rare honor of the spolia opima.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Marcellus later commanded Roman forces in the Second Punic War, most famously leading the protracted siege of Syracuse from 214 to 212 BC. During the assault he killed the famed mathematician Archimedes, an act he reportedly regretted. He was killed in 208 BC while leading a reconnaissance mission against Hannibal’s Numidian cavalry, ending a career that had made him one of Rome’s most celebrated military leaders.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was elected consul five times (222, 215, 214, 210, and 208 BC).",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He won the spolia opima by killing the Gallic king Viridomarus in single combat at the Battle of Clastidium in 222 BC.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the siege of Syracuse, he killed the mathematician Archimedes, who was known for inventing war machines.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He earned the nickname “Sword of Rome” for his battlefield prowess and for bringing Greek art and learning to Rome after the fall of Syracuse.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He is the only confirmed holder of the spolia opima after Romulus and Aulus Cornelius Cossus, reviving the tradition in Roman military culture.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -270,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": -208,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Denarius_Publius_Cornelius_Lentulus_Marcellinus_3_Obverse.png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Denarius_Publius_Cornelius_Lentulus_Marcellinus_3_Obverse.png",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Denarius_Publius_Cornelius_Lentulus_Marcellinus_3_Obverse.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Denarius_Publius_Cornelius_Lentulus_Marcellinus_3_Obverse.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 394,
+    "height": 382,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Marcus Claudius Marcellus",
+    "url": "https://en.wikipedia.org/wiki/Marcus_Claudius_Marcellus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:46:08.457Z"
+  }
+}

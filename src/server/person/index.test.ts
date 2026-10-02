@@ -9,10 +9,37 @@ import type { PersonContent } from "./types";
 
 const directories: string[] = [];
 
-const createRepository = () => {
+const createRepository = (...existingIds: string[]) => {
   const directory = mkdtempSync(path.join(tmpdir(), "people-"));
   directories.push(directory);
-  return createFilesystemPersonRepository(directory);
+  const repository = createFilesystemPersonRepository(directory);
+  for (const id of existingIds) {
+    const source = {
+      id: "wikipedia",
+      kind: "wikipedia" as const,
+      title: id,
+      url: `https://en.wikipedia.org/wiki/${id}`,
+      content: "Stored source",
+    };
+    repository.replace(
+      {
+        id,
+        name: id,
+        wikidataId: `Q-${id}`,
+        wikipediaTitle: id,
+        content,
+        source,
+        generation: {
+          aiMode: "local",
+          aiProvider: "ollama",
+          aiModel: "test-model",
+          completedAt: "2026-09-19T10:00:00.000Z",
+        },
+      },
+      source,
+    );
+  }
+  return repository;
 };
 
 const content: PersonContent = {
@@ -49,6 +76,175 @@ afterEach(() => {
 });
 
 describe("People", () => {
+  it("merges source links redirected to the same canonical Wikipedia article", async () => {
+    const repository = createRepository();
+    const people = createPeople({
+      repository,
+      fetchSnapshot: async () => snapshot("John Smith (architect)", "Q100"),
+      generateContent: async () => content,
+      fetchImageCandidates: async () => [],
+    });
+    const result = await people.resolveAndGenerateMissing({
+      relatedPeople: [{ name: "John Smith", sourceIds: ["wikipedia"] }],
+      storySources: [
+        {
+          id: "wikipedia",
+          kind: "wikipedia",
+          title: "Example",
+          url: "https://en.wikipedia.org/wiki/Example",
+          content: "Source text",
+          links: [
+            { label: "John Smith", title: "John Smith" },
+            { label: "John Smith", title: "John Smith (architect)" },
+          ],
+        },
+      ],
+      ai: { mode: "local", model: "person-model" },
+    });
+    expect(result.failures).toEqual([]);
+    expect(repository.get(result.relatedPeople[0].personId!)?.wikipediaTitle).toBe(
+      "John Smith (architect)",
+    );
+    expect(repository.list()).toHaveLength(1);
+  });
+
+  it("does not create a Person from a disambiguation page alone", async () => {
+    const repository = createRepository();
+    const people = createPeople({
+      repository,
+      fetchSnapshot: async (title) => ({ ...snapshot(title, "Q100"), isDisambiguation: true }),
+      generateContent: async () => {
+        throw new Error("A disambiguation page is not a Person.");
+      },
+    });
+    const result = await people.resolveAndGenerateMissing({
+      relatedPeople: [{ name: "John Smith", sourceIds: ["wikipedia"] }],
+      storySources: [
+        {
+          id: "wikipedia",
+          kind: "wikipedia",
+          title: "Example",
+          url: "https://en.wikipedia.org/wiki/Example",
+          content: "Source text",
+          links: [{ label: "John Smith", title: "John Smith" }],
+        },
+      ],
+      ai: { mode: "local", model: "person-model" },
+    });
+    expect(result).toEqual({ relatedPeople: [], failures: [] });
+    expect(repository.list()).toHaveLength(0);
+  });
+  it.each([
+    ["Quintus Marcius Rex", "Quintus Marcius Rex (praetor 144 BC)"],
+    ["John Smith", "John Smith (architect)"],
+  ])(
+    "ignores the disambiguation page when one sourced Person remains for %s",
+    async (name, title) => {
+      const repository = createRepository();
+      const fetchedTitles: string[] = [];
+      const people = createPeople({
+        repository,
+        fetchSnapshot: async (requestedTitle) => {
+          fetchedTitles.push(requestedTitle);
+          return {
+            ...snapshot(requestedTitle, requestedTitle === title ? "Q100" : "Q200"),
+            ...(requestedTitle === name ? { isDisambiguation: true } : {}),
+          };
+        },
+        generateContent: async () => content,
+        fetchImageCandidates: async () => [],
+      });
+      const result = await people.resolveAndGenerateMissing({
+        relatedPeople: [{ name, sourceIds: ["wikipedia"] }],
+        storySources: [
+          {
+            id: "wikipedia",
+            kind: "wikipedia",
+            title: "Example",
+            url: "https://en.wikipedia.org/wiki/Example",
+            content: "Source text",
+            links: [
+              { label: name, title: name },
+              { label: name, title },
+            ],
+          },
+        ],
+        ai: { mode: "local", model: "person-model" },
+      });
+      expect(result.failures).toEqual([]);
+      expect(fetchedTitles).toEqual([name, title]);
+      expect(repository.get(result.relatedPeople[0].personId!)).toMatchObject({
+        name,
+        wikipediaTitle: title,
+        wikidataId: "Q100",
+      });
+    },
+  );
+  it.each([
+    ["Decimus Junius Brutus Scaeva (consul 292)", "Decimus Junius Brutus Scaeva"],
+    ["John Smith (architect)", "John Smith"],
+  ])("separates the display name from Wikipedia identity for %s", async (title, name) => {
+    const repository = createRepository();
+    let requestedName: string | undefined;
+    const people = createPeople({
+      repository,
+      fetchSnapshot: async (requestedTitle) => {
+        expect(requestedTitle).toBe(title);
+        return snapshot(title, "Q100");
+      },
+      generateContent: async (person) => {
+        requestedName = person.name;
+        return content;
+      },
+      fetchImageCandidates: async () => [],
+    });
+    const result = await people.resolveAndGenerateMissing({
+      relatedPeople: [{ name: title, sourceIds: ["wikipedia"] }],
+      storySources: [
+        {
+          id: "wikipedia",
+          kind: "wikipedia",
+          title: "Example",
+          url: "https://en.wikipedia.org/wiki/Example",
+          content: "Source text",
+          links: [{ label: title, title }],
+        },
+      ],
+      ai: { mode: "local", model: "person-model" },
+    });
+    expect(requestedName).toBe(name);
+    const id = result.relatedPeople[0].personId!;
+    expect(repository.get(id)).toMatchObject({ name, wikipediaTitle: title, source: { title } });
+    expect(people.getPublic(id)?.name).toBe(name);
+    const stored = repository.get(id)!;
+    repository.replace({ ...stored, name: title }, repository.readSource(stored));
+    expect(people.getPublic(id)?.name).toBe(name);
+  });
+  it("resolves a saved reference again when its Person ID has no stored Person", async () => {
+    const repository = createRepository();
+    const people = createPeople({
+      repository,
+      fetchSnapshot: async (title) => snapshot(title, "Q100"),
+      generateContent: async () => content,
+      fetchImageCandidates: async () => [],
+    });
+    const result = await people.resolveAndGenerateMissing({
+      relatedPeople: [{ name: "Hercules", personId: "Hercules", sourceIds: ["wikipedia"] }],
+      storySources: [
+        {
+          id: "wikipedia",
+          kind: "wikipedia",
+          title: "Forum Boarium",
+          url: "https://en.wikipedia.org/wiki/Forum_Boarium",
+          content: "Story source",
+          links: [{ label: "Hercules", title: "Hercules" }],
+        },
+      ],
+      ai: { mode: "local", model: "person-model" },
+    });
+    expect(result.relatedPeople[0].personId).toBe("hercules");
+    expect(repository.get("hercules")).toBeDefined();
+  });
   it("uses the selected Ollama Cloud model for People", async () => {
     vi.stubEnv("CLOUD_AI_PROVIDER", "ollama");
     const repository = createRepository();
@@ -193,7 +389,7 @@ describe("People", () => {
   it("prefers an exact identity and keeps distinct resolved people with the same name", async () => {
     const fetchedTitles: string[] = [];
     const people = createPeople({
-      repository: createRepository(),
+      repository: createRepository("smith-artist", "smith-explorer"),
       fetchSnapshot: async (title) => {
         fetchedTitles.push(title);
         return snapshot(title, "Q100");
@@ -235,9 +431,7 @@ describe("People", () => {
   it("keeps ambiguous normalized matches unresolved and never matches a surname alone", async () => {
     const people = createPeople({
       repository: createRepository(),
-      fetchSnapshot: async () => {
-        throw new Error("An uncertain identity must not be fetched.");
-      },
+      fetchSnapshot: async (title) => snapshot(title, title === "Alexander I" ? "Q100" : "Q101"),
     });
     const result = await people.resolveAndGenerateMissing({
       relatedPeople: [
@@ -319,8 +513,9 @@ describe("People", () => {
   });
 
   it("preserves an existing Person ID when an unresolved duplicate comes first", async () => {
+    const progress: string[] = [];
     const people = createPeople({
-      repository: createRepository(),
+      repository: createRepository("innocent-x"),
       fetchSnapshot: async () => {
         throw new Error("Resolved People must not be fetched again.");
       },
@@ -334,6 +529,7 @@ describe("People", () => {
         ],
         storySources: [],
         ai: { mode: "local", model: "person-model" },
+        onProgress: (message) => progress.push(message),
       }),
     ).resolves.toEqual({
       relatedPeople: [
@@ -341,6 +537,7 @@ describe("People", () => {
       ],
       failures: [],
     });
+    expect(progress).toEqual(["Skipping Pope Innocent X (1/1): already resolved."]);
   });
 
   it("leaves missing, ambiguous, and identity-less references unresolved", async () => {
@@ -443,6 +640,50 @@ describe("People", () => {
     expect(repository.list()).toHaveLength(1);
   });
 
+  it("excludes a Person whose Wikipedia page does not exist and continues with the remaining People", async () => {
+    const repository = createRepository();
+    const progress: string[] = [];
+    const people = createPeople({
+      repository,
+      fetchSnapshot: async (title) => {
+        if (title === "Alfredo Energici")
+          throw new Error(`Wikipedia page not found for title "${title}".`);
+        return snapshot(title, "Q100");
+      },
+      generateContent: async () => content,
+      fetchImageCandidates: async () => [],
+    });
+
+    await expect(
+      people.resolveAndGenerateMissing({
+        relatedPeople: [
+          { name: "Alfredo Energici", sourceIds: ["wikipedia"] },
+          { name: "Hercules", sourceIds: ["wikipedia"] },
+        ],
+        storySources: [
+          {
+            id: "wikipedia",
+            kind: "wikipedia",
+            title: "Example",
+            url: "https://en.wikipedia.org/wiki/Example",
+            content: "Source text",
+            links: [
+              { label: "Alfredo Energici", title: "Alfredo Energici" },
+              { label: "Hercules", title: "Hercules" },
+            ],
+          },
+        ],
+        ai: { mode: "local", model: "person-model" },
+        onProgress: (message) => progress.push(message),
+      }),
+    ).resolves.toEqual({
+      relatedPeople: [{ name: "Hercules", personId: "hercules", sourceIds: ["wikipedia"] }],
+      failures: [],
+    });
+    expect(repository.list()).toHaveLength(1);
+    expect(progress).toContain("Skipping Alfredo Energici: Wikipedia page not found.");
+  });
+
   it("does not persist a partial Person when generation fails", async () => {
     const repository = createRepository();
     const people = createPeople({
@@ -510,7 +751,7 @@ describe("People", () => {
   });
 
   it("keeps existing resolutions and stops new requests after a rate limit", async () => {
-    const repository = createRepository();
+    const repository = createRepository("resolved");
     const fetchedTitles: string[] = [];
     const people = createPeople({
       repository,

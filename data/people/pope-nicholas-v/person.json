@@ -1,0 +1,69 @@
+{
+  "id": "pope-nicholas-v",
+  "name": "Pope Nicholas V",
+  "wikidataId": "Q134588",
+  "wikipediaTitle": "Pope Nicholas V",
+  "content": {
+    "description": [
+      {
+        "text": "Tommaso Parentucelli, born on 15 November 1397 in Sarzana, rose through the ranks of the Church to become Pope Nicholas V after the death of Eugene IV. He was elected on 6 March 1447 and took the name Nicholas in honour of his early patron, Niccolò Albergati.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his eight‑year pontificate he sought to make Rome a centre of the Renaissance, restoring aqueducts, rebuilding churches, and commissioning the design of the future Basilica of St. Peter. He also founded a library of five thousand volumes, many of which were rescued from the Turks after the fall of Constantinople.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Nicholas ordered the restoration of the Aqua Virgo aqueduct, whose basin later became the site of the Trevi Fountain.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He commissioned the architectural plans that would eventually lead to the construction of the Basilica of St. Peter.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The papal library he founded contained five thousand volumes, including manuscripts rescued from the Turks after the fall of Constantinople.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1397,
+      "month": 11,
+      "day": 15,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1455,
+      "month": 3,
+      "day": 24,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Paus_Nicolaas_V_door_Peter_Paul_Rubens.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Paus_Nicolaas_V_door_Peter_Paul_Rubens.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Paus_Nicolaas_V_door_Peter_Paul_Rubens.jpg/960px-Paus_Nicolaas_V_door_Peter_Paul_Rubens.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Paus_Nicolaas_V_door_Peter_Paul_Rubens.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Peter Paul Rubens",
+    "author": "Peter Paul Rubens",
+    "width": 2369,
+    "height": 3181,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Nicholas V",
+    "url": "https://en.wikipedia.org/wiki/Pope_Nicholas_V"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:53:48.763Z"
+  }
+}

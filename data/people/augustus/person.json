@@ -1,0 +1,65 @@
+{
+  "id": "augustus",
+  "name": "Augustus",
+  "wikidataId": "Q1405",
+  "wikipediaTitle": "Augustus",
+  "content": {
+    "description": [
+      {
+        "text": "Augustus, born Gaius Octavius on 23 September 63 BC, rose from a modest equestrian family to become the founder of the Roman Empire. After Julius Caesar named him his heir, he skillfully navigated the turbulent politics of the late Republic, forming the Second Triumvirate with Mark Antony and Lepidus, defeating their rivals at the Battle of Philippi, and ultimately consolidating power by defeating Antony and Cleopatra at Actium in 31 BC.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As emperor from 27 BC until his death in AD 14, Augustus established the principate, a system that preserved the façade of republican institutions while granting him supreme authority. He expanded the empire’s borders, reformed its finances and military, and embarked on extensive building projects that reshaped Rome into a marble city. His reign ushered in the Pax Romana, a period of relative peace and prosperity that endured for two centuries.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The month of August was renamed in his honor, replacing Sextilis in the Roman calendar.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Augustus was a noted patron of the arts, supporting poets such as Virgil, Horace, and Ovid.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -63,
+      "month": 9,
+      "day": 23,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 14,
+      "month": 8,
+      "day": 19,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Statue_of_the_Emperor_Octavian_Augustus_as_Jupiter_(6).png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Statue_of_the_Emperor_Octavian_Augustus_as_Jupiter_(6).png",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Statue_of_the_Emperor_Octavian_Augustus_as_Jupiter_%286%29.png/960px-Statue_of_the_Emperor_Octavian_Augustus_as_Jupiter_%286%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Statue_of_the_Emperor_Octavian_Augustus_as_Jupiter_%286%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "С. И. Сосновский",
+    "author": "С. И. Сосновский",
+    "width": 1080,
+    "height": 1920,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Augustus",
+    "url": "https://en.wikipedia.org/wiki/Augustus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:50:38.889Z"
+  }
+}

@@ -1,5 +1,6 @@
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
+import { personRepository } from "@/server/person/filesystemRepository";
 import { createStoryWorkflowForCity } from "@/server/storyWorkflow";
 import type { DraftStorySnapshot } from "@/server/storyWorkflow";
 import { toPublicStoryContent } from "@/server/storyWorkflow/storyContent";
@@ -44,7 +45,16 @@ export const getPoiStoryContent = async (city: string, poiId?: string) => {
 
   const storyContent = (await createStoryWorkflowForCity(city).draftStory.get({ poiId }))
     ?.storyContent;
-  return storyContent ? toPublicStoryContent(storyContent) : undefined;
+  return storyContent
+    ? toPublicStoryContent({
+        ...storyContent,
+        relatedPeople: storyContent.relatedPeople.map((person) =>
+          person.personId && personRepository.get(person.personId)
+            ? person
+            : { name: person.name, sourceIds: person.sourceIds },
+        ),
+      })
+    : undefined;
 };
 
 const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Poi | null => {

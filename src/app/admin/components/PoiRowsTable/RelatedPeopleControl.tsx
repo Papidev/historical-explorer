@@ -49,11 +49,6 @@ export const RelatedPeopleControl = ({
               {unresolvedCount} unresolved
             </span>
           ) : null}
-          {resolutionErrors.length > 0 ? (
-            <span className="rounded bg-red-100 px-1.5 py-0.5 text-xs font-medium text-red-800">
-              Errors
-            </span>
-          ) : null}
         </button>
         {unresolvedCount ? (
           <form

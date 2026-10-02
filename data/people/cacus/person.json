@@ -1,0 +1,65 @@
+{
+  "id": "cacus",
+  "name": "Cacus",
+  "wikidataId": "Q754686",
+  "wikipediaTitle": "Cacus",
+  "content": {
+    "description": [
+      {
+        "text": "Cacus was a fire‑breathing giant in Roman mythology, described as the son of Vulcan. He lived in a cave on the future site of Rome’s Aventine Hill, where he terrorized nearby inhabitants by eating human flesh and nailing the heads of his victims to the doors of his cave.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Hercules encountered Cacus while resting his stolen cattle from Geryon. Cacus stole eight of the herd, then blocked the cave entrance with a massive boulder and spewed fire. Hercules broke the rock, entered the cave, and strangled Cacus, after which he erected the Ara Maxima altar that later became the Forum Boarium.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In Dante’s Inferno, Cacus is portrayed as a centaur with a fire‑breathing dragon on his shoulders, guarding thieves in the Circle of Fraud.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Spanish colloquial word “caco” for thief derives from the name Cacus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After killing Cacus, Hercules erected the Ara Maxima altar, which later became the site of Rome’s Forum Boarium, the city’s cattle market.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Virgil’s Aeneid records that the Arcadian king Evander told Aeneas about Cacus, using the story to explain the yearly rites performed to Hercules.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cacus had a sister named Caca, who reportedly informed Hercules of her brother’s location.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Blake_Hell_25_Centaur_Cacus.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Blake_Hell_25_Centaur_Cacus.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Blake_Hell_25_Centaur_Cacus.jpg/960px-Blake_Hell_25_Centaur_Cacus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/83/Blake_Hell_25_Centaur_Cacus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "William Blake",
+    "author": "William Blake",
+    "width": 1815,
+    "height": 1284,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Cacus",
+    "url": "https://en.wikipedia.org/wiki/Cacus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:45:35.580Z"
+  }
+}

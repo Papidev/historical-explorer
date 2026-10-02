@@ -1,0 +1,51 @@
+{
+  "introduction": {
+    "text": "The Chiostro del Bramante is a Renaissance cloister in Rome, commissioned by Cardinal Oliviero Carafa around 1500 and designed by Donato Bramante. It now hosts exhibitions, meetings, concerts, a café, and a bookshop.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Commissioned by Cardinal Oliviero Carafa around 1500.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1500,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "Designed by Donato Bramante.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "A fresco by Raphael, The Sibyls, visible from the first floor.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Donato Bramante",
+      "personId": "donato-bramante",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Oliviero Carafa",
+      "personId": "oliviero-carafa",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Raphael",
+      "personId": "raphael",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

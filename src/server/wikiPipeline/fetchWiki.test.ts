@@ -10,6 +10,28 @@ afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 
 describe("Wikipedia source acquisition", () => {
+  it("recognizes Wikipedia disambiguation metadata even when its value is empty", async () => {
+    server.use(
+      http.get("https://en.wikipedia.org/w/api.php", () =>
+        HttpResponse.json({
+          query: {
+            pages: [
+              {
+                title: "John Smith",
+                pageprops: { wikibase_item: "Q100", disambiguation: "" },
+                revisions: [
+                  { slots: { main: { content: "John Smith may refer to several people." } } },
+                ],
+              },
+            ],
+          },
+        }),
+      ),
+    );
+    await expect(fetchWikiSnapshot("John Smith")).resolves.toMatchObject({
+      isDisambiguation: true,
+    });
+  });
   it("waits for Retry-After before retrying a rate-limited request", async () => {
     let requests = 0;
     server.use(

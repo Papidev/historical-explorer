@@ -1,0 +1,150 @@
+{
+  "introduction": {
+    "text": "The Forum Boarium was the ancient Roman cattle market and commercial hub located near the Tiber in Rome. It played a key role in the city’s trade, religious life, and early gladiatorial spectacles.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The Ara Maxima, a massive altar, was erected on the site in the 6th or 5th century BC.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -600,
+          "precision": "approximate",
+          "endYear": -501,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "The first recorded gladiatorial contest in Rome took place at the Forum Boarium in 264 BC.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -264,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "In 215 BC, four people were buried alive under the Forum Boarium as human sacrifices.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -215,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "The Temple of Hercules Victor was constructed in the 2nd century BC.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -200,
+          "precision": "approximate",
+          "endYear": -101,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "The Temple of Portunus was built between 100 and 80 BC.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -100,
+          "precision": "approximate",
+          "endYear": -80,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "During the late Western Roman Empire, the Forum Boarium area was converted into a commercial district with shops.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 400,
+          "precision": "approximate",
+          "endYear": 499,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "Conservation work on the temples and landscaping began in the late 1990s.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1995,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The Temple of Hercules Victor is a circular peristyle building with a colonnade of Corinthian columns arranged in a concentric ring around a cylindrical cella.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The Temple of Portunus is a rectangular structure with a tetrastyle Ionic portico and a cella on a podium, built of tuff and travertine.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "Restoration efforts have preserved the temples and introduced new landscaping to the Forum Boarium site.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "A statue by the sculptor Myron, possibly depicting Theseus defeating the Minotaur, was once placed at the Forum Boarium.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Hercules",
+      "personId": "hercules",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Cacus",
+      "personId": "cacus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Geryon",
+      "personId": "geryon",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Decimus Junius Brutus Scaeva (consul 292)",
+      "personId": "decimus-junius-brutus-scaeva-consul-292",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Marcus Claudius Marcellus",
+      "personId": "marcus-claudius-marcellus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Livy",
+      "personId": "livy",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Italo Gismondi",
+      "personId": "italo-gismondi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Myron",
+      "personId": "myron",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

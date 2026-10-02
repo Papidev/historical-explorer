@@ -105,9 +105,9 @@ export const StoryContent = ({
             Related People
           </h3>
           <ul className="mt-3 space-y-3">
-            {content.relatedPeople.map(({ name, personId }) => (
+            {content.relatedPeople.map(({ name, personId }, index) => (
               <li
-                key={name}
+                key={personId ?? `${name}-${index}`}
                 className="relative pl-5 before:absolute before:top-0 before:left-1 before:text-sky-400 before:content-['•']"
               >
                 {personId && onOpenPerson ? (
@@ -118,7 +118,9 @@ export const StoryContent = ({
                   >
                     {name}
                   </button>
-                ) : <span className="font-semibold text-zinc-950">{name}</span>}
+                ) : (
+                  <span className="font-semibold text-zinc-950">{name}</span>
+                )}
               </li>
             ))}
           </ul>

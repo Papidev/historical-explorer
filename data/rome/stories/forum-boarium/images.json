@@ -1,18 +1,44 @@
 {
   "candidates": [
     {
-      "commonsFileName": "SoutherCircusFlaminiusInRomeByGismondi.jpg",
-      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:SoutherCircusFlaminiusInRomeByGismondi.jpg",
-      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/52/SoutherCircusFlaminiusInRomeByGismondi.jpg",
-      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/52/SoutherCircusFlaminiusInRomeByGismondi.jpg",
-      "license": "Public domain",
-      "attribution": "Alessandro57",
-      "author": "Alessandro57",
-      "width": 486,
-      "height": 428,
-      "discoveredVia": "wikipedia-page-image",
+      "commonsFileName": "Temple_of_Portunus_Rome_2.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Temple_of_Portunus_Rome_2.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Temple_of_Portunus_Rome_2.jpg/960px-Temple_of_Portunus_Rome_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Temple_of_Portunus_Rome_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Torquatus",
+      "author": "Torquatus",
+      "width": 1600,
+      "height": 1200,
+      "discoveredVia": "wikidata-p18",
       "isProposed": true
+    },
+    {
+      "commonsFileName": "Pauly-Wissowa_III,1,_0573.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pauly-Wissowa_III%2C1%2C_0573.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Pauly-Wissowa_III%2C1%2C_0573.jpg/960px-Pauly-Wissowa_III%2C1%2C_0573.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Pauly-Wissowa_III%2C1%2C_0573.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Diverse",
+      "author": "Diverse",
+      "width": 1890,
+      "height": 2955,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Pauly-Wissowa_III,1,_0573a.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pauly-Wissowa_III%2C1%2C_0573a.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Pauly-Wissowa_III%2C1%2C_0573a.jpg/960px-Pauly-Wissowa_III%2C1%2C_0573a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Pauly-Wissowa_III%2C1%2C_0573a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Christian Hülsen (d. 1935)",
+      "author": "Christian Hülsen (d. 1935)",
+      "width": 1243,
+      "height": 1025,
+      "discoveredVia": "commons-category",
+      "isProposed": false
     }
   ],
-  "selectedCommonsFileName": "SoutherCircusFlaminiusInRomeByGismondi.jpg"
+  "selectedCommonsFileName": "Temple_of_Portunus_Rome_2.jpg"
 }

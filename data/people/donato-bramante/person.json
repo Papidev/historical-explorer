@@ -1,0 +1,79 @@
+{
+  "id": "donato-bramante",
+  "name": "Donato Bramante",
+  "wikidataId": "Q7793",
+  "wikipediaTitle": "Donato Bramante",
+  "content": {
+    "description": [
+      {
+        "text": "Donato Bramante was born in 1444 in Fermignano near Urbino, a small town in the Marche region of Italy. He began his career in Urbino, where he worked on the Palazzo Ducale under the patronage of the court of Federico da Montefeltro, and later moved to Milan around 1474. In Milan he became the court architect of Duke Ludovico Sforza, introducing the new Renaissance style to a city steeped in Gothic tradition. His most celebrated early work there is the trompe‑l'œil choir of Santa Maria presso San Satiro, a masterful illusion that blends perspective with classical detail.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1499 Bramante relocated to Rome, where he quickly gained the patronage of Cardinal Della Rovere, who would become Pope Julius II. He designed the Tempietto at San Pietro in Montorio in 1502, a small temple that exemplified the High Renaissance’s emphasis on symmetry and proportion. The same year he was commissioned to rebuild St. Peter’s Basilica, producing a centralized Greek‑cross plan that would later be adapted by Michelangelo. He also conceived the Cortile del Belvedere, a grand courtyard that linked the basilica’s surrounding buildings. Bramante died in Rome on 11 April 1514, leaving a legacy that shaped the trajectory of Western architecture.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Bramante composed eighty sonnets in addition to his architectural work.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He introduced Renaissance architecture to Milan, bringing the new Antique style to a city steeped in Gothic tradition.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Tempietto at San Pietro in Montorio is considered the beginning of the High Renaissance in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the court architect for Ludovico Sforza and built the trompe‑l'œil choir of Santa Maria presso San Satiro.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "According to a later engraving by Sebastiano Serlio, Bramante planned to set the Tempietto within a colonnaded courtyard.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He designed the Cortile del Belvedere, a grand courtyard that linked the basilica’s surrounding buildings.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1444,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1514,
+      "month": 4,
+      "day": 11,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Donato_Bramante.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Donato_Bramante.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Donato_Bramante.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Donato_Bramante.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Not necessary, PD by age.",
+    "author": "Not necessary, PD by age.",
+    "width": 468,
+    "height": 640,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Donato Bramante",
+    "url": "https://en.wikipedia.org/wiki/Donato_Bramante"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:28:53.116Z"
+  }
+}

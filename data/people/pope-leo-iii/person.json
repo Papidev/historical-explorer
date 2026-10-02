@@ -1,0 +1,63 @@
+{
+  "id": "pope-leo-iii",
+  "name": "Pope Leo III",
+  "wikidataId": "Q132086",
+  "wikipediaTitle": "Pope Leo III",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Leo III was elected on 26 December 795, the day his predecessor Adrian I was buried, and was consecrated the following day. His rapid election was likely intended to preclude interference from the Frankish king Charlemagne, whom Leo immediately acknowledged as protector of the Holy See by sending him the keys of St. Peter’s confession and the city’s standard. Charlemagne responded with a congratulatory letter and a substantial gift of treasure that Leo used to support Rome’s churches and charitable institutions.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Leo’s pontificate was marked by both conflict and cooperation with Charlemagne. In 799 he was violently attacked by armed men while en route to the Flaminian Gate, an assault that left him injured and unconscious; he was rescued by Charlemagne’s missi dominici and later escorted to Paderborn, where the king honored him. The following year, Charlemagne crowned Leo’s ally as emperor on Christmas Day 800, an act that solidified the alliance between the papacy and the Carolingian dynasty and provoked disapproval in Constantinople.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "During the attack on Leo in 799, the pope was rescued by two of Charlemagne’s missi dominici, who brought a considerable force to secure his safety.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Leo placed two silver shields bearing the unaltered creed in both Greek and Latin at the entrance of St. Peter’s, a symbolic act to safeguard orthodox faith.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 808, Leo entrusted the island of Corsica to Charlemagne for protection against Muslim raids originating from Al-Andalus, reflecting the pope’s role in regional security matters.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 816,
+      "month": 6,
+      "day": 12,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_Leo_III_–_Triclinium_Leoninum.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Leo_III_%E2%80%93_Triclinium_Leoninum.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/83/Pope_Leo_III_%E2%80%93_Triclinium_Leoninum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/83/Pope_Leo_III_%E2%80%93_Triclinium_Leoninum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Various: Original: Unknown authorUnknown author Restoration: Ferdinando Fuga (1743)",
+    "author": "Various: Original: Unknown authorUnknown author Restoration: Ferdinando Fuga (1743)",
+    "width": 471,
+    "height": 970,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Leo III",
+    "url": "https://en.wikipedia.org/wiki/Pope_Leo_III"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:24:52.550Z"
+  }
+}

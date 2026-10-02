@@ -1,0 +1,81 @@
+{
+  "id": "pope-pius-vii",
+  "name": "Pope Pius VII",
+  "wikidataId": "Q124754",
+  "wikipediaTitle": "Pope Pius VII",
+  "content": {
+    "description": [
+      {
+        "text": "Barnaba Niccolò Maria Luigi Chiaramonti was born on 14 August 1742 in Cesena, Italy, and entered the Order of Saint Benedict at the age of fourteen. He became a professed monk in 1758, taught at Benedictine colleges, and was ordained a priest in 1765. His ecclesiastical career advanced rapidly: he was appointed Bishop of Tivoli in 1782, Bishop of Imola in 1785, and made a cardinal the same year. After the death of Pope Pius VI, Chiaramonti was elected pope on 14 March 1800, taking the name Pius VII and serving as the head of the Catholic Church until his death in 1823.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pius VII’s pontificate was dominated by his fraught relationship with Napoleon Bonaparte. He signed the Concordat of 1801, which secured religious freedom for Catholics in France and established a new legal framework for the Church. In 1809, he was exiled to Savona and later to France after refusing to cooperate with Napoleon’s Continental System, remaining a prisoner until 1814. Upon his return, he restored the Jesuit order, condemned the Atlantic slave trade, re‑instituted the Roman Jewish ghetto, and oversaw significant cultural projects in Rome, including the restoration of the Arch of Titus and the erection of the obelisk on the Pincian Hill.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Pius VII was a multilingual Benedictine who could speak Italian, French, English, and Latin.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was present at Napoleon’s coronation as Emperor of the French in 1804.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his exile, Pius VII was imprisoned by Napoleon and later released after the signing of the Concordat of Fontainebleau in 1813.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He restored the Society of Jesus in 1814, issuing the papal bull *Sollicitudo omnium ecclesiarum* that re‑established the order worldwide.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pius VII condemned the Atlantic slave trade in 1815, urging European monarchs to end the practice.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the Napoleonic occupation, he re‑instituted the Roman Jewish ghetto, closing its doors at night.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1742,
+      "month": 8,
+      "day": 14,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1823,
+      "month": 8,
+      "day": 20,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Jacques-Louis_David_018.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_018.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Jacques-Louis_David_018.jpg/960px-Jacques-Louis_David_018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Jacques-Louis_David_018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Jacques-Louis David",
+    "author": "Jacques-Louis David",
+    "width": 3622,
+    "height": 4338,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Pius VII",
+    "url": "https://en.wikipedia.org/wiki/Pope_Pius_VII"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:11:56.010Z"
+  }
+}

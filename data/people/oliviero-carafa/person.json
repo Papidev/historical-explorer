@@ -1,0 +1,69 @@
+{
+  "id": "oliviero-carafa",
+  "name": "Oliviero Carafa",
+  "wikidataId": "Q117125",
+  "wikipediaTitle": "Oliviero Carafa",
+  "content": {
+    "description": [
+      {
+        "text": "Oliviero Carafa was born on 10 March 1430 in Naples into a prominent Aragonese‑aligned family. He was ordained in 1476 and, by 1458, had already been elevated to Archbishop of Naples, a post he held in a complex pattern of exchanges with relatives to keep the see within his family’s control. In 1467 he became a cardinal, and by 1471 he served as papal legate to King Ferdinand of Naples, later commanding the papal fleet that captured Smyrna from the Ottoman Turks. His diplomatic and military activities earned him the respect of Pope Sixtus IV, who kept him in the papal court despite Carafa’s frequent conflicts with Neapolitan interests.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond politics, Carafa was a notable patron of the arts and learning. He commissioned the richly decorated Succorpo in the Naples cathedral, employed Donato Bramante to remodel his Roman palazzo, and assembled a substantial library that attracted scholars. He supported the first Italian printing press established by Torquemada at Subiaco and financed the frescoes of Filippino Lippi in the Carafa Chapel of Santa Maria sopra Minerva. His patronage extended to the Dominican order, for which he served as cardinal protector, and he played a key role in the artistic and intellectual life of Renaissance Rome.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Carafa is credited with a dramatic incident in 1493 when he slipped Pope Alexander VI’s ring off his finger and sealed a papal brief on the spot, an act that demonstrated his influence and boldness in the papal court.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the patron of the first printing press in Italy, established by Torquemada at Subiaco, and his library was a major resource for Renaissance humanists.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Carafa’s architectural patronage included the cloister at Santa Maria della Pace, his first major commission for architect Donato Bramante.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1430,
+      "month": 3,
+      "day": 10,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1511,
+      "month": 1,
+      "day": 20,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Oliviero_Carafa.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Oliviero_Carafa.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Oliviero_Carafa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Oliviero_Carafa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Filippino Lippi",
+    "author": "Filippino Lippi",
+    "width": 216,
+    "height": 294,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Oliviero Carafa",
+    "url": "https://en.wikipedia.org/wiki/Oliviero_Carafa"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:29:02.193Z"
+  }
+}

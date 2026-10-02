@@ -1,3 +1,4 @@
+import { getPoiRowStatusGroup } from "../../lib/getPoiRowStatusGroup";
 import { ArrowPathIcon, EyeIcon } from "@heroicons/react/20/solid";
 import { IconButton } from "@/app/components/ui/IconButton";
 import { SubmitButton } from "../SubmitButton";
@@ -16,23 +17,28 @@ export const WikidataTypesCell = ({
   const types = row.poiTypes?.types ?? [];
 
   return (
-    <PipelineCell inProgress={isInProgress}>
+    <PipelineCell
+      inProgress={isInProgress}
+      needsAttention={
+        getPoiRowStatusGroup(row) === "needs-attention" &&
+        (types.length === 0 || Boolean(row.poiTypes?.error))
+      }
+    >
       <div className={types.length > 0 ? "pt-6" : undefined}>
         <CellContent
           title={
-            !row.wikidataId
-              ? "No Wikidata ID"
-              : row.poiTypes?.error
-                ? "Acquisition failed"
+            row.poiTypes?.error
+              ? "Acquisition failed"
+              : types.length > 0
+                ? types
+                    .slice(0, 2)
+                    .map(({ label }) => label)
+                    .join(", ")
                 : row.poiTypes
-                  ? types.length > 0
-                    ? types
-                        .slice(0, 2)
-                        .map(({ label }) => label)
-                        .join(", ")
-                    : "No types"
-                  : undefined
+                  ? "No Wikidata types found"
+                  : "Wikidata types not generated"
           }
+          titleTone={types.length > 0 && !row.poiTypes?.error ? "status" : "warning"}
           subtitle={
             row.poiTypes?.error ??
             (types.length > 0 ? `${types.length} type${types.length === 1 ? "" : "s"}` : undefined)

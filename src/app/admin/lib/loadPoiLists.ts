@@ -3,6 +3,7 @@ import path from "node:path";
 import { readGenerationMetadata, type GenerationMetadata } from "@/server/generationMetadata";
 import { readGenerationRuns } from "@/server/generationRunLog";
 import { storyWorkflow, type DraftStorySnapshot, type Source } from "@/server/storyWorkflow";
+import { personRepository } from "@/server/person/filesystemRepository";
 import { poiTypes } from "@/server/poiTypes";
 import {
   buildSourceMetadataFilePath,
@@ -319,7 +320,14 @@ export const loadPoiLists = async () => {
       )
       .map((snapshot, index) => ({
         item: toSnapshotItem(snapshot, index),
-        storyContent: snapshot.storyContent,
+        storyContent: {
+          ...snapshot.storyContent,
+          relatedPeople: snapshot.storyContent.relatedPeople.map((person) =>
+            person.personId && personRepository.get(person.personId)
+              ? person
+              : { name: person.name, sourceIds: person.sourceIds },
+          ),
+        },
         sources: snapshot.sources,
         updatedAt: formatCompletedAt(snapshot.generation.storyContent?.completedAt),
       }));

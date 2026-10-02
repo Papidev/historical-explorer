@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Tivoli_Acquedotto_Arci_0511-03.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Tivoli_Acquedotto_Arci_0511-03.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Tivoli_Acquedotto_Arci_0511-03.JPG/960px-Tivoli_Acquedotto_Arci_0511-03.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tivoli_Acquedotto_Arci_0511-03.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Lalupa",
+      "author": "Lalupa",
+      "width": 2127,
+      "height": 1359,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Aqua_Marcia_01.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Aqua_Marcia_01.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Aqua_Marcia_01.jpg/960px-Aqua_Marcia_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/Aqua_Marcia_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Chris 73",
+      "author": "Chris 73",
+      "width": 3264,
+      "height": 2448,
+      "discoveredVia": "wikipedia-page-image",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Tivoli_Acquedotto_Arci_0511-03.JPG"
+}

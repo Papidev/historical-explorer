@@ -1,0 +1,65 @@
+{
+  "id": "bernardo-rossellino",
+  "name": "Bernardo Rossellino",
+  "wikidataId": "Q325930",
+  "wikipediaTitle": "Bernardo Rossellino",
+  "content": {
+    "description": [
+      {
+        "text": "Bernardo Rossellino was born in 1409 in the mountain village of Settignano, overlooking the Arno Valley.  He entered Florence by 1420 and apprenticed to the sculptor Nanni di Bartolo, a connection that helped him absorb the new classical revival championed by Brunelleschi, Donatello, Ghiberti and Masaccio.  His early commissions, such as the 1433 façade of the Misericordia in Arezzo, show his skill at blending the prevailing Gothic style with emerging Renaissance elements, a synthesis that would become a hallmark of the Rossellino workshop.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After returning to Florence in 1436, Rossellino established his own workshop and worked on several important projects, including the Aranci Cloister of the Badia and the Rucellai palace façade.  He travelled to Rome in 1451 to assist Pope Nicholas V’s reconstruction efforts, and later, from 1459 to 1464, he transformed the rural town of Pienza into a model Renaissance city, designing its cathedral, palaces and civic buildings.  In 1461 he was appointed capomaestro of the Florence Cathedral, a largely honorific title that reflected his reputation.  Rossellino died in Florence on 23 September 1464.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The surname Rossellino, meaning “little redhead,” was a nickname given to Bernardo and his brothers because of their reddish hair.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1461 Bernardo was named capomaestro (chief architect) of the Florence Cathedral, a prestigious but largely ceremonial position.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His design of the entire town of Pienza, including the cathedral and civic buildings, served as a prototype for later urban projects such as Michelangelo’s redesign of Rome’s Piazza del Campidoglio.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1409,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1464,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Bernardo_(e_forse_Antonio)_Rossellino,_monumento_funebre_di_Leonardo_Bruni,_1450,_cimasa,_puttti_con_stemma_bruni.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Bernardo_(e_forse_Antonio)_Rossellino%2C_monumento_funebre_di_Leonardo_Bruni%2C_1450%2C_cimasa%2C_puttti_con_stemma_bruni.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Bernardo_%28e_forse_Antonio%29_Rossellino%2C_monumento_funebre_di_Leonardo_Bruni%2C_1450%2C_cimasa%2C_puttti_con_stemma_bruni.jpg/960px-Bernardo_%28e_forse_Antonio%29_Rossellino%2C_monumento_funebre_di_Leonardo_Bruni%2C_1450%2C_cimasa%2C_puttti_con_stemma_bruni.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Bernardo_%28e_forse_Antonio%29_Rossellino%2C_monumento_funebre_di_Leonardo_Bruni%2C_1450%2C_cimasa%2C_puttti_con_stemma_bruni.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Francesco Bini",
+    "author": "Francesco Bini",
+    "width": 3444,
+    "height": 2296,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Bernardo Rossellino",
+    "url": "https://en.wikipedia.org/wiki/Bernardo_Rossellino"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:54:07.256Z"
+  }
+}

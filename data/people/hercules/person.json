@@ -1,0 +1,61 @@
+{
+  "id": "hercules",
+  "name": "Hercules",
+  "wikidataId": "Q240679",
+  "wikipediaTitle": "Hercules",
+  "content": {
+    "description": [
+      {
+        "text": "Hercules, the Romanized form of the Greek hero Heracles, was born to the mortal Alcmena and the god Jupiter. According to Roman myth, the jealous goddess Juno sent serpents to kill the infant in his cradle, but the boy strangled both snakes, an act that foreshadowed his legendary strength. In another version, Juno herself suckled the child, only to be bitten and pushed away, spilling her milk across the night sky and forming the Milky Way. These dramatic birth stories illustrate how Hercules was seen as a divine child who would grow to become a champion of the weak and a protector of humanity.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In Roman culture, Hercules was more than a mythic hero; he became a patron deity of children and childbirth, and his cult spread across the empire. Roman brides wore a special belt tied with the “knot of Hercules,” a symbol said to be difficult to untie, reflecting the hero’s enduring strength. The hero’s image was also adopted by Germanic peoples, who fashioned “Donar’s Clubs” from deer antler, bone, or wood as amulets of protection. These clubs were later replaced by Viking Thor’s hammer pendants as Christianity spread through Scandinavia. Hercules’ widespread veneration shows how a Greek myth was transformed into a pan‑Roman and even pan‑Germanic symbol of power and protection.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Hercules strangled two serpents that were sent by Juno to kill him in his cradle.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Juno’s milk, after being spilled by the infant Hercules, is said to have formed the Milky Way.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Roman brides wore a belt tied with the “knot of Hercules,” a knot that was reputedly hard to untie.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Germanic peoples made “Donar’s Clubs” from deer antler, bone or wood, which were later replaced by Viking Thor’s hammer pendants.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Antonio_del_Pollaiolo_-_Ercole_e_l'Idra_e_Ercole_e_Anteo_-_Google_Art_Project.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Antonio_del_Pollaiolo_-_Ercole_e_l'Idra_e_Ercole_e_Anteo_-_Google_Art_Project.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Antonio_del_Pollaiolo_-_Ercole_e_l%27Idra_e_Ercole_e_Anteo_-_Google_Art_Project.jpg/960px-Antonio_del_Pollaiolo_-_Ercole_e_l%27Idra_e_Ercole_e_Anteo_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Antonio_del_Pollaiolo_-_Ercole_e_l%27Idra_e_Ercole_e_Anteo_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Antonio del Pollaiuolo",
+    "author": "Antonio del Pollaiuolo",
+    "width": 2217,
+    "height": 3147,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Hercules",
+    "url": "https://en.wikipedia.org/wiki/Hercules"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:45:24.175Z"
+  }
+}

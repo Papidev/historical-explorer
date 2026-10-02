@@ -1,0 +1,85 @@
+{
+  "id": "raffaele-stern",
+  "name": "Raffaele Stern",
+  "wikidataId": "Q2415339",
+  "wikipediaTitle": "Raffaele Stern",
+  "content": {
+    "description": [
+      {
+        "text": "Raffaele Stern was born in Rome on 13 May 1774 into an architectural family; his father, Giovanni Stern, was an architect who introduced him to the principles of Johann Joachim Winckelmann.  By the early 19th century Stern had become a prominent Neoclassical architect, appointed papal architect by Pope Pius VII and serving as an honorary scholar of the Accademia di San Luca from 1805.  He played a leading role in the restoration of Rome’s most iconic monument, the Colosseum, after the 1806 earthquake, proposing a brick buttress and structural reinforcements that preserved the ancient arches while avoiding the costly dismantling favored by antiquarians.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Stern’s career extended beyond Rome’s ruins; in 1811 he was invited by Elisa Bonaparte to Paris to collaborate with Antonio Canova on restoring the Quirinal Palace for Napoleon’s use.  He also designed the Fontana dei Dioscuri in 1818, a fountain that now stands opposite the palace.  In 1817 he oversaw the reorganization of the Vatican Museums, building the Braccio Nuovo wing of the Museo Chiaramonti, a hallmark of Neoclassical design.  A few months before his death in 1820, Stern was named Vice‑President of the Accademia di San Luca, and his posthumously published volume *Lezioni di architettura civile* (1822) offered a comprehensive treatise on architectural theory and practice.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Stern was appointed papal architect by Pope Pius VII and served as an honorary scholar of the Accademia di San Luca from 1805.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was part of the commission that restored the Colosseum after the 1806 earthquake, proposing a brick buttress and strengthening the arches to preserve the ancient structure.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1811, Elisa Bonaparte invited Stern to Paris to work with Antonio Canova on restoring the Quirinal Palace for Napoleon’s use.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Stern designed the Fontana dei Dioscuri in 1818, a fountain that now stands opposite the Quirinal Palace.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He oversaw the reorganization of the Vatican Museums in 1817 and built the Braccio Nuovo wing of the Museo Chiaramonti, a key example of Neoclassical architecture.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1820, a few months before his death, Stern was nominated Vice‑President of the Accademia di San Luca.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His posthumously published volume *Lezioni di architettura civile* (1822) covered imitation, analogy, symmetry, and the practical aspects of architectural design.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1774,
+      "month": 5,
+      "day": 13,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1820,
+      "month": 12,
+      "day": 30,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Quirinale_-_Fontana_dei_Dioscuri.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Quirinale_-_Fontana_dei_Dioscuri.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Quirinale_-_Fontana_dei_Dioscuri.JPG/960px-Quirinale_-_Fontana_dei_Dioscuri.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/10/Quirinale_-_Fontana_dei_Dioscuri.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "William Domenichini",
+    "author": "William Domenichini",
+    "width": 1536,
+    "height": 2048,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Raffaele Stern",
+    "url": "https://en.wikipedia.org/wiki/Raffaele_Stern"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:11:30.037Z"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "cato-the-elder",
+  "name": "Cato the Elder",
+  "wikidataId": "Q180081",
+  "wikipediaTitle": "Cato the Elder",
+  "content": {
+    "description": [
+      {
+        "text": "Marcus Porcius Cato, known as Cato the Elder, was a Roman statesman, soldier, and writer who lived from 234 to 149 BC. He rose from a plebeian background to hold the highest magistracies, serving as quaestor, aedile, praetor, consul, and finally censor in 184 BC. His career was marked by a fierce commitment to traditional Roman values and a sharp opposition to the growing influence of Greek culture. As a censor he introduced taxes on luxury goods and oversaw extensive public works, while his military service included campaigns in Hispania and a triumph in 194 BC.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cato was also a pioneering author. He was the first Roman historian to write a history in Latin, producing the now‑fragmentary Origines, and he authored De agri cultura, the oldest surviving Latin prose text, which served as a practical guide to farming. His speeches in the Senate, most famously the refrain 'Carthage must be destroyed,' reflected his anti‑Carthaginian stance and helped shape Roman policy toward the Punic city. His legacy endures in the Basilica Porcia he built and in the lunar ridge Dorsa Cato named after him.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "De agri cultura, written by Cato, is the oldest extant prose written in Latin.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cato was the first Roman historian to write a history in Latin, with his work Origines.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As censor, Cato introduced taxes on luxury goods to curb excess.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cato built the Basilica Porcia, the first known basilica in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He famously concluded Senate speeches with the cry 'Carthage must be destroyed.'",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -234,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": -149,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Patrizio_Torlonia.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Patrizio_Torlonia.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Patrizio_Torlonia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Patrizio_Torlonia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 420,
+    "height": 585,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Cato the Elder",
+    "url": "https://en.wikipedia.org/wiki/Cato_the_Elder"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:50:19.324Z"
+  }
+}

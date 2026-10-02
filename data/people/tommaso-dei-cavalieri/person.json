@@ -1,0 +1,65 @@
+{
+  "id": "tommaso-dei-cavalieri",
+  "name": "Tommaso dei Cavalieri",
+  "wikidataId": "Q538960",
+  "wikipediaTitle": "Tommaso dei Cavalieri",
+  "content": {
+    "description": [
+      {
+        "text": "Tommaso dei Cavalieri (c. 1509 – 1587) was an Italian nobleman whose striking appearance and cultured manners made him a favourite of the Roman elite.  He became the object of Michelangelo’s affection in 1532, when the artist, then 57, was introduced to the young patrician by mutual acquaintances.  Their relationship, documented in letters, poems and a handful of drawings, remained a central part of both men’s lives until Michelangelo’s death in 1564.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond his artistic patronage, Cavalieri held several civic offices in Rome, including caporione of Sant’Eustachio and twice Conservatore, the highest municipal post.  In this capacity he supervised the construction of the Campidoglio, a project that began under Michelangelo’s design and continued long after the sculptor’s death.  He also married Lavinia della Valle in 1544, producing two sons, one of whom became a noted composer, and he was present at Michelangelo’s final moments, underscoring the depth of their bond.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Michelangelo gifted Cavalieri four finished drawings, known as the “presentation drawings,” which were unique in that they were intended as complete works rather than studies.  The artist’s notes on the drawings, preserved in the British Museum, reveal that he wrote to Cavalieri, offering to finish or revise them at the noble’s request.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cavalieri was the dedicatee of roughly thirty of Michelangelo’s poems, the largest single sequence of sonnets in any modern language at the time.  These poems, written in a Neoplatonic style, express the artist’s admiration for Cavalieri’s beauty and character and have been the subject of scholarly debate regarding their emotional nature.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1554, Cavalieri was appointed one of the Conservatori responsible for overseeing the restoration of the Campidoglio, a project that would not be completed until 1662.  His role was primarily architectural, ensuring that Michelangelo’s designs were faithfully executed, while a colleague handled financial and administrative matters.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1509,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1587,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Tommaso_de‘_Cavalieri.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Tommaso_de%E2%80%98_Cavalieri.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/78/Tommaso_de%E2%80%98_Cavalieri.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/78/Tommaso_de%E2%80%98_Cavalieri.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "unknown, possibly Daniele da Volterra or Michelangelo",
+    "author": "unknown, possibly Daniele da Volterra or Michelangelo",
+    "width": 600,
+    "height": 863,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Tommaso dei Cavalieri",
+    "url": "https://en.wikipedia.org/wiki/Tommaso_dei_Cavalieri"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:54:17.416Z"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "honorius-emperor",
+  "name": "Honorius",
+  "wikidataId": "Q159798",
+  "wikipediaTitle": "Honorius",
+  "content": {
+    "description": [
+      {
+        "text": "Honorius was born on 9 September 384 in Constantinople as the younger son of Emperor Theodosius I and Empress Aelia Flaccilla. He became a Roman emperor at the age of ten after his father's death in 395, ruling the western half of the empire under the regency of the general Stilicho.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his reign, Honorius faced a series of barbarian incursions and internal revolts. He moved the imperial capital from Milan to the defensible marshland city of Ravenna in 401, and his rule was marked by the sack of Rome in 410, the execution of Stilicho in 408, and the eventual decline of the Western Roman Empire.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Honorius is famously associated with a humorous anecdote in which he mistook a rooster named \"Rome\" for the city itself, leading to a moment of confusion when the city was sacked.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In an unusual decree, Honorius banned men from wearing trousers in Rome, a law that reflected the emperor's concern over fashion and morality.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The sack of Rome in 410 was relatively mild compared to later sackings; churches and religious statuary were largely spared, though the psychological impact was profound.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Honorius moved the imperial residence to Ravenna because its marshes and fortifications made it easier to defend against barbarian attacks.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Stilicho, the general who had protected Honorius, was executed in 408 after being accused of conspiring with the Goths, a purge that weakened the empire's military leadership.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 384,
+      "month": 9,
+      "day": 9,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 423,
+      "month": 8,
+      "day": 15,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Jean-Paul_Laurens_-_The_Byzantine_Emperor_Honorius_-_1880.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Jean-Paul_Laurens_-_The_Byzantine_Emperor_Honorius_-_1880.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Jean-Paul_Laurens_-_The_Byzantine_Emperor_Honorius_-_1880.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Jean-Paul_Laurens_-_The_Byzantine_Emperor_Honorius_-_1880.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Jean-Paul Laurens",
+    "author": "Jean-Paul Laurens",
+    "width": 784,
+    "height": 1125,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Honorius",
+    "url": "https://en.wikipedia.org/wiki/Honorius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:51:37.685Z"
+  }
+}

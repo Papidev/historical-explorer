@@ -1,0 +1,61 @@
+{
+  "id": "cassius-dio",
+  "name": "Cassius Dio",
+  "wikidataId": "Q185223",
+  "wikipediaTitle": "Cassius Dio",
+  "content": {
+    "description": [
+      {
+        "text": "Lucius Cassius Dio, born around 165 AD, was a Roman senator of Greek maternal origin who chose to write his monumental history in Koine Greek rather than Latin. His work, the Roman History, spanned 80 books and covered roughly 1,400 years of Roman history, from the legendary arrival of Aeneas to the reign of Severus Alexander in 229 AD.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Throughout his career, Dio held several high offices: he served as a senator under Commodus, governed Smyrna after the death of Septimius Severus, and was appointed suffect consul around 205 AD. Later, Severus Alexander reappointed him to the consulship in 229, after which Dio returned to his native Bithynia, where he eventually died.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Dio’s Roman History was composed over 22 years, with ten years spent gathering material and twelve years dedicated to writing, and it remains one of the few surviving Roman histories that cover the period of the British revolt of 60–61 AD led by Boudica.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Despite being a Roman citizen, Dio wrote exclusively in Greek, reflecting his cultural heritage and the linguistic preferences of the eastern provinces of the empire.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Many of Dio’s original volumes survived intact, and later Byzantine scholars such as Xiphilinus (11th century) and Zonaras (12th century) preserved summaries and excerpts of his work, ensuring its transmission to modern times.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 165,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Dio_Cassius.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Dio_Cassius.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/12/Dio_Cassius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/12/Dio_Cassius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 340,
+    "height": 411,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Cassius Dio",
+    "url": "https://en.wikipedia.org/wiki/Cassius_Dio"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:10:56.195Z"
+  }
+}

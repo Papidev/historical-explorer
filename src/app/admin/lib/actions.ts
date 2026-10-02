@@ -55,7 +55,6 @@ const runAiAction = async (
     onProgress(result?.warning ? result.warning.title : "AI generation completed.");
     if (runId)
       finishAiProgress(runId, result?.warning ? "partial" : "succeeded", result?.failedSteps);
-    revalidatePath("/admin");
     return result;
   } catch (error) {
     onProgress("AI generation stopped.");
@@ -77,6 +76,8 @@ const runAiAction = async (
         ],
       );
     throw error;
+  } finally {
+    revalidatePath("/admin");
   }
 };
 

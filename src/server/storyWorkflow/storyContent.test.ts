@@ -1,13 +1,33 @@
 import { describe, expect, it } from "vitest";
-import { parseStoryContent, type HistoryInsight, type StoryContent } from "./storyContent";
+import {
+  toPublicStoryContent,
+  parseStoryContent,
+  type HistoryInsight,
+  type StoryContent,
+} from "./storyContent";
 
 const validStoryContent = (): StoryContent => ({
-  introduction: { text: "Forum Boarium was Rome's ancient cattle market.", sourceIds: ["wikipedia"] },
+  introduction: {
+    text: "Forum Boarium was Rome's ancient cattle market.",
+    sourceIds: ["wikipedia"],
+  },
   topics: { history: [], design: [], art: [] },
   relatedPeople: [],
 });
 
 describe("Story Content", () => {
+  it("shows clean names while preserving distinct Person IDs and source names", () => {
+    const content = validStoryContent();
+    content.relatedPeople = [
+      { name: "John Smith (architect)", personId: "smith-architect", sourceIds: ["wikipedia"] },
+      { name: "John Smith (explorer)", personId: "smith-explorer", sourceIds: ["wikipedia"] },
+    ];
+    expect(toPublicStoryContent(content).relatedPeople).toEqual([
+      { name: "John Smith", personId: "smith-architect" },
+      { name: "John Smith", personId: "smith-explorer" },
+    ]);
+    expect(content.relatedPeople[0].name).toBe("John Smith (architect)");
+  });
   it("accepts up to ten Related People without requiring Insight links", () => {
     const content = validStoryContent();
     content.relatedPeople = Array.from({ length: 10 }, (_, index) => ({
@@ -18,7 +38,10 @@ describe("Story Content", () => {
     expect(parseStoryContent(content, ["wikipedia"])).toEqual(content);
     expect(() =>
       parseStoryContent(
-        { ...content, relatedPeople: [...content.relatedPeople, { name: "Eleventh", sourceIds: ["wikipedia"] }] },
+        {
+          ...content,
+          relatedPeople: [...content.relatedPeople, { name: "Eleventh", sourceIds: ["wikipedia"] }],
+        },
         ["wikipedia"],
       ),
     ).toThrow("Too big");
@@ -33,7 +56,11 @@ describe("Story Content", () => {
         sourceIds: ["wikipedia"],
         time: { startYear: 1500, precision: "approximate", granularity: "year" },
       },
-      { id: "later-use", description: "The building later became a venue.", sourceIds: ["wikipedia"] },
+      {
+        id: "later-use",
+        description: "The building later became a venue.",
+        sourceIds: ["wikipedia"],
+      },
       {
         id: "ancient-period",
         description: "The site was used across two centuries BC.",

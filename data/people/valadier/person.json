@@ -1,0 +1,69 @@
+{
+  "id": "valadier",
+  "name": "Valadier",
+  "wikidataId": "Q959688",
+  "wikipediaTitle": "Giuseppe Valadier",
+  "content": {
+    "description": [
+      {
+        "text": "Giuseppe Valadier was born in Rome on 14 April 1762 into a family of goldsmiths.  From a young age he turned away from the family trade and pursued architecture, winning a prize at the Accademia di San Luca in 1775 for a façade design and a second prize in 1777 for a competition at the age of fifteen.  By 1781, before he was twenty, he had been appointed Architetto dei Sacri Palazzi, a post that gave him responsibility for the reconstruction of churches damaged by the 1786 earthquake in Romagna and the rebuilding of Urbino Cathedral with Camillo Morigia.  His early work was marked by a Neoclassical style that drew on Palladio and Quarenghi, and he soon became known for his careful restorations of ancient monuments.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the Napoleonic occupation of Rome, Valadier’s career shifted toward large‑scale public projects.  He was tasked with restoring the Milvian Bridge in 1805, turning its decayed bastion into a monumental gateway with severe rustication.  His most celebrated urban design was the re‑envisioning of Piazza del Popolo, where he introduced an elliptical plan and linked the square to the Pincio via terraces and ramps, culminating in the Casina Valadier coffee house.  In the 1820s he also restored the Arch of Titus, carefully distinguishing new work from the original with travertine, and he served as professor of architectural theory at the Accademia di San Luca until his death.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Valadier was a pioneer archaeologist, retracing the ancient line of the Via Flaminia in 1805 and restoring the neglected Church of Sant'Andrea in Via Flaminia, which later influenced his design of Santa Maria della Salute in Fiumicino.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond architecture, he designed silver table services for high‑profile patrons, including the \"York Chalice\" for the Cardinal Duke of York and a grand silver service for Monsignor Antonio Odescalchi.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Valadier’s Casina Valadier, built in the 1810s as part of his Piazza del Popolo plan, remains a notable example of Neoclassical architecture and is still used as a coffee house today.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1762,
+      "month": 4,
+      "day": 14,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1839,
+      "month": 2,
+      "day": 1,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Valadier.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Valadier.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/72/Valadier.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/72/Valadier.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "The original uploader was Maus-Trauden at German Wikipedia.",
+    "author": "The original uploader was Maus-Trauden at German Wikipedia.",
+    "width": 350,
+    "height": 350,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giuseppe Valadier",
+    "url": "https://en.wikipedia.org/wiki/Giuseppe_Valadier"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:11:41.320Z"
+  }
+}

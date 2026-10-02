@@ -1,3 +1,4 @@
+import { getPoiRowStatusGroup } from "../../lib/getPoiRowStatusGroup";
 import { EyeIcon } from "@heroicons/react/20/solid";
 import { ArrowPathIcon, PhotoIcon } from "@heroicons/react/24/outline";
 import { IconButton } from "@/app/components/ui/IconButton";
@@ -18,22 +19,27 @@ const isCandidateSelectable = (candidate: MainImageCandidate) =>
 
 const getMainImageStatus = (artifact?: MainImageCandidatesArtifact) => {
   if (!artifact) {
-    return undefined;
+    return "Image candidates not generated";
   }
 
   if (artifact.candidates.length === 0) {
     return "No candidates";
   }
 
-  if (getSelectedMainImageCandidate(artifact)) {
+  const selectedImage = getSelectedMainImageCandidate(artifact);
+  if (selectedImage) {
+    if (!selectedImage.license && !selectedImage.attribution)
+      return "Missing license and attribution";
+    if (!selectedImage.license) return "Missing license";
+    if (!selectedImage.attribution) return "Missing attribution";
     return undefined;
   }
 
   if (artifact.candidates.every((candidate) => !isCandidateSelectable(candidate))) {
-    return "Missing metadata";
+    return "Missing license or attribution";
   }
 
-  return "Needs selection";
+  return "No image selected";
 };
 
 export const MainImageCell = ({
@@ -43,12 +49,20 @@ export const MainImageCell = ({
   onSelectPanel,
   runSingleAction,
 }: ActionCellProps) => (
-  <PipelineCell inProgress={isInProgress}>
-    <div className="flex min-w-0 items-start gap-3">
+  <PipelineCell
+    inProgress={isInProgress}
+    needsAttention={
+      getPoiRowStatusGroup(row) === "needs-attention" &&
+      Boolean(getMainImageStatus(row.mainImageArtifact))
+    }
+  >
+    <div className="flex min-w-0 flex-wrap items-start gap-3">
       <MainImageCellPreview artifact={row.mainImageArtifact} />
       <CellContent
         title={row.sourcePending ? "Waiting for source" : getMainImageStatus(row.mainImageArtifact)}
-        titleTone={row.sourcePending ? "warning" : "status"}
+        titleTone={
+          row.sourcePending || getMainImageStatus(row.mainImageArtifact) ? "warning" : "status"
+        }
         subtitle={
           row.mainImageArtifact
             ? `${row.mainImageArtifact.candidates.length} candidate${
@@ -70,23 +84,25 @@ export const MainImageCell = ({
     >
       {row.mainImageArtifact ? (
         <div className="flex flex-wrap items-center gap-1.5">
-          <IconButton
-            type="button"
-            label="View Main Image Candidates"
-            disabled={isInProgress}
-            onClick={() =>
-              row.mainImageArtifact
-                ? onSelectPanel({
-                    title: `${row.id} Main Image Candidates`,
-                    kind: "mainImage",
-                    poiId: row.id,
-                    artifact: row.mainImageArtifact,
-                  })
-                : null
-            }
-          >
-            <EyeIcon />
-          </IconButton>
+          {row.mainImageArtifact.candidates.length > 0 ? (
+            <IconButton
+              type="button"
+              label="View Main Image Candidates"
+              disabled={isInProgress}
+              onClick={() =>
+                row.mainImageArtifact
+                  ? onSelectPanel({
+                      title: `${row.id} Main Image Candidates`,
+                      kind: "mainImage",
+                      poiId: row.id,
+                      artifact: row.mainImageArtifact,
+                    })
+                  : null
+              }
+            >
+              <EyeIcon />
+            </IconButton>
+          ) : null}
           {row.artifacts?.mainImageCandidates ? (
             <ArtifactViewButton
               artifact={row.artifacts.mainImageCandidates}

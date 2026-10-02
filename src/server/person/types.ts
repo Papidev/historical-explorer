@@ -1,11 +1,15 @@
 import type { MainImageCandidate } from "@/server/wikiPipeline/types";
+import { getPersonDisplayName } from "@/utils/getPersonDisplayName";
 import { z } from "zod";
 
 const sourceIdsSchema = z.array(z.string().min(1)).min(1);
 
 const historicalDateSchema = z
   .object({
-    year: z.number().int().refine((year) => year !== 0, "Year zero is not supported."),
+    year: z
+      .number()
+      .int()
+      .refine((year) => year !== 0, "Year zero is not supported."),
     month: z.number().int().min(1).max(12).optional(),
     day: z.number().int().min(1).max(31).optional(),
     precision: z.enum(["exact", "approximate"]),
@@ -68,7 +72,7 @@ export type PublicPerson = {
 
 export const toPublicPerson = (person: Person): PublicPerson => ({
   id: person.id,
-  name: person.name,
+  name: getPersonDisplayName(person.name),
   description: person.content.description.map(({ text }) => text) as [string, string],
   curiosities: person.content.curiosities.map(({ text }) => text),
   ...(person.content.birthDate ? { birthDate: person.content.birthDate } : {}),

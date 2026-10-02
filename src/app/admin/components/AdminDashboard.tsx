@@ -1,5 +1,6 @@
 "use client";
 
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import { useRef } from "react";
 import type { AiModeOption, AiSelection } from "../lib/aiModels";
 import type { AdminAction, AdminArtifact, AdminPoiRow } from "../lib/types";
@@ -39,6 +40,15 @@ export const AdminDashboard = ({
           <p className="mt-1 text-xs text-black/55">
             Generate and review Rome POI content from raw source data.
           </p>
+          <a
+            href="/rome"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-flex items-center gap-1 text-sm text-violet-700 hover:underline"
+          >
+            Open Rome map
+            <ArrowTopRightOnSquareIcon className="h-4 w-4" aria-hidden="true" />
+          </a>
         </div>
         <AiGenerationSettings
           aiModeOptions={aiModeOptions}

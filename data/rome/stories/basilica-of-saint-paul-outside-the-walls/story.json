@@ -1,0 +1,241 @@
+{
+  "introduction": {
+    "text": "The Basilica di San Paolo fuori le mura is one of Rome's four major papal basilicas and a key site of Christian pilgrimage, built over the traditional burial place of Saint Paul.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Constantine the Great founded the first basilica over the burial site of Saint Paul, which was consecrated by Pope Sylvester I in 324.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 324,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Theodosius I began constructing a larger basilica in 386, which was probably consecrated around 402.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 386,
+          "precision": "approximate",
+          "endYear": 402,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Pope Leo I completed the mosaics of the basilica during his pontificate (440–461).",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 440,
+          "precision": "approximate",
+          "endYear": 461,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Pope Gregory the Great extensively modified the main altar and presbytery between 590 and 604.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 590,
+          "precision": "approximate",
+          "endYear": 604,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "An earthquake on 29 April 801 caused the roof to collapse and the basilica was rebuilt by Pope Leo III.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 801,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "Pope John VIII fortified the basilica and surrounding area during a Saracen raid (872–882).",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 872,
+          "precision": "approximate",
+          "endYear": 882,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "In 937 Odo of Cluny was entrusted with the basilica by Alberic II of Spoleto.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 937,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history8",
+        "description": "The cloister of the monastery was built between 1220 and 1241.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1220,
+          "precision": "approximate",
+          "endYear": 1241,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history9",
+        "description": "A fire in 1823 destroyed most of the original basilica.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1823,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history10",
+        "description": "The transept and high altar were consecrated by Pope Gregory XVI in October 1840.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1840,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history11",
+        "description": "The entire basilica was reconsecrated in 1854 by Pope Pius IX.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1854,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history12",
+        "description": "An explosion in 1891 destroyed the basilica's stained‑glass windows.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1891,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history13",
+        "description": "Pope Benedict XVI appointed an archpriest to oversee the basilica in 2005.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2005,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history14",
+        "description": "In 2024 a restoration agreement was signed to restore the basilica.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2024,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history15",
+        "description": "Charles III visited the basilica in 2025, entering through the Holy Door.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2025,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The 19th‑century reconstruction retained the original nave and aisles, added a Neo‑classical portico, and rebuilt the transept.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "The apse mosaics and the triumphal arch date to the 5th century, depicting the Apocalypse of John and the four Evangelists.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "The bronze Byzantine door, commissioned in 1070 by Pantaleone, contains 56 engraved panels illustrating scenes from Christ and the apostles.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "The 13th‑century ciborium of Arnolfo di Cambio (1285) is a notable example of medieval sculpture.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Paul the Apostle",
+      "personId": "paul-the-apostle",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Constantine the Great",
+      "personId": "constantine-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Sylvester I",
+      "personId": "pope-silvester-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Theodosius I",
+      "personId": "theodosius-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Innocent I",
+      "personId": "pope-innocent-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Leo I",
+      "personId": "leo-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Gregory I",
+      "personId": "pope-gregory-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Leo III",
+      "personId": "pope-leo-iii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope John VIII",
+      "personId": "pope-john-viii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Odo of Cluny",
+      "personId": "odo-of-cluny",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

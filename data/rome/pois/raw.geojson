@@ -37503,22 +37503,6 @@
     {
       "type": "Feature",
       "properties": {
-        "@id": "node/6834192160",
-        "historic": "boundary_stone",
-        "name": "<ROMA - MARE>"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          12.3405575,
-          41.7991392
-        ]
-      },
-      "id": "node/6834192160"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "@id": "node/6860850383",
         "access": "no",
         "historic": "city_gate",
@@ -49487,22 +49471,6 @@
         ]
       },
       "id": "node/13084273199"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "node/13094271701",
-        "historic": "boundary_stone",
-        "name": "gate here"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          12.4843025,
-          41.8918091
-        ]
-      },
-      "id": "node/13094271701"
     },
     {
       "type": "Feature",

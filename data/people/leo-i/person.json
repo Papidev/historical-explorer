@@ -1,0 +1,71 @@
+{
+  "id": "leo-i",
+  "name": "Leo I",
+  "wikidataId": "Q43954",
+  "wikipediaTitle": "Pope Leo I",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Leo I, who reigned from 440 to 461, was a Roman aristocrat who used his position to strengthen papal authority and to shape early Christological doctrine. He is best remembered for issuing the Tome of Leo at the Council of Chalcedon, a concise statement that clarified the union of Christ's divine and human natures and helped secure the council's decisions against the Eutychian controversy. His letters and sermons, numbering nearly a hundred and a half, were widely circulated and formed the theological foundation for the Western Church's stance on heresy and ecclesiastical discipline.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Leo also played a pivotal diplomatic role during the Hunnic threat to Italy. In 452 he personally negotiated with Attila the Hun, an encounter that, according to contemporary accounts, persuaded the king to withdraw from Rome and spare the city. The meeting is often cited as an example of the pope's moral authority and the power of prayer, and it remains a celebrated episode in the history of the papacy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the first pope to be buried within St. Peter's Basilica, a distinction that underscored his importance to the early Church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Leo was the first of the three popes listed in the Annuario Pontificio with the title \"the Great,\" a designation that highlighted his lasting influence.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1914 Pope Benedict XV named Leo a Doctor of the Church, recognizing his theological contributions to Christian unity.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his papacy the term \"Pope\" came to be used exclusively for the Bishop of Rome, marking a significant shift in ecclesiastical terminology.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 391,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 461,
+      "month": 11,
+      "day": 10,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Herrera_mozo_San_León_magno_Lienzo._Óvalo._164_x_105_cm._Museo_del_Prado.png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Herrera_mozo_San_Le%C3%B3n_magno_Lienzo._%C3%93valo._164_x_105_cm._Museo_del_Prado.png",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Herrera_mozo_San_Le%C3%B3n_magno_Lienzo._%C3%93valo._164_x_105_cm._Museo_del_Prado.png/960px-Herrera_mozo_San_Le%C3%B3n_magno_Lienzo._%C3%93valo._164_x_105_cm._Museo_del_Prado.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Herrera_mozo_San_Le%C3%B3n_magno_Lienzo._%C3%93valo._164_x_105_cm._Museo_del_Prado.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Francisco Herrera the Younger",
+    "author": "Francisco Herrera the Younger",
+    "width": 1860,
+    "height": 2916,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Leo I",
+    "url": "https://en.wikipedia.org/wiki/Pope_Leo_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:24:43.978Z"
+  }
+}

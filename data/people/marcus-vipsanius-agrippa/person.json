@@ -1,0 +1,69 @@
+{
+  "id": "marcus-vipsanius-agrippa",
+  "name": "Marcus Vipsanius Agrippa",
+  "wikidataId": "Q48174",
+  "wikipediaTitle": "Marcus Vipsanius Agrippa",
+  "content": {
+    "description": [
+      {
+        "text": "Marcus Vipsanius Agrippa was a pivotal military commander and close confidant of Octavian, later Augustus. His naval command at the Battle of Actium in 31 BC decisively defeated Mark Antony and Cleopatra, securing Octavian’s path to imperial power. Agrippa’s strategic acumen and loyalty earned him repeated consulships and unprecedented political authority, including veto power over the Senate and the right to present laws to the people.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond the battlefield, Agrippa transformed Rome’s public infrastructure. He oversaw the renovation of aqueducts such as the Aqua Marcia, built baths, porticoes, and gardens, and laid out the Via Agrippa road network. He also designed the original Pantheon, a monumental temple that later inspired Hadrian’s surviving structure. His civic projects earned him the reputation of making Rome “a city of marble.”",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Agrippa was the original architect of the Pantheon, whose design was later adapted by Emperor Hadrian.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He compiled a comprehensive geographical survey of the Roman Empire, producing a circular chart that was engraved on marble and displayed in a colonnade.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Agrippa’s family ties extended into the Julio‑Claudian dynasty; he was the maternal grandfather of Emperor Caligula and the great‑grandfather of Emperor Nero.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 33 BC he became Rome’s first Curator Aquarum, giving him responsibility for the city’s water supply and sanitation systems.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -63,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": -12,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Agrippa_Gabii_Louvre_Ma1208.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Agrippa_Gabii_Louvre_Ma1208.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Agrippa_Gabii_Louvre_Ma1208.jpg/960px-Agrippa_Gabii_Louvre_Ma1208.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/16/Agrippa_Gabii_Louvre_Ma1208.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 2.5",
+    "attribution": "Marie-Lan Nguyen (User:Jastrow), 2009",
+    "author": "Marie-Lan Nguyen (User:Jastrow), 2009",
+    "width": 2467,
+    "height": 3700,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Marcus Vipsanius Agrippa",
+    "url": "https://en.wikipedia.org/wiki/Marcus_Vipsanius_Agrippa"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-01T23:50:29.739Z"
+  }
+}

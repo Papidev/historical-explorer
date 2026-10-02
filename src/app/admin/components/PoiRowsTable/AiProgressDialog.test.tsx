@@ -63,17 +63,18 @@ describe("AI progress dialog", () => {
   });
 
   it("shows a Person generation event while the action is running", async () => {
+    const entries = [
+      {
+        at: "2026-09-25T00:00:01.000Z",
+        message: "Generating Hadrian with Ollama (qwen3.5:9b).",
+      },
+    ];
     server.use(
       http.get("/api/admin/ai-progress/:runId", () =>
         HttpResponse.json({
           status: "running",
           startedAt: "2026-09-25T00:00:00.000Z",
-          entries: [
-            {
-              at: "2026-09-25T00:00:01.000Z",
-              message: "Generating Hadrian with Ollama (qwen3.5:9b).",
-            },
-          ],
+          entries,
         }),
       ),
     );
@@ -92,5 +93,15 @@ describe("AI progress dialog", () => {
     ).toBeInTheDocument();
     expect(screen.getByRole("dialog")).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Hide" })).toBeInTheDocument();
+
+    const log = screen.getByRole("log");
+    Object.defineProperty(log, "scrollHeight", { value: 600, configurable: true });
+    log.scrollTop = 0;
+    entries.push({ at: "2026-09-25T00:00:02.000Z", message: "Resolved Hadrian." });
+
+    expect(
+      await screen.findByText("Resolved Hadrian.", {}, { timeout: 2_500 }),
+    ).toBeInTheDocument();
+    expect(log.scrollTop).toBe(600);
   });
 });
