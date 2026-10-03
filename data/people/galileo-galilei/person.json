@@ -1,0 +1,85 @@
+{
+  "id": "galileo-galilei",
+  "name": "Galileo Galilei",
+  "wikidataId": "Q307",
+  "wikipediaTitle": "Galileo Galilei",
+  "content": {
+    "description": [
+      {
+        "text": "Galileo Galilei was born on 15 February 1564 in Pisa, then part of the Duchy of Florence, to Vincenzo Galilei, a lutenist and music theorist, and Giulia Ammannati. Raised in a family that valued music and science, he learned to play the lute and studied logic and mathematics under the guidance of Jacopo Borghini and at the Vallombrosa Abbey. His early curiosity led him to experiment with pendulums, hydrostatic balances, and a thermoscope, laying the groundwork for his later work in physics and astronomy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1609 Galileo built an improved telescope that allowed him to observe the roughness of the Moon, the phases of Venus, and the four largest moons of Jupiter, providing strong evidence for the Copernican heliocentric model. His telescopic discoveries, together with his writings on motion, tides, and sunspots, earned him the title of the father of observational astronomy, but also attracted the ire of the Roman Inquisition. After being tried for heresy in 1633, he spent the rest of his life under house arrest, during which he published the influential *Two New Sciences* and continued to refine his theories of mechanics and optics.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He invented the thermoscope, a forerunner of the thermometer.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He built an early microscope, one of the first instruments to magnify small objects.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was one of the earliest developers of the thermoscope and the inventor of various military compasses.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His observation of the phases of Venus contradicted the Ptolemaic model and supported heliocentrism.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He discovered Jupiter's four largest moons, later named the Galilean satellites.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He observed sunspots, challenging the idea of celestial perfection.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was tried by the Roman Inquisition and spent the rest of his life under house arrest.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1564,
+      "month": 2,
+      "day": 15,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1642,
+      "month": 1,
+      "day": 8,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Galileo.arp.300pix.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Galileo.arp.300pix.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Galileo.arp.300pix.jpg/960px-Galileo.arp.300pix.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Galileo.arp.300pix.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Justus Sustermans",
+    "author": "Justus Sustermans",
+    "width": 1180,
+    "height": 1448,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Galileo Galilei",
+    "url": "https://en.wikipedia.org/wiki/Galileo_Galilei"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-02T16:36:32.832Z"
+  }
+}

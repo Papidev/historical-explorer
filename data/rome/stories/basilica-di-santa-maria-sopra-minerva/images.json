@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Santa_Maria_sopra_Minerva.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Santa_Maria_sopra_Minerva.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Santa_Maria_sopra_Minerva.jpg/960px-Santa_Maria_sopra_Minerva.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Santa_Maria_sopra_Minerva.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Merulana",
+      "author": "Merulana",
+      "width": 7074,
+      "height": 5034,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Piazza_della_Minerva_Historische_Topographie.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Piazza_della_Minerva_Historische_Topographie.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/63/Piazza_della_Minerva_Historische_Topographie.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/63/Piazza_della_Minerva_Historische_Topographie.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Peter1936F",
+      "author": "Peter1936F",
+      "width": 695,
+      "height": 611,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Piazza_della_Minerva.svg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Piazza_della_Minerva.svg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Piazza_della_Minerva.svg/960px-Piazza_della_Minerva.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/Piazza_della_Minerva.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "JTSH26",
+      "author": "JTSH26",
+      "width": 322,
+      "height": 257,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Santa_Maria_sopra_Minerva.jpg"
+}

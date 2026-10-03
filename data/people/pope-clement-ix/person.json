@@ -1,0 +1,97 @@
+{
+  "id": "pope-clement-ix",
+  "name": "Pope Clement IX",
+  "wikidataId": "Q155961",
+  "wikipediaTitle": "Pope Clement IX",
+  "content": {
+    "description": [
+      {
+        "text": "Giulio Rospigliosi was born on 28 January 1600 into the noble Rospigliosi family of Pistoia in the Grand Duchy of Tuscany. He studied at the Seminario Romano and the University of Pisa, earning doctorates in theology, philosophy, canon and civil law in 1623, and later taught theology at Pisa until 1625. He entered the diplomatic service of the Holy See, serving as Referendary of the Apostolic Signatura under Pope Urban VIII, then as Titular Archbishop of Tarsus in 1644 and Apostolic Nuncio to Spain until 1653. His literary talent was evident in his libretti, including what may be the first comic opera, Chi soffre, speri (1637). In 1657 Pope Alexander VII made him a cardinal, and in 1667 he was elected pope, taking the name Clement IX.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As pope, Clement IX was noted for his humility and charity, often hearing confessions in St. Peter’s Basilica and visiting hospitals. He patronised the arts, commissioning works from Gian Lorenzo Bernini and opening Rome’s first public opera house. He beatified Rose of Lima (15 April 1668) and canonised Magdalena de Pazzi and Peter of Alcántara (28 April 1668), and created twelve new cardinals. He attempted to strengthen Venetian defenses in Crete, but the fall of Candia in 1669 brought him ill health; he died of a stroke on 9 December 1669.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was a patron of the artist Nicolas Poussin, commissioning the painting A Dance to the Music of Time.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He opened Rome’s first public opera house during his pontificate.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He wrote the libretto for what is considered the first comic opera, Chi soffre, speri (1637).",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He beatified Rose of Lima on 15 April 1668.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He canonised Magdalena de Pazzi and Peter of Alcántara on 28 April 1668.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He created twelve new cardinals in three consistories during his reign.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He acted as a mediator during the 1668 peace of Aachen, helping to negotiate between France, Spain, England and the Netherlands.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was known for his charity, hearing confessions in St. Peter’s Basilica and visiting hospitals, a rare practice among popes of his era.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He attempted to strengthen Venetian defenses against the Turks on the island of Crete, but was unable to secure wider support.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He died of a stroke on 9 December 1669, reportedly after learning of the surrender of the Venetian fortress of Candia in Crete.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1600,
+      "month": 1,
+      "day": 28,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1669,
+      "month": 12,
+      "day": 9,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Carlo_Maratta_-_Portrait_of_Pope_Clement_IX.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Carlo_Maratta_-_Portrait_of_Pope_Clement_IX.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Carlo_Maratta_-_Portrait_of_Pope_Clement_IX.jpg/960px-Carlo_Maratta_-_Portrait_of_Pope_Clement_IX.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Carlo_Maratta_-_Portrait_of_Pope_Clement_IX.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Carlo Maratta",
+    "author": "Carlo Maratta",
+    "width": 1740,
+    "height": 2399,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Clement IX",
+    "url": "https://en.wikipedia.org/wiki/Pope_Clement_IX"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-02T16:37:37.107Z"
+  }
+}

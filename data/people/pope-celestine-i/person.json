@@ -1,0 +1,63 @@
+{
+  "id": "pope-celestine-i",
+  "name": "Pope Celestine I",
+  "wikidataId": "Q160922",
+  "wikipediaTitle": "Pope Celestine I",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Celestine I, born around 359 in the Campanian region of Italy, rose to prominence as a deacon under Pope Innocent I before being elected bishop of Rome in 422. His election is recorded by the Vatican as occurring on 10 September, though some sources cite 3 November, reflecting the early medieval uncertainty surrounding papal successions.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his decade-long pontificate, Celestine was a decisive opponent of heresy, particularly Nestorianism and Pelagianism. He delegated Cyril of Alexandria to condemn Nestorius at the Council of Ephesus, sent Germanus of Auxerre to Britain to confront Pelagian bishops, and dispatched Palladius to Ireland to establish a Christian presence among the Scots.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Celestine commissioned Palladius as bishop to the Scots of Ireland and northern Britain in 431, marking one of the earliest papal efforts to evangelize the British Isles.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He actively opposed the Novatians in Rome, removing their churches and forcing their bishop, Rusticulus, to hold clandestine meetings, while simultaneously advocating for the absolution of repentant sinners.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 359,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 432,
+      "month": 7,
+      "day": 27,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Celestine-Dedek.TIF",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Celestine-Dedek.TIF",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Celestine-Dedek.TIF/lossy-page1-960px-Celestine-Dedek.TIF.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Celestine-Dedek.TIF?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Crescens Lajos Dedek",
+    "author": "Crescens Lajos Dedek",
+    "width": 6127,
+    "height": 6607,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Celestine I",
+    "url": "https://en.wikipedia.org/wiki/Pope_Celestine_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-02T16:34:22.900Z"
+  }
+}

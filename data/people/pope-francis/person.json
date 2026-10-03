@@ -1,0 +1,73 @@
+{
+  "id": "pope-francis",
+  "name": "Pope Francis",
+  "wikidataId": "Q450675",
+  "wikipediaTitle": "Pope Francis",
+  "content": {
+    "description": [
+      {
+        "text": "Jorge Mario Bergoglio was born on 17 December 1936 in the Flores neighbourhood of Buenos Aires, Argentina, to a family of Italian origin. He entered the Society of Jesus in 1958 after recovering from a severe illness, was ordained a priest in 1969, and served as provincial superior of the Jesuits in Argentina from 1973 to 1979. In 1998 he was appointed archbishop of Buenos Aires and in 2001 he was made a cardinal by Pope John Paul II. His election as pope on 13 March 2013 made him the first Jesuit, the first Latin American, and the first pope born or raised outside Europe since the 8th‑century Syrian pope Gregory III.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As pope, Francis adopted a less formal style, choosing to live in the Domus Sanctae Marthae guesthouse, refusing the traditional mozzetta cape, and wearing a silver ring and an iron cross. He emphasized mercy, interreligious dialogue, and care for the poor, migrants and refugees, and he convened the Synod on Synodality, described as the culmination of his papacy. His reforms included opening the Holy Doors of the major basilicas, abolishing the death penalty, and granting women voting rights in the Synod of Bishops.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Francis was the first pope to live outside the papal apartments of the Apostolic Palace, choosing the Domus Sanctae Marthae guesthouse instead.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He chose a silver ring for his papal ring, a departure from the traditional gold ring used by previous popes.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He made women and laymen full members of the dicasteries in the Roman Curia, a first in the history of the Catholic Church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He permitted non‑liturgical blessings of individuals in same‑sex relationships in the Latin Church, a significant shift in papal policy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1936,
+      "month": 12,
+      "day": 17,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 2025,
+      "month": 4,
+      "day": 21,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_Francis_Korea_Haemi_Castle_19.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Francis_Korea_Haemi_Castle_19.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Pope_Francis_Korea_Haemi_Castle_19.jpg/960px-Pope_Francis_Korea_Haemi_Castle_19.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Pope_Francis_Korea_Haemi_Castle_19.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 2.0",
+    "attribution": "Korea.net / Korean Culture and Information Service (Photographer name)",
+    "author": "Korea.net / Korean Culture and Information Service (Jeon Han)",
+    "width": 1797,
+    "height": 2381,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Francis",
+    "url": "https://en.wikipedia.org/wiki/Pope_Francis"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-02T16:36:12.255Z"
+  }
+}

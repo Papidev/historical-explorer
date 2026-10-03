@@ -1,0 +1,77 @@
+{
+  "id": "pope-pius-v",
+  "name": "Pope Pius V",
+  "wikidataId": "Q131945",
+  "wikipediaTitle": "Pope Pius V",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Pius V, born Antonio Ghislieri in 1504, was a Dominican who rose through the Inquisition to become the 236th pope. His pontificate, from 1566 to 1572, was marked by a rigorous enforcement of the decrees of the Council of Trent, a sweeping reform of the Roman liturgy, and a stern stance against heresy that earned him both veneration as a saint and a reputation for severity.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his reign he used papal authority to shape European politics: he excommunicated England’s Queen Elizabeth I, forged the Holy League that defeated the Ottoman navy at Lepanto, and instituted the Feast of Our Lady of Victory. His reforms extended beyond theology to the very life of Rome, where he curtailed court excesses, banned horse racing in St. Peter’s Square, and oversaw public works that improved the city’s water supply.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He is credited with establishing the tradition of the pope wearing a white habit, a practice that continues today.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pius V banned horse racing in St. Peter’s Square, a prohibition that remains in effect.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In March 1571 he created the Congregation of the Index to formalise the censorship of books deemed heretical or immoral.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He declared Thomas Aquinas a Doctor of the Church in 1567, cementing Aquinas’s central role in Catholic theology.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The papal bull Regnans in Excelsis, issued in 1570, excommunicated Queen Elizabeth I and released her subjects from allegiance to her.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1504,
+      "month": 1,
+      "day": 17,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1572,
+      "month": 5,
+      "day": 1,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Bartolomeo_Passarotti_-_Pius_V.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Bartolomeo_Passarotti_-_Pius_V.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Bartolomeo_Passarotti_-_Pius_V.jpg/960px-Bartolomeo_Passarotti_-_Pius_V.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/28/Bartolomeo_Passarotti_-_Pius_V.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Bartolomeo Passarotti and workshop",
+    "author": "Bartolomeo Passarotti and workshop",
+    "width": 1321,
+    "height": 1689,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Pius V",
+    "url": "https://en.wikipedia.org/wiki/Pope_Pius_V"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-02T16:34:36.571Z"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "leon-battista-alberti",
+  "name": "Leon Battista Alberti",
+  "wikidataId": "Q182046",
+  "wikipediaTitle": "Leon Battista Alberti",
+  "content": {
+    "description": [
+      {
+        "text": "Leon Battista Alberti was born in Genoa on 14 February 1404 and grew up in a family that moved between Genoa, Florence, and Rome. He studied law at Bologna, entered the papal court in Rome, and was drawn to the ruins of ancient Rome, which sparked his lifelong fascination with architecture. He wrote the seminal treatise De re aedificatoria in 1452, which systematized Vitruvian principles and became the first comprehensive architectural textbook of the Renaissance. His designs for the façade of the Rucellai Palace in Florence and the churches of San Sebastiano and Sant'Andrea in Mantua showcase his mastery of classical orders and his innovative use of perspective.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond architecture, Alberti was a prolific writer and a pioneering cryptographer. He authored De componendis cifris, the first treatise on polyalphabetic substitution, and introduced the Alberti cipher disk, a device that allowed the use of multiple cipher alphabets. He also wrote on painting, sculpture, geography, and even a comedy at the age of twenty that was mistakenly credited to a classical author. A devout priest who never married, he was known for his athleticism, his love of animals—particularly a mongrel dog he praised in a panegyric—and for his autobiographical claims of leaping over a man and throwing a coin high into a cathedral vault.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Alberti invented the first polyalphabetic cipher, known as the Alberti cipher, and is considered the founder of European cryptography.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He had a pet mongrel dog and wrote a panegyric titled \"Canis\" about it.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In his autobiographical notes he claimed he could leap over a standing man and throw a coin high into a cathedral vault.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "At the age of twenty he wrote a comedy that was passed off as a genuine classical work.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1404,
+      "month": 2,
+      "day": 14,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1472,
+      "month": 4,
+      "day": 25,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Leon_Battista_Alberti2.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Leon_Battista_Alberti2.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Leon_Battista_Alberti2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Leon_Battista_Alberti2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "G. Benaglia",
+    "author": "G. Benaglia",
+    "width": 572,
+    "height": 736,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Leon Battista Alberti",
+    "url": "https://en.wikipedia.org/wiki/Leon_Battista_Alberti"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-02T23:57:54.458Z"
+  }
+}

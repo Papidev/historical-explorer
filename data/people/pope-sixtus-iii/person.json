@@ -1,0 +1,75 @@
+{
+  "id": "pope-sixtus-iii",
+  "name": "Pope Sixtus III",
+  "wikidataId": "Q167065",
+  "wikipediaTitle": "Pope Sixtus III",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Sixtus III, born in Rome, rose to prominence among the Roman clergy before being elected bishop of Rome on 31 July 432.  He was known for his correspondence with Augustine of Hippo and, according to some scholars, for patronising the theologian Pelagius, a claim that has been contested by later historians.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his pontificate he sought to restore ecclesiastical peace, mediating between Cyril of Alexandria and John of Antioch, and defending the papal authority over Illyria and the archbishop of Thessalonica against the ambitions of Proclus of Constantinople.  His reign coincided with a building boom in Rome, during which Santa Sabina was dedicated and the Liberian Basilica was erected as Santa Maria Maggiore in honour of the Mother of God, reflecting his acceptance of the decisions of the Council of Ephesus in 431.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Sixtus III’s feast day is celebrated by both the Catholic and Eastern Orthodox Churches on 28 March.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He corresponded regularly with Augustine of Hippo, indicating a close intellectual relationship between the two men.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Liberian Basilica, later known as Santa Maria Maggiore, was built during his pontificate as a response to the Council of Ephesus’s declaration that Mary could be called the Mother of God.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sixtus III attempted to mediate a dispute between Cyril of Alexandria and John of Antioch, seeking to restore peace within the early church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He defended the papal rights over Illyria and the position of the archbishop of Thessalonica as head of the local Illyrian church against the ambitions of Proclus of Constantinople.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "According to Peter Brown, Sixtus was a patron of Pelagius before becoming pope, although this claim has been disputed by other historians.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 440,
+      "month": 8,
+      "day": 18,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope-Sixtus-III.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope-Sixtus-III.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Pope-Sixtus-III.jpg/960px-Pope-Sixtus-III.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/78/Pope-Sixtus-III.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 1000,
+    "height": 1000,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Sixtus III",
+    "url": "https://en.wikipedia.org/wiki/Pope_Sixtus_III"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-02T16:34:49.500Z"
+  }
+}

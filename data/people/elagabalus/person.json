@@ -1,0 +1,71 @@
+{
+  "id": "elagabalus",
+  "name": "Elagabalus",
+  "wikidataId": "Q1762",
+  "wikipediaTitle": "Elagabalus",
+  "content": {
+    "description": [
+      {
+        "text": "Marcus Aurelius Antoninus, known as Elagabalus, was born around 204 in Emesa (modern Homs) to a prominent Syrian Arab family that held hereditary rights to the priesthood of the sun god Elagabal. Raised as the high priest of Elagabal from a young age, he was thrust into the imperial throne at fourteen when his grandmother Julia Maesa orchestrated a revolt against the short‑lived emperor Macrinus, proclaiming him emperor in 218. His accession was marked by the adoption of the name Marcus Aurelius Antoninus, the same as the late Caracalla, to legitimize his rule among soldiers loyal to Caracalla.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Elagabalus’s reign was dominated by religious innovation and scandal. He brought the cult of Elagabal to Rome, installing a black meteorite stone in the new Elagabalium on the Palatine Hill and declaring the god the chief deity of the Roman pantheon. His personal life, including a marriage to the Vestal Virgin Aquilia Severa and allegations of sexual promiscuity, alienated the Senate, the Praetorian Guard, and the general populace. Facing growing opposition, he was assassinated by the Praetorian Guard on 13 March 222, at the age of eighteen, and succeeded by his cousin Severus Alexander.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Before becoming emperor, Elagabalus served as the high priest of the sun god Elagabal in his hometown of Emesa.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He introduced a black meteorite stone, representing Elagabal, into Rome and built the Elagabalium on the Palatine Hill to house it.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Elagabalus married the Vestal Virgin Aquilia Severa, a violation of Roman law that required Vestals to remain celibate.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was assassinated by the Praetorian Guard on 13 March 222, at the age of eighteen.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 204,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 222,
+      "month": 3,
+      "day": 13,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Bust_of_Elagabalus_-_Palazzo_Nuovo_-_Musei_Capitolini_-_Rome_2016_(2).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Bust_of_Elagabalus_-_Palazzo_Nuovo_-_Musei_Capitolini_-_Rome_2016_(2).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Bust_of_Elagabalus_-_Palazzo_Nuovo_-_Musei_Capitolini_-_Rome_2016_%282%29.jpg/960px-Bust_of_Elagabalus_-_Palazzo_Nuovo_-_Musei_Capitolini_-_Rome_2016_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Bust_of_Elagabalus_-_Palazzo_Nuovo_-_Musei_Capitolini_-_Rome_2016_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "© José Luiz Bernardes Ribeiro",
+    "author": "José Luiz",
+    "width": 3328,
+    "height": 5120,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Elagabalus",
+    "url": "https://en.wikipedia.org/wiki/Elagabalus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-02T16:43:55.377Z"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Esquilino_-_Anfiteatro_Castrense_1000921.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Esquilino_-_Anfiteatro_Castrense_1000921.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Esquilino_-_Anfiteatro_Castrense_1000921.JPG/960px-Esquilino_-_Anfiteatro_Castrense_1000921.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Esquilino_-_Anfiteatro_Castrense_1000921.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Lalupa",
+      "author": "Lalupa",
+      "width": 2816,
+      "height": 2112,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "AmphitheatrumCastrense_planrome.png",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:AmphitheatrumCastrense_planrome.png",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/AmphitheatrumCastrense_planrome.png/960px-AmphitheatrumCastrense_planrome.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ef/AmphitheatrumCastrense_planrome.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "width": 1128,
+      "height": 900,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "AmphitheatreCastrense_planrome.png",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:AmphitheatreCastrense_planrome.png",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/AmphitheatreCastrense_planrome.png/960px-AmphitheatreCastrense_planrome.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b7/AmphitheatreCastrense_planrome.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "The original uploader was ColdEel at French Wikipedia.",
+      "author": "The original uploader was ColdEel at French Wikipedia.",
+      "width": 1128,
+      "height": 900,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Esquilino_-_Anfiteatro_Castrense_1000921.JPG"
+}

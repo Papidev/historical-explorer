@@ -1,0 +1,67 @@
+{
+  "id": "pope-liberius",
+  "name": "Pope Liberius",
+  "wikidataId": "Q102105",
+  "wikipediaTitle": "Pope Liberius",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Liberius (310 – 24 September 366) served as bishop of Rome from 17 May 352 until his death. He was consecrated on 22 May 352 as the successor to Julius I. During the reign of Emperor Constantius II, Liberius was exiled to Beroea in Thrace for more than two years after refusing to condemn Athanasius of Alexandria. After Constantius’s death, Liberius returned to Rome, was restored to the papacy, annulled the decrees of the Council of Sirmium, and in 366 welcomed a moderate Arian delegation into his communion.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Liberius is notable for being the earliest pope not listed in the Roman Martyrology, making him one of only two popes omitted from Catholic sainthood in the first 500 years of church history. In contrast, the Eastern Orthodox Church venerates him as a saint, celebrating his feast on 27 August. The Basilica di Santa Maria Maggiore in Rome is sometimes referred to as the Liberian Basilica in his honor.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Liberius is the earliest pontiff not mentioned as a saint in the Roman Martyrology, marking him as the first pope omitted from Catholic sainthood in the first five centuries.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In the Eastern Orthodox Church, Liberius is commemorated as a saint with a feast day on 27 August.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Basilica di Santa Maria Maggiore in Rome is sometimes called the Liberian Basilica in reference to Pope Liberius.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 310,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 366,
+      "month": 9,
+      "day": 24,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Matthias_Grünewald_-_Establishment_of_the_Santa_Maria_Maggiore_in_Rome_(detail)_-_WGA10780.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Matthias_Gr%C3%BCnewald_-_Establishment_of_the_Santa_Maria_Maggiore_in_Rome_(detail)_-_WGA10780.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/Matthias_Gr%C3%BCnewald_-_Establishment_of_the_Santa_Maria_Maggiore_in_Rome_%28detail%29_-_WGA10780.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/Matthias_Gr%C3%BCnewald_-_Establishment_of_the_Santa_Maria_Maggiore_in_Rome_%28detail%29_-_WGA10780.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Matthias Grünewald",
+    "author": "Matthias Grünewald",
+    "width": 761,
+    "height": 1059,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Liberius",
+    "url": "https://en.wikipedia.org/wiki/Pope_Liberius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-02T16:34:05.471Z"
+  }
+}

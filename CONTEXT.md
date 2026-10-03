@@ -24,12 +24,20 @@ A Wikidata classification assigned to a **POI**, identified by a Wikidata item a
 _Avoid_: P31, category
 
 **POI Category**:
-An app-owned grouping used to filter **POIs** in the **Visitor Experience**. A **POI** may belong to several categories.
+An app-owned grouping shared across cities, with a singular name, used to filter **POIs** by their current or historical nature or function in the **Visitor Experience**. A **POI** may belong to several categories, including categories assigned directly by a **Curator** without **POI Types**; category membership does not imply current use or visitor access.
 _Avoid_: POI Type, Wikidata category
 
 **POI Subcategory**:
 A **POI Category** nested directly under a broader parent **POI Category**. Its **POIs** also belong to the parent's discovery scope; Cathedral, Basilica, and Church are subcategories of Churches & cathedrals. Discovery scopes within that group are disjoint and follow the place naming rules.
 _Avoid_: POI Type, Wikidata subclass
+
+**POI Type Mapping**:
+A shared editorial rule assigning a **POI Type** to zero or more **POI Categories** across cities. An explicitly ignored type is distinct from a type that has not yet been mapped.
+_Avoid_: Wikidata category, city category mapping
+
+**POI Category Exception**:
+A Curator's explicit addition or exclusion of a **POI Category** for one **POI**, relative to the shared **POI Type Mapping**. It remains an editorial decision until the Curator removes it, independently of changes to source types or shared mappings.
+_Avoid_: Local type mapping, source correction
 
 **Story Workflow**:
 The internal process that takes a **POI** through **Draft Story Generation** and **Story Curation** until it has an approved **Story**.

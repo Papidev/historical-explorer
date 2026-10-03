@@ -1,0 +1,365 @@
+{
+  "introduction": {
+    "text": "The Basilica di Santa Maria sopra Minerva in Rome is a minor basilica and the only surviving example of original Gothic church architecture in the city. Its layered history—from a Roman temple to a Dominican centre—makes it a key monument of religious, artistic, and architectural heritage.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Construction of the Minervium, a temple to the goddess Minerva, on the site around 50 BC.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -50,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Pope Zachary Christianized the site and offered it to Basilian nuns.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 741,
+          "precision": "exact",
+          "endYear": 752,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Pope Alexander IV established a community of former prostitutes on the site.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1255,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Dominican friars began to occupy the site in 1266.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1266,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "Dominicans took official possession of the church in 1275.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1275,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "Construction of the present Gothic church began in 1280.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1280,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "Side aisles were completed during the 14th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1300,
+          "precision": "approximate",
+          "endYear": 1399,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history11",
+        "description": "The 1431 papal conclave was held in the church.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1431,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history12",
+        "description": "A second conclave took place in 1447 at the basilica.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1447,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history8",
+        "description": "Cardinal Juan Torquemada ordered the completion of the main nave vault in 1453.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1453,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history9",
+        "description": "Count Francesco Orsini sponsored the façade in 1453.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1453,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history13",
+        "description": "The basilica became a titular church in 1557.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1557,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history14",
+        "description": "It was raised to the status of minor basilica in 1566.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1566,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history15",
+        "description": "Carlo Maderno enlarged the apse and added Baroque decorations in 1600.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1600,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history16",
+        "description": "An Egyptian obelisk was discovered in 1665.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1665,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history10",
+        "description": "The façade was completed in 1725 under Pope Benedict XIII.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1725,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history17",
+        "description": "The basilica was affected by the French occupation from 1797 to 1814.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1797,
+          "precision": "exact",
+          "endYear": 1814,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history18",
+        "description": "A Neo‑Gothic restoration was carried out between 1848 and 1855.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1848,
+          "precision": "exact",
+          "endYear": 1855,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history19",
+        "description": "The convent was expropriated by the Italian government in 1870.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1870,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history20",
+        "description": "The College of Saint Thomas left the basilica in 1873.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1873,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history23",
+        "description": "The great organ was built in 1909.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1909,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history21",
+        "description": "The college was relocated to the convent of Saints Dominic and Sixtus in 1932.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1932,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history22",
+        "description": "The Pontifical University of Saint Thomas Aquinas, Angelicum, was established in 1963.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1963,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history24",
+        "description": "The organ was restored in 1999.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1999,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history25",
+        "description": "António Marto was named titular cardinal in 2018.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2018,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "Gothic interior with arched vaulting, blue painted vaults, gilded stars, and red ribbing restored in Neo‑Gothic style.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "Renaissance façade with pilastered tripartite division completed in 1725.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "Baroque modifications by Carlo Maderno in 1600, including enlarged apse and Baroque decorations.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design4",
+        "description": "Neo‑Gothic restoration of interior walls and frescoes by Girolamo Bianchedi between 1848 and 1855.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Michelangelo's marble statue Cristo della Minerva (1521) located to the left of the main altar.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "Filippino Lippi fresco cycle (1488–1493) in the Carafa Chapel.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "Tombs of Saint Catherine of Siena, Fra Angelico, and the Medici popes Leo X and Clement VII by Baccio Bandinelli.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art4",
+        "description": "Stained glass windows mostly from the 19th century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art5",
+        "description": "The Pulcino della Minerva, a bronze elephant base supporting an obelisk, designed by Gian Lorenzo Bernini.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Thomas Aquinas",
+      "personId": "thomas-aquinas",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Michelangelo",
+      "personId": "michelangelo-buonarroti",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Fra Angelico",
+      "personId": "fra-angelico",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Pius V",
+      "personId": "pope-pius-v",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Leo X",
+      "personId": "pope-leo-x",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Clement VII",
+      "personId": "pope-clement-vii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Paul IV",
+      "personId": "pope-paul-iv",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Urban VII",
+      "personId": "urban-vii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Benedict XIII",
+      "personId": "pope-benedict-xiii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Galileo Galilei",
+      "personId": "galileo-galilei",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

@@ -19,6 +19,8 @@ Then open [http://localhost:3000](http://localhost:3000).
 
 The Rome map reads its versioned POI catalog from `data/rome/pois/pois.geojson` and shows only POIs whose admin rows are green (Complete).
 
+The OpenFreeMap basemap shows only cultural POI labels and icons: museums, monuments and memorials, castles and ruins, archaeological sites, places of worship, theatres, galleries, artworks, arts centres, and libraries. Other basemap POIs are hidden, including businesses, accommodation, services, sports facilities, and transit stops. Roads, buildings, geographic labels, and the app's curated markers remain visible. Filtering uses the categories supplied by the basemap; generic attractions are excluded because their cultural significance is not identified by those categories.
+
 ## Routes
 
 - `/` - project home page.

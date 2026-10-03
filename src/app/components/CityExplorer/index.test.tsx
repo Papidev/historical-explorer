@@ -23,6 +23,9 @@ vi.mock("maplibre-gl", () => {
     getContainer() {
       return this.container;
     }
+    getStyle() {
+      return { layers: [] };
+    }
     on() {}
     once(event: string, handler: () => void) {
       if (event === "load") {
