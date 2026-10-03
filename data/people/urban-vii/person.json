@@ -7,41 +7,29 @@
     "description": [
       {
         "text": "Giovanni Battista Castagna was born in Rome on 4 August 1521 to a noble family. He studied civil and canon law at the University of Bologna, earned a doctorate, and entered the Roman Curia as a referendary. He rose through the ranks, serving as governor of Fano, Perugia, and Umbria, and as Archbishop of Rossano, where he participated in the Council of Trent. His diplomatic career included appointments as Apostolic Nuncio to Spain, Venice, and as legate to Flanders and Cologne, and he was created a cardinal by Pope Gregory XIII in 1583.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "When Pope Sixtus V died, Castagna was elected pope on 15 September 1590 and took the name Urban VII. Though he reigned for only twelve days before succumbing to malaria on 27 September, he left a mark by instituting the first known public smoking ban, threatening excommunication for anyone who used tobacco in or near a church. He also championed charity, subsidizing Roman bakers so they could sell bread below cost, and he forbade nepotism within the Roman Curia.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "curiosities": [
       {
         "text": "Urban VII's papacy was the shortest recognized in history, lasting just 12 days.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "He instituted the world's first public smoking ban, threatening excommunication for tobacco use in churches.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "He subsidized Roman bakers to sell bread below cost, demonstrating his commitment to the poor.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "He forbade nepotism within the Roman Curia, a stance that set him apart from many of his contemporaries.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "birthDate": {

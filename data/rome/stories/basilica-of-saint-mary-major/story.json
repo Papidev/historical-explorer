@@ -1,18 +1,14 @@
 {
   "introduction": {
     "text": "The Basilica di Santa Maria Maggiore in Rome is one of the city’s major Marian churches and a papal major basilica, renowned for its early Christian mosaics, historic relics, and role as a pilgrimage site.",
-    "sourceIds": [
-      "wikipedia"
-    ]
+    "sourceIds": ["wikipedia"]
   },
   "topics": {
     "history": [
       {
         "id": "history-1",
         "description": "Construction of the first church on the site, the Liberian Basilica, began under Pope Liberius (352–366) after a reported miraculous snowfall.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 352,
           "precision": "approximate",
@@ -23,9 +19,7 @@
       {
         "id": "history-2",
         "description": "Reconstruction of the basilica under Pope Celestine I (422–432) and its consecration by Pope Sixtus III on 5 August 434.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 422,
           "precision": "approximate",
@@ -36,9 +30,7 @@
       {
         "id": "history-4",
         "description": "Pope Eugene III (1145–1153) restored and extended the basilica.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 1145,
           "precision": "approximate",
@@ -49,9 +41,7 @@
       {
         "id": "history-5",
         "description": "Pope Nicholas IV (1288–1292) commissioned the apse mosaic of the Coronation of the Virgin.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 1288,
           "precision": "approximate",
@@ -62,9 +52,7 @@
       {
         "id": "history-3",
         "description": "The basilica suffered damage during the earthquake of 1348.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 1348,
           "precision": "exact",
@@ -74,9 +62,7 @@
       {
         "id": "history-6",
         "description": "Pope Clement X (1670–1676) undertook interior renovations.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 1670,
           "precision": "approximate",
@@ -87,9 +73,7 @@
       {
         "id": "history-7",
         "description": "Pope Benedict XIV (1740–1758) commissioned Ferdinando Fuga to rebuild the façade and modify the interior.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 1740,
           "precision": "approximate",
@@ -100,9 +84,7 @@
       {
         "id": "history-8",
         "description": "Archaeological excavations in 1966 uncovered remains of a Roman building and an imperial calendar.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 1966,
           "precision": "exact",
@@ -112,9 +94,7 @@
       {
         "id": "history-9",
         "description": "Pope Francis was buried in the basilica in 2025.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 2025,
           "precision": "exact",
@@ -126,74 +106,54 @@
       {
         "id": "design-1",
         "description": "The 14th-century campanile, the tallest bell tower in Rome, rises to 246 feet.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "id": "design-2",
         "description": "The 16th-century coffered ceiling, designed by Giuliano da Sangallo, was gilded with gold brought by Christopher Columbus.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "id": "design-3",
         "description": "The façade rebuilt by Ferdinando Fuga in 1743 features a loggia and a palace-like front.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "id": "design-4",
         "description": "The marble columns of the nave are of Athenian origin, some dating to the first basilica.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "id": "design-5",
         "description": "The Marian column in Piazza Santa Maria Maggiore, erected in 1614, bears a statue of the Virgin and Child.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "art": [
       {
         "id": "art-1",
         "description": "The 5th-century mosaics in the nave and triumphal arch depict scenes of the Virgin Mary and Christ.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "id": "art-2",
         "description": "The Salus Populi Romani icon, a venerated early image of the Madonna and Child, is housed in the Borghese Chapel.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "id": "art-3",
         "description": "The apse mosaic of the Coronation of the Virgin, completed in 1295 by Jacopo Torriti.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "id": "art-4",
         "description": "Frescoes by Giovanni Baglione adorn the Cappella Borghese.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "id": "art-5",
         "description": "The 16th-century frescoes in the Pauline Chapel were painted by Guido Reni.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ]
   },
@@ -201,72 +161,52 @@
     {
       "name": "Pope Liberius",
       "personId": "pope-liberius",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Pope Celestine I",
       "personId": "pope-celestine-i",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Pope Sixtus III",
       "personId": "pope-sixtus-iii",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Pope Benedict XIV",
       "personId": "pope-benedict-xiv",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Pope Francis",
       "personId": "pope-francis",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Pope Gregory XVI",
       "personId": "pope-gregory-xvi",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Pope Pius XII",
       "personId": "pope-pius-xii",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Pope Pius IX",
       "personId": "pope-pius-ix",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Pope Clement IX",
       "personId": "pope-clement-ix",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Pope Clement VIII",
       "personId": "pope-clement-viii",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     }
   ]
 }

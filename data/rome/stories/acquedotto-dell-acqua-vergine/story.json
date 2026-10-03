@@ -1,18 +1,14 @@
 {
   "introduction": {
     "text": "The Acquedotto dell'Acqua Vergine, also known as Aqua Virgo, is an ancient Roman aqueduct that supplied water to Rome from 19 BC and remains a vital source of drinking water today. Its engineering, longevity, and the iconic fountains it feeds make it a key element of Rome’s urban heritage.",
-    "sourceIds": [
-      "wikipedia"
-    ]
+    "sourceIds": ["wikipedia"]
   },
   "topics": {
     "history": [
       {
         "id": "h1",
         "description": "Completed in 19 BC by Marcus Agrippa to supply the Baths of Agrippa.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": -19,
           "precision": "exact",
@@ -22,9 +18,7 @@
       {
         "id": "h2",
         "description": "Tiberius repaired the aqueduct in 37 AD.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 37,
           "precision": "exact",
@@ -34,9 +28,7 @@
       {
         "id": "h3",
         "description": "Claudius renovated sections between 45 and 46 AD.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 45,
           "precision": "exact",
@@ -47,9 +39,7 @@
       {
         "id": "h4",
         "description": "First major disruption in 537 AD when Goths besieged Rome.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 537,
           "precision": "exact",
@@ -59,9 +49,7 @@
       {
         "id": "h5",
         "description": "Pope Adrian I carried out major restorations in the 8th century.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 700,
           "precision": "approximate",
@@ -72,9 +60,7 @@
       {
         "id": "h6",
         "description": "Pope Nicholas V made extensive repairs in 1453.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 1453,
           "precision": "exact",
@@ -84,27 +70,21 @@
       {
         "id": "h7",
         "description": "In the 1930s a pressurised Acqua Vergine Nuovo was built.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "design": [
       {
         "id": "d1",
         "description": "The aqueduct used a gravity system with underground channels, a shallow gradient, and arches in the final 1.8 km. It was built mainly of masonry, lead, and terracotta, and its channels were lined with cement.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "art": [
       {
         "id": "a1",
         "description": "Its water feeds iconic fountains such as the Trevi Fountain, Piazza del Popolo, and the fountains of Piazza Navona.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ]
   },
@@ -112,72 +92,52 @@
     {
       "name": "Marcus Agrippa",
       "personId": "marcus-vipsanius-agrippa",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Augustus",
       "personId": "augustus",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Tiberius",
       "personId": "tiberius",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Claudius",
       "personId": "claudius",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Constantine the Great",
       "personId": "constantine-i",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Theodoric the Great",
       "personId": "theodoric-the-great",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Pope Adrian I",
       "personId": "pope-adrian-i",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Pope Nicholas V",
       "personId": "pope-nicholas-v",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Vitruvius",
       "personId": "vitruvius",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Leon Battista Alberti",
       "personId": "leon-battista-alberti",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     }
   ]
 }

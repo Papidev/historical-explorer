@@ -7,47 +7,33 @@
     "description": [
       {
         "text": "Tiberius Julius Caesar Augustus was born on 16 November 42 BC in Rome to Tiberius Claudius Nero and Livia Drusilla. He succeeded Augustus as the second Roman emperor in AD 14 and reigned until his death in AD 37. He is remembered for his military successes in Pannonia, Dalmatia, Raetia, and parts of Germania, which helped secure the empire’s northern frontier, as well as for his diplomatic skill and administrative efficiency, even as his reign grew increasingly wary of the Senate and marked by a reputation for reclusiveness.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "Despite his accomplishments, Tiberius earned a reputation as a dark, reclusive ruler, earning Pliny the Elder the nickname “the gloomiest of men.” He withdrew from Rome to Capri, where he spent the last years of his reign, and later died at Misenum. He was the first emperor to avoid deification, refusing the title of Augustus and the honors of a divine cult, and his death left the empire to his adopted grandson Caligula.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "curiosities": [
       {
         "text": "Tiberius was the first emperor to avoid deification, refusing the title of Augustus and the honors of a divine cult.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "He was known as “the gloomiest of men” by Pliny the Elder.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "He withdrew to Capri, where he spent the last years of his reign, and later died at Misenum.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "He was the second Roman emperor, succeeding Augustus in AD 14 and ruling until AD 37.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "He was known for his military campaigns in Pannonia, Dalmatia, Raetia, and Germania, which secured the empire’s northern frontier.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "birthDate": {

@@ -7,53 +7,37 @@
     "description": [
       {
         "text": "Born in Belluno, Italy, Bartolomeo Alberto Cappellari entered the Camaldolese order at 18, became a priest in 1787, taught philosophy and theology, and rose to prominence as a censor and abbot before being made cardinal in 1825.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "Elected pope on 2 February 1831, Gregory XVI was the most recent pope to take the name Gregory, the last pope to govern the Papal States for his entire pontificate, and the last pope elected before being consecrated as a bishop; his reign was marked by a staunch defense of traditional doctrine, condemnation of the slave trade, and efforts to suppress Italian revolutionary movements.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "curiosities": [
       {
         "text": "He was the last pope to be elected before being consecrated as a bishop.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "He was the last pope to take the name Gregory.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "He condemned the slave trade in 1839 with the apostolic letter In supremo apostolatus.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "He died of erysipelas, a skin infection, in June 1846.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "He was a Camaldolese monk who never traveled outside Italy.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "He was the last pope to govern the Papal States for the whole duration of his pontificate.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "birthDate": {

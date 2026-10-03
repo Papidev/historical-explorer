@@ -7,35 +7,25 @@
     "description": [
       {
         "text": "Thomas Aquinas was born around 1225 in the family castle of Roccasecca near Aquino, a stronghold of the d'Aquino family in the Kingdom of Sicily.  From a young age he received a rigorous education at Monte Cassino and later at the studium generale in Naples, where he was introduced to the works of Aristotle, Averroes and Maimonides.  At nineteen he resolved to join the Dominican Order, a decision that led to a year of imprisonment by his own family who feared his departure from a traditional noble path.  After his escape he studied in Paris and Cologne under Albertus Magnus, eventually becoming a respected teacher and regent master at the University of Paris.\n",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "During the next decade Thomas produced a vast body of theological and philosophical work, most famously the unfinished Summa Theologiae, a comprehensive guide to Catholic doctrine.  He also wrote the Summa contra Gentiles, commentaries on Aristotle, and numerous hymns that entered the liturgy.  His synthesis of Aristotelian philosophy with Christian theology earned him the titles Doctor Angelicus, Doctor Communis and Doctor Humanitatis.  After his death on 7 March 1274, he was canonized as a saint by Pope John XXII in 1323, and later declared a Doctor of the Church in 1567.\n",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "curiosities": [
       {
         "text": "Thomas Aquinas is credited with authoring the hymns \"Pange lingua\" and \"Panis angelicus,\" which remain part of the Catholic liturgical repertoire.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "He was canonized 49 years after his death, on 18 July 1323, by Pope John XXII, who praised the saint as having as many miracles as there were articles in his Summa Theologiae.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "Thomas Aquinas earned the epithet Doctor Angelicus, meaning “Angelic Doctor,” reflecting his profound influence on both theology and philosophy in the Western tradition.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "birthDate": {

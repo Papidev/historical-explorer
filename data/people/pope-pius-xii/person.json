@@ -7,47 +7,33 @@
     "description": [
       {
         "text": "Pope Pius XII, born Eugenio Maria Giuseppe Giovanni Pacelli on 2 March 1876 in Rome, was ordained a priest in 1899 and rose through the Vatican’s diplomatic corps, serving as nuncio to Germany and later as Cardinal Secretary of State. His diplomatic experience, particularly his negotiations with the German government, was a key factor in his election as pope on 2 March 1939, the day of his 63rd birthday.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "During his 19‑year reign he signed the Reichskonkordat with Nazi Germany in 1933, maintained a policy of Vatican neutrality during World War II, issued 41 encyclicals—including the 1950 dogma of the Assumption of Mary—and oversaw the first post‑war internationalization of the College of Cardinals, all while navigating the complex political landscape of the early Cold War.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "curiosities": [
       {
         "text": "Pius XII was the first Cardinal Secretary of State to be elected pope since the 17th century.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "He signed the Reichskonkordat with Nazi Germany in 1933, a treaty that granted the Church legal protection but also became a point of controversy for its perceived accommodation of the Nazi regime.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "Pius XII issued 41 encyclicals during his pontificate, more than all his successors combined in the first half of the 20th century.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "In 1950 he invoked papal infallibility to define the dogma of the Assumption of Mary, the last time this doctrine has been used by a pope.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "He established the Vatican Information Service, which processed nearly 10 million requests for information about missing persons during and after World War II.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "birthDate": {

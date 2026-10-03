@@ -7,47 +7,33 @@
     "description": [
       {
         "text": "Tiberius Claudius Caesar Augustus Germanicus was born on 1 August 10 BC in Lugdunum (modern Lyon, France), making him the first Roman emperor to be born outside Italy.  He was the son of Drusus the Elder and Antonia Minor and grew up with a limp, a stammer and a tremor that caused his family to exclude him from public office until his consulship in AD 37.  After the assassination of Caligula, the Praetorian Guard declared Claudius emperor, the first time a ruler was proclaimed by the guard rather than the Senate.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "During his reign from AD 41 to AD 54, Claudius proved to be an able administrator who expanded the imperial bureaucracy to include freedmen, restored the empire’s finances, and oversaw extensive public works such as the construction of the aqueducts Aqua Claudia and Aqua Anio Novus.  He launched the successful conquest of Britain, presided over public trials, issued daily edicts, and was a frequent target of political intrigue that ultimately led to his death, widely attributed to poisoning by his wife Agrippina the Younger.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "curiosities": [
       {
         "text": "Claudius was the first Roman emperor to be born outside Italy.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "He was declared emperor by the Praetorian Guard after Caligula’s assassination, a first in Roman history.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "Claudius expanded the imperial bureaucracy to include freedmen, a significant shift in administrative practice.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "He built the aqueducts Aqua Claudia and Aqua Anio Novus, which supplied Rome with water for the first time in decades.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "The conquest of Britain in AD 43 began under Claudius, who personally traveled to the island and established the colony of Colonia Claudia Victricensis.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "birthDate": {

@@ -7,41 +7,29 @@
     "description": [
       {
         "text": "Theodoric the Great was born around 454 in the region of Pannonia, the son of the Ostrogothic noble Theodemir. As a child he was taken hostage to Constantinople, where he received an East Roman education and spent a decade learning the language, literature, and administrative practices of the empire.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "After returning to his homeland, Theodoric consolidated power by defeating rival Goths and Sarmatians, and he was recognized as king of the Ostrogoths in 471. He later defeated Odoacer and became ruler of Italy in 493, where he maintained Roman legal institutions for Romans while preserving a separate legal system for Goths, and he oversaw an extensive building program that restored Roman monuments and erected new palaces and churches.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "curiosities": [
       {
         "text": "In 497 he received the former Western imperial regalia from Constantinople and used them to exercise imperial powers recognized in the East.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "He built the Palace of Theodoric in Ravenna, modeled on the Great Palace of Constantinople, and the palace church of Christ the Redeemer survives today as the Basilica of Sant'Apollinare Nuovo.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "In 524 he executed the Roman senator Boethius on charges of treason, a decision that shocked the Roman aristocracy and marked a turning point in his reign.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "After his death he was immortalized in Germanic heroic legend as Dietrich von Bern, a figure who appears in medieval epics and folklore.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "birthDate": {

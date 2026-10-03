@@ -7,29 +7,21 @@
     "description": [
       {
         "text": "Pope Celestine I, born around 359 in the Campanian region of Italy, rose to prominence as a deacon under Pope Innocent I before being elected bishop of Rome in 422. His election is recorded by the Vatican as occurring on 10 September, though some sources cite 3 November, reflecting the early medieval uncertainty surrounding papal successions.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "During his decade-long pontificate, Celestine was a decisive opponent of heresy, particularly Nestorianism and Pelagianism. He delegated Cyril of Alexandria to condemn Nestorius at the Council of Ephesus, sent Germanus of Auxerre to Britain to confront Pelagian bishops, and dispatched Palladius to Ireland to establish a Christian presence among the Scots.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "curiosities": [
       {
         "text": "Celestine commissioned Palladius as bishop to the Scots of Ireland and northern Britain in 431, marking one of the earliest papal efforts to evangelize the British Isles.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "He actively opposed the Novatians in Rome, removing their churches and forcing their bishop, Rusticulus, to hold clandestine meetings, while simultaneously advocating for the absolution of repentant sinners.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "birthDate": {

@@ -7,41 +7,29 @@
     "description": [
       {
         "text": "Leon Battista Alberti was born in Genoa on 14 February 1404 and grew up in a family that moved between Genoa, Florence, and Rome. He studied law at Bologna, entered the papal court in Rome, and was drawn to the ruins of ancient Rome, which sparked his lifelong fascination with architecture. He wrote the seminal treatise De re aedificatoria in 1452, which systematized Vitruvian principles and became the first comprehensive architectural textbook of the Renaissance. His designs for the façade of the Rucellai Palace in Florence and the churches of San Sebastiano and Sant'Andrea in Mantua showcase his mastery of classical orders and his innovative use of perspective.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "Beyond architecture, Alberti was a prolific writer and a pioneering cryptographer. He authored De componendis cifris, the first treatise on polyalphabetic substitution, and introduced the Alberti cipher disk, a device that allowed the use of multiple cipher alphabets. He also wrote on painting, sculpture, geography, and even a comedy at the age of twenty that was mistakenly credited to a classical author. A devout priest who never married, he was known for his athleticism, his love of animals—particularly a mongrel dog he praised in a panegyric—and for his autobiographical claims of leaping over a man and throwing a coin high into a cathedral vault.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "curiosities": [
       {
         "text": "Alberti invented the first polyalphabetic cipher, known as the Alberti cipher, and is considered the founder of European cryptography.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "He had a pet mongrel dog and wrote a panegyric titled \"Canis\" about it.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "In his autobiographical notes he claimed he could leap over a standing man and throw a coin high into a cathedral vault.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "At the age of twenty he wrote a comedy that was passed off as a genuine classical work.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "birthDate": {

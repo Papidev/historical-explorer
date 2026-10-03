@@ -1,18 +1,14 @@
 {
   "introduction": {
     "text": "The Amphitheatrum Castrense is a Roman amphitheatre in Rome, adjacent to Santa Croce in Gerusalemme. It is significant as an example of imperial entertainment architecture and its later transformation into a defensive structure within the Aurelian Walls.",
-    "sourceIds": [
-      "wikipedia"
-    ]
+    "sourceIds": ["wikipedia"]
   },
   "topics": {
     "history": [
       {
         "id": "history1",
         "description": "Built by Emperor Elagabalus in the early 3rd century AD as part of the Horti Spei Veteris imperial villa complex.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 218,
           "precision": "approximate",
@@ -22,9 +18,7 @@
       {
         "id": "history2",
         "description": "Arches of the outer walls were bricked up during incorporation into the Aurelian Walls (271–275 AD), ending its use for spectacles.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 271,
           "precision": "approximate",
@@ -34,9 +28,7 @@
       {
         "id": "history3",
         "description": "Mid‑16th‑century demolition of the second story for defensive purposes.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 1550,
           "precision": "approximate",
@@ -46,9 +38,7 @@
       {
         "id": "history4",
         "description": "18th‑century discovery of a hypogeum beneath the arena, filled with bones of large animals, indicating venationes.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 1700,
           "precision": "approximate",
@@ -60,25 +50,19 @@
       {
         "id": "design1",
         "description": "Regular ellipse measuring 88 × 76 m, built of brick‑faced concrete with decorative travertine elements.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "id": "design2",
         "description": "Three‑story structure, with only the lowest story preserved today.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "art": [
       {
         "id": "art1",
         "description": "Drawings by Andrea Palladio and Étienne Dupérac documented the ruins of the amphitheatre.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ]
   },
@@ -86,23 +70,17 @@
     {
       "name": "Elagabalus",
       "personId": "elagabalus",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Andrea Palladio",
       "personId": "andrea-palladio",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Étienne Dupérac",
       "personId": "tienne-dup-rac",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     }
   ]
 }

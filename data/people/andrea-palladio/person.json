@@ -7,35 +7,25 @@
     "description": [
       {
         "text": "Andrea Palladio was born on 30 November 1508 in Padua, where he was raised in a modest household and apprenticed as a stonecutter at the age of thirteen.  His early years were marked by hard work in the workshop of Bartolomeo Cavazza, a period that ended when Palladio fled to Vicenza in 1523 before returning to finish his contract.  After completing his apprenticeship, he joined the guild of stonemasons and bricklayers in Vicenza, where he began to experiment with classical motifs drawn from the works of Vitruvius and the Roman ruins he would later study in Rome.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "Palladio’s career accelerated in 1538–39 when he rebuilt the Villa Trissino for the humanist Gian Giorgio Trissino, a commission that introduced him to the study of Roman antiquity.  He travelled to Rome multiple times between 1541 and 1547, absorbing the architecture of the Pantheon, the Colosseum and the Villa dei Quintili, and later published the influential treatise *The Four Books of Architecture* in 1570.  His designs for villas, urban palaces and churches—such as the Basilica Palladiana, Villa Capra “La Rotonda” and the Teatro Olimpico—combined classical symmetry with practical layouts, and his books were translated into several languages, spreading his ideas across Europe and the Americas.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "curiosities": [
       {
         "text": "Palladio was given the name “Palladio” by his patron Trissino, an allusion to the Greek goddess Pallas Athena and meaning “wise one.”",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "The Teatro Olimpico, completed after Palladio’s death, features a back wall that is a triumphal arch with three levels, creating the illusion of a Roman street and a painted ceiling that mimics an open sky.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "Palladio’s treatise *The Four Books of Architecture* was widely reprinted and translated, and it directly inspired the design of Thomas Jefferson’s Monticello and the neoclassical architecture of Britain’s Palladian houses.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "birthDate": {
