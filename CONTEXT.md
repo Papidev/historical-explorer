@@ -27,6 +27,10 @@ _Avoid_: P31, category
 An app-owned grouping used to filter **POIs** in the **Visitor Experience**. A **POI** may belong to several categories.
 _Avoid_: POI Type, Wikidata category
 
+**POI Subcategory**:
+A **POI Category** nested directly under a broader parent **POI Category**. Its **POIs** also belong to the parent's discovery scope; Cathedral, Basilica, and Church are subcategories of Churches & cathedrals. Discovery scopes within that group are disjoint and follow the place naming rules.
+_Avoid_: POI Type, Wikidata subclass
+
 **Story Workflow**:
 The internal process that takes a **POI** through **Draft Story Generation** and **Story Curation** until it has an approved **Story**.
 _Avoid_: Draft Workflow, production workflow, admin workflow

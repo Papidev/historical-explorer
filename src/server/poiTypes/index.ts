@@ -2,6 +2,7 @@ import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from "
 import path from "node:path";
 import { findPoiInGeoJson, getDefaultInputPath } from "@/server/wikiPipeline/io";
 import { sanitizePoiIdForFile, toCitySlug } from "@/server/wikiPipeline/normalize";
+import { createPoiCategoriesForCity } from "@/server/poiCategories";
 import type { PoiInput } from "@/server/wikiPipeline/types";
 
 export type PoiType = { id: string; label: string };
@@ -64,8 +65,10 @@ const fetchPoiTypes = async (wikidataId: string): Promise<PoiType[]> => {
 export const createPoiTypes = ({
   directory,
   findPointOfInterest,
+  onRefresh,
 }: {
   directory: string;
+  onRefresh?: (poiId: string, types: PoiType[]) => void;
   findPointOfInterest: (poiId: string) => PoiInput | undefined;
 }) => {
   const filePath = (poiId: string) => path.join(directory, `${sanitizePoiIdForFile(poiId)}.json`);
@@ -85,6 +88,7 @@ export const createPoiTypes = ({
         throw new Error(`POI ${poiId} was not found.`);
       }
       if (!pointOfInterest.sourceHints.wikidata) {
+        onRefresh?.(poiId, []);
         return { types: [], skipped: "no-wikidata-id" };
       }
 
@@ -103,6 +107,7 @@ export const createPoiTypes = ({
       mkdirSync(path.dirname(file), { recursive: true });
       writeFileSync(`${file}.tmp`, `${JSON.stringify(result, null, 2)}\n`, "utf-8");
       renameSync(`${file}.tmp`, file);
+      onRefresh?.(poiId, result.types);
       return result;
     },
   };
@@ -111,6 +116,7 @@ export const createPoiTypes = ({
 export const createPoiTypesForCity = (city: string) =>
   createPoiTypes({
     directory: path.join(process.cwd(), "data", toCitySlug(city), "generated", "wikidata"),
+    onRefresh: createPoiCategoriesForCity(toCitySlug(city)).refresh,
     findPointOfInterest: (poiId) => {
       try {
         return findPoiInGeoJson(getDefaultInputPath(city), poiId, city);

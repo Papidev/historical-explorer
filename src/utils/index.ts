@@ -4,6 +4,7 @@ import { personRepository } from "@/server/person/filesystemRepository";
 import { createStoryWorkflowForCity } from "@/server/storyWorkflow";
 import type { DraftStorySnapshot } from "@/server/storyWorkflow";
 import { toPublicStoryContent } from "@/server/storyWorkflow/storyContent";
+import { createPoiCategoriesForCity } from "@/server/poiCategories";
 import type { Poi } from "@/types/Poi";
 
 type GeoJson = {
@@ -146,6 +147,7 @@ export const createPoisForCity = async (
   getDraftStory?: (poiId: string) => Promise<DraftStorySnapshot | undefined>,
 ): Promise<Poi[]> => {
   const features = loadGeoJsonForCity(city).features ?? [];
+  const categories = createPoiCategoriesForCity(toCitySlug(city)).getAll();
   const pois = features.map((feature, index) => asPoi(feature, index, city));
   const storyWorkflow = createStoryWorkflowForCity(city);
 
@@ -160,7 +162,7 @@ export const createPoisForCity = async (
         const previewDescription =
           poi.shortDescription ?? draftStory?.storyContent?.introduction.text;
 
-        return { ...poi, mainImageUrl, previewDescription };
+        return { ...poi, categories: categories[poi.id] ?? [], mainImageUrl, previewDescription };
       }),
   );
 };

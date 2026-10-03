@@ -2,6 +2,19 @@ import { describe, expect, it } from "vitest";
 import { createPoisForCity } from ".";
 
 describe("createPoisForCity", () => {
+  it("combines separate persisted categories with POIs by their stable ID", async () => {
+    const pois = await createPoisForCity("rome", async () => undefined);
+    expect(pois.find(({ id }) => id === "basilica-costantiniana-di-s-agnese")?.categories).toEqual(
+      [],
+    );
+    expect(pois.find(({ id }) => id === "castle-of-the-holy-angel")?.categories).toEqual([
+      "Museum",
+      "Castle",
+      "Mausoleum",
+    ]);
+    expect(pois.find(({ id }) => id === "acquedotto-dei-sette-bassi")?.categories).toEqual([]);
+  });
+
   it("includes selected images without inventing missing preview copy", async () => {
     const pois = await createPoisForCity("rome", async (poiId) =>
       poiId === "forum-boarium"

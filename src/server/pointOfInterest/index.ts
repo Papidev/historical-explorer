@@ -5,6 +5,7 @@ import {
   replaceGenerationCheckpoint,
 } from "@/server/generationMetadata";
 import { getDefaultInputPath } from "@/server/wikiPipeline/io";
+import { createPoiCategoriesForCity } from "@/server/poiCategories";
 import { linkWikidata } from "./linkWikidata";
 import { prepareCatalog } from "./prepareCatalog";
 import type { GeoJson } from "@/server/wikiPipeline/types";
@@ -44,6 +45,7 @@ export const pointOfInterest: PointOfInterestModule = {
     const prepared = prepareCatalog(geoPlaceId, geoPlaces, catalog);
     const { poiId } = prepared;
     writeCatalog(prepared.catalog);
+    createPoiCategoriesForCity(city).rebuild();
     replaceGenerationCheckpoint(city, poiId, "transformed", {
       durationMs: Date.now() - startedAt,
       completedAt: new Date().toISOString(),
