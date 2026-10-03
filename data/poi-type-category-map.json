@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "mappings": {
+    "Q2887138": ["Basilica"],
+    "Q7362268": ["Amphitheatre"],
+    "Q839954": ["Archaeological Site"],
+    "Q13218676": ["Aqueduct"],
+    "Q33506": ["Museum"],
+    "Q92107": ["Castle"],
+    "Q3822604": ["Mausoleum"],
+    "Q162875": ["Mausoleum"],
+    "Q124936": ["Church", "Basilica"],
+    "Q2713379": ["Church", "Basilica"],
+    "Q317557": ["Church"],
+    "Q15487029": ["Church", "Basilica"],
+    "Q334383": ["Church"],
+    "Q97588309": ["Church"],
+    "Q120560": ["Church", "Basilica"],
+    "Q143912": ["Arch"],
+    "Q1088552": ["Church"],
+    "Q174782": ["Square"],
+    "Q16970": ["Church"],
+    "Q2065736": [],
+    "Q1492823": [],
+    "Q14752696": []
+  }
+}

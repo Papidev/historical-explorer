@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "eslint",
     "format": "prettier --write",
-    "prepare": "husky"
+    "prepare": "husky",
+    "categories:rebuild": "node scripts/rebuild-poi-categories.mjs"
   },
   "dependencies": {
     "@headlessui/react": "2.2.10",

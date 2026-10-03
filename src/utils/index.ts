@@ -4,6 +4,7 @@ import { personRepository } from "@/server/person/filesystemRepository";
 import { createStoryWorkflowForCity } from "@/server/storyWorkflow";
 import type { DraftStorySnapshot } from "@/server/storyWorkflow";
 import { toPublicStoryContent } from "@/server/storyWorkflow/storyContent";
+import type { PoiCategory } from "@/types/PoiCategory";
 import type { Poi } from "@/types/Poi";
 
 type GeoJson = {
@@ -11,6 +12,7 @@ type GeoJson = {
 };
 
 type GeoJsonFeature = {
+  categories?: PoiCategory[];
   id?: string | number;
   wikidataId?: string;
   properties?: Record<string, unknown>;
@@ -109,6 +111,7 @@ const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Po
 
   return {
     id: rawId,
+    categories: feature.categories ?? [],
     name,
     city,
     coordinates: { lat, lng },

@@ -19,7 +19,10 @@
           41.9231188
         ]
       },
-      "geoPlaceId": "way/23944398"
+      "geoPlaceId": "way/23944398",
+      "categories": [
+        "Basilica"
+      ]
     },
     {
       "id": "cloisters-of-bramante",
@@ -44,7 +47,11 @@
           41.9000215
         ]
       },
-      "geoPlaceId": "node/1674754682"
+      "geoPlaceId": "node/1674754682",
+      "categories": [
+        "Museum",
+        "Church"
+      ]
     },
     {
       "id": "forum-boarium",
@@ -63,7 +70,10 @@
           41.8888528
         ]
       },
-      "geoPlaceId": "way/27350575"
+      "geoPlaceId": "way/27350575",
+      "categories": [
+        "Square"
+      ]
     },
     {
       "id": "piazza-navona",
@@ -82,7 +92,10 @@
           41.8989256
         ]
       },
-      "geoPlaceId": "way/4247138"
+      "geoPlaceId": "way/4247138",
+      "categories": [
+        "Square"
+      ]
     },
     {
       "id": "castle-of-the-holy-angel",
@@ -104,7 +117,12 @@
           41.9030762
         ]
       },
-      "geoPlaceId": "way/8035487"
+      "geoPlaceId": "way/8035487",
+      "categories": [
+        "Museum",
+        "Castle",
+        "Mausoleum"
+      ]
     },
     {
       "id": "basilica-of-saint-paul-outside-the-walls",
@@ -130,7 +148,11 @@
           41.8586828
         ]
       },
-      "geoPlaceId": "way/23370510"
+      "geoPlaceId": "way/23370510",
+      "categories": [
+        "Church",
+        "Basilica"
+      ]
     },
     {
       "id": "torre-valca",
@@ -146,7 +168,10 @@
           41.8581318
         ]
       },
-      "geoPlaceId": "way/23955573"
+      "geoPlaceId": "way/23955573",
+      "categories": [
+        "Archaeological Site"
+      ]
     },
     {
       "id": "palazzo-rondinini",
@@ -164,7 +189,8 @@
           41.9088977
         ]
       },
-      "geoPlaceId": "way/24186531"
+      "geoPlaceId": "way/24186531",
+      "categories": []
     },
     {
       "id": "capitol-square",
@@ -184,7 +210,10 @@
           41.8932288
         ]
       },
-      "geoPlaceId": "way/23055100"
+      "geoPlaceId": "way/23055100",
+      "categories": [
+        "Square"
+      ]
     },
     {
       "id": "arch-of-titus",
@@ -204,7 +233,11 @@
           41.8906722
         ]
       },
-      "geoPlaceId": "way/23913953"
+      "geoPlaceId": "way/23913953",
+      "categories": [
+        "Arch",
+        "Archaeological Site"
+      ]
     },
     {
       "id": "basilica-parrocchiale-dei-santi-pietro-e-paolo",
@@ -223,7 +256,11 @@
           41.833704
         ]
       },
-      "geoPlaceId": "way/23432370"
+      "geoPlaceId": "way/23432370",
+      "categories": [
+        "Church",
+        "Basilica"
+      ]
     },
     {
       "id": "accademia-di-san-luca",
@@ -242,7 +279,8 @@
           41.9016166
         ]
       },
-      "geoPlaceId": "node/7012887885"
+      "geoPlaceId": "node/7012887885",
+      "categories": []
     },
     {
       "id": "acqua-marcia",
@@ -259,7 +297,11 @@
           41.8712135
         ]
       },
-      "geoPlaceId": "way/113758266"
+      "geoPlaceId": "way/113758266",
+      "categories": [
+        "Aqueduct",
+        "Archaeological Site"
+      ]
     },
     {
       "id": "a-umberto-ii-re-d-italia",
@@ -274,7 +316,8 @@
           41.9251799
         ]
       },
-      "geoPlaceId": "node/2002031137"
+      "geoPlaceId": "node/2002031137",
+      "categories": []
     },
     {
       "id": "acea-heritage",
@@ -296,7 +339,8 @@
           41.8749809
         ]
       },
-      "geoPlaceId": "node/13028360534"
+      "geoPlaceId": "node/13028360534",
+      "categories": []
     },
     {
       "id": "achille-joachim-bligny",
@@ -311,7 +355,8 @@
           41.9022115
         ]
       },
-      "geoPlaceId": "node/7820567640"
+      "geoPlaceId": "node/7820567640",
+      "categories": []
     },
     {
       "id": "acquedotto-dei-sette-bassi",
@@ -326,7 +371,8 @@
           41.8364569
         ]
       },
-      "geoPlaceId": "way/151952790"
+      "geoPlaceId": "way/151952790",
+      "categories": []
     },
     {
       "id": "acquedotto-dei-sette-bassi-2",
@@ -341,7 +387,8 @@
           41.8392242
         ]
       },
-      "geoPlaceId": "way/317695840"
+      "geoPlaceId": "way/317695840",
+      "categories": []
     },
     {
       "id": "acquedotto-dei-sette-bassi-3",
@@ -356,7 +403,8 @@
           41.8415101
         ]
       },
-      "geoPlaceId": "way/997532430"
+      "geoPlaceId": "way/997532430",
+      "categories": []
     },
     {
       "id": "basilica-of-saint-mary-major",
@@ -379,7 +427,11 @@
           41.8976084
         ]
       },
-      "geoPlaceId": "way/131564482"
+      "geoPlaceId": "way/131564482",
+      "categories": [
+        "Church",
+        "Basilica"
+      ]
     },
     {
       "id": "amphitheatre-castrense",
@@ -398,7 +450,11 @@
           41.8876475
         ]
       },
-      "geoPlaceId": "node/1791417716"
+      "geoPlaceId": "node/1791417716",
+      "categories": [
+        "Amphitheatre",
+        "Archaeological Site"
+      ]
     },
     {
       "id": "basilica-di-santa-maria-sopra-minerva",
@@ -417,7 +473,11 @@
           41.8979917
         ]
       },
-      "geoPlaceId": "way/25400176"
+      "geoPlaceId": "way/25400176",
+      "categories": [
+        "Church",
+        "Basilica"
+      ]
     },
     {
       "id": "acquedotto-dei-sette-bassi-4",
@@ -432,7 +492,8 @@
           41.8417417
         ]
       },
-      "geoPlaceId": "way/997532432"
+      "geoPlaceId": "way/997532432",
+      "categories": []
     },
     {
       "id": "acquedotto-dei-sette-bassi-5",
@@ -447,7 +508,8 @@
           41.8418608
         ]
       },
-      "geoPlaceId": "way/997532434"
+      "geoPlaceId": "way/997532434",
+      "categories": []
     },
     {
       "id": "acquedotto-dei-sette-bassi-6",
@@ -462,7 +524,8 @@
           41.8410165
         ]
       },
-      "geoPlaceId": "way/997532436"
+      "geoPlaceId": "way/997532436",
+      "categories": []
     },
     {
       "id": "acquedotto-dei-sette-bassi-7",
@@ -477,7 +540,8 @@
           41.841327
         ]
       },
-      "geoPlaceId": "way/997532439"
+      "geoPlaceId": "way/997532439",
+      "categories": []
     },
     {
       "id": "acquedotto-dei-sette-bassi-8",
@@ -492,7 +556,8 @@
           41.8410942
         ]
       },
-      "geoPlaceId": "way/997532438"
+      "geoPlaceId": "way/997532438",
+      "categories": []
     },
     {
       "id": "acquedotto-dei-sette-bassi-9",
@@ -507,7 +572,8 @@
           41.8407461
         ]
       },
-      "geoPlaceId": "way/997532441"
+      "geoPlaceId": "way/997532441",
+      "categories": []
     },
     {
       "id": "acquedotto-dei-sette-bassi-10",
@@ -522,7 +588,8 @@
           41.8408255
         ]
       },
-      "geoPlaceId": "way/997532446"
+      "geoPlaceId": "way/997532446",
+      "categories": []
     },
     {
       "id": "acquedotto-dei-sette-bassi-11",
@@ -537,7 +604,8 @@
           41.840601
         ]
       },
-      "geoPlaceId": "way/997532444"
+      "geoPlaceId": "way/997532444",
+      "categories": []
     },
     {
       "id": "acquedotto-dei-sette-bassi-12",
@@ -552,7 +620,8 @@
           41.8403159
         ]
       },
-      "geoPlaceId": "way/997532447"
+      "geoPlaceId": "way/997532447",
+      "categories": []
     },
     {
       "id": "acquedotto-dei-sette-bassi-13",
@@ -567,7 +636,8 @@
           41.8369817
         ]
       },
-      "geoPlaceId": "way/997532451"
+      "geoPlaceId": "way/997532451",
+      "categories": []
     },
     {
       "id": "acquedotto-del-grande-ninfeo",
@@ -582,7 +652,8 @@
           41.8284359
         ]
       },
-      "geoPlaceId": "way/331242877"
+      "geoPlaceId": "way/331242877",
+      "categories": []
     },
     {
       "id": "acquedotto-dei-sette-bassi-14",
@@ -597,7 +668,8 @@
           41.8369418
         ]
       },
-      "geoPlaceId": "way/997532453"
+      "geoPlaceId": "way/997532453",
+      "categories": []
     },
     {
       "id": "acquedotto-dei-sette-bassi-15",
@@ -612,7 +684,8 @@
           41.8365259
         ]
       },
-      "geoPlaceId": "way/997532455"
+      "geoPlaceId": "way/997532455",
+      "categories": []
     },
     {
       "id": "acquedotto-dell-acqua-vergine",
@@ -628,7 +701,10 @@
         ]
       },
       "geoPlaceId": "way/243334849",
-      "wikidataId": "Q600139"
+      "wikidataId": "Q600139",
+      "categories": [
+        "Aqueduct"
+      ]
     }
   ]
 }
