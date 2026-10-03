@@ -6,7 +6,30 @@ import type { GeoJson } from "@/server/wikiPipeline/types";
 export const derivePoiCategories = (
   types: Array<{ id: string }>,
   mappings: Record<string, PoiCategory[]>,
-): PoiCategory[] => [...new Set(types.flatMap(({ id }) => mappings[id] ?? []))];
+  name = "",
+): PoiCategory[] => {
+  const categories = [...new Set(types.flatMap(({ id }) => mappings[id] ?? []))];
+  if (!categories.some((category) => ["Church", "Basilica", "Cathedral"].includes(category)))
+    return categories;
+  if (/\bbasilica\b/i.test(name)) {
+    return [
+      ...new Set([
+        ...categories.filter((category) => category !== "Cathedral"),
+        "Basilica" as const,
+      ]),
+    ];
+  }
+  if (/\b(cathedral|cattedrale)\b/i.test(name))
+    return [...new Set([...categories, "Cathedral" as const])];
+  return categories.includes("Cathedral")
+    ? [
+        ...new Set([
+          ...categories.filter((category) => category !== "Cathedral"),
+          "Church" as const,
+        ]),
+      ]
+    : categories;
+};
 
 export const createPoiCategoriesForCity = (
   city: string,
@@ -45,7 +68,18 @@ export const createPoiCategoriesForCity = (
   return {
     getAll,
     refresh: (poiId: string, types: Array<{ id: string }>) => {
-      save({ ...getAll(), [poiId]: derivePoiCategories(types, mappings()) });
+      save({
+        ...getAll(),
+        [poiId]: derivePoiCategories(
+          types,
+          mappings(),
+          String(
+            (JSON.parse(readFileSync(catalogPath, "utf-8")) as GeoJson).features?.find(
+              (feature) => String(feature.id) === poiId,
+            )?.properties?.name ?? "",
+          ),
+        ),
+      });
     },
     rebuild: () => {
       if (!existsSync(catalogPath)) return;
@@ -78,6 +112,7 @@ export const createPoiCategoriesForCity = (
                     ).types
                   : [],
                 rules,
+                String(feature.properties?.name ?? ""),
               ),
             ];
           }),

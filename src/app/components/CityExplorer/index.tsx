@@ -1,6 +1,11 @@
 "use client";
 
-import { matchesPoiCategory, type PoiCategory } from "@/types/PoiCategory";
+import {
+  POI_CATEGORY_PARENTS,
+  POI_SUBCATEGORIES,
+  matchesPoiCategory,
+  type PoiCategory,
+} from "@/types/PoiCategory";
 import { Sidebar } from "./Sidebar";
 import { useState } from "react";
 import type { Poi } from "@/types/Poi";
@@ -64,13 +69,21 @@ export const CityExplorer = ({
           visiblePois={visiblePois}
           selectedCategories={selectedCategories}
           selectedPoiId={selectedPoiId}
-          onToggleCategory={(category) =>
+          onToggleCategory={(category) => {
+            const children: PoiCategory[] = POI_SUBCATEGORIES.filter(
+              ({ parent }) => parent === category,
+            ).map(({ name }) => name);
             updateCategories(
               selectedCategories.includes(category)
-                ? selectedCategories.filter((selected) => selected !== category)
-                : [...selectedCategories, category],
-            )
-          }
+                ? selectedCategories.filter(
+                    (selected) =>
+                      selected !== category &&
+                      !children.includes(selected) &&
+                      selected !== POI_CATEGORY_PARENTS[category],
+                  )
+                : [...new Set([...selectedCategories, category, ...children])],
+            );
+          }}
           onClear={() => updateCategories([])}
           onOpenPoi={openPoi}
           onClose={() => setSidebarOpen(false)}

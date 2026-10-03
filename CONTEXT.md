@@ -28,7 +28,7 @@ An app-owned grouping used to filter **POIs** in the **Visitor Experience**. A *
 _Avoid_: POI Type, Wikidata category
 
 **POI Subcategory**:
-A **POI Category** nested directly under a broader parent **POI Category**. Its **POIs** also belong to the parent's discovery scope; Basilica is a subcategory of Church for religious basilicas.
+A **POI Category** nested directly under a broader parent **POI Category**. Its **POIs** also belong to the parent's discovery scope; Cathedral, Basilica, and Church are subcategories of Churches & cathedrals. Discovery scopes within that group are disjoint and follow the place naming rules.
 _Avoid_: POI Type, Wikidata subclass
 
 **Story Workflow**:

@@ -176,6 +176,37 @@ describe("persisted POI categories", () => {
     expect(readCategories()["civil-basilica"]).toEqual([]);
   });
 
+  it("uses the place name to distinguish basilicas from cathedrals without classifying ignored civil basilicas", () => {
+    const rules = {
+      cathedral: ["Cathedral"],
+      basilica: ["Basilica"],
+      church: ["Church"],
+      civil: [],
+    } satisfies Record<string, import("@/types/PoiCategory").PoiCategory[]>;
+    expect(
+      derivePoiCategories(
+        [{ id: "cathedral" }, { id: "basilica" }],
+        rules,
+        "Basilica di San Giovanni",
+      ),
+    ).toEqual(["Basilica"]);
+    expect(derivePoiCategories([{ id: "basilica" }], rules, "Cattedrale di Example")).toEqual([
+      "Basilica",
+      "Cathedral",
+    ]);
+    expect(derivePoiCategories([{ id: "cathedral" }], rules, "Example Church")).toEqual(["Church"]);
+    expect(derivePoiCategories([{ id: "cathedral" }], rules, "Example Cathedral")).toEqual([
+      "Cathedral",
+    ]);
+    expect(derivePoiCategories([{ id: "civil" }], rules, "Basilica of Maxentius")).toEqual([]);
+    const categories = createPoiCategoriesForCity("rome", dataDirectory);
+    const catalog = readCatalog();
+    catalog.features![1].properties = { name: "Basilica di Example" };
+    writeFileSync(catalogPath(), JSON.stringify(catalog));
+    categories.refresh("missing-types", [{ id: "Q2977" }]);
+    expect(readCategories()["missing-types"]).toEqual(["Basilica"]);
+  });
+
   it("keeps other POI assignments intact when one type list is refreshed", () => {
     const originalCatalog = readFileSync(catalogPath(), "utf-8");
     const categories = createPoiCategoriesForCity("rome", dataDirectory);
