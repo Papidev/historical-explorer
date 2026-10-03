@@ -8,6 +8,7 @@
     "test": "vitest run",
     "start": "next start",
     "lint": "eslint",
+    "format": "prettier --write",
     "prepare": "husky"
   },
   "dependencies": {
