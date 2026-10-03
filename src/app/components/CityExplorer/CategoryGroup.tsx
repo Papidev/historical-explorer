@@ -1,6 +1,5 @@
 import { useId, useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
-import { IconButton } from "@/app/components/ui/IconButton";
 import type { Poi } from "@/types/Poi";
 import { POI_SUBCATEGORIES, matchesPoiCategory, type PoiCategory } from "@/types/PoiCategory";
 import { CategoryOption } from "./CategoryOption";
@@ -36,15 +35,19 @@ export const CategoryGroup = ({
           onToggle={() => onToggleCategory(category)}
         />
         {children.length > 0 && (
-          <IconButton
-            label={`${expanded ? "Hide" : "Show"} subcategories for ${category}`}
-            size="small"
+          <button
+            type="button"
+            aria-label={`${expanded ? "Hide" : "Show"} subcategories for ${category}`}
             aria-expanded={expanded}
             aria-controls={subcategoriesId}
             onClick={() => setExpanded(!expanded)}
+            className="flex size-7 shrink-0 cursor-pointer items-center justify-center rounded text-zinc-400 transition-colors hover:bg-zinc-100 hover:text-zinc-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-700"
           >
-            <ChevronDownIcon className={expanded ? "rotate-180" : ""} />
-          </IconButton>
+            <ChevronDownIcon
+              aria-hidden="true"
+              className={`size-4 transition-transform ${expanded ? "rotate-180" : ""}`}
+            />
+          </button>
         )}
       </div>
       {children.length > 0 && (
