@@ -15,9 +15,8 @@
 - Use `pnpm` exclusively for dependency management and scripts (do not use npm or yarn).
 - If dependency installation fails, stop immediately and ask for help. Do not continue with alternative approaches intended to bypass the failed installation.
 - `pnpm lint` runs ESLint with the Next `core-web-vitals` rules plus `eslint-config-prettier` to keep formatting conflicts out.
-- During iteration, run the smallest useful verification; `pnpm lint` is a required final gate before handoff/PR, not after every tiny edit.
+- During iteration, run the smallest useful verification. Run linting and formatting only immediately before opening a PR.
 - `pnpm lint` is not a full TypeScript type-check in this repo; when touching TS-heavy logic, also run `pnpm build` (or `tsc --noEmit` if a script is available) before considering the change complete.
-- The pre-commit hook runs Prettier and ESLint automatically on staged files. Do not run them after every modification; use targeted checks during iteration and let the hook format staged Tailwind classes with `prettier-plugin-tailwindcss`.
 
 ## Tailwind Plus / Catalyst
 
@@ -61,7 +60,7 @@ Update `AGENTS.md` only with important stuff that cannot be clearly/quickly deri
 - There is no automated map test harness yet; add colocated `*.test.tsx` files when introducing logic-heavy components and stub MapLibre APIs if needed.
 - Keep tests user-centric: verify visible behavior, interactions, and outcomes rather than implementation details.
 - Prefer accessible queries (for example `getByRole`, `getByLabelText`) and avoid brittle selectors.
-- Immediately before raising a PR, run `pnpm lint` and `pnpm build`. CI checks that the built app starts and responds on the PR. Do not require browser smoke checks unless explicitly requested.
+- Immediately before raising a PR, run `pnpm format <changed files>` for files supported by Prettier, then `pnpm lint` and `pnpm build`. CI checks that the built app starts and responds on the PR. Do not require browser smoke checks unless explicitly requested.
 - Document any manual QA (e.g., “verified zoom-to markers on Chrome + Safari”) in PR descriptions until automated coverage exists.
 
 ## Commits & PR Hygiene
