@@ -44,7 +44,8 @@ export const pointOfInterest: PointOfInterestModule = {
         };
     const prepared = prepareCatalog(geoPlaceId, geoPlaces, catalog);
     const { poiId } = prepared;
-    writeCatalog(createPoiCategoriesForCity(city).applyToCatalog(prepared.catalog));
+    writeCatalog(prepared.catalog);
+    createPoiCategoriesForCity(city).rebuild();
     replaceGenerationCheckpoint(city, poiId, "transformed", {
       durationMs: Date.now() - startedAt,
       completedAt: new Date().toISOString(),

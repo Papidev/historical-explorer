@@ -15,6 +15,8 @@ const catalogPath = (city = "rome") => path.join(dataDirectory, city, "pois", "p
 const readCatalog = (city = "rome") =>
   JSON.parse(readFileSync(catalogPath(city), "utf-8")) as GeoJson;
 
+const readCategories = (city = "rome") => createPoiCategoriesForCity(city, dataDirectory).getAll();
+
 beforeEach(() => {
   dataDirectory = mkdtempSync(path.join(tmpdir(), "poi-categories-"));
   writeFileSync(
@@ -74,17 +76,24 @@ describe("persisted POI categories", () => {
     expect(derivePoiCategories([], { church: ["Church"] })).toEqual([]);
   });
 
-  it("backfills city catalogs and preserves every POI and its identity when types are absent", () => {
+  it("backfills separate category records without modifying city catalogs or POI identities", () => {
     for (const city of ["rome", "another-city"]) {
+      const originalCatalog = readFileSync(catalogPath(city), "utf-8");
       createPoiCategoriesForCity(city, dataDirectory).rebuild();
+      expect(readFileSync(catalogPath(city), "utf-8")).toBe(originalCatalog);
       const features = readCatalog(city).features!;
       expect(features).toHaveLength(5);
       expect(features[0]).toMatchObject({
         wikidataId: "Q124154237",
-        categories: ["Basilica"],
         properties: { name: "Constantinian ruins" },
       });
-      expect(features.slice(1).map((poi) => poi.categories)).toEqual([[], [], [], []]);
+      expect(readCategories(city)).toEqual({
+        "civil-basilica": ["Basilica"],
+        "missing-types": [],
+        "no-wikidata": [],
+        "ignored-type": [],
+        "unmapped-type": [],
+      });
     }
     const rules = JSON.parse(
       readFileSync(path.join(dataDirectory, "poi-type-category-map.json"), "utf-8"),
@@ -127,15 +136,15 @@ describe("persisted POI categories", () => {
       onRefresh: categories.refresh,
     });
     await types.refresh("missing-types");
-    expect(readCatalog().features?.[1].categories).toEqual(["Church", "Museum"]);
+    expect(readCategories()["missing-types"]).toEqual(["Church", "Museum"]);
     typeIds = ["Q33506"];
     await types.refresh("missing-types");
-    expect(readCatalog().features?.[1].categories).toEqual(["Museum"]);
+    expect(readCategories()["missing-types"]).toEqual(["Museum"]);
     server.use(
       http.get("https://www.wikidata.org/w/api.php", () => new HttpResponse(null, { status: 503 })),
     );
     await types.refresh("missing-types");
-    expect(readCatalog().features?.[1].categories).toEqual(["Museum"]);
+    expect(readCategories()["missing-types"]).toEqual(["Museum"]);
   });
 
   it("clears stale categories when a POI has no Wikidata ID or refreshed types are empty", async () => {
@@ -153,9 +162,20 @@ describe("persisted POI categories", () => {
       onRefresh: categories.refresh,
     });
     await types.refresh("no-wikidata");
-    expect(readCatalog().features?.[2].categories).toEqual([]);
+    expect(readCategories()["no-wikidata"]).toEqual([]);
     categories.refresh("civil-basilica", []);
-    expect(readCatalog().features?.[0].categories).toEqual([]);
+    expect(readCategories()["civil-basilica"]).toEqual([]);
+  });
+
+  it("keeps other POI assignments intact when one type list is refreshed", () => {
+    const originalCatalog = readFileSync(catalogPath(), "utf-8");
+    const categories = createPoiCategoriesForCity("rome", dataDirectory);
+    expect(categories.getAll()).toEqual({});
+    categories.rebuild();
+    categories.refresh("missing-types", [{ id: "Q33506" }]);
+    expect(readCategories()["missing-types"]).toEqual(["Museum"]);
+    expect(readCategories()["civil-basilica"]).toEqual(["Basilica"]);
+    expect(readFileSync(catalogPath(), "utf-8")).toBe(originalCatalog);
   });
 
   it("recomputes categories after regeneration without merging the current church and its ruins", () => {
@@ -172,19 +192,16 @@ describe("persisted POI categories", () => {
     catalog.features?.push({
       id: "present-church",
       wikidataId: "Q1636696",
-      categories: ["Church"],
     });
     const generated = prepareCatalog("Q124154237", raw, catalog);
-    const rebuilt = createPoiCategoriesForCity("rome", dataDirectory).applyToCatalog(
-      generated.catalog,
-    );
+    writeFileSync(catalogPath(), JSON.stringify(generated.catalog));
+    createPoiCategoriesForCity("rome", dataDirectory).rebuild();
     expect(generated.poiId).toBe("civil-basilica");
-    expect(rebuilt.features?.find((poi) => poi.id === generated.poiId)?.categories).toEqual([
-      "Basilica",
-    ]);
-    expect(rebuilt.features?.find((poi) => poi.id === "present-church")?.wikidataId).toBe(
+    expect(readCategories()[generated.poiId]).toEqual(["Basilica"]);
+    expect(readCatalog().features?.find((poi) => poi.id === "present-church")?.wikidataId).toBe(
       "Q1636696",
     );
-    expect(rebuilt.features).toHaveLength(6);
+    expect(readCatalog().features).toHaveLength(6);
+    expect(readCatalog().features?.some((poi) => "categories" in poi)).toBe(false);
   });
 });

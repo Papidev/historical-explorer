@@ -30,7 +30,7 @@ The visitor may select multiple POI Categories at the same time. A POI matches w
 
 The Constantinian basilica ruins and the present church of Sant'Agnese fuori le mura remain distinct POIs. Civil basilica Q2887138 maps to Basilica without implying Church.
 
-Current type acquisition uses direct non-deprecated Wikidata P31 classifications, preserves their IDs and labels, and does not traverse the P279 hierarchy. The shared vocabulary lives in `src/types/PoiCategory/`, and versioned direct-type rules live in `data/poi-type-category-map.json`. Categories are persisted on app-ready catalog features. Type acquisition/refresh and generation update them; `pnpm categories:rebuild` applies the current rules across existing city catalogs using their local type snapshots. The browser filters persisted categories only.
+Current type acquisition uses direct non-deprecated Wikidata P31 classifications, preserves their IDs and labels, and does not traverse the P279 hierarchy. The shared vocabulary lives in `src/types/PoiCategory/`, and versioned direct-type rules live in `data/poi-type-category-map.json`. Category lists are persisted by POI ID in `data/<city>/pois/categories.json`, separate from the GeoJSON catalog. The server combines the catalog and saved categories for the visitor map. Type acquisition/refresh and generation update them; `pnpm categories:rebuild` applies the current rules across existing city catalogs using their local type snapshots. The browser filters persisted categories only.
 
 ## Planned curator behavior
 

@@ -1,5 +1,3 @@
-import type { PoiCategory } from "@/types/PoiCategory";
-
 export type GeoJson = {
   type?: string;
   generator?: string;
@@ -9,7 +7,6 @@ export type GeoJson = {
 };
 
 export type GeoJsonFeature = {
-  categories?: PoiCategory[];
   id?: string | number;
   wikidataId?: string;
   geoPlaceId?: string;
