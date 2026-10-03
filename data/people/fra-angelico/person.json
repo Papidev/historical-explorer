@@ -1,0 +1,89 @@
+{
+  "id": "fra-angelico",
+  "name": "Fra Angelico",
+  "wikidataId": "Q5664",
+  "wikipediaTitle": "Fra Angelico",
+  "content": {
+    "description": [
+      {
+        "text": "John of Fiesole, born Guido di Pietro around 1395 in Vicchio near Fiesole, entered the Dominican Order in 1423 and adopted the name Fra Giovanni.  Before taking his vows he worked as a manuscript illuminator and painted early frescoes for the Dominican friary of Cortona, where he assisted Gherardo Starnina.  His first major commission was an altarpiece for the Charterhouse of Florence, and by the late 1420s he was producing altarpieces for San Domenico in Fiesole, including the Coronation of the Virgin and the Fiesole Altarpiece, works that already showed a blend of Gothic elegance and emerging Renaissance naturalism.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "In 1436 Fra Angelico moved to the newly built convent of San Marco in Florence, where he attracted the patronage of Cosimo de' Medici.  He decorated the convent’s cells and chapter house with frescoes that introduced the sacra conversazione genre, most famously the San Marco Altarpiece of 1439.  Later, summoned by Pope Eugene IV, he painted the Chapel of the Holy Sacrament at St. Peter’s and the Niccoline Chapel for Pope Nicholas V, works that combined linear perspective with luminous, gold‑leafed backgrounds.  He died on 18 February 1455 in Rome, where he was buried in Santa Maria sopra Minerva, and was beatified by Pope John Paul II in 1982, who declared him the patron of Catholic artists.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Fra Angelico was offered the Archbishopric of Florence by Pope Nicholas V but declined the position, recommending another friar instead.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He reportedly never altered or retouched his paintings, believing that the divine inspiration behind them should remain untouched.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "According to contemporary accounts, Fra Angelico would weep while painting a Crucifixion, reflecting the deep piety that guided his work.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Cosimo de' Medici reserved a private cell at San Marco for himself, and the friar’s frescoes were admired by the Medici family for their spiritual depth and technical mastery.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Fra Angelico’s frescoes at San Marco were executed in a style that emphasized light, color, and a subtle use of perspective, influencing later artists such as Benozzo Gozzoli and Raphael.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": 1395,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1455,
+      "month": 2,
+      "day": 18,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Fra_Angelico_portrait.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Fra_Angelico_portrait.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Fra_Angelico_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Fra_Angelico_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Luca Signorelli",
+    "author": "Luca Signorelli",
+    "width": 550,
+    "height": 695,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Fra Angelico",
+    "url": "https://en.wikipedia.org/wiki/Fra_Angelico"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-02T16:34:15.915Z"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "vitruvius",
+  "name": "Vitruvius",
+  "wikidataId": "Q47163",
+  "wikipediaTitle": "Vitruvius",
+  "content": {
+    "description": [
+      {
+        "text": "Vitruvius was a Roman architect and engineer of the 1st century BC, best known for his ten‑book treatise De architectura, the only surviving major work on architecture from antiquity. In it he codified the three essential qualities of a building—firmitas (strength), utilitas (utility) and venustas (beauty)—and linked architectural proportion to the proportions of the human body, a theory that later inspired Leonardo da Vinci’s famous Vitruvian Man.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Beyond his literary legacy, Vitruvius served as a military engineer, specializing in the design and construction of siege engines such as ballistae and scorpio catapults for Julius Caesar’s campaigns. His treatise was widely copied in the Middle Ages, rediscovered in 1414, and remained a foundational text for Renaissance architects. In 2026 the basilica at Fanum Fortunae described by Vitruvius was excavated in Fano, providing the first archaeological confirmation of his practical work.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The triad of firmitas, utilitas and venustas introduced by Vitruvius is still taught in modern architecture schools as a foundational design philosophy.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "De architectura was the first book on architectural theory and profoundly influenced Renaissance masters such as Leon Battista Alberti, Leonardo da Vinci and Michelangelo.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Vitruvius described the aeolipile, the earliest known steam engine, and the Archimedes screw for lifting water, demonstrating early mechanical ingenuity.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "The basilica at Fanum Fortunae, whose foundations Vitruvius detailed in his treatise, was unearthed in 2026, confirming the historic accuracy of his architectural descriptions.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": -80,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": -15,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Busto_di_Vitruvio.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Busto_di_Vitruvio.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/20/Busto_di_Vitruvio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/20/Busto_di_Vitruvio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Mikceo",
+    "author": "Mikceo",
+    "width": 880,
+    "height": 1600,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Vitruvius",
+    "url": "https://en.wikipedia.org/wiki/Vitruvius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-02T23:57:40.954Z"
+  }
+}

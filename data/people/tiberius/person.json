@@ -1,0 +1,91 @@
+{
+  "id": "tiberius",
+  "name": "Tiberius",
+  "wikidataId": "Q1407",
+  "wikipediaTitle": "Tiberius",
+  "content": {
+    "description": [
+      {
+        "text": "Tiberius Julius Caesar Augustus was born on 16 November 42 BC in Rome to Tiberius Claudius Nero and Livia Drusilla. He succeeded Augustus as the second Roman emperor in AD 14 and reigned until his death in AD 37. He is remembered for his military successes in Pannonia, Dalmatia, Raetia, and parts of Germania, which helped secure the empire’s northern frontier, as well as for his diplomatic skill and administrative efficiency, even as his reign grew increasingly wary of the Senate and marked by a reputation for reclusiveness.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Despite his accomplishments, Tiberius earned a reputation as a dark, reclusive ruler, earning Pliny the Elder the nickname “the gloomiest of men.” He withdrew from Rome to Capri, where he spent the last years of his reign, and later died at Misenum. He was the first emperor to avoid deification, refusing the title of Augustus and the honors of a divine cult, and his death left the empire to his adopted grandson Caligula.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Tiberius was the first emperor to avoid deification, refusing the title of Augustus and the honors of a divine cult.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He was known as “the gloomiest of men” by Pliny the Elder.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He withdrew to Capri, where he spent the last years of his reign, and later died at Misenum.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He was the second Roman emperor, succeeding Augustus in AD 14 and ruling until AD 37.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He was known for his military campaigns in Pannonia, Dalmatia, Raetia, and Germania, which secured the empire’s northern frontier.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": -42,
+      "month": 11,
+      "day": 16,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 37,
+      "month": 3,
+      "day": 16,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "(Venice)_Tiberius_Portrait_of_the_'Imperium_Maius'_type_in_Museo_Archeologico_Nazionale.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:(Venice)_Tiberius_Portrait_of_the_'Imperium_Maius'_type_in_Museo_Archeologico_Nazionale.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/%28Venice%29_Tiberius_Portrait_of_the_%27Imperium_Maius%27_type_in_Museo_Archeologico_Nazionale.jpg/960px-%28Venice%29_Tiberius_Portrait_of_the_%27Imperium_Maius%27_type_in_Museo_Archeologico_Nazionale.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/%28Venice%29_Tiberius_Portrait_of_the_%27Imperium_Maius%27_type_in_Museo_Archeologico_Nazionale.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Didier Descouens",
+    "author": "Didier Descouens",
+    "width": 5504,
+    "height": 7080,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Tiberius",
+    "url": "https://en.wikipedia.org/wiki/Tiberius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-02T23:56:56.676Z"
+  }
+}

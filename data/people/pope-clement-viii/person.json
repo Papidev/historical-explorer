@@ -1,0 +1,79 @@
+{
+  "id": "pope-clement-viii",
+  "name": "Pope Clement VIII",
+  "wikidataId": "Q170395",
+  "wikipediaTitle": "Pope Clement VIII",
+  "content": {
+    "description": [
+      {
+        "text": "Ippolito Aldobrandini, later Pope Clement VIII, was born on 24 February 1536 in Fano, a city in the Papal States.  He entered the Church as a canon lawyer, becoming an auditor of the Roman Rota, and was ordained a priest only at the age of 45.  His legal acumen and diplomatic skill earned him elevation to the cardinalate in 1585, and after a brief tenure as papal legate in Poland he was elected pope on 30 January 1592, taking the name Clement in a move that signaled a shift toward a more balanced and liberal papal policy in European affairs.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "During his reign, Clement VIII issued the Clementine Vulgate in 1592, which became the official Latin Bible of the Catholic Church until the Nova Vulgata replaced it in 1979.  He famously reconciled Henry IV of France to Catholicism in 1593, ending the French Wars of Religion, and he is credited with popularising coffee in Rome after tasting it in 1600, a gesture that helped dispel the notion of the beverage as a “Satan’s drink.”  His papacy was also marked by the trial and execution of Giordano Bruno and by strict measures against Jewish communities in the Papal States.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Clementine Vulgate, promulgated by Pope Clement VIII in 1592, remained the definitive Latin text of the Bible for nearly four centuries, until the 1979 Nova Vulgata was issued.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Clement VIII’s absolution of Henry IV of France in 1595 ended thirty years of religious conflict in France and secured a crucial alliance for the papacy against the Ottoman Empire.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Legend holds that Pope Clement VIII was the first pope to taste coffee, declaring it a drink worthy of the faithful and thereby contributing to its spread among Catholics.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": 1536,
+      "month": 2,
+      "day": 24,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1605,
+      "month": 3,
+      "day": 3,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Papa_Clemente_VIII_Aldobrandini_–_Giuseppe_Cesari_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Papa_Clemente_VIII_Aldobrandini_%E2%80%93_Giuseppe_Cesari_(cropped).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/Papa_Clemente_VIII_Aldobrandini_%E2%80%93_Giuseppe_Cesari_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/Papa_Clemente_VIII_Aldobrandini_%E2%80%93_Giuseppe_Cesari_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Giuseppe Cesari",
+    "author": "Giuseppe Cesari",
+    "width": 752,
+    "height": 1018,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Clement VIII",
+    "url": "https://en.wikipedia.org/wiki/Pope_Clement_VIII"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-02T16:37:47.964Z"
+  }
+}

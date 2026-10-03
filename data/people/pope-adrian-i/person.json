@@ -1,0 +1,83 @@
+{
+  "id": "pope-adrian-i",
+  "name": "Pope Adrian I",
+  "wikidataId": "Q103292",
+  "wikipediaTitle": "Pope Adrian I",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Adrian I, who served as bishop of Rome from 1 February 772 until his death on 25 December 795, came from a Roman military aristocratic family and was raised by his uncle, a consul and commander of the Roman Church. During his pontificate he faced repeated Lombard incursions and sought the protection of the Frankish king Charlemagne, who eventually defeated the Lombard king Desiderius and restored the Pentapolis to the papacy. Adrian’s reign was marked by a shift in papal administration, as he began to date documents by the reign of Charlemagne rather than that of the Byzantine emperor, and he celebrated this change by striking the earliest papal coin.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Beyond his political maneuvering, Adrian is remembered for his building projects and ecclesiastical reforms. He restored ancient Roman aqueducts, rebuilt churches such as Santa Maria in Cosmedin and San Marco, and assembled the Domusculta Capracorum villa from his inherited estates. In 787 he elevated the English diocese of Lichfield to an archdiocese at the behest of King Offa of Mercia, and in 796 Charlemagne commissioned an epitaph for Adrian that was later preserved in St. Peter’s Basilica. His long pontificate, lasting 23 years, was the longest in the papacy until the reign of Pius VI.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Adrian issued the earliest known papal coin, a symbolic act that marked the papacy’s shift from Byzantine to Frankish influence.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He restored the ancient aqueducts of Rome and rebuilt key churches, including Santa Maria in Cosmedin and San Marco.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "In 787 he elevated the English diocese of Lichfield to an archdiocese at the request of King Offa of Mercia, giving the bishop Hygeberht the pallium in 788.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Charlemagne commissioned Adrian’s epitaph in 796, which was carved in Roman square capitals on black limestone and later moved to St. Peter’s Basilica, where it remains today.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": 700,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 795,
+      "month": 12,
+      "day": 25,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Zecca_di_roma,_denaro_di_adriano_I,_772-795,_in_argento_(bibl._apostolica_vaticana).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Zecca_di_roma%2C_denaro_di_adriano_I%2C_772-795%2C_in_argento_(bibl._apostolica_vaticana).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Zecca_di_roma%2C_denaro_di_adriano_I%2C_772-795%2C_in_argento_%28bibl._apostolica_vaticana%29.jpg/960px-Zecca_di_roma%2C_denaro_di_adriano_I%2C_772-795%2C_in_argento_%28bibl._apostolica_vaticana%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Zecca_di_roma%2C_denaro_di_adriano_I%2C_772-795%2C_in_argento_%28bibl._apostolica_vaticana%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Francesco Bini",
+    "author": "Francesco Bini",
+    "width": 1108,
+    "height": 1128,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Adrian I",
+    "url": "https://en.wikipedia.org/wiki/Pope_Adrian_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-02T23:57:30.872Z"
+  }
+}

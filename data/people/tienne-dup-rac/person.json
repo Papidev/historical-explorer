@@ -1,0 +1,81 @@
+{
+  "id": "tienne-dup-rac",
+  "name": "Étienne Dupérac",
+  "wikidataId": "Q289626",
+  "wikipediaTitle": "Étienne Dupérac",
+  "content": {
+    "description": [
+      {
+        "text": "Étienne Dupérac was a versatile French artist born around 1525 who made his mark as an architect, painter, engraver, and garden designer. After arriving in Rome in 1550, he quickly established himself as a skilled designer and engraver, producing a celebrated bird‑eye view of Ancient Rome with reconstructed buildings (Urbis Romae Sciographia, 1574) and a similar view of modern Rome (Descriptio, 1577). His 1575 book of forty engravings, I vestigi dell'antichità di Roma, showcased Roman monuments and antiquities, while an unpublished collection of parchment drawings (Disegni de le Ruine di Roma e Come Anticamente Erono) from 1564‑1574, later published in facsimile, attempted to juxtapose ruins with their original forms.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "By 1578 Dupérac had returned to France, where he was commissioned to paint the Cabinet des Bains at the Château de Fontainebleau and is thought to have contributed to its gardens. He is also credited with designing the gardens at Anet for the duke of Aumale, and as architect to Henri IV from 1595 he may have planned the terraced gardens at Saint‑Germain‑en‑Laye and worked on the Tuileries in Paris around 1600‑1603. Dupérac died in Paris in March 1604, leaving behind an album signed by him in 1575 (Illustration des fragments antiques) now housed in the Louvre and an etching from Speculum Romanae Magnificentiae displayed in Rome’s Palazzo Braschi.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Dupérac’s bird‑eye view of Ancient Rome with reconstructed buildings was one of the earliest attempts to visualize the city’s lost monuments from a single perspective.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "His engravings of modern Rome, such as the carousel in the Cortile del Belvedere and the Villa d'Este, helped transmit contemporary architectural and gardening ideas from Italy to France and northern Europe.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Dupérac’s album Illustration des fragments antiques, signed and dated 1575, is preserved in the Louvre and provides a rare glimpse into his approach to antiquity.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "An etching from his work Speculum Romanae Magnificentiae is exhibited in Rome’s Palazzo Braschi, illustrating his influence on the visual culture of the city.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": 1525,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1604,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Engraving_of_Charles-Henri-Joseph_Cordier's_statue_of_Étienne_Dupérac_at_the_Louvre.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Engraving_of_Charles-Henri-Joseph_Cordier's_statue_of_%C3%89tienne_Dup%C3%A9rac_at_the_Louvre.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Engraving_of_Charles-Henri-Joseph_Cordier%27s_statue_of_%C3%89tienne_Dup%C3%A9rac_at_the_Louvre.jpg/960px-Engraving_of_Charles-Henri-Joseph_Cordier%27s_statue_of_%C3%89tienne_Dup%C3%A9rac_at_the_Louvre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Engraving_of_Charles-Henri-Joseph_Cordier%27s_statue_of_%C3%89tienne_Dup%C3%A9rac_at_the_Louvre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "No restrictions",
+    "attribution": "Internet Archive Book Images",
+    "author": "Internet Archive Book Images",
+    "width": 1106,
+    "height": 1691,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Étienne Dupérac",
+    "url": "https://en.wikipedia.org/wiki/%C3%89tienne_Dup%C3%A9rac"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-02T16:44:33.647Z"
+  }
+}

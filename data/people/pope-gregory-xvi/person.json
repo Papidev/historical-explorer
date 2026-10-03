@@ -1,0 +1,97 @@
+{
+  "id": "pope-gregory-xvi",
+  "name": "Pope Gregory XVI",
+  "wikidataId": "Q43734",
+  "wikipediaTitle": "Pope Gregory XVI",
+  "content": {
+    "description": [
+      {
+        "text": "Born in Belluno, Italy, Bartolomeo Alberto Cappellari entered the Camaldolese order at 18, became a priest in 1787, taught philosophy and theology, and rose to prominence as a censor and abbot before being made cardinal in 1825.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Elected pope on 2 February 1831, Gregory XVI was the most recent pope to take the name Gregory, the last pope to govern the Papal States for his entire pontificate, and the last pope elected before being consecrated as a bishop; his reign was marked by a staunch defense of traditional doctrine, condemnation of the slave trade, and efforts to suppress Italian revolutionary movements.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the last pope to be elected before being consecrated as a bishop.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He was the last pope to take the name Gregory.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He condemned the slave trade in 1839 with the apostolic letter In supremo apostolatus.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He died of erysipelas, a skin infection, in June 1846.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He was a Camaldolese monk who never traveled outside Italy.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He was the last pope to govern the Papal States for the whole duration of his pontificate.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": 1765,
+      "month": 9,
+      "day": 18,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1846,
+      "month": 6,
+      "day": 1,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Gregory_XVI.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Gregory_XVI.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Gregory_XVI.jpg/960px-Gregory_XVI.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Gregory_XVI.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Paul Delaroche",
+    "author": "Paul Delaroche",
+    "width": 1023,
+    "height": 1264,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Gregory XVI",
+    "url": "https://en.wikipedia.org/wiki/Pope_Gregory_XVI"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-02T16:36:45.382Z"
+  }
+}

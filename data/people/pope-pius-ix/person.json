@@ -1,0 +1,79 @@
+{
+  "id": "pope-pius-ix",
+  "name": "Pope Pius IX",
+  "wikidataId": "Q43720",
+  "wikipediaTitle": "Pope Pius IX",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Maria Mastai‑Ferretti was born on 13 May 1792 in Senigallia, the ninth child of a noble family. He studied theology at the Piarist College in Volterra and Rome, was ordained a priest in 1819, and later served as rector of the Tata Giovanni Institute. After a brief stint in the Papal Noble Guard, he was dismissed following an epileptic seizure, but Pope Pius VII supported his continued studies. In 1846 he was elected pope on 16 June, taking the name Pius IX, and was crowned on 21 June.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Pius IX’s reign of nearly 32 years was the longest verified papal reign and saw a dramatic shift from early liberalism to conservative orthodoxy. He convened the First Vatican Council in 1869, which defined the dogma of papal infallibility, and promulgated the dogma of the Immaculate Conception in 1854. His 1864 Syllabus of Errors condemned liberalism and modernism, and he was the last pope to rule the Papal States as a secular sovereign until Rome was annexed in 1870. He died on 7 February 1878, still residing in the Vatican as a “prisoner in the Vatican.”",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He convened the First Vatican Council, which defined the dogma of papal infallibility.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He was the last pope to hold temporal power over the Papal States.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He was beatified by Pope John Paul II in 2000.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": 1792,
+      "month": 5,
+      "day": 13,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1878,
+      "month": 2,
+      "day": 7,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pius_IX,_by_Adolphe_Braun,_1875.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pius_IX%2C_by_Adolphe_Braun%2C_1875.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Pius_IX%2C_by_Adolphe_Braun%2C_1875.jpg/960px-Pius_IX%2C_by_Adolphe_Braun%2C_1875.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Pius_IX%2C_by_Adolphe_Braun%2C_1875.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Adolphe Braun",
+    "author": "Adolphe Braun",
+    "width": 3172,
+    "height": 4000,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Pius IX",
+    "url": "https://en.wikipedia.org/wiki/Pope_Pius_IX"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-02T16:37:13.071Z"
+  }
+}

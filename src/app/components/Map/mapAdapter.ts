@@ -2,7 +2,7 @@
 
 import { createElement } from "react";
 import { createRoot, type Root } from "react-dom/client";
-import maplibregl, { Map as MapLibreMap, Marker } from "maplibre-gl";
+import maplibregl, { Map as MapLibreMap, Marker, type ExpressionSpecification } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import type { Poi } from "@/types/Poi";
 import { PoiPreviewCard } from "./PoiPreviewCard";
@@ -236,6 +236,43 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
         onZoomChange(map.getZoom());
       });
       map.once("load", () => {
+        for (const layer of map?.getStyle().layers ?? []) {
+          if (layer.type !== "symbol" || layer["source-layer"] !== "poi") {
+            continue;
+          }
+
+          map?.setFilter(layer.id, [
+            "all",
+            // Liberty uses expression filters; preserve its geometry and zoom-rank restrictions.
+            (layer.filter as ExpressionSpecification | undefined) ?? true,
+            [
+              "any",
+              [
+                "match",
+                ["get", "class"],
+                [
+                  "museum",
+                  "monument",
+                  "memorial",
+                  "castle",
+                  "archaeological_site",
+                  "place_of_worship",
+                  "theatre",
+                ],
+                true,
+                false,
+              ],
+              [
+                "match",
+                ["get", "subclass"],
+                ["artwork", "gallery", "arts_centre", "library"],
+                true,
+                false,
+              ],
+            ],
+          ]);
+        }
+
         isLoaded = true;
         if (pendingPois) {
           setMarkers(pendingPois);

@@ -1,0 +1,91 @@
+{
+  "id": "claudius",
+  "name": "Claudius",
+  "wikidataId": "Q1411",
+  "wikipediaTitle": "Claudius",
+  "content": {
+    "description": [
+      {
+        "text": "Tiberius Claudius Caesar Augustus Germanicus was born on 1 August 10 BC in Lugdunum (modern Lyon, France), making him the first Roman emperor to be born outside Italy.  He was the son of Drusus the Elder and Antonia Minor and grew up with a limp, a stammer and a tremor that caused his family to exclude him from public office until his consulship in AD 37.  After the assassination of Caligula, the Praetorian Guard declared Claudius emperor, the first time a ruler was proclaimed by the guard rather than the Senate.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "During his reign from AD 41 to AD 54, Claudius proved to be an able administrator who expanded the imperial bureaucracy to include freedmen, restored the empire’s finances, and oversaw extensive public works such as the construction of the aqueducts Aqua Claudia and Aqua Anio Novus.  He launched the successful conquest of Britain, presided over public trials, issued daily edicts, and was a frequent target of political intrigue that ultimately led to his death, widely attributed to poisoning by his wife Agrippina the Younger.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Claudius was the first Roman emperor to be born outside Italy.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He was declared emperor by the Praetorian Guard after Caligula’s assassination, a first in Roman history.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Claudius expanded the imperial bureaucracy to include freedmen, a significant shift in administrative practice.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He built the aqueducts Aqua Claudia and Aqua Anio Novus, which supplied Rome with water for the first time in decades.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "The conquest of Britain in AD 43 began under Claudius, who personally traveled to the island and established the colony of Colonia Claudia Victricensis.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": -10,
+      "month": 8,
+      "day": 1,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 54,
+      "month": 10,
+      "day": 13,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Château_de_Versailles,_salon_de_la_paix,_buste_d'empereur_romain_(Claude).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Versailles%2C_salon_de_la_paix%2C_buste_d'empereur_romain_(Claude).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Ch%C3%A2teau_de_Versailles%2C_salon_de_la_paix%2C_buste_d%27empereur_romain_%28Claude%29.jpg/960px-Ch%C3%A2teau_de_Versailles%2C_salon_de_la_paix%2C_buste_d%27empereur_romain_%28Claude%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Ch%C3%A2teau_de_Versailles%2C_salon_de_la_paix%2C_buste_d%27empereur_romain_%28Claude%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Coyau / Wikimedia Commons",
+    "author": "Coyau",
+    "width": 2404,
+    "height": 3701,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Claudius",
+    "url": "https://en.wikipedia.org/wiki/Claudius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-02T23:57:09.905Z"
+  }
+}
