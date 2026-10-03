@@ -34,7 +34,7 @@ export const CategoryGroup = ({
           checked={selectedCategories.includes(category)}
           onToggle={() => onToggleCategory(category)}
         />
-        {children.length > 0 && (
+        {children.length > 0 ? (
           <button
             type="button"
             aria-label={`${expanded ? "Hide" : "Show"} subcategories for ${category}`}
@@ -48,13 +48,15 @@ export const CategoryGroup = ({
               className={`size-4 transition-transform ${expanded ? "rotate-180" : ""}`}
             />
           </button>
+        ) : (
+          <span aria-hidden="true" className="w-7 shrink-0" />
         )}
       </div>
       {children.length > 0 && (
         <div
           id={subcategoriesId}
           hidden={!expanded}
-          className="mt-2 ml-5 space-y-2 border-l border-zinc-200 pl-3"
+          className="mt-2 ml-5 space-y-2 border-l border-zinc-200 pr-9 pl-3"
         >
           {children.map(({ name, count }) => (
             <CategoryOption

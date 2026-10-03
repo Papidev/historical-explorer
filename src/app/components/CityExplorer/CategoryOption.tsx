@@ -26,7 +26,10 @@ export const CategoryOption = ({
         Subcategory of {POI_CATEGORY_PARENTS[category]}
       </span>
     )}
-    <span aria-hidden="true" className="text-xs text-zinc-400">
+    <span
+      aria-hidden="true"
+      className="min-w-5 shrink-0 text-right text-xs text-zinc-400 tabular-nums"
+    >
       {count}
     </span>
   </label>
