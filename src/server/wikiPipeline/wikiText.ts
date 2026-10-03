@@ -22,14 +22,28 @@ export const wikiTextToPlainText = (content: string) => {
   const doc = wtf(content);
   const sections = doc.sections();
   const output: string[] = [];
+  let excludedDepth: number | undefined;
 
   for (const section of sections) {
     const title = section.title().trim();
     const lowerTitle = title.toLowerCase();
 
-    if (lowerTitle === "external links") {
+    if (
+      [
+        "references",
+        "see also",
+        "external links",
+        "note",
+        "bibliografia",
+        "voci correlate",
+        "collegamenti esterni",
+      ].includes(lowerTitle)
+    ) {
+      excludedDepth = section.depth();
       continue;
     }
+    if (excludedDepth !== undefined && section.depth() > excludedDepth) continue;
+    excludedDepth = undefined;
 
     if (title) {
       output.push(title);

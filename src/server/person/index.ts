@@ -9,7 +9,11 @@ import { fetchWikiSnapshot } from "@/server/wikiPipeline/fetchWiki";
 import { buildWikipediaPageUrl } from "@/server/wikiPipeline/io";
 import { getPersonDisplayName } from "@/utils/getPersonDisplayName";
 import { toCitySlug } from "@/server/wikiPipeline/normalize";
-import type { MainImageCandidate, WikiSnapshot } from "@/server/wikiPipeline/types";
+import type {
+  MainImageCandidate,
+  WikiSnapshot,
+  WikipediaLanguage,
+} from "@/server/wikiPipeline/types";
 import { wikiTextToPlainText } from "@/server/wikiPipeline/wikiText";
 import { personRepository, type PersonRepository } from "./filesystemRepository";
 import { generatePerson } from "./generatePerson";
@@ -53,7 +57,10 @@ const findMatchingLinks = (name: string, links: WikiSnapshot["links"]) => {
             (!/\([^)]*\)\s*$/.test(name) &&
               normalizeName(title.replace(/\s*\([^)]*\)\s*$/, "")) === normalizeName(name)),
         )
-    ).map((link) => [normalizeTitle(link.title), { ...link, title: link.title.split("#")[0] }]),
+    ).map((link) => [
+      `${link.language ?? "en"}:${normalizeTitle(link.title)}`,
+      { ...link, title: link.title.split("#")[0] },
+    ]),
   );
 };
 
@@ -68,7 +75,7 @@ const getProvider = (ai: AiSelection): "ollama" | "gemini" =>
 
 type PersonDependencies = {
   repository: PersonRepository;
-  fetchSnapshot: (title: string) => Promise<WikiSnapshot>;
+  fetchSnapshot: (title: string, language?: WikipediaLanguage) => Promise<WikiSnapshot>;
   generateContent: (
     person: { name: string; wikidataId: string },
     sources: PersonSource[],
@@ -117,7 +124,7 @@ const generateAndPersist = async ({
     id: "wikipedia",
     kind: "wikipedia",
     title: snapshot.title,
-    url: buildWikipediaPageUrl(snapshot.title),
+    url: buildWikipediaPageUrl(snapshot.title, snapshot.language),
     content: wikiTextToPlainText(snapshot.fullText),
   };
   onProgress?.(
@@ -140,7 +147,10 @@ const generateAndPersist = async ({
         name,
         city: "",
         coordinates: { lat: 0, lng: 0 },
-        sourceHints: { wikipedia: `en:${snapshot.title}`, wikidata: wikidataId },
+        sourceHints: {
+          wikipedia: `${snapshot.language ?? "en"}:${snapshot.title}`,
+          wikidata: wikidataId,
+        },
       })
       .catch((error: unknown) => {
         if (!/\b429\b|too many requests/i.test(String(error))) throw error;
@@ -149,7 +159,8 @@ const generateAndPersist = async ({
       })
   ).find(({ license, attribution }) => license && attribution);
   const person: Person = {
-    id,
+    // Allocate after all asynchronous work so concurrent People cannot claim the same ID.
+    id: allocatePersonId(name, dependencies.repository),
     name: getPersonDisplayName(name),
     wikidataId,
     wikipediaTitle: snapshot.title,
@@ -181,6 +192,8 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
     now: () => new Date(),
     ...overrides,
   };
+
+  const pendingPeople = new Map<string, Promise<Person>>();
 
   return {
     resolveAndGenerateMissing: async ({
@@ -253,11 +266,14 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
           for (const link of matchingLinks.values()) {
             onProgress?.(`Fetching the Wikipedia article for ${person.name}: ${link.title}.`);
             try {
-              const snapshot = await dependencies.fetchSnapshot(link.title);
+              const snapshot = await dependencies.fetchSnapshot(link.title, link.language);
               if (snapshot.isDisambiguation) {
                 onProgress?.(`Ignoring ${link.title}: Wikipedia disambiguation page.`);
               } else {
-                matchingSnapshots.set(normalizeTitle(snapshot.title), snapshot);
+                matchingSnapshots.set(
+                  `${snapshot.language ?? "en"}:${normalizeTitle(snapshot.title)}`,
+                  snapshot,
+                );
               }
             } catch (error) {
               if (
@@ -297,17 +313,21 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
           }
 
           const existing = dependencies.repository.findByWikidataId(snapshot.wikidataId);
-          const resolvedPerson =
-            existing ??
-            (await generateAndPersist({
-              id: allocatePersonId(person.name, dependencies.repository),
+          let pending = pendingPeople.get(snapshot.wikidataId);
+          if (!existing && !pending) {
+            const wikidataId = snapshot.wikidataId;
+            pending = generateAndPersist({
+              id: toCitySlug(person.name) || "person",
               name: person.name,
-              wikidataId: snapshot.wikidataId,
+              wikidataId,
               snapshot,
               ai: personAi,
               dependencies,
               onProgress,
-            }));
+            }).finally(() => pendingPeople.delete(wikidataId));
+            pendingPeople.set(wikidataId, pending);
+          }
+          const resolvedPerson = existing ?? (await pending!);
           resolved.push({
             name: person.name,
             personId: resolvedPerson.id,

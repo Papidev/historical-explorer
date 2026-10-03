@@ -27,16 +27,22 @@ export const WikidataTypesCell = ({
       <div className={types.length > 0 ? "pt-6" : undefined}>
         <CellContent
           title={
-            row.poiTypes?.error
-              ? "Acquisition failed"
-              : types.length > 0
-                ? types
-                    .slice(0, 2)
-                    .map(({ label }) => label)
-                    .join(", ")
-                : row.poiTypes
-                  ? "No Wikidata types found"
-                  : "Wikidata types not generated"
+            row.transformedPoi &&
+            !row.wikidataId &&
+            !row.transformedPoi.wikidata &&
+            !row.rawPoi?.wikidata &&
+            !row.poiTypes
+              ? "No Wikidata ID"
+              : row.poiTypes?.error
+                ? "Acquisition failed"
+                : types.length > 0
+                  ? types
+                      .slice(0, 2)
+                      .map(({ label }) => label)
+                      .join(", ")
+                  : row.poiTypes
+                    ? "No Wikidata types found"
+                    : "Wikidata types not generated"
           }
           titleTone={types.length > 0 && !row.poiTypes?.error ? "status" : "warning"}
           subtitle={
@@ -63,7 +69,7 @@ export const WikidataTypesCell = ({
               <EyeIcon />
             </IconButton>
           ) : null}
-          {row.transformedPoi && row.wikidataId ? (
+          {row.transformedPoi ? (
             <form
               action={(formData) =>
                 runSingleAction(
@@ -78,8 +84,9 @@ export const WikidataTypesCell = ({
               <SubmitButton
                 idleLabel="Refresh types"
                 pendingLabel="Refreshing..."
+                confirmMessage="Refresh Wikidata types for this POI? This will replace the saved types."
                 icon={<ArrowPathIcon />}
-                tone="secondary"
+                tone="danger"
                 disabled={isInProgress}
               />
             </form>

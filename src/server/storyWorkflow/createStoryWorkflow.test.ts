@@ -172,6 +172,10 @@ describe("Story Workflow Interface", () => {
       createStoryWorkflow(dependencies).draftStory.generate({
         poiId: pointOfInterest.id,
         ai: { mode: "local", model: "qwen3:8b" },
+        onSourcesAcquired: async (sources) => {
+          expect(sources[0].content).toBe("Source");
+          order.push("poiTypes");
+        },
       }),
     ).resolves.toEqual({
       poiId: pointOfInterest.id,
@@ -181,7 +185,13 @@ describe("Story Workflow Interface", () => {
       relatedPeople: "resolved",
       relatedPeopleFailures: [],
     });
-    expect(order).toEqual(["sources", "mainImageCandidates", "storyContent", "people:qwen3:8b"]);
+    expect(order).toEqual([
+      "sources",
+      "poiTypes",
+      "mainImageCandidates",
+      "storyContent",
+      "people:qwen3:8b",
+    ]);
     expect(imageSourceTitles).toEqual(["Forum Boarium"]);
   });
 
@@ -612,6 +622,45 @@ describe("Story Workflow Interface", () => {
       stage: "persistence",
       retryable: true,
     });
+  });
+
+  it("preserves separate artifacts and shared checkpoints across three parallel workflows", async () => {
+    const originalWorkingDirectory = process.cwd();
+    const temporaryDirectory = mkdtempSync(path.join(tmpdir(), "parallel-stories-"));
+    process.chdir(temporaryDirectory);
+    try {
+      const workflow = createStoryWorkflow({
+        ...createDependencies().dependencies,
+        findPointOfInterest: async (poiId) => ({ ...pointOfInterest, id: poiId }),
+        generateStoryContent: async ({ pointOfInterest }) => {
+          if (pointOfInterest.id === "failed") throw new Error("Provider unavailable");
+          return { content: storyContent(pointOfInterest.id), provider: "gemini" };
+        },
+        repository: createFilesystemStoryWorkflowRepository("rome"),
+      });
+      const outcomes = await Promise.allSettled(
+        ["first", "second", "failed"].map((poiId) =>
+          workflow.draftStory.generate({ poiId, ai: { mode: "cloud", model: "test-model" } }),
+        ),
+      );
+      expect(outcomes.map(({ status }) => status)).toEqual(["fulfilled", "fulfilled", "rejected"]);
+      for (const poiId of ["first", "second"]) {
+        expect(await workflow.draftStory.get({ poiId })).toMatchObject({
+          storyContent: storyContent(poiId),
+          sources: [{ content: "Source version one" }],
+        });
+        expect(readGenerationMetadata("rome")[poiId]?.storyContent).toBeDefined();
+      }
+      expect(await workflow.draftStory.get({ poiId: "failed" })).toMatchObject({
+        sources: [{ content: "Source version one" }],
+        mainImageCandidates: [{ commonsFileName: "first.jpg" }],
+      });
+      expect(readGenerationMetadata("rome").failed.wiki).toBeDefined();
+      expect(readGenerationMetadata("rome").failed.storyContent).toBeUndefined();
+    } finally {
+      process.chdir(originalWorkingDirectory);
+      rmSync(temporaryDirectory, { recursive: true, force: true });
+    }
   });
 
   it("persists and resets workflow state through the public Interface in isolated storage", async () => {

@@ -11,7 +11,10 @@ import type { CellProps } from "./RowTypes";
 export const WikipediaCell = ({ row, isInProgress, onSelectPanel }: CellProps) => (
   <PipelineCell
     inProgress={isInProgress}
-    needsAttention={getPoiRowStatusGroup(row) === "needs-attention" && !row.wikiPoi}
+    needsAttention={
+      Boolean(row.sourcePending) ||
+      (getPoiRowStatusGroup(row) === "needs-attention" && !row.wikiPoi)
+    }
   >
     <CellContent
       title={!row.wikiPoi ? "Wikipedia source not acquired" : undefined}
@@ -20,7 +23,7 @@ export const WikipediaCell = ({ row, isInProgress, onSelectPanel }: CellProps) =
     />
     {row.sourcePending ? (
       <p role="status" className="mt-2 text-xs font-semibold text-amber-900">
-        Story waiting for an English Wikipedia source
+        No unambiguous English or Italian Wikipedia page was found for this POI.
       </p>
     ) : null}
     <GenerationErrorDetails

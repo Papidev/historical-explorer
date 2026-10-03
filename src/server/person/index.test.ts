@@ -76,6 +76,125 @@ afterEach(() => {
 });
 
 describe("People", () => {
+  it("keeps the Italian edition for Related People links and their saved source", async () => {
+    const repository = createRepository();
+    const people = createPeople({
+      repository,
+      fetchSnapshot: async (title, language) => {
+        expect(title).toBe("Galileo Galilei");
+        expect(language).toBe("it");
+        return { ...snapshot(title, "Q307"), language: "it" };
+      },
+      generateContent: async (_person, sources) => {
+        expect(sources[0].url).toBe("https://it.wikipedia.org/wiki/Galileo_Galilei");
+        return content;
+      },
+      fetchImageCandidates: async (input) => {
+        expect(input.sourceHints.wikipedia).toBe("it:Galileo Galilei");
+        return [];
+      },
+    });
+    const result = await people.resolveAndGenerateMissing({
+      relatedPeople: [{ name: "Galileo Galilei", sourceIds: ["wikipedia"] }],
+      storySources: [
+        {
+          id: "wikipedia",
+          kind: "wikipedia",
+          title: "Example",
+          url: "https://it.wikipedia.org/wiki/Example",
+          content: "Source",
+          links: [{ label: "Galileo Galilei", title: "Galileo Galilei", language: "it" }],
+        },
+      ],
+      ai: { mode: "local", model: "test-model" },
+    });
+    expect(result.failures).toEqual([]);
+    expect(result.relatedPeople[0].personId).toBe("galileo-galilei");
+    expect(repository.get("galileo-galilei")?.source.url).toBe(
+      "https://it.wikipedia.org/wiki/Galileo_Galilei",
+    );
+  });
+
+  it("shares one pending generation between concurrent Stories and releases failures", async () => {
+    const repository = createRepository();
+    let generations = 0;
+    const people = createPeople({
+      repository,
+      fetchSnapshot: async () => snapshot("Hercules", "Q123"),
+      generateContent: async () => {
+        generations += 1;
+        if (generations === 1) throw new Error("Provider unavailable");
+        return content;
+      },
+      fetchImageCandidates: async () => [],
+    });
+    const input = {
+      relatedPeople: [{ name: "Hercules", sourceIds: ["wikipedia"] }],
+      storySources: [
+        {
+          id: "wikipedia",
+          kind: "wikipedia" as const,
+          title: "Story",
+          url: "https://en.wikipedia.org/wiki/Story",
+          content: "Source",
+          links: [{ label: "Hercules", title: "Hercules" }],
+        },
+      ],
+      ai: { mode: "cloud" as const, model: "test-model" },
+    };
+    const failed = await Promise.all([
+      people.resolveAndGenerateMissing(input),
+      people.resolveAndGenerateMissing(input),
+    ]);
+    expect(generations).toBe(1);
+    expect(failed.every(({ failures }) => failures.length === 1)).toBe(true);
+    const resolved = await Promise.all([
+      people.resolveAndGenerateMissing(input),
+      people.resolveAndGenerateMissing(input),
+    ]);
+    expect(generations).toBe(2);
+    expect(repository.list()).toHaveLength(1);
+    expect(resolved.map(({ relatedPeople }) => relatedPeople[0].personId)).toEqual([
+      "hercules",
+      "hercules",
+    ]);
+  });
+
+  it("allocates distinct IDs when different People with the same name finish concurrently", async () => {
+    const repository = createRepository();
+    const people = createPeople({
+      repository,
+      fetchSnapshot: async (title) => snapshot(title, title.endsWith("architect)") ? "Q1" : "Q2"),
+      generateContent: async () => content,
+      fetchImageCandidates: async () => [],
+    });
+    await Promise.all(
+      ["John Smith (architect)", "John Smith (artist)"].map((title) =>
+        people.resolveAndGenerateMissing({
+          relatedPeople: [{ name: "John Smith", sourceIds: ["wikipedia"] }],
+          storySources: [
+            {
+              id: "wikipedia",
+              kind: "wikipedia",
+              title: "Story",
+              url: "https://en.wikipedia.org/wiki/Story",
+              content: "Source",
+              links: [{ label: "John Smith", title }],
+            },
+          ],
+          ai: { mode: "cloud", model: "test-model" },
+        }),
+      ),
+    );
+    expect(
+      repository
+        .list()
+        .map(({ id }) => id)
+        .sort(),
+    ).toEqual(["john-smith", "john-smith-2"]);
+    expect(new Set(repository.list().map(({ wikidataId }) => wikidataId)).size).toBe(2);
+  });
+
   it("merges source links redirected to the same canonical Wikipedia article", async () => {
     const repository = createRepository();
     const people = createPeople({

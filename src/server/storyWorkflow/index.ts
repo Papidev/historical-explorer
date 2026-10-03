@@ -23,24 +23,32 @@ export const createStoryWorkflowForCity = (city: string) =>
     },
     acquireSources: async (pointOfInterest, previousSources) => {
       console.info(`[wiki] Fetching Wikipedia text for ${pointOfInterest.id}.`);
-      const title =
-        previousSources?.find(({ kind }) => kind === "wikipedia")?.title ??
-        (await resolvePageForPoi(pointOfInterest)).selected.title;
-      const snapshot = await fetchWikiSnapshot(title);
+      const previous = previousSources?.find(({ kind }) => kind === "wikipedia");
+      const page = previous
+        ? {
+            title: previous.title,
+            language:
+              new URL(previous.url).hostname === "it.wikipedia.org"
+                ? ("it" as const)
+                : ("en" as const),
+          }
+        : (await resolvePageForPoi(pointOfInterest)).selected;
+      const snapshot = await fetchWikiSnapshot(page.title, page.language);
       return [
         {
           id: "wikipedia",
           kind: "wikipedia",
           title: snapshot.title,
-          url: buildWikipediaPageUrl(snapshot.title),
+          ...(snapshot.wikidataId ? { wikidataId: snapshot.wikidataId } : {}),
+          url: buildWikipediaPageUrl(snapshot.title, page.language),
           content: wikiTextToPlainText(snapshot.fullText),
           links: snapshot.links,
         },
       ];
     },
-    generateMainImageCandidates: async (pointOfInterest, wikipediaTitle) => {
+    generateMainImageCandidates: async (pointOfInterest, wikipediaTitle, wikipediaLanguage) => {
       console.info(`[wiki-images] Generating Main Image Candidates for ${pointOfInterest.id}.`);
-      return fetchMainImageCandidates(pointOfInterest, wikipediaTitle);
+      return fetchMainImageCandidates(pointOfInterest, wikipediaTitle, wikipediaLanguage);
     },
     generateStoryContent: async ({ pointOfInterest, sources, ai }) => {
       const provider =

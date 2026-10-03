@@ -1,3 +1,5 @@
+import { jsonrepair } from "jsonrepair";
+import { logAiResponseFailure, readAiResponse } from "@/server/aiResponseLog";
 import type { PoiInput } from "@/server/wikiPipeline/types";
 import { parseStoryContent, storyContentJsonSchema, type StoryContent } from "./storyContent";
 import type { Source } from "./types";
@@ -75,17 +77,37 @@ const toPrompt = (pointOfInterest: PoiInput, sources: Source[]) =>
   );
 
 const parseGeneratedContent = (content: string, sources: Source[]) => {
-  const storyContent = parseStoryContent(
-    JSON.parse(content),
-    sources.map((source) => source.id),
-  );
+  let storyContent: StoryContent;
+  try {
+    storyContent = parseStoryContent(
+      JSON.parse(content),
+      sources.map(({ id }) => id),
+    );
+  } catch (error) {
+    if (!(error instanceof SyntaxError)) throw error;
+    try {
+      // Some models prefix topic objects with an extra quote: ,"{"id":...
+      storyContent = parseStoryContent(
+        JSON.parse(jsonrepair(content.replace(/,\s*"(?=\{\s*"id"\s*:)/g, ","))),
+        sources.map(({ id }) => id),
+      );
+    } catch {
+      throw error;
+    }
+    console.warn("[story-content] Recovered malformed JSON and validated the Story schema.");
+  }
   return {
     ...storyContent,
     relatedPeople: storyContent.relatedPeople.map(({ name, sourceIds }) => ({ name, sourceIds })),
   };
 };
 
-const generateWithGemini = async (pointOfInterest: PoiInput, sources: Source[], model: string) => {
+const generateWithGemini = async (
+  pointOfInterest: PoiInput,
+  sources: Source[],
+  model: string,
+  mode: AiGenerationConfig["mode"],
+) => {
   const response = await fetch(
     `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${getGeminiApiKey()}`,
     {
@@ -109,23 +131,40 @@ const generateWithGemini = async (pointOfInterest: PoiInput, sources: Source[], 
       }),
     },
   );
-  const data = (await response.json()) as GeminiGenerateContentResponse;
-  if (!response.ok) {
-    throw new Error(
-      `Gemini failed: HTTP ${response.status}${
-        data.error?.message ? ` - ${data.error.message}` : ""
-      }`,
-    );
+  const context = {
+    kind: "storyContent" as const,
+    subjectId: pointOfInterest.id,
+    subjectName: pointOfInterest.name,
+    mode,
+    provider: "gemini" as const,
+    model,
+    attempt: 1,
+  };
+  const { data, rawResponse } = await readAiResponse<GeminiGenerateContentResponse>(
+    response,
+    context,
+  );
+  try {
+    if (!response.ok) {
+      throw new Error(
+        `Gemini failed: HTTP ${response.status}${
+          data.error?.message ? ` - ${data.error.message}` : ""
+        }`,
+      );
+    }
+    const content =
+      data.candidates?.[0]?.content?.parts
+        ?.map((part) => part.text ?? "")
+        .join("")
+        .trim() ?? "";
+    if (!content) {
+      throw new Error("Gemini returned empty Story Content.");
+    }
+    return parseGeneratedContent(content, sources);
+  } catch (error) {
+    logAiResponseFailure(context, rawResponse, error);
+    throw error;
   }
-  const content =
-    data.candidates?.[0]?.content?.parts
-      ?.map((part) => part.text ?? "")
-      .join("")
-      .trim() ?? "";
-  if (!content) {
-    throw new Error("Gemini returned empty Story Content.");
-  }
-  return parseGeneratedContent(content, sources);
 };
 
 const generateWithOllama = async (
@@ -155,15 +194,27 @@ const generateWithOllama = async (
     if (!response.ok) {
       throw new Error(`Ollama failed: HTTP ${response.status}`);
     }
-    const data = (await response.json()) as OllamaChatResponse;
+    const context = {
+      kind: "storyContent" as const,
+      subjectId: pointOfInterest.id,
+      subjectName: pointOfInterest.name,
+      mode,
+      provider: "ollama" as const,
+      model,
+      attempt: attempt + 1,
+    };
+    const { data, rawResponse } = await readAiResponse<OllamaChatResponse>(response, context);
     const content = data.message?.content?.trim() ?? "";
     if (!content) {
-      throw new Error("Ollama returned empty Story Content.");
+      const error = new Error("Ollama returned empty Story Content.");
+      logAiResponseFailure(context, rawResponse, error);
+      throw error;
     }
 
     try {
       return parseGeneratedContent(content, sources);
     } catch (error) {
+      logAiResponseFailure(context, rawResponse, error);
       if (attempt === attempts - 1) throw error;
       messages.push(
         { role: "assistant", content },
@@ -191,7 +242,7 @@ export const generateStoryContent = async (
   try {
     storyContent =
       config.provider === "gemini"
-        ? await generateWithGemini(pointOfInterest, sources, config.model)
+        ? await generateWithGemini(pointOfInterest, sources, config.model, config.mode)
         : await generateWithOllama(pointOfInterest, sources, config.model, config.mode);
   } catch (error) {
     console.error(`[story-content] ${config.provider} generation failed.`, error);

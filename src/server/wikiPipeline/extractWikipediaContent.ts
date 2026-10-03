@@ -24,14 +24,14 @@ export const extractWikipediaContent = async ({ city, poiId }: ExtractWikipediaC
   const poi = findPoiInGeoJson(getDefaultInputPath(city), poiId, city);
   const outputFilePath = buildOutputFilePath(outputDir, poi.id);
   const resolved = await resolvePageForPoi(poi);
-  const snapshot = await fetchWikiSnapshot(resolved.selected.title);
+  const snapshot = await fetchWikiSnapshot(resolved.selected.title, resolved.selected.language);
 
   writeSnapshotFile(outputFilePath, wikiTextToPlainText(snapshot.fullText));
   writeSourceMetadataFile(buildSourceMetadataFilePath(outputDir, poi.id), {
     id: "wikipedia",
     kind: "wikipedia",
-    title: resolved.selected.title,
-    url: buildWikipediaPageUrl(resolved.selected.title),
+    title: snapshot.title,
+    url: buildWikipediaPageUrl(snapshot.title, resolved.selected.language),
   });
 
   console.info(`[wiki] Saved readable Wikipedia text for ${poiId} to ${outputFilePath}.`);

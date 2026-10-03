@@ -9,6 +9,7 @@ export type GeoJson = {
 export type GeoJsonFeature = {
   id?: string | number;
   wikidataId?: string;
+  geoPlaceId?: string;
   properties?: Record<string, unknown>;
   geometry?: {
     type?: string;
@@ -31,7 +32,15 @@ export type PoiInput = {
   };
 };
 
-export type ResolutionMethod = "wikipedia_tag_en" | "wikidata_enwiki";
+export type WikipediaLanguage = "en" | "it";
+
+export type ResolutionMethod =
+  | "wikipedia_tag_en"
+  | "wikipedia_tag_it"
+  | "wikidata_enwiki"
+  | "wikidata_itwiki"
+  | "name_enwiki"
+  | "name_itwiki";
 
 export type ResolutionCandidate = {
   title: string;
@@ -43,13 +52,15 @@ export type ResolvedPage = {
   candidates: ResolutionCandidate[];
   selected: {
     title: string;
+    language?: WikipediaLanguage;
   };
 };
 
 export type WikiSnapshot = {
   fullText: string;
-  links: Array<{ label: string; title: string }>;
+  links: Array<{ label: string; title: string; language?: WikipediaLanguage }>;
   title: string;
+  language?: WikipediaLanguage;
   wikidataId?: string;
   isDisambiguation?: boolean;
 };

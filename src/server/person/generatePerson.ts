@@ -1,3 +1,4 @@
+import { logAiResponseFailure, readAiResponse } from "@/server/aiResponseLog";
 import {
   personContentJsonSchema,
   personContentSchema,
@@ -76,24 +77,36 @@ export const generatePerson = async (
         }),
       },
     );
-    const data = (await response.json()) as {
+    const context = {
+      ...config,
+      kind: "person" as const,
+      subjectId: person.wikidataId,
+      subjectName: person.name,
+      attempt: 1,
+    };
+    const { data, rawResponse } = await readAiResponse<{
       candidates?: Array<{ content?: { parts?: Array<{ text?: string }> } }>;
       error?: { message?: string };
-    };
-    if (!response.ok) {
-      throw new Error(
-        `Gemini failed: HTTP ${response.status}${data.error?.message ? ` - ${data.error.message}` : ""}`,
+    }>(response, context);
+    try {
+      if (!response.ok) {
+        throw new Error(
+          `Gemini failed: HTTP ${response.status}${data.error?.message ? ` - ${data.error.message}` : ""}`,
+        );
+      }
+      const content = data.candidates?.[0]?.content?.parts
+        ?.map(({ text }) => text ?? "")
+        .join("")
+        .trim();
+      if (!content) throw new Error("Gemini returned an empty Person.");
+      return parseContent(
+        content,
+        sources.map(({ id }) => id),
       );
+    } catch (error) {
+      logAiResponseFailure(context, rawResponse, error);
+      throw error;
     }
-    const content = data.candidates?.[0]?.content?.parts
-      ?.map(({ text }) => text ?? "")
-      .join("")
-      .trim();
-    if (!content) throw new Error("Gemini returned an empty Person.");
-    return parseContent(
-      content,
-      sources.map(({ id }) => id),
-    );
   }
 
   const messages = [
@@ -135,9 +148,23 @@ export const generatePerson = async (
         `Ollama failed: HTTP ${response.status}${error.error ? ` - ${error.error}` : ""}`,
       );
     }
-    const data = (await response.json()) as { message?: { content?: string } };
+    const context = {
+      ...config,
+      kind: "person" as const,
+      subjectId: person.wikidataId,
+      subjectName: person.name,
+      attempt: attempt + 1,
+    };
+    const { data, rawResponse } = await readAiResponse<{ message?: { content?: string } }>(
+      response,
+      context,
+    );
     const content = data.message?.content?.trim();
-    if (!content) throw new Error("Ollama returned an empty Person.");
+    if (!content) {
+      const error = new Error("Ollama returned an empty Person.");
+      logAiResponseFailure(context, rawResponse, error);
+      throw error;
+    }
 
     try {
       return parseContent(
@@ -145,6 +172,7 @@ export const generatePerson = async (
         sources.map(({ id }) => id),
       );
     } catch (error) {
+      logAiResponseFailure(context, rawResponse, error);
       if (attempt === attempts - 1) throw error;
       messages.push(
         { role: "assistant", content },

@@ -8,17 +8,22 @@ import { ActionToast, getActionError } from "./ActionToast";
 afterEach(cleanup);
 
 describe("Action toast", () => {
-  it("shows a waiting notice when the POI has no linked English Wikipedia source", () => {
+  it("shows a waiting notice when no English or Italian Wikipedia source can be resolved", () => {
     render(
       <ActionToast
         toast={getActionError(
-          new Error("source-not-found: No English Wikipedia page is linked to POI example"),
+          new Error(
+            "source-not-found: No unambiguous English or Italian Wikipedia page was found for POI example",
+          ),
         )}
         onDismiss={() => {}}
       />,
     );
 
     expect(screen.getByRole("alert")).toHaveTextContent("Story waiting for a source");
+    expect(screen.getByRole("alert")).toHaveTextContent(
+      "No unambiguous English or Italian Wikipedia page",
+    );
     expect(screen.getByRole("alert")).not.toHaveTextContent("source-not-found");
   });
 

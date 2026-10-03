@@ -14,20 +14,22 @@ export type AdminActionResult = {
 
 export type AdminAction = (formData: FormData) => Promise<AdminActionResult | void>;
 
-export type GeoJsonFeature = {
-  id?: string | number;
-  wikidataId?: string;
-  properties?: Record<string, unknown>;
+export type AdminBatchResult = {
+  geoPlaceId: string;
+  progressId: string;
+  result?: AdminActionResult | void;
+  error?: string;
 };
 
-export type GeoJson = {
-  features?: GeoJsonFeature[];
-};
+export type AdminBatchAction = (formData: FormData) => Promise<AdminBatchResult[]>;
+
+export type { GeoJson, GeoJsonFeature } from "@/server/wikiPipeline/types";
 
 export type PoiItem = {
   id: string;
   name: string;
   wikidata?: string;
+  geoPlaceId?: string;
   featureIndex: number;
 };
 

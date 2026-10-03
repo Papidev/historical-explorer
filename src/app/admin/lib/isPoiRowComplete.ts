@@ -6,7 +6,7 @@ export const isPoiRowComplete = (row: AdminPoiRow) => {
   );
 
   return (
-    row.lastGenerationRun?.status === "success" &&
+    !row.generationErrors?.length &&
     !row.sourcePending &&
     Boolean(row.transformedPoi && row.poiTypes?.types.length && !row.poiTypes.error) &&
     Boolean(

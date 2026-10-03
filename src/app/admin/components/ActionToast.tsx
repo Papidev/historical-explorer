@@ -19,7 +19,7 @@ export const getActionError = (error: unknown): Toast => {
     return {
       tone: "warning",
       title: "Story waiting for a source",
-      description: "This POI has no linked English Wikipedia page.",
+      description: "No unambiguous English or Italian Wikipedia page was found for this POI.",
     };
   }
   if (details.includes("sources-unavailable")) {

@@ -1,4 +1,4 @@
-import { ArrowPathIcon, PlusIcon } from "@heroicons/react/24/outline";
+import { ArrowPathIcon } from "@heroicons/react/24/outline";
 import { SubmitButton } from "../SubmitButton";
 import { ArtifactViewButton } from "./ArtifactViewButton";
 import { CellContent } from "./CellContent";
@@ -29,7 +29,9 @@ export const GeoPlaceCell = ({
   progressDescription,
   onSelectPanel,
   runSingleAction,
-}: ActionCellProps & { progressDescription: string | null }) => {
+}: ActionCellProps & {
+  progressDescription: string | null;
+}) => {
   const isRowEmpty =
     !row.transformedPoi && !row.wikiPoi && !row.storyContent && !row.mainImageArtifact;
 
@@ -41,13 +43,6 @@ export const GeoPlaceCell = ({
         titleTone="poi"
       />
       {progressDescription ? <ProgressMessage description={progressDescription} /> : null}
-      {row.sourcePending ? (
-        <GenerationErrorDetails
-          errors={(row.generationErrors ?? []).filter(({ stage }) => stage === "sources")}
-          label="Source errors"
-          latestOnly
-        />
-      ) : null}
       <GenerationErrorDetails
         errors={(row.generationErrors ?? []).filter(
           ({ stage }) =>
@@ -85,8 +80,8 @@ export const GeoPlaceCell = ({
                   idleLabel="Generate"
                   pendingLabel="Generating..."
                   confirmMessage={generateConfirmMessage}
-                  icon={<PlusIcon />}
-                  tone="primary"
+                  icon={<ArrowPathIcon />}
+                  tone="danger"
                   disabled={isInProgress}
                 />
               </form>
