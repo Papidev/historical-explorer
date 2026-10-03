@@ -6,7 +6,7 @@ import userEvent from "@testing-library/user-event";
 import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 import { http, HttpResponse } from "msw";
 import { setupServer } from "msw/node";
-import type { AdminActionResult } from "../../lib/types";
+import type { AdminActionResult, AdminBatchResult } from "../../lib/types";
 import { PoiRowsTable } from "./index";
 import { RelatedPeopleDrawer } from "./RelatedPeopleDrawer";
 
@@ -20,6 +20,215 @@ afterEach(() => {
 afterAll(() => server.close());
 
 describe("POI actions", () => {
+  it.each([true, false])(
+    "keeps a missing Wikipedia source error in its Wikipedia cell (log available: %s)",
+    async (hasLog) => {
+      const user = userEvent.setup();
+      render(
+        <PoiRowsTable
+          rows={[
+            {
+              id: "aqueduct",
+              rawPoi: { id: "way/997532432", name: "Acquedotto dei Sette Bassi", featureIndex: 0 },
+              transformedPoi: {
+                id: "aqueduct",
+                name: "Acquedotto dei Sette Bassi",
+                featureIndex: 0,
+              },
+              transformedJson: '{"id":"aqueduct"}',
+              sourcePending: true,
+              generationErrors: hasLog
+                ? [
+                    {
+                      stage: "sources",
+                      message:
+                        "No unambiguous English or Italian Wikipedia page was found for this POI.",
+                      at: "Today",
+                      operation: "draftStory.generate",
+                    },
+                  ]
+                : [],
+            },
+          ]}
+          globalArtifacts={[]}
+          aiSelectionRef={{ current: { mode: "local", model: "test-model" } }}
+          generateDraftStoryAction={async () => {}}
+          generateDraftStoriesAction={async () => []}
+          refreshStoryContentAction={async () => {}}
+          resolveRelatedPeopleAction={async () => {}}
+          refreshMainImageCandidatesAction={async () => {}}
+          refreshPoiTypesAction={async () => {}}
+          selectMainImageCandidateAction={async () => {}}
+        />,
+      );
+      const cells = within(
+        screen.getByRole("row", { name: /Acquedotto dei Sette Bassi/ }),
+      ).getAllByRole("cell");
+      expect(within(cells[2]).getByRole("status")).toHaveTextContent(
+        "No unambiguous English or Italian Wikipedia page was found for this POI.",
+      );
+      expect(within(cells[2]).getByRole("status")).toBeVisible();
+      expect(Boolean(within(cells[2]).queryByText("Latest error"))).toBe(hasLog);
+      expect(within(cells[2]).getByText("Wikipedia source not acquired")).toBeVisible();
+      expect(within(cells[0]).queryByText("Latest error")).not.toBeInTheDocument();
+      expect(cells).toHaveLength(6);
+      expect(within(cells[3]).getByText("No Wikidata ID")).toBeVisible();
+      expect(within(cells[3]).getByRole("button", { name: "Refresh types" })).toBeEnabled();
+      await user.click(within(cells[3]).getByRole("button", { name: "Refresh types" }));
+      expect(screen.getByRole("dialog", { name: "Confirm refresh types" })).toBeVisible();
+      expect(
+        screen.getByText("Refresh Wikidata types for this POI? This will replace the saved types."),
+      ).toBeVisible();
+      await user.click(screen.getByRole("button", { name: "Cancel" }));
+      expect(
+        screen.queryByRole("dialog", { name: "Confirm refresh types" }),
+      ).not.toBeInTheDocument();
+
+      ["Geo Place", "POI", "Wikipedia Text", "Wikidata Types", "Story", "Main Image"].forEach(
+        (label, index) =>
+          expect(within(screen.getAllByRole("columnheader")[index]).getByText(label)).toBeVisible(),
+      );
+      expect(within(cells[1]).getByRole("button", { name: "View POI JSON" })).toBeVisible();
+      expect(within(cells[1]).getByText("aqueduct")).toBeVisible();
+      for (const index of [4, 5]) expect(cells[index]).toHaveTextContent(/^$/);
+    },
+  );
+
+  it("generates the first three To do POIs with one click and independent outcomes", async () => {
+    const submitted: FormData[] = [];
+    let finish: (results: AdminBatchResult[]) => void = () => {};
+    const response = new Promise<AdminBatchResult[]>((resolve) => {
+      finish = resolve;
+    });
+    render(
+      <PoiRowsTable
+        rows={["One", "Two", "Three", "Four"].map((name) => ({
+          id: name,
+          wikidataId: "Q100",
+          rawPoi: { id: name, name, featureIndex: 0 },
+        }))}
+        globalArtifacts={[]}
+        aiSelectionRef={{ current: { mode: "cloud", model: "cloud-model" } }}
+        generateDraftStoryAction={async () => {
+          throw new Error("Use the batch action");
+        }}
+        generateDraftStoriesAction={async (formData) => {
+          submitted.push(formData);
+          return response;
+        }}
+        refreshStoryContentAction={async () => {}}
+        resolveRelatedPeopleAction={async () => {}}
+        refreshMainImageCandidatesAction={async () => {}}
+        refreshPoiTypesAction={async () => {}}
+        selectMainImageCandidateAction={async () => {}}
+      />,
+    );
+    const user = userEvent.setup();
+    expect(screen.queryByRole("checkbox", { name: /for generation/ })).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Generate next 3" }));
+    expect(screen.getByRole("dialog", { name: "Batch generation" })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Hide" }));
+    expect(
+      screen.queryByRole("list", { name: "Batch generation results" }),
+    ).not.toBeInTheDocument();
+    expect(submitted).toHaveLength(1);
+    expect(submitted[0].getAll("geoPlaceId")).toEqual(["One", "Two", "Three"]);
+    expect(submitted[0].get("aiMode")).toBe("cloud");
+    expect(submitted[0].get("aiModel")).toBe("cloud-model");
+    expect(new Set(submitted[0].getAll("progressId")).size).toBe(3);
+    expect(screen.getByRole("button", { name: "Generating batch..." })).toBeDisabled();
+    expect(
+      within(screen.getByRole("row", { name: /Four/ })).getByRole("button", { name: "Generate" }),
+    ).toBeDisabled();
+    await act(async () => {
+      finish(
+        submitted[0].getAll("geoPlaceId").map((id, index) => ({
+          geoPlaceId: String(id),
+          progressId: String(submitted[0].getAll("progressId")[index]),
+          ...(index === 1
+            ? { error: "Provider unavailable" }
+            : index === 2
+              ? { result: { warning: { title: "Missing image" } } }
+              : { result: {} }),
+        })),
+      );
+    });
+    await user.click(screen.getByRole("button", { name: "Show batch progress" }));
+    const results = within(screen.getByRole("list", { name: "Batch generation results" }));
+    expect(results.getByText(/: Completed$/)).toBeInTheDocument();
+    expect(results.getByText(/: Failed$/)).toBeInTheDocument();
+    expect(results.getByText(/: Completed with issues$/)).toBeInTheDocument();
+    expect(results.getByText("Provider unavailable")).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Close" }));
+    expect(screen.queryByText("Provider unavailable")).not.toBeInTheDocument();
+    expect(submitted).toHaveLength(1);
+    expect(screen.getByRole("button", { name: "Generate next 3" })).toBeEnabled();
+  });
+
+  it("picks the next To do POIs across pages and respects search, status filters, and generated IDs", async () => {
+    const submitted: FormData[] = [];
+    const props = {
+      globalArtifacts: [],
+      aiSelectionRef: { current: { mode: "cloud" as const, model: "cloud-model" } },
+      generateDraftStoryAction: async () => {},
+      generateDraftStoriesAction: async (formData: FormData) => {
+        submitted.push(formData);
+        return formData.getAll("geoPlaceId").map((id, index) => ({
+          geoPlaceId: String(id),
+          progressId: String(formData.getAll("progressId")[index]),
+          result: {},
+        }));
+      },
+      refreshStoryContentAction: async () => {},
+      resolveRelatedPeopleAction: async () => {},
+      refreshMainImageCandidatesAction: async () => {},
+      refreshPoiTypesAction: async () => {},
+      selectMainImageCandidateAction: async () => {},
+    };
+    const rows = Array.from({ length: 55 }, (_, index) => ({
+      id: `Q${index}`,
+      rawPoi: { id: `Q${index}`, name: `Place ${index}`, featureIndex: index },
+      ...(index === 0 ? { sourcePending: true } : {}),
+      ...(index === 1
+        ? { transformedPoi: { id: "generated-1", name: "Place 1", featureIndex: index } }
+        : {}),
+    }));
+    const { rerender } = render(<PoiRowsTable {...props} rows={rows} />);
+    const user = userEvent.setup();
+    await user.click(screen.getByRole("button", { name: "Next page" }));
+    await user.click(screen.getByRole("button", { name: "Generate next 3" }));
+    expect(submitted[0].getAll("geoPlaceId")).toEqual(["Q2", "Q3", "Q4"]);
+    await user.click(screen.getByRole("button", { name: "Close" }));
+    rerender(
+      <PoiRowsTable
+        {...props}
+        rows={rows.map((row) =>
+          ["Q2", "Q3", "Q4"].includes(row.id)
+            ? {
+                ...row,
+                id: `generated-${row.id}`,
+                transformedPoi: { ...row.rawPoi, id: `generated-${row.id}` },
+              }
+            : row,
+        )}
+      />,
+    );
+    await user.click(screen.getByRole("button", { name: "Generate next 3" }));
+    expect(submitted[1].getAll("geoPlaceId")).toEqual(["Q5", "Q6", "Q7"]);
+    await user.click(screen.getByRole("button", { name: "Close" }));
+    const search = screen.getByRole("searchbox", { name: "Search POIs by name" });
+    await user.type(search, "Place 53");
+    await user.click(screen.getByRole("checkbox", { name: "To do" }));
+    expect(screen.getByRole("button", { name: "Generate next 3" })).toBeDisabled();
+    await user.click(screen.getByRole("checkbox", { name: "To do" }));
+    await user.click(screen.getByRole("button", { name: "Generate next 3" }));
+    expect(submitted[2].getAll("geoPlaceId")).toEqual(["Q53"]);
+    await user.click(screen.getByRole("button", { name: "Close" }));
+    await user.clear(search);
+    await user.type(search, "Missing POI");
+    expect(screen.getByRole("button", { name: "Generate next 3" })).toBeDisabled();
+  });
+
   it("shows resolution errors only for unresolved People", () => {
     render(
       <RelatedPeopleDrawer
@@ -94,6 +303,7 @@ describe("POI actions", () => {
           globalArtifacts={[]}
           aiSelectionRef={{ current: { mode: "local", model: "test-model" } }}
           generateDraftStoryAction={async () => {}}
+          generateDraftStoriesAction={async () => []}
           refreshStoryContentAction={async () => {}}
           resolveRelatedPeopleAction={async () => {}}
           refreshMainImageCandidatesAction={async () => {}}
@@ -112,6 +322,7 @@ describe("POI actions", () => {
       <PoiRowsTable
         rows={["Incomplete POI", "Complete POI", "No candidates POI"].map((name) => ({
           id: name,
+          wikidataId: "Q100",
           rawPoi: { id: name, name, featureIndex: 0 },
           transformedPoi: { id: name, name, featureIndex: 0 },
           wikiPoi: { id: name, name, featureIndex: 0 },
@@ -160,6 +371,7 @@ describe("POI actions", () => {
         globalArtifacts={[]}
         aiSelectionRef={{ current: { mode: "local", model: "test-model" } }}
         generateDraftStoryAction={async () => {}}
+        generateDraftStoriesAction={async () => []}
         refreshStoryContentAction={async () => {}}
         resolveRelatedPeopleAction={async () => {}}
         refreshMainImageCandidatesAction={async () => {}}
@@ -170,6 +382,7 @@ describe("POI actions", () => {
 
     const incomplete = within(screen.getByRole("row", { name: /Incomplete POI/ }));
     expect(incomplete.getByText("Wikidata types not generated")).toBeVisible();
+    expect(incomplete.getByRole("button", { name: "Refresh types" })).toBeEnabled();
     expect(incomplete.getByText("Missing license")).toBeVisible();
     expect(incomplete.getByRole("cell", { name: /Wikidata types not generated/ })).toHaveClass(
       "bg-rose-100/80",
@@ -202,108 +415,154 @@ describe("POI actions", () => {
     expect(screen.queryByText("Errors", { exact: true })).not.toBeInTheDocument();
   });
 
-  it("searches POI names across pages and combines search with status filters", async () => {
-    render(
-      <PoiRowsTable
-        rows={[
-          {
-            id: "failed-poi",
-            rawPoi: { id: "failed-poi", name: "Failed POI", featureIndex: 0 },
-            storyContent: {
-              introduction: { text: "An incomplete Story", sourceIds: ["wikipedia"] },
-              topics: { history: [], design: [], art: [] },
-              relatedPeople: [{ name: "Titus", sourceIds: ["wikipedia"] }],
-            },
-            generationErrors: [
-              {
-                at: "2026-09-25",
-                operation: "relatedPeople.resolve",
-                stage: "relatedPeople",
-                name: "Titus",
-                message: "Could not resolve Titus",
+  it.each(["pagination", "search", "status filters"])(
+    "handles POI %s across pages",
+    async (scenario) => {
+      render(
+        <PoiRowsTable
+          rows={[
+            {
+              id: "failed-poi",
+              rawPoi: { id: "failed-poi", name: "Failed POI", featureIndex: 0 },
+              storyContent: {
+                introduction: { text: "An incomplete Story", sourceIds: ["wikipedia"] },
+                topics: { history: [], design: [], art: [] },
+                relatedPeople: [{ name: "Titus", sourceIds: ["wikipedia"] }],
               },
-            ],
-          },
-          {
-            id: "pending-poi",
-            rawPoi: { id: "pending-poi", name: "Pending POI", featureIndex: 1 },
-          },
-          {
-            id: "source-poi",
-            rawPoi: { id: "source-poi", name: "Source POI", featureIndex: 2 },
-            sourcePending: true,
-          },
-          ...Array.from({ length: 100 }, (_, index) => ({
-            id: `pending-${index}`,
-            rawPoi: { id: `pending-${index}`, name: `Pending ${index}`, featureIndex: index + 3 },
-            ...(index === 99
-              ? {
-                  transformedPoi: { id: "pending-99", name: "Renamed location", featureIndex: 102 },
-                }
-              : {}),
-          })),
-        ]}
-        globalArtifacts={[]}
-        aiSelectionRef={{ current: { mode: "local", model: "qwen3.5:9b" } }}
-        generateDraftStoryAction={async () => {}}
-        refreshStoryContentAction={async () => {}}
-        resolveRelatedPeopleAction={async () => {}}
-        refreshMainImageCandidatesAction={async () => {}}
-        refreshPoiTypesAction={async () => {}}
-        selectMainImageCandidateAction={async () => {}}
-      />,
-    );
+              generationErrors: [
+                {
+                  at: "2026-09-25",
+                  operation: "relatedPeople.resolve",
+                  stage: "relatedPeople",
+                  name: "Titus",
+                  message: "Could not resolve Titus",
+                },
+              ],
+            },
+            {
+              id: "pending-poi",
+              rawPoi: { id: "pending-poi", name: "Pending POI", featureIndex: 1 },
+            },
+            {
+              id: "source-poi",
+              rawPoi: { id: "source-poi", name: "Source POI", featureIndex: 2 },
+              sourcePending: true,
+            },
+            ...Array.from({ length: 100 }, (_, index) => ({
+              id: `pending-${index}`,
+              rawPoi: { id: `pending-${index}`, name: `Pending ${index}`, featureIndex: index + 3 },
+              ...(index === 99
+                ? {
+                    transformedPoi: {
+                      id: "pending-99",
+                      name: "Renamed location",
+                      featureIndex: 102,
+                    },
+                  }
+                : {}),
+            })),
+          ]}
+          globalArtifacts={[]}
+          aiSelectionRef={{ current: { mode: "local", model: "qwen3.5:9b" } }}
+          generateDraftStoryAction={async () => {}}
+          generateDraftStoriesAction={async () => []}
+          refreshStoryContentAction={async () => {}}
+          resolveRelatedPeopleAction={async () => {}}
+          refreshMainImageCandidatesAction={async () => {}}
+          refreshPoiTypesAction={async () => {}}
+          selectMainImageCandidateAction={async () => {}}
+        />,
+      );
 
-    const user = userEvent.setup();
-    expect(screen.getByText("Showing 1–50 of 103 POIs")).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "Previous page" })).toBeDisabled();
-    expect(screen.queryByText("Pending 99", { exact: true })).not.toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Next page" }));
-    expect(screen.getByText("Showing 51–100 of 103 POIs")).toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Next page" }));
-    expect(screen.getByText("Showing 101–103 of 103 POIs")).toBeInTheDocument();
-    expect(screen.getByText("Pending 99", { exact: true })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "Next page" })).toBeDisabled();
-    await user.click(screen.getByRole("button", { name: "Previous page" }));
-    expect(screen.getByText("Showing 51–100 of 103 POIs")).toBeInTheDocument();
+      const user = userEvent.setup();
+      expect(screen.getByText("Showing 1–50 of 103 POIs")).toBeInTheDocument();
+      expect(
+        within(screen.getByRole("navigation", { name: "POI pagination" })).getByRole("button", {
+          name: "Previous page",
+        }),
+      ).toBeDisabled();
+      expect(screen.queryByText("Pending 99", { exact: true })).not.toBeInTheDocument();
+      if (scenario === "pagination") {
+        await user.click(
+          within(screen.getByRole("navigation", { name: "POI pagination" })).getByRole("button", {
+            name: "Next page",
+          }),
+        );
+        expect(screen.getByText("Showing 51–100 of 103 POIs")).toBeInTheDocument();
+        await user.click(
+          within(screen.getByRole("navigation", { name: "POI pagination" })).getByRole("button", {
+            name: "Next page",
+          }),
+        );
+        expect(screen.getByText("Showing 101–103 of 103 POIs")).toBeInTheDocument();
+        expect(screen.getByText("Pending 99", { exact: true })).toBeInTheDocument();
+        expect(
+          within(screen.getByRole("navigation", { name: "POI pagination" })).getByRole("button", {
+            name: "Next page",
+          }),
+        ).toBeDisabled();
+        await user.click(
+          within(screen.getByRole("navigation", { name: "POI pagination" })).getByRole("button", {
+            name: "Previous page",
+          }),
+        );
+        expect(screen.getByText("Showing 51–100 of 103 POIs")).toBeInTheDocument();
 
-    const search = screen.getByRole("searchbox", { name: "Search POIs by name" });
-    await user.type(search, "  pEnDiNg 99  ");
-    expect(screen.getByText("Showing 1–1 of 1 POIs")).toBeInTheDocument();
-    expect(screen.getByText("Pending 99", { exact: true })).toBeInTheDocument();
-    expect(screen.queryByText("Failed POI")).not.toBeInTheDocument();
-    await user.clear(search);
-    await user.type(search, "renamed");
-    expect(screen.getByText("Pending 99", { exact: true })).toBeInTheDocument();
-    await user.click(screen.getByRole("checkbox", { name: "Needs attention" }));
-    expect(screen.getByText("No POIs match the search and selected statuses.")).toBeInTheDocument();
-    await user.click(screen.getByRole("checkbox", { name: "Needs attention" }));
-    expect(screen.getByText("Pending 99", { exact: true })).toBeInTheDocument();
-    await user.clear(search);
-    await user.type(search, "pending-99");
-    expect(screen.getByText("No POIs match the search and selected statuses.")).toBeInTheDocument();
-    await user.clear(search);
-    expect(screen.getByText("Showing 1–50 of 103 POIs")).toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Next page" }));
+        return;
+      }
 
-    await user.click(screen.getByRole("checkbox", { name: "Needs attention" }));
-    expect(screen.getByText("Showing 1–50 of 101 POIs")).toBeInTheDocument();
-    expect(screen.queryByText("Failed POI")).not.toBeInTheDocument();
-    expect(screen.getByText("Pending POI")).toBeInTheDocument();
-    expect(screen.getByText("Source POI")).toBeInTheDocument();
+      await user.click(
+        within(screen.getByRole("navigation", { name: "POI pagination" })).getByRole("button", {
+          name: "Next page",
+        }),
+      );
 
-    await user.click(screen.getByRole("checkbox", { name: "Needs source" }));
-    expect(screen.queryByText("Source POI")).not.toBeInTheDocument();
-    await user.click(screen.getByRole("checkbox", { name: "To do" }));
-    expect(screen.getByText("No POIs match the selected statuses.")).toBeInTheDocument();
-    expect(screen.queryByRole("navigation", { name: "POI pagination" })).not.toBeInTheDocument();
-    await user.click(screen.getByRole("checkbox", { name: "To do" }));
-    expect(screen.getByText("Showing 1–50 of 100 POIs")).toBeInTheDocument();
-    expect(screen.getByText("Pending POI")).toBeInTheDocument();
-  });
+      if (scenario === "search") {
+        const search = screen.getByRole("searchbox", { name: "Search POIs by name" });
+        await user.click(search);
+        await user.paste("  pEnDiNg 99  ");
+        expect(screen.getByText("Showing 1–1 of 1 POIs")).toBeInTheDocument();
+        expect(screen.getByText("Pending 99", { exact: true })).toBeInTheDocument();
+        expect(screen.queryByText("Failed POI")).not.toBeInTheDocument();
+        await user.clear(search);
+        await user.paste("renamed");
+        expect(screen.getByText("Pending 99", { exact: true })).toBeInTheDocument();
+        await user.click(screen.getByRole("checkbox", { name: "Needs attention" }));
+        expect(
+          screen.getByText("No POIs match the search and selected statuses."),
+        ).toBeInTheDocument();
+        await user.click(screen.getByRole("checkbox", { name: "Needs attention" }));
+        expect(screen.getByText("Pending 99", { exact: true })).toBeInTheDocument();
+        await user.clear(search);
+        await user.paste("pending-99");
+        expect(
+          screen.getByText("No POIs match the search and selected statuses."),
+        ).toBeInTheDocument();
+        await user.clear(search);
+        expect(screen.getByText("Showing 1–50 of 103 POIs")).toBeInTheDocument();
+
+        return;
+      }
+
+      await user.click(screen.getByRole("checkbox", { name: "Needs attention" }));
+      expect(screen.getByText("Showing 1–50 of 101 POIs")).toBeInTheDocument();
+      expect(screen.queryByText("Failed POI")).not.toBeInTheDocument();
+      expect(screen.getByText("Pending POI")).toBeInTheDocument();
+      expect(screen.getByText("Source POI")).toBeInTheDocument();
+
+      await user.click(screen.getByRole("checkbox", { name: "Needs source" }));
+      expect(screen.queryByText("Source POI")).not.toBeInTheDocument();
+      await user.click(screen.getByRole("checkbox", { name: "To do" }));
+      expect(screen.getByText("No POIs match the selected statuses.")).toBeInTheDocument();
+      expect(screen.queryByRole("navigation", { name: "POI pagination" })).not.toBeInTheDocument();
+      await user.click(screen.getByRole("checkbox", { name: "To do" }));
+      expect(screen.getByText("Showing 1–50 of 100 POIs")).toBeInTheDocument();
+      expect(screen.getByText("Pending POI")).toBeInTheDocument();
+    },
+  );
 
   it.each(["success", "warning"])(
-    "reopens the same log while running and after %s",
+    "shows and hides the action log without a toolbar shortcut after %s",
     async (outcome) => {
       let finishResolution: (value: AdminActionResult) => void = () => {};
       const resolution = new Promise<AdminActionResult>((resolve) => {
@@ -342,6 +601,7 @@ describe("POI actions", () => {
           globalArtifacts={[]}
           aiSelectionRef={{ current: { mode: "local", model: "qwen3.5:9b" } }}
           generateDraftStoryAction={async () => {}}
+          generateDraftStoriesAction={async () => []}
           refreshStoryContentAction={async () => {}}
           resolveRelatedPeopleAction={() => resolution}
           refreshMainImageCandidatesAction={async () => {}}
@@ -363,11 +623,7 @@ describe("POI actions", () => {
 
       await user.click(screen.getByRole("button", { name: "Hide" }));
       expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
-      await user.click(screen.getByRole("button", { name: "Show generation log" }));
-      expect(
-        await screen.findByText("Generating Titus with Ollama (qwen3.5:9b)."),
-      ).toBeInTheDocument();
-      await user.click(screen.getByRole("button", { name: "Hide" }));
+      expect(screen.queryByRole("button", { name: "Show generation log" })).not.toBeInTheDocument();
 
       await act(async () => {
         finishResolution(
@@ -377,12 +633,8 @@ describe("POI actions", () => {
         );
       });
       expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
-      await user.click(screen.getByRole("button", { name: "Show generation log" }));
-      expect(
-        await screen.findByText("Generating Titus with Ollama (qwen3.5:9b)."),
-      ).toBeInTheDocument();
-      expect(screen.getByRole("button", { name: "Close" })).toBeInTheDocument();
-      expect(requestedRunIds.length).toBeGreaterThanOrEqual(3);
+      expect(screen.queryByRole("button", { name: "Show generation log" })).not.toBeInTheDocument();
+      expect(requestedRunIds.length).toBeGreaterThanOrEqual(1);
       expect(new Set(requestedRunIds).size).toBe(1);
     },
   );

@@ -106,6 +106,7 @@ export const createFilesystemStoryWorkflowRepository = (city: string): StoryWork
           kind: source.kind,
           title: source.title,
           url: source.url,
+          wikidataId: source.wikidataId,
           links: source.links,
         },
         null,

@@ -5,7 +5,7 @@ import { sanitizePoiIdForFile, toCitySlug } from "@/server/wikiPipeline/normaliz
 import type { PoiInput } from "@/server/wikiPipeline/types";
 
 export type PoiType = { id: string; label: string };
-export type PoiTypesResult = { types: PoiType[]; error?: string };
+export type PoiTypesResult = { types: PoiType[]; error?: string; skipped?: "no-wikidata-id" };
 
 type WikidataEntity = {
   missing?: string;
@@ -85,7 +85,7 @@ export const createPoiTypes = ({
         throw new Error(`POI ${poiId} was not found.`);
       }
       if (!pointOfInterest.sourceHints.wikidata) {
-        return { types: [], error: "No Wikidata ID." };
+        return { types: [], skipped: "no-wikidata-id" };
       }
 
       let result: PoiTypesResult;

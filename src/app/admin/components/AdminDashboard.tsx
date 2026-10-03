@@ -3,7 +3,7 @@
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import { useRef } from "react";
 import type { AiModeOption, AiSelection } from "../lib/aiModels";
-import type { AdminAction, AdminArtifact, AdminPoiRow } from "../lib/types";
+import type { AdminAction, AdminBatchAction, AdminArtifact, AdminPoiRow } from "../lib/types";
 import { AiGenerationSettings } from "./AiGenerationSettings";
 import { PoiRowsTable } from "./PoiRowsTable";
 
@@ -13,6 +13,7 @@ export const AdminDashboard = ({
   aiModeOptions,
   initialAiSelection,
   generateDraftStoryAction,
+  generateDraftStoriesAction,
   refreshStoryContentAction,
   resolveRelatedPeopleAction,
   refreshMainImageCandidatesAction,
@@ -24,6 +25,7 @@ export const AdminDashboard = ({
   aiModeOptions: readonly AiModeOption[];
   initialAiSelection: AiSelection;
   generateDraftStoryAction: AdminAction;
+  generateDraftStoriesAction: AdminBatchAction;
   refreshStoryContentAction: AdminAction;
   resolveRelatedPeopleAction: AdminAction;
   refreshMainImageCandidatesAction: AdminAction;
@@ -61,6 +63,7 @@ export const AdminDashboard = ({
         globalArtifacts={globalArtifacts}
         aiSelectionRef={aiSelectionRef}
         generateDraftStoryAction={generateDraftStoryAction}
+        generateDraftStoriesAction={generateDraftStoriesAction}
         refreshStoryContentAction={refreshStoryContentAction}
         resolveRelatedPeopleAction={resolveRelatedPeopleAction}
         refreshMainImageCandidatesAction={refreshMainImageCandidatesAction}

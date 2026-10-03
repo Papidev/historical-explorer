@@ -11,6 +11,50 @@ afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 
 describe("Main Image Candidates", () => {
+  it("discovers the page image from the Italian source edition", async () => {
+    server.use(
+      http.get("https://it.wikipedia.org/w/api.php", ({ request }) => {
+        expect(new URL(request.url).searchParams.get("titles")).toBe("Acquedotto dei Sette Bassi");
+        return HttpResponse.json({ query: { pages: [{ pageimage: "Aqueduct.jpg" }] } });
+      }),
+      http.get("https://commons.wikimedia.org/w/api.php", () =>
+        HttpResponse.json({
+          query: {
+            pages: [
+              {
+                imageinfo: [
+                  {
+                    url: "https://upload.wikimedia.org/original.jpg",
+                    thumburl: "https://upload.wikimedia.org/thumb.jpg",
+                    extmetadata: {
+                      LicenseShortName: { value: "CC BY-SA 4.0" },
+                      Artist: { value: "Photographer" },
+                    },
+                  },
+                ],
+              },
+            ],
+          },
+        }),
+      ),
+    );
+    await expect(
+      fetchMainImageCandidates(
+        {
+          id: "sette-bassi",
+          name: "Acquedotto dei Sette Bassi",
+          city: "Rome",
+          coordinates: { lat: 41.8, lng: 12.5 },
+          sourceHints: {},
+        },
+        "Acquedotto dei Sette Bassi",
+        "it",
+      ),
+    ).resolves.toMatchObject([
+      { commonsFileName: "Aqueduct.jpg", discoveredVia: "wikipedia-page-image" },
+    ]);
+  });
+
   it("uses the POI Commons category when the POI has no English Wikipedia page", async () => {
     const poi: PoiInput = {
       id: "basilica-costantiniana-di-s-agnese",

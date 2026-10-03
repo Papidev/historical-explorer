@@ -4,9 +4,9 @@ import type {
   MainImageCandidate,
   MainImageDiscoveredVia,
   PoiInput,
+  WikipediaLanguage,
 } from "@/server/wikiPipeline/types";
 
-const WIKIPEDIA_API = "https://en.wikipedia.org/w/api.php";
 const WIKIDATA_API = "https://www.wikidata.org/w/api.php";
 const COMMONS_API = "https://commons.wikimedia.org/w/api.php";
 const COMMONS_FILE_BASE_URL = "https://commons.wikimedia.org/wiki/File:";
@@ -73,8 +73,8 @@ const discoverP18FileName = async (wikidataId?: string) => {
   return typeof value === "string" ? value : undefined;
 };
 
-const discoverPageImageFileName = async (title: string) => {
-  const url = new URL(WIKIPEDIA_API);
+const discoverPageImageFileName = async (title: string, language: WikipediaLanguage = "en") => {
+  const url = new URL(`https://${language}.wikipedia.org/w/api.php`);
   url.searchParams.set("action", "query");
   url.searchParams.set("prop", "pageimages");
   url.searchParams.set("titles", title);
@@ -174,9 +174,18 @@ const fetchCommonsCandidate = async (
   };
 };
 
-export const fetchMainImageCandidates = async (poi: PoiInput, wikipediaTitle?: string) => {
+export const fetchMainImageCandidates = async (
+  poi: PoiInput,
+  wikipediaTitle?: string,
+  wikipediaLanguage: WikipediaLanguage = "en",
+) => {
   const commonsCategory = poi.sourceHints.wikimediaCommons?.startsWith("Category:")
     ? poi.sourceHints.wikimediaCommons
+    : undefined;
+  const page = !commonsCategory
+    ? wikipediaTitle
+      ? { title: wikipediaTitle, language: wikipediaLanguage }
+      : (await resolvePageForPoi(poi)).selected
     : undefined;
   const discoveredFiles: Array<{
     commonsFileName?: string;
@@ -193,9 +202,7 @@ export const fetchMainImageCandidates = async (poi: PoiInput, wikipediaTitle?: s
         }))
       : [
           {
-            commonsFileName: await discoverPageImageFileName(
-              wikipediaTitle ?? (await resolvePageForPoi(poi)).selected.title,
-            ),
+            commonsFileName: await discoverPageImageFileName(page!.title, page!.language),
             discoveredVia: "wikipedia-page-image" as const,
           },
         ]),

@@ -1,7 +1,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { getFeatureId, pickString, sanitizePoiIdForFile, toCitySlug } from "./normalize";
-import type { GeoJson, PoiInput } from "./types";
+import type { GeoJson, PoiInput, WikipediaLanguage } from "./types";
 
 const parseGeoJson = (raw: string): GeoJson => {
   try {
@@ -72,8 +72,8 @@ export const buildOutputFilePath = (outputDir: string, poiId: string) =>
 export const buildSourceMetadataFilePath = (outputDir: string, poiId: string) =>
   path.join(outputDir, `${sanitizePoiIdForFile(poiId)}.metadata.json`);
 
-export const buildWikipediaPageUrl = (title: string) =>
-  `https://en.wikipedia.org/wiki/${encodeURIComponent(title.trim().replace(/\s+/g, "_"))}`;
+export const buildWikipediaPageUrl = (title: string, language: WikipediaLanguage = "en") =>
+  `https://${language}.wikipedia.org/wiki/${encodeURIComponent(title.trim().replace(/\s+/g, "_"))}`;
 
 export const outputExists = (outputFilePath: string) => existsSync(outputFilePath);
 

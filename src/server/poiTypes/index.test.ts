@@ -95,7 +95,7 @@ describe("POI types", () => {
 
     await expect(poiTypes.refresh(pointOfInterest.id)).resolves.toEqual({
       types: [],
-      error: "No Wikidata ID.",
+      skipped: "no-wikidata-id",
     });
     expect(poiTypes.get(pointOfInterest.id)).toBeUndefined();
   });

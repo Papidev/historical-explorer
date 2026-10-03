@@ -1,5 +1,5 @@
 import type { MainImageCandidate, PoiInput } from "@/server/wikiPipeline/types";
-import { EnglishWikipediaSourceMissingError } from "@/server/wikiPipeline/resolve";
+import { WikipediaSourceMissingError } from "@/server/wikiPipeline/resolve";
 import type { StoryContent } from "./storyContent";
 import {
   StoryWorkflowError,
@@ -42,6 +42,7 @@ export type StoryWorkflowDependencies = {
   generateMainImageCandidates(
     pointOfInterest: PoiInput,
     wikipediaTitle?: string,
+    wikipediaLanguage?: "en" | "it",
   ): Promise<MainImageCandidate[]>;
   generateStoryContent(input: {
     pointOfInterest: PoiInput;
@@ -111,11 +112,9 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
       console.error(`[sources] Acquisition failed for ${pointOfInterest.id}.`, cause);
       throw new StoryWorkflowError({
         code:
-          cause instanceof EnglishWikipediaSourceMissingError
-            ? "source-not-found"
-            : "sources-unavailable",
+          cause instanceof WikipediaSourceMissingError ? "source-not-found" : "sources-unavailable",
         stage: "sources",
-        retryable: !(cause instanceof EnglishWikipediaSourceMissingError),
+        retryable: !(cause instanceof WikipediaSourceMissingError),
         cause,
       });
     }
@@ -138,9 +137,11 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
     const previous = await dependencies.repository.get(pointOfInterest.id);
     let candidates: MainImageCandidate[];
     try {
+      const source = (sources ?? previous?.sources)?.find(({ kind }) => kind === "wikipedia");
       candidates = await dependencies.generateMainImageCandidates(
         pointOfInterest,
-        (sources ?? previous?.sources)?.find(({ kind }) => kind === "wikipedia")?.title,
+        source?.title,
+        source && new URL(source.url).hostname === "it.wikipedia.org" ? "it" : "en",
       );
     } catch (cause) {
       throw new StoryWorkflowError({
@@ -245,9 +246,9 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
 
   return {
     draftStory: {
-      generate: async ({ poiId, ai, onProgress }) => {
+      generate: async ({ poiId, ai, onProgress, onSourcesAcquired }) => {
         onProgress?.("Finding the Point of Interest.");
-        const pointOfInterest = await findPointOfInterest(poiId, dependencies);
+        let pointOfInterest = await findPointOfInterest(poiId, dependencies);
         onProgress?.("Fetching the Wikipedia Source.");
         let sources: Source[];
         try {
@@ -261,6 +262,10 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
             }
           }
           throw error;
+        }
+        if (onSourcesAcquired) {
+          await onSourcesAcquired(sources);
+          pointOfInterest = await findPointOfInterest(poiId, dependencies);
         }
         let mainImageCandidates: "generated" | "failed" = "generated";
         let mainImageCandidatesError: string | undefined;

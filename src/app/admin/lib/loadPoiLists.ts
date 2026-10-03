@@ -4,6 +4,9 @@ import { readGenerationMetadata, type GenerationMetadata } from "@/server/genera
 import { readGenerationRuns } from "@/server/generationRunLog";
 import { storyWorkflow, type DraftStorySnapshot, type Source } from "@/server/storyWorkflow";
 import { personRepository } from "@/server/person/filesystemRepository";
+import { getPoiGeoPlaceId } from "@/server/pointOfInterest/getPoiGeoPlaceId";
+import { getFeatureId } from "@/server/wikiPipeline/normalize";
+import { sanitizePoiIdForFile } from "@/server/wikiPipeline/normalize";
 import { poiTypes } from "@/server/poiTypes";
 import {
   buildSourceMetadataFilePath,
@@ -18,6 +21,7 @@ import type {
   MainImageCandidatesArtifact,
   PoiItem,
 } from "./types";
+import { getCurrentGenerationErrors } from "./getCurrentGenerationErrors";
 import { getPoiRowStatusGroup } from "./getPoiRowStatusGroup";
 
 const toRowKey = (value: string) => value.trim().toLowerCase();
@@ -106,7 +110,11 @@ const readArtifact = ({
     : undefined;
 };
 
-const toPoiItems = (features: GeoJsonFeature[] | undefined, raw = false) =>
+export const toPoiItems = (
+  features: GeoJsonFeature[] | undefined,
+  raw = false,
+  geoPlaces: GeoJsonFeature[] = [],
+) =>
   (features ?? []).map((feature, index) => {
     const properties = feature.properties ?? {};
     const wikidata =
@@ -121,7 +129,15 @@ const toPoiItems = (features: GeoJsonFeature[] | undefined, raw = false) =>
       `missing-id-${index}`;
     const name = (typeof properties.name === "string" && properties.name.trim()) || id;
 
-    return { id, name, wikidata, featureIndex: index } satisfies PoiItem;
+    return {
+      id,
+      name,
+      wikidata,
+      geoPlaceId: raw
+        ? getFeatureId(feature, `missing-id-${index}`)
+        : getPoiGeoPlaceId(feature, geoPlaces),
+      featureIndex: index,
+    } satisfies PoiItem;
   });
 
 const toSnapshotItem = (snapshot: DraftStorySnapshot, index: number) => ({
@@ -130,7 +146,7 @@ const toSnapshotItem = (snapshot: DraftStorySnapshot, index: number) => ({
   featureIndex: index,
 });
 
-const toPoiRows = (
+export const toPoiRows = (
   rawPois: PoiItem[],
   rawUpdatedAt: string,
   generationMetadata: GenerationMetadata,
@@ -149,6 +165,7 @@ const toPoiRows = (
   }>,
 ) => {
   const rowsById = new Map<string, AdminPoiRow>();
+  const duplicatePoiIds = new Set<string>();
 
   for (const rawPoi of rawPois) {
     rowsById.set(toRowKey(rawPoi.id), { id: rawPoi.id, rawPoi, rawUpdatedAt });
@@ -156,11 +173,21 @@ const toPoiRows = (
 
   for (const { item, json, updatedAt } of transformedPois) {
     const rowKey = toRowKey(item.id);
-    const rawRowEntry = item.wikidata
-      ? Array.from(rowsById.entries()).find(
-          ([, candidate]) => candidate.rawPoi?.wikidata === item.wikidata,
-        )
-      : undefined;
+    // Keep one table row per source, including legacy catalog duplicates.
+    if (
+      item.geoPlaceId &&
+      Array.from(rowsById.values()).some(
+        (row) => row.transformedPoi?.geoPlaceId === item.geoPlaceId,
+      )
+    ) {
+      duplicatePoiIds.add(item.id);
+      continue;
+    }
+    const rawRowEntry = Array.from(rowsById.entries()).find(
+      ([, candidate]) =>
+        (item.geoPlaceId && candidate.rawPoi?.geoPlaceId === item.geoPlaceId) ||
+        (item.wikidata && candidate.rawPoi?.wikidata === item.wikidata),
+    );
     const row = rowsById.get(rowKey) ?? rawRowEntry?.[1];
     if (rawRowEntry && rawRowEntry[0] !== rowKey) {
       rowsById.delete(rawRowEntry[0]);
@@ -191,6 +218,7 @@ const toPoiRows = (
   }
 
   for (const { item, json, updatedAt } of wikiPois) {
+    if (duplicatePoiIds.has(item.id)) continue;
     const rowKey = toRowKey(item.id);
     const row = rowsById.get(rowKey);
     rowsById.set(
@@ -218,6 +246,7 @@ const toPoiRows = (
   }
 
   for (const { item, storyContent, sources, updatedAt } of storyContentPois) {
+    if (duplicatePoiIds.has(item.id)) continue;
     const rowKey = toRowKey(item.id);
     const row = rowsById.get(rowKey);
     rowsById.set(rowKey, {
@@ -242,6 +271,7 @@ const toPoiRows = (
   }
 
   for (const { item, artifact, updatedAt } of mainImagePois) {
+    if (duplicatePoiIds.has(item.id)) continue;
     const rowKey = toRowKey(item.id);
     const row = rowsById.get(rowKey);
     rowsById.set(
@@ -290,7 +320,7 @@ export const loadPoiLists = async () => {
       ? parseGeoJson(transformedPath)
       : ({ features: [] } as GeoJson);
     const transformedPois = (transformedGeoJson.features ?? []).map((feature, index) => ({
-      item: toPoiItems([feature])[0] ?? {
+      item: toPoiItems([feature], false, rawGeoJson.features)[0] ?? {
         id: `missing-id-${index}`,
         name: `missing-id-${index}`,
         featureIndex: index,
@@ -363,16 +393,35 @@ export const loadPoiLists = async () => {
       const latestDraftRun = matchingRuns.find(
         (run) => run.operation === "draftStory.generate" && run.event !== "started",
       );
+      const types = row.transformedPoi ? poiTypes.get(row.id) : undefined;
+      const poiTypesPath = path.join(
+        process.cwd(),
+        "data",
+        "rome",
+        "generated",
+        "wikidata",
+        `${sanitizePoiIdForFile(row.id)}.json`,
+      );
+      const generationErrors = getCurrentGenerationErrors(matchingRuns, {
+        ...generationMetadata[toRowKey(row.id)],
+        ...(types && !types.error && existsSync(poiTypesPath)
+          ? { poiTypes: { completedAt: statSync(poiTypesPath).mtime.toISOString() } }
+          : {}),
+      });
       const sourcePending =
         generationMetadata[toRowKey(row.id)]?.sourceMissing ||
-        latestDraftRun?.errorCode === "source-not-found" ||
-        (latestDraftRun?.errorCode === "sources-unavailable" &&
-          latestDraftRun.errorMessage?.includes(
-            "no valid English Wikipedia tag or Wikidata English sitelink",
-          ));
+        (generationErrors.some(
+          ({ at, stage }) => at === latestDraftRun?.at && stage === "sources",
+        ) &&
+          (latestDraftRun?.errorCode === "source-not-found" ||
+            (latestDraftRun?.errorCode === "sources-unavailable" &&
+              latestDraftRun.errorMessage?.includes(
+                "no valid English Wikipedia tag or Wikidata English sitelink",
+              ))));
       return {
         ...row,
         sourcePending,
+        poiTypes: types,
         ...(sourcePending
           ? {
               wikiPoi: undefined,
@@ -391,22 +440,10 @@ export const loadPoiLists = async () => {
               relatedPeopleGenerationDuration: undefined,
             }
           : {}),
-        generationErrors: matchingRuns.flatMap((run) =>
-          run.event === "failed"
-            ? [
-                {
-                  at: formatCompletedAt(run.at),
-                  operation: run.operation,
-                  stage: run.errorStage ?? "generation",
-                  message: run.errorMessage ?? run.errorCode ?? "Unknown error",
-                },
-              ]
-            : (run.errors ?? []).map((error) => ({
-                ...error,
-                at: formatCompletedAt(run.at),
-                operation: run.operation,
-              })),
-        ),
+        generationErrors: generationErrors.map((error) => ({
+          ...error,
+          at: formatCompletedAt(error.at),
+        })),
         lastGenerationRun: lastRun
           ? {
               operation: lastRun.operation,
@@ -485,9 +522,6 @@ export const loadPoiLists = async () => {
 
     for (const row of rows) {
       row.wikidataId = row.transformedPoi?.wikidata ?? row.rawPoi?.wikidata;
-      if (row.transformedPoi) {
-        row.poiTypes = poiTypes.get(row.id);
-      }
     }
 
     const priority = (row: AdminPoiRow) =>

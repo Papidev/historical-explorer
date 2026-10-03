@@ -11,6 +11,7 @@ import { statusGroupStyles } from "./statusGroupStyles";
 
 export const Row = ({
   row,
+  actionsDisabled,
   actions,
   isInProgress,
   progressDescription,
@@ -18,6 +19,7 @@ export const Row = ({
   runSingleAction,
   selectMainImageCandidateAction,
 }: ActionCellProps & {
+  actionsDisabled: boolean;
   progressDescription: string | null;
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => {
@@ -33,32 +35,39 @@ export const Row = ({
       <GeoPlaceCell
         row={row}
         actions={actions}
-        isInProgress={isInProgress}
+        isInProgress={isInProgress || actionsDisabled}
         progressDescription={progressDescription}
         onSelectPanel={onSelectPanel}
         runSingleAction={runSingleAction}
       />
+      <PoiCell
+        row={row}
+        isInProgress={isInProgress || actionsDisabled}
+        onSelectPanel={onSelectPanel}
+      />
+      <WikipediaCell
+        row={row}
+        isInProgress={isInProgress || actionsDisabled}
+        onSelectPanel={onSelectPanel}
+      />
+      <WikidataTypesCell
+        row={row}
+        actions={actions}
+        isInProgress={isInProgress || actionsDisabled}
+        onSelectPanel={onSelectPanel}
+        runSingleAction={runSingleAction}
+      />
       {row.sourcePending ? (
-        Array.from({ length: 5 }, (_, index) => (
-          <PipelineCell key={index} inProgress={isInProgress}>
-            {null}
-          </PipelineCell>
-        ))
+        <>
+          <PipelineCell inProgress={isInProgress}>{null}</PipelineCell>
+          <PipelineCell inProgress={isInProgress}>{null}</PipelineCell>
+        </>
       ) : (
         <>
-          <PoiCell row={row} isInProgress={isInProgress} onSelectPanel={onSelectPanel} />
-          <WikidataTypesCell
-            row={row}
-            actions={actions}
-            isInProgress={isInProgress}
-            onSelectPanel={onSelectPanel}
-            runSingleAction={runSingleAction}
-          />
-          <WikipediaCell row={row} isInProgress={isInProgress} onSelectPanel={onSelectPanel} />
           <StoryCell
             row={row}
             actions={actions}
-            isInProgress={isInProgress}
+            isInProgress={isInProgress || actionsDisabled}
             onSelectPanel={onSelectPanel}
             runSingleAction={runSingleAction}
             selectMainImageCandidateAction={selectMainImageCandidateAction}
@@ -66,7 +75,7 @@ export const Row = ({
           <MainImageCell
             row={row}
             actions={actions}
-            isInProgress={isInProgress}
+            isInProgress={isInProgress || actionsDisabled}
             onSelectPanel={onSelectPanel}
             runSingleAction={runSingleAction}
           />

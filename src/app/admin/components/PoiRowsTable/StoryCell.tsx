@@ -1,6 +1,6 @@
 import { getPoiRowStatusGroup } from "../../lib/getPoiRowStatusGroup";
 import { EyeIcon } from "@heroicons/react/20/solid";
-import { ArrowPathIcon, DocumentTextIcon } from "@heroicons/react/24/outline";
+import { ArrowPathIcon } from "@heroicons/react/24/outline";
 import { IconButton } from "@/app/components/ui/IconButton";
 import { SubmitButton } from "../SubmitButton";
 import { ArtifactViewButton } from "./ArtifactViewButton";
@@ -112,8 +112,8 @@ export const StoryCell = ({
               idleLabel={row.storyContent ? "Refresh" : "Generate"}
               pendingLabel="Generating..."
               confirmMessage={refreshStoryConfirmMessage}
-              icon={row.storyContent ? <ArrowPathIcon /> : <DocumentTextIcon />}
-              tone={row.storyContent ? "danger" : "primary"}
+              icon={<ArrowPathIcon />}
+              tone="danger"
               disabled={isInProgress}
             />
           </form>

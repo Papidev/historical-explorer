@@ -1,4 +1,7 @@
-import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
+import { mkdtempSync, readdirSync, readFileSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import path from "node:path";
+import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it } from "vitest";
 import { http, HttpResponse } from "msw";
 import { setupServer } from "msw/node";
 import { generatePerson } from "./generatePerson";
@@ -13,8 +16,18 @@ const generated = {
   birthDate: { year: 307, precision: "approximate" },
 };
 
+const originalDirectory = process.cwd();
+let temporaryDirectory: string;
 beforeAll(() => server.listen({ onUnhandledRequest: "error" }));
-afterEach(() => server.resetHandlers());
+beforeEach(() => {
+  temporaryDirectory = mkdtempSync(path.join(tmpdir(), "ai-response-tests-"));
+  process.chdir(temporaryDirectory);
+});
+afterEach(() => {
+  process.chdir(originalDirectory);
+  rmSync(temporaryDirectory, { recursive: true, force: true });
+  server.resetHandlers();
+});
 afterAll(() => server.close());
 
 describe("Person generation", () => {
@@ -105,6 +118,19 @@ describe("Person generation", () => {
     ).resolves.toEqual(generated);
 
     expect(requests).toHaveLength(2);
+    const directory = path.join("data", "generated", "ai-response-failures");
+    const files = readdirSync(directory);
+    expect(files).toHaveLength(1);
+    const failure = JSON.parse(readFileSync(path.join(directory, files[0]), "utf-8"));
+    expect(failure).toMatchObject({
+      kind: "person",
+      subjectId: "Q1429",
+      subjectName: "Hadrian",
+      provider: "ollama",
+      model: "gpt-oss:20b-cloud",
+      attempt: 1,
+    });
+    expect(JSON.parse(failure.rawResponse).message.content).toBe("not JSON");
     expect(requests[0].model).toBe("gpt-oss:20b-cloud");
     expect(requests[0].format).toBeUndefined();
     expect(requests[0].messages[0].content).toContain("JSON schema:");

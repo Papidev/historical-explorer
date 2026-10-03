@@ -1,4 +1,4 @@
-import type { MainImageCandidate } from "@/server/wikiPipeline/types";
+import type { MainImageCandidate, WikiSnapshot } from "@/server/wikiPipeline/types";
 import type { StoryContent } from "./storyContent";
 
 export type AiSelection = {
@@ -11,8 +11,9 @@ export type Source = {
   kind: "wikipedia";
   title: string;
   url: string;
+  wikidataId?: string;
   content: string;
-  links?: Array<{ label: string; title: string }>;
+  links?: WikiSnapshot["links"];
 };
 
 export type DraftMainImage = MainImageCandidate;
@@ -106,6 +107,7 @@ export type StoryWorkflow = {
       poiId: string;
       ai: AiSelection;
       onProgress?: (message: string) => void;
+      onSourcesAcquired?: (sources: Source[]) => Promise<void>;
     }): Promise<DraftStoryGenerationResult>;
     get(input: { poiId: string }): Promise<DraftStorySnapshot | undefined>;
     reset(input: { poiId: string }): Promise<void>;

@@ -1,8 +1,13 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
+import { withPoiGeneration } from "@/server/poiGeneration";
+import { generateStoryBatch } from "@/server/storyBatch";
 import { pointOfInterest } from "@/server/pointOfInterest";
 import { poiTypes } from "@/server/poiTypes";
+import { findPoiInGeoJson, getDefaultInputPath } from "@/server/wikiPipeline/io";
+import { resolvePageForPoi } from "@/server/wikiPipeline/resolve";
+import { fetchWikiSnapshot } from "@/server/wikiPipeline/fetchWiki";
 import { sanitizeErrorMessage, withGenerationRun } from "@/server/generationRunLog";
 import { storyCuration } from "@/server/storyCuration";
 import { storyWorkflow, StoryWorkflowError } from "@/server/storyWorkflow";
@@ -90,20 +95,29 @@ export const generateDraftStory = async (formData: FormData) =>
       async () => {
         onProgress("Creating the Point of Interest.");
         const { poiId } = await pointOfInterest.generate({ geoPlaceId });
-        let poiTypesError: string | undefined;
-        try {
-          onProgress("Refreshing POI types.");
-          poiTypesError = (await poiTypes.refresh(poiId)).error;
-        } catch (error) {
-          console.warn(`[poi-types] Refresh failed for ${poiId}.`, error);
-          poiTypesError = error instanceof Error ? error.message : String(error);
-        }
-        if (poiTypesError) onProgress("POI Types could not be refreshed; continuing.");
-        return {
-          poiId,
-          poiTypesError,
-          result: await storyWorkflow.draftStory.generate({ poiId, ai, onProgress }),
-        };
+        return withPoiGeneration(poiId, async () => {
+          let poiTypesError: string | undefined;
+          const result = await storyWorkflow.draftStory.generate({
+            poiId,
+            ai,
+            onProgress,
+            onSourcesAcquired: async (sources) => {
+              try {
+                const wikidataId = sources.find(({ kind }) => kind === "wikipedia")?.wikidataId;
+                if (wikidataId) await pointOfInterest.linkWikidata({ poiId, wikidataId });
+                onProgress("Checking POI types.");
+                const types = await poiTypes.refresh(poiId);
+                poiTypesError = types.error;
+                if (types.skipped) onProgress("Skipping POI types: no Wikidata ID.");
+              } catch (error) {
+                console.warn(`[poi-types] Refresh failed for ${poiId}.`, error);
+                poiTypesError = error instanceof Error ? error.message : String(error);
+              }
+              if (poiTypesError) onProgress("POI Types could not be refreshed; continuing.");
+            },
+          });
+          return { poiId, poiTypesError, result };
+        });
       },
       ({ poiId, result, poiTypesError }) => ({
         poiId,
@@ -154,7 +168,10 @@ export const refreshStoryContent = async (formData: FormData) =>
     const ai = await getWorkflowAiSelection(formData);
     const result = await withGenerationRun(
       { city: "rome", operation: "storyContent.generate", poiId, ai },
-      () => storyWorkflow.storyContent.generate({ poiId, ai, onProgress }),
+      () =>
+        withPoiGeneration(poiId, () =>
+          storyWorkflow.storyContent.generate({ poiId, ai, onProgress }),
+        ),
       ({ failures }) => ({
         status: failures.length > 0 ? "partial" : "success",
         failedSteps: failures.length > 0 ? ["relatedPeople"] : [],
@@ -166,8 +183,32 @@ export const refreshStoryContent = async (formData: FormData) =>
   });
 
 export const refreshPoiTypes = async (formData: FormData): Promise<AdminActionResult | void> => {
-  const result = await poiTypes.refresh(getRequiredString(formData, "poiId", "POI id"));
+  const poiId = getRequiredString(formData, "poiId", "POI id");
+  const result = await withPoiGeneration(poiId, async () => {
+    try {
+      const poi = findPoiInGeoJson(getDefaultInputPath("rome"), poiId, "rome");
+      if (!poi.sourceHints.wikidata) {
+        const page = (await resolvePageForPoi(poi)).selected;
+        const snapshot = await fetchWikiSnapshot(page.title, page.language);
+        if (snapshot.wikidataId) {
+          await pointOfInterest.linkWikidata({ poiId, wikidataId: snapshot.wikidataId });
+        }
+      }
+      return await poiTypes.refresh(poiId);
+    } catch (error) {
+      console.warn(`[poi-types] Refresh failed for ${poiId}.`, error);
+      return { error: error instanceof Error ? error.message : String(error) };
+    }
+  });
   revalidatePath("/admin");
+  if ("skipped" in result && result.skipped) {
+    return {
+      warning: {
+        title: "No Wikidata ID found",
+        description: "The Wikipedia page has no Wikidata ID, so its types could not be generated.",
+      },
+    };
+  }
   if (result.error) {
     return {
       warning: {
@@ -185,7 +226,10 @@ export const resolveRelatedPeople = async (formData: FormData) =>
     const ai = await getWorkflowAiSelection(formData);
     const result = await withGenerationRun(
       { city: "rome", operation: "relatedPeople.resolve", poiId, ai },
-      () => storyWorkflow.relatedPeople.resolve({ poiId, ai, onProgress }),
+      () =>
+        withPoiGeneration(poiId, () =>
+          storyWorkflow.relatedPeople.resolve({ poiId, ai, onProgress }),
+        ),
       ({ failures }) => ({
         status: failures.length > 0 ? "partial" : "success",
         failedSteps: failures.length > 0 ? ["relatedPeople"] : [],
@@ -199,29 +243,52 @@ export const resolveRelatedPeople = async (formData: FormData) =>
 export const refreshMainImageCandidates = async (formData: FormData) => {
   const poiId = getRequiredString(formData, "poiId", "POI id");
   await withGenerationRun({ city: "rome", operation: "mainImageCandidates.generate", poiId }, () =>
-    storyWorkflow.mainImageCandidates.generate({ poiId }),
+    withPoiGeneration(poiId, () => storyWorkflow.mainImageCandidates.generate({ poiId })),
   );
   revalidatePath("/admin");
 };
 
 export const deleteStoryContent = async (formData: FormData) => {
-  await storyWorkflow.storyContent.delete({
-    poiId: getRequiredString(formData, "poiId", "POI id"),
-  });
+  const poiId = getRequiredString(formData, "poiId", "POI id");
+  await withPoiGeneration(poiId, () => storyWorkflow.storyContent.delete({ poiId }));
   revalidatePath("/admin");
 };
 
 export const deleteMainImageCandidates = async (formData: FormData) => {
-  await storyWorkflow.mainImageCandidates.delete({
-    poiId: getRequiredString(formData, "poiId", "POI id"),
-  });
+  const poiId = getRequiredString(formData, "poiId", "POI id");
+  await withPoiGeneration(poiId, () => storyWorkflow.mainImageCandidates.delete({ poiId }));
   revalidatePath("/admin");
 };
 
 export const selectMainImageCandidate = async (formData: FormData) => {
-  await storyCuration.selectDraftMainImage({
-    poiId: getRequiredString(formData, "poiId", "POI id"),
-    commonsFileName: getRequiredString(formData, "commonsFileName", "Commons file name"),
-  });
+  const poiId = getRequiredString(formData, "poiId", "POI id");
+  await withPoiGeneration(poiId, () =>
+    storyCuration.selectDraftMainImage({
+      poiId,
+      commonsFileName: getRequiredString(formData, "commonsFileName", "Commons file name"),
+    }),
+  );
   revalidatePath("/admin");
+};
+
+export const generateDraftStories = async (formData: FormData) => {
+  const ai = await getWorkflowAiSelection(formData);
+  const progressIds = formData.getAll("progressId");
+  if (progressIds.length !== formData.getAll("geoPlaceId").length) {
+    throw new Error("Each selected POI needs a progress ID.");
+  }
+  return generateStoryBatch(
+    formData.getAll("geoPlaceId").map((geoPlaceId, index) => ({
+      geoPlaceId,
+      progressId: progressIds[index],
+    })),
+    async ({ geoPlaceId, progressId }) => {
+      const input = new FormData();
+      input.set("geoPlaceId", geoPlaceId);
+      input.set("progressId", progressId);
+      input.set("aiMode", ai.mode);
+      input.set("aiModel", ai.model);
+      return generateDraftStory(input);
+    },
+  );
 };

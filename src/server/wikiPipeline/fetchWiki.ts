@@ -1,10 +1,15 @@
 import wtf from "wtf_wikipedia";
 import { fetchWikimediaJson } from "./fetchWikimediaJson";
-import type { WikiSnapshot } from "./types";
+import type { WikiSnapshot, WikipediaLanguage } from "./types";
 
-const WIKIPEDIA_API = "https://en.wikipedia.org/w/api.php";
 const WIKIDATA_API = "https://www.wikidata.org/w/api.php";
-const EXCLUDED_SECTION_TITLES = ["References", "See also"];
+const EXCLUDED_SECTION_TITLES = [
+  "References",
+  "See also",
+  "Note",
+  "Bibliografia",
+  "Voci correlate",
+];
 
 const stripExcludedSections = (content: string) => {
   const doc = wtf(content);
@@ -64,8 +69,11 @@ const replaceCommonsInlineTemplate = (
   });
 };
 
-export const fetchWikiSnapshot = async (title: string): Promise<WikiSnapshot> => {
-  const url = new URL(WIKIPEDIA_API);
+export const fetchWikiSnapshot = async (
+  title: string,
+  language: WikipediaLanguage = "en",
+): Promise<WikiSnapshot> => {
+  const url = new URL(`https://${language}.wikipedia.org/w/api.php`);
   url.searchParams.set("action", "query");
   url.searchParams.set("prop", "revisions|pageprops");
   url.searchParams.set("titles", title);
@@ -124,11 +132,12 @@ export const fetchWikiSnapshot = async (title: string): Promise<WikiSnapshot> =>
       new Map(
         links.map((link) => [
           `${link.text()}\0${link.page()}`,
-          { label: link.text(), title: link.page() },
+          { label: link.text(), title: link.page(), ...(language === "it" ? { language } : {}) },
         ]),
       ).values(),
     ),
     title: page.title ?? title,
+    ...(language === "it" ? { language } : {}),
     ...(wikidataId ? { wikidataId } : {}),
     ...(page.pageprops?.disambiguation !== undefined ? { isDisambiguation: true } : {}),
   };

@@ -1,12 +1,13 @@
 "use client";
 
-import { useOptimistic, useState } from "react";
+import { useOptimistic, useRef, useState } from "react";
 import { flushSync } from "react-dom";
+import { BatchGeneration } from "./BatchGeneration";
 import { Pagination } from "./Pagination";
 import { Search } from "./Search";
 import type { RefObject } from "react";
 import type { AiSelection } from "../../lib/aiModels";
-import type { AdminAction, AdminArtifact, AdminPoiRow } from "../../lib/types";
+import type { AdminAction, AdminBatchAction, AdminArtifact, AdminPoiRow } from "../../lib/types";
 import { getPoiRowStatusGroup } from "../../lib/getPoiRowStatusGroup";
 import { ActionToast, getActionError, type Toast } from "../ActionToast";
 import { AiProgressDialog } from "./AiProgressDialog";
@@ -55,6 +56,7 @@ export const PoiRowsTable = ({
   globalArtifacts,
   aiSelectionRef,
   generateDraftStoryAction,
+  generateDraftStoriesAction,
   refreshStoryContentAction,
   resolveRelatedPeopleAction,
   refreshMainImageCandidatesAction,
@@ -65,12 +67,15 @@ export const PoiRowsTable = ({
   globalArtifacts: AdminArtifact[];
   aiSelectionRef: RefObject<Pick<AiSelection, "mode" | "model">>;
   generateDraftStoryAction: AdminAction;
+  generateDraftStoriesAction: AdminBatchAction;
   refreshStoryContentAction: AdminAction;
   resolveRelatedPeopleAction: AdminAction;
   refreshMainImageCandidatesAction: AdminAction;
   refreshPoiTypesAction: AdminAction;
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => {
+  const tableScrollRef = useRef<HTMLDivElement>(null);
+  const [runningIds, setRunningIds] = useState<string[]>([]);
   const [page, setPage] = useState(0);
   const [search, setSearch] = useState("");
   const [selectedPanel, setSelectedPanel] = useState<SelectedPanel | null>(null);
@@ -97,8 +102,12 @@ export const PoiRowsTable = ({
     refreshPoiTypes: refreshPoiTypesAction,
   };
   const searchText = search.trim().toLocaleLowerCase("en");
+  const runningRows = runningIds.flatMap((id) =>
+    rows.filter((row) => (row.rawPoi?.id ?? row.id) === id),
+  );
   const visibleRows = rows.filter(
     (row) =>
+      !runningIds.includes(row.rawPoi?.id ?? row.id) &&
       visibleStatusGroups.includes(getPoiRowStatusGroup(row)) &&
       (!searchText ||
         [row.rawPoi?.name, row.transformedPoi?.name].some((name) =>
@@ -114,6 +123,7 @@ export const PoiRowsTable = ({
     formData: FormData,
     includeAiSelection = false,
   ) => {
+    if (runningIds.length) return;
     const runId = includeAiSelection ? crypto.randomUUID() : undefined;
     if (includeAiSelection) {
       formData.set("aiMode", aiSelectionRef.current.mode);
@@ -159,6 +169,7 @@ export const PoiRowsTable = ({
     <>
       {aiProgressDialog?.isOpen ? (
         <AiProgressDialog
+          key={aiProgressDialog.runId}
           runId={aiProgressDialog.runId}
           title={aiProgressDialog.title}
           isFinished={aiProgressDialog.isFinished}
@@ -172,6 +183,21 @@ export const PoiRowsTable = ({
       ) : null}
       <section className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-gray-950/10">
         <GlobalArtifacts artifacts={globalArtifacts} onSelectPanel={setSelectedPanel} />
+        <BatchGeneration
+          rows={visibleRows
+            .filter((row) => row.rawPoi && getPoiRowStatusGroup(row) === "to-do")
+            .slice(0, 3)}
+          aiSelectionRef={aiSelectionRef}
+          action={generateDraftStoriesAction}
+          disabled={Boolean(progress) || runningIds.length > 0}
+          onRunningChange={(ids) => {
+            setRunningIds(ids);
+            if (ids.length) tableScrollRef.current?.scrollTo?.({ top: 0 });
+          }}
+          onShowLog={(runId, title, isFinished) =>
+            setAiProgressDialog({ runId, title, isFinished, isOpen: true })
+          }
+        />
         <div
           role="group"
           aria-label="Show status"
@@ -184,18 +210,6 @@ export const PoiRowsTable = ({
               setPage(0);
             }}
           />
-          {aiProgressDialog ? (
-            <button
-              type="button"
-              aria-haspopup="dialog"
-              onClick={() =>
-                setAiProgressDialog((current) => (current ? { ...current, isOpen: true } : current))
-              }
-              className="cursor-pointer rounded-md border border-violet-200 bg-violet-50 px-2.5 py-1.5 text-sm font-medium text-violet-900 hover:bg-violet-100"
-            >
-              Show generation log
-            </button>
-          ) : null}
           <span className="font-semibold text-gray-800">Show status</span>
           {Object.entries(statusGroupStyles).map(([value, { label, filter, checkbox }]) => (
             <label
@@ -221,10 +235,13 @@ export const PoiRowsTable = ({
             </label>
           ))}
         </div>
-        <div className="min-h-0 min-w-0 flex-1 overflow-auto [&_[role=tooltip]]:right-0 [&_[role=tooltip]]:left-auto [&_[role=tooltip]]:translate-x-0">
+        <div
+          ref={tableScrollRef}
+          className="min-h-0 min-w-0 flex-1 overflow-auto [&_[role=tooltip]]:right-0 [&_[role=tooltip]]:left-auto [&_[role=tooltip]]:translate-x-0"
+        >
           {rows.length === 0 ? (
             <p className="px-4 py-4 text-sm text-black/55">No POIs available.</p>
-          ) : visibleRows.length === 0 ? (
+          ) : visibleRows.length === 0 && runningRows.length === 0 ? (
             <p className="px-4 py-4 text-sm text-black/55">
               {searchText
                 ? "No POIs match the search and selected statuses."
@@ -269,9 +286,9 @@ export const PoiRowsTable = ({
                     className="border-r border-b border-gray-200 px-3 py-2 text-left align-top"
                   >
                     <ColumnHeader
-                      title="Wikidata Types"
-                      path="data/rome/generated/wikidata/*.json"
-                      description="Source types for future filters"
+                      title="Wikipedia Text"
+                      path="data/rome/generated/wikipedia/*.txt"
+                      description="Local snapshot; overwritten with each Story generation"
                       versioned={false}
                     />
                   </th>
@@ -280,9 +297,9 @@ export const PoiRowsTable = ({
                     className="border-r border-b border-gray-200 px-3 py-2 text-left align-top"
                   >
                     <ColumnHeader
-                      title="Wikipedia Text"
-                      path="data/rome/generated/wikipedia/*.txt"
-                      description="Local snapshot; overwritten with each Story generation"
+                      title="Wikidata Types"
+                      path="data/rome/generated/wikidata/*.json"
+                      description="Source types for future filters"
                       versioned={false}
                     />
                   </th>
@@ -311,14 +328,24 @@ export const PoiRowsTable = ({
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200 bg-white">
-                {visibleRows.slice(currentPage * 50, (currentPage + 1) * 50).map((row) => (
+                {[
+                  ...runningRows,
+                  ...visibleRows.slice(currentPage * 50, (currentPage + 1) * 50),
+                ].map((row) => (
                   <Row
-                    key={row.id}
+                    key={row.rawPoi?.id ?? row.id}
                     row={row}
                     actions={actions}
-                    isInProgress={progress?.poiId === row.id}
+                    actionsDisabled={runningIds.length > 0}
+                    isInProgress={
+                      progress?.poiId === row.id || runningIds.includes(row.rawPoi?.id ?? row.id)
+                    }
                     progressDescription={
-                      progress && progress.poiId === row.id ? progress.description : null
+                      runningIds.includes(row.rawPoi?.id ?? row.id)
+                        ? "Generating Draft Story..."
+                        : progress && progress.poiId === row.id
+                          ? progress.description
+                          : null
                     }
                     onSelectPanel={setSelectedPanel}
                     runSingleAction={runSingleAction}
