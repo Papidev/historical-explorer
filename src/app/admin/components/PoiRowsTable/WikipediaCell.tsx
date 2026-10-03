@@ -18,7 +18,7 @@ export const WikipediaCell = ({ row, isInProgress, onSelectPanel }: CellProps) =
   >
     <CellContent
       title={!row.wikiPoi ? "Wikipedia source not acquired" : undefined}
-      titleTone="warning"
+      titleTone={getPoiRowStatusGroup(row) === "to-do" ? "neutral" : "warning"}
       isAvailable={Boolean(row.wikiPoi)}
     />
     {row.sourcePending ? (

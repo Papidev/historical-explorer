@@ -14,6 +14,13 @@ export const WikidataTypesCell = ({
   onSelectPanel,
   runSingleAction,
 }: ActionCellProps) => {
+  if (row.sourcePending && !row.poiTypes) {
+    return (
+      <PipelineCell inProgress={isInProgress}>
+        <CellContent title="Wikidata types not generated" titleTone="neutral" />
+      </PipelineCell>
+    );
+  }
   const types = row.poiTypes?.types ?? [];
 
   return (
@@ -44,7 +51,13 @@ export const WikidataTypesCell = ({
                     ? "No Wikidata types found"
                     : "Wikidata types not generated"
           }
-          titleTone={types.length > 0 && !row.poiTypes?.error ? "status" : "warning"}
+          titleTone={
+            getPoiRowStatusGroup(row) === "to-do"
+              ? "neutral"
+              : types.length > 0 && !row.poiTypes?.error
+                ? "status"
+                : "warning"
+          }
           subtitle={
             row.poiTypes?.error ??
             (types.length > 0 ? `${types.length} type${types.length === 1 ? "" : "s"}` : undefined)

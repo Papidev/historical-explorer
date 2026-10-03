@@ -1,4 +1,5 @@
 import { GeoPlaceCell } from "./GeoPlaceCell";
+import { CellContent } from "./CellContent";
 import { MainImageCell } from "./MainImageCell";
 import { PipelineCell } from "./PipelineCell";
 import { PoiCell } from "./PoiCell";
@@ -59,8 +60,12 @@ export const Row = ({
       />
       {row.sourcePending ? (
         <>
-          <PipelineCell inProgress={isInProgress}>{null}</PipelineCell>
-          <PipelineCell inProgress={isInProgress}>{null}</PipelineCell>
+          <PipelineCell inProgress={isInProgress}>
+            <CellContent title="Story Content not generated" titleTone="neutral" />
+          </PipelineCell>
+          <PipelineCell inProgress={isInProgress}>
+            <CellContent title="Image candidates not generated" titleTone="neutral" />
+          </PipelineCell>
         </>
       ) : (
         <>

@@ -1,5 +1,10 @@
 import type { Source, StoryContent } from "@/server/storyWorkflow";
 import type { PoiTypesResult } from "@/server/poiTypes";
+import type { PublicPerson } from "@/server/person";
+
+export type AdminPerson = PublicPerson & {
+  linkedPois: Array<{ id: string; name: string }>;
+};
 
 export type AdminActionWarning = {
   title: string;

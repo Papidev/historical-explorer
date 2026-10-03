@@ -1,6 +1,7 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
+import { people } from "@/server/person";
 import { withPoiGeneration } from "@/server/poiGeneration";
 import { generateStoryBatch } from "@/server/storyBatch";
 import { pointOfInterest } from "@/server/pointOfInterest";
@@ -180,6 +181,16 @@ export const refreshStoryContent = async (formData: FormData) =>
       }),
     );
     return toRelatedPeopleWarning(result.failures);
+  });
+
+export const regeneratePerson = async (formData: FormData) =>
+  runAiAction(formData, async (onProgress) => {
+    await people.regenerate({
+      personId: getRequiredString(formData, "personId", "Person id"),
+      ai: await getWorkflowAiSelection(formData),
+      onProgress,
+    });
+    revalidatePath("/rome");
   });
 
 export const refreshPoiTypes = async (formData: FormData): Promise<AdminActionResult | void> => {

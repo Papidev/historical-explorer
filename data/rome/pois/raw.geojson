@@ -14589,23 +14589,6 @@
     {
       "type": "Feature",
       "properties": {
-        "@id": "way/408362779",
-        "historic": "monument",
-        "name": "Aereo",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          12.2892098,
-          41.7417522
-        ]
-      },
-      "id": "way/408362779"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "@id": "way/408714255",
         "building": "yes",
         "historic": "ruins",

@@ -40,7 +40,9 @@ export type ResolutionMethod =
   | "wikidata_enwiki"
   | "wikidata_itwiki"
   | "name_enwiki"
-  | "name_itwiki";
+  | "name_itwiki"
+  | "coordinates_enwiki"
+  | "coordinates_itwiki";
 
 export type ResolutionCandidate = {
   title: string;

@@ -23,7 +23,6 @@ describe("POI actions", () => {
   it.each([true, false])(
     "keeps a missing Wikipedia source error in its Wikipedia cell (log available: %s)",
     async (hasLog) => {
-      const user = userEvent.setup();
       render(
         <PoiRowsTable
           rows={[
@@ -72,17 +71,8 @@ describe("POI actions", () => {
       expect(within(cells[2]).getByText("Wikipedia source not acquired")).toBeVisible();
       expect(within(cells[0]).queryByText("Latest error")).not.toBeInTheDocument();
       expect(cells).toHaveLength(6);
-      expect(within(cells[3]).getByText("No Wikidata ID")).toBeVisible();
-      expect(within(cells[3]).getByRole("button", { name: "Refresh types" })).toBeEnabled();
-      await user.click(within(cells[3]).getByRole("button", { name: "Refresh types" }));
-      expect(screen.getByRole("dialog", { name: "Confirm refresh types" })).toBeVisible();
-      expect(
-        screen.getByText("Refresh Wikidata types for this POI? This will replace the saved types."),
-      ).toBeVisible();
-      await user.click(screen.getByRole("button", { name: "Cancel" }));
-      expect(
-        screen.queryByRole("dialog", { name: "Confirm refresh types" }),
-      ).not.toBeInTheDocument();
+      expect(within(cells[3]).getByText("Wikidata types not generated")).toBeVisible();
+      expect(within(cells[3]).queryByRole("button")).not.toBeInTheDocument();
 
       ["Geo Place", "POI", "Wikipedia Text", "Wikidata Types", "Story", "Main Image"].forEach(
         (label, index) =>
@@ -90,7 +80,10 @@ describe("POI actions", () => {
       );
       expect(within(cells[1]).getByRole("button", { name: "View POI JSON" })).toBeVisible();
       expect(within(cells[1]).getByText("aqueduct")).toBeVisible();
-      for (const index of [4, 5]) expect(cells[index]).toHaveTextContent(/^$/);
+      expect(within(cells[4]).getByText("Story Content not generated")).toBeVisible();
+      expect(within(cells[5]).getByText("Image candidates not generated")).toBeVisible();
+      for (const index of [4, 5])
+        expect(within(cells[index]).queryByRole("button")).not.toBeInTheDocument();
     },
   );
 
