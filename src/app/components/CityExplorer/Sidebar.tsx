@@ -1,5 +1,10 @@
 import type { Poi } from "@/types/Poi";
-import { POI_CATEGORIES, type PoiCategory } from "@/types/PoiCategory";
+import {
+  POI_CATEGORIES,
+  POI_CATEGORY_PARENTS,
+  matchesPoiCategory,
+  type PoiCategory,
+} from "@/types/PoiCategory";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 
 export const Sidebar = ({
@@ -44,17 +49,26 @@ export const Sidebar = ({
     <fieldset className="mt-4 space-y-2">
       <legend className="sr-only">Category filters</legend>
       {POI_CATEGORIES.map((category) => (
-        <label key={category} className="flex cursor-pointer items-center gap-2 text-sm">
+        <label
+          key={category}
+          className={`flex cursor-pointer items-center gap-2 text-sm ${POI_CATEGORY_PARENTS[category] ? "ml-5 border-l border-zinc-200 pl-3" : ""}`}
+        >
           <input
             type="checkbox"
             aria-label={category}
+            aria-describedby={POI_CATEGORY_PARENTS[category] ? `${category}-parent` : undefined}
             checked={selectedCategories.includes(category)}
             onChange={() => onToggleCategory(category)}
             className="size-4 cursor-pointer accent-rose-700"
           />
           <span className="flex-1">{category}</span>
+          {POI_CATEGORY_PARENTS[category] && (
+            <span id={`${category}-parent`} className="sr-only">
+              Subcategory of {POI_CATEGORY_PARENTS[category]}
+            </span>
+          )}
           <span aria-hidden="true" className="text-xs text-zinc-400">
-            {pois.filter((poi) => poi.categories?.includes(category)).length}
+            {pois.filter((poi) => matchesPoiCategory(poi.categories, category)).length}
           </span>
         </label>
       ))}

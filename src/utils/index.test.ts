@@ -4,9 +4,9 @@ import { createPoisForCity } from ".";
 describe("createPoisForCity", () => {
   it("combines separate persisted categories with POIs by their stable ID", async () => {
     const pois = await createPoisForCity("rome", async () => undefined);
-    expect(pois.find(({ id }) => id === "basilica-costantiniana-di-s-agnese")?.categories).toEqual([
-      "Basilica",
-    ]);
+    expect(pois.find(({ id }) => id === "basilica-costantiniana-di-s-agnese")?.categories).toEqual(
+      [],
+    );
     expect(pois.find(({ id }) => id === "castle-of-the-holy-angel")?.categories).toEqual([
       "Museum",
       "Castle",

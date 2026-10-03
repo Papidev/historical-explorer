@@ -1,6 +1,6 @@
 "use client";
 
-import type { PoiCategory } from "@/types/PoiCategory";
+import { matchesPoiCategory, type PoiCategory } from "@/types/PoiCategory";
 import { Sidebar } from "./Sidebar";
 import { useState } from "react";
 import type { Poi } from "@/types/Poi";
@@ -31,7 +31,7 @@ export const CityExplorer = ({
   const visiblePois = pois.filter(
     (poi) =>
       !selectedCategories.length ||
-      poi.categories?.some((category) => selectedCategories.includes(category)),
+      selectedCategories.some((category) => matchesPoiCategory(poi.categories, category)),
   );
   const selectedPoi = selectedPoiId
     ? visiblePois.find((poi) => poi.id === selectedPoiId)
@@ -41,7 +41,7 @@ export const CityExplorer = ({
     if (
       selectedPoi &&
       next.length &&
-      !selectedPoi.categories?.some((category) => next.includes(category))
+      !next.some((category) => matchesPoiCategory(selectedPoi.categories, category))
     ) {
       setSelectedPoiId(null);
     }

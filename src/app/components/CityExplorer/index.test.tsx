@@ -199,6 +199,52 @@ describe("visitor category filtering", () => {
     expect(await screen.findByText("A real story response.")).toBeInTheDocument();
   });
 
+  it("includes subcategories in the parent filter and count, but keeps subcategory selection specific", async () => {
+    const user = userEvent.setup();
+    render(
+      <CityExplorer
+        citySlug="rome"
+        coordinates={[12, 41]}
+        initialZoom={15}
+        pois={[
+          ...pois,
+          {
+            id: "basilica",
+            name: "A Basilica",
+            city: "Rome",
+            coordinates: { lat: 41, lng: 12 },
+            funFacts: [],
+            categories: ["Basilica"],
+          },
+        ]}
+        initialSelectedPoiId="basilica"
+      />,
+    );
+    expect(screen.getByRole("checkbox", { name: "Basilica" })).toHaveAccessibleDescription(
+      "Subcategory of Church",
+    );
+    expect(screen.getByText("3")).toBeInTheDocument();
+    await user.click(screen.getByRole("checkbox", { name: "Church" }));
+    expect(screen.getByRole("status")).toHaveTextContent("3 places");
+    expect(screen.getByRole("heading", { name: "A Basilica" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Open details for A Basilica" })).toBeInTheDocument();
+    await user.click(screen.getByRole("checkbox", { name: "Basilica" }));
+    expect(screen.getByRole("status")).toHaveTextContent("3 places");
+    await user.click(screen.getByRole("checkbox", { name: "Church" }));
+    expect(screen.getByRole("status")).toHaveTextContent("1 place");
+    expect(
+      screen.queryByRole("button", { name: "Open details for A Church" }),
+    ).not.toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "A Basilica" })).toBeInTheDocument();
+    await user.click(screen.getByRole("checkbox", { name: "Museum" }));
+    expect(screen.getByRole("status")).toHaveTextContent("3 places");
+    await user.click(screen.getByRole("checkbox", { name: "Basilica" }));
+    expect(screen.queryByRole("heading", { name: "A Basilica" })).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Clear categories" }));
+    expect(screen.getByRole("status")).toHaveTextContent("5 places");
+    expect(screen.queryByRole("heading", { name: "A Basilica" })).not.toBeInTheDocument();
+  });
+
   it("shows an empty result and recovers when a zero-count category is cleared", async () => {
     const user = userEvent.setup();
     render(<CityExplorer citySlug="rome" coordinates={[12, 41]} initialZoom={15} pois={pois} />);

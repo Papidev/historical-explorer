@@ -6,6 +6,8 @@ Status: automatic direct-type mapping and sidebar filtering are implemented in t
 
 POI Types are source classifications from Wikidata; POI Categories are the app-owned vocabulary used for visitor discovery. Categories and their type mappings are shared across cities, so a category has the same meaning throughout Cultural Atlas.
 
+Basilica is a POI Subcategory of Church, reserved for religious basilicas. Each subcategory has one parent chosen from the top-level categories. The category hierarchy has one level of subcategories below top-level categories, with no deeper nesting. The general subcategory model currently has one configured child: Basilica under Church. This app-owned hierarchy is independent of the Wikidata type hierarchy.
+
 Category names use the singular, for example Church, Basilica, and Museum. Membership can reflect a current or historical nature or function: a former church or church ruins can belong to Church. Membership does not promise current religious use, opening hours, or visitor access.
 
 A Curator may add a category to a POI even when it has no Wikidata types. Manual additions require neither an explanation nor a source; this is an editorial classification decision, separate from the source requirements for Story Content.
@@ -22,15 +24,17 @@ The initial shared vocabulary is Church, Basilica, Museum, Castle, Mausoleum, Aq
 
 ## Agreed visitor filter scope
 
+The sidebar displays Basilica nested under Church. Selecting Church includes all Basilica POIs even when their saved category list contains only Basilica; selecting Basilica alone matches only basilicas. Counts and open-detail retention follow the same parent/child rule. Other categories do not gain parent relationships.
+
 The visitor may select multiple POI Categories at the same time. A POI matches when it belongs to at least one selected category (OR semantics). For example, selecting Church and Museum includes POIs in either category or both. With no category selected, all POIs remain visible. If the filter excludes the currently open POI, close its detail view and clear its selection.
 
 ## Implementation boundaries
 
-[Issue #38](https://github.com/Papidev/historical-explorer/issues/38) was updated on 2026-10-03 to incorporate the agreed design and serves as the implementation scope and acceptance criteria. An absent mapping rule means unmapped; an explicit empty category list means ignored. Missing or unknown types preserve the POI.
+[Issue #38](https://github.com/Papidev/historical-explorer/issues/38) contains the original scope. The later agreed changes recorded here make Basilica a religious subcategory of Church and explicitly ignore civil basilica types, superseding the original flat-category and civil-basilica mapping requirements. An absent mapping rule means unmapped; an explicit empty category list means ignored. Missing or unknown types preserve the POI.
 
-The Constantinian basilica ruins and the present church of Sant'Agnese fuori le mura remain distinct POIs. Civil basilica Q2887138 maps to Basilica without implying Church.
+The Constantinian basilica ruins and the present church of Sant'Agnese fuori le mura remain distinct POIs. Civil basilica Q2887138 is explicitly ignored: it assigns neither Basilica nor Church. Its source classification is retained. Civil Basilica is not a visitor category; another category such as Archaeological Site requires a suitable direct type or a future per-POI exception.
 
-Current type acquisition uses direct non-deprecated Wikidata P31 classifications, preserves their IDs and labels, and does not traverse the P279 hierarchy. The shared vocabulary lives in `src/types/PoiCategory/`, and versioned direct-type rules live in `data/poi-type-category-map.json`. Category lists are persisted by POI ID in `data/<city>/pois/categories.json`, separate from the GeoJSON catalog. The server combines the catalog and saved categories for the visitor map. Type acquisition/refresh and generation update them; `pnpm categories:rebuild` applies the current rules across existing city catalogs using their local type snapshots. The browser filters persisted categories only.
+Current type acquisition uses direct non-deprecated Wikidata P31 classifications, preserves their IDs and labels, and does not traverse the P279 hierarchy. The fixed top-level vocabulary and subcategory records (`name` and top-level `parent`) live in `src/types/PoiCategory/`. Sidebar grouping, parent-inclusive counts, filtering, and open-detail retention use this shared configuration; no Basilica-specific filtering branch is needed. Versioned direct-type rules live in `data/poi-type-category-map.json`. Category lists are persisted by POI ID in `data/<city>/pois/categories.json`, separate from the GeoJSON catalog. The server combines the catalog and saved categories for the visitor map. Type acquisition/refresh and generation update them; `pnpm categories:rebuild` applies the current rules across existing city catalogs using their local type snapshots. The browser filters persisted categories only.
 
 ## Planned curator behavior
 

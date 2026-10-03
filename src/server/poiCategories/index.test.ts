@@ -88,7 +88,7 @@ describe("persisted POI categories", () => {
         properties: { name: "Constantinian ruins" },
       });
       expect(readCategories(city)).toEqual({
-        "civil-basilica": ["Basilica"],
+        "civil-basilica": [],
         "missing-types": [],
         "no-wikidata": [],
         "ignored-type": [],
@@ -98,6 +98,7 @@ describe("persisted POI categories", () => {
     const rules = JSON.parse(
       readFileSync(path.join(dataDirectory, "poi-type-category-map.json"), "utf-8"),
     ).mappings;
+    expect(rules.Q2887138).toEqual([]);
     expect(rules.Q2065736).toEqual([]);
     expect(rules.Q999999).toBeUndefined();
   });
@@ -167,14 +168,24 @@ describe("persisted POI categories", () => {
     expect(readCategories()["civil-basilica"]).toEqual([]);
   });
 
+  it("maps religious basilica types to the subcategory while ignoring civil basilica types", () => {
+    const categories = createPoiCategoriesForCity("rome", dataDirectory);
+    categories.refresh("missing-types", [{ id: "Q124936" }, { id: "Q2713379" }]);
+    expect(readCategories()["missing-types"]).toEqual(["Basilica"]);
+    categories.refresh("civil-basilica", [{ id: "Q2887138" }]);
+    expect(readCategories()["civil-basilica"]).toEqual([]);
+  });
+
   it("keeps other POI assignments intact when one type list is refreshed", () => {
     const originalCatalog = readFileSync(catalogPath(), "utf-8");
     const categories = createPoiCategoriesForCity("rome", dataDirectory);
     expect(categories.getAll()).toEqual({});
     categories.rebuild();
+    categories.refresh("ignored-type", [{ id: "Q16970" }]);
     categories.refresh("missing-types", [{ id: "Q33506" }]);
     expect(readCategories()["missing-types"]).toEqual(["Museum"]);
-    expect(readCategories()["civil-basilica"]).toEqual(["Basilica"]);
+    expect(readCategories()["ignored-type"]).toEqual(["Church"]);
+    expect(readCategories()["civil-basilica"]).toEqual([]);
     expect(readFileSync(catalogPath(), "utf-8")).toBe(originalCatalog);
   });
 
@@ -197,7 +208,7 @@ describe("persisted POI categories", () => {
     writeFileSync(catalogPath(), JSON.stringify(generated.catalog));
     createPoiCategoriesForCity("rome", dataDirectory).rebuild();
     expect(generated.poiId).toBe("civil-basilica");
-    expect(readCategories()[generated.poiId]).toEqual(["Basilica"]);
+    expect(readCategories()[generated.poiId]).toEqual([]);
     expect(readCatalog().features?.find((poi) => poi.id === "present-church")?.wikidataId).toBe(
       "Q1636696",
     );
