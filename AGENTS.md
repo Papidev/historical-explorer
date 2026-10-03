@@ -15,7 +15,7 @@
 - Use `pnpm` exclusively for dependency management and scripts (do not use npm or yarn).
 - If dependency installation fails, stop immediately and ask for help. Do not continue with alternative approaches intended to bypass the failed installation.
 - `pnpm lint` runs ESLint with the Next `core-web-vitals` rules plus `eslint-config-prettier` to keep formatting conflicts out.
-- During iteration, run the smallest useful verification. Run ESLint and Prettier only immediately before opening a PR.
+- During iteration, run the smallest useful verification. Run linting and formatting only immediately before opening a PR.
 - `pnpm lint` is not a full TypeScript type-check in this repo; when touching TS-heavy logic, also run `pnpm build` (or `tsc --noEmit` if a script is available) before considering the change complete.
 
 ## Tailwind Plus / Catalyst
