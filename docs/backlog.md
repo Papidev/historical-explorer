@@ -159,3 +159,99 @@ We introduce standalone Person navigation or prioritize discovering Points of In
 **Possible direction**
 
 Derive the related Points of Interest from Story references to `personId` instead of storing a second list on the Person. Present only approved, visitor-facing Stories.
+
+Verify the complete POI A → Person → POI B path, including returning to the original place. Approval is not currently implemented; resolve the visitor visibility gate explicitly before exposing this new path. See [Entity discovery](entity-discovery.md).
+
+Include a way to see the associated POIs on the map when selecting a Person, and to clear that selection. The association is enough for discovery; opening a POI should explain the connection through its Story. Agree on city scope and interaction with category, style, and period filters when this slice is prioritized.
+
+## Preserve evidence for entity connections
+
+**Observation**
+
+Related People retain Source IDs, while linked Wikipedia articles resolve identities. Neither alone records the specific evidence that makes a connection significant.
+
+**Risk**
+
+Identity resolution can be mistaken for connection validation, and a future ranker may order entities without enough context about their relationship to the POI.
+
+**Revisit when**
+
+We evaluate independent ranking, add Wikidata-backed entity discovery, or introduce the first Event or Artifact.
+
+**Possible direction**
+
+Retain the supporting passage or structured statement for each connection internally. Keep identity resolution separate from connection validation and avoid requiring a formal relationship taxonomy. Coordinate with the multiple Story Sources entry if new sources are introduced.
+
+## Discover related Events
+
+**Observation**
+
+Story history insights describe occurrences, but Events do not yet have reusable identities or visitor detail views.
+
+**Risk**
+
+Visitors cannot explore a historical occurrence across places, and broad periods could be conflated with specific events.
+
+**Revisit when**
+
+We prioritize the first Event discovery path and select real POIs with source-supported occurrences.
+
+**Possible direction**
+
+Agree on the Event boundary using catalog examples, then deliver one complete discovery, identity resolution, and drawer detail slice. Keep unsupported or ambiguous identities non-navigable. Evaluate category tabs once real content makes the presentation useful; a general graph framework is not a prerequisite.
+
+## Discover related Artifacts
+
+**Observation**
+
+Story art insights can mention works and objects, but Artifacts do not yet have reusable identities or visitor detail views.
+
+**Risk**
+
+Visitors cannot explore an artwork or object independently. A monument that is also a POI could acquire duplicate identities.
+
+**Revisit when**
+
+We prioritize the first Artifact discovery path and select real works or objects with source-supported POI connections.
+
+**Possible direction**
+
+Agree on the Artifact boundary and its overlap with POIs before implementing a complete source-to-detail-view slice. Start with concrete works or objects and preserve their connection evidence without introducing a general ontology.
+
+## Complement Wikipedia entity discovery with Wikidata
+
+**Observation**
+
+People are currently selected during Story generation from Wikipedia. Wikidata is used for canonical Person identity, but not as a complementary discovery path for related entities.
+
+**Risk**
+
+Significant structured connections may be missed, while indiscriminately importing statements could produce irrelevant or duplicate candidates.
+
+**Revisit when**
+
+A review of actual POIs identifies significant connections missing from the Wikipedia-first path that Wikidata can support.
+
+**Possible direction**
+
+Add the smallest discovery path for those examples, retaining statement evidence and merging candidates through resolved identities. Preserve Wikipedia discovery when structured data is absent. Do not equate the existence of a statement with editorial significance.
+
+Begin with a source comparison for actual catalog POIs: record which useful facts and connections come from Wikidata, Wikipedia, or both, and where identity or historical context differs. Use those examples to choose the first additional path rather than building a broad property importer. Category, style, and period acquisition already belong to issues #38–#40; creator connections remain a future concrete case.
+
+## Evaluate Jev for ordering related People
+
+**Observation**
+
+Story generation currently selects and orders at most ten People in one operation. Jev was proposed as a separate future ranking candidate; it has not been evaluated or integrated.
+
+**Risk**
+
+A ranker could reward fame or semantic similarity rather than the significance of the connection, or silently filter entities that discovery already accepted.
+
+**Revisit when**
+
+We prioritize independent ordering and have connection evidence plus a Curator-reviewed expected order for People on 3–5 real POIs.
+
+**Possible direction**
+
+Verify Jev's concrete API and evaluate it against the current Story order using the same valid People. Assess quality, latency, cost, and failures before deciding on integration. Require exactly the same entities in the output, ordered within one category. Jev must not discover, validate, filter, add, or rewrite entities. Preserve the existing order on failure or invalid output and keep ranking replaceable. Events and Artifacts can be evaluated later when their discovery paths exist; cross-category ranking remains outside scope.

@@ -17,6 +17,22 @@ The goal is to help visitors:
 
 Each POI should become a small curated visitor experience, not a complete encyclopedia page.
 
+The map should be selective: places belong because of their historical, artistic, architectural, archaeological, or cultural significance. Restaurants, hotels, shops, and other businesses should not appear merely because they are useful to tourists; a place may still qualify through its own cultural or historical significance. Extending this scope to places valued primarily for natural interest remains a product decision.
+
+## Discovery through connections
+
+A visitor should eventually be able to move from a POI to a connected Person, Event, or Artifact, then discover other places through that connection. For example, opening a person associated with a palace could reveal other places connected to that person.
+
+Spatial discovery answers "What is interesting around here?"; discovery through connections answers "What else is connected to this?". Selecting a Person should eventually let the visitor see associated POIs on the map. For discovery, knowing that a POI is connected is sufficient; its Story should explain why the connection matters without requiring a relationship label in the filter.
+
+People are the first implemented path. Events and Artifacts are future extensions: Events represent significant historical occurrences connected to a place; Artifacts represent culturally significant works or objects connected to it. Their detailed boundaries should be agreed on using real catalog examples before implementation.
+
+These connections form a knowledge graph in the domain, without requiring a graph visualization or dedicated graph database. The visitor should encounter simple lists and useful detail views. People, Events, and Artifacts tabs are a possible presentation to evaluate once there is real content for each category.
+
+Discovering a supported connection and ordering supported connections are separate responsibilities. Ranking should order entities within each category by the historical or cultural significance of their connection to the POI. Jev is a candidate for this future ordering step only; it must not discover, validate, filter, or add entities.
+
+The first extension should use simple, source-supported connections without requiring formal relationship types or generated prose for every relationship. Automatic "must-see" selections, ranking across categories, and explicit graph visualization remain outside the initial scope. See [Entity discovery](../entity-discovery.md) for current behavior and future boundaries.
+
 ## Production world vs visitor world
 
 There are two separate worlds:
@@ -45,7 +61,7 @@ The visitor experience should be quick, pleasant, low-friction, and useful while
 
 ## Current product decisions
 
-The primary product mode is a visitor who is near, or interested in, a specific POI and wants a concise cultural explanation. Planning, nearby discovery, post-visit review, and deeper reading are interesting future modes, but the first product shape should optimize the POI visit companion experience.
+The primary product mode is a visitor who is near, or interested in, a specific POI and wants a concise cultural explanation. Browsing the map and exploring POIs from home before a visit are part of the same experience; physical presence is not required. Dedicated itinerary planning, expanded nearby discovery, post-visit review, and deeper reading remain possible future modes, while the first product shape should optimize the POI visit companion experience.
 
 Each POI should have one canonical English story. Its primary content is structured, source-grounded, and concise: a required introduction followed by supported history, design, and art insights, plus related people. Topics may be empty and unsupported material must be omitted. The structure carries content semantics, while React components own its public presentation.
 
@@ -66,6 +82,8 @@ Main image candidate discovery should run after Wikipedia source acquisition and
 The admin dashboard should let the curator choose the AI provider for the current admin session, switching between local AI through Ollama and cloud AI through Gemini or Ollama Cloud without rewriting environment configuration. The selector should use the concise choices "Local" and "Cloud", with a secondary line explaining the concrete provider, model, and cost implication. When Ollama Cloud is active, the panel should show both models used by the pipeline: the Cloud model for Story Content and the configured local Ollama model for structured Person generation. `AI_MODE` should choose the initial Local/Cloud selection, while `LOCAL_AI_PROVIDER`, `LOCAL_AI_MODEL`, `CLOUD_AI_PROVIDER`, and `CLOUD_AI_MODEL` configure the concrete backends. These variables are the primary AI configuration shape. The selected provider and model should be submitted with each manual AI workflow action.
 
 The first source pipeline should stay limited to Wikipedia, Wikidata, and Wikimedia Commons. Source material and draft metadata belong to the story workflow and should not be shown in the default visitor experience. A future "learn more" section may expose selected sources when that adds useful depth without slowing down the core visit companion experience.
+
+Filterable POI metadata should remain separate from Story Content. Categories, architectural styles, and historical periods support discovery; the Story explains the place's significance. Prefer structured source facts for filters where available, preserving source identity and date precision before mapping them to app-owned values. Wikipedia remains both a narrative source and a source of connections absent from Wikidata. These are complementary roles, without treating either source as complete or infallible. Category, style, and period filters are already planned in issues [#38](https://github.com/Papidev/historical-explorer/issues/38), [#39](https://github.com/Papidev/historical-explorer/issues/39), and [#40](https://github.com/Papidev/historical-explorer/issues/40).
 
 The map remains the entry point for discovery, but the story is the main value moment. Selecting a marker should first show a lightweight identifiable preview, because a marker alone does not tell the visitor what it represents. The preview should include the POI name, a small thumbnail, a short descriptor, and an action to open the full story.
 
