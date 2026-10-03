@@ -147,6 +147,8 @@ describe("visitor category filtering", () => {
     expect(
       screen.getByRole("button", { name: "Open details for An Unclassified Place" }),
     ).toBeInTheDocument();
+    for (const checkbox of screen.getAllByRole("checkbox")) expect(checkbox).toBeChecked();
+    await user.click(screen.getByRole("button", { name: "Clear categories" }));
     await user.click(screen.getByRole("checkbox", { name: "Churches" }));
     expect(screen.getByRole("status")).toHaveTextContent("2 places");
     expect(
@@ -188,6 +190,7 @@ describe("visitor category filtering", () => {
       screen.getByRole("button", { name: "Show subcategories for Churches & cathedrals" }),
     );
     expect(screen.getByRole("heading", { name: "A Museum" })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Clear categories" }));
     await user.click(screen.getByRole("checkbox", { name: "Museum" }));
     expect(screen.getByRole("heading", { name: "A Museum" })).toBeInTheDocument();
     await user.click(screen.getByRole("checkbox", { name: "Churches" }));
@@ -234,6 +237,10 @@ describe("visitor category filtering", () => {
         initialSelectedPoiId="basilica"
       />,
     );
+    expect(screen.getByRole("checkbox", { name: "Churches & cathedrals" })).toBeChecked();
+    expect(screen.getByRole("checkbox", { name: "Museum" })).toBeChecked();
+    expect(screen.getByRole("status")).toHaveTextContent("6 places");
+    await user.click(screen.getByRole("button", { name: "Clear categories" }));
     expect(screen.queryByRole("checkbox", { name: "Basilicas" })).not.toBeInTheDocument();
     await user.click(screen.getByRole("checkbox", { name: "Churches & cathedrals" }));
     expect(screen.getByRole("status")).toHaveTextContent("4 places");
@@ -295,6 +302,7 @@ describe("visitor category filtering", () => {
     );
     expect(screen.queryByRole("checkbox", { name: "Cathedrals" })).not.toBeInTheDocument();
     expect(screen.queryByRole("checkbox", { name: "Basilicas" })).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Clear categories" }));
     await user.click(screen.getByRole("checkbox", { name: "Churches" }));
     expect(screen.getByRole("status")).toHaveTextContent("2 places");
     expect(screen.getByRole("checkbox", { name: "Museum" })).toBeInTheDocument();

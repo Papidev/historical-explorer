@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  POI_CATEGORIES,
   POI_CATEGORY_PARENTS,
   POI_SUBCATEGORIES,
   matchesPoiCategory,
@@ -28,7 +29,12 @@ export const CityExplorer = ({
   initialSelectedPoiId = null,
   pois,
 }: Props) => {
-  const [selectedCategories, setSelectedCategories] = useState<PoiCategory[]>([]);
+  const availableCategories = POI_CATEGORIES.filter((category) =>
+    pois.some((poi) => matchesPoiCategory(poi.categories, category)),
+  );
+  const [selectedCategories, setSelectedCategories] = useState<PoiCategory[]>(
+    () => availableCategories,
+  );
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [zoom, setZoom] = useState(initialZoom);
   const [selectedPoiId, setSelectedPoiId] = useState<string | null>(initialSelectedPoiId);
@@ -36,6 +42,7 @@ export const CityExplorer = ({
   const visiblePois = pois.filter(
     (poi) =>
       !selectedCategories.length ||
+      availableCategories.every((category) => selectedCategories.includes(category)) ||
       selectedCategories.some((category) => matchesPoiCategory(poi.categories, category)),
   );
   const selectedPoi = selectedPoiId
@@ -46,6 +53,7 @@ export const CityExplorer = ({
     if (
       selectedPoi &&
       next.length &&
+      !availableCategories.every((category) => next.includes(category)) &&
       !next.some((category) => matchesPoiCategory(selectedPoi.categories, category))
     ) {
       setSelectedPoiId(null);
