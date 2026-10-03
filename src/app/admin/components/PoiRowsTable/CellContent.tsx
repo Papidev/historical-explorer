@@ -9,7 +9,7 @@ export const CellContent = ({
   subtitle?: string;
   generationModel?: string;
   isAvailable?: boolean;
-  titleTone?: "poi" | "status" | "warning";
+  titleTone?: "poi" | "status" | "warning" | "neutral";
 }) => (
   <div className="grid min-w-0 grid-rows-[1.5rem_1rem]">
     <div className="overflow-hidden">
@@ -20,9 +20,11 @@ export const CellContent = ({
             title
               ? titleTone === "poi"
                 ? "text-base leading-5 font-semibold text-black"
-                : titleTone === "warning"
-                  ? "text-xs leading-4 font-semibold text-amber-900"
-                  : "text-xs leading-4 font-semibold text-emerald-700"
+                : titleTone === "neutral"
+                  ? "text-xs leading-4 text-gray-500"
+                  : titleTone === "warning"
+                    ? "text-xs leading-4 font-semibold text-amber-900"
+                    : "text-xs leading-4 font-semibold text-emerald-700"
               : "text-sm leading-5 text-black/35"
           }`}
         >

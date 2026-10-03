@@ -196,6 +196,41 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
   const pendingPeople = new Map<string, Promise<Person>>();
 
   return {
+    regenerate: async ({
+      personId,
+      ai,
+      onProgress,
+    }: {
+      personId: string;
+      ai: AiSelection;
+      onProgress?: (message: string) => void;
+    }) => {
+      const person = dependencies.repository.list().find(({ id }) => id === personId);
+      if (!person) throw new Error("Person not found.");
+      if (pendingPeople.has(person.wikidataId)) {
+        throw new Error("This Person is already being generated. Try again when it finishes.");
+      }
+      const pending = (async () => {
+        const source = dependencies.repository.readSource(person);
+        const provider = getProvider(ai);
+        onProgress?.(`Generating ${person.name} with ${provider} (${ai.model}).`);
+        const content = await dependencies.generateContent(person, [source], { ...ai, provider });
+        const updated = {
+          ...person,
+          content,
+          generation: {
+            aiMode: ai.mode,
+            aiProvider: provider,
+            aiModel: ai.model,
+            completedAt: dependencies.now().toISOString(),
+          },
+        };
+        dependencies.repository.replace(updated, source);
+        return updated;
+      })().finally(() => pendingPeople.delete(person.wikidataId));
+      pendingPeople.set(person.wikidataId, pending);
+      return pending;
+    },
     resolveAndGenerateMissing: async ({
       relatedPeople: references,
       storySources,

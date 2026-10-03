@@ -76,6 +76,56 @@ afterEach(() => {
 });
 
 describe("People", () => {
+  it("regenerates saved content while preserving identity, image, and source", async () => {
+    const repository = createRepository("hercules");
+    const original = repository.get("hercules")!;
+    repository.replace({ ...original, image: image(true) }, repository.readSource(original));
+    const people = createPeople({
+      repository,
+      now: () => new Date("2026-10-03T10:00:00.000Z"),
+      generateContent: async (person, sources, config) => {
+        expect(person.wikidataId).toBe(original.wikidataId);
+        expect(sources[0].content).toBe("Stored source");
+        expect(config).toEqual({ mode: "local", provider: "ollama", model: "new-model" });
+        return { ...content, curiosities: [] };
+      },
+    });
+    await people.regenerate({ personId: "hercules", ai: { mode: "local", model: "new-model" } });
+    expect(repository.list()).toHaveLength(1);
+    expect(repository.get("hercules")).toEqual({
+      ...original,
+      image: image(true),
+      content: { ...content, curiosities: [] },
+      generation: {
+        aiMode: "local",
+        aiProvider: "ollama",
+        aiModel: "new-model",
+        completedAt: "2026-10-03T10:00:00.000Z",
+      },
+    });
+    expect(repository.readSource(repository.get("hercules")!).content).toBe("Stored source");
+  });
+
+  it("keeps the saved Person after a failed regeneration and allows retry", async () => {
+    const repository = createRepository("hercules");
+    const original = repository.get("hercules");
+    let fail = true;
+    const people = createPeople({
+      repository,
+      generateContent: async () => {
+        if (fail) throw new Error("Generation failed");
+        return { ...content, curiosities: [] };
+      },
+    });
+    await expect(
+      people.regenerate({ personId: "hercules", ai: { mode: "local", model: "test-model" } }),
+    ).rejects.toThrow("Generation failed");
+    expect(repository.get("hercules")).toEqual(original);
+    fail = false;
+    await people.regenerate({ personId: "hercules", ai: { mode: "local", model: "test-model" } });
+    expect(repository.get("hercules")?.content.curiosities).toEqual([]);
+  });
+
   it("keeps the Italian edition for Related People links and their saved source", async () => {
     const repository = createRepository();
     const people = createPeople({

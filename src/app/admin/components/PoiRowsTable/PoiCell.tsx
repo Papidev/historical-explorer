@@ -13,7 +13,7 @@ export const PoiCell = ({ row, isInProgress, onSelectPanel }: CellProps) => (
   >
     <CellContent
       title={!row.transformedPoi ? "POI not generated" : undefined}
-      titleTone="warning"
+      titleTone={getPoiRowStatusGroup(row) === "to-do" ? "neutral" : "warning"}
       subtitle={row.transformedPoi?.id}
       isAvailable={Boolean(row.transformedPoi)}
     />

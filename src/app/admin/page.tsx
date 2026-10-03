@@ -1,5 +1,8 @@
+import { personRepository } from "@/server/person/filesystemRepository";
+import { toPublicPerson } from "@/server/person/types";
 import { AdminDashboard } from "./components/AdminDashboard";
 import {
+  regeneratePerson,
   generateDraftStory,
   generateDraftStories,
   refreshStoryContent,
@@ -19,31 +22,35 @@ export default async function AdminPage() {
   const initialAiSelection = await getInitialAiSelection();
 
   return (
-    <>
-      {error ? (
-        <main className="flex h-screen min-h-screen flex-col bg-neutral-50 p-4 sm:p-6">
-          <header className="mb-4 border-b border-black/10 pb-3">
-            <h1 className="text-xl font-semibold text-black">POI Import</h1>
-          </header>
-          <section className="rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-900">
-            {error}
-          </section>
-        </main>
-      ) : (
-        <AdminDashboard
-          rows={rows}
-          globalArtifacts={globalArtifacts}
-          aiModeOptions={aiModeOptions}
-          initialAiSelection={initialAiSelection}
-          generateDraftStoryAction={generateDraftStory}
-          generateDraftStoriesAction={generateDraftStories}
-          refreshStoryContentAction={refreshStoryContent}
-          resolveRelatedPeopleAction={resolveRelatedPeople}
-          refreshMainImageCandidatesAction={refreshMainImageCandidates}
-          refreshPoiTypesAction={refreshPoiTypes}
-          selectMainImageCandidateAction={selectMainImageCandidate}
-        />
-      )}
-    </>
+    <AdminDashboard
+      rows={rows}
+      poiError={error}
+      people={personRepository
+        .list()
+        .map((person) => ({
+          ...toPublicPerson(person),
+          linkedPois: rows
+            .filter((row) =>
+              row.storyContent?.relatedPeople.some(({ personId }) => personId === person.id),
+            )
+            .map((row) => ({
+              id: row.id,
+              name: row.transformedPoi?.name ?? row.rawPoi?.name ?? row.id,
+            }))
+            .sort((a, b) => a.name.localeCompare(b.name, "en")),
+        }))
+        .sort((a, b) => a.name.localeCompare(b.name, "en"))}
+      regeneratePersonAction={regeneratePerson}
+      globalArtifacts={globalArtifacts}
+      aiModeOptions={aiModeOptions}
+      initialAiSelection={initialAiSelection}
+      generateDraftStoryAction={generateDraftStory}
+      generateDraftStoriesAction={generateDraftStories}
+      refreshStoryContentAction={refreshStoryContent}
+      resolveRelatedPeopleAction={resolveRelatedPeople}
+      refreshMainImageCandidatesAction={refreshMainImageCandidates}
+      refreshPoiTypesAction={refreshPoiTypes}
+      selectMainImageCandidateAction={selectMainImageCandidate}
+    />
   );
 }

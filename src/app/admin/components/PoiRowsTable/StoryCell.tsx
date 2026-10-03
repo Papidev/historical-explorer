@@ -38,7 +38,13 @@ export const StoryCell = ({
             ? "Story Content not generated"
             : undefined
       }
-      titleTone={row.sourcePending || !row.storyContent ? "warning" : "status"}
+      titleTone={
+        getPoiRowStatusGroup(row) === "to-do"
+          ? "neutral"
+          : row.sourcePending || !row.storyContent
+            ? "warning"
+            : "status"
+      }
       generationModel={[
         row.storyContentGenerationMode,
         row.storyContentGenerationProvider,

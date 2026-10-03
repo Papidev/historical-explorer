@@ -61,7 +61,11 @@ export const MainImageCell = ({
       <CellContent
         title={row.sourcePending ? "Waiting for source" : getMainImageStatus(row.mainImageArtifact)}
         titleTone={
-          row.sourcePending || getMainImageStatus(row.mainImageArtifact) ? "warning" : "status"
+          getPoiRowStatusGroup(row) === "to-do"
+            ? "neutral"
+            : row.sourcePending || getMainImageStatus(row.mainImageArtifact)
+              ? "warning"
+              : "status"
         }
         subtitle={
           row.mainImageArtifact
