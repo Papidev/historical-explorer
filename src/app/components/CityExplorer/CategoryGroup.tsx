@@ -1,27 +1,37 @@
 import { useId, useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import type { Poi } from "@/types/Poi";
-import { POI_SUBCATEGORIES, matchesPoiCategory, type PoiCategory } from "@/types/PoiCategory";
+import {
+  DEFAULT_POI_CATEGORY_DEFINITIONS,
+  matchesPoiCategory,
+  type PoiCategory,
+  type PoiCategoryDefinition,
+} from "@/types/PoiCategory";
 import { CategoryOption } from "./CategoryOption";
 
 export const CategoryGroup = ({
   category,
+  definitions = DEFAULT_POI_CATEGORY_DEFINITIONS,
   pois,
   selectedCategories,
   onToggleCategory,
 }: {
   category: PoiCategory;
+  definitions?: PoiCategoryDefinition[];
   pois: Poi[];
   selectedCategories: PoiCategory[];
   onToggleCategory: (category: PoiCategory) => void;
 }) => {
   const [expanded, setExpanded] = useState(false);
   const subcategoriesId = useId();
-  const count = pois.filter((poi) => matchesPoiCategory(poi.categories, category)).length;
-  const children = POI_SUBCATEGORIES.filter(({ parent }) => parent === category)
-    .map(({ name }) => ({
-      name,
-      count: pois.filter((poi) => matchesPoiCategory(poi.categories, name)).length,
+  const count = pois.filter((poi) =>
+    matchesPoiCategory(poi.categories, category, definitions),
+  ).length;
+  const children = definitions
+    .filter(({ parent }) => parent === category)
+    .map(({ id }) => ({
+      name: id,
+      count: pois.filter((poi) => matchesPoiCategory(poi.categories, id, definitions)).length,
     }))
     .filter(({ count }) => count > 0);
   if (!count) return null;
@@ -30,6 +40,7 @@ export const CategoryGroup = ({
       <div className="flex items-center gap-2">
         <CategoryOption
           category={category}
+          definitions={definitions}
           count={count}
           checked={selectedCategories.includes(category)}
           onToggle={() => onToggleCategory(category)}
@@ -37,7 +48,7 @@ export const CategoryGroup = ({
         {children.length > 0 ? (
           <button
             type="button"
-            aria-label={`${expanded ? "Hide" : "Show"} subcategories for ${category}`}
+            aria-label={`${expanded ? "Hide" : "Show"} subcategories for ${definitions.find((definition) => definition.id === category)?.name ?? category}`}
             aria-expanded={expanded}
             aria-controls={subcategoriesId}
             onClick={() => setExpanded(!expanded)}
@@ -62,6 +73,7 @@ export const CategoryGroup = ({
             <CategoryOption
               key={name}
               category={name}
+              definitions={definitions}
               count={count}
               checked={selectedCategories.includes(name)}
               onToggle={() => onToggleCategory(name)}

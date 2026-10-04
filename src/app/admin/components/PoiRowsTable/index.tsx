@@ -125,10 +125,8 @@ export const PoiRowsTable = ({
   ) => {
     if (runningIds.length) return;
     const runId = includeAiSelection ? crypto.randomUUID() : undefined;
-    if (includeAiSelection) {
-      formData.set("aiMode", aiSelectionRef.current.mode);
-      formData.set("aiModel", aiSelectionRef.current.model);
-    }
+    formData.set("aiMode", aiSelectionRef.current.mode);
+    formData.set("aiModel", aiSelectionRef.current.model);
     if (runId) {
       formData.set("progressId", runId);
       flushSync(() => {
@@ -145,6 +143,11 @@ export const PoiRowsTable = ({
     setProgress({ poiId, description });
     try {
       const result = await action(formData);
+      if (typeof BroadcastChannel !== "undefined") {
+        const channel = new BroadcastChannel("poi-type-mappings");
+        channel.postMessage(["rome"]);
+        channel.close();
+      }
       if (result?.warning) {
         setActionToast({ tone: "warning", ...result.warning });
       }

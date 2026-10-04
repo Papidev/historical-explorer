@@ -1,17 +1,30 @@
 import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import type { PoiCategory } from "@/types/PoiCategory";
+import {
+  expandPoiCategorySelection,
+  DEFAULT_POI_CATEGORY_DEFINITIONS,
+  type PoiCategoryDefinition,
+  type PoiCategory,
+} from "@/types/PoiCategory";
 import type { GeoJson } from "@/server/wikiPipeline/types";
+
+import { readPoiCategoryCatalog } from "@/server/poiCategoryCatalog";
 
 export const derivePoiCategories = (
   types: Array<{ id: string }>,
   mappings: Record<string, PoiCategory[]>,
   name = "",
+  definitions: PoiCategoryDefinition[] = DEFAULT_POI_CATEGORY_DEFINITIONS,
 ): PoiCategory[] => {
-  const categories = [...new Set(types.flatMap(({ id }) => mappings[id] ?? []))];
+  const categories = expandPoiCategorySelection(
+    types.flatMap(({ id }) => mappings[id] ?? []),
+    definitions,
+    false,
+  ).filter((category) => definitions.some(({ id }) => id === category));
+  if (categories.includes("Churches & cathedrals")) return categories;
   if (!categories.some((category) => ["Church", "Basilica", "Cathedral"].includes(category)))
     return categories;
-  if (/\bbasilica\b/i.test(name)) {
+  if (/\bbasilica\b/i.test(name) && definitions.some(({ id }) => id === "Basilica")) {
     return [
       ...new Set([
         ...categories.filter((category) => category !== "Cathedral"),
@@ -19,13 +32,13 @@ export const derivePoiCategories = (
       ]),
     ];
   }
-  if (/\b(cathedral|cattedrale)\b/i.test(name))
+  if (/\b(cathedral|cattedrale)\b/i.test(name) && definitions.some(({ id }) => id === "Cathedral"))
     return [...new Set([...categories, "Cathedral" as const])];
   return categories.includes("Cathedral")
     ? [
         ...new Set([
           ...categories.filter((category) => category !== "Cathedral"),
-          "Church" as const,
+          ...(definitions.some(({ id }) => id === "Church") ? ["Church"] : []),
         ]),
       ]
     : categories;
@@ -78,6 +91,7 @@ export const createPoiCategoriesForCity = (
               (feature) => String(feature.id) === poiId,
             )?.properties?.name ?? "",
           ),
+          readPoiCategoryCatalog(dataDirectory).categories,
         ),
       });
     },
@@ -113,6 +127,7 @@ export const createPoiCategoriesForCity = (
                   : [],
                 rules,
                 String(feature.properties?.name ?? ""),
+                readPoiCategoryCatalog(dataDirectory).categories,
               ),
             ];
           }),

@@ -21,7 +21,18 @@ beforeEach(() => {
   dataDirectory = mkdtempSync(path.join(tmpdir(), "poi-categories-"));
   writeFileSync(
     path.join(dataDirectory, "poi-type-category-map.json"),
-    readFileSync("data/poi-type-category-map.json"),
+    JSON.stringify({
+      version: 1,
+      mappings: {
+        Q2887138: [],
+        Q2065736: [],
+        Q16970: ["Church"],
+        Q33506: ["Museum"],
+        Q124936: ["Basilica"],
+        Q2713379: ["Basilica"],
+        Q2977: ["Cathedral"],
+      },
+    }),
   );
   for (const city of ["rome", "another-city"]) {
     mkdirSync(path.dirname(catalogPath(city)), { recursive: true });
@@ -246,4 +257,110 @@ describe("persisted POI categories", () => {
     expect(readCatalog().features).toHaveLength(6);
     expect(readCatalog().features?.some((poi) => "categories" in poi)).toBe(false);
   });
+});
+
+describe("shared curator type mappings", () => {
+  it("assigns multiple categories across cities, persists rules and distinguishes clear from ignore", async () => {
+    const { createPoiTypeMappings } = await import("@/server/poiTypeMappings");
+    const mappings = createPoiTypeMappings(dataDirectory);
+    expect(
+      mappings.getCatalog().types.find((type) => type.id === "Q999999")?.categories,
+    ).toBeUndefined();
+    expect(mappings.save("Q999999", ["Church", "Museum", "Church"])).toEqual({
+      updatedPois: 2,
+      cities: ["another-city", "rome"],
+    });
+    for (const city of ["rome", "another-city"])
+      expect(readCategories(city)["unmapped-type"]).toEqual([
+        "Church",
+        "Museum",
+        "Churches & cathedrals",
+      ]);
+    expect(
+      createPoiTypeMappings(dataDirectory)
+        .getCatalog()
+        .types.find((type) => type.id === "Q999999")?.categories,
+    ).toEqual(["Church", "Museum", "Churches & cathedrals"]);
+    for (const city of ["rome", "another-city"])
+      createPoiCategoriesForCity(city, dataDirectory).rebuild();
+    for (const city of ["rome", "another-city"])
+      expect(readCategories(city)["unmapped-type"]).toEqual([
+        "Church",
+        "Museum",
+        "Churches & cathedrals",
+      ]);
+    mappings.save("Q999999", []);
+    expect(mappings.getCatalog().types.find((type) => type.id === "Q999999")?.categories).toEqual(
+      [],
+    );
+    mappings.save("Q999999", null);
+    expect(
+      mappings.getCatalog().types.find((type) => type.id === "Q999999")?.categories,
+    ).toBeUndefined();
+    for (const city of ["rome", "another-city"])
+      expect(readCategories(city)["unmapped-type"]).toEqual([]);
+    expect(mappings.getCatalog().missingTypes).toHaveLength(4);
+    expect(readCatalog().features).toHaveLength(5);
+  });
+
+  it("preserves unrelated saved categories and Stories, and validates input before writing", async () => {
+    const { createPoiTypeMappings } = await import("@/server/poiTypeMappings");
+    const mappings = createPoiTypeMappings(dataDirectory);
+    const categories = createPoiCategoriesForCity("rome", dataDirectory);
+    categories.refresh("ignored-type", [{ id: "Q33506" }]);
+    const before = readFileSync(path.join(dataDirectory, "poi-type-category-map.json"), "utf-8");
+    expect(() => mappings.save("Q999999", ["Unknown" as never])).toThrow("existing vocabulary");
+    expect(() => mappings.save("../../bad", [])).toThrow("Invalid Wikidata");
+    expect(() => mappings.save("Q111111", [])).toThrow("no longer present");
+    expect(readFileSync(path.join(dataDirectory, "poi-type-category-map.json"), "utf-8")).toBe(
+      before,
+    );
+    mappings.save("Q999999", ["Square"]);
+    expect(readCategories()["ignored-type"]).toEqual(["Museum"]);
+    writeFileSync(path.join(dataDirectory, "rome", "pois", "categories.json"), "invalid json");
+    const saved = readFileSync(path.join(dataDirectory, "poi-type-category-map.json"), "utf-8");
+    expect(() => mappings.save("Q999999", ["Museum"])).toThrow();
+    expect(readFileSync(path.join(dataDirectory, "poi-type-category-map.json"), "utf-8")).toBe(
+      saved,
+    );
+  });
+});
+
+it("keeps Curator rules through a real source-type refresh", async () => {
+  const { createPoiTypeMappings } = await import("@/server/poiTypeMappings");
+  const mappings = createPoiTypeMappings(dataDirectory);
+  mappings.save("Q999999", ["Museum"]);
+  server.use(
+    http.get("https://www.wikidata.org/w/api.php", ({ request }) => {
+      const ids = new URL(request.url).searchParams.get("ids");
+      return HttpResponse.json({
+        entities:
+          ids === "Q300"
+            ? {
+                Q300: {
+                  claims: { P31: [{ mainsnak: { datavalue: { value: { id: "Q999999" } } } }] },
+                },
+              }
+            : { Q999999: { labels: { en: { value: "Refreshed label" } } } },
+      });
+    }),
+  );
+  const types = createPoiTypes({
+    directory: path.join(dataDirectory, "rome", "generated", "wikidata"),
+    findPointOfInterest: (id) => ({
+      id,
+      name: "Unmapped place",
+      city: "Rome",
+      coordinates: { lat: 41, lng: 12 },
+      sourceHints: { wikidata: "Q300" },
+    }),
+    onRefresh: createPoiCategoriesForCity("rome", dataDirectory).refresh,
+  });
+  await types.refresh("unmapped-type");
+  expect(readCategories()["unmapped-type"]).toEqual(["Museum"]);
+  expect(
+    createPoiTypeMappings(dataDirectory)
+      .getCatalog()
+      .types.find((type) => type.id === "Q999999")?.categories,
+  ).toEqual(["Museum"]);
 });

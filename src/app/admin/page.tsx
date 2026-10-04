@@ -2,6 +2,11 @@ import { personRepository } from "@/server/person/filesystemRepository";
 import { toPublicPerson } from "@/server/person/types";
 import { AdminDashboard } from "./components/AdminDashboard";
 import {
+  saveTypeMapping,
+  classifyTypeMappings,
+  savePoiCategory,
+  movePoiCategory,
+  deletePoiCategory,
   regeneratePerson,
   generateDraftStory,
   generateDraftStories,
@@ -14,6 +19,8 @@ import {
 import { getInitialAiSelection, loadAiModeOptions } from "./lib/aiModels";
 import { loadPoiLists } from "./lib/loadPoiLists";
 
+import { createPoiTypeMappings } from "@/server/poiTypeMappings";
+
 export const dynamic = "force-dynamic";
 
 export default async function AdminPage() {
@@ -24,6 +31,10 @@ export default async function AdminPage() {
   return (
     <AdminDashboard
       rows={rows}
+      typeMappings={createPoiTypeMappings().getCatalog()}
+      saveTypeMappingAction={saveTypeMapping}
+      classifyTypeMappingsAction={classifyTypeMappings}
+      categoryActions={{ save: savePoiCategory, delete: deletePoiCategory, move: movePoiCategory }}
       poiError={error}
       people={personRepository
         .list()

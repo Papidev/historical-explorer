@@ -6,7 +6,7 @@
     "Q7362268": ["Amphitheatre"],
     "Q839954": ["Archaeological Site"],
     "Q13218676": ["Aqueduct"],
-    "Q33506": ["Museum"],
+    "Q33506": ["Abbey", "Churches & cathedrals"],
     "Q92107": ["Castle"],
     "Q3822604": ["Mausoleum"],
     "Q162875": ["Mausoleum"],
@@ -23,6 +23,24 @@
     "Q16970": ["Church"],
     "Q2065736": [],
     "Q1492823": [],
-    "Q14752696": []
+    "Q14752696": [],
+    "Q3748441": ["Square"],
+    "Q16560": ["Palace"],
+    "Q110288055": ["Abbey", "Churches & cathedrals"],
+    "Q12518": ["Tower"],
+    "Q840482": []
+  },
+  "origins": {
+    "Q3748441": "automatic",
+    "Q16560": "automatic",
+    "Q840482": "manual",
+    "Q110288055": "manual",
+    "Q12518": "automatic",
+    "Q33506": "manual"
+  },
+  "reasons": {
+    "Q3748441": "\"forum venalium\" is a Roman marketplace, which is a type of public square.",
+    "Q16560": "\"palace\" denotes a grand residence not covered by existing categories, so a new top‑level category \"Palace\" is created.",
+    "Q12518": "\"tower\" is a distinct architectural type not covered by existing categories, so a new category \"Tower\" is created."
   }
 }

@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import type { AdminActionWarning } from "../lib/types";
 
-export type Toast = AdminActionWarning & { tone: "error" | "warning" };
+export type Toast = AdminActionWarning & { tone: "error" | "warning" | "success" };
 
 export const getActionError = (error: unknown): Toast => {
   const details = error instanceof Error ? error.message : "The action failed. Please try again.";
@@ -67,17 +67,22 @@ export const getActionError = (error: unknown): Toast => {
 
 export const ActionToast = ({ toast, onDismiss }: { toast: Toast; onDismiss: () => void }) => {
   useEffect(() => {
-    const timeout = window.setTimeout(onDismiss, 12_000);
+    const timeout = window.setTimeout(onDismiss, toast.tone === "success" ? 6000 : 12_000);
     return () => window.clearTimeout(timeout);
   }, [toast, onDismiss]);
 
   const isWarning = toast.tone === "warning";
+  const isSuccess = toast.tone === "success";
 
   return (
     <div
-      role="alert"
+      role={isSuccess ? "status" : "alert"}
       className={`fixed right-4 bottom-4 z-50 flex w-[calc(100vw-2rem)] max-w-xl items-start gap-5 rounded-xl border-2 bg-white px-5 py-4 text-base shadow-2xl sm:px-6 sm:py-5 ${
-        isWarning ? "border-amber-300 text-amber-950" : "border-red-300 text-red-950"
+        isSuccess
+          ? "border-green-300 text-green-950"
+          : isWarning
+            ? "border-amber-300 text-amber-950"
+            : "border-red-300 text-red-950"
       }`}
     >
       <div className="flex-1">
@@ -88,9 +93,11 @@ export const ActionToast = ({ toast, onDismiss }: { toast: Toast; onDismiss: () 
         type="button"
         aria-label="Dismiss notification"
         className={`-m-1 cursor-pointer rounded p-2 text-2xl leading-none ${
-          isWarning
-            ? "text-amber-800/70 hover:bg-amber-50 hover:text-amber-950"
-            : "text-red-700/70 hover:bg-red-50 hover:text-red-900"
+          isSuccess
+            ? "text-green-800/70 hover:bg-green-50 hover:text-green-950"
+            : isWarning
+              ? "text-amber-800/70 hover:bg-amber-50 hover:text-amber-950"
+              : "text-red-700/70 hover:bg-red-50 hover:text-red-900"
         }`}
         onClick={onDismiss}
       >

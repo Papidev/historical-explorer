@@ -1,18 +1,42 @@
 import { describe, expect, it } from "vitest";
+import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import path from "node:path";
+import { createPoiCategoriesForCity } from "@/server/poiCategories";
 import { createPoisForCity } from ".";
 
 describe("createPoisForCity", () => {
   it("combines separate persisted categories with POIs by their stable ID", async () => {
-    const pois = await createPoisForCity("rome", async () => undefined);
-    expect(pois.find(({ id }) => id === "basilica-costantiniana-di-s-agnese")?.categories).toEqual(
-      [],
-    );
-    expect(pois.find(({ id }) => id === "castle-of-the-holy-angel")?.categories).toEqual([
-      "Museum",
-      "Castle",
-      "Mausoleum",
-    ]);
-    expect(pois.find(({ id }) => id === "acquedotto-dei-sette-bassi")?.categories).toEqual([]);
+    const directory = mkdtempSync(path.join(tmpdir(), "visitor-categories-"));
+    try {
+      mkdirSync(path.join(directory, "rome", "pois"), { recursive: true });
+      writeFileSync(
+        path.join(directory, "rome", "pois", "categories.json"),
+        JSON.stringify({
+          version: 1,
+          pois: {
+            "castle-of-the-holy-angel": ["Museum", "Castle", "Mausoleum"],
+            "basilica-costantiniana-di-s-agnese": [],
+          },
+        }),
+      );
+      const pois = await createPoisForCity(
+        "rome",
+        async () => undefined,
+        createPoiCategoriesForCity("rome", directory).getAll,
+      );
+      expect(
+        pois.find(({ id }) => id === "basilica-costantiniana-di-s-agnese")?.categories,
+      ).toEqual([]);
+      expect(pois.find(({ id }) => id === "castle-of-the-holy-angel")?.categories).toEqual([
+        "Museum",
+        "Castle",
+        "Mausoleum",
+      ]);
+      expect(pois.find(({ id }) => id === "acquedotto-dei-sette-bassi")?.categories).toEqual([]);
+    } finally {
+      rmSync(directory, { recursive: true, force: true });
+    }
   });
 
   it("includes selected images without inventing missing preview copy", async () => {

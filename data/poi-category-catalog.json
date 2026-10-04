@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "Churches & cathedrals",
+      "name": "Churches & cathedrals"
+    },
+    {
+      "id": "Cathedral",
+      "name": "Cathedral",
+      "label": "Cathedrals",
+      "parent": "Churches & cathedrals",
+      "supersedes": ["Basilica", "Church"]
+    },
+    {
+      "id": "Basilica",
+      "name": "Basilica",
+      "label": "Basilicas",
+      "parent": "Churches & cathedrals",
+      "supersedes": ["Church"]
+    },
+    {
+      "id": "Church",
+      "name": "Church",
+      "label": "Churches",
+      "parent": "Churches & cathedrals",
+      "supersedes": []
+    },
+    {
+      "id": "Museum",
+      "name": "Museum"
+    },
+    {
+      "id": "Castle",
+      "name": "Castle"
+    },
+    {
+      "id": "Mausoleum",
+      "name": "Mausoleum"
+    },
+    {
+      "id": "Aqueduct",
+      "name": "Aqueduct"
+    },
+    {
+      "id": "Amphitheatre",
+      "name": "Amphitheatre"
+    },
+    {
+      "id": "Arch",
+      "name": "Arch"
+    },
+    {
+      "id": "Square",
+      "name": "Square"
+    },
+    {
+      "id": "Archaeological Site",
+      "name": "Archaeological Site"
+    },
+    {
+      "id": "Palace",
+      "name": "Palace"
+    },
+    {
+      "id": "Abbey",
+      "name": "Abbey",
+      "parent": "Churches & cathedrals"
+    },
+    {
+      "id": "Tower",
+      "name": "Tower"
+    }
+  ],
+  "deletedNames": ["Shrine"]
+}
