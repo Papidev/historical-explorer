@@ -2,15 +2,20 @@
   "name": "historical-explorer",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@10.18.0",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "test": "vitest run",
+    "dev": "pnpm catalog:build && next dev",
+    "build": "pnpm catalog:build && next build",
+    "test": "pnpm catalog:build && vitest run",
     "start": "next start",
     "lint": "eslint",
     "format": "prettier --write",
     "prepare": "husky",
-    "categories:rebuild": "node scripts/rebuild-poi-categories.mjs"
+    "categories:rebuild": "node scripts/rebuild-poi-categories.mjs",
+    "catalog:build": "tsx scripts/build-public-catalog.ts"
   },
   "dependencies": {
     "@headlessui/react": "2.2.10",
@@ -45,6 +50,7 @@
     "prettier": "^3.8.3",
     "prettier-plugin-tailwindcss": "^0.8.0",
     "tailwindcss": "^4.3.0",
+    "tsx": "^4.23.15",
     "typescript": "^6.0.3",
     "vitest": "^4.1.11"
   }

@@ -17,7 +17,7 @@ pnpm dev
 
 Then open [http://localhost:3000](http://localhost:3000).
 
-The Rome map reads its versioned POI catalog from `data/rome/pois/pois.geojson` and shows only POIs whose admin rows are green (Complete).
+The Rome map and public APIs read a public content snapshot generated automatically before development, tests, and production builds. Publication is currently implicit: a POI needs valid versioned Story Content, a selected Main Image with license and attribution, and saved Person records for all Related People. Admin `Complete` status remains an editorial pipeline diagnostic and does not control publication. Local Wikipedia Sources, generation logs, and acquired POI Types are not required for publication.
 
 The OpenFreeMap basemap shows only cultural POI labels and icons: museums, monuments and memorials, castles and ruins, archaeological sites, places of worship, theatres, galleries, artworks, arts centres, and libraries. Other basemap POIs are hidden, including businesses, accommodation, services, sports facilities, and transit stops. Roads, buildings, geographic labels, and the app's curated markers remain visible. Filtering uses the categories supplied by the basemap; generic attractions are excluded because their cultural significance is not identified by those categories.
 
@@ -31,9 +31,18 @@ The OpenFreeMap basemap shows only cultural POI labels and icons: museums, monum
 ## Scripts
 
 - `pnpm dev` - run the local development server.
-- `pnpm build` - build for production.
+- `pnpm build` - generate the public snapshot from versioned content, then build for production.
+- `pnpm catalog:build` - regenerate the snapshot independently when needed.
 - `pnpm start` - start the production server.
 - `pnpm lint` - run ESLint.
+
+## Deployment
+
+Deploy through Vercel's GitHub integration. Import `Papidev/historical-explorer` into Vercel and select `main` as the production branch. `vercel.json` configures the production build; `package.json` pins pnpm and Node.js 24. Branch pushes create preview deployments, while updates to `main` deploy to production. The existing GitHub CI checks should be required before merging.
+
+Commit the POI catalog, categories, Stories, Image Candidates with their selected image, and linked Person records. Every build creates `data/public/catalog.json` from these files; the snapshot is gitignored and embedded in the server build. No separate export step, local generated data, or AI credentials are required on Vercel. The runtime map and APIs expose only snapshot entries and do not read editorial files using request IDs. Content updates reach the public site on the next deployment.
+
+The development server refreshes the snapshot after admin operations so the local map reflects saved content. Editing content files directly requires restarting `pnpm dev` or running `pnpm catalog:build`.
 
 ## Tailwind Plus / Catalyst
 
@@ -114,7 +123,7 @@ Ollama Cloud does not support schema-constrained output. Story Content and new P
 
 ## Security Notes
 
-The current `/admin` route is temporary and has no authentication. Keep it for local development only; do not expose it publicly until access control is added.
+The current `/admin` route is temporary and has no authentication. It is available only with `pnpm dev`: the admin page and AI progress API use `.dev.tsx` / `.dev.ts` route extensions, which are excluded from production builds. The production client bundles contain no admin UI, and requests to these missing routes return 404. Admin Server Actions also reject production execution before they read inputs or perform any work. The development server has no localhost-only access restriction; keep it on a trusted local network.
 
 Do not commit real API keys. Cloud AI generation sends source text to the configured provider and may incur paid usage.
 

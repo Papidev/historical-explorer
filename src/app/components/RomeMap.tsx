@@ -1,6 +1,4 @@
-import { createPoisForCity } from "@/utils";
-import { isPoiRowComplete } from "@/app/admin/lib/isPoiRowComplete";
-import { loadPoiLists } from "@/app/admin/lib/loadPoiLists";
+import { publicCatalog } from "@/server/publicCatalog";
 import { CityExplorer } from "@/app/components/CityExplorer";
 
 type Props = {
@@ -8,15 +6,7 @@ type Props = {
 };
 
 export const RomeMap = async ({ initialSelectedPoiId }: Props = {}) => {
-  const [catalogPois, { rows, error }] = await Promise.all([
-    createPoisForCity("rome"),
-    loadPoiLists(),
-  ]);
-  if (error) {
-    throw new Error(error);
-  }
-  const completePoiIds = new Set(rows.filter(isPoiRowComplete).map(({ id }) => id));
-  const pois = catalogPois.filter(({ id }) => completePoiIds.has(id));
+  const pois = publicCatalog.getPois("rome");
   const initialSelectedPoi = initialSelectedPoiId
     ? pois.find((poi) => poi.id === initialSelectedPoiId)
     : undefined;

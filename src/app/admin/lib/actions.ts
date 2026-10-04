@@ -1,6 +1,8 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
+import { notFound } from "next/navigation";
+import { writePublicCatalog } from "@/server/publicCatalog/build";
 import { people } from "@/server/person";
 import { withPoiGeneration } from "@/server/poiGeneration";
 import { generateStoryBatch } from "@/server/storyBatch";
@@ -16,6 +18,12 @@ import { appendAiProgress, finishAiProgress, startAiProgress } from "@/server/ai
 import type { RelatedPeopleResolutionFailure } from "@/server/storyWorkflow";
 import { resolveAiSelection } from "./aiModels";
 import type { AdminActionResult } from "./types";
+
+const refreshPublicCatalog = async () => {
+  await writePublicCatalog();
+  revalidatePath("/rome");
+  revalidatePath("/admin");
+};
 
 const getRequiredString = (formData: FormData, key: string, label: string) => {
   const value = formData.get(key);
@@ -49,6 +57,8 @@ const runAiAction = async (
   formData: FormData,
   work: (onProgress: (message: string) => void) => Promise<AdminActionResult | undefined>,
 ) => {
+  if (process.env.NODE_ENV === "production") notFound();
+
   const progressId = formData.get("progressId");
   const runId = typeof progressId === "string" ? progressId : undefined;
   if (runId) startAiProgress(runId);
@@ -83,7 +93,7 @@ const runAiAction = async (
       );
     throw error;
   } finally {
-    revalidatePath("/admin");
+    await refreshPublicCatalog();
   }
 };
 
@@ -194,6 +204,8 @@ export const regeneratePerson = async (formData: FormData) =>
   });
 
 export const refreshPoiTypes = async (formData: FormData): Promise<AdminActionResult | void> => {
+  if (process.env.NODE_ENV === "production") notFound();
+
   const poiId = getRequiredString(formData, "poiId", "POI id");
   const result = await withPoiGeneration(poiId, async () => {
     try {
@@ -211,7 +223,7 @@ export const refreshPoiTypes = async (formData: FormData): Promise<AdminActionRe
       return { error: error instanceof Error ? error.message : String(error) };
     }
   });
-  revalidatePath("/admin");
+  await refreshPublicCatalog();
   if ("skipped" in result && result.skipped) {
     return {
       warning: {
@@ -252,26 +264,34 @@ export const resolveRelatedPeople = async (formData: FormData) =>
   });
 
 export const refreshMainImageCandidates = async (formData: FormData) => {
+  if (process.env.NODE_ENV === "production") notFound();
+
   const poiId = getRequiredString(formData, "poiId", "POI id");
   await withGenerationRun({ city: "rome", operation: "mainImageCandidates.generate", poiId }, () =>
     withPoiGeneration(poiId, () => storyWorkflow.mainImageCandidates.generate({ poiId })),
   );
-  revalidatePath("/admin");
+  await refreshPublicCatalog();
 };
 
 export const deleteStoryContent = async (formData: FormData) => {
+  if (process.env.NODE_ENV === "production") notFound();
+
   const poiId = getRequiredString(formData, "poiId", "POI id");
   await withPoiGeneration(poiId, () => storyWorkflow.storyContent.delete({ poiId }));
-  revalidatePath("/admin");
+  await refreshPublicCatalog();
 };
 
 export const deleteMainImageCandidates = async (formData: FormData) => {
+  if (process.env.NODE_ENV === "production") notFound();
+
   const poiId = getRequiredString(formData, "poiId", "POI id");
   await withPoiGeneration(poiId, () => storyWorkflow.mainImageCandidates.delete({ poiId }));
-  revalidatePath("/admin");
+  await refreshPublicCatalog();
 };
 
 export const selectMainImageCandidate = async (formData: FormData) => {
+  if (process.env.NODE_ENV === "production") notFound();
+
   const poiId = getRequiredString(formData, "poiId", "POI id");
   await withPoiGeneration(poiId, () =>
     storyCuration.selectDraftMainImage({
@@ -279,10 +299,12 @@ export const selectMainImageCandidate = async (formData: FormData) => {
       commonsFileName: getRequiredString(formData, "commonsFileName", "Commons file name"),
     }),
   );
-  revalidatePath("/admin");
+  await refreshPublicCatalog();
 };
 
 export const generateDraftStories = async (formData: FormData) => {
+  if (process.env.NODE_ENV === "production") notFound();
+
   const ai = await getWorkflowAiSelection(formData);
   const progressIds = formData.getAll("progressId");
   if (progressIds.length !== formData.getAll("geoPlaceId").length) {
