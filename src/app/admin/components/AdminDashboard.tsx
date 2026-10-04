@@ -4,6 +4,8 @@ import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import { PeopleTable } from "./PeopleTable";
 import { useRef } from "react";
+import { useSearchParams } from "next/navigation";
+import { TypeMappingsPrototype } from "./TypeMappingsPrototype";
 import type { AiModeOption, AiSelection } from "../lib/aiModels";
 import type {
   AdminAction,
@@ -47,6 +49,8 @@ export const AdminDashboard = ({
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => {
   const aiSelectionRef = useRef(initialAiSelection);
+  const searchParams = useSearchParams();
+  const showPrototype = process.env.NODE_ENV !== "production";
 
   return (
     <main className="flex h-screen min-h-screen flex-col bg-neutral-50 p-4 sm:p-6">
@@ -72,16 +76,16 @@ export const AdminDashboard = ({
           selectionRef={aiSelectionRef}
         />
       </header>
-      <TabGroup className="flex min-h-0 flex-1 flex-col">
+      <TabGroup defaultIndex={showPrototype && searchParams.get("prototype") === "type-mappings" ? 2 : 0} className="flex min-h-0 flex-1 flex-col">
         <TabList aria-label="Admin content" className="mb-4 flex gap-8 border-b border-gray-200">
-          {["POIs", "People"].map((label) => (
+          {["POIs", "People", ...(showPrototype ? ["Type mappings"] : [])].map((label) => (
             <Tab
               key={label}
               className="-mb-px flex cursor-pointer items-center gap-2 border-b-2 border-transparent px-1 py-3 text-sm font-medium text-gray-500 hover:text-gray-700 focus-visible:outline-2 focus-visible:outline-indigo-600 data-selected:border-indigo-600 data-selected:text-indigo-600"
             >
               {label}
               <span className="rounded-full bg-gray-100 px-2 py-0.5 text-xs">
-                {label === "POIs" ? rows.length : people.length}
+                {label === "POIs" ? rows.length : label === "People" ? people.length : "Prototype"}
               </span>
             </Tab>
           ))}
@@ -117,6 +121,7 @@ export const AdminDashboard = ({
               regeneratePersonAction={regeneratePersonAction}
             />
           </TabPanel>
+          {showPrototype && <TabPanel unmount={false} className="flex min-h-0 flex-1 flex-col"><TypeMappingsPrototype rows={rows} /></TabPanel>}
         </TabPanels>
       </TabGroup>
     </main>
