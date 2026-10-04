@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { people } from "@/server/person";
+import { publicCatalog } from "@/server/publicCatalog";
 
 export const GET = async (
   _request: Request,
@@ -7,6 +7,6 @@ export const GET = async (
 ) => {
   const { personId } = await params;
   return NextResponse.json({
-    person: people.getPublic(decodeURIComponent(personId)) ?? null,
+    person: publicCatalog.getPerson(personId) ?? null,
   });
 };

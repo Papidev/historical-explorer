@@ -26,6 +26,7 @@
 # generated local content
 /data/*/generated/
 /data/generated/
+/data/public/
 
 # paid local Tailwind Plus source
 /.tailwind-plus/

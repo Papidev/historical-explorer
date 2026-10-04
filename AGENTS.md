@@ -12,6 +12,8 @@
 
 ## Tooling & Commands
 
+- Local-only admin route entrypoints use `.dev.tsx` / `.dev.ts`; `next.config.ts` recognizes these extensions only in the development-server phase. Keep public route entrypoints on the standard extensions, and avoid importing admin UI or Server Actions from public routes so they stay out of production bundles.
+- Public routes read only the build-generated public catalog. Publication is currently implicit from versioned Story Content, a licensed and attributed selected Main Image, and resolved saved People; do not use local pipeline `Complete` status or generated Sources as a publication gate. Keep snapshot generation out of production request handlers.
 - Use `pnpm` exclusively for dependency management and scripts (do not use npm or yarn).
 - If dependency installation fails, stop immediately and ask for help. Do not continue with alternative approaches intended to bypass the failed installation.
 - `pnpm lint` runs ESLint with the Next `core-web-vitals` rules plus `eslint-config-prettier` to keep formatting conflicts out.

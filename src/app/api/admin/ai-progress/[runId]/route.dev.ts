@@ -7,6 +7,8 @@ export const GET = async (
   _request: Request,
   { params }: { params: Promise<{ runId: string }> },
 ) => {
+  if (process.env.NODE_ENV === "production") return new Response(null, { status: 404 });
+
   const { runId } = await params;
   try {
     const progress = readAiProgress(runId);

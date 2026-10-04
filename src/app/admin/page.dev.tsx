@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import { personRepository } from "@/server/person/filesystemRepository";
 import { toPublicPerson } from "@/server/person/types";
 import { AdminDashboard } from "./components/AdminDashboard";
@@ -24,6 +25,8 @@ import { createPoiTypeMappings } from "@/server/poiTypeMappings";
 export const dynamic = "force-dynamic";
 
 export default async function AdminPage() {
+  if (process.env.NODE_ENV === "production") notFound();
+
   const { rows, globalArtifacts, error } = await loadPoiLists();
   const aiModeOptions = await loadAiModeOptions();
   const initialAiSelection = await getInitialAiSelection();

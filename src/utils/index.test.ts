@@ -4,6 +4,8 @@ import { tmpdir } from "node:os";
 import path from "node:path";
 import { createPoiCategoriesForCity } from "@/server/poiCategories";
 import { createPoisForCity } from ".";
+import { buildPublicCatalog } from "@/server/publicCatalog/build";
+import { createPublicCatalog } from "@/server/publicCatalog";
 
 describe("createPoisForCity", () => {
   it("combines separate persisted categories with POIs by their stable ID", async () => {
@@ -70,5 +72,39 @@ describe("createPoisForCity", () => {
     expect(
       pois.find(({ id }) => id === "basilica-costantiniana-di-s-agnese")?.shortDescription,
     ).toBeUndefined();
+  });
+});
+
+describe("public catalog", () => {
+  it("publishes versioned Stories and only their linked People without local sources", async () => {
+    const snapshot = await buildPublicCatalog();
+    const catalog = createPublicCatalog(() => snapshot);
+
+    expect(catalog.getPois("rome").find(({ id }) => id === "forum-boarium")).toMatchObject({
+      name: expect.any(String),
+      mainImageUrl: expect.stringContaining("https://"),
+    });
+    expect(catalog.getStoryContent("rome", "forum-boarium")?.introduction).toContain(
+      "Forum Boarium",
+    );
+    expect(catalog.getStoryContent("rome", "basilica-costantiniana-di-s-agnese")).toBeUndefined();
+    expect(catalog.getPerson("pope-alexander-iv")).toBeUndefined();
+    for (const { storyContent } of snapshot.pois) {
+      for (const { personId } of storyContent.relatedPeople) {
+        expect(catalog.getPerson(personId!)).toBeDefined();
+      }
+    }
+    expect(JSON.stringify(snapshot)).not.toMatch(/"(?:sourceIds|generation|isProposed)":/);
+  });
+
+  it("returns no content for unknown cities or IDs, including filesystem paths", async () => {
+    const snapshot = await buildPublicCatalog();
+    const catalog = createPublicCatalog(() => snapshot);
+
+    expect(catalog.getPois("unknown")).toEqual([]);
+    expect(catalog.getStoryContent("unknown", "forum-boarium")).toBeUndefined();
+    expect(catalog.getStoryContent("rome", "../forum-boarium")).toBeUndefined();
+    expect(catalog.getPerson("../people/pope-nicholas-v")).toBeUndefined();
+    expect(catalog.getPerson("%2e%2e%2fpeople%2fpope-nicholas-v")).toBeUndefined();
   });
 });
