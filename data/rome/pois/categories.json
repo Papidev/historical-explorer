@@ -2,13 +2,18 @@
   "version": 1,
   "pois": {
     "basilica-costantiniana-di-s-agnese": [],
-    "cloisters-of-bramante": ["Museum", "Church"],
+    "cloisters-of-bramante": ["Abbey", "Churches & cathedrals", "Church"],
     "forum-boarium": ["Square"],
     "piazza-navona": ["Square"],
-    "castle-of-the-holy-angel": ["Museum", "Castle", "Mausoleum"],
-    "basilica-of-saint-paul-outside-the-walls": ["Basilica", "Church"],
-    "torre-valca": ["Archaeological Site"],
-    "palazzo-rondinini": [],
+    "castle-of-the-holy-angel": ["Abbey", "Churches & cathedrals", "Castle", "Mausoleum"],
+    "basilica-of-saint-paul-outside-the-walls": [
+      "Basilica",
+      "Church",
+      "Abbey",
+      "Churches & cathedrals"
+    ],
+    "torre-valca": ["Tower", "Archaeological Site"],
+    "palazzo-rondinini": ["Palace"],
     "capitol-square": ["Square"],
     "arch-of-titus": ["Arch", "Archaeological Site"],
     "basilica-parrocchiale-dei-santi-pietro-e-paolo": ["Basilica", "Church"],

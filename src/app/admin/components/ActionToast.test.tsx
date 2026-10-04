@@ -1,8 +1,8 @@
 // @vitest-environment jsdom
 
 import "@testing-library/jest-dom/vitest";
-import { cleanup, render, screen } from "@testing-library/react";
-import { afterEach, describe, expect, it } from "vitest";
+import { act, cleanup, render, screen } from "@testing-library/react";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import { ActionToast, getActionError } from "./ActionToast";
 
 afterEach(cleanup);
@@ -38,4 +38,24 @@ describe("Action toast", () => {
     expect(screen.getByRole("alert")).not.toHaveTextContent("sources-unavailable");
     expect(screen.getByRole("alert")).not.toHaveTextContent("basilica-costantiniana-di-s-agnese");
   });
+});
+
+it("dismisses a success toast automatically after six seconds", () => {
+  vi.useFakeTimers();
+  try {
+    const view = render(
+      <ActionToast
+        toast={{ tone: "success", title: "Changes saved", description: "Category saved." }}
+        onDismiss={() => view.unmount()}
+      />,
+    );
+    expect(screen.getByRole("status")).toHaveTextContent("Category saved.");
+    expect(screen.getByRole("button", { name: "Dismiss notification" })).toBeVisible();
+    act(() => vi.advanceTimersByTime(5999));
+    expect(screen.getByRole("status")).toBeInTheDocument();
+    act(() => vi.advanceTimersByTime(1));
+    expect(screen.queryByRole("status")).not.toBeInTheDocument();
+  } finally {
+    vi.useRealTimers();
+  }
 });

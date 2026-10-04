@@ -1,3 +1,4 @@
+import { readPoiCategoryCatalog } from "@/server/poiCategoryCatalog";
 import { createPoisForCity } from "@/utils";
 import { isPoiRowComplete } from "@/app/admin/lib/isPoiRowComplete";
 import { loadPoiLists } from "@/app/admin/lib/loadPoiLists";
@@ -29,6 +30,7 @@ export const RomeMap = async ({ initialSelectedPoiId }: Props = {}) => {
   return (
     <CityExplorer
       citySlug="rome"
+      categoryDefinitions={readPoiCategoryCatalog().categories}
       coordinates={coordinates}
       initialZoom={15}
       initialSelectedPoiId={initialSelectedPoi?.id ?? null}

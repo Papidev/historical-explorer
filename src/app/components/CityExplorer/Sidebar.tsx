@@ -1,10 +1,15 @@
 import type { Poi } from "@/types/Poi";
-import { POI_TOP_LEVEL_CATEGORIES, type PoiCategory } from "@/types/PoiCategory";
+import {
+  DEFAULT_POI_CATEGORY_DEFINITIONS,
+  type PoiCategory,
+  type PoiCategoryDefinition,
+} from "@/types/PoiCategory";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { CategoryGroup } from "./CategoryGroup";
 
 export const Sidebar = ({
   citySlug,
+  categoryDefinitions = DEFAULT_POI_CATEGORY_DEFINITIONS,
   pois,
   visiblePois,
   selectedCategories,
@@ -15,6 +20,7 @@ export const Sidebar = ({
   onClose,
 }: {
   citySlug: string;
+  categoryDefinitions?: PoiCategoryDefinition[];
   pois: Poi[];
   visiblePois: Poi[];
   selectedCategories: PoiCategory[];
@@ -44,15 +50,18 @@ export const Sidebar = ({
     <p className="mt-1 text-xs text-zinc-500">Choose any categories that interest you.</p>
     <fieldset className="mt-4 space-y-2">
       <legend className="sr-only">Category filters</legend>
-      {POI_TOP_LEVEL_CATEGORIES.map((category) => (
-        <CategoryGroup
-          key={category}
-          category={category}
-          pois={pois}
-          selectedCategories={selectedCategories}
-          onToggleCategory={onToggleCategory}
-        />
-      ))}
+      {categoryDefinitions
+        .filter((category) => !category.parent)
+        .map((category) => (
+          <CategoryGroup
+            key={category.id}
+            category={category.id}
+            definitions={categoryDefinitions}
+            pois={pois}
+            selectedCategories={selectedCategories}
+            onToggleCategory={onToggleCategory}
+          />
+        ))}
     </fieldset>
     <button
       type="button"

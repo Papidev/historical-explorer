@@ -26,9 +26,15 @@ export const POI_SUBCATEGORIES = [
   supersedes: readonly string[];
 }[];
 
-export type PoiCategory =
-  | (typeof POI_TOP_LEVEL_CATEGORIES)[number]
-  | (typeof POI_SUBCATEGORIES)[number]["name"];
+// Category IDs stay stable when their display names are edited.
+export type PoiCategory = string;
+export type PoiCategoryDefinition = {
+  id: PoiCategory;
+  name: string;
+  label?: string;
+  parent?: PoiCategory;
+  supersedes?: PoiCategory[];
+};
 
 export const POI_CATEGORIES: PoiCategory[] = POI_TOP_LEVEL_CATEGORIES.flatMap((parent) => [
   parent,
@@ -43,13 +49,65 @@ export const POI_CATEGORY_LABELS = Object.fromEntries(
   POI_SUBCATEGORIES.map(({ name, label }) => [name, label]),
 ) as Partial<Record<PoiCategory, string>>;
 
-export const matchesPoiCategory = (categories: PoiCategory[] | undefined, selected: PoiCategory) =>
+export const DEFAULT_POI_CATEGORY_DEFINITIONS: PoiCategoryDefinition[] = POI_CATEGORIES.map(
+  (id) => ({
+    id,
+    name: id,
+    ...(POI_CATEGORY_LABELS[id] ? { label: POI_CATEGORY_LABELS[id] } : {}),
+    ...(POI_CATEGORY_PARENTS[id] ? { parent: POI_CATEGORY_PARENTS[id] } : {}),
+    ...(POI_SUBCATEGORIES.find((category) => category.name === id)
+      ? {
+          supersedes: [
+            ...(POI_SUBCATEGORIES.find((category) => category.name === id)?.supersedes ?? []),
+          ],
+        }
+      : {}),
+  }),
+);
+
+export const matchesPoiCategory = (
+  categories: PoiCategory[] | undefined,
+  selected: PoiCategory,
+  definitions: PoiCategoryDefinition[] = DEFAULT_POI_CATEGORY_DEFINITIONS,
+) =>
   Boolean(
-    !POI_SUBCATEGORIES.some(
-      ({ name, supersedes }) =>
-        categories?.includes(name) && supersedes.some((category) => category === selected),
+    !definitions.some(
+      ({ id, supersedes }) => categories?.includes(id) && supersedes?.includes(selected),
     ) &&
     categories?.some(
-      (category) => category === selected || POI_CATEGORY_PARENTS[category] === selected,
+      (category) =>
+        category === selected || definitions.find(({ id }) => id === category)?.parent === selected,
     ),
   );
+
+// A parent with explicit children represents that subset; a parent alone selects all children.
+export const expandPoiCategorySelection = (
+  categories: PoiCategory[],
+  definitions: PoiCategoryDefinition[],
+  includeParents = true,
+) => {
+  const expanded = [
+    ...new Set(
+      categories.flatMap((id) => [
+        id,
+        ...(definitions.some(
+          (category) => category.parent === id && categories.includes(category.id),
+        )
+          ? []
+          : definitions
+              .filter((category) => category.parent === id)
+              .map((category) => category.id)),
+      ]),
+    ),
+  ];
+  return includeParents
+    ? [
+        ...new Set([
+          ...expanded,
+          ...definitions
+            .filter((category) => expanded.includes(category.id) && category.parent)
+            .map((category) => category.parent!),
+        ]),
+      ]
+    : expanded;
+};

@@ -145,9 +145,12 @@ const loadGeoJsonForCity = (city: string): GeoJson => {
 export const createPoisForCity = async (
   city: string,
   getDraftStory?: (poiId: string) => Promise<DraftStorySnapshot | undefined>,
+  getCategories?: () => Record<string, string[]>,
 ): Promise<Poi[]> => {
   const features = loadGeoJsonForCity(city).features ?? [];
-  const categories = createPoiCategoriesForCity(toCitySlug(city)).getAll();
+  const categories = getCategories
+    ? getCategories()
+    : createPoiCategoriesForCity(toCitySlug(city)).getAll();
   const pois = features.map((feature, index) => asPoi(feature, index, city));
   const storyWorkflow = createStoryWorkflowForCity(city);
 
