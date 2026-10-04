@@ -320,3 +320,125 @@ describe("visitor category filtering", () => {
     expect(screen.getByRole("checkbox", { name: "Churches" })).toBeChecked();
   });
 });
+
+it("changes the visitor category-filter results after a Curator saves a shared type rule", async () => {
+  const { mkdtempSync, mkdirSync, writeFileSync, rmSync } = await import("node:fs");
+  const { tmpdir } = await import("node:os");
+  const { default: path } = await import("node:path");
+  const { useState } = await import("react");
+  const { createPoiTypeMappings } = await import("@/server/poiTypeMappings");
+  const { createPoiCategoriesForCity } = await import("@/server/poiCategories");
+  const { TypeMappings } = await import("@/app/admin/components/TypeMappings");
+  const directory = mkdtempSync(path.join(tmpdir(), "mapping-visitor-flow-"));
+  try {
+    writeFileSync(
+      path.join(directory, "poi-type-category-map.json"),
+      JSON.stringify({ version: 1, mappings: { Q16970: ["Church"], Q33506: ["Museum"] } }),
+    );
+    mkdirSync(path.join(directory, "rome", "pois"), { recursive: true });
+    mkdirSync(path.join(directory, "rome", "generated", "wikidata"), { recursive: true });
+    writeFileSync(
+      path.join(directory, "rome", "pois", "pois.geojson"),
+      JSON.stringify({
+        features: [
+          { id: "church", wikidataId: "Q1", properties: { name: "A Church" } },
+          { id: "museum", wikidataId: "Q2", properties: { name: "A Museum" } },
+        ],
+      }),
+    );
+    for (const [id, type, label] of [
+      ["church", "Q16970", "church building"],
+      ["museum", "Q33506", "museum"],
+    ])
+      writeFileSync(
+        path.join(directory, "rome", "generated", "wikidata", `${id}.json`),
+        JSON.stringify({ types: [{ id: type, label }] }),
+      );
+    const repository = createPoiTypeMappings(directory);
+    const categories = createPoiCategoriesForCity("rome", directory);
+    categories.rebuild();
+    const user = userEvent.setup();
+    const visitor = render(
+      <CityExplorer
+        citySlug="rome"
+        coordinates={[12, 41]}
+        initialZoom={15}
+        pois={pois.slice(0, 2).map((poi) => ({ ...poi, categories: categories.getAll()[poi.id] }))}
+      />,
+    );
+    await user.click(screen.getByRole("checkbox", { name: "Churches & cathedrals" }));
+    expect(screen.getByRole("status")).toHaveTextContent("1 place");
+    expect(
+      screen.queryByRole("button", { name: "Open details for A Church" }),
+    ).not.toBeInTheDocument();
+    visitor.unmount();
+    const EditingCatalog = () => {
+      const [catalog, setCatalog] = useState(repository.getCatalog());
+      return (
+        <TypeMappings
+          catalog={catalog}
+          saveRule={async (id, next) => {
+            const result = repository.save(id, next);
+            setCatalog(repository.getCatalog());
+            return result;
+          }}
+        />
+      );
+    };
+    const curator = render(<EditingCatalog />);
+    await user.click(screen.getByRole("checkbox", { name: "Museum" }));
+    await user.click(screen.getByRole("button", { name: "Save categories" }));
+    expect(await screen.findByRole("status")).toHaveTextContent("Rule saved");
+    curator.unmount();
+    render(
+      <CityExplorer
+        citySlug="rome"
+        coordinates={[12, 41]}
+        initialZoom={15}
+        pois={pois.slice(0, 2).map((poi) => ({ ...poi, categories: categories.getAll()[poi.id] }))}
+      />,
+    );
+    await user.click(screen.getByRole("checkbox", { name: "Churches & cathedrals" }));
+    expect(screen.getByRole("status")).toHaveTextContent("2 places");
+    expect(screen.getByRole("button", { name: "Open details for A Church" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Open details for A Museum" })).toBeInTheDocument();
+  } finally {
+    rmSync(directory, { recursive: true, force: true });
+  }
+});
+
+it("shows newly created categories and preserves filter membership when a category is renamed", async () => {
+  const { DEFAULT_POI_CATEGORY_DEFINITIONS } = await import("@/types/PoiCategory");
+  const user = userEvent.setup();
+  const catalog = [...pois, { ...pois[0], id: "tower", name: "A Tower", categories: ["Tower"] }];
+  const definitions = [...DEFAULT_POI_CATEGORY_DEFINITIONS, { id: "Tower", name: "Tower" }];
+  const view = render(
+    <CityExplorer
+      citySlug="rome"
+      coordinates={[12, 41]}
+      initialZoom={15}
+      pois={catalog}
+      categoryDefinitions={definitions}
+    />,
+  );
+  expect(screen.getByRole("checkbox", { name: "Tower" })).toBeChecked();
+  await user.click(screen.getByRole("button", { name: "Clear categories" }));
+  await user.click(screen.getByRole("checkbox", { name: "Tower" }));
+  expect(screen.getByRole("status")).toHaveTextContent("1 place");
+  expect(screen.getByRole("button", { name: "Open details for A Tower" })).toBeInTheDocument();
+  view.rerender(
+    <CityExplorer
+      citySlug="rome"
+      coordinates={[12, 41]}
+      initialZoom={15}
+      pois={catalog}
+      categoryDefinitions={[
+        ...DEFAULT_POI_CATEGORY_DEFINITIONS,
+        { id: "Tower", name: "Observation tower" },
+      ]}
+    />,
+  );
+  expect(screen.getByRole("checkbox", { name: "Observation tower" })).toBeChecked();
+  expect(screen.queryByRole("checkbox", { name: "Tower" })).not.toBeInTheDocument();
+  expect(screen.getByRole("status")).toHaveTextContent("1 place");
+});

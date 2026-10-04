@@ -4,6 +4,14 @@ import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import { PeopleTable } from "./PeopleTable";
 import { useRef } from "react";
+import { useSearchParams } from "next/navigation";
+import { TypeMappings } from "./TypeMappings";
+import type {
+  TypeMappingCatalog,
+  SaveTypeMapping,
+  CategoryActions,
+  ClassifyTypeMappings,
+} from "@/types/PoiTypeMapping";
 import type { AiModeOption, AiSelection } from "../lib/aiModels";
 import type {
   AdminAction,
@@ -17,6 +25,10 @@ import { PoiRowsTable } from "./PoiRowsTable";
 
 export const AdminDashboard = ({
   rows,
+  typeMappings,
+  saveTypeMappingAction,
+  classifyTypeMappingsAction,
+  categoryActions,
   poiError,
   people,
   regeneratePersonAction,
@@ -32,6 +44,10 @@ export const AdminDashboard = ({
   selectMainImageCandidateAction,
 }: {
   rows: AdminPoiRow[];
+  typeMappings: TypeMappingCatalog;
+  saveTypeMappingAction: SaveTypeMapping;
+  classifyTypeMappingsAction: ClassifyTypeMappings;
+  categoryActions: CategoryActions;
   poiError: string | null;
   people: AdminPerson[];
   regeneratePersonAction: AdminAction;
@@ -47,6 +63,8 @@ export const AdminDashboard = ({
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => {
   const aiSelectionRef = useRef(initialAiSelection);
+  const searchParams = useSearchParams();
+  const unmappedTypes = typeMappings.types.filter((type) => type.categories === undefined).length;
 
   return (
     <main className="flex h-screen min-h-screen flex-col bg-neutral-50 p-4 sm:p-6">
@@ -72,17 +90,34 @@ export const AdminDashboard = ({
           selectionRef={aiSelectionRef}
         />
       </header>
-      <TabGroup className="flex min-h-0 flex-1 flex-col">
+      <TabGroup
+        defaultIndex={
+          searchParams.get("section") === "type-mappings" ||
+          searchParams.get("prototype") === "type-mappings"
+            ? 2
+            : 0
+        }
+        className="flex min-h-0 flex-1 flex-col"
+      >
         <TabList aria-label="Admin content" className="mb-4 flex gap-8 border-b border-gray-200">
-          {["POIs", "People"].map((label) => (
+          {["POIs", "People", "Type mappings"].map((label) => (
             <Tab
               key={label}
               className="-mb-px flex cursor-pointer items-center gap-2 border-b-2 border-transparent px-1 py-3 text-sm font-medium text-gray-500 hover:text-gray-700 focus-visible:outline-2 focus-visible:outline-indigo-600 data-selected:border-indigo-600 data-selected:text-indigo-600"
             >
               {label}
               <span className="rounded-full bg-gray-100 px-2 py-0.5 text-xs">
-                {label === "POIs" ? rows.length : people.length}
+                {label === "POIs"
+                  ? rows.length
+                  : label === "People"
+                    ? people.length
+                    : typeMappings.types.length}
               </span>
+              {label === "Type mappings" && unmappedTypes > 0 && (
+                <span className="rounded-full bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-800">
+                  {unmappedTypes} unmapped
+                </span>
+              )}
             </Tab>
           ))}
         </TabList>
@@ -115,6 +150,15 @@ export const AdminDashboard = ({
               people={people}
               aiSelectionRef={aiSelectionRef}
               regeneratePersonAction={regeneratePersonAction}
+            />
+          </TabPanel>
+          <TabPanel unmount={false} className="flex min-h-0 flex-1 flex-col">
+            <TypeMappings
+              catalog={typeMappings}
+              saveRule={saveTypeMappingAction}
+              categoryActions={categoryActions}
+              classifyRules={classifyTypeMappingsAction}
+              aiSelectionRef={aiSelectionRef}
             />
           </TabPanel>
         </TabPanels>

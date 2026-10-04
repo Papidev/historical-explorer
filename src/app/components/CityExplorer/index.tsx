@@ -1,11 +1,10 @@
 "use client";
 
 import {
-  POI_CATEGORIES,
-  POI_CATEGORY_PARENTS,
-  POI_SUBCATEGORIES,
+  DEFAULT_POI_CATEGORY_DEFINITIONS,
   matchesPoiCategory,
   type PoiCategory,
+  type PoiCategoryDefinition,
 } from "@/types/PoiCategory";
 import { Sidebar } from "./Sidebar";
 import { useState } from "react";
@@ -20,6 +19,7 @@ type Props = {
   initialZoom: number;
   initialSelectedPoiId?: string | null;
   pois: Poi[];
+  categoryDefinitions?: PoiCategoryDefinition[];
 };
 
 export const CityExplorer = ({
@@ -28,12 +28,16 @@ export const CityExplorer = ({
   initialZoom,
   initialSelectedPoiId = null,
   pois,
+  categoryDefinitions = DEFAULT_POI_CATEGORY_DEFINITIONS,
 }: Props) => {
-  const availableCategories = POI_CATEGORIES.filter((category) =>
-    pois.some((poi) => matchesPoiCategory(poi.categories, category)),
-  );
-  const [selectedCategories, setSelectedCategories] = useState<PoiCategory[]>(
-    () => availableCategories,
+  const availableCategories = categoryDefinitions
+    .map(({ id }) => id)
+    .filter((category) =>
+      pois.some((poi) => matchesPoiCategory(poi.categories, category, categoryDefinitions)),
+    );
+  const [categorySelection, setSelectedCategories] = useState<PoiCategory[] | null>(null);
+  const selectedCategories = (categorySelection ?? availableCategories).filter((id) =>
+    categoryDefinitions.some((category) => category.id === id),
   );
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [zoom, setZoom] = useState(initialZoom);
@@ -43,7 +47,9 @@ export const CityExplorer = ({
     (poi) =>
       !selectedCategories.length ||
       availableCategories.every((category) => selectedCategories.includes(category)) ||
-      selectedCategories.some((category) => matchesPoiCategory(poi.categories, category)),
+      selectedCategories.some((category) =>
+        matchesPoiCategory(poi.categories, category, categoryDefinitions),
+      ),
   );
   const selectedPoi = selectedPoiId
     ? visiblePois.find((poi) => poi.id === selectedPoiId)
@@ -54,7 +60,9 @@ export const CityExplorer = ({
       selectedPoi &&
       next.length &&
       !availableCategories.every((category) => next.includes(category)) &&
-      !next.some((category) => matchesPoiCategory(selectedPoi.categories, category))
+      !next.some((category) =>
+        matchesPoiCategory(selectedPoi.categories, category, categoryDefinitions),
+      )
     ) {
       setSelectedPoiId(null);
     }
@@ -73,21 +81,24 @@ export const CityExplorer = ({
       >
         <Sidebar
           citySlug={citySlug}
+          categoryDefinitions={categoryDefinitions}
           pois={pois}
           visiblePois={visiblePois}
           selectedCategories={selectedCategories}
           selectedPoiId={selectedPoiId}
           onToggleCategory={(category) => {
-            const children: PoiCategory[] = POI_SUBCATEGORIES.filter(
-              ({ parent }) => parent === category,
-            ).map(({ name }) => name);
+            const children: PoiCategory[] = categoryDefinitions
+              .filter(({ parent }) => parent === category)
+              .map(({ id }) => id);
             updateCategories(
               selectedCategories.includes(category)
                 ? selectedCategories.filter(
                     (selected) =>
                       selected !== category &&
                       !children.includes(selected) &&
-                      selected !== POI_CATEGORY_PARENTS[category],
+                      selected !==
+                        categoryDefinitions.find((definition) => definition.id === category)
+                          ?.parent,
                   )
                 : [...new Set([...selectedCategories, category, ...children])],
             );

@@ -4,6 +4,7 @@ import snapshot from "../../../data/public/catalog.json";
 import type { PublicCatalog } from "./types";
 
 export const createPublicCatalog = (readCatalog: () => PublicCatalog) => ({
+  getCategoryDefinitions: () => readCatalog().categoryDefinitions,
   getPois: (city: string) => {
     const catalog = readCatalog();
     return city === catalog.city ? catalog.pois.map(({ poi }) => poi) : [];

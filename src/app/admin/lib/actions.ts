@@ -1,5 +1,6 @@
 "use server";
 
+import { createPoiTypeMappings } from "@/server/poiTypeMappings";
 import { revalidatePath } from "next/cache";
 import { notFound } from "next/navigation";
 import { writePublicCatalog } from "@/server/publicCatalog/build";
@@ -31,11 +32,6 @@ const getRequiredString = (formData: FormData, key: string, label: string) => {
     throw new Error(`Invalid ${label}.`);
   }
   return value.trim();
-};
-
-const getWorkflowAiSelection = async (formData: FormData) => {
-  const { mode, model } = await resolveAiSelection(formData);
-  return { mode, model };
 };
 
 const toRelatedPeopleWarning = (
@@ -100,14 +96,15 @@ const runAiAction = async (
 export const generateDraftStory = async (formData: FormData) =>
   runAiAction(formData, async (onProgress) => {
     const geoPlaceId = getRequiredString(formData, "geoPlaceId", "Geo Place id");
-    const ai = await getWorkflowAiSelection(formData);
-    const { result, poiTypesError } = await withGenerationRun(
+    const ai = await resolveAiSelection(formData);
+    const { result, poiTypesError, typeMappingError } = await withGenerationRun(
       { city: "rome", operation: "draftStory.generate", geoPlaceId, ai },
       async () => {
         onProgress("Creating the Point of Interest.");
         const { poiId } = await pointOfInterest.generate({ geoPlaceId });
         return withPoiGeneration(poiId, async () => {
           let poiTypesError: string | undefined;
+          let typeMappingError: string | undefined;
           const result = await storyWorkflow.draftStory.generate({
             poiId,
             ai,
@@ -119,6 +116,23 @@ export const generateDraftStory = async (formData: FormData) =>
                 onProgress("Checking POI types.");
                 const types = await poiTypes.refresh(poiId);
                 poiTypesError = types.error;
+                if (!types.error && types.types.length) {
+                  try {
+                    onProgress("Matching new types to visitor categories.");
+                    const classified = await createPoiTypeMappings().classify(
+                      ai,
+                      types.types.map((type) => type.id),
+                    );
+                    for (const city of classified.cities) revalidatePath(`/${city}`);
+                  } catch (error) {
+                    console.warn(`[poi-categories] Classification failed for ${poiId}.`, error);
+                    typeMappingError = error instanceof Error ? error.message : String(error);
+                    onProgress(
+                      "Some category mappings remain unmapped; continuing Story generation.",
+                    );
+                  }
+                }
+
                 if (types.skipped) onProgress("Skipping POI types: no Wikidata ID.");
               } catch (error) {
                 console.warn(`[poi-types] Refresh failed for ${poiId}.`, error);
@@ -127,7 +141,7 @@ export const generateDraftStory = async (formData: FormData) =>
               if (poiTypesError) onProgress("POI Types could not be refreshed; continuing.");
             },
           });
-          return { poiId, poiTypesError, result };
+          return { poiId, poiTypesError, typeMappingError, result };
         });
       },
       ({ poiId, result, poiTypesError }) => ({
@@ -170,13 +184,21 @@ export const generateDraftStory = async (formData: FormData) =>
           },
           failedSteps,
         }
-      : undefined;
+      : typeMappingError
+        ? {
+            warning: {
+              title: "Story generated; some category mappings remain unmapped",
+              description: "Retry classification from Type mappings.",
+              details: typeMappingError,
+            },
+          }
+        : undefined;
   });
 
 export const refreshStoryContent = async (formData: FormData) =>
   runAiAction(formData, async (onProgress) => {
     const poiId = getRequiredString(formData, "poiId", "POI id");
-    const ai = await getWorkflowAiSelection(formData);
+    const ai = await resolveAiSelection(formData);
     const result = await withGenerationRun(
       { city: "rome", operation: "storyContent.generate", poiId, ai },
       () =>
@@ -197,7 +219,7 @@ export const regeneratePerson = async (formData: FormData) =>
   runAiAction(formData, async (onProgress) => {
     await people.regenerate({
       personId: getRequiredString(formData, "personId", "Person id"),
-      ai: await getWorkflowAiSelection(formData),
+      ai: await resolveAiSelection(formData),
       onProgress,
     });
     revalidatePath("/rome");
@@ -223,6 +245,19 @@ export const refreshPoiTypes = async (formData: FormData): Promise<AdminActionRe
       return { error: error instanceof Error ? error.message : String(error) };
     }
   });
+  let mappingError: string | undefined;
+  if (!result.error && "types" in result && result.types?.length) {
+    try {
+      const classified = await createPoiTypeMappings().classify(
+        await resolveAiSelection(formData),
+        result.types.map((type) => type.id),
+      );
+      for (const city of classified.cities) revalidatePath(`/${city}`);
+    } catch (error) {
+      console.warn(`[poi-categories] Classification failed for ${poiId}.`, error);
+      mappingError = error instanceof Error ? error.message : String(error);
+    }
+  }
   await refreshPublicCatalog();
   if ("skipped" in result && result.skipped) {
     return {
@@ -241,12 +276,20 @@ export const refreshPoiTypes = async (formData: FormData): Promise<AdminActionRe
       },
     };
   }
+  if (mappingError)
+    return {
+      warning: {
+        title: "Types refreshed; some categories remain unmapped",
+        description: "Retry classification from Type mappings.",
+        details: mappingError,
+      },
+    };
 };
 
 export const resolveRelatedPeople = async (formData: FormData) =>
   runAiAction(formData, async (onProgress) => {
     const poiId = getRequiredString(formData, "poiId", "POI id");
-    const ai = await getWorkflowAiSelection(formData);
+    const ai = await resolveAiSelection(formData);
     const result = await withGenerationRun(
       { city: "rome", operation: "relatedPeople.resolve", poiId, ai },
       () =>
@@ -305,7 +348,7 @@ export const selectMainImageCandidate = async (formData: FormData) => {
 export const generateDraftStories = async (formData: FormData) => {
   if (process.env.NODE_ENV === "production") notFound();
 
-  const ai = await getWorkflowAiSelection(formData);
+  const ai = await resolveAiSelection(formData);
   const progressIds = formData.getAll("progressId");
   if (progressIds.length !== formData.getAll("geoPlaceId").length) {
     throw new Error("Each selected POI needs a progress ID.");
@@ -324,4 +367,54 @@ export const generateDraftStories = async (formData: FormData) => {
       return generateDraftStory(input);
     },
   );
+};
+
+export const saveTypeMapping = async (
+  id: string,
+  categories: import("@/types/PoiCategory").PoiCategory[] | null,
+) => {
+  if (process.env.NODE_ENV === "production") notFound();
+
+  const result = createPoiTypeMappings().save(id, categories);
+  await refreshPublicCatalog();
+  for (const city of result.cities) revalidatePath(`/${city}`);
+  return result;
+};
+
+export const classifyTypeMappings = async (formData: FormData) => {
+  if (process.env.NODE_ENV === "production") notFound();
+
+  try {
+    return await createPoiTypeMappings().classify(await resolveAiSelection(formData));
+  } finally {
+    await refreshPublicCatalog();
+    revalidatePath("/", "layout");
+  }
+};
+
+export const savePoiCategory = async (id: string | null, name: string) => {
+  if (process.env.NODE_ENV === "production") notFound();
+
+  const result = createPoiTypeMappings().saveCategory(id, name);
+  await refreshPublicCatalog();
+  revalidatePath("/", "layout");
+  return result;
+};
+
+export const deletePoiCategory = async (id: string) => {
+  if (process.env.NODE_ENV === "production") notFound();
+
+  const result = createPoiTypeMappings().deleteCategory(id);
+  await refreshPublicCatalog();
+  revalidatePath("/", "layout");
+  return result;
+};
+
+export const movePoiCategory = async (id: string, parent: string | null) => {
+  if (process.env.NODE_ENV === "production") notFound();
+
+  const result = createPoiTypeMappings().moveCategory(id, parent);
+  await refreshPublicCatalog();
+  revalidatePath("/", "layout");
+  return result;
 };

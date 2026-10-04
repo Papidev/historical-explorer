@@ -1,3 +1,4 @@
+import { RefreshPoiCategories } from "@/app/components/RefreshPoiCategories";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 import { RomeMap } from "@/app/components/RomeMap";
 import { WorkInProgressBadge } from "@/app/components/ui/WorkInProgressBadge";
@@ -14,6 +15,7 @@ export default async function RomePage({ searchParams }: Props) {
 
   return (
     <main className="flex h-screen flex-col">
+      <RefreshPoiCategories city="rome" />
       <header className="flex items-center justify-between gap-6 border-b border-zinc-200/80 bg-white px-5 py-3 shadow-sm sm:px-6">
         <div className="flex min-w-0 items-center gap-3">
           <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-rose-50 text-rose-600 ring-1 ring-rose-100">
@@ -26,7 +28,9 @@ export default async function RomePage({ searchParams }: Props) {
               </h1>
               <WorkInProgressBadge />
             </div>
-            <p className="mt-0.5 text-sm text-zinc-500">A simple starting point: a map centered on Rome.</p>
+            <p className="mt-0.5 text-sm text-zinc-500">
+              A simple starting point: a map centered on Rome.
+            </p>
           </div>
         </div>
       </header>

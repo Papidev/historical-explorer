@@ -57,6 +57,11 @@ export const useBatchGeneration = ({
       }
       try {
         const results = await action(formData);
+        if (typeof BroadcastChannel !== "undefined") {
+          const channel = new BroadcastChannel("poi-type-mappings");
+          channel.postMessage(["rome"]);
+          channel.close();
+        }
         setRuns(
           selected.map((run) => ({
             ...run,

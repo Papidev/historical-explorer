@@ -2,6 +2,7 @@ import { mkdirSync, renameSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { createPoisForCity } from "@/utils";
 import { personRepository } from "@/server/person/filesystemRepository";
+import { readPoiCategoryCatalog } from "@/server/poiCategoryCatalog";
 import { personContentSchema, toPublicPerson } from "@/server/person/types";
 import { readStoryContent } from "@/server/storyWorkflow/storyContentArtifacts";
 import { readMainImageCandidateArtifact } from "@/server/storyWorkflow/mainImageCandidateArtifacts";
@@ -32,7 +33,13 @@ export const buildPublicCatalog = async () => {
     return snapshot;
   });
   const people = personRepository.list();
-  const catalog: PublicCatalog = { version: 1, city: "rome", pois: [], people: [] };
+  const catalog: PublicCatalog = {
+    version: 1,
+    city: "rome",
+    categoryDefinitions: readPoiCategoryCatalog().categories,
+    pois: [],
+    people: [],
+  };
 
   for (const poi of pois) {
     const snapshot = snapshots.get(poi.id);

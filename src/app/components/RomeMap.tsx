@@ -19,6 +19,7 @@ export const RomeMap = async ({ initialSelectedPoiId }: Props = {}) => {
   return (
     <CityExplorer
       citySlug="rome"
+      categoryDefinitions={publicCatalog.getCategoryDefinitions()}
       coordinates={coordinates}
       initialZoom={15}
       initialSelectedPoiId={initialSelectedPoi?.id ?? null}
