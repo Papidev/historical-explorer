@@ -135,7 +135,9 @@ it("keeps an unsaved selection available for retry when saving fails", async () 
   await user.click(screen.getByRole("button", { name: "Save categories" }));
   expect(await screen.findByRole("alert")).toBeVisible();
   expect(screen.getByRole("checkbox", { name: "Museum" })).toBeChecked();
-  expect(screen.getByRole("button", { name: "Save categories" })).toBeEnabled();
+  await waitFor(() =>
+    expect(screen.getByRole("button", { name: "Save categories" })).toBeEnabled(),
+  );
   expect(createPoiTypeMappings(directory).getCatalog().types[0].categories).toEqual(["Church"]);
 });
 
