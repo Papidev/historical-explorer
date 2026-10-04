@@ -92,7 +92,12 @@ it("lets the Curator assign several categories, reload, ignore and clear a share
   const view = render(<CatalogProvider />);
   await user.click(screen.getByRole("checkbox", { name: "Museum" }));
   await user.click(screen.getByRole("button", { name: "Save categories" }));
-  expect(await screen.findByRole("status")).toHaveTextContent("Updated 2 POIs across 2 cities");
+  await waitFor(() =>
+    expect(screen.getByRole("status")).toHaveTextContent("Updated 2 POIs across 2 cities"),
+  );
+  await waitFor(() =>
+    expect(screen.queryByRole("button", { name: "Working…" })).not.toBeInTheDocument(),
+  );
   expect(screen.getByRole("checkbox", { name: "Church" })).toBeChecked();
   expect(screen.getByRole("checkbox", { name: "Museum" })).toBeChecked();
   for (const city of ["rome", "florence"])
@@ -105,7 +110,10 @@ it("lets the Curator assign several categories, reload, ignore and clear a share
   render(<CatalogProvider />);
   expect(screen.getByRole("checkbox", { name: "Museum" })).toBeChecked();
   await user.click(screen.getByRole("button", { name: "Ignore type" }));
-  expect(await screen.findByRole("status")).toHaveTextContent("Rule saved");
+  await waitFor(() => expect(screen.getByRole("status")).toHaveTextContent("Rule saved"));
+  await waitFor(() =>
+    expect(screen.queryByRole("button", { name: "Working…" })).not.toBeInTheDocument(),
+  );
   expect(screen.queryByRole("region", { name: "Edit church building" })).not.toBeInTheDocument();
   await user.click(screen.getByRole("checkbox", { name: "Show ignored types" }));
   expect(
@@ -113,7 +121,10 @@ it("lets the Curator assign several categories, reload, ignore and clear a share
   ).toBeInTheDocument();
   expect(screen.getByText(/1 types · 0 unmapped/)).toBeInTheDocument();
   await user.click(screen.getByRole("button", { name: "Clear rule" }));
-  expect(await screen.findByRole("status")).toHaveTextContent("Rule saved");
+  await waitFor(() => expect(screen.getByRole("status")).toHaveTextContent("Rule saved"));
+  await waitFor(() =>
+    expect(screen.queryByRole("button", { name: "Working…" })).not.toBeInTheDocument(),
+  );
   expect(await screen.findByText(/1 types · 1 unmapped/)).toBeInTheDocument();
   expect(createPoiTypeMappings(directory).getCatalog().types[0].categories).toBeUndefined();
   expect(
@@ -177,8 +188,13 @@ it("automatically creates a shared category with the selected AI, then lets the 
     const user = userEvent.setup();
     render(<CatalogProvider />);
     await user.click(screen.getByRole("button", { name: "Classify unmapped types" }));
-    expect(await screen.findByRole("status")).toHaveTextContent(
-      "Classified 1 types, created 1 categories, and updated 2 POIs",
+    await waitFor(() =>
+      expect(screen.getByRole("status")).toHaveTextContent(
+        "Classified 1 types, created 1 categories, and updated 2 POIs",
+      ),
+    );
+    await waitFor(() =>
+      expect(screen.queryByRole("button", { name: "Working…" })).not.toBeInTheDocument(),
     );
     await user.click(
       within(screen.getByRole("navigation", { name: "Acquired types" })).getByRole("button", {
@@ -191,7 +207,10 @@ it("automatically creates a shared category with the selected AI, then lets the 
     await user.clear(screen.getByRole("textbox", { name: "Name for Tower" }));
     await user.type(screen.getByRole("textbox", { name: "Name for Tower" }), "Observation tower");
     await user.click(screen.getByRole("button", { name: "Rename Tower" }));
-    expect(await screen.findByRole("status")).toHaveTextContent("Category saved");
+    await waitFor(() => expect(screen.getByRole("status")).toHaveTextContent("Category saved"));
+    await waitFor(() =>
+      expect(screen.queryByRole("button", { name: "Working…" })).not.toBeInTheDocument(),
+    );
     expect(await screen.findByRole("checkbox", { name: "Observation tower" })).toBeChecked();
     for (const city of ["rome", "florence"])
       expect(createPoiCategoriesForCity(city, directory).getAll().tower).toEqual(["Tower"]);
@@ -205,7 +224,10 @@ it("automatically creates a shared category with the selected AI, then lets the 
       "Its child categories will also be deleted",
     );
     await user.click(within(screen.getByRole("dialog")).getByRole("button", { name: "Confirm" }));
-    expect(await screen.findByRole("status")).toHaveTextContent("Category deleted");
+    await waitFor(() => expect(screen.getByRole("status")).toHaveTextContent("Category deleted"));
+    await waitFor(() =>
+      expect(screen.queryByRole("button", { name: "Working…" })).not.toBeInTheDocument(),
+    );
     await waitFor(() =>
       expect(screen.queryByRole("checkbox", { name: "Observation tower" })).not.toBeInTheDocument(),
     );
@@ -231,7 +253,10 @@ it("shows two category levels and saves all children when their parent is select
   for (const name of ["Church", "Basilica", "Cathedral"])
     expect(within(children).getByRole("checkbox", { name })).toBeChecked();
   await user.click(screen.getByRole("button", { name: "Save categories" }));
-  expect(await screen.findByRole("status")).toHaveTextContent("Updated 2 POIs");
+  await waitFor(() => expect(screen.getByRole("status")).toHaveTextContent("Updated 2 POIs"));
+  await waitFor(() =>
+    expect(screen.queryByRole("button", { name: "Working…" })).not.toBeInTheDocument(),
+  );
   expect(createPoiTypeMappings(directory).getCatalog().types[0].categories).toEqual([
     "Churches & cathedrals",
     "Cathedral",
@@ -286,7 +311,10 @@ it("assigns a child's parent without its siblings and preserves that subset afte
   expect(screen.getByRole("checkbox", { name: "Church" })).not.toBeChecked();
   expect(screen.getByRole("checkbox", { name: "Cathedral" })).not.toBeChecked();
   await user.click(screen.getByRole("button", { name: "Save categories" }));
-  expect(await screen.findByRole("status")).toHaveTextContent("Rule saved");
+  await waitFor(() => expect(screen.getByRole("status")).toHaveTextContent("Rule saved"));
+  await waitFor(() =>
+    expect(screen.queryByRole("button", { name: "Working…" })).not.toBeInTheDocument(),
+  );
   expect(createPoiTypeMappings(directory).getCatalog().types[0].categories).toEqual([
     "Basilica",
     "Churches & cathedrals",
@@ -313,7 +341,10 @@ it("moves a child into another parent by drag and drop and retains its saved ass
     dataTransfer: { dropEffect: "move" },
   });
   fireEvent.drop(screen.getByRole("listitem", { name: "Category Museum" }));
-  expect(await screen.findByRole("status")).toHaveTextContent("Category moved");
+  await waitFor(() => expect(screen.getByRole("status")).toHaveTextContent("Category moved"));
+  await waitFor(() =>
+    expect(screen.queryByRole("button", { name: "Working…" })).not.toBeInTheDocument(),
+  );
   expect(
     within(await screen.findByRole("list", { name: "Child categories of Museum" })).getByRole(
       "textbox",
