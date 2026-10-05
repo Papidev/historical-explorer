@@ -6,6 +6,7 @@
 
 ## Before Starting Work
 
+- Before starting further work on the current branch, check whether its pull request has already been merged. If it has, create a new `feat/` branch from updated `main` before making any changes, even if the current branch still exists locally. Check the PR's merge status rather than Git ancestry, because squash merges do not preserve the branch commits.
 - Always work on a branch, never on `main`.
 - Before creating a feature branch, fetch `origin/main` and verify that local `main` points to the same commit. If they differ, align `main` before creating the branch.
 - If needed, create a branch before coding (example: `git checkout -b feat/<short-name>`).

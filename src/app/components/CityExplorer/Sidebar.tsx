@@ -32,7 +32,7 @@ export const Sidebar = ({
 }) => (
   <aside
     aria-label="Discover places"
-    className="flex h-full w-72 max-w-[calc(100vw-3rem)] shrink-0 flex-col overflow-y-auto border-r border-zinc-200 bg-white p-4 text-zinc-900"
+    className="flex h-full w-full shrink-0 flex-col overflow-y-auto border-r border-zinc-200 bg-white p-4 text-zinc-900"
   >
     <div className="flex items-center justify-between gap-2">
       <h2 className="text-lg font-semibold">
@@ -42,7 +42,7 @@ export const Sidebar = ({
         type="button"
         aria-label="Close filters"
         onClick={onClose}
-        className="cursor-pointer rounded-md p-2 hover:bg-zinc-100 sm:hidden"
+        className="cursor-pointer rounded-md p-2 hover:bg-zinc-100 lg:hidden"
       >
         <XMarkIcon aria-hidden="true" className="size-5" />
       </button>

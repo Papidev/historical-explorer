@@ -7,11 +7,13 @@ import {
   type PoiCategoryDefinition,
 } from "@/types/PoiCategory";
 import { Sidebar } from "./Sidebar";
+import { useFilterSwipe } from "./useFilterSwipe";
 import { useState } from "react";
 import type { Poi } from "@/types/Poi";
 import { Map } from "@/app/components/Map";
 import { MapZoomControl } from "@/app/components/Map/MapZoomControl";
 import { PoiDetailsDrawer } from "@/app/components/PoiDetailsDrawer";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
 type Props = {
   citySlug: string;
@@ -40,6 +42,8 @@ export const CityExplorer = ({
     categoryDefinitions.some((category) => category.id === id),
   );
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const openFiltersSwipe = useFilterSwipe("right", () => setSidebarOpen(true));
+  const closeFiltersSwipe = useFilterSwipe("left", () => setSidebarOpen(false));
   const [zoom, setZoom] = useState(initialZoom);
   const [selectedPoiId, setSelectedPoiId] = useState<string | null>(initialSelectedPoiId);
   const [openRequestId, setOpenRequestId] = useState(0);
@@ -77,7 +81,8 @@ export const CityExplorer = ({
     <div className="relative flex h-full w-full overflow-hidden">
       <div
         id="discovery-sidebar"
-        className={`${sidebarOpen ? "absolute inset-y-0 left-0 z-30 shadow-xl" : "hidden"} sm:static sm:z-auto sm:block sm:shadow-none`}
+        {...closeFiltersSwipe}
+        className={`fixed inset-0 z-30 h-dvh w-full touch-pan-y transition-transform duration-200 motion-reduce:transition-none ${sidebarOpen ? "visible translate-x-0 shadow-xl" : "invisible -translate-x-full"} lg:visible lg:static lg:z-auto lg:h-full lg:w-72 lg:translate-x-0 lg:shadow-none`}
       >
         <Sidebar
           citySlug={citySlug}
@@ -109,17 +114,25 @@ export const CityExplorer = ({
         />
       </div>
       <div className="relative min-w-0 flex-1 overflow-hidden">
-        <button
-          type="button"
-          aria-expanded={sidebarOpen}
-          aria-controls="discovery-sidebar"
-          onClick={() => setSidebarOpen(!sidebarOpen)}
-          className="absolute bottom-4 left-4 z-10 cursor-pointer rounded-full bg-white px-4 py-3 text-sm font-semibold text-zinc-900 shadow-lg sm:hidden"
-        >
-          Categories{selectedCategories.length ? ` · ${selectedCategories.length}` : ""}
-          {" · "}
-          {visiblePois.length} places
-        </button>
+        {!sidebarOpen && !selectedPoi && (
+          <button
+            type="button"
+            aria-label="Open filters"
+            aria-expanded={sidebarOpen}
+            aria-controls="discovery-sidebar"
+            {...openFiltersSwipe}
+            onClick={() => setSidebarOpen(true)}
+            className="group absolute inset-y-0 left-0 z-10 w-6 cursor-pointer touch-pan-y focus-visible:outline-none lg:hidden"
+          >
+            <span
+              aria-hidden="true"
+              className="absolute top-1/2 left-0 flex w-6 -translate-y-1/2 flex-col items-center gap-2 rounded-r-lg border border-l-0 border-zinc-200 bg-white/95 py-3 text-zinc-600 shadow-md group-hover:bg-rose-50 group-focus-visible:ring-2 group-focus-visible:ring-rose-600"
+            >
+              <ChevronRightIcon className="size-4" />
+              <span className="text-xs font-semibold [writing-mode:vertical-rl]">Filters</span>
+            </span>
+          </button>
+        )}
         <MapZoomControl zoom={zoom} onChange={setZoom} />
         <Map
           coordinates={coordinates}
