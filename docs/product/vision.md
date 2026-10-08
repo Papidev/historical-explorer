@@ -49,13 +49,13 @@ A POI starts from source material such as Wikipedia, Wikidata, and Wikimedia Com
 - proposing one main image
 - explaining why each insight is useful
 
-The AI draft is only a proposal. A human curator reviews, edits, enriches, or approves draft stories.
+AI-generated content is reviewable editorial material. A human curator can review, edit, and enrich it. An explicit approval step is a possible future evolution, not a current publication requirement.
 
 ### Visitor world
 
 This is the public app experience.
 
-The visitor only sees approved stories. They should not see AI reasoning, drafts, source processing, visitor insights, or editorial metadata.
+The visitor sees publishable stories from the public catalog. Publication currently requires valid versioned Story Content, a selected main image with license and attribution, and saved Person records for all Related People; it does not require an explicit Curator approval state. They should not see AI reasoning, drafts, source processing, visitor insights, or editorial metadata.
 
 The visitor experience should be quick, pleasant, low-friction, and useful while physically looking at a place.
 
@@ -69,7 +69,7 @@ The tone should be warm, precise, and visitor-facing without becoming promotiona
 
 Story Content contains plain text without Markdown, inline highlights, CSS, or presentation components. It is the sole textual content artifact for a story. MDX and configurable React renderers remain future decisions.
 
-Each story needs one required main image. The main image should help the visitor recognize the place or notice an important visible detail, not merely decorate the page. It should live outside Story Content and include source, author or rights status, license, and attribution metadata before approval.
+Each story needs one required main image. The main image should help the visitor recognize the place or notice an important visible detail, not merely decorate the page. It should live outside Story Content and include source, author or rights status, license, and attribution metadata before publication.
 
 For the first AI story workflow, AI should produce:
 
@@ -113,7 +113,7 @@ AI is a junior cultural editor, not the final authority.
 
 AI may help draft, classify, summarize, rank, and propose. The human curator has the final word.
 
-Do not design flows where AI directly publishes final stories without human review.
+The current application does not enforce human review through an approval state. Generated content becomes eligible for the public catalog when the current publication requirements are met and reaches the public site through deployment. Explicit Curator approval may be introduced later; it is not a prerequisite for the current product or new discovery paths.
 
 ## Content quality risks
 
