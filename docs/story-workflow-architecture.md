@@ -101,7 +101,7 @@ The two deletion operations preserve the current Curator recovery actions while 
 
 `draftStory.reset` removes all Sources, Story Content, Main Image Candidates, Draft Main Image state, and generation metadata owned by the Story Workflow. It does not remove the POI or its Geo Place.
 
-Selecting a **Draft Main Image**, editing a **Draft Story**, and approving it as a **Story** belong to **Story Curation** and cross a separate **Seam**.
+Selecting a **Draft Main Image** and editing a **Draft Story** belong to **Story Curation** and cross a separate **Seam**. Explicit approval is a possible future extension of Story Curation, not a current publication requirement.
 
 `draftStory.get` returns domain data for the Curator UI without exposing artifact paths or file formats. The admin loader may combine this snapshot with Geo Place and POI data owned outside the Story Workflow.
 
