@@ -31,11 +31,11 @@ Selecting a Person should eventually expose associated POIs on the map as well a
 
 Keep three purposes explicit:
 
-- **Filterable POI metadata:** categories, architectural styles, and historical periods. Acquire supported structured facts and map them to small app-owned values outside Story Content; preserve original identities and date precision.
+- **Filterable POI metadata:** categories and architectural styles. Historical period filtering is deferred and is not part of the current work. Acquire supported structured facts and map them to small app-owned values outside Story Content; preserve original identities and date precision.
 - **Entity connections:** supported associations between a POI and a Person, Event, or Artifact. Identity and connection evidence enable navigation independently of generated descriptions.
 - **Visitor insights:** concise source-grounded Story Content explaining what the place is, why it matters, and what is worth noticing.
 
-These purposes do not require converting categories, styles, and periods into generic graph nodes. Their first filter slices are already tracked in [#38](https://github.com/Papidev/historical-explorer/issues/38), [#39](https://github.com/Papidev/historical-explorer/issues/39), and [#40](https://github.com/Papidev/historical-explorer/issues/40). Neither regenerating a Story nor changing its wording should silently redefine a structured filter value.
+These purposes do not require converting categories, styles, and periods into generic graph nodes. Category and style slices are tracked in [#38](https://github.com/Papidev/historical-explorer/issues/38) and [#39](https://github.com/Papidev/historical-explorer/issues/39); historical period filtering [#40](https://github.com/Papidev/historical-explorer/issues/40) is deferred, with no current commitment to inception-based bands. Neither regenerating a Story nor changing its wording should silently redefine a structured filter value.
 
 Prefer direct acquisition of available structured facts over asking an LLM to infer them from prose. Wikipedia extraction can still provide supported connections absent from Wikidata. Missing structured data should preserve the POI; disagreements between sources need contextual review rather than an automatic universal precedence rule.
 
