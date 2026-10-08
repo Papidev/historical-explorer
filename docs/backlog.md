@@ -4,20 +4,6 @@ This document preserves potentially useful product and architecture observations
 
 An entry should become a GitHub Issue only when its **Revisit when** condition occurs. At that point, replace the entry with a link to the issue or remove it after the issue has captured the relevant context.
 
-## Support Geo Places without Wikidata
-
-**Observation**  
-The current Geo Place to POI flow relies mainly on Wikidata to reconnect the source item with the newly assigned POI ID.
-
-**Risk**  
-After creating a POI from a Geo Place without Wikidata, later Story Workflow steps may still use the source identifier and fail to find the new POI.
-
-**Revisit when**  
-We want to create the first POI from a Geo Place that has no Wikidata ID.
-
-**Possible direction**  
-Concentrate POI creation from a Geo Place, POI ID allocation, external identifiers, and catalog persistence in one POI catalog Module.
-
 ## Treat each Story directory as one aggregate
 
 **Observation**  
