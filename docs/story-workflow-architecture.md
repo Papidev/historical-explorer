@@ -2,46 +2,28 @@
 
 Status: implemented.
 
-## Goal
+The server-side Story Workflow hides sequencing, persistence, partial failures, and external integrations behind an artifact-oriented interface. It starts from an existing POI; POI creation and Type acquisition belong to the Next server-action Adapter.
 
-Deepen the server-side **Story Workflow Module** so callers use a small **Interface** while ordering, partial-failure behavior, persistence, and external integrations remain in its **Implementation**.
+## Generate and Refresh
 
-The browser exposes the same full-pipeline action as Generate for an empty row and Refresh for an existing row. Its Next server-action **Adapter** creates or replaces a **POI** from a **Geo Place**, refreshes its **POI Types**, then invokes the Story Workflow with the resulting **POI ID**. POI Type acquisition belongs to the Adapter, outside **Draft Story Generation**.
+The browser labels an empty row **Generate** and a populated row **Refresh**. Both submit the original Geo Place ID and current AI selection to the same Adapter:
 
-The POI Module has its own **Interface** and **Implementation**. It hides Geo Place access, source-data cleaning, POI ID allocation, external-identifier preservation, and POI catalog persistence.
+1. Call `pointOfInterest.generate({ geoPlaceId })` to create/replace the POI, retaining its stable ID.
+2. Refresh POI Types independently; failure does not stop Story generation.
+3. Call `storyWorkflow.draftStory.generate({ poiId, ai })`.
 
-```ts
-type PointOfInterestModule = {
-  generate(input: { geoPlaceId: string }): Promise<{ poiId: string }>;
+The POI Module owns Geo Place access, cleaning, ID allocation, external identifiers, and catalog persistence. Its `reset({ poiId })` removes derived catalog state while preserving the Geo Place; Refresh never invokes reset.
 
-  reset(input: { poiId: string }): Promise<void>;
-};
-```
+Within full Draft Story generation, the order is fixed:
 
-`generate({ geoPlaceId })` creates or replaces the POI and returns its stable POI ID. `reset({ poiId })` is a lower-level cleanup operation that removes the derived POI state from the POI catalog while preserving the Geo Place; it is not exposed as the row-level refresh action.
+1. Acquire and clean Sources.
+2. Generate Main Image Candidates.
+3. Preserve an eligible current image, or select the first licensed and attributed candidate.
+4. Generate Story Content and resolve Related People.
 
-Creating a POI from a Geo Place does not belong to the Story Workflow. The Story Workflow starts from an existing POI and does not know how it was created.
-
-```text
-Geo Place -> POI Module -> POI -> POI Types
-                            -> Story Workflow Module -> Draft Story
-```
-
-The Next server-action Adapter behind the Generate/Refresh action composes the two Modules:
-
-```ts
-const { poiId } = await pointOfInterest.generate({ geoPlaceId });
-try {
-  await poiTypes.refresh(poiId);
-} catch (error) {
-  console.warn(error);
-}
-return storyWorkflow.draftStory.generate({ poiId, ai });
-```
+Callers cannot reorder or skip steps. Full generation uses private implementation functions because its failure policy differs from independent artifact actions.
 
 ## Interface
-
-The agreed **Interface** groups operations by the domain artifact they affect.
 
 ```ts
 type AiSelection = {
@@ -93,49 +75,33 @@ type StoryWorkflow = {
 };
 ```
 
-`draftStory.generate`, `storyContent.generate`, and `mainImageCandidates.generate` have create-or-replace semantics: each creates missing artifacts or generates replacements for the current ones. They are not idempotent because AI output and external Sources may change between calls. The Curator UI labels full generation as Generate when the row is empty and Refresh when it already contains generated artifacts. Refresh runs the complete pipeline without resetting the row first, so a failed refresh does not begin by deleting the current artifacts. `relatedPeople.resolve` is narrower: it retries unresolved People against the saved Story Content and preserves already resolved People without regenerating the Story.
+| Operation | Behavior |
+| --- | --- |
+| `draftStory.generate` | Full generation with checkpoint persistence. |
+| `draftStory.get` | Domain snapshot without paths/formats; the loader may join external POI/Geo Place data. |
+| `draftStory.reset` | Remove workflow Sources, content, candidates, image selection, and metadata; preserve POI/Geo Place. |
+| `storyContent.generate` / `mainImageCandidates.generate` | Create or replace that artifact. |
+| `relatedPeople.resolve` | Retry unresolved references from saved content, preserving resolved People. |
+| Artifact `delete` actions | Curator recovery with paths/cascade rules kept inside the Module. |
 
-The Curator UI may label the same operation Generate when its artifact is missing and Refresh when one already exists.
-
-The two deletion operations preserve the current Curator recovery actions while keeping artifact paths and cascade rules inside the Story Workflow Module.
-
-`draftStory.reset` removes all Sources, Story Content, Main Image Candidates, Draft Main Image state, and generation metadata owned by the Story Workflow. It does not remove the POI or its Geo Place.
-
-Selecting a **Draft Main Image** and editing a **Draft Story** belong to **Story Curation** and cross a separate **Seam**. Explicit approval is a possible future extension of Story Curation, not a current publication requirement.
-
-`draftStory.get` returns domain data for the Curator UI without exposing artifact paths or file formats. The admin loader may combine this snapshot with Geo Place and POI data owned outside the Story Workflow.
-
-`draftStory.generate` orchestrates full generation through private Implementation functions rather than by calling the public artifact-generation operations. Full generation has different partial-failure behavior from an explicitly requested artifact generation.
-
-## Full generation order
-
-`draftStory.generate` owns this order:
-
-1. Acquire and clean **Sources**.
-2. Generate **Main Image Candidates**.
-3. Preserve the current **Draft Main Image** when it remains eligible; otherwise select the first candidate with license and attribution information.
-4. Generate **Story Content**.
-
-The caller cannot choose, reorder, or skip these steps.
+Generation is not idempotent: AI output and external Sources may change. The UI may label artifact actions Generate or Refresh depending on whether content exists. Editing content and selecting an image belong to separate Story Curation; explicit approval remains optional future work.
 
 ## Partial-failure behavior
 
-Generation uses checkpoint semantics rather than rollback:
+Successful checkpoints remain available for independent retry; there is no whole-operation rollback.
 
-- Source failure stops full generation.
-- Main Image Candidate failure is reported, but Story Content generation continues.
-- Story Content failure preserves already generated Sources and Main Image Candidates.
-- Related People failure preserves Story Content, leaves failed names unresolved, and reports partial success.
-- A Related People retry processes unresolved references without regenerating Story Content.
-- An explicitly requested artifact generation failure preserves the previous artifact and rejects that operation.
+| Failure | Full generation outcome |
+| --- | --- |
+| Source acquisition | Stop downstream generation. |
+| Main Image Candidates | Report failure; continue Story Content generation. |
+| Story Content | Keep acquired Sources and candidates. |
+| Related People | Keep Story Content, preserve unresolved names, and report partial success. |
 
-Successfully persisted artifacts remain available for independent retry.
+An explicitly requested artifact action preserves its previous artifact and rejects on failure. Refresh does not clear the row first; replacements are saved when ready.
 
-Story Content generation and Related People resolution have separate generation checkpoints. The Curator UI can therefore show the duration and completion time of each phase, and a Related People retry updates only the Related People checkpoint.
+Story Content and Related People have separate timing/completion checkpoints. Retrying People updates only that checkpoint and does not regenerate Story Content.
 
-## Result
-
-Full generation returns a compact domain result:
+## Result and errors
 
 ```ts
 type DraftStoryGenerationResult = {
@@ -147,10 +113,6 @@ type DraftStoryGenerationResult = {
   relatedPeopleFailures: RelatedPeopleResolutionFailure[];
 };
 ```
-
-The result communicates full or partial success without exposing file paths, provider responses, or other Implementation details.
-
-## Errors
 
 ```ts
 type StoryWorkflowError = {
@@ -165,51 +127,14 @@ type StoryWorkflowError = {
 };
 ```
 
-External HTTP errors, filesystem errors, and AI-provider response shapes remain behind the Module's **Seam**.
-
-During full generation, Main Image Candidate failure appears in the partial result. During an explicitly requested `mainImageCandidates.generate`, the same failure rejects the operation with a `StoryWorkflowError`.
+Results and errors use domain states without exposing paths or provider response shapes. Candidate failure is a partial full-generation result, but an independent candidate request rejects with `StoryWorkflowError`.
 
 ## Adapters and dependencies
 
-The public Interface receives domain inputs only: a POI ID and, where needed, the Local or Cloud AI selection and model.
+Inputs are POI ID and the Local/Cloud AI selection where needed. Ollama and Gemini implement an internal AI seam; Wikipedia, Wikidata, and Commons remain internal HTTP integrations. Filesystem persistence is internal. Next Adapters own `FormData` parsing and `revalidatePath`.
 
-- Ollama and Gemini satisfy an internal AI **Seam** through separate **Adapters**.
-- Wikipedia, Wikidata, and Wikimedia Commons remain internal HTTP integrations and can be tested with MSW.
-- Filesystem persistence remains internal and can be tested against a temporary data directory.
-- `FormData` parsing and `revalidatePath` remain in Next server-action Adapters.
+The browser shows one overall `Generating Draft Story...` state; independent artifact actions have their own labels. Per-step server progress is a [backlog option](backlog.md#report-story-workflow-progress-to-the-browser), without moving orchestration into the browser.
 
-The browser transport therefore follows this shape:
+## Verification
 
-```text
-Browser form -> FormData -> Next server-action Adapter -> { poiId, ai } -> Story Workflow
-```
-
-## Browser progress
-
-The initial implementation exposes one overall `Generating Draft Story...` state for full generation. Independent artifact-generation actions retain their specific progress labels.
-
-Per-step server events are a possible future improvement recorded in `docs/backlog.md`. They must not move orchestration back into the browser.
-
-## Full Refresh coordination
-
-The browser exposes Refresh for a populated row. It submits the original Geo Place ID and current AI selection to the same server-action Adapter used by Generate, which coordinates two responsibilities:
-
-1. Call `pointOfInterest.generate({ geoPlaceId })` to create or replace the app-ready POI while retaining its stable POI ID.
-2. Refresh POI Types independently; a failure does not stop Story generation.
-3. Call `storyWorkflow.draftStory.generate({ poiId, ai })` to reacquire Sources, regenerate Main Image Candidates, regenerate Story Content, and resolve Related People.
-
-Refresh never invokes either reset operation. Existing artifacts are replaced only when their newly generated replacements are ready, following the workflow's checkpoint and partial-failure rules.
-
-## Testing surface
-
-Tests cross the same Interface as production callers and verify observable outcomes:
-
-- fixed generation order;
-- Source failure stopping downstream work;
-- Story Content continuing after candidate failure;
-- preservation of successful checkpoints;
-- independent artifact generation with create-or-replace semantics;
-- Draft Main Image preservation and automatic fallback selection;
-- stable domain results and errors.
-
-HTTP behavior should use MSW where practical. Filesystem behavior should use isolated temporary data rather than exposing storage operations through the public Interface.
+Test through the public interface: ordering, downstream stopping/continuation, checkpoint preservation, independent replacement, image preservation/fallback, and domain results/errors. Use MSW for HTTP where practical and temporary directories for persistence without exposing storage APIs.
