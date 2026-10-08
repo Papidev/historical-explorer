@@ -59,6 +59,8 @@ The visitor sees publishable stories from the public catalog. Publication curren
 
 The visitor experience should be quick, pleasant, low-friction, and useful while physically looking at a place.
 
+A POI appears on the visitor map only after the Story Workflow has generated its Story Content and the other publication requirements are met. Imported places and metadata-only POIs remain internal until then. Curator edits may enrich the generated Story; an explicit approval step is not required.
+
 ## Current product decisions
 
 The primary product mode is a visitor who is near, or interested in, a specific POI and wants a concise cultural explanation. Browsing the map and exploring POIs from home before a visit are part of the same experience; physical presence is not required. Dedicated itinerary planning, expanded nearby discovery, post-visit review, and deeper reading remain possible future modes, while the first product shape should optimize the POI visit companion experience.
