@@ -6,7 +6,7 @@ Status: product direction. Only the current People path described below is imple
 
 Story Content generation selects at most ten Related People, already ordered by significance to understanding the POI. Selection and ordering currently happen in the same AI operation; there is no separate ranking stage.
 
-The Person resolver uses links from the POI's Wikipedia source to resolve identities, reuses existing People, and generates missing Person records. Ambiguous references remain non-navigable. Resolved references carry an app-owned `personId` and supporting `sourceIds`. People can include historical, mythological, or imaginary figures under the current Story generation rules.
+The Person resolver uses links from the POI's Wikipedia source to resolve identities, reuses existing People, and generates missing Person records. Ambiguous references remain non-navigable in the editorial workflow. Any retained unresolved reference or missing Person record excludes the entire POI from the current public catalog and visitor map; Story Content remains saved for review and retry. Resolved references carry an app-owned `personId` and supporting `sourceIds`. People can include historical, mythological, or imaginary figures under the current Story generation rules.
 
 Visitors can open a resolved Person in the existing POI drawer and return to the original Story. Person-to-other-POI navigation, Events, Artifacts, and Jev ranking are not implemented. See [Person Architecture](person-architecture.md) for the detailed current behavior.
 
