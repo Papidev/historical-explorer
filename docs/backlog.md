@@ -218,7 +218,7 @@ A review of actual POIs identifies significant connections missing from the Wiki
 
 Add the smallest discovery path for those examples, retaining statement evidence and merging candidates through resolved identities. Preserve Wikipedia discovery when structured data is absent. Do not equate the existence of a statement with editorial significance.
 
-Begin with a source comparison for actual catalog POIs: record which useful facts and connections come from Wikidata, Wikipedia, or both, and where identity or historical context differs. Use those examples to choose the first additional path rather than building a broad property importer. Category, style, and period acquisition already belong to issues #38–#40; creator connections remain a future concrete case.
+Begin with a source comparison for actual catalog POIs: record which useful facts and connections come from Wikidata, Wikipedia, or both, and where identity or historical context differs. Use those examples to choose the first additional path rather than building a broad property importer. Category and style acquisition belong to issues #38–#39; period filtering (#40) is deferred and must not be added to the current work; creator connections remain a future concrete case.
 
 ## Evaluate Jev for ordering related People
 
