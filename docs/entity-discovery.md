@@ -10,7 +10,7 @@ The Person resolver uses links from the POI's Wikipedia source to resolve identi
 
 Visitors can open a resolved Person in the existing POI drawer and return to the original Story. Person-to-other-POI navigation, Events, Artifacts, and Jev ranking are not implemented. See [Person Architecture](person-architecture.md) for the detailed current behavior.
 
-Story and Person approval are not currently enforced. The approved-only visitor experience described in the [product vision](product/vision.md) remains a product requirement, tracked in the [backlog](backlog.md#introduce-story-approval-before-visitor-visibility).
+Story and Person approval are not currently enforced. Explicit Curator approval is a possible future evolution, not a current product requirement or a prerequisite for entity navigation. Use the existing public catalog eligibility rules for visitor visibility. See the [product vision](product/vision.md) and [backlog](backlog.md#consider-explicit-story-approval).
 
 ## Future responsibilities
 
@@ -71,6 +71,6 @@ Extend the existing POI-to-Person path through small complete slices, consistent
 - Add Wikidata-backed discovery only where real examples demonstrate gaps in the Wikipedia-first path.
 - Evaluate ranking separately before integrating it.
 
-For reverse navigation, approved-only visibility remains the product target. Before exposing new paths, explicitly resolve the missing approval gate rather than claiming current records are approved.
+For reverse navigation, expose only POIs and People available in the public catalog under the existing publication rules. An explicit approval gate is not a prerequisite; do not describe current records as approved.
 
 Precise relationship classification, generated prose for every connection, automatic "must-see" selections, cross-category ranking, a graph visualization, and dedicated graph storage remain outside these initial slices. Follow-up triggers are recorded in the [backlog](backlog.md).
