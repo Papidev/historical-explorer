@@ -74,19 +74,19 @@ We add or rename a generation step, display more checkpoint information, or othe
 **Possible direction**
 Make the Curator projection consume the canonical generation metadata type or, preferably, the generation status already exposed by the relevant domain Module. Avoid exposing filesystem paths or storage-specific JSON shapes.
 
-## Introduce Story approval before visitor visibility
+## Consider explicit Story approval
 
 **Observation**  
 Story status is not represented. Content written by the Story Workflow can be read immediately by the Visitor Experience.
 
 **Risk**  
-The application cannot distinguish a Draft Story awaiting Curator review from an approved Story.
+If we later choose to require explicit approval, the application cannot distinguish content awaiting Curator review from approved content. This is not a current publication requirement.
 
 **Revisit when**  
-We introduce Curator approval or need to prevent unfinished content from appearing in the Visitor Experience.
+We explicitly decide to add a Curator approval workflow. This is a possible future evolution, not planned work or a prerequisite for current publication or new discovery paths.
 
 **Possible direction**  
-Represent the Draft Story to Story transition explicitly and make visitor-facing reads return only approved Stories.
+If adopted, represent the Draft Story to Story transition explicitly and make visitor-facing reads return only approved Stories. Until then, retain the current public catalog eligibility rules.
 
 ## Model multiple Story Sources
 
@@ -158,9 +158,9 @@ We introduce standalone Person navigation or prioritize discovering Points of In
 
 **Possible direction**
 
-Derive the related Points of Interest from Story references to `personId` instead of storing a second list on the Person. Present only approved, visitor-facing Stories.
+Derive the related Points of Interest from Story references to `personId` instead of storing a second list on the Person. Present only visitor-facing Stories available in the public catalog under the existing publication rules.
 
-Verify the complete POI A → Person → POI B path, including returning to the original place. Approval is not currently implemented; resolve the visitor visibility gate explicitly before exposing this new path. See [Entity discovery](entity-discovery.md).
+Verify the complete POI A → Person → POI B path, including returning to the original place. Approval is not currently implemented and is not required for this path; use the existing public catalog as the visibility boundary. See [Entity discovery](entity-discovery.md).
 
 Include a way to see the associated POIs on the map when selecting a Person, and to clear that selection. The association is enough for discovery; opening a POI should explain the connection through its Story. Agree on city scope and interaction with category, style, and period filters when this slice is prioritized.
 
