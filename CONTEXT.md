@@ -5,6 +5,10 @@ Cultural Atlas helps visitors understand cities through concise, curated discove
 **Cultural Atlas**:
 The product name for the visitor experience and its editorial tools. The core perspectives are **History**, **Art**, and **Culture**.
 
+## Current publication and optional approval
+
+The application does not currently represent or enforce Curator approval. Stories become eligible for the public catalog through valid versioned Story Content, a licensed and attributed selected Main Image, and saved Person records for all Related People. Content reaches the public site through deployment. Explicit approval is a possible future evolution, not a current requirement or a prerequisite for new discovery paths. The Draft Story and Story Curation terms describe reviewable editorial work; any approval transition below is conditional on adopting that future workflow.
+
 ## Language
 
 **POI**:
@@ -40,7 +44,7 @@ A Curator's explicit addition or exclusion of a **POI Category** for one **POI**
 _Avoid_: Local type mapping, source correction
 
 **Story Workflow**:
-The internal process that takes a **POI** through **Draft Story Generation** and **Story Curation** until it has an approved **Story**.
+The internal process that takes a **POI** through **Draft Story Generation** and **Story Curation** until it has visitor-facing **Story** content. Explicit approval may be added in a future version.
 _Avoid_: Draft Workflow, production workflow, admin workflow
 
 **Draft Story Generation**:
@@ -48,11 +52,11 @@ The automated part of the **Story Workflow** that gathers **Sources** and create
 _Avoid_: Generation Pipeline, AI pipeline, draft workflow
 
 **Story Curation**:
-The human part of the **Story Workflow** in which a **Curator** reviews and edits a **Draft Story**, may change its **Draft Main Image**, and approves it as a **Story**.
+The human part of the **Story Workflow** in which a **Curator** reviews and edits a **Draft Story**, may change its **Draft Main Image**, and may prepare it for publication. Explicit approval is an optional future step.
 _Avoid_: Review Workflow, approval workflow, manual workflow
 
 **Curator**:
-The human decision-maker who reviews, edits, enriches, and approves draft stories.
+The human decision-maker who reviews, edits, enriches, and prepares draft stories for publication; may approve them if an explicit approval workflow is adopted.
 _Avoid_: Admin, editor, reviewer
 
 **POI Metadata**:
@@ -60,11 +64,11 @@ Basic identifying information for a **POI**, such as name, location, city, perio
 _Avoid_: Visitor narrative, curated content, story metadata
 
 **Story**:
-The approved source-grounded visitor-facing explanation for one **POI**, including **Story Content** and a main image.
+The source-grounded visitor-facing explanation for one **POI**, including **Story Content** and a main image.
 _Avoid_: POI Story, Visitor Narrative, article, summary, description, AI text, Markdown
 
 **Draft Story**:
-A source-grounded visitor-facing story for one **POI** before curator approval.
+A source-grounded visitor-facing story for one **POI** while it is being prepared or reviewed editorially; no separate approval status is currently stored.
 _Avoid_: Draft POI Story, POI Draft, draft narrative, AI Markdown, AI text, Markdown, generated output
 
 **Story Content**:
@@ -100,7 +104,7 @@ The image in a story that helps visitors recognize a **POI** or notice an import
 _Avoid_: Lead Image Candidate, decoration, gallery image
 
 **Draft Main Image**:
-The current image selected for a **Draft Story** before approval. It becomes the **Main Image** only when the **Draft Story** becomes a **Story**.
+The current image selected during editorial preparation of a **Draft Story**. It supplies the visitor-facing **Main Image** when the current publication requirements are met; an explicit approval transition may be added later.
 _Avoid_: Proposed Main Image, selected image, temporary Main Image
 
 **Main Image Candidate**:
@@ -116,7 +120,7 @@ An internal reference from a **Story Introduction**, **Visitor Insight**, or **R
 _Avoid_: public footnote, URL embedded in prose, bibliography entry
 
 **Visitor Experience**:
-The public-facing experience that shows approved stories to visitors.
+The public-facing experience that shows publishable stories from the public catalog to visitors.
 _Avoid_: Production output, AI output
 
 ## Relationships
@@ -124,14 +128,14 @@ _Avoid_: Production output, AI output
 - A **Geo Place** may become a **POI** when source data is cleaned for app use.
 - A **POI** has exactly one **POI ID** and may retain optional external identifiers such as a Wikidata ID.
 - A **POI** may have multiple **POI Types** from Wikidata and multiple app-owned **POI Categories**.
-- A **Story Workflow** comprises **Draft Story Generation** followed by **Story Curation**.
+- A **Story Workflow** comprises **Draft Story Generation** with human **Story Curation** available as editorial work; it does not currently enforce an approval gate.
 - **Draft Story Generation** starts from an existing **POI** and creates or updates its current **Draft Story**.
 - Manually regenerating **Story Content** or **Main Image Candidates** belongs to **Draft Story Generation** because it recreates automated artifacts.
 - Creating a **POI** from a **Geo Place** happens before, and does not belong to, the **Story Workflow**.
 - **Story Curation** begins after **Draft Story Generation** has produced a reviewable **Draft Story**.
 - A **Curator** selecting a **Main Image Candidate** as the **Draft Main Image** belongs to **Story Curation**.
 - A **Story** belongs to exactly one **POI**.
-- A **POI** has at most one approved **Story** in the current product.
+- A **POI** has at most one visitor-facing **Story** in the current product.
 - A **POI** has at most one current **Draft Story**.
 - A **Story** contains one **Story Content** and one **Main Image**.
 - A **Story** may reference zero or more **Persons** as **Related Persons**.
@@ -159,23 +163,23 @@ _Avoid_: Production output, AI output
 - A **Story** may make substantive claims only when they are supported by its **Sources**.
 - A **Story** retains the **Sources** and resolvable **Source References** used to support curator review.
 - A **Story** is composed from the strongest few **Visitor Insights**, not from a complete article summary.
-- A **Draft Story** proposes the **Visitor Insights** that may shape the approved **Story**.
-- A **Draft Story** becomes a **Story** only when approved by a **Curator**.
+- A **Draft Story** proposes the **Visitor Insights** that may shape the visitor-facing **Story**.
+- If explicit approval is adopted in a future version, a **Draft Story** becomes an approved **Story** through a **Curator** decision. This transition is not currently required or represented.
 - A **Draft Story** contains **Story Content** and one or more **Sources**, and may also include one **Draft Main Image** and one or more **Main Image Candidates**.
-- A **Draft Story** must include one **Draft Main Image** with source, rights, license, and attribution information before it becomes a **Story**.
+- A **Draft Story** must include one **Draft Main Image** with source, rights, license, and attribution information before it becomes visitor-facing.
 - The first **Draft Story Generation** proposes up to three **Main Image Candidates** for each **Draft Story**.
 - **Main Image Candidates** should help visitors recognize the **POI**, not inspect a detail.
 - The first **Main Image Candidates** come from Wikimedia Commons.
 - **Main Image Candidates** belong to the **Draft Story**, not to the visitor-facing **Story**.
 - The first **Main Images** come from Wikimedia Commons.
 - **Draft Story Generation** preserves the current **Draft Main Image** when it remains an available candidate; otherwise it automatically selects the first candidate with license and attribution information.
-- A **Curator** may select a **Main Image Candidate** as the current **Draft Main Image**, and may change that selection before approving the **Draft Story**.
+- A **Curator** may select a **Main Image Candidate** as the current **Draft Main Image**, and may change that selection during editorial review.
 - **Main Image Candidates** and the **Draft Main Image** are reviewable parts of a **Draft Story**.
-- When a **Curator** approves a **Draft Story**, its **Draft Main Image** becomes the **Main Image** of the resulting **Story**.
+- If explicit approval is adopted, approving a **Draft Story** also approves its selected **Draft Main Image** as the resulting **Story**'s **Main Image**.
 - A **Visitor Insight** should prefer visible details when they can carry the cultural meaning.
 - The first **Sources** come from Wikipedia, Wikidata, and Wikimedia Commons.
-- A **Curator** may edit a **Draft Story** before approving it.
-- A **Story** may become visitor-facing only when approved by a **Curator**, regardless of whether it began as AI-generated or manually written content.
+- A **Curator** may edit a **Draft Story** during editorial preparation.
+- A **Story** becomes eligible for the current **Visitor Experience** when it meets the public catalog's content, image, and resolved-Person requirements. No explicit **Curator** approval is required.
 - **POI Metadata** identifies a **POI** but is separate from its **Story**.
 - The **Visitor Experience** shows **Story** content.
 - The default **Visitor Experience** does not show **Sources**.
@@ -185,7 +189,7 @@ _Avoid_: Production output, AI output
 ## Example dialogue
 
 > **Dev:** "Does **Draft Story Generation** choose the final **Main Image**?"
-> **Domain expert:** "It automatically selects a **Draft Main Image**. During **Story Curation**, a **Curator** may change it; it becomes the **Main Image** only when the **Draft Story** is approved as a **Story**."
+> **Domain expert:** "It automatically selects a **Draft Main Image**. During **Story Curation**, a **Curator** may change it; it supplies the visitor-facing **Main Image** when the current publication requirements are met. Explicit approval may be added later."
 >
 > **Dev:** "Must every **Draft Story** contain every **Story Topic**?"
 > **Domain expert:** "No. It includes only **Story Topics** supported by the **Sources**, and their presentation is decided during **Story Curation**."
@@ -195,16 +199,16 @@ _Avoid_: Production output, AI output
 - "Raw POI" made a source-dataset place sound like it was already a **POI** in the app — resolved: call the source representation a **Geo Place**.
 - "production workflow" was used to mean the internal AI-assisted editorial process — resolved: call this the **Story Workflow**.
 - "Wikipedia-only source material" was used for the current first slice — resolved: first **Sources** may come from Wikipedia, Wikidata, and Wikimedia Commons, while implementation may begin with Wikipedia article text.
-- "published POI content" implied a release destination — resolved: call the human-approved visitor-facing output a **Story**.
+- "published POI content" implied a release destination — resolved: call the visitor-facing output a **Story**; explicit approval is a possible future evolution.
 - "MDX narrative" was considered as a future presentation mechanism — unresolved by design: **Story Content** is currently structured plain text, while MDX and configurable React renderers remain possible later increments.
 - "AI Markdown" and "AI text" were used for the current reviewable artifact — resolved: call the domain object a **Draft Story**.
 - "lead image candidate" over-specified the current image model because the draft workflow proposes only one image for now — resolved: call the image inside a story the **Main Image**.
-- "alternatives" was used for images AI can propose to the curator — resolved: call these **Main Image Candidates**, and keep them out of the approved **Story**.
+- "alternatives" was used for images AI can propose to the curator — resolved: call these **Main Image Candidates**, and keep them out of the visitor-facing **Story**.
 - "detail image" was considered for candidates — resolved: the first **Main Image Candidates** should all be recognizers for the **POI**.
 - "image search" was ambiguous between Wikimedia Commons and broader web search — resolved: the first **Main Image Candidates** come from Wikimedia Commons only.
 - "main image from Wikipedia" was ambiguous between using a Wikipedia article thumbnail as the source and discovering images through Wikipedia/Wikidata — resolved: Wikipedia/Wikidata may help discover images, but the image source and attribution should come from Wikimedia Commons.
 - "exactly three candidates" overstated the first direct-source workflow because Wikidata and Wikipedia page images may provide fewer than three distinct usable images — resolved: the first **Story Workflow** proposes up to three **Main Image Candidates**.
-- "show the selected image" was ambiguous between the **Story Workflow** and the **Visitor Experience** — resolved: the first image-candidate implementation stays workflow-only until the approved **Story** shape is explicit.
-- "selected image" was ambiguous with final story approval — resolved: call the mutable selection on a **Draft Story** the **Draft Main Image**; it becomes the **Main Image** only upon approval.
+- "show the selected image" was ambiguous between the **Story Workflow** and the **Visitor Experience** — resolved: the first image-candidate implementation started as workflow-only; the current visitor experience now uses the selected image when publication requirements are met.
+- "selected image" was ambiguous with final story approval — resolved: call the mutable selection on a **Draft Story** the **Draft Main Image**; its selection supplies the visitor-facing **Main Image** when publication requirements are met; explicit approval is optional future work.
 - "manual refresh" was ambiguous between automated generation and human curation — resolved: regenerating **Story Content** or **Main Image Candidates** belongs to **Draft Story Generation**, while selecting the **Draft Main Image** belongs to **Story Curation**.
 - "section" was ambiguous between generated cultural content and its public presentation — resolved: use optional **Story Topics** to organize proposed **Visitor Insights**, without requiring a corresponding section in the **Visitor Experience**.
