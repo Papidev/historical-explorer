@@ -144,25 +144,7 @@ Move historical date formatting behind a locale-aware formatter. Keep numeric ye
 
 ## Show related Points of Interest for People
 
-**Observation**
-
-A global Person may be referenced by multiple Stories, but the first visitor flow only opens that Person from the current Story and returns to the same POI.
-
-**Risk**
-
-Visitors cannot use a Person as a path for discovering the other places connected to them.
-
-**Revisit when**
-
-We introduce standalone Person navigation or prioritize discovering Points of Interest through people.
-
-**Possible direction**
-
-Derive the related Points of Interest from Story references to `personId` instead of storing a second list on the Person. Present only visitor-facing Stories available in the public catalog under the existing publication rules.
-
-Verify the complete POI A → Person → POI B path, including returning to the original place. Approval is not currently implemented and is not required for this path; use the existing public catalog as the visibility boundary. See [Entity discovery](entity-discovery.md).
-
-Include a way to see the associated POIs on the map when selecting a Person, and to clear that selection. The association is enough for discovery; opening a POI should explain the connection through its Story. Agree on city scope and interaction with category, style, and period filters when this slice is prioritized.
+Promoted to [issue #72](https://github.com/Papidev/historical-explorer/issues/72): discover connected published POIs from a Person in the current city, show them on the map, open their details, and preserve the return path. Person discovery intersects with active filters; unlike name search, it does not temporarily bypass them.
 
 ## Preserve evidence for entity connections
 
