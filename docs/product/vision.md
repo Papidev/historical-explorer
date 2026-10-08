@@ -43,11 +43,11 @@ This is the internal editorial workflow.
 
 A POI starts from source material such as Wikipedia, Wikidata, and Wikimedia Commons. AI helps create a first draft by:
 
-- extracting visitor-oriented insights
+- drafting concise cultural content intended for the visitor
 - proposing concise structured Story Content
-- suggesting which medium best communicates each insight
+- suggesting which medium best communicates each proposed cultural idea
 - proposing one main image
-- explaining why each insight is useful
+- recording editorial notes explaining why proposed content is useful
 
 AI-generated content is reviewable editorial material. A human curator can review, edit, and enrich it. An explicit approval step is a possible future evolution, not a current publication requirement.
 
@@ -55,7 +55,7 @@ AI-generated content is reviewable editorial material. A human curator can revie
 
 This is the public app experience.
 
-The visitor sees publishable stories from the public catalog. Publication currently requires valid versioned Story Content, a selected main image with license and attribution, and saved Person records for all Related People; it does not require an explicit Curator approval state. They should not see AI reasoning, drafts, source processing, visitor insights, or editorial metadata.
+The visitor sees publishable stories from the public catalog. Publication currently requires valid versioned Story Content, a selected main image with license and attribution, and saved Person records for all Related People; it does not require an explicit Curator approval state. Insights are the cultural content shown to the visitor. AI reasoning, drafts, source processing, editorial notes, and other editorial metadata remain internal and are not called insights.
 
 The visitor experience should be quick, pleasant, low-friction, and useful while physically looking at a place.
 
@@ -90,6 +90,8 @@ The map remains the entry point for discovery, but the story is the main value m
 ## Core content principle
 
 Insight first. Medium second.
+
+Use “insight” only for cultural content shown to the visitor. Before publication, refer to draft content or proposed cultural ideas. Internal rationale, selection explanations, and generation notes are editorial notes, not insights.
 
 Use text, image, map, timeline, or another medium only when that medium best communicates the specific cultural insight.
 
