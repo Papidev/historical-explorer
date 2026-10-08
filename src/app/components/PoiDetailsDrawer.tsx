@@ -32,7 +32,7 @@ export const PoiDetailsDrawer = ({
 
   return (
     <aside
-      className={`absolute top-0 right-0 z-20 h-full w-full max-w-md border-l border-black/10 bg-white shadow-2xl transition-transform duration-300 ${
+      className={`absolute top-0 right-0 z-20 h-full w-full border-l border-black/10 bg-white shadow-2xl transition-transform duration-300 lg:max-w-md ${
         poi ? "translate-x-0" : "translate-x-full"
       }`}
       aria-hidden={!poi}
@@ -87,7 +87,9 @@ export const PoiDetailsDrawer = ({
               ) : (
                 <p className="text-black/60">This person is unavailable.</p>
               )
-            ) : poi.shortDescription ? <p>{poi.shortDescription}</p> : null}
+            ) : poi.shortDescription ? (
+              <p>{poi.shortDescription}</p>
+            ) : null}
             {!selectedPersonId &&
               (isLoading ? (
                 <p className="mt-4 text-black/60">Loading additional content...</p>
@@ -96,9 +98,7 @@ export const PoiDetailsDrawer = ({
                   content={content}
                   period={poi.period}
                   address={poi.address}
-                  onOpenPerson={(personId) =>
-                    setSelectedPerson({ id: personId, openRequestId })
-                  }
+                  onOpenPerson={(personId) => setSelectedPerson({ id: personId, openRequestId })}
                 />
               ) : (
                 <p className="mt-4 text-black/60">

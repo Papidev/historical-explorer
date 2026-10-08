@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 import "@testing-library/jest-dom/vitest";
-import { cleanup, render, screen, within } from "@testing-library/react";
+import { cleanup, fireEvent, render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from "vitest";
 import { http, HttpResponse } from "msw";
@@ -140,9 +140,37 @@ afterAll(() => {
 });
 
 describe("visitor category filtering", () => {
-  it("matches any selected category, deduplicates matches and excludes uncategorized places until fully cleared", async () => {
+  it("opens and closes filters by swipe, then matches selected categories until fully cleared", async () => {
     const user = userEvent.setup();
     render(<CityExplorer citySlug="rome" coordinates={[12, 41]} initialZoom={15} pois={pois} />);
+    const edge = screen.getByRole("button", { name: "Open filters" });
+    expect(screen.queryByRole("button", { name: /^Categories/ })).not.toBeInTheDocument();
+    fireEvent.touchStart(edge, { touches: [{ clientX: 5, clientY: 100 }] });
+    fireEvent.touchEnd(edge, { changedTouches: [{ clientX: 25, clientY: 100 }] });
+    expect(edge).toBeInTheDocument();
+    fireEvent.touchStart(edge, { touches: [{ clientX: 5, clientY: 100 }] });
+    fireEvent.touchEnd(edge, { changedTouches: [{ clientX: 80, clientY: 220 }] });
+    expect(edge).toBeInTheDocument();
+    fireEvent.touchStart(edge, { touches: [{ clientX: 5, clientY: 100 }] });
+    fireEvent.touchMove(edge, {
+      touches: [
+        { clientX: 35, clientY: 100 },
+        { clientX: 40, clientY: 120 },
+      ],
+    });
+    fireEvent.touchEnd(edge, { changedTouches: [{ clientX: 100, clientY: 100 }] });
+    expect(edge).toBeInTheDocument();
+    fireEvent.touchStart(edge, { touches: [{ clientX: 5, clientY: 100 }] });
+    fireEvent.touchEnd(edge, { changedTouches: [{ clientX: 100, clientY: 105 }] });
+    expect(screen.queryByRole("button", { name: "Open filters" })).not.toBeInTheDocument();
+    fireEvent.touchStart(screen.getByRole("complementary", { name: "Discover places" }), {
+      touches: [{ clientX: 200, clientY: 150 }],
+    });
+    fireEvent.touchEnd(screen.getByRole("complementary", { name: "Discover places" }), {
+      changedTouches: [{ clientX: 100, clientY: 155 }],
+    });
+    expect(screen.getByRole("button", { name: "Open filters" })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Open filters" }));
     await user.click(
       screen.getByRole("button", { name: "Show subcategories for Churches & cathedrals" }),
     );
