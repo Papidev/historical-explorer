@@ -1,82 +1,67 @@
 # Entity Discovery
 
-Status: product direction. Only the current People path described below is implemented; the broader discovery and ranking flow is future work.
+Status: POI-to-Person details are implemented. Person-to-POI navigation is planned in [#72](https://github.com/Papidev/historical-explorer/issues/72); Events, Artifacts, and independent ranking remain future work.
 
 ## Current behavior
 
-Story Content generation selects at most ten Related People, already ordered by significance to understanding the POI. Selection and ordering currently happen in the same AI operation; there is no separate ranking stage.
+Story generation selects and orders at most ten Related People significant to understanding the POI. People may be historical, mythological, or imaginary. Wikipedia links resolve identities; canonical records are reused or generated, with app-owned `personId` and supporting `sourceIds`.
 
-The Person resolver uses links from the POI's Wikipedia source to resolve identities, reuses existing People, and generates missing Person records. Ambiguous references remain non-navigable in the editorial workflow. Any retained unresolved reference or missing Person record excludes the entire POI from the current public catalog and visitor map; Story Content remains saved for review and retry. Resolved references carry an app-owned `personId` and supporting `sourceIds`. People can include historical, mythological, or imaginary figures under the current Story generation rules.
+Ambiguous references remain non-navigable in the editorial workflow. Story Content is preserved for retry, but any retained unresolved reference or missing Person record excludes the POI from the public catalog. Visitors can open a resolved Person in the POI drawer and return to the original Story. See [Person Architecture](person-architecture.md).
 
-Visitors can open a resolved Person in the existing POI drawer and return to the original Story. Person-to-other-POI navigation is planned in [#72](https://github.com/Papidev/historical-explorer/issues/72), but is not implemented. Events, Artifacts, and Jev ranking are not implemented. See [Person Architecture](person-architecture.md) for the detailed current behavior.
+Use existing public catalog eligibility for all visitor paths. Explicit approval is optional future work, not a dependency; current records must not be described as approved.
 
-Story and Person approval are not currently enforced. Explicit Curator approval is a possible future evolution, not a current product requirement or a prerequisite for entity navigation. Use the existing public catalog eligibility rules for visitor visibility. See the [product vision](product/vision.md) and [backlog](backlog.md#consider-explicit-story-approval).
+## Responsibilities
 
-## Future responsibilities
+1. **Discovery:** find candidates with evidence of a significant connection.
+2. **Identity resolution:** identify and reuse the specific entity without guessing.
+3. **Ranking:** order valid entities within their category.
+4. **Presentation:** provide useful lists, details, and navigation.
 
-Keep these responsibilities distinguishable without introducing a generic entity framework before concrete slices need one:
+A Wikipedia link or resolved identity does not prove the connection's significance. A Source ID identifies a document, not the supporting passage. Retain connection evidence internally without requiring a formal relationship vocabulary; the visitor list can show names, while the POI Story explains the connection.
 
-1. **Discovery:** find candidates with evidence of a significant connection to the POI.
-2. **Identity resolution:** identify the specific Person, Event, or Artifact, reuse an existing record where possible, and preserve ambiguity rather than guessing.
-3. **Ranking:** order the already valid entities within their category.
-4. **Presentation:** expose useful lists, detail views, and navigation without overwhelming the visitor.
+Keep these separate:
 
-Finding a Wikipedia link can help identify a candidate; it does not by itself demonstrate a culturally significant connection. Likewise, resolving an identity does not validate the connection. A reference to a source document identifies where support may be found, but does not by itself capture the supporting passage or structured statement.
+- **Metadata:** filterable categories and architectural styles, acquired outside Story Content.
+- **Connections:** evidenced POI-to-Person, Event, or Artifact associations.
+- **Insights:** visitor-visible cultural explanations.
 
-The initial connection can remain simple: POI to Person, Event, or Artifact. A formal relationship vocabulary such as `designed`, `visited`, or `commissioned` is not required. This does not remove the need to retain source evidence internally, even when the visitor list shows only entity names.
-
-Selecting a Person should eventually expose associated POIs on the map as well as provide a path into their details. The discovery action needs the association, while the POI's Story supplies the meaning of that association. A visitor should not have to select a relationship type to find places connected to a Person.
-
-## Metadata, connections, and insights
-
-Keep three purposes explicit:
-
-- **Filterable POI metadata:** categories and architectural styles. Historical period filtering is deferred and is not part of the current work. Acquire supported structured facts and map them to small app-owned values outside Story Content; preserve original identities and date precision.
-- **Entity connections:** supported associations between a POI and a Person, Event, or Artifact. Identity and connection evidence enable navigation independently of generated descriptions.
-- **Visitor insights:** concise source-grounded Story Content explaining what the place is, why it matters, and what is worth noticing.
-
-These purposes do not require converting categories, styles, and periods into generic graph nodes. Category and style slices are tracked in [#38](https://github.com/Papidev/historical-explorer/issues/38) and [#39](https://github.com/Papidev/historical-explorer/issues/39); historical period filtering [#40](https://github.com/Papidev/historical-explorer/issues/40) is deferred, with no current commitment to inception-based bands. Neither regenerating a Story nor changing its wording should silently redefine a structured filter value.
-
-Prefer direct acquisition of available structured facts over asking an LLM to infer them from prose. Wikipedia extraction can still provide supported connections absent from Wikidata. Missing structured data should preserve the POI; disagreements between sources need contextual review rather than an automatic universal precedence rule.
+Story regeneration must not redefine filter values. Prefer structured facts over LLM inference where available, preserve identity and date precision, and keep POIs when structured data is missing. Source disagreements need contextual review. Category/style work is in #38–#39; period filtering (#40) is deferred.
 
 ## Source and tool roles
 
-| Source or tool    | Role                                                                                                                                              |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Wikipedia         | Narrative context and evidence for connections, including connections absent from structured data.                                                |
-| Wikidata          | External identities, types, dates, coordinates, and structured statements where available. It complements Wikipedia.                              |
-| Wikimedia Commons | Images with source, license, and attribution metadata.                                                                                            |
-| LLM               | Source-grounded structured extraction where deterministic source data is insufficient. Current providers remain configured by the Story Workflow. |
-| Jev               | Candidate for ordering valid entities in a future ranking experiment. No discovery, validation, filtering, or entity generation.                  |
+| Source/tool | Role |
+| --- | --- |
+| Wikipedia | Narrative context and connection evidence, including gaps in structured data. |
+| Wikidata | External identity, types, dates, coordinates, and available statements. |
+| Wikimedia Commons | Images and rights metadata. |
+| LLM | Source-grounded extraction when deterministic data is insufficient, using Story Workflow providers. |
+| Jev | Unadopted candidate for independent ordering; evaluate before integration. |
 
-Jev is not an adopted dependency. Its concrete API, availability, and suitability must be verified during evaluation; this document does not establish a package or integration contract. No Jive orchestration layer is needed for this product direction.
-
-Before implementing Wikipedia parsing or enrichment, check the existing `wtf_wikipedia` plugins as required by the repository guidance.
+Check existing `wtf_wikipedia` plugins before implementing parsing or enrichment, as required by repository guidance.
 
 ## Ranking boundary
 
-Ranking receives a POI, valid entities from one category, and evidence of their connections. Its result must be a permutation of the input entities: same identities and content, no omissions, additions, or duplicates.
+Rank by historical or cultural significance of the connection to this POI, not fame, mention count, or semantic similarity. Inputs are the POI, valid entities from one category, and connection evidence. Output must be a permutation of those entities: no additions, omissions, duplicates, or content changes. Discovery validates candidates before ranking.
 
-The criterion is the historical or cultural significance of the connection to this place, rather than name recognition, mention frequency, or general semantic similarity. Discovery must exclude unsupported candidates before ranking; ranking does not make them valid.
+If integrated, preserve the existing order on failure or invalid output and keep the ranker replaceable. The [Jev backlog entry](backlog.md#evaluate-jev-for-ordering-related-people) defines the API, quality, latency, cost, and failure evaluation; Jev is not an adopted dependency.
 
-Start evaluation with People already available in the catalog and 3–5 real POIs. Compare the output with a Curator-reviewed expected order and the current Story order. Review quality, latency, cost, and failure behavior before adopting Jev. If integrated, preserve the existing order when ranking fails or returns an invalid permutation, and keep the ranker replaceable without rewriting discovery.
+## Incremental delivery
 
-## Incremental delivery and open boundaries
+Follow small complete slices as in [#35](https://github.com/Papidev/historical-explorer/issues/35):
 
-Extend the existing POI-to-Person path through small complete slices, consistent with [issue #35](https://github.com/Papidev/historical-explorer/issues/35):
+- Derive Person-to-POI associations from Story references, not a second list on Person records.
+- Introduce Events through source acquisition, identity, and a detail view; first distinguish concrete occurrences from broad periods.
+- Introduce Artifacts similarly; first resolve overlap with visitable POIs to avoid duplicate identities.
+- Add Wikidata discovery only for real, evidenced gaps in the Wikipedia path.
+- Evaluate ranking separately.
 
-- Derive other POIs for a Person from existing Story references, rather than storing a second list on the Person.
-- Introduce Events through a source-to-detail-view slice. First agree on concrete occurrences versus broad historical periods.
-- Introduce Artifacts through a source-to-detail-view slice. First agree on how an object that is also a visitable POI is represented without duplicating its identity.
-- Add Wikidata-backed discovery only where real examples demonstrate gaps in the Wikipedia-first path.
-- Evaluate ranking separately before integrating it.
-
-For reverse navigation, expose only POIs and People available in the public catalog under the existing publication rules. An explicit approval gate is not a prerequisite; do not describe current records as approved.
-
-Precise relationship classification, generated prose for every connection, automatic "must-see" selections, cross-category ranking, a graph visualization, and dedicated graph storage remain outside these initial slices. Follow-up triggers are recorded in the [backlog](backlog.md).
+A generic entity framework, relationship taxonomy, generated prose per connection, automatic “must-see” selection, cross-category ranking, graph visualization, and dedicated graph storage are outside these slices. Follow-up triggers remain in the [backlog](backlog.md).
 
 ## Agreed discovery and search filter behavior
 
-Person-to-POI discovery (#72) is limited to published POIs in the current city and intersects with the other active filters. Clearing the Person constraint preserves those filters.
+Both paths use published POIs in the current city:
 
-Name search [#68](https://github.com/Papidev/historical-explorer/issues/68) searches all published POIs in the current city, including places excluded by active filters. Selecting an excluded result temporarily shows its marker and opens its detail, with a concise filter notice and no change to filter selections. Closing the detail removes the temporary exception; selecting another result replaces it. Neither path exposes draft-only or metadata-only POIs.
+- **Person discovery (#72):** associated POIs intersect with active filters. Clearing the Person constraint preserves those filters.
+- **Name search [#68](https://github.com/Papidev/historical-explorer/issues/68):** searches all published POIs, including filtered-out places. Selecting an excluded result temporarily reveals its marker and opens its detail with a filter notice. Filters stay unchanged; closing removes the exception and selecting another result replaces it.
+
+Neither path exposes draft-only or metadata-only POIs.
