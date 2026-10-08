@@ -75,14 +75,14 @@ type StoryWorkflow = {
 };
 ```
 
-| Operation | Behavior |
-| --- | --- |
-| `draftStory.generate` | Full generation with checkpoint persistence. |
-| `draftStory.get` | Domain snapshot without paths/formats; the loader may join external POI/Geo Place data. |
-| `draftStory.reset` | Remove workflow Sources, content, candidates, image selection, and metadata; preserve POI/Geo Place. |
-| `storyContent.generate` / `mainImageCandidates.generate` | Create or replace that artifact. |
-| `relatedPeople.resolve` | Retry unresolved references from saved content, preserving resolved People. |
-| Artifact `delete` actions | Curator recovery with paths/cascade rules kept inside the Module. |
+| Operation                                                | Behavior                                                                                             |
+| -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `draftStory.generate`                                    | Full generation with checkpoint persistence.                                                         |
+| `draftStory.get`                                         | Domain snapshot without paths/formats; the loader may join external POI/Geo Place data.              |
+| `draftStory.reset`                                       | Remove workflow Sources, content, candidates, image selection, and metadata; preserve POI/Geo Place. |
+| `storyContent.generate` / `mainImageCandidates.generate` | Create or replace that artifact.                                                                     |
+| `relatedPeople.resolve`                                  | Retry unresolved references from saved content, preserving resolved People.                          |
+| Artifact `delete` actions                                | Curator recovery with paths/cascade rules kept inside the Module.                                    |
 
 Generation is not idempotent: AI output and external Sources may change. The UI may label artifact actions Generate or Refresh depending on whether content exists. Editing content and selecting an image belong to separate Story Curation; explicit approval remains optional future work.
 
@@ -90,12 +90,12 @@ Generation is not idempotent: AI output and external Sources may change. The UI 
 
 Successful checkpoints remain available for independent retry; there is no whole-operation rollback.
 
-| Failure | Full generation outcome |
-| --- | --- |
-| Source acquisition | Stop downstream generation. |
-| Main Image Candidates | Report failure; continue Story Content generation. |
-| Story Content | Keep acquired Sources and candidates. |
-| Related People | Keep Story Content, preserve unresolved names, and report partial success. |
+| Failure               | Full generation outcome                                                    |
+| --------------------- | -------------------------------------------------------------------------- |
+| Source acquisition    | Stop downstream generation.                                                |
+| Main Image Candidates | Report failure; continue Story Content generation.                         |
+| Story Content         | Keep acquired Sources and candidates.                                      |
+| Related People        | Keep Story Content, preserve unresolved names, and report partial success. |
 
 An explicitly requested artifact action preserves its previous artifact and rejects on failure. Refresh does not clear the row first; replacements are saved when ready.
 

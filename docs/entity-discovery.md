@@ -29,13 +29,13 @@ Story regeneration must not redefine filter values. Prefer structured facts over
 
 ## Source and tool roles
 
-| Source/tool | Role |
-| --- | --- |
-| Wikipedia | Narrative context and connection evidence, including gaps in structured data. |
-| Wikidata | External identity, types, dates, coordinates, and available statements. |
-| Wikimedia Commons | Images and rights metadata. |
-| LLM | Source-grounded extraction when deterministic data is insufficient, using Story Workflow providers. |
-| Jev | Unadopted candidate for independent ordering; evaluate before integration. |
+| Source/tool       | Role                                                                                                |
+| ----------------- | --------------------------------------------------------------------------------------------------- |
+| Wikipedia         | Narrative context and connection evidence, including gaps in structured data.                       |
+| Wikidata          | External identity, types, dates, coordinates, and available statements.                             |
+| Wikimedia Commons | Images and rights metadata.                                                                         |
+| LLM               | Source-grounded extraction when deterministic data is insufficient, using Story Workflow providers. |
+| Jev               | Unadopted candidate for independent ordering; evaluate before integration.                          |
 
 Check existing `wtf_wikipedia` plugins before implementing parsing or enrichment, as required by repository guidance.
 

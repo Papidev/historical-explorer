@@ -39,13 +39,13 @@ Preserve seeded rules, ignored types, and manual corrections. Manually cleared t
 
 The discovery sidebar is collapsible on mobile. All available categories start selected, showing all published POIs including uncategorized ones. Children start collapsed; expansion does not change selection. Hide zero-count categories; counts use the full visitor-ready catalog.
 
-| Action | Effect |
-| --- | --- |
-| Select/clear a parent | Select/clear all children. |
-| Deselect a child | Clear the parent's selected state; retain other children. |
-| Select several categories | Match any selected category (OR). |
-| Clear all categories | Show all published POIs, including uncategorized ones. |
-| Exclude the open POI | Close its detail and clear selection. |
+| Action                    | Effect                                                    |
+| ------------------------- | --------------------------------------------------------- |
+| Select/clear a parent     | Select/clear all children.                                |
+| Deselect a child          | Clear the parent's selected state; retain other children. |
+| Select several categories | Match any selected category (OR).                         |
+| Clear all categories      | Show all published POIs, including uncategorized ones.    |
+| Exclude the open POI      | Close its detail and clear selection.                     |
 
 Active category subsets exclude uncategorized POIs. Religious child scopes are disjoint. For legacy mapped religious types, catalog naming determines the scope:
 
@@ -75,12 +75,12 @@ Use exceptions for source types describing an encompassing complex rather than t
 
 ## Persistence
 
-| Artifact | Location |
-| --- | --- |
-| Shared category definitions | `data/poi-category-catalog.json` |
-| Versioned direct-type rules | `data/poi-type-category-map.json` |
+| Artifact                       | Location                           |
+| ------------------------------ | ---------------------------------- |
+| Shared category definitions    | `data/poi-category-catalog.json`   |
+| Versioned direct-type rules    | `data/poi-type-category-map.json`  |
 | Persisted categories by POI ID | `data/<city>/pois/categories.json` |
-| Defaults for older catalogs | `src/types/PoiCategory/` |
+| Defaults for older catalogs    | `src/types/PoiCategory/`           |
 
 Definitions contain stable `id`, singular `name`, optional visitor `label`, top-level `parent`, and `supersedes`. Shared configuration drives grouping, counts, and filtering without Basilica-specific browser logic.
 

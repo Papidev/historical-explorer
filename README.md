@@ -13,20 +13,20 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000). Installation activates Husky: staged files are formatted with Prettier and staged JS/TS checked/fixed with ESLint. Run `pnpm lint` before a PR.
 
-| Route | Purpose |
-| --- | --- |
-| `/` | Project home. |
-| `/rome` | Visitor map. |
-| `/rome?poiId=<id>` | Map with POI detail open. |
-| `/admin` | Development-only editorial workflow. |
+| Route              | Purpose                              |
+| ------------------ | ------------------------------------ |
+| `/`                | Project home.                        |
+| `/rome`            | Visitor map.                         |
+| `/rome?poiId=<id>` | Map with POI detail open.            |
+| `/admin`           | Development-only editorial workflow. |
 
-| Script | Purpose |
-| --- | --- |
-| `pnpm dev` | Local server; generate the public snapshot first. |
-| `pnpm build` | Generate the snapshot and production build. |
-| `pnpm catalog:build` | Rebuild the snapshot independently. |
-| `pnpm start` | Run the production server. |
-| `pnpm lint` | ESLint. |
+| Script                    | Purpose                                            |
+| ------------------------- | -------------------------------------------------- |
+| `pnpm dev`                | Local server; generate the public snapshot first.  |
+| `pnpm build`              | Generate the snapshot and production build.        |
+| `pnpm catalog:build`      | Rebuild the snapshot independently.                |
+| `pnpm start`              | Run the production server.                         |
+| `pnpm lint`               | ESLint.                                            |
 | `pnpm categories:rebuild` | Apply category rules to local city type snapshots. |
 
 ## Publication and deployment
@@ -43,16 +43,16 @@ Admin operations refresh the development snapshot. After directly editing conten
 
 Versioned content lives under `data/<city>/`; rebuildable `generated/` outputs are ignored.
 
-| Artifact | Location |
-| --- | --- |
-| Geo Place input | `data/<city>/pois/raw.geojson` |
-| App-ready POIs | `data/<city>/pois/pois.geojson` |
-| POI categories | `data/<city>/pois/categories.json` |
+| Artifact                           | Location                                                 |
+| ---------------------------------- | -------------------------------------------------------- |
+| Geo Place input                    | `data/<city>/pois/raw.geojson`                           |
+| App-ready POIs                     | `data/<city>/pois/pois.geojson`                          |
+| POI categories                     | `data/<city>/pois/categories.json`                       |
 | Story Content and image candidates | `data/<city>/stories/<poi-id>/story.json`, `images.json` |
-| Wikipedia text/source metadata | `data/<city>/generated/wikipedia/` |
-| Acquired Wikidata Types | `data/<city>/generated/wikidata/` |
-| Pipeline checkpoints/timings | `data/<city>/generated/generation-metadata.json` |
-| Canonical People | `data/people/<person-id>/person.json` |
+| Wikipedia text/source metadata     | `data/<city>/generated/wikipedia/`                       |
+| Acquired Wikidata Types            | `data/<city>/generated/wikidata/`                        |
+| Pipeline checkpoints/timings       | `data/<city>/generated/generation-metadata.json`         |
+| Canonical People                   | `data/people/<person-id>/person.json`                    |
 
 POI IDs are stable and app-owned; external IDs such as `wikidataId` are optional. `geoPlaceId` preserves the original feature identity, enabling regeneration without Wikidata. Legacy records recover it only from a unique exact name/geometry match. Admin shows one row per linked source and preserves existing duplicates.
 
@@ -129,7 +129,7 @@ Story generation uses `jsonrepair` for malformed JSON, including stray quotes be
 
 The OpenFreeMap basemap shows cultural labels/icons: museums, monuments/memorials, castles/ruins, archaeology, worship, theatres, galleries, artworks, arts centres, and libraries. Other business/service/transit/sport POIs and generic attractions are hidden; roads, buildings, geographic labels, and curated markers remain.
 
-A category discovery sidebar supports OR filtering and a collapsible mobile panel. See [POI Categories](docs/poi-categories.md#visitor-filtering) for defaults, counts, and religious subcategories, and [Entity Discovery](docs/entity-discovery.md) for planned search/Person navigation.
+Below 768 px, the map uses a compact header. Below 1024 px, open full-screen category filters by swiping right from the map’s left edge or tapping the keyboard/screen-reader-accessible Filters tab; swipe left or use Close filters to dismiss them. Stories span the map width. Wider screens keep the sidebar visible and use a side drawer for Stories; mobile height follows the dynamic viewport. Category filtering uses OR semantics. See [POI Categories](docs/poi-categories.md#visitor-filtering) for defaults, counts, and religious subcategories, and [Entity Discovery](docs/entity-discovery.md) for planned search/Person navigation.
 
 ## Security Notes
 
