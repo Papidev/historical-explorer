@@ -1,140 +1,51 @@
-# Cultural Atlas - Project Context
+# Cultural Atlas — Product Vision
 
-Cultural Atlas is a visit companion for art, history, and cultural discovery.
-
-The app helps tourists understand what they are seeing while they are visiting a city. It turns points of interest into concise, engaging cultural discoveries using text, images, maps, timelines, and other media when they are the best medium for the insight.
+Cultural Atlas helps visitors understand places through concise discoveries across art, history, and culture. It works during a visit and when exploring from home; physical presence is not required.
 
 ## Product philosophy
 
-The app is not a Wikipedia clone, a generic tourist guide, or an AI-generated article system.
+Each POI should offer a small cultural experience rather than an encyclopedia summary or generic tourist guide. Every insight should help the visitor notice a detail, understand the place, connect it to a wider context, remember something meaningful, or navigate a spatial relationship.
 
-The goal is to help visitors:
+Choose the strongest few source-supported ideas. Use text, images, maps, timelines, or other media only when they communicate those ideas well. Avoid promotional prose, decorative media, rigid templates, and excessive sections or clicks. Optional depth should add value without slowing the core experience.
 
-- notice meaningful details
-- understand what they are looking at
-- connect a place to art, history, culture, people, and the city
-- remember something valuable after the visit
+The map includes places with historical, artistic, architectural, archaeological, or cultural significance. Businesses qualify through that significance, not merely through tourist usefulness. Places valued primarily for natural interest remain an open scope decision.
 
-Each POI should become a small curated visitor experience, not a complete encyclopedia page.
+## Visitor experience
 
-The map should be selective: places belong because of their historical, artistic, architectural, archaeological, or cultural significance. Restaurants, hotels, shops, and other businesses should not appear merely because they are useful to tourists; a place may still qualify through its own cultural or historical significance. Extending this scope to places valued primarily for natural interest remains a product decision.
+The map is the discovery entry point; the Story explains why a place matters. Selecting a marker should show a lightweight preview with the POI name, thumbnail, short descriptor, and an action to open the Story.
+
+A POI appears only when it has workflow-generated, valid versioned Story Content, a selected Main Image with source, rights, license, and attribution, and saved records for every retained Related Person. Imported places and metadata-only POIs remain internal. Explicit approval is a possible future evolution, not a current requirement; content reaches the public site through deployment.
+
+“Insight” means cultural content shown to the visitor. Unpublished proposals are draft content; internal rationale is Editorial Notes. Sources, processing metadata, AI reasoning, and Editorial Notes stay out of the default visitor experience. Selected sources may later appear in a useful “learn more” section.
+
+Dedicated itinerary planning, expanded nearby discovery, post-visit review, and deeper reading remain possible future modes.
+
+## Stories and editorial work
+
+Each POI has one canonical English Story: a required introduction, supported history/design/art content, and Related People. Omit unsupported material; topics may be empty and need not become separate UI sections.
+
+Write warm, precise contemporary English without promotional or academic language. Avoid assuming the reader is at the place, such as “you are looking at.” Useful observation prompts such as “a detail worth noticing is...” are acceptable.
+
+Story Content is structured plain text without Markdown, inline highlights, CSS, or presentation components. React owns presentation; MDX and configurable renderers remain future decisions. The Main Image is separate from Story Content and should help recognize the place or notice a meaningful visible detail.
+
+AI drafts source-grounded content, proposes an image, and may suggest suitable media and editorial rationale. The Curator can review individual content blocks, edit, and enrich them; AI is not the final editorial authority. Draft introductions, topic items, and Related People retain Source References for review. Never invent facts, coordinates, media, or licenses.
+
+The first pipeline uses Wikipedia, Wikidata, and Wikimedia Commons. It acquires Sources, discovers up to three Commons recognizer images, preserves an eligible current selection or chooses the first licensed and attributed candidate, then generates Story Content. Image discovery is independently retryable. See [Story Workflow Architecture](../story-workflow-architecture.md).
+
+The admin session selects Local or Cloud AI, with provider, model, and cost information. Story and Person generation use the selected model without a separate local model requirement. Configuration belongs in the [README](../../README.md#ai-configuration).
 
 ## Discovery through connections
 
-A visitor should eventually be able to move from a POI to a connected Person, Event, or Artifact, then discover other places through that connection. For example, opening a person associated with a palace could reveal other places connected to that person.
+Visitors should move from a POI to a Person, Event, or Artifact and discover other connected places. The association enables discovery; the POI Story explains its meaning without requiring relationship labels such as “visited” or “commissioned.”
 
-Spatial discovery answers "What is interesting around here?"; discovery through connections answers "What else is connected to this?". Selecting a Person should eventually let the visitor see associated POIs on the map. For discovery, knowing that a POI is connected is sufficient; its Story should explain why the connection matters without requiring a relationship label in the filter.
+POI-to-Person details are implemented; Person-to-POI map navigation is planned. Events are significant historical occurrences; Artifacts are culturally significant works or objects. Define their boundaries using catalog examples before implementing them. Simple lists and detail views come first; category tabs can be evaluated when real content exists.
 
-People are the first implemented path. Events and Artifacts are future extensions: Events represent significant historical occurrences connected to a place; Artifacts represent culturally significant works or objects connected to it. Their detailed boundaries should be agreed on using real catalog examples before implementation.
+Discovery and ranking are separate. Ranking orders supported connections within a category by their significance to the place. Jev is an unadopted candidate for ranking only. Formal relationship taxonomies, prose for every connection, automatic “must-see” selections, cross-category ranking, graph visualization, and dedicated graph storage are outside the initial scope. See [Entity Discovery](../entity-discovery.md).
 
-These connections form a knowledge graph in the domain, without requiring a graph visualization or dedicated graph database. The visitor should encounter simple lists and useful detail views. People, Events, and Artifacts tabs are a possible presentation to evaluate once there is real content for each category.
+## Filter metadata
 
-Discovering a supported connection and ordering supported connections are separate responsibilities. Ranking should order entities within each category by the historical or cultural significance of their connection to the POI. Jev is a candidate for this future ordering step only; it must not discover, validate, filter, or add entities.
+Categories and architectural styles remain separate from Story Content: filters support discovery, while the Story explains significance. Prefer structured facts where available, retaining source identity and precision. Wikipedia can supply context and connections absent from Wikidata; neither source is complete or infallible.
 
-The first extension should use simple, source-supported connections without requiring formal relationship types or generated prose for every relationship. Automatic "must-see" selections, ranking across categories, and explicit graph visualization remain outside the initial scope. See [Entity discovery](../entity-discovery.md) for current behavior and future boundaries.
+Category and style work is tracked in [#38](https://github.com/Papidev/historical-explorer/issues/38) and [#39](https://github.com/Papidev/historical-explorer/issues/39). Historical period filtering [#40](https://github.com/Papidev/historical-explorer/issues/40) is deferred.
 
-## Production world vs visitor world
-
-There are two separate worlds:
-
-### Production world
-
-This is the internal editorial workflow.
-
-A POI starts from source material such as Wikipedia, Wikidata, and Wikimedia Commons. AI helps create a first draft by:
-
-- drafting concise cultural content intended for the visitor
-- proposing concise structured Story Content
-- suggesting which medium best communicates each proposed cultural idea
-- proposing one main image
-- recording editorial notes explaining why proposed content is useful
-
-AI-generated content is reviewable editorial material. A human curator can review, edit, and enrich it. An explicit approval step is a possible future evolution, not a current publication requirement.
-
-### Visitor world
-
-This is the public app experience.
-
-The visitor sees publishable stories from the public catalog. Publication currently requires valid versioned Story Content, a selected main image with license and attribution, and saved Person records for all Related People; it does not require an explicit Curator approval state. Insights are the cultural content shown to the visitor. AI reasoning, drafts, source processing, editorial notes, and other editorial metadata remain internal and are not called insights.
-
-The visitor experience should be quick, pleasant, low-friction, and useful while physically looking at a place.
-
-A POI appears on the visitor map only after the Story Workflow has generated its Story Content and the other publication requirements are met. Imported places and metadata-only POIs remain internal until then. Curator edits may enrich the generated Story; an explicit approval step is not required.
-
-## Current product decisions
-
-The primary product mode is a visitor who is near, or interested in, a specific POI and wants a concise cultural explanation. Browsing the map and exploring POIs from home before a visit are part of the same experience; physical presence is not required. Dedicated itinerary planning, expanded nearby discovery, post-visit review, and deeper reading remain possible future modes, while the first product shape should optimize the POI visit companion experience.
-
-Each POI should have one canonical English story. Its primary content is structured, source-grounded, and concise: a required introduction followed by supported history, design, and art insights, plus related people. Topics may be empty and unsupported material must be omitted. The structure carries content semantics, while React components own its public presentation.
-
-The tone should be warm, precise, and visitor-facing without becoming promotional, academic, or presence-assuming. Avoid wording like "you are looking at" or "in front of you" because the visitor may be browsing away from the POI. Soft observation prompts are acceptable when useful, such as "a detail worth noticing is..."
-
-Story Content contains plain text without Markdown, inline highlights, CSS, or presentation components. It is the sole textual content artifact for a story. MDX and configurable React renderers remain future decisions.
-
-Each story needs one required main image. The main image should help the visitor recognize the place or notice an important visible detail, not merely decorate the page. It should live outside Story Content and include source, author or rights status, license, and attribution metadata before publication.
-
-For the first AI story workflow, AI should produce:
-
-- concise English Story Content with source references on its introduction, insights, and related people
-- one proposed main image with source, license, and attribution metadata, chosen from three Wikimedia Commons recognizer candidates
-- source material used to ground the draft story
-
-Main image candidate discovery should run after Wikipedia source acquisition and before Story Content generation. It should remain retryable independently from Story Content generation. The workflow should keep an existing available selection or automatically select the first candidate with license and attribution; the curator may review and change that selection. Full Generate produces Story Content.
-
-The admin dashboard should let the curator choose the AI provider for the current admin session, switching between local AI through Ollama and cloud AI through Gemini or Ollama Cloud without rewriting environment configuration. The selector should use the concise choices "Local" and "Cloud", with a secondary line explaining the concrete provider, model, and cost implication. Story Content and structured Person generation currently use the same AI model selected for the admin action, including the selected Cloud model when Cloud mode is active. Person generation must not require a separate local model. Cloud is the practical current choice because sufficiently powerful local models are not available on the Curator's current hardware; Local mode remains supported for future use when suitable. `AI_MODE` should choose the initial Local/Cloud selection, while `LOCAL_AI_PROVIDER`, `LOCAL_AI_MODEL`, `CLOUD_AI_PROVIDER`, and `CLOUD_AI_MODEL` configure the concrete backends. These variables are the primary AI configuration shape. The selected provider and model should be submitted with each manual AI workflow action.
-
-The first source pipeline should stay limited to Wikipedia, Wikidata, and Wikimedia Commons. Source material and draft metadata belong to the story workflow and should not be shown in the default visitor experience. A future "learn more" section may expose selected sources when that adds useful depth without slowing down the core visit companion experience.
-
-Filterable POI metadata should remain separate from Story Content. Categories and architectural styles support discovery; the Story explains the place's significance. Prefer structured source facts for filters where available, preserving source identity and date precision before mapping them to app-owned values. Wikipedia remains both a narrative source and a source of connections absent from Wikidata. These are complementary roles, without treating either source as complete or infallible. Category and style filters are tracked in [#38](https://github.com/Papidev/historical-explorer/issues/38) and [#39](https://github.com/Papidev/historical-explorer/issues/39). Historical period filtering [#40](https://github.com/Papidev/historical-explorer/issues/40) is deferred: do not implement it or define period bands now. Its meaning across a place's origin, transformations, and connected events remains a future decision.
-
-The map remains the entry point for discovery, but the story is the main value moment. Selecting a marker should first show a lightweight identifiable preview, because a marker alone does not tell the visitor what it represents. The preview should include the POI name, a small thumbnail, a short descriptor, and an action to open the full story.
-
-## Core content principle
-
-Insight first. Medium second.
-
-Use “insight” only for cultural content shown to the visitor. Before publication, refer to draft content or proposed cultural ideas. Internal rationale, selection explanations, and generation notes are editorial notes, not insights.
-
-Use text, image, map, timeline, or another medium only when that medium best communicates the specific cultural insight.
-
-Do not add media just because it makes the page look rich. If concise, engaging text communicates the idea best, use text.
-
-## Editorial rule
-
-Every published discovery should help the visitor do at least one of these:
-
-- See: notice something visible
-- Understand: grasp what they are looking at
-- Connect: relate the POI to history, art, culture, people, or the city
-- Remember: leave with a meaningful cultural takeaway
-- Navigate: understand a nearby or spatial relationship
-
-A true fact is not automatically worth publishing. The final experience should contain the best few discoveries, not all available information.
-
-## AI role
-
-AI is a junior cultural editor, not the final authority.
-
-AI may help draft, classify, summarize, rank, and propose. The human curator has the final word.
-
-The current application does not enforce human review through an approval state. Generated content becomes eligible for the public catalog when the current publication requirements are met and reaches the public site through deployment. Explicit Curator approval may be introduced later; it is not a prerequisite for the current product or new discovery paths.
-
-## Content quality risks
-
-Avoid:
-
-- long article-like summaries
-- generic tourist-guide prose
-- too many cards, clicks, or sections
-- decorative media with no clear purpose
-- unsupported claims
-- invented facts, coordinates, media, or licenses
-- treating all POIs with the same rigid template
-
-Prefer:
-
-- concise, engaging, source-grounded insights
-- block-by-block human review
-- visible source support for draft content
-- media chosen because it communicates an insight better
-- optional depth only when it adds value
+See [CONTEXT.md](../../CONTEXT.md) for domain vocabulary and core rules.
