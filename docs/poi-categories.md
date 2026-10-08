@@ -1,55 +1,89 @@
 # POI Categories
 
-Status: automatic direct-type mapping, sidebar filtering (#59), and shared Curator mapping edits (#60) are implemented. Per-POI exceptions (#61) remain planned.
+Status: direct-type mapping, visitor sidebar (#59), and shared Curator edits (#60) are implemented. Per-POI exceptions (#61) remain planned.
 
-## Agreed domain decisions
+## Domain and hierarchy
 
-POI Types are source classifications from Wikidata; POI Categories are the app-owned vocabulary used for visitor discovery. Categories and their type mappings are shared across cities, so a category has the same meaning throughout Cultural Atlas.
+POI Types are Wikidata source classifications; Categories are an editable app-owned vocabulary shared across cities, separate from Story Content. Membership may reflect current or historical nature/function and does not promise current use, opening hours, or access. A Story/category difference may reflect a change of use.
 
-Churches & cathedrals is a top-level POI Category with Cathedral, Basilica, and Church as its children, displayed as Cathedrals, Basilicas, and Churches. Each subcategory has one parent chosen from the top-level categories. There is one level of subcategories, with no deeper nesting. This app-owned hierarchy is independent of the Wikidata type hierarchy. Curators move categories in Manage categories by drag and drop: drop a child or a top-level leaf onto a top-level parent, or onto the Top level area to remove its parent. Categories with children cannot be nested. Moving preserves IDs and selected children, updates affected shared rules with the new parent, and removes the previous parent when none of its children remain assigned.
+Category names are singular; visitor labels may be plural. The initial vocabulary is Churches & cathedrals, Cathedral, Basilica, Church, Museum, Castle, Mausoleum, Aqueduct, Amphitheatre, Arch, Square, and Archaeological Site.
 
-Category names use the singular, for example Church, Basilica, and Museum. Membership can reflect a current or historical nature or function: a former church or church ruins can belong to Church. Membership does not promise current religious use, opening hours, or visitor access.
+The hierarchy has two levels. Each child has one top-level parent; categories with children cannot be nested. Churches & cathedrals contains Cathedral, Basilica, and Church, displayed as Cathedrals, Basilicas, and Churches. This hierarchy is independent of Wikidata's.
 
-A Curator may add a category to a POI even when it has no Wikidata types. Manual additions require neither an explanation nor a source; this is an editorial classification decision, separate from the source requirements for Story Content.
+In Manage categories, drag a child or top-level leaf onto a parent, or onto Top level to detach it. Moving preserves IDs and selected children, updates shared rules to the new parent, and removes the old parent assignment when none of its children remain assigned. Renaming preserves IDs and assignments; AI-created categories start at the top level.
 
-The shared type mapping supplies the base categories. The Curator may explicitly add or exclude categories for an individual POI when the global rule does not fit that place. Place-specific exceptions avoid changing a generally correct rule or altering source classifications to accommodate one case. Final categories are the union of categories from all mapped direct POI Types and manual additions, minus manual exclusions. Exclusions take precedence. Additions and exclusions survive source-type refreshes, global mapping edits, and POI regeneration until the Curator explicitly removes them. Removing an exception restores the shared mapping behavior for that category.
+Deleting a parent deletes its children and removes all deleted assignments from shared rules and POIs. Rules left empty become manually cleared Unmapped. Deleted names and original IDs are retained to prevent AI recreation.
 
-Categories remain separate from Story Content. A changed Story does not itself redefine category membership, and a difference between Story and category may reflect a historical change of use rather than a contradiction.
+## Type mapping
 
-## Agreed first mapping scope
+Use direct non-deprecated Wikidata P31 types with their IDs and labels; do not traverse P279. A type may map to several categories; a POI receives their deduplicated union.
 
-Map direct Wikidata types explicitly; do not inherit categories through the Wikidata type hierarchy in the first version. A type may map to several categories, and a POI receives the union of the categories assigned by its types before its exceptions are applied.
+- An absent rule is **Unmapped**; an explicit empty category list is **Ignored**.
+- Missing or unknown types preserve the POI. Mapping gaps do not make otherwise complete Story Content incomplete.
+- Assigning a parent selects all children; assigning a child includes its parent without its siblings.
+- A saved parent with explicit children preserves that subset; a parent alone selects all children.
+- Clearing a parent clears its children. Clearing one child preserves siblings and removes the parent only when no children remain.
+- Explicit parent assignments preserve the selected religious children; the name refinement below applies to legacy leaf-only rules.
 
-The initial shared vocabulary is Churches & cathedrals, Cathedral, Church, Basilica, Museum, Castle, Mausoleum, Aqueduct, Amphitheatre, Arch, Square, and Archaeological Site. Broad or administrative source classifications may be explicitly ignored rather than becoming visitor categories. The initial fixed-vocabulary restriction was superseded by the Curator decision on 4 October 2026: use the selected admin AI to match new types to existing categories, create a category when none is suitable, and apply the result immediately. The Curator can correct type rules and create, rename, or delete shared categories afterward. AI-created categories start at the top level. Deleting a parent also deletes its children and removes all their assignments across type rules and POIs. Rules with no remaining categories become manually cleared Unmapped types; deleted parent and child names are protected from automatic recreation. The type mapping editor and category manager display parents and children on two levels. Assigning a parent, manually or through AI, includes every child in the saved rule and derived POI categories. Assigning a child also assigns its parent, without selecting its siblings. A saved parent with explicit children retains that subset; a parent alone selects every child. Clearing the parent clears its children. Clearing one child preserves its siblings and their parent, removing the parent only when no children remain. Explicit parent assignments preserve the selected religious children; the name-based refinement below applies to legacy leaf-only rules.
-
-## Agreed visitor filter scope
-
-All available categories and subcategories start selected, with all places visible including uncategorized places. Subcategories start collapsed. Expanding or collapsing them does not change the selection. Categories and subcategories with zero items are hidden; counts use the full visitor-ready catalog rather than the currently filtered results. Selecting Churches & cathedrals selects all three children; clearing it clears all three. Deselecting a child clears the parent selection and retains the remaining selected children. Child discovery scopes are disjoint. For mapped religious buildings, Basilica in the catalog name selects Basilica even if the source also calls the place a cathedral. Cathedral is assigned only when the catalog name contains Cathedral or Cattedrale (case-insensitive). A cathedral type without that name is classified as Church unless Basilica applies. Name rules do not classify ignored civil basilicas. Filtering uses the configured precedence after these name rules: Cathedral supersedes Basilica and Church, and Basilica supersedes Church. Source types remain unchanged. The three child counts sum to the parent count. Counts and open-detail retention use the same rules.
-
-The visitor may select multiple POI Categories at the same time. A POI matches when it belongs to at least one selected category (OR semantics). For example, selecting Church and Museum includes POIs in either category or both. With no category selected, all POIs remain visible. If the filter excludes the currently open POI, close its detail view and clear its selection.
-
-## Implementation boundaries
-
-[Issue #38](https://github.com/Papidev/historical-explorer/issues/38) contains the original scope. The later agreed changes recorded here group Cathedral, Basilica, and Church under Churches & cathedrals and explicitly ignore civil basilica types, superseding the original flat-category and civil-basilica mapping requirements. An absent mapping rule means unmapped; an explicit empty category list means ignored. Missing or unknown types preserve the POI.
-
-The Constantinian basilica ruins and the present church of Sant'Agnese fuori le mura remain distinct POIs. Civil basilica Q2887138 is explicitly ignored: it assigns neither Basilica nor Church. Its source classification is retained. Civil Basilica is not a visitor category; another category such as Archaeological Site requires a suitable direct type or a future per-POI exception.
-
-Current type acquisition uses direct non-deprecated Wikidata P31 classifications, preserves their IDs and labels, and does not traverse the P279 hierarchy. The shared category catalog lives in `data/poi-category-catalog.json`. Records have a stable `id`, editable singular `name`, optional visitor `label`, top-level `parent`, and `supersedes` precedence. `src/types/PoiCategory/` supplies initial defaults for older catalogs. Renaming a category changes its display name without changing IDs or assignments. Sidebar grouping, parent-inclusive counts, filtering, and open-detail retention use this shared configuration; no Basilica-specific filtering branch is needed. Versioned direct-type rules live in `data/poi-type-category-map.json`. Category lists are persisted by POI ID in `data/<city>/pois/categories.json`, separate from the GeoJSON catalog. The server combines the catalog and saved categories for the visitor map. Type acquisition/refresh and generation update them; `pnpm categories:rebuild` applies the current rules across existing city catalogs using their local type snapshots. The browser filters persisted categories only.
+Civil basilica `Q2887138` is explicitly ignored and assigns neither Basilica nor Church. The Constantinian basilica ruins and present Sant'Agnese fuori le mura church remain distinct POIs. Archaeological Site requires another suitable direct type or a future exception; classification must not rewrite source identity or merge places.
 
 ## Automatic classification
 
-Generate and Refresh types classify newly acquired, previously unmapped types using the AI mode and model selected in the admin session. Classify unmapped types processes existing gaps with the same selection. The AI receives the acquired type IDs, labels, examples of affected places, the current category catalog, and deleted names. It reuses existing categories first, creates concise singular English categories only when needed, explicitly ignores broad classifications, and leaves uncertain types unmapped.
+Generate/Refresh types classify newly acquired unmapped types using the selected admin AI; **Classify unmapped types** handles existing gaps. Inputs include type IDs/labels, affected-place examples, the current catalog, and deleted names.
 
-AI output is validated before persistence. Each new rule stores its automatic origin and short explanation. Existing seeded rules, ignored types, and all manual corrections are preserved; a manually cleared type is not automatically classified again. After an AI response arrives, current rules are checked again so manual edits made during the request win. Deleted category names and original IDs are retained to prevent recreation. A classification failure preserves acquired types and does not make Story Content incomplete; retry from Type mappings.
+Reuse categories first, create concise singular English categories when needed, ignore broad/administrative types, and leave uncertainty unmapped. Validate output before saving; automatic rules retain their origin and short explanation.
 
-## Curator mapping workflow
+Preserve seeded rules, ignored types, and manual corrections. Manually cleared types are not automatically retried; recheck current rules after the AI response so concurrent manual edits win. Classification failure preserves acquired types; retry from Type mappings.
 
-The admin Type mappings tab lists acquired direct types across all city catalogs, with their Wikidata IDs, labels, assigned categories, and affected POIs. Search by label or ID and filter by Mapped or Unmapped. Ignored types are hidden from the default list and appear only when Show ignored types is enabled; the Ignored state filter is then available. Select a type in the list to edit its rule in the adjacent panel. Save categories assigns one or several existing categories; Ignore type saves an explicit empty list; Clear rule removes the rule. Manage categories supports creation, renaming, and deletion. Deleting removes a category from shared type rules and persisted POI categories across cities, preserves child categories, and returns types with no remaining categories to manually cleared Unmapped.
+## Visitor filtering
 
-Report unmapped types in the shared type-mapping section even when a POI already has manual categories. Manual categories are sufficient for visitor filtering; an unmapped type does not make that POI incomplete. Keep unmapped types distinct from explicitly ignored types.
+The discovery sidebar is collapsible on mobile. All available categories start selected, showing all published POIs including uncategorized ones. Children start collapsed; expansion does not change selection. Hide zero-count categories; counts use the full visitor-ready catalog.
 
-Editing a shared mapping immediately updates the persisted categories of affected POIs across cities from their local type snapshots, leaving unrelated category records and Story artifacts intact. The admin and affected visitor routes are revalidated after saving. An open visitor map in the same browser receives a category-change notification and refreshes its rendered data. Shared rules retain their schema version and survive type refreshes and POI regeneration. Individual additions and exclusions will be added in #61. No Story regeneration or per-POI approval is required for the category update.
+| Action                    | Effect                                                    |
+| ------------------------- | --------------------------------------------------------- |
+| Select/clear a parent     | Select/clear all children.                                |
+| Deselect a child          | Clear the parent's selected state; retain other children. |
+| Select several categories | Match any selected category (OR).                         |
+| Clear all categories      | Show all published POIs, including uncategorized ones.    |
+| Exclude the open POI      | Close its detail and clear selection.                     |
 
-When a source type describes an encompassing complex rather than the specific POI, the Curator may use a POI Category Exception to correct the place's categories. A classification issue must not silently merge distinct places or rewrite their source identities.
+Active category subsets exclude uncategorized POIs. Religious child scopes are disjoint. For legacy mapped religious types, catalog naming determines the scope:
 
-See the [domain glossary](../CONTEXT.md), [entity discovery](entity-discovery.md), and [Story/category consistency backlog](backlog.md#check-poi-categories-against-story-content).
+- Basilica in the name selects Basilica, even for a cathedral.
+- Cathedral requires Cathedral or Cattedrale, case-insensitive.
+- Otherwise use Church; these rules never classify ignored civil basilicas.
+
+After naming refinement, configured precedence is Cathedral over Basilica/Church, then Basilica over Church. Source types stay unchanged; child counts sum to the parent, and counts/detail retention use the same rules.
+
+The planned name-search visibility exception is described in [Entity Discovery](entity-discovery.md#agreed-discovery-and-search-filter-behavior).
+
+## Curator workflow
+
+Type mappings lists acquired direct types across cities, with IDs, labels, assignments, and affected POIs. Search by label/ID and filter Mapped/Unmapped. **Show ignored types** reveals ignored rules and enables the Ignored filter.
+
+Select a type to edit it: **Save categories** assigns existing categories, **Ignore type** saves an empty list, and **Clear rule** removes its rule. **Manage categories** controls the shared hierarchy.
+
+Saving a rule immediately recalculates affected POIs from local type snapshots across cities, preserving unrelated records and Story artifacts. Revalidate admin/visitor routes and notify an open map in the same browser to refresh. Shared versioned rules survive type refresh and POI regeneration; neither Story regeneration nor per-POI approval is needed.
+
+## Planned per-POI exceptions
+
+[#61](https://github.com/Papidev/historical-explorer/issues/61) allows additions/exclusions when a global rule does not fit a specific POI, including those without Wikidata types. Manual additions require no explanation or Source.
+
+Final categories are `(mapped union + additions) - exclusions`; exclusions win. Exceptions survive refreshes, mapping changes, and regeneration until removed, restoring shared mapping behavior. Continue reporting unmapped types even when manual categories suffice for filtering.
+
+Use exceptions for source types describing an encompassing complex rather than the specific place, without altering generally correct shared rules.
+
+## Persistence
+
+| Artifact                       | Location                           |
+| ------------------------------ | ---------------------------------- |
+| Shared category definitions    | `data/poi-category-catalog.json`   |
+| Versioned direct-type rules    | `data/poi-type-category-map.json`  |
+| Persisted categories by POI ID | `data/<city>/pois/categories.json` |
+| Defaults for older catalogs    | `src/types/PoiCategory/`           |
+
+Definitions contain stable `id`, singular `name`, optional visitor `label`, top-level `parent`, and `supersedes`. Shared configuration drives grouping, counts, and filtering without Basilica-specific browser logic.
+
+Type acquisition/refresh and POI generation recompute categories. Run `pnpm categories:rebuild` to apply current rules across local city snapshots. The server/public snapshot combines definitions, categories, and POI catalog; the browser filters persisted values.
+
+See [#38](https://github.com/Papidev/historical-explorer/issues/38), the [glossary](../CONTEXT.md), and the [consistency backlog](backlog.md#check-poi-categories-against-story-content).

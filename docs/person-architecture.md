@@ -1,15 +1,42 @@
 # Person Architecture
 
-The Story Workflow discovers significant people while generating Story Content. A Story may reference at most ten people, ordered from most to least significant. AI-supplied Person IDs are discarded; only the resolver assigns them. Saved references are resolved only when their Person ID points to an existing local Person; missing artifacts are treated as unresolved in admin and public views, and retried by the resolver. Resolved references contain a stable Person ID; ambiguous references retain only the sourced display name.
+## Identity and storage
 
-Each Person is stored once under `data/people/<person-id>/person.json`. The Person name excludes trailing Wikipedia disambiguation qualifiers; the full `wikipediaTitle`, source title, and stable ID retain their identity information. The same name rule applies when displaying existing Person records and Story references, without rewriting saved artifacts. Its `id` is app-owned and its `wikidataId` is retained as an external identifier, following the same identity pattern as Points of Interest. Person source text is stored separately under `data/generated/people/`.
+Story generation selects at most ten significant Related People in order. It discards AI-supplied IDs; only the resolver assigns canonical app-owned Person IDs and retains Wikidata IDs as external identity.
 
-After Story Content generation, the workflow resolves each generated name against links preserved from the POI's Wikipedia source. Name matching first compares link titles and labels exactly after normalizing Unicode, whitespace, underscores, and section anchors. If no exact match exists, it also tolerates accents, apostrophe and dash variants, common honorific prefixes, and page disambiguation suffixes when the generated name has no explicit qualifier. Matching links are checked against Wikipedia page metadata: disambiguation pages are excluded, redirects to the same canonical article are merged, and resolution proceeds only if one personal article remains. If multiple real articles remain, the reference stays unresolved. A normalized match must identify one page; partial names and spelling-distance guesses are not used. Repeated names or aliases pointing to the same unique link are merged before resolution, preserving their Source IDs and any existing Person ID. Distinct resolved Person IDs are kept separate; retrying saved Related People also removes these duplicates. People mentioned without a matching Wikipedia link, or whose linked Wikipedia page does not exist, are excluded from Related People, including when retrying a saved Story. Missing pages are logged as skipped People rather than resolution failures. The Story generation prompt receives the Source links and requires the exact linked Wikipedia title as each selected name. It reuses a Person with the same Wikidata ID or, when none exists, acquires that person's Wikipedia source and performs one additional generation using the selected Story model. Ollama Cloud receives the JSON schema in the prompt, and its response is validated with one retry for invalid output because the cloud service does not enforce structured outputs. Existing People are never regenerated as a side effect of Story generation.
+Each Person lives once at `data/people/<person-id>/person.json`; source text is separate under `data/generated/people/`. Display names omit trailing Wikipedia disambiguation qualifiers without rewriting saved records. Full Wikipedia/source titles and stable IDs retain identity information.
 
-A Person contains a two-paragraph description, any number of source-grounded curiosities, optional exact or approximate birth and death dates, and at most one optional Wikimedia Commons image. Its Wikipedia content Source is separate from the Story Sources and remains internal; Wikidata supplies canonical identity, while Commons supplies image and rights metadata.
+A Person has a two-paragraph description, source-supported curiosities, optional exact or approximate birth/death dates, and at most one optional Commons image. Its internal Wikipedia Source is separate from Story Sources; Wikidata supplies identity and Commons image rights.
 
-Person resolution is failure-isolated from Story Content. If source acquisition or generation fails for a Person, the Story is still persisted and available, while that name remains an unresolved, non-navigable reference. A new Person is persisted after source acquisition and structured generation. Image discovery may fail with a rate limit without blocking the Person, because the image is optional. A source or AI provider rate limit stops further Person attempts in the same operation so it does not create avoidable requests.
+## Resolution
 
-People become available automatically after successful generation. The Curator can retry only unresolved People from the saved Story without regenerating Story Content; already resolved People are preserved. The admin People tab lists all generated People with image thumbnails, a Linked POIs count, and a detail drawer showing the associated POIs. Associations are derived from saved Story references by Person ID; repeated mentions in one Story count as one POI. Its explicit Regenerate action replaces description, curiosities, and dates using the saved Wikipedia source and the selected AI model; the existing ID, image, and Story references are preserved. A failed generation keeps the existing Person. This slice does not add editing, approval, or manual identity resolution controls.
+After Story generation, resolve names against preserved Wikipedia Source links. The prompt requests exact linked titles; omit prose-only names without personal links.
 
-In the Visitor Experience, resolved names in Related People are links and unresolved names are plain text. Selecting a resolved Person replaces the POI Story inside the existing drawer; Back returns to the same POI and closing the drawer returns to the map. Standalone Person pages and reverse Person-to-POI navigation in the Visitor Experience are outside the first version.
+1. Match link titles and labels after normalizing Unicode, whitespace, underscores, and section anchors.
+2. If no exact match exists, tolerate accents, apostrophe/dash variants, honorific prefixes, and disambiguation suffixes when the generated name has no qualifier.
+3. Exclude disambiguation pages and merge redirects to the same canonical article. Proceed only when one personal article remains; do not use partial-name or spelling-distance guesses.
+4. Merge repeated names/aliases for the same unique link, preserving Source IDs and existing Person IDs. Keep distinct resolved IDs separate; retrying saved references also deduplicates them.
+5. Exclude names with no matching link or nonexistent pages, including on retry. Log missing pages as skipped rather than failed.
+6. Reuse a Person with the same Wikidata ID; otherwise acquire its Wikipedia Source and generate using the selected Story model. Existing People are never regenerated as a side effect.
+
+Ollama Cloud receives the JSON schema in the prompt and retries invalid output once. The resolver considers a reference resolved only when its Person ID points to a saved local record.
+
+## Failure and publication
+
+Source or generation failure preserves Story Content and leaves the reference unresolved for Curator review and retry. Any retained unresolved or missing Person blocks the entire POI from the public catalog; a Story with no Related People may still qualify. Never invent people to satisfy completeness.
+
+Persist a new Person after source acquisition and valid generation. Its optional image may fail without blocking the record. A source or AI-provider rate limit stops further Person attempts in that operation.
+
+Generated People are immediately available internally. Public Person records are included only when referenced by a publishable POI.
+
+## Curator actions
+
+- Retry unresolved People from the saved Story without regenerating content or replacing resolved People.
+- Browse the People tab alphabetically, with thumbnails, name search, Linked POIs counts, and a detail drawer. Associations derive from Story references by Person ID; repeated mentions count once per POI.
+- **Regenerate** replaces description, curiosities, and dates from the saved Source using the selected AI model. Preserve ID, image, and Story links; keep the existing record on failure.
+
+Manual editing, approval, and identity-resolution controls are outside this slice.
+
+## Visitor navigation
+
+All public Related People link to saved records. Selecting a Person replaces the Story in the existing drawer; Back returns to the original POI and closing returns to the map. Standalone Person pages are outside the current slice. Reverse map discovery is planned in [#72](https://github.com/Papidev/historical-explorer/issues/72); see [Entity Discovery](entity-discovery.md) for filter behavior.

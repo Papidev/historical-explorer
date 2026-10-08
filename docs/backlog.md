@@ -1,257 +1,113 @@
 # Backlog
 
-This document preserves potentially useful product and architecture observations that are not planned work.
-
-An entry should become a GitHub Issue only when its **Revisit when** condition occurs. At that point, replace the entry with a link to the issue or remove it after the issue has captured the relevant context.
-
-## Support Geo Places without Wikidata
-
-**Observation**  
-The current Geo Place to POI flow relies mainly on Wikidata to reconnect the source item with the newly assigned POI ID.
-
-**Risk**  
-After creating a POI from a Geo Place without Wikidata, later Story Workflow steps may still use the source identifier and fail to find the new POI.
-
-**Revisit when**  
-We want to create the first POI from a Geo Place that has no Wikidata ID.
-
-**Possible direction**  
-Concentrate POI creation from a Geo Place, POI ID allocation, external identifiers, and catalog persistence in one POI catalog Module.
+These are observations, not planned work. Promote an entry to a GitHub Issue only when its **Revisit when** condition occurs; then replace it with an issue link or remove it once the context is captured.
 
 ## Treat each Story directory as one aggregate
 
-**Observation**  
-Each Story directory contains `story.json` and `images.json`, but separate Modules currently discover and manage the files.
+**Problem:** Separate Modules manage `story.json` and `images.json`, exposing partial directories and their coupling to callers.
 
-**Risk**  
-Callers can observe or create partial Story directories, and each caller must understand how the two files relate.
+**Revisit when:** A Story gains another artifact, partial directories cause workflow problems, or reset/validation becomes more complex.
 
-**Revisit when**  
-A Story gains another artifact, partial directories cause real workflow problems, or Story reset and validation become more complex.
-
-**Possible direction**  
-Use one Story storage Module that reads, writes, lists, validates, and removes the whole per-POI aggregate while keeping the files physically separate.
+**Direction:** One storage Module reads, writes, lists, validates, and removes the per-POI aggregate while keeping files separate.
 
 ## Report Story Workflow progress to the browser
 
-**Observation**
-Once Draft Story Generation runs behind one server operation, the browser can show that the overall workflow is running but cannot distinguish which step is in progress, completed, or failed.
+**Problem:** Full generation exposes one overall running state, making long operations and partial failures hard to interpret.
 
-**Risk**
-Long-running generation may appear stalled, and a Curator may not understand which artifact needs an independent retry after a partial failure.
+**Revisit when:** Latency or recovery needs make that state insufficient.
 
-**Revisit when**
-Draft Story Generation latency or partial failures make the single overall progress state insufficient for Curators.
-
-**Possible direction**
-Let the Story Workflow Module emit progress events for Source acquisition, Main Image Candidate generation, and Story Content generation. A server Adapter could deliver those events to the browser so it can show in-progress, completed, and failed steps without moving orchestration back into the client.
+**Direction:** Emit server progress for Sources, image candidates, and Story Content; deliver it through an Adapter without moving orchestration into the browser.
 
 ## Introduce a Curator read model
 
-**Observation**
-`loadPoiLists` builds the Curator table by joining Geo Places, Points of Interest, Sources, Story Content, Main Image Candidates, and generation metadata in several passes.
+**Problem:** `loadPoiLists` joins Geo Places, POIs, Sources, Story Content, image candidates, and metadata in several passes. Growing merge logic risks becoming a second workflow implementation.
 
-**Risk**
-As the Story Workflow gains states or artifacts, the loader can become a second orchestration layer whose row-merging rules are difficult to understand and test.
+**Revisit when:** The table gains a workflow state, artifact, filter, or city view, or merging causes defects.
 
-**Revisit when**
-The Curator table gains another workflow state, artifact, filter, or city-specific view, or its merge logic starts causing defects.
-
-**Possible direction**
-Introduce one Curator-facing read model assembled server-side from the POI and Story Workflow Modules. Keep it a query projection rather than adding write behavior or moving workflow decisions into the UI.
+**Direction:** A server-side query projection assembled from POI/Story Workflow Modules, without write behavior or UI-owned workflow decisions.
 
 ## Use one generation metadata model
 
-**Observation**
-The Curator loader declares its own `GenerationStep` and `GenerationMetadata` shapes while the canonical persistence types live in the generation metadata Module and the Story Workflow snapshot.
+**Problem:** The Curator loader duplicates `GenerationStep` and `GenerationMetadata`, risking drift from persistence and workflow checkpoints.
 
-**Risk**
-A new checkpoint field or generation step can be added to persistence without being reflected in the Curator projection, causing silent drift between stored and displayed metadata.
+**Revisit when:** A step is added/renamed, more checkpoint information is displayed, or metadata changes.
 
-**Revisit when**
-We add or rename a generation step, display more checkpoint information, or otherwise modify generation metadata.
+**Direction:** Consume the canonical type or domain Module's generation status, without exposing paths or storage JSON.
 
-**Possible direction**
-Make the Curator projection consume the canonical generation metadata type or, preferably, the generation status already exposed by the relevant domain Module. Avoid exposing filesystem paths or storage-specific JSON shapes.
+## Consider explicit Story approval
 
-## Introduce Story approval before visitor visibility
+**Problem:** Draft and published content have no separate approval status. This is acceptable under current publication rules.
 
-**Observation**  
-Story status is not represented. Content written by the Story Workflow can be read immediately by the Visitor Experience.
+**Revisit when:** We explicitly choose an approval workflow; it is not a dependency of current publication or discovery.
 
-**Risk**  
-The application cannot distinguish a Draft Story awaiting Curator review from an approved Story.
-
-**Revisit when**  
-We introduce Curator approval or need to prevent unfinished content from appearing in the Visitor Experience.
-
-**Possible direction**  
-Represent the Draft Story to Story transition explicitly and make visitor-facing reads return only approved Stories.
+**Direction:** Model approval and restrict visitor reads to approved Stories if adopted. Until then, retain public catalog eligibility.
 
 ## Model multiple Story Sources
 
-### Current state
+**Problem:** One local Wikipedia snapshot uses Source ID `wikipedia`, with text and metadata under ignored `data/<city>/generated/wikipedia/`. References are validated during generation, but public `story.json` reads do not require the snapshot. This does not define multi-source identity, versions, replacement, citation granularity, or persistence.
 
-The first Story Content slice uses one locally generated Wikipedia snapshot with the conventional Source ID `wikipedia`. Its readable text and metadata sidecar live under the ignored `data/<city>/generated/wikipedia/` directory. Source References are validated while generating Story Content, but the Visitor Experience can read the versioned `story.json` without requiring that local snapshot.
+**Revisit when:** A Story needs a second Source, source history, or visitor-visible Sources.
 
-### Current limitation
-
-The conventional ID and local sidecar are intentionally narrow. They do not define identity, versioning, replacement, citation granularity, or persistence rules for multiple Wikipedia pages or heterogeneous providers.
-
-### Trigger
-
-We add a second source to one Story, need Source history across regenerations, or expose selected Sources to visitors.
-
-### Direction
-
-Design a city-scoped Source model only when the trigger occurs. Decide stable identity, ownership, versioning, storage location, and whether Source References address whole documents or individual claims. Migrate the current Wikipedia snapshot without requiring Story Content or the public renderer to know its physical file layout.
+**Direction:** Define city-scoped identity, ownership, versions, storage, and document-versus-claim references. Migrate the snapshot without coupling Story Content or rendering to file layout.
 
 ## Check POI categories against Story Content
 
-**Observation**
+**Problem:** Categories may reflect a different historical/present use than the Story explains. A mismatch is not automatically an error.
 
-Wikidata can classify a POI in several ways, while its Story may describe a different historical or present-day use. A difference is not necessarily a contradiction.
+**Revisit when:** Mapped POIs from #38 can be reviewed alongside their Stories.
 
-**Risk**
-
-A visitor filter such as "Churches" could include a POI whose Story does not explain why it belongs there.
-
-**Revisit when**
-
-The first Wikidata-backed category filter is implemented in #38 and its mapped POIs can be reviewed alongside their Stories.
-
-**Possible direction**
-
-Review concrete mismatches with a Curator before adding any automated warning. Keep category mapping separate from Story Content and account for changes of use over time.
+**Direction:** Review concrete cases with a Curator before adding warnings. Keep category mapping independent of Story Content and account for changes of use.
 
 ## Localize historical date formatting
 
-**Observation**
+**Problem:** Numeric years are language-neutral, but the current English renderer uses forms such as `338 AD` and `264 BC`. Other locales or editorial conventions need different labels/order, such as `338 d.C.`.
 
-Story Content stores language-neutral numeric years and the current English renderer displays historical dates with `AD` and `BC`, for example `338 AD` and `264 BC`.
+**Revisit when:** Language selection or localized Story Content is introduced.
 
-**Risk**
-
-Date labels may use the wrong vocabulary or ordering when the Visitor Experience supports another language. English may require `AD 338`, `338 CE`, or `338 AD` according to the chosen editorial convention, while Italian typically uses forms such as `338 d.C.` and `264 a.C.`.
-
-**Revisit when**
-
-The Visitor Experience adds language selection or localized Story Content.
-
-**Possible direction**
-
-Move historical date formatting behind a locale-aware formatter. Keep numeric years, precision, and granularity in Story Content, and let the selected locale determine era labels, label placement, abbreviations, and century formatting.
+**Direction:** A locale-aware formatter owns era labels, placement, abbreviations, and centuries; preserve numeric years, precision, and granularity.
 
 ## Show related Points of Interest for People
 
-**Observation**
-
-A global Person may be referenced by multiple Stories, but the first visitor flow only opens that Person from the current Story and returns to the same POI.
-
-**Risk**
-
-Visitors cannot use a Person as a path for discovering the other places connected to them.
-
-**Revisit when**
-
-We introduce standalone Person navigation or prioritize discovering Points of Interest through people.
-
-**Possible direction**
-
-Derive the related Points of Interest from Story references to `personId` instead of storing a second list on the Person. Present only approved, visitor-facing Stories.
-
-Verify the complete POI A → Person → POI B path, including returning to the original place. Approval is not currently implemented; resolve the visitor visibility gate explicitly before exposing this new path. See [Entity discovery](entity-discovery.md).
-
-Include a way to see the associated POIs on the map when selecting a Person, and to clear that selection. The association is enough for discovery; opening a POI should explain the connection through its Story. Agree on city scope and interaction with category, style, and period filters when this slice is prioritized.
+Promoted to [#72](https://github.com/Papidev/historical-explorer/issues/72): connected published POIs in the current city, map/detail navigation, and a return path. Person discovery respects active filters; name search may temporarily reveal an excluded result.
 
 ## Preserve evidence for entity connections
 
-**Observation**
+**Problem:** Source IDs and identity-resolving Wikipedia links do not capture the passage establishing a significant connection. Resolution can be mistaken for validation.
 
-Related People retain Source IDs, while linked Wikipedia articles resolve identities. Neither alone records the specific evidence that makes a connection significant.
+**Revisit when:** Independent ranking, Wikidata discovery, or the first Event/Artifact is prioritized.
 
-**Risk**
-
-Identity resolution can be mistaken for connection validation, and a future ranker may order entities without enough context about their relationship to the POI.
-
-**Revisit when**
-
-We evaluate independent ranking, add Wikidata-backed entity discovery, or introduce the first Event or Artifact.
-
-**Possible direction**
-
-Retain the supporting passage or structured statement for each connection internally. Keep identity resolution separate from connection validation and avoid requiring a formal relationship taxonomy. Coordinate with the multiple Story Sources entry if new sources are introduced.
+**Direction:** Retain supporting passages/statements internally, separately from identity resolution, without a formal relationship taxonomy. Coordinate new Sources with the multi-source entry.
 
 ## Discover related Events
 
-**Observation**
+**Problem:** History insights describe occurrences without reusable Event identities/details; broad periods could be mistaken for specific events.
 
-Story history insights describe occurrences, but Events do not yet have reusable identities or visitor detail views.
+**Revisit when:** We prioritize Event discovery and select real source-supported catalog examples.
 
-**Risk**
-
-Visitors cannot explore a historical occurrence across places, and broad periods could be conflated with specific events.
-
-**Revisit when**
-
-We prioritize the first Event discovery path and select real POIs with source-supported occurrences.
-
-**Possible direction**
-
-Agree on the Event boundary using catalog examples, then deliver one complete discovery, identity resolution, and drawer detail slice. Keep unsupported or ambiguous identities non-navigable. Evaluate category tabs once real content makes the presentation useful; a general graph framework is not a prerequisite.
+**Direction:** Agree on boundaries, then deliver source acquisition, identity, and drawer details. Keep unsupported/ambiguous identities non-navigable; evaluate tabs with real content instead of introducing a general graph framework.
 
 ## Discover related Artifacts
 
-**Observation**
+**Problem:** Art insights mention works/objects without reusable identities/details. Objects that are also POIs risk duplicate identities.
 
-Story art insights can mention works and objects, but Artifacts do not yet have reusable identities or visitor detail views.
+**Revisit when:** We prioritize Artifact discovery and select source-supported works/objects.
 
-**Risk**
-
-Visitors cannot explore an artwork or object independently. A monument that is also a POI could acquire duplicate identities.
-
-**Revisit when**
-
-We prioritize the first Artifact discovery path and select real works or objects with source-supported POI connections.
-
-**Possible direction**
-
-Agree on the Artifact boundary and its overlap with POIs before implementing a complete source-to-detail-view slice. Start with concrete works or objects and preserve their connection evidence without introducing a general ontology.
+**Direction:** Resolve POI overlap, then deliver a complete source-to-detail slice with connection evidence, without a general ontology.
 
 ## Complement Wikipedia entity discovery with Wikidata
 
-**Observation**
+**Problem:** Wikipedia selects People; Wikidata resolves identity but does not yet discover connections. Useful statements may be missed; broad imports risk irrelevant/duplicate candidates.
 
-People are currently selected during Story generation from Wikipedia. Wikidata is used for canonical Person identity, but not as a complementary discovery path for related entities.
+**Revisit when:** Real POIs reveal significant Wikipedia gaps supported by Wikidata.
 
-**Risk**
+**Direction:** Compare useful facts/connections from both sources, including identity/context differences. Add the smallest evidenced path, merge by resolved identity, and preserve Wikipedia discovery where structured data is absent. A statement alone does not establish editorial significance.
 
-Significant structured connections may be missed, while indiscriminately importing statements could produce irrelevant or duplicate candidates.
-
-**Revisit when**
-
-A review of actual POIs identifies significant connections missing from the Wikipedia-first path that Wikidata can support.
-
-**Possible direction**
-
-Add the smallest discovery path for those examples, retaining statement evidence and merging candidates through resolved identities. Preserve Wikipedia discovery when structured data is absent. Do not equate the existence of a statement with editorial significance.
-
-Begin with a source comparison for actual catalog POIs: record which useful facts and connections come from Wikidata, Wikipedia, or both, and where identity or historical context differs. Use those examples to choose the first additional path rather than building a broad property importer. Category, style, and period acquisition already belong to issues #38–#40; creator connections remain a future concrete case.
+Categories/style remain in #38–#39, period filtering (#40) is deferred, and creator connections need a concrete future case.
 
 ## Evaluate Jev for ordering related People
 
-**Observation**
+**Problem:** Story generation currently selects and orders People together. Jev has not been evaluated; a ranker might favor fame/similarity or remove valid candidates.
 
-Story generation currently selects and orders at most ten People in one operation. Jev was proposed as a separate future ranking candidate; it has not been evaluated or integrated.
+**Revisit when:** Independent ordering is prioritized and connection evidence plus Curator-reviewed expected orders exist for People on 3–5 real POIs.
 
-**Risk**
-
-A ranker could reward fame or semantic similarity rather than the significance of the connection, or silently filter entities that discovery already accepted.
-
-**Revisit when**
-
-We prioritize independent ordering and have connection evidence plus a Curator-reviewed expected order for People on 3–5 real POIs.
-
-**Possible direction**
-
-Verify Jev's concrete API and evaluate it against the current Story order using the same valid People. Assess quality, latency, cost, and failures before deciding on integration. Require exactly the same entities in the output, ordered within one category. Jev must not discover, validate, filter, add, or rewrite entities. Preserve the existing order on failure or invalid output and keep ranking replaceable. Events and Artifacts can be evaluated later when their discovery paths exist; cross-category ranking remains outside scope.
+**Direction:** Verify API, availability, and suitability; compare against current ordering using the same valid People. Review quality, latency, cost, and failure behavior before integration. Require a permutation within one category, preserving identities/content. Ranking must not discover, validate, filter, add, or rewrite entities. Keep it replaceable and retain the existing order on failure/invalid output. Evaluate Events/Artifacts only after discovery exists; cross-category ranking is out of scope.

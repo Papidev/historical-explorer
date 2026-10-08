@@ -1,8 +1,6 @@
 # Cultural Atlas
 
-Next.js 16 + React 19 app for exploring historical points of interest on an interactive map.
-
-Cultural Atlas is a visit companion for cultural discovery across history, art, and culture: the map helps visitors pick a place, and the POI story explains why that place matters.
+Next.js 16 + React 19 visit companion for history, art, and culture. The map helps visitors choose a place; its Story explains why it matters.
 
 ## Getting Started
 
@@ -13,88 +11,82 @@ pnpm install
 pnpm dev
 ```
 
-`pnpm install` activates the Husky Git hooks. Before each commit, staged files are formatted with Prettier and staged JavaScript/TypeScript files are checked and fixed with ESLint. Run `pnpm lint` for a full-project check before opening a pull request.
+Open [http://localhost:3000](http://localhost:3000). Installation activates Husky: staged files are formatted with Prettier and staged JS/TS checked/fixed with ESLint. Run `pnpm lint` before a PR.
 
-Then open [http://localhost:3000](http://localhost:3000).
+| Route              | Purpose                              |
+| ------------------ | ------------------------------------ |
+| `/`                | Project home.                        |
+| `/rome`            | Visitor map.                         |
+| `/rome?poiId=<id>` | Map with POI detail open.            |
+| `/admin`           | Development-only editorial workflow. |
 
-The Rome map and public APIs read a public content snapshot generated automatically before development, tests, and production builds. Publication is currently implicit: a POI needs valid versioned Story Content, a selected Main Image with license and attribution, and saved Person records for all Related People. Admin `Complete` status remains an editorial pipeline diagnostic and does not control publication. Local Wikipedia Sources, generation logs, and acquired POI Types are not required for publication.
+| Script                    | Purpose                                            |
+| ------------------------- | -------------------------------------------------- |
+| `pnpm dev`                | Local server; generate the public snapshot first.  |
+| `pnpm build`              | Generate the snapshot and production build.        |
+| `pnpm catalog:build`      | Rebuild the snapshot independently.                |
+| `pnpm start`              | Run the production server.                         |
+| `pnpm lint`               | ESLint.                                            |
+| `pnpm categories:rebuild` | Apply category rules to local city type snapshots. |
 
-The OpenFreeMap basemap shows only cultural POI labels and icons: museums, monuments and memorials, castles and ruins, archaeological sites, places of worship, theatres, galleries, artworks, arts centres, and libraries. Other basemap POIs are hidden, including businesses, accommodation, services, sports facilities, and transit stops. Roads, buildings, geographic labels, and the app's curated markers remain visible. Filtering uses the categories supplied by the basemap; generic attractions are excluded because their cultural significance is not identified by those categories.
+## Publication and deployment
 
-## Routes
+Visitor routes/APIs read a build-generated public snapshot, never editorial files selected by request IDs. A POI needs valid versioned workflow-generated Story Content, a selected licensed/attributed Main Image, and saved records for every retained Related Person. Imported or metadata-only POIs are excluded. Explicit approval is optional future work; admin `Complete`, local Sources, generation logs, and acquired Types do not gate publication.
 
-The visitor map uses a compact header below 768 px. Below 1024 px, swipe right from the left edge of the map or tap the Filters tab to open category filters full screen, and swipe left on the panel or use Close filters to dismiss it. The Filters tab is also accessible to keyboard and screen-reader users. Stories use the full map width; wider screens keep the category sidebar visible and show Stories in a side drawer. The map follows the dynamic viewport height on mobile browsers.
+Deploy through Vercel's GitHub integration with `Papidev/historical-explorer` and production branch `main`. `vercel.json` configures the build; `package.json` pins pnpm and Node.js 24. Branch pushes create previews; `main` updates deploy production. Require existing CI checks before merging.
 
-- `/` - project home page.
-- `/rome` - Rome visitor map.
-- `/rome?poiId=<id>` - Rome visitor map with a POI detail panel opened.
-- `/admin` - temporary local editorial workflow for generating POI data, Wikipedia snapshots, and Story content.
+Commit POI catalogs, categories, Stories, image candidates/selection, and linked People. Builds generate gitignored `data/public/catalog.json`, embedded in the server build. Vercel needs no export step, local generated data, or AI credentials. Content becomes public on the next deployment.
 
-## Scripts
+Admin operations refresh the development snapshot. After directly editing content files, restart `pnpm dev` or run `pnpm catalog:build`. Tests also generate the snapshot automatically.
 
-- `pnpm dev` - run the local development server.
-- `pnpm build` - generate the public snapshot from versioned content, then build for production.
-- `pnpm catalog:build` - regenerate the snapshot independently when needed.
-- `pnpm start` - start the production server.
-- `pnpm lint` - run ESLint.
+## Data layout
 
-## Deployment
+Versioned content lives under `data/<city>/`; rebuildable `generated/` outputs are ignored.
 
-Deploy through Vercel's GitHub integration. Import `Papidev/historical-explorer` into Vercel and select `main` as the production branch. `vercel.json` configures the production build; `package.json` pins pnpm and Node.js 24. Branch pushes create preview deployments, while updates to `main` deploy to production. The existing GitHub CI checks should be required before merging.
+| Artifact                           | Location                                                 |
+| ---------------------------------- | -------------------------------------------------------- |
+| Geo Place input                    | `data/<city>/pois/raw.geojson`                           |
+| App-ready POIs                     | `data/<city>/pois/pois.geojson`                          |
+| POI categories                     | `data/<city>/pois/categories.json`                       |
+| Story Content and image candidates | `data/<city>/stories/<poi-id>/story.json`, `images.json` |
+| Wikipedia text/source metadata     | `data/<city>/generated/wikipedia/`                       |
+| Acquired Wikidata Types            | `data/<city>/generated/wikidata/`                        |
+| Pipeline checkpoints/timings       | `data/<city>/generated/generation-metadata.json`         |
+| Canonical People                   | `data/people/<person-id>/person.json`                    |
 
-Commit the POI catalog, categories, Stories, Image Candidates with their selected image, and linked Person records. Every build creates `data/public/catalog.json` from these files; the snapshot is gitignored and embedded in the server build. No separate export step, local generated data, or AI credentials are required on Vercel. The runtime map and APIs expose only snapshot entries and do not read editorial files using request IDs. Content updates reach the public site on the next deployment.
+POI IDs are stable and app-owned; external IDs such as `wikidataId` are optional. `geoPlaceId` preserves the original feature identity, enabling regeneration without Wikidata. Legacy records recover it only from a unique exact name/geometry match. Admin shows one row per linked source and preserves existing duplicates.
 
-The development server refreshes the snapshot after admin operations so the local map reflects saved content. Editing content files directly requires restarting `pnpm dev` or running `pnpm catalog:build`.
+Wikipedia Sources use a text snapshot and metadata with ID `wikipedia`, title, and URL. Generation validates Source References; admin displays them when local Sources exist, while public responses omit them.
 
-## Tailwind Plus / Catalyst
+## Editorial workflow
 
-The project uses Tailwind Plus as a local reference catalog, not as a runtime dependency. The paid source is not committed.
+Admin has **POIs**, **People**, and **Type mappings** tabs. POIs has 50 rows per page; status/search apply across all pages and reset pagination. Name search is case-insensitive across original and generated names.
 
-If you have a Tailwind Plus license, keep the downloaded source locally in `.tailwind-plus/`. That folder is gitignored on purpose and must not be imported by production code. When a Tailwind Plus or Catalyst component is useful, adapt only the app-specific component needed in `src/app/components/ui/` and commit that implementation together with any runtime dependencies and theme/font setup.
+Empty rows are **To do**. Attempted/generated rows with outstanding work/errors are **Needs attention**. **Needs source** keeps generated POIs and acquired Types visible, with missing-source/error details that persist after the toast closes and neutral placeholders without generation controls for unavailable artifacts.
 
-## Generated Data
+**Generate** (empty row) and **Refresh** (existing row) recreate POI metadata, acquire Wikipedia, retain discovered Wikidata identity, refresh Types when available, generate image candidates, and generate structured Story Content/Related People. Preview, Refresh, and Delete are available for Story Content; commit reviewed artifacts.
 
-For project glossary terms such as Geo Place, Draft Story, Sources, and Main Image, see `CONTEXT.md`.
+Temporary refresh errors preserve existing artifacts. If no unambiguous English/Italian Wikipedia page resolves, remove the POI's Source, Story, and image candidates and mark it waiting for a Source; shared People and logs remain. See [Story Workflow Architecture](docs/story-workflow-architecture.md).
 
-Each city's data lives under `data/<city>/`. The Geo Place input and app-ready POI catalog live together in the city's `pois/` folder and are versioned. Rebuildable local outputs live under `generated/` and are intentionally not committed.
+People supports alphabetical browsing, thumbnails, name search, and Linked POIs details derived from saved Story references. **Regenerate** uses the saved Source and selected model, preserving identity, image, and links. See [Person Architecture](docs/person-architecture.md).
 
-For Rome, the Geo Place input lives at `data/rome/pois/raw.geojson`, while app-ready POIs are progressively added to `data/rome/pois/pois.geojson`. Each app-ready POI has a stable, human-readable `id`; external identifiers such as `wikidataId` are optional and separate. The catalog preserves the original GeoJSON feature ID as `geoPlaceId`, so POIs without Wikidata stay linked to their source and regeneration reuses the existing POI. Legacy records can recover that link from a unique exact match of name and geometry. The admin table shows one row per linked source, while existing duplicate catalog records remain saved. Wikipedia Text snapshots and local Source metadata are generated into `data/rome/generated/wikipedia/`. Explicit English or Italian Wikipedia/Wikidata links take priority over name searches. Name-only matches require a primary Earth coordinate within 1 km of the POI and a supported physical-place geographic type; missing, distant, secondary, or broad-entity coordinates leave the POI waiting for a source. The 1 km tolerance allows small differences between POI centroids and article coordinates; it is a conservative safeguard, not proof of exact identity. If both name searches fail, geographic lookup examines up to 50 nearby articles in each Wikipedia edition using the same location and place-type checks. It accepts only one entity whose title, English translation, Wikidata label, or Wikidata alias matches the POI name; proximity alone never selects an article, and two language editions of the same Wikidata entity count as one candidate. Wikidata POI types are stored separately in `data/rome/generated/wikidata/`. Local pipeline timings and execution details live in `data/rome/generated/generation-metadata.json`.
+Type mappings supports shared rules, automatic classification, and editable two-level categories. Saving updates affected city POIs without Story regeneration. Per-POI exceptions remain planned in #61. See [POI Categories](docs/poi-categories.md) for mapping, hierarchy, deletion, and filter rules.
 
-The visitor map has a discovery sidebar with shared categories. Churches & cathedrals contains one level of subcategories: Cathedrals, Basilicas, and Churches. All available categories and subcategories start selected, with all places visible including uncategorized places. Subcategories start collapsed and can be expanded independently of selection. Categories and subcategories with no items are hidden. Selecting or clearing the group selects or clears all its children. Each place is counted in one child. A religious place named Basilica appears under Basilicas even when it is also a cathedral; Cathedrals requires Cathedral or Cattedrale in the name. Remaining churches appear under Churches. The child counts therefore sum to the group count. Select several categories to show places in any of them; clearing the selection shows all visitor-ready places, including uncategorized ones. Filtering out an open place closes its detail. On small screens, swipe right from the map’s left edge to open the category sidebar; swipe left on the sidebar to close it.
+### Source resolution
 
-`data/poi-type-category-map.json` contains versioned, cross-city rules for direct Wikidata type IDs. An absent rule is unmapped; an empty list explicitly ignores a type. The deduplicated category lists are saved by POI ID in `data/<city>/pois/categories.json`, separately from the GeoJSON catalog, acquired types, and Story Content. The snapshot builder combines these lists and the shared category definitions with the catalog for the visitor map. Type acquisition/refresh and POI generation recompute categories. Religious basilica types map to Basilica; catalog names distinguish basilicas from cathedrals, and Cathedral requires Cathedral or Cattedrale in the name; civil basilica `Q2887138` is explicitly ignored and does not assign Basilica or Church. To apply changed rules to all existing city catalogs using their locally acquired type snapshots, run `pnpm categories:rebuild`. POIs with missing source types receive an empty category list and stay in the catalog. Curators can edit shared rules in the admin **Type mappings** tab: select a type, assign one or several existing categories, **Ignore type** to save an explicit empty rule, or **Clear rule** to return it to Unmapped. Saving immediately recalculates affected POIs across all city catalogs and refreshes the affected visitor routes without regenerating Stories. Missing types and unmapped rules stay visible to the Curator. Ignored types are hidden until **Show ignored types** is enabled and produce no mapping warning. During Generate/Refresh types, new unmapped types are classified with the AI selected in the admin: reuse existing categories first, create a new singular category when necessary, and apply immediately. **Classify unmapped types** handles existing gaps. **Manage categories** lets the Curator create, rename, and delete categories shared across cities. Drag a category by its handle onto a top-level category to make it a child, including moving children between parents; drop it on the **Top level** area to remove its parent. The hierarchy supports two levels, so categories with children remain at the top level. Moving preserves the category ID, updates existing type rules to use its new parent, and recalculates visitor categories across cities. Category IDs remain stable across renames; manual corrections and ignored rules are protected from automatic changes. Deleting a parent also deletes its children, removing every deleted category from shared rules and POIs. Deleted category names are not recreated by the AI. Individual exceptions remain planned in #61.
+Prefer explicit English/Italian Wikipedia or Wikidata links over name searches. Wikipedia acquisition prefers linked English, then English name search; next use Italian links/search and prefer their English language link. Italian-only Sources still generate English content; URLs, images, and Person links retain the actual source language.
 
-The UI experiment for #59 was captured on the local branch `feat/category-filter-prototype-59`; the confirmed decision is the discovery sidebar, with a collapsible panel on mobile.
+Name matches must be unique titles/redirects, never disambiguation pages, with a primary Earth coordinate within 1 km and a supported physical-place type. Missing/distant/secondary coordinates or broad entities leave the POI waiting. The tolerance accommodates centroids; it does not prove identity.
 
-Generation attempts are logged locally in `data/rome/generated/generation-logs/day-*.jsonl`. Each line records a start, completion, or failure with a shared run ID. Seven daily files are reused in rotation: when a slot is used again after seven days, its old contents are overwritten. The Curator table shows the latest run and expandable errors beside the affected source, story, or image; Related People errors appear inside the People drawer. Error messages are stored with known credentials redacted; stack traces remain in the server console. These files are ignored by Git and are not a durable audit store across machines or deployments.
+If both language name searches fail, examine up to 50 nearby articles per edition using the same checks. Accept one entity matching the name through title, English translation, Wikidata label, or alias; proximity alone is insufficient. Two editions of the same Wikidata entity count once.
 
-The admin has **POIs**, **People**, and **Type mappings** tabs. People lists all generated records alphabetically, with image thumbnails, name search, and a full-detail drawer. The Linked POIs count is visible in the table; selecting it or the Person name opens the drawer with all linked POIs, derived from saved Story references. **Regenerate** uses the saved Wikipedia source and the selected AI model to replace a Person’s description, curiosities, and dates while preserving its ID, image, and Story links.
+### Manual Story batches
 
-The admin POI table shows 50 rows per page. Status filters and name search apply to the complete list and return to the first page when changed. Search matches original and generated POI names without distinguishing uppercase and lowercase. Empty rows are To do; rows with generated artifacts, attempted generation, or errors remain Needs attention until complete. Rows waiting for source acquisition are Needs source; their generated POI and previously acquired Wikidata Types remain visible (unavailable types, Story Content, and Image Candidates keep neutral placeholders without generation controls), and their Wikipedia cell keeps the missing-source notice and any available error details visible after the toast closes.
+**Generate next 3** runs the first three matching To do Geo Places across all pages, or fewer if insufficient; disable when none match. No selection/confirmation is needed. One click starts one concurrent batch, then stops. Each POI has independent progress/outcome; one failure does not stop others.
 
-Use Generate on an empty row or Refresh on an existing row in `/admin` to run the complete Rome generation flow:
+Running rows stay pinned above other rows. The progress dialog can be hidden/reopened. The next click chooses the next matching To do POIs. Batches add no retries beyond existing cloud JSON/domain-validation retry.
 
-1. Add app-ready POI metadata from the Geo Place.
-2. Generate the Wikipedia Text snapshot and save any discovered Wikidata ID on the POI.
-3. Refresh POI types using the Wikidata ID; log a skipped step when no ID is available.
-4. Generate Main Image Candidates and select the first candidate with license and attribution.
-5. Generate structured Story Content.
-
-Refresh reruns this entire pipeline with the selected AI configuration and resolves the Wikipedia Source again from the POI. Existing artifacts remain if a temporary error interrupts regeneration. If no unambiguous English or Italian Wikipedia page can be resolved, the Curator marks its Story as waiting for a Source and removes that POI's saved Source, Story, and Main Image Candidates. Shared Person records and generation logs remain available.
-
-Stories live under the city's `stories/` folder, with one directory per POI ID. For example, `data/rome/stories/forum-boarium/` contains structured Story Content in `story.json` and Main Image Candidates in `images.json`. Full Generate creates or replaces `story.json`, and the Curator UI provides preview, Refresh, and Delete actions for that content. These are reviewable content artifacts and should be committed after generation and human editing.
-
-Wikipedia acquisition prefers a linked English page, then searches by the original POI name
-on English Wikipedia. If that fails, it uses an Italian link or name search, preferring
-that page's English language link when available. If only the Italian page exists,
-it is used as the source while Story Content is still generated in English. Name
-search accepts a unique matching title or redirect, and excludes disambiguation
-pages rather than choosing an unrelated first result. Source URLs, image discovery,
-and Related People links keep the language of the actual source.
-
-Locally generated Wikipedia Sources use a text snapshot plus a metadata file containing the conventional `wikipedia` source ID, title, and URL. Source references are validated during generation and are shown in the Curator UI when the local Source is available, but are omitted from the public Story response.
-
-Story status is not represented yet, so the same structure currently holds content whether it is still a draft or already finalized. When approval status is introduced, the visitor experience should only expose approved Stories.
+Guards support one local server process: three POI operations, one mutation per POI, and one pending Person generation per Wikidata ID. Allocate Person IDs immediately before saving; shared catalog/metadata writes are synchronous. Multiple processes or machines require shared coordination.
 
 ## AI Configuration
 
@@ -123,45 +115,32 @@ OLLAMA_BASE_URL=http://localhost:11434
 
 Ollama Cloud does not support schema-constrained output. Story Content and new People include their schemas in the prompt and retry once when a response fails JSON or domain validation. Both use the selected Cloud model.
 
+## Diagnostics
+
+Local `data/rome/generated/generation-logs/day-*.jsonl` records start/completion/failure with shared run IDs. Seven daily slots rotate, overwriting data when reused after seven days. Admin shows latest-run errors beside artifacts and Related People errors in the People drawer. Known credentials are redacted; stack traces stay in the console. Logs are gitignored and not a durable cross-machine/deployment audit.
+
+Admin shows current errors: newer successful checkpoints or successful operations supersede them. A failed refresh remains visible if its saved artifact is older; historical logs stay on disk. Completion uses current artifacts/errors, not obsolete failed runs.
+
+Rejected AI output is saved in gitignored `data/generated/ai-response-failures/`: exact `rawResponse`, generation kind, subject identity, provider/model/mode, attempt, time, and validation error. Invalid provider JSON and content are captured even before a successful retry. Console output links the file; requests, keys, and headers are not stored. Diagnostic write failure preserves the original error.
+
+Story generation uses `jsonrepair` for malformed JSON, including stray quotes before topic objects. Repaired output must pass Story schema and Source-ID validation; otherwise preserve normal error/retry behavior.
+
+## Visitor map
+
+The OpenFreeMap basemap shows cultural labels/icons: museums, monuments/memorials, castles/ruins, archaeology, worship, theatres, galleries, artworks, arts centres, and libraries. Other business/service/transit/sport POIs and generic attractions are hidden; roads, buildings, geographic labels, and curated markers remain.
+
+Below 768 px, the map uses a compact header. Below 1024 px, open full-screen category filters by swiping right from the map’s left edge or tapping the keyboard/screen-reader-accessible Filters tab; swipe left or use Close filters to dismiss them. Stories span the map width. Wider screens keep the sidebar visible and use a side drawer for Stories; mobile height follows the dynamic viewport. Category filtering uses OR semantics. See [POI Categories](docs/poi-categories.md#visitor-filtering) for defaults, counts, and religious subcategories, and [Entity Discovery](docs/entity-discovery.md) for planned search/Person navigation.
+
 ## Security Notes
 
-The current `/admin` route is temporary and has no authentication. It is available only with `pnpm dev`: the admin page and AI progress API use `.dev.tsx` / `.dev.ts` route extensions, which are excluded from production builds. The production client bundles contain no admin UI, and requests to these missing routes return 404. Admin Server Actions also reject production execution before they read inputs or perform any work. The development server has no localhost-only access restriction; keep it on a trusted local network.
+Admin is temporary, unauthenticated, and available only with `pnpm dev`. Its page and AI-progress API use `.dev.tsx`/`.dev.ts`, excluded from production builds; admin UI is absent from production bundles and missing routes return 404. Server Actions reject production execution before reading inputs or doing work. Dev is not localhost-restricted; use a trusted network.
 
-Do not commit real API keys. Cloud AI generation sends source text to the configured provider and may incur paid usage.
+Never commit real API keys. Cloud generation sends source text to the provider and may incur charges.
 
-### Manual Story batches
+## Tailwind Plus / Catalyst
 
-In the admin table, choose **Generate next 3** to generate the first three **To do**
-Geo Places matching the current search and status filters, across all pages.
-No row selection or confirmation is needed. If fewer than three remain, it generates
-those remaining; the button is disabled when none match. Each click starts one batch
-and stops, without automatically starting further POIs. The server runs the batch
-concurrently through the same workflow as the row action. Each POI has its own
-progress log and outcome; a failed POI does not stop the others. Running rows stay
-pinned above the other rows. Batch progress and outcomes open in a dialog that can
-be hidden and reopened. The next click picks the next matching To do POIs.
-The batch adds no automatic retries; the existing cloud JSON/domain-validation
-retry remains part of each Story or Person generation.
+Licensed Tailwind Plus source is a local reference in gitignored `.tailwind-plus/`, never a production import or committed catalog. Adapt needed components in `src/app/components/ui/` and commit app-owned code with required dependencies/theme/font setup.
 
-Concurrency guards support one local server process: up to three POI operations,
-one mutation per POI, and one pending Person generation per Wikidata ID. Person
-IDs are allocated immediately before saving. Shared catalog and generation metadata
-updates remain synchronous on the filesystem. Multiple server processes or machines
-would require shared coordination before using this storage safely.
+## Documentation
 
-Rejected AI responses are saved locally in
-`data/generated/ai-response-failures/` (ignored by Git). Each unique JSON file
-contains the exact HTTP response body in `rawResponse`, generation kind, POI or
-Person identity, provider, model, mode, attempt number, timestamp, and validation
-error. Both invalid provider JSON and invalid generated content are captured,
-including an invalid attempt followed by a successful retry. The server console
-prints the saved path. Requests, API keys, and headers are not captured. Diagnostic
-write failures do not replace the original generation error.
-
-The admin shows only current generation errors. Errors are superseded by a newer
-successful checkpoint for the affected artifact or a successful run of the same
-operation. A failed refresh remains visible when the saved artifact is older.
-Historical logs remain on disk. Row completion follows current artifacts and
-current errors rather than an obsolete failed run.
-
-Story generation attempts to recover malformed model JSON with `jsonrepair`, including stray quotes before topic objects. Recovered output must still pass the complete Story schema and source-ID validation; otherwise the original parsing error and retry behavior are preserved.
+[Product vision](docs/product/vision.md) · [Glossary](CONTEXT.md) · [Entity discovery](docs/entity-discovery.md) · [Backlog](docs/backlog.md)
