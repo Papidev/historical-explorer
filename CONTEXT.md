@@ -151,8 +151,8 @@ _Avoid_: Production output, AI output
 - Removing a **Related Person** from a **Story** removes only that reference; it does not remove the **Person**.
 - **Draft Story Generation** preserves an ambiguous person reference as an **Unresolved Person Reference** rather than creating a guessed **Person**.
 - A **Person** resolution failure does not discard otherwise valid **Story Content**; the name remains an **Unresolved Person Reference** that can be retried without regenerating the **Story Content**.
-- The **Visitor Experience** may show an **Unresolved Person Reference** as a non-navigable name.
-- The **Visitor Experience** links a resolved **Related Person** from a **Story** to that **Person** and shows an **Unresolved Person Reference** as a name without a link.
+- An **Unresolved Person Reference** remains available in the editorial workflow for review and retry. Any unresolved or missing **Related Person** excludes the entire **POI** from the current public catalog and visitor map.
+- The current **Visitor Experience** links every **Related Person** to its saved **Person**; published **Stories** have no unresolved person references. A **Story** with no **Related People** may still qualify for publication.
 - The default **Visitor Experience** does not show **Person** Sources.
 - A **Story** selects at most ten **Related Persons** that are significant to understanding its **POI** and orders them from most to least significant.
 - **Story Content** contains plain text rather than Markdown or presentation styling.
@@ -184,7 +184,7 @@ _Avoid_: Production output, AI output
 - The **Visitor Experience** shows **Story** content.
 - The default **Visitor Experience** does not show **Sources**.
 - The default **Visitor Experience** does not show **Visitor Insights** directly.
-- The **Visitor Experience** may show **POI Metadata** when a **Story** is unavailable.
+- The current visitor map includes only **POIs** meeting the public catalog's publication requirements; a metadata-only **POI** is not shown.
 
 ## Example dialogue
 
