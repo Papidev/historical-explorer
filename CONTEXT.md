@@ -84,8 +84,12 @@ One of the supported cultural perspectives—currently history, design, or art�
 _Avoid_: Required section, content slot, card
 
 **Visitor Insight**:
-A selected idea that makes a **POI** worth noticing, understanding, connecting to, remembering, or navigating.
-_Avoid_: Fact, section, card, reasoning
+A concise cultural idea shown to the visitor that makes a **POI** worth noticing, understanding, connecting to, remembering, or navigating. **Insight** and **Visitor Insight** refer only to this visitor-visible content; unpublished proposals are draft content, while internal rationale and selection explanations are **Editorial Notes**.
+_Avoid_: Fact, section, card, reasoning, internal rationale, unpublished proposal
+
+**Editorial Notes**:
+Internal explanations, selection rationale, review comments, and generation notes used to prepare or review content. They are not **Insights** and are not shown in the default **Visitor Experience**.
+_Avoid_: Insight, Visitor Insight
 
 **Person**:
 A historical, mythological, or imaginary individual represented once in Cultural Atlas, with an internal ID, external identity, source-grounded description, and optional curiosities, dates, and image.
@@ -156,14 +160,14 @@ _Avoid_: Production output, AI output
 - The default **Visitor Experience** does not show **Person** Sources.
 - A **Story** selects at most ten **Related Persons** that are significant to understanding its **POI** and orders them from most to least significant.
 - **Story Content** contains plain text rather than Markdown or presentation styling.
-- A **Draft Story** organizes its proposed **Visitor Insights** into the supported **Story Topics**.
+- A **Draft Story** organizes draft cultural content into the supported **Story Topics**. Published visitor-visible ideas are called **Insights**.
 - A **Story Topic** appears only when supported by the **Sources**; a **Draft Story** does not fill every available **Story Topic**.
 - A **Story Topic** provides content semantics but does not own the React presentation used by the **Visitor Experience**.
 - Dated **Visitor Insights** in the history **Story Topic** appear from oldest to newest; undated historical insights follow them.
 - A **Story** may make substantive claims only when they are supported by its **Sources**.
 - A **Story** retains the **Sources** and resolvable **Source References** used to support curator review.
 - A **Story** is composed from the strongest few **Visitor Insights**, not from a complete article summary.
-- A **Draft Story** proposes the **Visitor Insights** that may shape the visitor-facing **Story**.
+- A **Draft Story** proposes cultural content that may become **Insights** in the visitor-facing **Story**.
 - If explicit approval is adopted in a future version, a **Draft Story** becomes an approved **Story** through a **Curator** decision. This transition is not currently required or represented.
 - A **Draft Story** contains **Story Content** and one or more **Sources**, and may also include one **Draft Main Image** and one or more **Main Image Candidates**.
 - A **Draft Story** must include one **Draft Main Image** with source, rights, license, and attribution information before it becomes visitor-facing.
@@ -183,7 +187,7 @@ _Avoid_: Production output, AI output
 - **POI Metadata** identifies a **POI** but is separate from its **Story**.
 - The **Visitor Experience** shows **Story** content.
 - The default **Visitor Experience** does not show **Sources**.
-- The default **Visitor Experience** does not show **Visitor Insights** directly.
+- The **Visitor Experience** shows **Insights** as cultural content, while internal **Editorial Notes**, AI reasoning, and source-processing metadata remain hidden.
 - The current visitor map includes only **POIs** meeting the public catalog's publication requirements; a metadata-only **POI** is not shown.
 
 ## Example dialogue
@@ -211,4 +215,4 @@ _Avoid_: Production output, AI output
 - "show the selected image" was ambiguous between the **Story Workflow** and the **Visitor Experience** — resolved: the first image-candidate implementation started as workflow-only; the current visitor experience now uses the selected image when publication requirements are met.
 - "selected image" was ambiguous with final story approval — resolved: call the mutable selection on a **Draft Story** the **Draft Main Image**; its selection supplies the visitor-facing **Main Image** when publication requirements are met; explicit approval is optional future work.
 - "manual refresh" was ambiguous between automated generation and human curation — resolved: regenerating **Story Content** or **Main Image Candidates** belongs to **Draft Story Generation**, while selecting the **Draft Main Image** belongs to **Story Curation**.
-- "section" was ambiguous between generated cultural content and its public presentation — resolved: use optional **Story Topics** to organize proposed **Visitor Insights**, without requiring a corresponding section in the **Visitor Experience**.
+- "section" was ambiguous between generated cultural content and its public presentation — resolved: use optional **Story Topics** to organize draft cultural content and visitor-facing **Insights**, without requiring a corresponding section in the **Visitor Experience**.
