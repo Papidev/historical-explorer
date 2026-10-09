@@ -76,7 +76,9 @@ export const Sidebar = ({
     </p>
     {!visiblePois.length && (
       <p className="mt-2 text-sm text-zinc-500">
-        No places match these categories. Try another category or clear your selection.
+        {selectedCategories.length
+          ? "No places match these categories. Try another category."
+          : "Select a category to explore places."}
       </p>
     )}
     <ul className="mt-2 space-y-1">

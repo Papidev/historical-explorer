@@ -44,7 +44,7 @@ The discovery sidebar is collapsible on mobile. All available categories start s
 | Select/clear a parent     | Select/clear all children.                                |
 | Deselect a child          | Clear the parent's selected state; retain other children. |
 | Select several categories | Match any selected category (OR).                         |
-| Clear all categories      | Show all published POIs, including uncategorized ones.    |
+| Clear all categories      | Show no POIs on the map or in the list.                   |
 | Exclude the open POI      | Close its detail and clear selection.                     |
 
 Active category subsets exclude uncategorized POIs. Religious child scopes are disjoint. For legacy mapped religious types, catalog naming determines the scope:
