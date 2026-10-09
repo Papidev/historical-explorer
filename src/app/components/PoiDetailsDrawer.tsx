@@ -3,10 +3,10 @@
 import { useState } from "react";
 import { Drawer } from "@/app/components/ui/Drawer";
 import { PanelResizeHandle } from "@/app/components/ui/PanelResizeHandle";
-import { ArrowLeftIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import type { Poi } from "@/types/Poi";
 import { StoryContent } from "@/app/components/StoryContent";
-import { IconButton } from "@/app/components/ui/IconButton";
+import { DrawerCloseButton } from "@/app/components/ui/DrawerCloseButton";
 import { usePoiStoryContent } from "@/app/components/usePoiStoryContent";
 import { Person } from "@/app/components/Person";
 import { usePerson } from "@/app/components/usePerson";
@@ -57,14 +57,7 @@ export const PoiDetailsDrawer = ({
           ) : null}
           <div key={poi.id} className="h-full overflow-y-auto">
             <div className="absolute top-4 right-4 z-10">
-              <IconButton
-                label="Close"
-                size="large"
-                className="bg-white/90 shadow-md backdrop-blur hover:bg-white"
-                onClick={onClose}
-              >
-                <XMarkIcon aria-hidden="true" />
-              </IconButton>
+              <DrawerCloseButton onClick={onClose} />
             </div>
             {!selectedPersonId && poi.mainImageUrl && poi.mainImageUrl !== failedMainImageUrl ? (
               <div className="aspect-video w-full shrink-0 overflow-hidden bg-zinc-100">
@@ -82,7 +75,7 @@ export const PoiDetailsDrawer = ({
                 <button
                   type="button"
                   onClick={() => setSelectedPerson(undefined)}
-                  className="mb-3 inline-flex max-w-full cursor-pointer items-center gap-2 rounded-full bg-white px-3 py-2 text-sm font-semibold shadow-md ring-1 ring-black/5 hover:bg-neutral-50"
+                  className="mb-3 inline-flex max-w-full cursor-pointer items-center gap-2 rounded-sm py-2 text-sm text-black/60 hover:text-black focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black/60"
                 >
                   <ArrowLeftIcon className="size-4 shrink-0" aria-hidden="true" />
                   <span className="truncate">Back to {poi.name}</span>
@@ -111,7 +104,6 @@ export const PoiDetailsDrawer = ({
                   <StoryContent
                     content={content}
                     period={poi.period}
-                    address={poi.address}
                     onOpenPerson={(personId) => setSelectedPerson({ id: personId, openRequestId })}
                   />
                 ) : (
