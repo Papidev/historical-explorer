@@ -34,8 +34,14 @@ Keep the title concise and scoped to the PR's main change.
 ## Body
 
 List the changes as a Markdown bulleted list, with one concrete change per item.
+Group the bullets under headings by change type, such as Features, Fixes,
+Refactoring, Documentation, or Maintenance. Include only types present in the PR;
+for a single type, use one heading.
+Give each bullet enough detail to explain what changed and why it matters.
+Include the affected behavior or area and, when useful, a concrete before/after
+example or an implementation detail that helps the reviewer assess the change.
 When creating or updating a PR through the GitHub connector, pass actual newlines
-in the body so each bullet renders as a separate list item.
+in the body and a blank line before each list so headings and bullets render correctly.
 
 Include only sections that add concrete review value. Do not add placeholder
 sections or sections whose content is effectively "none", "not captured", or
