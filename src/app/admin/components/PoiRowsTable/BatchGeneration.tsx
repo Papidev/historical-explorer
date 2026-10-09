@@ -11,14 +11,12 @@ export const BatchGeneration = ({
   action,
   disabled,
   onRunningChange,
-  onShowLog,
 }: {
   rows: AdminPoiRow[];
   aiSelectionRef: RefObject<Pick<AiSelection, "mode" | "model">>;
   action: AdminBatchAction;
   disabled: boolean;
   onRunningChange: (ids: string[]) => void;
-  onShowLog: (runId: string, title: string, isFinished: boolean) => void;
 }) => {
   const { runs, error, generate, isOpen, setIsOpen } = useBatchGeneration({
     rows,
@@ -56,15 +54,7 @@ export const BatchGeneration = ({
         </button>
       ) : null}
       {isOpen ? (
-        <BatchProgressDialog
-          runs={runs}
-          error={error}
-          onClose={() => setIsOpen(false)}
-          onShowLog={(runId, title, isFinished) => {
-            setIsOpen(false);
-            onShowLog(runId, title, isFinished);
-          }}
-        />
+        <BatchProgressDialog runs={runs} error={error} onClose={() => setIsOpen(false)} />
       ) : null}
     </div>
   );

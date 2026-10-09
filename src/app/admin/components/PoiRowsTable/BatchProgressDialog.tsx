@@ -1,16 +1,23 @@
-import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from "@headlessui/react";
+import {
+  Dialog,
+  DialogBackdrop,
+  DialogPanel,
+  DialogTitle,
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from "@headlessui/react";
+import { AiProgressLog } from "./AiProgressLog";
 import type { useBatchGeneration } from "./useBatchGeneration";
 
 export const BatchProgressDialog = ({
   runs,
   error,
   onClose,
-  onShowLog,
 }: {
   runs: ReturnType<typeof useBatchGeneration>["runs"];
   error: string | null;
   onClose: () => void;
-  onShowLog: (runId: string, title: string, isFinished: boolean) => void;
 }) => (
   <Dialog open onClose={onClose} className="relative z-50">
     <DialogBackdrop className="fixed inset-0 bg-black/35" />
@@ -27,7 +34,7 @@ export const BatchProgressDialog = ({
         <ul
           aria-label="Batch generation results"
           aria-live="polite"
-          className="mt-4 max-h-72 space-y-4 overflow-y-auto text-sm"
+          className="mt-4 max-h-[60vh] space-y-4 overflow-y-auto text-sm"
         >
           {runs.map((run) => (
             <li key={run.progressId}>
@@ -44,13 +51,19 @@ export const BatchProgressDialog = ({
                   {run.error ?? run.result?.warning?.description ?? run.result?.warning?.title}
                 </p>
               ) : null}
-              <button
-                type="button"
-                onClick={() => onShowLog(run.progressId, `Generating ${run.name}`, run.isFinished)}
-                className="mt-1 cursor-pointer text-xs text-violet-700 underline"
-              >
-                Show log<span className="sr-only"> for {run.name}</span>
-              </button>
+              <Disclosure>
+                {({ open }) => (
+                  <>
+                    <DisclosureButton className="mt-1 cursor-pointer text-xs text-violet-700 underline">
+                      {open ? "Hide log" : "Show log"}{" "}
+                      <span className="sr-only"> for {run.name}</span>
+                    </DisclosureButton>
+                    <DisclosurePanel>
+                      <AiProgressLog runId={run.progressId} isFinished={run.isFinished} />
+                    </DisclosurePanel>
+                  </>
+                )}
+              </Disclosure>
             </li>
           ))}
         </ul>

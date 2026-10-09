@@ -9,6 +9,15 @@ Use the repo-local [push-branch](../push-branch/SKILL.md) skill when publishing 
 
 Read the full diff against the PR's base branch before writing its title and change list.
 
+## Base Branch Alignment
+
+Before opening every PR, fetch `origin/main` and verify that
+`git merge-base --is-ancestor origin/main HEAD` succeeds. If the branch is behind,
+merge `origin/main` into the current branch, resolve any conflicts, and run the
+required checks on the aligned branch before publishing it and opening the PR.
+Repeat the fetch and ancestry check immediately before creating the PR; if main
+advanced again, align the branch and rerun the affected checks first.
+
 ## GitHub Access
 
 Create and manage pull requests through the GitHub connector, including assignment and other PR metadata. Use Git only for local commits and publishing the branch; do not use the `gh` CLI for pull request operations in this repository.
