@@ -77,25 +77,53 @@ const toPrompt = (pointOfInterest: PoiInput, sources: Source[]) =>
   );
 
 const parseGeneratedContent = (content: string, sources: Source[]) => {
-  let storyContent: StoryContent;
+  let generated: unknown;
+  let parseError: unknown;
   try {
-    storyContent = parseStoryContent(
-      JSON.parse(content),
-      sources.map(({ id }) => id),
-    );
+    generated = JSON.parse(content);
   } catch (error) {
     if (!(error instanceof SyntaxError)) throw error;
+    parseError = error;
     try {
       // Some models prefix topic objects with an extra quote: ,"{"id":...
-      storyContent = parseStoryContent(
-        JSON.parse(jsonrepair(content.replace(/,\s*"(?=\{\s*"id"\s*:)/g, ","))),
-        sources.map(({ id }) => id),
-      );
+      generated = JSON.parse(jsonrepair(content.replace(/,\s*"(?=\{\s*"id"\s*:)/g, ",")));
     } catch {
       throw error;
     }
-    console.warn("[story-content] Recovered malformed JSON and validated the Story schema.");
   }
+  if (
+    generated &&
+    typeof generated === "object" &&
+    "topics" in generated &&
+    generated.topics &&
+    typeof generated.topics === "object"
+  ) {
+    const topics = generated.topics as Record<string, unknown>;
+    for (const topic of ["history", "design", "art"]) {
+      if (Array.isArray(topics[topic])) {
+        topics[topic] = topics[topic].map((item: unknown) => {
+          if (typeof item !== "string") return item;
+          try {
+            return JSON.parse(item);
+          } catch {
+            // Keep invalid values so schema validation still rejects them.
+            return item;
+          }
+        });
+      }
+    }
+  }
+  let storyContent: StoryContent;
+  try {
+    storyContent = parseStoryContent(
+      generated,
+      sources.map(({ id }) => id),
+    );
+  } catch (error) {
+    throw parseError ?? error;
+  }
+  if (parseError)
+    console.warn("[story-content] Recovered malformed JSON and validated the Story schema.");
   return {
     ...storyContent,
     relatedPeople: storyContent.relatedPeople.map(({ name, sourceIds }) => ({ name, sourceIds })),
