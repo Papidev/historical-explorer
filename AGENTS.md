@@ -11,6 +11,13 @@
 - Before creating a feature branch, fetch `origin/main` and verify that local `main` points to the same commit. If they differ, align `main` before creating the branch.
 - If needed, create a branch before coding (example: `git checkout -b feat/<short-name>`).
 
+## Worktree Lifecycle
+
+- When creating a worktree, copy all local resources from the source checkout: environment files, every uncommitted file and directory under `data/` (including modified tracked files, untracked files, and ignored files), `.tailwind-plus/`, Catalyst references, and any other uncommitted local libraries or assets. Preserve directory structure and contents, keep ignored resources uncommitted, and verify that all resources are present before starting work.
+- After the task is complete and its PR is confirmed merged, stop the application and any task processes started from that worktree, including their child processes. Identify processes by their association with the worktree and leave applications running from other checkouts alone.
+- Before removing the worktree, preserve its local resources and any remaining uncommitted work in the main checkout or a recoverable backup. If the destination contains different content, ask the user before overwriting it. Managed worktree archives exclude ignored files, so preserve those separately and verify the copy before archiving.
+- Once processes are stopped and local resources are preserved, remove the entire task worktree and its registration; use the Codex archive tool for managed worktrees. A completed task with a merged PR must leave no running application or worktree directory behind.
+
 ## Tooling & Commands
 
 - Local-only admin route entrypoints use `.dev.tsx` / `.dev.ts`; `next.config.ts` recognizes these extensions only in the development-server phase. Keep public route entrypoints on the standard extensions, and avoid importing admin UI or Server Actions from public routes so they stay out of production bundles.
