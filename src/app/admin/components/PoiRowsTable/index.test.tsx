@@ -88,6 +88,15 @@ describe("POI actions", () => {
   );
 
   it("generates the first three To do POIs with one click and independent outcomes", async () => {
+    server.use(
+      http.get("/api/admin/ai-progress/:runId", ({ params }) =>
+        HttpResponse.json({
+          status: "running",
+          startedAt: new Date().toISOString(),
+          entries: [{ at: new Date().toISOString(), message: `Log for ${params.runId}` }],
+        }),
+      ),
+    );
     const submitted: FormData[] = [];
     let finish: (results: AdminBatchResult[]) => void = () => {};
     const response = new Promise<AdminBatchResult[]>((resolve) => {
@@ -120,6 +129,20 @@ describe("POI actions", () => {
     expect(screen.queryByRole("checkbox", { name: /for generation/ })).not.toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Generate next 3" }));
     expect(screen.getByRole("dialog", { name: "Batch generation" })).toBeInTheDocument();
+    expect(screen.queryByRole("log")).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Show log for One" }));
+    expect(
+      await screen.findByText(`Log for ${submitted[0].getAll("progressId")[0]}`),
+    ).toBeVisible();
+    expect(screen.getAllByRole("dialog")).toHaveLength(1);
+    await user.click(screen.getByRole("button", { name: "Show log for Two" }));
+    expect(
+      await screen.findByText(`Log for ${submitted[0].getAll("progressId")[1]}`),
+    ).toBeVisible();
+    expect(screen.getAllByRole("log")).toHaveLength(2);
+    await user.click(screen.getByRole("button", { name: "Hide log for One" }));
+    expect(screen.getAllByRole("log")).toHaveLength(1);
+    expect(screen.getByRole("button", { name: "Hide log for Two" })).toBeVisible();
     await user.click(screen.getByRole("button", { name: "Hide" }));
     expect(
       screen.queryByRole("list", { name: "Batch generation results" }),
