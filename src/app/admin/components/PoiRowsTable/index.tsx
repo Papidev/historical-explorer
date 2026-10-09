@@ -197,9 +197,6 @@ export const PoiRowsTable = ({
             setRunningIds(ids);
             if (ids.length) tableScrollRef.current?.scrollTo?.({ top: 0 });
           }}
-          onShowLog={(runId, title, isFinished) =>
-            setAiProgressDialog({ runId, title, isFinished, isOpen: true })
-          }
         />
         <div
           role="group"

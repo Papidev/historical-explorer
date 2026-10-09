@@ -1,0 +1,82 @@
+{
+  "introduction": {
+    "text": "The Acquedotto Felice is a Renaissance aqueduct that restored water supply to Rome’s hills, symbolising the city’s modernisation under Pope Sixtus V.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-1",
+        "description": "Destruction of Rome’s ancient aqueducts in the 6th century left the city’s hills water‑less.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 500,
+          "precision": "approximate",
+          "endYear": 599,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-2",
+        "description": "Completion of the Acquedotto Felice in 1586 by Pope Sixtus V provided a new water source for Rome’s hills.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1586,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "The aqueduct spans 15 mi, running underground for 8 mi and then on arches of the Aqua Claudia and Aqua Marcia for 7 mi to its terminus at the Fontana dell’Acqua Felice.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-1",
+        "description": "The Fontana dell’Acqua Felice, a three‑arched mostra designed by Domenico Fontana, marks the aqueduct’s entry into Rome and serves as a public memorial to the engineering feat.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Pope Sixtus V",
+      "personId": "pope-sixtus-v",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giovanni Fontana (Dominican)",
+      "personId": "giovanni-fontana-dominican",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Domenico Fontana",
+      "personId": "domenico-fontana",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Michelangelo",
+      "personId": "michelangelo-buonarroti",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Andrea Palladio",
+      "personId": "andrea-palladio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Siegfried Giedion",
+      "personId": "siegfried-giedion",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "H. V. Morton",
+      "personId": "h-v-morton",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

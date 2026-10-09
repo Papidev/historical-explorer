@@ -1,0 +1,64 @@
+{
+  "id": "h-v-morton",
+  "name": "H. V. Morton",
+  "wikidataId": "Q5729591",
+  "wikipediaTitle": "H. V. Morton",
+  "content": {
+    "description": [
+      {
+        "text": "Henry Canova Vollam Morton, known as H. V. Morton, was born in Ashton‑under‑Lyne, Lancashire, on 26 July 1892. He left school at 16 to pursue journalism, beginning his career at the Birmingham Gazette and Express before moving to London, where he worked for the Daily Mail, Evening Standard and Daily Express. His reporting on the opening of Tutankhamun’s tomb in 1923 brought him national acclaim and established him as a leading travel writer.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Morton’s travel books, beginning with The Heart of London (1925) and followed by In the Steps of the Master (1934) and In Search of South Africa (1948), sold millions of copies and earned him honours such as the Royal Society of Literature fellowship, the Greek Order of the Phoenix and the Italian Order of Merit. He also reported on the Atlantic Charter in 1941 and later lived in South Africa until his death in 1979.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He covered the opening of Tutankhamun’s tomb in 1923, circumventing The Times exclusive rights to the story.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Morton was a reporter at the Atlantic Charter meeting between Winston Churchill and Franklin D. Roosevelt in 1941.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was awarded the Greek Commander of the Order of the Phoenix in 1937 and the Italian Order of Merit in 1965.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A commemorative blue plaque was erected at his birthplace in Ashton‑under‑Lyne in June 2004.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A 2004 biography alleges that Morton privately held Nazi sympathies, citing diary entries that praise Hitler and criticize the United States.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1892,
+      "month": 7,
+      "day": 26,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1979,
+      "month": 6,
+      "day": 18,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "H. V. Morton",
+    "url": "https://en.wikipedia.org/wiki/H._V._Morton"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-09T00:27:49.701Z"
+  }
+}

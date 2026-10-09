@@ -1,0 +1,79 @@
+{
+  "id": "domenico-fontana",
+  "name": "Domenico Fontana",
+  "wikidataId": "Q336806",
+  "wikipediaTitle": "Domenico Fontana",
+  "content": {
+    "description": [
+      {
+        "text": "Domenico Fontana was born in 1543 in Melide, a village on Lake Lugano that was then part of the old Swiss Confederacy and is now in Switzerland's Ticino region. He moved to Rome in 1563 to join his elder brother and began his career as a plasterer before becoming a mason and master builder. His technical skill in measurement and construction led to his first major commission, a villa for Cardinal Montalto in the Piazza Pasquino, completed in 1578. The cardinal later entrusted him with the design of the Cappella del Presepio in Santa Maria Maggiore, a domed Greek‑cross structure that exemplifies Fontana's ability to balance elaborate ornamentation with a clear architectural scheme.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Fontana's reputation grew when he was appointed Architect of St. Peter's by Pope Sixtus V, a position that earned him the title of Knight of the Golden Spur. He added the lantern to the dome of St. Peter's and proposed a new nave, while also engineering the relocation of the 320‑ton Vatican obelisk in 1586—a feat that required 800 men, 160 horses, and countless pulleys and rope. After Sixtus V's death he continued to serve Pope Clement VIII, but later was dismissed and moved to Naples, where he became architect to the Viceroy and oversaw the construction of canals that first confirmed the location of Pompeii. He died in 1607 and was buried in the church of Sant'Anna dei Lombardi.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 1586 Fontana erected the 320‑ton Vatican obelisk in St. Peter's Square, a monumental engineering effort that mobilised 800 men, 160 horses, and countless pulleys and rope.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was appointed Architect of St. Peter's and added the lantern to the dome of the basilica, a key element of its design.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Fontana became a member of the Accademia di San Luca in 1585, reflecting his standing among contemporary architects.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "While working in Naples, a crew building a canal for him first confirmed the location of the ancient city of Pompeii.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was honoured with the title of Knight of the Golden Spur by Pope Sixtus V.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his death in 1607, Fontana was buried in the church of Sant'Anna dei Lombardi.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1543,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1607,
+      "month": 6,
+      "day": 28,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Federico_Zuccari,_Ritratto_di_Domenico_Fontana.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Federico_Zuccari%2C_Ritratto_di_Domenico_Fontana.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Federico_Zuccari%2C_Ritratto_di_Domenico_Fontana.jpg/960px-Federico_Zuccari%2C_Ritratto_di_Domenico_Fontana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Federico_Zuccari%2C_Ritratto_di_Domenico_Fontana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Federico Zuccari",
+    "author": "Federico Zuccari",
+    "width": 1230,
+    "height": 1836,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Domenico Fontana",
+    "url": "https://en.wikipedia.org/wiki/Domenico_Fontana"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-09T00:27:18.147Z"
+  }
+}
