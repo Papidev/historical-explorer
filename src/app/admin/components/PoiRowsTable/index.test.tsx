@@ -88,13 +88,16 @@ describe("POI actions", () => {
   );
 
   it("generates the first three To do POIs with one click and independent outcomes", async () => {
+    let finished = false;
     server.use(
       http.get("/api/admin/ai-progress/:runId", ({ params }) =>
-        HttpResponse.json({
-          status: "running",
-          startedAt: new Date().toISOString(),
-          entries: [{ at: new Date().toISOString(), message: `Log for ${params.runId}` }],
-        }),
+        finished
+          ? new HttpResponse(null, { status: 500 })
+          : HttpResponse.json({
+              status: "running",
+              startedAt: new Date().toISOString(),
+              entries: [{ at: new Date().toISOString(), message: `Log for ${params.runId}` }],
+            }),
       ),
     );
     const submitted: FormData[] = [];
@@ -157,6 +160,7 @@ describe("POI actions", () => {
       within(screen.getByRole("row", { name: /Four/ })).getByRole("button", { name: "Generate" }),
     ).toBeDisabled();
     await act(async () => {
+      finished = true;
       finish(
         submitted[0].getAll("geoPlaceId").map((id, index) => ({
           geoPlaceId: String(id),
@@ -171,10 +175,15 @@ describe("POI actions", () => {
     });
     await user.click(screen.getByRole("button", { name: "Show batch progress" }));
     const results = within(screen.getByRole("list", { name: "Batch generation results" }));
-    expect(results.getByText(/: Completed$/)).toBeInTheDocument();
-    expect(results.getByText(/: Failed$/)).toBeInTheDocument();
-    expect(results.getByText(/: Completed with issues$/)).toBeInTheDocument();
+    expect(results.getByText("Completed", { exact: true })).toBeInTheDocument();
+    expect(results.getByText("Failed", { exact: true })).toBeInTheDocument();
+    expect(results.getByText("Completed with issues", { exact: true })).toBeInTheDocument();
     expect(results.getByText("Provider unavailable")).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Show log for Two" }));
+    expect(await screen.findByText("Generation failed")).toBeVisible();
+    expect(await screen.findByText("Generation log unavailable.")).toBeVisible();
+    expect(screen.queryByText("Starting generation...")).not.toBeInTheDocument();
+    expect(screen.queryByText("Waiting for the final result...")).not.toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Close" }));
     expect(screen.queryByText("Provider unavailable")).not.toBeInTheDocument();
     expect(submitted).toHaveLength(1);

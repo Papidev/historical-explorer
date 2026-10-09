@@ -60,38 +60,51 @@ afterEach(() => {
 afterAll(() => server.close());
 
 describe("Story Content AI adapters", () => {
-  it("recovers the recorded Acqua Vergine response without changing its insights", async () => {
-    const response = JSON.parse(
-      readFileSync(
-        path.join(
-          originalDirectory,
-          "src/server/storyWorkflow/fixtures/acqua-vergine-malformed.json",
+  it.each([
+    [
+      "acqua-vergine-malformed.json",
+      6,
+      "repair-tiberius",
+      "Repaired by Emperor Tiberius in 37 AD.",
+    ],
+    [
+      "acqua-vergine-stringified-topics.json",
+      7,
+      "history2",
+      "Repair under Emperor Tiberius in 37 AD.",
+    ],
+  ])(
+    "recovers the recorded Acqua Vergine response %s without changing its insights",
+    async (fixture, count, id, description) => {
+      const response = JSON.parse(
+        readFileSync(
+          path.join(originalDirectory, `src/server/storyWorkflow/fixtures/${fixture}`),
+          "utf-8",
         ),
-        "utf-8",
-      ),
-    );
-    let requests = 0;
-    server.use(
-      http.post("http://localhost:11434/api/chat", () => {
-        requests += 1;
-        return HttpResponse.json(response);
-      }),
-    );
-    const result = await generateStoryContent(pointOfInterest, sources, {
-      mode: "cloud",
-      provider: "ollama",
-      model: "gpt-oss:20b-cloud",
-    });
-    expect(result.topics.history).toHaveLength(6);
-    expect(result.topics.history[1]).toMatchObject({
-      id: "repair-tiberius",
-      description: "Repaired by Emperor Tiberius in 37 AD.",
-      sourceIds: ["wikipedia"],
-      time: { startYear: 37 },
-    });
-    expect(result.relatedPeople).toHaveLength(10);
-    expect(requests).toBe(1);
-  });
+      );
+      let requests = 0;
+      server.use(
+        http.post("http://localhost:11434/api/chat", () => {
+          requests += 1;
+          return HttpResponse.json(response);
+        }),
+      );
+      const result = await generateStoryContent(pointOfInterest, sources, {
+        mode: "cloud",
+        provider: "ollama",
+        model: "gpt-oss:20b-cloud",
+      });
+      expect(result.topics.history).toHaveLength(count);
+      expect(result.topics.history[1]).toMatchObject({
+        id,
+        description,
+        sourceIds: ["wikipedia"],
+        time: { startYear: 37 },
+      });
+      expect(result.relatedPeople).toHaveLength(10);
+      expect(requests).toBe(1);
+    },
+  );
 
   it("discards Person IDs supplied by AI so names must pass real identity resolution", async () => {
     server.use(
