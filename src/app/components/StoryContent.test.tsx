@@ -7,7 +7,6 @@ describe("StoryContent", () => {
     const html = renderToStaticMarkup(
       <StoryContent
         period="Roman Republic"
-        address="5 Arco della Pace, Rome"
         content={{
           introduction: "Introduction",
           topics: {
@@ -40,7 +39,6 @@ describe("StoryContent", () => {
     );
 
     expect(html).toContain("Roman Republic");
-    expect(html).toContain("5 Arco della Pace, Rome");
     expect(html).toContain("c. 6th–5th century BC");
     expect(html.indexOf("Ancient history")).toBeLessThan(html.indexOf("Modern history"));
     expect(html.indexOf("Modern history")).toBeLessThan(html.indexOf("Undated history"));

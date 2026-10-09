@@ -4,7 +4,7 @@ import {
   type PoiCategory,
   type PoiCategoryDefinition,
 } from "@/types/PoiCategory";
-import { XMarkIcon } from "@heroicons/react/24/outline";
+import { DrawerCloseButton } from "@/app/components/ui/DrawerCloseButton";
 import { CategoryGroup } from "./CategoryGroup";
 
 export const Sidebar = ({
@@ -38,14 +38,7 @@ export const Sidebar = ({
       <h2 className="text-lg font-semibold">
         Discover {citySlug.charAt(0).toUpperCase() + citySlug.slice(1)}
       </h2>
-      <button
-        type="button"
-        aria-label="Close filters"
-        onClick={onClose}
-        className="cursor-pointer rounded-md p-2 hover:bg-zinc-100"
-      >
-        <XMarkIcon aria-hidden="true" className="size-5" />
-      </button>
+      <DrawerCloseButton label="Close filters" onClick={onClose} />
     </div>
     <p className="mt-1 text-xs text-zinc-500">Choose any categories that interest you.</p>
     <fieldset className="mt-4 space-y-2">

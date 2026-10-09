@@ -43,12 +43,10 @@ const formatHistoricalTime = (time: NonNullable<HistoryInsight["time"]>) =>
 export const StoryContent = ({
   content,
   period,
-  address,
   onOpenPerson,
 }: {
   content: PublicStoryContent;
   period?: string;
-  address?: string;
   onOpenPerson?: (personId: string) => void;
 }) => {
   const history = [...content.topics.history].sort((left, right) => {
@@ -61,20 +59,12 @@ export const StoryContent = ({
   return (
     <div className="mt-4 space-y-6 text-base leading-[1.7] text-zinc-800">
       <p>{content.introduction}</p>
-      {period || address ? (
+      {period ? (
         <dl className="grid gap-2 rounded-lg bg-amber-50 p-3 text-sm">
-          {period ? (
-            <div>
-              <dt className="font-semibold text-zinc-950">Period</dt>
-              <dd>{period}</dd>
-            </div>
-          ) : null}
-          {address ? (
-            <div>
-              <dt className="font-semibold text-zinc-950">Address</dt>
-              <dd>{address}</dd>
-            </div>
-          ) : null}
+          <div>
+            <dt className="font-semibold text-zinc-950">Period</dt>
+            <dd>{period}</dd>
+          </div>
         </dl>
       ) : null}
       {history.length > 0 ? (
