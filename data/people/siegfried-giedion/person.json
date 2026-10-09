@@ -1,0 +1,56 @@
+{
+  "id": "siegfried-giedion",
+  "name": "Siegfried Giedion",
+  "wikidataId": "Q123143",
+  "wikipediaTitle": "Sigfried Giedion",
+  "content": {
+    "description": [
+      {
+        "text": "Sigfried Giedion was born on 14 April 1888 in Prague to Swiss‑Jewish parents. He studied engineering at the University of Vienna, graduating in 1913, before turning to the arts. After earning a Ph.D. in art history in Munich under Heinrich Wölfflin in 1922, he rejected a conventional academic post and instead joined the Bauhaus in 1923, where he met Walter Gropius and became an early advocate of the modern movement.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Giedion’s influence spread through his teaching and writing. He taught at Harvard University in 1938–39, delivered the Charles Eliot Norton Memorial Lectures, and later held professorships at MIT and ETH‑Zürich. His books, especially *Space, Time and Architecture* (1941) and *Mechanization Takes Command* (1948), became foundational texts for modern architectural theory and for the Independent Group at the Institute of Contemporary Arts. He died in Zürich on 10 April 1968 after a heart attack.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Giedion was the first secretary‑general of the Congrès International d'Architecture Moderne (CIAM), a key organization that shaped modernist architecture in the mid‑20th century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He co‑founded the CIAM in 1928 together with Le Corbusier and Helène de Mandrot, and also helped design the Werkbundsiedlung Neubühl, one of the first modernist residential communities.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Giedion’s early career included writing poems and plays, one of which was staged by Max Reinhardt, showing his early engagement with the avant‑garde arts scene.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1888,
+      "month": 4,
+      "day": 14,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1968,
+      "month": 4,
+      "day": 10,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Sigfried Giedion",
+    "url": "https://en.wikipedia.org/wiki/Sigfried_Giedion"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-09T00:27:31.883Z"
+  }
+}

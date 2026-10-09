@@ -521,6 +521,45 @@
       },
       "geoPlaceId": "way/243334849",
       "wikidataId": "Q600139"
+    },
+    {
+      "id": "acquedotto-julio",
+      "type": "Feature",
+      "properties": {
+        "name": "Acquedotto Julio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5072036, 41.8958215]
+      },
+      "geoPlaceId": "way/97834048"
+    },
+    {
+      "id": "acquedotto-felice",
+      "wikidataId": "Q14456361",
+      "type": "Feature",
+      "properties": {
+        "name": "Acquedotto Felice",
+        "wikimedia_commons": "Category:Aqua Felice (Rome)",
+        "wikipedia": "it:Acquedotto Felice"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5339066, 41.8775109]
+      },
+      "geoPlaceId": "way/243044347"
+    },
+    {
+      "id": "acquedotto-neroniano",
+      "type": "Feature",
+      "properties": {
+        "name": "Acquedotto Neroniano"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4958147, 41.8851493]
+      },
+      "geoPlaceId": "way/112174949"
     }
   ]
 }

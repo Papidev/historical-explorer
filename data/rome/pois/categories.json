@@ -41,6 +41,9 @@
     "acquedotto-del-grande-ninfeo": [],
     "acquedotto-dei-sette-bassi-14": [],
     "acquedotto-dei-sette-bassi-15": [],
-    "acquedotto-dell-acqua-vergine": ["Aqueduct"]
+    "acquedotto-dell-acqua-vergine": ["Aqueduct"],
+    "acquedotto-julio": [],
+    "acquedotto-felice": ["Aqueduct"],
+    "acquedotto-neroniano": []
   }
 }

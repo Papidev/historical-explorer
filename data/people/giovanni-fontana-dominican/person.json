@@ -1,0 +1,56 @@
+{
+  "id": "giovanni-fontana-dominican",
+  "name": "Giovanni Fontana",
+  "wikidataId": "Q3107180",
+  "wikipediaTitle": "Giovanni Fontana (architect)",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Fontana, born in Melide in 1540, began his architectural career as an assistant to Giacomo della Porta, where he helped implement designs by Michelangelo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He rose to prominence in Rome, designing the Arch of Pope Sixtus V, rebuilding the church of San Girolamo dei Croati, and later pioneering hydraulic engineering projects that revitalized the city’s water supply.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Fontana was the first major architect-engineer to specialize in hydraulics, reorganizing and exploiting Rome’s ancient waterworks to bring clean water to the city.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1612 he designed the Fontana dell'Acqua Paola on the Janiculum, which not only supplied drinking water but also inspired the later Trevi Fountain.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was commissioned in 1585 to design the Arch of Pope Sixtus V and in 1587 to rebuild the church of San Girolamo dei Croati for Rome’s Croatian community.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1596 he undertook the draining of the Rieti Valley, a significant engineering project commissioned by Pope Clement VIII.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1540,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1614,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giovanni Fontana (architect)",
+    "url": "https://en.wikipedia.org/wiki/Giovanni_Fontana_(architect)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-09T00:26:47.785Z"
+  }
+}
