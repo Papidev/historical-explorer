@@ -56,11 +56,11 @@ export const CityExplorer = ({
   const [openRequestId, setOpenRequestId] = useState(0);
   const visiblePois = pois.filter(
     (poi) =>
-      !selectedCategories.length ||
-      availableCategories.every((category) => selectedCategories.includes(category)) ||
-      selectedCategories.some((category) =>
-        matchesPoiCategory(poi.categories, category, categoryDefinitions),
-      ),
+      selectedCategories.length > 0 &&
+      (availableCategories.every((category) => selectedCategories.includes(category)) ||
+        selectedCategories.some((category) =>
+          matchesPoiCategory(poi.categories, category, categoryDefinitions),
+        )),
   );
   const selectedPoi = selectedPoiId
     ? visiblePois.find((poi) => poi.id === selectedPoiId)
@@ -69,11 +69,11 @@ export const CityExplorer = ({
     setSelectedCategories(next);
     if (
       selectedPoi &&
-      next.length &&
-      !availableCategories.every((category) => next.includes(category)) &&
-      !next.some((category) =>
-        matchesPoiCategory(selectedPoi.categories, category, categoryDefinitions),
-      )
+      (!next.length ||
+        (!availableCategories.every((category) => next.includes(category)) &&
+          !next.some((category) =>
+            matchesPoiCategory(selectedPoi.categories, category, categoryDefinitions),
+          )))
     ) {
       setSelectedPoiId(null);
     }
