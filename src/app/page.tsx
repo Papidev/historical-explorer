@@ -36,7 +36,11 @@ const Home = () => {
             <p className="mt-6 max-w-md text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">
               Discover the art, history, and people behind the places on the map. A few meaningful details can change the way you see a city.
             </p>
-            <Link href="/rome" className="group mt-8 inline-flex items-center gap-6 rounded-full bg-zinc-800 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800">
+            <p className="mt-6 max-w-md text-base leading-7 text-zinc-600">
+              <span className="font-semibold text-zinc-900">Our atlas begins in Rome.</span>{" "}
+              More cities will follow.
+            </p>
+            <Link href="/rome" className="group mt-6 inline-flex items-center gap-6 rounded-full bg-zinc-800 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800">
               Explore Rome
               <ArrowRightIcon className="size-5 motion-safe:transition-transform motion-safe:group-hover:translate-x-1" aria-hidden="true" />
             </Link>
@@ -49,7 +53,7 @@ const Home = () => {
                 <Image src={cover.mainImage.thumbnailUrl} alt={cover.poi.name} fill unoptimized preload sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
                 <div className="absolute inset-0 bg-linear-to-t from-zinc-950/80 via-transparent to-transparent" aria-hidden="true" />
                 <div className="absolute right-6 bottom-7 left-6 text-white sm:right-8 sm:left-8">
-                  <p className="text-xs font-medium tracking-[0.2em] text-zinc-100 uppercase">Your first chapter</p>
+                  <p className="text-xs font-medium tracking-[0.2em] text-zinc-100 uppercase">The first city in our atlas</p>
                   <p className="mt-2 font-serif text-5xl sm:text-6xl">Rome</p>
                   <p className="mt-3 flex items-center gap-2 text-sm text-zinc-200">
                     <MapPinIcon className="size-4" aria-hidden="true" />
