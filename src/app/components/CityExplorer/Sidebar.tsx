@@ -34,7 +34,7 @@ export const Sidebar = ({
     aria-label="Discover places"
     className="flex h-full w-full shrink-0 flex-col overflow-y-auto border-r border-zinc-200 bg-white p-4 text-zinc-900"
   >
-    <div className="flex items-center justify-between gap-2">
+    <div className="sticky top-0 z-10 flex items-center justify-between gap-2 bg-white">
       <h2 className="text-lg font-semibold">
         Discover {citySlug.charAt(0).toUpperCase() + citySlug.slice(1)}
       </h2>
@@ -42,7 +42,7 @@ export const Sidebar = ({
         type="button"
         aria-label="Close filters"
         onClick={onClose}
-        className="cursor-pointer rounded-md p-2 hover:bg-zinc-100 lg:hidden"
+        className="cursor-pointer rounded-md p-2 hover:bg-zinc-100"
       >
         <XMarkIcon aria-hidden="true" className="size-5" />
       </button>

@@ -132,6 +132,7 @@ beforeAll(() => {
 });
 afterEach(() => {
   cleanup();
+  window.innerWidth = 1024;
   server.resetHandlers();
 });
 afterAll(() => {
@@ -141,6 +142,7 @@ afterAll(() => {
 
 describe("visitor category filtering", () => {
   it("opens and closes filters by swipe, then matches selected categories until fully cleared", async () => {
+    window.innerWidth = 390;
     const user = userEvent.setup();
     render(<CityExplorer citySlug="rome" coordinates={[12, 41]} initialZoom={15} pois={pois} />);
     const edge = screen.getByRole("button", { name: "Open filters" });
@@ -163,7 +165,7 @@ describe("visitor category filtering", () => {
     fireEvent.touchStart(edge, { touches: [{ clientX: 5, clientY: 100 }] });
     fireEvent.touchEnd(edge, { changedTouches: [{ clientX: 100, clientY: 105 }] });
     expect(screen.queryByRole("button", { name: "Open filters" })).not.toBeInTheDocument();
-    fireEvent.touchStart(screen.getByRole("complementary", { name: "Discover places" }), {
+    fireEvent.touchStart(await screen.findByRole("complementary", { name: "Discover places" }), {
       touches: [{ clientX: 200, clientY: 150 }],
     });
     fireEvent.touchEnd(screen.getByRole("complementary", { name: "Discover places" }), {
@@ -217,6 +219,10 @@ describe("visitor category filtering", () => {
         initialSelectedPoiId="museum"
       />,
     );
+    expect(screen.queryByRole("button", { name: "Open filters" })).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Close filters" }));
+    expect(screen.getByRole("button", { name: "Open filters" })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Open filters" }));
     await user.click(
       screen.getByRole("button", { name: "Show subcategories for Churches & cathedrals" }),
     );

@@ -8,12 +8,15 @@ import {
 } from "@/types/PoiCategory";
 import { Sidebar } from "./Sidebar";
 import { useFilterSwipe } from "./useFilterSwipe";
+import { useDesktopLayout } from "./useDesktopLayout";
 import { useState } from "react";
+import { PanelResizeHandle } from "@/app/components/ui/PanelResizeHandle";
+import { DrawerTab } from "@/app/components/ui/DrawerTab";
+import { Drawer } from "@/app/components/ui/Drawer";
 import type { Poi } from "@/types/Poi";
 import { Map } from "@/app/components/Map";
 import { MapZoomControl } from "@/app/components/Map/MapZoomControl";
 import { PoiDetailsDrawer } from "@/app/components/PoiDetailsDrawer";
-import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
 type Props = {
   citySlug: string;
@@ -41,7 +44,11 @@ export const CityExplorer = ({
   const selectedCategories = (categorySelection ?? availableCategories).filter((id) =>
     categoryDefinitions.some((category) => category.id === id),
   );
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState<boolean | null>(null);
+  const isDesktop = useDesktopLayout();
+  const sidebarVisible = sidebarOpen ?? isDesktop;
+  const [sidebarWidth, setSidebarWidth] = useState<number>();
+  const [detailsWidth, setDetailsWidth] = useState<number>();
   const openFiltersSwipe = useFilterSwipe("right", () => setSidebarOpen(true));
   const closeFiltersSwipe = useFilterSwipe("left", () => setSidebarOpen(false));
   const [zoom, setZoom] = useState(initialZoom);
@@ -74,15 +81,18 @@ export const CityExplorer = ({
   const openPoi = (poiId: string) => {
     setSelectedPoiId(poiId);
     setOpenRequestId((current) => current + 1);
-    setSidebarOpen(false);
+    setSidebarOpen((current) => (current === false ? false : null));
   };
 
   return (
-    <div className="relative flex h-full w-full overflow-hidden">
-      <div
+    <div data-panel-container className="relative flex h-full w-full overflow-hidden">
+      <Drawer
         id="discovery-sidebar"
+        open={sidebarVisible}
+        side="left"
+        width={sidebarWidth}
         {...closeFiltersSwipe}
-        className={`fixed inset-0 z-30 h-dvh w-full touch-pan-y transition-transform duration-200 motion-reduce:transition-none ${sidebarOpen ? "visible translate-x-0 shadow-xl" : "invisible -translate-x-full"} lg:visible lg:static lg:z-auto lg:h-full lg:w-72 lg:translate-x-0 lg:shadow-none`}
+        className="z-30 touch-pan-y lg:w-[var(--panel-width,18rem)]"
       >
         <Sidebar
           citySlug={citySlug}
@@ -112,26 +122,19 @@ export const CityExplorer = ({
           onOpenPoi={openPoi}
           onClose={() => setSidebarOpen(false)}
         />
-      </div>
-      <div className="relative min-w-0 flex-1 overflow-hidden">
-        {!sidebarOpen && !selectedPoi && (
-          <button
-            type="button"
+        <PanelResizeHandle edge="right" label="Resize filters panel" onResize={setSidebarWidth} />
+      </Drawer>
+      <div data-panel-container className="relative min-w-0 flex-1 overflow-hidden">
+        {!sidebarVisible && (
+          <DrawerTab
+            label="Filters"
             aria-label="Open filters"
-            aria-expanded={sidebarOpen}
+            aria-expanded={false}
             aria-controls="discovery-sidebar"
             {...openFiltersSwipe}
             onClick={() => setSidebarOpen(true)}
-            className="group absolute inset-y-0 left-0 z-10 w-6 cursor-pointer touch-pan-y focus-visible:outline-none lg:hidden"
-          >
-            <span
-              aria-hidden="true"
-              className="absolute top-1/2 left-0 flex w-6 -translate-y-1/2 flex-col items-center gap-2 rounded-r-lg border border-l-0 border-zinc-200 bg-white/95 py-3 text-zinc-600 shadow-md group-hover:bg-rose-50 group-focus-visible:ring-2 group-focus-visible:ring-rose-600"
-            >
-              <ChevronRightIcon className="size-4" />
-              <span className="text-xs font-semibold [writing-mode:vertical-rl]">Filters</span>
-            </span>
-          </button>
+            className={selectedPoi ? "hidden md:block" : undefined}
+          />
         )}
         <MapZoomControl zoom={zoom} onChange={setZoom} />
         <Map
@@ -143,10 +146,11 @@ export const CityExplorer = ({
           onMapClick={() => setSelectedPoiId(null)}
         />
         <PoiDetailsDrawer
-          key={selectedPoi?.id ?? "closed"}
           citySlug={citySlug}
           openRequestId={openRequestId}
           poi={selectedPoi}
+          width={detailsWidth}
+          onResize={setDetailsWidth}
           onClose={() => setSelectedPoiId(null)}
         />
       </div>

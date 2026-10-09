@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 
 import "@testing-library/jest-dom/vitest";
-import { cleanup, render, screen } from "@testing-library/react";
+import { cleanup, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { HttpResponse, http } from "msw";
 import { setupServer } from "msw/node";
@@ -23,18 +23,12 @@ const poi: Poi = {
 const storyContent = {
   introduction: "A visitor-facing introduction.",
   topics: { history: [], design: [], art: [] },
-  relatedPeople: [
-    { name: "Hercules", personId: "hercules" },
-    { name: "Unresolved figure" },
-  ],
+  relatedPeople: [{ name: "Hercules", personId: "hercules" }, { name: "Unresolved figure" }],
 };
 
 beforeAll(() => {
   vi.stubGlobal("fetch", (input: string | URL | Request, init?: RequestInit) =>
-    nativeFetch(
-      typeof input === "string" ? new URL(input, "http://localhost") : input,
-      init,
-    ),
+    nativeFetch(typeof input === "string" ? new URL(input, "http://localhost") : input, init),
   );
   server.listen({ onUnhandledRequest: "error" });
 });
@@ -74,7 +68,7 @@ describe("POI details person navigation", () => {
     );
     const user = userEvent.setup();
     const onClose = vi.fn();
-    render(<PoiDetailsDrawer citySlug="rome" poi={poi} onClose={onClose} />);
+    const { rerender } = render(<PoiDetailsDrawer citySlug="rome" poi={poi} onClose={onClose} />);
 
     expect(await screen.findByText("A visitor-facing introduction.")).toBeInTheDocument();
     expect(screen.getByText("Unresolved figure")).toBeInTheDocument();
@@ -92,15 +86,17 @@ describe("POI details person navigation", () => {
 
     await user.click(screen.getByRole("button", { name: "Close" }));
     expect(onClose).toHaveBeenCalledOnce();
+    rerender(<PoiDetailsDrawer citySlug="rome" onClose={onClose} />);
+    expect(screen.getByText("A visitor-facing introduction.")).toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: "Forum Boarium" })).not.toBeInTheDocument();
+    await waitFor(() =>
+      expect(screen.queryByText("A visitor-facing introduction.")).not.toBeInTheDocument(),
+    );
   });
 
   it("shows a fallback when a resolved Person is unavailable and still allows Back", async () => {
     useStoryResponse();
-    server.use(
-      http.get("*/api/people/hercules", () =>
-        HttpResponse.json({ person: null }),
-      ),
-    );
+    server.use(http.get("*/api/people/hercules", () => HttpResponse.json({ person: null })));
     const user = userEvent.setup();
     render(<PoiDetailsDrawer citySlug="rome" poi={poi} onClose={() => {}} />);
 
@@ -127,25 +123,13 @@ describe("POI details person navigation", () => {
     );
     const user = userEvent.setup();
     const { rerender } = render(
-      <PoiDetailsDrawer
-        citySlug="rome"
-        poi={poi}
-        openRequestId={1}
-        onClose={() => {}}
-      />,
+      <PoiDetailsDrawer citySlug="rome" poi={poi} openRequestId={1} onClose={() => {}} />,
     );
 
     await user.click(await screen.findByRole("button", { name: "Hercules" }));
     expect(await screen.findByRole("heading", { name: "Hercules" })).toBeInTheDocument();
 
-    rerender(
-      <PoiDetailsDrawer
-        citySlug="rome"
-        poi={poi}
-        openRequestId={2}
-        onClose={() => {}}
-      />,
-    );
+    rerender(<PoiDetailsDrawer citySlug="rome" poi={poi} openRequestId={2} onClose={() => {}} />);
 
     expect(screen.getByRole("heading", { name: "Forum Boarium" })).toBeInTheDocument();
     expect(screen.getByText("A visitor-facing introduction.")).toBeInTheDocument();
