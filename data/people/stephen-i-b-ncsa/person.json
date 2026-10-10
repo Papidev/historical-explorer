@@ -1,0 +1,67 @@
+{
+  "id": "stephen-i-b-ncsa",
+  "name": "Stephen I Báncsa",
+  "wikidataId": "Q1993768",
+  "wikipediaTitle": "Stephen I Báncsa",
+  "content": {
+    "description": [
+      {
+        "text": "Stephen I Báncsa was born around 1205 into the gens Báncsa, a noble family from Bács County. He first appears in records as provost of Bács and chancellor to King Béla IV in 1238, and by 1240 he had become Bishop of Vác. When the Mongol invasion devastated Hungary in 1241, Báncsa escaped with the royal family to Italy, reporting the catastrophe to Pope Gregory IX and later negotiating with Emperor Frederick II for aid. His leadership during this crisis helped him secure the archbishopric of Esztergom in 1242, where he rebuilt Vác and strengthened the metropolitan see against the backdrop of a weakened royal court.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In December 1251 Pope Innocent IV created Báncsa Cardinal Bishop of Praeneste, making him the first Hungarian to reach the College of Cardinals. He retained his archbishopric while serving as a papal legate to Hungary and Slavonia, and later as a key advisor during the papal elections of 1254, 1261, and 1268. After a long career in Rome, he died in Rome on 9 July 1270, leaving a will that donated his liturgical garments and manuscripts to churches. He was buried in the basilica of Santa Balbina, the titular church that would later be associated with Hungarian cardinals.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Báncsa was the first Hungarian cardinal, a milestone that marked Hungary's growing influence in the Roman Curia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the Mongol invasion of 1241, Báncsa fled with the royal family to Italy and personally reported the devastation to Pope Gregory IX.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was buried in the basilica of Santa Balbina in Rome, a church that later became the titular church of Hungarian cardinals.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1205,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1270,
+      "month": 7,
+      "day": 9,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Báncsa_István_1255.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:B%C3%A1ncsa_Istv%C3%A1n_1255.JPG",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/B%C3%A1ncsa_Istv%C3%A1n_1255.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/B%C3%A1ncsa_Istv%C3%A1n_1255.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown author from the 13th century",
+    "author": "Unknown author from the 13th century",
+    "width": 250,
+    "height": 344,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Stephen I Báncsa",
+    "url": "https://en.wikipedia.org/wiki/Stephen_I_B%C3%A1ncsa"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:18:22.504Z"
+  }
+}

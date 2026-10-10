@@ -1,0 +1,67 @@
+{
+  "id": "giovanni-vasanzio",
+  "name": "Giovanni Vasanzio",
+  "wikidataId": "Q3768326",
+  "wikipediaTitle": "Giovanni Vasanzio",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Vasanzio, also known as Jan van Santen, was a Dutch-born architect, garden designer and engraver who made his mark in Rome from the 1580s until his death in 1621. Born in Utrecht in 1550, he arrived in the Italian capital as an assistant to the prominent architect Flaminio Ponzio and later completed Ponzio's unfinished projects after the latter's death in 1613.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his Roman career Vasanzio became the de facto \"house architect\" for the powerful Borghese family, designing and supervising a range of architectural and decorative works, from the façade of San Sebastiano fuori le Mura to the façade of Villa Borghese on the Pincio, and contributing to the fountain of Acqua Paola and the gardens of the Vatican Palace. His collaborations with Carlo Maderno and his role in orchestrating elaborate dynastic celebrations cemented his reputation as a versatile designer of both permanent structures and temporary spectacles.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Vasanzio's work on the façade of San Sebastiano fuori le Mura in 1612 was originally conceived by his mentor Flaminio Ponzio, but the final execution was completed by Vasanzio after Ponzio's death.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He designed the façade of Villa Borghese on the Pincio between 1613 and 1615, with decorative work that continued into 1618-19.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Vasanzio also contributed to the design of the Fountain of the Acqua Paola in 1613, following Ponzio's original design.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1550,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1621,
+      "month": 8,
+      "day": 21,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "La_villa_Borghèse_(Rome)_(5967141816).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:La_villa_Borgh%C3%A8se_(Rome)_(5967141816).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/La_villa_Borgh%C3%A8se_%28Rome%29_%285967141816%29.jpg/960px-La_villa_Borgh%C3%A8se_%28Rome%29_%285967141816%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/da/La_villa_Borgh%C3%A8se_%28Rome%29_%285967141816%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 2.0",
+    "attribution": "Jean-Pierre Dalbéra from Paris, France",
+    "author": "Jean-Pierre Dalbéra from Paris, France",
+    "width": 3743,
+    "height": 2495,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giovanni Vasanzio",
+    "url": "https://en.wikipedia.org/wiki/Giovanni_Vasanzio"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:07:21.493Z"
+  }
+}

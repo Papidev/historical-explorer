@@ -1,0 +1,77 @@
+{
+  "id": "girolamo-maria-gotti",
+  "name": "Girolamo Maria Gotti",
+  "wikidataId": "Q1369805",
+  "wikipediaTitle": "Girolamo Maria Gotti",
+  "content": {
+    "description": [
+      {
+        "text": "Girolamo Maria Gotti was born Antonio Giovanni Benedetto Gotti in Genoa on 29 March 1834, the second of five children of a dock worker and his wife. He entered the Jesuit academy in his hometown before joining the Order of Discalced Carmelites in 1849, where he took the religious name Girolamo Maria dell'Immacolata Concezione. After receiving the habit in 1850 and making his profession in 1851, he studied for the priesthood and was ordained on 20 December 1856. During the next decade he taught philosophy and theology at the Carmelite monastery and even taught mathematics at the local naval academy, earning a reputation as a tireless scholar and ascetic who slept on the floor.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Gotti’s influence grew when he served as a theological advisor at the First Vatican Council in 1870 and later became Prior General of the Carmelite Order in 1881, a post he held until 1897. He advised several Roman curial congregations, acted as Apostolic Examiner of the Roman clergy, and carried out missions to South America, especially Brazil, where he was appointed Titular Archbishop of Petra and Internuncio in 1892. Pope Leo XIII elevated him to the College of Cardinals on 29 November 1895, assigning him the titular church of Santa Maria della Scala. He became Prefect of the Congregation for Bishops in 1896, then Prefect of the Congregation for the Propagation of the Faith in 1902, and was a leading papabile candidate at the 1903 conclave, ultimately supporting the election of Pope Pius X. He remained Prefect of Propaganda Fide until his death in 1916 and participated in the 1914 conclave, though his age precluded him from being a candidate.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "While serving as a professor of philosophy and theology, Gotti also taught mathematics at the local naval academy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Despite his high office, he was known for sleeping on the floor, reflecting his ascetic lifestyle.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the only Carmelite cardinal to be a serious papal candidate since the Order was founded in the 13th century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His remains were transferred to the Chapel of San Giovanni Battista in the Church of Santa Maria della Scala in 1966.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the 1880s, he served as Apostolic Examiner of the Roman clergy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1834,
+      "month": 3,
+      "day": 29,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1916,
+      "month": 3,
+      "day": 29,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Girolamo_Maria_Gotti.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Girolamo_Maria_Gotti.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Girolamo_Maria_Gotti.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Girolamo_Maria_Gotti.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 300,
+    "height": 389,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Girolamo Maria Gotti",
+    "url": "https://en.wikipedia.org/wiki/Girolamo_Maria_Gotti"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:42:10.491Z"
+  }
+}

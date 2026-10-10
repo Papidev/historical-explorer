@@ -1,0 +1,48 @@
+{
+  "id": "flavio-anicio-ermogeniano-olibrio",
+  "name": "Flavio Anicio Ermogeniano Olibrio",
+  "wikidataId": "Q1372249",
+  "wikipediaTitle": "Flavio Anicio Ermogeniano Olibrio",
+  "content": {
+    "description": [
+      {
+        "text": "Flavio Anicio Ermogeniano Olibrio was a Roman senator from the aristocratic Anicii family, the son of Anicia Faltonia Proba and Sesto Petronio Probo, a prominent consul in 371. He shared the consulship of 395 with his brother Flavio Anicio Probino, a young pair whose joint office was celebrated in a panegyric by Claudio Claudiano, indicating that they were raised in Rome and were still very young at the time.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Both Olibrio and his brother were Christians, a notable fact given their family's traditional pagan aristocratic background. Their appointment as consuls was likely a deliberate signal by Emperor Theodosius I following the restoration of paganism under Emperor Flavius Eugenius. They were honored with a dedication of the work Exempla elocutionum by Arusianus Messianus and received a letter from Quintus Aurelius Simmacus. Olibrio married his relative Anicia Giuliana and had a son and a daughter, Demetria.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "A panegyric by Claudio Claudiano was specifically dedicated to the consulship of Probino and Olibrio, underscoring their prominence and youth.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Olibrio and Probino were among the first Christian consuls in the late Roman Empire, reflecting Theodosius I's policy shift.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The work Exempla elocutionum by Arusianus Messianus was dedicated to Olibrio and Probino, indicating their patronage of rhetorical literature.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Olibrio's marriage to Anicia Giuliana produced a daughter named Demetria.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Flavio Anicio Ermogeniano Olibrio",
+    "url": "https://it.wikipedia.org/wiki/Flavio_Anicio_Ermogeniano_Olibrio"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:45:13.566Z"
+  }
+}

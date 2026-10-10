@@ -1,0 +1,71 @@
+{
+  "introduction": {
+    "text": "The Archivio Museo Storico di Fiume is a museum and archive in Rome that preserves documents and artifacts related to the city of Fiume and the Italian diaspora from Dalmatia.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "On 12 July 1972 the Minister of Education Oscar Luigi Scalfaro issued a decree granting the Archivio Museo Storico di Fiume the status of an archive of \"exceptional historical interest\" and placing it under state protection.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1972,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "In 1987 the Soprintendenza Archivistica per il Lazio placed the archive under the protection provided by Article 38 of D.P.R. 30.91963, n. 1409, recognising its significant historical value.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1987,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "The 2004 law 92/2004, which established the Giorno del Ricordo, officially recognised the Archivio Museo Storico di Fiume as a cultural asset of the history of Fiume and the Giulian‑Dalmatian exodus.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2004,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The museum occupies a basement room of 250 m² that includes a sacrario memorialising the fallen in Dalmatia and a collection of documents on migration from Adriatic centres. The second floor houses an archive and library covering another 250 m², a meeting room for 30 people, computer facilities, and a director’s office.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "The museum displays works by Fiuman artists spanning from the 1700s to the contemporary period, illustrating the artistic heritage of the city.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Oscar Luigi Scalfaro",
+      "personId": "oscar-luigi-scalfaro",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Gabriele D'Annunzio",
+      "personId": "gabriele-d-annunzio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Riccardo Zanella",
+      "personId": "riccardo-zanella",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Basilica_di_Santa_Maria_degli_Angeli_e_dei_Martiri_-_22-11-2019.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Basilica_di_Santa_Maria_degli_Angeli_e_dei_Martiri_-_22-11-2019.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Basilica_di_Santa_Maria_degli_Angeli_e_dei_Martiri_-_22-11-2019.jpg/960px-Basilica_di_Santa_Maria_degli_Angeli_e_dei_Martiri_-_22-11-2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Basilica_di_Santa_Maria_degli_Angeli_e_dei_Martiri_-_22-11-2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Gustavo La Pizza",
+      "author": "Gustavo La Pizza",
+      "width": 3766,
+      "height": 2824,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "2024-10-11_Rome,_Santa_Maria_degli_Angeli_e_dei_Martiri.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:2024-10-11_Rome%2C_Santa_Maria_degli_Angeli_e_dei_Martiri.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/2024-10-11_Rome%2C_Santa_Maria_degli_Angeli_e_dei_Martiri.jpg/960px-2024-10-11_Rome%2C_Santa_Maria_degli_Angeli_e_dei_Martiri.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/72/2024-10-11_Rome%2C_Santa_Maria_degli_Angeli_e_dei_Martiri.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "Alexkom000",
+      "author": "Alexkom000",
+      "width": 4000,
+      "height": 6000,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Dscn0816_(53663164099).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Dscn0816_(53663164099).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Dscn0816_%2853663164099%29.jpg/960px-Dscn0816_%2853663164099%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Dscn0816_%2853663164099%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.0",
+      "attribution": "Attila",
+      "author": "Attila",
+      "width": 1536,
+      "height": 2048,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Basilica_di_Santa_Maria_degli_Angeli_e_dei_Martiri_-_22-11-2019.jpg"
+}

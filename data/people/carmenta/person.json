@@ -1,0 +1,57 @@
+{
+  "id": "carmenta",
+  "name": "Carmenta",
+  "wikidataId": "Q684225",
+  "wikipediaTitle": "Carmenta",
+  "content": {
+    "description": [
+      {
+        "text": "Carmenta was a Roman goddess of childbirth and prophecy who also became associated with technological innovation, most notably the adaptation of the Latin alphabet. Her name derives from the Latin word *carmen*, meaning a spell, oracle, or song, and she was originally called Nicostrate, a name meaning “victory-army,” before it was changed to honor her renown for giving oracles. Carmenta is said to have been the mother of Evander of Pallene, fathered by Hermes, and according to Gaius Julius Hyginus she altered fifteen letters of the Greek alphabet to create the Latin alphabet that her son introduced into Latium.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Carmenta’s cult was part of the group of goddesses known as the Camenae and she was also identified with the Cimmerian Sibyl. The leader of her cult was called the flamen carmentalis, and her temple stood next to the Porta Carmentalis and close to the Theater of Marcellus in Rome, where it was forbidden to wear leather or other forms of dead skin. Her festival, the Carmentalia, was celebrated primarily by women on January 11 and January 15, and she is remembered in Giovanni Boccaccio’s *De Mulieribus Claris*, the first collection devoted exclusively to biographies of women in Western literature.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Carmenta is credited with altering fifteen letters of the Greek alphabet to create the Latin alphabet that her son Evander introduced into Latium.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Her festival, the Carmentalia, was celebrated on January 11 and January 15, primarily by women.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She was the mother of Evander of Pallene, who was fathered by the god Hermes.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Carmenta-Nicostrata.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Carmenta-Nicostrata.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Carmenta-Nicostrata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Carmenta-Nicostrata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Published by Guillaume Rouille (1518?-1589)",
+    "author": "Published by Guillaume Rouille (1518?-1589)",
+    "width": 432,
+    "height": 426,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Carmenta",
+    "url": "https://en.wikipedia.org/wiki/Carmenta"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:09:27.196Z"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "pope-mark",
+  "name": "Pope Mark",
+  "wikidataId": "Q132797",
+  "wikipediaTitle": "Pope Mark",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Mark served as bishop of Rome for a brief period in 336, succeeding Sylvester I on 18 January. Little is known of his early life; the Liber Pontificalis records that he was a Roman and that his father was named Priscus. During his short pontificate, he is believed to have begun the early lists of bishops and martyrs known as the Depositio episcoporum and Depositio martyrum.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Mark is credited with issuing a constitution that invested the bishop of Ostia with a pallium and confirmed the right of that bishop to consecrate newly elected popes. He also founded the Basilica of San Marco in Rome and a cemetery church over the Catacomb of Balbina, which he secured through a donation from Emperor Constantine. He died of natural causes on 7 October 336 and was buried in the catacomb of Balbina; his remains were later moved to Velletri in 1048 and to the Basilica of San Marco in 1145.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Pope Mark’s remains are kept in an urn under the altar of the Basilica of San Marco in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His feast day is celebrated on 7 October, and he is particularly venerated at the Abbadia San Salvatore on Monte Amiata.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 336,
+      "month": 10,
+      "day": 7,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_Mark.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Mark.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/db/Pope_Mark.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/db/Pope_Mark.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Artaud de Montor (1772–1849)",
+    "author": "Artaud de Montor (1772–1849)",
+    "width": 432,
+    "height": 623,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Mark",
+    "url": "https://en.wikipedia.org/wiki/Pope_Mark"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T16:59:43.101Z"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "introduction": {
+    "text": "The Basilica di Santa Teresa d'Avila is a minor basilica, titular, and conventual church in Rome dedicated to Teresa of Ávila and serving as the church of the General Curia of the Discalced Carmelites.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Founded by Cardinal Girolamo Gotti in 1901.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1901,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Made a parish church by Pope Pius X in 1906 and granted to the Discalced Carmelites.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1906,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Elevated to the status of basilica by Pope Pius XII in 1951.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1951,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Made a titular church by Pope John XXIII in 1962, with Cardinal Giovanni Panico as its first titular cardinal.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1962,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "Designed in a Romanesque-Gothic hybrid style by Tullio Passarelli.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "The tympanum above the main entrance depicts Saint Teresa being blessed by Christ.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "Interior decorated with works by 20th-century Roman artists, including a statue of Saint Teresa above the high altar.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Girolamo Maria Gotti",
+      "personId": "girolamo-maria-gotti",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Teresa of Avila",
+      "personId": "teresa-of-avila",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Pius X",
+      "personId": "pope-pius-x",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Pius XII",
+      "personId": "pope-pius-xii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope John XXIII",
+      "personId": "pope-john-xxiii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giovanni Panico",
+      "personId": "giovanni-panico",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Adeodato Giovanni Piazza",
+      "personId": "adeodato-giovanni-piazza",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Joseph-Marie Martin",
+      "personId": "joseph-marie-martin",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "László Lékai",
+      "personId": "l-szl-l-kai",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

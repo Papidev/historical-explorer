@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Santa_cecilia_in_trastevere,_esterno_02.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Santa_cecilia_in_trastevere%2C_esterno_02.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Santa_cecilia_in_trastevere%2C_esterno_02.jpg/960px-Santa_cecilia_in_trastevere%2C_esterno_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Santa_cecilia_in_trastevere%2C_esterno_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "attribution": "Sailko",
+      "author": "Sailko",
+      "width": 2880,
+      "height": 2304,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Roma_-_basilica_di_Santa_Cecilia_in_Trastevere_-_2025-10-15_002.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Roma_-_basilica_di_Santa_Cecilia_in_Trastevere_-_2025-10-15_002.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Roma_-_basilica_di_Santa_Cecilia_in_Trastevere_-_2025-10-15_002.jpg/960px-Roma_-_basilica_di_Santa_Cecilia_in_Trastevere_-_2025-10-15_002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/Roma_-_basilica_di_Santa_Cecilia_in_Trastevere_-_2025-10-15_002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "C_messier",
+      "author": "C_messier",
+      "width": 5184,
+      "height": 3888,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Roma_-_basilica_di_Santa_Cecilia_in_Trastevere_-_2025-10-15_003.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Roma_-_basilica_di_Santa_Cecilia_in_Trastevere_-_2025-10-15_003.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Roma_-_basilica_di_Santa_Cecilia_in_Trastevere_-_2025-10-15_003.jpg/960px-Roma_-_basilica_di_Santa_Cecilia_in_Trastevere_-_2025-10-15_003.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Roma_-_basilica_di_Santa_Cecilia_in_Trastevere_-_2025-10-15_003.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "C_messier",
+      "author": "C_messier",
+      "width": 4975,
+      "height": 3731,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Santa_cecilia_in_trastevere,_esterno_02.jpg"
+}

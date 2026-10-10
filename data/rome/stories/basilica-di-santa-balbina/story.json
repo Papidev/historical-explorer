@@ -1,0 +1,158 @@
+{
+  "introduction": {
+    "text": "The Basilica di Santa Balbina is a Roman Catholic basilica on the Aventine Hill in Rome, notable for its early Christian origins, medieval renovations, and artistic treasures that reflect the city's religious and cultural history.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Site originally the home of Lucius Fabius Cilo, a wealthy Roman of the late second century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 150,
+          "precision": "approximate",
+          "endYear": 200,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Christian renovation around 370, walls heightened and layout modified.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 370,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Consecrated by Pope Gregory III in the eighth century to the mythical St Balbina.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 700,
+          "precision": "approximate",
+          "endYear": 799,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "First known Hungarian cardinal, Stephen I Báncsa, buried in the basilica in 1270.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1270,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "Revised under Pope Paul II in 1464.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1464,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "Revised under Cardinal Pompeo Arrigoni in 1600.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1600,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "Heavily restored in the 1930s, during which an ancient sarcophagus was discovered.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "Cosmatesque episcopal chair from the 13th century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "Baroque frescoes in the apse and triumphal arch painted by Anastasio Fontebuoni in 1599.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "Medieval defense tower adjoining the monastery.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Frescoes on the side walls dating from the 9th to 14th centuries.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "Baroque frescoes depicting Sts Paul and Peter on the triumphal arch and St Balbina in the apse.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Balbina of Rome",
+      "personId": "balbina-of-rome",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Gregory III",
+      "personId": "pope-gregory-iii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Paul II",
+      "personId": "pope-paul-ii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Cardinal Pompeo Arrigoni",
+      "personId": "cardinal-pompeo-arrigoni",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Anastasio Fontebuoni",
+      "personId": "anastasio-fontebuoni",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Sylvester I",
+      "personId": "pope-silvester-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Constantine the Great",
+      "personId": "constantine-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Lucius Fabius Cilo",
+      "personId": "lucius-fabius-cilo",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Septimius Severus",
+      "personId": "septimius-severus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Stephen I Báncsa",
+      "personId": "stephen-i-b-ncsa",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "balbina-of-rome",
+  "name": "Balbina of Rome",
+  "wikidataId": "Q508782",
+  "wikipediaTitle": "Balbina of Rome",
+  "content": {
+    "description": [
+      {
+        "text": "Balbina of Rome is celebrated as a virgin martyr whose story is preserved in the legendary Acts of Sts. Alexander and Balbina. According to the account, she was the daughter of Quirinus, a Roman tribune who had imprisoned Pope Alexander I and a man named Hermes. Quirinus, after witnessing the miracles performed by the two Christians, converted to Christianity and was later martyred by decapitation on 30 March 116. Balbina’s own fate is recorded as a death by execution in 130, though some traditions hold that she was beheaded alongside her father in 116.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After her martyrdom, Balbina’s relics were venerated in Rome and beyond. Her skull was placed in an ornate reliquary that now resides in the Metropolitan Museum of Art in New York City, and other relics were brought to Cologne Cathedral during the Middle Ages. The basilica of Santa Balbina, built in the 4th century over the house of consul Lucius Fabius Cilo on the Aventine Hill, stands as a lasting tribute to her sanctity, and she is honored as one of the 140 saints on the colonnade of St. Peter’s Square.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Balbina’s skull, preserved in a richly decorated reliquary, is currently housed in the Metropolitan Museum of Art in New York City.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Some of Balbina’s relics were transferred to Cologne Cathedral during the Middle Ages, likely around the same time that Quirinus’ body was donated to an abbess of Neuss in 1050 by Pope Leo IX.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The basilica of Santa Balbina was constructed in the 4th century over the former residence of consul Lucius Fabius Cilo on Rome’s Aventine Hill, behind the Baths of Caracalla.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 130,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Saint_Balbina.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Saint_Balbina.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Saint_Balbina.JPG/960px-Saint_Balbina.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Saint_Balbina.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC0",
+    "attribution": "AlfvanBeem",
+    "author": "AlfvanBeem",
+    "width": 1774,
+    "height": 2367,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Balbina of Rome",
+    "url": "https://en.wikipedia.org/wiki/Balbina_of_Rome"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:16:41.736Z"
+  }
+}

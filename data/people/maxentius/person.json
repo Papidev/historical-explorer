@@ -1,0 +1,67 @@
+{
+  "id": "maxentius",
+  "name": "Maxentius",
+  "wikidataId": "Q182070",
+  "wikipediaTitle": "Maxentius",
+  "content": {
+    "description": [
+      {
+        "text": "Marcus Aurelius Valerius Maxentius (c. 283 – 28 October 312) ruled as Roman emperor from 306 until his death in 312.  He was the son of former Emperor Maximian and the son‑in‑law of Emperor Galerius, and he was acclaimed emperor in Rome on 28 October 306 after a popular uprising of the city’s garrison.  During his reign he focused on restoring and embellishing the ancient capital, undertaking major building projects such as the Temple of the Divine Romulus, the Basilica of Maxentius, and the Circus of Maxentius, many of which were completed by his successor Constantine.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Maxentius’s reign ended at the Battle of the Milvian Bridge on 28 October 312, where he was defeated by Constantine.  According to contemporary accounts, Maxentius fled across the Tiber and drowned; his body was recovered the next day and displayed in Rome before being sent to Africa.  His death marked the end of the last emperor permanently residing in Rome and the consolidation of Constantine’s authority over the western Empire.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Maxentius was the last emperor to permanently reside in Rome, a status that ended with his death in 312.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Basilica of Maxentius, begun under his reign, was completed by Constantine and is one of the largest structures in the Roman Forum.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 2006 Italian archaeologists uncovered imperial insignia, including a sceptre, in a shrine near the Palatine Hill that are believed to have belonged to Maxentius.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 283,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 312,
+      "month": 10,
+      "day": 28,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Maxentius02_pushkin.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Maxentius02_pushkin.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Maxentius02_pushkin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Maxentius02_pushkin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0",
+    "attribution": "shakko",
+    "author": "shakko",
+    "width": 760,
+    "height": 1014,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Maxentius",
+    "url": "https://en.wikipedia.org/wiki/Maxentius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:49:57.403Z"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "quintus-lutatius-catulus",
+  "name": "Quintus Lutatius Catulus",
+  "wikidataId": "Q352035",
+  "wikipediaTitle": "Quintus Lutatius Catulus (consul 102 BC)",
+  "content": {
+    "description": [
+      {
+        "text": "Quintus Lutatius Catulus, born around 149 BC, rose to the consulship of the Roman Republic in 102 BC, sharing office with the famed general Gaius Marius. While Marius led the fight against the Teutones in Gaul, Catulus was tasked with holding the Alpine passes against the Cimbri. His cautious strategy, which included retreating to defensible positions and constructing fortifications along the Atesis River, ultimately failed to stop the Cimbri from entering the Po Valley. In 101 BC, as proconsul, he joined forces with Marius again; together they secured a decisive victory at the Battle of Vercellae, ending the Germanic threat and earning Catulus a triumph.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond the battlefield, Catulus distinguished himself as an orator, poet, and prose writer. He is credited with introducing the Hellenistic epigram to Rome, fostering a taste for short, personal poems that would influence later Latin lyricists such as Valerius Catullus. His literary output also included a history of his consulship written in the style of Xenophon and a collection of versiculi parum severi, of which only two epigrams survive. In addition to his cultural patronage, he invested his wealth in public architecture, erecting the Temple of Fortuna Huiusce Diei and the Porticus Catuli from the spoils of the Cimbrian War.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Catulus committed suicide by suffocating himself in a room with a charcoal fire after being prosecuted by Marius's nephew in 87 BC.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He built the Porticus Catuli, a public portico funded by the sale of Cimbrian spoils, which served as a lasting monument to his military success.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -148,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": -86,
+      "precision": "approximate"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Quintus Lutatius Catulus (consul 102 BC)",
+    "url": "https://en.wikipedia.org/wiki/Quintus_Lutatius_Catulus_(consul_102_BC)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:04:43.087Z"
+  }
+}

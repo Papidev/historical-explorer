@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Roma_chiesa_san_saba.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Roma_chiesa_san_saba.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Roma_chiesa_san_saba.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Roma_chiesa_san_saba.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Lalupa",
+      "author": "Lalupa",
+      "width": 800,
+      "height": 600,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "San_saba_2000-2_000116.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:San_saba_2000-2_000116.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/San_saba_2000-2_000116.jpg/960px-San_saba_2000-2_000116.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ef/San_saba_2000-2_000116.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Lalupa",
+      "author": "Lalupa",
+      "width": 1600,
+      "height": 1200,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "San_saba_entrata.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:San_saba_entrata.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/San_saba_entrata.JPG/960px-San_saba_entrata.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/San_saba_entrata.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Lalupa",
+      "author": "Lalupa",
+      "width": 2272,
+      "height": 1704,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Roma_chiesa_san_saba.jpg"
+}

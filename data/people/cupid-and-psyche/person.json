@@ -1,0 +1,49 @@
+{
+  "id": "cupid-and-psyche",
+  "name": "Cupid and Psyche",
+  "wikidataId": "Q135662",
+  "wikipediaTitle": "Cupid and Psyche",
+  "content": {
+    "description": [
+      {
+        "text": "Psyche, a mortal woman of extraordinary beauty, attracts the jealousy of Venus, who orders her son Cupid to make Psyche fall in love with a hideous creature. Cupid, however, falls for Psyche himself after being wounded by his own arrow, and secretly visits her in a golden house. Psyche is forbidden to look upon him, but her sisters’ envy leads her to break the taboo, causing Cupid to flee and leaving her to wander the world. Through a series of trials imposed by Venus—sorting grain, retrieving golden wool, and fetching a vial of the underworld’s beauty—Psyche proves her devotion and ultimately wins Cupid’s forgiveness, culminating in their divine marriage and the birth of their child, Voluptas.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The tale, preserved in Apuleius’s 2nd‑century novel *Metamorphoses*, has been a fertile source for art and literature across centuries. It was known to Boccaccio in the 14th century and first printed in 1469, after which it inspired countless retellings in poetry, drama, opera, and visual arts. Renaissance painters such as Raphael and Boucher depicted the wedding banquet of Cupid and Psyche, while composers like Lully and Franck set the story to music. The myth’s enduring appeal lies in its blend of romance, moral testing, and allegorical depth, making it a staple of both classical scholarship and popular culture.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Cupid and Psyche’s story has been adapted into operas, ballets, and symphonic poems, and it was a favored subject for Renaissance paintings of the wedding banquet.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "William-Adolphe_Bouguereau_-_The_abduction_of_Psyche,_1895.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:William-Adolphe_Bouguereau_-_The_abduction_of_Psyche%2C_1895.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/William-Adolphe_Bouguereau_-_The_abduction_of_Psyche%2C_1895.jpg/960px-William-Adolphe_Bouguereau_-_The_abduction_of_Psyche%2C_1895.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/William-Adolphe_Bouguereau_-_The_abduction_of_Psyche%2C_1895.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "William-Adolphe Bouguereau",
+    "author": "William-Adolphe Bouguereau",
+    "width": 978,
+    "height": 1757,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Cupid and Psyche",
+    "url": "https://en.wikipedia.org/wiki/Cupid_and_Psyche"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:45:49.287Z"
+  }
+}

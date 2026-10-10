@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Sant'Agnese_fuori_le_mura_-_esterno.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Sant'Agnese_fuori_le_mura_-_esterno.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Sant%27Agnese_fuori_le_mura_-_esterno.jpg/960px-Sant%27Agnese_fuori_le_mura_-_esterno.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Sant%27Agnese_fuori_le_mura_-_esterno.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "S. Agnese fuori le mura",
+      "author": "S. Agnese fuori le mura",
+      "width": 5128,
+      "height": 5472,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "AgneseFuoriPlan.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:AgneseFuoriPlan.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/AgneseFuoriPlan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/AgneseFuoriPlan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Giovanni Battista Cipriani",
+      "author": "Giovanni Battista Cipriani",
+      "width": 662,
+      "height": 426,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Architecture_in_Italy,_from_the_sixth_to_the_eleventh_century;_historical_and_critical_researches_(1896)_(14593900739).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Architecture_in_Italy%2C_from_the_sixth_to_the_eleventh_century%3B_historical_and_critical_researches_(1896)_(14593900739).jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/Architecture_in_Italy%2C_from_the_sixth_to_the_eleventh_century%3B_historical_and_critical_researches_%281896%29_%2814593900739%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/Architecture_in_Italy%2C_from_the_sixth_to_the_eleventh_century%3B_historical_and_critical_researches_%281896%29_%2814593900739%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "No restrictions",
+      "attribution": "Internet Archive Book Images",
+      "author": "Internet Archive Book Images",
+      "width": 362,
+      "height": 502,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Sant'Agnese_fuori_le_mura_-_esterno.jpg"
+}

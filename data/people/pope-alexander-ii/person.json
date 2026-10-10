@@ -1,0 +1,75 @@
+{
+  "id": "pope-alexander-ii",
+  "name": "Pope Alexander II",
+  "wikidataId": "Q171112",
+  "wikipediaTitle": "Pope Alexander II",
+  "content": {
+    "description": [
+      {
+        "text": "Anselm of Baggio, later Pope Alexander II, was born in the Milanese suburb of Baggio around 1010–1015 and became a leading figure in the Pataria reform movement that sought to rid the clergy of simony and clerical marriage. His reputation for uprightness earned him the bishopric of Lucca in 1056, where he worked closely with Hildebrand of Sovana to enforce clerical celibacy and suppress the buying and selling of benefices.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1061, after the death of Pope Nicholas II, the cardinals elected Anselm without the participation of Rome’s lay clergy, marking the first papal election decided solely by the cardinal bishops. He was crowned at nightfall in San Pietro in Vincoli and immediately set about reforming the Church, excommunicating the rival Pope Honorius II, ending the singing of the Alleluia during Lent, and authorising the Norman conquest of England in 1066, thereby extending papal influence across Europe.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Alexander II was the first pope elected exclusively by the cardinal bishops, a change that removed the influence of Rome’s lay clergy and the emperor from the papal election process.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He formally excommunicated the rival Pope Honorius II (Cadalo) in a synod at the Lateran Basilica in 1063, a decisive move that helped secure his own papacy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Alexander II ended the medieval practice of singing or reciting the Alleluia during the Lenten season, a reform that remained in force for centuries.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He authorised the Norman conquest of England in 1066, providing papal blessing and material support to William the Conqueror, which helped secure the English church’s submission to Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As a bishop of Lucca, he was a key supporter of the Pataria reform movement in Milan, which aimed to eliminate simony and clerical marriage and to enforce the Gregorian reforms.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1010,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1073,
+      "month": 4,
+      "day": 21,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Alessandro-ii-color.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Alessandro-ii-color.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/28/Alessandro-ii-color.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/28/Alessandro-ii-color.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "medieval paintings and files",
+    "author": "medieval paintings and files",
+    "width": 782,
+    "height": 1024,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Alexander II",
+    "url": "https://en.wikipedia.org/wiki/Pope_Alexander_II"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:26:43.852Z"
+  }
+}

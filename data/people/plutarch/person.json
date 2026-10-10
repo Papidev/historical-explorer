@@ -1,0 +1,65 @@
+{
+  "id": "plutarch",
+  "name": "Plutarch",
+  "wikidataId": "Q41523",
+  "wikipediaTitle": "Plutarch",
+  "content": {
+    "description": [
+      {
+        "text": "Plutarch was born before 50 CE in the small Boeotian town of Chaeronea, the son of a prominent local family.  He studied mathematics and philosophy in Athens under Ammonius around 66–67 CE, and later received Roman citizenship, possibly taking the name Lucius Mestrius Plutarchus.  He served as a priest of Apollo at Delphi, where he helped revive the temple’s shrines and was honored with a portrait bust by the Delphians and Chaeroneans.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Plutarch is best known for his literary works, especially the Parallel Lives—a collection of paired biographies of Greek and Roman figures that illuminate moral character—and the Moralia, a wide-ranging anthology of essays and speeches.  His writings were widely translated and have influenced Western literature from the Renaissance to modern times, with notable figures such as Shakespeare and Rousseau drawing on his insights.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He served as epimeletes (manager) of the Amphictyonic League for at least five terms, from 107 to 127 CE, during which he organized the Pythian Games.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Plutarch was a vegetarian and wrote two discourses in the Moralia discussing the ethics of meat‑eating.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A portrait bust of Plutarch, dated to the 2nd century, was dedicated to him by the Delphians and Chaeroneans in recognition of his efforts to restore the Delphic shrines.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 50,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 120,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Plutarch_of_Chaeronea-03.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Plutarch_of_Chaeronea-03.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/34/Plutarch_of_Chaeronea-03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/34/Plutarch_of_Chaeronea-03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Odysses",
+    "author": "Odysses",
+    "width": 930,
+    "height": 1251,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Plutarch",
+    "url": "https://en.wikipedia.org/wiki/Plutarch"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:54:18.939Z"
+  }
+}

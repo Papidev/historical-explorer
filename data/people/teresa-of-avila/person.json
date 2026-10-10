@@ -1,0 +1,77 @@
+{
+  "id": "teresa-of-avila",
+  "name": "Teresa of Avila",
+  "wikidataId": "Q174880",
+  "wikipediaTitle": "Teresa of Ávila",
+  "content": {
+    "description": [
+      {
+        "text": "Teresa of Avila, born Teresa Sánchez de Cepeda Dávila y Ahumada on 28 March 1515, entered the Carmelite convent of the Incarnation at the age of twenty and soon became a leading mystic of the Counter‑Reformation.  Her early years were marked by intense asceticism and a series of ecstatic visions, the most famous of which was the transverberation in which a golden lance pierced her heart, a moment that later inspired Gianlorenzo Bernini’s celebrated sculpture.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In the following decades Teresa transformed the Carmelite order, founding the Discalced Carmelites with the help of John of the Cross and establishing a strict rule of poverty and prayer.  Her writings—most notably *The Interior Castle* and *The Way of Perfection*—became foundational texts for Christian mysticism.  She was canonised in 1622 by Pope Gregory XV and, in 1970, became the first woman to be named a Doctor of the Church by Pope Paul VI.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Teresa’s vision of a golden lance piercing her heart inspired Gianlorenzo Bernini’s famous sculpture *The Ecstasy of Saint Teresa* in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She was canonised by Pope Gregory XV in 1622, forty years after her death.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1970 Pope Paul VI declared Teresa the first female Doctor of the Church, a title she shares with Catherine of Siena.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Her book *The Interior Castle* uses the metaphor of a seven‑mansion castle to describe the stages of spiritual growth.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Teresa founded the Discalced Carmelites, a reformed branch of the Carmelite order that emphasized poverty, silence and contemplative prayer.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1515,
+      "month": 3,
+      "day": 28,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1582,
+      "month": 10,
+      "day": 4,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Santa_Teresa_de_Jesús_(Museo_del_Prado).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Santa_Teresa_de_Jes%C3%BAs_(Museo_del_Prado).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Santa_Teresa_de_Jes%C3%BAs_%28Museo_del_Prado%29.jpg/960px-Santa_Teresa_de_Jes%C3%BAs_%28Museo_del_Prado%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/20/Santa_Teresa_de_Jes%C3%BAs_%28Museo_del_Prado%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Eduardo Balaca",
+    "author": "Eduardo Balaca",
+    "width": 2203,
+    "height": 2952,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Teresa of Ávila",
+    "url": "https://en.wikipedia.org/wiki/Teresa_of_%C3%81vila"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:42:27.004Z"
+  }
+}

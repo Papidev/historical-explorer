@@ -1,0 +1,77 @@
+{
+  "id": "angelo-maria-quirini",
+  "name": "Angelo Maria Quirini",
+  "wikidataId": "Q536170",
+  "wikipediaTitle": "Angelo Maria Querini",
+  "content": {
+    "description": [
+      {
+        "text": "Angelo Maria Quirini was born in Venice on 30 March 1680 and entered the Benedictine Order in Florence in 1695. He was ordained in 1702 and spent the next decade traveling through England, France, Germany, and the Netherlands, where he corresponded with prominent scholars such as Bernard de Montfaucon, Isaac Newton, and Voltaire.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After returning to Italy, Quirini became abbot of the Benedictine monastery in Rome and was tasked with compiling the annals of the order. He was elected Archbishop of Corfu in 1723, created a cardinal in pectore by Pope Benedict XIII in 1726, and later served as head librarian of the Vatican Library in 1730. He founded the Biblioteca Queriniana in Brescia in 1745 and financed the completion of St. Hedwig Church in Berlin, while also serving as a member of several European academies of sciences.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Quirini was a member of the first learned society of the Habsburg Monarchy, the Societas eruditorum incognitorum in terris Austriacis.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He had significant disagreements with Pope Benedict XIV over the appointment of Cardinal Passionei as pro‑librarian and the pope's stance in a conflict with Venice.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Quirini compiled a five‑volume edition of the correspondence of Cardinal Reginald Pole.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as a member of the Academies of Sciences of Berlin, Vienna, and Russia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After conflicts with the pope, Quirini was sent back to his diocese in Brescia, where he died on 6 January 1755.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1680,
+      "month": 3,
+      "day": 30,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1755,
+      "month": 1,
+      "day": 6,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pinacoteca_Querini_Stampalia_-_Angelo_Maria_Querini_-_Bartolomeo_Nazari_(Medium_resolution).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pinacoteca_Querini_Stampalia_-_Angelo_Maria_Querini_-_Bartolomeo_Nazari_(Medium_resolution).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Pinacoteca_Querini_Stampalia_-_Angelo_Maria_Querini_-_Bartolomeo_Nazari_%28Medium_resolution%29.jpg/960px-Pinacoteca_Querini_Stampalia_-_Angelo_Maria_Querini_-_Bartolomeo_Nazari_%28Medium_resolution%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Pinacoteca_Querini_Stampalia_-_Angelo_Maria_Querini_-_Bartolomeo_Nazari_%28Medium_resolution%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Didier Descouens",
+    "author": "Didier Descouens",
+    "width": 5461,
+    "height": 8094,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Angelo Maria Querini",
+    "url": "https://en.wikipedia.org/wiki/Angelo_Maria_Querini"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:02:44.525Z"
+  }
+}

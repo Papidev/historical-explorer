@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Colonne_di_Veio_a_palazzo_Wedekind.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Colonne_di_Veio_a_palazzo_Wedekind.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Colonne_di_Veio_a_palazzo_Wedekind.JPG/960px-Colonne_di_Veio_a_palazzo_Wedekind.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/Colonne_di_Veio_a_palazzo_Wedekind.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "user:Lalupa",
+      "author": "user:Lalupa",
+      "width": 2095,
+      "height": 1700,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Tempio_di_veio.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Tempio_di_veio.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Tempio_di_veio.JPG/960px-Tempio_di_veio.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Tempio_di_veio.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Livioandronico2013",
+      "author": "Livioandronico2013",
+      "width": 5184,
+      "height": 3888,
+      "discoveredVia": "wikipedia-page-image",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Colonne_di_Veio_a_palazzo_Wedekind.JPG"
+}

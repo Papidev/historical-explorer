@@ -1,0 +1,132 @@
+{
+  "introduction": {
+    "text": "The Argiletum was an ancient Roman street that ran from the Suburra district to the Roman Forum, serving as a commercial hub and later a passageway during the imperial age.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The Argiletum originally ran between the Comitium and the Basilica Pauli before being absorbed by the construction of the Imperial fora from the time of Julius Caesar onwards.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -44,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "During the Flavian rule (AD 69–96), the Argiletum became a principal node of public space.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 69,
+          "precision": "approximate",
+          "endYear": 96,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "By the time of Martial (died about AD 103), the Argiletum had become a seedy district filled with taverns and brothels.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 103,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Varro claimed that the name of the street derived from a Greek scoundrel.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "history5",
+        "description": "The first stretch of the Argiletum was replaced by the Forum of Nerva during the imperial age, but remained a passageway known as Forum Transitorium.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "history6",
+        "description": "The Argiletum was known as the street of booksellers, mentioned by Horace, Martial, and Seneca.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The Argiletum branched into the Vicus Patricius (now Via Urbana) and the Clivus Suburanus (now Via in Selci) on its eastern side.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "On its western side, the Argiletum ended between the Basilica Aemilia and the Curia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "During the imperial age, the first stretch of the Argiletum was replaced by the Forum of Nerva, which maintained a function of passageway and was also known as Forum Transitorium.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "A quadrifrons (Tetrapylon) was located at the junction of the Roman Forum, the Argiletum, and the Forum of Caesar.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "The Temple of Janus Geminus was located at the lower Argiletum.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Julius Caesar",
+      "personId": "julius-caesar",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Livy",
+      "personId": "livy",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Horace",
+      "personId": "horace",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Martial",
+      "personId": "martial",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Seneca the Younger",
+      "personId": "seneca-the-younger",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Varro",
+      "personId": "varro",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Evander of Pallantium",
+      "personId": "evander-of-pallantium",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Mercury (mythology)",
+      "personId": "mercury-mythology",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Carmenta",
+      "personId": "carmenta",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

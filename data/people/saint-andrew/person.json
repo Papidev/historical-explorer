@@ -1,0 +1,65 @@
+{
+  "id": "saint-andrew",
+  "name": "Saint Andrew",
+  "wikidataId": "Q43399",
+  "wikipediaTitle": "Andrew the Apostle",
+  "content": {
+    "description": [
+      {
+        "text": "Andrew the Apostle was a fisherman from Bethsaida in Galilee, the brother of Simon Peter, and the first disciple called by Jesus after following John the Baptist. He introduced Peter to Jesus, earning the Eastern Orthodox title Protokletos, or \"first called.\"",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After Jesus’ ascension, Andrew travelled widely, preaching in Scythia and Thrace before arriving in Rome. He was martyred by crucifixion on an X‑shaped cross in Patras around AD 60, and his relics were moved to Patras, Constantinople, and later returned to Patras for veneration.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In Eastern Orthodox tradition, Andrew is honored with the title Protokletos, meaning \"first called,\" reflecting his role as the first disciple to recognize Jesus as the Messiah.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The X‑shaped cross on which Andrew was crucified is known as the Saint Andrew's Cross or saltire, and its shape inspired the flag of Scotland.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Andrew’s relics, including a skull, a finger, and the cross of his martyrdom, are kept in the Church of St. Andrew at Patras and are venerated annually on 30 November.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 5,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 60,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Martirio_de_San_Andrés,_por_Juan_Correa_de_Vivar.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Martirio_de_San_Andr%C3%A9s%2C_por_Juan_Correa_de_Vivar.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Martirio_de_San_Andr%C3%A9s%2C_por_Juan_Correa_de_Vivar.jpg/960px-Martirio_de_San_Andr%C3%A9s%2C_por_Juan_Correa_de_Vivar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/70/Martirio_de_San_Andr%C3%A9s%2C_por_Juan_Correa_de_Vivar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Juan Correa de Vivar",
+    "author": "Juan Correa de Vivar",
+    "width": 2094,
+    "height": 2953,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Andrew the Apostle",
+    "url": "https://en.wikipedia.org/wiki/Andrew_the_Apostle"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:10:13.414Z"
+  }
+}

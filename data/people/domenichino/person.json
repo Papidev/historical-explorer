@@ -1,0 +1,69 @@
+{
+  "id": "domenichino",
+  "name": "Domenichino",
+  "wikidataId": "Q320118",
+  "wikipediaTitle": "Domenichino",
+  "content": {
+    "description": [
+      {
+        "text": "Domenico Zampieri, known as Domenichino, was born in Bologna on 21 October 1581 to a shoemaker and began his artistic training under Denis Calvaert. After a quarrel with Calvaert he joined the Accademia degli Incamminati of the Carracci, where his small stature earned him the affectionate nickname Domenichino, meaning \"little Domenico\". In 1602 he moved to Rome, where he became a prominent apprentice of Annibale Carracci and worked alongside fellow Bolognese artists such as Albani and Guido Reni, gaining early commissions for frescoes in the Galleria Farnese and the Loggia del Giardino of the Palazzo Farnese.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Throughout the 1610s Domenichino produced celebrated works including the frescoes of the Life of Saint Cecilia in San Luigi dei Francesi and the altarpiece The Last Communion of St. Jerome, which critics compared to Raphael’s Transfiguration. He was appointed Papal Architect, designing plans for the facades of Sant'Andrea della Valle and Sant'Ignazio, and later moved to Naples in 1631 to decorate the Cappella del Tesoro di San Gennaro, a commission that occupied him until his death in 1641. His career was marked by both artistic acclaim and rivalry, notably with Lanfranco, and he remained a central figure in the Bolognese School until his passing.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "His nickname Domenichino, meaning \"little Domenico,\" reflected his short stature and was widely used by contemporaries.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In addition to painting, Domenichino served as a Papal Architect, contributing designs for the facades of major Roman churches such as Sant'Andrea della Valle and Sant'Ignazio.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He had a keen interest in music, studying the construction of instruments suited to the stile moderno and the seconda pratica, and produced numerous drawings that illustrate his musical pursuits.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1581,
+      "month": 10,
+      "day": 21,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1641,
+      "month": 4,
+      "day": 6,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Dominique_zampieri_bm_116.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Dominique_zampieri_bm_116.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Dominique_zampieri_bm_116.jpg/960px-Dominique_zampieri_bm_116.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Dominique_zampieri_bm_116.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Randon sc. 0dieuvre exc.",
+    "author": "Randon sc. 0dieuvre exc.",
+    "width": 2783,
+    "height": 3680,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Domenichino",
+    "url": "https://en.wikipedia.org/wiki/Domenichino"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:23:02.521Z"
+  }
+}

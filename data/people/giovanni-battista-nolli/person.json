@@ -1,0 +1,73 @@
+{
+  "id": "giovanni-battista-nolli",
+  "name": "Giovanni Battista Nolli",
+  "wikidataId": "Q2525097",
+  "wikipediaTitle": "Giambattista Nolli",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Battista Nolli was born on 9 April 1701 in Castiglione d'Intelvi, a small town in the Como province of northern Italy. He moved to Rome in his early adulthood, where he benefited from the patronage of influential patrician families such as the Albani and Corsini, which helped launch his career as an architect and surveyor.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Nolli is best remembered for creating the Nolli Map, a highly detailed copperplate plan of Rome that he began surveying in 1736 and engraved in 1748. The map, composed of twelve large plates, was commissioned by Pope Benedict XIV to provide accurate demarcations for Rome’s fourteen traditional districts. Its precision and innovative representation of the city’s built environment made it the most accurate description of Rome available at the time and it remained a foundational reference for Roman planning until the 1970s.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Nolli Map reoriented Rome from the conventional eastward orientation to magnetic north, reflecting Nolli’s use of a compass to determine the city’s topography.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The map was used as the base for all Roman mapping and planning activities for more than two centuries, remaining in official use until the 1970s.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Nolli collaborated with the renowned engraver Giovanni Battista Piranesi and the architect Giuseppe Vasi to produce a scaled‑down edition of the map in the same year the original was finished.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The commission that prompted the creation of the Nolli Map came directly from Pope Benedict XIV, who sought a detailed survey to aid in the demarcation of Rome’s districts.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1701,
+      "month": 4,
+      "day": 9,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1756,
+      "month": 7,
+      "day": 3,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Nolli_map1.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Nolli_map1.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Nolli_map1.jpg/960px-Nolli_map1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Nolli_map1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "The original uploader was Twospoonfuls at English Wikipedia.",
+    "author": "The original uploader was Twospoonfuls at English Wikipedia.",
+    "width": 998,
+    "height": 685,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giambattista Nolli",
+    "url": "https://en.wikipedia.org/wiki/Giambattista_Nolli"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:16:24.081Z"
+  }
+}

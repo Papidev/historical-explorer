@@ -1,0 +1,69 @@
+{
+  "id": "pope-john-paul-ii",
+  "name": "Pope John Paul II",
+  "wikidataId": "Q989",
+  "wikipediaTitle": "Pope John Paul II",
+  "content": {
+    "description": [
+      {
+        "text": "Born Karol Józef Wojtyła in 1920 in Wadowice, Poland, he became a priest, theologian, and eventually Archbishop of Kraków. He was elected pope on 16 October 1978, becoming the first non‑Italian pope in 455 years and the third longest‑serving pope after St. Peter and Pius IX. He was known for his philosophical work, his love of the arts, and his commitment to human dignity.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his 26‑year pontificate he travelled to 129 countries, beatified 1,344 people, canonised 483 saints, and played a pivotal role in the fall of communism in Eastern Europe. He promulgated the 1983 Code of Canon Law and the Catechism of the Catholic Church, and he was canonised by Pope Francis in 2014. He died on 2 April 2005 in Vatican City.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the first non‑Italian pope since Adrian VI in the 16th century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was one of the most‑travelled world leaders, visiting 129 countries during his pontificate.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was canonised by Pope Francis in 2014, becoming the first pope to be canonised after his death.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1920,
+      "month": 5,
+      "day": 18,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 2005,
+      "month": 4,
+      "day": 2,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_John_Paul_II_smile.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_John_Paul_II_smile.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Pope_John_Paul_II_smile.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Pope_John_Paul_II_smile.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0 pl",
+    "attribution": "Gov.pl",
+    "author": "Unknown authorUnknown author",
+    "width": 826,
+    "height": 1004,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope John Paul II",
+    "url": "https://en.wikipedia.org/wiki/Pope_John_Paul_II"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:28:45.367Z"
+  }
+}

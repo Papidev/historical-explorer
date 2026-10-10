@@ -1,0 +1,61 @@
+{
+  "id": "arnolfo-di-cambio",
+  "name": "Arnolfo di Cambio",
+  "wikidataId": "Q315249",
+  "wikipediaTitle": "Arnolfo di Cambio",
+  "content": {
+    "description": [
+      {
+        "text": "Arnolfo di Cambio, born around 1240 in Colle Val d'Elsa, began his career as a lead assistant to the renowned sculptor Nicola Pisano. He worked on the marble pulpit of Siena Cathedral between 1265 and 1268, a project that helped him develop a distinctive style that blended the solidity of Romanesque tradition with emerging Gothic sensibilities. By the late 1260s he was already producing independent commissions, including a tomb sculpture that showcased his skill in rendering human figures with a naturalistic touch.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In the 1290s Arnolfo shifted his focus to architecture, becoming the capomaestro, or Head of Works, for Florence Cathedral in 1300. He designed the façade of Santa Maria del Fiore and oversaw the construction of the Palazzo Vecchio, while also contributing sculptural elements to the cathedral’s lower façade. His influence extended beyond Florence; he designed the sixth city wall that encircled the city from 1284 to 1333, a monumental fortification that reflected the growing importance of urban defense in medieval Italy. His later works included the monument to Pope Boniface VIII in the Vatican crypt and the celebrated statue of Charles I of Anjou in Rome’s Capitoline Museums.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Arnolfo di Cambio designed the sixth city wall around Florence, a massive fortification project that spanned from 1284 to 1333.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was credited with the monument to Pope Boniface VIII in the Vatican crypt, a work that exemplifies his ability to blend sculptural detail with architectural context.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1240,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1300,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Arnolfo_di_Lapo.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Arnolfo_di_Lapo.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Arnolfo_di_Lapo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Arnolfo_di_Lapo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Nicolas de Larmessin and Esme de Boulonois",
+    "author": "Nicolas de Larmessin and Esme de Boulonois",
+    "width": 606,
+    "height": 886,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Arnolfo di Cambio",
+    "url": "https://en.wikipedia.org/wiki/Arnolfo_di_Cambio"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:21:29.416Z"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "septimius-severus",
+  "name": "Septimius Severus",
+  "wikidataId": "Q1442",
+  "wikipediaTitle": "Septimius Severus",
+  "content": {
+    "description": [
+      {
+        "text": "Lucius Septimius Severus, born in Leptis Magna in 145, rose through the Roman cursus honorum before seizing the throne in 193 during the Year of the Five Emperors. After deposing Didius Julianus, he defeated rival claimants Pescennius Niger and Clodius Albinus, securing control of the western provinces and later campaigning against the Parthian Empire, sacking Ctesiphon and annexing parts of Mesopotamia. His reign was marked by aggressive military expansion and the reorganization of the Praetorian Guard, which he replaced with new cohorts drawn from veteran legions.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Severus also invested heavily in public works, erecting the Arch of Septimius Severus in Rome and the Septizodium, and he enriched his native Leptis Magna with triumphal arches and other monuments. He married Julia Domna, whose political influence helped shape his policies, and fathered Caracalla and Geta, who succeeded him. His reign ended abruptly in 211 when he died of an infectious disease in Eboracum (York), after a campaign in Britain that had reached as far north as Caledonia.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the first Roman emperor to station part of the imperial army in Italy, creating a central reserve that could be dispatched anywhere.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Severus increased the number of legions from 30 to 33, adding three new legions named Parthica to strengthen the eastern frontier.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He built the Septizodium in Rome, a monumental façade that showcased his architectural patronage.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 145,
+      "month": 4,
+      "day": 11,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 211,
+      "month": 2,
+      "day": 4,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Septimius_Severus_Glyptothek_Munich_357_cropped.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Septimius_Severus_Glyptothek_Munich_357_cropped.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Septimius_Severus_Glyptothek_Munich_357_cropped.jpg/960px-Septimius_Severus_Glyptothek_Munich_357_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Septimius_Severus_Glyptothek_Munich_357_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "This image has been extracted from another file",
+    "author": "This image has been extracted from another file",
+    "width": 1500,
+    "height": 1500,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Septimius Severus",
+    "url": "https://en.wikipedia.org/wiki/Septimius_Severus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:48:15.431Z"
+  }
+}

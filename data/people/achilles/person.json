@@ -1,0 +1,61 @@
+{
+  "id": "achilles",
+  "name": "Achilles",
+  "wikidataId": "Q41746",
+  "wikipediaTitle": "Achilles",
+  "content": {
+    "description": [
+      {
+        "text": "Achilles, the son of the sea‑nymph Thetis and king Peleus, was raised in Phthia alongside his childhood companion Patroclus and received his education from the centaur Chiron. He emerged as the commander of the Myrmidons and is celebrated in Homer's Iliad as the greatest of all Greek warriors, whose prowess on the battlefield made him a central figure in the Trojan War.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "According to later tradition, Achilles was dipped in the river Styx by his mother, leaving his heel untouched and vulnerable; this myth explains why he was ultimately killed by Paris’s arrow. The phrase “Achilles’ heel” has entered modern usage to denote a single point of weakness, and the Achilles tendon is named after him following the same legend.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Achilles was taught by the centaur Chiron, who was renowned as the most righteous of the centaurs.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The myth that Achilles was dipped in the Styx and left vulnerable at the heel originates from Statius’s unfinished epic Achilleid, written in the first century AD.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The expression “Achilles’ heel” has become a common idiom meaning a single point of weakness that can lead to downfall.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Achilles tendon, a key structure in the human foot, is named after the hero following the same legend of his vulnerable heel.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Leon_Benouville_The_Wrath_of_Achilles.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Leon_Benouville_The_Wrath_of_Achilles.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leon_Benouville_The_Wrath_of_Achilles.jpg/960px-Leon_Benouville_The_Wrath_of_Achilles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Leon_Benouville_The_Wrath_of_Achilles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "François-Léon Benouville",
+    "author": "François-Léon Benouville",
+    "width": 1137,
+    "height": 1929,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Achilles",
+    "url": "https://en.wikipedia.org/wiki/Achilles"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:53:29.418Z"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "giovanni-panico",
+  "name": "Giovanni Panico",
+  "wikidataId": "Q1352322",
+  "wikipediaTitle": "Giovanni Panico",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Panico was born on 12 April 1895 in Tricase, a small town in southern Italy. He grew up in a large farming family, the sixth of eleven children, and was educated first by a private tutor and then at the minor seminary in Ugento. He went on to study at the Gregorian University and the Pontifical Roman Seminary in Rome, where he earned doctorates in theology and canon law and served as the official organist for the seminary. He was ordained a priest on 14 March 1919 by Cardinal Basilio Pompili and, that same summer, founded boys’ and girls’ choirs for the children of Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Panico entered the Vatican diplomatic service in the 1920s, serving as auditor in Argentina and Czechoslovakia before becoming Apostolic Delegate to Australia and New Zealand in 1935. He advocated for native‑born bishops in those countries, a move that earned him the nickname “Panicky Jack” among Irish clergy. During World War II he organized charities for prisoners of war, and in 1948 he opened Holy Name Seminary in Christchurch. He was appointed nuncio to Peru, Canada, and Portugal in the 1950s, and in March 1962 he was created a cardinal by Pope John XXIII. He died in 1962 at age 67 and was buried in his hometown of Tricase, where his remains were later moved to the Church of the Nativity of the Blessed Virgin Mary.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Panico was an accomplished musician, playing both the organ and the piano, and served as the official organist for the Pontifical Roman Seminary during his studies.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In the summer of 1919, after his ordination, he founded a boys’ choir and a separate girls’ choir for the children of Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "While serving in Prague, Panico contributed to the foundation of the University of Bratislava.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "For his diplomatic service, he was awarded the French Legion of Honour.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1895,
+      "month": 4,
+      "day": 12,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1962,
+      "month": 7,
+      "day": 7,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Giovanni_Panico.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Giovanni_Panico.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Giovanni_Panico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Giovanni_Panico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Karlshammer",
+    "author": "Karlshammer",
+    "width": 530,
+    "height": 653,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giovanni Panico",
+    "url": "https://en.wikipedia.org/wiki/Giovanni_Panico"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:43:06.931Z"
+  }
+}

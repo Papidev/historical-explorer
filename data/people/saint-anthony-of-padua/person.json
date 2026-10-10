@@ -1,0 +1,57 @@
+{
+  "id": "saint-anthony-of-padua",
+  "name": "Saint Anthony of Padua",
+  "wikidataId": "Q167477",
+  "wikipediaTitle": "Anthony of Padua",
+  "content": {
+    "description": [
+      {
+        "text": "Anthony of Padua was born Fernando Martins de Bulhões in Lisbon on 15 August 1195. He entered the Canons Regular of the Holy Cross at age 15 and later joined the nascent Franciscan order, adopting the name Anthony after the chapel dedicated to Saint Anthony the Great. His early years were marked by rigorous theological study and a growing reputation as a gifted preacher, culminating in a memorable sermon in Forlì in 1222 that impressed both Dominicans and Franciscans alike.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After being entrusted by Francis of Assisi to oversee the education of friars, Anthony travelled across Italy and France, delivering sermons that earned him the nickname “Doctor Arca testamenti.” He suffered ergotism in 1231 and died on 13 June while returning to Padua. His canonisation by Pope Gregory IX on 30 May 1232 and later designation as a Doctor of the Church cemented his legacy as a powerful orator and miracle worker, especially noted for the tradition of praying for lost items.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The custom of asking Saint Anthony for help in finding lost or stolen objects originates from an incident in Bologna where he lost his personal psalter. He prayed for its return, and the thief not only returned the book but also rejoined the order, an event that led to the widespread devotion to seek his intercession for lost things.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1195,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1231,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "(Venice)_Sant'Antonio_da_Padova_by_Alvise_Vivarini_-_Correr_Museum.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:(Venice)_Sant'Antonio_da_Padova_by_Alvise_Vivarini_-_Correr_Museum.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/%28Venice%29_Sant%27Antonio_da_Padova_by_Alvise_Vivarini_-_Correr_Museum.jpg/960px-%28Venice%29_Sant%27Antonio_da_Padova_by_Alvise_Vivarini_-_Correr_Museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ad/%28Venice%29_Sant%27Antonio_da_Padova_by_Alvise_Vivarini_-_Correr_Museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Didier Descouens",
+    "author": "Didier Descouens",
+    "width": 4958,
+    "height": 6385,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Anthony of Padua",
+    "url": "https://en.wikipedia.org/wiki/Anthony_of_Padua"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:14:36.764Z"
+  }
+}

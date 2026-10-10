@@ -1,0 +1,73 @@
+{
+  "id": "diocletian",
+  "name": "Diocletian",
+  "wikidataId": "Q43107",
+  "wikipediaTitle": "Diocletian",
+  "content": {
+    "description": [
+      {
+        "text": "Diocletian, born Diocles in the Roman province of Dalmatia around 242 CE, rose from a low‑status family to become a cavalry commander under emperors Aurelian and Probus. After the mysterious deaths of Emperor Carus and his son Numerian in 284, the eastern army proclaimed Diocles emperor, and he defeated the rival claimant Carinus at the Battle of the Margus. His reign began a decisive end to the Crisis of the Third Century, stabilising the empire through military victories against the Sarmatians, Carpi, Alamanni, and a successful campaign against Persia that culminated in the capture of Ctesiphon.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Diocletian is best known for instituting the tetrarchy, appointing Maximian as co‑emperor and later Galerius and Constantius as Caesars, thereby dividing the empire into four parts and creating a system of succession that lasted until Constantine’s rise. He also carried out sweeping administrative reforms, reorganised provincial boundaries, introduced a comprehensive tax system based on a new census, and issued the infamous Edict on Maximum Prices. In 305 he became the first Roman emperor to voluntarily abdicate, retiring to his palace on the Dalmatian coast where he tended vegetable gardens until his death around 311 CE. His legacy endured in the form of a more bureaucratic state and a precedent for imperial retirement.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Diocletian was the first Roman emperor to voluntarily abdicate the throne, doing so on 1 May 305.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He launched the Diocletianic Persecution, the empire’s last and largest official persecution of Christianity.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The tetrarchy he established divided the empire into four parts, with each tetrarch ruling a quarter‑division.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "New administrative capitals such as Nicomedia, Mediolanum, Sirmium, and Treverorum were founded to bring the imperial court closer to the frontiers.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His palace on the Dalmatian coast later became the core of the modern city of Split in Croatia.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 242,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 311,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Istanbul_-_Museo_archeol._-_Diocleziano_(284-305_d.C.)_-_Foto_G._Dall'Orto_28-5-2006.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Istanbul_-_Museo_archeol._-_Diocleziano_(284-305_d.C.)_-_Foto_G._Dall'Orto_28-5-2006.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Istanbul_-_Museo_archeol._-_Diocleziano_%28284-305_d.C.%29_-_Foto_G._Dall%27Orto_28-5-2006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Istanbul_-_Museo_archeol._-_Diocleziano_%28284-305_d.C.%29_-_Foto_G._Dall%27Orto_28-5-2006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Attribution",
+    "attribution": "G.dallorto",
+    "author": "G.dallorto",
+    "width": 794,
+    "height": 978,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Diocletian",
+    "url": "https://en.wikipedia.org/wiki/Diocletian"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T16:57:04.442Z"
+  }
+}

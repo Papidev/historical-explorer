@@ -1,0 +1,81 @@
+{
+  "id": "corrado-giaquinto",
+  "name": "Corrado Giaquinto",
+  "wikidataId": "Q740934",
+  "wikipediaTitle": "Corrado Giaquinto",
+  "content": {
+    "description": [
+      {
+        "text": "Corrado Giaquinto was born on 8 February 1703 in Molfetta, a town in the Kingdom of Naples, where he first apprenticed with the modest local painter Saverio Porta before deciding to pursue a secular artistic career. In 1724 he left his hometown and, together with contemporaries Francesco de Mura and Giuseppe Bonito, studied in the prolific Neapolitan studio of Francesco Solimena, either directly under Solimena or through his pupil Nicola Maria Rossi. By 1723 Giaquinto had moved to Rome to work in the studio of Sebastiano Conca, where he painted in several churches and eventually opened an independent studio near the Ponte Sisto in 1727, marking the beginning of a peripatetic career that would take him to Naples, Rome, Turin, and Madrid.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his mature period Giaquinto received prestigious commissions across Italy and Spain, including a 1730 work for King John V of Portugal and frescoes in the churches of San Nicola dei Lorenesi and Santa Teresa in Turin. In 1753 he was patronized by Ferdinand VI of Spain and appointed director of the Academy of San Fernando, where his influence reached future masters such as Antonio González Velázquez, José del Castillo, Mariano Salvador Maella, and even Francisco Goya. He returned to Naples in 1762 to decorate the sacristy of San Luigi di Palazzo and died there on 18 April 1766, leaving a legacy as the greatest exponent of Roman Rococo and a celebrated colorist whose style blended the seriousness of the Italian Grand Style with the refinement of the 18th century.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Giaquinto was patronized by Ferdinand VI of Spain and ultimately appointed director of the Academy of San Fernando, where he influenced painters such as Antonio González Velázquez, José del Castillo, Mariano Salvador Maella, and Francisco Goya.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His frescoes in the main staircase of the Royal Palace of Madrid depict The Triumph of Religion and the Church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Art historians have called Giaquinto the \"greatest exponent\" of Roman Rococo and noted him as a master colorist who combined the seriousness of the Italian Grand Style with the loveliness and refinement of the 18th century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Giaquinto married Caterina Silvestri Agate in 1734, but his wife died soon after childbirth in 1735, a personal tragedy that coincided with his return to Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The first documented work by Giaquinto was a painting of Christ crucified with the Madonna, Saint John Evangelist, and Magdalene, commissioned in 1730 by King John V of Portugal for the Basilica of the Palace of Mafra.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Giaquinto trained under Francesco Solimena in Naples and later in the studio of Sebastiano Conca in Rome, experiences that shaped his early artistic development.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1703,
+      "month": 2,
+      "day": 8,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1766,
+      "month": 4,
+      "day": 18,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Corrado_Giaquinto_-_Autoportrait_(Palais_Fesch).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Corrado_Giaquinto_-_Autoportrait_(Palais_Fesch).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Corrado_Giaquinto_-_Autoportrait_%28Palais_Fesch%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Corrado_Giaquinto_-_Autoportrait_%28Palais_Fesch%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Corrado Giaquinto",
+    "author": "Corrado Giaquinto",
+    "width": 508,
+    "height": 668,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Corrado Giaquinto",
+    "url": "https://en.wikipedia.org/wiki/Corrado_Giaquinto"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:25:16.020Z"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "publius-valerius-publicola",
+  "name": "Publius Valerius Publicola",
+  "wikidataId": "Q318726",
+  "wikipediaTitle": "Publius Valerius Poplicola",
+  "content": {
+    "description": [
+      {
+        "text": "Publius Valerius Publicola was a key figure in the overthrow of the Roman monarchy in 509 BC and became the first consul of the nascent Republic. Born into the wealthy Valerii of Sabine origin, he used his influence to rally the plebeians against the tyranny of Tarquinius Superbus, and together with Lucius Junius Brutus and others, he deposed the king and established the consulship as the highest executive office. His election as consul in 509 BC, after the exile of Collatinus, marked the beginning of a new republican era.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Publicola's military leadership was equally decisive. He commanded the Roman infantry at the Battle of Silva Arsia, where the Romans defeated the Etruscan forces of Tarquinius. He later negotiated a treaty with the king of Clusium, Lars Porsena, and defended Rome against the Sabines, earning a triumph in 504 BC. His reforms, including the right of appeal and the prohibition of monarchical restoration, cemented the Republic's foundations. He died in 503 BC, and his death was mourned for an entire year.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Lapis Satricanus, discovered in 1977, bears the name \"Poplios Valesios\", a Latin rendering of Publius Valerius, indicating that a prominent individual with this name existed in the late 6th or early 5th century BC.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The pseudonym \"Publius\" used by the authors of the Federalist Papers was chosen in honor of Publicola's role in establishing the Roman Republic.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": -503,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Publius_Valerius_Publicola.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Publius_Valerius_Publicola.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/da/Publius_Valerius_Publicola.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/da/Publius_Valerius_Publicola.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "ÖNB",
+    "author": "ÖNB",
+    "width": 731,
+    "height": 1024,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Publius Valerius Poplicola",
+    "url": "https://en.wikipedia.org/wiki/Publius_Valerius_Poplicola"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:53:53.222Z"
+  }
+}

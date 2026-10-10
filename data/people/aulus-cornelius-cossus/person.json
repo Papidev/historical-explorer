@@ -1,0 +1,69 @@
+{
+  "id": "aulus-cornelius-cossus",
+  "name": "Aulus Cornelius Cossus",
+  "wikidataId": "Q772631",
+  "wikipediaTitle": "Aulus Cornelius Cossus",
+  "content": {
+    "description": [
+      {
+        "text": "Aulus Cornelius Cossus was a Roman general in the early Republic who earned fame as the second Roman, after Romulus, to be awarded the spolia optima, Rome's highest military honour. He achieved this distinction at the Battle of Fidenae in 437 BC, when he single‑handedly killed the Veientine king Lars Tolumnius in combat. According to Livy, Cossus identified the king on the battlefield, unhorsed him with his spear, used the spear to vault off his own horse, and then struck the king with the boss of his shield before spearing him repeatedly. He decapitated the king, spiked the head on his spear, and paraded it before the enemy army, which panicked and fled. The Senate awarded the dictator Mamercus Aemilius Mamercinus a triumph, but Cossus became the central focus of the celebration, and he placed the spolia optima secunda beside Romulus' original trophy in the Temple of Jupiter Feretrius on the Capitoline Hill.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cossus later entered the political arena, being elected consul in 428 BC, a year marked by a severe drought and plague that devastated Rome's livestock and population. In 426 BC he served as one of four consular tribunes, a wartime magistracy that was abolished in 367 BC. When the Roman army suffered a defeat at Veii, the people demanded a dictator; Cossus nominated Mamercus Aemilius Mamercinus, who was appointed dictator and made Cossus his magister equitum. The dictator led the army to a decisive victory over Veii, and Cossus returned to Rome with the spoils of war. Later, Livy records a Cornelius Cossus elected consul in 413 BC, though historians debate whether this was the same man or his son Marcus Cornelius Cossus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the second Roman to receive the spolia optima, a rare honour that only three Romans ever achieved.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his victory, he placed the spolia optima secunda beside Romulus' original trophy in the Temple of Jupiter Feretrius on the Capitoline Hill.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was elected consul during a year of drought and plague, which caused widespread suffering in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as magister equitum (master of the horse) under the dictator Mamercus Aemilius Mamercinus during the campaign against Veii.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "There is historical confusion over whether a Cornelius Cossus elected consul in 413 BC was the same man or his son Marcus Cornelius Cossus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "According to the article, a fourth winner of the spolia optima was denied the honour by jealous Consul Caesar Octavianus (later Augustus), who insisted the honour was limited exclusively to Roman commanders.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "A._Cornelius_Cosens_kills_with_his_own_hand_Sarte_Tolumnius,_king_of_the_Veientines,_437_BC.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:A._Cornelius_Cosens_kills_with_his_own_hand_Sarte_Tolumnius%2C_king_of_the_Veientines%2C_437_BC.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/A._Cornelius_Cosens_kills_with_his_own_hand_Sarte_Tolumnius%2C_king_of_the_Veientines%2C_437_BC.jpg/960px-A._Cornelius_Cosens_kills_with_his_own_hand_Sarte_Tolumnius%2C_king_of_the_Veientines%2C_437_BC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/A._Cornelius_Cosens_kills_with_his_own_hand_Sarte_Tolumnius%2C_king_of_the_Veientines%2C_437_BC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 2293,
+    "height": 1660,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Aulus Cornelius Cossus",
+    "url": "https://en.wikipedia.org/wiki/Aulus_Cornelius_Cossus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:01:17.623Z"
+  }
+}

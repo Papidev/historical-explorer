@@ -1,0 +1,73 @@
+{
+  "id": "giovanni-vincenzo-gonzaga",
+  "name": "Giovanni Vincenzo Gonzaga",
+  "wikidataId": "Q776597",
+  "wikipediaTitle": "Giovanni Vincenzo Gonzaga",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Vincenzo Gonzaga was born on 8 December 1540 in Palermo, the son of Ferrante Gonzaga and Isabella di Capua.  He grew up in the influential House of Gonzaga, which already produced two cardinals: his older brother Francesco and his uncle Ercole.  In his youth he was summoned by Guglielmo Gonzaga, Duke of Mantua, to assist in the administration of the duchy, where he joined the Knights Hospitaller and was appointed Prior of Barletta.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pope Gregory XIII elevated him to the rank of cardinal deacon on 21 February 1578, and he received the red hat and the deaconry of San Giorgio in Velabro on 21 November 1578.  He later opted for the deaconry of Santa Maria in Cosmedin (19 December 1583) and, on 18 December 1585, he became a cardinal priest, with his deaconry raised pro illa vice to a titular church.  He chose the titular church of Santi Bonifacio e Alessio on 20 April 1587 and was appointed auditor of causes for citizens of the Papal States by Pope Sixtus V.  Gonzaga participated in the conclaves of 1585, 1590 (twice), and 1591, and he died in Rome on 23 December 1591, where he was buried in his titular church.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was a member of the Knights Hospitaller, a military order dedicated to caring for sick and wounded pilgrims.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as Prior of Barletta, giving him administrative authority over the local chapter of the Knights Hospitaller.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was appointed auditor of causes for citizens of the Papal States, a judicial role that allowed him to adjudicate civil disputes on behalf of the Pope.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He participated in three consecutive papal conclaves within a span of two years (1590 and 1591), a rare occurrence for a cardinal of his time.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1540,
+      "month": 12,
+      "day": 8,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1591,
+      "month": 12,
+      "day": 23,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "RITRATTO_DEL_CARDINALE_VINCENZO_GONZAGA.PNG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:RITRATTO_DEL_CARDINALE_VINCENZO_GONZAGA.PNG",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d8/RITRATTO_DEL_CARDINALE_VINCENZO_GONZAGA.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d8/RITRATTO_DEL_CARDINALE_VINCENZO_GONZAGA.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unidentified painter",
+    "author": "Unidentified painter",
+    "width": 683,
+    "height": 836,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giovanni Vincenzo Gonzaga",
+    "url": "https://en.wikipedia.org/wiki/Giovanni_Vincenzo_Gonzaga"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:17:05.088Z"
+  }
+}

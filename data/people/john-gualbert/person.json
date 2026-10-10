@@ -1,0 +1,67 @@
+{
+  "id": "john-gualbert",
+  "name": "John Gualbert",
+  "wikidataId": "Q707172",
+  "wikipediaTitle": "John Gualbert",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Gualberto was born around 985 into the noble Visdomini family at the castle of Poggio Petroio.  As a youth he was more interested in vanity and romantic intrigues than in religion, but the murder of his older brother Ugo set him on a path of vengeance.  On a Good Friday he encountered the man who had killed his brother in a narrow lane of Florence; the killer begged for mercy in the name of Jesus, and Gualberto, moved by the day’s significance, granted him clemency and abandoned his revenge.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After this act of mercy he entered the Benedictine community at San Miniato al Monte, where he began a life of strict penance and humility.  He later left the order to found the Vallumbrosan Order in 1036, establishing a monastery at Vallombrosa that emphasized austere communal living and the cultivation of trees rather than a traditional garden.  His compassion for the poor and ill earned him the esteem of several popes, and he was canonized by Pope Celestine III on 24 October 1193.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Gualberto is the patron saint of foresters, park rangers, and forests, a role formalized by Pope Pius XII in 1951 for the Italian Forest Corps and by the Brazilian Church in 1957.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "At Vallombrosa he chose to plant firs and pines instead of a conventional garden, reflecting his commitment to a simple, nature‑oriented monastic life.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was canonized by Pope Celestine III on 24 October 1193, more than a century after his death, and his feast day was later added to the General Roman Calendar in 1595 before being removed in 1969.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 985,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1073,
+      "month": 7,
+      "day": 12,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Santa_Trinita,_Neri_di_bicci,_San_giovanni_gualberto_(dettaglio)2.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Santa_Trinita%2C_Neri_di_bicci%2C_San_giovanni_gualberto_(dettaglio)2.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Santa_Trinita%2C_Neri_di_bicci%2C_San_giovanni_gualberto_%28dettaglio%292.jpg/960px-Santa_Trinita%2C_Neri_di_bicci%2C_San_giovanni_gualberto_%28dettaglio%292.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Santa_Trinita%2C_Neri_di_bicci%2C_San_giovanni_gualberto_%28dettaglio%292.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 2.5",
+    "attribution": "No machine-readable author provided. Sailko assumed (based on copyright claims).",
+    "author": "No machine-readable author provided. Sailko assumed (based on copyright claims).",
+    "width": 2408,
+    "height": 2079,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "John Gualbert",
+    "url": "https://en.wikipedia.org/wiki/John_Gualbert"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:38:44.449Z"
+  }
+}

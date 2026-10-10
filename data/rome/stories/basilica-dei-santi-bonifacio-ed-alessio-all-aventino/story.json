@@ -1,0 +1,243 @@
+{
+  "introduction": {
+    "text": "The Basilica dei Santi Bonifacio ed Alessio all’Aventino is a minor basilica on Rome’s Aventine Hill, notable for its layered history from the 3rd century, its Romanesque and Baroque architecture, and its artistic treasures such as medieval frescoes and Eastern icons.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "founding",
+        "description": "Founded between the 3rd and 4th centuries.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 200,
+          "precision": "approximate",
+          "endYear": 399,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "10thcenturyaddition",
+        "description": "Addition of Saint Alexius to the dedication in the 10th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 900,
+          "precision": "approximate",
+          "endYear": 999,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "1216restoration",
+        "description": "Restored by Pope Honorius III in 1216.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1216,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1582restoration",
+        "description": "Restored in 1582.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1582,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1587titular",
+        "description": "Basilica became titular church for cardinal-priests in 1587.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1587,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1743design",
+        "description": "Designed by Giovanni Battista Nolli in 1743.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1743,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1750srework",
+        "description": "Reworked by Tommaso De Marchis in the 1750s.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1750,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1852-1860somaschi",
+        "description": "Rebuilt by the Somaschi Fathers between 1852 and 1860.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1852,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1965discovery",
+        "description": "Fresco discovered by Genio Civile in 1965.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1965,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "2005rediscovery",
+        "description": "Fresco rediscovered in 2005.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2005,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "2015fresco",
+        "description": "Fresco discovered in 2015.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2015,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "2019fresco",
+        "description": "Fresco discovered in 2019.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2019,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "2022present",
+        "description": "Cardinal title held by Paulo Cezar Costa since 2022.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2022,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "campanile",
+        "description": "Romanesque campanile towers the basilica.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "quadriportico",
+        "description": "Quadriportico in medieval style surrounds the façade.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "16thcenturyfaçade",
+        "description": "16th century façade elaborated from the De Marchis phase.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "mainaltar",
+        "description": "Main altar designed by Tommaso De Marchis in the 1750s.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "funerarymonument",
+        "description": "Funerary monument of Eleonora Boncompagni Borghese (1693) by Giovan Contini Batiste.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "chapelofcharles",
+        "description": "Chapel of Charles IV of Spain contains the Madonna di sant’Alessio icon.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "fresco",
+        "description": "Medieval fresco of Christ the Pilgrim discovered in the crypt.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "edessaicon",
+        "description": "Edessa icon of the Intercession of the Madonna from the 12-13th centuries.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "cryptfresco",
+        "description": "12th-century wall frescoes in the crypt depicting Agnus Dei and Four Evangelists.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "woodstucco",
+        "description": "Wood and stucco work by Andrea Bergondi in the south transept.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "stgerolamo",
+        "description": "Painting by Jean Francois De Troy depicting St Gerolamo Emiliani introducing orphans to the Virgin.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Saint Boniface of Tarsus",
+      "personId": "saint-boniface-of-tarsus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Saint Alexius",
+      "personId": "saint-alexius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Honorius III",
+      "personId": "pope-honorius-iii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giovanni Battista Nolli",
+      "personId": "giovanni-battista-nolli",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Charles IV of Spain",
+      "personId": "charles-iv-of-spain",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giovanni Vincenzo Gonzaga",
+      "personId": "giovanni-vincenzo-gonzaga",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "St Luke",
+      "personId": "st-luke",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "St Thomas of Canterbury",
+      "personId": "st-thomas-of-canterbury",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

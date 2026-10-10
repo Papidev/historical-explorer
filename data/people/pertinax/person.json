@@ -1,0 +1,85 @@
+{
+  "id": "pertinax",
+  "name": "Pertinax",
+  "wikidataId": "Q1436",
+  "wikipediaTitle": "Pertinax",
+  "content": {
+    "description": [
+      {
+        "text": "Publius Helvius Pertinax was born on 1 August 126 in Alba Pompeia, the son of a freedman named Helvius Successus.  From a modest background he rose through the Roman military ranks, distinguishing himself in the Parthian War of 161–166 and later holding a succession of provincial governorships, including Britain, Moesia, Dacia, Syria, and Africa.  His disciplined leadership earned him the position of urban prefect of Rome, placing him in a powerful administrative role just before the death of Emperor Commodus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After Commodus was assassinated on 31 December 192, Pertinax was acclaimed emperor by the Praetorian Guard.  He attempted to restore discipline and fiscal stability, tightening the Guard’s conduct, raising the silver content of the denarius from 74 % to 87 %, and regulating the state welfare scheme.  His reforms angered the Guard, and on 28 March 193, after 87 days in power, they stormed the palace and killed him.  Septimius Severus later deified Pertinax and incorporated his name into his own, cementing his legacy as a capable but ultimately doomed ruler.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Pertinax was the first emperor of the turbulent Year of the Five Emperors, a period marked by rapid succession and political instability.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the son of a freedman, illustrating the social mobility possible within the Roman Empire.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his reign he raised the silver content of the Roman denarius, a significant monetary reform aimed at restoring confidence in the currency.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his assassination, the Praetorian Guard auctioned the imperial throne, a dramatic event that underscored the Guard’s power.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Septimius Severus deified Pertinax and used his name as part of his own imperial title, a rare honor for a short‑reigned emperor.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The pseudonym “Pertinax” was adopted by French journalist André Géraud (1882–1974) in his writings.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The United Kingdom’s oldest gorilla, named Pertinax, was named after the emperor and lived to the age of 42 at Paignton Zoo.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 126,
+      "month": 8,
+      "day": 1,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 193,
+      "month": 3,
+      "day": 28,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Alba_Iulia_National_Museum_of_the_Union_2011_-_Possible_Statue_of_Roman_Emperor_Pertinax_Close_Up,_Apulum.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Alba_Iulia_National_Museum_of_the_Union_2011_-_Possible_Statue_of_Roman_Emperor_Pertinax_Close_Up%2C_Apulum.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Alba_Iulia_National_Museum_of_the_Union_2011_-_Possible_Statue_of_Roman_Emperor_Pertinax_Close_Up%2C_Apulum.JPG/960px-Alba_Iulia_National_Museum_of_the_Union_2011_-_Possible_Statue_of_Roman_Emperor_Pertinax_Close_Up%2C_Apulum.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Alba_Iulia_National_Museum_of_the_Union_2011_-_Possible_Statue_of_Roman_Emperor_Pertinax_Close_Up%2C_Apulum.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Codrin.B",
+    "author": "Codrin.B",
+    "width": 1155,
+    "height": 1067,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pertinax",
+    "url": "https://en.wikipedia.org/wiki/Pertinax"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:58:43.568Z"
+  }
+}

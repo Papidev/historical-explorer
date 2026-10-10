@@ -1,0 +1,61 @@
+{
+  "id": "giuliano-della-rovere",
+  "name": "Giuliano della Rovere",
+  "wikidataId": "Q80516",
+  "wikipediaTitle": "Pope Julius II",
+  "content": {
+    "description": [
+      {
+        "text": "Giuliano della Rovere was born on 5 December 1443 in Albisola near Savona, the son of Raffaello della Rovere and Theodora Manerola.  Educated by his uncle, the Franciscan minister general, he entered the Church and was made a cardinal in 1471, a rapid rise that reflected the nepotism of the era.  In 1503 he was elected pope, taking the name Julius II, and began a reign that would last until his death in 1513.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As pope, Julius II earned the nickname “Warrior Pope” for his active military campaigns against the French, the Venetians, and the Borgias, while simultaneously patronising the arts.  He commissioned the rebuilding of St. Peter’s Basilica, the creation of the Raphael Rooms, and the founding of the Swiss Guard in 1506, a body that still protects the pope today.  His reign also saw the establishment of the Vatican Museums and the initiation of the Fifth Lateran Council, cementing his legacy as a powerful political and cultural leader of the High Renaissance.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He founded the Swiss Guard in 1506, which remains the papal bodyguard to this day.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1443,
+      "month": 12,
+      "day": 5,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1513,
+      "month": 2,
+      "day": 21,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_Julius_II.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Julius_II.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Pope_Julius_II.jpg/960px-Pope_Julius_II.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Pope_Julius_II.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Raphael",
+    "author": "Raphael",
+    "width": 3111,
+    "height": 4227,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Julius II",
+    "url": "https://en.wikipedia.org/wiki/Pope_Julius_II"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:22:00.550Z"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Church_St_Maria_del_popolo_1.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Church_St_Maria_del_popolo_1.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Church_St_Maria_del_popolo_1.jpg/960px-Church_St_Maria_del_popolo_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Church_St_Maria_del_popolo_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Karelj",
+      "author": "Karelj",
+      "width": 3600,
+      "height": 2401,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Christliche_Kunst_im_Bilde_1911_(148930672).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Christliche_Kunst_im_Bilde_1911_(148930672).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Christliche_Kunst_im_Bilde_1911_%28148930672%29.jpg/960px-Christliche_Kunst_im_Bilde_1911_%28148930672%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Christliche_Kunst_im_Bilde_1911_%28148930672%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Georg Vitzthum von Eckstädt",
+      "author": "Georg Vitzthum von Eckstädt",
+      "width": 2077,
+      "height": 3132,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "De_Villa_Borghese_a_Santa_Maria_del_Popolo_23.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:De_Villa_Borghese_a_Santa_Maria_del_Popolo_23.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/De_Villa_Borghese_a_Santa_Maria_del_Popolo_23.jpg/960px-De_Villa_Borghese_a_Santa_Maria_del_Popolo_23.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/De_Villa_Borghese_a_Santa_Maria_del_Popolo_23.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC0",
+      "attribution": "Álvaro de la Paz Franco",
+      "author": "Álvaro de la Paz Franco",
+      "width": 5184,
+      "height": 3456,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Church_St_Maria_del_popolo_1.jpg"
+}

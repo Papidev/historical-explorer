@@ -1,0 +1,77 @@
+{
+  "id": "pelagio-teologo",
+  "name": "Pelagio",
+  "wikidataId": "Q162593",
+  "wikipediaTitle": "Pelagio (teologo)",
+  "content": {
+    "description": [
+      {
+        "text": "Pelagio was a large, corpulent man with a prominent forehead, a broad chest, and a distinctive “turtle neck.” He lived in Rome around 384, where he befriended the lawyer Celestio and fled the city after the sack of 410, first to Ippona in North Africa and later to Carthage, where the two developed the theological doctrine that would become known as Pelagianism.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pelagio was a skilled orator, writer, and exegete who sought to counter what he saw as the superficial Christianity of mass converts. He preached strict moral discipline, advocating poverty, chastity, and a firm belief in the existence of heaven and hell. His ideas sparked controversy, leading to multiple councils that condemned Pelagianism, including the councils of Carthage and Milevus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Pelagio was described as having a “turtle neck” (collo taurino).",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a moralist who preached poverty, chastity, and a strict discipline, insisting on the existence of heaven and hell.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pelagio’s theological views, known as Pelagianism, were condemned at several councils, including the councils of Carthage and Milevus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a friend of the lawyer Celestio, with whom he fled Rome after the sack of 410 and later developed Pelagianism.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pelagio wrote many letters, some of which survive only in fragments quoted by Augustine.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was not subject to the imperial expulsion order of 418, which targeted other Pelagians.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pelagio died a few years after 418, possibly in Palestine or Egypt.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 420,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pelagius_from_Nuremberg_Chronicle.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pelagius_from_Nuremberg_Chronicle.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Pelagius_from_Nuremberg_Chronicle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Pelagius_from_Nuremberg_Chronicle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 215,
+    "height": 288,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pelagio (teologo)",
+    "url": "https://it.wikipedia.org/wiki/Pelagio_(teologo)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:45:51.449Z"
+  }
+}

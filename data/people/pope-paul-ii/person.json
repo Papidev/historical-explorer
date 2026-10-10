@@ -1,0 +1,77 @@
+{
+  "id": "pope-paul-ii",
+  "name": "Pope Paul II",
+  "wikidataId": "Q102605",
+  "wikipediaTitle": "Pope Paul II",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Paul II, born Pietro Barbo in Venice on 23 February 1417, rose rapidly through the ecclesiastical ranks after his uncle, Pope Eugene IV, was elected. He became archdeacon of Bologna, bishop of Cervia and Vicenza, and a cardinal‑deacon in 1440, before being elected pope on 30 August 1464. His election was aided by the dissatisfaction of some cardinals with the policies of his predecessor, Pius II, and by his promise to buy each cardinal a villa to escape the summer heat.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his reign Paul II was a patron of the arts and a controversial figure. He amassed a vast collection of art and antiquities, built the Palazzo San Marco (now the Palazzo Venezia) and wore a papal tiara studded with precious gems. He also approved the introduction of printing into the Papal States, first at Subiaco in 1464 and at Rome in 1467, making books more widely available. His reign was marked by secretive appointments of cardinals, a crackdown on the Roman Academy, and the institution of horse races along the Via Lata in 1466, which included participants of all ages and social groups.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Paul II had a papal tiara studded with diamonds, sapphires, emeralds, topaz, large pearls, and every kind of precious gem.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He built the Palazzo San Marco (now the Palazzo Venezia) and lived there as pope, amassing a great collection of art and antiquities.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He approved the introduction of printing into the Papal States, first at Subiaco in 1464 and at Rome in 1467.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1466 he permitted horse races along the Via Lata (Via del Corso) and organized races for boys, adult men, old people and Jews, with appropriate prizes for each group.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He created several secret cardinals in pectore, including two in 1464–65 who died before their names could be published.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1417,
+      "month": 2,
+      "day": 23,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1471,
+      "month": 7,
+      "day": 26,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Portrait_of_Paolo_II.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_Paolo_II.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Portrait_of_Paolo_II.jpg/960px-Portrait_of_Paolo_II.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/37/Portrait_of_Paolo_II.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 970,
+    "height": 1282,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Paul II",
+    "url": "https://en.wikipedia.org/wiki/Pope_Paul_II"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:00:32.768Z"
+  }
+}

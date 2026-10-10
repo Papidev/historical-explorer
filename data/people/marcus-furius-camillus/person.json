@@ -1,0 +1,65 @@
+{
+  "id": "marcus-furius-camillus",
+  "name": "Marcus Furius Camillus",
+  "wikidataId": "Q294862",
+  "wikipediaTitle": "Marcus Furius Camillus",
+  "content": {
+    "description": [
+      {
+        "text": "Marcus Furius Camillus, who lived roughly from 448 BC to 365 BC, was a Roman statesman and politician of the early Republic. He is best known for the legendary capture of the Etruscan city of Veii and for his supposed defense of Rome against the Gallic sack that followed the Battle of the Allia. Modern scholars, however, regard many of the traditional accounts of his exploits as heavily embellished or entirely fictional, noting that the sources are largely based on later annalistic traditions.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Camillus’s career is portrayed as a series of high offices: he served as consular tribune, was elected censor before holding any other magistracy, and held the office of dictator on several occasions. After a period of exile, he was recalled to lead Rome against the Gauls, a narrative that has been described by historians as a likely fabrication. Despite the doubts, he was celebrated as Rome’s “second founder,” with a bronze statue erected on the rostra in the Forum and his deeds used as moral exempla in Roman literature.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Camillus is traditionally credited with capturing Veii after a ten‑year siege, an event that supposedly involved supernatural elements such as the rising of the Alban Lake and the construction of a drainage tunnel.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "According to the legend, Camillus was recalled from exile to defeat the Gauls during the sack of Rome, a story that has been called one of the most daring fabrications in Roman history.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He is often referred to as Rome’s second founder, a title that reflects the Roman belief that he restored the city after its destruction and re‑established its institutions.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -448,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": -365,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Furius-Camillus.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Furius-Camillus.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Furius-Camillus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Furius-Camillus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Published by Guillaume Rouille (1518?-1589)",
+    "author": "Published by Guillaume Rouille (1518?-1589)",
+    "width": 420,
+    "height": 415,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Marcus Furius Camillus",
+    "url": "https://en.wikipedia.org/wiki/Marcus_Furius_Camillus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:00:34.427Z"
+  }
+}

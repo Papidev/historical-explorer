@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "ArchofGallienus2.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:ArchofGallienus2.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/ArchofGallienus2.jpg/960px-ArchofGallienus2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/ArchofGallienus2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Tomk2ski",
+      "author": "Tomk2ski",
+      "width": 3192,
+      "height": 2748,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Porteesquiline_planrome.PNG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Porteesquiline_planrome.PNG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Porteesquiline_planrome.PNG/960px-Porteesquiline_planrome.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Porteesquiline_planrome.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Coldeel",
+      "author": "Coldeel",
+      "width": 1128,
+      "height": 900,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "182_arc_Gallien_Est.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:182_arc_Gallien_Est.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/182_arc_Gallien_Est.JPG/960px-182_arc_Gallien_Est.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/182_arc_Gallien_Est.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Ursus",
+      "author": "Ursus",
+      "width": 2592,
+      "height": 3456,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "ArchofGallienus2.jpg"
+}

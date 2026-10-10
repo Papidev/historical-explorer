@@ -1,0 +1,53 @@
+{
+  "id": "oscar-luigi-scalfaro",
+  "name": "Oscar Luigi Scalfaro",
+  "wikidataId": "Q1228",
+  "wikipediaTitle": "Oscar Luigi Scalfaro",
+  "content": {
+    "description": [
+      {
+        "text": "Oscar Luigi Scalfaro was a long‑standing member of the Italian Chamber of Deputies, serving continuously from 1946 until 1992. During that time he held several ministerial posts, including Minister of the Interior from 1983 to 1987, and was a key figure in the Christian Democracy party’s right‑wing faction.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1992, following the resignation of President Francesco Cossiga, Scalfaro was elected President of the Italian Republic. His seven‑year term was marked by a firm stance against corruption, most famously when he refused to sign the controversial Conso decree, citing constitutional concerns, and by his support for the 1993 referendum that introduced a majoritarian electoral system.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Scalfaro was the oldest person to assume the Italian presidency, taking office at the age of 74.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the only president of the Republic who never appointed a life senator during his term, a decision that set him apart from his predecessors.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Oscar_Luigi_Scalfaro_portrait.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Oscar_Luigi_Scalfaro_portrait.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Oscar_Luigi_Scalfaro_portrait.jpg/960px-Oscar_Luigi_Scalfaro_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Oscar_Luigi_Scalfaro_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Attribution",
+    "attribution": "Quirinale.it",
+    "author": "Unknown authorUnknown author",
+    "width": 4136,
+    "height": 5692,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Oscar Luigi Scalfaro",
+    "url": "https://it.wikipedia.org/wiki/Oscar_Luigi_Scalfaro"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:46:35.395Z"
+  }
+}

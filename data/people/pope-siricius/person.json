@@ -1,0 +1,75 @@
+{
+  "id": "pope-siricius",
+  "name": "Pope Siricius",
+  "wikidataId": "Q161443",
+  "wikipediaTitle": "Pope Siricius",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Siricius, born around 334 in Rome, rose through the church ranks as a lector and deacon during the reign of Pope Liberius. He was elected bishop of Rome in December 384, a decision confirmed by Emperor Valentinian II that quelled rival claims from Ursinus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his fifteen‑year pontificate Siricius issued the Directa decretal, the oldest fully preserved papal decretal, addressing baptism, penance, discipline and clerical celibacy. He also mediated the Meletian schism in Antioch, persuaded the Roman church to readmit Flavian, and protested the execution of the Spanish ascetic Priscillian by Emperor Magnus Maximus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Directa decretal, issued in response to Bishop Himerius of Tarragona, contains decisions on fifteen different points and is the earliest completely preserved papal decretal.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Siricius is sometimes credited as the first bishop of Rome to style himself pope, though the title was used earlier for other bishops.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He helped mend the Meletian schism in Antioch by recognizing Flavian and readmitting him to communion with Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Siricius, along with Ambrose of Milan and Martin of Tours, protested the execution of the ascetic Priscillian by Emperor Magnus Maximus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Later authors mistakenly attributed anti‑Manichaean actions to Siricius; these were actually carried out under Pope Leo I.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 334,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 399,
+      "month": 11,
+      "day": 26,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pormenor_do_Retábulo_de_Santa_Auta_(Papa_Ciríaco_Abençoa_Santa_Auta_e_o_Príncipe_Conan),_Museu_Nacional_de_Arte_Antiga.png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pormenor_do_Ret%C3%A1bulo_de_Santa_Auta_(Papa_Cir%C3%ADaco_Aben%C3%A7oa_Santa_Auta_e_o_Pr%C3%ADncipe_Conan)%2C_Museu_Nacional_de_Arte_Antiga.png",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Pormenor_do_Ret%C3%A1bulo_de_Santa_Auta_%28Papa_Cir%C3%ADaco_Aben%C3%A7oa_Santa_Auta_e_o_Pr%C3%ADncipe_Conan%29%2C_Museu_Nacional_de_Arte_Antiga.png/960px-Pormenor_do_Ret%C3%A1bulo_de_Santa_Auta_%28Papa_Cir%C3%ADaco_Aben%C3%A7oa_Santa_Auta_e_o_Pr%C3%ADncipe_Conan%29%2C_Museu_Nacional_de_Arte_Antiga.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Pormenor_do_Ret%C3%A1bulo_de_Santa_Auta_%28Papa_Cir%C3%ADaco_Aben%C3%A7oa_Santa_Auta_e_o_Pr%C3%ADncipe_Conan%29%2C_Museu_Nacional_de_Arte_Antiga.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Master of the Altarpiece of Santa Auta",
+    "author": "Master of the Altarpiece of Santa Auta",
+    "width": 2176,
+    "height": 3264,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Siricius",
+    "url": "https://en.wikipedia.org/wiki/Pope_Siricius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:40:42.812Z"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "constantius-ii",
+  "name": "Constantius II",
+  "wikidataId": "Q46418",
+  "wikipediaTitle": "Constantius II",
+  "content": {
+    "description": [
+      {
+        "text": "Constantius II was born on 7 August 317 in Sirmium, Pannonia, and was the third son of Constantine the Great. He was elevated to Caesar by his father on 8 November 324 at the age of seven, and after Constantine's death in 337 he became Augustus together with his brothers Constantine II and Constans. His reign was dominated by a series of wars on the eastern frontier against the Sassanid Empire and on the Danube against Germanic tribes, most notably the costly campaigns against Shapur II and the decisive victory over the Alamanni in 354.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In the religious sphere Constantius promoted Arian Christianity, banned pagan sacrifices, and issued laws against Jews, actions that inflamed domestic conflict and shaped the theological debates of the era. He died of fever on 3 November 361 in Mopsuestia, allegedly naming his cousin Julian as his successor before his death, and was buried in the Church of the Holy Apostles.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was made Caesar at the age of seven, a rare instance of a child emperor in Roman history.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Constantius promoted Arianism and banned pagan sacrifices, reflecting his attempt to enforce religious uniformity.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Before his death he named his cousin Julian as his successor, a move that precipitated Julian's rise to power.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was married three times and left a posthumous daughter, Constantia, who later married Emperor Gratian.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 317,
+      "month": 8,
+      "day": 7,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 361,
+      "month": 11,
+      "day": 3,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Bust_of_Constantius_II_(Mary_Harrsch).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Bust_of_Constantius_II_(Mary_Harrsch).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/Bust_of_Constantius_II_%28Mary_Harrsch%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/Bust_of_Constantius_II_%28Mary_Harrsch%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 2.0",
+    "attribution": "Mary Harrsch",
+    "author": "Mary Harrsch",
+    "width": 564,
+    "height": 800,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Constantius II",
+    "url": "https://en.wikipedia.org/wiki/Constantius_II"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:55:52.579Z"
+  }
+}

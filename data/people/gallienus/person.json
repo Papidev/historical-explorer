@@ -1,0 +1,70 @@
+{
+  "id": "gallienus",
+  "name": "Gallienus",
+  "wikidataId": "Q104475",
+  "wikipediaTitle": "Gallienus",
+  "content": {
+    "description": [
+      {
+        "text": "Publius Licinius Egnatius Gallienus was born around 218 into a wealthy senatorial family and became emperor in 253 when his father Valerian was elevated to the throne. He was raised in the traditional Roman elite and was named Augustus by the Senate, sharing the empire with his father who governed the east while Gallienus defended the western provinces against Germanic incursions.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his 15‑year reign he faced a wave of usurpers, Germanic invasions, and the split of the Gallic Empire, yet he introduced significant military reforms, notably the creation of the mobile cavalry units known as the Comitatenses, and issued the first official declaration of tolerance for Christians. His rule ended abruptly in September 268 when he was assassinated by the officer Cecropius while besieging the city of Mediolanum.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Gallienus was the first Roman emperor to issue an official declaration of tolerance towards Christians, restoring their places of worship and cemeteries.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He pioneered the use of mobile cavalry units, the Comitatenses, which could be dispatched across the empire quickly, a reform that influenced later emperors such as Diocletian and Constantine.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Gallienus was assassinated by the officer Cecropius during a siege, a rare example of an emperor being killed by a subordinate officer.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Gallic Empire, a breakaway state under Postumus, seceded from Rome during Gallienus's reign, illustrating the fragmentation of the empire during the Crisis of the Third Century.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 218,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 268,
+      "month": 9,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Ritratto_di_gallieno_dalla_casa_delle_vestali.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ritratto_di_gallieno_dalla_casa_delle_vestali.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Ritratto_di_gallieno_dalla_casa_delle_vestali.jpg/960px-Ritratto_di_gallieno_dalla_casa_delle_vestali.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Ritratto_di_gallieno_dalla_casa_delle_vestali.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0",
+    "attribution": "Sailko",
+    "author": "Sailko",
+    "width": 1300,
+    "height": 1600,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Gallienus",
+    "url": "https://en.wikipedia.org/wiki/Gallienus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:54:59.668Z"
+  }
+}

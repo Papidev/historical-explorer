@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Largo_di_Torre_Argentina_4.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Largo_di_Torre_Argentina_4.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Largo_di_Torre_Argentina_4.jpg/960px-Largo_di_Torre_Argentina_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Largo_di_Torre_Argentina_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Wknight94",
+      "author": "Wknight94",
+      "width": 3072,
+      "height": 2304,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "0010_Largo_di_Torre_Argentina,_Area_Sacra_dal_IV_al_I_sec._a.C.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:0010_Largo_di_Torre_Argentina%2C_Area_Sacra_dal_IV_al_I_sec._a.C.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/0010_Largo_di_Torre_Argentina%2C_Area_Sacra_dal_IV_al_I_sec._a.C.jpg/960px-0010_Largo_di_Torre_Argentina%2C_Area_Sacra_dal_IV_al_I_sec._a.C.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/78/0010_Largo_di_Torre_Argentina%2C_Area_Sacra_dal_IV_al_I_sec._a.C.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Luciano Tronati",
+      "author": "Luciano Tronati",
+      "width": 5146,
+      "height": 2898,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "0020_Largo_di_Torre_Argentina,_Area_Sacra_dal_IV_al_I_sec._a.C.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:0020_Largo_di_Torre_Argentina%2C_Area_Sacra_dal_IV_al_I_sec._a.C.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/0020_Largo_di_Torre_Argentina%2C_Area_Sacra_dal_IV_al_I_sec._a.C.jpg/960px-0020_Largo_di_Torre_Argentina%2C_Area_Sacra_dal_IV_al_I_sec._a.C.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/0020_Largo_di_Torre_Argentina%2C_Area_Sacra_dal_IV_al_I_sec._a.C.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Luciano Tronati",
+      "author": "Luciano Tronati",
+      "width": 5132,
+      "height": 2890,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Largo_di_Torre_Argentina_4.jpg"
+}

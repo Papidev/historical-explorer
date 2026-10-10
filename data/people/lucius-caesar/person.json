@@ -1,0 +1,67 @@
+{
+  "id": "lucius-caesar",
+  "name": "Lucius Caesar",
+  "wikidataId": "Q313735",
+  "wikipediaTitle": "Lucius Caesar",
+  "content": {
+    "description": [
+      {
+        "text": "Lucius Julius Caesar was born in Rome in 17 BC to Marcus Vipsanius Agrippa and Julia the Elder, Augustus’ daughter.  Augustus adopted Lucius and his older brother Gaius in a symbolic sale shortly after their birth, naming them his heirs and giving them the titles of princeps iuventutis and consul designatus.  Augustus personally taught the boys to read, swim and imitate his handwriting, and he sent them to the provinces as consuls‑elect to introduce them to administrative life.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "While on a military posting in Hispania, Lucius fell ill and died suddenly on 20 August 2 AD in Massilia, Gaul.  His death, together with that of his brother Gaius a year later, shocked the empire and forced Augustus to redraw the line of succession, adopting his stepson Tiberius and his younger brother Agrippa Postumus as new heirs.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Lucius was made a member of the college of augurs, a prestigious religious office, while his brother Gaius was made a pontifex.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was sent by Augustus to complete his military training in Hispania, but died of a sudden illness in Massilia before he could assume command.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The untimely deaths of Lucius and Gaius prompted Augustus to adopt Tiberius and Agrippa Postumus as his new heirs in 4 AD.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -17,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 2,
+      "month": 8,
+      "day": 20,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "8091_-_Roma_-_Ara_Pacis_-_Lucio_Cesare_-_Foto_Giovanni_Dall'Orto_-_28-Mar-2008.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:8091_-_Roma_-_Ara_Pacis_-_Lucio_Cesare_-_Foto_Giovanni_Dall'Orto_-_28-Mar-2008.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/8091_-_Roma_-_Ara_Pacis_-_Lucio_Cesare_-_Foto_Giovanni_Dall%27Orto_-_28-Mar-2008.jpg/960px-8091_-_Roma_-_Ara_Pacis_-_Lucio_Cesare_-_Foto_Giovanni_Dall%27Orto_-_28-Mar-2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/8091_-_Roma_-_Ara_Pacis_-_Lucio_Cesare_-_Foto_Giovanni_Dall%27Orto_-_28-Mar-2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Giovanni Dall'Orto",
+    "author": "Giovanni Dall'Orto",
+    "width": 1120,
+    "height": 1744,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Lucius Caesar",
+    "url": "https://en.wikipedia.org/wiki/Lucius_Caesar"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:49:09.953Z"
+  }
+}

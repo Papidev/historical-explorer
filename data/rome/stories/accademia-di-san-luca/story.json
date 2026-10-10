@@ -1,0 +1,221 @@
+{
+  "introduction": {
+    "text": "The Accademia Nazionale di San Luca is Rome’s historic artists’ academy, founded in the late 16th century, that shaped the training, standards and patronage of painters, sculptors and architects and still houses a major collection of artworks.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "h1",
+        "description": "The predecessor guild, Compagnia di San Luca, had its statutes and privileges renewed by Pope Sixtus IV on 17 December 1478.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1478,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h2",
+        "description": "A papal brief in 1577 officially approved the establishment of the Accademia de i Pittori e Scultori di Roma.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1577,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h3",
+        "description": "In 1588 Pope Sixtus V granted the academy the ancient church of S. Martina, later rededicated as Santi Luca e Martina.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1588,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h4",
+        "description": "Federico Zuccari became the academy’s first principe (director) in 1593.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1593,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h5",
+        "description": "Pope Paul V granted the academy the right to pardon a condemned man on the feast of St Luke in 1605.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1605,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h6",
+        "description": "The academy’s statutes were formally ratified in 1607.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1607,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h7",
+        "description": "In the 1620s Urban VIII extended the academy’s rights to decide who was considered an artist in Rome.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1620,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h8",
+        "description": "In 1627 the academy came under the patronage of Cardinal Francesco Barberini (seniore).",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1627,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h9",
+        "description": "Urban VIII gave the academy the right to tax all artists and art‑dealers in 1633.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1633,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h10",
+        "description": "After 1634, while Pietro da Cortona was principe, the academy began admitting architects on equal footing with painters and sculptors.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1634,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h11",
+        "description": "The Concorsi Balestra competitions were added in 1763, alternating with the older Concorsi Clementini.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1763,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h12",
+        "description": "In 1845 the academy expanded into the Palazzo Camerale on Via di Ripetta, later becoming the Liceo Artistico Ripetta.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1845,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h13",
+        "description": "The historic headquarters were demolished for Via dell'Impero and the academy moved to Palazzo Carpegna in 1934.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1934,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "d1",
+        "description": "The academy church of Santi Luca e Martina features a Baroque façade designed by Pietro da Cortona that overlooks the Roman Forum.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "d2",
+        "description": "Since 1934 the academy has been housed in the 16th‑century Palazzo Carpegna, adapted to display its collections and host exhibitions.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "a1",
+        "description": "Members traditionally donated a self‑portrait, creating a collection of about 500 portraits and an extensive archive of drawings.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "a2",
+        "description": "The academy was the venue for the famous Cortona‑Sacchi debate on the appropriate number of figures in a painting, illustrating its role in artistic theory.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "a3",
+        "description": "Portraits of Sofonisba Anguissola (1564) and Geronima Parasole (1612) were added to the academy’s portrait collection, the first women artists represented there.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Federico Zuccari",
+      "personId": "federico-zuccari",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Girolamo Muziano",
+      "personId": "girolamo-muziano",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pietro da Cortona",
+      "personId": "pietro-da-cortona",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Francesco Barberini (seniore)",
+      "personId": "francesco-barberini-seniore",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giovanni Bellori",
+      "personId": "giovanni-bellori",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Andrea Sacchi",
+      "personId": "andrea-sacchi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Sofonisba Anguissola",
+      "personId": "sofonisba-anguissola",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Claude Lorrain",
+      "personId": "claude-lorrain",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ernesto Biondi",
+      "personId": "ernesto-biondi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Piccirilli Brothers",
+      "personId": "piccirilli-brothers",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

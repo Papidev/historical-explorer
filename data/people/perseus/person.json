@@ -1,0 +1,65 @@
+{
+  "id": "perseus",
+  "name": "Perseus",
+  "wikidataId": "Q130832",
+  "wikipediaTitle": "Perseus",
+  "content": {
+    "description": [
+      {
+        "text": "Perseus is a central figure in Greek mythology, celebrated as the founder of the Perseid dynasty and one of the greatest heroes before Heracles. He was a demigod, the son of the sky god Zeus and the mortal princess Danaë, and his birth was foretold by an oracle that he would be killed by his own grandson. To escape this fate, his father King Acrisius cast him and his mother into the sea, where they were rescued on the island of Seriphos and raised by the fisherman Dictys. The island’s king, Polydectes, later sought to eliminate Perseus by sending him on a perilous quest to bring back the head of the Gorgon Medusa.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "With the aid of divine gifts from Athena and Hermes—winged sandals, a reflective shield, and a sword—Perseus successfully beheaded Medusa, using her head to defeat the sea monster Cetus and rescue the princess Andromeda, whom he later married. His exploits earned him a place among the stars: the constellation Perseus bears his name, and the annual Perseid meteor shower is said to be the result of Medusa’s blood falling from the heavens. Perseus’s lineage continued through his sons, notably Perses, who became an ancestor of the Persians, and Alcaeus, whose descendants included the hero Heracles.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Perseus was called Chrysopatros, meaning \"gold‑fathered,\" because Zeus appeared to his mother Danaë as a shower of gold.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The head of Medusa was used to petrify the sea monster Cetus and later to defeat King Atlas of Mauretania, turning him into the Atlas Mountains.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The constellation Perseus contains the variable star Algol and the Perseid meteor shower, both linked to Perseus’s myth.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Perseus’s son Perses is said to be an ancestor of the Persians, connecting Greek myth to the founding of Persia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "According to the Suda, Perseus founded the city of Amandra, later renamed Ikonion, and taught the magi about the Gorgon.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Anton_Raphael_Mengs_-_Perseus_and_Andromeda_-_WGA15037.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Anton_Raphael_Mengs_-_Perseus_and_Andromeda_-_WGA15037.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Anton_Raphael_Mengs_-_Perseus_and_Andromeda_-_WGA15037.jpg/960px-Anton_Raphael_Mengs_-_Perseus_and_Andromeda_-_WGA15037.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Anton_Raphael_Mengs_-_Perseus_and_Andromeda_-_WGA15037.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Anton Raphael Mengs",
+    "author": "Anton Raphael Mengs",
+    "width": 2402,
+    "height": 3471,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Perseus",
+    "url": "https://en.wikipedia.org/wiki/Perseus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:45:26.604Z"
+  }
+}

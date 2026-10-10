@@ -1,0 +1,69 @@
+{
+  "id": "maximilian-kolbe",
+  "name": "Maximilian Kolbe",
+  "wikidataId": "Q153850",
+  "wikipediaTitle": "Maximilian Kolbe",
+  "content": {
+    "description": [
+      {
+        "text": "Born on 8 January 1894 in Zduńska Wola, Poland, Maximilian Maria Kolbe entered the Conventual Franciscan order at a young age and later took the name Maximilian. He studied at the Pontifical Gregorian University, earned doctorates in philosophy and theology, and was ordained a priest in 1918. Kolbe became a prominent promoter of the veneration of the Immaculate Virgin Mary, founding the Militia Immaculatae and the monthly periodical Rycerz Niepokalanej.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During World War II he remained at the monastery of Niepokalanów, where he sheltered refugees and resisted Nazi demands. Arrested in 1941, he was sent to Auschwitz, where he volunteered to take the place of another prisoner, enduring starvation and ultimately dying on 14 August 1941. He was canonized in 1982 as a martyr of charity.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Kolbe is venerated as the patron saint of amateur radio operators, a title that reflects his own call sign SP3RN.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He founded the monastery of Niepokalanów near Warsaw, which grew into a major religious publishing centre and a refuge for persecuted individuals during the war.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "At Auschwitz, Kolbe volunteered to die in place of the Polish Catholic prisoner Franciszek Gajowniczek, an act that exemplified his commitment to charity.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1894,
+      "month": 1,
+      "day": 8,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1941,
+      "month": 8,
+      "day": 14,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Fr.Maximilian_Kolbe_in_1936.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Fr.Maximilian_Kolbe_in_1936.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Fr.Maximilian_Kolbe_in_1936.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Fr.Maximilian_Kolbe_in_1936.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 726,
+    "height": 981,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Maximilian Kolbe",
+    "url": "https://en.wikipedia.org/wiki/Maximilian_Kolbe"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:13:00.835Z"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "pope-urban-i",
+  "name": "Pope Urban I",
+  "wikidataId": "Q125631",
+  "wikipediaTitle": "Pope Urban I",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Urban I, also known as Saint Urban, served as bishop of Rome from 222 until his death on 23 May 230. Born in Rome, he succeeded Callixtus I, who had been martyred, and his pontificate is the first papacy that can be definitively dated.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the reign of Emperor Alexander Severus, Urban presided over a period of relative peace for Christians, a time when the Church in Rome grew. He maintained a hostile policy toward the schismatic Hippolytus and is credited with a papal decree that regulated the use of gifts offered at Mass for ecclesiastical purposes, the common good, and the poor.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Urban's pontificate is the earliest papacy that can be definitively dated.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A papal decree attributed to Urban states that the gifts of the faithful offered at Mass may only be used for ecclesiastical purposes, the common good of the Christian community, and for the poor.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A relic from Urban's body is preserved in Hungary at the Monok Roman Catholic Church, having been donated by Pope Clement XIV to the Andrássy family in 1773.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 175,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 230,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_Urban_I.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Urban_I.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Pope_Urban_I.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Pope_Urban_I.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Artaud de Montor (1772–1849)",
+    "author": "Artaud de Montor (1772–1849)",
+    "width": 432,
+    "height": 598,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Urban I",
+    "url": "https://en.wikipedia.org/wiki/Pope_Urban_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:20:36.611Z"
+  }
+}

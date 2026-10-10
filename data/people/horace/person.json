@@ -1,0 +1,77 @@
+{
+  "id": "horace",
+  "name": "Horace",
+  "wikidataId": "Q6197",
+  "wikipediaTitle": "Horace",
+  "content": {
+    "description": [
+      {
+        "text": "Quintus Horatius Flaccus, born on 8 December 65 BC in Venusia, was the son of a freedman and grew up in a culturally diverse region of southern Italy.  He received a classical education that exposed him to Greek literature and Latin rhetoric, and he later studied in Athens where he absorbed the philosophies of Epicureans and Stoics.  His early life was marked by the loss of his father and the confiscation of his family estate after the Battle of Philippi, events that pushed him toward a career in poetry and public service.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Horace’s literary career flourished under the patronage of Maecenas, Octavian’s chief adviser, and he became a key voice in the early Augustan regime.  He produced celebrated works such as the Satires, Epodes, Odes, and the Carmen Saeculare, and he is best remembered for the line “Exegi monumentum aere perennius” from Ode 3.30.  He served as a tribunus militum at Philippi, later held a lucrative treasury post, and died on 27 November 8 BC at the age of 56, leaving a legacy that shaped Roman literary culture for centuries.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Horace was a freedman’s son who rose to the rank of eques Romanus, a rare achievement for someone of his background.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as a tribunus militum during the Battle of Philippi in 42 BC, a position usually reserved for senators or equestrians.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Maecenas gifted Horace a villa in the Sabine hills, which became his home and a symbol of his patronage.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Horace’s Ode 3.30 contains the famous line “Exegi monumentum aere perennius,” meaning “I have erected a monument more enduring than bronze.”",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He wrote the Carmen Saeculare, a hymn composed for the Secular Games in 17 BC, which was performed at a public festival organized by Augustus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -65,
+      "month": 12,
+      "day": 8,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": -8,
+      "month": 11,
+      "day": 27,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Quintus_Horatius_Flaccus.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Quintus_Horatius_Flaccus.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Quintus_Horatius_Flaccus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Quintus_Horatius_Flaccus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Anton von Werner",
+    "author": "Anton von Werner",
+    "width": 412,
+    "height": 821,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Horace",
+    "url": "https://en.wikipedia.org/wiki/Horace"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:07:56.197Z"
+  }
+}

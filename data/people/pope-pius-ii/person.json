@@ -1,0 +1,73 @@
+{
+  "id": "pope-pius-ii",
+  "name": "Pope Pius II",
+  "wikidataId": "Q101437",
+  "wikipediaTitle": "Pope Pius II",
+  "content": {
+    "description": [
+      {
+        "text": "Enea Silvio Piccolomini, later Pope Pius II, was born on 18 October 1405 in Corsignano, a small Sienese village. He studied humanities and civil law at the universities of Siena and Florence, and became a noted humanist, diplomat and orator. Before his elevation to the papacy he served as secretary to several high‑ranking clerics, was a member of the Council of Basel, and held the bishoprics of Trieste and Siena. His long autobiographical work, the Commentaries, was the first pope’s autobiography to be published, appearing posthumously in 1584.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Elected pope in 1458, Pius II pursued a vigorous policy of crusading against the Ottoman Turks and sought to unite European powers at the Congress of Mantua. He also undertook an ambitious urban project, rebuilding his hometown of Corsignano into the Renaissance city of Pienza, and issued a bull that prohibited damage to ancient ruins in Rome. He died on 14 August 1464 in Ancona while preparing a crusade, and was buried in the Vatican before his remains were moved to the Church of St. Andrea della Valle in 1613.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Pius II’s Commentaries were the first published autobiography of a pope.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1442 he was named imperial poet laureate by Emperor Frederick III.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He founded the city of Pienza, renaming Corsignano after himself.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He condemned the enslavement of newly baptized Christians, issuing a letter in 1462 to bishops in the Canary Islands.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1405,
+      "month": 10,
+      "day": 18,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1464,
+      "month": 8,
+      "day": 14,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pio_II_Pont_Max_(detail).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pio_II_Pont_Max_(detail).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Pio_II_Pont_Max_%28detail%29.jpg/960px-Pio_II_Pont_Max_%28detail%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/93/Pio_II_Pont_Max_%28detail%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Fabrizio Garrisi",
+    "author": "Fabrizio Garrisi",
+    "width": 2284,
+    "height": 4637,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Pius II",
+    "url": "https://en.wikipedia.org/wiki/Pope_Pius_II"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:10:40.538Z"
+  }
+}

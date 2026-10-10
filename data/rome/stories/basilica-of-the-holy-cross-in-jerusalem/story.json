@@ -1,0 +1,259 @@
+{
+  "introduction": {
+    "text": "The Basilica di Santa Croce in Gerusalemme is a Catholic minor basilica in Rome that houses relics of the Passion of Jesus and serves as one of Rome’s Seven Pilgrim Churches, making it a key site for Christian pilgrimage.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Construction of the Aurelian Walls in 272 affected the imperial villa that later became the basilica.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 272,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Empress Helena transformed the large hall into a Christian basilica around 320.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 320,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Pope Gregory I declared the church a titular church in 523.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 523,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Pope Gregory II restored the basilica in the eighth century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 700,
+          "precision": "approximate",
+          "endYear": 799,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "The monastery foundation dates to the 10th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 900,
+          "precision": "approximate",
+          "endYear": 999,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "Pope Leo IX entrusted the monastery to the Benedictines of Montecassino in 1049.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1049,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "Pope Alexander II installed the Canons Regular of San Frediano di Lucca in 1062.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1062,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history8",
+        "description": "Pope Urban V assigned Santa Croce to the Carthusians around 1370.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1370,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history9",
+        "description": "The Lombard Cistercians took over the basilica in 1561.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1561,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history10",
+        "description": "Peter Paul Rubens painted the altarpiece 'St. Helena with the True Cross' in 1601.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1601,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history11",
+        "description": "Pope Benedict XIV oversaw the late Baroque interior renewal from 1740 to 1758.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1740,
+          "precision": "exact",
+          "endYear": 1758,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history12",
+        "description": "The Cappella delle Reliquie was built in 1930 by Florestano Di Fausto to house relics.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1930,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history13",
+        "description": "The Cistercian congregation was suppressed in 2011.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2011,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "Cosmatesque pavement featuring interlocking geometric patterns in colored marble, dating from the 12th‑century Romanesque renovation.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "Baroque façade designed by Pietro Passalacqua and Domenico Gregorini, reflecting late Roman Baroque style.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "Vault mosaic by Melozzo da Forlì depicting Jesus Blessing and the Histories of the Cross, created before 1485.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design4",
+        "description": "Vault painting by Corrado Giaquinto, part of the 18th‑century Baroque interior renewal.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design5",
+        "description": "Cappella delle Reliquie built in 1930 by Florestano Di Fausto to house relics.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Mosaic of Jesus Blessing and the Histories of the Cross by Melozzo da Forlì.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "Vault painting by Corrado Giaquinto, created during the Baroque interior renewal.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "Altarpiece 'St. Helena with the True Cross' painted by Peter Paul Rubens in 1601.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art4",
+        "description": "Large statue of St. Helena, adapted from an ancient statue of Juno.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art5",
+        "description": "Tomb of Cardinal Francisco de Quiñones sculpted by Jacopo Sansovino in 1536.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art6",
+        "description": "Mosaic icon of Pope Gregory I, believed to have been given to the basilica around 1385 by Raimondo Del Balzo Orsini.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art7",
+        "description": "Frescoes of the Legends of the True Cross in the apse, attributed to Melozzo, Antoniazzo Romano, and Marco Palmezzano.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Helena, mother of Constantine I",
+      "personId": "helena-mother-of-constantine-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Gregory I",
+      "personId": "pope-gregory-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Benedict XIV",
+      "personId": "pope-benedict-xiv",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Peter Paul Rubens",
+      "personId": "peter-paul-rubens",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Corrado Giaquinto",
+      "personId": "corrado-giaquinto",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Melozzo da Forlì",
+      "personId": "melozzo-da-forl",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Florestano Di Fausto",
+      "personId": "florestano-di-fausto",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Jacopo Sansovino",
+      "personId": "jacopo-sansovino",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Lucius II",
+      "personId": "pope-lucius-ii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Alexander II",
+      "personId": "pope-alexander-ii",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

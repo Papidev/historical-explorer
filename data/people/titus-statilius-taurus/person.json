@@ -1,0 +1,69 @@
+{
+  "id": "titus-statilius-taurus",
+  "name": "Titus Statilius Taurus",
+  "wikidataId": "Q3991906",
+  "wikipediaTitle": "Titus Statilius Taurus",
+  "content": {
+    "description": [
+      {
+        "text": "Titus Statilius Taurus (I) was a Roman general and twice consul who rose from humble origins in Lucania to become a prominent figure during the late Republic and early Principate. He entered the political arena as a novus homo, a self‑made man, and was first elected suffect consul in 37 BC on the patronage of Marcus Antonius. In that same year he was dispatched with a fleet to support Octavian in the campaign against Sextus Pompeius; after Pompey was expelled from Sicily, Taurus crossed to Africa and secured the province with little resistance, earning a triumph in 34 BC. His success in Africa earned him a reputation as a capable commander and set the stage for his later service under Octavian.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Taurus continued to play a decisive role in Octavian’s wars. He accompanied Octavian to Dalmatia in 34 BC and remained in command of the troops there after the emperor returned to Rome. When the civil war with Antony and Cleopatra erupted, Taurus sided with Octavian and commanded the land forces at the Battle of Actium; Antony’s land army surrendered to him, hastening Octavian’s victory. In 29 BC he was sent to Spain, where he defeated the Cantabrians, Vaccaei and Astures. He was made consul ordinarius in 26 BC alongside Augustus, and in 16 BC he served as praefectus urbi while Augustus was in Gaul. Taurus was the last man to hold multiple consulships until the reign of Tiberius, and he is credited with building Rome’s first permanent amphitheatre, which opened in 29 BC to great acclaim.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He maintained a private bodyguard of German slaves in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He built Rome’s first permanent amphitheatre, which opened in 29 BC to great acclaim.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a novus homo, a self‑made man from Lucania.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He commanded Octavian’s land forces at the Battle of Actium, leading to Antony’s surrender.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was awarded a triumph in 34 BC for securing Africa.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the last man to hold multiple consulships until the reign of Tiberius.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Titus_Statilius_Taurus.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Titus_Statilius_Taurus.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/db/Titus_Statilius_Taurus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/db/Titus_Statilius_Taurus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Published by Guillaume Rouille (1518?-1589)",
+    "author": "Published by Guillaume Rouille (1518?-1589)",
+    "width": 400,
+    "height": 405,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Titus Statilius Taurus",
+    "url": "https://en.wikipedia.org/wiki/Titus_Statilius_Taurus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:52:10.150Z"
+  }
+}

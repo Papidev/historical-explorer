@@ -1,0 +1,61 @@
+{
+  "id": "pope-evaristus",
+  "name": "Pope Evaristus",
+  "wikidataId": "Q47746",
+  "wikipediaTitle": "Pope Evaristus",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Evaristus served as bishop of Rome from around 99 to 107 CE, a period that overlapped the final years of the Apostolic Age. According to the Liber Pontificalis and Eusebius, he was a Greek born in Bethlehem to a Jewish father named Judah, and he assumed the papacy in the third year of Emperor Trajan’s reign, holding office for roughly nine years before his death.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his episcopate, Evaristus is credited with formalizing the public celebration of marriage under priestly blessing, a practice that would become a cornerstone of Catholic sacramental life. He is also described as being \"crowned with martyrdom\" in the Liber Pontificalis, though the Roman Martyrology lists him without a martyr title; he was interred in the catacomb beneath Saint Peter’s Basilica, close to the apostle’s own burial site.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Evaristus decreed that marriage should be celebrated publicly and with the blessing of a priest, establishing a precedent for the Catholic sacrament of marriage.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He is described in the Liber Pontificalis as being \"crowned with martyrdom\", though the Roman Martyrology does not list him as a martyr.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was buried near the body of Saint Peter in the Vatican, in Saint Peter's tomb under Saint Peter's Basilica.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 107,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Evaristus_at_St_Paul.gif",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Evaristus_at_St_Paul.gif",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Evaristus_at_St_Paul.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Evaristus_at_St_Paul.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 364,
+    "height": 364,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Evaristus",
+    "url": "https://en.wikipedia.org/wiki/Pope_Evaristus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:37:53.814Z"
+  }
+}

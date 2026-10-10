@@ -1,0 +1,65 @@
+{
+  "id": "federico-zuccari",
+  "name": "Federico Zuccari",
+  "wikidataId": "Q345605",
+  "wikipediaTitle": "Federico Zuccari",
+  "content": {
+    "description": [
+      {
+        "text": "Federico Zuccari (c. 1540/1541 – July/August 1609) was an Italian painter, draughtsman, architect and writer who epitomised late‑Mannerist art, working in Rome, Venice, Florence, Paris, Antwerp, England and Spain, and executing major fresco cycles such as the Last Judgment in the dome of Florence’s cathedral and decorations for the Escorial.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond his painting, Zuccari founded the Accademia di San Luca in Rome in 1595, becoming its first president, and he published the theoretical treatise *L'idea de' Pittori, Scultori, ed Architetti* (1607), while also producing a celebrated 88‑sheet illustrated edition of Dante’s *Divina Commedia* that now resides in the Uffizi.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "During his tenure in Spain (1586‑1588) Zuccari’s Mannerist style clashed with Philip II’s austere taste, leading many of his works at the Escorial to be painted over or heavily retouched after his departure.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In Venice he collaborated with the architect Palladio on theatrical set designs for the Compagnia della Calza degli Accesi, illustrating his involvement in interdisciplinary artistic projects.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Zuccari’s series of 20 drawings (c. 1595) depicting the early life of his elder brother Taddeo are preserved at the Getty Center, showcasing his skill as a draughtsman and his dedication to family legacy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1540,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1609,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Fede_Galizia_-_Portrait_of_Federico_Zuccaro.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Fede_Galizia_-_Portrait_of_Federico_Zuccaro.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Fede_Galizia_-_Portrait_of_Federico_Zuccaro.jpg/960px-Fede_Galizia_-_Portrait_of_Federico_Zuccaro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/98/Fede_Galizia_-_Portrait_of_Federico_Zuccaro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Fede Galizia",
+    "author": "Fede Galizia",
+    "width": 1419,
+    "height": 1827,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Federico Zuccari",
+    "url": "https://en.wikipedia.org/wiki/Federico_Zuccari"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:120b-cloud",
+    "completedAt": "2026-10-10T01:32:42.135Z"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "st-thomas-of-canterbury",
+  "name": "St Thomas of Canterbury",
+  "wikidataId": "Q192236",
+  "wikipediaTitle": "Thomas Becket",
+  "content": {
+    "description": [
+      {
+        "text": "Thomas Becket was born in London on 21 December 1119, the feast day of Saint Thomas the Apostle, into a Norman family that had settled in the city.  Educated first at Merton Priory and later in Paris, he entered the household of Archbishop Theobald of Bec, where his administrative skill earned him the king’s confidence and the post of Lord Chancellor in 1155.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After Theobald’s death, Becket was elected Archbishop of Canterbury in 1162, a position that brought him into direct conflict with King Henry II over the rights of the Church.  His refusal to accept the Constitutions of Clarendon led to his exile in France for six years, and his return in 1170 ended only when he was murdered by four knights loyal to the king inside Canterbury Cathedral.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Becket’s birth on the feast day of Saint Thomas the Apostle may have influenced his later devotion to the saint’s namesake.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Before becoming a cleric, Becket worked as a clerk in a merchant’s business, a common path for young men of modest means in 12th‑century London.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was canonised by Pope Alexander III in 1173, just two years after his death, and his shrine at Canterbury became one of the most visited pilgrimage sites in medieval England.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The shrine was destroyed during the Dissolution of the Monasteries in 1538, and the remains of Becket were lost, though his cult continued in various forms across Europe.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1119,
+      "month": 12,
+      "day": 21,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1170,
+      "month": 12,
+      "day": 29,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "BecketHenryII_(Thomas_Becket).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:BecketHenryII_(Thomas_Becket).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/66/BecketHenryII_%28Thomas_Becket%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/66/BecketHenryII_%28Thomas_Becket%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Peter of Langtoft",
+    "author": "Peter of Langtoft",
+    "width": 155,
+    "height": 264,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Thomas Becket",
+    "url": "https://en.wikipedia.org/wiki/Thomas_Becket"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:17:38.104Z"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "james-gibbons",
+  "name": "James Gibbons",
+  "wikidataId": "Q712605",
+  "wikipediaTitle": "James Gibbons",
+  "content": {
+    "description": [
+      {
+        "text": "James Gibbons was born in Baltimore on July 23, 1834, the fourth of six children to Irish immigrants. After a childhood marked by illness and a family move to New Orleans, he entered St. Charles College in 1855 and was ordained a priest in 1861. He served as a curate and pastor in Baltimore before becoming a personal secretary to Archbishop Martin Spalding, which positioned him for his later appointment as the first apostolic vicar of North Carolina in 1868.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Elevated to the episcopacy at age 34, Gibbons earned the nickname “the boy bishop” and later became Bishop of Richmond in 1872. In 1877 he succeeded as Archbishop of Baltimore, where he served for forty years, and in 1886 he was made a cardinal, the second American to receive that honor. During his tenure he founded the Catholic University of America, defended labor rights, and published the bestselling apologetic work The Faith of Our Fathers, which helped shape American Catholic identity.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the second American cardinal, following John McCloskey.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "At age 34 he was one of the youngest Catholic bishops in the world and was nicknamed “the boy bishop.”",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His book The Faith of Our Fathers sold 1.4 million copies by 1917 and remained the most popular book in the United States until 1939.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as the first chancellor of the Catholic University of America when it opened in 1889.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1903 he became the first American cardinal to participate in a papal conclave.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was involved in the Congo issue and received the Grand Cross of the Order of the Crown for his assistance to King Leopold II.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1834,
+      "month": 7,
+      "day": 23,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1921,
+      "month": 3,
+      "day": 24,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "GibbonsPhotoStanding.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:GibbonsPhotoStanding.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/GibbonsPhotoStanding.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/GibbonsPhotoStanding.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 734,
+    "height": 1043,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "James Gibbons",
+    "url": "https://en.wikipedia.org/wiki/James_Gibbons"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:39:01.521Z"
+  }
+}

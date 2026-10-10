@@ -1,0 +1,73 @@
+{
+  "id": "suetonius",
+  "name": "Suetonius",
+  "wikidataId": "Q10133",
+  "wikipediaTitle": "Suetonius",
+  "content": {
+    "description": [
+      {
+        "text": "Gaius Suetonius Tranquillus, known simply as Suetonius, was born around AD 69 in the North African town of Hippo Regius (modern Annaba, Algeria).  His family held a modest equestrian status; his father, Suetonius Laetus, served as a tribune in Legio XIII Gemina.  Suetonius received a classical education in rhetoric in Rome and later became a close friend of the senator Pliny the Younger, who described him as “quiet and studious, a man dedicated to writing.”  Pliny’s patronage helped Suetonius acquire a small property and secure tax‑immunity privileges normally reserved for fathers of three, even though Suetonius was childless but married.  He went on to serve in several imperial offices, acting as secretary of studies and director of the imperial archives under Emperor Trajan, and later as the emperor’s secretary (ab epistulis) under Hadrian.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Suetonius is best remembered for his surviving work De Vita Caesarum, commonly called The Twelve Caesars, a collection of biographies of the first twelve Roman rulers from Julius Caesar to Domitian.  Written during Hadrian’s reign, the work is notable for its consistent structure—appearance, omens, family, quotes, and history—and for recording the earliest accounts of Julius Caesar’s epileptic seizures.  In addition to this masterpiece, Suetonius produced a number of other writings, many of which survive only in fragments or are known only from later references.  These include Greek biographies of famous writers (De Poetis, De Grammaticis, De Rhetoribus) and works on Roman customs, games, and physical defects, as well as a long list of lost titles such as Roman Manners and Customs, The Roman Year, and Greek Games.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Suetonius recorded the earliest known accounts of Julius Caesar’s epileptic seizures, a detail that has intrigued historians for centuries.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Despite being married, Suetonius was childless, yet he was granted the tax‑immunity privilege (ius trium liberorum) usually reserved for fathers of three, thanks to Pliny’s intercession.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Hadrian dismissed Suetonius from his position as the emperor’s secretary because he was deemed too informal around the empress Vibia Sabina.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Suetonius served as secretary of studies and director of the imperial archives under Trajan, and later as the emperor’s secretary (ab epistulis) under Hadrian.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Suetonius wrote Greek biographies of famous writers, including lives of Virgil, Terence, Horace, and Lucan, many of which survive only in fragments.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 69,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 122,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Suetonius_etching_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Suetonius_etching_(cropped).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Suetonius_etching_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Suetonius_etching_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Achille Réveil",
+    "author": "Achille Réveil",
+    "width": 573,
+    "height": 795,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Suetonius",
+    "url": "https://en.wikipedia.org/wiki/Suetonius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:50:48.308Z"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "pietro-aldobrandini",
+  "name": "Pietro Aldobrandini",
+  "wikidataId": "Q691894",
+  "wikipediaTitle": "Pietro Aldobrandini",
+  "content": {
+    "description": [
+      {
+        "text": "Pietro Aldobrandini was born on 31 March 1571 in Rome and entered the ecclesiastical hierarchy at a young age. In 1593 he was elevated to the College of Cardinals by his uncle, Pope Clement VIII, receiving the title of Cardinal‑deacon of San Nicola in Carcere. His rapid rise was aided by his family’s influence and his diplomatic skill, which later earned him the role of papal legate to Lyon in 1600, where he blessed the marriage of Henry IV of France and Marie de’ Medici.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond his administrative duties, Aldobrandini became a prominent patron of the arts. He acquired the old Ruffini villa at Frascati, transforming it into the Villa Aldobrandini with designs by Giacomo della Porta and a loggia added by Carlo Maderno. He also oversaw the construction of a new villa on the Quirinal Hill, where he housed a rich collection of paintings donated by Lucrezia d’Este. His patronage extended to literary and musical figures, notably the poet Torquato Tasso and the composer Girolamo Frescobaldi.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He served as Camerlengo of the Holy Roman Church, responsible for the fiscal administration of the Patrimony of Saint Peter.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1604 he was consecrated bishop by Pope Clement VIII and shortly thereafter became Archbishop of Ravenna, a position he held until his death.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Villa Aldobrandini’s garden pavilion was decorated with frescoes by the painter Domenichino, illustrating the cardinal’s commitment to contemporary artists.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1571,
+      "month": 3,
+      "day": 31,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1621,
+      "month": 2,
+      "day": 10,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pietro_Aldobrandini.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pietro_Aldobrandini.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Pietro_Aldobrandini.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Pietro_Aldobrandini.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 201,
+    "height": 296,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pietro Aldobrandini",
+    "url": "https://en.wikipedia.org/wiki/Pietro_Aldobrandini"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:38:30.569Z"
+  }
+}

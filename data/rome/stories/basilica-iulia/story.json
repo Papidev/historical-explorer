@@ -1,0 +1,146 @@
+{
+  "introduction": {
+    "text": "The Basilica Julia was a civil basilica in the Roman Forum, built by Julius Caesar and completed by Augustus, serving as a major public court and meeting place in ancient Rome.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Construction began under Julius Caesar in 46 BC.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -46,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "The basilica burned in 9 AD shortly after completion.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 9,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "It was reconstructed and rededicated to Augustus' adoptive sons Gaius and Lucius in 12 AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 12,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Septimius Severus restored the basilica after a fire in 199 AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 199,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "Diocletian rebuilt the basilica after another fire in 283 AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 283,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "The urban prefect Gabinius Vettius Probianus restored the basilica in 377 AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 377,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "The basilica was partially destroyed when the Visigoths sacked Rome in 410 AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 410,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The basilica was a three‑story marble structure with a central aisle that measured 82 m in length, flanked by five aisles and supported by marble‑faced brick columns. The façade featured two stories of arcades with Carrara marble columns.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "The central hall was paved with colorful polychrome marble slabs, contrasting with the plain white marble of the adjoining aisles, and the façade was decorated with engaged Carrara marble columns.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Julius Caesar",
+      "personId": "julius-caesar",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Augustus",
+      "personId": "augustus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Gaius Caesar",
+      "personId": "gaius-caesar",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Lucius Caesar",
+      "personId": "lucius-caesar",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Diocletian",
+      "personId": "diocletian",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Septimius Severus",
+      "personId": "septimius-severus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pliny the Younger",
+      "personId": "pliny-the-younger",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Suetonius",
+      "personId": "suetonius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Caligula",
+      "personId": "caligula",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Scipio Africanus",
+      "personId": "scipio-africanus",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "pope-lucius-ii",
+  "name": "Pope Lucius II",
+  "wikidataId": "Q170385",
+  "wikipediaTitle": "Pope Lucius II",
+  "content": {
+    "description": [
+      {
+        "text": "Gherardo Caccianemici dal Orso, later Pope Lucius II, rose from a canon of the Basilica di San Frediano in Bologna to the papacy in March 1144.  After serving as a cardinal priest and papal legate in Germany, he was elected pope and consecrated on 12 March 1144, taking the name Lucius in honour of the earlier pontiff.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His brief pontificate was dominated by the turmoil of the Roman Commune and the struggle for control of Rome.  He negotiated a seven‑year truce with King Roger II of Sicily, fought the Senate led by Giordano Pierleoni, and ultimately died from injuries sustained in a clash with the rebels on 15 February 1145.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "During his reign he presented the church with a copy of the Gospels bound in gold plates and adorned with jewels, as well as silver‑gilt ampullae for use at Mass.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He accepted feudal homage from King Afonso I of Portugal on 1 May 1144, but did not recognise him as king, instead calling him Dux Portugallensis.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Lucius II was mortally wounded by a thrown stone during a battle against the Roman Senate, and died at San Gregorio Magno al Celio.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 1145,
+      "month": 2,
+      "day": 15,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Fresco_of_Pope_Lucius_II_after_restoration_-_Palazzo_Altieri.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Fresco_of_Pope_Lucius_II_after_restoration_-_Palazzo_Altieri.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Fresco_of_Pope_Lucius_II_after_restoration_-_Palazzo_Altieri.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Fresco_of_Pope_Lucius_II_after_restoration_-_Palazzo_Altieri.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 527,
+    "height": 602,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Lucius II",
+    "url": "https://en.wikipedia.org/wiki/Pope_Lucius_II"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:26:30.804Z"
+  }
+}

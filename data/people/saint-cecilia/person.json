@@ -1,0 +1,61 @@
+{
+  "id": "saint-cecilia",
+  "name": "Saint Cecilia",
+  "wikidataId": "Q80513",
+  "wikipediaTitle": "Cecilia of Rome",
+  "content": {
+    "description": [
+      {
+        "text": "Saint Cecilia was a Roman virgin who was martyred in the early third century. According to tradition she was forced to marry the pagan nobleman Valerian, but she remained a devoted Christian and sang silently to God during her wedding. Her steadfast faith led to her execution, and she is remembered as a martyr who upheld her vow of virginity against pagan pressure.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cecilia’s legacy grew far beyond her martyrdom. She became the patron saint of music and musicians, a status that has inspired countless composers and performers. Her feast day, celebrated on 22 November, is marked by concerts and musical festivals, and the Church of Santa Cecilia in Trastevere—believed to stand on the site of her home—houses her relics.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Cecilia is venerated as the patron saint of music and musicians, and her feast day on 22 November is traditionally observed with concerts and musical festivals.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The church of Santa Cecilia in Trastevere, founded in the third century by Pope Urban I, is believed to be built on the site of the house where Cecilia lived and died, and it contains her relics.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1599 the tomb of Saint Cecilia was opened and her body was found to be incorrupt, appearing as if she were simply sleeping.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 230,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Vouet,_Simon_-_Saint_Cecilia_-_c._1626.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Vouet%2C_Simon_-_Saint_Cecilia_-_c._1626.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Vouet%2C_Simon_-_Saint_Cecilia_-_c._1626.jpg/960px-Vouet%2C_Simon_-_Saint_Cecilia_-_c._1626.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Vouet%2C_Simon_-_Saint_Cecilia_-_c._1626.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Simon Vouet",
+    "author": "Simon Vouet",
+    "width": 1852,
+    "height": 2512,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Cecilia of Rome",
+    "url": "https://en.wikipedia.org/wiki/Cecilia_of_Rome"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:20:07.824Z"
+  }
+}

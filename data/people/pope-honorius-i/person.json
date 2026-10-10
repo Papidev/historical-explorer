@@ -1,0 +1,63 @@
+{
+  "id": "pope-honorius-i",
+  "name": "Pope Honorius I",
+  "wikidataId": "Q170502",
+  "wikipediaTitle": "Pope Honorius I",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Honorius I, who reigned as bishop of Rome from 27 October 625 until his death on 12 October 638, was a wealthy aristocrat born in Campania.  During his papacy he actively promoted the Christianisation of Anglo‑Saxon England, sending Saint Birinus to convert the West Saxons and bestowing the pallium on the archbishops of York and Canterbury, while also working to persuade the Irish and British churches to adopt the Roman Easter computus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Honorius’s tenure was also marked by his involvement in the theological controversy over Monoenergism and Monothelitism.  In a 635 letter to Patriarch Sergius I of Constantinople, he endorsed a policy of silence on the question of Christ’s energies, a stance that later led to his posthumous anathematization by the Third Council of Constantinople in 681.  The condemnation of Honorius was subsequently cited by opponents of papal infallibility during the First Vatican Council of 1870 as evidence that a pope could be a heretic.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Honorius was a wealthy aristocrat; his father, Petronius, held the honorary title of consul.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He employed monks rather than secular clergy in the administration of the Lateran Palace, following the model of Gregory I.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His posthumous anathematization by the Third Council of Constantinople was used as a primary argument against the doctrine of papal infallibility in the debates of the First Vatican Council.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 638,
+      "month": 10,
+      "day": 12,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_Honorius_I_-_Apse_mosaic_-_Sant'Agnese_fuori_le_mura_-_Rome_2016.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Honorius_I_-_Apse_mosaic_-_Sant'Agnese_fuori_le_mura_-_Rome_2016.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Pope_Honorius_I_-_Apse_mosaic_-_Sant%27Agnese_fuori_le_mura_-_Rome_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Pope_Honorius_I_-_Apse_mosaic_-_Sant%27Agnese_fuori_le_mura_-_Rome_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "© José Luiz Bernardes Ribeiro",
+    "author": "José Luiz",
+    "width": 886,
+    "height": 1535,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Honorius I",
+    "url": "https://en.wikipedia.org/wiki/Pope_Honorius_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:08:52.470Z"
+  }
+}

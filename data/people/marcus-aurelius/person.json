@@ -1,0 +1,69 @@
+{
+  "id": "marcus-aurelius",
+  "name": "Marcus Aurelius",
+  "wikidataId": "Q1430",
+  "wikipediaTitle": "Marcus Aurelius",
+  "content": {
+    "description": [
+      {
+        "text": "Marcus Aurelius Antoninus was born on 26 April 121 in Rome as the son of the praetor Marcus Annius Verus and Domitia Calvilla. Raised by his mother and paternal grandfather after his father’s early death, he was adopted by Emperor Antoninus Pius in 138 and later married Antoninus’s daughter Faustina in 145. He studied Greek and Latin under prominent tutors, served as consul in 140, 145 and 161, and ascended to the throne in 161 alongside his adoptive brother Lucius Verus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his reign from 161 to 180, Marcus Aurelius faced extensive military campaigns against the Marcomanni, Quadi, Iazyges, and the Parthian Empire, while also dealing with the Antonine Plague that devastated the population. He is best remembered for his philosophical work *Meditations*, written in Greek as a personal journal of Stoic thought, and for the equestrian statue that still stands in Rome. He died on 17 March 180 and was succeeded by his son Commodus, marking the end of the Pax Romana.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Marcus Aurelius’s *Meditations* were written in Greek and have become one of the most important sources for modern understanding of ancient Stoic philosophy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The equestrian statue of Marcus Aurelius is the only Roman equestrian statue that has survived into the modern period.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the last emperor of the Pax Romana, an era of relative peace, calm, and stability that lasted from 27 BC to 180 AD.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 121,
+      "month": 4,
+      "day": 26,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 180,
+      "month": 3,
+      "day": 17,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Marcus_Aurelius_Louvre_MR561_n02.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Marcus_Aurelius_Louvre_MR561_n02.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Marcus_Aurelius_Louvre_MR561_n02.jpg/960px-Marcus_Aurelius_Louvre_MR561_n02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Marcus_Aurelius_Louvre_MR561_n02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 2.5",
+    "attribution": "Marie-Lan Nguyen (2011)",
+    "author": "Marie-Lan Nguyen (2011)",
+    "width": 2773,
+    "height": 4160,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Marcus Aurelius",
+    "url": "https://en.wikipedia.org/wiki/Marcus_Aurelius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:50:13.750Z"
+  }
+}

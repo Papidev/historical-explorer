@@ -1,0 +1,48 @@
+{
+  "id": "piccirilli-brothers",
+  "name": "Piccirilli Brothers",
+  "wikidataId": "Q7190583",
+  "wikipediaTitle": "Piccirilli Brothers",
+  "content": {
+    "description": [
+      {
+        "text": "The Piccirilli Brothers were an Italian‑American family of marble carvers who emigrated from Italy to New York in 1888 under the leadership of Giuseppe Piccirilli (1844–1910). All six sons—Ferruccio, Attilio, Furio, Masaniello (Thomas), Orazio (Horace) and Getulio—were trained as cutters and became the premier stone‑carving workshop in the United States, operating from a brownstone on 142nd Street in the Bronx that eventually occupied an entire city block.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Their studio supplied the finished marble for many of America’s most celebrated monuments, including Daniel Chester French’s colossal Abraham Lincoln in the Lincoln Memorial (1920), the Four Continents for the National Mall, and the pedimental sculptures of the U.S. Capitol. While the brothers were chiefly known as executors of other sculptors’ designs, Attilio and Furio also produced independent sculptures, and the workshop’s sudden closure in 1945 led to the loss of much of its archival record.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Giuseppe Piccirilli had fought in Garibaldi’s Unification war before becoming a stone carver in New York.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Piccirilli Brothers were the carvers of choice for leading American sculptors such as Daniel Chester French and Paul Wayland Bartlett, translating plaster models into marble, limestone, and granite.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Their studio’s closure in 1945 resulted in the loss of many records, making it difficult for historians to fully document their output.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Attilio Piccirilli sculpted the figures of Courage and Duty for the Firemen’s Memorial in Riverside Park in 1913.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Piccirilli Brothers",
+    "url": "https://en.wikipedia.org/wiki/Piccirilli_Brothers"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:120b-cloud",
+    "completedAt": "2026-10-10T01:33:18.185Z"
+  }
+}

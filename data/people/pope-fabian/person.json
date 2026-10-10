@@ -1,0 +1,75 @@
+{
+  "id": "pope-fabian",
+  "name": "Pope Fabian",
+  "wikidataId": "Q131159",
+  "wikipediaTitle": "Pope Fabian",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Fabian was elected to the papacy in 236 after a period of relative calm in the early Christian community. According to Eusebius, a dove descended upon his head during the election, a sign that the Holy Spirit had chosen him. The assembled electors, recalling the descent of the Spirit at Jesus’ baptism, acclamated him as bishop, and he immediately set about restoring harmony among the Roman congregations, ending the schism between the followers of Pontian and Hippolytus and securing the return of their bodies from Sardinia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his fourteen-year reign, Fabian organized the Church in Rome into seven deaconries and appointed subdeacons to collect the acts of martyrs, thereby preserving early Christian testimony. He also sent seven bishops—known as the “apostles to the Gauls”—to evangelize the region in 245. His tenure ended abruptly when Emperor Decius ordered Christians to perform acts of loyalty to the Roman gods; Fabian was martyred on 20 January 250, likely while imprisoned, and his remains were later reinterred at San Sebastiano fuori le mura by Pope Clement XI.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "A dove is said to have descended on Fabian’s head during his election, symbolizing the Holy Spirit’s unexpected choice.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He sent seven bishops to Gaul in 245, a mission that laid the foundations for Christianity in that region.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Fabian divided Rome into seven deaconries and appointed subdeacons to collect and preserve the acts of martyrs.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was martyred on 20 January 250 during the Decian persecution, likely while imprisoned rather than executed.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His remains were reinterred at San Sebastiano fuori le mura by Pope Clement XI, where the Albani Chapel is dedicated to him.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His feast day is 20 January in the Catholic Church, the same as Saint Sebastian, and 5 August in the Eastern Orthodox Church.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 250,
+      "month": 1,
+      "day": 20,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Saint_Fabian1.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Saint_Fabian1.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Saint_Fabian1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Saint_Fabian1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Giovanni di Paolo",
+    "author": "Giovanni di Paolo",
+    "width": 788,
+    "height": 1147,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Fabian",
+    "url": "https://en.wikipedia.org/wiki/Pope_Fabian"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:06:25.890Z"
+  }
+}

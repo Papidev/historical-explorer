@@ -1,0 +1,59 @@
+{
+  "id": "pope-stephen-iii",
+  "name": "Pope Stephen III",
+  "wikidataId": "Q320531",
+  "wikipediaTitle": "Pope Stephen III",
+  "content": {
+    "description": [
+      {
+        "text": "Stephen III was born in 720 in Sicily and was a Greek who entered the monastery of St. Chrysogonus in Rome, where he became a Benedictine monk. He served in the Lateran Palace under Pope Zachary and rose to high office, even attending the bedside of the dying Pope Paul I during the turbulent election that followed.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Elected pope on 7 August 768 after a chaotic contest involving rival antipopes, Stephen convened the Lateran Council of 769 to curb noble influence in papal elections and to oppose iconoclasm. His pontificate was marked by diplomatic efforts between the Franks and Lombards, and he died on 24 January 772.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Stephen was considered a saint in Sicily, with a feast day on 1 February, although the Holy See never officially recognized his sainthood.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 720,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 772,
+      "month": 1,
+      "day": 24,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_Stephen_III_(2).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Stephen_III_(2).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Pope_Stephen_III_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Pope_Stephen_III_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Artaud de Montor (1772–1849)",
+    "author": "Artaud de Montor (1772–1849)",
+    "width": 432,
+    "height": 602,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Stephen III",
+    "url": "https://en.wikipedia.org/wiki/Pope_Stephen_III"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:22:18.639Z"
+  }
+}

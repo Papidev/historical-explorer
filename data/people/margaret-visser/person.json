@@ -1,0 +1,62 @@
+{
+  "id": "margaret-visser",
+  "name": "Margaret Visser",
+  "wikidataId": "Q6759989",
+  "wikipediaTitle": "Margaret Visser",
+  "content": {
+    "description": [
+      {
+        "text": "Margaret Visser was born in South Africa on May 11, 1940, and pursued her education across several continents, attending schools in Zambia and Zimbabwe before studying at the Sorbonne in France and earning a PhD in Classics from the University of Toronto. She spent 18 years teaching Greek and Latin at York University in Toronto, while also establishing herself as a writer and broadcaster who lives between Toronto, Paris, and South West France, focusing on the history, anthropology, and mythology of everyday life.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Visser’s literary career has been marked by numerous accolades, including the Glenfiddich Award for Food Book of the Year in Britain (1989), the International Association of Culinary Professionals' Literary Food Writing Award, and the Jane Grigson Award. She delivered the 2002 CBC Massey Lectures on the theme \"Beyond Fate,\" and her 1992 book *The Rituals of Dinner* was re‑issued on her birthday in 2017, receiving praise from *The Guardian* for its wry humour. The Washington Post cited her work on dining etiquette in a story about a high‑school girl who claimed to serve classmates cookies containing her grandfather’s ashes, and in 2019 she appeared as an expert in a documentary exploring Mayan dining habits.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "She taught Greek and Latin at York University for 18 years.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She regularly appeared on the Canadian Broadcasting Corporation's popular radio program *Morningside* in conversations with Peter Gzowski.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Visser won the Glenfiddich Award for Food Book of the Year in Britain in 1989.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Her book *The Rituals of Dinner* was re‑issued in 2017 on her birthday, and *The Guardian* noted her wry humour in a review of the book.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Washington Post cited Visser on the etiquette of cannibalism from her 1992 book when reporting on a bizarre case involving a California high‑school girl who claimed to serve classmates cookies containing her grandfather’s ashes.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In September 2019, Visser was interviewed for a documentary on what recent archaeological discoveries say about Mayan dining habits.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1940,
+      "month": 5,
+      "day": 11,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Margaret Visser",
+    "url": "https://en.wikipedia.org/wiki/Margaret_Visser"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:09:09.597Z"
+  }
+}

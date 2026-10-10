@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "San_Pietro_in_Vincoli_-_Roma,_facciata.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:San_Pietro_in_Vincoli_-_Roma%2C_facciata.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/San_Pietro_in_Vincoli_-_Roma%2C_facciata.jpg/960px-San_Pietro_in_Vincoli_-_Roma%2C_facciata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/San_Pietro_in_Vincoli_-_Roma%2C_facciata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Luciano Tronati",
+      "author": "Luciano Tronati",
+      "width": 5226,
+      "height": 2940,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "St.Peter_in_Chains.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:St.Peter_in_Chains.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/St.Peter_in_Chains.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/St.Peter_in_Chains.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Oswald Achenbach",
+      "author": "Oswald Achenbach",
+      "width": 960,
+      "height": 741,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "San_Pietro_in_Vincoli_old.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:San_Pietro_in_Vincoli_old.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/San_Pietro_in_Vincoli_old.jpg/960px-San_Pietro_in_Vincoli_old.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/San_Pietro_in_Vincoli_old.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.0",
+      "attribution": "trespassers william",
+      "author": "trespassers william",
+      "width": 1280,
+      "height": 910,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "San_Pietro_in_Vincoli_-_Roma,_facciata.jpg"
+}

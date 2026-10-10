@@ -1,0 +1,65 @@
+{
+  "id": "gabriele-d-annunzio",
+  "name": "Gabriele D'Annunzio",
+  "wikidataId": "Q193236",
+  "wikipediaTitle": "Gabriele D'Annunzio",
+  "content": {
+    "description": [
+      {
+        "text": "Gabriele D'Annunzio, born on 12 March 1863 in Pescara, emerged as one of Italy's most flamboyant literary figures in the late nineteenth and early twentieth centuries.  His early poetry, beginning with the 1879 collection *Primo vere*, showcased a daring blend of classical allusion and sensual modernity that quickly earned him the nickname “Vate” (poet‑sage).  By the 1880s he had established a reputation for extravagant public performances and a style that fused lyrical elegance with a provocative, almost theatrical, presence, influencing the broader cultural movement that later came to be known as *dannunzianismo*.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond the page, D'Annunzio was an active political actor.  He served as a deputy in the Italian Parliament, championed interventionist war propaganda during World War I, and famously led the occupation of Fiume in 1919, proclaiming the short‑lived “Free State of Fiume” and drafting the progressive Carta del Carnaro.  His flamboyant leadership, combined with his literary notoriety, positioned him as a precursor to the fascist movement, though he never formally joined the National Fascist Party.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 1879, to generate buzz for his debut poetry collection *Primo vere*, D'Annunzio fabricated a story that he had died in a horse‑riding accident, only to later reveal the hoax and claim the book’s success was due to the sensational rumor.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "D'Annunzio was a 33rd‑degree member of the Scottish Rite of Freemasonry, a fact that influenced some of his later political and symbolic endeavors.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1863,
+      "month": 3,
+      "day": 12,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1938,
+      "month": 3,
+      "day": 1,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Gabriele_D'Annunzio_1922.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Gabriele_D'Annunzio_1922.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Gabriele_D%27Annunzio_1922.jpg/960px-Gabriele_D%27Annunzio_1922.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/Gabriele_D%27Annunzio_1922.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Agence de presse Meurisse",
+    "author": "Agence de presse Meurisse",
+    "width": 4781,
+    "height": 6233,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Gabriele D'Annunzio",
+    "url": "https://it.wikipedia.org/wiki/Gabriele_D'Annunzio"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:46:53.674Z"
+  }
+}

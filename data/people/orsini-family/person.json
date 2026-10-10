@@ -1,0 +1,65 @@
+{
+  "id": "orsini-family",
+  "name": "Orsini family",
+  "wikidataId": "Q855303",
+  "wikipediaTitle": "Orsini family",
+  "content": {
+    "description": [
+      {
+        "text": "The Orsini family was a powerful Italian noble house that rose to prominence in medieval Italy and Renaissance Rome. They produced five popes, 34 cardinals, condottieri, and were part of the Black nobility that supported the papacy. Their origins trace back to a legendary ancestor Ursus, and they claimed descent from the Julio‑Claudian dynasty. They were involved in a long‑running feud with the Colonna family, which ended with a papal bull in 1511 and a reconciliation marriage in 1571.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The family’s influence extended across central and southern Italy, controlling territories such as Bracciano, Pitigliano, and Gravina. They held political offices like Senator of Rome, Grand Justicer of Naples, and Gonfaloniere of the Papal States. Their legacy includes architectural monuments such as the Bracciano castle, the Orsini Palace in Rome, and the Park of the Monsters garden. Their name also appears in literature, from Boccaccio’s Decameron to Fitzgerald’s Tender Is the Night.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Orsini family produced five popes, the most recent being Benedict XIII in the 18th century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The family’s feud with the Colonna lasted centuries and was finally ended by a papal bull in 1511.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Bracciano castle, built in 1426, remains a symbol of the family’s military power.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Park of the Monsters, a Renaissance garden commissioned by Vicino Orsini, is a notable artistic legacy of the family.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Orsini family is mentioned in Boccaccio’s Decameron, where soldiers of a rival family attack a character named Pietro.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Coat_of_arms_of_the_house_of_Orsini_(2).svg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_the_house_of_Orsini_(2).svg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Coat_of_arms_of_the_house_of_Orsini_%282%29.svg/960px-Coat_of_arms_of_the_house_of_Orsini_%282%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Coat_of_arms_of_the_house_of_Orsini_%282%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "MostEpic",
+    "author": "MostEpic",
+    "width": 303,
+    "height": 354,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Orsini family",
+    "url": "https://en.wikipedia.org/wiki/Orsini_family"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T16:57:35.196Z"
+  }
+}

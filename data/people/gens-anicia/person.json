@@ -1,0 +1,44 @@
+{
+  "id": "gens-anicia",
+  "name": "Gens Anicia",
+  "wikidataId": "Q546397",
+  "wikipediaTitle": "Gens Anicia",
+  "content": {
+    "description": [
+      {
+        "text": "The gens Anicia traces its roots to the town of Praeneste (modern Palestrina) in central Italy, a fact underscored by the cognomen Praenestinus that appears among its earliest members such as Quinto Anicio Prenestino, who served as curule aedile in 304 BC.  Over the following centuries the family steadily climbed the Roman political ladder, reaching the consulship with Lucio Anicio Gallo in 160 BC, who led Rome’s third Illyrian war and negotiated peace between the kingdoms of Bithynia and Pergamon in 154 BC.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the late Roman Empire the Anicii became a dominant aristocratic house, largely through strategic marriages with other powerful families such as the Annia, Petronia, and Cocceia.  Their influence peaked in the 4th and 5th centuries, when they produced a succession of consuls, urban prefects, and even emperors—Petronius Maximus in 455 and Olybrius in 472.  The family was also notable for its early conversion to Christianity, becoming the first senatorial house to embrace the faith and staunch supporters of Constantine I, a shift that helped cement their political power and led to the election of four popes from their line.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Four members of the Anicii line ascended to the papacy: Felix III (483–492), Agapetus I (535–536), Gregory I (590–604), and Adrian I (772).",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The last Roman consul, Anicius Faustus Albinus Basilius, held the office in 541, marking the end of the Roman consular tradition.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Anicius Manlius Torquatus Severinus Boethius, a philosopher and statesman of the 5th–6th centuries, was a member of the Anicii and is remembered for his work *De consolatione philosophiae* and his martyrdom under the Ostrogothic king Theodoric.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Gens Anicia",
+    "url": "https://it.wikipedia.org/wiki/Gens_Anicia"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:46:18.645Z"
+  }
+}

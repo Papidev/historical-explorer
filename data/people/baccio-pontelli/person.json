@@ -1,0 +1,65 @@
+{
+  "id": "baccio-pontelli",
+  "name": "Baccio Pontelli",
+  "wikidataId": "Q576325",
+  "wikipediaTitle": "Baccio Pontelli",
+  "content": {
+    "description": [
+      {
+        "text": "Baccio Pontelli was born around 1449 in Florence, where he learned the art of wood inlay and marquetry in the workshop of Giuliano and Benedetto da Maiano. His early career was shaped by a trip to Urbino between 1480 and 1482, during which he worked on the Studiolo of Duke Federico de Montefeltro and absorbed the influence of Francesco di Giorgio Martini.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Later he moved to Rome, where he served as an architect during Pope Sixtus IV’s urban renewal program. His contributions included supervising construction on Santa Aurea, the Ponte Sisto, the hospital of Santo Spirito in Sassia, the church of Sant'Agostino, the facade of Santa Maria del Popolo, San Pietro in Vincoli, and Santi Apostoli, and he is credited with the design of the Sistine Chapel. In his final years he worked on military fortresses in the Marche region and in the Kingdom of Naples, and he died around 1494 in Urbino, where he was buried in the church of St. Dominic.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Pontelli is credited with designing the Sistine Chapel, a project that later became famous for Michelangelo’s frescoes.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He played a key role in the construction of the Ponte Sisto, a bridge that still carries traffic across the Tiber in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his death, a nephew placed an epitaph in 1577 in the church of St. Dominic in Urbino, where Pontelli was interred.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1449,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1494,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Sant_Agostino_Fassade.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Sant_Agostino_Fassade.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Sant_Agostino_Fassade.jpg/960px-Sant_Agostino_Fassade.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Sant_Agostino_Fassade.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Peter1936F",
+    "author": "Peter1936F",
+    "width": 7859,
+    "height": 7782,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Baccio Pontelli",
+    "url": "https://en.wikipedia.org/wiki/Baccio_Pontelli"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:22:21.409Z"
+  }
+}

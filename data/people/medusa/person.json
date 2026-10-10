@@ -1,0 +1,65 @@
+{
+  "id": "medusa",
+  "name": "Medusa",
+  "wikidataId": "Q160730",
+  "wikipediaTitle": "Medusa",
+  "content": {
+    "description": [
+      {
+        "text": "Medusa is one of the three Gorgons in Greek mythology, distinguished as the only mortal among them. She is famously depicted as a woman whose hair is made of living snakes, and whose gaze turns anyone who looks upon her into stone. According to the ancient accounts, Medusa was slain by the hero Perseus, who used her severed head as a weapon before gifting it to the goddess Athena, who mounted it on her shield, the Aegis.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Medusa’s lineage traces back to the sea‑gods Phorcys and Ceto, making her a child of the ocean’s primordial forces. While her sisters Euryale and Stheno were immortal, Medusa’s mortality made her vulnerable to mortal heroes. The myths place her dwelling in various locations, from Sarpedon near Cisthene to the Libyan coast, reflecting differing traditions about her origin. After her death, her head retained its petrifying power, and from her body sprang the winged horse Pegasus and the bronze‑armed giant Chrysaor.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The head of Medusa was preserved after her death and continued to turn onlookers to stone, a power that Perseus exploited before handing it to Athena.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Gorgoneion, an apotropaic device featuring Medusa’s head, was used in classical antiquity to ward off evil and was often placed on shields and architectural elements.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Medusa was pregnant by Poseidon at the time of her beheading, and the birth of Pegasus and Chrysaor from her severed body is a recurring motif in the myth.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Medusa’s sisters, Euryale and Stheno, were immortal, contrasting with Medusa’s mortal status and underscoring the unique vulnerability of her character.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The myths situate Medusa’s home in different regions—Sarpedon near Cisthene in some accounts and Libya in others—highlighting the fluidity of ancient geographic attributions.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Medusa_by_Carvaggio.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Medusa_by_Carvaggio.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Medusa_by_Carvaggio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Medusa_by_Carvaggio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Caravaggio",
+    "author": "Caravaggio",
+    "width": 935,
+    "height": 955,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Medusa",
+    "url": "https://en.wikipedia.org/wiki/Medusa"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:45:39.974Z"
+  }
+}

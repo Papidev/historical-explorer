@@ -1,0 +1,129 @@
+{
+  "introduction": {
+    "text": "The Arch of Malborghetto is an ancient Roman quadrifrons arch located north of Rome on the Via Flaminia, notable for its early fourth‑century construction and its later transformations into a medieval building.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "construction",
+        "description": "Construction of the quadrifrons arch in the first half of the fourth century, during the reign of Diocletian.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 284,
+          "precision": "approximate",
+          "endYear": 305,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "medieval-conversion",
+        "description": "Transformation into a Greek‑cross church in the eleventh century, closing the archways and adding an apse.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1000,
+          "precision": "approximate",
+          "endYear": 1100,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "1256-notice",
+        "description": "First official notice of the building in 1256, mentioned in a deed of sale by the Orsini family.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1256,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1485-devastation",
+        "description": "Devastation by the Orsini in 1485 to drive out the Colonna family.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1485,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "16th-century-rebuild",
+        "description": "Abandonment until the mid‑sixteenth century, when Constantino Pietrasanta rented and rebuilt the structure.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1500,
+          "precision": "approximate",
+          "endYear": 1600,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "20th-century-study",
+        "description": "Early twentieth‑century study by Fritz Töbelmann, who confirmed the fourth‑century origin through a brick stamp.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1900,
+          "precision": "approximate",
+          "endYear": 1915,
+          "granularity": "century"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "quadrifrons-structure",
+        "description": "Original quadrifrons design with rectangular floorplan (14.86 × 11.87 m) and estimated height of 18 m, similar to the Arch of Janus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "brick-masonry",
+        "description": "Brick masonry visible, with marble plates once attached via metal links; four holes for links still visible.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "architects",
+        "description": "Giuliano da Sangallo produced the first sketch reconstruction; Fritz Töbelmann also produced sketches; recent 3D models have been created.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Constantine I",
+      "personId": "constantine-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Diocletian",
+      "personId": "diocletian",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giuliano da Sangallo",
+      "personId": "giuliano-da-sangallo",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pietrasanta",
+      "personId": "pietrasanta",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Orsini family",
+      "personId": "orsini-family",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Colonna family",
+      "personId": "colonna-family",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Maxentius",
+      "personId": "maxentius",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

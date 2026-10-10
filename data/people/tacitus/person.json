@@ -1,0 +1,73 @@
+{
+  "id": "tacitus",
+  "name": "Tacitus",
+  "wikidataId": "Q2161",
+  "wikipediaTitle": "Tacitus",
+  "content": {
+    "description": [
+      {
+        "text": "Publius Cornelius Tacitus, born around AD 56 or 57, was a Roman historian and politician who rose through the cursus honorum to become suffect consul in 97. He married Julia Agricola, daughter of the general Gnaeus Julius Agricola, and his career included service as quaestor, praetor, and governor of Asia. His surviving works—Annals, Histories, Agricola, Germania, and Dialogus—cover the reigns of the Julio‑Claudians and provide a critical, concise narrative of Roman politics and foreign affairs.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Tacitus is celebrated for his terse, incisive prose and his moral scrutiny of imperial power. He drew on official state records and contemporary accounts, and his style has influenced later historians such as Edward Gibbon. His accounts of the Year of the Four Emperors and the persecution of Christians remain key primary sources for the late first‑century Roman Empire.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Tacitus married Julia Agricola, the daughter of the famed general Gnaeus Julius Agricola, which connected him to one of Rome’s most celebrated military leaders.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 97, Tacitus held the office of suffect consul under Emperor Nerva, becoming the first member of his family to reach the consulship.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Tacitus authored Germania, an ethnographic study of the Germanic peoples beyond the Roman frontier, which remains one of the earliest detailed accounts of those tribes.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Tacitus’s Latin style is noted for its brevity and precision, often described as \"grave, concise, and pithily eloquent.\"",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Tacitus was a friend and contemporary of Pliny the Younger, with whom he shared a background in rhetoric and politics.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 56,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 120,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Tacitus,_Cornelius_(50_-_116).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Tacitus%2C_Cornelius_(50_-_116).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Tacitus%2C_Cornelius_%2850_-_116%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Tacitus%2C_Cornelius_%2850_-_116%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 612,
+    "height": 729,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Tacitus",
+    "url": "https://en.wikipedia.org/wiki/Tacitus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:52:25.869Z"
+  }
+}

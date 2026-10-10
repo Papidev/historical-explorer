@@ -1,0 +1,53 @@
+{
+  "id": "servius-tullius",
+  "name": "Servius Tullius",
+  "wikidataId": "Q192998",
+  "wikipediaTitle": "Servius Tullius",
+  "content": {
+    "description": [
+      {
+        "text": "Servius Tullius, the legendary sixth king of Rome, is said to have risen from servile origins to become a popular monarch. According to Livy and other Roman writers, his mother was a captured Latin princess who was enslaved by the Romans; a divine sign—a ring of fire around his head—marked him as destined for greatness, and he later married Tarquinius Priscus’s daughter, securing his place in the royal family.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his reign, which lasted from 578 to 535 BC, Servius expanded Rome’s territory, defeated the Etruscans, and reorganised the city’s political structure. He introduced the first Roman census, created the comitia centuriata, and extended voting rights to many commoners. His reforms laid the groundwork for the Republic, but he was ultimately murdered by his daughter Tullia and her husband Lucius Tarquinius Superbus, an act that precipitated the fall of the monarchy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Servius is traditionally credited with building temples to Fortuna and Diana and with instituting the Compitalia festivals, which celebrated the household gods of local neighbourhoods.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Some ancient sources attribute the invention of Rome’s first true coinage to Servius, although this claim is considered unlikely by modern scholars.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Servius_Tullius_by_Frans_Huys.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Servius_Tullius_by_Frans_Huys.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Servius_Tullius_by_Frans_Huys.jpg/960px-Servius_Tullius_by_Frans_Huys.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/89/Servius_Tullius_by_Frans_Huys.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Frans Huys, 1522-62",
+    "author": "Frans Huys, 1522-62",
+    "width": 1100,
+    "height": 1600,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Servius Tullius",
+    "url": "https://en.wikipedia.org/wiki/Servius_Tullius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:53:37.805Z"
+  }
+}

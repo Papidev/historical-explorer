@@ -1,0 +1,69 @@
+{
+  "id": "andrea-sacchi",
+  "name": "Andrea Sacchi",
+  "wikidataId": "Q495008",
+  "wikipediaTitle": "Andrea Sacchi",
+  "content": {
+    "description": [
+      {
+        "text": "Andrea Sacchi (30 November 1599 – 21 June 1661) was an Italian painter of High Baroque Classicism who spent virtually his entire career in Rome. After an early apprenticeship with the studio of Cavalier Giuseppe d’Arpino, he entered Francesco Albani’s workshop and soon attracted the patronage of Cardinal Antonio Barberini, which helped launch his professional life.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sacchi is remembered for his theoretical clash with Pietro da Cortona at the Accademia di San Luca, where he argued that a history painting should contain only a few figures so each could retain individual expression. He expressed this principle in works such as the Allegory of Divine Wisdom (1629–33) in the Palazzo Barberini, a fresco inspired by Raphael’s Parnassus, and he later headed a prolific Roman studio that trained artists like Carlo Maratta, Luigi Garzi and Francesco Fiorelli.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In the public debates with Pietro da Cortona, Sacchi championed simplicity and unity, claiming that crowded compositions diluted narrative meaning, a stance that positioned him as a leading proponent of the ‘Classical’ approach against the exuberant ‘Baroque’ style.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His fresco Allegory of Divine Wisdom in the Palazzo Barberini (1629–33) was directly inspired by Raphael’s Parnassus and incorporates astrological symbols that allude to Pope Urban VIII’s birth and election, linking the artwork to contemporary political propaganda.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sacchi’s workshop became a major training ground for the next generation of Roman painters; among his most notable pupils was Carlo Maratta, who would dominate Roman painting for decades after Sacchi’s death.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1599,
+      "month": 11,
+      "day": 30,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1661,
+      "month": 6,
+      "day": 21,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "El_pintor_Andrea_Sacchi_(Maratta).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:El_pintor_Andrea_Sacchi_(Maratta).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/El_pintor_Andrea_Sacchi_%28Maratta%29.jpg/960px-El_pintor_Andrea_Sacchi_%28Maratta%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d8/El_pintor_Andrea_Sacchi_%28Maratta%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Carlo Maratta",
+    "author": "Carlo Maratta",
+    "width": 2199,
+    "height": 2952,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Andrea Sacchi",
+    "url": "https://en.wikipedia.org/wiki/Andrea_Sacchi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:120b-cloud",
+    "completedAt": "2026-10-10T01:33:01.503Z"
+  }
+}

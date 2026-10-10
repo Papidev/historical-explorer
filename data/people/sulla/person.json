@@ -1,0 +1,73 @@
+{
+  "id": "sulla",
+  "name": "Sulla",
+  "wikidataId": "Q483783",
+  "wikipediaTitle": "Sulla",
+  "content": {
+    "description": [
+      {
+        "text": "Lucius Cornelius Sulla Felix, born around 138 BC, rose from a modest patrician background to become one of the most powerful generals of the late Roman Republic. His early career was marked by decisive victories in the Jugurthine War, the Cimbrian War, and the Social War, where he earned the Grass Crown for bravery at the Battle of Nola. In 88 BC, as consul, he seized command of the army against Mithridates and marched on Rome, expelling his political rivals and establishing a brief dictatorship that he used to purge opponents and enact constitutional reforms aimed at restoring senatorial authority. He resigned his dictatorial powers in 80 BC after enacting these reforms, a rare example of a Roman dictator voluntarily relinquishing power.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After retiring from public office, Sulla lived a luxurious life in his villa near Puteoli, surrounded by actors and musicians, and he spent his final years writing memoirs. He died in 78 BC under circumstances that some ancient writers attribute to a sudden illness after a heated confrontation with a municipal magistrate. His death marked the end of a career that had set a precedent for the use of military force in Roman politics, a precedent that would later be followed by Pompey and Julius Caesar.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Sulla was the first Roman general to march on Rome and win a civil war, a bold move that shocked the Republic.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was awarded the Grass Crown, the highest Roman military honor, for his bravery at the Battle of Nola.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sulla was closely associated with Venus, adopting the title Epaphroditos, meaning \"favoured of Aphrodite.\"",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He had a long‑standing relationship with the actor Metrobius, whom he carried with him until the end of his life.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sulla revived the office of dictator, which had been dormant since the Second Punic War, and used it to enact sweeping constitutional reforms.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -137,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": -77,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Sulla_Glyptothek_Munich_309.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Sulla_Glyptothek_Munich_309.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Sulla_Glyptothek_Munich_309.jpg/960px-Sulla_Glyptothek_Munich_309.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Sulla_Glyptothek_Munich_309.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Own work",
+    "author": "Own work",
+    "width": 1645,
+    "height": 2508,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Sulla",
+    "url": "https://en.wikipedia.org/wiki/Sulla"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:54:38.844Z"
+  }
+}

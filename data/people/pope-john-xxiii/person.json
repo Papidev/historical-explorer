@@ -1,0 +1,73 @@
+{
+  "id": "pope-john-xxiii",
+  "name": "Pope John XXIII",
+  "wikidataId": "Q23873",
+  "wikipediaTitle": "Pope John XXIII",
+  "content": {
+    "description": [
+      {
+        "text": "Angelo Giuseppe Roncalli was born on 25 November 1881 in the small village of Sotto il Monte in Lombardy. After completing a doctorate in theology, he was ordained a priest in 1904 and served as a chaplain in the Italian army during World War I. His diplomatic career saw him appointed as Apostolic Nuncio to Bulgaria, Greece and Turkey, where he used his position to help Jewish refugees during the Holocaust. In 1958, at the age of 76, he was unexpectedly elected pope and chose the name John XXIII, becoming the first pope in over five centuries to use the name John after the antipope of the same title.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As pope, John XXIII surprised observers by convening the Second Vatican Council in 1962, a move that would modernise the Church’s liturgy and promote ecumenical dialogue. He also removed the term “perfidius” from the Good Friday liturgy, signalling a new approach to Jewish relations, and expanded the College of Cardinals to include representatives from Africa, Asia and the Pacific. His papacy ended abruptly in 1963 when he died of stomach cancer, but his legacy as the “Good Pope” and the catalyst for Vatican II has endured.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the first pope to be called \"the Good Pope\", a nickname that has endured in Catholic tradition.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first pope to be named John in over 500 years, breaking a long avoidance of the name after the antipope John XXIII.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first pope to convene the Second Vatican Council, which opened in 1962 and brought significant reforms to the Church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was canonised by Pope Francis in 2014 without the traditionally required second miracle, a unique case in Catholic canonisation history.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1881,
+      "month": 11,
+      "day": 25,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1963,
+      "month": 6,
+      "day": 3,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Ioannes_XXIII,_by_De_Agostini,_1958–1963.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ioannes_XXIII%2C_by_De_Agostini%2C_1958%E2%80%931963.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Ioannes_XXIII%2C_by_De_Agostini%2C_1958%E2%80%931963.jpg/960px-Ioannes_XXIII%2C_by_De_Agostini%2C_1958%E2%80%931963.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Ioannes_XXIII%2C_by_De_Agostini%2C_1958%E2%80%931963.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "De Agostini Editore",
+    "author": "De Agostini Editore",
+    "width": 1772,
+    "height": 2334,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope John XXIII",
+    "url": "https://en.wikipedia.org/wiki/Pope_John_XXIII"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:14:59.215Z"
+  }
+}

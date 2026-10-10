@@ -1,0 +1,57 @@
+{
+  "id": "lars-tolumnus",
+  "name": "Lars Tolumnus",
+  "wikidataId": "Q385810",
+  "wikipediaTitle": "Lars Tolumnius",
+  "content": {
+    "description": [
+      {
+        "text": "Lars Tolumnius, the most celebrated king of the Etruscan city of Veii, first appears in the historical record when the Roman colony of Fidenae rebelled in 438 BC and allied with Veii.  Tolumnius, who commanded the Fidenate army, ordered the murder of four Roman envoys sent to demand an explanation, an act that provoked the Roman Senate to declare war on Veii.  According to Livy, the execution was not a spontaneous act of drunkenness but a calculated move to entangle the Fidenates in a deed that would make reconciliation with Rome impossible, though a popular legend claims Tolumnius had merely been playing dice when he uttered the word “excellent!” and the Fidenates interpreted it as a command to kill the ambassadors.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The ensuing conflict culminated in the Battle of Fidenae, where Tolumnius faced the Roman consular army under Lucius Sergius.  Despite initial successes, the Etruscan cavalry was routed by the Roman horsemen, and Tolumnius was unhorsed and killed by the Roman tribune Aulus Cornelius Cossus.  With the king dead, the Etruscan forces collapsed, and the Romans claimed the spolia opima— the king’s armor and weapons— which Cossus dedicated at the temple of Jupiter Feretrius.  The victory earned the Roman dictator Mamercus Aemilius Mamercinus a triumph, while four statues were erected in the Roman forum to commemorate the murdered ambassadors.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "A popular anecdote suggests that Tolumnius was playing dice when the Fidenates asked whether they should kill the Roman ambassadors; he had just rolled a favorable number and exclaimed “excellent!”, which the Fidenates interpreted as a command to execute the envoys.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After Tolumnius’s death, the spolia opima— the king’s armor and weapons— were stripped from his body and dedicated at the temple of Jupiter Feretrius, a rare honor reserved for a Roman commander who had killed an enemy king in single combat.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": -437,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "A._Cornelius_Cosens_kills_with_his_own_hand_Sarte_Tolumnius,_king_of_the_Veientines,_437_BC.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:A._Cornelius_Cosens_kills_with_his_own_hand_Sarte_Tolumnius%2C_king_of_the_Veientines%2C_437_BC.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/A._Cornelius_Cosens_kills_with_his_own_hand_Sarte_Tolumnius%2C_king_of_the_Veientines%2C_437_BC.jpg/960px-A._Cornelius_Cosens_kills_with_his_own_hand_Sarte_Tolumnius%2C_king_of_the_Veientines%2C_437_BC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/A._Cornelius_Cosens_kills_with_his_own_hand_Sarte_Tolumnius%2C_king_of_the_Veientines%2C_437_BC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 2293,
+    "height": 1660,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Lars Tolumnius",
+    "url": "https://en.wikipedia.org/wiki/Lars_Tolumnius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:00:47.205Z"
+  }
+}

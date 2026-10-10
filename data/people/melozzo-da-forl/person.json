@@ -1,0 +1,75 @@
+{
+  "id": "melozzo-da-forl",
+  "name": "Melozzo da Forlì",
+  "wikidataId": "Q314579",
+  "wikipediaTitle": "Melozzo da Forlì",
+  "content": {
+    "description": [
+      {
+        "text": "Melozzo da Forlì, born around 1438 in Forlì, emerged from a wealthy family named Ambrosi, though little is known of his early life. He is thought to have been trained in the Forlivese school, influenced by Ansuino da Forlì and Andrea Mantegna, and may have worked as a journeyman and color‑grinder for master painters before first appearing in records in 1460 and 1464.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He moved to Urbino between 1465 and 1474, where he met Piero della Francesca and studied architecture with Bramante, absorbing the work of Flemish painters serving Duke Federico da Montefeltro. In Rome, he produced a foreshortened Ascension of Christ in the Basilica dei Santi Apostoli, a fresco that later influenced Raphael, and he designed the Palazzo Altemps for Girolamo Riario. He was one of the founding members of the Academy of St Luke in 1478, and his later cupola in the Basilica della Santa Casa at Loreto became a model for Mantegna’s Camera degli Sposi. Melozzo died in Forlì on 8 November 1494 and was buried in the Church of the Santissima Trinita.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Melozzo was a founding member of the Academy of St Luke in Rome, an institution created by Pope Sixtus IV to unite the city’s leading painters.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He designed the Palazzo Altemps in Rome, a palatial residence that still bears his architectural imprint.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His fresco of the Ascension of Christ in the Basilica dei Santi Apostoli employed bold foreshortening that directly influenced Raphael’s later work.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The cupola of the sacristy of San Marco in the Basilica della Santa Casa, painted by Melozzo, was among the first examples of a cupola decorated with both architecture and figures, inspiring Mantegna’s Camera degli Sposi.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Melozzo’s only secular painting, the fresco known as the \"Pestapepe\" (Pepper‑grinder) in the Pinacoteca of Forlì, was originally a grocer’s sign and showcases his energetic realism.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1438,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1494,
+      "month": 11,
+      "day": 8,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Melozzo_da_Forlì.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Melozzo_da_Forl%C3%AC.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Melozzo_da_Forl%C3%AC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Melozzo_da_Forl%C3%AC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0",
+    "attribution": "AFAIK, this should be a 19th century engraving by Luigi Barocci (first published in Rome, 1837). The image itself was uploaded on museionline.info and made available by them under CC BY-SA 3.0 licence (as stated at https://www.museionline.info/?view=article&amp;id=8:credits&amp;catid=2)",
+    "author": "AFAIK, this should be a 19th century engraving by Luigi Barocci (first published in Rome, 1837). The image itself was uploaded on museionline.info and made available by them under CC BY-SA 3.0 licence (as stated at https://www.museionline.info/?view=article&amp;id=8:credits&amp;catid=2)",
+    "width": 420,
+    "height": 500,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Melozzo da Forlì",
+    "url": "https://en.wikipedia.org/wiki/Melozzo_da_Forl%C3%AC"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:25:42.899Z"
+  }
+}

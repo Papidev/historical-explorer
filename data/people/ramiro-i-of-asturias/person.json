@@ -1,0 +1,71 @@
+{
+  "id": "ramiro-i-of-asturias",
+  "name": "Ramiro I of Asturias",
+  "wikidataId": "Q168363",
+  "wikipediaTitle": "Ramiro I of Asturias",
+  "content": {
+    "description": [
+      {
+        "text": "Ramiro I of Asturias (c. 790 – 1 February 850) ascended to the throne in 842 after a contested succession following the childless death of Alfonso II. While still abroad in Castile for his wedding, he was named successor by Alfonso II, a choice that sparked a challenge from Nepotian, a kinsman of the late king. Ramiro gathered an army in Galicia, marched to Oviedo, and defeated Nepotian at the Bridge of Cornellana, after which the rival was blinded and confined to a monastery. His early reign was marked by this decisive victory, which secured his legitimacy and allowed him to focus on external threats.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his reign, Ramiro confronted both Viking raiders and the forces of al‑Andalus. In 844 he routed a Viking fleet that had landed at Corunna, capturing prisoners and burning much of their ships, a victory that reportedly deterred further raids along the Asturian coast. He also attempted to repopulate León, but the city was soon abandoned again after an attack by Abd ar‑Rahman II’s forces. Internally, he was known for harsh justice, executing rebel nobles such as Piniolo and blinding the comes palatii Aldroito, earning the epithet Uirga iustitiae. He died on 1 February 850 in his palace at Santa María del Naranco and was buried in the Cathedral of San Salvador, Oviedo.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The palace Santa María del Naranco, built by Ramiro, is a UNESCO World Heritage Site and exemplifies the Ramirense architectural style that introduced barrel vaults made of tufa.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ramiro’s victory over the Vikings in 844 is credited with discouraging further Viking raids along the Asturian coast, a significant defensive achievement for the kingdom.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The legendary Battle of Clavijo, often attributed to Ramiro, is actually a later myth forged in the 12th century and not mentioned in contemporary chronicles.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ramiro earned the nickname Uirga iustitiae (“Rod of Justice”) for his severe measures against rebels and thieves, reflecting his reputation for harsh justice.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 790,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 850,
+      "month": 2,
+      "day": 1,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Ramiro_I_de_Asturias_(Museo_del_Prado).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ramiro_I_de_Asturias_(Museo_del_Prado).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Ramiro_I_de_Asturias_%28Museo_del_Prado%29.jpg/960px-Ramiro_I_de_Asturias_%28Museo_del_Prado%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/Ramiro_I_de_Asturias_%28Museo_del_Prado%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "[2]",
+    "author": "[2]",
+    "width": 1824,
+    "height": 2889,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Ramiro I of Asturias",
+    "url": "https://en.wikipedia.org/wiki/Ramiro_I_of_Asturias"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:11:30.651Z"
+  }
+}

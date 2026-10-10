@@ -1,0 +1,69 @@
+{
+  "id": "girolamo-muziano",
+  "name": "Girolamo Muziano",
+  "wikidataId": "Q1333792",
+  "wikipediaTitle": "Girolamo Muziano",
+  "content": {
+    "description": [
+      {
+        "text": "Girolamo Muziano was born around 1532 in Acquafredda near Brescia; contemporary accounts claim he first apprenticed with Romanino, but his own confessor’s memoirs reveal that his early training was under Domenico Campagnola and Lambert Sustris in Padua between 1544 and 1546, after which he spent a few years in Venice before settling permanently in Rome around 1550.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In Rome he became the leading painter of the Counter‑Reformation, known for grand‑manner religious works that echoed Michelangelo’s monumental anatomy; his Resurrection of Lazarus (1555) earned Michelangelo’s praise, he re‑founded the Accademia di San Luca in 1577, and he executed major commissions for St. Peter’s Basilica and the Cardinal Ippolito II d’Este, before dying in 1592 and being buried in Santa Maria Maggiore.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Muziano earned the nickname “Il giovane dei paesi” (the young man of the landscapes) because early in his career he painted numerous landscape scenes.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Michelangelo himself called Muziano one of the “first artists of that age” after seeing the Resurrection of Lazarus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was responsible for re‑founding Rome’s Academy of St Luke (Accademia di San Luca) in 1577, revitalizing artistic training in the city.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Muziano painted two altarpieces for St Peter’s Basilica; one, the Mass of St Basil, is now lost but is recorded in an etching by Jacques Callot.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1532,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1592,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pier_Leone_Ghezzi_-_Portrait_of_Girolamo_Muziano.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pier_Leone_Ghezzi_-_Portrait_of_Girolamo_Muziano.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Pier_Leone_Ghezzi_-_Portrait_of_Girolamo_Muziano.jpg/960px-Pier_Leone_Ghezzi_-_Portrait_of_Girolamo_Muziano.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Pier_Leone_Ghezzi_-_Portrait_of_Girolamo_Muziano.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Pier Leone Ghezzi",
+    "author": "Pier Leone Ghezzi",
+    "width": 1098,
+    "height": 1500,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Girolamo Muziano",
+    "url": "https://en.wikipedia.org/wiki/Girolamo_Muziano"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:120b-cloud",
+    "completedAt": "2026-10-10T01:32:45.995Z"
+  }
+}

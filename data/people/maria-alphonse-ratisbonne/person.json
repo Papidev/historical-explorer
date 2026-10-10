@@ -1,0 +1,73 @@
+{
+  "id": "maria-alphonse-ratisbonne",
+  "name": "Maria Alphonse Ratisbonne",
+  "wikidataId": "Q2166049",
+  "wikipediaTitle": "Marie-Alphonse Ratisbonne",
+  "content": {
+    "description": [
+      {
+        "text": "Marie‑Alphonse Ratisbonne was born on 1 May 1814 in Strasbourg, Alsace, France, the eleventh of thirteen children in the prominent Jewish banking family of the Ratisbonnes. After his mother died when he was four, he was raised by relatives and studied law in Paris. In January 1842, while on a pleasure trip to Rome, he entered the Church of Sant’Andrea delle Fratte and experienced a vision of the Virgin Mary, which led him to convert to Catholicism and add the name Marie to his own.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Following his conversion, Ratisbonne entered the Society of Jesus and was ordained a priest in 1848. He first worked as a missionary among convicts in the prisons of Brest, but in 1850 he joined his brother Théodore in a mission to convert fellow Jews. Together they founded the male branch of the Congregation of Our Lady of Sion in 1852, and in 1855 Ratisbonne moved to Palestine, where he established several convents and monasteries, including the Convent of Ecce Homo in Jerusalem and the Convent of St John in Ein Karem. He remained in the Holy Land until his death on 6 May 1884.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "After his vision in Rome, Ratisbonne added the name Marie to his own, reflecting the role he felt the Virgin Mary had played in his conversion.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the eleventh of thirteen children in a family of Jewish bankers whose father served as president of the Provincial Council of Alsace.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ratisbonne’s missionary work began in the prisons of Brest, where he ministered to convicts before turning his focus to the conversion of Jews.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1858 he founded the Convent of Ecce Homo in the Old City of Jerusalem, and in 1860 he built the Convent of St John on a hilltop in the village of Ein Karem, outside Jerusalem.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1814,
+      "month": 5,
+      "day": 1,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1884,
+      "month": 5,
+      "day": 6,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Alphonse_Ratisbonne.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Alphonse_Ratisbonne.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Alphonse_Ratisbonne.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Alphonse_Ratisbonne.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Foto Franck Paris",
+    "author": "Foto Franck Paris",
+    "width": 370,
+    "height": 597,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Marie-Alphonse Ratisbonne",
+    "url": "https://en.wikipedia.org/wiki/Marie-Alphonse_Ratisbonne"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:13:18.724Z"
+  }
+}

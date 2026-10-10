@@ -1,0 +1,67 @@
+{
+  "id": "am-rico-aguiar",
+  "name": "Américo Aguiar",
+  "wikidataId": "Q61927457",
+  "wikipediaTitle": "Américo Aguiar",
+  "content": {
+    "description": [
+      {
+        "text": "Américo Manuel Alves Aguiar was born on 12 December 1973 in Leça do Balio, a suburb of Matosinhos in the Porto metropolitan area.  During his youth he was active in local politics, serving on the City Council of Matosinhos from 1994 to 1997 as a member of the Socialist Party.  After completing middle school he entered the seminary in Ermesinde and later studied at the major seminary of the Diocese of Porto and the Portuguese Catholic University, where he earned a master's degree in communication sciences in 2014.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Aguiar was ordained a priest of the Diocese of Porto on 8 July 2001 and held several pastoral and administrative posts, including parish priest of São Pedro de Azevedo, special secretary to Bishop Armindo Lopes Coelho, and vicar general of the diocese.  In 2019 Pope Francis appointed him auxiliary bishop of Lisbon and titular bishop of Dagno, making him the youngest bishop in Portugal at the time.  He later became national director of the Secretariat of Church Social Communications, head of the Episcopal Commission for Culture, and president of the administrative board of Rádio Renascença.  In 2023 he was named cardinal priest by Pope Francis and appointed bishop of Setúbal, where he has served since October of that year.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "When Pope Francis appointed him auxiliary bishop of Lisbon in March 2019, Aguiar became the youngest bishop in Portugal.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His elevation to the College of Cardinals in September 2023 made him the second youngest cardinal in the history of the Catholic Church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As head of the organization responsible for World Youth Day 2023, Aguiar publicly stated that the event’s purpose was not to convert young people to Christ, a comment that sparked debate among clergy and the faithful.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Aguiar participated as a cardinal elector in the 2025 papal conclave that elected Pope Leo XIV.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1973,
+      "month": 12,
+      "day": 12,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Mons._Americo_Aguiar_visita_a_los_jóvenes_de_Tierra_Santa,_2023.png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Mons._Americo_Aguiar_visita_a_los_j%C3%B3venes_de_Tierra_Santa%2C_2023.png",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Mons._Americo_Aguiar_visita_a_los_j%C3%B3venes_de_Tierra_Santa%2C_2023.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Mons._Americo_Aguiar_visita_a_los_j%C3%B3venes_de_Tierra_Santa%2C_2023.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0",
+    "attribution": "Christian Media Center - Español",
+    "author": "Christian Media Center - Español",
+    "width": 480,
+    "height": 642,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Américo Aguiar",
+    "url": "https://en.wikipedia.org/wiki/Am%C3%A9rico_Aguiar"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:15:12.048Z"
+  }
+}

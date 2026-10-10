@@ -1,0 +1,52 @@
+{
+  "id": "m-aemilius-lepidus",
+  "name": "M. Aemilius Lepidus",
+  "wikidataId": "Q319561",
+  "wikipediaTitle": "Marcus Aemilius Lepidus (consul 187 BC)",
+  "content": {
+    "description": [
+      {
+        "text": "Marcus Aemilius Lepidus, born around 230 BC, was a patrician of the ancient gens Aemilia who first attracted attention as a teenager during the Second Punic War. At the Battle of Cannae in 216 BC he distinguished himself by saving a fellow Roman, an act that earned him an equestrian statue on the Capitoline hill – a rare honor for someone of his age. The Senate’s decision to commemorate him in this way marked Lepidus as a figure of both bravery and promise, setting the stage for a career that would see him rise to the highest offices of the Republic.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Lepidus’s political ascent was marked by a series of consulships, a tenure as Pontifex Maximus, and a term as censor. He served as consul in 187 BC, 175 BC, and 168 BC, and in 180 BC he was elected Pontifex Maximus, the chief priest of Rome. As censor he oversaw the census and public morals, and he was also involved in the construction of the Via Aemilia, a vital road linking Placentia to Ariminum. His legacy extended beyond Rome; he founded colonies such as Parma and Mutina and lent his name to the castrum Regium Lepidi, now Reggio Emilia.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Polybius described Lepidus as the handsomest man of his time.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Diodorus praised him as being gifted with superior intelligence.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During a diplomatic mission to Egypt, Lepidus acted as a regent for the young king Ptolemy V and governed the country for a period.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -230,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": -152,
+      "precision": "approximate"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Marcus Aemilius Lepidus (consul 187 BC)",
+    "url": "https://en.wikipedia.org/wiki/Marcus_Aemilius_Lepidus_(consul_187_BC)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:05:10.052Z"
+  }
+}

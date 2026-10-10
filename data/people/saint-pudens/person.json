@@ -1,0 +1,65 @@
+{
+  "id": "saint-pudens",
+  "name": "Saint Pudens",
+  "wikidataId": "Q706213",
+  "wikipediaTitle": "Saint Pudens",
+  "content": {
+    "description": [
+      {
+        "text": "Saint Pudens is remembered as an early Christian saint and martyr, noted in the New Testament as a layman of the Roman Church in 2 Timothy 4:21.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was born into a wealthy Roman family, possibly of the Gens Cornelia, the son of Senator Quintus Cornelius Pudens and his wife Priscilla, one of the first converts of Peter in Rome.  Peter baptized him while staying at the Pudens household, making Pudens one of the earliest Roman Christians to receive the sacrament directly from the apostle.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Pudens was baptized by the apostle Peter himself, a rare direct link between an early Christian saint and the apostle.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He held the rank of Roman senator, illustrating that Christianity had already reached the Roman elite by the mid‑first century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his martyrdom under Emperor Nero, he was interred in the Catacomb of Priscilla on the Via Salaria, a significant early Christian burial site.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The acts of the synod of Pope Symmachus (499) record a church called Titulus Pudentis, also known as Ecclesia Pudentiana, indicating Pudens’ lasting influence on early Christian worship.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His feast days differ among traditions—April 14, January 4 in the Eastern Orthodox calendar, and May 19 in the Dominican Martyrology—showing his widespread veneration across Christian denominations.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Menaion_icon_(17_c.,_TsAK)_-_April_-_24_Pudens.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Menaion_icon_(17_c.%2C_TsAK)_-_April_-_24_Pudens.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Menaion_icon_%2817_c.%2C_TsAK%29_-_April_-_24_Pudens.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Menaion_icon_%2817_c.%2C_TsAK%29_-_April_-_24_Pudens.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 143,
+    "height": 221,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Saint Pudens",
+    "url": "https://en.wikipedia.org/wiki/Saint_Pudens"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:40:01.985Z"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "nero-claudius-drusus",
+  "name": "Nero Claudius Drusus",
+  "wikidataId": "Q156778",
+  "wikipediaTitle": "Nero Claudius Drusus",
+  "content": {
+    "description": [
+      {
+        "text": "Nero Claudius Drusus, born around 38 BC, was a Roman general and politician who rose to prominence as the stepson of Emperor Augustus and the younger brother of Tiberius.  He was the son of Livia Drusilla and the father of the future emperor Claudius, making him a key figure in the Julio‑Claudian dynasty.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Drusus is best remembered for his aggressive campaigns across the Rhine, where he pushed Roman forces as far north as the Weser and Elbe rivers.  His daring single‑combat victories earned him the rare honor of the spolia opima, and his popularity among legionaries was commemorated by monuments such as the Drususstein in Mainz.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the first Roman general to reach the Weser and Elbe rivers during his Germanic campaigns.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Drusus was likely the fourth and final Roman commander to achieve the spolia opima, a rare honor awarded for killing an enemy king in single combat.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his death in 9 BC, his ashes were interred in the Mausoleum of Augustus, and his memory was honored with annual games and coin issues during the reign of his son Claudius.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -37,
+      "month": 3,
+      "day": 15,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": -8,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Drusus_l'ancien_Rome_augGP2014.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Drusus_l'ancien_Rome_augGP2014.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Drusus_l%27ancien_Rome_augGP2014.jpg/960px-Drusus_l%27ancien_Rome_augGP2014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/66/Drusus_l%27ancien_Rome_augGP2014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Siren-Com",
+    "author": "Siren-Com",
+    "width": 2459,
+    "height": 3548,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": false
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Nero Claudius Drusus",
+    "url": "https://en.wikipedia.org/wiki/Nero_Claudius_Drusus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:52:42.143Z"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "richard-brilliant",
+  "name": "Richard Brilliant",
+  "wikidataId": "Q19997583",
+  "wikipediaTitle": "Richard Brilliant",
+  "content": {
+    "description": [
+      {
+        "text": "Richard Brilliant was a distinguished American art historian whose scholarship focused on the semiotics and narrative of ancient Greek and Roman art. He earned his Ph.D. in 1960 with a dissertation on Roman gestures and went on to hold professorships at the University of Pennsylvania and Columbia University, where he became the Anna S. Garbedian Professor in the Humanities and later Professor Emeritus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond teaching, Brilliant served as Editor‑in‑Chief of The Art Bulletin from 1991 to 1994, directed the Italian Academy for Advanced Studies in America at Columbia, and consulted for media productions, appearing on the Discovery Channel’s Alexandria Production program *Rome: Power and Glory* in 1997. His contributions earned him a Fulbright scholarship, a Rome Prize, a Guggenheim Fellowship, and election to the American Academy of Arts and Sciences in 2005.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He served as Editor‑in‑Chief of The Art Bulletin between 1991 and 1994.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first director of the Italian Academy for Advanced Studies in America at Columbia University.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He appeared on screen in the Alexandria Production program *Rome: Power and Glory* for the Discovery Channel in December 1997.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He received a Fulbright scholarship for study in Italy from 1957 to 1959.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was awarded a Rome Prize from the American Academy in Rome for the period 1960 to 1962.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1929,
+      "month": 11,
+      "day": 20,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 2024,
+      "month": 8,
+      "day": 8,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Richard_Brilliant.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Richard_Brilliant.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Richard_Brilliant.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Richard_Brilliant.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC0",
+    "attribution": "Elizabeth Bartman",
+    "author": "Elizabeth Bartman",
+    "width": 204,
+    "height": 292,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Richard Brilliant",
+    "url": "https://en.wikipedia.org/wiki/Richard_Brilliant"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:58:16.615Z"
+  }
+}

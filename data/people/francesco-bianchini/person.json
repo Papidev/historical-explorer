@@ -1,0 +1,73 @@
+{
+  "id": "francesco-bianchini",
+  "name": "Francesco Bianchini",
+  "wikidataId": "Q1440942",
+  "wikipediaTitle": "Francesco Bianchini",
+  "content": {
+    "description": [
+      {
+        "text": "Francesco Bianchini was born on 13 December 1662 in Verona into a noble family. He received a Jesuit education in Bologna and later studied comets under the Paduan astronomer Geminiano Montanari while enrolled in theology at the University of Padua. This early immersion in observational astronomy shaped his lifelong commitment to experimental science and laid the groundwork for his later work on celestial mechanics and calendar reform.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Bianchini entered the papal curia in 1684, becoming librarian to Cardinal Ottoboni and later a papal chamberlain and canon of Santa Maria Maggiore. He served three popes, notably Clement XI, who appointed him camiere d'honore and tasked him with reforming the calendar and constructing a meridian line in the Basilica of Santa Maria degli Angeli e dei Martiri. His scientific achievements included a controversial deduction of Venus’s rotation period, measurements of the planet’s parallax, and observations of the Earth’s axial precession. In addition to his astronomical pursuits, Bianchini was a topographer and archaeologist who uncovered the columbarium of Livia on the Via Appia and suffered a severe injury when he fell through a vault on the Palatine Hill in 1727. He died in Rome on 2 March 1729 and was buried in Santa Maria Maggiore, with a monument erected in his honor at Verona Cathedral.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In January 1713, Bianchini was elected a Fellow of the Royal Society of London after being proposed by Sir Isaac Newton.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The meridian line he built in the Basilica of Santa Maria degli Angeli e dei Martiri was a sophisticated device for calculating the sun’s position and was used to determine the dates of Easter and other liturgical celebrations.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "An asteroid (42775 Bianchini) and a crater on the Moon named Bianchini honor his contributions to astronomy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "While exploring the ruins of the palace of the Caesars on the Palatine Hill in 1727, Bianchini fell through the ceiling of a vault and was severely injured, an incident that nearly ended his career.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1662,
+      "month": 12,
+      "day": 13,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1729,
+      "month": 3,
+      "day": 2,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Portret_van_wetenschapper_en_geestelijke_Francesco_Bianchini,_RP-P-1920-2371_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Portret_van_wetenschapper_en_geestelijke_Francesco_Bianchini%2C_RP-P-1920-2371_(cropped).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Portret_van_wetenschapper_en_geestelijke_Francesco_Bianchini%2C_RP-P-1920-2371_%28cropped%29.jpg/960px-Portret_van_wetenschapper_en_geestelijke_Francesco_Bianchini%2C_RP-P-1920-2371_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Portret_van_wetenschapper_en_geestelijke_Francesco_Bianchini%2C_RP-P-1920-2371_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC0",
+    "attribution": "Rijksmuseum",
+    "author": "Rijksmuseum",
+    "width": 2113,
+    "height": 2849,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Francesco Bianchini",
+    "url": "https://en.wikipedia.org/wiki/Francesco_Bianchini"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:28:16.834Z"
+  }
+}

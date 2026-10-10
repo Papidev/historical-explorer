@@ -1,0 +1,81 @@
+{
+  "id": "cl-udio-hummes",
+  "name": "Cláudio Hummes",
+  "wikidataId": "Q266481",
+  "wikipediaTitle": "Cláudio Hummes",
+  "content": {
+    "description": [
+      {
+        "text": "Cláudio Hummes was born Auri Alfonso Hummes on 8 August 1934 in Montenegro, Brazil, to German-Brazilian parents. He entered the Order of Friars Minor, taking the name Cláudio upon his profession, and was ordained a priest on 3 August 1958. He earned a doctorate in philosophy from the Pontifical University Antonianum in Rome in 1963 and spent the next five years teaching philosophy at Franciscan seminaries and the Pontifical Catholic University of Porto Alegre, before studying ecumenism at the Ecumenical Institute of Bossey in Geneva.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Hummes rose through the episcopal ranks, becoming Coadjutor Bishop of Santo André in 1975 and later Archbishop of Fortaleza and São Paulo. In 2001 he was created a cardinal by Pope John Paul II and served as Prefect of the Congregation for the Clergy from 2006 to 2010. He was a vocal advocate for social justice, allowing labor unions to meet in parishes during Brazil’s dictatorship, and later participated in climate activism, carrying Pope Francis’s shoes to a 2015 Paris demonstration. He also served as honorary president of the Pan‑Amazon Ecclesial Network, promoting a missionary Church in the Amazon.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was a member of the Order of Friars Minor and took the name Cláudio upon his profession as a Franciscan.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was an outspoken proponent of social justice, allowing labor unions to meet in parishes during Brazil’s dictatorship and forging a friendship with future president Luiz Inácio Lula da Silva.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was created a cardinal in 2001 by Pope John Paul II and later served as Prefect of the Congregation for the Clergy from 2006 to 2010.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the 2013 conclave that elected Pope Francis, Hummes whispered to the new pope, \"Don't forget the poor,\" a comment that reportedly influenced Francis’s focus on poverty.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 2015 he participated in a climate demonstration in Paris, carrying Pope Francis’s shoes to symbolize solidarity with the poor and to call for drastic cuts in carbon emissions.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as honorary president of the Pan‑Amazon Ecclesial Network, advocating for a missionary Church in the Amazon with a native clergy and a focus on the poorest and excluded.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1934,
+      "month": 8,
+      "day": 8,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 2022,
+      "month": 7,
+      "day": 4,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Hummes2006.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Hummes2006.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/93/Hummes2006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/93/Hummes2006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0 br",
+    "attribution": "Ricardo Stuckert/PR",
+    "author": "Ricardo Stuckert/PR",
+    "width": 780,
+    "height": 868,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Cláudio Hummes",
+    "url": "https://en.wikipedia.org/wiki/Cl%C3%A1udio_Hummes"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:15:57.343Z"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "pliny-the-younger",
+  "name": "Pliny the Younger",
+  "wikidataId": "Q168707",
+  "wikipediaTitle": "Pliny the Younger",
+  "content": {
+    "description": [
+      {
+        "text": "Gaius Plinius Caecilius Secundus, better known as Pliny the Younger, was born in 61 AD in Novum Comum (modern Como, Italy).  Raised by his mother after his father’s early death, he was tutored by the former governor Lucius Verginius Rufus and later studied rhetoric in Rome under Quintilian.  His uncle, the famed naturalist Pliny the Elder, adopted him after the elder’s death in 79 AD, which led to a name change and a substantial inheritance that enabled Pliny to pursue a distinguished career in the Roman civil service, eventually reaching the senatorial order and serving as governor of Bithynia-Pontus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pliny’s most enduring legacy is his collection of 247 surviving letters, which provide a rare, first‑hand view of Roman administration, law, and everyday life in the first century.  Among these, his vivid accounts of the 79 AD eruption of Mount Vesuvius and his correspondence with Emperor Trajan about the treatment of Christians are especially significant, offering the earliest Roman documentation of both a major natural disaster and the early Christian community.  His letters also reveal his legal acumen, his friendship with Tacitus, and his occasional role as a patron of writers such as Suetonius.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Pliny wrote 369 letters in total, of which 247 have survived to the present day.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his uncle’s death, Pliny was adopted and changed his name from Gaius Caecilius Cilo to Gaius Plinius Caecilius Secundus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As governor of Bithynia-Pontus, he sent a letter to Emperor Trajan in 112 AD seeking guidance on how to handle suspected Christians, a document that is the earliest surviving Roman reference to the Christian faith.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pliny’s panegyric to Trajan, delivered in the Senate in 100 AD, is the only surviving oration of his and praises the emperor’s virtues while subtly contrasting him with Domitian.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 61,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 113,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Plinio_il_Giovane.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Plinio_il_Giovane.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Plinio_il_Giovane.jpg/960px-Plinio_il_Giovane.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Plinio_il_Giovane.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Daniela Manili Pessina",
+    "author": "Daniela Manili Pessina",
+    "width": 2999,
+    "height": 4152,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pliny the Younger",
+    "url": "https://en.wikipedia.org/wiki/Pliny_the_Younger"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:49:25.460Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "lucius-aemilius-regillus",
+  "name": "Lucius Aemilius Regillus",
+  "wikidataId": "Q763405",
+  "wikipediaTitle": "Lucius Aemilius Regillus",
+  "content": {
+    "description": [
+      {
+        "text": "Lucius Aemilius Regillus was a Roman admiral and praetor who served during the war with Antiochus III of Syria. Little is known about his early life and military career before 190 BC, when he was appointed commander of Roman naval forces in the Aegean Sea.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 190 BC he defeated a Syrian fleet commanded by the former Carthaginian General Hannibal at the Battle of Eurymedon and later routed a second Syrian fleet at the Battle of Myonessus, securing the Aegean Sea for Rome and its Rhodian and Pergamene allies. After returning to Rome in 189 BC, he had a temple built in honor of the lares permarini, a promise he made in return for the Roman victory.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Regillus’s first and only naval battle was against the former Carthaginian General Hannibal.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He built a temple to the lares permarini in Rome as a fulfillment of a vow made after his Aegean victories.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Lucius Aemilius Regillus",
+    "url": "https://en.wikipedia.org/wiki/Lucius_Aemilius_Regillus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:04:53.873Z"
+  }
+}

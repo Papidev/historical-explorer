@@ -1,0 +1,71 @@
+{
+  "id": "eusebius-of-caesarea",
+  "name": "Eusebius of Caesarea",
+  "wikidataId": "Q142999",
+  "wikipediaTitle": "Eusebius",
+  "content": {
+    "description": [
+      {
+        "text": "Eusebius of Caesarea, born around 260 CE in Caesarea Maritima, rose from a modest background to become a central figure in early Christian scholarship. Educated under the guidance of Pamphilus, he absorbed the intellectual traditions of Origen and the school of Antioch, which shaped his later work in biblical criticism and church history. In 313 he was appointed bishop of Caesarea, a position that placed him at the heart of the theological debates of his time, including the Arian controversy, and allowed him to influence the proceedings of the First Council of Nicaea in 325, where he presented the creed that would become the Nicene Creed.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Eusebius’s literary legacy is vast and enduring. He is best known for his Ecclesiastical History, a comprehensive narrative that traces the development of the Christian church from the apostles to his own era, and for the Onomasticon, an early geographical lexicon of biblical sites. His methodological innovations, such as the Eusebian canons—cross‑referencing tables that facilitated the comparison of Gospel passages—remained in use throughout the Middle Ages. In addition, he compiled a Life of Constantine, a panegyric that provides valuable historical insight into the emperor’s reign and the early Christian state.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Eusebius compiled the Onomasticon, an early geographical lexicon that catalogued places mentioned in the Bible and provided distances between them.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He created the Eusebian canons, a system of cross‑referencing the four Gospels that was widely used in medieval manuscripts and remains a key tool for biblical scholars.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Eusebius was a close friend of Emperor Constantine and authored the Life of Constantine, a panegyric that offers a unique, though rhetorical, perspective on the emperor’s reign.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was venerated as a saint, with feast days recorded on 30 May in the Syrian Martyrology and on 29 February in the modern Syrian Orthodox calendar.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 260,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 339,
+      "month": 5,
+      "day": 30,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Eusebius_of_Caesarea_Rabbula_Gospels_Icon.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Eusebius_of_Caesarea_Rabbula_Gospels_Icon.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/70/Eusebius_of_Caesarea_Rabbula_Gospels_Icon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/70/Eusebius_of_Caesarea_Rabbula_Gospels_Icon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown, the art is from the 6th Century AD",
+    "author": "Unknown, the art is from the 6th Century AD",
+    "width": 246,
+    "height": 589,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Eusebius",
+    "url": "https://en.wikipedia.org/wiki/Eusebius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:52:04.578Z"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "pope-sixtus-iv",
+  "name": "Pope Sixtus IV",
+  "wikidataId": "Q163514",
+  "wikipediaTitle": "Pope Sixtus IV",
+  "content": {
+    "description": [
+      {
+        "text": "Francesco della Rovere, later Pope Sixtus IV, was born in Celle Ligure on 21 July 1414 and entered the Franciscan Order at the age of nine. After earning a doctorate in theology from the University of Padua, he rose through the ranks of the order, becoming Minister General in 1464 and a cardinal in 1467 before being elected pope on 9 August 1471.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his reign he was a prolific patron of the arts and architecture, commissioning the construction of the Sistine Chapel and the Vatican Library, while also expanding Rome’s infrastructure with new bridges, roads and aqueducts. His papacy was marked by significant political maneuvering, including the establishment of the Spanish Inquisition, the annulment of the Council of Constance decrees, and a personal involvement in the Pazzi conspiracy against the Medici family.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Sixtus IV’s patronage of the arts brought together a group of artists who ushered the early Renaissance into Rome, producing masterpieces such as the frescoes in the Sistine Chapel.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He founded the Spanish Inquisition in 1478 through the papal bull *Exigit Sinceræ Devotionis*, a move that had lasting effects on the religious and political landscape of Spain.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sixtus was notorious for nepotism, appointing six of the thirty‑four cardinals he created to be his nephews, and personally involving himself in the Pazzi conspiracy to depose the Medici in Florence.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1414,
+      "month": 7,
+      "day": 21,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1484,
+      "month": 8,
+      "day": 12,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pedro_Berruguete,_Portrait_of_Pope_Sixtus_IV_della_Rovere_(early_1500s),_Cleveland_Museum_of_Art.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pedro_Berruguete%2C_Portrait_of_Pope_Sixtus_IV_della_Rovere_(early_1500s)%2C_Cleveland_Museum_of_Art.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Pedro_Berruguete%2C_Portrait_of_Pope_Sixtus_IV_della_Rovere_%28early_1500s%29%2C_Cleveland_Museum_of_Art.jpg/960px-Pedro_Berruguete%2C_Portrait_of_Pope_Sixtus_IV_della_Rovere_%28early_1500s%29%2C_Cleveland_Museum_of_Art.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/10/Pedro_Berruguete%2C_Portrait_of_Pope_Sixtus_IV_della_Rovere_%28early_1500s%29%2C_Cleveland_Museum_of_Art.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Pedro Berruguete",
+    "author": "Pedro Berruguete",
+    "width": 3791,
+    "height": 5404,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Sixtus IV",
+    "url": "https://en.wikipedia.org/wiki/Pope_Sixtus_IV"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:31:13.044Z"
+  }
+}

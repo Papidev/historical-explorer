@@ -1,0 +1,73 @@
+{
+  "id": "martial",
+  "name": "Martial",
+  "wikidataId": "Q2098",
+  "wikipediaTitle": "Martial",
+  "content": {
+    "description": [
+      {
+        "text": "Marcus Valerius Martialis, known simply as Martial, was born in the Roman province of Hispania, in the town of Bilbilis (modern Calatayud), sometime in March between 38 and 41 AD.  He moved to Rome in 64 AD, where he quickly established himself as a sharp‑witted satirist, publishing a series of twelve books of epigrams that ran from 86 to 103 AD and earned him the reputation of the greatest Latin epigrammatist.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his Roman career Martial cultivated a network of wealthy patrons, including emperors Domitian, Titus, and Nerva, who granted him equestrian rank and other privileges.  He spent most of his life in the city, but after a brief return to Hispania in 98 AD he eventually left Rome for good, dying around 102–104 AD.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Martial was granted equestrian rank by Emperor Domitian, a rare honor for a poet.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A total of 1,561 epigrams survive from Martial, of which 1,235 are written in elegiac couplets.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He is often described as the greatest Latin epigrammatist, a title that reflects the enduring influence of his concise, witty verse.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Martial owned a small villa and unproductive farm near Nomentum in the Sabine territory, which he used as a retreat from the bustle of Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was born in Bilbilis, a town in Hispania Tarraconensis, which he frequently referenced in his poems to evoke his provincial roots.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 38,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 102,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Martial,_engraved_from_an_ancient_gem_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Martial%2C_engraved_from_an_ancient_gem_(cropped).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Martial%2C_engraved_from_an_ancient_gem_%28cropped%29.jpg/960px-Martial%2C_engraved_from_an_ancient_gem_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Martial%2C_engraved_from_an_ancient_gem_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown",
+    "author": "Unknown",
+    "width": 1336,
+    "height": 1562,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Martial",
+    "url": "https://en.wikipedia.org/wiki/Martial"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:08:09.149Z"
+  }
+}

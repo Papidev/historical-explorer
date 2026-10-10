@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Stucchi_della_volta_della_basilica_sotterranea_di_porta_maggiore.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Stucchi_della_volta_della_basilica_sotterranea_di_porta_maggiore.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Stucchi_della_volta_della_basilica_sotterranea_di_porta_maggiore.jpg/960px-Stucchi_della_volta_della_basilica_sotterranea_di_porta_maggiore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Stucchi_della_volta_della_basilica_sotterranea_di_porta_maggiore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Unknown authorUnknown author",
+      "author": "Unknown authorUnknown author",
+      "width": 1541,
+      "height": 2297,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Arch_Stucco.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Arch_Stucco.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Arch_Stucco.jpg/960px-Arch_Stucco.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/63/Arch_Stucco.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.0",
+      "attribution": "MumblerJamie",
+      "author": "MumblerJamie",
+      "width": 2988,
+      "height": 5312,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Atrium_Stucco_01.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Atrium_Stucco_01.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Atrium_Stucco_01.jpg/960px-Atrium_Stucco_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/13/Atrium_Stucco_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.0",
+      "attribution": "MumblerJamie",
+      "author": "MumblerJamie",
+      "width": 5312,
+      "height": 2988,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Stucchi_della_volta_della_basilica_sotterranea_di_porta_maggiore.jpg"
+}

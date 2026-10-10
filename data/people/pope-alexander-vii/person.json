@@ -1,0 +1,65 @@
+{
+  "id": "pope-alexander-vii",
+  "name": "Pope Alexander VII",
+  "wikidataId": "Q127254",
+  "wikipediaTitle": "Pope Alexander VII",
+  "content": {
+    "description": [
+      {
+        "text": "Fabio Chigi, later Pope Alexander VII, was born in Siena on 13 February 1599. He studied philosophy, law and theology at the University of Siena and entered the diplomatic service of the Holy See, serving as vice‑papal legate in Ferrara and as Inquisitor of Malta. He was ordained a priest in 1634, became Bishop of Nardò in 1635 and later Bishop of Imola. His diplomatic skill earned him the post of Secretary of State in 1651 and the rank of cardinal in 1652, before he was elected pope on 7 April 1655 after a lengthy conclave.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his reign he pursued a program of urban renewal in Rome, commissioning works by Bernini and Cortona and redesigning major streets and squares, including the colonnade of St. Peter's Square. He also reinforced the Jesuit order and issued the Index Librorum Prohibitorum, which listed heliocentric works such as those by Copernicus and Galileo. Although he initially opposed nepotism, he eventually brought his relatives into the curia, a move that marked a shift from his earlier stance.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Alexander VII commissioned Gian Lorenzo Bernini to design the iconic colonnade that surrounds St. Peter's Square, a landmark of Baroque architecture.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He issued the Index Librorum Prohibitorum, which included the heliocentric works of Copernicus and Galileo, reinforcing the Church’s opposition to the theory.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1599,
+      "month": 2,
+      "day": 13,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1667,
+      "month": 5,
+      "day": 22,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Portrait_of_Pope_Alexander_VII_Chigi_(by_Giovanni_Battista_Gaulli_-_Baciccio).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_Pope_Alexander_VII_Chigi_(by_Giovanni_Battista_Gaulli_-_Baciccio).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Portrait_of_Pope_Alexander_VII_Chigi_%28by_Giovanni_Battista_Gaulli_-_Baciccio%29.jpg/960px-Portrait_of_Pope_Alexander_VII_Chigi_%28by_Giovanni_Battista_Gaulli_-_Baciccio%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Portrait_of_Pope_Alexander_VII_Chigi_%28by_Giovanni_Battista_Gaulli_-_Baciccio%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Giovanni Battista Gaulli",
+    "author": "Giovanni Battista Gaulli",
+    "width": 2500,
+    "height": 2843,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Alexander VII",
+    "url": "https://en.wikipedia.org/wiki/Pope_Alexander_VII"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:31:26.778Z"
+  }
+}

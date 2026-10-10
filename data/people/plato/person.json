@@ -1,0 +1,73 @@
+{
+  "id": "plato",
+  "name": "Plato",
+  "wikidataId": "Q859",
+  "wikipediaTitle": "Plato",
+  "content": {
+    "description": [
+      {
+        "text": "Plato, born around 428 BC into an aristocratic Athenian family, became one of the most influential philosophers of Classical Greece. He is best known for founding the Academy in Athens, where he taught a curriculum that blended philosophy, mathematics, and the sciences, and for developing the literary dialogue and dialectic as central methods of inquiry.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His philosophical legacy centers on the Theory of Forms, which posits a realm of unchanging, perfect ideals that ground the material world. Through dialogues featuring Socrates as the main interlocutor, Plato explored ethics, politics, epistemology, and metaphysics, laying the groundwork for Western philosophical tradition and influencing later schools such as Neoplatonism.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Plato’s nickname, meaning ‘flat’ or ‘broad’, was said to refer to his robust figure, and his birth name Aristocles is considered a later fabrication.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After meeting Socrates, Plato reportedly burned his early poems, abandoning poetry for philosophy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "When the Thirty Tyrants came to power, Plato was invited to join the administration but declined, disillusioned by their atrocities.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Plato founded the Academy in Athens around 383 BC, near the sacred olive grove of Hecademus, where he taught for many years.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A 2024 decipherment of a Herculaneum scroll claims that Plato was sold into slavery on the island of Aegina, possibly as early as 404 BC.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -428,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": -347,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Plato_Silanion_Musei_Capitolini_MC1377.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Plato_Silanion_Musei_Capitolini_MC1377.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Plato_Silanion_Musei_Capitolini_MC1377.jpg/960px-Plato_Silanion_Musei_Capitolini_MC1377.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Plato_Silanion_Musei_Capitolini_MC1377.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 2.5",
+    "attribution": "© Marie-Lan Nguyen / Wikimedia Commons",
+    "author": "Marie-Lan Nguyen",
+    "width": 2400,
+    "height": 3600,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Plato",
+    "url": "https://en.wikipedia.org/wiki/Plato"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:53:03.686Z"
+  }
+}

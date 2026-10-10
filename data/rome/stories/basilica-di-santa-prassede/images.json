@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Basilica_di_Santa_Prassede_-_esterno.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Basilica_di_Santa_Prassede_-_esterno.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Basilica_di_Santa_Prassede_-_esterno.jpg/960px-Basilica_di_Santa_Prassede_-_esterno.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Basilica_di_Santa_Prassede_-_esterno.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "Rione I Monti",
+      "author": "Rione I Monti",
+      "width": 4376,
+      "height": 6688,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Benfoto-Roma2013-082.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Benfoto-Roma2013-082.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Benfoto-Roma2013-082.jpg/960px-Benfoto-Roma2013-082.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Benfoto-Roma2013-082.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Ben Skála, Benfoto",
+      "author": "Ben Skála, Benfoto",
+      "width": 4288,
+      "height": 2848,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Basilica_di_Santa_Prassede_-_esterno.jpg"
+}

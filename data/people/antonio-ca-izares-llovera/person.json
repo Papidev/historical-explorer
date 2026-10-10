@@ -1,0 +1,79 @@
+{
+  "id": "antonio-ca-izares-llovera",
+  "name": "Antonio Cañizares Llovera",
+  "wikidataId": "Q382332",
+  "wikipediaTitle": "Antonio Cañizares Llovera",
+  "content": {
+    "description": [
+      {
+        "text": "Antonio Cañizares Llovera was born on 15 October 1945 in Utiel, Spain. He earned a bachelor’s degree in philosophy at the seminary in Valencia, followed by a licentiate and a doctorate in theology from the Pontifical University of Salamanca. Ordained a priest in 1970, he served as a parish priest, university chaplain, and founded catechist schools before moving to Madrid, where he taught fundamental theology at the Conciliar Seminary and directed the Higher Institute of Religious Sciences and Catechesis. He also founded the Spanish Association of Catechists and led the review Teología y Catequesis.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1992 he was appointed Bishop of Ávila, then Archbishop of Granada in 1996, and later Archbishop of Toledo and Primate of Spain in 2002. Pope Benedict XVI elevated him to the College of Cardinals in 2006 and appointed him Prefect of the Congregation for Divine Worship in 2008, a post he held until 2014. He served as Archbishop of Valencia from 2014 until his resignation in 2022, during which he was known for his outspoken positions on secularism, immigration, and liturgical tradition. He participated in the 2013 conclave that elected Pope Francis and was one of the few cardinal electors who did not attend the 2025 conclave due to health reasons.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was sometimes called \"Little Ratzinger\" because his views mirrored those of Pope Benedict XVI, a nickname Pope Benedict found amusing.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 2009 he compared child abuse by priests to abortion, stating that abortion has legally destroyed 40 million human lives.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He emphasized that Vatican II’s renewal must be understood in continuity with the Church’s Tradition, not as a break or discontinuity.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was one of two cardinal electors who did not attend the 2025 papal conclave for health reasons, and he was hospitalized on 7 August 2025 with a delicate state of health.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was awarded an honorary doctorate by Universidad CEU Cardenal Herrera on 4 July 2007.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was elected to medalla nº 16 of the Real Academia de la Historia on 1 December 2006 and took up his seat on 24 February 2008.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After facing protests over his remarks on immigration, he reversed his position, modified his language, and developed initiatives to welcome refugees, earning recognition from Pope Francis.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1945,
+      "month": 10,
+      "day": 15,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Card._Canizares_(30279529724).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Card._Canizares_(30279529724).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Card._Canizares_%2830279529724%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Card._Canizares_%2830279529724%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 2.0",
+    "attribution": "Conferencia Episcopal Española",
+    "author": "Conferencia Episcopal Española",
+    "width": 600,
+    "height": 755,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Antonio Cañizares Llovera",
+    "url": "https://en.wikipedia.org/wiki/Antonio_Ca%C3%B1izares_Llovera"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:20:31.190Z"
+  }
+}

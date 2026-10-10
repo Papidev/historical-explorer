@@ -1,0 +1,168 @@
+{
+  "introduction": {
+    "text": "The Basilica di Santa Prassede is an early‑medieval church in Rome that houses some of the city’s oldest mosaics and important relics, making it a key monument in the history of Christian art and architecture.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history2",
+        "description": "Pope St. Evaristus founded the Titulus S. Praxedis around 112.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 112,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history1",
+        "description": "The church’s origins date to at least the fifth century, when a Christian community was established on the site.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 400,
+          "precision": "approximate",
+          "endYear": 499,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Pope Hadrian I commissioned the current church around 780 to house the relics of St. Praxedes and St. Pudentiana.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 780,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Pope Paschal I enlarged and decorated the basilica around 828.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 828,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "Alfred the Great visited Rome around 855‑856 and was impressed by the basilica’s beauty.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 855,
+          "precision": "approximate",
+          "endYear": 856,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "Since 1198 the Vallombrosian monks have maintained the basilica.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1198,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "In 1223 a relic of the column of the Flagellation was brought to the basilica by Cardinal Giovanni Colonna.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1223,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The basilica’s interior is dominated by a mosaic program in the apse, apsidal arch and triumphal arch, created by a team of professional mosaicists under Pope Paschal I.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "A column believed to be part of the Flagellation of Christ is housed in the basilica, allegedly discovered by Helena in the early fourth century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "The basilica’s layout follows a traditional Roman church plan with a central nave, transept and a prominent triumphal arch.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "The main altarpiece, a canvas of St. Praxedes gathering the blood of the martyrs (c. 1730‑35), was painted by Domenico Muratori.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "A portrait of Cardinal Angelo Maria Querini (1747) by Jacopo Zoboli adorns the right column of the triumphal arch.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "An Annunciation by Stefano Pieri is displayed within the basilica.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Praxedes",
+      "personId": "praxedes",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pudentiana",
+      "personId": "pudentiana",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Hadrian I",
+      "personId": "pope-adrian-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Paschal I",
+      "personId": "pope-paschal-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Evaristus",
+      "personId": "pope-evaristus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Innocent III",
+      "personId": "pope-innocent-iii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Alfred the Great",
+      "personId": "alfred-the-great",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "John Gualbert",
+      "personId": "john-gualbert",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Paul Poupard",
+      "personId": "paul-poupard",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Helena (empress)",
+      "personId": "helena-mother-of-constantine-i",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

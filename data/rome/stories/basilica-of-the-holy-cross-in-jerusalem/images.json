@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Santa_croce_di_gerusalemme_at_Night.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Santa_croce_di_gerusalemme_at_Night.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Santa_croce_di_gerusalemme_at_Night.jpg/960px-Santa_croce_di_gerusalemme_at_Night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Santa_croce_di_gerusalemme_at_Night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Livioandronico2013",
+      "author": "Livioandronico2013",
+      "width": 4244,
+      "height": 3650,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Geschichte_Roms_und_der_Papste_im_Mittelalter_1898_(143026296).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Geschichte_Roms_und_der_Papste_im_Mittelalter_1898_(143026296).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Geschichte_Roms_und_der_Papste_im_Mittelalter_1898_%28143026296%29.jpg/960px-Geschichte_Roms_und_der_Papste_im_Mittelalter_1898_%28143026296%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Geschichte_Roms_und_der_Papste_im_Mittelalter_1898_%28143026296%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Hartmann Grisar",
+      "author": "Hartmann Grisar",
+      "width": 3004,
+      "height": 4392,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "LL-Q188_(deu)-Jeuwre-Grabeskirche.wav",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:LL-Q188_(deu)-Jeuwre-Grabeskirche.wav",
+      "thumbnailUrl": "https://commons.wikimedia.org/w/resources/assets/file-type-icons/fileicon-ogg.png",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/LL-Q188_%28deu%29-Jeuwre-Grabeskirche.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Jeuwre",
+      "author": "Jeuwre",
+      "width": 0,
+      "height": 0,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Santa_croce_di_gerusalemme_at_Night.jpg"
+}

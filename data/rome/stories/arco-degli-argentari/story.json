@@ -1,0 +1,101 @@
+{
+  "introduction": {
+    "text": "The Arco degli Argentari is an ancient Roman arch in Rome’s Forum Boarium, built by money‑changers in 204 CE to honor the Severan dynasty. It is significant for its unique rectangular form, its surviving marble reliefs, and its later alterations that reflect the political turmoil of the early third century.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-construct",
+        "description": "Construction of the arch by the argentarii in 204 CE.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 204,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-pla",
+        "description": "Murder of Gaius Fulvius Plautianus in 205 CE and subsequent damnatio memoriae of his dedication on the arch.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 205,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-pla2",
+        "description": "Murder of Fulvia Plautilla in 211 CE and removal of her depiction from the arch.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 211,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-geta",
+        "description": "Murder of Geta in 212 CE and removal of his depiction from the arch.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 212,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-arch",
+        "description": "The arch is rectangular, resembling an architrave rather than a typical triumphal arch, originally 6.9 m high and 3.3 m wide, with a lower register of plain travertine and an upper register of Proconnesian marble reliefs and an inscription.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-reliefs",
+        "description": "The exterior bears imperial imagery, including reliefs of Hercules with the Nemean lion and a Roman genius, while the interior reliefs depict the Severan emperors offering libations, illustrating Roman religious themes.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Septimius Severus",
+      "personId": "septimius-severus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Julia Domna",
+      "personId": "julia-domna",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Caracalla",
+      "personId": "caracalla",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Geta (emperor)",
+      "personId": "geta-emperor",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Fulvia Plautilla",
+      "personId": "fulvia-plautilla",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Gaius Fulvius Plautianus",
+      "personId": "gaius-fulvius-plautianus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Hercules",
+      "personId": "hercules",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "introduction": {
+    "text": "The Arch of Septimius Severus is a white marble triumphal arch in Rome’s Roman Forum, built in 203 AD to celebrate Emperor Septimius Severus’ victories over the Parthians and to serve as a symbol of imperial power.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The Parthian campaign of 194–195 AD, which the arch commemorates.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 194,
+          "precision": "exact",
+          "endYear": 195,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "The Parthian campaign of 197–199 AD, also commemorated by the arch.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 197,
+          "precision": "exact",
+          "endYear": 199,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "The Arch was dedicated in 203 AD to honor Septimius Severus’ victories.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 203,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "After Septimius Severus’ death, his sons Caracalla and Geta ruled jointly, but Geta was later assassinated by Caracalla, leading to the removal of Geta’s image from the arch.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The arch stands about 23 m high and 25 m wide, featuring a central archway flanked by two side archways, supported by composite columns on pedestals.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "The arch’s relief panels depict the Parthian campaigns, winged Victories, the four seasons, and inscriptions praising the emperors.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Septimius Severus",
+      "personId": "septimius-severus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Caracalla",
+      "personId": "caracalla",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Publius Septimius Geta",
+      "personId": "geta-emperor",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Richard Brilliant",
+      "personId": "richard-brilliant",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Innocent III",
+      "personId": "pope-innocent-iii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Marcus Aurelius",
+      "personId": "marcus-aurelius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pertinax",
+      "personId": "pertinax",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

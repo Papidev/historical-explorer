@@ -1,0 +1,227 @@
+{
+  "introduction": {
+    "text": "The Basilica di San Sebastiano fuori le mura is a minor basilica in Rome, built outside the Aurelian Walls, and historically significant as one of Rome’s Seven Pilgrim Churches and a site linked to early Christian martyrdom and pilgrimage traditions.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "According to tradition, the catacombs beneath the basilica were used in 258 during the Valerian persecutions to bury Saints Peter and Paul.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 258,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "The first basilica, the Basilica Apostolorum, was built by Constantine I in the first half of the 4th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 301,
+          "precision": "approximate",
+          "endYear": 400,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "St. Sebastian’s remains were moved to the basilica around 350.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 350,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "The basilica was dedicated to Saint Sebastian in the 9th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 801,
+          "precision": "approximate",
+          "endYear": 900,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "In 826 the remains of St. Sebastian were transferred to St. Peter’s Basilica to protect them from a Saracen assault, after which the basilica was destroyed.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 826,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "The basilica was refounded under Pope Nicholas I (858–867).",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 858,
+          "precision": "exact",
+          "endYear": 867,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history8",
+        "description": "In the 13th century the arcade of the triple nave was walled in.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1201,
+          "precision": "approximate",
+          "endYear": 1300,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "The martyr’s altar was reconsecrated by Pope Honorius III (1216–1227) at the request of the Cistercians.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1216,
+          "precision": "exact",
+          "endYear": 1227,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history9",
+        "description": "After 1553, St. Philip Neri initiated the Seven Churches Visitation, making the basilica part of a one‑day pilgrimage.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1553,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history10",
+        "description": "The current edifice was largely rebuilt in the 17th century, commissioned by Cardinal Scipione Borghese in 1609 and completed by Giovanni Vasanzio after Ponzio’s death in 1613.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1601,
+          "precision": "approximate",
+          "endYear": 1700,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history11",
+        "description": "The Albani Chapel was built in 1716, designed by Carlo Maratta, Alessandro Specchi, Filippo Barigioni and Carlo Fontana, and commissioned by Pope Clement XI.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1716,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history12",
+        "description": "In 2001 the Bust of the Saviour by Gian Lorenzo Bernini was rediscovered in the convent adjacent to the church.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2001,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The basilica’s current layout was designed in the 17th century by Flaminio Ponzio and later completed by Giovanni Vasanzio.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The Albani Chapel, added in 1716, showcases Baroque design by Carlo Maratta, Alessandro Specchi, Filippo Barigioni and Carlo Fontana.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "The nave’s triple arcade was walled in during the 13th century, altering the interior spatial arrangement.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "A statue of St. Sebastian by Giuseppe Giorgetti stands at the altar in the first chapel on the left.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "The Bust of the Saviour (Salvator Mundi) by Gian Lorenzo Bernini, rediscovered in 2001, is displayed in a niche on the right side.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "The Chapel of Relics houses a stone allegedly imprinted with the footprints of Jesus and one of the arrows that struck St. Sebastian.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art4",
+        "description": "Busts of Saints Peter and Paul by Nicolò Cordier flank the altar, recalling the basilica’s original dedication.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Saint Sebastian",
+      "personId": "saint-sebastian",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Constantine I",
+      "personId": "constantine-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Nicholas I",
+      "personId": "pope-nicholas-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Honorius III",
+      "personId": "pope-honorius-iii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Clement XI",
+      "personId": "pope-clement-xi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Fabian",
+      "personId": "pope-fabian",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Scipione Borghese",
+      "personId": "scipione-borghese",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Flaminio Ponzio",
+      "personId": "flaminio-ponzio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giovanni Vasanzio",
+      "personId": "giovanni-vasanzio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Gian Lorenzo Bernini",
+      "personId": "gian-lorenzo-bernini",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

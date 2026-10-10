@@ -1,0 +1,69 @@
+{
+  "id": "pope-callixtus-i",
+  "name": "Pope Callixtus I",
+  "wikidataId": "Q122376",
+  "wikipediaTitle": "Pope Callixtus I",
+  "content": {
+    "description": [
+      {
+        "text": "Callixtus I, originally a Roman slave, was entrusted by his master Carpophorus with the collection of alms for widows and orphans. After losing the funds and fleeing, he was captured near Portus but later released, only to be rearrested for fighting in a synagogue. Despite these early trials, he rose to become Bishop of Rome around 217, succeeding Zephyrinus, and is credited with opening the Church to converts from sects and schisms without requiring penance. He also instituted a practice of absolving all sins, including adultery and murder, which drew criticism from contemporaries such as Hippolytus. His tenure is recorded by Eusebius and the Liberian catalogue as lasting roughly five years.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Callixtus's martyrdom is traditionally dated to 222 or 223, when he was reportedly thrown into a well during a popular uprising. According to apocryphal Acts, a priest named Asterius recovered his body and buried it secretly, only to be killed by being thrown into the Tiber. He was interred in the cemetery of Calepodius on the Aurelian Way, and his relics were later moved to Santa Maria in Trastevere. The Catacombs of St. Callixtus, established under his supervision as the first land property owned by the Church, became the burial ground for many popes and were rediscovered by Giovanni Battista de Rossi in 1849. He is venerated as a saint and martyr, and is the patron saint of cemetery workers.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Callixtus I began his life as a Roman slave before rising to become Bishop of Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He is venerated as the patron saint of cemetery workers.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Under his supervision, the Catacombs of St. Callixtus became the first land property owned by the Church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was reportedly martyred by being thrown into a well during a popular uprising around 222.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He established the practice of absolving all sins, including adultery and murder.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 222,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Fresco_of_Pope_Callixtus_I_-_Basilica_of_Saint_Paul_Outside_the_Walls_(Before_1823).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Fresco_of_Pope_Callixtus_I_-_Basilica_of_Saint_Paul_Outside_the_Walls_(Before_1823).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Fresco_of_Pope_Callixtus_I_-_Basilica_of_Saint_Paul_Outside_the_Walls_%28Before_1823%29.jpg/960px-Fresco_of_Pope_Callixtus_I_-_Basilica_of_Saint_Paul_Outside_the_Walls_%28Before_1823%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Fresco_of_Pope_Callixtus_I_-_Basilica_of_Saint_Paul_Outside_the_Walls_%28Before_1823%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author; Photo taken by Arnaldo Vescovo",
+    "author": "Unknown authorUnknown author; Photo taken by Arnaldo Vescovo",
+    "width": 1001,
+    "height": 992,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Callixtus I",
+    "url": "https://en.wikipedia.org/wiki/Pope_Callixtus_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:32:47.795Z"
+  }
+}

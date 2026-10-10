@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Arch_of_Septimius_Severus.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Arch_of_Septimius_Severus.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Arch_of_Septimius_Severus.jpg/960px-Arch_of_Septimius_Severus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Arch_of_Septimius_Severus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Ramon Wijnands",
+      "author": "Ramon Wijnands",
+      "width": 1594,
+      "height": 1374,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Forum-Romanum-Platner.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Forum-Romanum-Platner.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Forum-Romanum-Platner.jpg/960px-Forum-Romanum-Platner.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/28/Forum-Romanum-Platner.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "saikindi",
+      "author": "saikindi",
+      "width": 1400,
+      "height": 1037,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Platner-forum-republic-96_recontructed_color.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Platner-forum-republic-96_recontructed_color.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Platner-forum-republic-96_recontructed_color.jpg/960px-Platner-forum-republic-96_recontructed_color.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Platner-forum-republic-96_recontructed_color.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Original diagram by Samuel Ball Platner, scan by Felix Just, S.J., Ph.D., alterations by Mark James Miller",
+      "author": "Original diagram by Samuel Ball Platner, scan by Felix Just, S.J., Ph.D., alterations by Mark James Miller",
+      "width": 4000,
+      "height": 3207,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Arch_of_Septimius_Severus.jpg"
+}

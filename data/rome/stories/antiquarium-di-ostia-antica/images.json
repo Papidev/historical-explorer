@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Museo_Archeologico_Ostiense.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Museo_Archeologico_Ostiense.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Museo_Archeologico_Ostiense.jpg/960px-Museo_Archeologico_Ostiense.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Museo_Archeologico_Ostiense.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Kaga tau",
+      "author": "Kaga tau",
+      "width": 4032,
+      "height": 2016,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Ostia_Antica_Museo.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ostia_Antica_Museo.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Ostia_Antica_Museo.jpg/960px-Ostia_Antica_Museo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Ostia_Antica_Museo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "AlMare",
+      "author": "AlMare",
+      "width": 2028,
+      "height": 1521,
+      "discoveredVia": "wikipedia-page-image",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Museo_Archeologico_Ostiense.jpg"
+}

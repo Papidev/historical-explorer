@@ -1,0 +1,104 @@
+{
+  "introduction": {
+    "text": "The Basilica Hilariana is a small, partially underground basilica on Rome’s Caelian Hill, built in the mid‑2nd century by pearl merchant Manius Publicius Ilarius for the dendrophores, a cult linked to Magna Mater and Attis. Its modest size and distinctive mosaic decoration illustrate the adaptation of civic basilica architecture for religious use in late antiquity.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-1",
+        "description": "Construction of the basilica in the mid‑2nd century for the dendrophores cult.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 100,
+          "precision": "approximate",
+          "endYear": 200,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-2",
+        "description": "Modification of the complex in the 3rd century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 200,
+          "precision": "approximate",
+          "endYear": 300,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-3",
+        "description": "Abandonment of the basilica in the 7th century, possibly after an earthquake.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 600,
+          "precision": "approximate",
+          "endYear": 700,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-4",
+        "description": "An earthquake in 618 AD may have contributed to the basilica’s abandonment.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 618,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "The basilica was partially underground, accessed by twelve marble steps leading to a vestibule.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-2",
+        "description": "The vestibule featured black and white mosaics depicting an eye struck by a spear surrounded by birds and animals.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-3",
+        "description": "A threshold with a footprint motif led to a room containing a basin and the base of a statue dedicated to Ilarius.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-1",
+        "description": "Mosaic iconography of an eye struck by a spear, a motif associated with the cult of Magna Mater.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-2",
+        "description": "Mosaic depiction of birds and animals surrounding the spear, reflecting the dendrophores’ symbolic imagery.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-3",
+        "description": "Footprint motif in the threshold mosaic, indicating a symbolic passage or rite.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Magna Mater",
+      "personId": "magna-mater",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Attis",
+      "personId": "attis",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Simplicius",
+      "personId": "pope-simplicius",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

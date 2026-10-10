@@ -1,0 +1,92 @@
+{
+  "introduction": {
+    "text": "The Arch of Gallienus, located in Rome, is a surviving gate of the ancient Servian Wall that was later expanded and rededicated in the 3rd century AD. It illustrates the evolution of Roman defensive architecture and commemorates Emperor Gallienus.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-1",
+        "description": "The gate was originally part of the Servian Wall, traditionally attributed to the 6th century BC but modern scholarship places its construction in the 4th century BC.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -400,
+          "precision": "approximate",
+          "endYear": -301,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-2",
+        "description": "The original arch was built in the 1st century AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1,
+          "precision": "approximate",
+          "endYear": 100,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-3",
+        "description": "In 262 AD, the arch was expanded to a triple arch structure and rededicated as the Arch of Gallienus.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 262,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "The gate originally consisted of a single arch, now the only surviving element.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-2",
+        "description": "The 262 AD expansion added two additional arches, creating a triple arch with a peak height of 8.8 m.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Augustus",
+      "personId": "augustus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Servius Tullius",
+      "personId": "servius-tullius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Publius Valerius Publicola",
+      "personId": "publius-valerius-publicola",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Cicero",
+      "personId": "cicero",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Plutarch",
+      "personId": "plutarch",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Sulla",
+      "personId": "sulla",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Gallienus",
+      "personId": "gallienus",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

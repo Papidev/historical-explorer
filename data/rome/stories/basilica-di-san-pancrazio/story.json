@@ -1,0 +1,121 @@
+{
+  "introduction": {
+    "text": "The Basilica di San Pancrazio in Rome is a minor Catholic basilica that has served as a parish, conventual, and titular church since the 6th century. It is significant for its association with the martyr Saint Pancras, its long architectural evolution, and its role as a titular church for several popes.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Founded by Pope Symmachus in the 6th century, the basilica was built on the burial site of Saint Pancras.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 498,
+          "precision": "exact",
+          "endYear": 514,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Pope Gregory I transferred the church to the Benedictine Order after the Lombard sack of Montecassino.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 590,
+          "precision": "exact",
+          "endYear": 604,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Pope Honorius I enlarged the church in the 7th century to accommodate pilgrims and placed the saint's relics beneath the high altar.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 625,
+          "precision": "exact",
+          "endYear": 638,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "In the 17th century the Discalced Carmelites remodeled the basilica.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1600,
+          "precision": "approximate",
+          "endYear": 1699,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "The basilica was heavily damaged during the French attack on the Roman Republic in 1849 and was rebuilt in the 19th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1849,
+          "precision": "approximate",
+          "endYear": 1899,
+          "granularity": "century"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The basilica retains a plain brick façade from the late 15th century, bearing the arms of Pope Innocent VIII.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The church was completely remodeled by the Discalced Carmelites in the 17th century, giving it its current layout.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "The adjacent Museo di S. Pancrazio displays fragments of sculpture and pagan and early Christian inscriptions from the catacombs.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Pope Symmachus",
+      "personId": "pope-symmachus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Innocent VIII",
+      "personId": "pope-innocent-viii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Paul IV",
+      "personId": "pope-paul-iv",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Clement VIII",
+      "personId": "pope-clement-viii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Antonio Cañizares Llovera",
+      "personId": "antonio-ca-izares-llovera",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pancras of Rome",
+      "personId": "pancras-of-rome",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Gian Pietro Carafa",
+      "personId": "pope-paul-iv",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

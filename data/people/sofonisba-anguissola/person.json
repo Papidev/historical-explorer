@@ -1,0 +1,75 @@
+{
+  "id": "sofonisba-anguissola",
+  "name": "Sofonisba Anguissola",
+  "wikidataId": "Q236038",
+  "wikipediaTitle": "Sofonisba Anguissola",
+  "content": {
+    "description": [
+      {
+        "text": "Sofonisba Anguissola, born c. 1532 in Cremona to a modest noble family, was the eldest of seven children; her father Amilcare encouraged a well‑rounded education and sent her and her sister Elena to study with Bernardino Campi at age fourteen, later continuing under Bernardino Gatti, which set a precedent for women to be accepted as art students. By her early twenties she had produced notable works such as The Game of Chess (1555) and a self‑portrait, establishing a reputation for intimate, informal portraiture that broke with the formal conventions of Italian art.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1559 Philip II invited her to Madrid as lady‑in‑waiting and art tutor to Queen Elisabeth of Valois, where she painted official royal portraits and shaped the queen’s own artistic development; after Elisabeth’s death she married a Sicilian noble and later a Genoese merchant, continuing to work into her nineties and receiving a visit from Anthony van Dyck in 1629, who recorded her age and praised her advice. Anguissola’s success opened doors for women artists, inspired later painters such as Lavinia Fontana, and even earned her a crater on Mercury named in her honor.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Michelangelo recognized Anguissola’s talent after she sent him a drawing of a boy bitten by a lobster, and he gave her sketches from his notebooks to copy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Her 1556 self‑portrait depicts herself as the artist at work, a rare assertion of agency for a woman painter in the Renaissance.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The portrait of Queen Elisabeth of Valois with a zibellino was widely copied by artists such as Peter Paul Rubens.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A crater on Mercury was named after Sofonisba Anguissola on 4 August 2017.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his 1629 visit, Anthony van Dyck noted that Anguissola was 96 years old, her eyesight was weakened, but her memory and intellect remained clear, and he recorded that her advice taught him more about the true principles of painting than anything else.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1532,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1629,
+      "month": 11,
+      "day": 16,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Sofonisba_Anguissola,_Selvportræt_ved_staffeliet,_1556,_Museum_Castle_in_Łańcut.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Sofonisba_Anguissola%2C_Selvportr%C3%A6t_ved_staffeliet%2C_1556%2C_Museum_Castle_in_%C5%81a%C5%84cut.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Sofonisba_Anguissola%2C_Selvportr%C3%A6t_ved_staffeliet%2C_1556%2C_Museum_Castle_in_%C5%81a%C5%84cut.jpg/960px-Sofonisba_Anguissola%2C_Selvportr%C3%A6t_ved_staffeliet%2C_1556%2C_Museum_Castle_in_%C5%81a%C5%84cut.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Sofonisba_Anguissola%2C_Selvportr%C3%A6t_ved_staffeliet%2C_1556%2C_Museum_Castle_in_%C5%81a%C5%84cut.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Sofonisba Anguissola",
+    "author": "Sofonisba Anguissola",
+    "width": 6100,
+    "height": 7087,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Sofonisba Anguissola",
+    "url": "https://en.wikipedia.org/wiki/Sofonisba_Anguissola"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:120b-cloud",
+    "completedAt": "2026-10-10T01:33:07.457Z"
+  }
+}

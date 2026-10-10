@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "RomaArcoGianoCostantino2.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:RomaArcoGianoCostantino2.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/RomaArcoGianoCostantino2.JPG/960px-RomaArcoGianoCostantino2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/RomaArcoGianoCostantino2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "No machine-readable author provided. MM assumed (based on copyright claims).",
+      "author": "No machine-readable author provided. MM assumed (based on copyright claims).",
+      "width": 1732,
+      "height": 1368,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Plan_Rome-_Boog_van_Janus.png",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Plan_Rome-_Boog_van_Janus.png",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Plan_Rome-_Boog_van_Janus.png/960px-Plan_Rome-_Boog_van_Janus.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/22/Plan_Rome-_Boog_van_Janus.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "fr:User:ColdEel &amp; edited by nl:Gebruiker:Joris1919",
+      "author": "fr:User:ColdEel &amp; edited by nl:Gebruiker:Joris1919",
+      "width": 1128,
+      "height": 900,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "14_533_Janusbogen.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:14_533_Janusbogen.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/14_533_Janusbogen.jpg/960px-14_533_Janusbogen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/14_533_Janusbogen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Falk2",
+      "author": "Falk2",
+      "width": 5257,
+      "height": 3483,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "RomaArcoGianoCostantino2.JPG"
+}

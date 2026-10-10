@@ -1,0 +1,67 @@
+{
+  "id": "carlo-maderno",
+  "name": "Carlo Maderno",
+  "wikidataId": "Q122328",
+  "wikipediaTitle": "Carlo Maderno",
+  "content": {
+    "description": [
+      {
+        "text": "Carlo Maderno was born in 1556 in Capolago, a town that was then part of the Swiss Confederacy. He began his career as a marble cutter in the northern quarries before moving to Rome in 1588 to work with his uncle Domenico Fontana. His early experience in sculptural work informed his architectural style, which would later become a cornerstone of the emerging Baroque aesthetic.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Maderno’s first major solo commission was the façade of Santa Susanna (1597–1603), a bold departure from the Mannerist conventions of the time. The dynamic rhythm of columns and pilasters, along with a protruding central bay, earned him the patronage of Pope Paul V, who appointed him chief architect of St. Peter’s Basilica. There he extended Michelangelo’s original plans, adding a palatial façade and an extended nave that transformed the basilica’s layout from a Greek cross to a Latin cross.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Maderno was appointed chief architect of St. Peter’s Basilica by Pope Paul V after the success of the Santa Susanna façade.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He designed the base supporting the Marian column in front of the Basilica di Santa Maria Maggiore, a design that later served as a model for many Marian columns throughout Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Maderno created the Confessio, a crypt‑like space beneath St. Peter’s dome, which contains 95 bronze lamps that remain lit perpetually.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1556,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1629,
+      "month": 1,
+      "day": 31,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Maderno_Carlo_Ritratto.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Maderno_Carlo_Ritratto.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Maderno_Carlo_Ritratto.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Maderno_Carlo_Ritratto.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 960,
+    "height": 960,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Carlo Maderno",
+    "url": "https://en.wikipedia.org/wiki/Carlo_Maderno"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:10:54.334Z"
+  }
+}

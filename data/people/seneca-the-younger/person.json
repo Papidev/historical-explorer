@@ -1,0 +1,65 @@
+{
+  "id": "seneca-the-younger",
+  "name": "Seneca the Younger",
+  "wikidataId": "Q2054",
+  "wikipediaTitle": "Seneca the Younger",
+  "content": {
+    "description": [
+      {
+        "text": "Seneca the Younger was a Roman Stoic philosopher, statesman, dramatist, and satirist born around 4 BC in Córdoba, Hispania. He received a classical education in Rome, studied rhetoric and Stoic philosophy under Attalus, Sotion, and Papirius Fabianus, and later became a prominent orator in the Senate. His early career was marked by a brief exile to Corsica under Claudius, after which he returned to Rome and served as tutor to the future emperor Nero, eventually becoming Nero’s chief advisor and a key figure in the early years of the emperor’s reign.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Seneca’s literary output includes twelve moral essays, 124 letters to Lucilius, and a collection of tragedies such as Medea, Thyestes, and Phaedra. He also authored the satirical Apocolocyntosis, lampooning the deification of Claudius, and the philosophical work Naturales Quaestiones. His influence extended beyond his lifetime, shaping Renaissance humanism and the development of revenge tragedy in Elizabethan drama. In 65 AD, amid the fallout from the Pisonian conspiracy, Nero forced Seneca to commit suicide, a death that has been depicted in numerous paintings and remains a dramatic testament to his stoic resolve.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Seneca practiced vegetarianism for about a year in his early twenties, a practice he abandoned after his father advised against it.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Seneca suffered from breathing difficulties, likely asthma, and was struck with tuberculosis in his mid‑twenties, leading him to spend several years in Egypt under the care of his aunt.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Seneca’s wife, Pompeia Paulina, attempted to share his forced suicide by also taking poison, but she survived.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -4,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 65,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Duble_herma_of_Socrates_and_Seneca_Antikensammlung_Berlin_07.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Duble_herma_of_Socrates_and_Seneca_Antikensammlung_Berlin_07.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Duble_herma_of_Socrates_and_Seneca_Antikensammlung_Berlin_07.jpg/960px-Duble_herma_of_Socrates_and_Seneca_Antikensammlung_Berlin_07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Duble_herma_of_Socrates_and_Seneca_Antikensammlung_Berlin_07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "I, Calidius",
+    "author": "Calidius",
+    "width": 1790,
+    "height": 2208,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Seneca the Younger",
+    "url": "https://en.wikipedia.org/wiki/Seneca_the_Younger"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:08:29.191Z"
+  }
+}

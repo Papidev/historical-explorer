@@ -1,0 +1,81 @@
+{
+  "id": "pope-pius-iv",
+  "name": "Pope Pius IV",
+  "wikidataId": "Q161983",
+  "wikipediaTitle": "Pope Pius IV",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Angelo Medici was born in Milan on 31 March 1499 as the second of eleven children to Bernardino Medici and Clelia Serbelloni. He studied philosophy and medicine in Pavia, then law at the University of Bologna, earning a doctorate in canon and civil law in 1525. His reputation as a jurist and his family's connections brought him to Rome in 1527, where Pope Paul III made him a cardinal in 1549 and later appointed him Archbishop of Ragusa and vice‑legate of Bologna.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Elected pope on 25 December 1559, he took the name Pius IV and presided over the final session of the Council of Trent in 1562, bringing the council to a satisfactory conclusion for Rome and the major European powers. During his pontificate he launched ambitious building projects in Rome, including the construction of Porta Pia and Via Pia, and he loosened the restrictive laws of the Roman ghetto. He died on 9 December 1565 after a prolonged illness and was buried in Santa Maria degli Angeli.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Pius IV presided over the final session of the Council of Trent, which produced the Tridentine Creed that became an authoritative expression of Catholic faith.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He initiated the construction of Porta Pia and Via Pia in Rome, expanding the city’s infrastructure and beautifying its streets.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pius IV loosened the restrictive laws of the Roman ghetto, allowing Jews to own property worth up to 1500 ducats and to conduct business with Christians.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a patron of Michelangelo, who rebuilt Santa Maria degli Angeli and designed the Villa Pia in the Vatican Gardens during Pius IV’s reign.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The pope suffered from gout, which restricted his mobility and required him to be carried in a sedia gestatoria for many public appearances.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1561 Pius IV beatified Gundisalvus of Amarante, the only beatification he performed during his pontificate.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1499,
+      "month": 3,
+      "day": 31,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1565,
+      "month": 12,
+      "day": 9,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Portrait_of_Pope_Pius_IV,_three-quarter-length,_seated_at_a_draped_table_(Circle_of_Scipione_Pulzone).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_Pope_Pius_IV%2C_three-quarter-length%2C_seated_at_a_draped_table_(Circle_of_Scipione_Pulzone).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Portrait_of_Pope_Pius_IV%2C_three-quarter-length%2C_seated_at_a_draped_table_%28Circle_of_Scipione_Pulzone%29.jpg/960px-Portrait_of_Pope_Pius_IV%2C_three-quarter-length%2C_seated_at_a_draped_table_%28Circle_of_Scipione_Pulzone%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/Portrait_of_Pope_Pius_IV%2C_three-quarter-length%2C_seated_at_a_draped_table_%28Circle_of_Scipione_Pulzone%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Circle of Scipione Pulzone",
+    "author": "Circle of Scipione Pulzone",
+    "width": 2205,
+    "height": 2880,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Pius IV",
+    "url": "https://en.wikipedia.org/wiki/Pope_Pius_IV"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:01:09.544Z"
+  }
+}

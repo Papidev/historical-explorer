@@ -1,0 +1,81 @@
+{
+  "id": "caligula",
+  "name": "Caligula",
+  "wikidataId": "Q1409",
+  "wikipediaTitle": "Caligula",
+  "content": {
+    "description": [
+      {
+        "text": "Gaius Julius Caesar Augustus Germanicus, known as Caligula, was born on 31 August AD 12 in Antium. He was the third of six surviving children of the popular general Germanicus and Agrippina the Elder, a granddaughter of Augustus. As a child he accompanied his father on campaigns in Germania and wore a miniature soldier’s outfit, including army boots, which earned him the affectionate nickname “Caligula” – Latin for “little boot” – from the troops.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He succeeded Tiberius as emperor in AD 37 at the age of 24 and ruled for a little over four years. During his reign he pursued ambitious public works, beginning the construction of the Aqua Claudia and Anio Novus aqueducts, annexed the client kingdom of Mauretania as a province, attempted an invasion of Britain, and was ultimately assassinated on 24 January AD 41 by conspirators in the Praetorian Guard.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The nickname “Caligula” means “little boot” and was given to him by Roman soldiers because he wore miniature soldier’s boots while accompanying his father on military campaigns.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Caligula is said to have planned to make his horse, Incitatus, a consul, a move that has become a famous anecdote about his reign.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He began the construction of the Aqua Claudia and Anio Novus aqueducts, two major public works that improved water supply in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 40 AD he annexed the client kingdom of Mauretania and divided it into the provinces of Mauretania Tingitana and Mauretania Caesariensis.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Caligula attempted an invasion of Britain but ultimately abandoned the plan, leaving the island under Roman control until his successor, Claudius, completed the conquest.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was assassinated on 24 January AD 41 by conspirators in the Praetorian Guard, ending his brief reign of just over four years.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 12,
+      "month": 8,
+      "day": 31,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 41,
+      "month": 1,
+      "day": 24,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Portrait_Head_of_Caligula_-_Getty_Museum_(72.AA.155).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Portrait_Head_of_Caligula_-_Getty_Museum_(72.AA.155).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Portrait_Head_of_Caligula_-_Getty_Museum_%2872.AA.155%29.jpg/960px-Portrait_Head_of_Caligula_-_Getty_Museum_%2872.AA.155%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Portrait_Head_of_Caligula_-_Getty_Museum_%2872.AA.155%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC0",
+    "attribution": "J. Paul Getty Museum",
+    "author": "J. Paul Getty Museum",
+    "width": 3285,
+    "height": 4260,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Caligula",
+    "url": "https://en.wikipedia.org/wiki/Caligula"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:51:04.954Z"
+  }
+}

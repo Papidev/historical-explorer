@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Palatino_aularegia.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Palatino_aularegia.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Palatino_aularegia.JPG/960px-Palatino_aularegia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Palatino_aularegia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Utente:Battlelight",
+      "author": "Utente:Battlelight",
+      "width": 4000,
+      "height": 3000,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "AC_SO_Grundriss_Aula_regia_nach_Hugot.svg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:AC_SO_Grundriss_Aula_regia_nach_Hugot.svg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/AC_SO_Grundriss_Aula_regia_nach_Hugot.svg/960px-AC_SO_Grundriss_Aula_regia_nach_Hugot.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/AC_SO_Grundriss_Aula_regia_nach_Hugot.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Grunpfnul",
+      "author": "Grunpfnul",
+      "width": 845,
+      "height": 483,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Aula_Regia_(Roma_Palatino).png",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Aula_Regia_(Roma_Palatino).png",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Aula_Regia_%28Roma_Palatino%29.png/960px-Aula_Regia_%28Roma_Palatino%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Aula_Regia_%28Roma_Palatino%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Cristiano64",
+      "author": "Cristiano64",
+      "width": 1250,
+      "height": 1500,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Palatino_aularegia.JPG"
+}

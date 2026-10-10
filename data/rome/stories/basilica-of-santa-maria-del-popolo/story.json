@@ -1,0 +1,196 @@
+{
+  "introduction": {
+    "text": "The Basilica di Santa Maria del Popolo in Rome is a minor basilica and titular church that has served as a major pilgrimage site and a showcase of Renaissance and Baroque art and architecture. Its strategic location at Piazza del Popolo made it the first church encountered by travelers entering Rome from the north, and its rich history reflects the patronage of successive popes and the Augustinian order.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "foundation-legend",
+        "description": "Legendary foundation by Pope Paschal II in 1099, involving the exorcism of a walnut tree and the removal of Emperor Nero's remains.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1099,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "papal-bull-1244",
+        "description": "Papal bull Pia desideria on 31 March 1244 confirmed the Augustinian order's establishment at the basilica.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1244,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "sistine-reconstruction",
+        "description": "Reconstruction between 1472 and 1477 under Pope Sixtus IV, creating the early Renaissance basilica with a Latin cross plan and octagonal dome.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1472,
+          "precision": "exact",
+          "endYear": 1477,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "julian-choir",
+        "description": "Choir added between 1505 and 1510 by Donato Bramante for Pope Julius II, featuring high Renaissance style.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1505,
+          "precision": "exact",
+          "endYear": 1510,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "caravaggio-paintings-history",
+        "description": "Caravaggio's 'Conversion of Saint Paul' and 'Crucifixion of Saint Peter' painted 1600–1601 in the Cerasi Chapel.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1600,
+          "precision": "exact",
+          "endYear": 1601,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "bernini-reconstruction",
+        "description": "Baroque reconstruction led by Gian Lorenzo Bernini from 1655 to 1661, altering façade and interior.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1655,
+          "precision": "exact",
+          "endYear": 1661,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "cybo-chapel",
+        "description": "Cybo Chapel completed 1682–1687 under Carlo Fontana, a Baroque masterpiece.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1682,
+          "precision": "exact",
+          "endYear": 1687,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1716-gift",
+        "description": "In 1716 Pope Clement XI blessed a sword gifted to Prince Eugene of Savoy.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1716,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1772-tomb",
+        "description": "The 1772 funeral monument of Princess Maria Flaminia Odescalchi Chigi, a late Baroque tomb.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1772,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "façade",
+        "description": "Early Renaissance façade built in the 1470s, later modified by Bernini, featuring a central rose window and sculpted Madonna.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "dome",
+        "description": "Octagonal Renaissance dome above the crossing, first of its kind in Rome, built 1474–75.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "interior-layout",
+        "description": "Three‑aisled Latin cross plan with four bays per nave, high Renaissance vaults, and a central dome.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "caravaggio-paintings",
+        "description": "Caravaggio's two masterpieces in the Cerasi Chapel, key examples of Baroque realism.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "raphael-works",
+        "description": "Raphael's 'Madonna of the Veil' and 'Portrait of Pope Julius II' once housed in the basilica.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "pinturicchio-frescoes",
+        "description": "Pinturicchio frescoes in the apse and side chapels, illustrating High Renaissance style.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "bernini-sculptures",
+        "description": "Bernini's sculptural decorations in the nave and transept, including the triumphal arch group.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Pope Paschal II",
+      "personId": "pope-paschal-ii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Sixtus IV",
+      "personId": "pope-sixtus-iv",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Julius II",
+      "personId": "giuliano-della-rovere",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Alexander VII",
+      "personId": "pope-alexander-vii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Pius IV",
+      "personId": "pope-pius-iv",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Pius V",
+      "personId": "pope-pius-v",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Sixtus V",
+      "personId": "pope-sixtus-v",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Clement VIII",
+      "personId": "pope-clement-viii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Clement XI",
+      "personId": "pope-clement-xi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Pius VII",
+      "personId": "pope-pius-vii",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

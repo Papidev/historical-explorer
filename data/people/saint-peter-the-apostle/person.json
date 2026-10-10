@@ -1,0 +1,57 @@
+{
+  "id": "saint-peter-the-apostle",
+  "name": "Saint Peter the Apostle",
+  "wikidataId": "Q33923",
+  "wikipediaTitle": "Saint Peter",
+  "content": {
+    "description": [
+      {
+        "text": "Simon bar Jonah, later called Peter, was a Galilean fisherman who became one of Jesus’ first disciples.  According to the New Testament and early Christian tradition, Jesus called him and his brother Andrew to be “fishers of men,” and gave him the name Cephas (Peter) meaning “rock.”  Peter is repeatedly portrayed as the most outspoken of the Twelve, often serving as the spokesman for the apostles in the Gospels and the Acts of the Apostles.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After Jesus’ death, Peter emerged as a leading figure in the early church, preaching in Jerusalem, Antioch, and eventually Rome.  Church Fathers such as Irenaeus, Tertullian, and Eusebius attest that he spent his final years in Rome, where he was martyred during Nero’s persecution.  His death—traditionally by crucifixion upside down—has become a central element of Catholic and Orthodox hagiography and is commemorated on 29 June as the feast of Saints Peter and Paul.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Peter was crucified upside down in Rome under Emperor Nero.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -1,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 64,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope-peter_pprubens.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope-peter_pprubens.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Pope-peter_pprubens.jpg/960px-Pope-peter_pprubens.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Pope-peter_pprubens.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Peter Paul Rubens",
+    "author": "Peter Paul Rubens",
+    "width": 2318,
+    "height": 3051,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Saint Peter",
+    "url": "https://en.wikipedia.org/wiki/Saint_Peter"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:40:13.199Z"
+  }
+}

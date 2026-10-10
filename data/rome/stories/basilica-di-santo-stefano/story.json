@@ -1,0 +1,149 @@
+{
+  "introduction": {
+    "text": "The Basilica di Santo Stefano in Via Latina is a 5th‑century Christian church that illustrates early Roman ecclesiastical architecture and the influence of aristocratic patronage on the spread of Christianity outside the city walls.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history2",
+        "description": "Demetriade, daughter of consul Flavio Anicio Ermogeniano Olibrio, donated the site after converting to Christianity.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 395,
+          "precision": "approximate",
+          "endYear": 410,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history1",
+        "description": "The basilica was founded on a suburban villa under Pope Leo I (440‑461) and completed around 470.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 470,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Pope Leo III (795‑816) renovated the roof of the basilica.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 795,
+          "precision": "approximate",
+          "endYear": 816,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Pope Leo IV (847‑855) supplied new liturgical furnishings and palioi.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 847,
+          "precision": "approximate",
+          "endYear": 855,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "The basilica was abandoned and forgotten by the end of the 9th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 850,
+          "precision": "approximate",
+          "endYear": 900,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "The ruins were rediscovered in 1857 by Lorenzo Fortunati.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1857,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The basilica was a three‑nave building (≈36 × 21 m) with an western apse and an eastern narthex, featuring eight Corinthian columns separating the central nave from the side aisles.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The central nave contained a schola cantorum with an ambon, and the apse altar likely held relics visible through a confession window.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "A mausoleum from pre‑Christian times existed beneath the schola cantorum and was used as a funerary chamber in the 5th century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design4",
+        "description": "Some columns and the portico of the narthex were reused from nearby ancient villas.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "papa Leone I",
+      "personId": "leo-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Demetriade (nobile)",
+      "personId": "demetriade-nobile",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Flavio Anicio Ermogeniano Olibrio",
+      "personId": "flavio-anicio-ermogeniano-olibrio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Alarico I",
+      "personId": "alaric",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Agostino d'Ippona",
+      "personId": "agostino-d-ippona",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pelagio (teologo)",
+      "personId": "pelagio-teologo",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "San Girolamo",
+      "personId": "san-girolamo",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Gens Anicia",
+      "personId": "gens-anicia",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Papa Leone III",
+      "personId": "pope-leo-iii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "papa Leone IV",
+      "personId": "papa-leone-iv",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

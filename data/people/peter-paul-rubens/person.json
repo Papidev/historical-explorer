@@ -1,0 +1,73 @@
+{
+  "id": "peter-paul-rubens",
+  "name": "Peter Paul Rubens",
+  "wikidataId": "Q5599",
+  "wikipediaTitle": "Peter Paul Rubens",
+  "content": {
+    "description": [
+      {
+        "text": "Sir Peter Paul Rubens (28 June 1577 – 30 May 1640) was a Flemish artist and diplomat whose Baroque style celebrated movement, colour, and sensuality, and whose compositions drew on classical and Christian themes.  His work ranged from grand altarpieces and mythological scenes to intimate portraits, and he was celebrated for his ability to blend the dramatic intensity of the Counter‑Reformation with the dynamism of Italian masters such as Titian and Caravaggio.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond painting, Rubens ran a prolific workshop in Antwerp that produced thousands of works and trained a generation of artists, most famously Anthony van Dyck.  He also served as a diplomat for the Spanish Habsburgs, negotiating on behalf of the Spanish Netherlands and England, and was knighted by both Philip IV of Spain and Charles I of England for his services.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Rubens was knighted by both Philip IV of Spain and Charles I of England, a rare honour for a painter.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He designed the last significant woodcuts before the 19th‑century revival of the technique, leaving a lasting influence on printmaking.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Rubens was a prolific designer of cartoons for Flemish tapestry workshops and of frontispieces for publishers in Antwerp, expanding his artistic reach beyond canvas.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a polyglot, writing in Italian, Dutch, French, Spanish, and Latin, which facilitated his diplomatic missions across Europe.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1577,
+      "month": 6,
+      "day": 28,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1640,
+      "month": 5,
+      "day": 30,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Sir_Peter_Paul_Rubens_-_Portrait_of_the_Artist_-_Google_Art_Project.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Sir_Peter_Paul_Rubens_-_Portrait_of_the_Artist_-_Google_Art_Project.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Sir_Peter_Paul_Rubens_-_Portrait_of_the_Artist_-_Google_Art_Project.jpg/960px-Sir_Peter_Paul_Rubens_-_Portrait_of_the_Artist_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Sir_Peter_Paul_Rubens_-_Portrait_of_the_Artist_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Peter Paul Rubens",
+    "author": "Peter Paul Rubens",
+    "width": 3786,
+    "height": 5281,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Peter Paul Rubens",
+    "url": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:24:55.258Z"
+  }
+}

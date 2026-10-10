@@ -1,0 +1,65 @@
+{
+  "id": "romulus",
+  "name": "Romulus",
+  "wikidataId": "Q2186",
+  "wikipediaTitle": "Romulus",
+  "content": {
+    "description": [
+      {
+        "text": "Romulus is the legendary founder and first king of Rome, whose story blends myth and early Roman tradition. According to the most common accounts, he and his twin brother Remus were the sons of the Vestal Rhea Silvia and the god Mars, and were abandoned in the Tiber River before being rescued by a she‑wolf and raised by a shepherd. Their later rebellion against the usurper Amulius and the founding of a city on the Palatine Hill are central to Rome’s origin myth, and the tales of their divine ancestry and miraculous upbringing have been cited by Roman historians and later writers as the basis for Rome’s divine favor and destiny.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond the founding narrative, Romulus is credited with establishing many of Rome’s earliest institutions. He divided the new city’s inhabitants into three tribes—Ramnes, Titienses, and Luceres—each further split into ten curiae, and set up a Senate composed of leading families. He also outlawed infanticide, created an asylum for fugitives on the Capitoline Hill, and organized the first Roman military levy, forming the Celeres as a royal bodyguard. These reforms, whether historically accurate or later legendary embellishments, were used by Roman writers to explain the origins of Roman law, politics, and social structure.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Romulus divided the populace into three tribes—Ramnes, Titienses, and Luceres—each with ten curiae, and assigned each curia a military levy of one hundred infantry and ten cavalry, forming the Celeres as the royal bodyguard.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He outlawed infanticide and established an asylum on the Capitoline Hill where fugitives could seek protection and eventually obtain Roman citizenship.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After a reign of thirty‑seven years, Romulus is said to have disappeared in a whirlwind during a storm while reviewing his troops, a death that has been interpreted as either murder, divine ascension, or a mythical disappearance.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -771,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": -734,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Brogi,_Carlo_(1850-1925)_-_n._8226_-_Certosa_di_Pavia_-_Medaglione_sullo_zoccolo_della_facciata.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Brogi%2C_Carlo_(1850-1925)_-_n._8226_-_Certosa_di_Pavia_-_Medaglione_sullo_zoccolo_della_facciata.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Brogi%2C_Carlo_%281850-1925%29_-_n._8226_-_Certosa_di_Pavia_-_Medaglione_sullo_zoccolo_della_facciata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Brogi%2C_Carlo_%281850-1925%29_-_n._8226_-_Certosa_di_Pavia_-_Medaglione_sullo_zoccolo_della_facciata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Carlo Brogi",
+    "author": "Carlo Brogi",
+    "width": 546,
+    "height": 546,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Romulus",
+    "url": "https://en.wikipedia.org/wiki/Romulus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:02:14.843Z"
+  }
+}

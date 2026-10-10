@@ -1,0 +1,65 @@
+{
+  "id": "saint-boniface-of-tarsus",
+  "name": "Saint Boniface of Tarsus",
+  "wikidataId": "Q892536",
+  "wikipediaTitle": "Boniface of Tarsus",
+  "content": {
+    "description": [
+      {
+        "text": "Saint Boniface of Tarsus was a Roman slave and steward of a pagan mistress named Aglaida, who lived a life of debauchery yet was known for his generosity to the poor. According to legend, he was sent from Rome to Tarsus to collect relics of martyrs for Aglaida, but upon arrival he discovered Christians being tortured and openly declared his faith, which led to his execution by beheading with a sword in 307.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his death, Boniface’s own body became the relics that were returned to Aglaida, who converted to Christianity, built a church that still stands as the Church of Santi Bonifacio e Alessio, and devoted her wealth to the poor. He is commemorated on 19 December in the Eastern Orthodox Church, was once listed in the General Roman Calendar, and is invoked against drunkenness; his feast date also made him one of the so‑called Ice Saints celebrated in parts of Europe during the cold spell of 12–14 May.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Saint Boniface is invoked against drunkenness.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Because of the cold spell believed to occur on 12–14 May, he is one of the Ice Saints celebrated in Switzerland, Poland, Bohemia and eastern Germany.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His own body was used as relics that were brought back to Aglaida, leading to her conversion and the construction of a church in his memory.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Aglaida, after converting, distributed her wealth to the poor and lived in a monastery for fifteen years, reportedly receiving a divine gift to exorcise evil spirits.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 307,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Bonifatius_2.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Bonifatius_2.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Bonifatius_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Bonifatius_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 350,
+    "height": 400,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Boniface of Tarsus",
+    "url": "https://en.wikipedia.org/wiki/Boniface_of_Tarsus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:15:31.673Z"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "charles-iv-of-spain",
+  "name": "Charles IV of Spain",
+  "wikidataId": "Q183226",
+  "wikipediaTitle": "Charles IV of Spain",
+  "content": {
+    "description": [
+      {
+        "text": "Charles IV was born on 11 November 1748 in Naples, the second son of Charles III and Maria Amalia of Saxony.  He earned the nickname \"El Cazador\" – the Hunter – because he preferred hunting and sport to state affairs.  When his father died in 1788, Charles succeeded to the Spanish throne, but he was largely a passive ruler, leaving most of the government’s decisions to his wife Maria Luisa and his first minister Manuel Godoy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his reign Spain became entangled in the wars of Revolutionary and Napoleonic France, and Charles’s indecisiveness and Godoy’s controversial policies eroded the monarchy’s legitimacy.  In 1808 the Tumult of Aranjuez forced Charles to abdicate in favor of his son Ferdinand, who was then deposed by Napoleon at Bayonne, paving the way for Joseph Bonaparte’s short reign.  Charles spent the rest of his life in exile, finally settling in Rome, where he died on 20 January 1819.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was called \"El Cazador\" because of his love of hunting.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Charles was a former wrestler before he became king.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The famous painter Francisco Goya painted several official portraits of Charles that critics later described as satirical.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He fathered fourteen children, though only seven survived into adulthood.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Historians often describe Charles as a do‑nothing king who left most decisions to his ministers.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1748,
+      "month": 11,
+      "day": 11,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1819,
+      "month": 1,
+      "day": 20,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Carlos_IV_de_rojo.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Carlos_IV_de_rojo.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Carlos_IV_de_rojo.jpg/960px-Carlos_IV_de_rojo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Carlos_IV_de_rojo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Francisco Goya",
+    "author": "Francisco Goya",
+    "width": 2240,
+    "height": 3051,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Charles IV of Spain",
+    "url": "https://en.wikipedia.org/wiki/Charles_IV_of_Spain"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:16:42.571Z"
+  }
+}

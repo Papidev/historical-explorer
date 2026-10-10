@@ -1,0 +1,67 @@
+{
+  "id": "pope-paschal-ii",
+  "name": "Pope Paschal II",
+  "wikidataId": "Q227967",
+  "wikipediaTitle": "Pope Paschal II",
+  "content": {
+    "description": [
+      {
+        "text": "Raniero Raineri di Bleda, later known as Pope Paschal II, was born in the small town of Bleda near Forlì in the Romagna region of Italy, sometime between 1050 and 1055. He entered the Benedictine monastery at Cluny at a young age, where he distinguished himself as a scholar and administrator. In 1073 the reformist Pope Gregory VII appointed him cardinal‑priest of San Clemente, a position that placed him at the centre of the Church’s political life during the height of the Investiture Controversy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Elected pope on 19 August 1099, Paschal II presided over a reign that lasted almost twenty years, an unusually long tenure for a medieval pontiff. He confronted the imperial ambitions of Henry V, was briefly imprisoned by the emperor’s forces, and negotiated the controversial 1111 compact that allowed Henry to be crowned at St. Peter’s while the pope retained the right to invest bishops with the ring and crozier. In 1113 he issued the bull *Pie postulatio voluntatis*, which formally recognized the Hospital of Saint John of Jerusalem as a religious order and laid the foundations for the Knights Hospitaller, an institution that would endure for centuries.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Paschal II consecrated the Cluniac church of Notre Dame at La Charité‑sur‑Loire in 1107, a building that at the time was the second‑largest church in Europe.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his papacy Paschal II issued a crusade for the capture of Tarragona at the behest of Count Ramon Berenguer III of Barcelona in 1116, extending the Church’s influence into the Iberian Peninsula.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He ordered the reconstruction of the basilica of Santi Quattro Coronati on the site of a church destroyed by the Normans in 1084, and the new structure was consecrated in 1116.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1050,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1118,
+      "month": 1,
+      "day": 21,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Filip1Frr_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Filip1Frr_(cropped).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Filip1Frr_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Filip1Frr_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 319,
+    "height": 663,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Paschal II",
+    "url": "https://en.wikipedia.org/wiki/Pope_Paschal_II"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:31:02.079Z"
+  }
+}

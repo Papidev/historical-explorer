@@ -1,0 +1,65 @@
+{
+  "id": "faustina-the-elder",
+  "name": "Faustina the Elder",
+  "wikidataId": "Q234734",
+  "wikipediaTitle": "Faustina the Elder",
+  "content": {
+    "description": [
+      {
+        "text": "Annia Galeria Faustina the Elder, born around 100 CE, became Roman empress as the wife of Emperor Antoninus Pius. She was renowned for her beauty, wisdom, and charitable work, especially in supporting education for girls and the poor. Her marriage to Antoninus, who had been adopted by Emperor Hadrian, elevated her to the title of Augusta upon his accession in 138 CE.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After Antoninus’s death in 161 CE, Faustina was deified by the Senate, and a temple dedicated to her was erected in the Roman Forum. Coins bearing her portrait were struck with the legend \"DIVA FAVSTINA,\" and a charitable institution named Puellae Faustinianae was established to aid orphaned girls. Her legacy continued to be celebrated throughout the principate, with statues, coins, and public commemorations across the empire.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Faustina’s distinctive hairstyle—braids pulled back into a bun behind or atop her head—was widely admired and emulated for two or three generations in Roman society.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Temple of Faustina, a grand hexastyle structure with Corinthian columns, was dedicated in 144 CE and became the first Roman empress’s permanent monument in the Forum Romanum.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Coins issued after her death featured Faustina seated on a throne, holding a tall staff, and were often crowned and veiled, reflecting her association with the goddess Ceres and the symbolic themes of fertility and abundance.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 100,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 140,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Colossal_portrait_of_Faustina_the_Elder,_from_the_Pantanello_at_Hadrian's_Villa,_138-140_AD,_Vatican_Museums,_Rome_(9459345263).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Colossal_portrait_of_Faustina_the_Elder%2C_from_the_Pantanello_at_Hadrian's_Villa%2C_138-140_AD%2C_Vatican_Museums%2C_Rome_(9459345263).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Colossal_portrait_of_Faustina_the_Elder%2C_from_the_Pantanello_at_Hadrian%27s_Villa%2C_138-140_AD%2C_Vatican_Museums%2C_Rome_%289459345263%29.jpg/960px-Colossal_portrait_of_Faustina_the_Elder%2C_from_the_Pantanello_at_Hadrian%27s_Villa%2C_138-140_AD%2C_Vatican_Museums%2C_Rome_%289459345263%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Colossal_portrait_of_Faustina_the_Elder%2C_from_the_Pantanello_at_Hadrian%27s_Villa%2C_138-140_AD%2C_Vatican_Museums%2C_Rome_%289459345263%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 2.0",
+    "attribution": "Following Hadrian",
+    "author": "Following Hadrian",
+    "width": 3133,
+    "height": 4179,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Faustina the Elder",
+    "url": "https://en.wikipedia.org/wiki/Faustina_the_Elder"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:44:51.464Z"
+  }
+}

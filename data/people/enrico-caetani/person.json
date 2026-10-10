@@ -1,0 +1,81 @@
+{
+  "id": "enrico-caetani",
+  "name": "Enrico Caetani",
+  "wikidataId": "Q2517909",
+  "wikipediaTitle": "Enrico Caetani",
+  "content": {
+    "description": [
+      {
+        "text": "Enrico Caetani was born on 6 August 1550 in Sermoneta, a town in the Papal States, as the second son of Bonifacio, lord of Sermoneta, and Caterina di Alberto Pio.  He was the nephew of Cardinal Niccolò Caetani and the brother of Camillo Caetani.  On 11 August 1585 he was consecrated bishop by Cardinal Giulio Antonio Santorio, with several archbishops and bishops serving as co‑consecrators.  Later that same year, Pope Sixtus V elevated him to the College of Cardinals on 18 December 1585 and appointed him Latin Patriarch of Alexandria, a post he held until 1587.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Caetani’s diplomatic career spanned several European courts.  He served as papal legate in Bologna from 1585 to 1587, during which he recommended the young astronomer Galileo Galilei for a professorship at the university, though the chair ultimately went to Giovanni Antonio Magini.  In 1589 he led a papal mission to France to support the Catholic League against Henry of Navarre, presiding over an oath‑taking ceremony in March 1590 in which Parisian militia pledged to defend the city.  After the death of William Allen in 1594, Caetani became Cardinal Protector of the English mission and appointed George Blackwell as archpriest.  He also served as legate a latere in Poland from 3 April 1596 until 23 June 1597 before returning to Rome, where he died on 13 December 1599.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Caetani recommended Galileo Galilei to the University of Bologna in 1588, but the chair was awarded to Giovanni Antonio Magini.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In March 1590 he presided over a ceremony in which militia and city officials of Paris took an oath to defend the city against Henry of Navarre.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After William Allen’s death in 1594, Caetani became the Cardinal Protector of the English mission and appointed George Blackwell as archpriest for England.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as Latin Patriarch of Alexandria from 1585 to 1587, a title that carried significant prestige within the Catholic Church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Caetani was consecrated bishop on 11 August 1585 by Cardinal Giulio Antonio Santorio, with Massimiliano Palumbara, Annibale de Capua, and Guillaume Damasi Van der Linden acting as co‑consecrators.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as legate a latere in Poland from 3 April 1596 until 23 June 1597, representing the papacy in diplomatic affairs.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1550,
+      "month": 8,
+      "day": 6,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1599,
+      "month": 12,
+      "day": 13,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Ritratto_del_Cardinale_Enrico_Caetani.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ritratto_del_Cardinale_Enrico_Caetani.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Ritratto_del_Cardinale_Enrico_Caetani.jpg/960px-Ritratto_del_Cardinale_Enrico_Caetani.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/Ritratto_del_Cardinale_Enrico_Caetani.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Scipione Pulzone",
+    "author": "Scipione Pulzone",
+    "width": 2083,
+    "height": 3527,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Enrico Caetani",
+    "url": "https://en.wikipedia.org/wiki/Enrico_Caetani"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:41:13.128Z"
+  }
+}

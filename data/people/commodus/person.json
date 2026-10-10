@@ -1,0 +1,73 @@
+{
+  "id": "commodus",
+  "name": "Commodus",
+  "wikidataId": "Q1434",
+  "wikipediaTitle": "Commodus",
+  "content": {
+    "description": [
+      {
+        "text": "Lucius Aelius Aurelius Commodus was born on 31 August 161 in Lanuvium, near Rome, the son of Emperor Marcus Aurelius and his first cousin Faustina the Younger.  He was raised under the tutelage of his father and a cadre of scholars, and by the age of sixteen he had already been named caesar and later became the youngest emperor and consul in Roman history when he succeeded his father in 180.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his sole reign, Commodus is best remembered for his extravagant and controversial public persona.  He performed as a gladiator in the Colosseum, cultivated a deific cult around himself, and pursued a policy of heavy taxation and currency devaluation that weakened the Roman economy.  His reign ended abruptly when he was assassinated by the wrestler Narcissus on 31 December 192, after which the Nerva–Antonine dynasty collapsed.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Commodus performed as a gladiator in the Colosseum, a rare act for an emperor.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was assassinated by the wrestler Narcissus, who strangled him in his bath.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Commodus reduced the silver purity of the denarius from 79 % to 76 % and later to 74 %, the largest devaluation since Nero.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first emperor born in the purple, meaning during his father's reign.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 161,
+      "month": 8,
+      "day": 31,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 192,
+      "month": 12,
+      "day": 31,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Commodus_Musei_Capitolini_MC1120.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Commodus_Musei_Capitolini_MC1120.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Commodus_Musei_Capitolini_MC1120.jpg/960px-Commodus_Musei_Capitolini_MC1120.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Commodus_Musei_Capitolini_MC1120.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Marie-Lan Nguyen (2006)",
+    "author": "Marie-Lan Nguyen (2006)",
+    "width": 2000,
+    "height": 3000,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Commodus",
+    "url": "https://en.wikipedia.org/wiki/Commodus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:13:30.974Z"
+  }
+}

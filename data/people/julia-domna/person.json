@@ -1,0 +1,65 @@
+{
+  "id": "julia-domna",
+  "name": "Julia Domna",
+  "wikidataId": "Q229246",
+  "wikipediaTitle": "Julia Domna",
+  "content": {
+    "description": [
+      {
+        "text": "Julia Domna was born around 160 AD in Emesa, a city in Roman Syria, into an Arab priestly family that served the deity Elagabalus.  She married the future emperor Septimius Severus in 187, and together they had two sons, Caracalla and Geta.  As empress consort, Domna distinguished herself by accompanying her husband on military campaigns, engaging in philosophical study, and earning a host of honorific titles such as \"Mother of the Invincible Camps\" and later the unprecedented title Pia Felix Augusta after Severus’s death.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During her tenure she acted as a political mediator between her sons, especially after Severus’s death in 211 when Caracalla and Geta were to rule jointly.  Domna’s influence extended to the imperial court, where she was present at key events and even accompanied Caracalla on his Parthian campaign.  After Caracalla’s assassination in 217, she chose to end her life in Antioch, a decision that underscored her loyalty to the Severan dynasty and her unwillingness to live in a world without its power.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Domna was the first empress dowager to receive the combined title Pia Felix Augusta, a designation that implied greater authority than was typical for a Roman empress mother.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She encouraged the philosopher Philostratus to write the Life of Apollonius of Tyana, a work that she is believed to have died before its completion.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Domna popularized the wearing of wigs in Rome, a custom that had been common among Assyrians and later influenced other Roman empresses and Palmyran queens.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 160,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 217,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Julia_Domna_(Julia_Pia),_inv._2210,_Roman_-_Braccio_Nuovo,_Museo_Chiaramonti_-_Vatican_Museums_-_DSC00897.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Julia_Domna_(Julia_Pia)%2C_inv._2210%2C_Roman_-_Braccio_Nuovo%2C_Museo_Chiaramonti_-_Vatican_Museums_-_DSC00897.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Julia_Domna_%28Julia_Pia%29%2C_inv._2210%2C_Roman_-_Braccio_Nuovo%2C_Museo_Chiaramonti_-_Vatican_Museums_-_DSC00897.jpg/960px-Julia_Domna_%28Julia_Pia%29%2C_inv._2210%2C_Roman_-_Braccio_Nuovo%2C_Museo_Chiaramonti_-_Vatican_Museums_-_DSC00897.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Julia_Domna_%28Julia_Pia%29%2C_inv._2210%2C_Roman_-_Braccio_Nuovo%2C_Museo_Chiaramonti_-_Vatican_Museums_-_DSC00897.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Daderot",
+    "author": "Daderot",
+    "width": 3382,
+    "height": 5472,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Julia Domna",
+    "url": "https://en.wikipedia.org/wiki/Julia_Domna"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:48:29.367Z"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "RomaArcoArgentari.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:RomaArcoArgentari.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/RomaArcoArgentari.jpg/960px-RomaArcoArgentari.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/RomaArcoArgentari.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "MM (Massimo Baldi}",
+      "author": "MM (Massimo Baldi}",
+      "width": 1364,
+      "height": 1358,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Plan_Rome_-_Arcus_Argentariorum.png",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Plan_Rome_-_Arcus_Argentariorum.png",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Plan_Rome_-_Arcus_Argentariorum.png/960px-Plan_Rome_-_Arcus_Argentariorum.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Plan_Rome_-_Arcus_Argentariorum.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "fr:User:ColdEel &amp; edited by nl:Gebruiker:Joris1919",
+      "author": "fr:User:ColdEel &amp; edited by nl:Gebruiker:Joris1919",
+      "width": 1128,
+      "height": 900,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "-Arch_of_the_Argentarii,_or,_Goldsmith's_Gate,_Rome-_MET_DP135028.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:-Arch_of_the_Argentarii%2C_or%2C_Goldsmith's_Gate%2C_Rome-_MET_DP135028.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/-Arch_of_the_Argentarii%2C_or%2C_Goldsmith%27s_Gate%2C_Rome-_MET_DP135028.jpg/960px--Arch_of_the_Argentarii%2C_or%2C_Goldsmith%27s_Gate%2C_Rome-_MET_DP135028.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/-Arch_of_the_Argentarii%2C_or%2C_Goldsmith%27s_Gate%2C_Rome-_MET_DP135028.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC0",
+      "attribution": "Unknown authorUnknown author",
+      "author": "Unknown authorUnknown author",
+      "width": 2520,
+      "height": 3159,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "RomaArcoArgentari.jpg"
+}

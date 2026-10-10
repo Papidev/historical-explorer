@@ -1,0 +1,56 @@
+{
+  "id": "demetriade-nobile",
+  "name": "Demetriade",
+  "wikidataId": "Q3625008",
+  "wikipediaTitle": "Demetriade (nobile)",
+  "content": {
+    "description": [
+      {
+        "text": "Anicia Demetriade, born around 398, was the daughter of Anicius Hermogenianus Olibrio, a consul in 395, and Anicia Juliana. As a member of the powerful Anicii and Amnia families, she was described by contemporary writers as the most noble and richest woman in the Roman world by 410.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the sack of Rome in 410, Demetriade fled with her mother and grandmother to Carthage, where they were imprisoned by the comes Eraclianus and released only after a large ransom. While in Carthage, she came into contact with Bishop Augustine of Hippo, who influenced her to pursue an ascetic life. At about fifteen in 413 she chose to take the veil rather than marry, a decision she announced to her family and was solemnized by Bishop Aurelius of Carthage. She received letters from Augustine, Jerome, and Pelagius, and later returned to Rome, where she founded a church dedicated to St. Stephen on the Via Latina. She died during the pontificate of Pope Leo I, sometime between 440 and 461.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "She was considered the richest person in the Roman world in 410.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She and her family were imprisoned in Carthage and released only after a large ransom was paid.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She received letters from Augustine, Jerome, and Pelagius, which influenced her religious path.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She founded a church dedicated to St. Stephen on the Via Latina near Rome.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 398,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 440,
+      "precision": "approximate"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Demetriade (nobile)",
+    "url": "https://it.wikipedia.org/wiki/Demetriade_(nobile)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:44:55.021Z"
+  }
+}

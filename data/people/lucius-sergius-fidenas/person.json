@@ -1,0 +1,72 @@
+{
+  "id": "lucius-sergius-fidenas",
+  "name": "Lucius Sergius Fidenas",
+  "wikidataId": "Q969058",
+  "wikipediaTitle": "Lucius Sergius Fidenas",
+  "content": {
+    "description": [
+      {
+        "text": "Lucius Sergius Fidenas was a prominent Roman statesman of the late 5th century BC. He served twice as consul, first in 437 BC alongside Marcus Geganius Macerinus and again in 429 BC with Hostus Lucretius Tricipitinus. Between his consulships he held the office of military tribune with consular power on three separate occasions—in 433, 424, and 418 BC—partnering with other leading senators such as Marcus Fabius Vibulanus and Appius Claudius Crassus. His full name, Lucius Sergius C.f. C.n. Fidenas, reflects his belonging to the Sergii Fidenates, a branch of the gens Sergia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Fidenas earned his cognomen from his decisive role in the second war against Veii, where Rome defeated King Lars Tolumnius on the Anio’s left bank, a first for the Romans. He was also involved in the investigation of Fidenae in 428 BC, ordering the removal of some of its inhabitants to Ostia, and in the grand games that celebrated Rome’s victories over Veii and Fidenae in 424 BC. His career ended in 418 BC when he led Roman forces against the Aequi near their camp; the battle was fought on disadvantageous ground and he was killed, prompting the senate to appoint Quintus Servilius Priscus Fidenas as dictator.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He earned the cognomen \"Fidenas\" for his role in the war against Veii.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as military tribune with consular power three times—in 433, 424, and 418 BC.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 428 BC he was selected by the senate to investigate Fidenae and remove some of its people to Ostia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Grand games were organized in 424 BC to celebrate Rome's victory over Veii and Fidenae.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He died in battle against the Aequi in 418 BC, leading to the appointment of a dictator by the senate.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a member of the Sergii Fidenates, a branch of the gens Sergia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His full name was Lucius Sergius C.f. C.n. Fidenas.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was elected consul twice, in 437 and 429 BC.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The second war between Rome and Veii was the first time Rome defeated King Tolumnius on their side of the Anio.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 433 BC a pestilence struck Rome, and the plague also heavily affected Athens, killing over 10,000 people.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Lucius Sergius Fidenas",
+    "url": "https://en.wikipedia.org/wiki/Lucius_Sergius_Fidenas"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:01:57.105Z"
+  }
+}
