@@ -19,6 +19,79 @@ afterEach(() => {
 afterAll(() => server.close());
 
 describe("AI progress dialog", () => {
+  it("reports an unavailable log after generation finishes", async () => {
+    server.use(
+      http.get("/api/admin/ai-progress/:runId", () => new HttpResponse(null, { status: 500 })),
+    );
+
+    render(
+      <AiProgressDialog runId="123" title="Generating Draft Story" isFinished onClose={() => {}} />,
+    );
+
+    expect(await screen.findByRole("alert")).toHaveTextContent(
+      "Unable to load the generation log.",
+    );
+    expect(screen.getByRole("alert")).not.toHaveTextContent("Retrying automatically");
+  });
+
+  it("waits without an error when the progress log has not been created yet", async () => {
+    server.use(
+      http.get("/api/admin/ai-progress/:runId", () => new HttpResponse(null, { status: 404 })),
+    );
+
+    render(
+      <AiProgressDialog
+        runId="123"
+        title="Generating Draft Story"
+        isFinished={false}
+        onClose={() => {}}
+      />,
+    );
+
+    expect(await screen.findByText("Starting generation...")).toBeVisible();
+    expect(screen.queryByRole("alert")).not.toBeInTheDocument();
+  });
+
+  it.each(["HTTP", "network"])(
+    "reports a %s error and recovers while generation is running",
+    async (error) => {
+      server.use(
+        http.get("/api/admin/ai-progress/:runId", () =>
+          error === "HTTP" ? new HttpResponse(null, { status: 500 }) : HttpResponse.error(),
+        ),
+      );
+
+      render(
+        <AiProgressDialog
+          runId="123"
+          title="Generating Draft Story"
+          isFinished={false}
+          onClose={() => {}}
+        />,
+      );
+
+      expect(await screen.findByRole("alert")).toHaveTextContent(
+        "Unable to load generation progress. Retrying automatically.",
+      );
+      expect(screen.queryByText("Starting generation...")).not.toBeInTheDocument();
+
+      server.use(
+        http.get("/api/admin/ai-progress/:runId", () =>
+          HttpResponse.json({
+            status: "running",
+            startedAt: new Date().toISOString(),
+            entries: [{ at: new Date().toISOString(), message: "Fetching the Wikipedia Source." }],
+          }),
+        ),
+      );
+
+      expect(
+        await screen.findByText("Fetching the Wikipedia Source.", {}, { timeout: 2_500 }),
+      ).toBeInTheDocument();
+      expect(screen.queryByRole("alert")).not.toBeInTheDocument();
+    },
+  );
+
   it("lists every failed step in a partial generation", async () => {
     server.use(
       http.get("/api/admin/ai-progress/:runId", () =>
