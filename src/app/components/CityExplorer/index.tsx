@@ -9,6 +9,7 @@ import {
 import { Sidebar } from "./Sidebar";
 import { useFilterSwipe } from "./useFilterSwipe";
 import { useDesktopLayout } from "./useDesktopLayout";
+import { useSelectedPoi } from "./useSelectedPoi";
 import { useState } from "react";
 import { PanelResizeHandle } from "@/app/components/ui/PanelResizeHandle";
 import { DrawerTab } from "@/app/components/ui/DrawerTab";
@@ -52,7 +53,8 @@ export const CityExplorer = ({
   const openFiltersSwipe = useFilterSwipe("right", () => setSidebarOpen(true));
   const closeFiltersSwipe = useFilterSwipe("left", () => setSidebarOpen(false));
   const [zoom, setZoom] = useState(initialZoom);
-  const [selectedPoiId, setSelectedPoiId] = useState<string | null>(initialSelectedPoiId);
+  const { selectedPoiId, selectPoi } = useSelectedPoi(initialSelectedPoiId);
+  const [previousSelectedPoiId, setPreviousSelectedPoiId] = useState(selectedPoiId);
   const [openRequestId, setOpenRequestId] = useState(0);
   const visiblePois = pois.filter(
     (poi) =>
@@ -65,6 +67,13 @@ export const CityExplorer = ({
   const selectedPoi = selectedPoiId
     ? visiblePois.find((poi) => poi.id === selectedPoiId)
     : undefined;
+  if (selectedPoiId !== previousSelectedPoiId) {
+    setPreviousSelectedPoiId(selectedPoiId);
+    setOpenRequestId((current) => current + 1);
+    if (selectedPoiId && !selectedPoi && pois.some((poi) => poi.id === selectedPoiId)) {
+      setSelectedCategories(null);
+    }
+  }
   const updateCategories = (next: PoiCategory[]) => {
     setSelectedCategories(next);
     if (
@@ -75,12 +84,12 @@ export const CityExplorer = ({
             matchesPoiCategory(selectedPoi.categories, category, categoryDefinitions),
           )))
     ) {
-      setSelectedPoiId(null);
+      selectPoi(null);
     }
   };
   const openPoi = (poiId: string) => {
-    setSelectedPoiId(poiId);
-    setOpenRequestId((current) => current + 1);
+    selectPoi(poiId);
+    if (poiId === selectedPoiId) setOpenRequestId((current) => current + 1);
     setSidebarOpen((current) => (current === false ? false : null));
   };
 
@@ -143,7 +152,7 @@ export const CityExplorer = ({
           pois={visiblePois}
           onZoomChange={setZoom}
           onOpenPoiDetails={openPoi}
-          onMapClick={() => setSelectedPoiId(null)}
+          onMapClick={() => selectPoi(null)}
         />
         <PoiDetailsDrawer
           citySlug={citySlug}
@@ -151,7 +160,7 @@ export const CityExplorer = ({
           poi={selectedPoi}
           width={detailsWidth}
           onResize={setDetailsWidth}
-          onClose={() => setSelectedPoiId(null)}
+          onClose={() => selectPoi(null)}
         />
       </div>
     </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Drawer } from "@/app/components/ui/Drawer";
 import { PanelResizeHandle } from "@/app/components/ui/PanelResizeHandle";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
@@ -35,7 +36,7 @@ export const PoiDetailsDrawer = ({
   }>();
   const selectedPersonId =
     selectedPerson?.openRequestId === openRequestId ? selectedPerson.id : undefined;
-  const { content, isLoading } = usePoiStoryContent({ citySlug, poiId: poi?.id });
+  const { content, isLoading, showLoading } = usePoiStoryContent({ citySlug, poiId: poi?.id });
   const { person, isLoading: isPersonLoading } = usePerson(selectedPersonId);
 
   return (
@@ -60,12 +61,13 @@ export const PoiDetailsDrawer = ({
               <DrawerCloseButton onClick={onClose} />
             </div>
             {!selectedPersonId && poi.mainImageUrl && poi.mainImageUrl !== failedMainImageUrl ? (
-              <div className="aspect-video w-full shrink-0 overflow-hidden bg-zinc-100">
-                {/* eslint-disable-next-line @next/next/no-img-element -- POI images use runtime-selected Wikimedia URLs. */}
-                <img
+              <div className="relative aspect-video w-full shrink-0 overflow-hidden bg-zinc-100">
+                <Image
                   src={poi.mainImageUrl}
                   alt={`Main image of ${poi.name}`}
-                  className="size-full object-cover"
+                  fill
+                  sizes={`(min-width: 768px) ${width ?? 448}px, 100vw`}
+                  className="object-cover"
                   onError={() => setFailedMainImageUrl(poi.mainImageUrl ?? null)}
                 />
               </div>
@@ -99,7 +101,9 @@ export const PoiDetailsDrawer = ({
               ) : null}
               {!selectedPersonId &&
                 (isLoading ? (
-                  <p className="mt-4 text-black/60">Loading additional content...</p>
+                  showLoading ? (
+                    <p className="mt-4 text-black/60">Loading additional content...</p>
+                  ) : null
                 ) : content ? (
                   <StoryContent
                     content={content}

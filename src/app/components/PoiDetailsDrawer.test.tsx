@@ -70,6 +70,7 @@ describe("POI details person navigation", () => {
     const onClose = vi.fn();
     const { rerender } = render(<PoiDetailsDrawer citySlug="rome" poi={poi} onClose={onClose} />);
 
+    expect(screen.queryByText("Loading additional content...")).not.toBeInTheDocument();
     expect(await screen.findByText("A visitor-facing introduction.")).toBeInTheDocument();
     expect(screen.getByText("Unresolved figure")).toBeInTheDocument();
     expect(screen.queryByRole("button", { name: "Unresolved figure" })).not.toBeInTheDocument();
@@ -95,12 +96,25 @@ describe("POI details person navigation", () => {
   });
 
   it("shows a fallback when a resolved Person is unavailable and still allows Back", async () => {
-    useStoryResponse();
+    let finishStory: () => void;
+    server.use(
+      http.get("*/api/pois/rome/forum-boarium/dialog-content", async () => {
+        await new Promise<void>((resolve) => {
+          finishStory = resolve;
+        });
+        return HttpResponse.json({ storyContent });
+      }),
+    );
     server.use(http.get("*/api/people/hercules", () => HttpResponse.json({ person: null })));
     const user = userEvent.setup();
     render(<PoiDetailsDrawer citySlug="rome" poi={poi} onClose={() => {}} />);
 
+    expect(screen.queryByText("Loading additional content...")).not.toBeInTheDocument();
+    expect(screen.queryByText(/No additional content/)).not.toBeInTheDocument();
+    expect(await screen.findByText("Loading additional content...")).toBeInTheDocument();
+    finishStory!();
     await user.click(await screen.findByRole("button", { name: "Hercules" }));
+    expect(screen.queryByText("Loading additional content...")).not.toBeInTheDocument();
 
     expect(await screen.findByText("This person is unavailable.")).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Back to Forum Boarium" }));

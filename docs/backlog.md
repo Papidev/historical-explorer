@@ -2,6 +2,14 @@
 
 These are observations, not planned work. Promote an entry to a GitHub Issue only when its **Revisit when** condition occurs; then replace it with an issue link or remove it once the context is captured.
 
+## Use Next.js prerendering for public Stories and the map
+
+**Problem:** Stories currently load through a browser fetch after opening the map drawer and have no dedicated page or per-Story metadata. The Rome page reads `searchParams` on the server, making it dynamically rendered even though the production catalog changes only at deployment. POI selection is now synchronized with the URL; see [Visitor map](../README.md#visitor-map).
+
+**Revisit when:** Public Story discoverability/sharing or initial-load performance is prioritized.
+
+**Direction:** Add prerendered Story pages with dedicated metadata and social previews while retaining the map drawer and sharing presentation components. Evaluate a static map page with query reading confined to a client component under Suspense. Avoid adding cache infrastructure without a concrete need.
+
 ## Treat each Story directory as one aggregate
 
 **Problem:** Separate Modules manage `story.json` and `images.json`, exposing partial directories and their coupling to callers.

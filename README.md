@@ -135,6 +135,14 @@ The OpenFreeMap basemap shows cultural labels/icons: museums, monuments/memorial
 
 Filters and Stories open in panels over the map, with full-width panels on mobile and resizable panels on larger screens. Open filters with the Filters tab or swipe right from the map’s left edge. Categories match with OR semantics; no categories selected means no POIs on the map or in the list. See [POI Categories](docs/poi-categories.md#visitor-filtering) for filtering rules and [Entity Discovery](docs/entity-discovery.md) for planned discovery features.
 
+The selected POI is stored in `?poiId=<id>`. Opening a different POI adds a browser-history entry; closing its Story, clicking the map, or excluding it through filters removes `poiId` in a new entry. Other query parameters and the URL fragment are preserved. Refresh and shared links reopen the selected Story; Back/Forward restore selection without reloading the map. If history restores a POI excluded by the current filters, all categories are selected so the restored place is visible. Unknown POI IDs leave the Story panel closed. Reopening the same POI does not add a duplicate history entry.
+
+Story loading feedback appears only after 200 ms, avoiding a brief loading-message flash for fast responses. Missing-content feedback appears only once the request finishes.
+
+Public homepage, POI preview, Story, and Person images use `next/image` with responsive sizes and reserved layout space. Next.js resizes and caches images and serves WebP to supported browsers. The image optimizer accepts HTTPS Wikimedia Commons images from `thumb.wikimedia.org` and `upload.wikimedia.org`; query strings are allowed for Wikimedia's thumbnail metadata. Preview and Story image-error fallbacks remain available.
+
+Local transfer samples on October 10, 2026: Piazza Navona's 1,492,910-byte source becomes 37,620 bytes at 384 px in WebP; the Cloisters of Bramante's 177,020-byte source becomes 17,202 bytes. These are image-response measurements, not full-page performance benchmarks.
+
 ## Security Notes
 
 Admin is temporary, unauthenticated, and available only with `pnpm dev`. Its page and AI-progress API use `.dev.tsx`/`.dev.ts`, excluded from production builds; admin UI is absent from production bundles and missing routes return 404. Server Actions reject production execution before reading inputs or doing work. Dev is not localhost-restricted; use a trusted network.
