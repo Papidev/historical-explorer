@@ -809,7 +809,7 @@ describe("POI actions", () => {
     expect(screen.queryByText("Errors", { exact: true })).not.toBeInTheDocument();
   });
 
-  it.each(["pagination", "search", "status filters"])(
+  it.each(["pagination", "search", "status filters", "status name selection"])(
     "handles POI %s across pages",
     async (scenario) => {
       render(
@@ -934,6 +934,28 @@ describe("POI actions", () => {
         ).toBeInTheDocument();
         await user.clear(search);
         expect(screen.getByText("Showing 1–50 of 103 POIs")).toBeInTheDocument();
+
+        return;
+      }
+
+      if (scenario === "status name selection") {
+        await user.click(screen.getByRole("button", { name: "Needs source" }));
+        expect(screen.getByText("Showing 1–1 of 1 POIs")).toBeInTheDocument();
+        expect(screen.getByText("Source POI")).toBeInTheDocument();
+        expect(screen.queryByText("Failed POI")).not.toBeInTheDocument();
+        expect(screen.queryByText("Pending POI")).not.toBeInTheDocument();
+        expect(screen.getByRole("checkbox", { name: "Needs source" })).toBeChecked();
+        for (const name of ["Needs attention", "To do", "Complete"]) {
+          expect(screen.getByRole("checkbox", { name })).not.toBeChecked();
+        }
+        await user.click(screen.getByRole("button", { name: "Needs source" }));
+        expect(screen.getByText("Source POI")).toBeInTheDocument();
+        await user.click(screen.getByRole("checkbox", { name: "To do" }));
+        expect(screen.getByText("Showing 1–50 of 101 POIs")).toBeInTheDocument();
+        expect(screen.getByText("Pending POI")).toBeInTheDocument();
+        expect(screen.getByText("Source POI")).toBeInTheDocument();
+        await user.click(screen.getByRole("checkbox", { name: "Needs source" }));
+        expect(screen.queryByText("Source POI")).not.toBeInTheDocument();
 
         return;
       }

@@ -210,14 +210,15 @@ export const PoiRowsTable = ({
           />
           <span className="font-semibold text-gray-800">Show status</span>
           {Object.entries(statusGroupStyles).map(([value, { label, filter, checkbox }]) => (
-            <label
+            <div
               key={value}
-              className={`flex cursor-pointer items-center gap-2 rounded-md border px-2.5 py-1.5 ${filter} ${
+              className={`flex items-center gap-2 rounded-md border px-2.5 py-1.5 ${filter} ${
                 visibleStatusGroups.includes(value) ? "" : "opacity-55 hover:opacity-100"
               }`}
             >
               <input
                 type="checkbox"
+                aria-label={label}
                 checked={visibleStatusGroups.includes(value)}
                 onChange={(event) => {
                   setPage(0);
@@ -229,8 +230,18 @@ export const PoiRowsTable = ({
                 }}
                 className={`size-4 cursor-pointer ${checkbox}`}
               />
-              {label}
-            </label>
+              <button
+                type="button"
+                title={`Show only ${label}`}
+                onClick={() => {
+                  setPage(0);
+                  setVisibleStatusGroups([value]);
+                }}
+                className="cursor-pointer rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2"
+              >
+                {label}
+              </button>
+            </div>
           ))}
         </div>
         <div
