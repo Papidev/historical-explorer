@@ -79,7 +79,6 @@ const Home = () => {
                   src={cover.mainImage.thumbnailUrl}
                   alt={cover.poi.name}
                   fill
-                  unoptimized
                   preload
                   sizes="(min-width: 1024px) 50vw, 100vw"
                   className="object-cover"
@@ -184,7 +183,6 @@ const Home = () => {
                         src={mainImage.thumbnailUrl}
                         alt={poi.name}
                         fill
-                        unoptimized
                         sizes="(min-width: 640px) 33vw, 100vw"
                         className="object-cover motion-safe:transition-transform motion-safe:duration-500 motion-safe:group-hover:scale-105"
                       />

@@ -24,10 +24,13 @@ describe("PoiPreviewCard", () => {
 
     expect(screen.getByRole("heading", { name: "Forum Boarium" })).toBeInTheDocument();
     expect(screen.getByText("The ancient cattle market beside the Tiber.")).toBeInTheDocument();
-    expect(screen.getByRole("img", { name: "Main image of Forum Boarium" })).toHaveAttribute(
-      "src",
-      poi.mainImageUrl,
-    );
+    expect(
+      new URL(
+        screen.getByRole("img", { name: "Main image of Forum Boarium" }).getAttribute("src")!,
+        window.location.href,
+      ).searchParams.get("url"),
+    ).toBe(poi.mainImageUrl);
+    expect(screen.getByRole("img")).toHaveAttribute("sizes", "288px");
   });
 
   it("shows the placeholder when the main image is unavailable or fails to load", () => {

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { PhotoIcon } from "@heroicons/react/24/outline";
 import type { Poi } from "@/types/Poi";
 
@@ -11,7 +12,6 @@ type Props = {
 
 export const PoiPreviewCard = ({ poi, onOpenDetails }: Props) => {
   const [hasImageError, setHasImageError] = useState(false);
-  const showImage = poi.mainImageUrl && !hasImageError;
   const description = poi.previewDescription ?? poi.shortDescription;
 
   return (
@@ -24,12 +24,13 @@ export const PoiPreviewCard = ({ poi, onOpenDetails }: Props) => {
       className="block w-72 max-w-full cursor-pointer overflow-hidden rounded-xl bg-white text-left shadow-lg ring-1 ring-black/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-600"
     >
       <div className="relative aspect-2/1 w-full bg-zinc-100">
-        {showImage ? (
-          // eslint-disable-next-line @next/next/no-img-element -- Map previews use runtime-selected Wikimedia URLs.
-          <img
+        {poi.mainImageUrl && !hasImageError ? (
+          <Image
             src={poi.mainImageUrl}
             alt={`Main image of ${poi.name}`}
-            className="absolute inset-0 size-full object-cover"
+            fill
+            sizes="288px"
+            className="object-cover"
             onError={() => setHasImageError(true)}
           />
         ) : (

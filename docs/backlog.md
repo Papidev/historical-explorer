@@ -10,14 +10,6 @@ These are observations, not planned work. Promote an entry to a GitHub Issue onl
 
 **Direction:** Add prerendered Story pages with dedicated metadata and social previews while retaining the map drawer and sharing presentation components. Evaluate a static map page with query reading confined to a client component under Suspense. Avoid adding cache infrastructure without a concrete need.
 
-## Evaluate public image optimization
-
-**Problem:** Homepage `next/image` instances use `unoptimized`; map previews and details use native images. Wikimedia thumbnails may already be suitable, but image transfer size and quality have not been measured.
-
-**Revisit when:** Image loading contributes materially to measured public-page latency or bandwidth.
-
-**Direction:** Compare existing thumbnails with appropriately sized variants or Next.js image optimization before adopting a loader or changing image delivery.
-
 ## Treat each Story directory as one aggregate
 
 **Problem:** Separate Modules manage `story.json` and `images.json`, exposing partial directories and their coupling to callers.

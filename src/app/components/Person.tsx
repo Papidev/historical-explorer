@@ -1,4 +1,5 @@
 import type { PublicPerson } from "@/server/person";
+import Image from "next/image";
 
 const formatDate = (date: NonNullable<PublicPerson["birthDate"]>) => {
   const year = `${Math.abs(date.year)} ${date.year < 0 ? "BC" : "AD"}`;
@@ -12,12 +13,15 @@ export const Person = ({ person }: { person: PublicPerson }) => (
   <article className="space-y-6 text-base leading-[1.7] text-zinc-800">
     {person.image ? (
       <figure className="overflow-hidden rounded-xl bg-zinc-100">
-        {/* eslint-disable-next-line @next/next/no-img-element -- Person images use runtime-selected Wikimedia URLs. */}
-        <img
-          src={person.image.thumbnailUrl}
-          alt={person.name}
-          className="max-h-72 w-full object-contain"
-        />
+        <div className="relative h-72">
+          <Image
+            src={person.image.thumbnailUrl}
+            alt={person.name}
+            fill
+            sizes="(min-width: 768px) 600px, calc(100vw - 40px)"
+            className="object-contain"
+          />
+        </div>
         {person.image.attribution ? (
           <figcaption className="px-3 py-2 text-xs text-zinc-500">
             {person.image.attribution}
