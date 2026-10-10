@@ -137,6 +137,8 @@ Filters and Stories open in panels over the map, with full-width panels on mobil
 
 The selected POI is stored in `?poiId=<id>`. Opening a different POI adds a browser-history entry; closing its Story, clicking the map, or excluding it through filters removes `poiId` in a new entry. Other query parameters and the URL fragment are preserved. Refresh and shared links reopen the selected Story; Back/Forward restore selection without reloading the map. If history restores a POI excluded by the current filters, all categories are selected so the restored place is visible. Unknown POI IDs leave the Story panel closed. Reopening the same POI does not add a duplicate history entry.
 
+Story loading feedback appears only after 200 ms, avoiding a brief loading-message flash for fast responses. Missing-content feedback appears only once the request finishes.
+
 ## Security Notes
 
 Admin is temporary, unauthenticated, and available only with `pnpm dev`. Its page and AI-progress API use `.dev.tsx`/`.dev.ts`, excluded from production builds; admin UI is absent from production bundles and missing routes return 404. Server Actions reject production execution before reading inputs or doing work. Dev is not localhost-restricted; use a trusted network.

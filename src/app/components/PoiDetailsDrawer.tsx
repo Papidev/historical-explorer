@@ -35,7 +35,7 @@ export const PoiDetailsDrawer = ({
   }>();
   const selectedPersonId =
     selectedPerson?.openRequestId === openRequestId ? selectedPerson.id : undefined;
-  const { content, isLoading } = usePoiStoryContent({ citySlug, poiId: poi?.id });
+  const { content, isLoading, showLoading } = usePoiStoryContent({ citySlug, poiId: poi?.id });
   const { person, isLoading: isPersonLoading } = usePerson(selectedPersonId);
 
   return (
@@ -99,7 +99,9 @@ export const PoiDetailsDrawer = ({
               ) : null}
               {!selectedPersonId &&
                 (isLoading ? (
-                  <p className="mt-4 text-black/60">Loading additional content...</p>
+                  showLoading ? (
+                    <p className="mt-4 text-black/60">Loading additional content...</p>
+                  ) : null
                 ) : content ? (
                   <StoryContent
                     content={content}
