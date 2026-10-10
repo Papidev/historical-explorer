@@ -4,7 +4,7 @@ import { useAutoScroll } from "./useAutoScroll";
 import type { useAiProgress } from "./useAiProgress";
 
 export const AiProgressLog = ({
-  state: { progress, isLoading, startedAt, now, status, isFinished },
+  state: { progress, isLoading, hasLoadError, startedAt, now, status, isFinished },
 }: {
   state: ReturnType<typeof useAiProgress>;
 }) => {
@@ -12,6 +12,13 @@ export const AiProgressLog = ({
 
   return (
     <>
+      {hasLoadError ? (
+        <p role="alert" className="mt-4 rounded-lg bg-amber-50 px-4 py-3 text-sm text-amber-950">
+          {isFinished
+            ? "Unable to load the generation log."
+            : "Unable to load generation progress. Retrying automatically."}
+        </p>
+      ) : null}
       {status === "partial" || status === "failed" || status === "waiting" ? (
         <div
           role="alert"
@@ -70,7 +77,7 @@ export const AiProgressLog = ({
           <li className="text-sm text-gray-500">
             {isLoading
               ? "Loading generation log..."
-              : isFinished
+              : hasLoadError || isFinished
                 ? "Generation log unavailable."
                 : "Starting generation..."}
           </li>
