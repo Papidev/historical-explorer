@@ -124,7 +124,13 @@ const loadLocalAiModelOptions = async () => {
   }
 };
 
-const loadCloudAiModelOptions = () => [toAiModelOption(getCloudAiModel())];
+const loadCloudAiModelOptions = () =>
+  ensureModelOption(
+    getCloudAiProvider() === "ollama"
+      ? ["gpt-oss:20b-cloud", "gpt-oss:120b-cloud"].map(toAiModelOption)
+      : [],
+    getCloudAiModel(),
+  );
 
 export const loadAiModeOptions = async () =>
   [

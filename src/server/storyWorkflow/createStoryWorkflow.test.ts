@@ -176,6 +176,9 @@ describe("Story Workflow Interface", () => {
           expect(sources[0].content).toBe("Source");
           order.push("poiTypes");
         },
+        onStoryContentStarted: () => {
+          order.push("storyContentStarted");
+        },
       }),
     ).resolves.toEqual({
       poiId: pointOfInterest.id,
@@ -189,10 +192,64 @@ describe("Story Workflow Interface", () => {
       "sources",
       "poiTypes",
       "mainImageCandidates",
+      "storyContentStarted",
       "storyContent",
       "people:qwen3:8b",
     ]);
     expect(imageSourceTitles).toEqual(["Forum Boarium"]);
+  });
+
+  it("saves Story Content before People work and resumes from saved checkpoints", async () => {
+    let stopped = true;
+    let generations = 0;
+    let sourceRequests = 0;
+    let imageRequests = 0;
+    const { dependencies, snapshots } = createDependencies({
+      acquireSources: async () => {
+        sourceRequests += 1;
+        return [source];
+      },
+      generateMainImageCandidates: async () => {
+        imageRequests += 1;
+        return [candidate("first.jpg")];
+      },
+      generateStoryContent: async () => {
+        generations += 1;
+        return { content: storyContent("Preserved Story"), provider: "ollama" };
+      },
+      resolveRelatedPeople: async ({ relatedPeople, onProgress }) => {
+        onProgress?.("Resolving People");
+        return { relatedPeople, failures: [] };
+      },
+    });
+    const workflow = createStoryWorkflow(dependencies);
+    await expect(
+      workflow.draftStory.generate({
+        poiId: pointOfInterest.id,
+        ai: { mode: "cloud", model: "test-model" },
+        onProgress: (message) => {
+          if (stopped && message === "Resolving People")
+            throw new DOMException("Stopped", "AbortError");
+        },
+      }),
+    ).rejects.toMatchObject({ name: "AbortError" });
+    expect(snapshots.get(pointOfInterest.id)?.storyContent?.introduction.text).toBe(
+      "Preserved Story",
+    );
+    stopped = false;
+    await expect(
+      workflow.draftStory.generate({
+        poiId: pointOfInterest.id,
+        ai: { mode: "cloud", model: "test-model" },
+        resume: true,
+        onStoryContentStarted: () => {
+          throw new Error("Must not regenerate saved Story Content");
+        },
+      }),
+    ).resolves.toMatchObject({ relatedPeople: "resolved" });
+    expect(generations).toBe(1);
+    expect(sourceRequests).toBe(1);
+    expect(imageRequests).toBe(1);
   });
 
   it("resolves the Wikipedia Source again on full refresh", async () => {
@@ -265,6 +322,9 @@ describe("Story Workflow Interface", () => {
     const generation = createStoryWorkflow(dependencies).draftStory.generate({
       poiId: pointOfInterest.id,
       ai: { mode: "local", model: "qwen3:8b" },
+      onStoryContentStarted: () => {
+        downstream.push("storyContentStarted");
+      },
     });
 
     await expect(generation).rejects.toMatchObject({
@@ -329,6 +389,7 @@ describe("Story Workflow Interface", () => {
   });
 
   it("preserves successful Source and candidate checkpoints when Story Content fails", async () => {
+    let storyStarted = false;
     const { dependencies, repository } = createDependencies({
       generateStoryContent: async () => {
         throw new Error("AI unavailable");
@@ -339,11 +400,15 @@ describe("Story Workflow Interface", () => {
       createStoryWorkflow(dependencies).draftStory.generate({
         poiId: pointOfInterest.id,
         ai: { mode: "cloud", model: "gemini-2.5-flash" },
+        onStoryContentStarted: () => {
+          storyStarted = true;
+        },
       }),
     ).rejects.toMatchObject({
       code: "story-content-generation-failed",
       stage: "storyContent",
     });
+    expect(storyStarted).toBe(true);
     expect(await repository.get(pointOfInterest.id)).toMatchObject({
       sources: [{ content: "Source version one" }],
       mainImageCandidates: [{ commonsFileName: "first.jpg" }],

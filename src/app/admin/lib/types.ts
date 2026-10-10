@@ -22,6 +22,8 @@ export type AdminAction = (formData: FormData) => Promise<AdminActionResult | vo
 export type AdminBatchResult = {
   geoPlaceId: string;
   progressId: string;
+  storyGenerationStarted?: boolean;
+  cancelled?: boolean;
   result?: AdminActionResult | void;
   error?: string;
 };

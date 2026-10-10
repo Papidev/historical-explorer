@@ -1,3 +1,8 @@
+import { GET as readProgress } from "@/app/api/admin/ai-progress/[runId]/route.dev";
+import { readAiProgress } from "@/server/aiProgress";
+import { POST as stopGeneration } from "@/app/api/admin/ai-progress/[runId]/stop/route.dev";
+import { withGenerationCancellation } from "@/server/generationCancellation";
+import { startAiProgress } from "@/server/aiProgress";
 import {
   existsSync,
   mkdtempSync,
@@ -73,8 +78,14 @@ describe("Story Content AI adapters", () => {
       "history2",
       "Repair under Emperor Tiberius in 37 AD.",
     ],
+    [
+      "san-saba-malformed.json",
+      11,
+      "history3",
+      "In 768, Antipope Constantine II was held prisoner in the monastery before being killed by the Lombards.",
+    ],
   ])(
-    "recovers the recorded Acqua Vergine response %s without changing its insights",
+    "recovers the recorded response %s without changing its insights",
     async (fixture, count, id, description) => {
       const response = JSON.parse(
         readFileSync(
@@ -99,12 +110,147 @@ describe("Story Content AI adapters", () => {
         id,
         description,
         sourceIds: ["wikipedia"],
-        time: { startYear: 37 },
+        time: { startYear: fixture === "san-saba-malformed.json" ? 768 : 37 },
       });
       expect(result.relatedPeople).toHaveLength(10);
       expect(requests).toBe(1);
     },
   );
+
+  it.each([true, false])(
+    "reports the actual schema error after recovering San Saba JSON (retry succeeds: %s)",
+    async (retrySucceeds) => {
+      const response = JSON.parse(
+        readFileSync(
+          path.join(originalDirectory, "src/server/storyWorkflow/fixtures/san-saba-malformed.json"),
+          "utf-8",
+        ),
+      );
+      // Keep a genuine schema failure after syntax recovery: non-numeric dates are invalid.
+      response.message.content = response.message.content.replace(
+        '"endYear":900',
+        '"endYear":"unknown"',
+      );
+      const requests: Array<{ messages: Array<{ role: string; content: string }> }> = [];
+      server.use(
+        http.post("http://localhost:11434/api/chat", async ({ request }) => {
+          requests.push((await request.json()) as (typeof requests)[number]);
+          return HttpResponse.json(
+            requests.length === 2 && retrySucceeds
+              ? { message: { content: JSON.stringify(generated) } }
+              : response,
+          );
+        }),
+      );
+      const result = generateStoryContent(pointOfInterest, sources, {
+        mode: "cloud",
+        provider: "ollama",
+        model: "gpt-oss:20b-cloud",
+      });
+      if (retrySucceeds) await expect(result).resolves.toEqual(generated);
+      else await expect(result).rejects.toThrow("endYear");
+      expect(requests).toHaveLength(2);
+      expect(requests[1].messages.at(-1)?.content).toContain("endYear");
+      expect(requests[1].messages.at(-1)?.content).not.toContain("Expected ',' or ']'");
+    },
+  );
+
+  it("reports a run from a previous server process as interrupted without altering its log", async () => {
+    const runId = "b1234567-1234-1234-1234-123456789abc";
+    startAiProgress(runId);
+    const progressPath = path.join("data", "rome", "generated", "ai-progress", `${runId}.json`);
+    const saved = JSON.parse(readFileSync(progressPath, "utf-8"));
+    saved.serverInstance = "previous-server-instance";
+    writeFileSync(progressPath, JSON.stringify(saved));
+    const response = await readProgress(
+      new Request(`http://localhost:3000/api/admin/ai-progress/${runId}`),
+      {
+        params: Promise.resolve({ runId }),
+      },
+    );
+    expect(response.status).toBe(200);
+    expect(await response.json()).toMatchObject({
+      status: "cancelled",
+      entries: [
+        expect.objectContaining({
+          message: "Server restarted. Resume the queue from saved checkpoints.",
+        }),
+      ],
+    });
+    expect(readAiProgress(runId)?.status).toBe("running");
+    expect(JSON.parse(readFileSync(progressPath, "utf-8"))).toEqual(saved);
+  });
+
+  it("records a stop before dispatch as cancelled so recovery does not wait for a nonexistent request", async () => {
+    const runId = "c1234567-1234-1234-1234-123456789abc";
+    const response = await stopGeneration(
+      new Request(`http://localhost:3000/api/admin/ai-progress/${runId}/stop`, {
+        method: "POST",
+        headers: { Origin: "http://localhost:3000" },
+      }),
+      { params: Promise.resolve({ runId }) },
+    );
+    expect(response.status).toBe(200);
+    expect(readAiProgress(runId)).toMatchObject({
+      status: "cancelled",
+      stopRequested: true,
+      serverInstance: expect.any(String),
+    });
+    const progress = await readProgress(
+      new Request(`http://localhost:3000/api/admin/ai-progress/${runId}`),
+      {
+        params: Promise.resolve({ runId }),
+      },
+    );
+    expect(await progress.json()).toMatchObject({ status: "cancelled" });
+    // If the original action eventually starts, its cancellation flag is retained.
+    startAiProgress(runId);
+    await expect(withGenerationCancellation(runId, async () => generated)).rejects.toThrow(
+      "Generation stopped by user.",
+    );
+  });
+
+  it("aborts an active model request without issuing a correction retry", async () => {
+    const runId = "a1234567-1234-1234-1234-123456789abc";
+    startAiProgress(runId);
+    let notifyStarted = () => {};
+    const started = new Promise<void>((resolve) => {
+      notifyStarted = resolve;
+    });
+    let requests = 0;
+    server.use(
+      http.post("http://localhost:11434/api/chat", async ({ request }) => {
+        requests += 1;
+        notifyStarted();
+        await new Promise<void>((resolve) =>
+          request.signal.addEventListener("abort", () => resolve(), { once: true }),
+        );
+        return HttpResponse.json({ message: { content: JSON.stringify(generated) } });
+      }),
+    );
+    const result = withGenerationCancellation(runId, () =>
+      generateStoryContent(pointOfInterest, sources, {
+        mode: "cloud",
+        provider: "ollama",
+        model: "test-model",
+      }),
+    );
+    // Attach the rejection handler before sending the stop command.
+    const outcome = expect(result).rejects.toMatchObject({ name: "AbortError" });
+    await started;
+    const stopResponse = await stopGeneration(
+      new Request(`http://localhost:3000/api/admin/ai-progress/${runId}/stop`, {
+        method: "POST",
+        headers: { origin: "http://localhost:3000" },
+      }),
+      { params: Promise.resolve({ runId }) },
+    );
+    expect(stopResponse.status).toBe(200);
+    expect(await stopResponse.json()).toEqual({ requested: true });
+    await outcome;
+    expect(requests).toBe(1);
+    expect(existsSync(path.join("data", "generated", "ai-response-failures"))).toBe(false);
+  });
 
   it("discards Person IDs supplied by AI so names must pass real identity resolution", async () => {
     server.use(
@@ -177,7 +323,7 @@ describe("Story Content AI adapters", () => {
     expect(
       historyTimeSchema.oneOf.find(({ properties }) => properties.granularity.const === "century")
         ?.required,
-    ).toContain("endYear");
+    ).not.toContain("endYear");
   });
 
   it("requests and validates Ollama structured output", async () => {
@@ -244,7 +390,7 @@ describe("Story Content AI adapters", () => {
     expect(JSON.parse(failure.rawResponse).message.content).toBe(
       '  {"introduction": ["broken" "array"]}  ',
     );
-    expect(failure.error).toContain("JSON");
+    expect(failure.error).toContain("introduction");
     expect(requests[0].format).toBeUndefined();
     expect(requests[0].messages[0].content).toContain('"introduction"');
     expect(requests[1].messages).toContainEqual(

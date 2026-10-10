@@ -1,3 +1,7 @@
+import {
+  fetchWithGenerationCancellation,
+  throwIfGenerationCancelled,
+} from "@/server/generationCancellation";
 const userAgent = "CulturalAtlas/0.1 (https://github.com/Papidev/historical-explorer)";
 
 export const fetchWikimediaJson = async <T>(url: URL): Promise<T> => {
@@ -9,7 +13,7 @@ export const fetchWikimediaJson = async <T>(url: URL): Promise<T> => {
     let retryDelay = 0;
 
     try {
-      const response = await fetch(url, {
+      const response = await fetchWithGenerationCancellation(url, {
         headers: { "User-Agent": userAgent },
         signal: controller.signal,
       });
@@ -31,6 +35,7 @@ export const fetchWikimediaJson = async <T>(url: URL): Promise<T> => {
         retryDelay = 500 * attempt;
       }
     } catch (error) {
+      throwIfGenerationCancelled();
       lastError = error;
       if (
         error instanceof Error &&

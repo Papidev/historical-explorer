@@ -26,7 +26,7 @@ export type GenerationLogEntry = GenerationRun &
   GenerationOutcome & {
     runId: string;
     at: string;
-    event: "started" | "completed" | "failed";
+    event: "started" | "completed" | "failed" | "cancelled";
     durationMs?: number;
     errorCode?: string;
     errorStage?: string;
@@ -127,9 +127,14 @@ export const withGenerationRun = async <T>(
     return result;
   } catch (error) {
     write({
-      event: "failed",
+      event: error instanceof Error && error.name === "AbortError" ? "cancelled" : "failed",
       durationMs: Date.now() - startedAt,
-      errorCode: error instanceof StoryWorkflowError ? error.code : "unexpected-error",
+      errorCode:
+        error instanceof Error && error.name === "AbortError"
+          ? "generation-cancelled"
+          : error instanceof StoryWorkflowError
+            ? error.code
+            : "unexpected-error",
       errorStage: error instanceof StoryWorkflowError ? error.stage : undefined,
       errorMessage: error instanceof Error ? error.message : String(error),
     });

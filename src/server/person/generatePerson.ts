@@ -1,3 +1,7 @@
+import {
+  fetchWithGenerationCancellation,
+  throwIfGenerationCancelled,
+} from "@/server/generationCancellation";
 import { logAiResponseFailure, readAiResponse } from "@/server/aiResponseLog";
 import {
   personContentJsonSchema,
@@ -61,7 +65,7 @@ export const generatePerson = async (
   if (config.provider === "gemini") {
     const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) throw new Error("GEMINI_API_KEY is required when using Gemini.");
-    const response = await fetch(
+    const response = await fetchWithGenerationCancellation(
       `https://generativelanguage.googleapis.com/v1beta/models/${config.model}:generateContent?key=${apiKey}`,
       {
         method: "POST",
@@ -104,6 +108,7 @@ export const generatePerson = async (
         sources.map(({ id }) => id),
       );
     } catch (error) {
+      throwIfGenerationCancelled();
       logAiResponseFailure(context, rawResponse, error);
       throw error;
     }
@@ -119,7 +124,7 @@ export const generatePerson = async (
   for (let attempt = 0; attempt < attempts; attempt += 1) {
     let response: Response;
     try {
-      response = await fetch(
+      response = await fetchWithGenerationCancellation(
         `${process.env.OLLAMA_BASE_URL ?? "http://localhost:11434"}/api/chat`,
         {
           method: "POST",
@@ -135,6 +140,7 @@ export const generatePerson = async (
         },
       );
     } catch (error) {
+      throwIfGenerationCancelled();
       if (error instanceof Error && error.name === "TimeoutError") {
         throw new Error(
           `Ollama timed out after ${timeoutSeconds} seconds while generating ${person.name}.`,
@@ -172,6 +178,7 @@ export const generatePerson = async (
         sources.map(({ id }) => id),
       );
     } catch (error) {
+      throwIfGenerationCancelled();
       logAiResponseFailure(context, rawResponse, error);
       if (attempt === attempts - 1) throw error;
       messages.push(

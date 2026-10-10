@@ -108,6 +108,8 @@ export type StoryWorkflow = {
       ai: AiSelection;
       onProgress?: (message: string) => void;
       onSourcesAcquired?: (sources: Source[]) => Promise<void>;
+      onStoryContentStarted?: () => void;
+      resume?: boolean;
     }): Promise<DraftStoryGenerationResult>;
     get(input: { poiId: string }): Promise<DraftStorySnapshot | undefined>;
     reset(input: { poiId: string }): Promise<void>;

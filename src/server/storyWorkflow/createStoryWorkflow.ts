@@ -1,3 +1,4 @@
+import { throwIfGenerationCancelled } from "@/server/generationCancellation";
 import type { MainImageCandidate, PoiInput } from "@/server/wikiPipeline/types";
 import { WikipediaSourceMissingError } from "@/server/wikiPipeline/resolve";
 import type { StoryContent } from "./storyContent";
@@ -109,6 +110,8 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         throw new Error("No usable sources were returned.");
       }
     } catch (cause) {
+      if (cause instanceof Error && cause.name === "AbortError") throw cause;
+      throwIfGenerationCancelled();
       console.error(`[sources] Acquisition failed for ${pointOfInterest.id}.`, cause);
       throw new StoryWorkflowError({
         code:
@@ -126,6 +129,8 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         toCheckpoint(startedAt, now),
       );
     } catch (cause) {
+      if (cause instanceof Error && cause.name === "AbortError") throw cause;
+      throwIfGenerationCancelled();
       throw persistenceError(cause);
     }
 
@@ -144,6 +149,8 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         source && new URL(source.url).hostname === "it.wikipedia.org" ? "it" : "en",
       );
     } catch (cause) {
+      if (cause instanceof Error && cause.name === "AbortError") throw cause;
+      throwIfGenerationCancelled();
       throw new StoryWorkflowError({
         code: "main-image-candidates-generation-failed",
         stage: "mainImageCandidates",
@@ -164,6 +171,8 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         toCheckpoint(startedAt, now),
       );
     } catch (cause) {
+      if (cause instanceof Error && cause.name === "AbortError") throw cause;
+      throwIfGenerationCancelled();
       throw persistenceError(cause);
     }
 
@@ -186,6 +195,8 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         ai,
       });
     } catch (cause) {
+      if (cause instanceof Error && cause.name === "AbortError") throw cause;
+      throwIfGenerationCancelled();
       throw new StoryWorkflowError({
         code: "story-content-generation-failed",
         stage: "storyContent",
@@ -200,6 +211,20 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
       aiModel: ai.model,
     };
 
+    // Save the generated Story before resolving People so a stopped run can resume here.
+    throwIfGenerationCancelled();
+    try {
+      await dependencies.repository.replaceStoryContent(
+        pointOfInterest.id,
+        generated.content,
+        storyContentCheckpoint,
+      );
+    } catch (cause) {
+      if (cause instanceof Error && cause.name === "AbortError") throw cause;
+      throwIfGenerationCancelled();
+      throw persistenceError(cause);
+    }
+
     const relatedPeopleStartedAt = now().getTime();
     let resolution: RelatedPeopleResolutionResult;
     try {
@@ -212,6 +237,8 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
       });
       generated.content.relatedPeople = resolution.relatedPeople;
     } catch (cause) {
+      if (cause instanceof Error && cause.name === "AbortError") throw cause;
+      throwIfGenerationCancelled();
       const message = cause instanceof Error ? cause.message : String(cause);
       console.warn(`[related-people] Resolution failed for ${pointOfInterest.id}.`, cause);
       onProgress?.("Related People resolution failed.");
@@ -223,6 +250,7 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
       };
     }
 
+    throwIfGenerationCancelled();
     onProgress?.("Saving Story Content and Related People.");
     try {
       await dependencies.repository.replaceStoryContent(
@@ -238,26 +266,41 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         },
       );
     } catch (cause) {
+      if (cause instanceof Error && cause.name === "AbortError") throw cause;
+      throwIfGenerationCancelled();
       throw persistenceError(cause);
     }
 
     return resolution;
   };
 
-  return {
+  const workflow: StoryWorkflow = {
     draftStory: {
-      generate: async ({ poiId, ai, onProgress, onSourcesAcquired }) => {
+      generate: async ({
+        poiId,
+        ai,
+        onProgress,
+        onSourcesAcquired,
+        onStoryContentStarted,
+        resume,
+      }) => {
+        const saved = resume ? await dependencies.repository.get(poiId) : undefined;
         onProgress?.("Finding the Point of Interest.");
         let pointOfInterest = await findPointOfInterest(poiId, dependencies);
         onProgress?.("Fetching the Wikipedia Source.");
         let sources: Source[];
         try {
-          sources = await acquireAndPersistSources(pointOfInterest);
+          sources = saved?.sources.length
+            ? saved.sources
+            : await acquireAndPersistSources(pointOfInterest);
         } catch (error) {
+          throwIfGenerationCancelled();
           if (error instanceof StoryWorkflowError && error.code === "source-not-found") {
             try {
               await dependencies.repository.reset(poiId, true);
             } catch (cause) {
+              if (cause instanceof Error && cause.name === "AbortError") throw cause;
+              throwIfGenerationCancelled();
               throw persistenceError(cause);
             }
           }
@@ -272,8 +315,11 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         let selectedCommonsFileName: string | undefined;
         try {
           onProgress?.("Finding Main Image Candidates.");
-          selectedCommonsFileName = await generateAndPersistCandidates(pointOfInterest, sources);
+          selectedCommonsFileName = saved?.generation.mainImageCandidates
+            ? saved.draftMainImage?.commonsFileName
+            : await generateAndPersistCandidates(pointOfInterest, sources);
         } catch (error) {
+          throwIfGenerationCancelled();
           if (
             !(error instanceof StoryWorkflowError) ||
             error.code !== "main-image-candidates-generation-failed"
@@ -286,12 +332,10 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
           selectedCommonsFileName = (await dependencies.repository.get(poiId))?.draftMainImage
             ?.commonsFileName;
         }
-        const relatedPeople = await generateAndPersistStoryContent(
-          pointOfInterest,
-          sources,
-          ai,
-          onProgress,
-        );
+        if (!saved?.storyContent) onStoryContentStarted?.();
+        const relatedPeople = saved?.storyContent
+          ? await workflow.relatedPeople.resolve({ poiId, ai, onProgress })
+          : await generateAndPersistStoryContent(pointOfInterest, sources, ai, onProgress);
 
         return {
           poiId,
@@ -308,6 +352,8 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         try {
           await dependencies.repository.reset(poiId);
         } catch (cause) {
+          if (cause instanceof Error && cause.name === "AbortError") throw cause;
+          throwIfGenerationCancelled();
           throw persistenceError(cause);
         }
       },
@@ -327,6 +373,8 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         try {
           await dependencies.repository.deleteStoryContent(poiId);
         } catch (cause) {
+          if (cause instanceof Error && cause.name === "AbortError") throw cause;
+          throwIfGenerationCancelled();
           throw persistenceError(cause);
         }
       },
@@ -354,6 +402,7 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
           ai,
           onProgress,
         });
+        throwIfGenerationCancelled();
         onProgress?.("Saving the updated Related People.");
         try {
           await dependencies.repository.replaceStoryContent(
@@ -371,6 +420,8 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
             },
           );
         } catch (cause) {
+          if (cause instanceof Error && cause.name === "AbortError") throw cause;
+          throwIfGenerationCancelled();
           throw persistenceError(cause);
         }
         return resolution;
@@ -384,9 +435,12 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         try {
           await dependencies.repository.deleteMainImageCandidates(poiId);
         } catch (cause) {
+          if (cause instanceof Error && cause.name === "AbortError") throw cause;
+          throwIfGenerationCancelled();
           throw persistenceError(cause);
         }
       },
     },
   };
+  return workflow;
 };

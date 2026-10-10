@@ -1,3 +1,7 @@
+import {
+  fetchWithGenerationCancellation,
+  throwIfGenerationCancelled,
+} from "@/server/generationCancellation";
 import { jsonrepair } from "jsonrepair";
 import { logAiResponseFailure, readAiResponse } from "@/server/aiResponseLog";
 import type { PoiInput } from "@/server/wikiPipeline/types";
@@ -31,14 +35,14 @@ type GeminiGenerateContentResponse = {
 
 const systemPrompt = `Create concise, source-grounded Story Content for a cultural POI.
 Return only data matching the provided JSON schema.
-The top-level object must contain exactly introduction, topics, and relatedPeople. introduction must contain text and sourceIds. topics must contain history, design, and art arrays. Every topic item must contain id, description, and sourceIds; only history items may additionally contain time. A time value must always be an object, never a number or string: use {"startYear": 312, "precision": "exact", "granularity": "year"} for a year, or include endYear and use granularity "century" for a century range. Every relatedPeople item must contain only name and sourceIds. Use sourceIds as arrays of supplied Source ID strings. Never return source, history, design, art, visitorInsights, or people as top-level fields.
+The top-level object must contain exactly introduction, topics, and relatedPeople. introduction must contain text and sourceIds. topics must contain history, design, and art arrays. Every topic item must contain id, description, and sourceIds; only history items may additionally contain time. A time value must always be an object, never a number or string: use {"startYear": 312, "precision": "exact", "granularity": "year"} for a year, or use granularity "century" for a century. Include endYear only when the Source supports a range; it is optional for a single century. Every relatedPeople item must contain only name and sourceIds. Use sourceIds as arrays of supplied Source ID strings. Never return source, history, design, art, visitorInsights, or people as top-level fields.
 
 The introduction must identify what the POI is and why it matters.
 Use only the optional Story Topics history, design, and art. Omit unsupported topics by returning an empty array. Each Visitor Insight must contain one useful, independent idea rather than a complete article summary.
 
 Use plain contemporary English. Do not use Markdown, HTML, JSX, headings, bullets, promotional language, poetic narration, or invented facts. Use only Source IDs supplied in the input. Include each person only once. For each Related Person, use the exact Wikipedia link title supplied in Source links as the name, rather than adding honorifics or inventing a different spelling; omit people mentioned only in the prose without a personal Wikipedia link. Select at most ten people who are most significant to understanding the POI, ordered from most to least significant. A person may be historical, mythological, or imaginary. Return only each person's name and supporting Source IDs; do not describe or classify the relationship.
 
-For History, include structured time only when the Source supports it. Use negative years for BC/BCE, positive years for AD/CE, and never use year zero. Preserve approximate dates and century granularity. Order dated History Insights from oldest to newest and place undated History Insights after them.`;
+For History, include structured time only when the Source supports it. Use negative years for BC/BCE, positive years for AD/CE, and never use year zero. Preserve approximate dates and century granularity. Never invent a missing range boundary. Omit time when the Source does not support a date. Order dated History Insights from oldest to newest and place undated History Insights after them.`;
 
 const cloudOllamaSystemPrompt = `${systemPrompt}
 
@@ -82,6 +86,7 @@ const parseGeneratedContent = (content: string, sources: Source[]) => {
   try {
     generated = JSON.parse(content);
   } catch (error) {
+    throwIfGenerationCancelled();
     if (!(error instanceof SyntaxError)) throw error;
     parseError = error;
     try {
@@ -113,15 +118,13 @@ const parseGeneratedContent = (content: string, sources: Source[]) => {
       }
     }
   }
-  let storyContent: StoryContent;
-  try {
-    storyContent = parseStoryContent(
-      generated,
-      sources.map(({ id }) => id),
-    );
-  } catch (error) {
-    throw parseError ?? error;
-  }
+  // A repaired object must report its current schema errors to the retry.
+  // Preserve the syntax error when recovery only produced a primitive value.
+  if (parseError && (!generated || typeof generated !== "object")) throw parseError;
+  const storyContent = parseStoryContent(
+    generated,
+    sources.map(({ id }) => id),
+  );
   if (parseError)
     console.warn("[story-content] Recovered malformed JSON and validated the Story schema.");
   return {
@@ -136,7 +139,7 @@ const generateWithGemini = async (
   model: string,
   mode: AiGenerationConfig["mode"],
 ) => {
-  const response = await fetch(
+  const response = await fetchWithGenerationCancellation(
     `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${getGeminiApiKey()}`,
     {
       method: "POST",
@@ -190,6 +193,7 @@ const generateWithGemini = async (
     }
     return parseGeneratedContent(content, sources);
   } catch (error) {
+    throwIfGenerationCancelled();
     logAiResponseFailure(context, rawResponse, error);
     throw error;
   }
@@ -208,7 +212,7 @@ const generateWithOllama = async (
   const attempts = mode === "cloud" ? 2 : 1;
 
   for (let attempt = 0; attempt < attempts; attempt += 1) {
-    const response = await fetch(`${getOllamaBaseUrl()}/api/chat`, {
+    const response = await fetchWithGenerationCancellation(`${getOllamaBaseUrl()}/api/chat`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -242,6 +246,7 @@ const generateWithOllama = async (
     try {
       return parseGeneratedContent(content, sources);
     } catch (error) {
+      throwIfGenerationCancelled();
       logAiResponseFailure(context, rawResponse, error);
       if (attempt === attempts - 1) throw error;
       messages.push(
@@ -273,6 +278,7 @@ export const generateStoryContent = async (
         ? await generateWithGemini(pointOfInterest, sources, config.model, config.mode)
         : await generateWithOllama(pointOfInterest, sources, config.model, config.mode);
   } catch (error) {
+    throwIfGenerationCancelled();
     console.error(`[story-content] ${config.provider} generation failed.`, error);
     throw error;
   }

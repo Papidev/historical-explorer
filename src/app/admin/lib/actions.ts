@@ -1,5 +1,10 @@
 "use server";
 
+import {
+  withGenerationCancellation,
+  throwIfGenerationCancelled,
+} from "@/server/generationCancellation";
+
 import { createPoiTypeMappings } from "@/server/poiTypeMappings";
 import { revalidatePath } from "next/cache";
 import { notFound } from "next/navigation";
@@ -16,7 +21,14 @@ import { fetchWikiSnapshot } from "@/server/wikiPipeline/fetchWiki";
 import { sanitizeErrorMessage, withGenerationRun } from "@/server/generationRunLog";
 import { storyCuration } from "@/server/storyCuration";
 import { storyWorkflow, StoryWorkflowError } from "@/server/storyWorkflow";
-import { appendAiProgress, finishAiProgress, startAiProgress } from "@/server/aiProgress";
+import {
+  aiProgressServerInstance,
+  appendAiProgress,
+  finishAiProgress,
+  markStoryContentStarted,
+  readAiProgress,
+  startAiProgress,
+} from "@/server/aiProgress";
 import type { RelatedPeopleResolutionFailure } from "@/server/storyWorkflow";
 import { resolveAiSelection } from "./aiModels";
 import type { AdminActionResult } from "./types";
@@ -52,24 +64,67 @@ const toRelatedPeopleWarning = (
 
 const runAiAction = async (
   formData: FormData,
-  work: (onProgress: (message: string) => void) => Promise<AdminActionResult | undefined>,
+  work: (
+    onProgress: (message: string) => void,
+    onStoryContentStarted: () => void,
+  ) => Promise<AdminActionResult | undefined>,
 ) => {
   if (process.env.NODE_ENV === "production") notFound();
 
   const progressId = formData.get("progressId");
   const runId = typeof progressId === "string" ? progressId : undefined;
-  if (runId) startAiProgress(runId);
+  if (runId) {
+    const previous = readAiProgress(runId);
+    if (previous?.serverInstance === aiProgressServerInstance) {
+      if (previous.status === "running") throw new Error("Generation already active.");
+      if (previous.status === "cancelled")
+        throw new DOMException("Generation stopped by user.", "AbortError");
+      if (previous.status === "failed" || previous.status === "waiting")
+        throw new Error(
+          previous.error || previous.failedSteps?.join(", ") || "The saved generation failed.",
+        );
+      return previous.status === "partial"
+        ? {
+            warning: previous.warning ?? { title: "Completed with issues" },
+            failedSteps: previous.failedSteps,
+          }
+        : undefined;
+    }
+    startAiProgress(runId);
+  }
   const onProgress = (message: string) => {
+    throwIfGenerationCancelled();
     if (runId) appendAiProgress(runId, sanitizeErrorMessage(message));
   };
 
   try {
-    const result = await work(onProgress);
+    const result = await withGenerationCancellation(runId, () =>
+      work(onProgress, () => {
+        throwIfGenerationCancelled();
+        if (runId) markStoryContentStarted(runId);
+      }),
+    );
     onProgress(result?.warning ? result.warning.title : "AI generation completed.");
     if (runId)
-      finishAiProgress(runId, result?.warning ? "partial" : "succeeded", result?.failedSteps);
+      finishAiProgress(runId, result?.warning ? "partial" : "succeeded", result?.failedSteps, {
+        warning: result?.warning
+          ? {
+              ...result.warning,
+              details: result.warning.details
+                ? sanitizeErrorMessage(result.warning.details)
+                : undefined,
+            }
+          : undefined,
+      });
     return result;
   } catch (error) {
+    if (error instanceof Error && error.name === "AbortError") {
+      if (runId) {
+        appendAiProgress(runId, "Generation stopped. Saved checkpoints are preserved.");
+        finishAiProgress(runId, "cancelled");
+      }
+      throw error;
+    }
     onProgress("AI generation stopped.");
     if (runId)
       finishAiProgress(
@@ -87,6 +142,7 @@ const runAiAction = async (
               }[error.stage]
             : "Generation",
         ],
+        { error: sanitizeErrorMessage(error instanceof Error ? error.message : String(error)) },
       );
     throw error;
   } finally {
@@ -95,13 +151,15 @@ const runAiAction = async (
 };
 
 export const generateDraftStory = async (formData: FormData) =>
-  runAiAction(formData, async (onProgress) => {
+  runAiAction(formData, async (onProgress, onStoryContentStarted) => {
     const geoPlaceId = getRequiredString(formData, "geoPlaceId", "Geo Place id");
     const ai = await resolveAiSelection(formData);
     return generateDraftStoryForPoi({
       geoPlaceId,
       ai,
       onProgress,
+      onStoryContentStarted,
+      resume: formData.get("resume") === "true",
       onCategoriesChanged: (cities) => {
         for (const city of cities) revalidatePath(`/${city}`);
       },
@@ -266,7 +324,7 @@ export const generateDraftStories = async (formData: FormData) => {
   if (progressIds.length !== formData.getAll("geoPlaceId").length) {
     throw new Error("Each selected POI needs a progress ID.");
   }
-  return generateStoryBatch(
+  const results = await generateStoryBatch(
     formData.getAll("geoPlaceId").map((geoPlaceId, index) => ({
       geoPlaceId,
       progressId: progressIds[index],
@@ -277,9 +335,15 @@ export const generateDraftStories = async (formData: FormData) => {
       input.set("progressId", progressId);
       input.set("aiMode", ai.mode);
       input.set("aiModel", ai.model);
+      if (formData.get("resume") === "true") input.set("resume", "true");
       return generateDraftStory(input);
     },
   );
+  return results.map((result) => ({
+    ...result,
+    storyGenerationStarted: readAiProgress(result.progressId)?.storyContentStarted === true,
+    cancelled: readAiProgress(result.progressId)?.status === "cancelled",
+  }));
 };
 
 export const saveTypeMapping = async (

@@ -5,10 +5,12 @@ export const useAiProgress = ({
   runId,
   isFinished,
   outcome,
+  connectionLost = false,
 }: {
   runId: string;
   isFinished: boolean;
   outcome?: Exclude<AiProgress["status"], "running">;
+  connectionLost?: boolean;
 }) => {
   const [progress, setProgress] = useState<AiProgress>();
   const [isLoading, setIsLoading] = useState(true);
@@ -20,13 +22,13 @@ export const useAiProgress = ({
     let timer: ReturnType<typeof setTimeout> | undefined;
     let attempts = 0;
     const poll = async () => {
-      let retryFinal = false;
+      let retryFinal = connectionLost;
       try {
         const response = await fetch(`/api/admin/ai-progress/${runId}`, { cache: "no-store" });
         if (response.ok) {
           const result = (await response.json()) as AiProgress;
           if (active) setProgress(result);
-          retryFinal = result.status === "running" && ++attempts < 3;
+          retryFinal = result.status === "running" && (connectionLost || ++attempts < 3);
         }
       } catch {
         // The action may not have created its progress file yet.
@@ -46,19 +48,23 @@ export const useAiProgress = ({
       active = false;
       clearTimeout(timer);
     };
-  }, [runId, isFinished]);
+  }, [runId, isFinished, connectionLost]);
 
   return {
     progress,
     isLoading,
     startedAt,
     now,
-    isFinished,
+    isFinished: connectionLost ? Boolean(progress && progress.status !== "running") : isFinished,
     status:
       progress && progress.status !== "running"
         ? progress.status
-        : isFinished
-          ? outcome
-          : "running",
+        : connectionLost
+          ? progress
+            ? "running"
+            : "unknown"
+          : isFinished
+            ? outcome
+            : "running",
   };
 };

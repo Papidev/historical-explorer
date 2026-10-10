@@ -187,9 +187,7 @@ export const PoiRowsTable = ({
       <section className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-gray-950/10">
         <GlobalArtifacts artifacts={globalArtifacts} onSelectPanel={setSelectedPanel} />
         <BatchGeneration
-          rows={visibleRows
-            .filter((row) => row.rawPoi && getPoiRowStatusGroup(row) === "to-do")
-            .slice(0, 3)}
+          rows={rows.filter((row) => row.rawPoi && !row.storyContent)}
           aiSelectionRef={aiSelectionRef}
           action={generateDraftStoriesAction}
           disabled={Boolean(progress) || runningIds.length > 0}

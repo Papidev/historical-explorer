@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { readAiProgress } from "@/server/aiProgress";
+import { aiProgressServerInstance, readAiProgress } from "@/server/aiProgress";
 
 export const dynamic = "force-dynamic";
 
@@ -13,7 +13,24 @@ export const GET = async (
   try {
     const progress = readAiProgress(runId);
     return progress
-      ? NextResponse.json(progress, { headers: { "Cache-Control": "no-store" } })
+      ? NextResponse.json(
+          progress.status === "running" &&
+            progress.serverInstance &&
+            progress.serverInstance !== aiProgressServerInstance
+            ? {
+                ...progress,
+                status: "cancelled",
+                entries: [
+                  ...progress.entries,
+                  {
+                    at: new Date().toISOString(),
+                    message: "Server restarted. Resume the queue from saved checkpoints.",
+                  },
+                ],
+              }
+            : progress,
+          { headers: { "Cache-Control": "no-store" } },
+        )
       : new Response(null, { status: 404 });
   } catch {
     return new Response(null, { status: 404 });

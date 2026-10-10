@@ -6,10 +6,11 @@ import type { GenerationLogEntry } from "./generationRunLog";
 import { StoryWorkflowError } from "./storyWorkflow";
 
 describe("manual Story batch", () => {
-  it.each(["success", "types", "mappings", "artifacts"])(
+  it.each(["success", "types", "mappings", "artifacts", "artifacts-limit"])(
     "coordinates three independent runs, logs %s consistently, and stops",
     async (outcome) => {
       const started: string[] = [];
+      const storyStarts: string[] = [];
       const events: string[] = [];
       const logs: Partial<GenerationLogEntry>[] = [];
       const changedCities: string[][] = [];
@@ -45,7 +46,7 @@ describe("manual Story batch", () => {
           },
         },
         draftStory: {
-          generate: async ({ poiId, onSourcesAcquired }) => {
+          generate: async ({ poiId, onSourcesAcquired, onStoryContentStarted }) => {
             await pending;
             if (poiId === "two")
               throw new StoryWorkflowError({
@@ -64,20 +65,34 @@ describe("manual Story batch", () => {
                 wikidataId: "Q100",
               },
             ]);
+            onStoryContentStarted?.();
             events.push(`${poiId}:story`);
             return {
               poiId,
               mainImageCandidates:
-                poiId === "three" && outcome === "artifacts" ? "failed" : "generated",
-              ...(poiId === "three" && outcome === "artifacts"
+                poiId === "three" && ["artifacts", "artifacts-limit"].includes(outcome)
+                  ? "failed"
+                  : "generated",
+              ...(poiId === "three" && ["artifacts", "artifacts-limit"].includes(outcome)
                 ? { mainImageCandidatesError: "Commons unavailable" }
                 : {}),
               draftMainImage: "available",
               storyContent: "generated",
-              relatedPeople: poiId === "three" && outcome === "artifacts" ? "partial" : "resolved",
+              relatedPeople:
+                poiId === "three" && ["artifacts", "artifacts-limit"].includes(outcome)
+                  ? "partial"
+                  : "resolved",
               relatedPeopleFailures:
-                poiId === "three" && outcome === "artifacts"
-                  ? [{ name: "Pope Innocent X", message: "Person unavailable" }]
+                poiId === "three" && ["artifacts", "artifacts-limit"].includes(outcome)
+                  ? [
+                      {
+                        name: "Pope Innocent X",
+                        message:
+                          outcome === "artifacts-limit"
+                            ? "Ollama failed: HTTP 429"
+                            : "Person unavailable",
+                      },
+                    ]
                   : [],
             };
           },
@@ -97,6 +112,9 @@ describe("manual Story batch", () => {
           geoPlaceId,
           ai: { mode: "cloud", provider: "ollama", model: "test-model" },
           onCategoriesChanged: (cities) => changedCities.push(cities),
+          onStoryContentStarted: () => {
+            storyStarts.push(geoPlaceId);
+          },
         }),
       );
       expect(started).toEqual(["one", "two", "three"]);
@@ -129,8 +147,11 @@ describe("manual Story batch", () => {
       } else if (outcome === "types") {
         expect(third?.failedSteps).toEqual(["POI Types"]);
         expect(log?.errors).toEqual([{ stage: "poiTypes", message: "Wikidata unavailable" }]);
-      } else if (outcome === "artifacts") {
+      } else if (["artifacts", "artifacts-limit"].includes(outcome)) {
         expect(third?.failedSteps).toEqual(["Main Image Candidates", "Related People"]);
+        expect(third?.warning?.details).toContain(
+          outcome === "artifacts-limit" ? "Ollama failed: HTTP 429" : "Person unavailable",
+        );
         expect(log).toMatchObject({
           relatedPeopleFailureCount: 1,
           failedSteps: ["mainImageCandidates", "relatedPeople"],
@@ -138,6 +159,7 @@ describe("manual Story batch", () => {
       }
       expect(events.some((event) => event.startsWith("two:"))).toBe(false);
       expect(started).toHaveLength(3);
+      expect([...storyStarts].sort()).toEqual(["one", "three"]);
       expect(changedCities).toEqual(
         outcome === "types" || outcome === "mappings" ? [["rome"]] : [["rome"], ["rome"]],
       );

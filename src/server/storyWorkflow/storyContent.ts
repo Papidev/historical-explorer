@@ -51,7 +51,8 @@ const historicalTimeSchema = z.discriminatedUnion("granularity", [
       endYear: z
         .number()
         .int()
-        .refine((year) => year !== 0, "Year zero is not supported."),
+        .refine((year) => year !== 0, "Year zero is not supported.")
+        .optional(),
       granularity: z.literal("century"),
     })
     .strict()
