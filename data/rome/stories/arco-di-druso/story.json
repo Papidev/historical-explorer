@@ -1,0 +1,56 @@
+{
+  "introduction": {
+    "text": "The Arco di Druso is an ancient Roman arch located near the First Mile of the Appian Way in Rome. Although historically misidentified, it is now believed to be the remains of the Arch of Trajan, making it an important example of imperial architecture and a witness to the city’s evolving infrastructure.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The original Arch of Drusus was erected by the Senate in honour of Nero Claudius Drusus after his death in 9 BCE, but the structure no longer exists.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -9,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "The current arch is most likely the remains of the Arch of Trajan, constructed during Caracalla’s reign as part of a spur added to the Aqua Marcia aqueduct between 211 and 216 AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 211,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The arch is built of travertine, faced with marble, and features Numidian marble columns with white marble bases; the central archway is 7.21 metres high.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Trajanic architectural elements such as a pediment and free‑standing columns are evident on the arch.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Nero Claudius Drusus",
+      "personId": "nero-claudius-drusus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Caracalla",
+      "personId": "caracalla",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

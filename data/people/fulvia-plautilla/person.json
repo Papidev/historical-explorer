@@ -1,0 +1,61 @@
+{
+  "id": "fulvia-plautilla",
+  "name": "Fulvia Plautilla",
+  "wikidataId": "Q238151",
+  "wikipediaTitle": "Fulvia Plautilla",
+  "content": {
+    "description": [
+      {
+        "text": "Publia Fulvia Plautilla, a Roman noblewoman of the plebeian gens Fulvia, became the wife of Emperor Caracalla in a politically motivated marriage arranged by his father, Emperor Septimius Severus, in April 202 CE. Though the ceremony was lavish, contemporary sources such as Cassius Dio describe the union as unhappy, with Caracalla reportedly despising her and the marriage never fully consummated, a claim that modern scholars consider likely propaganda.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After her father Gaius Fulvius Plautianus was executed for treason in 205 CE, Plautilla and her brother were exiled first to Sicily and then to the island of Lipari, where they were treated harshly and ultimately strangled, possibly on Caracalla's orders following Severus' death in 211 CE. Numismatic evidence suggests that the couple may have had a daughter in 204 CE, and coins bearing her image survive from her father's reign, while a marble bust of Plautilla resides in the Louvre and a portrait known as the Solinjanka in Zagreb is believed to depict her.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Plautilla and her brother were exiled to Sicily and Lipari before being strangled, possibly on Caracalla's orders.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A marble bust of Fulvia Plautilla is housed in the Louvre.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Solinjanka portrait, found in Salona and now in Zagreb, is thought to depict Plautilla at a young age.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 211,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Head_of_Fulvia_Plautilla._Face.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Head_of_Fulvia_Plautilla._Face.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Head_of_Fulvia_Plautilla._Face.jpg/960px-Head_of_Fulvia_Plautilla._Face.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Head_of_Fulvia_Plautilla._Face.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Taromsky",
+    "author": "Taromsky",
+    "width": 1621,
+    "height": 2907,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Fulvia Plautilla",
+    "url": "https://en.wikipedia.org/wiki/Fulvia_Plautilla"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:48:52.501Z"
+  }
+}

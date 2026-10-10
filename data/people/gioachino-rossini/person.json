@@ -1,0 +1,77 @@
+{
+  "id": "gioachino-rossini",
+  "name": "Gioachino Rossini",
+  "wikidataId": "Q9726",
+  "wikipediaTitle": "Gioachino Rossini",
+  "content": {
+    "description": [
+      {
+        "text": "Gioachino Antonio Rossini was born on 29 February 1792 in Pesaro, a town on the Adriatic coast that was then part of the Papal States. From an early age he was surrounded by music: his father was a trumpeter and his mother a singer, and by the time he was twelve he had already composed a set of six sonatas for four stringed instruments. He entered the Liceo Musicale in Bologna, where he studied singing, cello and piano, and soon began to write operas. His first opera, La cambiale di matrimonio, a one‑act comedy, was staged in Venice in 1810 when he was just eighteen, and the success of that premiere launched a prodigious period in which he would write 39 operas, including the comic masterpieces L'italiana in Algeri, Il barbiere di Siviglia and La Cenerentola.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Rossini's career reached its zenith in the 1810s and 1820s, but by the end of his thirties he had withdrawn from large‑scale composition, a decision that has puzzled scholars for generations. He spent the next four decades composing little, although he remained musically active in Paris, where he hosted famous Saturday salons that attracted figures such as Franz Liszt, Giuseppe Verdi and Richard Wagner. In 1863 he wrote his Petite messe solennelle, and in 1864 he was made a grand officer of the Legion of Honour. Rossini died in Passy on 13 November 1868 at the age of seventy‑six, leaving a legacy that continues to dominate the operatic repertoire.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Rossini wrote a total of 39 operas, including 34 for the Italian stage between 1810 and 1823.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He retired from opera in his thirties, at the height of his popularity.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Rossini hosted Saturday salons in Paris that were attended by many famous musicians, including Franz Liszt, Giuseppe Verdi and Richard Wagner.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1864 he was made a grand officer of the Legion of Honour by Napoleon III.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He composed the Petite messe solennelle in 1863, a work that was first performed in 1864.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1792,
+      "month": 2,
+      "day": 29,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1868,
+      "month": 11,
+      "day": 13,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Composer_Rossini_G_1865_by_Carjat.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Composer_Rossini_G_1865_by_Carjat.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Composer_Rossini_G_1865_by_Carjat.jpg/960px-Composer_Rossini_G_1865_by_Carjat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/46/Composer_Rossini_G_1865_by_Carjat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Étienne Carjat",
+    "author": "Étienne Carjat",
+    "width": 1507,
+    "height": 1895,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Gioachino Rossini",
+    "url": "https://en.wikipedia.org/wiki/Gioachino_Rossini"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:05:48.715Z"
+  }
+}

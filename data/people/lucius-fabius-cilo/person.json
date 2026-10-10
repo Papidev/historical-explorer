@@ -1,0 +1,52 @@
+{
+  "id": "lucius-fabius-cilo",
+  "name": "Lucius Fabius Cilo",
+  "wikidataId": "Q1231642",
+  "wikipediaTitle": "Lucius Fabius Cilo",
+  "content": {
+    "description": [
+      {
+        "text": "Lucius Fabius Cilo, whose full name was Lucius Fabius Cilo Septiminus Catinius Acilianus Lepidus Fulcinianus, was a Roman senator from Hispania who rose through the cursus honorum to become a confidant of Emperor Septimius Severus. He held a series of important posts, including military tribune with Legio XI Claudia, quaestor of Crete and Cyrenaica, urban praetor, and commander of Legio XVI Flavia Firma in Syria, before being appointed suffect consul in 193 and ordinary consul in 204 alongside Marcus Annius Flavius Libo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cilo’s political career was closely tied to the fortunes of Severus. After Commodus’s death he was entrusted with the emperor’s corpse, which he placed in the Mausoleum of Hadrian, and he was later given the title comes Imperatoris. He governed several provinces—Bithynia and Pontus, Moesia Superior, and Pannonia Superior—while also serving as urban prefect from around 202 until after 211. During the reign of Caracalla he was almost executed by the urbaniciani, but the emperor intervened and spared him, a testament to the respect he commanded.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Cilo was twice Roman consul, first as suffect consul in 193 and later as ordinary consul in 204.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He received the corpse of Emperor Commodus and placed it in the Mausoleum of Hadrian, where a funerary inscription for Commodus can be found.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Severus gifted Cilo a domus on the Aventine, a residence that appears in the Forma Urbis Romae.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cilo was a member of the sodalis Hadrianalis priestly order.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "While serving as urban prefect, he saved the life of the future emperor Marcus Opellius Macrinus when his patron Gaius Fulvius Plautianus fell into disgrace.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Lucius Fabius Cilo",
+    "url": "https://en.wikipedia.org/wiki/Lucius_Fabius_Cilo"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:18:03.149Z"
+  }
+}

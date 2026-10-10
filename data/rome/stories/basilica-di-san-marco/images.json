@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Basilica_di_San_Marco_Evangelista_al_Campidoglio_02.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Basilica_di_San_Marco_Evangelista_al_Campidoglio_02.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Basilica_di_San_Marco_Evangelista_al_Campidoglio_02.jpg/960px-Basilica_di_San_Marco_Evangelista_al_Campidoglio_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Basilica_di_San_Marco_Evangelista_al_Campidoglio_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Nicholas Gemini",
+      "author": "Nicholas Gemini",
+      "width": 5152,
+      "height": 3864,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Roma_-_Basilica_di_San_Marco_Evangelista_al_Campidoglio_-_2023-09-16_22-11-53_005.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Roma_-_Basilica_di_San_Marco_Evangelista_al_Campidoglio_-_2023-09-16_22-11-53_005.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Roma_-_Basilica_di_San_Marco_Evangelista_al_Campidoglio_-_2023-09-16_22-11-53_005.jpg/960px-Roma_-_Basilica_di_San_Marco_Evangelista_al_Campidoglio_-_2023-09-16_22-11-53_005.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Roma_-_Basilica_di_San_Marco_Evangelista_al_Campidoglio_-_2023-09-16_22-11-53_005.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Stella aboaf",
+      "author": "Stella aboaf",
+      "width": 1080,
+      "height": 2400,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Roma_-_Basilica_di_San_Marco_Evangelista_al_Campidoglio_-_2023-09-20_22-23-45_001.jpeg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Roma_-_Basilica_di_San_Marco_Evangelista_al_Campidoglio_-_2023-09-20_22-23-45_001.jpeg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Roma_-_Basilica_di_San_Marco_Evangelista_al_Campidoglio_-_2023-09-20_22-23-45_001.jpeg/960px-Roma_-_Basilica_di_San_Marco_Evangelista_al_Campidoglio_-_2023-09-20_22-23-45_001.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Roma_-_Basilica_di_San_Marco_Evangelista_al_Campidoglio_-_2023-09-20_22-23-45_001.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Stella aboaf",
+      "author": "Stella aboaf",
+      "width": 1080,
+      "height": 1090,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Basilica_di_San_Marco_Evangelista_al_Campidoglio_02.jpg"
+}

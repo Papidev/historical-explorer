@@ -1,0 +1,69 @@
+{
+  "id": "pancras-of-rome",
+  "name": "Pancras of Rome",
+  "wikidataId": "Q336731",
+  "wikipediaTitle": "Pancras of Rome",
+  "content": {
+    "description": [
+      {
+        "text": "Pancras of Rome was a Roman citizen who converted to Christianity at a very young age and was martyred for his faith at the age of fourteen during the persecution under Emperor Diocletian. He was born around 289 near Synnada in Phrygia Salutaris, and after the deaths of his mother and father he was raised by his uncle Dionysius in Rome. The family was converted to Christianity by a man named Marcellinus, and Pancras became a zealous adherent of the new faith.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "According to tradition, Diocletian offered Pancras wealth and power if he would sacrifice to the Roman gods, but the boy refused and was beheaded on the Via Aurelia on 12 May 303 AD. His body was recovered by a Roman matron named Octavilla, who wrapped it in precious linens and buried it in the Catacombs of Rome. Pancras’ head was later placed in a reliquary that still exists in the Basilica of Saint Pancras, and his cult spread throughout the Roman Empire, especially after Pope Gregory the Great sent Augustine to England with relics of the saint.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Pancras’ name is Greek for “all‑powerful,” and he is often depicted as a young soldier in medieval iconography because of his association with the paired soldier saints Nereus and Achilleus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He is venerated as the patron saint of children, jobs, and health, and his name is invoked against cramps, false witnesses, headaches, and perjury.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Many English churches, including St Pancras Old Church in London, are dedicated to him, a tradition that began when Pope Gregory the Great sent Augustine to England with relics of the saint.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Tridentine calendar celebrated a joint feast of Nereus, Achilleus, and Pancras on 12 May, and in the present General Roman Calendar the saint has an optional memorial on that date.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 289,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 304,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Barcelona_Cathedral_Interior_-_Statue_of_Saint_Pancrace_of_Rome.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Barcelona_Cathedral_Interior_-_Statue_of_Saint_Pancrace_of_Rome.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Barcelona_Cathedral_Interior_-_Statue_of_Saint_Pancrace_of_Rome.jpg/960px-Barcelona_Cathedral_Interior_-_Statue_of_Saint_Pancrace_of_Rome.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Barcelona_Cathedral_Interior_-_Statue_of_Saint_Pancrace_of_Rome.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Didier Descouens",
+    "author": "Didier Descouens",
+    "width": 4912,
+    "height": 6378,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pancras of Rome",
+    "url": "https://en.wikipedia.org/wiki/Pancras_of_Rome"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:20:47.454Z"
+  }
+}

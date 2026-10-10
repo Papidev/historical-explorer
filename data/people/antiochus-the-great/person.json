@@ -1,0 +1,65 @@
+{
+  "id": "antiochus-the-great",
+  "name": "Antiochus the Great",
+  "wikidataId": "Q3365",
+  "wikipediaTitle": "Antiochus III the Great",
+  "content": {
+    "description": [
+      {
+        "text": "Antiochus III the Great, born around 241 BC, became the sixth ruler of the Seleucid Empire at the age of eighteen after the murder of his brother Seleucus III. He inherited a fragmented state, with Asia Minor detached and the eastern provinces of Bactria and Parthia having broken away. Over the next decade he reasserted Seleucid authority over central Asia Minor, Parthia, and Bactria, and even crossed into the Kabul valley where he renewed a friendship with the Indian king Sophagasenus, earning the epithet \"the Great\" and the title Basileus Megas.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His ambition to restore Seleucid dominance over the Greek city‑states brought him into conflict with the rising power of Rome. Declaring himself the champion of Greek freedom, he launched a four‑year war against Rome in 192 BC, aided by the exiled Carthaginian general Hannibal and an alliance with the Aetolian League. After defeats at Thermopylae and Magnesia, he lost much of his western empire and was eventually killed in 187 BC while pillaging a temple of Bel in Elymaïs.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Antiochus earned the epithet \"the Great\" after renewing a friendship with the Indian king Sophagasenus and bringing a large number of elephants to his army.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his campaign against Rome, Antiochus was advised by the exiled Carthaginian general Hannibal, who urged him to attack Greece.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was killed while pillaging a temple of Bel at Elymaïs in Persia, an event that marked the end of his eastern expedition.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -240,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": -186,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Antiochos_III_coin_cropped.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Antiochos_III_coin_cropped.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Antiochos_III_coin_cropped.jpg/960px-Antiochos_III_coin_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/de/Antiochos_III_coin_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0",
+    "attribution": "Uploadalt",
+    "author": "Uploadalt",
+    "width": 1444,
+    "height": 1448,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Antiochus III the Great",
+    "url": "https://en.wikipedia.org/wiki/Antiochus_III_the_Great"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:06:53.657Z"
+  }
+}

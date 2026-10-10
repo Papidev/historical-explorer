@@ -1,0 +1,67 @@
+{
+  "id": "pliny-the-elder",
+  "name": "Pliny the Elder",
+  "wikidataId": "Q82778",
+  "wikipediaTitle": "Pliny the Elder",
+  "content": {
+    "description": [
+      {
+        "text": "Gaius Plinius Secundus, known as Pliny the Elder, was a Roman author, naturalist, and naval commander who lived from the early first century AD until his death in 79 AD. He is best remembered for compiling the 37‑volume *Naturalis Historia*, an encyclopedic survey of the natural world that set a model for later encyclopedias. In addition to his scholarly work, Pliny served in the Roman army, held several procuratorial posts across the empire, and was a close friend of Emperor Vespasian.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pliny's career spanned military service in Germania, administrative roles in provinces such as Gallia Narbonensis, Africa, Hispania Tarraconensis, and Gallia Belgica, and a naval command at Misenum. His writings drew on personal experience, earlier histories, and field investigations, and he is credited with preserving knowledge that would otherwise have been lost. His death came while he was attempting to rescue people from the eruption of Mount Vesuvius in 79 AD.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Pliny's *Naturalis Historia* was the first encyclopedia to survive from antiquity, covering topics from botany to astronomy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He adopted his nephew, Pliny the Younger, posthumously, ensuring the continuation of his literary legacy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pliny's military career included participation in the conquest of the Chauci and the construction of a canal between the Maas and Rhine.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 23,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 79,
+      "month": 8,
+      "day": 25,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Grande_Illustrazione_del_Lombardo_Veneto_Vol_3_Plinio_Secondo_300dpi.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Grande_Illustrazione_del_Lombardo_Veneto_Vol_3_Plinio_Secondo_300dpi.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Grande_Illustrazione_del_Lombardo_Veneto_Vol_3_Plinio_Secondo_300dpi.jpg/960px-Grande_Illustrazione_del_Lombardo_Veneto_Vol_3_Plinio_Secondo_300dpi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/Grande_Illustrazione_del_Lombardo_Veneto_Vol_3_Plinio_Secondo_300dpi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Geoffrey",
+    "author": "Geoffrey",
+    "width": 1291,
+    "height": 1591,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pliny the Elder",
+    "url": "https://en.wikipedia.org/wiki/Pliny_the_Elder"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:13:48.394Z"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "johannes-burckardt",
+  "name": "Johannes Burckardt",
+  "wikidataId": "Q716458",
+  "wikipediaTitle": "Johann Burchard",
+  "content": {
+    "description": [
+      {
+        "text": "Johannes Burckardt, born around 1450 in Niederhaslach, Alsace, rose from humble origins to become the papal Master of Ceremonies, a position he held from 1483 until his death in 1506. After studying canon law and serving as a secretary in Strasbourg, he moved to Rome in 1481, where he entered the Roman Curia as a lawyer and was appointed Protonotary Apostolic. With the purchase of the office for 450 ducats, he became Master of Ceremonies to Pope Sixtus IV and continued under Innocent VIII, Alexander VI, Pius III, and Julius II, overseeing the most significant rites of the Italian Renaissance. His diary, begun in 1481, provides a detailed eyewitness account of papal ceremonies, diplomatic visits, and the inner workings of the papal court.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Burckardt's scholarly output includes the Liber Notarum, a meticulous record of papal ceremonies, and editions of the Liber Pontificalis, Caeremoniale Episcoporum, and the Ordo Servandus, which influenced the Roman Missal. He is also noted for chronicling the infamous Banquet of Chestnuts hosted by Cesare Borgia in 1501, a tale that has survived in his diary and corroborated by contemporary dispatches. His residence, built in 1491 at Via del Sudario 44, still stands today and gave its name to the Torre Argentina district. Burckardt's legacy endures through the continued use of his Liber Notarum by the papal Ceremoniere and his portrayal in modern television series about the Borgia family.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Burckardt was known as \"Argentinus\" from the Latin name for Strasbourg, and the tower on his palace gave the name \"Torre Argentina\" to the district, a designation that survives in the Largo di Torre Argentina.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was present at the laying of the foundation stone of the new Basilica of St. Peter on 18 April 1506, an event he recorded in his diary.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1503 Pope Pius III promoted Burckardt to Bishop of Orte and Cività Castellana, a position he held only until his retirement in 1504.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Burckardt helped publish a revised edition of the Liber Pontificalis in 1485 and a new edition of the Caeremoniale Episcoporum in 1488, both of which were significant for the standardization of papal rites.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was buried in the church of Santa Maria del Popolo at the Flaminian Gate after his death on 16 May 1506.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His diary records an alleged orgy known as the Banquet of Chestnuts, held by Cesare Borgia in the Papal Palace on 30 October 1501, a story corroborated by a dispatch from the Florentine ambassador Francesco Pepi.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Burckardt was portrayed in several television series, including The Borgias (1981), The Borgias (2011), Borgia (2011), and Pope: The Most Powerful Man in History (2018).",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He purchased the office of Master of Ceremonies for 450 ducats, a transaction that illustrates the financial aspects of papal appointments during the Renaissance.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Burckardt held the title Decretorum Doctor, indicating he had earned a Doctorate in Canon Law before his ordination as a priest in 1476.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Ordo Servandus per Sacerdotem in celebratione Missae, published under orders from Pope Alexander VI, went through numerous editions before its substance was incorporated into the Normae Generales of the Roman Missal.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Johann Burchard",
+    "url": "https://en.wikipedia.org/wiki/Johann_Burchard"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:06:31.403Z"
+  }
+}

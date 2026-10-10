@@ -1,0 +1,63 @@
+{
+  "id": "pope-honorius-iii",
+  "name": "Pope Honorius III",
+  "wikidataId": "Q160182",
+  "wikipediaTitle": "Pope Honorius III",
+  "content": {
+    "description": [
+      {
+        "text": "Cencio Savelli was born in Rome around 1150 as the son of Aimerico Savelli, a member of the prominent Roman Savelli family. He entered the clergy as a canon at the Basilica di Santa Maria Maggiore and later served in several key administrative roles, including Camerlengo of the Holy Roman Church and Cardinal Deacon of Santa Lucia in Silice. In 1197 he became the tutor of the young Frederick II, who would later ascend to the throne of Sicily and the Holy Roman Empire.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Elected pope on 18 July 1216, he took the name Honorius III and led the Church until his death in 1227. His papacy was dominated by efforts to launch the Fifth Crusade, which he repeatedly urged European monarchs to support, and by the formal approval of several new religious orders. He granted official recognition to the Dominican Order in 1216 and the Franciscan Order in 1223, allowing them to establish their first permanent residence in Rome at Santa Sabina. He also authored the Liber Censuum, a comprehensive register of the Church’s revenues and properties that remains a vital source for medieval ecclesiastical history.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Honorius III’s approval of the Dominican and Franciscan orders in the early 13th century laid the groundwork for the rapid expansion of these mendicant movements across Christendom.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Liber Censuum, compiled under his direction, provides a detailed account of the Church’s economic holdings and has been used by historians to reconstruct the financial landscape of medieval Europe.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1150,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1227,
+      "month": 3,
+      "day": 18,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Vad-0321_025_Honorius_III_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Vad-0321_025_Honorius_III_(cropped).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Vad-0321_025_Honorius_III_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Vad-0321_025_Honorius_III_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "AnonymousUnknown author",
+    "author": "AnonymousUnknown author",
+    "width": 833,
+    "height": 1048,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Honorius III",
+    "url": "https://en.wikipedia.org/wiki/Pope_Honorius_III"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:16:10.039Z"
+  }
+}

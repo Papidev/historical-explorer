@@ -1,0 +1,106 @@
+{
+  "introduction": {
+    "text": "The Arch of Constantine is a triumphal arch in Rome that commemorates Emperor Constantine the Great’s victory over Maxentius at the Battle of the Milvian Bridge in AD 312. It is the largest Roman triumphal arch and a key monument of late antiquity, illustrating the reuse of earlier imperial art and the political symbolism of Constantine’s reign.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "construction",
+        "description": "Construction of the arch began in 312 and was completed in 315, commissioned by the Roman Senate to commemorate Constantine’s victory over Maxentius.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 312,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "dedication",
+        "description": "The arch was officially opened on 25 July 315, marking the tenth anniversary of Constantine’s reign.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "medieval",
+        "description": "In 1534 Lorenzino de' Medici mutilated the heads of some statues on the arch.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "olympics",
+        "description": "The arch served as the finish line for the marathon at the 1960 Summer Olympics.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "lightning",
+        "description": "The arch was damaged by a lightning strike on 3 September 2024.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design",
+        "description": "The arch has a three‑bay design with detached Corinthian columns, measuring 21 m high, 25.9 m wide and 7.4 m deep. It was built of brick‑faced concrete covered in marble.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art",
+        "description": "The arch’s sculptural decoration is a mix of reused reliefs from earlier imperial monuments—Trajan, Hadrian, Marcus Aurelius—combined with new panels depicting Constantine’s victories.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Constantine I",
+      "personId": "constantine-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Maxentius",
+      "personId": "maxentius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Trajan",
+      "personId": "trajan",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Hadrian",
+      "personId": "hadrian",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Marcus Aurelius",
+      "personId": "marcus-aurelius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Lorenzino de' Medici",
+      "personId": "lorenzino-de-medici",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Herman van Swanevelt",
+      "personId": "herman-van-swanevelt",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Edward Gibbon",
+      "personId": "edward-gibbon",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ernst Kitzinger",
+      "personId": "ernst-kitzinger",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Eusebius of Caesarea",
+      "personId": "eusebius-of-caesarea",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": "herman-van-swanevelt",
+  "name": "Herman van Swanevelt",
+  "wikidataId": "Q875164",
+  "wikipediaTitle": "Herman van Swanevelt",
+  "content": {
+    "description": [
+      {
+        "text": "Herman van Swanevelt was born in 1603 in Woerden, the son of a family of artisans whose lineage included the renowned painter Lucas van Leyden. While the identity of his teacher remains uncertain, a recent hypothesis suggests he may have studied under Willem Buytewech. Swanevelt first signed and dated works in 1623 while in Paris, and by 1629 he had relocated to Rome, where he began to develop a distinctive style of idyllic landscape that featured sunlit 'contrejours' reflecting the time of day. During his Roman period he joined the Bentvueghels, adopting the nickname \"heremiet\", although he preferred to work alone.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Swanevelt’s reputation grew as he received commissions from the Vatican and the Barberini family, including work for the monastery of Monte Cassino, and he also painted landscapes for Philip IV of Spain’s new Buen Retiro Palace in Madrid. In 1641 he returned to Paris, where he remained except for occasional visits to his hometown. He was admitted to the Académie Royale de Peinture et de Sculpture in 1651, assisted in decorating the Hôtel Lambert, and produced numerous drawings and etchings for patrons such as Cardinal Richelieu and King Louis XIV. Swanevelt died in 1655 while living on Rue du Temple in Paris.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was a member of the Bentvueghels, adopting the nickname \"heremiet\".",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He painted his first signed and dated works in 1623 while in Paris.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He introduced a new type of idyllic landscape with sunlit 'contrejours' reflecting the times of day.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He received commissions from the Barberini family, Pope Urban VIII, and the Vatican, including work for the monastery of Monte Cassino.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He painted landscapes for Philip IV of Spain’s new Buen Retiro Palace in Madrid.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He became a member of the Académie Royale de Peinture et de Sculpture in 1651.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He assisted in the decoration of the Hôtel Lambert.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His patrons in France included Cardinal Richelieu and King Louis XIV.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He lived on Rue du Temple at the time of his death in 1655.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He painted murals in Santa Maria sopra Minerva, with one surviving lunette.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "An etching titled \"The Birth of Adonis\" (1654) is part of the Utah Museum of Fine Art’s permanent collection.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1603,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1655,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Herman_van_Swanevelt.png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Herman_van_Swanevelt.png",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Herman_van_Swanevelt.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Herman_van_Swanevelt.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Herman van Swanevelt (1603-1655)",
+    "author": "Herman van Swanevelt (1603-1655)",
+    "width": 300,
+    "height": 383,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Herman van Swanevelt",
+    "url": "https://en.wikipedia.org/wiki/Herman_van_Swanevelt"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:51:23.514Z"
+  }
+}

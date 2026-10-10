@@ -1,0 +1,57 @@
+{
+  "id": "attis",
+  "name": "Attis",
+  "wikidataId": "Q262016",
+  "wikipediaTitle": "Attis",
+  "content": {
+    "description": [
+      {
+        "text": "Attis was the consort of the Phrygian mother goddess Cybele and is best known for his self‑castration, an act that made him a symbol of the seasonal cycle of vegetation.  According to myth, he castrated himself under a pine tree, and the blood that fell from his wound was said to give rise to violets, a sign that the earth would renew itself each spring.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The cult of Attis spread from Phrygia to Greece and eventually to Rome, where his priests, the Galli, were eunuchs who performed ritual castration and wore women’s clothing.  Roman festivals such as the Hilaria celebrated Attis’s death and rebirth, and Ovid’s Metamorphoses records that Attis was transformed into a pine tree after his self‑mutilation.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Attis’s self‑castration under a pine tree is said to have caused violets to grow from his blood.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ovid’s Metamorphoses records that after his self‑mutilation, Attis was transformed into a pine tree.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Galli, priests of Attis, were eunuchs who performed ritual castration and wore women’s clothing, leading some modern scholars to interpret them as transgender or as occupying a third gender in Roman society.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Statue_of_a_reclining_Attis_at_the_Shrine_of_Attis_2.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Statue_of_a_reclining_Attis_at_the_Shrine_of_Attis_2.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Statue_of_a_reclining_Attis_at_the_Shrine_of_Attis_2.jpg/960px-Statue_of_a_reclining_Attis_at_the_Shrine_of_Attis_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Statue_of_a_reclining_Attis_at_the_Shrine_of_Attis_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 2.0",
+    "attribution": "Dennis G. Jarvis",
+    "author": "Dennis G. Jarvis",
+    "width": 2848,
+    "height": 4288,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Attis",
+    "url": "https://en.wikipedia.org/wiki/Attis"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:47:48.739Z"
+  }
+}

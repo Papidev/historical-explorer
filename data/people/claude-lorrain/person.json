@@ -1,0 +1,71 @@
+{
+  "id": "claude-lorrain",
+  "name": "Claude Lorrain",
+  "wikidataId": "Q214074",
+  "wikipediaTitle": "Claude Lorrain",
+  "content": {
+    "description": [
+      {
+        "text": "Claude Lorrain, born Claude Gellée around 1604 in the village of Chamagne in the Duchy of Lorraine, spent most of his professional life in Italy where he became the pre‑eminent landscape painter of the Baroque era, pioneering the use of luminous sunlight to illuminate his scenes and blending landscape with biblical and mythological narratives.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He kept a meticulous record of his output in the Liber Veritatis, a bound collection of pen‑and‑wash drawings that documented nearly every completed painting, and his prolific output of drawings, etchings and frescoes established a model for landscape painting that influenced generations of artists across Europe.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Claude never married but adopted an orphan named Agnese in 1658, who may have been his own daughter with a servant.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His figures were famously considered weak; contemporary accounts note that he joked he charged for landscapes but gave the figures for free.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The so‑called \"Claude glass\" used by English tourists to emulate his softened, golden light was named after him, although there is no evidence he ever used such a device.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In his later years Claude’s figures became increasingly elongated, a stylistic exaggeration evident in his final work \"Ascanius Shooting the Stag of Sylvia\" (1682).",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1604,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1682,
+      "month": 11,
+      "day": 23,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Claude_Lorrain.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Claude_Lorrain.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Claude_Lorrain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Claude_Lorrain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown artistUnknown artist",
+    "author": "Unknown artistUnknown artist",
+    "width": 740,
+    "height": 894,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Claude Lorrain",
+    "url": "https://en.wikipedia.org/wiki/Claude_Lorrain"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:120b-cloud",
+    "completedAt": "2026-10-10T01:33:11.029Z"
+  }
+}

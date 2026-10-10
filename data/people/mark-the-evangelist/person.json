@@ -1,0 +1,57 @@
+{
+  "id": "mark-the-evangelist",
+  "name": "Mark the Evangelist",
+  "wikidataId": "Q31966",
+  "wikipediaTitle": "Mark the Evangelist",
+  "content": {
+    "description": [
+      {
+        "text": "Mark the Evangelist, also known as John Mark, is traditionally credited with writing the Gospel of Mark. According to early church tradition, he was a Roman African from Cyrene and served as a companion and interpreter for the apostle Peter, recording Peter’s sermons that later formed the basis of the gospel before traveling to Alexandria in AD 49 where he founded the first Christian community there.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Mark is venerated as the first bishop of Alexandria and is considered the founder of Christianity in Africa. His feast day is celebrated on April 25, and he is symbolized by a winged lion. Tradition holds that he was martyred in AD 68, though modern scholarship questions the authorship of the gospel and the historicity of his life.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Coptic tradition holds that Mark hosted the disciples in his house after Jesus’s death, and the resurrected Jesus appeared there, with the Holy Spirit descending on the disciples at Pentecost in the same house.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Mark is believed to have been among the servants at the Marriage at Cana who poured out the water that Jesus turned to wine.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Mark is symbolized by a winged lion, a symbol that is also associated with the resurrection because lions were believed to sleep with their eyes open.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Caxias_museumunicipal4.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Caxias_museumunicipal4.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/Caxias_museumunicipal4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/Caxias_museumunicipal4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Ricardo André Frantz (User:Tetraktys)",
+    "author": "Ricardo André Frantz (User:Tetraktys)",
+    "width": 321,
+    "height": 559,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Mark the Evangelist",
+    "url": "https://en.wikipedia.org/wiki/Mark_the_Evangelist"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T16:59:29.502Z"
+  }
+}

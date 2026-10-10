@@ -1,0 +1,69 @@
+{
+  "id": "giovanni-morone",
+  "name": "Giovanni Morone",
+  "wikidataId": "Q82697",
+  "wikipediaTitle": "Giovanni Morone",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Morone was born in Milan on 25 January 1509 into a family of clerical and political influence. His father, Count Girolamo Morone, had served as grand chancellor and had been imprisoned for opposing Charles V, later supporting him. Giovanni studied jurisprudence in Padua and was nominated as Bishop of Modena at the age of 20, a move that reflected the Pope’s gratitude for his father’s services. He was ordained a priest and consecrated bishop in 1533, and in 1542 he was created a cardinal by Pope Paul III, receiving the titulus of San Vitale.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Throughout his career Morone served as a papal diplomat, negotiating with France, the Holy Roman Empire, and the Diet of Speyer. He was imprisoned in Castel Sant'Angelo in 1557 on Pope Paul IV’s orders, accused of Lutheran sympathies, but was later cleared by Pope Pius IV. He became Dean of the Sacred College of Cardinals in 1570, presided over the conclave that elected Pope Gregory XIII, and played a key role in the Council of Trent, helping to formulate the Tridentine Creed. He died on 1 December 1580 and was buried in Santa Maria sopra Minerva.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Morone was imprisoned in Castel Sant'Angelo for two years on suspicion of Lutheran heresy, a charge that was later proven baseless by a commission of cardinals.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as protector of several religious orders, including the Dominicans, Benedictines, Cistercians, and Dominicans, and was also the protector of the Santa Casa at Loreto.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the Jubilee of 1575, Morone presided over the opening of the Holy Door at the Basilica of San Paolo Fuori le Mura, allowing thousands of pilgrims to pass through.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1509,
+      "month": 1,
+      "day": 25,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1580,
+      "month": 12,
+      "day": 1,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Anonimo_Giovanni_Morone.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Anonimo_Giovanni_Morone.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Anonimo_Giovanni_Morone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Anonimo_Giovanni_Morone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "nknown",
+    "author": "nknown",
+    "width": 350,
+    "height": 442,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giovanni Morone",
+    "url": "https://en.wikipedia.org/wiki/Giovanni_Morone"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:37:39.457Z"
+  }
+}

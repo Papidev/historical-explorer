@@ -70,6 +70,38 @@
     {
       "id": "Tower",
       "name": "Tower"
+    },
+    {
+      "id": "Academy",
+      "name": "Academy"
+    },
+    {
+      "id": "Archive",
+      "name": "Archive"
+    },
+    {
+      "id": "Art collection",
+      "name": "Art collection"
+    },
+    {
+      "id": "Artist collective",
+      "name": "Artist collective"
+    },
+    {
+      "id": "Guild",
+      "name": "Guild"
+    },
+    {
+      "id": "Statue",
+      "name": "Statue"
+    },
+    {
+      "id": "Lost sculpture",
+      "name": "Lost sculpture"
+    },
+    {
+      "id": "Street",
+      "name": "Street"
     }
   ],
   "deletedNames": ["Shrine"]

@@ -1,0 +1,67 @@
+{
+  "id": "pope-julius-i",
+  "name": "Pope Julius I",
+  "wikidataId": "Q103101",
+  "wikipediaTitle": "Pope Julius I",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Julius I served as bishop of Rome from 6 February 337 until his death on 12 April 352. A native of Rome, he was chosen after a four‑month vacancy and quickly became a key figure in the Arian controversy, supporting Athanasius and condemning his deposition by Arian bishops. He sent a letter to the Eastern bishops that is an early example of the claims of primacy for the bishop of Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Julius presided over a synod that recognized Athanasius as a regular bishop in 342 and was involved in the council of Sardica, where the Western bishops confirmed the Roman synod's decisions. He built several basilicas and churches, and his death on 12 April 352 led to his veneration as a saint with a feast day on the same date. A later tradition mistakenly attributes the declaration of 25 December as the birthdate of Jesus to him, but the evidence is spurious.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Julius I was the first pope to send a letter asserting the primacy of the bishop of Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was instrumental in the council of Sardica, where the Western bishops confirmed the Roman synod's decisions.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Julius I built several basilicas and churches during his pontificate.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A later tradition mistakenly attributes the declaration of 25 December as the birthdate of Jesus to him, but the evidence is spurious.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 352,
+      "month": 4,
+      "day": 12,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_Julius_I_–_Santa_Maria_in_Trastevere.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Julius_I_%E2%80%93_Santa_Maria_in_Trastevere.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Pope_Julius_I_%E2%80%93_Santa_Maria_in_Trastevere.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Pope_Julius_I_%E2%80%93_Santa_Maria_in_Trastevere.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Hugo DK",
+    "author": "Hugo DK",
+    "width": 701,
+    "height": 1273,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Julius I",
+    "url": "https://en.wikipedia.org/wiki/Pope_Julius_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:33:36.254Z"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "id": "pope-simplicius",
+  "name": "Pope Simplicius",
+  "wikidataId": "Q168741",
+  "wikipediaTitle": "Pope Simplicius",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Simplicius, born in Tivoli, Italy, was elected bishop of Rome after a ten‑day vacancy following Pope Hilarius. He was consecrated on 25 February 468 and began his pontificate at a time when the Western Roman Empire was in decline. His early years in office were marked by a determination to maintain the authority of Rome amid the political turbulence of the late fifth century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his fifteen‑year reign, Simplicius combated the Eutychian heresy, defended the decisions of the Council of Chalcedon, and sought to counter the effects of Germanic invasions. He sent complaints to the Eastern emperors Basiliscus and Leo I to restore Catholic bishops in Antioch and Alexandria, rehabilitated Patriarch Timotheos Solofaciolus, and held a synod in 478 that pronounced anathemas against several heretical bishops. He also expanded the practice of consecrating bishops outside December, beginning to confer holy orders in February, and oversaw the construction of several churches, including Santa Bibiana and the Church of Santo Stefano Rotondo.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the first pope to hold consecrations outside December, beginning to confer holy orders in February.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He constructed the church of Santa Bibiana in memory of the virgin martyr St. Bibiana.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He named Zeno, Bishop of Hispalis (Seville), as Papal Vicar in Spain.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was buried in the Basilica of St. Peter on 2 March 483, and Rome was without a pope for six days after his death.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His pontificate coincided with the fall of the Western Roman Empire in 476 when Odoacer deposed Romulus Augustulus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 483,
+      "month": 3,
+      "day": 10,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_Simplicius_(Nuremberg_Chronicles).png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Simplicius_(Nuremberg_Chronicles).png",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Pope_Simplicius_%28Nuremberg_Chronicles%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Pope_Simplicius_%28Nuremberg_Chronicles%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Hartmann Schedel",
+    "author": "Hartmann Schedel",
+    "width": 218,
+    "height": 278,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Simplicius",
+    "url": "https://en.wikipedia.org/wiki/Pope_Simplicius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:48:08.036Z"
+  }
+}

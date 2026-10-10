@@ -1,0 +1,61 @@
+{
+  "id": "mercury-mythology",
+  "name": "Mercury",
+  "wikidataId": "Q1150",
+  "wikipediaTitle": "Mercury (mythology)",
+  "content": {
+    "description": [
+      {
+        "text": "Mercury, known in Latin as Mercurius, is a major deity in Roman religion and mythology, occupying a place among the twelve Dii Consentes. He is the god of boundaries, commerce, communication, eloquence, financial gain, languages, luck, thieves, travelers, and trickery, and he also serves as the guide of souls to the underworld. His origins are linked to the Greek god Hermes and the Etruscan deity Turms, and he is traditionally depicted holding the caduceus, a staff with intertwined snakes that was originally a magic wand given by Apollo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Mercury’s cult grew during the Roman Republic, especially after the syncretism of Roman and Greek religions in the 4th century BC. He was worshipped as a psychopomp, leading newly deceased souls to the afterlife, and as a patron of trade and travelers. The Romans built his temple in 495 BC between the Aventine and Palatine Hills, and they celebrated his major festival, the Mercuralia, on 15 May, during which merchants sprinkled water from his sacred well upon themselves.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Mercury’s temple in Rome was constructed in 495 BC, a time of social unrest that led to the secession of the plebs; the temple’s location between the plebeian Aventine and patrician Palatine underscored Mercury’s role as a mediator.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the Mercuralia festival on 15 May, merchants would sprinkle water from Mercury’s sacred well near the Porta Capena on their heads, a ritual that symbolized purification and the god’s blessing of commerce.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In Roman syncretism, Mercury was equated with the Celtic god Lugus and the Germanic god Wotan, a connection that influenced the naming of the weekday Wednesday in English and Mercredi in French.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The caduceus, the staff Mercury carries, was originally a magic wand given to Hermes by Apollo; it later became a symbol of commerce and negotiation in Roman culture.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Mercure_by_Augustin_Pajou.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Mercure_by_Augustin_Pajou.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Mercure_by_Augustin_Pajou.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Mercure_by_Augustin_Pajou.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Augustin Pajou (French, 1730–1809)",
+    "author": "Augustin Pajou (French, 1730–1809)",
+    "width": 825,
+    "height": 1513,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Mercury (mythology)",
+    "url": "https://en.wikipedia.org/wiki/Mercury_(mythology)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:09:12.279Z"
+  }
+}

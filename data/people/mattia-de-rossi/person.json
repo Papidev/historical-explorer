@@ -1,0 +1,77 @@
+{
+  "id": "mattia-de-rossi",
+  "name": "Mattia de Rossi",
+  "wikidataId": "Q2395202",
+  "wikipediaTitle": "Mattia de Rossi",
+  "content": {
+    "description": [
+      {
+        "text": "Mattia de Rossi was born in Rome on 14 January 1637 into a family of architects and artisans. He rose to prominence under the mentorship of Gian Lorenzo Bernini, and after Bernini’s death in 1680 he inherited the position of chief architect of the Fabbrica di San Pietro, where he continued the work on the outside colonnade of St. Peter’s Basilica and the Ponte Sant’Angelo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the late Baroque period de Rossi designed the facades of Santa Galla and San Francesco a Ripa, finished or reconstructed several other churches, and created the monument to Pope Clement X in St. Peter’s Basilica, a project that combined his architectural design with sculptures by Lazzaro Morelli, Ercole Ferrata and Giuseppe Mazzuoli. He also served twice as director of the Accademia di San Luca, co‑designed the mountain‑top sanctuary of San Bonaventura at Monterano, and planned the new main church, the Collegiata, in Valmontone, drawing inspiration from Borromini’s Sant’Agnese in Agone.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "After Bernini’s death in 1680, de Rossi inherited the role of chief architect of the Fabbrica di San Pietro, overseeing the completion of the basilica’s exterior colonnade and the Ponte Sant’Angelo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He designed the monument to Pope Clement X in St. Peter’s Basilica, a work that was later completed by sculptors Lazzaro Morelli, Ercole Ferrata and Giuseppe Mazzuoli.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "De Rossi served twice as director of the Accademia di San Luca, first in 1681 and again from 1690 to 1693, before being replaced by Carlo Fontana.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He co‑designed the mountain‑top sanctuary church of San Bonaventura at Monterano, commissioned by Don Angelo Altieri, nephew of Pope Clement X.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1683 he planned the new main church, the Collegiata, in Valmontone, taking inspiration from Borromini’s Sant’Agnese in Agone.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1637,
+      "month": 1,
+      "day": 14,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1695,
+      "month": 8,
+      "day": 2,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Lazio_Roma_SMVittoria3_tango7174.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Lazio_Roma_SMVittoria3_tango7174.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/39/Lazio_Roma_SMVittoria3_tango7174.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/39/Lazio_Roma_SMVittoria3_tango7174.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Tango7174",
+    "author": "Tango7174",
+    "width": 800,
+    "height": 600,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Mattia de Rossi",
+    "url": "https://en.wikipedia.org/wiki/Mattia_de_Rossi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:13:41.554Z"
+  }
+}

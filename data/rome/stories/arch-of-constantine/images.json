@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Arch_of_Constantine_(Rome)_-_South_side,_from_Via_triumphalis.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Arch_of_Constantine_(Rome)_-_South_side%2C_from_Via_triumphalis.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Arch_of_Constantine_%28Rome%29_-_South_side%2C_from_Via_triumphalis.jpg/960px-Arch_of_Constantine_%28Rome%29_-_South_side%2C_from_Via_triumphalis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Arch_of_Constantine_%28Rome%29_-_South_side%2C_from_Via_triumphalis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "NikonZ7II (Paris Orlando)",
+      "author": "NikonZ7II (Paris Orlando)",
+      "width": 6272,
+      "height": 5292,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Arcus_Constantini,_Rome.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Arcus_Constantini%2C_Rome.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Arcus_Constantini%2C_Rome.jpg/960px-Arcus_Constantini%2C_Rome.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Arcus_Constantini%2C_Rome.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Pierre Goiffon",
+      "author": "Pierre Goiffon",
+      "width": 6000,
+      "height": 3750,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "De-Konstantinsbogen.ogg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:De-Konstantinsbogen.ogg",
+      "thumbnailUrl": "https://commons.wikimedia.org/w/resources/assets/file-type-icons/fileicon-ogg.png",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/De-Konstantinsbogen.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Jeuwre",
+      "author": "Jeuwre",
+      "width": 0,
+      "height": 0,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Arch_of_Constantine_(Rome)_-_South_side,_from_Via_triumphalis.jpg"
+}

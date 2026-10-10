@@ -1,0 +1,54 @@
+{
+  "id": "stefano-maderno",
+  "name": "Stefano Maderno",
+  "wikidataId": "Q1348891",
+  "wikipediaTitle": "Stefano Maderno",
+  "content": {
+    "description": [
+      {
+        "text": "Stefano Maderno was an Italian Baroque sculptor whose life is shrouded in uncertainty.  While some early accounts claimed he was born in Capolago, near Ticino, his own death certificate lists Palestrina as his birthplace, and a bas‑relief he signed in Santa Maria Maggiore identifies him as a Roman: “STEPHANVS MADERNVS ROMANVS F.”  Scholars therefore regard him as a native of Rome, though the exact year of his birth remains approximate, around 1576.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Maderno’s artistic career reached its zenith with the naturalistic marble of Saint Cecilia (1599–1600), a work that marked the transition from Mannerism to the Baroque.  In 1607 he was elected to the Accademia di San Luca, cementing his status as the leading sculptor of his generation.  His patron, Count Gaspare Rivaldi, rewarded him with a sinecure at the excise offices of the Gabelle di Ripetta, a position that diverted his attention from sculpture and contributed to his later decline in artistic output.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Maderno’s election to the Accademia di San Luca in 1607 made him the pre‑eminent sculptor of his generation, rivalled only by Camillo Mariani at the time.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The sinecure at the excise offices of the Gabelle di Ripetta, granted by his patron Count Rivaldi, occupied Maderno’s time and led him to neglect his art in his later years.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A number of Maderno’s terracotta sketches, including a variation on the Farnese Hercules and a Pietà, are preserved in the Hermitage and the Ca’ d’Oro in Venice.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1576,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1636,
+      "month": 9,
+      "day": 17,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Stefano Maderno",
+    "url": "https://en.wikipedia.org/wiki/Stefano_Maderno"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:22:04.363Z"
+  }
+}

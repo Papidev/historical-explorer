@@ -1,0 +1,73 @@
+{
+  "id": "igor-mitoraj",
+  "name": "Igor Mitoraj",
+  "wikidataId": "Q957078",
+  "wikipediaTitle": "Igor Mitoraj",
+  "content": {
+    "description": [
+      {
+        "text": "Igor Mitoraj was born Jerzy Makina on 26 March 1944 in Oederan, Germany, to a Polish mother who had been a forced labourer and a French Foreign Legion officer of Polish extraction. After the war he returned to Poland, adopted the family name of his stepfather, and later changed his first name to Igor when he moved to France. He studied painting at the Kraków Academy of Art under Tadeusz Kantor and held his first solo exhibition in 1967 at the Krzysztofory Gallery in Poland.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In the early 1970s Mitoraj travelled to Mexico, where his fascination with Aztec art led him to take up sculpture. A 1979 trip to Carrara inspired him to work primarily in marble, and he established a studio in Pietrasanta in 1983. His career included commissions such as bronze doors and a statue of John the Baptist for the basilica of Santa Maria degli Angeli in Rome (2006), and he received the Golden Medal of Merit to Culture – Gloria Artis and the Commander's Cross of the Order of Polonia Restituta. Mitoraj died in a Paris hospital on 6 October 2014 and was buried in Pietrasanta; his sculpture Daedalus was later installed permanently in Pompeii.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Mitoraj’s early work was in terracotta and bronze before he switched to marble after his visit to Carrara.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was commissioned in 2006 to create new bronze doors and a statue of John the Baptist for the basilica of Santa Maria degli Angeli in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 2016, his sculpture \"Daedalus\" was gifted to Italy and remains permanently installed in Pompeii.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Mitoraj received the Golden Medal of Merit to Culture – Gloria Artis in 2005 and the Commander's Cross of the Order of Polonia Restituta in 2012.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1944,
+      "month": 3,
+      "day": 26,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 2014,
+      "month": 10,
+      "day": 6,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Igor_Mitoraj_(15434967636).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Igor_Mitoraj_(15434967636).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Igor_Mitoraj_%2815434967636%29.jpg/960px-Igor_Mitoraj_%2815434967636%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Igor_Mitoraj_%2815434967636%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 2.0",
+    "attribution": "Andrea Bosio from Florence , ITALY",
+    "author": "Andrea Bosio from Florence , ITALY",
+    "width": 1200,
+    "height": 1800,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Igor Mitoraj",
+    "url": "https://en.wikipedia.org/wiki/Igor_Mitoraj"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:29:03.238Z"
+  }
+}

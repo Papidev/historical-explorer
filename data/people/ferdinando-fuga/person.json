@@ -1,0 +1,69 @@
+{
+  "id": "ferdinando-fuga",
+  "name": "Ferdinando Fuga",
+  "wikidataId": "Q1357805",
+  "wikipediaTitle": "Ferdinando Fuga",
+  "content": {
+    "description": [
+      {
+        "text": "Ferdinando Fuga was born in Florence on 11 November 1699 and trained under the prominent architect Giovanni Battista Foggini before moving to Rome in 1718. In the 1720s he submitted designs for the Trevi Fountain and façades of San Giovanni in Laterano and Santa Maria sopra Minerva, and by the early 1730s he had secured commissions from Pope Clement XII, including the Palazzo Corsini and the façade of Santa Maria Maggiore.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1748 Fuga relocated to Naples, where he became a court architect for King Charles III. He oversaw the construction of the enormous Albergo de' Poveri, a work‑house for 8,000 poor, and designed public buildings such as the Granili granaries and the ceramic manufactory at Caserta. His later projects included the façade of the Church of the Gerolamini and the reconstruction of the Palermo cathedral’s interior, reflecting his continued influence on both civic and religious architecture.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Albergo de' Poveri, begun in 1751 and completed in stages until 1819, featured a hexagonal church at its center and separate courtyards for men, women, boys, and girls, illustrating Fuga’s attempt to provide structured shelter for Naples’ poorest residents.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Fuga’s façade of Santa Maria Maggiore, completed between 1741 and 1743, served as a palazzo‑like screen that preserved the basilica’s medieval mosaics while providing a new narthex, a design that was later replicated at Santa Cecilia in Trastevere.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the 1767–1768 reconstruction of Palermo’s cathedral, Fuga added a tall dome over the crossing and restored the interior domes over the nave chapels, bringing a degree of architectural harmony to the complex.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1699,
+      "month": 11,
+      "day": 11,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1782,
+      "month": 2,
+      "day": 7,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Ferdinando_Fuga_(2020_attributed).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ferdinando_Fuga_(2020_attributed).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Ferdinando_Fuga_%282020_attributed%29.jpg/960px-Ferdinando_Fuga_%282020_attributed%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/13/Ferdinando_Fuga_%282020_attributed%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Presumably Gaspare Traversi / Presumably Giuseppe Bonito",
+    "author": "Presumably Gaspare Traversi / Presumably Giuseppe Bonito",
+    "width": 1610,
+    "height": 1920,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Ferdinando Fuga",
+    "url": "https://en.wikipedia.org/wiki/Ferdinando_Fuga"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:21:17.285Z"
+  }
+}

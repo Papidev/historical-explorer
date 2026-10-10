@@ -1,0 +1,117 @@
+{
+  "introduction": {
+    "text": "The Basilica Sotterranea di Porta Maggiore is an underground basilica in Rome discovered in 1917, dating to the 1st century BC. It is significant as the only archaeological site linked to the neo‑Pythagorean movement and as a precursor to later Christian basilicas.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history2",
+        "description": "The structure is dated to the 1st century BC and is believed to have been the meeting place of the neo‑Pythagoreans.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -100,
+          "precision": "approximate",
+          "endYear": -1,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "The basilica was constructed by the Statilius family; its head, Titus Statilius Taurus, committed suicide in 53 CE after being accused of magical superstitions.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 53,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history1",
+        "description": "The basilica was discovered accidentally in 1917 during construction of a railway line from Rome to Cassino.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1917,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "In 1951 a concrete shell was built to enclose the basilica and air purifiers were installed to combat radon gas.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1951,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "The basilica was opened to small groups of visitors in April 2015.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2015,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The basilica has three naves lined by six rock pillars and an apse, originally entered through a long downhill entrance from Prenestina Street.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "The interior is decorated with stucco images of centaurs, griffins, satyrs, and classical heroes such as Achilles, Orpheus, Paris, and Hercules.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Titus Statilius Taurus",
+      "personId": "titus-statilius-taurus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Tacitus",
+      "personId": "tacitus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pythagoras",
+      "personId": "pythagoras",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Plato",
+      "personId": "plato",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Achilles",
+      "personId": "achilles",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Orpheus",
+      "personId": "orpheus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Paris (mythology)",
+      "personId": "paris-mythology",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Hercules",
+      "personId": "hercules",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

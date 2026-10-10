@@ -1,0 +1,65 @@
+{
+  "id": "giuliano-da-sangallo",
+  "name": "Giuliano da Sangallo",
+  "wikidataId": "Q312365",
+  "wikipediaTitle": "Giuliano da Sangallo",
+  "content": {
+    "description": [
+      {
+        "text": "Giuliano da Sangallo, born around 1445 in Florence, began his career as a joiner’s apprentice before catching the eye of Lorenzo de’ Medici. His skill in woodworking and his study of classical architecture led Lorenzo to commission him for military fortifications in Castellina, where Giuliano successfully defended the town against the Duke of Calabria. This early success cemented a lifelong partnership with the Medici, who repeatedly turned to him for both secular and religious projects.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the late 15th century Giuliano designed several landmark buildings, including the Medici Villa at Poggio a Caiano, the Greek‑cross Santa Maria delle Carceri, and a castle for the King of Naples that was never completed. He later assisted in the design of St. Peter’s Basilica and helped Michelangelo finish the Sistine Chapel ceiling, although he was not chosen to lead the basilica’s construction. Giuliano died in Florence in 1516, leaving a legacy that lives on through his sketchbook and the influence he had on contemporaries such as Raphael and Leonardo da Vinci.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Giuliano was sometimes called Giuliano da San Gallo after he built a church for Augustinian monks, a nickname that Lorenzo de’ Medici popularized.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His design of Santa Maria delle Carceri employed a Greek‑cross plan, a layout that had not been widely used in the Renaissance before his work.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Giuliano’s sketchbook, now housed in Siena, contains detailed drawings of artillery, cathedral domes, and existing medieval structures, showing his broad architectural interests.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1445,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1516,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Piero_di_Cosimo_047.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Piero_di_Cosimo_047.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Piero_di_Cosimo_047.jpg/960px-Piero_di_Cosimo_047.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Piero_di_Cosimo_047.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Piero di Cosimo",
+    "author": "Piero di Cosimo",
+    "width": 1028,
+    "height": 1500,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giuliano da Sangallo",
+    "url": "https://en.wikipedia.org/wiki/Giuliano_da_Sangallo"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:22:36.348Z"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "francesco-da-volterra",
+  "name": "Francesco da Volterra",
+  "wikidataId": "Q2023754",
+  "wikipediaTitle": "Francesco da Volterra",
+  "content": {
+    "description": [
+      {
+        "text": "Francesco da Volterra was an Italian painter and architect who is best known for his brief but notable period in Pisa between 1370 and 1372. During that time he worked on the south wall of the Campo Santo, creating a series of panels depicting the History of Job. Although the frescoes have largely faded and are now almost obliterated, contemporary accounts and reproductions in Italian art books suggest that his work displayed a distinctive form of realism that set it apart from other medieval paintings of the period.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The painter’s identity has long been a subject of scholarly debate. Some historians believe that Francesco da Volterra was in fact the same individual as Francesco di Maestro Giotto, a Florentine artist whose name appears in the city guild records of 1341. This possible dual identity has led to confusion with a later architect of the same name, Francesco Capriani da Volterra, who lived in the 16th century and was a student of Vignola.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He painted the History of Job on the south wall of the Campo Santo in Pisa.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He may have been identical with Francesco di Maestro Giotto, a Florentine painter recorded in the city guild in 1341.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He should not be confused with the 16th‑century architect Francesco Capriani da Volterra, who was a student of Vignola.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Francesco_neri_da_volterra,_madonna_col_bambino,_commissionata_da_coluccio_ferscolini_da_montegemoli,_1360_ca._02.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Francesco_neri_da_volterra%2C_madonna_col_bambino%2C_commissionata_da_coluccio_ferscolini_da_montegemoli%2C_1360_ca._02.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Francesco_neri_da_volterra%2C_madonna_col_bambino%2C_commissionata_da_coluccio_ferscolini_da_montegemoli%2C_1360_ca._02.jpg/960px-Francesco_neri_da_volterra%2C_madonna_col_bambino%2C_commissionata_da_coluccio_ferscolini_da_montegemoli%2C_1360_ca._02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Francesco_neri_da_volterra%2C_madonna_col_bambino%2C_commissionata_da_coluccio_ferscolini_da_montegemoli%2C_1360_ca._02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0",
+    "attribution": "Sailko",
+    "author": "Sailko",
+    "width": 1698,
+    "height": 2608,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Francesco da Volterra",
+    "url": "https://en.wikipedia.org/wiki/Francesco_da_Volterra"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:40:54.969Z"
+  }
+}

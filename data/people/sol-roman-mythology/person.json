@@ -1,0 +1,57 @@
+{
+  "id": "sol-roman-mythology",
+  "name": "Sol",
+  "wikidataId": "Q1199937",
+  "wikipediaTitle": "Sol (Roman mythology)",
+  "content": {
+    "description": [
+      {
+        "text": "Sol is the Roman personification of the Sun and was worshipped from the earliest days of the Republic. According to Roman sources, the god was introduced by the Sabine king Titus Tatius shortly after Rome’s foundation, and a shrine to Sol stood on the banks of the Numicius near other early Latin religious sites. The earliest temple of Sol was located in the Circus Maximus, and a shrine on the Quirinal was used for annual sacrifices on 9 August to commemorate Caesar’s victory at Pharsala and on 11 December for a feast of Sol Indiges.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In the late Empire the cult of Sol was re‑emphasised under the name Sol Invictus, a title that may have been adopted by Emperor Aurelian in 274 to promote a unified state god. The festival of the “unconquered sun” was celebrated on 25 December, the winter solstice, and the date was also used for the birth of Jesus in the Philocalian calendar. Coins from the third and fourth centuries often show Sol with a radiate crown, a symbol that later emperors such as Constantine used to link themselves to the sun god.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Sol’s cult survived the transition from Republic to Empire, with a College of Pontiffs for Sol established during Aurelian’s reign.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The radiate crown that appears on some emperor’s portraits on coins minted in the third century was associated with Sol and may have been influenced by earlier depictions of Alexander the Great.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sol appears in many depictions of Mithras, such as the Tauroctony, where Mithras looks at Sol over his shoulder.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Arte_romana,_disco_col_sole_invitto,_2_secolo.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Arte_romana%2C_disco_col_sole_invitto%2C_2_secolo.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Arte_romana%2C_disco_col_sole_invitto%2C_2_secolo.JPG/960px-Arte_romana%2C_disco_col_sole_invitto%2C_2_secolo.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Arte_romana%2C_disco_col_sole_invitto%2C_2_secolo.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "I, Sailko",
+    "author": "sailko",
+    "width": 1653,
+    "height": 1605,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Sol (Roman mythology)",
+    "url": "https://en.wikipedia.org/wiki/Sol_(Roman_mythology)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:14:11.926Z"
+  }
+}

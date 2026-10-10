@@ -1,0 +1,57 @@
+{
+  "id": "frangipane-family",
+  "name": "Frangipane family",
+  "wikidataId": "Q588429",
+  "wikipediaTitle": "Frangipani family",
+  "content": {
+    "description": [
+      {
+        "text": "The Frangipane family was a powerful Roman patrician clan that rose to prominence in the Middle Ages, aligning firmly with the Guelph cause. Their earliest documented appearance dates to 1014 in a record concerning the Abbazia di Farfa, though a parchment from 973 bearing Otto I’s seal suggests an earlier presence in the region of Friuli.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Their political influence peaked in the early 12th century when they briefly governed Rome from 1107 to 1108 and secured the election of Pope Honorius II in 1124. From around 1130 they held the Colosseum, fortifying it to control access to the Lateran Palace, a strategic advantage that underscored their dominance until the mid‑thirteenth century.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 1268, Giovanni Frangipane betrayed Conradin, the last Hohenstaufen duke, handing him over to Charles of Anjou, who executed him.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The family’s Roman branch was extinguished in 1654 with the death of Mario Frangipane, marquis of Nemi, though other branches persisted in Friuli and Dalmatia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "They possessed the right of burial at the church of San Marcello al Corso, where the Frangipani Chapel, dedicated to Saint Paul, housed frescoes by Taddeo and Federico Zuccari between 1558 and 1566.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Angelo_Maria_da_Bologna,_Araldo_nel_quale_si_vedono_delineate_e_colorite_le_armi_de'_potentati_e_sovrani_d'Europa,_page_100.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Angelo_Maria_da_Bologna%2C_Araldo_nel_quale_si_vedono_delineate_e_colorite_le_armi_de'_potentati_e_sovrani_d'Europa%2C_page_100.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Angelo_Maria_da_Bologna%2C_Araldo_nel_quale_si_vedono_delineate_e_colorite_le_armi_de%27_potentati_e_sovrani_d%27Europa%2C_page_100.jpg/960px-Angelo_Maria_da_Bologna%2C_Araldo_nel_quale_si_vedono_delineate_e_colorite_le_armi_de%27_potentati_e_sovrani_d%27Europa%2C_page_100.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Angelo_Maria_da_Bologna%2C_Araldo_nel_quale_si_vedono_delineate_e_colorite_le_armi_de%27_potentati_e_sovrani_d%27Europa%2C_page_100.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Angelo Maria da Bologna",
+    "author": "Angelo Maria da Bologna",
+    "width": 1302,
+    "height": 1576,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Frangipani family",
+    "url": "https://en.wikipedia.org/wiki/Frangipani_family"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:56:25.957Z"
+  }
+}

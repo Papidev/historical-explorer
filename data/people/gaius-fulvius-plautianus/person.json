@@ -1,0 +1,63 @@
+{
+  "id": "gaius-fulvius-plautianus",
+  "name": "Gaius Fulvius Plautianus",
+  "wikidataId": "Q947550",
+  "wikipediaTitle": "Gaius Fulvius Plautianus",
+  "content": {
+    "description": [
+      {
+        "text": "Gaius Fulvius Plautianus, born around 150 AD, rose from the provincial city of Leptis Magna to become the most powerful man in Rome after being appointed prefect of the Praetorian Guard in 197.  His close friendship with Emperor Septimius Severus earned him a seat in the Senate, a consular insignia, and the consulship of 203, during which his portrait appeared on coinage alongside Severus’ son.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Plautianus’ influence grew to the point that he could dictate imperial policy and even orchestrate the marriage of his daughter, Fulvia Plautilla, to Severus’ eldest son Caracalla.  The emperor’s wife, Julia Domna, grew wary of his power, and when Plautianus was accused of treason, Severus summoned him to the palace.  On 22 January 205, Caracalla’s men assassinated Plautianus, after which his property was seized and his name was erased from public monuments.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "During the wedding of his daughter to Caracalla, Plautianus castrated a hundred free Roman men so that his daughter could be attended by a hundred eunuchs.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his execution, Plautianus’ name was deliberately removed from public monuments, a rare act of damnatio memoriae for a former Praetorian Prefect.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 150,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 205,
+      "month": 1,
+      "day": 22,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Bust_of_the_consul_Gaius_Fulvius_Plautianus_at_Museo_Pio-Clementino.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Bust_of_the_consul_Gaius_Fulvius_Plautianus_at_Museo_Pio-Clementino.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Bust_of_the_consul_Gaius_Fulvius_Plautianus_at_Museo_Pio-Clementino.jpg/960px-Bust_of_the_consul_Gaius_Fulvius_Plautianus_at_Museo_Pio-Clementino.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Bust_of_the_consul_Gaius_Fulvius_Plautianus_at_Museo_Pio-Clementino.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "User:Lalupa",
+    "author": "User:Lalupa",
+    "width": 1113,
+    "height": 1405,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Gaius Fulvius Plautianus",
+    "url": "https://en.wikipedia.org/wiki/Gaius_Fulvius_Plautianus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:49:03.132Z"
+  }
+}

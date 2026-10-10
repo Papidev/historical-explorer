@@ -1,0 +1,53 @@
+{
+  "id": "magna-mater",
+  "name": "Magna Mater",
+  "wikidataId": "Q188236",
+  "wikipediaTitle": "Cybele",
+  "content": {
+    "description": [
+      {
+        "text": "Cybele, originally an Anatolian mother goddess, was first worshipped in Phrygia where she was associated with mountains, lions, and a black meteoric stone that served as her sacred image. The Phrygian cult spread to Greek colonies in the sixth century BC, where the Greeks adapted her as a foreign mystery‑goddess who arrived in a lion‑drawn chariot and was linked to the earth‑goddess Gaia, Rhea, and Demeter.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In Rome she was adopted as the Magna Mater during the Second Punic War, after a Sibylline oracle recommended her conscription. The Roman state built a temple on the Palatine Hill, celebrated her with the Megalesia festival, and incorporated a unique priesthood of eunuch mendicants called the Galli. The cult spread throughout the empire, and her image was made from the same meteoric stone that had been brought from Pessinus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The cult of Magna Mater included a unique priesthood of eunuch mendicants known as the Galli, who were required to castrate themselves as part of their initiation.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The statue of the goddess that was brought to Rome was made from a black meteoric stone from Pessinus, which served as the face of the statue.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Cybele_formiae.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Cybele_formiae.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Cybele_formiae.jpg/960px-Cybele_formiae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Cybele_formiae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "ChrisO",
+    "author": "ChrisO",
+    "width": 1000,
+    "height": 1800,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Cybele",
+    "url": "https://en.wikipedia.org/wiki/Cybele"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:47:38.956Z"
+  }
+}

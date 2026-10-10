@@ -1,0 +1,81 @@
+{
+  "id": "pope-pius-i",
+  "name": "Pope Pius I",
+  "wikidataId": "Q83198",
+  "wikipediaTitle": "Pope Pius I",
+  "content": {
+    "description": [
+      {
+        "text": "Pius I, whose Greek name was Πίος, is believed to have been born in Aquileia in northern Italy during the late first century.  According to the Liber Pontificalis and the Muratorian Canon, he was the brother of Hermas, the author of The Shepherd of Hermas, and both men may have been freedmen, a possibility suggested by Hermas's own claim of former slavery.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as bishop of Rome from around 140 to his death around 154, a period that overlapped the reigns of Antoninus Pius and Marcus Aurelius.  During his pontificate he is credited with opposing the Valentinians and other Gnostic groups, ordering that Easter be observed only on a Sunday, and building one of Rome’s earliest churches, Santa Pudenziana.  While his feast day is celebrated on 11 July and he is venerated as a saint, the evidence that he died as a martyr remains inconclusive.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Pius I is considered the ninth successor of Saint Peter.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He is said to have ordered the publication of the Liber Pontificalis, although the compilation of that document did not begin until the 6th century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He excommunicated the Valentinians and other heretical groups during his papacy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He decreed that Easter should be kept only on a Sunday.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He built Santa Pudenziana, one of the oldest churches in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His feast day was originally given the rank of \"Simple\" and celebrated as a martyr, but was later reduced to a commemoration in the 1955 General Roman Calendar.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The 1969 revision of the General Roman Calendar found no grounds for considering him a martyr.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 90,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 155,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_Pius_I.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Pius_I.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Pope_Pius_I.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Pope_Pius_I.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Pietro Perugino",
+    "author": "Pietro Perugino",
+    "width": 197,
+    "height": 300,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Pius I",
+    "url": "https://en.wikipedia.org/wiki/Pope_Pius_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:40:31.855Z"
+  }
+}

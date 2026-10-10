@@ -1,0 +1,65 @@
+{
+  "id": "pietro-cavallini",
+  "name": "Pietro Cavallini",
+  "wikidataId": "Q316009",
+  "wikipediaTitle": "Pietro Cavallini",
+  "content": {
+    "description": [
+      {
+        "text": "Pietro Cavallini, an Italian painter of the late Middle Ages, first appears in a 1273 legal document from Santa Maria Maggiore, where he is referred to as \"Petrus dictus Cavallinus de Cerronibus.\" The same document, together with a later 1308 contract, shows that he was highly respected, receiving a house, 30 ounces of gold, and an annual pension from King Charles II of Naples, indicating that his reputation extended beyond Rome to the Neapolitan court.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cavallini’s most celebrated work is the fresco of the Last Judgment in Santa Cecilia in Trastevere, painted around 1293, which exemplifies Roman naturalism and influenced artists in Florence and Siena. His oeuvre also includes the Life of the Virgin Mary mosaic cycle at Santa Maria in Trastevere, the apse mosaics of San Paolo fuori le Mura, and several frescoes in San Domenico Maggiore, many of which survive only in fragments or through stylistic attribution.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The 1273 document from Santa Maria Maggiore is considered the earliest known mention of Cavallini.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1308, a contract awarded Cavallini 30 ounces of gold, a house, and an annual pension from the King of Naples.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His fresco of the Last Judgment in Santa Cecilia in Trastevere is regarded as his masterwork.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cavallini’s style bridged Byzantine and naturalistic painting, helping to spark the International Gothic style in Italy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "One of his pupils was Giovanni di Bartolommeo.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Vite_de_più_eccellenti_pittori_scultori_ed_architetti_(1767)_(14597651248).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Vite_de_pi%C3%B9_eccellenti_pittori_scultori_ed_architetti_(1767)_(14597651248).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Vite_de_pi%C3%B9_eccellenti_pittori_scultori_ed_architetti_%281767%29_%2814597651248%29.jpg/960px-Vite_de_pi%C3%B9_eccellenti_pittori_scultori_ed_architetti_%281767%29_%2814597651248%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Vite_de_pi%C3%B9_eccellenti_pittori_scultori_ed_architetti_%281767%29_%2814597651248%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Giorgio Vasari",
+    "author": "Giorgio Vasari",
+    "width": 1690,
+    "height": 1938,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pietro Cavallini",
+    "url": "https://en.wikipedia.org/wiki/Pietro_Cavallini"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:20:59.640Z"
+  }
+}

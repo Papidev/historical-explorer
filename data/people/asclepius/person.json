@@ -1,0 +1,57 @@
+{
+  "id": "asclepius",
+  "name": "Asclepius",
+  "wikidataId": "Q83223",
+  "wikipediaTitle": "Asclepius",
+  "content": {
+    "description": [
+      {
+        "text": "Asclepius is a hero and later a god of medicine in ancient Greek religion and mythology. He is described as the son of Apollo and the mortal woman Coronis, or in some accounts as the son of Apollo alone. From his divine parentage he inherited the healing aspect of the medical arts, and his daughters Hygieia, Iaso, Aceso, Aegle and Panacea each personify different facets of health and recovery. The myths also credit him with teaching the art of medicine to mortals, and with the ability to restore life, a power that eventually led to his death at the hands of Zeus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The cult of Asclepius grew rapidly from the fifth century BC, with healing temples called asclepieia appearing throughout the Greek world. In these sanctuaries pilgrims underwent purification, slept in the abaton, and reported dreams that priests interpreted to prescribe cures. The most famous asclepeion was at Epidaurus, and the rod of Asclepius—a snake‑entwined staff—became a lasting symbol of medicine, still used today. The rod is often confused with the caduceus of Hermes, but it is distinct and uniquely associated with the healing god.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The rod of Asclepius, a snake‑entwined staff, is a symbol of medicine that is often mistakenly identified with the caduceus of Hermes.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Asclepius was associated with the Roman god Vediovis and the Egyptian healer Imhotep, indicating a cross‑cultural recognition of his healing powers.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The botanical genus Asclepias, commonly known as milkweed, is named after Asclepius and includes medicinal species such as A. tuberosa.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Asclepios_MAN_Napoli_Inv6360.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Asclepios_MAN_Napoli_Inv6360.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Asclepios_MAN_Napoli_Inv6360.jpg/960px-Asclepios_MAN_Napoli_Inv6360.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Asclepios_MAN_Napoli_Inv6360.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 2.5",
+    "attribution": "Marie-Lan Nguyen (2011)",
+    "author": "Marie-Lan Nguyen (2011)",
+    "width": 2000,
+    "height": 4000,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Asclepius",
+    "url": "https://en.wikipedia.org/wiki/Asclepius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:45:04.269Z"
+  }
+}

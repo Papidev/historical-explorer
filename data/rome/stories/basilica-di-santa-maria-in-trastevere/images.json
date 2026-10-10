@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Roma_-_Basilica_di_Santa_Maria_in_Trastevere_20231228-02.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Roma_-_Basilica_di_Santa_Maria_in_Trastevere_20231228-02.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Roma_-_Basilica_di_Santa_Maria_in_Trastevere_20231228-02.jpg/960px-Roma_-_Basilica_di_Santa_Maria_in_Trastevere_20231228-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Roma_-_Basilica_di_Santa_Maria_in_Trastevere_20231228-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Pymouss",
+      "author": "Pymouss",
+      "width": 3648,
+      "height": 5472,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Roma_-_Basilica_di_Santa_Maria_in_Trastevere_-_2026-09-10.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Roma_-_Basilica_di_Santa_Maria_in_Trastevere_-_2026-09-10.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Roma_-_Basilica_di_Santa_Maria_in_Trastevere_-_2026-09-10.jpg/960px-Roma_-_Basilica_di_Santa_Maria_in_Trastevere_-_2026-09-10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Roma_-_Basilica_di_Santa_Maria_in_Trastevere_-_2026-09-10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Colombo_Nicola",
+      "author": "Colombo_Nicola",
+      "width": 3748,
+      "height": 2818,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Roma_-_Basilica_di_Santa_Maria_in_Trastevere_-_la_navata_centrale.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Roma_-_Basilica_di_Santa_Maria_in_Trastevere_-_la_navata_centrale.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Roma_-_Basilica_di_Santa_Maria_in_Trastevere_-_la_navata_centrale.JPG/960px-Roma_-_Basilica_di_Santa_Maria_in_Trastevere_-_la_navata_centrale.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Roma_-_Basilica_di_Santa_Maria_in_Trastevere_-_la_navata_centrale.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Monica_Rondoni",
+      "author": "Monica_Rondoni",
+      "width": 5426,
+      "height": 3617,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Roma_-_Basilica_di_Santa_Maria_in_Trastevere_20231228-02.jpg"
+}

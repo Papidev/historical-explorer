@@ -1,0 +1,111 @@
+{
+  "introduction": {
+    "text": "The Antiquarium di Ostia Antica, also known as the Museo Archeologico Ostiense, is an archaeological museum in Rome that preserves and displays artifacts from the ancient Roman city of Ostia, offering insight into the daily life, art, and culture of the city.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The museum was built by Pope Pius IX in 1865 by readapting a fifteenth‑century building that had been used as a store.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1865,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "The museum is dedicated to the ancient Roman city of Ostia, showcasing objects uncovered during long excavations.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The building was originally a fifteenth‑century structure that Pope Pius IX converted into a museum, preserving its historic architectural features.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Busts of Asclepius and Volcacius Myropnous, a portrait of Faustina the Elder, and the head of Trajan.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "Statue of Perseus holding the head of Medusa.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "Sculptural group of Mithras slaying the bull.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art4",
+        "description": "Marble groups depicting Cupid and Psyche.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art5",
+        "description": "Sarcophagi and reliefs from various burials.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art6",
+        "description": "Wall paintings from different burials.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art7",
+        "description": "Polychrome mosaics, including the Christ Blessing.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art8",
+        "description": "Marble slab from the temple of Bellona with carved votive feet.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Pope Pius IX",
+      "personId": "pope-pius-ix",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Trajan",
+      "personId": "trajan",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Faustina the Elder",
+      "personId": "faustina-the-elder",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Asclepius",
+      "personId": "asclepius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Perseus",
+      "personId": "perseus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Medusa",
+      "personId": "medusa",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Cupid and Psyche",
+      "personId": "cupid-and-psyche",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

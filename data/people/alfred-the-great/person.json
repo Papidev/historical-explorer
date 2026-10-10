@@ -1,0 +1,67 @@
+{
+  "id": "alfred-the-great",
+  "name": "Alfred the Great",
+  "wikidataId": "Q83476",
+  "wikipediaTitle": "Alfred the Great",
+  "content": {
+    "description": [
+      {
+        "text": "Alfred the Great, born around 849, became king of the West Saxons in 871 after the death of his brother Æthelred. He faced a relentless Viking onslaught, culminating in the decisive Battle of Edington in 878 where he defeated the Danish leader Guthrum and secured a treaty that divided England into Anglo‑Saxon and Danelaw territories. This victory not only halted the Viking advance but also established Alfred as the dominant ruler of England, allowing him to reclaim London in 886 and style himself \"King of the Anglo‑Saxons\" for the first time.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond his military successes, Alfred instituted sweeping administrative and educational reforms. He created a network of fortified burhs linked by roads, restructured the fyrd into a more reliable militia, and promulgated a comprehensive law code that blended earlier statutes with his own provisions. Recognizing the decline of learning after the Viking raids, he founded a court school that taught both nobles and commoners in English and Latin, and he personally oversaw translations of key Christian texts into the vernacular, thereby revitalising literacy and legal knowledge across his realm.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Alfred was the only native‑born English monarch to be given the epithet \"the Great\"; the title was first used in the 13th century and became popular in the 16th century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He established a court school that educated both nobles and commoners in English and Latin, a pioneering move that laid the groundwork for a more literate and administratively capable kingdom.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Alfred was the first English king to style himself \"King of the Anglo‑Saxons\", a title that reflected his unification of the various Anglo‑Saxon kingdoms under a single ruler.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 849,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 899,
+      "month": 10,
+      "day": 26,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Alfred_the_Great,_silver_penny;_struck_875–880_(obverse).png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Alfred_the_Great%2C_silver_penny%3B_struck_875%E2%80%93880_(obverse).png",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Alfred_the_Great%2C_silver_penny%3B_struck_875%E2%80%93880_%28obverse%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Alfred_the_Great%2C_silver_penny%3B_struck_875%E2%80%93880_%28obverse%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 2.5",
+    "attribution": "Classical Numismatic Group, Inc. http://www.cngcoins.com",
+    "author": "CNG - Classical Numismatic Group",
+    "width": 410,
+    "height": 400,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Alfred the Great",
+    "url": "https://en.wikipedia.org/wiki/Alfred_the_Great"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:38:17.693Z"
+  }
+}

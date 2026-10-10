@@ -1,0 +1,214 @@
+{
+  "introduction": {
+    "text": "The Basilica di Santa Maria degli Angeli e dei Martiri is a Catholic minor basilica in Rome that occupies the ruined frigidarium and tepidarium of the Roman Baths of Diocletian. It is significant for its unique combination of ancient Roman architecture, Renaissance design by Michelangelo, and later artistic additions, making it a living testament to Rome’s layered history.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The original baths were commissioned by Emperor Maximian in 297 AD and completed in 306 AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 297,
+          "precision": "exact",
+          "endYear": 306,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "The baths were in use until the fall of Rome in 537 AD, after which they fell into ruin.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 537,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Pope Pius IV ordered the church to be built on 27 July 1561.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1561,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Michelangelo worked on the adaptation of the baths into a church from 1563 to 1564.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1563,
+          "precision": "exact",
+          "endYear": 1564,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "Francesco Bianchini built a meridian line inside the basilica in 1702.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1702,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "Luigi Vanvitelli directed later construction in 1749.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1749,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "The basilica served as the official state church of the Kingdom of Italy from 1870 to 1946.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1870,
+          "precision": "exact",
+          "endYear": 1946,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history8",
+        "description": "The Vanvitellian façade on Piazza Esedra was demolished in 1911 to restore the calidarium niche.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1911,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history9",
+        "description": "Narcissus Quagliata installed a stained glass dome titled Light and Time in 2001.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2001,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history10",
+        "description": "Igor Mitoraj created new bronze doors and a statue of John the Baptist in 2006.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2006,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history11",
+        "description": "A bronze statue of Galileo Galilei was unveiled in 2010.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2010,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "Michelangelo designed the basilica around a Greek cross plan with a dominant transept and cubical chapels at each end.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The entrance features a concave brick shape derived from the ancient exedra of the calidarium.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "The vaulted transept measures 90.8 meters long and 28 meters high, emphasizing the scale of the Roman construction.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "A stained glass dome by Narcissus Quagliata, installed in 2001, functions as a sundial and spans five meters in diameter.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "Igor Mitoraj created new bronze doors for the basilica in 2006.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "A bronze statue of John the Baptist, also by Mitoraj, was added in 2006.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art4",
+        "description": "A bronze statue of Galileo Galilei, designed by Tsung-Dao Lee, was unveiled in 2010.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Michelangelo Buonarroti",
+      "personId": "michelangelo-buonarroti",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Pius IV",
+      "personId": "pope-pius-iv",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Jacopo Del Duca",
+      "personId": "jacopo-del-duca",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Luigi Vanvitelli",
+      "personId": "luigi-vanvitelli",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Francesco Bianchini",
+      "personId": "francesco-bianchini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Antonio del Duca",
+      "personId": "antonio-del-duca",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Clement XI",
+      "personId": "pope-clement-xi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope John Paul II",
+      "personId": "pope-john-paul-ii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Igor Mitoraj",
+      "personId": "igor-mitoraj",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Tsung-Dao Lee",
+      "personId": "tsung-dao-lee",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "pope-gregory-xv",
+  "name": "Pope Gregory XV",
+  "wikidataId": "Q132692",
+  "wikipediaTitle": "Pope Gregory XV",
+  "content": {
+    "description": [
+      {
+        "text": "Alessandro Ludovisi was born on 9 January 1554 in Bologna to Pompeo Ludovisi, Count of Samoggia, and Camilla Bianchini.  Educated at the Roman College of the Jesuits and the German College in Rome, he earned degrees in canon and Roman law from the University of Bologna in 1575 and began his career as a papal jurist.  He rose through the ranks of the Roman Curia, serving as Referendary of the Apostolic Signatura, Vicegerent of Rome, and Auditor of the Sacred Roman Rota before being appointed Archbishop of Bologna in 1612, where he was consecrated a bishop in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Elected pope on 9 February 1621, he took the name Gregory XV and was crowned on 14 February.  His short reign was marked by decisive reforms: he established the permanent Congregation for the Propagation of the Faith in 1622, issued the papal bull *Aeterni Patris Filius* to regulate papal elections with secret ballots, and canonized four major saints—Francis Xavier, Ignatius of Loyola, Teresa of Ávila, and Philip Neri—in a single day in 1622.  He also issued the last papal ordinance against witchcraft, limiting the death penalty to those proven to have entered into a pact with the devil.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Gregory XV founded the Congregation for the Propagation of the Faith, the first permanent missionary congregation of the Catholic Church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "On 12 March 1622 he canonized four prominent saints—Francis Xavier, Ignatius of Loyola, Teresa of Ávila, and Philip Neri—in one day, a rare ecclesiastical event.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His papal bull *Aeterni Patris Filius* introduced secret ballots for papal elections, a procedural change that remains in use today.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He issued the last papal ordinance against witchcraft, *Omnipotentis Dei*, which limited the death penalty to those proven to have entered into a pact with the devil.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1554,
+      "month": 1,
+      "day": 9,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1623,
+      "month": 7,
+      "day": 8,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "(Albi)_Cathédrale_Sainte-Cécile_-_Trèsor_-_Portrait_du_pape_Grégoire_XV_-_PalissyIM81001477.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:(Albi)_Cath%C3%A9drale_Sainte-C%C3%A9cile_-_Tr%C3%A8sor_-_Portrait_du_pape_Gr%C3%A9goire_XV_-_PalissyIM81001477.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/%28Albi%29_Cath%C3%A9drale_Sainte-C%C3%A9cile_-_Tr%C3%A8sor_-_Portrait_du_pape_Gr%C3%A9goire_XV_-_PalissyIM81001477.jpg/960px-%28Albi%29_Cath%C3%A9drale_Sainte-C%C3%A9cile_-_Tr%C3%A8sor_-_Portrait_du_pape_Gr%C3%A9goire_XV_-_PalissyIM81001477.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/%28Albi%29_Cath%C3%A9drale_Sainte-C%C3%A9cile_-_Tr%C3%A8sor_-_Portrait_du_pape_Gr%C3%A9goire_XV_-_PalissyIM81001477.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Didier Descouens",
+    "author": "Didier Descouens",
+    "width": 5947,
+    "height": 8042,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Gregory XV",
+    "url": "https://en.wikipedia.org/wiki/Pope_Gregory_XV"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:11:29.470Z"
+  }
+}

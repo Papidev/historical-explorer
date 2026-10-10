@@ -1,0 +1,62 @@
+{
+  "introduction": {
+    "text": "The Settecamini archaeological area is a Roman settlement site located in the Settecamini district of Rome, notable for its remains of early Christian and pagan structures, a Roman road, and an Imperial-era mosaic.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "earliest-building-1st-century-bc",
+        "description": "The earliest building is an early Christian structure inserted into a 1st-century BC pagan temple.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -100,
+          "precision": "approximate",
+          "endYear": -1,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "abandonment-5th-century",
+        "description": "The settlement was abandoned in the 5th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 400,
+          "precision": "approximate",
+          "endYear": 499,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "discovery-1951",
+        "description": "The site was discovered in 1951.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1951,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "taberna-rest-stop",
+        "description": "The best-preserved building is the taberna, a rest stop for travellers, featuring an Imperial-era mosaic.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "courtyard-well",
+        "description": "A courtyard with a central well that led to two side entrances.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "imperial-mosaic",
+        "description": "An Imperial-era mosaic found in the taberna.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": []
+}

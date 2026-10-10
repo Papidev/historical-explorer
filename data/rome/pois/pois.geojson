@@ -638,6 +638,1630 @@
         "coordinates": [12.4755017, 41.9061511]
       },
       "geoPlaceId": "way/201291264"
+    },
+    {
+      "id": "acquedotto-dell-acqua-vergine-2",
+      "type": "Feature",
+      "properties": {
+        "name": "Acquedotto dell'Acqua Vergine"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.531069, 41.9267114]
+      },
+      "geoPlaceId": "way/243334849"
+    },
+    {
+      "id": "ahmed-shawky",
+      "type": "Feature",
+      "properties": {
+        "name": "Ahmed Shawky"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4807584, 41.9155691]
+      },
+      "geoPlaceId": "node/12791585974"
+    },
+    {
+      "id": "ai-commbattenti-jugoslavi",
+      "type": "Feature",
+      "properties": {
+        "name": "Ai commbattenti jugoslavi",
+        "tourism": "artwork",
+        "wikimedia_commons": "File:Spomen_Kosturnica_u_Rimu.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4890919, 42.0191304]
+      },
+      "geoPlaceId": "node/11428790726"
+    },
+    {
+      "id": "aktium",
+      "type": "Feature",
+      "properties": {
+        "name": "Aktium",
+        "tourism": "attraction",
+        "website": "https://www.cinecittaworld.it/it/parco/attrazioni/aktium"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4481609, 41.7131098]
+      },
+      "geoPlaceId": "way/312168131"
+    },
+    {
+      "id": "alba-sofia-ravenna-levi",
+      "type": "Feature",
+      "properties": {
+        "name": "Alba Sofia Ravenna Levi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.475393, 41.9127823]
+      },
+      "geoPlaceId": "node/10136407153"
+    },
+    {
+      "id": "alberto-di-segni",
+      "type": "Feature",
+      "properties": {
+        "name": "Alberto Di Segni"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4768141, 41.8722931]
+      },
+      "geoPlaceId": "node/11300371556"
+    },
+    {
+      "id": "alberto-marchesi",
+      "type": "Feature",
+      "properties": {
+        "name": "Alberto Marchesi",
+        "wikimedia_commons": "File:S Eustachio - v d Scrofa 39 - memoria di Alberto Marchesi P1000821.JPG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4750147, 41.9015335]
+      },
+      "geoPlaceId": "node/13123487720"
+    },
+    {
+      "id": "alberto-sordi",
+      "type": "Feature",
+      "properties": {
+        "name": "Alberto Sordi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4913302, 41.862453]
+      },
+      "geoPlaceId": "node/3983670189"
+    },
+    {
+      "id": "aleksander-gierymski",
+      "type": "Feature",
+      "properties": {
+        "name": "Aleksander Gierymski"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5231556, 41.9053729]
+      },
+      "geoPlaceId": "node/13003828203"
+    },
+    {
+      "id": "aleksandr-sergeevi-pu-kin",
+      "type": "Feature",
+      "properties": {
+        "name": "Aleksandr Sergeevič Puškin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4813256, 41.9148424]
+      },
+      "geoPlaceId": "node/7003938268"
+    },
+    {
+      "id": "alessandro-brisse",
+      "type": "Feature",
+      "properties": {
+        "name": "Alessandro Brisse"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5246357, 41.904212]
+      },
+      "geoPlaceId": "node/5991691203"
+    },
+    {
+      "id": "alexander-dub-ek",
+      "type": "Feature",
+      "properties": {
+        "name": "Alexander Dubček"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4614626, 41.9366964]
+      },
+      "geoPlaceId": "node/5353568912"
+    },
+    {
+      "id": "alfredo-casella",
+      "type": "Feature",
+      "properties": {
+        "name": "Alfredo Casella"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5232527, 41.9016427]
+      },
+      "geoPlaceId": "node/5633662345"
+    },
+    {
+      "id": "alla-garbatella",
+      "type": "Feature",
+      "properties": {
+        "name": "Alla Garbatella"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4818624, 41.8622947]
+      },
+      "geoPlaceId": "node/5718530661"
+    },
+    {
+      "id": "altair",
+      "type": "Feature",
+      "properties": {
+        "name": "Altair",
+        "tourism": "attraction",
+        "website": "https://www.cinecittaworld.it/it/parco/attrazioni/altair"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4500164, 41.7149804]
+      },
+      "geoPlaceId": "way/445960726"
+    },
+    {
+      "id": "altare-di-citt-fiume",
+      "type": "Feature",
+      "properties": {
+        "name": "Altare di città Fiume"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4828181, 41.8943383]
+      },
+      "geoPlaceId": "node/6697931767"
+    },
+    {
+      "id": "altare-di-citt-gorizia",
+      "type": "Feature",
+      "properties": {
+        "name": "Altare di città Gorizia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4832915, 41.89442]
+      },
+      "geoPlaceId": "node/1387899487"
+    },
+    {
+      "id": "altare-di-citt-pola",
+      "type": "Feature",
+      "properties": {
+        "name": "Altare di città Pola"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4830046, 41.8943554]
+      },
+      "geoPlaceId": "node/1387899470"
+    },
+    {
+      "id": "altare-di-citt-trento",
+      "type": "Feature",
+      "properties": {
+        "name": "Altare di città Trento"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4833819, 41.8944504]
+      },
+      "geoPlaceId": "node/1387899494"
+    },
+    {
+      "id": "altare-di-citt-trieste",
+      "type": "Feature",
+      "properties": {
+        "name": "Altare di città Trieste"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4834699, 41.8944843]
+      },
+      "geoPlaceId": "node/1387899502"
+    },
+    {
+      "id": "altare-di-citt-zara",
+      "type": "Feature",
+      "properties": {
+        "name": "Altare di città Zara"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4829117, 41.8943436]
+      },
+      "geoPlaceId": "node/1387899467"
+    },
+    {
+      "id": "ambiente-4",
+      "type": "Feature",
+      "properties": {
+        "name": "Ambiente 4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4899794, 41.8900546]
+      },
+      "geoPlaceId": "way/597452722"
+    },
+    {
+      "id": "ancora-nell-edera",
+      "type": "Feature",
+      "properties": {
+        "name": "Ancora nell'edera"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4737497, 41.8668578]
+      },
+      "geoPlaceId": "node/5401056293"
+    },
+    {
+      "id": "andrea-camilleri",
+      "type": "Feature",
+      "properties": {
+        "name": "Andrea Camilleri"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4783042, 41.8755509]
+      },
+      "geoPlaceId": "node/9362375696"
+    },
+    {
+      "id": "angelo-brunetti-detto-ciceuracchio",
+      "type": "Feature",
+      "properties": {
+        "name": "Angelo Brunetti detto Ciceuracchio",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4612453, 41.8888696]
+      },
+      "geoPlaceId": "node/3753627861"
+    },
+    {
+      "id": "anita-di-capua-valabreda",
+      "type": "Feature",
+      "properties": {
+        "name": "Anita Di Capua Valabreda"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4715039, 41.9222328]
+      },
+      "geoPlaceId": "node/10136352833"
+    },
+    {
+      "id": "antico-deposito-ghiaccio-birra-peroni",
+      "type": "Feature",
+      "properties": {
+        "name": "Antico Deposito Ghiaccio Birra Peroni"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.2785033, 41.7337984]
+      },
+      "geoPlaceId": "node/12181730354"
+    },
+    {
+      "id": "antico-ponte-romano",
+      "type": "Feature",
+      "properties": {
+        "name": "Antico Ponte Romano"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4456841, 41.8266835]
+      },
+      "geoPlaceId": "way/887827801"
+    },
+    {
+      "id": "antico-pozzo-e-sale-dei-filosofi",
+      "type": "Feature",
+      "properties": {
+        "name": "Antico pozzo e Sale dei Filosofi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5483566, 41.8291386]
+      },
+      "geoPlaceId": "way/1159235517"
+    },
+    {
+      "id": "antiquarium-di-ostia-antica",
+      "wikidataId": "Q3867725",
+      "type": "Feature",
+      "properties": {
+        "name": "Antiquarium di Ostia Antica",
+        "tourism": "museum",
+        "website": "https://www.ostiaantica.beniculturali.it/",
+        "wikipedia": "it:Museo archeologico ostiense"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.2877034, 41.7555352]
+      },
+      "geoPlaceId": "way/85535159"
+    },
+    {
+      "id": "anton-giulio-majano",
+      "type": "Feature",
+      "properties": {
+        "name": "Anton Giulio Majano"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5243793, 41.899804]
+      },
+      "geoPlaceId": "node/8205137499"
+    },
+    {
+      "id": "antonelli",
+      "type": "Feature",
+      "properties": {
+        "name": "Antonelli"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5221048, 41.9030978]
+      },
+      "geoPlaceId": "way/685849369"
+    },
+    {
+      "id": "antonio-ciamarra",
+      "type": "Feature",
+      "properties": {
+        "name": "Antonio Ciamarra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5272261, 41.9006582]
+      },
+      "geoPlaceId": "node/8580012694"
+    },
+    {
+      "id": "antonio-gramsci",
+      "type": "Feature",
+      "properties": {
+        "name": "Antonio Gramsci",
+        "tourism": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4777525, 41.8753382]
+      },
+      "geoPlaceId": "node/9051635779"
+    },
+    {
+      "id": "antonio-piccinni",
+      "type": "Feature",
+      "properties": {
+        "name": "Antonio Piccinni"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5010345, 41.9045998]
+      },
+      "geoPlaceId": "node/9784529428"
+    },
+    {
+      "id": "antonio-sbarbati-e-fratelli",
+      "type": "Feature",
+      "properties": {
+        "name": "Antonio Sbarbati e fratelli"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5019386, 41.7486588]
+      },
+      "geoPlaceId": "node/11876837852"
+    },
+    {
+      "id": "aqua-rodeo",
+      "type": "Feature",
+      "properties": {
+        "name": "Aqua Rodeo",
+        "tourism": "attraction",
+        "website": "https://www.cinecittaworld.it/it/parco/attrazioni/aqua-rodeo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4510875, 41.7144246]
+      },
+      "geoPlaceId": "way/611988076"
+    },
+    {
+      "id": "aquila-iv-u-571",
+      "type": "Feature",
+      "properties": {
+        "name": "Aquila IV (U-571)",
+        "tourism": "attraction",
+        "website": "https://www.cinecittaworld.it/it/parco/attrazioni/u-571"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4505244, 41.7123878]
+      },
+      "geoPlaceId": "way/312168132"
+    },
+    {
+      "id": "archaic-regia-of-gabii",
+      "type": "Feature",
+      "properties": {
+        "name": "Archaic regia of Gabii"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.7194701, 41.890845]
+      },
+      "geoPlaceId": "way/215648069"
+    },
+    {
+      "id": "archivio-museo-storico-di-fiume",
+      "wikidataId": "Q3621669",
+      "type": "Feature",
+      "properties": {
+        "addr:housenumber": "10",
+        "addr:street": "Via Antonio Cippico",
+        "name": "Archivio museo storico di Fiume",
+        "tourism": "museum",
+        "website": "https://www.fiume-rijeka.it/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4816757, 41.8208889]
+      },
+      "geoPlaceId": "node/7876169064"
+    },
+    {
+      "id": "arciconfraternita-del-ss-cuore-di-ges",
+      "type": "Feature",
+      "properties": {
+        "name": "Arciconfraternita del SS. Cuore di Gesù"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5223496, 41.9050045]
+      },
+      "geoPlaceId": "way/622081234"
+    },
+    {
+      "id": "arciconfraternita-ss-ambrogio-e-carlo",
+      "type": "Feature",
+      "properties": {
+        "name": "Arciconfraternita SS. Ambrogio e Carlo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5306837, 41.9056554]
+      },
+      "geoPlaceId": "way/1036671664"
+    },
+    {
+      "id": "arciconfraternita-ss-ambrogio-e-carlo-2",
+      "type": "Feature",
+      "properties": {
+        "name": "Arciconfraternita SS. Ambrogio e Carlo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5306922, 41.9056582]
+      },
+      "geoPlaceId": "way/1036671665"
+    },
+    {
+      "id": "arco-copped",
+      "type": "Feature",
+      "properties": {
+        "name": "Arco Coppedé",
+        "tourism": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5014163, 41.9186111]
+      },
+      "geoPlaceId": "way/113704775"
+    },
+    {
+      "id": "arco-degli-argentari",
+      "wikidataId": "Q645062",
+      "type": "Feature",
+      "properties": {
+        "name": "Arco degli Argentari",
+        "wikimedia_commons": "Category:Arco degli Argentari",
+        "wikipedia": "en:Arcus Argentariorum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4830029, 41.8894907]
+      },
+      "geoPlaceId": "way/123971358"
+    },
+    {
+      "id": "arco-dei-banchi",
+      "type": "Feature",
+      "properties": {
+        "addr:street": "Via dell'Arco De' Banchi",
+        "name": "Arco dei Banchi",
+        "tourism": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.46618, 41.9004363]
+      },
+      "geoPlaceId": "node/9676942017"
+    },
+    {
+      "id": "arco-dei-quattro-venti",
+      "type": "Feature",
+      "properties": {
+        "name": "Arco dei Quattro Venti"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4563278, 41.8867308]
+      },
+      "geoPlaceId": "way/365873918"
+    },
+    {
+      "id": "arch-of-constantine",
+      "wikidataId": "Q5786",
+      "type": "Feature",
+      "properties": {
+        "name": "Arco di Costantino",
+        "name:en": "Arch of Constantine",
+        "tourism": "attraction",
+        "website": "http://archeoroma.beniculturali.it/siti-archeologici/arco-costantino",
+        "wikimedia_commons": "Category:Arch of Constantine (Rome)",
+        "wikipedia": "en:Arch of Constantine"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4906668, 41.8897623]
+      },
+      "geoPlaceId": "way/23590989"
+    },
+    {
+      "id": "arco-di-druso",
+      "wikidataId": "Q1107952",
+      "type": "Feature",
+      "properties": {
+        "name": "Arco di Druso",
+        "wikimedia_commons": "Category:Arch of Drusus (Rome)",
+        "wikipedia": "it:Arco di Druso"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5014369, 41.8737744]
+      },
+      "geoPlaceId": "way/234894452"
+    },
+    {
+      "id": "arch-of-gallienus",
+      "wikidataId": "Q616887",
+      "type": "Feature",
+      "properties": {
+        "name": "Arco di Gallieno",
+        "name:en": "Arch of Gallienus",
+        "wikimedia_commons": "Category:Arch of Gallienus (Rome)",
+        "wikipedia": "it:Porta Esquilina"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5013576, 41.8957775]
+      },
+      "geoPlaceId": "way/81741050"
+    },
+    {
+      "id": "arch-of-janus",
+      "wikidataId": "Q580555",
+      "type": "Feature",
+      "properties": {
+        "name": "Arco di Giano",
+        "name:en": "Arch of Janus",
+        "tourism": "attraction",
+        "wikimedia_commons": "Category:Arch of Janus (Rome)",
+        "wikipedia": "it:Arco di Giano"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4827608, 41.8893396]
+      },
+      "geoPlaceId": "way/52924046"
+    },
+    {
+      "id": "arco-di-malborghetto",
+      "wikidataId": "Q3621780",
+      "type": "Feature",
+      "properties": {
+        "addr:city": "Roma",
+        "addr:country": "IT",
+        "addr:housenumber": "1",
+        "addr:postcode": "00036",
+        "addr:street": "Via Barlassina",
+        "name": "Arco di Malborghetto",
+        "operator": "Soprintendenza Speciale per il Colosseo, il Museo Nazionale Romano e l'Area Archeologica di Roma",
+        "tourism": "museum",
+        "website": "http://archeoroma.beniculturali.it/siti-archeologici/arco-malborghetto",
+        "wikipedia": "it:Arco di Malborghetto"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4870285, 42.0523166]
+      },
+      "geoPlaceId": "way/489590481"
+    },
+    {
+      "id": "arco-di-paolo-v",
+      "type": "Feature",
+      "properties": {
+        "name": "Arco di Paolo V"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4531168, 41.8889773]
+      },
+      "geoPlaceId": "node/307878083"
+    },
+    {
+      "id": "arco-di-paolo-v-2",
+      "type": "Feature",
+      "properties": {
+        "name": "Arco di Paolo V"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4531424, 41.8889757]
+      },
+      "geoPlaceId": "way/544529989"
+    },
+    {
+      "id": "arch-of-septimius-severus",
+      "wikidataId": "Q162353",
+      "type": "Feature",
+      "properties": {
+        "name": "Arco di Settimio Severo",
+        "name:en": "Arch of Septimius Severus",
+        "wikimedia_commons": "Category:Arch of Septimius Severus (Rome)",
+        "wikipedia": "en:Arch of Septimius Severus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.484739, 41.8928337]
+      },
+      "geoPlaceId": "way/49824161"
+    },
+    {
+      "id": "arco-di-settimio-severo",
+      "type": "Feature",
+      "properties": {
+        "name": "Arco di Settimio Severo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4819725, 41.9146071]
+      },
+      "geoPlaceId": "way/201401356"
+    },
+    {
+      "id": "arco-di-via-nola",
+      "type": "Feature",
+      "properties": {
+        "name": "Arco di Via Nola"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5145464, 41.8875444]
+      },
+      "geoPlaceId": "node/566506497"
+    },
+    {
+      "id": "arco-di-via-nola-2",
+      "type": "Feature",
+      "properties": {
+        "name": "Arco di Via Nola"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.514493, 41.8875282]
+      },
+      "geoPlaceId": "node/566506498"
+    },
+    {
+      "id": "arco-di-via-nola-3",
+      "type": "Feature",
+      "properties": {
+        "name": "Arco di Via Nola"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5145968, 41.8875607]
+      },
+      "geoPlaceId": "node/3606100623"
+    },
+    {
+      "id": "arco-su-porta-san-lorenzo",
+      "type": "Feature",
+      "properties": {
+        "name": "Arco su Porta San Lorenzo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5104801, 41.8972367]
+      },
+      "geoPlaceId": "node/566650171"
+    },
+    {
+      "id": "area-archeologica-del-teatro-di-marcello",
+      "type": "Feature",
+      "properties": {
+        "name": "Area archeologica del Teatro di Marcello",
+        "tourism": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4793346, 41.8919883]
+      },
+      "geoPlaceId": "way/123530465"
+    },
+    {
+      "id": "area-archeologica-di-campetti-decumano",
+      "type": "Feature",
+      "properties": {
+        "name": "Area Archeologica di Campetti - Decumano"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.3940437, 42.0266094]
+      },
+      "geoPlaceId": "way/102571484"
+    },
+    {
+      "id": "area-archeologica-di-grottarossa",
+      "type": "Feature",
+      "properties": {
+        "name": "Area archeologica di Grottarossa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4900779, 41.9624671]
+      },
+      "geoPlaceId": "way/108630337"
+    },
+    {
+      "id": "area-archeologica-di-macchia-grande",
+      "type": "Feature",
+      "properties": {
+        "name": "Area Archeologica di Macchia Grande"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.405869, 42.0179314]
+      },
+      "geoPlaceId": "way/102599282"
+    },
+    {
+      "id": "area-archeologica-di-piano-della-comunit",
+      "type": "Feature",
+      "properties": {
+        "name": "Area Archeologica di Piano della Comunità",
+        "wikipedia": "it:Veio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4004576, 42.0243443]
+      },
+      "geoPlaceId": "way/102699361",
+      "wikidataId": "Q677935"
+    },
+    {
+      "id": "area-archeologica-di-piazza-d-armi",
+      "type": "Feature",
+      "properties": {
+        "name": "Area Archeologica di Piazza d'Armi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4071936, 42.013593]
+      },
+      "geoPlaceId": "way/102599387"
+    },
+    {
+      "id": "area-archeologica-di-settecamini",
+      "wikidataId": "Q19545276",
+      "type": "Feature",
+      "properties": {
+        "name": "Area archeologica di Settecamini",
+        "wikipedia": "it:Area archeologica di Settecamini"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.6219762, 41.9383637]
+      },
+      "geoPlaceId": "way/157951911"
+    },
+    {
+      "id": "area-archeologica-di-villa-campetti",
+      "type": "Feature",
+      "properties": {
+        "name": "Area archeologica di Villa Campetti"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.3898164, 42.0233986]
+      },
+      "geoPlaceId": "way/102571483"
+    },
+    {
+      "id": "area-archeologica-monticchio",
+      "type": "Feature",
+      "properties": {
+        "name": "Area Archeologica Monticchio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.3514011, 42.0293917]
+      },
+      "geoPlaceId": "node/9229855880"
+    },
+    {
+      "id": "area-archeologica-vicus-caprarius-la-citt-dell-acqua",
+      "type": "Feature",
+      "properties": {
+        "name": "Area archeologica Vicus Caprarius: La Città dell’Acqua",
+        "website": "https://www.vicuscaprarius.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4840951, 41.9004309]
+      },
+      "geoPlaceId": "node/6908586063"
+    },
+    {
+      "id": "area-sacra-dell-argentina",
+      "wikidataId": "Q1541068",
+      "type": "Feature",
+      "properties": {
+        "name": "Area sacra dell'Argentina",
+        "tourism": "attraction",
+        "wikimedia_commons": "Category:Largo di Torre Argentina",
+        "wikipedia": "it:Largo di Torre Argentina"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4768864, 41.8953968]
+      },
+      "geoPlaceId": "way/23955329"
+    },
+    {
+      "id": "area-sacra-dell-argentina-2",
+      "type": "Feature",
+      "properties": {
+        "name": "Area sacra dell'Argentina",
+        "tourism": "attraction",
+        "website": "https://www.sovraintendenzaroma.it/i_luoghi/roma_antica/aree_archeologiche/area_sacra_di_largo_argentina"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4768864, 41.8953968]
+      },
+      "geoPlaceId": "way/125566956"
+    },
+    {
+      "id": "argiletum",
+      "wikidataId": "Q646998",
+      "type": "Feature",
+      "properties": {
+        "name": "Argiletum",
+        "wikipedia": "it:Argileto"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4900701, 41.8946273]
+      },
+      "geoPlaceId": "node/11066696905"
+    },
+    {
+      "id": "armando-diaz",
+      "type": "Feature",
+      "properties": {
+        "name": "Armando Diaz",
+        "wikimedia_commons": "Category:Armando Diaz grave in Santa Maria degli Angeli (Rome)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.497721, 41.9031374]
+      },
+      "geoPlaceId": "node/9254148022"
+    },
+    {
+      "id": "arnoldo-fo",
+      "type": "Feature",
+      "properties": {
+        "name": "Arnoldo Foà"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4783435, 41.8759138]
+      },
+      "geoPlaceId": "node/9060517698"
+    },
+    {
+      "id": "assassin-s-creed",
+      "type": "Feature",
+      "properties": {
+        "name": "Assassin's Creed",
+        "tourism": "attraction",
+        "website": "https://www.cinecittaworld.it/it/parco/attrazioni/assassins-creed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.450546, 41.7142544]
+      },
+      "geoPlaceId": "node/5793676249"
+    },
+    {
+      "id": "associazione-democratica-giuditta-tavani-arquati",
+      "type": "Feature",
+      "properties": {
+        "name": "Associazione democratica Giuditta Tavani Arquati"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5274226, 41.9025471]
+      },
+      "geoPlaceId": "way/679343104"
+    },
+    {
+      "id": "attilio-ferraris",
+      "type": "Feature",
+      "properties": {
+        "name": "Attilio Ferraris"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5266799, 41.9043252]
+      },
+      "geoPlaceId": "node/7221265155"
+    },
+    {
+      "id": "august-von-goethe",
+      "type": "Feature",
+      "properties": {
+        "name": "August von Goethe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4793998, 41.8759028]
+      },
+      "geoPlaceId": "node/9362375699"
+    },
+    {
+      "id": "augusto",
+      "type": "Feature",
+      "properties": {
+        "name": "Augusto"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4861426, 41.8939812]
+      },
+      "geoPlaceId": "node/9051032377"
+    },
+    {
+      "id": "aula-dei-mensores-i-xix-1-3",
+      "type": "Feature",
+      "properties": {
+        "name": "Aula dei Mensores (I,XIX,1.3)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.2849795, 41.7537523]
+      },
+      "geoPlaceId": "way/1123506089",
+      "wikidataId": "Q131936641"
+    },
+    {
+      "id": "aula-del-buon-pastore",
+      "type": "Feature",
+      "properties": {
+        "name": "Aula del Buon Pastore"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.2862829, 41.7530201]
+      },
+      "geoPlaceId": "node/13054451679"
+    },
+    {
+      "id": "aula-gotica",
+      "type": "Feature",
+      "properties": {
+        "name": "Aula Gotica",
+        "tourism": "attraction",
+        "website": "http://www.aulagoticasantiquattrocoronati.it/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4985606, 41.8884013]
+      },
+      "geoPlaceId": "node/12484449287"
+    },
+    {
+      "id": "aula-regia",
+      "wikidataId": "Q94574",
+      "type": "Feature",
+      "properties": {
+        "name": "Aula Regia",
+        "wikimedia_commons": "Category:Aula Regia",
+        "wikipedia": "it:Aula Regia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4872868, 41.8891287]
+      },
+      "geoPlaceId": "node/5586787424"
+    },
+    {
+      "id": "ave-maria",
+      "type": "Feature",
+      "properties": {
+        "name": "Ave Maria"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4524309, 41.8968677]
+      },
+      "geoPlaceId": "node/1405099351"
+    },
+    {
+      "id": "ave-maria-2",
+      "type": "Feature",
+      "properties": {
+        "name": "Ave Maria"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4634985, 41.8730238]
+      },
+      "geoPlaceId": "node/2423074526"
+    },
+    {
+      "id": "aviator",
+      "type": "Feature",
+      "properties": {
+        "name": "Aviator",
+        "tourism": "attraction",
+        "website": "https://www.cinecittaworld.it/it/parco/attrazioni/aviator"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4511285, 41.7126376]
+      },
+      "geoPlaceId": "way/437061891"
+    },
+    {
+      "id": "bartolomeo-pinelli",
+      "type": "Feature",
+      "properties": {
+        "name": "Bartolomeo Pinelli"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4731551, 41.8881806]
+      },
+      "geoPlaceId": "node/10313412962"
+    },
+    {
+      "id": "pedestal-of-colossus-of-nero",
+      "wikidataId": "Q1570519",
+      "type": "Feature",
+      "properties": {
+        "name": "Base del Colosso di Nerone",
+        "name:en": "pedestal of colossus of Nero",
+        "website": "https://www.info.roma.it/monumenti_dettaglio.asp?ID_schede=538",
+        "wikimedia_commons": "Category:Colossus of Nero",
+        "wikipedia": "en:Colossus of Nero"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4909922, 41.8908689]
+      },
+      "geoPlaceId": "way/709011412"
+    },
+    {
+      "id": "basilica-costantiniana-di-ostia",
+      "wikidataId": "Q56293166",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica costantiniana di Ostia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.2936805, 41.7541808]
+      },
+      "geoPlaceId": "node/13054673400"
+    },
+    {
+      "id": "basilica-cristiana-iii-i-4",
+      "wikidataId": "Q810067",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica Cristiana (III,I,4)",
+        "wikimedia_commons": "Category:Basilica cristiana (Ostia Antica, R III)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.2864162, 41.752965]
+      },
+      "geoPlaceId": "way/950143356"
+    },
+    {
+      "id": "basilica-damasiana",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica Damasiana"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4327839, 41.8360308]
+      },
+      "geoPlaceId": "node/2597020460"
+    },
+    {
+      "id": "basilica-dei-santi-bonifacio-ed-alessio-all-aventino",
+      "wikidataId": "Q1076439",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica dei Santi Bonifacio ed Alessio all’Aventino",
+        "wikimedia_commons": "Category:Santi Bonifacio e Alessio (Rome)",
+        "wikipedia": "it:Basilica dei Santi Bonifacio e Alessio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4786593, 41.8838331]
+      },
+      "geoPlaceId": "way/51246736"
+    },
+    {
+      "id": "basilica-di-pianabella",
+      "wikidataId": "Q55685926",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica di Pianabella"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.2936898, 41.7500396]
+      },
+      "geoPlaceId": "way/384187529"
+    },
+    {
+      "id": "basilica-di-san-marco",
+      "wikidataId": "Q1479910",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica di San Marco",
+        "wikimedia_commons": "Category:San Marco (Rome)",
+        "wikipedia": "it:Basilica di San Marco Evangelista al Campidoglio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4815467, 41.8960432]
+      },
+      "geoPlaceId": "way/140031952"
+    },
+    {
+      "id": "saint-mark-s-basilica",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica di San Marco",
+        "name:en": "Saint Mark's Basilica"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.505911, 41.8612412]
+      },
+      "geoPlaceId": "way/566843165"
+    },
+    {
+      "id": "basilica-di-san-pancrazio",
+      "wikidataId": "Q1515307",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica di San Pancrazio",
+        "tourism": "attraction",
+        "wikimedia_commons": "Category:San Pancrazio (Rome)",
+        "wikipedia": "it:Basilica di San Pancrazio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.453967, 41.8849411]
+      },
+      "geoPlaceId": "way/135189103"
+    },
+    {
+      "id": "saint-peter-in-chains",
+      "wikidataId": "Q542070",
+      "type": "Feature",
+      "properties": {
+        "addr:city": "Roma",
+        "addr:housenumber": "4/a",
+        "addr:postcode": "00184",
+        "addr:street": "Piazza di San Pietro in Vincoli",
+        "name": "Basilica di San Pietro in Vincoli",
+        "name:en": "Saint Peter in Chains",
+        "tourism": "attraction",
+        "wikimedia_commons": "Category:San Pietro in Vincoli (Rome)",
+        "wikipedia": "it:Basilica di San Pietro in Vincoli"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4931598, 41.8938552]
+      },
+      "geoPlaceId": "way/201882369"
+    },
+    {
+      "id": "basilica-di-san-saba",
+      "wikidataId": "Q1729714",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica di San Saba",
+        "tourism": "attraction",
+        "wikimedia_commons": "Category:San Saba (Rome)",
+        "wikipedia": "it:Basilica di San Saba"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4855288, 41.8786035]
+      },
+      "geoPlaceId": "way/53791987"
+    },
+    {
+      "id": "basilica-di-san-sebastiano-fuori-le-mura",
+      "wikidataId": "Q658051",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica di San Sebastiano fuori le mura",
+        "tourism": "attraction",
+        "wikipedia": "it:Basilica di San Sebastiano fuori le mura"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5155635, 41.8555984]
+      },
+      "geoPlaceId": "way/50773061"
+    },
+    {
+      "id": "basilica-di-sant-agnese-fuori-le-mura",
+      "wikidataId": "Q1636696",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica di Sant'Agnese fuori le mura",
+        "tourism": "attraction",
+        "wikimedia_commons": "Category:Sant'Agnese fuori le mura (Rome)",
+        "wikipedia": "it:Basilica di Sant'Agnese fuori le mura"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5188799, 41.9229281]
+      },
+      "geoPlaceId": "way/205704488"
+    },
+    {
+      "id": "basilica-di-sant-andrea-della-valle",
+      "wikidataId": "Q1631593",
+      "type": "Feature",
+      "properties": {
+        "addr:city": "Roma",
+        "addr:street": "Corso Vittorio Emanuele Secondo",
+        "name": "Basilica di Sant'Andrea della Valle",
+        "tourism": "attraction",
+        "wikimedia_commons": "Category:Sant'Andrea della Valle (Rome)",
+        "wikipedia": "it:Basilica di Sant'Andrea della Valle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4743329, 41.8960034]
+      },
+      "geoPlaceId": "way/25625603"
+    },
+    {
+      "id": "basilica-di-sant-andrea-delle-fratte",
+      "wikidataId": "Q1809794",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica di Sant'Andrea delle Fratte",
+        "tourism": "attraction",
+        "wikimedia_commons": "Category:Sant'Andrea delle Fratte",
+        "wikipedia": "it:Basilica di Sant'Andrea delle Fratte"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4838527, 41.9036404]
+      },
+      "geoPlaceId": "way/202339987"
+    },
+    {
+      "id": "basilica-di-sant-antonio-da-padova-all-esquilino",
+      "wikidataId": "Q3585396",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica di Sant'Antonio da Padova all'Esquilino",
+        "wikimedia_commons": "Category:Sant'Antonio da Padova all'Esquilino",
+        "wikipedia": "it:Basilica di Sant'Antonio da Padova all'Esquilino"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5042663, 41.8888626]
+      },
+      "geoPlaceId": "way/106365792"
+    },
+    {
+      "id": "basilica-di-santa-balbina",
+      "wikidataId": "Q2354657",
+      "type": "Feature",
+      "properties": {
+        "addr:city": "Roma",
+        "addr:housenumber": "8",
+        "addr:postcode": "00153",
+        "addr:street": "Via di Santa Balbina",
+        "name": "Basilica di Santa Balbina",
+        "tourism": "attraction",
+        "wikimedia_commons": "Category:Santa Balbina (Rome)",
+        "wikipedia": "it:Basilica di Santa Balbina all'Aventino"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4896712, 41.8805378]
+      },
+      "geoPlaceId": "way/52134171"
+    },
+    {
+      "id": "basilica-di-santa-cecilia-in-trastevere",
+      "wikidataId": "Q1479873",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica di Santa Cecilia in Trastevere",
+        "tourism": "attraction",
+        "website": "https://www.benedettinesantacecilia.it/",
+        "wikimedia_commons": "Category:Santa Cecilia (Rome)",
+        "wikipedia": "it:Basilica di Santa Cecilia in Trastevere"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4758567, 41.8875608]
+      },
+      "geoPlaceId": "way/86250354"
+    },
+    {
+      "id": "basilica-of-the-holy-cross-in-jerusalem",
+      "wikidataId": "Q685940",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica di Santa Croce in Gerusalemme",
+        "name:en": "Basilica of the Holy Cross in Jerusalem",
+        "tourism": "attraction",
+        "wikimedia_commons": "Category:Santa Croce in Gerusalemme (Rome)",
+        "wikipedia": "it:Basilica di Santa Croce in Gerusalemme"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5158571, 41.8882257]
+      },
+      "geoPlaceId": "way/998191514"
+    },
+    {
+      "id": "basilica-di-santa-maria-degli-angeli-e-dei-martiri",
+      "wikidataId": "Q569253",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica di Santa Maria degli Angeli e dei Martiri",
+        "tourism": "attraction",
+        "wikimedia_commons": "Category:Santa Maria degli Angeli (Rome)",
+        "wikipedia": "it:Basilica di Santa Maria degli Angeli e dei Martiri"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4973373, 41.9034429]
+      },
+      "geoPlaceId": "way/201482365"
+    },
+    {
+      "id": "basilica-of-santa-maria-del-popolo",
+      "wikidataId": "Q869513",
+      "type": "Feature",
+      "properties": {
+        "addr:city": "Roma",
+        "addr:housenumber": "12",
+        "addr:postcode": "00187",
+        "addr:street": "Piazza del Popolo",
+        "name": "Basilica di Santa Maria del Popolo",
+        "name:en": "Basilica of Santa Maria del Popolo",
+        "website": "https://www.agostiniani.it/comunita-agostiniane-provincia/parrocchia-santa-maria-popolo/",
+        "wikimedia_commons": "Category:Santa Maria del Popolo (Rome)",
+        "wikipedia": "en:Santa Maria del Popolo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.476551, 41.9114573]
+      },
+      "geoPlaceId": "way/52430153"
+    },
+    {
+      "id": "basilica-di-santa-maria-in-trastevere",
+      "wikidataId": "Q1137391",
+      "type": "Feature",
+      "properties": {
+        "addr:street": "Piazza di Santa Maria in Trastevere",
+        "name": "Basilica di Santa Maria in Trastevere",
+        "tourism": "attraction",
+        "website": "https://www.santamariaintrastevere.it/",
+        "wikimedia_commons": "Category:Santa Maria in Trastevere (Rome)",
+        "wikipedia": "it:Basilica di Santa Maria in Trastevere"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4694941, 41.8894264]
+      },
+      "geoPlaceId": "way/51368975"
+    },
+    {
+      "id": "basilica-di-santa-prassede",
+      "wikidataId": "Q733890",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica di Santa Prassede",
+        "tourism": "attraction",
+        "wikimedia_commons": "Category:Basilica of Saint Praxedes (Rome)",
+        "wikipedia": "it:Basilica di Santa Prassede"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4986933, 41.8962403]
+      },
+      "geoPlaceId": "way/44448525"
+    },
+    {
+      "id": "basilica-of-st-pudentiana",
+      "wikidataId": "Q1526417",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica di Santa Pudenziana al Viminale",
+        "name:en": "Basilica of St. Pudentiana",
+        "tourism": "attraction",
+        "wikimedia_commons": "Category:Santa Pudenziana (Rome)",
+        "wikipedia": "it:Basilica di Santa Pudenziana"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4954286, 41.8984577]
+      },
+      "geoPlaceId": "way/112796242"
+    },
+    {
+      "id": "basilica-di-santa-teresa-d-avila",
+      "wikidataId": "Q2615449",
+      "type": "Feature",
+      "properties": {
+        "addr:city": "Roma",
+        "addr:country": "IT",
+        "addr:housenumber": "37",
+        "addr:postcode": "00198",
+        "addr:street": "Corso d'Italia",
+        "email": "SantaTeresadAvila@VicariatusUrbis.org",
+        "name": "Basilica di Santa Teresa d'Avila",
+        "website": "http://parrocchiasantateresadavila.it/contattaci/index.html",
+        "wikimedia_commons": "Category:Basilica of Saint Teresa of Ávila (Rome)",
+        "wikipedia": "it:Basilica di Santa Teresa d'Avila"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4950908, 41.9114964]
+      },
+      "geoPlaceId": "way/359820971"
+    },
+    {
+      "id": "basilica-di-santo-stefano",
+      "wikidataId": "Q28000913",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica di Santo Stefano",
+        "wikipedia": "it:Basilica di Santo Stefano in via Latina"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5373529, 41.8616748]
+      },
+      "geoPlaceId": "node/9595019794"
+    },
+    {
+      "id": "basilica-hilariana",
+      "wikidataId": "Q3959538",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica Hilariana",
+        "website": "http://archeoroma.beniculturali.it/en/node/148",
+        "wikipedia": "it:Basiliche civili antiche di Roma"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4966238, 41.8858204]
+      },
+      "geoPlaceId": "node/2674141008"
+    },
+    {
+      "id": "basilica-iulia",
+      "wikidataId": "Q616271",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica Iulia",
+        "tourism": "attraction",
+        "wikimedia_commons": "Category:Basilica Julia (Rome)",
+        "wikipedia": "en:Basilica Julia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4847813, 41.8919543]
+      },
+      "geoPlaceId": "way/131451564"
+    },
+    {
+      "id": "basilica-paleocristiana",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica paleocristiana",
+        "website": "https://www.academia.edu/1652144/La_basilica_paleocristiana_anonima_di_Castelfusano_Ostia_"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.3488792, 41.7115361]
+      },
+      "geoPlaceId": "way/171556806"
+    },
+    {
+      "id": "basilica-sotterranea-di-porta-maggiore",
+      "wikidataId": "Q2887175",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica Sotterranea di Porta Maggiore",
+        "tourism": "attraction",
+        "wikimedia_commons": "Category:Porta Maggiore underground basilica",
+        "wikipedia": "en:Porta Maggiore Basilica"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5164579, 41.8917818]
+      },
+      "geoPlaceId": "way/382363018"
     }
   ]
 }

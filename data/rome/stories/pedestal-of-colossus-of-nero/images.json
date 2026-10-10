@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Lawrence_Alma-Tadema_02.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Lawrence_Alma-Tadema_02.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Lawrence_Alma-Tadema_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Lawrence_Alma-Tadema_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Lawrence Alma-Tadema",
+      "author": "Lawrence Alma-Tadema",
+      "width": 786,
+      "height": 800,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Base_of_the_Colossus_of_Nero,_Coliseum,_Rome,_Italy_Wellcome_M0000104.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Base_of_the_Colossus_of_Nero%2C_Coliseum%2C_Rome%2C_Italy_Wellcome_M0000104.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Base_of_the_Colossus_of_Nero%2C_Coliseum%2C_Rome%2C_Italy_Wellcome_M0000104.jpg/960px-Base_of_the_Colossus_of_Nero%2C_Coliseum%2C_Rome%2C_Italy_Wellcome_M0000104.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Base_of_the_Colossus_of_Nero%2C_Coliseum%2C_Rome%2C_Italy_Wellcome_M0000104.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "https://wellcomeimages.org/indexplus/obf_images/38/82/1d1e20eb950cc4c827ea36ef4b84.jpg Gallery: https://wellcomeimages.org/indexplus/image/M0000104.html Wellcome Collection gallery (2018-03-23): https://wellcomecollection.org/works/j9m9nrec CC-BY-4.0",
+      "author": "https://wellcomeimages.org/indexplus/obf_images/38/82/1d1e20eb950cc4c827ea36ef4b84.jpg Gallery: https://wellcomeimages.org/indexplus/image/M0000104.html Wellcome Collection gallery (2018-03-23): https://wellcomecollection.org/works/j9m9nrec CC-BY-4.0",
+      "width": 3809,
+      "height": 2836,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Coloso_de_Nerón.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Coloso_de_Ner%C3%B3n.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Coloso_de_Ner%C3%B3n.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Coloso_de_Ner%C3%B3n.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "http://www.pontuali.com",
+      "author": "http://www.pontuali.com",
+      "width": 500,
+      "height": 217,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Lawrence_Alma-Tadema_02.jpg"
+}

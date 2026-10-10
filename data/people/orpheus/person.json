@@ -1,0 +1,57 @@
+{
+  "id": "orpheus",
+  "name": "Orpheus",
+  "wikidataId": "Q174353",
+  "wikipediaTitle": "Orpheus",
+  "content": {
+    "description": [
+      {
+        "text": "Orpheus was a Thracian bard, legendary musician and prophet, renowned for his ability to charm all living things and even stones with his music. He is credited with founding the Orphic mysteries and composing works such as the Orphic Hymns and the Orphic Argonautica, and he is said to have traveled with Jason and the Argonauts in search of the Golden Fleece.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His most famous myth involves his descent into the underworld to retrieve his wife Eurydice, a story that has been retold by many ancient writers. Orpheus’s death came at the hands of the maenads of Dionysus, who tore him apart for his mourning and for neglecting the worship of Dionysus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Orpheus is credited with the composition of the Orphic Hymns, the Orphic Argonautica, and the Lithica.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He is said to have traveled with Jason and the Argonauts.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was killed by the maenads of Dionysus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Franc_Kavčič_-_The_Lament_of_Orpheus.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Franc_Kav%C4%8Di%C4%8D_-_The_Lament_of_Orpheus.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Franc_Kav%C4%8Di%C4%8D_-_The_Lament_of_Orpheus.jpg/960px-Franc_Kav%C4%8Di%C4%8D_-_The_Lament_of_Orpheus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Franc_Kav%C4%8Di%C4%8D_-_The_Lament_of_Orpheus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Franz Caucig",
+    "author": "Franz Caucig",
+    "width": 2610,
+    "height": 3484,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Orpheus",
+    "url": "https://en.wikipedia.org/wiki/Orpheus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:53:41.300Z"
+  }
+}

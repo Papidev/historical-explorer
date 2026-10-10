@@ -1,0 +1,65 @@
+{
+  "id": "pope-eugene-iv",
+  "name": "Pope Eugene IV",
+  "wikidataId": "Q167561",
+  "wikipediaTitle": "Pope Eugene IV",
+  "content": {
+    "description": [
+      {
+        "text": "Gabriele Condulmer was born in Venice in 1383 to a wealthy merchant family. He became a bishop at a very young age, was made a cardinal by his uncle Pope Gregory XII, and was elected pope on 3 March 1431, taking the name Eugene IV. His papacy lasted until his death in 1447 and was marked by a series of political and ecclesiastical conflicts, including a long struggle with the Council of Basel and a violent confrontation with the powerful Colonna family.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his reign Eugene IV issued several important bulls, most notably the 1434 bull \"Creator Omnium\", which annulled Portugal's claim to the Canary Islands and prohibited the enslavement of newly converted Christians. He also attempted to protect Jews with early decrees, but later issued the 1442 bull \"Dudum ad nostram audientiam\", which laid the groundwork for the creation of Jewish ghettos. Despite his efforts to maintain papal authority, he was suspended by the Council of Basel in 1439 and later excommunicated by the council, although he eventually regained control of Rome after a decade of exile.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the last pope to take the pontifical name \"Eugene\".",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Eugene IV was exiled from Rome for nearly ten years, during which he travelled to Florence and Bologna before returning to the papal seat in 1443.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1431 he re-established the University of Rome, demonstrating his patronage of learning and the arts.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1383,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1447,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Domenico_di_Bartolo,_madonna_della_misericordia,_1444,_06(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Domenico_di_Bartolo%2C_madonna_della_misericordia%2C_1444%2C_06(cropped).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Domenico_di_Bartolo%2C_madonna_della_misericordia%2C_1444%2C_06%28cropped%29.jpg/960px-Domenico_di_Bartolo%2C_madonna_della_misericordia%2C_1444%2C_06%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Domenico_di_Bartolo%2C_madonna_della_misericordia%2C_1444%2C_06%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0",
+    "attribution": "Sailko",
+    "author": "Sailko",
+    "width": 1320,
+    "height": 1760,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Eugene IV",
+    "url": "https://en.wikipedia.org/wiki/Pope_Eugene_IV"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:37:12.289Z"
+  }
+}

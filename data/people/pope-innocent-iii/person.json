@@ -1,0 +1,67 @@
+{
+  "id": "pope-innocent-iii",
+  "name": "Pope Innocent III",
+  "wikidataId": "Q128076",
+  "wikipediaTitle": "Pope Innocent III",
+  "content": {
+    "description": [
+      {
+        "text": "Lotario de' Conti di Segni, later Pope Innocent III, was born in 1160 or 1161 near Anagni, Italy, and rose through the ecclesiastical ranks to become a cardinal in 1191. He was elected pope on 8 January 1198, only thirty‑seven years old, after the death of Celestine III, and immediately began to assert the papacy’s supremacy over all of Europe, claiming spiritual authority over kings and princes alike.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his reign he reshaped Western canon law through decretals and the Fourth Lateran Council, and he extended the scope of the Crusades, directing campaigns against Muslim Iberia, the Holy Land, the Baltic pagans, and the Cathars. He also played a decisive role in the political affairs of the Holy Roman Empire, supporting Otto IV’s election and later backing the young Frederick II. His papacy ended with his death in Perugia on 16 July 1216, leaving a legacy of unprecedented papal power and institutional reform.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 1198 Innocent III introduced a new clerical tax, requiring all clergy to donate one‑fortieth of their income to fund the Fourth Crusade, marking the first time a pope imposed a direct tax on the clergy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He formally approved the founding of the Franciscan Order in 1210, granting the new community a place within the Church and allowing them to preach without owning property.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1215 he convened the Fourth Lateran Council, which issued seventy reform decrees, including a ban on the judicial ordeal and regulations for clergy conduct.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1160,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1216,
+      "month": 7,
+      "day": 16,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_Innocent_III_(Monastery_of_Subiaco).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Innocent_III_(Monastery_of_Subiaco).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Pope_Innocent_III_%28Monastery_of_Subiaco%29.jpg/960px-Pope_Innocent_III_%28Monastery_of_Subiaco%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Pope_Innocent_III_%28Monastery_of_Subiaco%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Carlo Raso",
+    "author": "Carlo Raso",
+    "width": 2293,
+    "height": 2833,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Innocent III",
+    "url": "https://en.wikipedia.org/wiki/Pope_Innocent_III"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:58:28.487Z"
+  }
+}

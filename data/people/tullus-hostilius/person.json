@@ -1,0 +1,65 @@
+{
+  "id": "tullus-hostilius",
+  "name": "Tullus Hostilius",
+  "wikidataId": "Q200859",
+  "wikipediaTitle": "Tullus Hostilius",
+  "content": {
+    "description": [
+      {
+        "text": "Tullus Hostilius was the third legendary king of Rome, succeeding Numa Pompilius around 672 BC. He is portrayed as a war‑oriented ruler who sought conflict to strengthen Rome, contrasting with his predecessor’s peace‑focused reign. He led Rome to victory over Alba Longa, destroying the city and incorporating its people into Rome, and expanded the cavalry and built the Curia Hostilia, the first senate building.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His reign also saw the construction of the Comitium, the establishment of the Fetial college, and the founding of the Salii Collini. He is credited with distributing royal estates to landless citizens and incorporating the Caelian Hill into the city walls. His death is recorded as occurring around 640 BC, possibly by lightning or assassination, though the exact cause remains uncertain.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He expanded the Roman cavalry from 300 to 600 by adding ten turmae of Albans.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He built the Curia Hostilia, the first senate building in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He destroyed Alba Longa and resettled its people on the Caelian Hill.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He established the Fetial college to formalise Rome’s declarations of war.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": -640,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Tulius-Hostilius.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Tulius-Hostilius.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Tulius-Hostilius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Tulius-Hostilius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Published by Guillaume Rouille(1518?-1589)",
+    "author": "Published by Guillaume Rouille(1518?-1589)",
+    "width": 810,
+    "height": 810,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Tullus Hostilius",
+    "url": "https://en.wikipedia.org/wiki/Tullus_Hostilius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:02:29.980Z"
+  }
+}

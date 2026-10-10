@@ -1,0 +1,73 @@
+{
+  "id": "francesco-barberini-seniore",
+  "name": "Francesco Barberini",
+  "wikidataId": "Q534683",
+  "wikipediaTitle": "Francesco Barberini (1597–1679)",
+  "content": {
+    "description": [
+      {
+        "text": "Francesco Barberini was born on 23 September 1597 in Florence to Carlo Barberini and Costanza Magalotti. After his family moved to Rome in 1600 at the invitation of his uncle, the future Pope Urban VIII, he was educated under the close supervision of his father and uncle, eventually graduating in canon and civil law from the University of Pisa in 1623. That same year his uncle, newly elected Pope Urban VIII, appointed him archpriest of St. John Lateran and shortly thereafter made him a cardinal deacon, a position he exchanged for Sant'Agata de' Goti the following year. By age twenty‑six he had become secretary of state and papal legate to Avignon, launching a long diplomatic career for the Papal States.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Barberini’s diplomatic work included missions to Paris and Spain in 1625, where he negotiated with Cardinal Richelieu over the Valtellina conflict and received a set of six Rubens‑designed tapestries from King Louis XIII as a gift. He later led the Papal foreign policy, favoring France during the Thirty Years’ War and the succession dispute over Montferrat. A passionate patron of the arts, he oversaw the transformation of the Sforza palace into the grand Palazzo Barberini, founded the Barberini tapestry workshop in 1627, and supported artists such as Poussin, Cortona, and Bernini. He also served as Grand Inquisitor from 1633 until his death, notably refusing to condemn Galileo, and died in Rome on 10 December 1679.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "As Grand Inquisitor, Barberini was one of only three members of the Roman Inquisition tribunal who refused to condemn Galileo in 1633.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He received a gift of six tapestries designed by Peter Paul Rubens from King Louis XIII of France after his 1625 diplomatic mission to Paris.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Barberini founded the Barberini Tapestry Works (Arazzia Barberini) in 1627, which operated until his death in 1679 and produced tapestries designed by Pietro da Cortona and others.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He played a key role in the construction and decoration of the Palazzo Barberini, commissioning Carlo Maderno and Pietro da Cortona for its architecture and interior frescoes.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1597,
+      "month": 9,
+      "day": 23,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1679,
+      "month": 12,
+      "day": 10,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Francesco_Barberini.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Francesco_Barberini.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Francesco_Barberini.jpg/960px-Francesco_Barberini.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Francesco_Barberini.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Ottavio Leoni",
+    "author": "Ottavio Leoni",
+    "width": 1504,
+    "height": 2126,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Francesco Barberini (1597–1679)",
+    "url": "https://en.wikipedia.org/wiki/Francesco_Barberini_(1597%E2%80%931679)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:120b-cloud",
+    "completedAt": "2026-10-10T01:32:51.435Z"
+  }
+}

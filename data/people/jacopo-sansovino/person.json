@@ -1,0 +1,69 @@
+{
+  "id": "jacopo-sansovino",
+  "name": "Jacopo Sansovino",
+  "wikidataId": "Q202267",
+  "wikipediaTitle": "Jacopo Sansovino",
+  "content": {
+    "description": [
+      {
+        "text": "Jacopo Sansovino was born in Florence on 2 July 1486 as Jacopo Tatti. He apprenticed with the sculptor Andrea Sansovino, whose name he later adopted, and quickly gained a reputation for his skill in marble. While living in Rome, he created a wax model of the Deposition of Christ for Pietro Perugino and, in 1510, was invited by Bramante to produce a wax copy of the Laocoön; Raphael judged Sansovino’s copy to be the best among those made.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1529 Sansovino became chief architect and superintendent of properties (Protomaestro) to the Procurators of San Marco, a position that made him one of Venice’s most influential artists. He designed the Biblioteca Marciana, the most celebrated of his works, and contributed to the Zecca, Loggetta, and numerous churches and palaces around Piazza San Marco. His classicist style, tempered with Venetian love of surface decoration, paved the way for Andrea Palladio’s later architecture. Sansovino died in Venice on 27 November 1570, and his tomb is located in the Baptistery of St. Mark’s Basilica.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 1518 Sansovino wrote a bitter letter of protest to Michelangelo after Michelangelo rejected his proposals for sculpture on the façade of the Church of San Lorenzo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "When appointed Protomaestro in 1529, Sansovino received an annual salary of 80 ducats, which was increased to 180 ducats within a year.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sansovino’s tomb is situated in the Baptistery of St. Mark’s Basilica, a testament to his lasting influence in Venice.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1486,
+      "month": 7,
+      "day": 2,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1570,
+      "month": 11,
+      "day": 27,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Jacopo_Tintoretto_027.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Jacopo_Tintoretto_027.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Jacopo_Tintoretto_027.jpg/960px-Jacopo_Tintoretto_027.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Jacopo_Tintoretto_027.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Jacopo Tintoretto",
+    "author": "Jacopo Tintoretto",
+    "width": 2024,
+    "height": 2405,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Jacopo Sansovino",
+    "url": "https://en.wikipedia.org/wiki/Jacopo_Sansovino"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:26:19.627Z"
+  }
+}

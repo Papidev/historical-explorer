@@ -1,0 +1,60 @@
+{
+  "id": "anastasio-fontebuoni",
+  "name": "Anastasio Fontebuoni",
+  "wikidataId": "Q3615087",
+  "wikipediaTitle": "Anastasio Fontebuoni",
+  "content": {
+    "description": [
+      {
+        "text": "Anastasio Fontebuoni (1571–1626) was an Italian Baroque painter from Florence who became known for his naturalistic style, influenced by the dramatic realism of Caravaggio. Educated in the workshop of Domenico Passignano, Fontebuoni absorbed the Florentine tradition while also embracing the new chiaroscuro techniques that were sweeping Italy at the time.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He spent a productive period in Rome between 1600 and 1620, where he painted for several churches during the pontificate of Paul V. His most celebrated works are the Birth of the Virgin and the Death of the Virgin in San Giovanni dei Fiorentini, alongside frescoes in Santa Prisca, Santa Balbina, Santa Lucia in Selci, and San Giacomo degli Spagnoli. Fontebuoni returned to Florence, where he died at a relatively young age in 1626.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Fontebuoni was among the Florentine painters who were more open to Caravaggio’s naturalism, a departure from the more traditional Florentine style.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He studied under the painter Domenico Passignano, whose influence is evident in Fontebuoni’s early works.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his Roman period, he painted frescoes for the churches of Santa Prisca and Santa Balbina, depicting saints and angels with the instruments of passion.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His frescoes in Santa Lucia in Selci include an Annunciation scene, while in San Giacomo degli Spagnoli he completed vault frescoes.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Fontebuoni’s career was cut short when he died in Florence in 1626, at the age of 55.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1571,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1626,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Anastasio Fontebuoni",
+    "url": "https://en.wikipedia.org/wiki/Anastasio_Fontebuoni"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:17:40.112Z"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "edward-gibbon",
+  "name": "Edward Gibbon",
+  "wikidataId": "Q161841",
+  "wikipediaTitle": "Edward Gibbon",
+  "content": {
+    "description": [
+      {
+        "text": "Edward Gibbon was born in Putney, Surrey, on 8 May 1737, the son of Edward and Judith Gibbon. He was raised in a family that had recovered from the South Sea Bubble, and he received an early education at Dr. Woddeson's school in Kingston and later at Westminster School. A formative episode in his youth was his brief conversion to Roman Catholicism in 1753, prompted by the writings of Conyers Middleton, and his subsequent reconversion to Protestantism the following year after his father threatened to disinherit him. These religious oscillations, coupled with his time spent in Lausanne, Switzerland, where he befriended the French translator Jacques Georges Deyverdun, shaped his intellectual curiosity and laid the groundwork for his later historical work.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Gibbon's magnum opus, The History of the Decline and Fall of the Roman Empire, was published in six volumes between 1776 and 1789. The work earned him critical acclaim and commercial success, and it established him as a leading Enlightenment historian. His style, noted for its irony and rigorous use of primary sources, earned him election to the Royal Society in 1788 and a place among the most respected scholars of his time. Gibbon died on 16 January 1794 in Fletching, East Sussex, after a long struggle with gout and a severe case of scrotal swelling that ultimately led to peritonitis.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "During the Seven Years' War, Gibbon served as a Captain in the South Hampshire Militia, commanding the regiment's Grenadier Company for three years.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1774, Gibbon was initiated as a Freemason of the Premier Grand Lodge of England.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was elected a Fellow of the Royal Society in 1788, with Lord Sheffield as his proposer.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Gibbon's health deteriorated due to gout and a severe case of scrotal swelling, which ultimately caused peritonitis and his death.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1737,
+      "month": 5,
+      "day": 8,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1794,
+      "month": 1,
+      "day": 16,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Edward_Emily_Gibbon.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Edward_Emily_Gibbon.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/de/Edward_Emily_Gibbon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/de/Edward_Emily_Gibbon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Joshua Reynolds",
+    "author": "Joshua Reynolds",
+    "width": 450,
+    "height": 538,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Edward Gibbon",
+    "url": "https://en.wikipedia.org/wiki/Edward_Gibbon"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:51:41.496Z"
+  }
+}

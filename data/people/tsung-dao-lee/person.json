@@ -1,0 +1,85 @@
+{
+  "id": "tsung-dao-lee",
+  "name": "Tsung-Dao Lee",
+  "wikidataId": "Q183679",
+  "wikipediaTitle": "Tsung-Dao Lee",
+  "content": {
+    "description": [
+      {
+        "text": "Tsung-Dao Lee was born in Shanghai on 24 November 1926 into a family that valued education; his father was a chemical industrialist and his grandfather a Methodist pastor.  He began his university studies in chemical engineering at National Chekiang University in 1943, but his talent in physics was quickly recognized and he transferred to the physics department.  The Second Sino‑Japanese War interrupted his education, yet he continued his studies at the National Southwestern Associated University in Kunming under Professor Wu Ta‑You, and in 1946 he went to the United States on a Chinese government fellowship.  Lee earned his PhD under Enrico Fermi at the University of Chicago in 1950, after which he worked at Berkeley before joining Columbia University in 1953, where he remained until his retirement in 2012.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "At Columbia, Lee pioneered the theoretical study of parity violation in weak interactions, a work that led to the Lee–Yang theorem and the 1957 Nobel Prize in Physics shared with Chen Ning Yang.  His research extended to high‑energy neutrino physics, the KLN theorem for handling divergences in massless particles, and the emerging field of relativistic heavy‑ion physics, which later became central to the Relativistic Heavy Ion Collider (RHIC) program.  Lee also contributed to the development of non‑topological solitons, soliton stars, and black hole physics, and he served as director of the RIKEN‑BNL Research Center from 1997 to 2003, overseeing the construction of the QCDSP and QCDOC supercomputers.  He remained active in teaching, research, and international collaboration until his death in 2024.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Lee was the youngest Nobel laureate in the science fields after World War II, winning the prize at age 30 in 1957.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first Chinese physicist to receive a Nobel Prize, sharing the award with Chen Ning Yang.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After becoming a naturalized American citizen in 1963, Lee became the youngest American ever to win a Nobel Prize.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Lee played a key role in establishing the field of relativistic heavy‑ion physics, which now dominates high‑energy nuclear physics research.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "From 1997 to 2003 he directed the RIKEN‑BNL Research Center, where the QCDSP and QCDOC supercomputers were developed for lattice QCD studies.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He founded the Chun‑Tsung Endowment in 1998 to award scholarships to Chinese university students, and the recipients are known as Chun‑Tsung Scholars.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Lee died in San Francisco on 4 August 2024 at the age of 97.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1926,
+      "month": 11,
+      "day": 24,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 2024,
+      "month": 8,
+      "day": 4,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "TD_Lee.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:TD_Lee.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/TD_Lee.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/TD_Lee.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Nobel foundation",
+    "author": "Nobel foundation",
+    "width": 280,
+    "height": 396,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Tsung-Dao Lee",
+    "url": "https://en.wikipedia.org/wiki/Tsung-Dao_Lee"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:29:25.708Z"
+  }
+}

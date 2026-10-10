@@ -1,0 +1,77 @@
+{
+  "id": "peter-doi",
+  "name": "Peter Doi",
+  "wikidataId": "Q919504",
+  "wikipediaTitle": "Peter Doi",
+  "content": {
+    "description": [
+      {
+        "text": "Peter Tatsuo Doi was born in Sendai on 22 December 1892 and was baptized at the age of nine with the name Peter. He studied at the seminary in Sendai and later at the Pontifical Urbaniana University in Rome before being ordained to the priesthood on 1 May 1921.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After serving in pastoral work in Sendai until 1934, Doi became Secretary of the Apostolic Delegation to Japan. He was appointed Archbishop of Tokyo on 2 December 1937, received episcopal consecration on 13 February 1938, and later served as executive director of the National Catholic Central Committee during World War II. In 1960 he was made the first Japanese cardinal, attended the Second Vatican Council, and participated in the 1963 papal conclave that elected Pope Paul VI. He died in Tokyo on 21 February 1970.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Doi was the first Japanese member of the College of Cardinals, a milestone that the Vatican hoped would invigorate the Catholic Church in Japan.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the Second Vatican Council, he assisted in delivering one of the closing messages on 8 December 1965, alongside Cardinal Stefan Wyszyński and Cardinal Paul Peter Meouchi.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as Apostolic Administrator of Yokohama from 1945 to 1947, overseeing the local church during the immediate post‑war period.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1949, Doi dedicated St. Ignatius Church in Tokyo, a significant act of devotion and leadership for the local Catholic community.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was buried in St. Mary's Cathedral in Tokyo after his death at the age of 77.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1892,
+      "month": 12,
+      "day": 22,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1970,
+      "month": 2,
+      "day": 21,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Archbishop_Peter_Doi_in_1938.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Archbishop_Peter_Doi_in_1938.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/Archbishop_Peter_Doi_in_1938.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/Archbishop_Peter_Doi_in_1938.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 404,
+    "height": 531,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Peter Doi",
+    "url": "https://en.wikipedia.org/wiki/Peter_Doi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:15:25.842Z"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "giovanni-bellori",
+  "name": "Giovanni Bellori",
+  "wikidataId": "Q714400",
+  "wikipediaTitle": "Giovanni Pietro Bellori",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Pietro Bellori was born in Rome on 15 January 1613, the son of a farmer named Giacomo, but he was raised and educated by his mother’s employer, the antiquarian Francesco Angeloni, who likely was his biological father. Angeloni’s extensive collection of art, antiquities, and natural history sparked Bellori’s lifelong fascination with the ancient world, and after Angeloni’s death in 1652 Bellori inherited his house on the Pincian Hill, where he lived for the rest of his life. He studied painting under Domenichino, joined the Accademia di San Luca by 1652, and served as its secretary in several terms, while also maintaining friendships with leading artists such as Nicolas Poussin, Carlo Maratta, and François Duquesnoy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Bellori is best remembered for his 1672 publication *Le vite de’ pittori, scultori et architetti moderni*, a collection of artist biographies that championed classical idealism and helped shape the discourse of 17th‑century art criticism. He held the papal post of Commissario delle Antichità from 1670 to 1694, served as librarian and antiquarian to Queen Christina of Sweden between 1677 and 1689, and produced a series of scholarly catalogues of ancient gems, coins, and monuments. Ill health confined him to his home from mid‑1694, and he died on 19 February 1696, being buried in the Church of Sant’Isidoro.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "After Bellori’s death, his modest but carefully curated art collection was purchased jointly by Frederick I of Prussia and Augustus III of Saxony, while his collection of ancient gems and medals eventually reached Dresden and influenced the work of the famed antiquarian Johann Joachim Winckelmann.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1613,
+      "month": 1,
+      "day": 15,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1696,
+      "month": 2,
+      "day": 19,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Carlo_Maratta_-_Portrait_of_Giovan_Pietro_Bellori.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Carlo_Maratta_-_Portrait_of_Giovan_Pietro_Bellori.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Carlo_Maratta_-_Portrait_of_Giovan_Pietro_Bellori.jpg/960px-Carlo_Maratta_-_Portrait_of_Giovan_Pietro_Bellori.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Carlo_Maratta_-_Portrait_of_Giovan_Pietro_Bellori.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Carlo Maratta",
+    "author": "Carlo Maratta",
+    "width": 2500,
+    "height": 3361,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giovanni Pietro Bellori",
+    "url": "https://en.wikipedia.org/wiki/Giovanni_Pietro_Bellori"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:120b-cloud",
+    "completedAt": "2026-10-10T01:32:55.941Z"
+  }
+}

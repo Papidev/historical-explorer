@@ -1,0 +1,77 @@
+{
+  "id": "niccol-sagredo",
+  "name": "Niccolò Sagredo",
+  "wikidataId": "Q1243577",
+  "wikipediaTitle": "Nicolò Sagredo",
+  "content": {
+    "description": [
+      {
+        "text": "Nicolò Sagredo was born in Venice on 18 December 1606 into a family that had been disgraced by his father's desertion at the Battle of Valeggio in 1630. The scandal stalled his early political ambitions, but the Sagredo family later redeemed itself by contributing heroic sacrifices during the Cretan War, which also allowed them to amass considerable wealth. With this newfound respect and fortune, Nicolò served as a diplomat on several embassies for the Most Serene Republic and eventually rose to the position of Procurator of St Mark's.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the death of Doge Domenico II Contarini on 26 January 1675, Sagredo was elected Doge on 6 February 1675. His reign was brief, lasting less than two years, but he is remembered for the lavish celebrations he organized to mark Venice’s traditional marriage with the sea—a ceremony that was noted for its splendor. He died in Venice on 14 August 1676 after a brief coma.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Sagredo’s election as Doge was almost immediate after the death of his predecessor, reflecting the quick political maneuvering typical of Venetian governance.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his short reign, the only notable event was the extravagant ceremony celebrating Venice’s marriage with the sea, which was remembered for its splendor.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Before becoming Doge, Sagredo served as a Procurator of St Mark's, a prestigious position that signaled his rise within the Venetian elite.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His family’s redemption after the Battle of Valeggio was achieved through heroic deaths in the Cretan War, which helped restore their reputation and wealth.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sagredo’s death on 14 August 1676 followed a three‑day coma, ending a brief but ceremonially significant tenure as Doge.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1606,
+      "month": 12,
+      "day": 18,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1676,
+      "month": 8,
+      "day": 14,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Nicolo_sagredo.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Nicolo_sagredo.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Nicolo_sagredo.jpg/960px-Nicolo_sagredo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Nicolo_sagredo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Gerolamo Forabosco",
+    "author": "Gerolamo Forabosco",
+    "width": 1871,
+    "height": 2797,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Nicolò Sagredo",
+    "url": "https://en.wikipedia.org/wiki/Nicol%C3%B2_Sagredo"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:01:45.867Z"
+  }
+}

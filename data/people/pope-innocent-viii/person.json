@@ -1,0 +1,75 @@
+{
+  "id": "pope-innocent-viii",
+  "name": "Pope Innocent VIII",
+  "wikidataId": "Q161351",
+  "wikipediaTitle": "Pope Innocent VIII",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Battista Cybo was born in Genoa in 1432 to a family of Greek ancestry that had served the Neapolitan court. He entered the clergy under the patronage of Cardinal Calandrini, became Bishop of Savona in 1467, and was elevated to the cardinalate by Pope Sixtus IV in 1473. With the support of Giuliano Della Rovere, he was elected pope on 29 August 1484, taking the name Innocent VIII.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his reign he issued the papal bull Summis desiderantes affectibus to empower the Inquisition against witchcraft, held the Ottoman prince Cem in custody while receiving a large ransom from Sultan Bayezid II, and used the papal treasury to fund crusading ventures against the Turks and the Waldensians. His papacy was also marked by nepotism, the construction of the Belvedere, and the controversial handling of slavery and the slave trade.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He issued the papal bull Summis desiderantes affectibus in December 1484, which gave the Inquisition explicit authority to prosecute witchcraft in Germany.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He received 120,000 crowns from Sultan Bayezid II for keeping Cem captive, an amount equal to the Vatican's annual revenue.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He granted the Belvedere of the Vatican, originally intended as a summer residence, which later became the Cortile del Belvedere.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He appointed Angelo Carletti di Chivasso as Apostolic Nuncio in 1491 to negotiate peace with the Waldensians.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first pope to grant formal approval for the local veneration of Catherine of Vadstena in 1484.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1432,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1492,
+      "month": 7,
+      "day": 25,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Ritratto_di_papa_Innocenzo_VIII_–_Calvi_dell'Umbria.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ritratto_di_papa_Innocenzo_VIII_%E2%80%93_Calvi_dell'Umbria.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Ritratto_di_papa_Innocenzo_VIII_%E2%80%93_Calvi_dell%27Umbria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Ritratto_di_papa_Innocenzo_VIII_%E2%80%93_Calvi_dell%27Umbria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "anonymous",
+    "author": "anonymous",
+    "width": 518,
+    "height": 744,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Innocent VIII",
+    "url": "https://en.wikipedia.org/wiki/Pope_Innocent_VIII"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:20:08.522Z"
+  }
+}

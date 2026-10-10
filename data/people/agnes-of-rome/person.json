@@ -1,0 +1,71 @@
+{
+  "id": "agnes-of-rome",
+  "name": "Agnes of Rome",
+  "wikidataId": "Q210096",
+  "wikipediaTitle": "Agnes of Rome",
+  "content": {
+    "description": [
+      {
+        "text": "Agnes of Rome was a Roman Christian adolescent who was martyred during the Diocletian persecution. Born into Roman nobility around 291, she was raised as a Christian and refused to renounce her faith, leading to her execution at the age of 12 or 13 on 21 January 304.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Her martyrdom is recorded by the 4th‑century theologian St Ambrose and later traditions. Agnes is venerated as a virgin martyr, with iconography that includes a lamb, a sword, and a palm branch. Her relics are preserved in Rome: her skull is kept in a chapel of Sant’Agnese in Agone, while her bones lie beneath the altar of Sant’Agnese fuori le mura.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Legend says that while Agnes prayed, her hair grew to cover her body and men who tried to assault her were immediately blinded.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Her foster‑sister Emerentiana was stoned to death a few days after Agnes’s burial for praying at her tomb.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Since the 16th century, the tradition of blessing lambs on Saint Agnes’s feast day has been practiced, with lambs from the Trappist abbey of Tre Fontane in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Agnes’s skull is preserved in a separate chapel of Sant’Agnese in Agone, while her bones are conserved beneath the high altar of the church built over her tomb in Rome.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 291,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 304,
+      "month": 1,
+      "day": 21,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Santa_Agnese_-_mosaico_Santa_Agnese_fuori_le_mura.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Santa_Agnese_-_mosaico_Santa_Agnese_fuori_le_mura.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Santa_Agnese_-_mosaico_Santa_Agnese_fuori_le_mura.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Santa_Agnese_-_mosaico_Santa_Agnese_fuori_le_mura.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 2.0",
+    "attribution": "Parrocchia di Santa Agnese fuori le Mura",
+    "author": "Parrocchia di Santa Agnese fuori le Mura",
+    "width": 365,
+    "height": 600,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Agnes of Rome",
+    "url": "https://en.wikipedia.org/wiki/Agnes_of_Rome"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:08:38.589Z"
+  }
+}

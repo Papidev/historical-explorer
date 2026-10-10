@@ -1,0 +1,69 @@
+{
+  "id": "joseph-marie-martin",
+  "name": "Joseph-Marie Martin",
+  "wikidataId": "Q998427",
+  "wikipediaTitle": "Joseph-Marie Martin",
+  "content": {
+    "description": [
+      {
+        "text": "Joseph‑Marie Martin was born on 9 August 1891 in Orléans and studied at the seminary in Bordeaux. He served in the French Army during the First World War, where he was seriously wounded, and was ordained to the priesthood on 18 December 1920. He carried out pastoral work in the Archdiocese of Bordeaux until 1940, serving as its vicar general from 1937 to 1940.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "On 9 February 1940 he was appointed Bishop of Le Puy‑en‑Velay and was consecrated on 2 April 1940 by Archbishop Maurice Feltin. He became Archbishop of Rouen on 11 October 1948, attended the Second Vatican Council from 1962 to 1965, and was elevated to the cardinalate on 22 February 1965 by Pope Paul VI. He resigned as archbishop on 29 May 1968, lost the right to participate in a papal conclave at age 80, and died in Rouen on 21 January 1976, where he was interred in the metropolitan cathedral.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He originally carried the name Eugene but later dropped it.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the First World War he was seriously wounded while serving in the French Army.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He survived several days buried in snow in the Pyrenees.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1891,
+      "month": 8,
+      "day": 9,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1976,
+      "month": 1,
+      "day": 21,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Coat_of_arms_of_Joseph-Marie_Martin.svg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_Joseph-Marie_Martin.svg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Coat_of_arms_of_Joseph-Marie_Martin.svg/960px-Coat_of_arms_of_Joseph-Marie_Martin.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Coat_of_arms_of_Joseph-Marie_Martin.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "This vector image includes elements that have been taken or adapted from this file:",
+    "author": "This vector image includes elements that have been taken or adapted from this file:",
+    "width": 1150,
+    "height": 1226,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Joseph-Marie Martin",
+    "url": "https://en.wikipedia.org/wiki/Joseph-Marie_Martin"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:43:43.853Z"
+  }
+}

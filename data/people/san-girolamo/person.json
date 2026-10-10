@@ -1,0 +1,73 @@
+{
+  "id": "san-girolamo",
+  "name": "San Girolamo",
+  "wikidataId": "Q44248",
+  "wikipediaTitle": "San Girolamo",
+  "content": {
+    "description": [
+      {
+        "text": "San Girolamo was born in the village of Stridone, a settlement that was later destroyed by the Goths at the border between Pannonia and Dalmatia.  As a young man he was sent to Rome, where he studied rhetoric under Mario Vittorino and Elio Donato, and was baptized at the age of nineteen by Pope Liberio.  His early years were marked by a restless pursuit of knowledge, leading him to travel to Treviri, Aquileia, and eventually Antioch, where he encountered the theological controversies of the time and began to immerse himself in the study of Hebrew and Greek.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Girolamo’s most enduring contribution was the translation of the entire Hebrew Bible into Latin, a monumental task that began in 382 under the commission of Pope Damaso I and was completed after 23 years.  His work on the Vulgate established a standard text that would serve as the basis for all subsequent Latin translations of the Scriptures for centuries.  Beyond his linguistic achievements, he was a vigorous polemicist against Pelagianism, a patron of translators, and is remembered as the patron saint of archaeologists and scholars of antiquity.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Girolamo translated not only the New Testament but also the entire Hebrew Old Testament, making him the first to render the complete Hebrew canon into Latin.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He is commemorated on 30 September in the Roman Martyrology.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The legend of a lion healing a wound on Girolamo’s foot is actually a misattribution from the story of Saint Gerasimus; the lion legend belongs to Gerasimus, not Girolamo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Girolamo was a critic of Pelagianism and corresponded with Augustine on the subject, even sending a letter to Pope Innocent I to seek intervention against Pelagian heresy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as a presbyter in Antioch and later as a secretary to Pope Damaso I in Rome, positioning him at the center of early Church intellectual life.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Girolamo is considered the patron saint of translators and of archaeologists, reflecting his scholarly pursuits and his dedication to the accurate transmission of biblical texts.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 420,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Francisco_de_Zurbarán_041.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Francisco_de_Zurbar%C3%A1n_041.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Francisco_de_Zurbar%C3%A1n_041.jpg/960px-Francisco_de_Zurbar%C3%A1n_041.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/28/Francisco_de_Zurbar%C3%A1n_041.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC0",
+    "attribution": "Francisco de Zurbarán",
+    "author": "Francisco de Zurbarán",
+    "width": 1595,
+    "height": 2971,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "San Girolamo",
+    "url": "https://it.wikipedia.org/wiki/San_Girolamo"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:46:07.889Z"
+  }
+}

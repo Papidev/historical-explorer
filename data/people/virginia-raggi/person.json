@@ -1,0 +1,67 @@
+{
+  "id": "virginia-raggi",
+  "name": "Virginia Raggi",
+  "wikidataId": "Q23766020",
+  "wikipediaTitle": "Virginia Raggi",
+  "content": {
+    "description": [
+      {
+        "text": "Virginia Elena Raggi was born on 18 July 1978 in the Appio‑Latino quarter of Rome. She studied law at Roma Tre University, specialising in civil law, and entered politics through local neighbourhood boards before joining the Five Star Movement in 2011. In 2013 she was elected to the Rome city council, becoming one of four M5S members to hold a seat, and she later won the party’s closed primary for mayor in 2016.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Raggi was elected mayor of Rome in June 2016, becoming the city’s first woman and the first member of the Five Star Movement to hold the office. During her term she withdrew Rome’s bid for the 2024 Summer Olympics, citing the city’s debt, and faced criticism over public transport and waste management. She also proposed, and later abandoned, a plan to collect coins from the Trevi Fountain for municipal funding.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "She was the first woman elected as mayor of Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She was the first member of the Five Star Movement to become mayor of Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She withdrew Rome’s bid for the 2024 Summer Olympics, arguing the city could not afford the debt.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She proposed collecting coins from the Trevi Fountain for municipal funding, but the idea was scrapped after backlash.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1978,
+      "month": 7,
+      "day": 18,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Virginia_Raggi_-_Festival_Economia_2016.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Virginia_Raggi_-_Festival_Economia_2016.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Virginia_Raggi_-_Festival_Economia_2016.jpg/960px-Virginia_Raggi_-_Festival_Economia_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Virginia_Raggi_-_Festival_Economia_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Niccolò Caranti",
+    "author": "Niccolò Caranti",
+    "width": 2163,
+    "height": 3024,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Virginia Raggi",
+    "url": "https://en.wikipedia.org/wiki/Virginia_Raggi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:05:29.161Z"
+  }
+}

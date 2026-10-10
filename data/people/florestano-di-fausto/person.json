@@ -1,0 +1,61 @@
+{
+  "id": "florestano-di-fausto",
+  "name": "Florestano Di Fausto",
+  "wikidataId": "Q472250",
+  "wikipediaTitle": "Florestano Di Fausto",
+  "content": {
+    "description": [
+      {
+        "text": "Florestano Di Fausto was born on 16 July 1890 in Rocca Canterano, near Rome, and studied architecture and civil engineering at the Accademia di Belle Arti before turning to a career that blended design, engineering and politics. His early commissions included the architectural part of Pope Pius X’s tomb in St. Peter’s Basilica and the Calvary chapel in Santa Croce in Gerusalemme, and he soon became a technical consultant for the Ministry of Foreign Affairs, designing Italian embassies and cultural institutes across Europe, Africa and the Americas.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Di Fausto’s most celebrated work came in the 1920s and 1930s when he was appointed the chief architect for Italy’s overseas territories, especially the Aegean Islands and Libya. He produced the garden‑city plan of Rhodes, the Venetian‑Gothic Palazzo del Governo, the neo‑Renaissance post office, and the grand Mercato nuovo, all of which blended Byzantine, Ottoman, Roman and Venetian motifs to suit the islands’ multi‑ethnic population. In Tripoli he drafted the city plan, the Piazza Castello, and the Al Waddan complex, while in Albania he designed the city plan of Tirana and royal villas for King Zog I, cementing his reputation as the “architect of the Mediterranean.”",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "During the 1920s, Di Fausto was also responsible for redesigning the town of Predappio, Mussolini’s birthplace, after a landslide threatened the original settlement; he created an idealised rural village that reflected the dictator’s vision of a simple, pastoral Italy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1890,
+      "month": 7,
+      "day": 16,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1965,
+      "month": 1,
+      "day": 11,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Florestano_Di_Fausto_01.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Florestano_Di_Fausto_01.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Florestano_Di_Fausto_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Florestano_Di_Fausto_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 320,
+    "height": 305,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Florestano Di Fausto",
+    "url": "https://en.wikipedia.org/wiki/Florestano_Di_Fausto"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:26:02.892Z"
+  }
+}

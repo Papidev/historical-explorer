@@ -1,0 +1,73 @@
+{
+  "id": "l-szl-l-kai",
+  "name": "László Lékai",
+  "wikidataId": "Q664519",
+  "wikipediaTitle": "László Lékai",
+  "content": {
+    "description": [
+      {
+        "text": "László Lékai was born on 12 March 1910 in Hungary. He was ordained to the priesthood on 28 September 1934 and spent the next decade teaching at the Seminary of Veszprém while also carrying out pastoral duties in the diocese. During this period he served as private secretary to Bishop József Mindszenty, who would later become a cardinal. In the final months of World II, Lékai was imprisoned by the Nazis from November 1944 until February 1945.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the war he was named a Privy chamberlain supernumerary in January 1946. His episcopal career began in 1972 when he was appointed titular Bishop of Giro di Tarasio and apostolic administrator of Veszprém. Two years later he became apostolic administrator of Esztergom, and in 1976 Pope Paul VI appointed him Metropolitan and Primate of Esztergom. That same year he was elevated to the College of Cardinals as Cardinal‑Priest of S. Teresa al Corso d'Italia, and he participated in both conclaves of 1978 that elected the next two popes.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was imprisoned in a Nazi prison from November 1944 to February 1945.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as private secretary to the future Cardinal József Mindszenty.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was appointed a Privy chamberlain supernumerary on 22 January 1946.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He took part in the conclaves of 25–26 August 1978 and 14–16 October 1978.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1910,
+      "month": 3,
+      "day": 12,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1986,
+      "month": 6,
+      "day": 30,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Laszlolekai.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Laszlolekai.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Laszlolekai.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Laszlolekai.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Ernmuhl at lb.wikipedia",
+    "author": "Ernmuhl at lb.wikipedia",
+    "width": 541,
+    "height": 802,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "László Lékai",
+    "url": "https://en.wikipedia.org/wiki/L%C3%A1szl%C3%B3_L%C3%A9kai"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:44:05.315Z"
+  }
+}

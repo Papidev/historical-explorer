@@ -1,0 +1,65 @@
+{
+  "id": "pope-alexander-i",
+  "name": "Pope Alexander I",
+  "wikidataId": "Q80028",
+  "wikipediaTitle": "Pope Alexander I",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Alexander I served as bishop of Rome from roughly 108 to 116 AD, a period that remains contested by scholars. The 2012 Annuario Pontificio places his pontificate between 108/09 and 116/19, while other sources suggest he began around 108/109 and died around 118/119, giving him a decade‑long reign. Some traditions claim he was martyred under the emperors Trajan or Hadrian, though the evidence for this is uncertain.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "According to the Liber Pontificalis, Alexander is credited with inserting the narration of the Last Supper into the Mass, a claim later disputed by Catholic scholars who view it as a later fabrication. He is also associated with early liturgical practices such as the use of blessed water mixed with salt to protect homes from evil and the mixing of water with sacramental wine. Legends further describe his miraculous conversion of the Roman governor Hermes and his household of 1,500 people, as well as a vision of the infant Jesus, and his remains were transferred to Freising in 834 AD.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He is credited with introducing the custom of using blessed water mixed with salt for the purification of Christian homes from evil influences.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Legend says he converted the Roman governor Hermes and his entire household of 1,500 people during Emperor Hadrian’s reign.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His remains were transferred to Freising in Bavaria, Germany in AD 834.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Some editions of the Roman Missal identified him with a martyr named Alexander commemorated with Eventius and Theodulus on 3 May, though later revisions clarified that he was not one of those martyrs.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 115,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Sanctus_Alexander_Papa_Sancta_Maria_Antiqua(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Sanctus_Alexander_Papa_Sancta_Maria_Antiqua(cropped).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Sanctus_Alexander_Papa_Sancta_Maria_Antiqua%28cropped%29.jpg/960px-Sanctus_Alexander_Papa_Sancta_Maria_Antiqua%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/Sanctus_Alexander_Papa_Sancta_Maria_Antiqua%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Alekjds",
+    "author": "Alekjds",
+    "width": 1461,
+    "height": 1948,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Alexander I",
+    "url": "https://en.wikipedia.org/wiki/Pope_Alexander_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:35:59.705Z"
+  }
+}

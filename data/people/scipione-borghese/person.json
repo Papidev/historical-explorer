@@ -1,0 +1,73 @@
+{
+  "id": "scipione-borghese",
+  "name": "Scipione Borghese",
+  "wikidataId": "Q452570",
+  "wikipediaTitle": "Scipione Borghese",
+  "content": {
+    "description": [
+      {
+        "text": "Scipione Caffarelli‑Borghese was born on 1 September 1577 in Artena, the son of Francesco Caffarelli and Ortensia Borghese.  After his father’s financial troubles, his education was paid for by his maternal uncle, Camillo Borghese, who later became Pope Paul V.  In 1605 the pope elevated Scipione to the cardinalate, giving him the right to use the Borghese name and coat of arms.  As the Pope’s nephew, Scipione wielded enormous influence as secretary of the papal government and governor of the Papal States, using the family’s banking fortune to purchase abandoned properties and expand the Borghese estate, while directing the funds toward the restoration of churches, roads, aqueducts and the excavation of ancient sites in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Scipione’s most lasting legacy is the art collection he assembled for the Villa Borghese, which became the nucleus of the modern Galleria Borghese.  He was a decisive patron of the young artists Caravaggio and Gian Lorenzo Bernini, acquiring masterpieces such as Caravaggio’s “Boy with a Basket of Fruit” and “Sick Bacchus” and commissioning Bernini’s marble works Apollo and Daphne and David.  He also oversaw the development of elaborate gardens at the Palazzo Borghese on the Quirinal and the Villa Borghese, incorporating waterfalls and dense groves, and restored several churches, including San Sebastiano fuori le mura and San Crisogono, leaving his heraldic symbols on their façades.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Scipione’s patronage of Caravaggio and Bernini helped launch their careers and established the Baroque style in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He used his position as Cardinal Nephew to purchase abandoned properties and villages, such as Montefortino and Olevano Romano, for the Borghese family.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The core of the Galleria Borghese collection, including Caravaggio’s “Boy with a Basket of Fruit” and “Sick Bacchus,” was assembled by Scipione in the early 17th century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Contemporary accounts describe a scandalous relationship between Scipione and Stefano Pignatelli, which caused jealousy among the papal court and led to Pignatelli’s eventual ordination as a cardinal.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1577,
+      "month": 9,
+      "day": 1,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1633,
+      "month": 10,
+      "day": 2,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Portrait_of_Cardinal_Scipione_Borghese_(by_Ottavio_Leoni).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_Cardinal_Scipione_Borghese_(by_Ottavio_Leoni).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Portrait_of_Cardinal_Scipione_Borghese_%28by_Ottavio_Leoni%29.jpg/960px-Portrait_of_Cardinal_Scipione_Borghese_%28by_Ottavio_Leoni%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/96/Portrait_of_Cardinal_Scipione_Borghese_%28by_Ottavio_Leoni%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Ottavio Leoni",
+    "author": "Ottavio Leoni",
+    "width": 1149,
+    "height": 1503,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Scipione Borghese",
+    "url": "https://en.wikipedia.org/wiki/Scipione_Borghese"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:06:41.165Z"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "introduction": {
+    "text": "The Aula Regia is the great hall of the Flavian Palace on Rome's Palatine Hill, completed in 92 AD. It is a key example of Roman imperial architecture and the model for medieval audience halls across Europe.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-1",
+        "description": "The Aula Regia of the Flavian Palace was completed in 92 AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 92,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-2",
+        "description": "The Aula Palatina in Trier was completed in 311 AD under Constantine the Great.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 311,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-3",
+        "description": "The Imperial Palace of Ingelheim was built around 780 AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 780,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-4",
+        "description": "Santa María del Naranco was constructed around 850 AD as an aula regia for Ramiro I of Asturias.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 850,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "The aula regia follows a single‑nave plan, unlike the basilica style. It features an apse where the ruler’s throne would be, and an entrance opposite the throne. The hall’s layout influenced later Christian church architecture.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Constantine the Great",
+      "personId": "constantine-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Helena, mother of Constantine I",
+      "personId": "helena-mother-of-constantine-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ramiro I of Asturias",
+      "personId": "ramiro-i-of-asturias",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

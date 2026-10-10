@@ -1,0 +1,49 @@
+{
+  "id": "janus",
+  "name": "Janus",
+  "wikidataId": "Q167685",
+  "wikipediaTitle": "Janus",
+  "content": {
+    "description": [
+      {
+        "text": "Janus is the Roman god of beginnings, gates, transitions, time, duality, doorways, passages, frames, and endings. He is usually depicted as having a two‑faced head, symbolising his control over past and future. The month of January is named after him, reflecting his role as the guardian of new beginnings.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Janus presided over the start and end of conflict, so the gates of the Temple of Janus in Rome were opened in times of war and closed to mark peace. He was invoked at the beginning of every ceremony, regardless of the main deity honoured, and he had no dedicated flamen; the rex sacrorum performed his rites.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Janus is the only Roman deity traditionally depicted with two faces, a visual motif that has influenced modern symbols of duality such as the Janus particle in physics.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Museo-etrusco-di-villa-giulia---giano_32493359611_o.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Museo-etrusco-di-villa-giulia---giano_32493359611_o.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Museo-etrusco-di-villa-giulia---giano_32493359611_o.jpg/960px-Museo-etrusco-di-villa-giulia---giano_32493359611_o.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Museo-etrusco-di-villa-giulia---giano_32493359611_o.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Giuseppe Savo",
+    "author": "Giuseppe Savo",
+    "width": 3472,
+    "height": 3472,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Janus",
+    "url": "https://en.wikipedia.org/wiki/Janus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:56:02.573Z"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Appia_antica_2-7-05_003.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Appia_antica_2-7-05_003.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Appia_antica_2-7-05_003.jpg/960px-Appia_antica_2-7-05_003.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/92/Appia_antica_2-7-05_003.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Nick",
+      "author": "Nick",
+      "width": 1712,
+      "height": 2288,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Moscioni,_Romualdo_(1849-1925)_-_n._0963_-_Arco_di_Druso_-_Roma.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Moscioni%2C_Romualdo_(1849-1925)_-_n._0963_-_Arco_di_Druso_-_Roma.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Moscioni%2C_Romualdo_%281849-1925%29_-_n._0963_-_Arco_di_Druso_-_Roma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Moscioni%2C_Romualdo_%281849-1925%29_-_n._0963_-_Arco_di_Druso_-_Roma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Romualdo Moscioni (1849-1925).",
+      "author": "Romualdo Moscioni (1849-1925).",
+      "width": 662,
+      "height": 935,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "1982-10-05_Arch_of_Drusus.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:1982-10-05_Arch_of_Drusus.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/1982-10-05_Arch_of_Drusus.jpg/960px-1982-10-05_Arch_of_Drusus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/1982-10-05_Arch_of_Drusus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "photo by David Cooper, 5 October 1982",
+      "author": "photo by David Cooper, 5 October 1982",
+      "width": 2085,
+      "height": 2929,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Appia_antica_2-7-05_003.jpg"
+}

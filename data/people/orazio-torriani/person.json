@@ -1,0 +1,69 @@
+{
+  "id": "orazio-torriani",
+  "name": "Orazio Torriani",
+  "wikidataId": "Q3884944",
+  "wikipediaTitle": "Orazio Torriani",
+  "content": {
+    "description": [
+      {
+        "text": "Orazio Torriani, born in 1578, was an Italian architect and sculptor whose career unfolded in Rome during the early Baroque period. Though the precise nature of his kinship with the earlier architect Nicola Torriani remains uncertain—whether they were brothers or father and son—Orazio established his own reputation through a series of significant commissions. In 1602 he undertook the reconstruction of the church of San Lorenzo in Miranda, integrating the ancient cella of the Temple of Antoninus and Faustina into a renewed ecclesiastical space. Two decades later, in 1624, he designed the imposing façade for the basilica of San Bartolomeo all'Isola on the Tiber Island, a project commissioned by Cardinal Trescio.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Torriani's influence extended beyond permanent architecture into the realm of artistic collaboration and temporary spectacle. His 1654 double staircase and balustrade at the church of Santi Domenico e Sisto became the subject of a celebrated oil painting and pencil sketches by American artist John Singer Sargent in 1906, an image that later informed Sargent's portrait of Harvard president Charles William Eliot. In the same period he raised the floor level of the church of Santi Cosma e Damiano under the patronage of Urban VIII Barberini, and he oversaw the construction of San Francesco di Paola between 1624 and 1630. His design of the aedicular altar at Sant'Agostino in 1627—often credited to Bernini—demonstrates his capacity to blend sculptural detail with architectural form. Additionally, Torriani contributed to the façade of the Jesuit church of Sant'Ignazio, offering critical assessments of competing designs, and he produced more than thirty drawings now preserved in the Kunstbibliothek Berlin. His creative reach even touched ceremonial architecture, as evidenced by his design of a thalamus for the 1625 Feast of the Rosary procession at Santa Maria sopra Minerva, an open‑work domed baldachin supported by Solomonic columns.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The staircase and balustrade at Santi Domenico e Sisto were painted by John Singer Sargent in 1906, and the pencil sketches are housed in Harvard University's Fogg Museum.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The aedicular altar at Sant'Agostino, often attributed to Bernini, was actually designed by Torriani.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Torriani produced more than thirty drawings that are conserved in the Kunstbibliothek Berlin.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He designed a thalamus for the 1625 Feast of the Rosary procession at Santa Maria sopra Minerva, an open‑work domed baldachin supported by Solomonic columns.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1578,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1657,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Roma-san_bartolomeo_all'isola.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Roma-san_bartolomeo_all'isola.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Roma-san_bartolomeo_all%27isola.jpg/960px-Roma-san_bartolomeo_all%27isola.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/Roma-san_bartolomeo_all%27isola.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 2.0",
+    "attribution": "sonofgroucho",
+    "author": "sonofgroucho",
+    "width": 1248,
+    "height": 943,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Orazio Torriani",
+    "url": "https://en.wikipedia.org/wiki/Orazio_Torriani"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:02:20.062Z"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "antonio-del-duca",
+  "name": "Antonio del Duca",
+  "wikidataId": "Q4777084",
+  "wikipediaTitle": "Antonio del Duca",
+  "content": {
+    "description": [
+      {
+        "text": "Antonio del Duca, also known as Lo Duca, was a Sicilian friar born in Cefalù in 1491 who became deeply fascinated with angelic worship. After serving as choirmaster in Palermo’s cathedral from 1513 to 1515, he discovered an ancient icon of the Seven Angelic Princes in the small Church of Sant'Angelo, an event that set him on a lifelong mission to secure official recognition for the Sette Principi angelici.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His relentless advocacy led him to Rome, where he served as chaplain to Cardinal Ciocchi del Monte and later to the ambassador of Charles V, always seeking papal approval for his liturgy. In 1541 he reported a beatific vision of the Seven Martyr Saints within the ruins of the Baths of Diocletian, and he inscribed the names of the Seven Archangels on seven red granite Roman columns. This devotion culminated in Pope Pius IV’s 1561 authorization of the construction of Santa Maria degli Angeli e dei Martiri, a church dedicated to the Virgin, all angels, and the martyrs, with the design attributed to Michelangelo.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Del Duca’s first major role was as choirmaster at Palermo’s cathedral, a position he held from 1513 to 1515 before discovering the icon that sparked his angelic crusade.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He personally inscribed the names of the Seven Archangels—Michael, Raphael, Gabriel, Selaphiel, Jegudiel, Barachiel, and Uriel—onto seven red granite Roman columns in the caldarium of the Baths of Diocletian.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1541, while in Rome, he claimed to have seen the Seven Martyr Saints—Saturnino, Ciriaco, Largo, Smaragdo, Sisinnio, Trasone, and Pope Marcellus I—in a white light within the ruins of the Baths of Diocletian, an experience that intensified his determination to build a church there.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1491,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1564,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Antonio del Duca",
+    "url": "https://en.wikipedia.org/wiki/Antonio_del_Duca"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:28:30.236Z"
+  }
+}

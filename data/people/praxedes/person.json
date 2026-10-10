@@ -1,0 +1,69 @@
+{
+  "id": "praxedes",
+  "name": "Praxedes",
+  "wikidataId": "Q676485",
+  "wikipediaTitle": "Praxedes",
+  "content": {
+    "description": [
+      {
+        "text": "Praxedes, a Roman maiden of the second century, was a saint and virgin who, together with her sister Pudentiana, devoted her life to caring for the poor and persecuted Christians in the Roman Empire.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After her father Pudens converted to Christianity, Praxedes and Pudentiana inherited their family fortune and used it to bury martyrs, provide for the needy, and hide Christians in their home, actions that earned them veneration in Rome from the fourth century onward.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Both sisters were buried in the Catacomb of Priscilla, a burial site that served Christian communities from the late second to the fourth century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The feast day of Saint Praxedes is celebrated on July 21.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Several churches are dedicated to Praxedes, including Santa Prassede in Rome, Santa Prassede in Todi, Santa Praxedes in Cagayan, and Sainte-Praxède in Quebec.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In the Basilica of Saint Praxedes, a mosaic in the apse depicts the sisters offering their crowns to Christ, while Praxedes is shown squeezing the blood of martyrs into a vessel.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 149,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 165,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "SaintPraxedisJohannesVermeerPainting.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:SaintPraxedisJohannesVermeerPainting.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/SaintPraxedisJohannesVermeerPainting.jpg/960px-SaintPraxedisJohannesVermeerPainting.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/SaintPraxedisJohannesVermeerPainting.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Attributed to Johannes Vermeer",
+    "author": "Attributed to Johannes Vermeer",
+    "width": 2580,
+    "height": 3206,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Praxedes",
+    "url": "https://en.wikipedia.org/wiki/Praxedes"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:36:54.296Z"
+  }
+}

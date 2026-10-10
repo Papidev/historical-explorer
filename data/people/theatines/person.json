@@ -1,0 +1,61 @@
+{
+  "id": "theatines",
+  "name": "Theatines",
+  "wikidataId": "Q1414924",
+  "wikipediaTitle": "Theatines",
+  "content": {
+    "description": [
+      {
+        "text": "The Theatines, officially the Congregation of Clerics Regular, were founded on 24 June 1524 by Saint Cajetan, Archbishop Gian Pietro Carafa (later Pope Paul IV), Paolo Consiglieri, and Bonifacio da Colle. The order was established under a papal brief from Pope Clement VII and was formally inaugurated on 14 September 1524, the feast of the Exaltation of the Holy Cross, when the first members made solemn profession before the altar of St. Peter’s Basilica in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Theatines sought to combine evangelical perfection with pastoral ministry, aiming to reform the clergy by emulating the apostolic life and encouraging virtue among the laity. They adopted the Cross of Christ as their emblem, wore simple black cassocks, and maintained a modest, austere lifestyle. Over the next two centuries they founded churches, hospitals, and oratories, established the first papal missions in regions such as Golconda, Ava, Peru, Mingrelia, the East Indies, Arabia, and Armenia, and eventually faced decline by the late eighteenth century due to political upheavals and the lack of institutional property.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Theatines were the first Catholic order to establish papal missions in Golconda (present‑day India), Ava (Burma), Peru, Mingrelia (Georgia), the East Indies, Arabia, Armenia, and Persia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Their emblem was the Cross of Christ, which they adopted as a distinctive symbol and used on their churches and insignia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The order’s members wore simple black cassocks and lived a modest, austere life, setting them apart from other contemporary religious orders.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1644, under the patronage of Cardinal Mazarin, the Theatines built the Church of St. Anne la Royale opposite the Louvre in Paris, a notable example of their architectural influence in France.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Francesco_Solimena_-_Estasi_di_San_Gaetano_da_Thiene.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Francesco_Solimena_-_Estasi_di_San_Gaetano_da_Thiene.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Francesco_Solimena_-_Estasi_di_San_Gaetano_da_Thiene.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Francesco_Solimena_-_Estasi_di_San_Gaetano_da_Thiene.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Francesco Solimena",
+    "author": "Francesco Solimena",
+    "width": 385,
+    "height": 685,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Theatines",
+    "url": "https://en.wikipedia.org/wiki/Theatines"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:10:25.917Z"
+  }
+}

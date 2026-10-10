@@ -1,0 +1,77 @@
+{
+  "id": "pope-pius-x",
+  "name": "Pope Pius X",
+  "wikidataId": "Q43739",
+  "wikipediaTitle": "Pope Pius X",
+  "content": {
+    "description": [
+      {
+        "text": "Giuseppe Melchiorre Sarto was born on 2 June 1835 in the small village of Riese in the Austrian Empire, the son of a postman and a mother who valued education despite their poverty. After a long walk to school and a scholarship to the Seminary of Padua, he was ordained a priest in 1858 and later became Bishop of Mantua in 1884. In the conclave of 1903 he was elected Pope, taking the name Pius X, and he chose the motto Instaurare omnia in Christo, promising to restore all things in Christ while living a life of personal poverty and simplicity that earned him the nickname “Pope of the Blessed Sacrament.”",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his pontificate he pushed a series of reforms that reshaped Catholic practice: he lowered the age for First Communion from 12 to 7, encouraged frequent reception of the Eucharist, and issued the motu proprio Tra le sollecitudini to revive Gregorian chant. He also launched a vigorous anti‑Modernist campaign, requiring all clerics to take the oath of fidelity and condemning 65 propositions in 1907. His administrative work culminated in the preparation of the 1917 Code of Canon Law, and after his death he was beatified in 1951 and canonized in 1954, becoming the first pope to be canonized since Pius V.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was known for giving sermons from the pulpit, a rare practice at the time.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the 1908 Messina earthquake he filled the Apostolic Palace with refugees before the Italian government acted.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the last pope without a doctorate until Pope Francis.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first pope to lower the age for First Communion, setting it at seven years old.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was known for his simple cassock and would sometimes wipe his pen on it, a habit that amused his aides.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1835,
+      "month": 6,
+      "day": 2,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1914,
+      "month": 8,
+      "day": 20,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pius_X,_by_Ernest_Walter_Histed_(retouched).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pius_X%2C_by_Ernest_Walter_Histed_(retouched).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Pius_X%2C_by_Ernest_Walter_Histed_%28retouched%29.jpg/960px-Pius_X%2C_by_Ernest_Walter_Histed_%28retouched%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/26/Pius_X%2C_by_Ernest_Walter_Histed_%28retouched%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Ernest Walter Histed",
+    "author": "Ernest Walter Histed",
+    "width": 2450,
+    "height": 3072,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Pius X",
+    "url": "https://en.wikipedia.org/wiki/Pope_Pius_X"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:42:46.679Z"
+  }
+}

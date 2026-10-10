@@ -1,0 +1,248 @@
+{
+  "introduction": {
+    "text": "The Basilica di Santa Cecilia in Trastevere is a titular church and minor basilica in Rome dedicated to Saint Cecilia, patron saint of music. It has served as a cardinal titular church since the 5th century and is renowned for its rich history, architectural features, and artistic treasures, including mosaics, frescoes, and relics that attract pilgrims and musicians worldwide.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "founding-urban-i",
+        "description": "The first church on the site was founded by Pope Urban I in the 3rd century, dedicated to Saint Cecilia.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 200,
+          "precision": "approximate",
+          "endYear": 299,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "synod-499",
+        "description": "The church is mentioned as Titulus Ceciliae at the Synod of 499.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 499,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "vigilius-545",
+        "description": "Pope Vigilius celebrated the feast of Saint Cecilia in the church in 545.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 545,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "paschal-rebuild-822",
+        "description": "Pope Paschal I rebuilt the church in 822 and moved the relics of St. Cecilia.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 822,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "gregory-vii-1080",
+        "description": "Pope Gregory VII dedicated the altar in the crypt on 3 June 1080.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1080,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "last-judgment-13th-century",
+        "description": "Cavallini's Last Judgment fresco was painted in the late 13th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1200,
+          "precision": "approximate",
+          "endYear": 1299,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "ciborium-1293",
+        "description": "The ciborium by Arnolfo di Cambio was erected in 1293.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1293,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "del-massaro-1470",
+        "description": "Antonio del Massaro frescoed the Cappella dei Ponziani in 1470.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1470,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "benedictine-1527",
+        "description": "A community of Benedictine nuns began living in the adjacent monastery in 1527.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1527,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "maderno-1600",
+        "description": "Stefano Maderno sculpted the marble statue of St. Cecilia in 1600.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1600,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "reni-1603",
+        "description": "Guido Reni painted two altarpieces in 1603.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1603,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "fuga-1725",
+        "description": "Ferdinando Fuga designed the façade in 1725.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1725,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "conca-1727",
+        "description": "Sebastiano Conca painted the Apotheosis of Santa Cecilia fresco in 1727.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1727,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "façade-courtyard",
+        "description": "The 1725 façade by Ferdinando Fuga encloses a courtyard decorated with ancient mosaics, columns, and a cantharus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "apse-mosaics",
+        "description": "9th century mosaics in the apse depict the Redeemer with Saints Paul, Cecilia, Paschal I, Peter, Valerian, and Agatha.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "crypt-cosmatesque",
+        "description": "The crypt is decorated in cosmatesque style and houses relics of St. Cecilia and St. Valerian.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "ciborium-altar",
+        "description": "The ciborium by Arnolfo di Cambio shelters the main altar and contains a glass case with the marble sculpture of St. Cecilia by Stefano Maderno.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "last-judgment-fresco",
+        "description": "Cavallini's Last Judgment fresco covers the west wall of the entrance and was rediscovered in 1900.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "apse-mosaic-art",
+        "description": "The 9th century apse mosaics are a key artistic feature of the basilica.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "vanvitelli-altar",
+        "description": "Luigi Vanvitelli's altarpiece and fresco in the Chapel of the Relics showcase Baroque artistry.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "conca-fresco",
+        "description": "Sebastiano Conca's 1727 Apotheosis of Santa Cecilia fresco adorns the nave.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "reni-altarpieces",
+        "description": "Guido Reni painted two altarpieces in 1603: Saints Valerian and Cecilia and Decapitation of Saint Cecilia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "maderno-sculpture",
+        "description": "Stefano Maderno's 1600 marble sculpture of St. Cecilia is displayed under the main altar.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Saint Cecilia",
+      "personId": "saint-cecilia",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Paschal I",
+      "personId": "pope-paschal-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Urban I",
+      "personId": "pope-urban-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pietro Cavallini",
+      "personId": "pietro-cavallini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ferdinando Fuga",
+      "personId": "ferdinando-fuga",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Arnolfo di Cambio",
+      "personId": "arnolfo-di-cambio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Guido Reni",
+      "personId": "guido-reni",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Stefano Maderno",
+      "personId": "stefano-maderno",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Luigi Vanvitelli",
+      "personId": "luigi-vanvitelli",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Stephen III",
+      "personId": "pope-stephen-iii",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

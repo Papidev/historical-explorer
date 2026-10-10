@@ -1,0 +1,69 @@
+{
+  "id": "geta-emperor",
+  "name": "Geta",
+  "wikidataId": "Q183089",
+  "wikipediaTitle": "Geta (emperor)",
+  "content": {
+    "description": [
+      {
+        "text": "Publius Septimius Geta was born on 7 March 189 in either Rome or Mediolanum, the younger son of Emperor Septimius Severus and his second wife Julia Domna. He was raised to the rank of caesar on 28 January 198 and later received the title of augustus in late 209, signalling his status as heir to the imperial throne.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After Severus’s death in February 211, Geta and his older brother Caracalla were proclaimed joint emperors. Their co‑rule quickly deteriorated into a tense standoff, with the brothers refusing to share a single residence or meal. Caracalla ultimately murdered Geta on 26 December 211, ordering a thorough damnatio memoriae that erased most of the emperor’s public images.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "During the joint reign, the Imperial Palace was physically divided into two separate sections, each guarded by its own military contingent, and neither brother allowed the other’s servants into his own quarters.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Caracalla’s attempt to kill Geta during the festival of Saturnalia on 17 December 211 failed, leading to a final confrontation arranged by their mother Julia Domna that culminated in Geta’s murder in her arms.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Coins minted during Geta’s reign depict him with a long beard and hanging hair, a style reminiscent of his father, suggesting an effort to present himself as the true successor of Septimius Severus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 189,
+      "month": 3,
+      "day": 7,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 211,
+      "month": 12,
+      "day": 26,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Geta.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Geta.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Geta.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Geta.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "ChrisO (original upload on the English Wikipedia under the same filename, 4 June 2004)",
+    "author": "ChrisO (original upload on the English Wikipedia under the same filename, 4 June 2004)",
+    "width": 486,
+    "height": 600,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Geta (emperor)",
+    "url": "https://en.wikipedia.org/wiki/Geta_(emperor)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:48:41.056Z"
+  }
+}

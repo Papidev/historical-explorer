@@ -1,0 +1,69 @@
+{
+  "id": "flaminio-ponzio",
+  "name": "Flaminio Ponzio",
+  "wikidataId": "Q2755095",
+  "wikipediaTitle": "Flaminio Ponzio",
+  "content": {
+    "description": [
+      {
+        "text": "Flaminio Ponzio was born in 1560 in Viggiù near Varese and received his early architectural training in Milan before moving to Rome, where he briefly worked under the established architect Domenico Fontana. In Rome he became the architect for Pope Paul V, a position that placed him at the center of the city’s Mannerist architectural developments during the early 17th century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ponzio’s portfolio includes the design of the Cappella Paolina in Santa Maria Maggiore (1605‑1611), the façade on Via Ripetta of Palazzo Borghese (1605‑1607), and the Villa Borghese Pinciana (1609‑1613), now the Galleria Borghese, as well as the Fountain of the Acqua Paola on the Janiculum (1610). He also contributed to the restoration and new cupola of the church of Sant’Eligio degli Orefici and designed the San Sebastiano and Palazzo Rospigliosi on the Quirinal Hill, works that were later completed by Giovanni Vasanzio.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Ponzio’s façade on Via Ripetta of Palazzo Borghese, completed between 1605 and 1607, is a notable example of his Mannerist style.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Fountain of the Acqua Paola, designed by Ponzio in 1610, remains a prominent landmark on the Janiculum hill in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ponzio’s design of the Villa Borghese Pinciana, also known as the Casino Nobile, was commissioned by Scipione Borghese and later completed by Jan Van Santen after Ponzio’s death.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was involved in the restoration and construction of a new cupola for the church of Sant'Eligio degli Orefici, a project that showcased his skill in ecclesiastical architecture.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1560,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1613,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Casa_Ponzio_Loggia_1280206.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Casa_Ponzio_Loggia_1280206.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Casa_Ponzio_Loggia_1280206.JPG/960px-Casa_Ponzio_Loggia_1280206.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/59/Casa_Ponzio_Loggia_1280206.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Lalupa",
+    "author": "Lalupa",
+    "width": 2112,
+    "height": 2816,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Flaminio Ponzio",
+    "url": "https://en.wikipedia.org/wiki/Flaminio_Ponzio"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:07:04.797Z"
+  }
+}

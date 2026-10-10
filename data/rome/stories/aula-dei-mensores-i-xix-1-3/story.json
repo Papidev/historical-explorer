@@ -1,0 +1,46 @@
+{
+  "introduction": {
+    "text": "The Aula dei Mensores is a Roman collegial hall in Ostia that housed grain measurers, illustrating the administrative infrastructure of the ancient city.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The Aula was originally built during the Trajanic period, around 112 AD, as indicated by its earliest opus latericium and mixtum walls.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 112,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Later, in the late Severan period, the Aula underwent brick modifications and added new pillars, reflecting changes in Roman architectural styles.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 200,
+          "precision": "approximate",
+          "endYear": 235,
+          "granularity": "century"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The hall is roughly rectangular, accessed via a seven‑metre wide entrance on Via della Foce. Its walls were originally supported by a perimeter wall on the west and north sides and pillars attached to the west wall and east side; later the wall thickness was doubled and additional pillars were added.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "A black‑and‑white mosaic with blue tesserae on the floor depicts mensores frumentarii measuring grain, including figures pointing to numbers and using a counting rod with nine tablets, a typical Severan decorative motif.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": []
+}

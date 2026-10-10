@@ -1,0 +1,70 @@
+{
+  "id": "pope-john-xi",
+  "name": "Pope John XI",
+  "wikidataId": "Q181959",
+  "wikipediaTitle": "Pope John XI",
+  "content": {
+    "description": [
+      {
+        "text": "Pope John XI was born in 910 to Marozia, the most powerful woman in Rome, and his paternity was a subject of dispute. While some chroniclers, such as Liutprand of Cremona, claimed that his father was Pope Sergius III, most contemporary sources, including Flodoard and the Liber Pontificalis, record him as the son of Marozia and Duke Alberic I of Spoleto.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Elected in March 931, John XI’s papacy was dominated by his mother Marozia and later by his brother Alberic II of Spoleto. He was effectively a figurehead, confined to the Lateran Palace for the rest of his reign, while his brothers exercised both secular and ecclesiastical authority. During this period he granted the pallium to Theophylactus, son of Byzantine Emperor Romanos I, and to Archbishop Artold of Reims, and he also bestowed privileges on the reformist Congregation of Cluny.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "John XI served as the nominal ruler of the Papal States from March 931 until his death in December 935.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was imprisoned and confined to the Lateran Palace for the remainder of his pontificate, effectively limiting his authority to spiritual duties.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In February 933 he granted the pallium to Theophylactus, the young son of Byzantine Emperor Romanos I, after a prolonged negotiation that reflected the political tensions between Rome and Constantinople.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "John XI granted many privileges to the Congregation of Cluny, which later became a powerful agent of Church reform.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 910,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 935,
+      "month": 12,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_John_XI.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_John_XI.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Pope_John_XI.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Pope_John_XI.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Artaud de Montor (1772–1849)",
+    "author": "Artaud de Montor (1772–1849)",
+    "width": 432,
+    "height": 626,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope John XI",
+    "url": "https://en.wikipedia.org/wiki/Pope_John_XI"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:36:39.461Z"
+  }
+}

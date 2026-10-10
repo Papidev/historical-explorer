@@ -1,0 +1,65 @@
+{
+  "id": "ant-nio-ribeiro-cardinal",
+  "name": "António Ribeiro",
+  "wikidataId": "Q45193",
+  "wikipediaTitle": "António Ribeiro (cardinal)",
+  "content": {
+    "description": [
+      {
+        "text": "Dom António II Ribeiro was born on 21 May 1928 in São Clemente de Basto, Celorico de Basto, Portugal, the son of José Ribeiro and Ana Gonçalves. He entered the priesthood in the Braga Archdiocese, being ordained a priest on 5 July 1953, and later earned a doctorate in Theology from the Pontifical Gregorian University in Rome, where his thesis examined the doctrine of errors in the writings of Saint Thomas Aquinas.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ribeiro’s ecclesiastical career accelerated when he was appointed Auxiliary Bishop of Braga in 1967 and subsequently transferred to Lisbon, where he served as chaplain of Catholic Action and taught at the Instituto Superior de Cultura Católica and the Technical University of Lisbon. In 1971 he succeeded Manuel Gonçalves Cerejeira as Patriarch of Lisbon, and a year later he also became Vicar Apostolic of the Portuguese Military. Elevated to the College of Cardinals by Pope Paul VI in 1973, he became the youngest cardinal of the twentieth century at age 44, and he participated in the two conclaves of 1978 that elected Popes John Paul I and John Paul II.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He hosted a weekly television program called “Dia do Senhor” (The Lord’s Day) starting in 1960, making him one of the first Catholic clergy to engage regularly with Portuguese television audiences.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "At the age of 44, when he was created cardinal, he was the youngest person to hold that rank in the twentieth century, a record that had stood since the previous cardinal, Manuel Gonçalves Cerejeira, was appointed forty‑four years earlier.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1928,
+      "month": 5,
+      "day": 21,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1998,
+      "month": 3,
+      "day": 24,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Cardeal_D._António_Ribeiro.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Cardeal_D._Ant%C3%B3nio_Ribeiro.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Cardeal_D._Ant%C3%B3nio_Ribeiro.jpg/960px-Cardeal_D._Ant%C3%B3nio_Ribeiro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/Cardeal_D._Ant%C3%B3nio_Ribeiro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Joseolgon",
+    "author": "Joseolgon",
+    "width": 3648,
+    "height": 5472,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "António Ribeiro (cardinal)",
+    "url": "https://en.wikipedia.org/wiki/Ant%C3%B3nio_Ribeiro_(cardinal)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:15:34.921Z"
+  }
+}

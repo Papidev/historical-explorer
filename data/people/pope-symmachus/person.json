@@ -1,0 +1,63 @@
+{
+  "id": "pope-symmachus",
+  "name": "Pope Symmachus",
+  "wikidataId": "Q160935",
+  "wikipediaTitle": "Pope Symmachus",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Symmachus, born on the island of Sardinia under Vandal rule, entered the Roman clergy as a pagan before being baptized in Rome. He rose to become archdeacon under Pope Anastasius II and was elected pope on 22 November 498 in the Constantinian basilica, a decision that sparked a serious schism when a rival faction elected Laurentius the same day at Saint Mary Major.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Symmachus’s papacy was marked by a series of synods and political intrigue. He convened a Roman Synod in 499 that condemned any cleric seeking to influence papal succession during a pope’s lifetime. In 501 he was accused of celebrating Easter on the wrong date and of other crimes, leading to a flight from Ariminum that was seen as an admission of guilt. Despite these controversies, he survived multiple synods, reconciled with former opponents, and died on 19 July 514, having ruled for fifteen years, seven months, and twenty-seven days.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Symmachus was considered the most outsider among the Ostrogothic popes, being born a pagan and not belonging to the aristocratic families that dominated the papacy at the time.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Laurentian Fragment claims that Symmachus secured his election by paying 400 solidi in bribes to influential figures, a claim that has been debated by historians.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Although Symmachus was the legitimate pope, the portrait of his rival Laurentius continues to hang in the papal gallery of St. Paul’s, not Symmachus’s.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 514,
+      "month": 7,
+      "day": 19,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_Symmachus_-_Apse_mosaic_-_Sant'Agnese_fuori_le_mura_-_Rome_2016.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Symmachus_-_Apse_mosaic_-_Sant'Agnese_fuori_le_mura_-_Rome_2016.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Pope_Symmachus_-_Apse_mosaic_-_Sant%27Agnese_fuori_le_mura_-_Rome_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Pope_Symmachus_-_Apse_mosaic_-_Sant%27Agnese_fuori_le_mura_-_Rome_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "© José Luiz Bernardes Ribeiro",
+    "author": "José Luiz",
+    "width": 699,
+    "height": 1639,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Symmachus",
+    "url": "https://en.wikipedia.org/wiki/Pope_Symmachus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:19:48.754Z"
+  }
+}

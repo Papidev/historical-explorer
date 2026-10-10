@@ -1,0 +1,69 @@
+{
+  "id": "agostino-d-ippona",
+  "name": "Agostino d'Ippona",
+  "wikidataId": "Q8018",
+  "wikipediaTitle": "Agostino d'Ippona",
+  "content": {
+    "description": [
+      {
+        "text": "Agostino d'Ippona was born on 13 November 354 in the Roman colony of Tagaste (now Souk Ahras, Algeria), the son of a Roman father, Patrizio, and a Berber mother, Monica, who would later become a saint.  Educated in the local schools of Tagaste and later in Carthage, he studied rhetoric and law, but his early life was marked by a spiritual conflict between the paganism of his father and the Christian faith of his mother, whose influence eventually led him to convert to Christianity.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After a period of theological exploration that included a brief involvement with Manichaeism, Agostino converted to orthodox Christianity in 386, a turning point described as occurring in a garden in Milan.  He was ordained a priest in 391, became Bishop of Hippo in 395, and served until his death on 28 August 430.  During his episcopate he authored the influential *City of God*, defended the Church against the Donatists, and contributed to the development of monastic rules that would later inspire the Order of Saint Augustine.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was nicknamed the Doctor Gratiae, or Doctor of Grace, reflecting his theological emphasis on divine grace.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His autobiographical work, the *Confessions*, is one of the earliest and most detailed Christian autobiographies, offering insight into his spiritual journey.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Agostino played a key role in the Donatist controversy, arguing that the Church should be inclusive of repentant sinners and opposing the strict separation advocated by the Donatists.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 354,
+      "month": 11,
+      "day": 13,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 430,
+      "month": 8,
+      "day": 28,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Saint_Augustine_by_Philippe_de_Champaigne.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Saint_Augustine_by_Philippe_de_Champaigne.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Saint_Augustine_by_Philippe_de_Champaigne.jpg/960px-Saint_Augustine_by_Philippe_de_Champaigne.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Saint_Augustine_by_Philippe_de_Champaigne.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Philippe de Champaigne",
+    "author": "Philippe de Champaigne",
+    "width": 3135,
+    "height": 4000,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Agostino d'Ippona",
+    "url": "https://it.wikipedia.org/wiki/Agostino_d'Ippona"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:45:26.341Z"
+  }
+}

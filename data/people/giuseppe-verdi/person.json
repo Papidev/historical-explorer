@@ -1,0 +1,61 @@
+{
+  "id": "giuseppe-verdi",
+  "name": "Giuseppe Verdi",
+  "wikidataId": "Q7317",
+  "wikipediaTitle": "Giuseppe Verdi",
+  "content": {
+    "description": [
+      {
+        "text": "Giuseppe Verdi was born near Busseto in 1813 and received his early musical training from a local patron, Antonio Barezzi, before studying privately with the maestro at La Scala. His first opera, originally titled Rocester, was written to a libretto by Antonio Piazza and premiered in 1839, marking the beginning of a career that would dominate Italian opera for the next century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Verdi’s operas, from the patriotic chorus of Nabucco to the grand spectacle of Aida, reflected his deep engagement with the Risorgimento and his own evolving artistic vision. He later served briefly as an elected politician, founded a retirement home for musicians, and left a legacy that continues to be celebrated worldwide.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Verdi’s first opera was originally titled Rocester and had a libretto by the journalist Antonio Piazza.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1813,
+      "month": 10,
+      "day": 9,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1901,
+      "month": 1,
+      "day": 27,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Giuseppe_Verdi_xilografia.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Giuseppe_Verdi_xilografia.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Giuseppe_Verdi_xilografia.jpg/960px-Giuseppe_Verdi_xilografia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Giuseppe_Verdi_xilografia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Disegnatore: A. Cairoli - Incisore: Ernesto Mancastroppa",
+    "author": "Disegnatore: A. Cairoli - Incisore: Ernesto Mancastroppa",
+    "width": 2500,
+    "height": 3471,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giuseppe Verdi",
+    "url": "https://en.wikipedia.org/wiki/Giuseppe_Verdi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:06:00.894Z"
+  }
+}

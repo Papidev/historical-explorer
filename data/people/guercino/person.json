@@ -1,0 +1,69 @@
+{
+  "id": "guercino",
+  "name": "Guercino",
+  "wikidataId": "Q334262",
+  "wikipediaTitle": "Guercino",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Francesco Barbieri, better known as Guercino, was born on 8 February 1591 in Cento, a small town in the Po Valley between Bologna and Ferrara. From an early age he was nicknamed “Guercino” – a diminutive of the Italian word for squinter – because he was cross‑eyed, a trait that would later influence his artistic perspective. He was largely self‑taught, and at sixteen he began an apprenticeship with Benedetto Gennari, a painter of the Bolognese School. During this period he produced his first frescoes for Casa Pannini (1615‑1616) and painted landscape canvases such as *Moonlit Landscape* and *Country Concert*, already showing a naturalistic independence that would characterize his early style.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Guercino’s career flourished after a brief but productive stay in Rome (1621‑1623), where he painted frescoes for the Villa Ludovisi and the ceiling of San Crisogono, and created a portrait of Pope Gregory XV. Returning to Cento, he completed a prolific output of altarpieces and other works, amassing 106 large altarpieces and about 144 other paintings. His drawings, noted for their rapid, calligraphic strokes, were often preparatory studies but also included landscapes, genre scenes, and caricatures. Despite presumably having monocular vision due to a lazy right eye, he managed to convey depth and light with remarkable skill, a trait that has drawn comparisons to other artists with strabismus such as Rembrandt and Dürer.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Guercino’s nickname, meaning “squinter,” came from his cross‑eyed condition, which he reportedly compensated for by developing an enhanced perception of light and shade.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He completed an extraordinary number of works in a short time, producing 106 large altarpieces and roughly 144 other paintings, a testament to his rapid execution and prolific output.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Although he likely had monocular vision, Guercino’s paintings display a convincing sense of depth, suggesting that his healthy eye compensated for the visual deficit.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1591,
+      "month": 2,
+      "day": 8,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1666,
+      "month": 12,
+      "day": 22,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Self-portrait_by_Guercino.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Self-portrait_by_Guercino.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Self-portrait_by_Guercino.jpg/960px-Self-portrait_by_Guercino.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Self-portrait_by_Guercino.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Guercino",
+    "author": "Guercino",
+    "width": 4833,
+    "height": 5974,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Guercino",
+    "url": "https://en.wikipedia.org/wiki/Guercino"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:22:49.818Z"
+  }
+}

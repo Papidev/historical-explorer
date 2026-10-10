@@ -1,0 +1,83 @@
+{
+  "id": "papa-leone-iv",
+  "name": "papa Leone IV",
+  "wikidataId": "Q228205",
+  "wikipediaTitle": "Papa Leone IV",
+  "content": {
+    "description": [
+      {
+        "text": "Leone IV was born in Rome to a Lombard family and entered the Benedictine order at San Martino near St. Peter’s. He rose to the rank of cardinal and was elected pope on 10 April 847, a decision made hastily because the city was under threat from Saracen raiders. The consecration was irregular because it took place without the emperor’s approval, but the emperor Lotarius I did not object, likely because Rome had already suffered a Saracen assault in 846.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his reign he focused on restoring Rome’s defenses after the 846 Saracen attack. He rebuilt the city walls, fortified the Vatican, and founded the League of Campania, a naval coalition that defeated the Saracens at Ostia in 849. He also oversaw the reconstruction of the Borgo after a fire, and he was the first pope to date his pontificate by year. In 850 he crowned Emperor Ludovico II, and in 855 he hosted the English Saxon king Etelvolfo (future Alfred the Great) for coronation, a rare act of papal recognition of a foreign monarch.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Leone IV was the first pope to date his pontificate by year, a practice that later became standard.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He founded the League of Campania, a naval coalition of the duchies of Amalfi, Gaeta, Naples and Sorrento, which defeated the Saracens at Ostia in 849.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He built the walls that surround the Vatican, which were inaugurated on 27 June 852.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He crowned Emperor Ludovico II on Easter 850, reaffirming the papal privilege of crowning emperors.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 855 he hosted the English Saxon king Etelvolfo, the future Alfred the Great, for coronation, an unusual papal recognition of a foreign monarch.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He created 63 bishops, 19 priests and 8 deacons in two ordinations, according to the Moroni.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a Benedictine monk at San Martino near St. Peter’s before becoming cardinal.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His consecration as pope on 10 April 847 was irregular because it occurred without the emperor’s approval.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 855,
+      "month": 7,
+      "day": 17,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "PopeLeoIV_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:PopeLeoIV_(cropped).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/PopeLeoIV_%28cropped%29.jpg/960px-PopeLeoIV_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/PopeLeoIV_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 4.0",
+    "attribution": "PalauanLibertarian",
+    "author": "PalauanLibertarian",
+    "width": 1232,
+    "height": 2004,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Papa Leone IV",
+    "url": "https://it.wikipedia.org/wiki/Papa_Leone_IV"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:46:46.711Z"
+  }
+}

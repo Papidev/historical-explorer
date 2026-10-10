@@ -1,0 +1,61 @@
+{
+  "id": "saint-alexius",
+  "name": "Saint Alexius",
+  "wikidataId": "Q137947",
+  "wikipediaTitle": "Alexius of Rome",
+  "content": {
+    "description": [
+      {
+        "text": "Saint Alexius of Rome, also known as Alexius of Edessa, is a fourth‑century Greek monk whose life is preserved in two separate traditions: a Syriac account that portrays him as an Eastern saint later transplanted to Rome, and a Greek narrative that casts him as the son of a wealthy Roman senator who fled an arranged marriage to live as a beggar in Edessa. In both versions he is described as a “Man of God” who shared his alms with the poor, even accepting money from his own household slaves, and who was eventually recognized by a miraculous icon of the Virgin Mary that identified him to those who could not otherwise see him.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The veneration of Alexius reached Rome only after the tenth century, when the exiled Greek metropolitan Sergius of Damascus transferred a nearly abandoned church on the Aventine Hill to the Greek and Latin monks, adding Alexius to the name of the church as Santi Bonifacio e Alessio. The saint’s relics are now kept in several monasteries, most notably the skull that was donated by Emperor Manuel II Palaiologos to the monastery of Agia Lavra in 1398. Although the Catholic Church still recognizes him, his feast was removed from the General Roman Calendar in 1969 because the written life of the saint is considered largely legendary.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "A miraculous icon of the Virgin Mary singled Alexius out as a \"Man of God\", allowing his own household slaves to recognize him after he had been living as a beggar.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Alexius spent seventeen years in a dark cubbyhole beneath the stairs of a Roman house, where he prayed and taught catechism to children.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The most precious relic of Alexius is a large part of his skull, which was donated to the monastery of Agia Lavra by Emperor Manuel II Palaiologos in 1398.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His feast day was removed from the General Roman Calendar in 1969, a decision attributed to the legendary nature of his written life.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Alexii.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Alexii.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/78/Alexii.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/78/Alexii.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "AnonymousUnknown author",
+    "author": "AnonymousUnknown author",
+    "width": 294,
+    "height": 450,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Alexius of Rome",
+    "url": "https://en.wikipedia.org/wiki/Alexius_of_Rome"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:15:54.916Z"
+  }
+}

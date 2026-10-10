@@ -1,0 +1,121 @@
+{
+  "introduction": {
+    "text": "The Basilica di Sant'Antonio da Padova all'Esquilino is a Roman Catholic titular church in Rome that serves as a spiritual home for the Order of Friars Minor and a minor basilica dedicated to Saint Anthony of Padua. Its history reflects the city's religious and architectural development, and its art and design showcase Franciscan devotion.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "construction-consecration",
+        "description": "The basilica was built for the Order of Friars Minor after they were moved from Santa Maria in Ara Coeli to allow construction of the Victor Emmanuel II Monument, and was consecrated on 4 December 1887.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1887,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "minor-basilica",
+        "description": "It was elevated to minor basilica status in 1931.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1931,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "titular-church",
+        "description": "On 12 March 1960 Pope John XXIII made it a titular church.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1960,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "order-move",
+        "description": "The Order of Friars Minor moved from Santa Maria in Ara Coeli to the site of the basilica to accommodate the Victor Emmanuel II Monument.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "architecture",
+        "description": "The basilica features two staircases leading to a gantry with a statue of Saint Anthony holding the Christ Child, three naves separated by pink marble columns, and interior decoration by Friar Bonaventura Loffredo da Alghero in 1889–1890.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "fresco-apotheosis",
+        "description": "A fresco of the apotheosis of the Franciscan family in the apse area of the sanctuary, painted by Friar Loffredo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "painting-st-clare",
+        "description": "Painting of St. Clare of Assisi by Giuseppe Bravi (1844–1908).",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "painting-st-francis",
+        "description": "Painting of St. Francis of Assisi by Franz De Rhoden (1817–1903).",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "painting-japanese-martyrs",
+        "description": "Painting of Japanese Martyrs crucified in 1597 in Nagasaki by Cesare Mariani (1826–1901).",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "painting-immaculate-mary",
+        "description": "Painting of Immaculate Mary by Francesco Szoldatiez (1916).",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "painting-st-ludovico",
+        "description": "Painting of St. Ludovico di Tolosa by Eugenia Pignet (1940).",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "painting-other-friars",
+        "description": "Other paintings by friars Giuseppe Maria Rossi, Caio D' Andrea and Michelangelo Cianti.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Saint Anthony of Padua",
+      "personId": "saint-anthony-of-padua",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope John XXIII",
+      "personId": "pope-john-xxiii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Américo Aguiar",
+      "personId": "am-rico-aguiar",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Peter Doi",
+      "personId": "peter-doi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "António Ribeiro (cardinal)",
+      "personId": "ant-nio-ribeiro-cardinal",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Cláudio Hummes",
+      "personId": "cl-udio-hummes",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

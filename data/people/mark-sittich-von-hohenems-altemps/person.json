@@ -1,0 +1,73 @@
+{
+  "id": "mark-sittich-von-hohenems-altemps",
+  "name": "Mark Sittich von Hohenems Altemps",
+  "wikidataId": "Q599397",
+  "wikipediaTitle": "Mark Sittich von Hohenems Altemps",
+  "content": {
+    "description": [
+      {
+        "text": "Mark Sittich von Hohenems Altemps was a German Roman Catholic bishop and cardinal born in 1533 in Hohenems, the son of Wolf Ludwig von Hohenems and Chiara de' Medici, a distant relative of the Medici family. He fought in the Italian War of 1551–1559 and against the Ottoman Empire, became a Knight of the Order of Santiago, and later entered the clergy, eventually being appointed Bishop of Cassano and then Bishop of Konstanz.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Elevated to the cardinalate in 1561 by his uncle Pope Pius IV, he served as papal legate to the Holy Roman Emperor, to the Council of Trent, and to various Italian cities, while also collecting Roman antiquities and building the Palazzo Altemps in Rome. He participated in nine papal conclaves between 1565 and 1592, and died in Rome on 15 February 1595, where he was buried in Santa Maria in Trastevere.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was a Knight of the Order of Santiago.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He had a natural son, Roberto, whom he later legitimized.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He built the Palazzo Altemps in Rome, which housed a significant collection of Roman antiquities.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He participated in nine papal conclaves, including those that elected Pius V, Gregory XIII, Sixtus V, Urban VII, Gregory XIV, Innocent IX, and Clement VIII.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as papal legate to the Council of Trent, helping to ensure its continuation.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1533,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1595,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Anthony_Bays_Hohenemser_Festtafel_1578_Markus_Sittikus.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Anthony_Bays_Hohenemser_Festtafel_1578_Markus_Sittikus.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/Anthony_Bays_Hohenemser_Festtafel_1578_Markus_Sittikus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/Anthony_Bays_Hohenemser_Festtafel_1578_Markus_Sittikus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Anton Boys",
+    "author": "Anton Boys",
+    "width": 849,
+    "height": 939,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Mark Sittich von Hohenems Altemps",
+    "url": "https://en.wikipedia.org/wiki/Mark_Sittich_von_Hohenems_Altemps"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:38:07.332Z"
+  }
+}

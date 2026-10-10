@@ -1,0 +1,69 @@
+{
+  "id": "colonna-family",
+  "name": "Colonna family",
+  "wikidataId": "Q327202",
+  "wikipediaTitle": "Colonna family",
+  "content": {
+    "description": [
+      {
+        "text": "The House of Colonna is a prominent Italian noble family that has been part of the papal nobility since the Middle Ages.  The family supplied one pope, Martin V, 23 cardinals, and many other church and political leaders, and it played a pivotal role in medieval and Renaissance Rome.  Its influence was so great that it was involved in the papal election that ended the Western Schism and it was a key player in the politics of the Papal States.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Colonna were also known for their fierce rivalry with the Orsini family, another powerful Roman house.  The feud culminated in the Outrage of Anagni in 1303, when the Colonna seized Pope Boniface VIII, and was later settled by the papal bull Pax Romana issued by Pope Julius II in 1511.  In the early modern period the family produced celebrated figures such as the poet Vittoria Colonna, the condottiero Fabrizio Colonna, and the naval commander Marcantonio II Colonna who fought at the Battle of Lepanto in 1571.  Today the family remains a princely house, with its historic Palazzo Colonna in Rome open to the public on certain days.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Colonna claimed descent from the ancient Julio‑Claudian dynasty, a lineage that the family traced back to the Counts of Tusculum and ultimately to the Roman gens Julia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The family’s feud with the Orsini was so intense that it led to the Outrage of Anagni, in which a Colonna conspirator physically assaulted Pope Boniface VIII.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pope Julius II issued the papal bull Pax Romana in 1511 to settle the long‑standing conflict between the Colonna and Orsini families.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Marcantonio II Colonna, a member of the family, commanded the papal fleet at the Battle of Lepanto in 1571 and later served as Viceroy of Sicily.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Vittoria Colonna, a 16th‑century poet from the family, was a close friend of Michelangelo and a patron of Caravaggio.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The family’s Palazzo Colonna in Rome is still owned by the Colonna and is open to the public on Fridays and Saturdays in the morning.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Stemma_della_famiglia_Colonna.svg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Stemma_della_famiglia_Colonna.svg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Stemma_della_famiglia_Colonna.svg/960px-Stemma_della_famiglia_Colonna.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/Stemma_della_famiglia_Colonna.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "ZuppaDiCarlo: blazon editing, Heralder: subjects",
+    "author": "ZuppaDiCarlo: blazon editing, Heralder: subjects",
+    "width": 410,
+    "height": 478,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Colonna family",
+    "url": "https://en.wikipedia.org/wiki/Colonna_family"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T16:57:50.993Z"
+  }
+}

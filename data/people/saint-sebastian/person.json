@@ -1,0 +1,73 @@
+{
+  "id": "saint-sebastian",
+  "name": "Saint Sebastian",
+  "wikidataId": "Q183332",
+  "wikipediaTitle": "Saint Sebastian",
+  "content": {
+    "description": [
+      {
+        "text": "Saint Sebastian was a Roman soldier who rose to the rank of captain in the Praetorian Guard during the reign of Emperor Diocletian. Though he served the empire, he secretly practiced Christianity, a faith that was outlawed during the Diocletianic persecution. In 286, he was discovered and condemned to a field where archers from Mauretania shot him with arrows. Miraculously, the arrows failed to kill him, and he was later rescued and healed by a woman named Irene of Rome. After recovering, he warned the emperor of his sins, which led to his final execution by clubbing to death.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sebastian’s story quickly entered Christian lore, and by the 4th century he was venerated on January 20, as noted in the Chronograph of 354 and sermons by Ambrose of Milan. Over the centuries he became the patron saint of athletes, archery, and plague sufferers, a role that grew during the Black Death when his arrow wounds were seen as symbolic of bubonic buboes. Artists from the Renaissance to the Baroque period celebrated him as a youthful, semi‑nude figure pierced by arrows, making him one of the most frequently depicted saints in Western art.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He is venerated on January 20, the day he is commemorated in the Catholic Church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He is the patron saint of athletes, archery, and plagues.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as a captain of the Praetorian Guard under Emperor Diocletian.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After being shot with arrows, he was rescued and healed by Irene of Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He is often depicted as a semi‑nude young man pierced by arrows, a popular subject in Renaissance and Baroque art.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In medieval times, he was believed to protect against the bubonic plague, and devotion to him increased during plague outbreaks.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 255,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Marco_Palmezzano_-_Saint_Sebastian.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Marco_Palmezzano_-_Saint_Sebastian.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Marco_Palmezzano_-_Saint_Sebastian.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Marco_Palmezzano_-_Saint_Sebastian.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Marco Palmezzano",
+    "author": "Marco Palmezzano",
+    "width": 917,
+    "height": 1200,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Saint Sebastian",
+    "url": "https://en.wikipedia.org/wiki/Saint_Sebastian"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:05:53.563Z"
+  }
+}

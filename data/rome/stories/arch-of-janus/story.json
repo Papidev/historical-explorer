@@ -1,0 +1,107 @@
+{
+  "introduction": {
+    "text": "The Arch of Janus is the only surviving quadrifrons triumphal arch in Rome, notable for its unique four‑fronted design and uncertain purpose, which may have served as a boundary marker, shelter for traders, or a monument to a Roman emperor.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Constructed in the early 4th century AD as a quadrifrons arch at the northeastern limit of the Forum Boarium, possibly serving as a boundary marker or shelter for traders.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 300,
+          "precision": "approximate",
+          "endYear": 399,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "In 1830, the attic storey was removed, mistakenly believed to be non‑original, altering the arch's appearance.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1830,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "Since the explosion of a bomb on 27 July 1993 in front of San Giorgio in Velabro, the arch has been inaccessible to the public.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1993,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Built using spolia, including bricks and pottery shards, and covered with white marble from earlier buildings.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "history3",
+        "description": "In the Middle Ages, the Frangipane family transformed the arch into a fortress, preserving it until the 19th century.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The arch is a quadrifrons structure with four arches and four facades, each pier featuring two rows of three niches.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The keystone at the apex of the central arch on the north side is thought to depict Minerva, though some scholars suggest it represents the Palladium.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "The arch originally had an attic storey, which was removed in 1830, and a staircase within the north‑west pier that would have provided access to the top floor.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "The keystone of the central arch may depict the goddess Minerva, indicating a possible artistic representation of a deity.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "The arch contains 48 niches that could have housed statues, though none have been identified.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Constantine I",
+      "personId": "constantine-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Constantius II",
+      "personId": "constantius-ii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Janus",
+      "personId": "janus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Minerva",
+      "personId": "minerva",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Frangipane family",
+      "personId": "frangipane-family",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

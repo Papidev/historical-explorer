@@ -1,0 +1,197 @@
+{
+  "introduction": {
+    "text": "Largo di Torre Argentina is a historic square in Rome that contains four Roman Republican temples, the remains of Pompey's Theatre, and the site of Julius Caesar's assassination. Its archaeological layers and cultural heritage make it a key window into ancient Roman life and later artistic developments.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "temple-c-290s-280s-bc",
+        "description": "Temple C, the oldest of the four, was built in the 290s/280s BC and probably dedicated to Feronia.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -290,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "temple-a-3rd-century-bc",
+        "description": "Temple A was constructed in the 3rd century BC, likely as the Temple of Juturna by Gaius Lutatius Catulus.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -250,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "temple-d-2nd-century-bc",
+        "description": "Temple D dates to the 2nd century BC and was dedicated to the Lares Permarini.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -200,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "temple-b-101-bc",
+        "description": "Temple B, a circular tholos, was built in 101 BC by Quintus Lutatius Catulus.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -101,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "caesar-assassination-44-bc",
+        "description": "Julius Caesar was assassinated in the Curia of Pompey in 44 BC, a site within the square.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -44,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "opera-house-18th-century",
+        "description": "The Teatro Argentina opera house, established in the 18th century, hosted premieres such as Rossini's The Barber of Seville.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1700,
+          "precision": "approximate",
+          "endYear": 1799,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "reconstruction-1909",
+        "description": "After Italian unification, part of Rome was reconstructed in 1909, demolishing the zone of Torre Argentina.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1909,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "statue-discovery-1927",
+        "description": "In 1927, a colossal head and arms of a marble statue were discovered during demolition work.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1927,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "cat-sanctuary-1993",
+        "description": "The Torre Argentina Cat Sanctuary was founded in 1993 within Temple D.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1993,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "walkways-2019",
+        "description": "In 2019, mayor Virginia Raggi announced walkways to allow public access to the ruins.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2019,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "temple-layout",
+        "description": "The square contains four Roman Republican temples, each with distinct architectural styles: a rectangular temple, a circular tholos, and a large temple dedicated to sailors.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "square-ancient-campus",
+        "description": "Largo di Torre Argentina lies within the ancient Campus Martius, surrounded by the Baths of Agrippa, Circus Flaminius, and the Theatre of Pompey.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "cat-sanctuary-structure",
+        "description": "The Torre Argentina Cat Sanctuary occupies the interior of Temple D, integrating modern facilities with the archaeological site.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "acrolithic-statue",
+        "description": "A marble acrolithic statue of Fortuna Huiusce Diei, found during excavations, is now housed in the Centrale Montemartini.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "mosaic-cella",
+        "description": "The inner cella of Temple C features a white and black mosaic dating from the restoration after the fire of AD 80.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "frescoes-saint-nicola",
+        "description": "The apses and frescoes of the early 900s church San Nicola de Calcarario, built on Temple A, remain visible.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Julius Caesar",
+      "personId": "julius-caesar",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Gaius Lutatius Catulus",
+      "personId": "gaius-lutatius-catulus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Quintus Lutatius Catulus",
+      "personId": "quintus-lutatius-catulus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Lucius Aemilius Regillus",
+      "personId": "lucius-aemilius-regillus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "M. Aemilius Lepidus",
+      "personId": "m-aemilius-lepidus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Virginia Raggi",
+      "personId": "virginia-raggi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Gioachino Rossini",
+      "personId": "gioachino-rossini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giuseppe Verdi",
+      "personId": "giuseppe-verdi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Johannes Burckardt",
+      "personId": "johannes-burckardt",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Antiochus the Great",
+      "personId": "antiochus-the-great",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

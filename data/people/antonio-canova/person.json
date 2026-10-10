@@ -1,0 +1,73 @@
+{
+  "id": "antonio-canova",
+  "name": "Antonio Canova",
+  "wikidataId": "Q5547",
+  "wikipediaTitle": "Antonio Canova",
+  "content": {
+    "description": [
+      {
+        "text": "Antonio Canova (1 November 1757 – 13 October 1822) was an Italian Neoclassical sculptor whose marble works are celebrated for their graceful realism and subtle emotional depth. Born in the Venetian Republic town of Possagno, he began sculpting at a very young age under the guidance of his grandfather, a stonemason, and quickly developed a reputation for skillful marble carving that blended the dynamism of the Baroque with the restrained elegance of classical antiquity.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Canova's career flourished after he moved to Rome in 1780, where he produced iconic pieces such as Theseus and the Minotaur, Psyche Revived by Cupid's Kiss, and the monument to Clement XIV. He served as Inspector‑General of Antiquities for the Papal State in 1802, played a key role in the acquisition of the Elgin Marbles for the British Museum, and was commissioned by Napoleon to create the famous statue of Napoleon as Mars the Peacemaker. He also founded the Tempio Canoviano in Possagno, a temple that combined Parthenon and Pantheon designs, and died in Venice in 1822, leaving a legacy that shaped Neoclassical sculpture for generations.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Canova's statue of Napoleon as Mars the Peacemaker was presented to the Duke of Wellington after the Battle of Waterloo, and the bronze copy remains in Apsley House.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1802, Canova was appointed Inspector‑General of Antiquities and Fine Art of the Papal State, a position formerly held by Raphael, and he used this role to restore the Appian Way and other ancient monuments.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Canova was instrumental in persuading the British to acquire the Elgin Marbles for the British Museum, and he sent plaster copies to Florence as part of the arrangement.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Tempio Canoviano, which he designed, financed, and partly built, was intended as a temple of religion and combined the architectural elements of the Parthenon and the Pantheon; its foundation stone was laid in 1819 and it was completed in 1836.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1757,
+      "month": 11,
+      "day": 1,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1822,
+      "month": 10,
+      "day": 13,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Antonio_Canova_Selfportrait_1792.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Antonio_Canova_Selfportrait_1792.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Antonio_Canova_Selfportrait_1792.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Antonio_Canova_Selfportrait_1792.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Antonio Canova",
+    "author": "Antonio Canova",
+    "width": 788,
+    "height": 983,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Antonio Canova",
+    "url": "https://en.wikipedia.org/wiki/Antonio_Canova"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:03:48.804Z"
+  }
+}

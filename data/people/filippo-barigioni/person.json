@@ -1,0 +1,69 @@
+{
+  "id": "filippo-barigioni",
+  "name": "Filippo Barigioni",
+  "wikidataId": "Q2253604",
+  "wikipediaTitle": "Filippo Barigioni",
+  "content": {
+    "description": [
+      {
+        "text": "Filippo Barigioni was an Italian sculptor and architect who worked in the Late Baroque tradition. Born in Rome in 1690, he studied architecture under Mattia de Rossi and initially followed the style of Gian Lorenzo Bernini before adopting the more classically oriented approach of Carlo Fontana and Pietro Bracci. His early collaboration with Fontana on the Albani Chapel in the Church of San Sebastiano fuori le mura, commissioned by Pope Clement XI around 1706, showcased rich marble and stucco decorations that combined Baroque exuberance with a refined eighteenth‑century elegance.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Barigioni’s career was marked by a series of high‑profile commissions in Rome, including the design of the towering catafalques for Popes Clement XI (1721), Innocent XIII (1724), and Clement XII (1740) as well as for Augustus II of Poland (1733). He also created the monumental statue of Saint Norbert for St. Peter’s Basilica in the 1740s and oversaw restorations of churches such as San Domenico in Urbino and the Basilica of San Marco Evangelista al Campidoglio. His work on the façade of the Church of San Gregorio della Divina Pietà and the Fontana della Rotonda, which re‑erected the Egyptian obelisk in Piazza della Rotonda, further cemented his reputation as a versatile architect and sculptor of the era.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Barigioni designed the elaborate catafalque for Pope Clement XI inside St. Peter’s Basilica, featuring tiered papal insignia such as the tiara and cushions, along with allegorical figures holding the pope’s heraldic coat of arms.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He added a two‑storey access staircase to the Church of San Domenico in Urbino, creating a restrained form that harmonised with the building’s Gothic façade and overall simplicity.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Barigioni collaborated with Pietro Bracci on the monument to Maria Clementina Sobieska in St. Peter’s Basilica, a lavish Baroque funerary monument that combined realistic marble figures with theatrical drapery.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He designed the Fontana della Rotonda in 1711, re‑erecting the Egyptian obelisk (the Obelisco Macuteo) in Piazza della Rotonda and adapting the ensemble in 1880.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1690,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1753,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pantheon.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pantheon.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Piazza_della_Rotonda%2C_obelisco_macuteo%2C_e_Pantheon_%28Roma_2006%29.jpg/960px-Piazza_della_Rotonda%2C_obelisco_macuteo%2C_e_Pantheon_%28Roma_2006%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/Piazza_della_Rotonda%2C_obelisco_macuteo%2C_e_Pantheon_%28Roma_2006%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Stinkzwam at Dutch Wikipedia",
+    "author": "Stinkzwam at Dutch Wikipedia",
+    "width": 1500,
+    "height": 1000,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Filippo Barigioni",
+    "url": "https://en.wikipedia.org/wiki/Filippo_Barigioni"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:03:15.505Z"
+  }
+}

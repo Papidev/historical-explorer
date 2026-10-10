@@ -1,0 +1,69 @@
+{
+  "id": "adeodato-giovanni-piazza",
+  "name": "Adeodato Giovanni Piazza",
+  "wikidataId": "Q356270",
+  "wikipediaTitle": "Adeodato Giovanni Piazza",
+  "content": {
+    "description": [
+      {
+        "text": "Adeodato Giovanni Piazza was born on 30 September 1884 in the mountain village of Vigo di Cadore in the Veneto region of Italy. He entered the Discalced Carmelite Order in 1902, took his solemn vows in 1907, and was ordained a priest in 1908. After serving as prior in several monasteries, he worked as a military chaplain in the medical corps during World War I.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1930 he was appointed Archbishop of Benevento and consecrated a bishop in Rome. He became Patriarch of Venice in 1935, was elevated to cardinal in 1937, and participated in the 1939 conclave that elected Pope Pius XII. Later he served as Secretary of the Sacred Consistorial Congregation and, in 1951, consecrated Fulton John Sheen as a bishop.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "During World War I, Piazza served as a military chaplain in the medical corps, ministering to wounded soldiers.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1951, he consecrated the American bishop Fulton John Sheen at the Basilica of Sts. John and Paul.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Piazza held the position of Secretary of the Sacred Consistorial Congregation, the body that oversees the appointment of bishops.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1884,
+      "month": 9,
+      "day": 30,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1957,
+      "month": 11,
+      "day": 30,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Sept._53._Le_cardinal_Piazza_rend_visite_au_cardinal_Saliège_(1953)_-_53Fi4938_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Sept._53._Le_cardinal_Piazza_rend_visite_au_cardinal_Sali%C3%A8ge_(1953)_-_53Fi4938_(cropped).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Sept._53._Le_cardinal_Piazza_rend_visite_au_cardinal_Sali%C3%A8ge_%281953%29_-_53Fi4938_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Sept._53._Le_cardinal_Piazza_rend_visite_au_cardinal_Sali%C3%A8ge_%281953%29_-_53Fi4938_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "André Cros",
+    "author": "André Cros",
+    "width": 811,
+    "height": 1242,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Adeodato Giovanni Piazza",
+    "url": "https://en.wikipedia.org/wiki/Adeodato_Giovanni_Piazza"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:43:21.134Z"
+  }
+}

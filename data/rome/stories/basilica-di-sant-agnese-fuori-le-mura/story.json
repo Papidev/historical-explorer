@@ -1,0 +1,159 @@
+{
+  "introduction": {
+    "text": "The Basilica di Sant'Agnese fuori le mura is a titular church and minor basilica in Rome, built on a slope descending from Via Nomentana. It sits above the Catacombs of Saint Agnes, where the saint was originally buried, and contains a largely intact 7th‑century apse mosaic. The basilica is significant for its early Christian architecture, its connection to Saint Agnes, and its role as a titular church and parish.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-1",
+        "description": "Catacombs dating from the 2nd to the 5th centuries are accessible from the church.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 100,
+          "precision": "approximate",
+          "endYear": 499,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-2",
+        "description": "A large basilica was built nearby in the 4th century, including a mausoleum for Constantina, later converted into Santa Costanza.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 300,
+          "precision": "approximate",
+          "endYear": 399,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-3",
+        "description": "The present church was constructed by Pope Honorius I in the 7th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 600,
+          "precision": "approximate",
+          "endYear": 699,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-4",
+        "description": "Pope Innocent VIII assigned the basilica to the Canons Regular of the Lateran in 1489.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1489,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-5",
+        "description": "Pope Clement XI made the basilica a parish church in 1708.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1708,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-6",
+        "description": "The Children of Mary sodality was founded at the basilica in 1864.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1864,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-7",
+        "description": "In 2026 a bust of Jesus Christ in the basilica was re‑attributed to Michelangelo.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2026,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "Separate upper gallery for women (matronaeum) similar to that of San Lorenzo fuori le mura.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-2",
+        "description": "Long wide internal set of steps lined with inscriptions from the catacombs and other ancient buildings.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-3",
+        "description": "Floor level of the 7th‑century church is about two metres above the catacomb floor, with public street entrances at the level of the second‑floor gallery.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-1",
+        "description": "Apse mosaic from Honorius’s time depicting Saint Agnes in Byzantine empress costume, Pope Honorius, and another unidentified pope on a gold ground.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Agnes of Rome",
+      "personId": "agnes-of-rome",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Honorius I",
+      "personId": "pope-honorius-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Innocent VIII",
+      "personId": "pope-innocent-viii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Clement XI",
+      "personId": "pope-clement-xi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Innocent X",
+      "personId": "pope-innocent-x",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Michelangelo",
+      "personId": "michelangelo-buonarroti",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Margaret Visser",
+      "personId": "margaret-visser",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Emerentiana",
+      "personId": "emerentiana",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Constantine I",
+      "personId": "constantine-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Constantina",
+      "personId": "constantina-constantia",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

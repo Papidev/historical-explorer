@@ -1,0 +1,69 @@
+{
+  "id": "pythagoras",
+  "name": "Pythagoras",
+  "wikidataId": "Q10261",
+  "wikipediaTitle": "Pythagoras",
+  "content": {
+    "description": [
+      {
+        "text": "Pythagoras of Samos, born around 570 BC, was an Ionian Greek philosopher who travelled to Croton in southern Italy around 530 BC, where he founded a school that required initiates to swear secrecy and live a communal, ascetic lifestyle. The school, often described as a “semicircle,” attracted scholars from across Greece and became a centre for political and religious teaching that influenced the philosophies of Plato, Aristotle, and later Western thought.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pythagoras is traditionally credited with a wide range of mathematical and scientific discoveries, most famously the Pythagorean theorem, as well as the theory of proportions, the sphericity of the Earth, and the identity of the morning and evening stars as Venus. He also promoted the doctrine of metempsychosis, the transmigration of souls, and the idea of a universal harmony of the spheres. His teachings were transmitted through a secretive community that survived persecution, and he may have died in 495 BC after a violent attack on his meeting house in Croton.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Pythagoras founded a school in Croton where members shared all possessions in common and were bound by a vow of silence, creating a model of communal living that influenced later monastic and philosophical communities.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He is reputed to have been the first person to call himself a philosopher, a term meaning “lover of wisdom,” which set a precedent for the use of the word in Greek intellectual circles.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pythagoras is traditionally credited with discovering the Pythagorean theorem, a fundamental result in geometry that states that in a right‑angled triangle the square of the hypotenuse equals the sum of the squares of the other two sides.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "According to legend, he was the first to propose that the Earth is spherical and that the morning and evening stars are the same celestial body, Venus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -570,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": -495,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Kapitolinischer_Pythagoras.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Kapitolinischer_Pythagoras.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Kapitolinischer_Pythagoras.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Kapitolinischer_Pythagoras.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "The original uploader was Galilea at German Wikipedia.",
+    "author": "The original uploader was Galilea at German Wikipedia.",
+    "width": 449,
+    "height": 599,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pythagoras",
+    "url": "https://en.wikipedia.org/wiki/Pythagoras"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:52:45.096Z"
+  }
+}

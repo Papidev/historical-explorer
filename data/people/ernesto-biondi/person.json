@@ -1,0 +1,67 @@
+{
+  "id": "ernesto-biondi",
+  "name": "Ernesto Biondi",
+  "wikidataId": "Q3732181",
+  "wikipediaTitle": "Ernesto Biondi",
+  "content": {
+    "description": [
+      {
+        "text": "Ernesto Biondi (January 30, 1855 – 1917) was an Italian sculptor born in Morolo, then part of the Papal State. He trained at Rome’s Accademia di San Luca under Girolamo Masini and first attracted national attention in 1883 when a work of his was shown at a Roman exposition. Biondi favored bronze over marble, even locating his studio near the Nelli Bronze Foundry to supervise casting, and many of his pieces draw on ancient Roman or Middle Eastern motifs.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He achieved international fame by winning the grand prix at the 1900 Exposition Universelle in Paris and by exhibiting thirteen works at the 1893 Chicago World’s Fair. His most controversial piece, the bronze group Saturnalia (1899), portrayed ten life‑size figures from different Roman social classes and provoked moral outrage when the Metropolitan Museum of Art removed it after a private viewing; Biondi sued the museum in 1905 but the New York Supreme Court ruled against him. He died in Rome in 1917.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Biondi’s Saturnalia featured ten life‑size bronze figures representing a cross‑section of Roman society, from gladiators and slaves to patricians, and was criticized for its perceived decadence.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He won the grand prix at the 1900 Paris Exposition for a sculpture celebrating the triumph of health over disease in Cisterna, Italy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Biondi’s lawsuit against the Metropolitan Museum of Art in 1905 sought $200,000 for breach of contract, but the court held that the museum director lacked authority to bind the institution without board approval.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1855,
+      "month": 1,
+      "day": 30,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1917,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Ernesto_Biondi.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ernesto_Biondi.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Ernesto_Biondi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Ernesto_Biondi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 200,
+    "height": 240,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Ernesto Biondi",
+    "url": "https://en.wikipedia.org/wiki/Ernesto_Biondi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:120b-cloud",
+    "completedAt": "2026-10-10T01:33:14.412Z"
+  }
+}

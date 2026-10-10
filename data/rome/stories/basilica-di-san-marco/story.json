@@ -1,0 +1,217 @@
+{
+  "introduction": {
+    "text": "The Basilica di San Marco in Rome is a titular basilica dedicated to Saint Mark the Evangelist and serves as the national church of Venice in Rome. Its layered history, distinctive mosaics, and architectural evolution make it a key monument of Roman religious and artistic heritage.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "consecration-336",
+        "description": "First consecration of the basilica by Pope Mark in 336.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 336,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "synod-499",
+        "description": "Synod of Pope Symmachus in 499 recorded the church as Titulus Marci.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 499,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "second-church-6th-century",
+        "description": "A second church was built in the second half of the 6th century, following the first church’s plan.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 500,
+          "precision": "approximate",
+          "endYear": 599,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "rebuilding-833",
+        "description": "Pope Gregory IV demolished the second church and rebuilt the basilica in 833.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 833,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "12th-century-additions",
+        "description": "In the 12th century a Romanesque campanile was added and the clerestory was enlarged.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1100,
+          "precision": "approximate",
+          "endYear": 1199,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "renaissance-renovation-1465-70",
+        "description": "Pope Paul II renovated the façade and added a two‑storied portico from 1465 to 1470.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1465,
+          "precision": "exact",
+          "endYear": 1470,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "baroque-redecoration-1654-57",
+        "description": "From 1654 to 1657 the colonnade was redecorated with Ionic capitals by Orazio Torriani.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1654,
+          "precision": "exact",
+          "endYear": 1657,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "baroque-redecoration-1732-54",
+        "description": "From 1732 to 1754 the high altar and choir stalls were redesigned by Filippo Barigioni.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1732,
+          "precision": "exact",
+          "endYear": 1754,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "crypt-rediscovery-1843",
+        "description": "The annular crypt was rediscovered in 1843.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1843,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "excavations-1947-50",
+        "description": "Excavations from 1947 to 1950 revealed foundations of earlier churches and a cypress chest with relics.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1947,
+          "precision": "exact",
+          "endYear": 1950,
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "apse-mosaic",
+        "description": "The apse mosaic from 833 depicts Jesus, Pope Mark, and other saints on a golden background.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "romanesque-campanile",
+        "description": "A Romanesque campanile was added in the 12th century above the southern end of the nave.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "gothic-tracery",
+        "description": "The clerestory windows were enlarged and ornamented with Gothic tracery during the Quattrocento.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "renaissance-facade",
+        "description": "Pope Paul II’s 1465–70 renovation introduced a Renaissance façade with a two‑storied portico and loggia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "baroque-interior",
+        "description": "Baroque interior changes from 1654–57 and 1732–54 added Ionic capitals, a new high altar, and choir stalls.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "apse-mosaic-art",
+        "description": "The apse mosaic is the best surviving element of Gregory IV’s reconstruction, featuring saints and symbolic lambs.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "fresco-fragments",
+        "description": "Fragments of frescoes depicting horses survive beneath the present basilica.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "baroque-sculptures",
+        "description": "Baroque and Neoclassical sculptures by artists such as Pier Francesco Mola, Guillaume Courtois, and Antonio Canova adorn the nave.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "neoclassical-works",
+        "description": "Neoclassical works by Luigi Primo, Carlo Maratta, and others are present in the interior.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Mark the Evangelist",
+      "personId": "mark-the-evangelist",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Mark",
+      "personId": "pope-mark",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Gregory IV",
+      "personId": "pope-gregory-iv",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Paul II",
+      "personId": "pope-paul-ii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Pius IV",
+      "personId": "pope-pius-iv",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Niccolò Sagredo",
+      "personId": "niccol-sagredo",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Orazio Torriani",
+      "personId": "orazio-torriani",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Angelo Maria Quirini",
+      "personId": "angelo-maria-quirini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Filippo Barigioni",
+      "personId": "filippo-barigioni",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Antonio Canova",
+      "personId": "antonio-canova",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

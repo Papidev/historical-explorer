@@ -1,0 +1,65 @@
+{
+  "id": "luigi-vanvitelli",
+  "name": "Luigi Vanvitelli",
+  "wikidataId": "Q359424",
+  "wikipediaTitle": "Luigi Vanvitelli",
+  "content": {
+    "description": [
+      {
+        "text": "Luigi Vanvitelli was born in Naples on 12 May 1700 to an Italian mother and a Dutch painter father, Caspar van Wittel, who also used the name Vanvitelli. He began his career as a history painter and, from 1724, worked as a copyist in the fabbrica of St Peter's in Rome. Under the influence of Antonio Valeri, and later of Carlo Fontana and Filippo Juvarra, he discovered his talent as an architect. His early commissions included the decoration of the Albani Chapel in Urbino and the design of the staircase and corridors of the Palazzo Albani, where he applied the restrained decorative style that would become characteristic of his later work.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Vanvitelli's most celebrated achievement is the Royal Palace of Caserta, which he began designing in 1751 for Charles VII of Naples. The palace, an enormous block measuring 253 by 190 metres, features a grand staircase, a chapel, and a theatre that he added to the original plans, as well as a series of state apartments and elaborate gardens. His work on Caserta exemplified the transition from Baroque to Neoclassicism, combining the rational planning of the Bourbon palaces with his own scenographic innovations, such as the radiating visual effect of the central vestibule and the majestic staircase that opens from a central octagon.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 1768, Vanvitelli was commissioned to design a false façade and temporary grand hall for the Palazzo Teora in Naples for the betrothal of Ferdinand IV to Maria Carolina of Austria, and again in 1772 for the birth of the King's first son.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was also commissioned to produce a design for the grand staircase of the Royal Palace of Madrid in 1765, demonstrating the international reach of his architectural influence.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1700,
+      "month": 5,
+      "day": 12,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1773,
+      "month": 3,
+      "day": 1,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Giacinto_Diano_-_Portrait_of_the_architect_Luigi_Vanvitelli.png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Giacinto_Diano_-_Portrait_of_the_architect_Luigi_Vanvitelli.png",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Giacinto_Diano_-_Portrait_of_the_architect_Luigi_Vanvitelli.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Giacinto_Diano_-_Portrait_of_the_architect_Luigi_Vanvitelli.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Giacinto Diano",
+    "author": "Giacinto Diano",
+    "width": 447,
+    "height": 558,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Luigi Vanvitelli",
+    "url": "https://en.wikipedia.org/wiki/Luigi_Vanvitelli"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:12:45.094Z"
+  }
+}

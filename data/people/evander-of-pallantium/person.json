@@ -1,0 +1,53 @@
+{
+  "id": "evander-of-pallantium",
+  "name": "Evander of Pallantium",
+  "wikidataId": "Q837699",
+  "wikipediaTitle": "Evander of Pallantium",
+  "content": {
+    "description": [
+      {
+        "text": "Evander of Pallantium, a legendary Arcadian hero, is credited in Roman mythology with bringing the Greek pantheon, laws, and alphabet to Italy. He founded the city of Pallantium on the future site of Rome’s Palatine Hill, sixty years before the Trojan War, and instituted the festival of the Lupercalia. After his death he was deified, and an altar was erected to him on the Aventine Hill.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In Virgil’s Aeneid, Evander plays a pivotal role as a wise king who welcomes Aeneas and his followers. He is portrayed as the first to raise an altar to Hercules in the Forum Boarium, a monument that later burned in the Great Fire of Rome in AD 64. Evander’s presence links the heroic past of myth with the Augustan age, and he assists Aeneas in his war against Turnus, reflecting the shared ancestry between the Arcadians and the Trojans.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Evander is said to have killed the three‑souled king Erulus three times in one day before becoming the most powerful king of Italy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Evander’s mother, a local nymph named Themis, was later revered by Romans as Carmenta, a nymph associated with song.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Euander-Pallene.svg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Euander-Pallene.svg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Euander-Pallene.svg/960px-Euander-Pallene.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Euander-Pallene.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Published by Guillaume Rouille (1518?-1589)",
+    "author": "Published by Guillaume Rouille (1518?-1589)",
+    "width": 440,
+    "height": 440,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Evander of Pallantium",
+    "url": "https://en.wikipedia.org/wiki/Evander_of_Pallantium"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:09:01.065Z"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "gaius-lutatius-catulus",
+  "name": "Gaius Lutatius Catulus",
+  "wikidataId": "Q453899",
+  "wikipediaTitle": "Gaius Lutatius Catulus (consul 242 BC)",
+  "content": {
+    "description": [
+      {
+        "text": "Gaius Lutatius Catulus was a Roman statesman and naval commander who rose to prominence during the First Punic War. Born into the plebeian gens Lutatius, he followed the typical cursus honorum, serving in the cavalry, as a military tribune and quaestor before being elected consul in 242 BC, a rare achievement for a novus homo. As the sole candidate to command the war in Sicily, he was granted the authority to lead the army and a newly assembled fleet, which was financed by donations from wealthy citizens after the public treasury had been depleted by the prolonged conflict.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 241 BC, after a wound prevented him from personally commanding the fleet at the Battle of the Aegates, his second‑in‑command, Praetor Quintus Valerius Falto, led the Roman forces to a decisive victory over Carthage. The triumph of the Romans forced Carthage to negotiate a peace treaty that was later tightened by the Senate, still bearing Catulus' name. To commemorate the victory, Catulus built a temple to the goddess Juturna in Campus Martius, and although no further records of his life survive, he later became the central figure in Finnish author Jukka M. Heikkilä's novel *Merikonsuli*.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Catulus' cognomen means \"puppy\".",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first Roman consul to be a novus homo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He built a temple to the goddess Juturna in Campus Martius after his triumph.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He is the main character in the Finnish novel *Merikonsuli* by Jukka M. Heikkilä.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Lutatius.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Lutatius.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Lutatius.jpg/960px-Lutatius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/93/Lutatius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0",
+    "attribution": "Lutatius",
+    "author": "Lutatius",
+    "width": 2896,
+    "height": 1904,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Gaius Lutatius Catulus (consul 242 BC)",
+    "url": "https://en.wikipedia.org/wiki/Gaius_Lutatius_Catulus_(consul_242_BC)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:04:23.536Z"
+  }
+}

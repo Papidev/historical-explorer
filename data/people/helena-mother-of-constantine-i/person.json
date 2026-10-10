@@ -1,0 +1,65 @@
+{
+  "id": "helena-mother-of-constantine-i",
+  "name": "Helena, mother of Constantine I",
+  "wikidataId": "Q170164",
+  "wikipediaTitle": "Helena, mother of Constantine I",
+  "content": {
+    "description": [
+      {
+        "text": "Helena, born around AD 246/248 in the lower‑class milieu of Bithynia, rose to become the mother of Emperor Constantine the Great and a revered saint in both Catholic and Orthodox traditions.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After Constantine’s ascension, Helena was granted the title of Augusta in 324 and played a pivotal role in Christian patronage, notably through her pilgrimage to the Holy Land where she is credited with discovering the True Cross and initiating the construction of the Church of the Holy Sepulchre.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Her pilgrimage to Jerusalem in 326–328 led to the construction or beautification of the Church of the Nativity in Bethlehem and the Church of Eleona on the Mount of Olives.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "According to tradition, Helena ordered the demolition of the pagan temple of Venus in Jerusalem, which paved the way for the building of the Church of the Holy Sepulchre.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Helena’s remains were originally interred in the Mausoleum of Helena outside Rome, but later moved to Santa Maria in Ara Coeli and are now displayed in the Pio‑Clementine Vatican Museum.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 246,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 330,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "0_Statue_de_Sainte_Hélène_par_Andrea_Bolgi_-_Basilique_St-Pierre_-_Vatican.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:0_Statue_de_Sainte_H%C3%A9l%C3%A8ne_par_Andrea_Bolgi_-_Basilique_St-Pierre_-_Vatican.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/0_Statue_de_Sainte_H%C3%A9l%C3%A8ne_par_Andrea_Bolgi_-_Basilique_St-Pierre_-_Vatican.JPG/960px-0_Statue_de_Sainte_H%C3%A9l%C3%A8ne_par_Andrea_Bolgi_-_Basilique_St-Pierre_-_Vatican.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/0_Statue_de_Sainte_H%C3%A9l%C3%A8ne_par_Andrea_Bolgi_-_Basilique_St-Pierre_-_Vatican.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0",
+    "attribution": "Jean-Pol GRANDMONT",
+    "author": "Jean-Pol GRANDMONT",
+    "width": 2592,
+    "height": 3888,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Helena, mother of Constantine I",
+    "url": "https://en.wikipedia.org/wiki/Helena%2C_mother_of_Constantine_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:11:08.998Z"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "emperor-nero",
+  "name": "Emperor Nero",
+  "wikidataId": "Q1413",
+  "wikipediaTitle": "Nero",
+  "content": {
+    "description": [
+      {
+        "text": "Nero Claudius Caesar Augustus Germanicus, born Lucius Domitius Ahenobarbus on 15 December AD 37 in Antium, was the son of Gnaeus Domitius Ahenobarbus and Agrippina the Younger. After his father died when he was three, his mother married Emperor Claudius in AD 49 and adopted Nero as his heir, giving him the imperial name and securing his place in the Julio‑Claudian line.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He ascended to the throne in AD 54 at the age of sixteen, ruling until his suicide on 9 June AD 68. During his reign he pursued extravagant building projects, promoted public games, and famously performed as an actor, poet, and musician—roles that scandalised the aristocracy but endeared him to the lower classes. The Great Fire of Rome in 64, which he was accused of starting, led to widespread persecution of Christians and a massive rebuilding effort that culminated in the construction of the Domus Aurea.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Nero was the last emperor of the Julio‑Claudian dynasty.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was known for performing in public as an actor, poet, and musician, a rare pastime for a Roman emperor.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Nero committed suicide by stabbing himself in the throat with a dagger, assisted by his secretary Epaphroditus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 37,
+      "month": 12,
+      "day": 15,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 68,
+      "month": 6,
+      "day": 9,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Nero_Palatino_Inv618.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Nero_Palatino_Inv618.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Nero_Palatino_Inv618.jpg/960px-Nero_Palatino_Inv618.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Nero_Palatino_Inv618.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Jastrow",
+    "author": "Jastrow",
+    "width": 1715,
+    "height": 2300,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Nero",
+    "url": "https://en.wikipedia.org/wiki/Nero"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:13:17.942Z"
+  }
+}

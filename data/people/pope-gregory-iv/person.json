@@ -1,0 +1,67 @@
+{
+  "id": "pope-gregory-iv",
+  "name": "Pope Gregory IV",
+  "wikidataId": "Q167052",
+  "wikipediaTitle": "Pope Gregory IV",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Gregory IV, who reigned from October 827 until his death on 25 January 844, was a learned and energetic churchman whose pontificate was marked by a persistent attempt to mediate the quarrels that divided the Carolingian Empire.  He was elected by the Roman nobility and confirmed by Emperor Louis the Pious, but his tenure was dominated by the emperor’s conflict with his sons, a struggle that culminated in the Treaty of Verdun in 843.  Gregory’s diplomatic efforts—sending envoys to Louis, traveling to the emperor’s camp, and negotiating with Lothair—were ultimately unsuccessful, yet they underscored the papacy’s growing assertion of spiritual authority over temporal rulers.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond the political arena, Gregory IV was a prolific builder and patron of the arts.  He repaired the Aqua Traiana, fortified the port of Ostia—renaming it Gregoriopolis—and established new colonies along the Tiber.  In Rome he completely rebuilt St. Mark’s Basilica in 833, adorning it with Byzantine‑style mosaics, and restored the atrium of St. Peter’s Basilica, where he transferred the relics of several saints.  His reign also saw the appointment of Ansgar as Archbishop of Hamburg‑Bremen and the promotion of the feast of All Saints across the Frankish kingdom, reflecting his broader vision of a unified Christian community.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Gregory IV rebuilt St. Mark’s Basilica in Rome in 833, decorating its walls with Byzantine‑style mosaics.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He fortified the port of Ostia and renamed it Gregoriopolis in an effort to protect the city from Saracen attacks.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 832 he appointed Ansgar as Archbishop of Hamburg‑Bremen, making him the apostolic legate to northern and eastern Europe.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He repaired the ancient Aqua Traiana aqueduct, restoring water supply to Rome after damage during the reign of Leo III.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 844,
+      "month": 1,
+      "day": 25,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Gregory-IV_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Gregory-IV_(cropped).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Gregory-IV_%28cropped%29.jpg/960px-Gregory-IV_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Gregory-IV_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Fulda",
+    "author": "Fulda",
+    "width": 1513,
+    "height": 1513,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Gregory IV",
+    "url": "https://en.wikipedia.org/wiki/Pope_Gregory_IV"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T16:59:59.384Z"
+  }
+}

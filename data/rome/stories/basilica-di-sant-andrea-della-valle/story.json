@@ -1,0 +1,223 @@
+{
+  "introduction": {
+    "text": "The Basilica di Sant'Andrea della Valle is a major Baroque church in Rome, serving as the seat of the Theatine order and a model for later churches.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "In 1582, Donna Costanza Piccolomini d'Aragona bequeathed her palace and the adjacent church of San Sebastiano to the Theatine order to build a new church dedicated to Saint Andrew.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1582,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Construction began around 1590 under Giacomo della Porta and Pier Paolo Olivieri, with patronage of Cardinal Gesualdo.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1590,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Work restarted by 1608, financed by an endowment of over 150,000 gold scudi, and led by Cardinal Alessandro Peretti di Montalto.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1608,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Giovanni Lanfranco completed the lavish dome decoration in 1627.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1627,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "The interior of the church was completed by 1650, with later changes by Francesco Grimaldi.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1650,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "The Baroque facade was added between 1655 and 1663 by Carlo Rainaldi.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1655,
+          "precision": "exact",
+          "endYear": 1663,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "The altar in the Chapel of the Madonna della Purità was consecrated in 1725.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1725,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history8",
+        "description": "Frescoes in the left transept were painted in 1770 by Alessio D'Elia.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1770,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history9",
+        "description": "A two‑manual pipe organ was built in 1845.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1845,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history11",
+        "description": "The Chapel of Our Lady of the Sacred Heart was designed 1887–1889 by Aristide Leonori.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1887,
+          "precision": "exact",
+          "endYear": 1889,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history10",
+        "description": "The church was designated a cardinal titular church on 12 March 1960.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1960,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The church’s Baroque facade, added 1655-1663, was designed by Carlo Rainaldi.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The dome’s frescoes, completed in 1627, were painted by Giovanni Lanfranco.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "A two‑manual pipe organ, built in 1845, remains in the basilica.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design4",
+        "description": "A fountain attributed to Carlo Maderno stands on the square in front of the basilica.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Domenichino painted frescoes in the dome and apse, including the History of Sant'Andrea and Virtues.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "Mattia Preti frescoed Crucifixion, Martyrdom and burial of Sant'Andrea in the apse walls (1650–1651).",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "Antonio Raggi sculpted the marble relief Angel Urges Sacred Family to Flee to Egypt (1675) in the Ginetti Chapel.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art4",
+        "description": "Bernini’s style influenced sculptures such as the angel in the Ginetti Chapel and other works.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art5",
+        "description": "Gregorio De Rossi produced bronze copies of Michelangelo’s Pietà, Leah and Rachel (1616) in the Strozzi Chapel.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Saint Andrew",
+      "personId": "saint-andrew",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Theatines",
+      "personId": "theatines",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Pius II",
+      "personId": "pope-pius-ii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Carlo Maderno",
+      "personId": "carlo-maderno",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giovanni Lanfranco",
+      "personId": "giovanni-lanfranco",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Domenichino",
+      "personId": "domenichino",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Michelangelo",
+      "personId": "michelangelo-buonarroti",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Bernini",
+      "personId": "gian-lorenzo-bernini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Gregory XV",
+      "personId": "pope-gregory-xv",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Sixtus V",
+      "personId": "pope-sixtus-v",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

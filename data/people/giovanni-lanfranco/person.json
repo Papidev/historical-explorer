@@ -1,0 +1,81 @@
+{
+  "id": "giovanni-lanfranco",
+  "name": "Giovanni Lanfranco",
+  "wikidataId": "Q447730",
+  "wikipediaTitle": "Giovanni Lanfranco",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Lanfranco was born on 26 January 1582 in Parma and entered the artistic world as a page in the household of Count Orazio Scotti.  His early talent led him to apprentice with Agostino Carracci in Bologna, where he worked alongside Sisto Badalocchio on projects for the Farnese palaces.  After Agostino’s death in 1602, Lanfranco moved to Annibale Carracci’s Roman workshop, contributing to the Galleria Farnese ceiling and later frescoing the Herrera Chapel in San Giacomo degli Spagnoli between 1602 and 1607.  By 1605 he was receiving independent commissions, including the Translation of the Magdalen for the Camerino degli Eremiti in the Palazzetto Farnese, and he returned to Parma for a brief period after Annibale’s death, where he painted altarpieces for the Ognissanti church and other local commissions.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Lanfranco’s return to Rome by 1612 marked the beginning of a prolific period in which he competed with fellow Carracci students for major fresco commissions.  He distinguished himself with a visionary, theatrical style that blended the classicism of the Carracci with the dramatic chiaroscuro of Caravaggio, as seen in his altarpiece of the Inspiration of Saint Luke.  His crowning achievement was the Assumption of the Virgin frescoed on the dome of Sant’Andrea della Valle in 1627, a landmark of Baroque painting noted for its crowded array of figures and bright golden coloration.  In recognition of his work, Urban VIII commissioned a fresco of St. Peter walking on water in 1628, for which Lanfranco received the Knight of the Supreme Order of Christ, and in 1631 he was named Prince of the Academy of Saint Luke.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Urban VIII awarded Lanfranco the Knight of the Supreme Order of Christ for his fresco of St. Peter walking on water, a commission that is now fragmentary.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1631 Lanfranco was named Prince (Principe) of the Academy of Saint Luke, the artist's guild in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Lanfranco’s Assumption of the Virgin on the dome of Sant’Andrea della Valle, completed in 1627, is considered a landmark of Baroque painting for its crowded composition and bright golden palette.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He engaged in a rivalry with Domenichino for fresco commissions, even publicly accusing Domenichino of plagiarizing Agostino Carracci in the painting of the Confession of St. Jerome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Lanfranco’s 1622 fresco of the Ecstasy of Saint Margaret of Cortona may have inspired Bernini’s famous St. Theresa in ecstasy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A long‑lost portrait of St. Charles Borromeo, painted around 1614–15, was identified from a chalk sketch in 1983, illustrating Lanfranco’s rare portrait studies.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Lanfranco was buried in Santa Maria in Trastevere after his death in Rome in 1647.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1582,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1647,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Autoritratto_di_Giovanni_Lanfranco.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Autoritratto_di_Giovanni_Lanfranco.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Autoritratto_di_Giovanni_Lanfranco.jpg/960px-Autoritratto_di_Giovanni_Lanfranco.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/81/Autoritratto_di_Giovanni_Lanfranco.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Giovanni Lanfranco",
+    "author": "Giovanni Lanfranco",
+    "width": 2347,
+    "height": 3020,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giovanni Lanfranco",
+    "url": "https://en.wikipedia.org/wiki/Giovanni_Lanfranco"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:11:14.135Z"
+  }
+}

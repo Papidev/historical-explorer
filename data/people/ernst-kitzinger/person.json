@@ -1,0 +1,69 @@
+{
+  "id": "ernst-kitzinger",
+  "name": "Ernst Kitzinger",
+  "wikidataId": "Q88907",
+  "wikipediaTitle": "Ernst Kitzinger",
+  "content": {
+    "description": [
+      {
+        "text": "Ernst Kitzinger was born on 27 December 1912 in Munich to a well‑educated Jewish family. He studied art history at the Ludwig‑Maximilians‑Universität München and spent much of the early 1930s in Rome, where he completed a dissertation on Roman painting of the 7th and 8th centuries. The rise of the Nazi regime forced him to leave Germany immediately after defending his thesis in 1934, and he eventually settled in England, where he began his career as a volunteer at the British Museum and contributed to the study of Anglo‑Saxon art and the Sutton Hoo ship burial.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Kitzinger’s scholarly work spanned late antique, early medieval, and Byzantine art, with a particular focus on the stylistic evolution of mosaics in Norman Sicily. He held key positions at Dumbarton Oaks and Harvard, supervised numerous doctoral students, and developed a theory of “modes” that linked style to subject matter. His books, such as *Byzantine Art in the Making*, remain influential, and his methodological insights continue to shape contemporary studies of medieval art.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "During World War II, Kitzinger was interned as an enemy alien and transported on the HMT Dunera to Australia, where he spent nine months in an internment camp before being released by the Warburg Institute.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "While interned, he learned Russian from a fellow internee, a skill that later proved useful in his academic career.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Kitzinger’s first published article examined Anglo‑Saxon vinescroll ornament, and he also assisted in the assessment of the treasures of the Sutton Hoo ship burial as they were uncovered in 1939.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1912,
+      "month": 12,
+      "day": 27,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 2003,
+      "month": 1,
+      "day": 22,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Bundesarchiv_B_145_Bild-F078398-0007,_Ernst_Kitzinger.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_B_145_Bild-F078398-0007%2C_Ernst_Kitzinger.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Bundesarchiv_B_145_Bild-F078398-0007%2C_Ernst_Kitzinger.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Bundesarchiv_B_145_Bild-F078398-0007%2C_Ernst_Kitzinger.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0 de",
+    "attribution": "Bundesarchiv, B 145 Bild-F078398-0007 / Engelbert Reineke / CC-BY-SA 3.0",
+    "author": "Engelbert Reineke",
+    "width": 800,
+    "height": 747,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Ernst Kitzinger",
+    "url": "https://en.wikipedia.org/wiki/Ernst_Kitzinger"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:51:51.131Z"
+  }
+}

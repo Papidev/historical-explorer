@@ -1,0 +1,73 @@
+{
+  "id": "varro",
+  "name": "Varro",
+  "wikidataId": "Q206119",
+  "wikipediaTitle": "Marcus Terentius Varro",
+  "content": {
+    "description": [
+      {
+        "text": "Marcus Terentius Varro was born around 116 BC near Reate in the Lazio region of Italy. He rose through the Roman political ladder, serving as tribune of the people, quaestor, curule aedile, and eventually praetor while supporting Pompey during the civil wars. After the defeat of Pompey, Varro was pardoned twice by Julius Caesar, a rare privilege that allowed him to survive the political purges of the era.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Varro was a prolific writer, producing more than seventy‑four Latin works on subjects ranging from language and agriculture to history and philosophy. His most enduring legacy is the Nine Books of Disciplines, which organized the liberal arts into a framework that later scholars, including Pliny the Elder, adopted. He also compiled the Varronian chronology, an attempt to set a year‑by‑year record of Roman history that became the standard reference for the Republic and early Empire.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In his agricultural treatise, Varro warned that swamps and marshes were breeding grounds for invisible creatures that could cause serious diseases, a remarkably early observation of what modern science would call microbiology and epidemiology.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Varro’s Varronian chronology was inscribed on the arch of Augustus in Rome, and although it contains errors, it remained the accepted Roman calendar for centuries and is preserved in the Fasti Capitolini.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Nine Books of Disciplines listed nine liberal arts—grammar, rhetoric, logic, arithmetic, geometry, astronomy, music, medicine, and architecture—providing a model that later medieval scholars distilled into the seven liberal arts of the trivium and quadrivium.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Varro owned a large farm in the Reatine plain and wrote De re rustica for his wife Fundania, a practical guide to managing a slave‑run estate that was later copied alongside Cato the Elder’s De agri cultura.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After being proscribed by Mark Antony, Varro was later protected by Augustus, who allowed him to retire in relative safety and continue his scholarly work until his death.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -115,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": -26,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Marco_Terenzio_Varrone.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Marco_Terenzio_Varrone.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Marco_Terenzio_Varrone.jpg/960px-Marco_Terenzio_Varrone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Marco_Terenzio_Varrone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Andre Thevet",
+    "author": "Andre Thevet",
+    "width": 1207,
+    "height": 1500,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Marcus Terentius Varro",
+    "url": "https://en.wikipedia.org/wiki/Marcus_Terentius_Varro"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:08:47.790Z"
+  }
+}

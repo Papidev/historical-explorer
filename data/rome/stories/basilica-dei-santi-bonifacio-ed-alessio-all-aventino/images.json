@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Basilica_dei_Santi_Bonifacio_e_Alessio.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Basilica_dei_Santi_Bonifacio_e_Alessio.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Basilica_dei_Santi_Bonifacio_e_Alessio.jpg/960px-Basilica_dei_Santi_Bonifacio_e_Alessio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Basilica_dei_Santi_Bonifacio_e_Alessio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Merulana",
+      "author": "Merulana",
+      "width": 7394,
+      "height": 6646,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "225_of_'Rome_et_ses_monuments._Guide_du_voyageur_catholique_dans_la_capitale_du_monde_chrétien_..._Avec_cinquante-et-un_plans_annotés'_(11072508876).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:225_of_'Rome_et_ses_monuments._Guide_du_voyageur_catholique_dans_la_capitale_du_monde_chr%C3%A9tien_..._Avec_cinquante-et-un_plans_annot%C3%A9s'_(11072508876).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/225_of_%27Rome_et_ses_monuments._Guide_du_voyageur_catholique_dans_la_capitale_du_monde_chr%C3%A9tien_..._Avec_cinquante-et-un_plans_annot%C3%A9s%27_%2811072508876%29.jpg/960px-225_of_%27Rome_et_ses_monuments._Guide_du_voyageur_catholique_dans_la_capitale_du_monde_chr%C3%A9tien_..._Avec_cinquante-et-un_plans_annot%C3%A9s%27_%2811072508876%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/225_of_%27Rome_et_ses_monuments._Guide_du_voyageur_catholique_dans_la_capitale_du_monde_chr%C3%A9tien_..._Avec_cinquante-et-un_plans_annot%C3%A9s%27_%2811072508876%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "No restrictions",
+      "attribution": "The British Library",
+      "author": "The British Library",
+      "width": 1273,
+      "height": 1808,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "225SsBonifacioAlessio.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:225SsBonifacioAlessio.JPG",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bb/225SsBonifacioAlessio.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bb/225SsBonifacioAlessio.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "MarkusMark",
+      "author": "MarkusMark",
+      "width": 525,
+      "height": 700,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Basilica_dei_Santi_Bonifacio_e_Alessio.jpg"
+}

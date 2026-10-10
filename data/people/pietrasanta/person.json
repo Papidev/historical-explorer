@@ -1,0 +1,57 @@
+{
+  "id": "pietrasanta",
+  "name": "Pietrasanta",
+  "wikidataId": "Q219330",
+  "wikipediaTitle": "Pietrasanta",
+  "content": {
+    "description": [
+      {
+        "text": "Pietrasanta is a coastal town in northern Tuscany, situated on the last foothills of the Apuan Alps and about 32 km north of Pisa. The settlement traces its origins back to Roman times, with remnants of a Roman wall still visible today. The medieval town was formally founded in 1255 by Luca Guiscardo da Pietrasanta on the site of the earlier Lombard fortress known as Rocca di Sala, and it later became part of the Republic of Genoa, the Duchy of Lucca, and the Medici‑ruled Florence, reflecting the shifting political landscape of the region.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The town’s reputation as a marble centre began in the fifteenth century when Michelangelo first recognised the quality of the local stone. Over the centuries Pietrasanta has attracted a host of artists—including Fernando Botero, Joan Miró, Henry Moore, and Damien Hirst—and today it still hosts more than fifty marble workshops and bronze foundries, making it a living hub for sculptural production.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Michelangelo was the first sculptor to recognise the beauty of Pietrasanta’s local marble.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The town is still home to over 50 marble workshops and bronze foundries.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pietrasanta suffered a long period of decline during the 17th and 18th centuries, partially due to malaria.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Pietrasanta-piazza_del_teatro2.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pietrasanta-piazza_del_teatro2.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Pietrasanta-piazza_del_teatro2.jpg/960px-Pietrasanta-piazza_del_teatro2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/72/Pietrasanta-piazza_del_teatro2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Davide Papalini",
+    "author": "Davide Papalini",
+    "width": 3264,
+    "height": 2448,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pietrasanta",
+    "url": "https://en.wikipedia.org/wiki/Pietrasanta"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T16:57:15.244Z"
+  }
+}

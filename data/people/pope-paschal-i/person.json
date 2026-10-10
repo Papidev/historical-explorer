@@ -1,0 +1,63 @@
+{
+  "id": "pope-paschal-i",
+  "name": "Pope Paschal I",
+  "wikidataId": "Q103308",
+  "wikipediaTitle": "Pope Paschal I",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Paschal I, born Pascale Massimi of the aristocratic Massimi family, served as abbot of St. Stephen's monastery before being elected bishop of Rome on 25 January 817, a day after the sudden death of Stephen IV. His election was made without the sanction of Emperor Louis the Pious, and Paschal immediately sought to justify the choice by emphasizing the need to avoid factional strife within the city.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his seven‑year pontificate he crowned Lothair I as Holy Roman Emperor in 823, rebuilt three major basilicas in Rome—including Santa Prassede, Santa Maria in Domnica, and Santa Cecilia in Trastevere—and sheltered exiled Byzantine monks who opposed iconoclasm, offering them work on Roman churches. His building projects were used to assert papal independence and he also added two oratories to Old St. Peter’s Basilica, though they did not survive the 16th‑century renovations.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Paschal is credited with discovering the body of Saint Cecilia in the Catacomb of Callixtus and translating it to the newly rebuilt basilica of Santa Cecilia in Trastevere.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He added two oratories—SS. Processus et Martinianus and SS. Xistus et Fabianus—to Old St. Peter’s Basilica, but these structures were lost during the 16th‑century renovation of St. Peter’s.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Paschal was canonized in the late sixteenth century; his feast day was originally 14 May but is now celebrated on 11 February.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 824,
+      "month": 2,
+      "day": 11,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_Paschalis_I._in_apsis_mosaic_of_Santa_Prassede_in_Rome.gif",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Paschalis_I._in_apsis_mosaic_of_Santa_Prassede_in_Rome.gif",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/Pope_Paschalis_I._in_apsis_mosaic_of_Santa_Prassede_in_Rome.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/Pope_Paschalis_I._in_apsis_mosaic_of_Santa_Prassede_in_Rome.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "https://etc.usf.edu/clippix/picture/rome-santa-prassede-apse-mosaic-pope-paschal-i-st-paul-and-st-praxedis-or-pudentiana.html",
+    "author": "https://etc.usf.edu/clippix/picture/rome-santa-prassede-apse-mosaic-pope-paschal-i-st-paul-and-st-praxedis-or-pudentiana.html",
+    "width": 207,
+    "height": 299,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Paschal I",
+    "url": "https://en.wikipedia.org/wiki/Pope_Paschal_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:20:23.535Z"
+  }
+}

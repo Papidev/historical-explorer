@@ -1,0 +1,67 @@
+{
+  "id": "pope-gregory-iii",
+  "name": "Pope Gregory III",
+  "wikidataId": "Q103268",
+  "wikipediaTitle": "Pope Gregory III",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Gregory III, born to a Syrian Christian family, was elected by popular acclamation on 11 February 731 and formally consecrated on 18 March after securing the approval of the Byzantine exarch of Ravenna.  He was the last pope to seek the exarch’s ratification of a papal election and the last pope of Syrian origin, a distinction that would not be repeated until Pope Francis in 2013.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his decade-long pontificate he confronted the twin crises of Byzantine iconoclasm and Lombard aggression.  Gregory appealed to Emperor Leo III to moderate iconoclasm, convened a synod that condemned the practice, and repaired and decorated churches with icons.  He also sought the intervention of the Frankish mayor Charles Martel against the Lombards, though the request ultimately failed to secure decisive military aid.  Gregory died on 28 November 741 and was buried in St. Peter’s Basilica.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the last pope to seek the consent of the Byzantine exarch of Ravenna for his election.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the last pope of Syrian origin.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the last pope born outside Europe until the election of Pope Francis 1,272 years later in 2013.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He invoked the intervention of Charles Martel, although ultimately in vain.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 741,
+      "month": 11,
+      "day": 28,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "178-7866_IMG_-_Gregorius_III_AV.png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:178-7866_IMG_-_Gregorius_III_AV.png",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/178-7866_IMG_-_Gregorius_III_AV.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/178-7866_IMG_-_Gregorius_III_AV.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "ASKI",
+    "author": "ASKI",
+    "width": 458,
+    "height": 456,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Gregory III",
+    "url": "https://en.wikipedia.org/wiki/Pope_Gregory_III"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:17:05.256Z"
+  }
+}

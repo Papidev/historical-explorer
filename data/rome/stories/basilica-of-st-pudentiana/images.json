@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Santa_Pudenziana_-_esterno.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Santa_Pudenziana_-_esterno.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Santa_Pudenziana_-_esterno.jpg/960px-Santa_Pudenziana_-_esterno.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Santa_Pudenziana_-_esterno.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "Rione I Monti",
+      "author": "Rione I Monti",
+      "width": 4028,
+      "height": 8388,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Basilica_di_S._Pudenziana_-_panoramio.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Basilica_di_S._Pudenziana_-_panoramio.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Basilica_di_S._Pudenziana_-_panoramio.jpg/960px-Basilica_di_S._Pudenziana_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Basilica_di_S._Pudenziana_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "attribution": "Vlad Lesnov",
+      "author": "Vlad Lesnov",
+      "width": 4288,
+      "height": 2848,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Santa_Pudenziana_-_Roma_-_exterior.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Santa_Pudenziana_-_Roma_-_exterior.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Santa_Pudenziana_-_Roma_-_exterior.JPG/960px-Santa_Pudenziana_-_Roma_-_exterior.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/16/Santa_Pudenziana_-_Roma_-_exterior.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC0",
+      "attribution": "Luc.",
+      "author": "Luc.",
+      "width": 3648,
+      "height": 2432,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Santa_Pudenziana_-_esterno.jpg"
+}

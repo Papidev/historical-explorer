@@ -1,0 +1,198 @@
+{
+  "introduction": {
+    "text": "The Area Archeologica di Piano della Comunità is an archaeological site in Rome that preserves the remains of the ancient Etruscan city of Veii, one of the most important centers of Etruria. Its ruins, including temples, tombs, and city walls, illustrate the wealth, artistic achievements, and military history of Veii, and the site remains a key location for understanding Etruscan culture and its interactions with early Rome.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-early-occupation",
+        "description": "Evidence of settlement on the Veii plateau dates to the 10th century BC, when small villages and cemeteries appeared during the Late Bronze Age.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -1000,
+          "precision": "approximate",
+          "endYear": -901,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-urban-development",
+        "description": "By the 7th century BC, Veii had evolved into a planned urban center with a grid of city blocks, a central square, and a water cistern, reflecting its growing political and economic power.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -700,
+          "precision": "approximate",
+          "endYear": -601,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-tarquinius-conflict",
+        "description": "Following the overthrow of the Roman monarchy in 509 BC, Tarquinius Superbus sought to regain power with the support of Veii, but the city’s forces were defeated by Roman consuls.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -509,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-lars-tolumnus-war",
+        "description": "In 438 BC, Veii’s ruler Lars Tolumnus allied with Fidenae against Rome; the conflict ended with his death in 437 BC during the Battle of Fidenae.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -438,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-battle-fidenae",
+        "description": "The Battle of Fidenae in 437 BC saw the Roman army defeat the combined forces of Veii and Fidenae, further weakening Veii’s influence.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -437,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-war-406",
+        "description": "In 406 BC, Rome again besieged Veii, culminating in the city’s fall after a prolonged siege and the destruction of its walls.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -406,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-battle-of-veii",
+        "description": "In 396 BC, Roman dictator Marcus Furius Camillus captured Veii after a ten‑year siege, ending the city’s independence and leading to its Romanization.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -396,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-roman-assimilation",
+        "description": "After its conquest, Veii was incorporated into the Roman state as Municipium Augustum Veiens, but it never regained its former prosperity.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design-sanctuary-minerva",
+        "description": "The sanctuary of Minerva, dating to the 7th c. BC, is the largest visible monument of Veii, featuring polychrome terracotta decorations that survive in the Villa Giulia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-temple-juno",
+        "description": "Veii’s temple of Juno was the most honored religious building in the city, and its statue was later taken to Rome after the city’s fall.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-thermal-baths",
+        "description": "Thermal baths and a forum built under Augustus have been partially excavated, illustrating Roman adaptation of the site.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-forum-augustus",
+        "description": "The forum constructed during Augustus’ reign demonstrates the integration of Veii into the Roman urban landscape.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-walls",
+        "description": "Sections of Veii’s defensive walls, built along the plateau’s streams, survive and show the city’s strategic fortifications.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-citadel",
+        "description": "The citadel (arx) on a bluff, marked today by Piazza d’Armi, was the city’s military stronghold.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-terracotta-sculptures",
+        "description": "Veii’s terracotta sculptures, including figurines and decorative panels, depict everyday life and religious scenes.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-frescoes-grotta-campana",
+        "description": "The Grotta Campana chamber tomb contains the oldest known Etruscan frescoes, illustrating funerary art.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-pottery",
+        "description": "Ceramic vessels from Veii, many with intricate Greek and Phoenician motifs, date back to the 8th c. BC.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-bronze",
+        "description": "Bronze artifacts such as horse harnesses, weapons, and mirrors became common as Veii’s wealth grew.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-terracotta-decorations",
+        "description": "Polychrome terracotta decorations from the sanctuary of Minerva are among the most celebrated artistic achievements of Veii.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Marcus Furius Camillus",
+      "personId": "marcus-furius-camillus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Lars Tolumnus",
+      "personId": "lars-tolumnus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Aulus Cornelius Cossus",
+      "personId": "aulus-cornelius-cossus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Publius Valerius Publicola",
+      "personId": "publius-valerius-publicola",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Lucius Sergius Fidenas",
+      "personId": "lucius-sergius-fidenas",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Plutarch",
+      "personId": "plutarch",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Livy",
+      "personId": "livy",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Romulus",
+      "personId": "romulus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Tullus Hostilius",
+      "personId": "tullus-hostilius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Servius Tullius",
+      "personId": "servius-tullius",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

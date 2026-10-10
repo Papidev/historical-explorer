@@ -1,0 +1,69 @@
+{
+  "id": "paris-mythology",
+  "name": "Paris",
+  "wikidataId": "Q167646",
+  "wikipediaTitle": "Paris (mythology)",
+  "content": {
+    "description": [
+      {
+        "text": "Paris, the Trojan prince and son of King Priam and Queen Hecuba, is best known for his extraordinary beauty and his pivotal role in igniting the Trojan War. In Homeric and later accounts he is sometimes called Alexander, a name meaning \"Protector\" or \"Protected\", and he survived an early attempt on his life when he was abandoned as an infant. Descriptions from ancient writers portray him as godlike in outward appearance, with an aquiline nose, polished nails, painted eyes, and a flowing, flowery wardrobe that set him apart from other men. He was considered handsome beyond all other men, yet he was also described as feminine, an accurate archer, and at times cowardly and hedonistic. At the age of eighteen he travelled to Sparta, where he would later elope with Helen, setting the stage for the war that would engulf Greece.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Paris’s most famous act was his judgment of the golden apple, where he chose Aphrodite over Hera and Athena, accepting her promise of Helen’s love. This choice led to Helen’s abduction and the ensuing conflict that became the Trojan War. During the war he proved a capable archer, wounding Achilles and other Greek heroes, but he was ultimately killed by the archer Philoctetes. His legacy extended beyond myth: he appears in Dante’s Inferno as a lustful sinner, and in modern adaptations such as the 2004 film Troy, where he is portrayed by Orlando Bloom. He also had a daughter with Helen named Alexandra, a detail that underscores the personal costs of his choices.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Paris was also known as Alexander, a name meaning \"Protector\" or \"Protected\", and he survived an early attempt on his life when he was abandoned as an infant.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was described as having an aquiline nose, polished nails, and painted eyes, and he never allowed dirt to settle on his hair even in battle.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was considered an accurate archer, but also described as cowardly and hedonist.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He had a daughter with Helen named Alexandra, whom he wanted to name after himself, but Helen named her after herself.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In Dante's Inferno, Paris is punished in the second circle for lust alongside Helen.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was portrayed by Orlando Bloom in the 2004 film Troy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Pâris_Gillet_Louvre_MR1863.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:P%C3%A2ris_Gillet_Louvre_MR1863.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/P%C3%A2ris_Gillet_Louvre_MR1863.jpg/960px-P%C3%A2ris_Gillet_Louvre_MR1863.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/P%C3%A2ris_Gillet_Louvre_MR1863.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Marie-Lan Nguyen",
+    "author": "Marie-Lan Nguyen",
+    "width": 1950,
+    "height": 4200,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Paris (mythology)",
+    "url": "https://en.wikipedia.org/wiki/Paris_(mythology)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:54:04.900Z"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Facciata_esterna_Chiesa.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Facciata_esterna_Chiesa.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Facciata_esterna_Chiesa.jpg/960px-Facciata_esterna_Chiesa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Facciata_esterna_Chiesa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "GiulioTivoli",
+      "author": "GiulioTivoli",
+      "width": 3456,
+      "height": 4608,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "074SAndreaDelleFratte.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:074SAndreaDelleFratte.JPG",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/074SAndreaDelleFratte.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/074SAndreaDelleFratte.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "MarkusMark",
+      "author": "MarkusMark",
+      "width": 800,
+      "height": 600,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "075SAndreaDelleFratte.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:075SAndreaDelleFratte.JPG",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d9/075SAndreaDelleFratte.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d9/075SAndreaDelleFratte.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "MarkusMark",
+      "author": "MarkusMark",
+      "width": 570,
+      "height": 700,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Facciata_esterna_Chiesa.jpg"
+}

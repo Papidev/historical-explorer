@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Sant'Antonio_da_Padova_all'Esquilino.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Sant'Antonio_da_Padova_all'Esquilino.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Sant%27Antonio_da_Padova_all%27Esquilino.jpg/960px-Sant%27Antonio_da_Padova_all%27Esquilino.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/01/Sant%27Antonio_da_Padova_all%27Esquilino.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "Fiat 500e",
+      "author": "Fiat 500e",
+      "width": 6725,
+      "height": 4520,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Basilica_di_Sant'Antonio_al_Laterano_-_panoramio.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Basilica_di_Sant'Antonio_al_Laterano_-_panoramio.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Basilica_di_Sant%27Antonio_al_Laterano_-_panoramio.jpg/960px-Basilica_di_Sant%27Antonio_al_Laterano_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Basilica_di_Sant%27Antonio_al_Laterano_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "attribution": "Mister No",
+      "author": "Mister No",
+      "width": 1600,
+      "height": 1200,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Bell_tower_of_Sant'Antonio_da_Padova_in_Via_Merulana.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Bell_tower_of_Sant'Antonio_da_Padova_in_Via_Merulana.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Bell_tower_of_Sant%27Antonio_da_Padova_in_Via_Merulana.jpg/960px-Bell_tower_of_Sant%27Antonio_da_Padova_in_Via_Merulana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Bell_tower_of_Sant%27Antonio_da_Padova_in_Via_Merulana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Livioandronico2013",
+      "author": "Livioandronico2013",
+      "width": 4000,
+      "height": 4892,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Sant'Antonio_da_Padova_all'Esquilino.jpg"
+}

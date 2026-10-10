@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Basilique_Sant_Andrea_Valle_-_Rome_(IT62)_-_2021-08-29_-_3.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Basilique_Sant_Andrea_Valle_-_Rome_(IT62)_-_2021-08-29_-_3.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Basilique_Sant_Andrea_Valle_-_Rome_%28IT62%29_-_2021-08-29_-_3.jpg/960px-Basilique_Sant_Andrea_Valle_-_Rome_%28IT62%29_-_2021-08-29_-_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/Basilique_Sant_Andrea_Valle_-_Rome_%28IT62%29_-_2021-08-29_-_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Chabe01",
+      "author": "Chabe01",
+      "width": 3957,
+      "height": 4922,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "2016_Sant'Andrea_della_Valle_-_01.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:2016_Sant'Andrea_della_Valle_-_01.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/2016_Sant%27Andrea_della_Valle_-_01.jpg/960px-2016_Sant%27Andrea_della_Valle_-_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/2016_Sant%27Andrea_della_Valle_-_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Jordiferrer",
+      "author": "Jordiferrer",
+      "width": 1944,
+      "height": 2592,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Abate_Luigi_(OSM).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Abate_Luigi_(OSM).jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/Abate_Luigi_%28OSM%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/Abate_Luigi_%28OSM%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "ODbL",
+      "attribution": "Autori di OpenStreetMap (OpenStreetMap authors/auteurs)",
+      "author": "Autori di OpenStreetMap (OpenStreetMap authors/auteurs)",
+      "width": 926,
+      "height": 745,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Basilique_Sant_Andrea_Valle_-_Rome_(IT62)_-_2021-08-29_-_3.jpg"
+}

@@ -1,0 +1,61 @@
+{
+  "id": "gaius-caesar",
+  "name": "Gaius Caesar",
+  "wikidataId": "Q298162",
+  "wikipediaTitle": "Gaius Caesar",
+  "content": {
+    "description": [
+      {
+        "text": "Gaius Julius Caesar, born in 20 BC to Marcus Vipsanius Agrippa and Julia the Elder, was raised by his grandfather Augustus after being adopted as a son and heir.  Augustus accelerated his political career, allowing him to bypass the usual quaestorship and praetorship that ordinary senators were required to hold.  In 1 BC, at the age of eighteen, Gaius was given command of the eastern provinces and concluded a peace treaty with King Phraates V of Parthia on an island in the Euphrates.  He was appointed consul for the following year, 1 AD, and later died of an illness in Lycia on 21 February 4 AD.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Gaius married his second cousin Livilla, but the couple had no children.  His death, together with that of his younger brother Lucius, shocked Augustus and prompted the emperor to adopt his stepson Tiberius and his sole surviving grandson Agrippa Postumus as heirs.  The Senate honored Gaius posthumously with statues, a cenotaph at Limyra, and other commemorations, recognizing him as the emperor’s chosen successor and the hope of Roman prosperity.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Gaius was nominated as consul at the unprecedented age of fourteen, a fact commemorated by statues and inscriptions throughout the empire.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "At eighteen, he was entrusted with the command of the eastern provinces and successfully negotiated a peace treaty with King Phraates V of Parthia, demonstrating his early diplomatic skill.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -20,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 4,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "8089_-_Roma_-_Ara_Pacis_-_Caio_Cesare_-_Foto_Giovanni_Dall'Orto_-_28-Mar-2008.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:8089_-_Roma_-_Ara_Pacis_-_Caio_Cesare_-_Foto_Giovanni_Dall'Orto_-_28-Mar-2008.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/8089_-_Roma_-_Ara_Pacis_-_Caio_Cesare_-_Foto_Giovanni_Dall%27Orto_-_28-Mar-2008.jpg/960px-8089_-_Roma_-_Ara_Pacis_-_Caio_Cesare_-_Foto_Giovanni_Dall%27Orto_-_28-Mar-2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/46/8089_-_Roma_-_Ara_Pacis_-_Caio_Cesare_-_Foto_Giovanni_Dall%27Orto_-_28-Mar-2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Attribution",
+    "attribution": "Giovanni Dall'Orto",
+    "author": "Giovanni Dall'Orto",
+    "width": 1360,
+    "height": 2048,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Gaius Caesar",
+    "url": "https://en.wikipedia.org/wiki/Gaius_Caesar"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:48:54.765Z"
+  }
+}

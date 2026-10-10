@@ -1,0 +1,63 @@
+{
+  "id": "pope-innocent-ii",
+  "name": "Pope Innocent II",
+  "wikidataId": "Q170386",
+  "wikipediaTitle": "Pope Innocent II",
+  "content": {
+    "description": [
+      {
+        "text": "Gregorio Papareschi, later known as Pope Innocent II, was a Cluniac monk who rose to the cardinalate in 1116 and served as a papal envoy to Henry V and Louis VI. He was elected pope on 13 February 1130 after the sudden death of Honorius II, but his election was contested by a rival faction that installed Anacletus II, forcing Innocent to flee Rome and seek refuge in Pisa and then France. With the backing of King Lothair III of Germany, he secured recognition at the synod of Würzburg in October 1130 and was later crowned Holy Roman Emperor by Lothair in 1133, a move that helped him regain influence in Italy and eventually bring an end to the schism when Anacletus died in 1138.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the remainder of his reign, Innocent presided over the Second Lateran Council in 1139, where he excommunicated Roger II of Sicily and banned the use of crossbows against Christians. He also issued the bull Omne Datum Optimum, declaring the Knights Templar answerable only to the papacy, and negotiated the Treaty of Mignano with Roger III, acknowledging the Sicilian king’s holdings. His papacy ended with his death on 24 September 1143, after which he was interred in a porphyry sarcophagus traditionally linked to Emperor Hadrian.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He had a portrait painted depicting Lothair's oath to preserve the privileges of the city of Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He declared the Knights Templar answerable only to the papacy in his bull Omne Datum Optimum.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He crowned Lothair III as Holy Roman Emperor.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 1143,
+      "month": 9,
+      "day": 24,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_Innocent_II_–_Santa_Maria_in_Trastevere.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Innocent_II_%E2%80%93_Santa_Maria_in_Trastevere.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/86/Pope_Innocent_II_%E2%80%93_Santa_Maria_in_Trastevere.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/86/Pope_Innocent_II_%E2%80%93_Santa_Maria_in_Trastevere.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Hugo DK",
+    "author": "Hugo DK",
+    "width": 853,
+    "height": 1345,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Innocent II",
+    "url": "https://en.wikipedia.org/wiki/Pope_Innocent_II"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:33:16.822Z"
+  }
+}

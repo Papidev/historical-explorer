@@ -1,0 +1,67 @@
+{
+  "id": "bede",
+  "name": "Bede",
+  "wikidataId": "Q154938",
+  "wikipediaTitle": "Bede",
+  "content": {
+    "description": [
+      {
+        "text": "Bede was born in 672 on the lands of the twin monasteries of Monkwearmouth–Jarrow in what is now Tyne and Wear.  Sent to Monkwearmouth at age seven, he was raised as a puer oblatus and later joined Ceolfrith at Jarrow, where he survived the plague of 686 that killed most of the monks.  By 692, at the age of about nineteen, he was ordained a deacon, an unusually early appointment that reflected his exceptional learning.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Bede became one of the most prolific writers of the Early Middle Ages, producing over sixty books that ranged from biblical commentaries to treatises on the science of computus.  He popularised the Anno Domini dating system, calculated the age of the world, and authored the influential *De temporum ratione*, which set the standard for Easter calculation.  His work earned him the title “Father of English History,” and his cult grew to the point that his body was translated to Durham Cathedral and he was canonised as a Doctor of the Church in 1899.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Bede’s early ordination as a deacon at the age of nineteen was unusually young for the time, indicating that his abilities were considered exceptional by his contemporaries.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first native of Great Britain to be declared a Doctor of the Church by the Vatican, a distinction he shares only with John Henry Newman until 2025.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Bede’s body was translated to Durham Cathedral in 1020, placed in the same tomb as Saint Cuthbert, and later moved to an independent shrine in 1370 before being destroyed during the English Reformation.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 672,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 735,
+      "month": 5,
+      "day": 26,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "The_Venerable_Bede_translates_John_1902.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:The_Venerable_Bede_translates_John_1902.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/78/The_Venerable_Bede_translates_John_1902.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/78/The_Venerable_Bede_translates_John_1902.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "The original uploader was Timsj at English Wikipedia.",
+    "author": "The original uploader was Timsj at English Wikipedia.",
+    "width": 336,
+    "height": 314,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Bede",
+    "url": "https://en.wikipedia.org/wiki/Bede"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:14:23.046Z"
+  }
+}

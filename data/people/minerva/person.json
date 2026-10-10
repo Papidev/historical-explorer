@@ -1,0 +1,69 @@
+{
+  "id": "minerva",
+  "name": "Minerva",
+  "wikidataId": "Q126916",
+  "wikipediaTitle": "Minerva",
+  "content": {
+    "description": [
+      {
+        "text": "Minerva is the Roman goddess of wisdom, justice, law, victory, and the patron of arts, trade, and strategy. She is a virgin deity who, from the second century BC, was equated with the Greek goddess Athena and is one of the three deities of the Capitoline Triad alongside Jupiter and Juno.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Her worship spanned many aspects of Roman life: she was celebrated in the Quinquatria festival, associated with strategic warfare rather than the bloodshed of Mars, and linked to childbirth and healing at sanctuaries such as Lavinium and the Temple of Minerva Medica. Minerva also appears on Roman coinage, in Roman Britain as a protective figure for carpenters, and was merged with the Celtic goddess Sulis in Bath, where her healing attributes were invoked at the hot springs.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Minerva is often depicted with an owl, symbolizing her association with wisdom.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She is a virgin goddess, a characteristic that distinguishes her from many other deities.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Unlike the warlike Mars, Minerva is associated with strategic warfare, focusing on tactics and planning.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She is the patron of arts, trade, and strategy, reflecting her broad protective scope over intellectual and commercial pursuits.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Minerva was equated with the Greek goddess Athena, sharing many attributes and myths.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She is one of the three deities of the Capitoline Triad, alongside Jupiter and Juno.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Statue_de_la_déesse_Minerve_-_Musée_du_Louvre_(Ma_332).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Statue_de_la_d%C3%A9esse_Minerve_-_Mus%C3%A9e_du_Louvre_(Ma_332).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Statue_de_la_d%C3%A9esse_Minerve_-_Mus%C3%A9e_du_Louvre_%28Ma_332%29.jpg/960px-Statue_de_la_d%C3%A9esse_Minerve_-_Mus%C3%A9e_du_Louvre_%28Ma_332%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Statue_de_la_d%C3%A9esse_Minerve_-_Mus%C3%A9e_du_Louvre_%28Ma_332%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "JackyM59",
+    "author": "JackyM59",
+    "width": 3337,
+    "height": 5553,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Minerva",
+    "url": "https://en.wikipedia.org/wiki/Minerva"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:56:16.550Z"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "riccardo-zanella",
+  "name": "Riccardo Zanella",
+  "wikidataId": "Q635003",
+  "wikipediaTitle": "Riccardo Zanella",
+  "content": {
+    "description": [
+      {
+        "text": "Riccardo Zanella was born to a mother from Carniola and a father from the province of Vicenza. After completing secondary studies in Fiume, he enrolled at the higher commerce academy in Budapest and later taught at the civic male school on Via Ciotta, where he also founded a local economic studies institute. His political career began in the late 1890s when he joined the Autonomous Association and its newspaper La Difesa, becoming a leading figure in the kossuthist faction of Fiume. In 1905 he was elected to the Hungarian parliament, where he advocated for the autonomy of the city and helped launch the Giovine Fiume movement.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the First World War, Zanella was conscripted into a Hungarian unit and surrendered to the Russians, eventually arriving in Rome in 1916 where he established the Pro Fiume e Carnaro committee to push for the annexation of Fiume to Italy. After the war he opposed the occupation by the D'Annunzio legionnaires, leading to his exile first to Porto Re, then to Belgrade and later Paris. He remained an active anti‑fascist, and after the war he petitioned the United Nations to restore the Free State of Fiume. He died in Rome in 1959 and was buried at the Cimitero del Verano.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was elected to the Hungarian parliament in 1905, advocating for Fiume's autonomy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as president of the council of schools in Fiume, making him one of the city's most popular politicians.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a leading figure in the kossuthist faction of Fiume, aligning the Autonomous Association with the Partito dell'indipendenza kossuthiano.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was exiled to Porto Re, then Belgrade, and later Paris, where he continued anti‑fascist activities.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He died in Rome in 1959 and was buried at the Cimitero del Verano.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 1959,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Photographie_de_Riccardo_Zanella_-_Archives_nationales_(France).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Photographie_de_Riccardo_Zanella_-_Archives_nationales_(France).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Photographie_de_Riccardo_Zanella_-_Archives_nationales_%28France%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Photographie_de_Riccardo_Zanella_-_Archives_nationales_%28France%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC0",
+    "attribution": "Ministère de l'Intérieur (France)",
+    "author": "Ministère de l'Intérieur (France)",
+    "width": 679,
+    "height": 883,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Riccardo Zanella",
+    "url": "https://it.wikipedia.org/wiki/Riccardo_Zanella"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T01:47:21.881Z"
+  }
+}

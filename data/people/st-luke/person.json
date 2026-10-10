@@ -1,0 +1,53 @@
+{
+  "id": "st-luke",
+  "name": "St Luke",
+  "wikidataId": "Q128538",
+  "wikipediaTitle": "Luke the Evangelist",
+  "content": {
+    "description": [
+      {
+        "text": "Luke the Evangelist, traditionally identified as a physician and companion of Paul, is credited with writing the Gospel of Luke and the Acts of the Apostles. He is mentioned in the New Testament in Colossians 4:14 and 2 Timothy 4:11, where Paul refers to him as a doctor. Scholars have debated his background, with some suggesting he was a Hellenized Jew and others a Gentile Christian, but the consensus is that he was a highly educated Greek‑speaking author. His writings are noted for their careful use of Greek literary references and for their historical detail, leading some modern scholars to regard him as a competent historian of the early church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Luke is also revered as a saint in many Christian traditions, celebrated on 18 October. Tradition holds that he was martyred, allegedly hanged from an olive tree, though the details are uncertain. He is venerated as the patron saint of artists, physicians, and several other groups, and his feast day is observed in both Eastern Orthodox and Roman Catholic calendars. Relics attributed to him are divided among several locations, including a rib in Thebes and a skull in Prague, and scientific studies have suggested a Syrian origin for the remains.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "According to tradition, Luke is credited as the first icon painter, with works such as the Hodegetria image in Constantinople.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In iconography, Luke is symbolized by an ox or bull, reflecting the sacrificial nature of Christ’s ministry.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Grandes_Heures_Anne_de_Bretagne_Saint_Luc.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Grandes_Heures_Anne_de_Bretagne_Saint_Luc.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Grandes_Heures_Anne_de_Bretagne_Saint_Luc.jpg/960px-Grandes_Heures_Anne_de_Bretagne_Saint_Luc.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Grandes_Heures_Anne_de_Bretagne_Saint_Luc.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Jean Bourdichon",
+    "author": "Jean Bourdichon",
+    "width": 3168,
+    "height": 4808,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Luke the Evangelist",
+    "url": "https://en.wikipedia.org/wiki/Luke_the_Evangelist"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T02:17:23.775Z"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "scipio-africanus",
+  "name": "Scipio Africanus",
+  "wikidataId": "Q2253",
+  "wikipediaTitle": "Scipio Africanus",
+  "content": {
+    "description": [
+      {
+        "text": "Publius Cornelius Scipio Africanus, born around 236 BC, rose from a patrician family in Rome to become one of the Republic’s most celebrated generals. He is best remembered for his decisive victory over Hannibal at the Battle of Zama in 202 BC, which ended the Second Punic War and earned him the honorific epithet Africanus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his triumph, Scipio served as consul, censor, and twice as consul again, but his political career was marred by trials for alleged bribery and by opposition from figures such as Cato the Elder. He retired to his villa at Liternum, where he died around 183 BC, leaving a legacy that shaped Roman military and political culture for centuries.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Scipio was granted proconsular imperium in Hispania in 210 BC without having held the office of consul, a rare exception that underscored his extraordinary reputation.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He founded the town of Italica in 206 BC, which later became the birthplace of emperors Trajan, Hadrian, and Theodosius I.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The story of Scipio’s clemency after the capture of Carthago Nova—where he released many prisoners and spared the city’s inhabitants—has become a celebrated example of Roman magnanimity.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -235,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": -182,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Escipión_africano.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Escipi%C3%B3n_africano.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Escipi%C3%B3n_africano.JPG/960px-Escipi%C3%B3n_africano.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Escipi%C3%B3n_africano.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Miguel Hermoso Cuesta",
+    "author": "Miguel Hermoso Cuesta",
+    "width": 3038,
+    "height": 5021,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Scipio Africanus",
+    "url": "https://en.wikipedia.org/wiki/Scipio_Africanus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T17:51:15.282Z"
+  }
+}
