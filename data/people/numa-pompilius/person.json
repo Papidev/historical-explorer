@@ -1,0 +1,65 @@
+{
+  "id": "numa-pompilius",
+  "name": "Numa Pompilius",
+  "wikidataId": "Q200031",
+  "wikipediaTitle": "Numa Pompilius",
+  "content": {
+    "description": [
+      {
+        "text": "Numa Pompilius, the legendary second king of Rome, is traditionally dated to have been born around 753 BC and reigned from 715 BC until his death in 672 BC.  He was of Sabine origin and succeeded Romulus after a one‑year interregnum, bringing a markedly different tone to the early Roman monarchy by emphasizing piety, law, and religious order rather than warfare.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his forty‑three year reign, Numa is credited with a wide range of reforms that laid the foundations of Roman religious and civic life.  He introduced the Roman calendar with the new months of January and February, established the Vestal Virgins, created the office of pontifex maximus, and reorganised the priesthoods, all while disbanding the personal guard of 300 celeres that had accompanied Romulus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Numa is said to have consulted the nymph Egeria nightly, who taught him the rites and laws that would become the core of Roman religious practice.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He introduced the Roman calendar, adding the months of January and February to replace the earlier March‑based system and aligning the year with the solstices.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Numa disbanded the personal guard of 300 celeres that had surrounded Romulus, a move interpreted as a sign of humility and a shift toward peace.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -753,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": -672,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Numa_Pompilio_(Ritratto).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Numa_Pompilio_(Ritratto).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Numa_Pompilio_%28Ritratto%29.jpg/960px-Numa_Pompilio_%28Ritratto%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Numa_Pompilio_%28Ritratto%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Max Karl Baldamus",
+    "author": "Max Karl Baldamus",
+    "width": 993,
+    "height": 1277,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Numa Pompilius",
+    "url": "https://en.wikipedia.org/wiki/Numa_Pompilius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-09T01:32:46.804Z"
+  }
+}

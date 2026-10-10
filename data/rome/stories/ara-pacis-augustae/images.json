@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Ara_Pacis_(SW).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ara_Pacis_(SW).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Ara_Pacis_%28SW%29.jpg/960px-Ara_Pacis_%28SW%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Ara_Pacis_%28SW%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Rabax63",
+      "author": "Rabax63",
+      "width": 5417,
+      "height": 3450,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "AraPacis_planrome.png",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:AraPacis_planrome.png",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/AraPacis_planrome.png/960px-AraPacis_planrome.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/AraPacis_planrome.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.5",
+      "attribution": "Original uploader was ColdEel at fr.wikipedia",
+      "author": "Original uploader was ColdEel at fr.wikipedia",
+      "width": 1128,
+      "height": 900,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Plan_Rome-_Ara_Pacis.png",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Plan_Rome-_Ara_Pacis.png",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Plan_Rome-_Ara_Pacis.png/960px-Plan_Rome-_Ara_Pacis.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Plan_Rome-_Ara_Pacis.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Joris1919",
+      "author": "Joris1919 at Dutch Wikipedia",
+      "width": 1128,
+      "height": 900,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Ara_Pacis_(SW).jpg"
+}

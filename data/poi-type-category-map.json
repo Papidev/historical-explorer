@@ -6,7 +6,7 @@
     "Q7362268": ["Amphitheatre"],
     "Q839954": ["Archaeological Site"],
     "Q13218676": ["Aqueduct"],
-    "Q33506": ["Abbey", "Churches & cathedrals"],
+    "Q33506": ["Museum"],
     "Q92107": ["Castle"],
     "Q3822604": ["Mausoleum"],
     "Q162875": ["Mausoleum"],
@@ -26,10 +26,12 @@
     "Q14752696": [],
     "Q3748441": ["Square"],
     "Q16560": ["Palace"],
-    "Q110288055": ["Abbey", "Churches & cathedrals"],
+    "Q110288055": [],
     "Q12518": ["Tower"],
     "Q840482": [],
-    "Q474": ["Aqueduct"]
+    "Q474": ["Aqueduct"],
+    "Q97621821": ["Archaeological Site"],
+    "Q697295": ["Archaeological Site"]
   },
   "origins": {
     "Q3748441": "automatic",
@@ -38,7 +40,9 @@
     "Q110288055": "manual",
     "Q12518": "automatic",
     "Q33506": "manual",
-    "Q474": "automatic"
+    "Q474": "automatic",
+    "Q97621821": "manual",
+    "Q697295": "manual"
   },
   "reasons": {
     "Q3748441": "\"forum venalium\" is a Roman marketplace, which is a type of public square.",

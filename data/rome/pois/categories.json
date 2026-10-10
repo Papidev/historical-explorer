@@ -2,16 +2,11 @@
   "version": 1,
   "pois": {
     "basilica-costantiniana-di-s-agnese": [],
-    "cloisters-of-bramante": ["Abbey", "Churches & cathedrals", "Church"],
+    "cloisters-of-bramante": ["Museum", "Church"],
     "forum-boarium": ["Square"],
     "piazza-navona": ["Square"],
-    "castle-of-the-holy-angel": ["Abbey", "Churches & cathedrals", "Castle", "Mausoleum"],
-    "basilica-of-saint-paul-outside-the-walls": [
-      "Basilica",
-      "Church",
-      "Abbey",
-      "Churches & cathedrals"
-    ],
+    "castle-of-the-holy-angel": ["Museum", "Castle", "Mausoleum"],
+    "basilica-of-saint-paul-outside-the-walls": ["Basilica", "Church"],
     "torre-valca": ["Tower", "Archaeological Site"],
     "palazzo-rondinini": ["Palace"],
     "capitol-square": ["Square"],
@@ -44,6 +39,12 @@
     "acquedotto-dell-acqua-vergine": ["Aqueduct"],
     "acquedotto-julio": [],
     "acquedotto-felice": ["Aqueduct"],
-    "acquedotto-neroniano": []
+    "acquedotto-neroniano": [],
+    "acquedotto-vergine": [],
+    "acquedotto-vergine-2": ["Aqueduct"],
+    "adele-elvira-sacerdoti": [],
+    "aermacchi-mb-326": [],
+    "agli-eroici-figli-di-ostia": [],
+    "ara-pacis-augustae": ["Archaeological Site", "Museum"]
   }
 }

@@ -1,0 +1,65 @@
+{
+  "id": "venus-mythology",
+  "name": "Venus",
+  "wikidataId": "Q47652",
+  "wikipediaTitle": "Venus (mythology)",
+  "content": {
+    "description": [
+      {
+        "text": "Venus is the Roman goddess of love, beauty, desire, fertility, prosperity, and victory. She inherited the iconography of the Greek Aphrodite and was typically depicted nude, underscoring her role as the embodiment of sensuality and aesthetic appeal. In Roman myth, she is the divine ancestor of the Roman people through her son Aeneas, and Julius Caesar famously claimed her as his own ancestor to legitimize his rule.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Venus’s cult was extensive and varied, with temples dedicated to her under different epithets such as Venus Genetrix, Venus Victrix, and Venus Physica. Her birth narrative—emerging from sea foam—mirrors the Greek story of Aphrodite, and her festivals, including Veneralia and Vinalia, celebrated her influence over love, marriage, and wine. The goddess’s many titles reflected her multifaceted functions, from protector of the state to patron of the arts and everyday life.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Julius Caesar claimed Venus as his divine ancestor, a claim that reinforced his political legitimacy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 46 BC, Caesar dedicated a temple to Venus Genetrix on the Forum, marking the first state-sponsored cult of the goddess in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "According to Roman myth, Venus emerged from sea foam, a birth narrative that mirrors the Greek story of Aphrodite.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Venus was traditionally depicted nude, a visual motif that underscored her association with beauty and desire.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The goddess bore many epithets—such as Venus Genetrix, Venus Victrix, and Venus Physica—each highlighting a distinct aspect of her divine portfolio.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Venus_Arles.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Venus_Arles.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Venus_Arles.jpg/960px-Venus_Arles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/68/Venus_Arles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 2.5",
+    "attribution": "Eric Gaba",
+    "author": "Eric Gaba (User:Sting), July 2005.",
+    "width": 1641,
+    "height": 2541,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Venus (mythology)",
+    "url": "https://en.wikipedia.org/wiki/Venus_(mythology)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-09T01:33:41.513Z"
+  }
+}

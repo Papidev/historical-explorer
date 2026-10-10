@@ -511,16 +511,17 @@
     },
     {
       "id": "acquedotto-dell-acqua-vergine",
+      "wikidataId": "Q600139",
       "type": "Feature",
       "properties": {
-        "name": "Acquedotto dell'Acqua Vergine"
+        "name": "Acquedotto Vergine",
+        "wikipedia": "it:Aqua Virgo"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [12.531069, 41.9267114]
+        "coordinates": [12.5752822, 41.9038801]
       },
-      "geoPlaceId": "way/243334849",
-      "wikidataId": "Q600139"
+      "geoPlaceId": "way/312005914"
     },
     {
       "id": "acquedotto-julio",
@@ -560,6 +561,83 @@
         "coordinates": [12.4958147, 41.8851493]
       },
       "geoPlaceId": "way/112174949"
+    },
+    {
+      "id": "acquedotto-vergine",
+      "type": "Feature",
+      "properties": {
+        "name": "Acquedotto Vergine"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.6001609, 41.9083585]
+      },
+      "geoPlaceId": "way/312002046"
+    },
+    {
+      "id": "acquedotto-vergine-2",
+      "type": "Feature",
+      "properties": {
+        "name": "Acquedotto Vergine"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.626928, 41.9115853]
+      },
+      "geoPlaceId": "way/312007980",
+      "wikidataId": "Q600139"
+    },
+    {
+      "id": "adele-elvira-sacerdoti",
+      "type": "Feature",
+      "properties": {
+        "name": "Adele Elvira Sacerdoti"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4679891, 41.9309179]
+      },
+      "geoPlaceId": "node/10136307263"
+    },
+    {
+      "id": "aermacchi-mb-326",
+      "type": "Feature",
+      "properties": {
+        "name": "Aermacchi MB-326"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5580465, 41.8686577]
+      },
+      "geoPlaceId": "node/5434893199"
+    },
+    {
+      "id": "agli-eroici-figli-di-ostia",
+      "type": "Feature",
+      "properties": {
+        "name": "Agli eroici figli di Ostia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.3018493, 41.7602112]
+      },
+      "geoPlaceId": "node/4610337594"
+    },
+    {
+      "id": "ara-pacis-augustae",
+      "wikidataId": "Q623612",
+      "type": "Feature",
+      "properties": {
+        "name": "Ara Pacis Augustae",
+        "tourism": "attraction",
+        "wikimedia_commons": "Category:Ara Pacis",
+        "wikipedia": "en:Ara Pacis"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4755017, 41.9061511]
+      },
+      "geoPlaceId": "way/201291264"
     }
   ]
 }
