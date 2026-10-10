@@ -424,9 +424,11 @@ export const loadPoiLists = async () => {
                   ? lastRun === latestDraftRun && sourcePending
                     ? "needs-source"
                     : "failed"
-                  : lastRun.event === "started"
+                  : lastRun.event === "cancelled"
                     ? "incomplete"
-                    : (lastRun.status ?? "success"),
+                    : lastRun.event === "started"
+                      ? "incomplete"
+                      : (lastRun.status ?? "success"),
               at: formatCompletedAt(lastRun.at),
             }
           : undefined,

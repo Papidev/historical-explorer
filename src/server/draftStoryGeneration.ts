@@ -1,3 +1,4 @@
+import { throwIfGenerationCancelled } from "@/server/generationCancellation";
 import { pointOfInterest } from "./pointOfInterest";
 import { poiTypes } from "./poiTypes";
 import { createPoiTypeMappings } from "./poiTypeMappings";
@@ -27,11 +28,15 @@ export const createDraftStoryGeneration =
     ai,
     onProgress,
     onCategoriesChanged,
+    onStoryContentStarted,
+    resume,
   }: {
     geoPlaceId: string;
     ai: AiSelection;
     onProgress?: (message: string) => void;
     onCategoriesChanged?: (cities: string[]) => void;
+    onStoryContentStarted?: () => void;
+    resume?: boolean;
   }) => {
     const { issues } = await dependencies.recordRun(
       { city: "rome", operation: "draftStory.generate", geoPlaceId, ai },
@@ -49,6 +54,8 @@ export const createDraftStoryGeneration =
             poiId,
             ai,
             onProgress,
+            onStoryContentStarted,
+            resume,
             onSourcesAcquired: async (sources) => {
               try {
                 const wikidataId = sources.find(({ kind }) => kind === "wikipedia")?.wikidataId;
@@ -66,6 +73,7 @@ export const createDraftStoryGeneration =
                     );
                     onCategoriesChanged?.(cities);
                   } catch (error) {
+                    throwIfGenerationCancelled();
                     console.warn(`[poi-categories] Classification failed for ${poiId}.`, error);
                     issues.push({
                       stage: "poiTypeMappings",
@@ -79,6 +87,7 @@ export const createDraftStoryGeneration =
                 }
                 if (types.skipped) onProgress?.("Skipping POI types: no Wikidata ID.");
               } catch (error) {
+                throwIfGenerationCancelled();
                 console.warn(`[poi-types] Refresh failed for ${poiId}.`, error);
                 issues.push({
                   stage: "poiTypes",
@@ -134,6 +143,7 @@ export const createDraftStoryGeneration =
               : {
                   title: "Draft generated with issues",
                   description: `Failed steps: ${failedSteps.join(", ")}.`,
+                  details: issues.map(({ message }) => message).join("\n"),
                 },
         }
       : undefined;

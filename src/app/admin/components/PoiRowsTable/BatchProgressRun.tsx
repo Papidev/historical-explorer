@@ -10,10 +10,20 @@ export const BatchProgressRun = ({
 }: {
   run: ReturnType<typeof useBatchGeneration>["runs"][number];
 }) => {
+  const connectionLost = Boolean(
+    run.error && /Failed to fetch|NetworkError|Load failed/i.test(run.error),
+  );
   const state = useAiProgress({
     runId: run.progressId,
     isFinished: run.isFinished,
-    outcome: run.error ? "failed" : run.result?.warning ? "partial" : "succeeded",
+    connectionLost,
+    outcome: run.cancelled
+      ? "cancelled"
+      : run.error
+        ? "failed"
+        : run.result?.warning
+          ? "partial"
+          : "succeeded",
   });
   const { status } = state;
   return (
@@ -27,7 +37,10 @@ export const BatchProgressRun = ({
               ? "bg-violet-50 text-violet-700"
               : status === "failed"
                 ? "bg-red-50 text-red-700"
-                : status === "partial" || status === "waiting"
+                : status === "partial" ||
+                    status === "waiting" ||
+                    status === "unknown" ||
+                    status === "cancelled"
                   ? "bg-amber-50 text-amber-800"
                   : "bg-emerald-50 text-emerald-700",
           )}
@@ -39,25 +52,35 @@ export const BatchProgressRun = ({
               status === "running" && "motion-safe:animate-pulse",
             )}
           />
-          {status === "running"
-            ? "Generating..."
-            : status === "waiting"
-              ? "Waiting for a source"
-              : status === "failed"
-                ? "Failed"
-                : status === "partial"
-                  ? "Completed with issues"
-                  : "Completed"}
+          {status === "cancelled"
+            ? "Stopped"
+            : status === "unknown"
+              ? "Checking outcome..."
+              : status === "running"
+                ? "Generating..."
+                : status === "waiting"
+                  ? "Waiting for a source"
+                  : status === "failed"
+                    ? "Failed"
+                    : status === "partial"
+                      ? "Completed with issues"
+                      : "Completed"}
         </span>
       </div>
-      {run.error || run.result?.warning ? (
+      {(
+        connectionLost
+          ? status === "running" || status === "unknown"
+          : !run.cancelled && (run.error || run.result?.warning)
+      ) ? (
         <p
           className={clsx(
             "mt-2 px-4 text-sm break-words",
             status === "failed" ? "text-red-700" : "text-amber-800",
           )}
         >
-          {run.error ?? run.result?.warning?.description ?? run.result?.warning?.title}
+          {connectionLost
+            ? "Connection lost. Checking server progress; generation may still be running."
+            : (run.error ?? run.result?.warning?.description ?? run.result?.warning?.title)}
         </p>
       ) : null}
       <Disclosure>

@@ -35,8 +35,8 @@ const formatCenturyRange = (startYear: number, endYear: number) => {
 
 const formatHistoricalTime = (time: NonNullable<HistoryInsight["time"]>) =>
   `${time.precision === "approximate" ? "c. " : ""}${
-    time.granularity === "century" && time.endYear !== undefined
-      ? formatCenturyRange(time.startYear, time.endYear)
+    time.granularity === "century"
+      ? formatCenturyRange(time.startYear, time.endYear ?? time.startYear)
       : formatYearRange(time.startYear, time.endYear)
   }`;
 

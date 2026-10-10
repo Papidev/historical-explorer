@@ -80,13 +80,17 @@ Name matches must be unique titles/redirects, never disambiguation pages, with a
 
 If both language name searches fail, examine up to 50 nearby articles per edition using the same checks. Accept one entity matching the name through title, English translation, Wikidata label, or alias; proximity alone is insufficient. Two editions of the same Wikidata entity count once.
 
-### Manual Story batches
+Historical dates may be approximate or omitted. A century can be stored without an end year and is displayed as a century, not an exact year; supplied ranges must remain chronological and year zero is invalid.
 
-**Generate next 3** runs the first three matching To do Geo Places across all pages, or fewer if insufficient; disable when none match. No selection/confirmation is needed. One click starts one concurrent batch, then stops. Each POI has independent progress/outcome; one failure does not stop others.
+### Missing Story queue
 
-Running rows stay pinned above other rows. The progress dialog can be hidden/reopened. The next click chooses the next matching To do POIs. Batches add no retries beyond existing cloud JSON/domain-validation retry.
+**Generate missing stories** replaces the concurrent three-POI batch. It selects all Geo Places without saved Story Content, including incomplete and failed POIs, regardless of table search, filters, or pagination. **Stories per run** defaults to 20 and accepts any positive integer; each run starts at most that many Story Content generations, one at a time, using the AI mode and model selected at its start. POIs that fail before Story Content generation starts do not use a slot, so the queue checks further POIs until it reaches the limit or exhausts the candidates. An error after Story Content generation starts still counts. Progress shows completed Story generation attempts, including failed attempts that used a Story slot; stopped attempts count as completed only after resuming and finishing.
 
-Batch badges and expanded logs share each run's progress state. A missing Wikipedia Source shows **Waiting for a source** in both. After the action finishes, a still-running log is read up to three times to obtain its final status; an unavailable log falls back to the action result without retrying generation.
+**Pause queue** lets the current POI finish before pausing. **Resume queue** continues with the next queued POI and the original model. **Stop current POI** also cancels its active external request. The stopped attempt remains visible, and resuming retries that POI first with a new progress log, reusing saved Sources, Main Image Candidates, Story Content, and completed People. An incomplete model response cannot be resumed and must be requested again. Each POI uses at most one Story slot across stop/resume, but repeated model requests still consume quota; stopped attempts are not shown as completed. The queue, original model, limit, attempt history, and position are saved in the browser and restored paused when the page reopens. Each POI has independent progress and outcomes; errors and partial results remain visible and the queue continues. An Ollama HTTP 429 or 402 in Story generation or a reported partial failure pauses the queue; check usage before manually resuming. Failed POIs are not retried automatically within the same run.
+
+**Resume queue** restores work in the same browser after closing the page or restarting the computer. Closing the page stops new submissions; an already submitted POI may finish while the local server remains running. On resume, the app checks that POI’s server progress before sending new work. A server restart marks an unfinished attempt as interrupted so it can resume from saved checkpoints. Nothing runs while the computer is off, and resuming is always manual. Browser storage must be available; clearing it removes the saved queue. **Discard saved queue** clears the queue without deleting generated artifacts or server logs. On browsers supporting Web Locks, one tab at a time can operate the saved queue. The story count is a workload limit, not an account quota guarantee: categories, People, and validation retries can each require additional AI requests.
+
+The active row stays pinned above other rows. The progress dialog can be hidden/reopened without pausing. Queue results and generation logs automatically scroll to the latest content when runs or messages change, including logs expanded within the queue. Badges and expanded logs share each run's progress state. A missing Wikipedia Source shows **Waiting for a source**. After an action finishes, a still-running log is read up to three times to obtain its final status; an unavailable log falls back to the action result without retrying generation. A lost browser connection pauses new queue submissions and is treated as an unknown outcome, not a confirmed generation failure; progress keeps checking for the server’s actual result and never resubmits the generation automatically.
 
 Guards support one local server process: three POI operations, one mutation per POI, and one pending Person generation per Wikidata ID. Allocate Person IDs immediately before saving; shared catalog/metadata writes are synchronous. Multiple processes or machines require shared coordination.
 
@@ -114,6 +118,8 @@ CLOUD_AI_PROVIDER=ollama
 CLOUD_AI_MODEL=gpt-oss:20b-cloud
 OLLAMA_BASE_URL=http://localhost:11434
 ```
+
+The Ollama Cloud dropdown includes `gpt-oss:20b-cloud` and `gpt-oss:120b-cloud`, plus any other model configured in `CLOUD_AI_MODEL`. That setting remains the default selection. Prepare each cloud reference with `ollama run <model>` before using it; reload the admin page to see updated model options.
 
 Ollama Cloud does not support schema-constrained output. Story Content and new People include their schemas in the prompt and retry once when a response fails JSON or domain validation. Both use the selected Cloud model.
 

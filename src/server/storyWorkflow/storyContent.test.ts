@@ -75,10 +75,27 @@ describe("Story Content", () => {
     ]);
   });
 
+  it.each(["exact", "approximate"] as const)(
+    "accepts a single century without inventing an end year (%s)",
+    (precision) => {
+      const content = validStoryContent();
+      content.topics.history.push({
+        id: "century",
+        description: "Restoration in the tenth century.",
+        sourceIds: ["wikipedia"],
+        time: { startYear: 1000, precision, granularity: "century" },
+      });
+      expect(parseStoryContent(content, ["wikipedia"]).topics.history[0].time).toEqual({
+        startYear: 1000,
+        precision,
+        granularity: "century",
+      });
+    },
+  );
+
   it.each([
     [{ startYear: 0, precision: "exact", granularity: "year" }, "Year zero"],
     [{ startYear: 400, endYear: 301, precision: "exact", granularity: "century" }, "End year"],
-    [{ startYear: 301, precision: "exact", granularity: "century" }, "expected number"],
   ])("rejects invalid historical time %o", (time, message) => {
     const content = validStoryContent();
     content.topics.history.push({

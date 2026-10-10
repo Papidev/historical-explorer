@@ -13,6 +13,10 @@ describe("StoryContent", () => {
             history: [
               { description: "Undated history" },
               {
+                description: "Medieval history",
+                time: { startYear: 1000, precision: "approximate", granularity: "century" },
+              },
+              {
                 description: "Modern history",
                 time: {
                   startYear: 1500,
@@ -40,6 +44,8 @@ describe("StoryContent", () => {
 
     expect(html).toContain("Roman Republic");
     expect(html).toContain("c. 6th–5th century BC");
+    expect(html).toContain("c. 10th century AD");
+    expect(html).not.toContain("1000 AD");
     expect(html.indexOf("Ancient history")).toBeLessThan(html.indexOf("Modern history"));
     expect(html.indexOf("Modern history")).toBeLessThan(html.indexOf("Undated history"));
     expect(html.indexOf("Undated history")).toBeLessThan(html.indexOf("Design insight"));

@@ -18,10 +18,12 @@ export const AiProgressDialog = ({
   <Dialog open onClose={onClose} className="relative z-50">
     <DialogBackdrop className="fixed inset-0 bg-black/35" />
     <div className="fixed inset-0 flex items-center justify-center p-4">
-      <DialogPanel className="w-full max-w-lg rounded-xl bg-white p-5 shadow-xl">
-        <DialogTitle className="text-base font-semibold text-gray-900">{title}</DialogTitle>
+      <DialogPanel className="flex max-h-[calc(100dvh-2rem)] w-full max-w-lg flex-col overflow-hidden rounded-xl bg-white p-5 shadow-xl">
+        <DialogTitle className="shrink-0 text-base font-semibold text-gray-900">
+          {title}
+        </DialogTitle>
         <AiProgressLog state={useAiProgress({ runId, isFinished })} />
-        <div className="mt-5 flex justify-end">
+        <div className="mt-5 flex shrink-0 justify-end">
           <button
             type="button"
             onClick={onClose}

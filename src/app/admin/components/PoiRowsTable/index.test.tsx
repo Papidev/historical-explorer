@@ -1,12 +1,13 @@
+import { storyQueueStorageKey } from "./storyQueueStorage";
 // @vitest-environment jsdom
 
 import "@testing-library/jest-dom/vitest";
-import { act, cleanup, render, screen, within } from "@testing-library/react";
+import { act, cleanup, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 import { http, HttpResponse } from "msw";
 import { setupServer } from "msw/node";
-import type { AdminActionResult, AdminBatchResult } from "../../lib/types";
+import type { AdminActionResult } from "../../lib/types";
 import { PoiRowsTable } from "./index";
 import { RelatedPeopleDrawer } from "./RelatedPeopleDrawer";
 
@@ -16,6 +17,7 @@ beforeAll(() => server.listen({ onUnhandledRequest: "error" }));
 afterEach(() => {
   cleanup();
   server.resetHandlers();
+  localStorage.clear();
 });
 afterAll(() => server.close());
 
@@ -87,39 +89,42 @@ describe("POI actions", () => {
     },
   );
 
-  it("generates the first three To do POIs with one click and independent outcomes", async () => {
-    let finished = false;
+  it("processes at most 20 missing stories sequentially, pauses, and continues after POI errors", async () => {
     server.use(
-      http.get("/api/admin/ai-progress/:runId", ({ params }) =>
-        finished
-          ? new HttpResponse(null, { status: 500 })
-          : HttpResponse.json({
-              status: "running",
-              startedAt: new Date().toISOString(),
-              entries: [{ at: new Date().toISOString(), message: `Log for ${params.runId}` }],
-            }),
-      ),
+      http.get("/api/admin/ai-progress/:runId", () => new HttpResponse(null, { status: 404 })),
     );
     const submitted: FormData[] = [];
-    let finish: (results: AdminBatchResult[]) => void = () => {};
-    const response = new Promise<AdminBatchResult[]>((resolve) => {
+    let finish = () => {};
+    const firstResponse = new Promise<void>((resolve) => {
       finish = resolve;
     });
+    const aiSelectionRef = { current: { mode: "cloud" as const, model: "cloud-model" } };
     render(
       <PoiRowsTable
-        rows={["One", "Two", "Three", "Four"].map((name) => ({
-          id: name,
-          wikidataId: "Q100",
-          rawPoi: { id: name, name, featureIndex: 0 },
+        rows={Array.from({ length: 22 }, (_, index) => ({
+          id: `Place ${index}`,
+          rawPoi: { id: `Place ${index}`, name: `Place ${index}`, featureIndex: index },
         }))}
         globalArtifacts={[]}
-        aiSelectionRef={{ current: { mode: "cloud", model: "cloud-model" } }}
+        aiSelectionRef={aiSelectionRef}
         generateDraftStoryAction={async () => {
-          throw new Error("Use the batch action");
+          throw new Error("Use the queue action");
         }}
         generateDraftStoriesAction={async (formData) => {
           submitted.push(formData);
-          return response;
+          if (submitted.length === 1) await firstResponse;
+          if (submitted.length === 2) throw new Error("Provider unavailable");
+          return [
+            {
+              geoPlaceId: String(formData.get("geoPlaceId")),
+              progressId: String(formData.get("progressId")),
+              ...(submitted.length === 3
+                ? { error: "sources-unavailable: HTTP 429" }
+                : submitted.length === 4
+                  ? { result: { warning: { title: "Missing image" } } }
+                  : { result: {} }),
+            },
+          ];
         }}
         refreshStoryContentAction={async () => {}}
         resolveRelatedPeopleAction={async () => {}}
@@ -129,129 +134,493 @@ describe("POI actions", () => {
       />,
     );
     const user = userEvent.setup();
-    expect(screen.queryByRole("checkbox", { name: /for generation/ })).not.toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Generate next 3" }));
-    expect(screen.getByRole("dialog", { name: "Batch generation" })).toBeInTheDocument();
-    expect(screen.queryByRole("log")).not.toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Show log for One" }));
+    expect(screen.getByRole("spinbutton", { name: "Stories per run" })).toHaveValue(20);
+    await user.click(screen.getByRole("button", { name: "Generate missing stories" }));
+    expect(screen.getByRole("dialog", { name: "Story queue" })).toBeVisible();
+    expect(submitted).toHaveLength(1);
     expect(
-      await screen.findByText(`Log for ${submitted[0].getAll("progressId")[0]}`),
-    ).toBeVisible();
-    expect(screen.getAllByRole("dialog")).toHaveLength(1);
-    await user.click(screen.getByRole("button", { name: "Show log for Two" }));
-    expect(
-      await screen.findByText(`Log for ${submitted[0].getAll("progressId")[1]}`),
-    ).toBeVisible();
-    expect(screen.getAllByRole("log")).toHaveLength(2);
-    await user.click(screen.getByRole("button", { name: "Hide log for One" }));
-    expect(screen.getAllByRole("log")).toHaveLength(1);
-    expect(screen.getByRole("button", { name: "Hide log for Two" })).toBeVisible();
-    await user.click(screen.getByRole("button", { name: "Hide" }));
-    expect(
-      screen.queryByRole("list", { name: "Batch generation results" }),
+      within(screen.getByRole("dialog", { name: "Story queue" })).queryByText("Place 1", {
+        exact: true,
+      }),
     ).not.toBeInTheDocument();
-    expect(submitted).toHaveLength(1);
-    expect(submitted[0].getAll("geoPlaceId")).toEqual(["One", "Two", "Three"]);
-    expect(submitted[0].get("aiMode")).toBe("cloud");
-    expect(submitted[0].get("aiModel")).toBe("cloud-model");
-    expect(new Set(submitted[0].getAll("progressId")).size).toBe(3);
-    expect(screen.getByRole("button", { name: "Generating batch..." })).toBeDisabled();
-    expect(
-      within(screen.getByRole("row", { name: /Four/ })).getByRole("button", { name: "Generate" }),
-    ).toBeDisabled();
+    await user.click(screen.getByRole("button", { name: "Show log for Place 0" }));
+    expect(await screen.findByRole("log")).toBeVisible();
+    await user.click(screen.getByRole("button", { name: "Pause queue" }));
+    expect(screen.getByRole("button", { name: "Pausing after current POI..." })).toBeDisabled();
+    await user.click(screen.getByRole("button", { name: "Hide" }));
     await act(async () => {
-      finished = true;
-      finish(
-        submitted[0].getAll("geoPlaceId").map((id, index) => ({
-          geoPlaceId: String(id),
-          progressId: String(submitted[0].getAll("progressId")[index]),
-          ...(index === 1
-            ? { error: "Provider unavailable" }
-            : index === 2
-              ? { result: { warning: { title: "Missing image" } } }
-              : { result: {} }),
-        })),
-      );
+      finish();
     });
-    await user.click(screen.getByRole("button", { name: "Show batch progress" }));
-    const results = within(screen.getByRole("list", { name: "Batch generation results" }));
-    expect(results.getByText("Completed", { exact: true })).toBeInTheDocument();
-    expect(results.getByText("Failed", { exact: true })).toBeInTheDocument();
-    expect(results.getByText("Completed with issues", { exact: true })).toBeInTheDocument();
-    expect(results.getByText("Provider unavailable")).toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Show log for Two" }));
-    expect(await screen.findByText("Generation failed")).toBeVisible();
-    expect(await screen.findByText("Generation log unavailable.")).toBeVisible();
-    expect(screen.queryByText("Starting generation...")).not.toBeInTheDocument();
-    expect(screen.queryByText("Waiting for the final result...")).not.toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Close" }));
-    expect(screen.queryByText("Provider unavailable")).not.toBeInTheDocument();
     expect(submitted).toHaveLength(1);
-    expect(screen.getByRole("button", { name: "Generate next 3" })).toBeEnabled();
+    expect(screen.getByRole("status")).toHaveTextContent(
+      "1 of 20 Story generations completed · Paused",
+    );
+    expect(screen.getByRole("spinbutton", { name: "Stories per run" })).toBeDisabled();
+    aiSelectionRef.current.model = "changed-model";
+    await user.click(screen.getByRole("button", { name: "Resume queue" }));
+    await waitFor(() =>
+      expect(screen.getByRole("status")).toHaveTextContent(
+        "20 of 20 Story generations completed · Finished",
+      ),
+    );
+    expect(submitted).toHaveLength(20);
+    expect(
+      submitted.every(
+        (data) => data.getAll("geoPlaceId").length === 1 && data.get("aiModel") === "cloud-model",
+      ),
+    ).toBe(true);
+    expect(submitted.map((data) => data.get("geoPlaceId"))).toEqual(
+      Array.from({ length: 20 }, (_, index) => `Place ${index}`),
+    );
+    expect(new Set(submitted.map((data) => data.get("progressId"))).size).toBe(20);
+    await user.click(screen.getByRole("button", { name: "Show queue progress" }));
+    expect(screen.getByText("Provider unavailable")).toBeVisible();
+    expect(screen.getByText("sources-unavailable: HTTP 429")).toBeVisible();
+    expect(screen.getByText("Completed with issues", { exact: true })).toBeVisible();
+    await user.click(screen.getByRole("button", { name: "Show log for Place 1" }));
+    expect(await screen.findByText("Generation failed")).toBeVisible();
+    await user.click(screen.getByRole("button", { name: "Close" }));
+    expect(screen.getByRole("button", { name: "Generate missing stories" })).toBeEnabled();
   });
 
-  it("picks the next To do POIs across pages and respects search, status filters, and generated IDs", async () => {
-    const submitted: FormData[] = [];
-    const props = {
-      globalArtifacts: [],
-      aiSelectionRef: { current: { mode: "cloud" as const, model: "cloud-model" } },
-      generateDraftStoryAction: async () => {},
-      generateDraftStoriesAction: async (formData: FormData) => {
-        submitted.push(formData);
-        return formData.getAll("geoPlaceId").map((id, index) => ({
-          geoPlaceId: String(id),
-          progressId: String(formData.getAll("progressId")[index]),
-          result: {},
-        }));
-      },
-      refreshStoryContentAction: async () => {},
-      resolveRelatedPeopleAction: async () => {},
-      refreshMainImageCandidatesAction: async () => {},
-      refreshPoiTypesAction: async () => {},
-      selectMainImageCandidateAction: async () => {},
-    };
-    const rows = Array.from({ length: 55 }, (_, index) => ({
-      id: `Q${index}`,
-      rawPoi: { id: `Q${index}`, name: `Place ${index}`, featureIndex: index },
-      ...(index === 0 ? { sourcePending: true } : {}),
-      ...(index === 1
-        ? { transformedPoi: { id: "generated-1", name: "Place 1", featureIndex: index } }
-        : {}),
-    }));
-    const { rerender } = render(<PoiRowsTable {...props} rows={rows} />);
-    const user = userEvent.setup();
-    await user.click(screen.getByRole("button", { name: "Next page" }));
-    await user.click(screen.getByRole("button", { name: "Generate next 3" }));
-    expect(submitted[0].getAll("geoPlaceId")).toEqual(["Q2", "Q3", "Q4"]);
-    await user.click(screen.getByRole("button", { name: "Close" }));
-    rerender(
+  it.each([false, true])(
+    "stops the active POI and resumes it without exceeding the story limit (started: %s)",
+    async (storyStarted) => {
+      server.use(
+        http.get("/api/admin/ai-progress/:runId", () => new HttpResponse(null, { status: 404 })),
+      );
+      let finish = () => {};
+      const pending = new Promise<void>((resolve) => {
+        finish = resolve;
+      });
+      const submitted: FormData[] = [];
+      server.use(
+        http.post("/api/admin/ai-progress/:runId/stop", ({ params }) => {
+          expect(params.runId).toBe(submitted[0].get("progressId"));
+          finish();
+          return HttpResponse.json({ requested: true });
+        }),
+      );
+      render(
+        <PoiRowsTable
+          rows={["Q1", "Q2"].map((id, featureIndex) => ({
+            id,
+            rawPoi: { id, name: id, featureIndex },
+          }))}
+          globalArtifacts={[]}
+          aiSelectionRef={{ current: { mode: "cloud", model: "cloud-model" } }}
+          generateDraftStoryAction={async () => {}}
+          generateDraftStoriesAction={async (formData) => {
+            submitted.push(formData);
+            const attempt = submitted.length;
+            if (attempt === 1) await pending;
+            return [
+              {
+                geoPlaceId: String(formData.get("geoPlaceId")),
+                progressId: String(formData.get("progressId")),
+                cancelled: attempt === 1,
+                storyGenerationStarted: attempt === 1 ? storyStarted : true,
+                ...(attempt === 1 ? { error: "Generation stopped by user." } : { result: {} }),
+              },
+            ];
+          }}
+          refreshStoryContentAction={async () => {}}
+          resolveRelatedPeopleAction={async () => {}}
+          refreshMainImageCandidatesAction={async () => {}}
+          refreshPoiTypesAction={async () => {}}
+          selectMainImageCandidateAction={async () => {}}
+        />,
+      );
+      const user = userEvent.setup();
+      await user.clear(screen.getByRole("spinbutton", { name: "Stories per run" }));
+      await user.type(screen.getByRole("spinbutton", { name: "Stories per run" }), "1");
+      await user.click(screen.getByRole("button", { name: "Generate missing stories" }));
+      await user.click(
+        within(screen.getByRole("dialog", { name: "Story queue" })).getByRole("button", {
+          name: "Stop current POI",
+        }),
+      );
+      expect(
+        await within(screen.getByRole("dialog", { name: "Story queue" })).findByText("Stopped", {
+          exact: true,
+        }),
+      ).toBeVisible();
+      expect(submitted).toHaveLength(1);
+      await user.click(screen.getByRole("button", { name: "Show log for Q1" }));
+      expect(
+        await screen.findByText("Generation stopped. Resume the queue to continue this POI."),
+      ).toBeVisible();
+      await user.click(
+        within(screen.getByRole("dialog", { name: "Story queue" })).getByRole("button", {
+          name: "Resume queue",
+        }),
+      );
+      await waitFor(() => expect(screen.getByRole("button", { name: "Close" })).toBeVisible());
+      expect(submitted).toHaveLength(2);
+      expect(submitted.map((data) => data.get("geoPlaceId"))).toEqual(["Q1", "Q1"]);
+      expect(submitted[1].get("resume")).toBe("true");
+      expect(submitted[1].get("progressId")).not.toBe(submitted[0].get("progressId"));
+      await user.click(screen.getByRole("button", { name: "Close" }));
+      expect(screen.getByRole("status")).toHaveTextContent(
+        "1 of 1 Story generations completed · Finished",
+      );
+    },
+  );
+
+  it.each([
+    "success",
+    "quota",
+    "partial-quota",
+    "connection",
+    "unmount",
+    "not-started",
+    "all-not-started",
+  ])(
+    "uses a custom limit across pages and filters, skips saved Story Content, and handles %s",
+    async (outcome) => {
+      server.use(
+        http.get("/api/admin/ai-progress/:runId", () => new HttpResponse(null, { status: 404 })),
+      );
+      if (outcome === "connection")
+        server.use(
+          http.get("/api/admin/ai-progress/:runId", () =>
+            HttpResponse.json({
+              status: "succeeded",
+              storyContentStarted: true,
+              startedAt: "2026-10-10T00:00:00.000Z",
+              entries: [],
+            }),
+          ),
+        );
+      const submitted: FormData[] = [];
+      let finish = () => {};
+      const firstResponse = new Promise<void>((resolve) => {
+        finish = resolve;
+      });
+      const { unmount } = render(
+        <PoiRowsTable
+          rows={Array.from({ length: 55 }, (_, index) => ({
+            id: `Q${index}`,
+            rawPoi: { id: `Q${index}`, name: `Place ${index}`, featureIndex: index },
+            ...(index === 0
+              ? {
+                  storyContent: {
+                    introduction: { text: "A Story", sourceIds: ["wikipedia"] },
+                    topics: { history: [], design: [], art: [] },
+                    relatedPeople: [],
+                  },
+                }
+              : {}),
+            ...(index === 1
+              ? {
+                  sourcePending: true,
+                  transformedPoi: { id: "generated-1", name: "Place 1", featureIndex: index },
+                }
+              : {}),
+          }))}
+          globalArtifacts={[]}
+          aiSelectionRef={{ current: { mode: "cloud", model: "cloud-model" } }}
+          generateDraftStoryAction={async () => {}}
+          generateDraftStoriesAction={async (formData) => {
+            submitted.push(formData);
+            if (submitted.length === 1) {
+              await firstResponse;
+              if (outcome === "quota") throw new Error("Ollama failed: HTTP 429");
+              if (outcome === "connection") throw new TypeError("Failed to fetch");
+            }
+            return [
+              {
+                geoPlaceId: String(formData.get("geoPlaceId")),
+                progressId: String(formData.get("progressId")),
+                ...(outcome === "all-not-started" ||
+                (outcome === "not-started" && submitted.length === 1)
+                  ? { storyGenerationStarted: false, error: "source-not-found" }
+                  : { storyGenerationStarted: true }),
+                result:
+                  outcome === "partial-quota" && submitted.length === 1
+                    ? {
+                        warning: {
+                          title: "Some Related People remain unresolved",
+                          details: "Ollama failed: HTTP 402",
+                        },
+                      }
+                    : {},
+              },
+            ];
+          }}
+          refreshStoryContentAction={async () => {}}
+          resolveRelatedPeopleAction={async () => {}}
+          refreshMainImageCandidatesAction={async () => {}}
+          refreshPoiTypesAction={async () => {}}
+          selectMainImageCandidateAction={async () => {}}
+        />,
+      );
+      const user = userEvent.setup();
+      await user.click(screen.getByRole("button", { name: "Next page" }));
+      await user.type(
+        screen.getByRole("searchbox", { name: "Search POIs by name" }),
+        "Missing POI",
+      );
+      await user.click(screen.getByRole("checkbox", { name: "To do" }));
+      await user.clear(screen.getByRole("spinbutton", { name: "Stories per run" }));
+      await user.type(screen.getByRole("spinbutton", { name: "Stories per run" }), "2");
+      await user.click(screen.getByRole("button", { name: "Generate missing stories" }));
+      expect(submitted[0].getAll("geoPlaceId")).toEqual(["Q1"]);
+      if (outcome === "unmount") unmount();
+      await act(async () => {
+        finish();
+      });
+      if (outcome === "unmount") {
+        expect(submitted).toHaveLength(1);
+        return;
+      }
+      if (outcome === "quota" || outcome === "partial-quota" || outcome === "connection") {
+        expect(submitted).toHaveLength(1);
+        expect(screen.getByRole("alert")).toHaveTextContent(
+          outcome === "connection"
+            ? "Connection to the server was lost"
+            : "Ollama reported a usage or request limit",
+        );
+        await user.click(
+          within(screen.getByRole("dialog", { name: "Story queue" })).getByRole("button", {
+            name: "Resume queue",
+          }),
+        );
+      }
+      const expectedAttempts =
+        outcome === "all-not-started" ? 54 : outcome === "not-started" ? 3 : 2;
+      await waitFor(() => expect(submitted).toHaveLength(expectedAttempts));
+      expect(submitted[1].getAll("geoPlaceId")).toEqual(["Q2"]);
+      if (outcome === "not-started") expect(submitted[2].getAll("geoPlaceId")).toEqual(["Q3"]);
+      await user.click(screen.getByRole("button", { name: "Close" }));
+      expect(screen.getByRole("status")).toHaveTextContent(
+        `${outcome === "all-not-started" ? 0 : 2} of 2 Story generations completed · Finished`,
+      );
+      expect(screen.getByRole("status")).toHaveTextContent(`${expectedAttempts} POIs processed`);
+    },
+  );
+
+  it.each(["finished", "running", "restarted", "not-sent", "offline", "quota"])(
+    "restores a saved queue and reconciles the previous POI (%s)",
+    async (outcome) => {
+      server.use(
+        http.get("/api/admin/ai-progress/:runId", () => new HttpResponse(null, { status: 404 })),
+      );
+      const rows = ["Q1", "Q2", "Q3"].map((id, featureIndex) => ({
+        id,
+        rawPoi: { id, name: id, featureIndex },
+      }));
+      let finish = () => {};
+      const pending = new Promise<void>((resolve) => {
+        finish = resolve;
+      });
+      const first = render(
+        <PoiRowsTable
+          rows={rows}
+          globalArtifacts={[]}
+          aiSelectionRef={{ current: { mode: "cloud", model: "saved-model" } }}
+          generateDraftStoryAction={async () => {}}
+          generateDraftStoriesAction={async (data) => {
+            await pending;
+            return [
+              {
+                geoPlaceId: String(data.get("geoPlaceId")),
+                progressId: String(data.get("progressId")),
+                storyGenerationStarted: true,
+              },
+            ];
+          }}
+          refreshStoryContentAction={async () => {}}
+          resolveRelatedPeopleAction={async () => {}}
+          refreshMainImageCandidatesAction={async () => {}}
+          refreshPoiTypesAction={async () => {}}
+          selectMainImageCandidateAction={async () => {}}
+        />,
+      );
+      const user = userEvent.setup();
+      await user.clear(screen.getByRole("spinbutton", { name: "Stories per run" }));
+      await user.type(screen.getByRole("spinbutton", { name: "Stories per run" }), "2");
+      await user.click(screen.getByRole("button", { name: "Generate missing stories" }));
+      const saved = JSON.parse(localStorage.getItem(storyQueueStorageKey)!);
+      expect(saved.pendingId).toBe(saved.runs[0].progressId);
+      first.unmount();
+      await act(async () => {
+        finish();
+      });
+      // A detached page must not overwrite the durable pending record.
+      expect(JSON.parse(localStorage.getItem(storyQueueStorageKey)!).pendingId).toBe(
+        saved.pendingId,
+      );
+      let reads = 0;
+      let unavailable = outcome === "offline";
+      server.use(
+        http.get("/api/admin/ai-progress/:runId", ({ params }) => {
+          if (params.runId !== saved.pendingId || outcome === "not-sent")
+            return new HttpResponse(null, { status: 404 });
+          if (unavailable) return HttpResponse.error();
+          reads += 1;
+          return HttpResponse.json({
+            status:
+              outcome === "quota"
+                ? "partial"
+                : outcome === "restarted"
+                  ? "cancelled"
+                  : outcome === "running" && reads < 3
+                    ? "running"
+                    : "succeeded",
+            startedAt: "2026-10-10T00:00:00.000Z",
+            storyContentStarted: true,
+            entries: [],
+            ...(outcome === "quota"
+              ? {
+                  warning: {
+                    title: "Related People incomplete",
+                    details: "Ollama failed: HTTP 402",
+                  },
+                }
+              : {}),
+          });
+        }),
+      );
+      const submitted: FormData[] = [];
+      render(
+        <PoiRowsTable
+          rows={rows}
+          globalArtifacts={[]}
+          aiSelectionRef={{ current: { mode: "local", model: "different-model" } }}
+          generateDraftStoryAction={async () => {}}
+          generateDraftStoriesAction={async (data) => {
+            submitted.push(data);
+            return [
+              {
+                geoPlaceId: String(data.get("geoPlaceId")),
+                progressId: String(data.get("progressId")),
+                storyGenerationStarted: !(
+                  outcome === "restarted" && data.get("geoPlaceId") === "Q1"
+                ),
+              },
+            ];
+          }}
+          refreshStoryContentAction={async () => {}}
+          resolveRelatedPeopleAction={async () => {}}
+          refreshMainImageCandidatesAction={async () => {}}
+          refreshPoiTypesAction={async () => {}}
+          selectMainImageCandidateAction={async () => {}}
+        />,
+      );
+      expect(screen.getByRole("spinbutton", { name: "Stories per run" })).toHaveValue(2);
+      expect(screen.getByRole("status")).toHaveTextContent(
+        "0 of 2 Story generations completed · Paused",
+      );
+      expect(submitted).toHaveLength(0);
+      await user.click(screen.getByRole("button", { name: "Resume queue" }));
+      if (outcome === "running") expect(submitted).toHaveLength(0);
+      if (outcome === "quota") {
+        expect(await screen.findByRole("alert")).toHaveTextContent(
+          "Ollama reported a usage or request limit",
+        );
+        expect(submitted).toHaveLength(0);
+        await user.click(screen.getByRole("button", { name: "Resume queue" }));
+      }
+      if (outcome === "offline") {
+        expect(await screen.findByRole("alert")).toHaveTextContent("nothing has been resubmitted");
+        expect(submitted).toHaveLength(0);
+        unavailable = false;
+        await user.click(screen.getByRole("button", { name: "Resume queue" }));
+      }
+      await waitFor(
+        () =>
+          expect(screen.getByRole("status")).toHaveTextContent(
+            "2 of 2 Story generations completed · Finished",
+          ),
+        { timeout: 4000 },
+      );
+      expect(submitted.map((data) => data.get("geoPlaceId"))).toEqual(
+        outcome === "restarted" || outcome === "not-sent" ? ["Q1", "Q2"] : ["Q2"],
+      );
+      expect(
+        submitted.every(
+          (data) => data.get("aiModel") === "saved-model" && data.get("aiMode") === "cloud",
+        ),
+      ).toBe(true);
+      if (outcome === "restarted") {
+        expect(submitted[0].get("resume")).toBe("true");
+        expect(submitted[0].get("progressId")).not.toBe(saved.pendingId);
+      }
+      if (outcome === "not-sent") expect(submitted[0].get("progressId")).toBe(saved.pendingId);
+      expect(JSON.parse(localStorage.getItem(storyQueueStorageKey)!).pendingId).toBeUndefined();
+    },
+  );
+
+  it("restores a queue created in another tab instead of overwriting it", async () => {
+    let submissions = 0;
+    render(
       <PoiRowsTable
-        {...props}
-        rows={rows.map((row) =>
-          ["Q2", "Q3", "Q4"].includes(row.id)
-            ? {
-                ...row,
-                id: `generated-${row.id}`,
-                transformedPoi: { ...row.rawPoi, id: `generated-${row.id}` },
-              }
-            : row,
-        )}
+        rows={[{ id: "Q1", rawPoi: { id: "Q1", name: "Q1", featureIndex: 0 } }]}
+        globalArtifacts={[]}
+        aiSelectionRef={{ current: { mode: "cloud", model: "different-model" } }}
+        generateDraftStoryAction={async () => {}}
+        generateDraftStoriesAction={async () => {
+          submissions += 1;
+          return [];
+        }}
+        refreshStoryContentAction={async () => {}}
+        resolveRelatedPeopleAction={async () => {}}
+        refreshMainImageCandidatesAction={async () => {}}
+        refreshPoiTypesAction={async () => {}}
+        selectMainImageCandidateAction={async () => {}}
       />,
     );
-    await user.click(screen.getByRole("button", { name: "Generate next 3" }));
-    expect(submitted[1].getAll("geoPlaceId")).toEqual(["Q5", "Q6", "Q7"]);
-    await user.click(screen.getByRole("button", { name: "Close" }));
-    const search = screen.getByRole("searchbox", { name: "Search POIs by name" });
-    await user.type(search, "Place 53");
-    await user.click(screen.getByRole("checkbox", { name: "To do" }));
-    expect(screen.getByRole("button", { name: "Generate next 3" })).toBeDisabled();
-    await user.click(screen.getByRole("checkbox", { name: "To do" }));
-    await user.click(screen.getByRole("button", { name: "Generate next 3" }));
-    expect(submitted[2].getAll("geoPlaceId")).toEqual(["Q53"]);
-    await user.click(screen.getByRole("button", { name: "Close" }));
-    await user.clear(search);
-    await user.type(search, "Missing POI");
-    expect(screen.getByRole("button", { name: "Generate next 3" })).toBeDisabled();
+    const saved = JSON.stringify({
+      version: 1,
+      runs: [{ geoPlaceId: "Q1", name: "Q1", progressId: crypto.randomUUID() }],
+      history: [],
+      index: 0,
+      started: 0,
+      counted: [],
+      completed: [],
+      limit: 7,
+      ai: { mode: "cloud", model: "saved-model" },
+    });
+    // This tab mounted before the other tab saved its queue.
+    localStorage.setItem(storyQueueStorageKey, saved);
+    await userEvent.setup().click(screen.getByRole("button", { name: "Generate missing stories" }));
+    expect(submissions).toBe(0);
+    expect(localStorage.getItem(storyQueueStorageKey)).toBe(saved);
+    expect(screen.getByRole("spinbutton", { name: "Stories per run" })).toHaveValue(7);
+    expect(screen.getByRole("button", { name: "Resume queue" })).toBeEnabled();
+    expect(screen.getByRole("alert")).toHaveTextContent("existing queue was restored");
+  });
+
+  it("does not submit generations when browser storage cannot save the queue", async () => {
+    localStorage.setItem("occupied", "x".repeat(4_999_900));
+    let submissions = 0;
+    render(
+      <PoiRowsTable
+        rows={Array.from({ length: 20 }, (_, index) => ({
+          id: `Q${index}`,
+          rawPoi: { id: `Q${index}`, name: `Place ${index}`, featureIndex: index },
+        }))}
+        globalArtifacts={[]}
+        aiSelectionRef={{ current: { mode: "cloud", model: "test-model" } }}
+        generateDraftStoryAction={async () => {}}
+        generateDraftStoriesAction={async () => {
+          submissions += 1;
+          return [];
+        }}
+        refreshStoryContentAction={async () => {}}
+        resolveRelatedPeopleAction={async () => {}}
+        refreshMainImageCandidatesAction={async () => {}}
+        refreshPoiTypesAction={async () => {}}
+        selectMainImageCandidateAction={async () => {}}
+      />,
+    );
+    await userEvent.setup().click(screen.getByRole("button", { name: "Generate missing stories" }));
+    expect(screen.getByRole("alert")).toHaveTextContent("queue could not be saved");
+    expect(submissions).toBe(0);
+    await userEvent.setup().click(screen.getByRole("button", { name: "Discard saved queue" }));
+    expect(screen.getByRole("button", { name: "Generate missing stories" })).toBeEnabled();
+    expect(localStorage.getItem("occupied")).not.toBeNull();
   });
 
   it("shows resolution errors only for unresolved People", () => {

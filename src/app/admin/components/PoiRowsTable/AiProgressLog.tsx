@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useAutoScroll } from "./useAutoScroll";
 import type { useAiProgress } from "./useAiProgress";
 
 export const AiProgressLog = ({
@@ -8,11 +8,7 @@ export const AiProgressLog = ({
 }: {
   state: ReturnType<typeof useAiProgress>;
 }) => {
-  const logRef = useRef<HTMLOListElement>(null);
-
-  useEffect(() => {
-    if (logRef.current) logRef.current.scrollTop = logRef.current.scrollHeight;
-  }, [progress?.entries.length]);
+  const logRef = useAutoScroll<HTMLOListElement>();
 
   return (
     <>
@@ -44,18 +40,22 @@ export const AiProgressLog = ({
         </div>
       ) : (
         <p className="mt-1 text-sm text-gray-600">
-          {status === "succeeded"
-            ? "Generation completed."
-            : isFinished
-              ? "Generation finished."
-              : `Working for ${Math.floor((now - (progress ? new Date(progress.startedAt).getTime() : startedAt)) / 1_000)} seconds.`}
+          {status === "cancelled"
+            ? "Generation stopped. Resume the queue to continue this POI."
+            : status === "unknown"
+              ? "Generation outcome is unknown. Checking server progress..."
+              : status === "succeeded"
+                ? "Generation completed."
+                : isFinished
+                  ? "Generation finished."
+                  : `Working for ${Math.floor((now - (progress ? new Date(progress.startedAt).getTime() : startedAt)) / 1_000)} seconds.`}
         </p>
       )}
       <ol
         ref={logRef}
         role="log"
         aria-live="polite"
-        className="mt-4 max-h-72 space-y-2 overflow-y-auto rounded-lg bg-gray-50 p-3"
+        className="mt-4 max-h-72 min-h-0 space-y-2 overflow-y-auto rounded-lg bg-gray-50 p-3"
       >
         {progress?.entries.length ? (
           progress.entries.map(({ at, message }, index) => (

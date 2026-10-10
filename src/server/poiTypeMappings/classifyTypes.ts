@@ -1,3 +1,4 @@
+import { fetchWithGenerationCancellation } from "@/server/generationCancellation";
 import { z } from "zod";
 import type { AiSelection } from "@/app/admin/lib/aiModels";
 import type { PoiCategoryDefinition } from "@/types/PoiCategory";
@@ -49,7 +50,7 @@ export const classifyTypes = async (
   if (ai.provider === "gemini") {
     if (!process.env.GEMINI_API_KEY)
       throw new Error("GEMINI_API_KEY is required when using Gemini.");
-    const response = await fetch(
+    const response = await fetchWithGenerationCancellation(
       `https://generativelanguage.googleapis.com/v1beta/models/${ai.model}:generateContent?key=${process.env.GEMINI_API_KEY}`,
       {
         method: "POST",
@@ -73,7 +74,7 @@ export const classifyTypes = async (
     };
     content = data.candidates?.[0]?.content?.parts?.map((part) => part.text ?? "").join("");
   } else {
-    const response = await fetch(
+    const response = await fetchWithGenerationCancellation(
       `${process.env.OLLAMA_BASE_URL ?? "http://localhost:11434"}/api/chat`,
       {
         method: "POST",

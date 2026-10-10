@@ -1,3 +1,7 @@
+import {
+  fetchWithGenerationCancellation,
+  throwIfGenerationCancelled,
+} from "@/server/generationCancellation";
 import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { findPoiInGeoJson, getDefaultInputPath } from "@/server/wikiPipeline/io";
@@ -27,7 +31,7 @@ const fetchEntities = async (ids: string[], props: string) => {
   url.searchParams.set("languages", "en");
   url.searchParams.set("format", "json");
 
-  const response = await fetch(url);
+  const response = await fetchWithGenerationCancellation(url);
   if (!response.ok) {
     throw new Error(`Wikidata returned HTTP ${response.status}.`);
   }
@@ -96,6 +100,7 @@ export const createPoiTypes = ({
       try {
         result = { types: await fetchPoiTypes(pointOfInterest.sourceHints.wikidata) };
       } catch (error) {
+        throwIfGenerationCancelled();
         console.warn(`[poi-types] Acquisition failed for ${poiId}.`, error);
         result = {
           types: get(poiId)?.types ?? [],

@@ -1,3 +1,4 @@
+import { throwIfGenerationCancelled } from "@/server/generationCancellation";
 import type {
   AiSelection,
   RelatedPeopleResolutionResult,
@@ -195,6 +196,7 @@ const generateAndPersist = async ({
       completedAt: dependencies.now().toISOString(),
     },
   };
+  throwIfGenerationCancelled();
   dependencies.repository.replace(person, source);
   return person;
 };
@@ -327,6 +329,7 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
                 );
               }
             } catch (error) {
+              throwIfGenerationCancelled();
               if (
                 error instanceof Error &&
                 error.message.startsWith('Wikipedia page not found for title "')
@@ -386,6 +389,7 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
           });
           onProgress?.(`Resolved ${person.name}.`);
         } catch (error) {
+          throwIfGenerationCancelled();
           const message = error instanceof Error ? error.message : String(error);
           if (message.startsWith('Wikipedia page not found for title "')) {
             onProgress?.(`Skipping ${person.name}: Wikipedia page not found.`);
