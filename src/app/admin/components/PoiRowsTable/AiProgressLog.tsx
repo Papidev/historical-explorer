@@ -1,57 +1,19 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import type { AiProgress } from "@/server/aiProgress";
+import { useEffect, useRef } from "react";
+import type { useAiProgress } from "./useAiProgress";
 
 export const AiProgressLog = ({
-  runId,
-  isFinished,
-  outcome,
+  state: { progress, isLoading, startedAt, now, status, isFinished },
 }: {
-  runId: string;
-  isFinished: boolean;
-  outcome?: "succeeded" | "partial" | "failed";
+  state: ReturnType<typeof useAiProgress>;
 }) => {
-  const [progress, setProgress] = useState<AiProgress>();
-  const [isLoading, setIsLoading] = useState(true);
   const logRef = useRef<HTMLOListElement>(null);
-  const [startedAt] = useState(() => Date.now());
-  const [now, setNow] = useState(startedAt);
-
-  useEffect(() => {
-    let active = true;
-    const poll = async () => {
-      try {
-        const response = await fetch(`/api/admin/ai-progress/${runId}`, { cache: "no-store" });
-        if (response.ok) {
-          const result = (await response.json()) as AiProgress;
-          if (active) setProgress(result);
-        }
-      } catch {
-        // The action may not have created its progress file yet.
-      } finally {
-        if (active) setIsLoading(false);
-      }
-    };
-    void poll();
-    const interval = isFinished
-      ? undefined
-      : setInterval(() => {
-          setNow(Date.now());
-          void poll();
-        }, 1_000);
-    return () => {
-      active = false;
-      clearInterval(interval);
-    };
-  }, [runId, isFinished]);
 
   useEffect(() => {
     if (logRef.current) logRef.current.scrollTop = logRef.current.scrollHeight;
   }, [progress?.entries.length]);
 
-  const status =
-    progress && progress.status !== "running" ? progress.status : (outcome ?? progress?.status);
   return (
     <>
       {status === "partial" || status === "failed" || status === "waiting" ? (

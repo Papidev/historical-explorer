@@ -1,11 +1,13 @@
 // @vitest-environment jsdom
 
 import "@testing-library/jest-dom/vitest";
-import { cleanup, render, screen } from "@testing-library/react";
+import { cleanup, render, screen, waitFor, within } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 import { http, HttpResponse } from "msw";
 import { setupServer } from "msw/node";
 import { AiProgressDialog } from "./AiProgressDialog";
+import { BatchProgressDialog } from "./BatchProgressDialog";
 
 const server = setupServer();
 
@@ -42,7 +44,7 @@ describe("AI progress dialog", () => {
     expect(screen.getByRole("alert")).toHaveTextContent("Related People");
   });
 
-  it("shows the missing Source as a waiting state", async () => {
+  it.each([false, true])("keeps waiting consistent (delayed: %s)", async (delayed) => {
     server.use(
       http.get("/api/admin/ai-progress/:runId", () =>
         HttpResponse.json({
@@ -60,6 +62,43 @@ describe("AI progress dialog", () => {
 
     expect(await screen.findByRole("alert")).toHaveTextContent("Waiting for a source");
     expect(screen.getByRole("alert")).toHaveTextContent("Wikipedia Source");
+
+    cleanup();
+    let requests = 0;
+    server.use(
+      http.get("/api/admin/ai-progress/:runId", () => {
+        requests += 1;
+        return HttpResponse.json({
+          status: delayed && requests === 1 ? "running" : "waiting",
+          startedAt: "2026-09-25T00:00:00.000Z",
+          failedSteps: ["Wikipedia Source"],
+          entries: [],
+        });
+      }),
+    );
+    render(
+      <BatchProgressDialog
+        runs={[
+          {
+            geoPlaceId: "church",
+            progressId: "123",
+            name: "Church",
+            isFinished: true,
+            error: "No Wikipedia Source found",
+          },
+        ]}
+        error={null}
+        onClose={() => {}}
+      />,
+    );
+    expect(await screen.findByText("Waiting for a source", {}, { timeout: 2_500 })).toBeVisible();
+    expect(screen.queryByText("Failed", { exact: true })).not.toBeInTheDocument();
+    const finalRequests = requests;
+    await userEvent.setup().click(screen.getByRole("button", { name: "Show log for Church" }));
+    expect(within(screen.getByRole("alert")).getByText("Waiting for a source")).toBeVisible();
+    expect(screen.getByRole("alert")).toHaveTextContent("Wikipedia Source");
+    expect(screen.getAllByText("Waiting for a source")).toHaveLength(2);
+    expect(requests).toBe(finalRequests);
   });
 
   it("shows a Person generation event while the action is running", async () => {
@@ -102,6 +141,6 @@ describe("AI progress dialog", () => {
     expect(
       await screen.findByText("Resolved Hadrian.", {}, { timeout: 2_500 }),
     ).toBeInTheDocument();
-    expect(log.scrollTop).toBe(600);
+    await waitFor(() => expect(log.scrollTop).toBe(600));
   });
 });

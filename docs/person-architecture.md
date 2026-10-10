@@ -21,6 +21,8 @@ After Story generation, resolve names against preserved Wikipedia Source links. 
 
 Ollama Cloud receives the JSON schema in the prompt and retries invalid output once. The resolver considers a reference resolved only when its Person ID points to a saved local record.
 
+The Person module also owns local Source-link diagnostics shown in the Curator table, using the resolver's matching rules. Saved resolution failures take precedence; fallback diagnostics inspect retained links without fetching Wikipedia or deciding whether redirects identify the same Person.
+
 ## Failure and publication
 
 Source or generation failure preserves Story Content and leaves the reference unresolved for Curator review and retry. Any retained unresolved or missing Person blocks the entire POI from the public catalog; a Story with no Related People may still qualify. Never invent people to satisfy completeness.

@@ -7,6 +7,7 @@ import { writePublicCatalog } from "@/server/publicCatalog/build";
 import { people } from "@/server/person";
 import { withPoiGeneration } from "@/server/poiGeneration";
 import { generateStoryBatch } from "@/server/storyBatch";
+import { generateDraftStory as generateDraftStoryForPoi } from "@/server/draftStoryGeneration";
 import { pointOfInterest } from "@/server/pointOfInterest";
 import { poiTypes } from "@/server/poiTypes";
 import { findPoiInGeoJson, getDefaultInputPath } from "@/server/wikiPipeline/io";
@@ -97,102 +98,14 @@ export const generateDraftStory = async (formData: FormData) =>
   runAiAction(formData, async (onProgress) => {
     const geoPlaceId = getRequiredString(formData, "geoPlaceId", "Geo Place id");
     const ai = await resolveAiSelection(formData);
-    const { result, poiTypesError, typeMappingError } = await withGenerationRun(
-      { city: "rome", operation: "draftStory.generate", geoPlaceId, ai },
-      async () => {
-        onProgress("Creating the Point of Interest.");
-        const { poiId } = await pointOfInterest.generate({ geoPlaceId });
-        return withPoiGeneration(poiId, async () => {
-          let poiTypesError: string | undefined;
-          let typeMappingError: string | undefined;
-          const result = await storyWorkflow.draftStory.generate({
-            poiId,
-            ai,
-            onProgress,
-            onSourcesAcquired: async (sources) => {
-              try {
-                const wikidataId = sources.find(({ kind }) => kind === "wikipedia")?.wikidataId;
-                if (wikidataId) await pointOfInterest.linkWikidata({ poiId, wikidataId });
-                onProgress("Checking POI types.");
-                const types = await poiTypes.refresh(poiId);
-                poiTypesError = types.error;
-                if (!types.error && types.types.length) {
-                  try {
-                    onProgress("Matching new types to visitor categories.");
-                    const classified = await createPoiTypeMappings().classify(
-                      ai,
-                      types.types.map((type) => type.id),
-                    );
-                    for (const city of classified.cities) revalidatePath(`/${city}`);
-                  } catch (error) {
-                    console.warn(`[poi-categories] Classification failed for ${poiId}.`, error);
-                    typeMappingError = error instanceof Error ? error.message : String(error);
-                    onProgress(
-                      "Some category mappings remain unmapped; continuing Story generation.",
-                    );
-                  }
-                }
-
-                if (types.skipped) onProgress("Skipping POI types: no Wikidata ID.");
-              } catch (error) {
-                console.warn(`[poi-types] Refresh failed for ${poiId}.`, error);
-                poiTypesError = error instanceof Error ? error.message : String(error);
-              }
-              if (poiTypesError) onProgress("POI Types could not be refreshed; continuing.");
-            },
-          });
-          return { poiId, poiTypesError, typeMappingError, result };
-        });
+    return generateDraftStoryForPoi({
+      geoPlaceId,
+      ai,
+      onProgress,
+      onCategoriesChanged: (cities) => {
+        for (const city of cities) revalidatePath(`/${city}`);
       },
-      ({ poiId, result, poiTypesError }) => ({
-        poiId,
-        status:
-          poiTypesError ||
-          result.mainImageCandidates === "failed" ||
-          result.relatedPeopleFailures.length > 0
-            ? "partial"
-            : "success",
-        failedSteps: [
-          ...(poiTypesError ? ["poiTypes"] : []),
-          ...(result.mainImageCandidates === "failed" ? ["mainImageCandidates"] : []),
-          ...(result.relatedPeopleFailures.length > 0 ? ["relatedPeople"] : []),
-        ],
-        relatedPeopleFailureCount: result.relatedPeopleFailures.length,
-        errors: [
-          ...(poiTypesError ? [{ stage: "poiTypes", message: poiTypesError }] : []),
-          ...(result.mainImageCandidatesError
-            ? [{ stage: "mainImageCandidates", message: result.mainImageCandidatesError }]
-            : []),
-          ...result.relatedPeopleFailures.map(({ name, message }) => ({
-            stage: "relatedPeople",
-            name,
-            message,
-          })),
-        ],
-      }),
-    );
-    const failedSteps = [
-      ...(poiTypesError ? ["POI Types"] : []),
-      ...(result.mainImageCandidates === "failed" ? ["Main Image Candidates"] : []),
-      ...(result.relatedPeopleFailures.length ? ["Related People"] : []),
-    ];
-    return failedSteps.length
-      ? {
-          warning: {
-            title: "Draft generated with issues",
-            description: `Failed steps: ${failedSteps.join(", ")}.`,
-          },
-          failedSteps,
-        }
-      : typeMappingError
-        ? {
-            warning: {
-              title: "Story generated; some category mappings remain unmapped",
-              description: "Retry classification from Type mappings.",
-              details: typeMappingError,
-            },
-          }
-        : undefined;
+    });
   });
 
 export const refreshStoryContent = async (formData: FormData) =>

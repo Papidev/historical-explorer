@@ -2,6 +2,7 @@
 
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from "@headlessui/react";
 import { AiProgressLog } from "./AiProgressLog";
+import { useAiProgress } from "./useAiProgress";
 
 export const AiProgressDialog = ({
   runId,
@@ -19,7 +20,7 @@ export const AiProgressDialog = ({
     <div className="fixed inset-0 flex items-center justify-center p-4">
       <DialogPanel className="w-full max-w-lg rounded-xl bg-white p-5 shadow-xl">
         <DialogTitle className="text-base font-semibold text-gray-900">{title}</DialogTitle>
-        <AiProgressLog runId={runId} isFinished={isFinished} />
+        <AiProgressLog state={useAiProgress({ runId, isFinished })} />
         <div className="mt-5 flex justify-end">
           <button
             type="button"

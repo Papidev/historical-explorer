@@ -64,6 +64,22 @@ const findMatchingLinks = (name: string, links: WikiSnapshot["links"]) => {
   );
 };
 
+export const getSourceLinkIssue = (name: string, sources: Source[]) => {
+  if (sources.length === 0) return undefined;
+
+  const matchingLinks = findMatchingLinks(
+    name,
+    sources.flatMap((source) => source.links ?? []),
+  );
+  if (matchingLinks.size === 0) {
+    return "No matching Wikipedia link exists in the current Story source.";
+  }
+  if (matchingLinks.size > 1) {
+    return "Multiple Wikipedia links match this name in the current Story source.";
+  }
+  return undefined;
+};
+
 const getProvider = (ai: AiSelection): "ollama" | "gemini" =>
   ai.mode === "local"
     ? process.env.LOCAL_AI_PROVIDER === "gemini"
