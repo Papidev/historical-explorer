@@ -14,10 +14,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5173079,
-          41.9231188
-        ]
+        "coordinates": [12.5173079, 41.9231188]
       },
       "geoPlaceId": "way/23944398"
     },
@@ -39,10 +36,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.4715028,
-          41.9000215
-        ]
+        "coordinates": [12.4715028, 41.9000215]
       },
       "geoPlaceId": "node/1674754682"
     },
@@ -58,10 +52,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.4808938,
-          41.8888528
-        ]
+        "coordinates": [12.4808938, 41.8888528]
       },
       "geoPlaceId": "way/27350575"
     },
@@ -77,10 +68,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.4730991,
-          41.8989256
-        ]
+        "coordinates": [12.4730991, 41.8989256]
       },
       "geoPlaceId": "way/4247138"
     },
@@ -99,10 +87,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.4663312,
-          41.9030762
-        ]
+        "coordinates": [12.4663312, 41.9030762]
       },
       "geoPlaceId": "way/8035487"
     },
@@ -125,10 +110,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.4768291,
-          41.8586828
-        ]
+        "coordinates": [12.4768291, 41.8586828]
       },
       "geoPlaceId": "way/23370510"
     },
@@ -141,10 +123,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5292531,
-          41.8581318
-        ]
+        "coordinates": [12.5292531, 41.8581318]
       },
       "geoPlaceId": "way/23955573"
     },
@@ -159,10 +138,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.4768992,
-          41.9088977
-        ]
+        "coordinates": [12.4768992, 41.9088977]
       },
       "geoPlaceId": "way/24186531"
     },
@@ -179,10 +155,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.4829654,
-          41.8932288
-        ]
+        "coordinates": [12.4829654, 41.8932288]
       },
       "geoPlaceId": "way/23055100"
     },
@@ -199,10 +172,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.4885842,
-          41.8906722
-        ]
+        "coordinates": [12.4885842, 41.8906722]
       },
       "geoPlaceId": "way/23913953"
     },
@@ -218,10 +188,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.4593082,
-          41.833704
-        ]
+        "coordinates": [12.4593082, 41.833704]
       },
       "geoPlaceId": "way/23432370"
     },
@@ -237,10 +204,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.4836806,
-          41.9016166
-        ]
+        "coordinates": [12.4836806, 41.9016166]
       },
       "geoPlaceId": "node/7012887885"
     },
@@ -254,10 +218,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5390264,
-          41.8712135
-        ]
+        "coordinates": [12.5390264, 41.8712135]
       },
       "geoPlaceId": "way/113758266"
     },
@@ -269,10 +230,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5038481,
-          41.9251799
-        ]
+        "coordinates": [12.5038481, 41.9251799]
       },
       "geoPlaceId": "node/2002031137"
     },
@@ -291,10 +249,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.4836883,
-          41.8749809
-        ]
+        "coordinates": [12.4836883, 41.8749809]
       },
       "geoPlaceId": "node/13028360534"
     },
@@ -306,10 +261,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5232323,
-          41.9022115
-        ]
+        "coordinates": [12.5232323, 41.9022115]
       },
       "geoPlaceId": "node/7820567640"
     },
@@ -321,10 +273,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5721425,
-          41.8364569
-        ]
+        "coordinates": [12.5721425, 41.8364569]
       },
       "geoPlaceId": "way/151952790"
     },
@@ -336,10 +285,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5774251,
-          41.8392242
-        ]
+        "coordinates": [12.5774251, 41.8392242]
       },
       "geoPlaceId": "way/317695840"
     },
@@ -351,10 +297,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5786812,
-          41.8415101
-        ]
+        "coordinates": [12.5786812, 41.8415101]
       },
       "geoPlaceId": "way/997532430"
     },
@@ -374,10 +317,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.4984576,
-          41.8976084
-        ]
+        "coordinates": [12.4984576, 41.8976084]
       },
       "geoPlaceId": "way/131564482"
     },
@@ -393,10 +333,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5150843,
-          41.8876475
-        ]
+        "coordinates": [12.5150843, 41.8876475]
       },
       "geoPlaceId": "node/1791417716"
     },
@@ -412,10 +349,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.4783662,
-          41.8979917
-        ]
+        "coordinates": [12.4783662, 41.8979917]
       },
       "geoPlaceId": "way/25400176"
     },
@@ -427,10 +361,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5787351,
-          41.8417417
-        ]
+        "coordinates": [12.5787351, 41.8417417]
       },
       "geoPlaceId": "way/997532432"
     },
@@ -442,10 +373,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5787241,
-          41.8418608
-        ]
+        "coordinates": [12.5787241, 41.8418608]
       },
       "geoPlaceId": "way/997532434"
     },
@@ -457,10 +385,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5784441,
-          41.8410165
-        ]
+        "coordinates": [12.5784441, 41.8410165]
       },
       "geoPlaceId": "way/997532436"
     },
@@ -472,10 +397,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5786003,
-          41.841327
-        ]
+        "coordinates": [12.5786003, 41.841327]
       },
       "geoPlaceId": "way/997532439"
     },
@@ -487,10 +409,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5784861,
-          41.8410942
-        ]
+        "coordinates": [12.5784861, 41.8410942]
       },
       "geoPlaceId": "way/997532438"
     },
@@ -502,10 +421,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.578297,
-          41.8407461
-        ]
+        "coordinates": [12.578297, 41.8407461]
       },
       "geoPlaceId": "way/997532441"
     },
@@ -517,10 +433,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5783412,
-          41.8408255
-        ]
+        "coordinates": [12.5783412, 41.8408255]
       },
       "geoPlaceId": "way/997532446"
     },
@@ -532,10 +445,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5782172,
-          41.840601
-        ]
+        "coordinates": [12.5782172, 41.840601]
       },
       "geoPlaceId": "way/997532444"
     },
@@ -547,10 +457,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5780387,
-          41.8403159
-        ]
+        "coordinates": [12.5780387, 41.8403159]
       },
       "geoPlaceId": "way/997532447"
     },
@@ -562,10 +469,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5751662,
-          41.8369817
-        ]
+        "coordinates": [12.5751662, 41.8369817]
       },
       "geoPlaceId": "way/997532451"
     },
@@ -577,10 +481,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5494195,
-          41.8284359
-        ]
+        "coordinates": [12.5494195, 41.8284359]
       },
       "geoPlaceId": "way/331242877"
     },
@@ -592,10 +493,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5750568,
-          41.8369418
-        ]
+        "coordinates": [12.5750568, 41.8369418]
       },
       "geoPlaceId": "way/997532453"
     },
@@ -607,10 +505,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5734651,
-          41.8365259
-        ]
+        "coordinates": [12.5734651, 41.8365259]
       },
       "geoPlaceId": "way/997532455"
     },
@@ -624,10 +519,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5752822,
-          41.9038801
-        ]
+        "coordinates": [12.5752822, 41.9038801]
       },
       "geoPlaceId": "way/312005914"
     },
@@ -639,10 +531,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5072036,
-          41.8958215
-        ]
+        "coordinates": [12.5072036, 41.8958215]
       },
       "geoPlaceId": "way/97834048"
     },
@@ -657,10 +546,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5339066,
-          41.8775109
-        ]
+        "coordinates": [12.5339066, 41.8775109]
       },
       "geoPlaceId": "way/243044347"
     },
@@ -672,10 +558,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.4958147,
-          41.8851493
-        ]
+        "coordinates": [12.4958147, 41.8851493]
       },
       "geoPlaceId": "way/112174949"
     },
@@ -687,10 +570,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.6001609,
-          41.9083585
-        ]
+        "coordinates": [12.6001609, 41.9083585]
       },
       "geoPlaceId": "way/312002046"
     },
@@ -702,10 +582,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.626928,
-          41.9115853
-        ]
+        "coordinates": [12.626928, 41.9115853]
       },
       "geoPlaceId": "way/312007980",
       "wikidataId": "Q600139"
@@ -718,10 +595,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.4679891,
-          41.9309179
-        ]
+        "coordinates": [12.4679891, 41.9309179]
       },
       "geoPlaceId": "node/10136307263"
     },
@@ -733,10 +607,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.5580465,
-          41.8686577
-        ]
+        "coordinates": [12.5580465, 41.8686577]
       },
       "geoPlaceId": "node/5434893199"
     },
@@ -748,10 +619,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.3018493,
-          41.7602112
-        ]
+        "coordinates": [12.3018493, 41.7602112]
       },
       "geoPlaceId": "node/4610337594"
     },
@@ -767,10 +635,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          12.4755017,
-          41.9061511
-        ]
+        "coordinates": [12.4755017, 41.9061511]
       },
       "geoPlaceId": "way/201291264"
     }

@@ -7,53 +7,37 @@
     "description": [
       {
         "text": "Pax, the Roman personification of peace, was adopted from the Greek goddess Eirene and presented as the daughter of Jupiter and the goddess Justice. Her cult was largely organized and popularised during the reign of Augustus, who used her imagery to signal the end of the civil wars that had torn the late Republic and to promote the stability of the new imperial order.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "Pax was commonly depicted holding olive branches, a caduceus, a cornucopia, and a sceptre, and she was associated with springtime abundance. A festival in her honour was held on January 30, and Augustus commissioned the Ara Pacis (Altar of Peace) on the Campus Martius while Vespasian later built the Templum Pacis in AD 75. As the empire entered the Pax Romana, Pax became synonymous with Augustus’s rule, but her worship waned as Christianity rose, eventually leading to the decline of her cult after the fall of the Western Roman Empire.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "curiosities": [
       {
         "text": "Pax’s iconography often included olive branches, symbolising peace offerings, and a caduceus, reflecting her Greek counterpart Eirene’s attributes.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "She was associated with spring, a season of renewal and abundance, which reinforced her role as a bringer of prosperity.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "A dedicated festival for Pax was celebrated annually on January 30, underscoring her importance in Roman civic life.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "Augustus used Pax as a political slogan, commissioning the Ara Pacis to visually represent the peace he had restored after years of civil conflict.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "Vespasian’s construction of the Templum Pacis in AD 75 linked Pax to the god Janus, symbolising the closing of war and the beginning of peace.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "text": "Pax’s depictions on coinage often featured agricultural motifs such as cornucopias and farm animals, highlighting the abundance that followed the Pax Romana.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ]
   },

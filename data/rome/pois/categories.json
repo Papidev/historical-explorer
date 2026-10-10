@@ -2,65 +2,27 @@
   "version": 1,
   "pois": {
     "basilica-costantiniana-di-s-agnese": [],
-    "cloisters-of-bramante": [
-      "Museum",
-      "Church"
-    ],
-    "forum-boarium": [
-      "Square"
-    ],
-    "piazza-navona": [
-      "Square"
-    ],
-    "castle-of-the-holy-angel": [
-      "Museum",
-      "Castle",
-      "Mausoleum"
-    ],
-    "basilica-of-saint-paul-outside-the-walls": [
-      "Basilica",
-      "Church"
-    ],
-    "torre-valca": [
-      "Tower",
-      "Archaeological Site"
-    ],
-    "palazzo-rondinini": [
-      "Palace"
-    ],
-    "capitol-square": [
-      "Square"
-    ],
-    "arch-of-titus": [
-      "Arch",
-      "Archaeological Site"
-    ],
-    "basilica-parrocchiale-dei-santi-pietro-e-paolo": [
-      "Basilica",
-      "Church"
-    ],
+    "cloisters-of-bramante": ["Museum", "Church"],
+    "forum-boarium": ["Square"],
+    "piazza-navona": ["Square"],
+    "castle-of-the-holy-angel": ["Museum", "Castle", "Mausoleum"],
+    "basilica-of-saint-paul-outside-the-walls": ["Basilica", "Church"],
+    "torre-valca": ["Tower", "Archaeological Site"],
+    "palazzo-rondinini": ["Palace"],
+    "capitol-square": ["Square"],
+    "arch-of-titus": ["Arch", "Archaeological Site"],
+    "basilica-parrocchiale-dei-santi-pietro-e-paolo": ["Basilica", "Church"],
     "accademia-di-san-luca": [],
-    "acqua-marcia": [
-      "Aqueduct",
-      "Archaeological Site"
-    ],
+    "acqua-marcia": ["Aqueduct", "Archaeological Site"],
     "a-umberto-ii-re-d-italia": [],
     "acea-heritage": [],
     "achille-joachim-bligny": [],
     "acquedotto-dei-sette-bassi": [],
     "acquedotto-dei-sette-bassi-2": [],
     "acquedotto-dei-sette-bassi-3": [],
-    "basilica-of-saint-mary-major": [
-      "Basilica"
-    ],
-    "amphitheatre-castrense": [
-      "Amphitheatre",
-      "Archaeological Site"
-    ],
-    "basilica-di-santa-maria-sopra-minerva": [
-      "Church",
-      "Basilica"
-    ],
+    "basilica-of-saint-mary-major": ["Basilica"],
+    "amphitheatre-castrense": ["Amphitheatre", "Archaeological Site"],
+    "basilica-di-santa-maria-sopra-minerva": ["Church", "Basilica"],
     "acquedotto-dei-sette-bassi-4": [],
     "acquedotto-dei-sette-bassi-5": [],
     "acquedotto-dei-sette-bassi-6": [],
@@ -74,24 +36,15 @@
     "acquedotto-del-grande-ninfeo": [],
     "acquedotto-dei-sette-bassi-14": [],
     "acquedotto-dei-sette-bassi-15": [],
-    "acquedotto-dell-acqua-vergine": [
-      "Aqueduct"
-    ],
+    "acquedotto-dell-acqua-vergine": ["Aqueduct"],
     "acquedotto-julio": [],
-    "acquedotto-felice": [
-      "Aqueduct"
-    ],
+    "acquedotto-felice": ["Aqueduct"],
     "acquedotto-neroniano": [],
     "acquedotto-vergine": [],
-    "acquedotto-vergine-2": [
-      "Aqueduct"
-    ],
+    "acquedotto-vergine-2": ["Aqueduct"],
     "adele-elvira-sacerdoti": [],
     "aermacchi-mb-326": [],
     "agli-eroici-figli-di-ostia": [],
-    "ara-pacis-augustae": [
-      "Archaeological Site",
-      "Museum"
-    ]
+    "ara-pacis-augustae": ["Archaeological Site", "Museum"]
   }
 }

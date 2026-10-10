@@ -1,18 +1,14 @@
 {
   "introduction": {
     "text": "Acquedotto Vergine, also known as Aqua Virgo, is an ancient Roman aqueduct that supplied water to Rome and remains a vital source of water today. Its engineering, longevity, and influence on Roman urban life make it a key cultural landmark.",
-    "sourceIds": [
-      "wikipedia"
-    ]
+    "sourceIds": ["wikipedia"]
   },
   "topics": {
     "history": [
       {
         "id": "history1",
         "description": "Completed in 19 BC by Marcus Agrippa, the aqueduct supplied the Baths of Agrippa in the Campus Martius.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": -19,
           "precision": "exact",
@@ -22,9 +18,7 @@
       {
         "id": "history2",
         "description": "Repaired by Emperor Tiberius in 37 AD to restore water flow.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 37,
           "precision": "exact",
@@ -34,9 +28,7 @@
       {
         "id": "history3",
         "description": "Rebuilt by Emperor Claudius between 45 AD and 46 AD after Caligula removed stone.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 45,
           "precision": "exact",
@@ -47,9 +39,7 @@
       {
         "id": "history4",
         "description": "Disrupted during the Gothic siege of Rome in 537 AD.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 537,
           "precision": "exact",
@@ -59,9 +49,7 @@
       {
         "id": "history5",
         "description": "Major restorations carried out in the 8th century by Pope Adrian I.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 700,
           "precision": "approximate",
@@ -72,9 +60,7 @@
       {
         "id": "history6",
         "description": "Extensive repairs performed by Pope Nicholas V in 1453.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 1453,
           "precision": "exact",
@@ -84,9 +70,7 @@
       {
         "id": "history7",
         "description": "A pressurised version, Acqua Vergine Nuovo, was built in the 1930s.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 1900,
           "precision": "approximate",
@@ -99,53 +83,39 @@
       {
         "id": "design1",
         "description": "The aqueduct ran mostly underground, with a final 1.8 km stretch on arches in the Campus Martius.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "id": "design2",
         "description": "Channels were 50 cm to 1 m below ground, constructed using cut‑and‑cover, lined with cement, and roofed with vaults.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "id": "design3",
         "description": "Materials included masonry, lead pipes, and terracotta, chosen for durability and ease of construction.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "id": "design4",
         "description": "A shallow gradient of only 4 m over 20.5 km ensured gravity‑driven flow with minimal pressure.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "art": [
       {
         "id": "art1",
         "description": "The aqueduct’s water feeds iconic fountains such as the Trevi Fountain and the fountains of Piazza del Popolo.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "id": "art2",
         "description": "The Trevi Fountain, a Baroque masterpiece, showcases the aqueduct’s water in a dramatic cascade.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "id": "art3",
         "description": "The fountains of Piazza del Popolo, including the Lions of Piazza del Popolo, illustrate the Renaissance use of the aqueduct.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ]
   },
@@ -153,72 +123,52 @@
     {
       "name": "Marcus Agrippa",
       "personId": "marcus-vipsanius-agrippa",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Augustus",
       "personId": "augustus",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Vitruvius",
       "personId": "vitruvius",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Tiberius",
       "personId": "tiberius",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Claudius",
       "personId": "claudius",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Constantine the Great",
       "personId": "constantine-i",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Theodoric the Great",
       "personId": "theodoric-the-great",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Pope Adrian I",
       "personId": "pope-adrian-i",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Pope Nicholas V",
       "personId": "pope-nicholas-v",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Leon Battista Alberti",
       "personId": "leon-battista-alberti",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     }
   ]
 }

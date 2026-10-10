@@ -1,18 +1,14 @@
 {
   "introduction": {
     "text": "The Acquedotto Vergine, also known as the Aqua Virgo, is a historic Roman aqueduct that supplied water to ancient Rome and continues to provide water to many of the city's iconic fountains. Its engineering, longevity, and cultural significance make it a key monument of Roman hydraulic infrastructure.",
-    "sourceIds": [
-      "wikipedia"
-    ]
+    "sourceIds": ["wikipedia"]
   },
   "topics": {
     "history": [
       {
         "id": "history1",
         "description": "Construction completed in 19 BC by Marcus Agrippa during Augustus's reign.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": -18,
           "precision": "exact",
@@ -22,9 +18,7 @@
       {
         "id": "history2",
         "description": "Tiberius repaired the aqueduct in 37 AD.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 37,
           "precision": "exact",
@@ -34,9 +28,7 @@
       {
         "id": "history3",
         "description": "Claudius renovated the aqueduct in 45–46 AD.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 45,
           "precision": "exact",
@@ -47,9 +39,7 @@
       {
         "id": "history4",
         "description": "The aqueduct suffered its first major disruption during the Gothic siege of Rome in 537 AD.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 537,
           "precision": "exact",
@@ -59,9 +49,7 @@
       {
         "id": "history5",
         "description": "Pope Adrian I carried out major restorations in the 8th century.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 700,
           "precision": "approximate",
@@ -72,9 +60,7 @@
       {
         "id": "history6",
         "description": "Pope Nicholas V performed extensive repairs in 1453, restoring the aqueduct for Renaissance use.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 1453,
           "precision": "exact",
@@ -84,9 +70,7 @@
       {
         "id": "history7",
         "description": "In the 1930s a pressurised version, Acqua Vergine Nuovo, was built.",
-        "sourceIds": [
-          "wikipedia"
-        ],
+        "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 1930,
           "precision": "approximate",
@@ -99,32 +83,24 @@
       {
         "id": "design1",
         "description": "The aqueduct was built as a gravity system with a shallow downward gradient, using underground channels of masonry, lead, and terracotta, and a few arches for the final 1.8 km.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "id": "design2",
         "description": "Construction employed a cut‑and‑cover technique, lining channels with cement to prevent leaks and provide a smooth surface.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ],
     "art": [
       {
         "id": "art1",
         "description": "The aqueduct's water feeds the Trevi Fountain, a Baroque masterpiece designed by Nicola Salvi and completed in 1762.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       },
       {
         "id": "art2",
         "description": "It also supplies the fountains of Piazza del Popolo, including the Lions Fountain and the Cascata on the Pincio.",
-        "sourceIds": [
-          "wikipedia"
-        ]
+        "sourceIds": ["wikipedia"]
       }
     ]
   },
@@ -132,72 +108,52 @@
     {
       "name": "Marcus Agrippa",
       "personId": "marcus-vipsanius-agrippa",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Augustus",
       "personId": "augustus",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Vitruvius",
       "personId": "vitruvius",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Tiberius",
       "personId": "tiberius",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Claudius",
       "personId": "claudius",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Constantine the Great",
       "personId": "constantine-i",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Theodoric the Great",
       "personId": "theodoric-the-great",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Pope Nicholas V",
       "personId": "pope-nicholas-v",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Pope Adrian I",
       "personId": "pope-adrian-i",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     },
     {
       "name": "Leon Battista Alberti",
       "personId": "leon-battista-alberti",
-      "sourceIds": [
-        "wikipedia"
-      ]
+      "sourceIds": ["wikipedia"]
     }
   ]
 }
