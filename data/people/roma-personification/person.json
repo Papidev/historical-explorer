@@ -1,0 +1,67 @@
+{
+  "id": "roma-personification",
+  "name": "Roma",
+  "wikidataId": "Q953033",
+  "wikipediaTitle": "Roma (personification)",
+  "content": {
+    "description": [
+      {
+        "text": "Roma is a female deity who personifies the city of Rome and the Roman state. Created to propagate Rome’s self‑image and justify its rule, she appears on coins, sculptures, architectural designs and at official games and festivals. Her iconography is often military: she wears a helmet, carries weapons, and stands over piled arms, symbolising conquest and protection for the obedient. In the Roman Imperial era she is also shown as a serene advisor, partner and protector of emperors, reflecting her role as the divine consort of the ruler.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "The cult of Roma spread through the empire, with temples and altars dedicated to her and the emperor in cities such as Leptis Magna, Mactar, Ostia and Rome itself. The Hadrianic Temple of Venus and Roma, the largest temple in the city, housed a seated, draped image of Roma holding the Palladium, symbolising Rome’s eternity. Her image survived into the Christian period as a personification of the Roman state, and her depiction influenced later personifications such as Britannia.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In the eastern provinces Roma was often shown with a mural crown or a cornucopia, or both, reflecting local iconographic traditions.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Roma’s image survived into the Christian period, continuing to represent the Roman state even as the empire adopted Christianity.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "The Hadrianic Temple of Venus and Roma in Rome was the largest temple in the city and featured a seated image of Roma holding the Palladium, a symbol of Rome’s eternal protection.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "D.G.U._(1831)_Vol._IV.1_Dea_Roma.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:D.G.U._(1831)_Vol._IV.1_Dea_Roma.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/D.G.U._%281831%29_Vol._IV.1_Dea_Roma.jpg/960px-D.G.U._%281831%29_Vol._IV.1_Dea_Roma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/D.G.U._%281831%29_Vol._IV.1_Dea_Roma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "This file is from the Mechanical Curator collection, a set of over 1 million images scanned from out-of-copyright books and released to Flickr Commons by the British Library in London, England. View image on Flickr View all images from book View catalogue entry for book.",
+    "author": "This file is from the Mechanical Curator collection, a set of over 1 million images scanned from out-of-copyright books and released to Flickr Commons by the British Library in London, England. View image on Flickr View all images from book View catalogue entry for book.",
+    "width": 1075,
+    "height": 1608,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Roma (personification)",
+    "url": "https://en.wikipedia.org/wiki/Roma_(personification)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-09T01:32:58.507Z"
+  }
+}

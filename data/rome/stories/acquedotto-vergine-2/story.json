@@ -1,6 +1,6 @@
 {
   "introduction": {
-    "text": "The Acquedotto Vergine, also known as the Aqua Virgo, is a historic Roman aqueduct that supplied water to ancient Rome and continues to provide water to many of the city's iconic fountains. Its engineering, longevity, and cultural significance make it a key monument of Roman hydraulic infrastructure.",
+    "text": "Acquedotto Vergine, also known as Aqua Virgo, is an ancient Roman aqueduct that supplied water to Rome and remains a vital source of water today. Its engineering, longevity, and influence on Roman urban life make it a key cultural landmark.",
     "sourceIds": [
       "wikipedia"
     ]
@@ -9,19 +9,19 @@
     "history": [
       {
         "id": "history1",
-        "description": "Construction completed in 19 BC by Marcus Agrippa during Augustus's reign.",
+        "description": "Completed in 19 BC by Marcus Agrippa, the aqueduct supplied the Baths of Agrippa in the Campus Martius.",
         "sourceIds": [
           "wikipedia"
         ],
         "time": {
-          "startYear": -18,
+          "startYear": -19,
           "precision": "exact",
           "granularity": "year"
         }
       },
       {
         "id": "history2",
-        "description": "Tiberius repaired the aqueduct in 37 AD.",
+        "description": "Repaired by Emperor Tiberius in 37 AD to restore water flow.",
         "sourceIds": [
           "wikipedia"
         ],
@@ -33,7 +33,7 @@
       },
       {
         "id": "history3",
-        "description": "Claudius renovated the aqueduct in 45–46 AD.",
+        "description": "Rebuilt by Emperor Claudius between 45 AD and 46 AD after Caligula removed stone.",
         "sourceIds": [
           "wikipedia"
         ],
@@ -46,7 +46,7 @@
       },
       {
         "id": "history4",
-        "description": "The aqueduct suffered its first major disruption during the Gothic siege of Rome in 537 AD.",
+        "description": "Disrupted during the Gothic siege of Rome in 537 AD.",
         "sourceIds": [
           "wikipedia"
         ],
@@ -58,7 +58,7 @@
       },
       {
         "id": "history5",
-        "description": "Pope Adrian I carried out major restorations in the 8th century.",
+        "description": "Major restorations carried out in the 8th century by Pope Adrian I.",
         "sourceIds": [
           "wikipedia"
         ],
@@ -71,7 +71,7 @@
       },
       {
         "id": "history6",
-        "description": "Pope Nicholas V performed extensive repairs in 1453, restoring the aqueduct for Renaissance use.",
+        "description": "Extensive repairs performed by Pope Nicholas V in 1453.",
         "sourceIds": [
           "wikipedia"
         ],
@@ -83,14 +83,14 @@
       },
       {
         "id": "history7",
-        "description": "In the 1930s a pressurised version, Acqua Vergine Nuovo, was built.",
+        "description": "A pressurised version, Acqua Vergine Nuovo, was built in the 1930s.",
         "sourceIds": [
           "wikipedia"
         ],
         "time": {
-          "startYear": 1930,
+          "startYear": 1900,
           "precision": "approximate",
-          "endYear": 1939,
+          "endYear": 1999,
           "granularity": "century"
         }
       }
@@ -98,14 +98,28 @@
     "design": [
       {
         "id": "design1",
-        "description": "The aqueduct was built as a gravity system with a shallow downward gradient, using underground channels of masonry, lead, and terracotta, and a few arches for the final 1.8 km.",
+        "description": "The aqueduct ran mostly underground, with a final 1.8 km stretch on arches in the Campus Martius.",
         "sourceIds": [
           "wikipedia"
         ]
       },
       {
         "id": "design2",
-        "description": "Construction employed a cut‑and‑cover technique, lining channels with cement to prevent leaks and provide a smooth surface.",
+        "description": "Channels were 50 cm to 1 m below ground, constructed using cut‑and‑cover, lined with cement, and roofed with vaults.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "design3",
+        "description": "Materials included masonry, lead pipes, and terracotta, chosen for durability and ease of construction.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "design4",
+        "description": "A shallow gradient of only 4 m over 20.5 km ensured gravity‑driven flow with minimal pressure.",
         "sourceIds": [
           "wikipedia"
         ]
@@ -114,14 +128,21 @@
     "art": [
       {
         "id": "art1",
-        "description": "The aqueduct's water feeds the Trevi Fountain, a Baroque masterpiece designed by Nicola Salvi and completed in 1762.",
+        "description": "The aqueduct’s water feeds iconic fountains such as the Trevi Fountain and the fountains of Piazza del Popolo.",
         "sourceIds": [
           "wikipedia"
         ]
       },
       {
         "id": "art2",
-        "description": "It also supplies the fountains of Piazza del Popolo, including the Lions Fountain and the Cascata on the Pincio.",
+        "description": "The Trevi Fountain, a Baroque masterpiece, showcases the aqueduct’s water in a dramatic cascade.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "art3",
+        "description": "The fountains of Piazza del Popolo, including the Lions of Piazza del Popolo, illustrate the Renaissance use of the aqueduct.",
         "sourceIds": [
           "wikipedia"
         ]
@@ -179,15 +200,15 @@
       ]
     },
     {
-      "name": "Pope Nicholas V",
-      "personId": "pope-nicholas-v",
+      "name": "Pope Adrian I",
+      "personId": "pope-adrian-i",
       "sourceIds": [
         "wikipedia"
       ]
     },
     {
-      "name": "Pope Adrian I",
-      "personId": "pope-adrian-i",
+      "name": "Pope Nicholas V",
+      "personId": "pope-nicholas-v",
       "sourceIds": [
         "wikipedia"
       ]

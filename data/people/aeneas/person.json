@@ -1,0 +1,73 @@
+{
+  "id": "aeneas",
+  "name": "Aeneas",
+  "wikidataId": "Q82732",
+  "wikipediaTitle": "Aeneas",
+  "content": {
+    "description": [
+      {
+        "text": "Aeneas is a Trojan hero in Greco‑Roman mythology, the son of the Trojan prince Anchises and the Greek goddess Aphrodite. He appears in Homer’s Iliad as a minor but honorable warrior, and his story is expanded in Virgil’s Aeneid, where he is portrayed as the ancestor of Romulus and Remus and the first true hero of Rome.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "After the fall of Troy, Aeneas leads a group of survivors on a perilous voyage that takes them to Sicily, Carthage, and finally to the Italian peninsula, where he founds the city of Lavinium. His journey is marked by divine intervention, an ill‑fated affair with Queen Dido, and the eventual deification of his spirit as the god Jupiter Indiges.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Aeneas is traditionally regarded as the ancestor of the Roman founders Romulus and Remus.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "During the Trojan War, the gods repeatedly save Aeneas from death, foreshadowing his destined role as a founder of a new people.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "After escaping Troy, Aeneas establishes the city of Lavinium, which becomes the first city of the Roman people.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Roman tradition holds that after his death Aeneas was deified as the god Jupiter Indiges.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "B._PINELLI,_Enea_e_il_Tevere.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:B._PINELLI%2C_Enea_e_il_Tevere.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/B._PINELLI%2C_Enea_e_il_Tevere.jpg/960px-B._PINELLI%2C_Enea_e_il_Tevere.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/B._PINELLI%2C_Enea_e_il_Tevere.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Bartolomeo Pinelli (Roma 1781 - Roma 1835)",
+    "author": "Bartolomeo Pinelli (Roma 1781 - Roma 1835)",
+    "width": 2512,
+    "height": 1721,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Aeneas",
+    "url": "https://en.wikipedia.org/wiki/Aeneas"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-09T01:32:35.117Z"
+  }
+}

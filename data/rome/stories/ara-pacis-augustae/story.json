@@ -1,0 +1,283 @@
+{
+  "introduction": {
+    "text": "The Ara Pacis Augustae, or Altar of Augustan Peace, is a Roman altar in Rome that commemorates the Pax Romana and serves as a key example of Augustan propaganda and religious ritual.",
+    "sourceIds": [
+      "wikipedia"
+    ]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "commissioning",
+        "description": "Commissioned by the Roman Senate on 4 July 13 BC to honor Augustus' return to Rome.",
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": -13,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "consecration",
+        "description": "Concecrated on 30 January 9 BC.",
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": -9,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "rediscovery-1568",
+        "description": "Fragments first rediscovered in 1568 beneath Palazzo Peretti.",
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 1568,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "rediscovery-1859",
+        "description": "Further fragments found in 1859 during excavations beneath Teatro Olimpia.",
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 1859,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "excavation-1903",
+        "description": "In 1903, Friedrich von Duhn identified the reliefs as belonging to the Ara Pacis, leading to formal excavations.",
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 1903,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "demolition-1909",
+        "description": "In 1909, the Italian government approved demolition of buildings around the Mausoleum of Augustus to restore view.",
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 1909,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "proposal-1918",
+        "description": "In 1918, Oreste Mattirolo proposed assembling all fragments for reconstruction.",
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 1918,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "demolition-1932",
+        "description": "Demolition of surrounding buildings began in 1932.",
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 1932,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "reconstruction-1937",
+        "description": "In February 1937, the Italian Cabinet ordered excavation and reconstruction for the 2000th anniversary of Augustus' birth.",
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 1937,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "reconstruction-1938",
+        "description": "Reconstruction completed on 23 September 1938, with missing parts assisted by Odoardo Ferretti.",
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 1938,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "pavilion-2006",
+        "description": "In 2006, the original pavilion was replaced by a glass and steel structure designed by Richard Meier.",
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 2006,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "original-location",
+        "description": "Initially located on the northern outskirts of Rome, a Roman mile from the pomerium on the west side of Via Flaminia, in the northeastern corner of the Campus Martius.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "burial",
+        "description": "Gradually buried under about 4 m of silt deposits.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "design": [
+      {
+        "id": "structure",
+        "description": "Central sacrificial altar enclosed by Luna marble precinct walls, set on a podium with a western entrance staircase.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "orientation",
+        "description": "The altar was turned 90° counterclockwise from its original orientation so the western side now faces south.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "pavilion-morpurgo",
+        "description": "A protective pavilion built in 1938 by architect Vittorio Ballio Morpurgo as part of Mussolini's Fascist theme park.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "pavilion-meier",
+        "description": "The 2006 museum pavilion designed by Richard Meier replaced the Morpurgo structure.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "art": [
+      {
+        "id": "lower-register",
+        "description": "Lower register features a continuous vegetal frieze of acanthus scrolls with animals, birds, insects, and mythological creatures.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "upper-register",
+        "description": "Upper register contains four mythological panels depicting figures such as Pax, Roma, Aeneas/Numa Pompilius, and a female foundation figure.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "processional-friezes",
+        "description": "Processional friezes on the north and south walls show a state ceremony with priestly colleges, magistrates, and members of the imperial household.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Augustus",
+      "personId": "augustus",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Marcus Vipsanius Agrippa",
+      "personId": "marcus-vipsanius-agrippa",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Livia",
+      "personId": "livia",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Tiberius",
+      "personId": "tiberius",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Aeneas",
+      "personId": "aeneas",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Numa Pompilius",
+      "personId": "numa-pompilius",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Roma (personification)",
+      "personId": "roma-personification",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Pax (goddess)",
+      "personId": "pax-goddess",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Venus (mythology)",
+      "personId": "venus-mythology",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    },
+    {
+      "name": "Tellus (mythology)",
+      "personId": "tellus-mythology",
+      "sourceIds": [
+        "wikipedia"
+      ]
+    }
+  ]
+}
