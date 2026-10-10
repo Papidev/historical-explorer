@@ -2,8 +2,9 @@ import { existsSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { readGenerationMetadata, type GenerationMetadata } from "@/server/generationMetadata";
 import { readGenerationRuns } from "@/server/generationRunLog";
-import { storyWorkflow, type DraftStorySnapshot, type Source } from "@/server/storyWorkflow";
+import { storyWorkflow, type DraftStorySnapshot } from "@/server/storyWorkflow";
 import { personRepository } from "@/server/person/filesystemRepository";
+import { getSourceLinkIssue } from "@/server/person";
 import { getPoiGeoPlaceId } from "@/server/pointOfInterest/getPoiGeoPlaceId";
 import { getFeatureId } from "@/server/wikiPipeline/normalize";
 import { sanitizePoiIdForFile } from "@/server/wikiPipeline/normalize";
@@ -25,35 +26,6 @@ import { getCurrentGenerationErrors } from "./getCurrentGenerationErrors";
 import { getPoiRowStatusGroup } from "./getPoiRowStatusGroup";
 
 const toRowKey = (value: string) => value.trim().toLowerCase();
-
-const getSourceLinkIssue = (name: string, sources: Source[]) => {
-  if (sources.length === 0) return undefined;
-
-  const normalizeName = (value: string) =>
-    value
-      .replace(/_/g, " ")
-      .replace(/\s*\([^)]*\)\s*$/, "")
-      .trim()
-      .toLocaleLowerCase("en");
-  const matchingTitles = new Set(
-    sources
-      .flatMap((source) => source.links ?? [])
-      .filter(
-        ({ label, title }) =>
-          normalizeName(label) === normalizeName(name) ||
-          normalizeName(title) === normalizeName(name),
-      )
-      .map(({ title }) => title.replace(/_/g, " ").trim().toLocaleLowerCase("en")),
-  );
-
-  if (matchingTitles.size === 0) {
-    return "No matching Wikipedia link exists in the current Story source.";
-  }
-  if (matchingTitles.size > 1) {
-    return "Multiple Wikipedia links match this name in the current Story source.";
-  }
-  return undefined;
-};
 
 const parseGeoJson = (filePath: string) => {
   const raw = readFileSync(filePath, "utf-8");

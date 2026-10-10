@@ -2,15 +2,17 @@
 
 Status: implemented.
 
-The server-side Story Workflow hides sequencing, persistence, partial failures, and external integrations behind an artifact-oriented interface. It starts from an existing POI; POI creation and Type acquisition belong to the Next server-action Adapter.
+The server-side Story Workflow hides sequencing, persistence, partial failures, and external integrations behind an artifact-oriented interface. It starts from an existing POI. The Draft Story Generation coordination module owns POI creation, Type acquisition, classification, and run-log outcomes outside Story Workflow; the Next server-action Adapter owns input parsing, progress transport, and revalidation.
 
 ## Generate and Refresh
 
-The browser labels an empty row **Generate** and a populated row **Refresh**. Both submit the original Geo Place ID and current AI selection to the same Adapter:
+The browser labels an empty row **Generate** and a populated row **Refresh**. Both submit the original Geo Place ID and current AI selection to the same Adapter, which invokes `src/server/draftStoryGeneration.ts`:
 
 1. Call `pointOfInterest.generate({ geoPlaceId })` to create/replace the POI, retaining its stable ID.
-2. Refresh POI Types independently; failure does not stop Story generation.
-3. Call `storyWorkflow.draftStory.generate({ poiId, ai })`.
+2. Call `storyWorkflow.draftStory.generate({ poiId, ai })` with a Sources-acquired callback.
+3. Once Sources are saved, link the discovered Wikidata identity, refresh POI Types, and classify unmapped types before image and content generation continue. Type acquisition or classification failure does not stop Story generation.
+
+Single and batch generation use the same coordination module. One issue list supplies run-log status/errors and Curator warnings/failed steps, including classification failures. The Adapter uses those warnings to finish progress as partial and revalidates affected cities when classification changes their categories, even if a later Story step fails.
 
 The POI Module owns Geo Place access, cleaning, ID allocation, external identifiers, and catalog persistence. Its `reset({ poiId })` removes derived catalog state while preserving the Geo Place; Refresh never invokes reset.
 

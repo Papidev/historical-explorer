@@ -4,7 +4,8 @@ import path from "node:path";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import type { MainImageCandidate, WikiSnapshot } from "@/server/wikiPipeline/types";
 import { createFilesystemPersonRepository } from "./filesystemRepository";
-import { createPeople } from ".";
+import { createPeople, getSourceLinkIssue } from ".";
+import type { Source } from "@/server/storyWorkflow";
 import type { PersonContent } from "./types";
 
 const directories: string[] = [];
@@ -535,18 +536,20 @@ describe("People", () => {
       generateContent: async () => content,
       fetchImageCandidates: async () => [],
     });
+    const storySources: Source[] = [
+      {
+        id: "wikipedia",
+        kind: "wikipedia",
+        title: "Example",
+        url: "https://en.wikipedia.org/wiki/Example",
+        content: "Source text",
+        links: [{ label: title, title }],
+      },
+    ];
+    expect(getSourceLinkIssue(name, storySources)).toBeUndefined();
     const result = await people.resolveAndGenerateMissing({
       relatedPeople: [{ name, sourceIds: ["wikipedia"] }],
-      storySources: [
-        {
-          id: "wikipedia",
-          kind: "wikipedia",
-          title: "Example",
-          url: "https://en.wikipedia.org/wiki/Example",
-          content: "Source text",
-          links: [{ label: title, title }],
-        },
-      ],
+      storySources,
       ai: { mode: "local", model: "person-model" },
     });
     expect(result.failures).toEqual([]);
@@ -566,25 +569,27 @@ describe("People", () => {
       generateContent: async () => content,
       fetchImageCandidates: async () => [],
     });
+    const storySources: Source[] = [
+      {
+        id: "wikipedia",
+        kind: "wikipedia",
+        title: "Example",
+        url: "https://en.wikipedia.org/wiki/Example",
+        content: "Source text",
+        links: [
+          { label: "John Smith", title: "John Smith (architect)" },
+          { label: "John Smith", title: "John Smith (artist)" },
+        ],
+      },
+    ];
+    expect(getSourceLinkIssue("John Smith (architect)", storySources)).toBeUndefined();
     const result = await people.resolveAndGenerateMissing({
       relatedPeople: [
         { name: "John Smith (architect)", sourceIds: ["wikipedia"] },
         { name: "John Smith", personId: "smith-artist", sourceIds: ["wikipedia"] },
         { name: "John Smith", personId: "smith-explorer", sourceIds: ["wikipedia"] },
       ],
-      storySources: [
-        {
-          id: "wikipedia",
-          kind: "wikipedia",
-          title: "Example",
-          url: "https://en.wikipedia.org/wiki/Example",
-          content: "Source text",
-          links: [
-            { label: "John Smith", title: "John Smith (architect)" },
-            { label: "John Smith", title: "John Smith (artist)" },
-          ],
-        },
-      ],
+      storySources,
       ai: { mode: "local", model: "person-model" },
     });
     expect(result.failures).toEqual([]);
@@ -602,25 +607,33 @@ describe("People", () => {
       repository: createRepository(),
       fetchSnapshot: async (title) => snapshot(title, title === "Alexander I" ? "Q100" : "Q101"),
     });
+    const storySources: Source[] = [
+      {
+        id: "wikipedia",
+        kind: "wikipedia",
+        title: "Example",
+        url: "https://en.wikipedia.org/wiki/Example",
+        content: "Source text",
+        links: [
+          { label: "Alexander", title: "Alexander I" },
+          { label: "Alexander", title: "Alexander II" },
+          { label: "Isaac Newton", title: "Isaac Newton" },
+        ],
+      },
+    ];
+    expect(getSourceLinkIssue("King Alexander", storySources)).toBe(
+      "Multiple Wikipedia links match this name in the current Story source.",
+    );
+    expect(getSourceLinkIssue("Newton", storySources)).toBe(
+      "No matching Wikipedia link exists in the current Story source.",
+    );
+    expect(getSourceLinkIssue("Newton", [])).toBeUndefined();
     const result = await people.resolveAndGenerateMissing({
       relatedPeople: [
         { name: "King Alexander", sourceIds: ["wikipedia"] },
         { name: "Newton", sourceIds: ["wikipedia"] },
       ],
-      storySources: [
-        {
-          id: "wikipedia",
-          kind: "wikipedia",
-          title: "Example",
-          url: "https://en.wikipedia.org/wiki/Example",
-          content: "Source text",
-          links: [
-            { label: "Alexander", title: "Alexander I" },
-            { label: "Alexander", title: "Alexander II" },
-            { label: "Isaac Newton", title: "Isaac Newton" },
-          ],
-        },
-      ],
+      storySources,
       ai: { mode: "local", model: "person-model" },
     });
     expect(result.relatedPeople).toEqual([{ name: "King Alexander", sourceIds: ["wikipedia"] }]);

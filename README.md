@@ -86,6 +86,8 @@ If both language name searches fail, examine up to 50 nearby articles per editio
 
 Running rows stay pinned above other rows. The progress dialog can be hidden/reopened. The next click chooses the next matching To do POIs. Batches add no retries beyond existing cloud JSON/domain-validation retry.
 
+Batch badges and expanded logs share each run's progress state. A missing Wikipedia Source shows **Waiting for a source** in both. After the action finishes, a still-running log is read up to three times to obtain its final status; an unavailable log falls back to the action result without retrying generation.
+
 Guards support one local server process: three POI operations, one mutation per POI, and one pending Person generation per Wikidata ID. Allocate Person IDs immediately before saving; shared catalog/metadata writes are synchronous. Multiple processes or machines require shared coordination.
 
 ## AI Configuration
@@ -120,6 +122,8 @@ Ollama Cloud does not support schema-constrained output. Story Content and new P
 Local `data/rome/generated/generation-logs/day-*.jsonl` records start/completion/failure with shared run IDs. Seven daily slots rotate, overwriting data when reused after seven days. Admin shows latest-run errors beside artifacts and Related People errors in the People drawer. Known credentials are redacted; stack traces stay in the console. Logs are gitignored and not a durable cross-machine/deployment audit.
 
 Admin shows current errors: newer successful checkpoints or successful operations supersede them. A failed refresh remains visible if its saved artifact is older; historical logs stay on disk. Completion uses current artifacts/errors, not obsolete failed runs.
+
+Single and batch Draft Story Generation share coordination and outcome reporting. Type acquisition, category classification, Main Image Candidates, and Related People issues are recorded as partial results and shown in progress and final warnings; classification failures can be retried from Type mappings.
 
 Rejected AI output is saved in gitignored `data/generated/ai-response-failures/`: exact `rawResponse`, generation kind, subject identity, provider/model/mode, attempt, time, and validation error. Invalid provider JSON and content are captured even before a successful retry. Console output links the file; requests, keys, and headers are not stored. Diagnostic write failure preserves the original error.
 

@@ -46,9 +46,14 @@ List the changes as a Markdown bulleted list, with one concrete change per item.
 Group the bullets under headings by change type, such as Features, Fixes,
 Refactoring, Documentation, or Maintenance. Include only types present in the PR;
 for a single type, use one heading.
-Give each bullet enough detail to explain what changed and why it matters.
-Include the affected behavior or area and, when useful, a concrete before/after
-example or an implementation detail that helps the reviewer assess the change.
+Write in plain English with short sentences. Lead each bullet with the concrete
+behavior that changes and why it matters to someone using or reviewing the app.
+Use a before/after example when it makes the change easier to understand.
+Include technical terms, filenames, or implementation details only when they help
+assess the change; explain unfamiliar terms on first use.
+
+Example: "When Wikipedia content is missing, the batch badge and detailed log
+both show 'Waiting for a source'. Previously, the badge showed 'Failed'."
 When creating or updating a PR through the GitHub connector, pass actual newlines
 in the body and a blank line before each list so headings and bullets render correctly.
 
