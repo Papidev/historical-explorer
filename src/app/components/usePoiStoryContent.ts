@@ -26,9 +26,7 @@ export const usePoiStoryContent = ({ citySlug, poiId }: { citySlug: string; poiI
     const abortController = new AbortController();
     const loadingTimeout = window.setTimeout(() => {
       setState((current) =>
-        current.poiId === poiId && current.isLoading
-          ? { ...current, showLoading: true }
-          : current,
+        current.poiId === poiId && current.isLoading ? { ...current, showLoading: true } : current,
       );
     }, 200);
 
