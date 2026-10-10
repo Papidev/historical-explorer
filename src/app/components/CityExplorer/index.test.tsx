@@ -1,8 +1,8 @@
 // @vitest-environment jsdom
 import "@testing-library/jest-dom/vitest";
-import { cleanup, fireEvent, render, screen, within } from "@testing-library/react";
+import { cleanup, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from "vitest";
+import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import { http, HttpResponse } from "msw";
 import { setupServer } from "msw/node";
 import type { Poi } from "@/types/Poi";
@@ -124,6 +124,7 @@ const server = setupServer(
   ),
 );
 const nativeFetch = globalThis.fetch;
+beforeEach(() => window.history.replaceState(null, "", "/rome"));
 beforeAll(() => {
   vi.stubGlobal("fetch", (input: string | URL | Request, init?: RequestInit) =>
     nativeFetch(typeof input === "string" ? new URL(input, "http://localhost") : input, init),
@@ -212,6 +213,7 @@ describe("visitor category filtering", () => {
 
   it("keeps matching details open, closes excluded details, and does not reopen them after clearing", async () => {
     const user = userEvent.setup();
+    window.history.replaceState(null, "", "/rome?poiId=museum&source=shared#map");
     render(
       <CityExplorer
         citySlug="rome"
@@ -235,6 +237,8 @@ describe("visitor category filtering", () => {
     expect(screen.getByRole("heading", { name: "A Museum" })).toBeInTheDocument();
     await user.click(screen.getByRole("checkbox", { name: "Museum" }));
     expect(screen.queryByRole("heading", { name: "A Museum" })).not.toBeInTheDocument();
+    expect(window.location.search).toBe("?source=shared");
+    expect(window.location.hash).toBe("#map");
     await user.click(screen.getByRole("button", { name: "Clear categories" }));
     expect(screen.queryByRole("heading", { name: "A Museum" })).not.toBeInTheDocument();
     await user.click(screen.getByRole("checkbox", { name: "Churches" }));
@@ -244,17 +248,58 @@ describe("visitor category filtering", () => {
       }),
     );
     expect(screen.getByRole("heading", { name: "A Church" })).toBeInTheDocument();
+    expect(new URLSearchParams(window.location.search).get("poiId")).toBe("church");
     expect(await screen.findByText("A real story response.")).toBeInTheDocument();
     await user.click(screen.getByRole("checkbox", { name: "Churches" }));
     expect(screen.getByRole("status")).toHaveTextContent("0 places");
     expect(screen.queryByRole("button", { name: /Open details for/ })).not.toBeInTheDocument();
     expect(screen.queryByRole("heading", { name: "A Church" })).not.toBeInTheDocument();
+    expect(new URLSearchParams(window.location.search).has("poiId")).toBe(false);
+    window.history.back();
+    expect(await screen.findByRole("heading", { name: "A Church" })).toBeInTheDocument();
+    expect(screen.getByRole("status")).toHaveTextContent("4 places");
+    window.history.forward();
+    await waitFor(() =>
+      expect(screen.queryByRole("heading", { name: "A Church" })).not.toBeInTheDocument(),
+    );
     await user.click(screen.getByRole("checkbox", { name: "Churches" }));
     expect(screen.queryByRole("heading", { name: "A Church" })).not.toBeInTheDocument();
+    await user.click(
+      within(screen.getByRole("complementary", { name: "Discover places" })).getByRole("button", {
+        name: "A Museum",
+      }),
+    );
+    expect(screen.getByRole("heading", { name: "A Museum" })).toBeInTheDocument();
+    const historyLength = window.history.length;
+    await user.click(
+      within(screen.getByRole("complementary", { name: "Discover places" })).getByRole("button", {
+        name: "A Museum",
+      }),
+    );
+    expect(window.history.length).toBe(historyLength);
+    await user.click(screen.getByRole("button", { name: "Close" }));
+    expect(window.location.search).toBe("?source=shared");
+    window.history.back();
+    expect(await screen.findByRole("heading", { name: "A Museum" })).toBeInTheDocument();
+    cleanup();
+    render(
+      <CityExplorer
+        citySlug="rome"
+        coordinates={[12, 41]}
+        initialZoom={15}
+        pois={pois}
+        initialSelectedPoiId="museum"
+      />,
+    );
+    expect(screen.getByRole("heading", { name: "A Museum" })).toBeInTheDocument();
+    window.history.replaceState(null, "", "/rome?poiId=missing");
+    fireEvent.popState(window);
+    expect(screen.queryByRole("heading", { name: "A Museum" })).not.toBeInTheDocument();
   });
 
   it("selects and clears every child with its parent, with disjoint child counts", async () => {
     const user = userEvent.setup();
+    window.history.replaceState(null, "", "/rome?poiId=basilica");
     render(
       <CityExplorer
         citySlug="rome"

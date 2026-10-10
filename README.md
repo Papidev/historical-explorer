@@ -135,6 +135,8 @@ The OpenFreeMap basemap shows cultural labels/icons: museums, monuments/memorial
 
 Filters and Stories open in panels over the map, with full-width panels on mobile and resizable panels on larger screens. Open filters with the Filters tab or swipe right from the map’s left edge. Categories match with OR semantics; no categories selected means no POIs on the map or in the list. See [POI Categories](docs/poi-categories.md#visitor-filtering) for filtering rules and [Entity Discovery](docs/entity-discovery.md) for planned discovery features.
 
+The selected POI is stored in `?poiId=<id>`. Opening a different POI adds a browser-history entry; closing its Story, clicking the map, or excluding it through filters removes `poiId` in a new entry. Other query parameters and the URL fragment are preserved. Refresh and shared links reopen the selected Story; Back/Forward restore selection without reloading the map. If history restores a POI excluded by the current filters, all categories are selected so the restored place is visible. Unknown POI IDs leave the Story panel closed. Reopening the same POI does not add a duplicate history entry.
+
 ## Security Notes
 
 Admin is temporary, unauthenticated, and available only with `pnpm dev`. Its page and AI-progress API use `.dev.tsx`/`.dev.ts`, excluded from production builds; admin UI is absent from production bundles and missing routes return 404. Server Actions reject production execution before reading inputs or doing work. Dev is not localhost-restricted; use a trusted network.
