@@ -75,7 +75,8 @@ Update `AGENTS.md` only with important stuff that cannot be clearly/quickly deri
 
 ## Commits & PR Hygiene
 
-- Whenever creating an issue, add it to the [Cultural Atlas Project](https://github.com/users/Papidev/projects/2), assign Status and Area, and verify the placement before reporting completion. Default to Backlog. If Project access is unavailable, report the missing placement explicitly.
+- Track bugs, improvements, and future ideas in GitHub Issues and the repository's Cultural Atlas Project. Search existing issues before creating one; retain unresolved decisions and revisit conditions in the issue body. Markdown documents explain product and architecture decisions.
+- Whenever creating an issue, add it to the Cultural Atlas GitHub Project associated with this repository, assign Status and Area, and verify the placement before reporting completion. Default to Backlog. If Project access is unavailable, report the missing placement explicitly.
 - For every new feature, review the existing milestones and determine where it belongs. Assign a matching milestone; if none fits, propose a new milestone or an explicit backlog placement for the product owner to decide. Report the milestone decision and its rationale when creating the issue.
 - Use short, imperative commit subjects ("Add Alexandria map data"). Keep formatting-only commits separate from feature work so reviewers can skim diffs quickly.
 - For push/publish requests, use the repo-local `push-branch` skill to decide whether a generic local branch should be renamed before creating the remote branch.

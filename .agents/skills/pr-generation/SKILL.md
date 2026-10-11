@@ -38,7 +38,7 @@ Keep the title concise and scoped to the PR's main change.
 ## State And Assignment
 
 - Open PRs as ready for review unless the user explicitly asks for a draft.
-- Assign new PRs to `Papidev` when GitHub permissions allow it.
+- Assign new PRs to the repository owner when GitHub permissions allow it.
 
 ## Body
 

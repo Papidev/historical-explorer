@@ -67,7 +67,7 @@ Saving a rule immediately recalculates affected POIs from local type snapshots a
 
 ## Planned per-POI exceptions
 
-[#61](https://github.com/Papidev/historical-explorer/issues/61) allows additions/exclusions when a global rule does not fit a specific POI, including those without Wikidata types. Manual additions require no explanation or Source.
+#61 allows additions/exclusions when a global rule does not fit a specific POI, including those without Wikidata types. Manual additions require no explanation or Source.
 
 Final categories are `(mapped union + additions) - exclusions`; exclusions win. Exceptions survive refreshes, mapping changes, and regeneration until removed, restoring shared mapping behavior. Continue reporting unmapped types even when manual categories suffice for filtering.
 
@@ -86,4 +86,4 @@ Definitions contain stable `id`, singular `name`, optional visitor `label`, top-
 
 Type acquisition/refresh and POI generation recompute categories. Run `pnpm categories:rebuild` to apply current rules across local city snapshots. The server/public snapshot combines definitions, categories, and POI catalog; the browser filters persisted values.
 
-See [#38](https://github.com/Papidev/historical-explorer/issues/38), the [glossary](../CONTEXT.md), and the [consistency backlog](backlog.md#check-poi-categories-against-story-content).
+See #38, the [glossary](../CONTEXT.md), and GitHub issue #104 for category/Story consistency review.
