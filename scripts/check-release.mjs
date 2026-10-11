@@ -30,11 +30,19 @@ if (current.version === previous.version && !initialRelease) {
       (file) =>
         file.startsWith("docs/") ||
         file.startsWith(".agents/") ||
-        ["README.md", "AGENTS.md", ".changeset/README.md"].includes(file),
+        [
+          "README.md",
+          "AGENTS.md",
+          ".changeset/README.md",
+          ".github/workflows/test.yml",
+          ".github/workflows/dependabot-release.yml",
+          "scripts/check-release.mjs",
+          "scripts/prepare-dependabot-release.mjs",
+        ].includes(file),
     ),
     "Application changes require a version increment. Run pnpm changeset, then pnpm release:version.",
   );
-  console.log("Documentation-only change: no release required.");
+  console.log("Documentation or release automation only: no release required.");
 } else {
   const versionPattern = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$/;
   assert.match(previous.version, versionPattern);

@@ -25,9 +25,10 @@ before running the required checks and publishing the PR:
 
 - For application changes, add an English Changeset describing the change and its patch, minor, or major increment.
 - Run `pnpm release:version` to consume pending changesets. Include the generated `package.json` version and `CHANGELOG.md` in the PR; an unconsumed changeset is not release-ready.
+- Apply the documentation and CI/release automation exemptions in [Application versions](../../../README.md#application-versions); dependency manifests and lockfiles still require a release.
 - Reuse an already prepared increment rather than bumping twice. If another release merged, regenerate from the updated base and preserve its changelog history.
 - Run `pnpm release:check origin/main` and resolve failures before opening or updating the PR.
-- Preserve `0.1.0` for the initial tracked release. Subsequent application PRs require one increment; internal documentation-only PRs are exempt.
+- Preserve `0.1.0` for the initial tracked release. Subsequent application PRs require one increment unless covered by the documented exemptions.
 
 ## GitHub Access
 

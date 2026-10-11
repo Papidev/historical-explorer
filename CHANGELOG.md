@@ -1,11 +1,5 @@
 # historical-explorer
 
-## 0.1.2
-
-### Patch Changes
-
-- Automatically prepare application patch releases for Dependabot updates and refresh them when main changes.
-
 ## 0.1.1
 
 ### Patch Changes

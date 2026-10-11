@@ -75,7 +75,7 @@ Update `AGENTS.md` only with important stuff that cannot be clearly/quickly deri
 
 ## Commits & PR Hygiene
 
-- Before opening application PRs, follow [Application versions](README.md#application-versions): prepare an English Changeset, consume it into exactly one version increment and changelog entry relative to current `main`, and regenerate after alignment if another release merged. Internal documentation-only PRs are exempt.
+- Before opening application PRs, follow [Application versions](README.md#application-versions): prepare an English Changeset, consume it into exactly one version increment and changelog entry relative to current `main`, and regenerate after alignment if another release merged. Internal documentation and the CI/release automation files allowed by `scripts/check-release.mjs` are exempt; dependency manifests and lockfiles still require a release.
 
 - Track bugs, improvements, and future ideas in GitHub Issues and the repository's Cultural Atlas Project. Search existing issues before creating one; retain unresolved decisions and revisit conditions in the issue body. Markdown documents explain product and architecture decisions.
 - Whenever creating an issue, add it to the Cultural Atlas GitHub Project associated with this repository, assign Status and Area, and verify the placement before reporting completion. Default to Backlog. If Project access is unavailable, report the missing placement explicitly.
