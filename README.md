@@ -38,8 +38,10 @@ increment before merging, so Vercel deploys the prepared version from `main`.
 The initial tracked release establishes the existing `0.1.0` as the baseline;
 the increment requirement applies to subsequent application changes.
 Use `patch` for fixes and small content/UI updates, `minor` for new features, and
-`major` for incompatible changes. Internal documentation-only changes do not
-require an increment. Versions remain `0.x` during initial development.
+`major` for incompatible changes. Internal documentation and changes limited to
+the CI/release automation files allowed by `scripts/check-release.mjs` do not
+require an increment. Dependency manifests and lockfile updates still require
+an application release. Versions remain `0.x` during initial development.
 
 ```bash
 pnpm changeset
@@ -60,6 +62,24 @@ checkout; it is `null` when unavailable. This endpoint identifies the running
 artifact. A release tag identifies its source commit and does not confirm that
 Vercel deployment succeeded. Preview deploys can have the same version with
 different commit SHAs. No npm publishing or additional secrets are required.
+
+Dependabot updates also produce a patch release of the application. The
+`Prepare Dependabot releases` workflow prepares and consumes an English
+Changeset automatically after the first CI run on a bot PR, and refreshes every open
+bot PR when `main` changes. Repeated runs preserve exactly one patch increment
+from current `main`. Dependency major versions do not automatically imply an
+application major release. Normal CI and review still apply before merging.
+
+No GitHub App or additional secrets are needed. A `workflow_run` job uses the
+built-in `GITHUB_TOKEN` to push the prepared release and explicitly dispatch CI
+on the updated branch. Dispatched CI runs have read-only permissions and do not
+trigger another preparation run. The privileged workflow executes only code
+and tooling from `main`, without sharing dependency caches with PR jobs; it
+treats PR changes as data. It supports package dependencies, the pnpm lockfile
+and GitHub Actions updates. Conflicting dependency changes or unrelated file
+changes stop preparation rather than overwrite work. The workflow can also be
+run manually to refresh existing PRs. Repository or organization restrictions
+on Actions write permissions still apply.
 
 ### Public catalog deployment
 

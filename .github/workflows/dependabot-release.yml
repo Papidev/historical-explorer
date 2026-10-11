@@ -1,0 +1,76 @@
+name: Prepare Dependabot releases
+
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  discover:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.event == 'pull_request'
+    runs-on: ubuntu-latest
+    outputs:
+      pulls: ${{ steps.pulls.outputs.pulls }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - id: pulls
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: echo "pulls=$(node scripts/prepare-dependabot-release.mjs list)" >> "$GITHUB_OUTPUT"
+
+  prepare:
+    needs: discover
+    if: needs.discover.outputs.pulls != '[]'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: read
+      actions: write
+    strategy:
+      fail-fast: false
+      matrix:
+        pull: ${{ fromJSON(needs.discover.outputs.pulls) }}
+    concurrency:
+      group: dependabot-release-${{ matrix.pull }}
+      cancel-in-progress: false
+    steps:
+      # Only main code and main dependencies are executed with write credentials.
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 10.18.0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Install trusted release tooling
+        run: pnpm install --frozen-lockfile --ignore-scripts
+      - name: Prepare and push patch release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ matrix.pull }}
+          GIT_AUTHOR_NAME: github-actions[bot]
+          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          GIT_COMMITTER_NAME: github-actions[bot]
+          GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+        run: |
+          gh auth setup-git
+          node scripts/prepare-dependabot-release.mjs "$PR_NUMBER"
