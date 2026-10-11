@@ -69,6 +69,11 @@ Changeset automatically after the first CI run on a bot PR, and refreshes every 
 bot PR when `main` changes. Repeated runs preserve exactly one patch increment
 from current `main`. Dependency major versions do not automatically imply an
 application major release. Normal CI and review still apply before merging.
+The generated release commit includes `[skip ci]` to suppress the duplicate
+`pull_request` run that GitHub requires a maintainer to approve after a
+`GITHUB_TOKEN` push. The automation explicitly dispatches CI on the prepared
+release branch instead; `workflow_dispatch` is unaffected by `[skip ci]` and
+checks the release version, lint, tests, build, and production startup.
 
 No GitHub App or additional secrets are needed. A `workflow_run` job uses the
 built-in `GITHUB_TOKEN` to push the prepared release and explicitly dispatch CI
