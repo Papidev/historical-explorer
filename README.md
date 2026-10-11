@@ -31,6 +31,38 @@ Open [http://localhost:3000](http://localhost:3000). Installation activates Husk
 
 ## Publication and deployment
 
+### Application versions
+
+Application releases use Changesets. Each application PR includes one version
+increment before merging, so Vercel deploys the prepared version from `main`.
+The initial tracked release establishes the existing `0.1.0` as the baseline;
+the increment requirement applies to subsequent application changes.
+Use `patch` for fixes and small content/UI updates, `minor` for new features, and
+`major` for incompatible changes. Internal documentation-only changes do not
+require an increment. Versions remain `0.x` during initial development.
+
+```bash
+pnpm changeset
+pnpm release:version
+pnpm release:check
+```
+
+Write the changeset summary in English. Run the version command after aligning
+with current `main`; it consumes pending changesets and updates `package.json`
+and `CHANGELOG.md`. Commit both files with the application change. If another
+release merges first, regenerate your increment from the new version while
+preserving the merged changelog history. CI checks the bump and changelog before
+merge and creates a `v<version>` Git tag after CI passes on `main`.
+
+`GET /api/version` returns the version and full commit SHA embedded in the build.
+The SHA comes from `VERCEL_GIT_COMMIT_SHA`, then `GITHUB_SHA`, then the local Git
+checkout; it is `null` when unavailable. This endpoint identifies the running
+artifact. A release tag identifies its source commit and does not confirm that
+Vercel deployment succeeded. Preview deploys can have the same version with
+different commit SHAs. No npm publishing or additional secrets are required.
+
+### Public catalog deployment
+
 Visitor routes/APIs read a build-generated public snapshot, never editorial files selected by request IDs. A POI needs valid versioned workflow-generated Story Content, a selected licensed/attributed Main Image, and saved records for every retained Related Person. Imported or metadata-only POIs are excluded. Explicit approval is optional future work; admin `Complete`, local Sources, generation logs, and acquired Types do not gate publication.
 
 Deploy through Vercel's GitHub integration with this repository and production branch `main`. `vercel.json` configures the build; `package.json` pins pnpm and Node.js 24. Branch pushes create previews; `main` updates deploy production. Require existing CI checks before merging.

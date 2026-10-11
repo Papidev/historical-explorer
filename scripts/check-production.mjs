@@ -4,6 +4,15 @@ import { readFileSync } from "node:fs";
 const baseUrl = process.argv[2] ?? "http://127.0.0.1:3000";
 const catalog = JSON.parse(readFileSync(new URL("../data/public/catalog.json", import.meta.url)));
 
+const versionResponse = await fetch(`${baseUrl}/api/version`);
+assert.equal(versionResponse.status, 200);
+const release = await versionResponse.json();
+assert.equal(
+  release.version,
+  JSON.parse(readFileSync(new URL("../package.json", import.meta.url))).version,
+);
+assert.ok(release.commit === null || /^[a-f0-9]{40}$/.test(release.commit));
+
 for (const route of ["/", "/rome"]) {
   assert.equal((await fetch(`${baseUrl}${route}`)).status, 200, `${route} must be available`);
 }

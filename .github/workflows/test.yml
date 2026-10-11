@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       - name: Set up pnpm
         uses: pnpm/action-setup@v6
@@ -32,6 +34,11 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Check application version
+        env:
+          RELEASE_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: pnpm release:check "$RELEASE_BASE"
 
       - name: Lint
         run: pnpm lint
@@ -61,3 +68,39 @@ jobs:
 
           cat /tmp/next-start.log
           exit 1
+
+  release-tag:
+    if: github.event_name == 'push'
+    needs: ci
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out release commit
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          ref: ${{ github.sha }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 24
+
+      - name: Tag the release version
+        env:
+          RELEASE_BASE: ${{ github.event.before }}
+        run: |
+          current_version=$(node -p 'require("./package.json").version')
+          previous_version=$(git show "$RELEASE_BASE:package.json" | node -p 'JSON.parse(require("node:fs").readFileSync(0, "utf8")).version')
+          if [ "$current_version" = "$previous_version" ] &&
+            [ -n "$(git ls-tree --name-only "$RELEASE_BASE" -- CHANGELOG.md .changeset/config.json)" ]; then
+            exit 0
+          fi
+          release_tag="v$current_version"
+          if git show-ref --verify --quiet "refs/tags/$release_tag"; then
+            test "$(git rev-parse "$release_tag^{commit}")" = "$GITHUB_SHA"
+          else
+            git tag "$release_tag" "$GITHUB_SHA"
+            git push origin "refs/tags/$release_tag"
+          fi

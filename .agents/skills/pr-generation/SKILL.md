@@ -18,6 +18,17 @@ required checks on the aligned branch before publishing it and opening the PR.
 Repeat the fetch and ancestry check immediately before creating the PR; if main
 advanced again, align the branch and rerun the affected checks first.
 
+## Application Version
+
+After branch alignment, follow [Application versions](../../../README.md#application-versions)
+before running the required checks and publishing the PR:
+
+- For application changes, add an English Changeset describing the change and its patch, minor, or major increment.
+- Run `pnpm release:version` to consume pending changesets. Include the generated `package.json` version and `CHANGELOG.md` in the PR; an unconsumed changeset is not release-ready.
+- Reuse an already prepared increment rather than bumping twice. If another release merged, regenerate from the updated base and preserve its changelog history.
+- Run `pnpm release:check origin/main` and resolve failures before opening or updating the PR.
+- Preserve `0.1.0` for the initial tracked release. Subsequent application PRs require one increment; internal documentation-only PRs are exempt.
+
 ## GitHub Access
 
 Create and manage pull requests through the GitHub connector, including assignment and other PR metadata. Use Git only for local commits and publishing the branch; do not use the `gh` CLI for pull request operations in this repository.
