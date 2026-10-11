@@ -43,7 +43,7 @@ Check existing `wtf_wikipedia` plugins before implementing parsing or enrichment
 
 Rank by historical or cultural significance of the connection to this POI, not fame, mention count, or semantic similarity. Inputs are the POI, valid entities from one category, and connection evidence. Output must be a permutation of those entities: no additions, omissions, duplicates, or content changes. Discovery validates candidates before ranking.
 
-If integrated, preserve the existing order on failure or invalid output and keep the ranker replaceable. The issue recorded in the [Jev migration entry](backlog.md#evaluate-jev-for-ordering-related-people) tracks the API, quality, latency, cost, and failure evaluation; Jev is not an adopted dependency.
+If integrated, preserve the existing order on failure or invalid output and keep the ranker replaceable. GitHub issue #110 tracks the API, quality, latency, cost, and failure evaluation; Jev is not an adopted dependency.
 
 ## Incremental delivery
 
@@ -55,7 +55,7 @@ Follow small complete slices as in #35:
 - Add Wikidata discovery only for real, evidenced gaps in the Wikipedia path.
 - Evaluate ranking separately.
 
-A generic entity framework, relationship taxonomy, generated prose per connection, automatic “must-see” selection, cross-category ranking, graph visualization, and dedicated graph storage are outside these slices. Follow-up conditions are tracked in GitHub Issues listed in the [migration index](backlog.md).
+A generic entity framework, relationship taxonomy, generated prose per connection, automatic “must-see” selection, cross-category ranking, graph visualization, and dedicated graph storage are outside these slices. Follow-up conditions are tracked in GitHub Issues.
 
 ## Agreed discovery and search filter behavior
 

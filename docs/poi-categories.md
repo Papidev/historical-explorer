@@ -86,4 +86,4 @@ Definitions contain stable `id`, singular `name`, optional visitor `label`, top-
 
 Type acquisition/refresh and POI generation recompute categories. Run `pnpm categories:rebuild` to apply current rules across local city snapshots. The server/public snapshot combines definitions, categories, and POI catalog; the browser filters persisted values.
 
-See #38, the [glossary](../CONTEXT.md), and the [consistency backlog](backlog.md#check-poi-categories-against-story-content).
+See #38, the [glossary](../CONTEXT.md), and GitHub issue #104 for category/Story consistency review.

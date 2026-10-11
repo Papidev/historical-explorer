@@ -161,6 +161,6 @@ Licensed Tailwind Plus source is a local reference in gitignored `.tailwind-plus
 
 ## Documentation
 
-Track bugs, improvements, and future ideas in GitHub Issues and this repository's Cultural Atlas Project. Backlog status records an idea without scheduling implementation; conditional work retains its revisit conditions in the issue. The Markdown backlog is now a migration index.
+Track bugs, improvements, and future ideas in GitHub Issues and this repository's Cultural Atlas Project. Backlog status records an idea without scheduling implementation; conditional work retains its revisit conditions in the issue.
 
-[Product vision](docs/product/vision.md) · [Glossary](CONTEXT.md) · [Entity discovery](docs/entity-discovery.md) · [Backlog migration index](docs/backlog.md)
+[Product vision](docs/product/vision.md) · [Glossary](CONTEXT.md) · [Entity discovery](docs/entity-discovery.md)
