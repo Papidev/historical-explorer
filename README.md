@@ -61,6 +61,24 @@ artifact. A release tag identifies its source commit and does not confirm that
 Vercel deployment succeeded. Preview deploys can have the same version with
 different commit SHAs. No npm publishing or additional secrets are required.
 
+Dependabot updates also produce a patch release of the application. The
+`Prepare Dependabot releases` workflow prepares and consumes an English
+Changeset automatically after the first CI run on a bot PR, and refreshes every open
+bot PR when `main` changes. Repeated runs preserve exactly one patch increment
+from current `main`. Dependency major versions do not automatically imply an
+application major release. Normal CI and review still apply before merging.
+
+No GitHub App or additional secrets are needed. A `workflow_run` job uses the
+built-in `GITHUB_TOKEN` to push the prepared release and explicitly dispatch CI
+on the updated branch. Dispatched CI runs have read-only permissions and do not
+trigger another preparation run. The privileged workflow executes only code
+and tooling from `main`, without sharing dependency caches with PR jobs; it
+treats PR changes as data. It supports package dependencies, the pnpm lockfile
+and GitHub Actions updates. Conflicting dependency changes or unrelated file
+changes stop preparation rather than overwrite work. The workflow can also be
+run manually to refresh existing PRs. Repository or organization restrictions
+on Actions write permissions still apply.
+
 ### Public catalog deployment
 
 Visitor routes/APIs read a build-generated public snapshot, never editorial files selected by request IDs. A POI needs valid versioned workflow-generated Story Content, a selected licensed/attributed Main Image, and saved records for every retained Related Person. Imported or metadata-only POIs are excluded. Explicit approval is optional future work; admin `Complete`, local Sources, generation logs, and acquired Types do not gate publication.
