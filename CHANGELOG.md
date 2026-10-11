@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.1.2
+
+### Patch Changes
+
+- Update next from 16.3.5 to 16.3.8.
+
 ## 0.1.1
 
 ### Patch Changes
