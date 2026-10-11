@@ -97,7 +97,7 @@ export const prepareRelease = (repository, base, head) => {
       "-p",
       base,
       "-m",
-      "Prepare dependency patch release [dependabot skip]",
+      "Prepare dependency patch release [dependabot skip] [skip ci]",
     ).trim();
   } finally {
     git("worktree", "remove", "--force", checkout);
@@ -149,8 +149,8 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
         stdio: "inherit",
       });
     } else console.log("Dependency release is already prepared.");
-    // Dispatch is explicitly supported with GITHUB_TOKEN; ordinary bot pushes
-    // cannot be relied upon to start CI without an approval step.
+    // [skip ci] suppresses the approval-required pull_request run from the bot push.
+    // workflow_dispatch still runs CI on the prepared release with GITHUB_TOKEN.
     execFileSync(
       "gh",
       [
