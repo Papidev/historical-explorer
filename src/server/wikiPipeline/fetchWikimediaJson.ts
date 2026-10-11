@@ -2,7 +2,7 @@ import {
   fetchWithGenerationCancellation,
   throwIfGenerationCancelled,
 } from "@/server/generationCancellation";
-const userAgent = "CulturalAtlas/0.1 (https://github.com/Papidev/historical-explorer)";
+const userAgent = "CulturalAtlas/0.1";
 
 export const fetchWikimediaJson = async <T>(url: URL): Promise<T> => {
   let lastError: unknown;

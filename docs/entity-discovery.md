@@ -1,6 +1,6 @@
 # Entity Discovery
 
-Status: POI-to-Person details are implemented. Person-to-POI navigation is planned in [#72](https://github.com/Papidev/historical-explorer/issues/72); Events, Artifacts, and independent ranking remain future work.
+Status: POI-to-Person details are implemented. Person-to-POI navigation is planned in #72; Events, Artifacts, and independent ranking remain future work.
 
 ## Current behavior
 
@@ -43,11 +43,11 @@ Check existing `wtf_wikipedia` plugins before implementing parsing or enrichment
 
 Rank by historical or cultural significance of the connection to this POI, not fame, mention count, or semantic similarity. Inputs are the POI, valid entities from one category, and connection evidence. Output must be a permutation of those entities: no additions, omissions, duplicates, or content changes. Discovery validates candidates before ranking.
 
-If integrated, preserve the existing order on failure or invalid output and keep the ranker replaceable. The [Jev backlog entry](backlog.md#evaluate-jev-for-ordering-related-people) defines the API, quality, latency, cost, and failure evaluation; Jev is not an adopted dependency.
+If integrated, preserve the existing order on failure or invalid output and keep the ranker replaceable. The issue recorded in the [Jev migration entry](backlog.md#evaluate-jev-for-ordering-related-people) tracks the API, quality, latency, cost, and failure evaluation; Jev is not an adopted dependency.
 
 ## Incremental delivery
 
-Follow small complete slices as in [#35](https://github.com/Papidev/historical-explorer/issues/35):
+Follow small complete slices as in #35:
 
 - Derive Person-to-POI associations from Story references, not a second list on Person records.
 - Introduce Events through source acquisition, identity, and a detail view; first distinguish concrete occurrences from broad periods.
@@ -55,13 +55,13 @@ Follow small complete slices as in [#35](https://github.com/Papidev/historical-e
 - Add Wikidata discovery only for real, evidenced gaps in the Wikipedia path.
 - Evaluate ranking separately.
 
-A generic entity framework, relationship taxonomy, generated prose per connection, automatic “must-see” selection, cross-category ranking, graph visualization, and dedicated graph storage are outside these slices. Follow-up triggers remain in the [backlog](backlog.md).
+A generic entity framework, relationship taxonomy, generated prose per connection, automatic “must-see” selection, cross-category ranking, graph visualization, and dedicated graph storage are outside these slices. Follow-up conditions are tracked in GitHub Issues listed in the [migration index](backlog.md).
 
 ## Agreed discovery and search filter behavior
 
 Both paths use published POIs in the current city:
 
 - **Person discovery (#72):** associated POIs intersect with active filters. Clearing the Person constraint preserves those filters.
-- **Name search [#68](https://github.com/Papidev/historical-explorer/issues/68):** searches all published POIs, including filtered-out places. Selecting an excluded result temporarily reveals its marker and opens its detail with a filter notice. Filters stay unchanged; closing removes the exception and selecting another result replaces it.
+- **Name search #68:** searches all published POIs, including filtered-out places. Selecting an excluded result temporarily reveals its marker and opens its detail with a filter notice. Filters stay unchanged; closing removes the exception and selecting another result replaces it.
 
 Neither path exposes draft-only or metadata-only POIs.

@@ -41,4 +41,4 @@ Manual editing, approval, and identity-resolution controls are outside this slic
 
 ## Visitor navigation
 
-All public Related People link to saved records. Selecting a Person replaces the Story in the existing drawer; Back returns to the original POI and closing returns to the map. Standalone Person pages are outside the current slice. Reverse map discovery is planned in [#72](https://github.com/Papidev/historical-explorer/issues/72); see [Entity Discovery](entity-discovery.md) for filter behavior.
+All public Related People link to saved records. Selecting a Person replaces the Story in the existing drawer; Back returns to the original POI and closing returns to the map. Standalone Person pages are outside the current slice. Reverse map discovery is planned in #72; see [Entity Discovery](entity-discovery.md) for filter behavior.

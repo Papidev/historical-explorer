@@ -135,7 +135,7 @@ Results and errors use domain states without exposing paths or provider response
 
 Inputs are POI ID and the Local/Cloud AI selection where needed. Ollama and Gemini implement an internal AI seam; Wikipedia, Wikidata, and Commons remain internal HTTP integrations. Filesystem persistence is internal. Next Adapters own `FormData` parsing and `revalidatePath`.
 
-The browser shows one overall `Generating Draft Story...` state; independent artifact actions have their own labels. Per-step server progress is a [backlog option](backlog.md#report-story-workflow-progress-to-the-browser), without moving orchestration into the browser.
+The browser retains the overall `Generating Draft Story...` action label and polls server-generated progress for Sources, image candidates, Story Content, and Related People. Progress dialogs show logs and final outcomes, including partial failures and log-loading errors. Orchestration remains on the server; independent artifact actions retain their own labels.
 
 ## Verification
 

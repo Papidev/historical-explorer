@@ -33,7 +33,7 @@ Open [http://localhost:3000](http://localhost:3000). Installation activates Husk
 
 Visitor routes/APIs read a build-generated public snapshot, never editorial files selected by request IDs. A POI needs valid versioned workflow-generated Story Content, a selected licensed/attributed Main Image, and saved records for every retained Related Person. Imported or metadata-only POIs are excluded. Explicit approval is optional future work; admin `Complete`, local Sources, generation logs, and acquired Types do not gate publication.
 
-Deploy through Vercel's GitHub integration with `Papidev/historical-explorer` and production branch `main`. `vercel.json` configures the build; `package.json` pins pnpm and Node.js 24. Branch pushes create previews; `main` updates deploy production. Require existing CI checks before merging.
+Deploy through Vercel's GitHub integration with this repository and production branch `main`. `vercel.json` configures the build; `package.json` pins pnpm and Node.js 24. Branch pushes create previews; `main` updates deploy production. Require existing CI checks before merging.
 
 Commit POI catalogs, categories, Stories, image candidates/selection, and linked People. Builds generate gitignored `data/public/catalog.json`, embedded in the server build. Vercel needs no export step, local generated data, or AI credentials. Content becomes public on the next deployment.
 
@@ -161,4 +161,6 @@ Licensed Tailwind Plus source is a local reference in gitignored `.tailwind-plus
 
 ## Documentation
 
-[Product vision](docs/product/vision.md) · [Glossary](CONTEXT.md) · [Entity discovery](docs/entity-discovery.md) · [Backlog](docs/backlog.md)
+Track bugs, improvements, and future ideas in GitHub Issues and this repository's Cultural Atlas Project. Backlog status records an idea without scheduling implementation; conditional work retains its revisit conditions in the issue. The Markdown backlog is now a migration index.
+
+[Product vision](docs/product/vision.md) · [Glossary](CONTEXT.md) · [Entity discovery](docs/entity-discovery.md) · [Backlog migration index](docs/backlog.md)

@@ -46,6 +46,6 @@ Discovery and ranking are separate. Ranking orders supported connections within 
 
 Categories and architectural styles remain separate from Story Content: filters support discovery, while the Story explains significance. Prefer structured facts where available, retaining source identity and precision. Wikipedia can supply context and connections absent from Wikidata; neither source is complete or infallible.
 
-Category and style work is tracked in [#38](https://github.com/Papidev/historical-explorer/issues/38) and [#39](https://github.com/Papidev/historical-explorer/issues/39). Historical period filtering [#40](https://github.com/Papidev/historical-explorer/issues/40) is deferred.
+Category and style work is tracked in #38 and #39. Historical period filtering #40 is deferred.
 
 See [CONTEXT.md](../../CONTEXT.md) for domain vocabulary and core rules.
