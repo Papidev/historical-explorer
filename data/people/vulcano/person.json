@@ -1,0 +1,49 @@
+{
+  "id": "vulcano",
+  "name": "Vulcano",
+  "wikidataId": "Q4640",
+  "wikipediaTitle": "Vulcano (divinità)",
+  "content": {
+    "description": [
+      {
+        "text": "Vulcano is the ancient Roman god of fire and destruction, whose cult dates back to the earliest period of Roman religion. He was worshipped by early kings such as Titus Tatius, who dedicated altars to him among others, and he was later identified with the Greek god Hephaestus through the practice of interpretatio graeca. The etymology of his name is uncertain; Roman tradition linked it to Latin words for lightning, while later scholars have proposed connections to names from Crete, Ireland, or the Ossetian language, though these theories remain speculative.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Vulcano’s worship was closely tied to the domestic hearth goddess Vesta, and his temples were traditionally built outside city walls to keep his destructive fire from harming homes. The most famous sanctuary was the Volcanal, an open-air altar on the slopes of the Capitoline Hill where a perpetual fire was kept; it was said to have been founded by Romulus and later used for the Volcanalia festival on 23 August, during which fish were sacrificed in his fire. The cult also extended to Ostia, where a pontifex Volcani oversaw religious affairs, and to the volcanic region of Pozzuoli, known in Greek as the Agora of Hephaestus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "During the Volcanalia festival, Romans would hang clothes in the sun and light candles to invoke Vulcano’s benevolent fire, a practice that may reflect a theological link between the god and the sun.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Vulcan_by_Bertel_Thorvaldsen.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Vulcan_by_Bertel_Thorvaldsen.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Vulcan_by_Bertel_Thorvaldsen.jpg/960px-Vulcan_by_Bertel_Thorvaldsen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Vulcan_by_Bertel_Thorvaldsen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC0",
+    "attribution": "Bertel Thorvaldsen",
+    "author": "Bertel Thorvaldsen",
+    "width": 2000,
+    "height": 3077,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Vulcano (divinità)",
+    "url": "https://it.wikipedia.org/wiki/Vulcano_(divinit%C3%A0)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:50:42.422Z"
+  }
+}

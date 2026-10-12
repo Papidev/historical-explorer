@@ -1,0 +1,73 @@
+{
+  "id": "giunone",
+  "name": "Giunone",
+  "wikidataId": "Q125046",
+  "wikipediaTitle": "Giunone",
+  "content": {
+    "description": [
+      {
+        "text": "Juno, known in Latin as Giunone, was a Roman mother goddess whose origins lie in the lunar cults of the early Italic peoples. She was originally the deity of marriage and childbirth, often depicted nursing a child, and later assumed the role of protector of the state. As the wife of Jupiter, she became the chief female deity, forming the Capitoline Triad with Jupiter and Minerva. Her offspring included Vulcan, the god of fire, and Juventas, the goddess of youth, while her jealousy over Jupiter’s solo birth of Minerva led to the creation of Mars, the god of war and agriculture. The month of June (Iunius) and the first day of each month, the calends, were both dedicated to her as guardian of childbirth.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Juno bore many epithets—Regina, Moneta (the warn‑er and mint‑keeper), Lucina (protector of births), Sospita, Viriplaca, Caprotina, and Pronuba—each reflecting a different aspect of her patronage. Temples such as the Juno Moneta on the Capitoline Hill, the Juno Regina on the Aventine, and the Juno Sospita in Rome served as centers of worship, with the Moneta temple also functioning as the Roman mint and reputedly saving the city during a Gallic assault in the 4th century BC. She was also the protector of animals, especially the peacock, and was considered an enemy of Troy for three mythic reasons. In modern times, her legacy endures in features like Juno Chasma on Venus and a NASA mission launched in 2011 that bore her name.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The month of June (Iunius) was dedicated to Juno.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The first day of each month, the calends, was dedicated to her as protector of childbirth.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The peacock was sacred to Juno.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The temple of Juno Moneta on the Capitoline hill served as the Roman mint and was said to have saved the city during a Gallic assault in the 4th century BC.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Juno was considered the enemy of Troy for three mythic reasons.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A NASA space mission launched in 2011 was named after Juno.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Juno Chasma is a feature on Venus named after her.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Statue_de_Junon,_Louvre,_Ma_485,_trois_quarts.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Statue_de_Junon%2C_Louvre%2C_Ma_485%2C_trois_quarts.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Statue_de_Junon%2C_Louvre%2C_Ma_485%2C_trois_quarts.JPG/960px-Statue_de_Junon%2C_Louvre%2C_Ma_485%2C_trois_quarts.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Statue_de_Junon%2C_Louvre%2C_Ma_485%2C_trois_quarts.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0",
+    "attribution": "Caroline Léna Becker",
+    "author": "Caroline Léna Becker",
+    "width": 3136,
+    "height": 4704,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giunone",
+    "url": "https://it.wikipedia.org/wiki/Giunone"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:50:33.110Z"
+  }
+}

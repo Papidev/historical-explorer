@@ -1,0 +1,42 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "CristoCatacombaSantiMarcellino_e_Pietro.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:CristoCatacombaSantiMarcellino_e_Pietro.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/CristoCatacombaSantiMarcellino_e_Pietro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/CristoCatacombaSantiMarcellino_e_Pietro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.5",
+      "attribution": "Getty Images",
+      "author": "Getty Images",
+      "width": 660,
+      "height": 433,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Adam_&_Eve_01.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Adam_%26_Eve_01.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Adam_%26_Eve_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Adam_%26_Eve_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "width": 480,
+      "height": 503,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Adam_&_Eve_01b.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Adam_%26_Eve_01b.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/52/Adam_%26_Eve_01b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/52/Adam_%26_Eve_01b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "http://ccat.sas.upenn.edu/~humm/Topics/AdamNeve/a_n_e07.html archive copy at the Wayback Machine",
+      "author": "http://ccat.sas.upenn.edu/~humm/Topics/AdamNeve/a_n_e07.html archive copy at the Wayback Machine",
+      "width": 718,
+      "height": 720,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "CristoCatacombaSantiMarcellino_e_Pietro.jpg"
+}

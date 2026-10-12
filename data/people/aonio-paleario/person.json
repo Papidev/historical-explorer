@@ -1,0 +1,75 @@
+{
+  "id": "aonio-paleario",
+  "name": "Aonio Paleario",
+  "wikidataId": "Q615907",
+  "wikipediaTitle": "Aonio Paleario",
+  "content": {
+    "description": [
+      {
+        "text": "Aonio Paleario was an Italian Christian reformer born around 1500 in Veroli, in the Roman Campagna. He studied in Rome, joined the literary circle of Pope Leo X, and later taught Greek and Hebrew in Siena. He held professorial chairs in Lucca and Milan, and he authored the didactic poem De immortalitate animarum in 1536, which argued for the immortality of the soul in Latin hexameters.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Paleario’s outspoken criticism of the Roman Church’s reliance on tradition and doctrines such as purgatory brought him into conflict with the Inquisition. He was condemned to death in October 1569, executed in July 1570, and his works were published posthumously in cities such as Lyon, Basel, Amsterdam, and Leipzig. His legacy continued into modern times with biographies by Mary Young, Gurlitt, and Bonnet, an English translation of Benefizio di Cristo in 1855, and a 2014 novel 'A Dream of Shadows' that won literary awards.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was executed in July 1570.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He wrote De immortalitate animarum in 1536, a Latin hexameter poem arguing for the immortality of the soul.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was part of Pope Leo X’s literary circle in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was condemned to death by the Inquisition in October 1569.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A novel about him, 'A Dream of Shadows,' was published in 2014 and won literary awards.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1500,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1570,
+      "month": 7,
+      "day": 3,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "6659_-_Roma_-_Ettore_Ferrari,_Monumento_a_Giordano_Bruno_(1889)_-_Foto_Giovanni_Dall'Orto,_6-Apr-2008.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:6659_-_Roma_-_Ettore_Ferrari%2C_Monumento_a_Giordano_Bruno_(1889)_-_Foto_Giovanni_Dall'Orto%2C_6-Apr-2008.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/6659_-_Roma_-_Ettore_Ferrari%2C_Monumento_a_Giordano_Bruno_%281889%29_-_Foto_Giovanni_Dall%27Orto%2C_6-Apr-2008.jpg/960px-6659_-_Roma_-_Ettore_Ferrari%2C_Monumento_a_Giordano_Bruno_%281889%29_-_Foto_Giovanni_Dall%27Orto%2C_6-Apr-2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/de/6659_-_Roma_-_Ettore_Ferrari%2C_Monumento_a_Giordano_Bruno_%281889%29_-_Foto_Giovanni_Dall%27Orto%2C_6-Apr-2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Attribution",
+    "attribution": "G.dallorto",
+    "author": "G.dallorto",
+    "width": 2048,
+    "height": 1360,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Aonio Paleario",
+    "url": "https://en.wikipedia.org/wiki/Aonio_Paleario"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:52:35.737Z"
+  }
+}

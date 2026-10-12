@@ -1,0 +1,45 @@
+{
+  "introduction": {
+    "text": "The Domus Severiana is the modern name for the final extension to the imperial palaces on Rome's Palatine Hill, built by Emperor Septimius Severus. It is significant for its architectural innovations, including the Septizodium facade and the extensive substructures that expanded the palace complex.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Domus Severiana was built as the final extension to the imperial palaces on the Palatine Hill, extending the Domus Augustana of Septimius Severus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The complex included brick substructures that created an artificial platform at the same level as Domitian's palace, extending the terrace.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The side facing via Appia featured a three-level facade known as the Septizodium, with fountains and colonnades, modeled after a theatre's scaenae frons.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Septimius Severus",
+      "personId": "septimius-severus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Domitian",
+      "personId": "domitian",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Maxentius",
+      "personId": "maxentius",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

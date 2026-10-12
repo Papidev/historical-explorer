@@ -1,0 +1,44 @@
+{
+  "id": "marcus-antistius-labeo",
+  "name": "Marcus Antistius Labeo",
+  "wikidataId": "Q436034",
+  "wikipediaTitle": "Marcus Antistius Labeo",
+  "content": {
+    "description": [
+      {
+        "text": "Marcus Antistius Labeo was a Roman jurist who rose quickly to the praetorship in the early reign of Augustus, but his open republican sympathies and brusque manner in the Senate earned him the ire of the new regime.  His rival, Ateius Capito, a loyal client of Augustus, was promoted to the consulate even though Labeo was in line for the office; Labeo declined the offer in a subsequent year, a decision that marked the end of his political career and the beginning of his full devotion to jurisprudence.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Labeo’s legal scholarship was shaped by his teacher Trebatius Testa and enriched by his wide general culture, especially in dialectics, philology, and antiquities.  He produced a systematic exposition of the common law in his *Libri posteriores*, a commentary on the praetors’ edicts in the *Libri ad Edictum*, and a collection of legal definitions in the *Probabilium lib. VIII.*.  His doctrines were frequently cited by later jurists such as Gaius, Ulpian, and Julius Paulus, and many of his sayings were preserved in Justinian’s Digest.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Labeo is credited with founding the Proculian school of legal thought, a tradition that contrasted with the Sabinian school founded by his rival Capito.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A considerable number of Labeo’s legal dicta were deemed worthy of preservation and appear in Justinian’s Digest, underscoring his lasting influence on Roman law.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 10,
+      "precision": "approximate"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Marcus Antistius Labeo",
+    "url": "https://en.wikipedia.org/wiki/Marcus_Antistius_Labeo"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:15:28.847Z"
+  }
+}

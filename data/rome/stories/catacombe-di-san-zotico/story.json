@@ -1,0 +1,63 @@
+{
+  "introduction": {
+    "text": "The Catacombe di San Zotico is a Roman catacomb complex located near via Nicolosi in the Borghesiana zone of Rome. It is historically significant as the burial site associated with the martyred saints Zoticus and Amantius, and it has been excavated and restored by modern archaeological commissions.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The catacomb complex was begun in the late 3rd century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 3,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "The martyrdom of saints Zoticus and Amantius is recorded in the 5th century Martyrologium Hieronymianum.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 5,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Early in the 8th century Irenaeus and Hyacinth were also linked to these two saints.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 8,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "The catacombs were discovered early in the 18th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 18,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "They were excavated and restored from 1998 onwards by the Pontificia commissione di archeologia sacra, the Soprintendenza Archeologica di Roma and the chair for Christian Archaeology at the Università degli Studi di Roma Tor Vergata.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1998,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [],
+    "art": []
+  },
+  "relatedPeople": []
+}

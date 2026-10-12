@@ -1,0 +1,52 @@
+{
+  "id": "angelo-celli",
+  "name": "Angelo Celli",
+  "wikidataId": "Q1057343",
+  "wikipediaTitle": "Angelo Celli",
+  "content": {
+    "description": [
+      {
+        "text": "Angelo Celli was born to Cristoforo Celli and Teresa Amatori, and after their early deaths he continued his studies thanks to a scholarship from the Pio Sodalizio dei Piceni. He earned a medical degree in 1878 from the University of Rome La Sapienza and became a professor of Hygiene. In 1880 he and Ettore Marchiafava studied the protozoan discovered by Alphonse Laveran, which they named Plasmodium; this organism would later be identified as the causative agent of malaria.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Celli’s scientific work on malaria was complemented by a long political career. He was elected to the Italian Chamber of Deputies in 1892 and served for twenty years, during which he championed comprehensive legislation against malaria. His initiatives included the founding of the state Chinin Company, the regulation of its distribution, and the establishment of free prophylactic and curative quinine for impoverished and working‑class populations in malaria‑affected zones. His efforts were later recognized abroad, earning him honorary doctorates from the universities of Athens, Aberdeen, and the Royal Institute of Public Health in London.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Celli’s research on Plasmodium was conducted in collaboration with notable contemporaries such as Amico Bignami and Giuseppe Bastianelli.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was instrumental in establishing the national entity “Le Scuole per i Contadini dell’Agro Romano e le Paludi Pontine,” which aimed to combat both malaria and rural illiteracy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A bronze statue of Celli, created by sculptor Angelo Biancini, was erected in Cagli in 1959 to honor his contributions to public health.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Angelo Celli School Monument was inaugurated in 1932 on the Colle di Sant’Anastasio, featuring bronze and marble reliefs by Duilio Cambellotti.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His archival papers are preserved at the Faculty of Experimental Medicine and Pathology of the University of Rome La Sapienza, with additional documents housed in the Museo Galileo library.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Angelo Celli",
+    "url": "https://it.wikipedia.org/wiki/Angelo_Celli"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:13:07.376Z"
+  }
+}

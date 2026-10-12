@@ -1,0 +1,40 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Colonna_dell'Immacolata_-_fronte.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Colonna_dell'Immacolata_-_fronte.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Colonna_dell%27Immacolata_-_fronte.jpg/960px-Colonna_dell%27Immacolata_-_fronte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Colonna_dell%27Immacolata_-_fronte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "Scanno12",
+      "author": "Scanno12",
+      "width": 3768,
+      "height": 5342,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Sommer,_Giorgio_(1834-1914)_-_Immacolata_Concezione_sulla_Piazza_di_Spagna,_Roma_-_01.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Sommer%2C_Giorgio_(1834-1914)_-_Immacolata_Concezione_sulla_Piazza_di_Spagna%2C_Roma_-_01.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Sommer%2C_Giorgio_%281834-1914%29_-_Immacolata_Concezione_sulla_Piazza_di_Spagna%2C_Roma_-_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Sommer%2C_Giorgio_%281834-1914%29_-_Immacolata_Concezione_sulla_Piazza_di_Spagna%2C_Roma_-_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "width": 525,
+      "height": 255,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Sommer,_Giorgio_(1834-1914)_-_Immacolata_Concezione_sulla_Piazza_di_Spagna,_Roma_-_02.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Sommer%2C_Giorgio_(1834-1914)_-_Immacolata_Concezione_sulla_Piazza_di_Spagna%2C_Roma_-_02.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Sommer%2C_Giorgio_%281834-1914%29_-_Immacolata_Concezione_sulla_Piazza_di_Spagna%2C_Roma_-_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Sommer%2C_Giorgio_%281834-1914%29_-_Immacolata_Concezione_sulla_Piazza_di_Spagna%2C_Roma_-_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "width": 539,
+      "height": 559,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Colonna_dell'Immacolata_-_fronte.jpg"
+}

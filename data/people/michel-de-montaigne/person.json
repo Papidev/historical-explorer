@@ -1,0 +1,69 @@
+{
+  "id": "michel-de-montaigne",
+  "name": "Michel de Montaigne",
+  "wikidataId": "Q41568",
+  "wikipediaTitle": "Michel de Montaigne",
+  "content": {
+    "description": [
+      {
+        "text": "Michel de Montaigne was born on 28 February 1533 in the Guyenne region of France, on the family estate Château de Montaigne. He grew up in a wealthy household that valued education, and his early schooling was deliberately designed to immerse him in Latin and classical learning. By the age of thirteen he had mastered the curriculum at the College of Guienne, and he later studied law before turning to public service as a councillor and courtier. In 1580 he published his Essais, a collection of essays that blended personal anecdotes with philosophical reflection and established the essay as a distinct literary genre.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Montaigne's essays are noted for their candid self‑analysis and skeptical tone, epitomised by the refrain \"What do I know?\" He rejected rigid dogma and instead promoted a method of inquiry that combined experience, dialogue, and doubt. His friendship with Étienne de La Boétie, whom he described as \"the greatest man I have known,\" profoundly shaped his thinking, and his later years were spent in seclusion at his château, where he continued to write and revise the Essais. He died on 13 September 1592 at the age of 59, leaving a legacy that influenced writers such as Francis Bacon, William Shakespeare, and Ralph Waldo Emerson.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Montaigne popularised the essay as a literary genre, making the form a vehicle for personal reflection and philosophical inquiry.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his lifetime he was admired more as a statesman than as an author, with contemporaries viewing his digressive style as self‑indulgent.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His close friendship with Étienne de La Boétie inspired many of his essays, and Montaigne famously described La Boétie as \"the greatest man I have known.\"",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1533,
+      "month": 2,
+      "day": 28,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1592,
+      "month": 9,
+      "day": 13,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Montaigne-Dumonstier.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Montaigne-Dumonstier.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Montaigne-Dumonstier.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Montaigne-Dumonstier.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "anonymous",
+    "author": "anonymous",
+    "width": 698,
+    "height": 900,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Michel de Montaigne",
+    "url": "https://en.wikipedia.org/wiki/Michel_de_Montaigne"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:20:39.071Z"
+  }
+}

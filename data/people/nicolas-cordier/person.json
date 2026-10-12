@@ -1,0 +1,68 @@
+{
+  "id": "nicolas-cordier",
+  "name": "Nicolas Cordier",
+  "wikidataId": "Q3876426",
+  "wikipediaTitle": "Nicolas Cordier",
+  "content": {
+    "description": [
+      {
+        "text": "Nicolas Cordier, born in 1567 in the Lorraine town of Saint‑Mihiel, was a sculptor who spent most of his career in Rome. In the Italian capital he was known as Niccolò da Lorena or, more familiarly, il Franciosino – the little Frenchman – a nickname that reflected both his nationality and his modest stature.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cordier specialized in religious sculpture, producing a number of statues and busts for prominent churches in Rome. His works include the statue of Saint Agnes in the basilica di Sant’Agnese fuori le Mura, the bust of Saint Gregory the Great in the Oratorio di Sant’Andrea al Celio, and a portrait of the French king Henri IV in the basilica di San Giovanni in Laterano. Several of his pieces are also housed in the Louvre, and his oeuvre can be found in the Borghese Gallery and the Prado.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was born in Saint‑Mihiel, Lorraine.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He died in Rome in 1612.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was known by the nickname \"il Franciosino\" meaning \"the little Frenchman\".",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His statue of Saint Agnes can be found in the basilica di Sant’Agnese fuori le Mura.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He created a bust of the French king Henri IV for the basilica di San Giovanni in Laterano.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Some of his sculptures are displayed in the Louvre.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He worked on the statue of Saint Gregory the Great in the Oratorio di Sant’Andrea al Celio.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1567,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1612,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Nicolas Cordier",
+    "url": "https://en.wikipedia.org/wiki/Nicolas_Cordier"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:23:14.707Z"
+  }
+}

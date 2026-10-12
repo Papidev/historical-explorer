@@ -1,0 +1,53 @@
+{
+  "id": "furia-sabina-tranquillina",
+  "name": "Furia Sabina Tranquillina",
+  "wikidataId": "Q2293889",
+  "wikipediaTitle": "Furia Sabina Tranquillina",
+  "content": {
+    "description": [
+      {
+        "text": "Furia Sabina Tranquillina was a Roman noblewoman who became the wife of Emperor Gordian I in 241 CE. She was the daughter of Timesiteo, a man of some standing in the Roman elite. At the time of their marriage, Gordian was sixteen and Sabina fifteen, a typical age for Roman aristocratic unions. The marriage was arranged by the emperor, who later granted her father‑in‑law the prestigious position of prefect of the Praetorian Guard.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sabina's marriage placed her within the complex genealogical web of the Nerva–Antonine dynasty, a line of emperors that began with Nerva in 96 CE and ended with Commodus in 192 CE. Her union with Gordian I linked her to the Severan line that eventually produced Gordian III in 244 CE, illustrating how Roman imperial families were interwoven through marriage and adoption. Though little is known of her personal life, her role as a consort helped cement political alliances between powerful families during a turbulent period of Roman history.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Sabina married Gordian I at the age of fifteen, while Gordian was sixteen, reflecting the common practice of early marriages among Roman elites.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After their marriage, the emperor granted Sabina's father‑in‑law the prefecture of the Praetorian Guard, a key military position that underscored the political significance of the union.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Tranquillina_-_chiaramonti.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Tranquillina_-_chiaramonti.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/58/Tranquillina_-_chiaramonti.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/58/Tranquillina_-_chiaramonti.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Tetraktys",
+    "author": "Tetraktys",
+    "width": 591,
+    "height": 789,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Furia Sabina Tranquillina",
+    "url": "https://it.wikipedia.org/wiki/Furia_Sabina_Tranquillina"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:18:37.799Z"
+  }
+}

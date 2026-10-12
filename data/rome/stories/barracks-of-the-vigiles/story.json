@@ -1,0 +1,122 @@
+{
+  "introduction": {
+    "text": "The Caserma dei Vigili is a Roman barracks in Ostia that housed a cohort of fire‑fighting soldiers. It illustrates the military and civic infrastructure of the ancient port and shows how the imperial cult and everyday life were integrated into a single complex.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-1",
+        "description": "The barracks was rebuilt in the Adriatic period (132‑137 CE) to accommodate a cohort of vigiles from Rome.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 132,
+          "precision": "exact",
+          "endYear": 137,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-2",
+        "description": "In the Severan period (205 CE) a second detachment was stationed at Porto, and the Ostian barracks was expanded with new tabernae and an imperial cult precinct.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 205,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-3",
+        "description": "The Ostian detachment probably ceased to operate in the mid‑3rd century, while the Porto detachment continued until the late 4th century.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "The building is rectangular, surrounding a large courtyard paved with bipedali and surrounded by a portico of brick pillars. The eastern entrance features a stone portal with a vestibule.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-2",
+        "description": "The western side contains a row of tabernae added in the 2nd century, with a central staircase to upper floors.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-3",
+        "description": "A western corridor in the Adriatic phase ends with a bath‑like basin, and the imperial cult area includes a pronaos with marble columns and a mosaic floor.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-1",
+        "description": "Mosaic floors in the courtyard and in the imperial cult area feature geometric patterns and scenes of sacrifice, including a bull and a flautist.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-2",
+        "description": "Statue bases in the cult precinct honor emperors such as Antoninus Pius, Lucius Verus, Septimius Severus, Marcus Aurelius, and Caracalla.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-3",
+        "description": "Graffiti on walls record the names of vigiles, their ranks, and thank‑you inscriptions to the reigning emperor.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Domiziano",
+      "personId": "domitian",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Claudio",
+      "personId": "claudius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Antonino Pio",
+      "personId": "antonino-pio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Lucio Vero",
+      "personId": "lucio-vero",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Settimio Severo",
+      "personId": "septimius-severus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Marco Aurelio",
+      "personId": "marcus-aurelius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Caracalla",
+      "personId": "caracalla",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Gordiano III",
+      "personId": "gordiano-iii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Furia Sabina Tranquillina",
+      "personId": "furia-sabina-tranquillina",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Rodolfo Lanciani",
+      "personId": "rodolfo-lanciani",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

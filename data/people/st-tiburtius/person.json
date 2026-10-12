@@ -1,0 +1,69 @@
+{
+  "id": "st-tiburtius",
+  "name": "St. Tiburtius",
+  "wikidataId": "Q2330524",
+  "wikipediaTitle": "Saint Tiburtius",
+  "content": {
+    "description": [
+      {
+        "text": "St. Tiburtius, the only son of the Roman prefect Agrestius Chromatius, was baptized by the Christian martyr Sebastian, who served as his godfather. During the Diocletianic persecution he hid in his father's house, but was eventually accused by a traitor and brought before the prefect Fabianus. In his trial he confessed his faith, and a miracle was reported: he walked barefoot over red‑hot coals without injury, a sign that was later interpreted as magic.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Tiburtius was beheaded at the third milestone of the Via Labicana in the year 286, at a spot known as the “two laurel trees” (ad duas lauros). He is mentioned in the epigram of Pope Damasus I and in the Roman Martyrology, and his feast day is celebrated on 11 August, the same day as that of Saint Susanna. The General Roman Calendar removed his commemoration in 1969, noting that apart from his burial site the only other known fact was his martyrdom on that date.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "His feast day, 11 August, coincides with that of Saint Susanna, leading to occasional association between the two saints despite no familial relation.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The miracle of walking over red‑hot coals was interpreted by some as evidence of divine protection, while others saw it as mere magic.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Tiburtius’s execution site, the third milestone of the Via Labicana, was specifically referred to as the “two laurel trees,” a detail preserved in early martyrologies.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pope Damasus I composed an epigram in 366–384 praising Tiburtius, indicating the saint’s veneration in the early Church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1969 the General Roman Calendar removed Tiburtius’s commemoration, noting that the only known fact about him was his burial at the Inter duas lauros cemetery on the Via Labicana.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 286,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "GBM_-_Tiburtius.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:GBM_-_Tiburtius.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/GBM_-_Tiburtius.jpg/960px-GBM_-_Tiburtius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/GBM_-_Tiburtius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Wolfgang Sauber",
+    "author": "Wolfgang Sauber",
+    "width": 2668,
+    "height": 2592,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Saint Tiburtius",
+    "url": "https://en.wikipedia.org/wiki/Saint_Tiburtius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:41:23.712Z"
+  }
+}

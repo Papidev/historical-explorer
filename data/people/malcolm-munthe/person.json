@@ -1,0 +1,68 @@
+{
+  "id": "malcolm-munthe",
+  "name": "Malcolm Munthe",
+  "wikidataId": "Q601202",
+  "wikipediaTitle": "Malcolm Munthe",
+  "content": {
+    "description": [
+      {
+        "text": "Major Malcolm Grane Ludovic Martin Munthe (30 January 1910 – 24 November 1995) was a British soldier, writer and curator, the son of Swedish doctor and author Axel Munthe and his English second wife Hilda Pennington‑Mellor.  Raised between the Swedish court, Italy and Britain, he became a British citizen at the outbreak of the Second World War so that he could fight, and was educated at King’s College School, Wimbledon, and abroad.  He was initially assigned to the Gordon Highlanders because of the Scottish roots of his first name, before being recruited to the Special Operations Executive (SOE) where he operated behind enemy lines in occupied Norway and neutral Sweden as a spy and saboteur.  Munthe claimed responsibility for the explosion of a German munitions train, though the veracity of this claim is doubtful; he later escaped, a harrowing experience he recounts in his wartime memoir *Sweet is War*, and was put in charge of SOE activities in Southern Italy, participating in the Anzio landings.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the war Munthe continued his military career and turned to social projects, authoring *The Bunty Boys*.  In 1945 he married the Hon. Ann Felicity Rea, with whom he had three children.  An aborted attempt at a political career with the Conservative Party was followed by a focus on maintaining the family’s properties in England, Sweden and Italy: he sold his father’s Capri holdings, bought the 108‑room Castello di Lunghezza outside Rome, and opened Hildasholm, Hellens and Southside House to the public.  He died at Southside House in November 1995, and was described by Sir Angus Ogilvy as “the last true English eccentric.”",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Munthe disguised himself as a large old lady to smuggle a radio transmitter past German lines in Southern Italy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was instrumental in rescuing the liberal philosopher Benedetto Croce and his family from captivity in Sorrento, arranging their flight to Capri where his father’s Villa San Michele provided shelter.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Munthe was decorated with the Military Cross for bravery during his wartime service.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was assigned to the Gordon Highlanders solely because of the Scottish roots of his first name.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Munthe claimed responsibility for the explosion of a German munitions train, though the veracity of this claim is suspect.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was described by Sir Angus Ogilvy as “the last true English eccentric.”",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1910,
+      "month": 1,
+      "day": 30,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1995,
+      "month": 11,
+      "day": 24,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Malcolm Munthe",
+    "url": "https://en.wikipedia.org/wiki/Malcolm_Munthe"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:35:05.071Z"
+  }
+}

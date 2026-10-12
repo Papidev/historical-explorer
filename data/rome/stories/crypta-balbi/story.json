@@ -1,0 +1,50 @@
+{
+  "introduction": {
+    "text": "The Crypta Balbi is an archaeological complex in Rome that preserves the remains of the ancient theater of Balbo and its surrounding urban fabric, now part of the Museo Nazionale Romano. It is significant for its role in illustrating the evolution of Roman urban life and the continuity of craft activity from the late classical to the early medieval period.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-1",
+        "description": "The Crypta Balbi was built as part of the theater of Balbo, constructed by Lucio Cornelio Balbo in 13 a.C.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -13,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-3",
+        "description": "Between the 7th and 10th centuries, the site hosted artisanal workshops, evidencing continuous craft activity during the early medieval period.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 700,
+          "precision": "approximate",
+          "endYear": 1000,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-2",
+        "description": "The complex was acquired by the Italian State in 1981 and became part of the Museo Nazionale Romano.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1981,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Lucio Cornelio Balbo (minore)",
+      "personId": "lucio-cornelio-balbo-minore",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

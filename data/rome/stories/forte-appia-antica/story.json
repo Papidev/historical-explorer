@@ -1,0 +1,55 @@
+{
+  "introduction": {
+    "text": "Forte Appia Antica is one of Rome's 15 forts built in the late 19th century, located in the Ardeatino quarter. It played a role in military history and remains a protected cultural site.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Construction of Forte Appia Antica began in 1877 and was completed in 1880, forming part of Rome's network of forts.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1877,
+          "precision": "exact",
+          "endYear": 1880,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "The fort served as the headquarters of the Artillery Directorate of the Aeronautical Corps until the 1910s.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1910,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Between the 1980s and 1990s, the fort was used by the Aeronautical Military's Automated Information Systems Division as a data processing center.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1980,
+          "precision": "exact",
+          "endYear": 1990,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "The fort was officially protected as a cultural heritage site by the decree dated 6 August 2008.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2008,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [],
+    "art": []
+  },
+  "relatedPeople": []
+}

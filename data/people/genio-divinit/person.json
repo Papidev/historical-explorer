@@ -1,0 +1,61 @@
+{
+  "id": "genio-divinit",
+  "name": "Genio",
+  "wikidataId": "Q654361",
+  "wikipediaTitle": "Genio (divinità)",
+  "content": {
+    "description": [
+      {
+        "text": "In Roman religion the Genio (plural Genii) was a tutelary spirit or nume that guarded the fortunes of families and individuals alike.  It was conceived as a benevolent presence that accompanies a person from birth, guiding their actions throughout life, much like a guardian angel.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Genio was closely associated with the forehead, which was considered its sacred spot; worship involved touching the forehead as a sign of reverence.  It was often depicted as a serpent in art and inscriptions, and its influence extended beyond individuals to families, the state, provinces, and even the emperor, whose Genio became a public cult under Augustus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Genio of a person is invoked on their birthday, the dies natalis, which was celebrated as the spirit’s own celebration.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Genio was traditionally represented as a serpent, a motif that appears in Cicerone, Giulio Ossequente, and the lararium of the Vetti house in Pompeii.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Rome itself had a Genio, with a temple in the Forum near the Concordia temple, and the city’s Genio was sometimes described as either male or female.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The concept of a Genio extended to places, with the belief that no location was without a Genio (nullus locus sine Genio).",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Vindobona_Hoher_Markt-92.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Vindobona_Hoher_Markt-92.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Vindobona_Hoher_Markt-92.JPG/960px-Vindobona_Hoher_Markt-92.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Vindobona_Hoher_Markt-92.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Gryffindor",
+    "author": "Gryffindor",
+    "width": 1230,
+    "height": 1641,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Genio (divinità)",
+    "url": "https://it.wikipedia.org/wiki/Genio_(divinit%C3%A0)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:07:27.858Z"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Pigna-s_Angelo_-_via_delle_Botteghe_oscure_-_crypta_Balbi_00738.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pigna-s_Angelo_-_via_delle_Botteghe_oscure_-_crypta_Balbi_00738.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Pigna-s_Angelo_-_via_delle_Botteghe_oscure_-_crypta_Balbi_00738.JPG/960px-Pigna-s_Angelo_-_via_delle_Botteghe_oscure_-_crypta_Balbi_00738.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/72/Pigna-s_Angelo_-_via_delle_Botteghe_oscure_-_crypta_Balbi_00738.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Lalupa",
+      "author": "Lalupa",
+      "width": 2048,
+      "height": 1536,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Crypta_Balbi_1561_Giuliano_da_Sangallo.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Crypta_Balbi_1561_Giuliano_da_Sangallo.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Crypta_Balbi_1561_Giuliano_da_Sangallo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Crypta_Balbi_1561_Giuliano_da_Sangallo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "width": 410,
+      "height": 444,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Architrave,_seconda_metà_VIII_sec..JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Architrave%2C_seconda_met%C3%A0_VIII_sec..JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Architrave%2C_seconda_met%C3%A0_VIII_sec..JPG/960px-Architrave%2C_seconda_met%C3%A0_VIII_sec..JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Architrave%2C_seconda_met%C3%A0_VIII_sec..JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "I, Sailko",
+      "author": "sailko",
+      "width": 2496,
+      "height": 1185,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Pigna-s_Angelo_-_via_delle_Botteghe_oscure_-_crypta_Balbi_00738.JPG"
+}

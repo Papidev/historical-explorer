@@ -1,0 +1,69 @@
+{
+  "id": "louis-xii",
+  "name": "Louis XII",
+  "wikidataId": "Q58514",
+  "wikipediaTitle": "Louis XII",
+  "content": {
+    "description": [
+      {
+        "text": "Louis XII, born 27 June 1462, was the son of Charles I, Duke of Orléans, and ascended to the French throne in 1498 after the childless death of Charles VIII. He annulled his earlier marriage to Joan of France, a move that secured his claim, and married Anne, Duchess of Brittany, thereby bringing the semi‑sovereign duchy into a personal union with France.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his reign he pursued an ambitious Italian policy, conquering Milan in 1499 and briefly ruling Naples, but ultimately lost both territories to rival powers. Despite costly campaigns, he enacted fiscal and legal reforms that reduced the taille tax and curbed noble privileges, earning him the sobriquet \"Father of the People\" and a reputation as a popular king. He died on 1 January 1515, leaving no male heir and passing the crown to Francis I.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Louis XII famously adopted the porcupine as his personal badge, a symbol that appeared on his coins, portraits, and even on cannons during his reign.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first French monarch to be officially titled \"Father of the People\" (Le Père du Peuple) by the Estates General, a unique honor not repeated by any other king.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Louis XII's marriage to Anne of Brittany in 1499 was a strategic union that effectively brought the duchy into the French crown, a move that had long‑lasting implications for the territorial integrity of France.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1462,
+      "month": 6,
+      "day": 27,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1515,
+      "month": 1,
+      "day": 1,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Louis-xii-roi-de-france.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Louis-xii-roi-de-france.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Louis-xii-roi-de-france.jpg/960px-Louis-xii-roi-de-france.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/13/Louis-xii-roi-de-france.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Workshop of Jean Perréal",
+    "author": "Workshop of Jean Perréal",
+    "width": 1127,
+    "height": 1500,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Louis XII",
+    "url": "https://en.wikipedia.org/wiki/Louis_XII"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:43:55.820Z"
+  }
+}

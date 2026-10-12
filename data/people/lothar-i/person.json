@@ -1,0 +1,62 @@
+{
+  "id": "lothar-i",
+  "name": "Lothar I",
+  "wikidataId": "Q150735",
+  "wikipediaTitle": "Lothair I",
+  "content": {
+    "description": [
+      {
+        "text": "Lothair I was born in 795 to Emperor Louis the Pious and Ermengarde of Hesbaye. He grew up in the imperial court and was sent to govern Bavaria at a young age. In 817, his father designated him as the principal heir and crowned him joint emperor at Aachen, while his brothers received subsidiary kingdoms.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Lothair's reign was marked by dynastic conflict with his brothers Pepin I of Aquitaine, Louis the German, and Charles the Bald, culminating in the Treaty of Verdun in 843, which divided the Carolingian Empire and left Lothair with Middle Francia and Italy. He promulgated the Constitutio Romana to define the relationship between the papacy and the emperor, and he died in the monastery of Prüm on 29 September 855 after abdicating the throne.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He promulgated the Constitutio Romana, a statute concerning the relations of pope and emperor, reserving supreme power to the secular potentate.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was crowned joint emperor by his father at Aachen in 817.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was involved in the Treaty of Verdun, which divided the Carolingian Empire and laid the foundation for modern France and Germany.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He died in the monastery of Prüm, where his remains were found in 1860.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He had an illegitimate son named Carloman, who died in 853.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 795,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 855,
+      "month": 9,
+      "day": 29,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Lothair I",
+    "url": "https://en.wikipedia.org/wiki/Lothair_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:01:00.725Z"
+  }
+}

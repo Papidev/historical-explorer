@@ -1,0 +1,69 @@
+{
+  "id": "antonio-nibby",
+  "name": "Antonio Nibby",
+  "wikidataId": "Q3619954",
+  "wikipediaTitle": "Antonio Nibby",
+  "content": {
+    "description": [
+      {
+        "text": "Antonio Nibby was born in Rome on 14 April 1792 into a family that had recently settled in the city from Amatrice. At the age of 17 he co‑founded the Accademia Ellenica, a youthful society aimed at promoting the study of Greek language and literature, and later helped establish the Accademia Tiberina after a split in 1813.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Nibby became a professor of archaeology at the Sapienza University in December 1820, a post he held until his death. He is best remembered for his pioneering topographical studies of Rome and its countryside, his meticulous guidebooks that were popular with Grand Tour travelers, and his work on the excavations of the Colosseum and the Roman Forum, which revealed the original pavement and the layout of the ancient city.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "At just 17 years old, Nibby founded the Accademia Ellenica, a bold initiative that brought together scholars and cultural figures to advance Greek studies in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was appointed the first professor of archaeology at the Archiginnasio of the Sapienza University in 1820, a position he maintained until his death in 1839.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Nibby correctly identified the statue of the dying Gladiator in the Capitoline Museums as a Roman copy of a Pergamon statue of Attalos I, thereby correcting a long‑held misattribution.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1792,
+      "month": 4,
+      "day": 14,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1839,
+      "month": 12,
+      "day": 29,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Antonio_Nibby.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Antonio_Nibby.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Antonio_Nibby.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Antonio_Nibby.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 304,
+    "height": 400,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Antonio Nibby",
+    "url": "https://it.wikipedia.org/wiki/Antonio_Nibby"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:49:14.905Z"
+  }
+}

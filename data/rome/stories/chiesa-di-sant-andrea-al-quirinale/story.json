@@ -1,0 +1,146 @@
+{
+  "introduction": {
+    "text": "The Church of Saint Andrew on the Quirinal Hill is a Roman Catholic titular church in Rome, notable for its Baroque architecture designed by Gian Lorenzo Bernini and its role as a Jesuit novitiate.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Jesuit novitiate founded on Quirinal Hill in 1566.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1566,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Commission of the church to Bernini received in 1658.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1658,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Construction of the church completed in 1661.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1661,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Interior decoration finished in 1670.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1670,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "Odilo Scherer appointed titular cardinal of the church in 2007.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2007,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "Baroque design by Bernini and Giovanni de'Rossi featuring an oval dome, curved quadrant walls, and a pedimented façade with Ionic columns.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "High altar displays Guillaume Courtois painting of the Martyrdom of Saint Andrew (1668) and a stucco sculpture of Saint Andrew by Antonio Raggi.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "Chapel of St Francis Xavier contains three canvases by Baciccio (1705) and a ceiling fresco by Filippo Bracci.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "Chapel of the Passion holds three canvases by Giacinto Brandi (1682).",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art4",
+        "description": "Chapel of Saint Stanislaus Kostka includes a painting by Carlo Maratta (1687) and a ceiling fresco by Giovanni Odazzi.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art5",
+        "description": "Chapel of Saint Ignatius of Loyola houses paintings by Ludovico Mazzanti and a ceiling fresco by Giuseppe Bartolomeo Chiari.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Gian Lorenzo Bernini",
+      "personId": "gian-lorenzo-bernini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Camillo Francesco Maria Pamphili",
+      "personId": "camillo-pamphili",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Alexander VII",
+      "personId": "pope-alexander-vii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Odilo Scherer",
+      "personId": "odilo-scherer",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Victorien Sardou",
+      "personId": "victorien-sardou",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Guillaume Courtois",
+      "personId": "guillaume-courtois",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Antonio Raggi",
+      "personId": "antonio-raggi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Baciccio",
+      "personId": "giovanni-battista-gaulli",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giacinto Brandi",
+      "personId": "giacinto-brandi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Carlo Maratta",
+      "personId": "carlo-maratta",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

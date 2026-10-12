@@ -1,0 +1,53 @@
+{
+  "id": "romulus-and-remus",
+  "name": "Romulus and Remus",
+  "wikidataId": "Q2197",
+  "wikipediaTitle": "Romulus and Remus",
+  "content": {
+    "description": [
+      {
+        "text": "Romulus and Remus are twin brothers whose myth explains the founding of Rome. According to Roman tradition, they were born to the Vestal Virgin Rhea Silvia and the god Mars, and were abandoned on the banks of the Tiber. They were rescued by a she‑wolf and later adopted by the shepherd Faustulus, growing up unaware of their royal lineage.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After learning of their heritage, the twins returned to Alba Longa, helped restore their grandfather Numitor to the throne, and then founded a city on the Palatine Hill. Their dispute over the site led to a contest of augury; Romulus claimed divine approval, killed Remus, and became Rome’s first king.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The she‑wolf that suckled the twins became an enduring symbol of Rome, appearing on early Roman coins and on the Capitoline Wolf statue.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -771,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "The_fortunes_of_the_Colville_family,_or,_A_cloud_and_its_silver_lining_-_And_seven_tales_(IA_fortunesofcolvil00smediala).pdf",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:The_fortunes_of_the_Colville_family%2C_or%2C_A_cloud_and_its_silver_lining_-_And_seven_tales_(IA_fortunesofcolvil00smediala).pdf",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/The_fortunes_of_the_Colville_family%2C_or%2C_A_cloud_and_its_silver_lining_-_And_seven_tales_%28IA_fortunesofcolvil00smediala%29.pdf/page1-500px-The_fortunes_of_the_Colville_family%2C_or%2C_A_cloud_and_its_silver_lining_-_And_seven_tales_%28IA_fortunesofcolvil00smediala%29.pdf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3b/The_fortunes_of_the_Colville_family%2C_or%2C_A_cloud_and_its_silver_lining_-_And_seven_tales_%28IA_fortunesofcolvil00smediala%29.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Smedley, Frank E. (Frank Edward), 1818-1864",
+    "author": "Smedley, Frank E. (Frank Edward), 1818-1864",
+    "width": 506,
+    "height": 850,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Romulus and Remus",
+    "url": "https://en.wikipedia.org/wiki/Romulus_and_Remus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:53:00.588Z"
+  }
+}

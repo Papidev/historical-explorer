@@ -1,0 +1,57 @@
+{
+  "id": "pietro-favre",
+  "name": "Pietro Favre",
+  "wikidataId": "Q454814",
+  "wikipediaTitle": "Pietro Favre",
+  "content": {
+    "description": [
+      {
+        "text": "Pietro Favre was born into a humble peasant family in Savoy and, at the age of twelve, took a vow of chastity. In 1525 he was sent to Paris to study philosophy at the Sorbonne, where he shared a dormitory with future Jesuit founders Francesco Xavier and Ignatius of Loyola.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After earning his degree he spent a month in spiritual exercises and was ordained a priest in 1534. He was among the six companions who, on 15 August 1534, inaugurated the Society of Jesus in the church of Montmartre. Favre later travelled to Rome, served as a theological lecturer, and was called to the Council of Trent, where he died shortly after arriving.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Favre made a vow of chastity at the age of twelve, a decision that shaped his lifelong commitment to the Church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He studied at the Sorbonne in Paris, where he lived with future Jesuit founders Francesco Xavier and Ignatius of Loyola.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Favre was beatified by Pope Pius IX on 5 September 1872, and his liturgical cult was extended to the universal Church by Pope Francis on 17 December 2013.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Pierre_Favre_(1506-1546).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pierre_Favre_(1506-1546).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/Pierre_Favre_%281506-1546%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/Pierre_Favre_%281506-1546%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Grentidez",
+    "author": "Grentidez",
+    "width": 419,
+    "height": 582,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pietro Favre",
+    "url": "https://it.wikipedia.org/wiki/Pietro_Favre"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:51:37.040Z"
+  }
+}

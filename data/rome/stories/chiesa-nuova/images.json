@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Santa_Maria_in_Vallicella_Facade_a_Roma.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Vallicella_Facade_a_Roma.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Santa_Maria_in_Vallicella_Facade_a_Roma.jpg/960px-Santa_Maria_in_Vallicella_Facade_a_Roma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Santa_Maria_in_Vallicella_Facade_a_Roma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+      "author": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+      "width": 9026,
+      "height": 11967,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Gustavo_Terziani_-_Il_Daniello_-_dramma_sacro_diviso_in_due_atti_-_libretto_(IA_ildaniellodramma00giul).pdf",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Gustavo_Terziani_-_Il_Daniello_-_dramma_sacro_diviso_in_due_atti_-_libretto_(IA_ildaniellodramma00giul).pdf",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Gustavo_Terziani_-_Il_Daniello_-_dramma_sacro_diviso_in_due_atti_-_libretto_%28IA_ildaniellodramma00giul%29.pdf/page1-500px-Gustavo_Terziani_-_Il_Daniello_-_dramma_sacro_diviso_in_due_atti_-_libretto_%28IA_ildaniellodramma00giul%29.pdf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Gustavo_Terziani_-_Il_Daniello_-_dramma_sacro_diviso_in_due_atti_-_libretto_%28IA_ildaniellodramma00giul%29.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Giuliani, Camillo, librettist",
+      "author": "Giuliani, Camillo, librettist",
+      "width": 904,
+      "height": 1516,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Roma_-_Chiesa_di_Santa_Maria_in_Vallicella_-_2023-09-08_09-55-48_001.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Roma_-_Chiesa_di_Santa_Maria_in_Vallicella_-_2023-09-08_09-55-48_001.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Roma_-_Chiesa_di_Santa_Maria_in_Vallicella_-_2023-09-08_09-55-48_001.jpg/960px-Roma_-_Chiesa_di_Santa_Maria_in_Vallicella_-_2023-09-08_09-55-48_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Roma_-_Chiesa_di_Santa_Maria_in_Vallicella_-_2023-09-08_09-55-48_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Francyort985",
+      "author": "Francyort985",
+      "width": 3264,
+      "height": 2448,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Santa_Maria_in_Vallicella_Facade_a_Roma.jpg"
+}

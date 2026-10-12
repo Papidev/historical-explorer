@@ -1,0 +1,71 @@
+{
+  "id": "alessandro-raffaele-torlonia",
+  "name": "Alessandro Raffaele Torlonia",
+  "wikidataId": "Q1425551",
+  "wikipediaTitle": "Alessandro Raffaele Torlonia",
+  "content": {
+    "description": [
+      {
+        "text": "Alessandro Raffaele Torlonia, a prominent 19th‑century Italian noble, is best remembered for his ambitious project to drain the marshy basin of Lake Fucino in the Marsica region. He invested all of his fortune in the endeavor, famously declaring, “I will drain the Fucino, or the Fucino will drain me.” The work, which began in 1853 and was completed in 1876, earned him the title of the first Prince of Fucino in 1875. In addition to this honor, he held the titles of Prince of Civitella Cesi, Marquess of Romavecchia, Duke of Ceri, and Prince of Canino and Musignano, the latter two acquired through purchases in 1833 and 1853 respectively.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Torlonia married Teresa Colonna in 1840, and the couple had two daughters, Anna Maria and Giovanna Giacinta Carolina. After the deaths of his wife and younger daughter in 1875, he relinquished all his titles in favor of his eldest daughter and her husband, Giulio Borghese, who adopted the Torlonia name. He died on 7 February 1886 in Rome at the age of 86. His legacy endures in Avezzano, where a bronze bust, a public fountain, and a high school bear his name, and in Rome, where Via Alessandro Torlonia runs alongside the Villa Torlonia he helped commission.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 1865 the city of Avezzano awarded Torlonia honorary citizenship for his contributions to the region.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A bronze bust of Torlonia was erected in Avezzano’s piazza‑giardino adjacent to the villa that bears his name.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Via Alessandro Torlonia in Rome’s Nomentano district is named after him and runs alongside the Villa Torlonia he helped commission.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Liceo Classico di Avezzano was named in his honor in 1956, long after his death.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Torlonia was a patron of the arts, commissioning many works for Villa Torlonia and works by the sculptor Canova.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 1886,
+      "month": 2,
+      "day": 7,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Alessandro_Torlonia_by_Natale_Carta_private_collection.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Alessandro_Torlonia_by_Natale_Carta_private_collection.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Alessandro_Torlonia_by_Natale_Carta_private_collection.jpg/960px-Alessandro_Torlonia_by_Natale_Carta_private_collection.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Alessandro_Torlonia_by_Natale_Carta_private_collection.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Natale Carta (1790–1888)",
+    "author": "Natale Carta (1790–1888)",
+    "width": 4585,
+    "height": 6120,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Alessandro Raffaele Torlonia",
+    "url": "https://it.wikipedia.org/wiki/Alessandro_Raffaele_Torlonia"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:21:58.136Z"
+  }
+}

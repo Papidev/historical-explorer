@@ -1,0 +1,65 @@
+{
+  "id": "giovanni-battista-gaulli",
+  "name": "Giovanni Battista Gaulli",
+  "wikidataId": "Q520573",
+  "wikipediaTitle": "Giovanni Battista Gaulli",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Battista Gaulli, born 8 May 1639 in Genoa, was a Baroque painter whose early training under Luciano Borzone and exposure to the cosmopolitan artistic milieu of Genoa—home to Rubens, van Dyck, and local masters—shaped his warm palette and later experimentation with cooler tones. After his parents died in the 1654 plague, he moved to Rome, where a Genoese merchant introduced him to Gian Lorenzo Bernini, who promoted him and secured his first public commission for an altarpiece in San Rocco in 1663.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "At age 22, Gaulli was chosen to decorate the ceiling of the Jesuit Church of the Gesù, a commission that would define his career. His masterwork, the illusionistic vault fresco unveiled on Christmas Eve 1679, blends painted and stucco figures in a dramatic di sotto in su perspective that lifts viewers into a celestial vision, earning him the nickname \"Bernini in paint.\" The success of this fresco cemented his reputation as one of Rome's most esteemed portrait painters and led to a prolific output of mythological and religious works until his death in Rome in 1709.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Gaulli was awarded the commission for the Gesù at the age of 22.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His main vault fresco at the Gesù was unveiled on Christmas Eve, 1679.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1639,
+      "month": 5,
+      "day": 8,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1709,
+      "month": 4,
+      "day": 2,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Baciccio_Autorretrato_Corredor_de_Vasari._Galería_de_los_Uffizi.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Baciccio_Autorretrato_Corredor_de_Vasari._Galer%C3%ADa_de_los_Uffizi.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Baciccio_Autorretrato_Corredor_de_Vasari._Galer%C3%ADa_de_los_Uffizi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Baciccio_Autorretrato_Corredor_de_Vasari._Galer%C3%ADa_de_los_Uffizi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Giovanni Battista Gaulli",
+    "author": "Giovanni Battista Gaulli",
+    "width": 606,
+    "height": 800,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giovanni Battista Gaulli",
+    "url": "https://en.wikipedia.org/wiki/Giovanni_Battista_Gaulli"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:26:44.022Z"
+  }
+}

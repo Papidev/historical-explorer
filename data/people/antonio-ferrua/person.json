@@ -1,0 +1,56 @@
+{
+  "id": "antonio-ferrua",
+  "name": "Antonio Ferrua",
+  "wikidataId": "Q3619578",
+  "wikipediaTitle": "Antonio Ferrua",
+  "content": {
+    "description": [
+      {
+        "text": "Antonio Ferrua was born in Trinità on 31 March 1901 and entered the Society of Jesus, being ordained a Jesuit priest in 1930. He pursued classical letters at the University of Turin, completing a thesis on the epigrams of Pope Damasus I in 1933, and later studied Christian epigraphy at the Pontifical Institute for Christian Archaeology, graduating in 1937. In 1940 Pope Pius XII summoned him to work on the Vatican necropolis, where he investigated the tomb of Saint Peter, a task that would define much of his career. His work on early Christian inscriptions, especially the nine‑volume “Inscriptiones christianae Urbis Romae septimo saeculo antiquiores” by Giovanni Battista de Rossi, established him as a leading epigraphist.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ferrua held several prominent positions: he served as professor and rector of the Pontifical Institute for Christian Archaeology, secretary of the Pontifical Commission for Sacred Archaeology, and librarian of the Biblioteca Apostolica Vaticana. He was also a member of the Pontifical Roman Academy of Archaeology, the Roman Society of National History, the National Institute of Roman Studies, and the German Archaeological Institute, among others. His scholarly output included articles for La Civiltà Cattolica and numerous monographs on early Christian Rome. A long‑standing dispute with Margherita Guarducci over the rediscovery of Saint Peter’s bones marked his later years, and he passed away in Rome on 25 May 2003.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 1940 Pope Pius XII summoned Ferrua to investigate the tomb of Saint Peter in the Vatican necropolis.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ferrua served as librarian of the Biblioteca Apostolica Vaticana, the Vatican Library.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a member of the German Archaeological Institute, reflecting his international scholarly engagement.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1901,
+      "month": 3,
+      "day": 31,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 2003,
+      "month": 5,
+      "day": 25,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Antonio Ferrua",
+    "url": "https://en.wikipedia.org/wiki/Antonio_Ferrua"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:06:55.201Z"
+  }
+}

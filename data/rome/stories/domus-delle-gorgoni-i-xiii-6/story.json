@@ -1,0 +1,35 @@
+{
+  "introduction": {
+    "text": "Domus delle Gorgoni is a Roman domus from the Constantinian age located near Porta Laurentina in region I of Ostia.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Domus delle Gorgoni is a domus dating to the Constantinian age, located near Porta Laurentina in region I of Ostia.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 300,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The building has a trapezoidal plan with a piazzetta, vestibule, two corridors, a courtyard, and a mosaic floor.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "The interior features black and white geometric mosaics with a gorgone motif.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": []
+}

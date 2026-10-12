@@ -1,0 +1,121 @@
+{
+  "introduction": {
+    "text": "The Angel of Grief is an 1894 sculpture by William Wetmore Story created for the grave of his wife Emelyn Story in Rome's Protestant Cemetery. It is significant as a powerful example of mourning art and has inspired many replicas worldwide.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "William Wetmore Story created the Angel of Grief in 1894 for his wife Emelyn Story's grave.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1894,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Story died in 1895, a year after his wife, making the sculpture his final major work.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1895,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "In 1896, Cosmopolitan Magazine documented the sculpture's creation.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1896,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "A replica of the Angel of Grief was erected in 1901 at the Stanford University Arboretum.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1901,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "The 1901 replica was damaged in the San Francisco earthquake of 1906.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1906,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "The damaged replica was replaced in 1908.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1908,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "The 1908 replacement was fully restored in 2001.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2001,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The Angel of Grief is a life‑size winged figure collapsed, weeping, and draped over the tomb, depicting the pain of those left behind.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The sculpture’s drooping wings and hidden face convey a sense of prostration and abandonment.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "The Angel of Grief has become an iconic image replicated worldwide and has influenced cemetery art and popular culture.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "Its image has been used in popular culture, appearing on album covers and film posters such as The Tea Party’s The Edges of Twilight, Evanescence’s EP, Nightwish’s Once, Lenny Kravitz’s Calling All Angels, and the 2012 film The Woman in Black.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "William Wetmore Story",
+      "personId": "william-wetmore-story",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Jane Stanford",
+      "personId": "jane-stanford",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Lenny Kravitz",
+      "personId": "lenny-kravitz",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

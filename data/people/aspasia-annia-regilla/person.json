@@ -1,0 +1,73 @@
+{
+  "id": "aspasia-annia-regilla",
+  "name": "Aspasia Annia Regilla",
+  "wikidataId": "Q441955",
+  "wikipediaTitle": "Appia Annia Regilla",
+  "content": {
+    "description": [
+      {
+        "text": "Appia Annia Regilla was born into the consular gens Annia around 125 CE, the daughter of Senator Appius Annius Trebonius Gallus and Atilia Caucidia Tertulla. At about fourteen she married the wealthy Greek Athenian Herodes Atticus, a tutor of the future emperor Marcus Aurelius, and together they acquired a villa on the Appian Way and later moved to Greece, where Regilla entered the highest circles of Athenian society.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 153 CE Regilla was appointed priestess of Demeter Chamyne at Olympia, making her the only woman officially present at the Olympic Games. She used her influence and wealth to build a monumental nymphaeum with a life‑sized bull statue, and the fountain’s inscriptions honored both the imperial family and her own lineage. In 160 CE she was murdered by a freedman, an event that sparked a celebrated trial in Rome; after her death Herodes Atticus erected memorials, including a temple on the villa grounds and an Odeon in Athens, and streets in Athens and Rome were later named after her.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Regilla was the only woman officially present at the Olympic Games as a priestess of Demeter Chamyne.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The nymphaeum she built at Olympia featured a life‑sized bull statue with an inscription dedicating the water to Zeus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Her murder in 160 CE was the subject of a trial that brought charges against Herodes Atticus, who was ultimately acquitted.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After her death Herodes Atticus erected a temple on the villa grounds that is still well preserved today.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Streets in Athens and Rome are named after Regilla, including Rēgíllēs Street and Herodou Attikou Street.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 125,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 160,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Three_tyches_Louvre_Ma590.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Three_tyches_Louvre_Ma590.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Three_tyches_Louvre_Ma590.jpg/960px-Three_tyches_Louvre_Ma590.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Three_tyches_Louvre_Ma590.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Marie-Lan Nguyen",
+    "author": "Marie-Lan Nguyen",
+    "width": 1750,
+    "height": 1850,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Appia Annia Regilla",
+    "url": "https://en.wikipedia.org/wiki/Appia_Annia_Regilla"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:33:24.859Z"
+  }
+}

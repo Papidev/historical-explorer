@@ -1,0 +1,77 @@
+{
+  "id": "guillaume-d-estouteville",
+  "name": "Guillaume d'Estouteville",
+  "wikidataId": "Q656131",
+  "wikipediaTitle": "Guillaume d'Estouteville",
+  "content": {
+    "description": [
+      {
+        "text": "Guillaume d’Estouteville was born into a powerful Norman family between 1403 and 1412, either in Estouteville‑Écalles or Valmont. He entered the Cluniac order at a young age, earned a doctorate in canon law from the University of Paris, and in 1432 became a canon of the Lyon cathedral chapter and the following year an archdeacon of Angers.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was made a cardinal by Pope Eugene IV in December 1439 and held a succession of important posts: he served as Camerlengo of the Sacred College, was appointed archbishop of Rouen, and later became cardinal bishop of Ostia‑Velletri. He acted as papal legate to France, mediating between King Charles VII and the Duchy of Savoy, and was involved in the review of the Joan of Arc case. A generous patron, he financed the rebuilding of the Church of Sant’Agostino in Rome and other religious buildings, and he died in Rome in 1483.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was elected bishop of Angers in 1439 but never took possession of the see because King Charles VII opposed his appointment.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as abbot of Mont‑Saint‑Michel in 1444 and later as abbot of St. Ouen in Rouen.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first cardinal to hold the title of Santa Pudenziana after it replaced Santi Silvestro e Martino ai Monti in 1459.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a key figure in the 1452 Treaty of Cleppié, which ended hostilities between France and Savoy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He had several natural children with the Roman noblewoman Girolama Tosti, including Girolamo, who became a courtier and treasurer for Beatrice d'Este.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a candidate for the papacy in the 1458 conclave that elected Pope Pius II, but the election of Piccolomini prevented his ascent.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1408,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1483,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Mino_da_fiesole,_ritratto_del_cardinale_guillaiume_d'estouteville,_vescovo_di_ostia_e_arcivescovo_di_rouen,_1450-75_ca,_01.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Mino_da_fiesole%2C_ritratto_del_cardinale_guillaiume_d'estouteville%2C_vescovo_di_ostia_e_arcivescovo_di_rouen%2C_1450-75_ca%2C_01.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Mino_da_fiesole%2C_ritratto_del_cardinale_guillaiume_d%27estouteville%2C_vescovo_di_ostia_e_arcivescovo_di_rouen%2C_1450-75_ca%2C_01.JPG/960px-Mino_da_fiesole%2C_ritratto_del_cardinale_guillaiume_d%27estouteville%2C_vescovo_di_ostia_e_arcivescovo_di_rouen%2C_1450-75_ca%2C_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Mino_da_fiesole%2C_ritratto_del_cardinale_guillaiume_d%27estouteville%2C_vescovo_di_ostia_e_arcivescovo_di_rouen%2C_1450-75_ca%2C_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "I, Sailko",
+    "author": "sailko",
+    "width": 1656,
+    "height": 1896,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Guillaume d'Estouteville",
+    "url": "https://it.wikipedia.org/wiki/Guillaume_d'Estouteville"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:33:18.741Z"
+  }
+}

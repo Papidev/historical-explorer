@@ -1,0 +1,157 @@
+{
+  "introduction": {
+    "text": "The Chiesa di Sant'Urbano alla Caffarella is a historic church in Rome that sits on the site of an ancient Roman temple. Its layered history—from a 2nd‑century pagan shrine to a medieval church and later Baroque restoration—illustrates the city’s architectural evolution and the continuity of sacred space.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Original pagan temple or tomb dating to around 160 AD, possibly dedicated to Ceres and Faustina.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 160,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Church built inside the temple in the 10th century, dedicated to St. Urban.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 900,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "12th‑century frescoes added inside the church.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1100,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Extensive 17th‑century restoration begun in 1634 by Pope Urban VIII and Cardinal Francesco Barberini.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1634,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "Church abandoned and later annexed in 1962.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1962,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "Acquired by the city of Rome in 2002 and transferred to the Diocese of Rome.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2002,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "Restoration carried out in 2010–2011.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2010,
+          "precision": "exact",
+          "endYear": 2011,
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "Columns at the front are marble from Greece, originally part of a portico built by Herodes Atticus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "Walls added between the columns during the 17th‑century renovation to provide stability.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "Portico walls integrated into the church façade during the 17th‑century restoration.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "12th‑century frescoes inside the church.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Herodes Atticus",
+      "personId": "herodes-atticus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "St. Urban",
+      "personId": "st-urban",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Urban VIII",
+      "personId": "pope-urban-viii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Francesco Barberini (1597–1679)",
+      "personId": "francesco-barberini-seniore",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Francesco Maria Del Monte",
+      "personId": "francesco-maria-del-monte",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Michelangelo Merisi da Caravaggio",
+      "personId": "caravaggio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Aspasia Annia Regilla",
+      "personId": "aspasia-annia-regilla",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Antoninus Pius",
+      "personId": "antonino-pio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Faustina the Elder",
+      "personId": "faustina-the-elder",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Bacchus",
+      "personId": "bacchus",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

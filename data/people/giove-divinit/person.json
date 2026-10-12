@@ -1,0 +1,69 @@
+{
+  "id": "giove-divinit",
+  "name": "Giove",
+  "wikidataId": "Q4649",
+  "wikipediaTitle": "Giove (divinità)",
+  "content": {
+    "description": [
+      {
+        "text": "Giove, also known as Iuppiter, is the chief deity of the Roman and Italic pantheon, embodying the sky, light, and thunder. His name derives from the Indo‑European root *dyeu‑, meaning \"to shine\" or \"to flash,\" a linguistic link that also appears in Greek Zeus and Indo‑Aryan Dyauṣ Pitā. The Romans associated Giove with the lightning bolt and thunder, symbols that appear in the iconography of temples such as the Temple of Giove Feretrio on the Capitoline Hill, the first temple built in Rome. Giove’s most celebrated epithet, Optimus Maximus, was used to honor him in the grandest of civic cults, and the planet Jupiter is named after him, reflecting his celestial dominion.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond his role as sky‑god, Giove’s cult was widespread across all Italic peoples, and he acquired a vast array of epithets that reflected local cultic practices—such as Fulgurator, Fulgur, and Tonans for his lightning, and Custos or Defensor for his protective aspects. The deity’s mythology includes numerous liaisons, most famously with Venus, from whom he fathered Cupid, and with Leda, Io, and other figures, illustrating the Roman tendency to adapt Greek myths. Giove’s worship also extended to natural symbols; the walnut tree was dedicated to him, its Latin name Juglans regia deriving from “Iovis glans” (Giove’s acorn), and the festival of Epulum Iovis was celebrated on 13 September, underscoring his central place in Roman religious life.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The walnut tree was dedicated to Giove, and its scientific name Juglans regia comes from the Latin phrase Iovis glans, meaning “Giove’s acorn.”",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Giove’s epithet Optimus Maximus was used for his temple on the Capitoline Hill, the first temple built in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Giove’s symbol is the lightning bolt and thunder, reflecting his role as the god of the sky and weather.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Giove’s name comes from the Indo‑European root *dyeu‑, meaning “to shine” or “to flash.”",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Giove’s love with Venus produced Cupid, the god of desire.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The festival of Epulum Iovis was celebrated on 13 September in honor of Giove.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "0_Jupiter_-_Louvre_MR_254_-_Louvre-Lens_(2).JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:0_Jupiter_-_Louvre_MR_254_-_Louvre-Lens_(2).JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/0_Jupiter_-_Louvre_MR_254_-_Louvre-Lens_%282%29.JPG/960px-0_Jupiter_-_Louvre_MR_254_-_Louvre-Lens_%282%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/0_Jupiter_-_Louvre_MR_254_-_Louvre-Lens_%282%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0",
+    "attribution": "Jean-Pol GRANDMONT",
+    "author": "Jean-Pol GRANDMONT",
+    "width": 3118,
+    "height": 4677,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giove (divinità)",
+    "url": "https://it.wikipedia.org/wiki/Giove_(divinit%C3%A0)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:50:07.902Z"
+  }
+}

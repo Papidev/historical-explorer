@@ -1,0 +1,130 @@
+{
+  "introduction": {
+    "text": "The Galleria nazionale d'arte antica di palazzo Corsini is a museum in Rome that houses a refined collection of Italian and Flemish paintings from the 16th to 17th centuries, reflecting the artistic heritage of the Corsini family and the broader Baroque period.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "collection-origin",
+        "description": "The core of the collection originated in the 17th century from the collections of Cardinal Neri Maria Corsini.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1601,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "early-18th-century-additions",
+        "description": "Additional works were added in the first half of the 18th century from various branches of the Corsini family and donations.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1701,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "trittico-presence-1740",
+        "description": "The Trittico del Giudizio Universale has been part of the collection since 1740.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1740,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "state-sale-1883",
+        "description": "In 1883 the palace and its properties were sold to the State, leading to the creation of the Galleria nazionale d'arte antica.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1883,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [],
+    "art": [
+      {
+        "id": "san-sebastiano-rubens",
+        "description": "San Sebastiano curato dagli angeli (1602-1603) by Peter Paul Rubens.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "san-giovanni-battista-caravaggio",
+        "description": "San Giovanni Battista (Caravaggio) (1603) by Caravaggio.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "madonna-bambino-gentileschi",
+        "description": "Madonna col Bambino by Orazio Gentileschi.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "venere-adone-ribera",
+        "description": "Venere scopre Adone morto (1637) by Jusepe de Ribera.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "trittico-giudizio-angelico",
+        "description": "Trittico del Giudizio Universale by Beato Angelico.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Peter Paul Rubens",
+      "personId": "peter-paul-rubens",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Caravaggio",
+      "personId": "caravaggio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Orazio Gentileschi",
+      "personId": "orazio-gentileschi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Jusepe de Ribera",
+      "personId": "jusepe-de-ribera",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Beato Angelico",
+      "personId": "fra-angelico",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Nicolas Poussin",
+      "personId": "nicolas-poussin",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giovanni Lanfranco",
+      "personId": "giovanni-lanfranco",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Luca Giordano",
+      "personId": "luca-giordano",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Andrea del Sarto",
+      "personId": "andrea-del-sarto",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Federico Hermanin",
+      "personId": "federico-hermanin",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

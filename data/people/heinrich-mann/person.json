@@ -1,0 +1,65 @@
+{
+  "id": "heinrich-mann",
+  "name": "Heinrich Mann",
+  "wikidataId": "Q76480",
+  "wikipediaTitle": "Heinrich Mann",
+  "content": {
+    "description": [
+      {
+        "text": "Heinrich Mann was born on 27 March 1871 in Lübeck, the eldest son of a grain merchant and senator. From an early age he cultivated a sharp, satirical voice that would later make him a leading critic of the rising tide of fascism in Germany. His novels, especially the scathing satire *Der Untertan*, earned him both acclaim and notoriety during the Weimar Republic, but his outspoken opposition to the Nazis forced him to flee the country in 1933.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After a brief exile in France, Mann escaped to the United States with the help of the American journalist Varian Fry. In exile he continued to write, producing works such as *Die Jugend des Königs Henri Quatre*, while his relationship with his more famous brother Thomas remained strained. Mann died in Santa Monica on 11 March 1950, leaving behind a legacy of political engagement and literary criticism that continues to be studied.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Mann’s novel *Professor Unrat* was adapted into the 1930 film *The Blue Angel*, in which Marlene Dietrich made her first sound‑film appearance and launched her international career.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the German occupation of France, Mann and a group of exiles—including his wife Nelly and friends Alma Mahler-Werfel and Franz Werfel—hiked for six hours to cross the border at Port Bou, eventually reaching Portugal and boarding the S.S. Nea Hellas to New York.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1871,
+      "month": 3,
+      "day": 27,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1950,
+      "month": 3,
+      "day": 11,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Heinrich_Mann_in_seinen_Münchner_Jahren.png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Heinrich_Mann_in_seinen_M%C3%BCnchner_Jahren.png",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Heinrich_Mann_in_seinen_M%C3%BCnchner_Jahren.png/960px-Heinrich_Mann_in_seinen_M%C3%BCnchner_Jahren.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/Heinrich_Mann_in_seinen_M%C3%BCnchner_Jahren.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Photographer not credited",
+    "author": "Photographer not credited",
+    "width": 1240,
+    "height": 1836,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Heinrich Mann",
+    "url": "https://en.wikipedia.org/wiki/Heinrich_Mann"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T21:01:00.925Z"
+  }
+}

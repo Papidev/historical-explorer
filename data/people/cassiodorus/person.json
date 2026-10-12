@@ -1,0 +1,65 @@
+{
+  "id": "cassiodorus",
+  "name": "Cassiodorus",
+  "wikidataId": "Q192365",
+  "wikipediaTitle": "Cassiodorus",
+  "content": {
+    "description": [
+      {
+        "text": "Magnus Aurelius Cassiodorus Senator, born around 485 in Scylletium near modern Catanzaro, was a Roman statesman of Syrian descent who rose to the highest offices of the Ostrogothic court. He served as quaestor sacri palatii (c. 507–511), consul in 514, and later as magister officiorum and praetorian prefect of Italy, the de facto prime minister of Theodoric the Great’s administration. His career was marked by a blend of legal expertise, rhetorical skill, and a deep commitment to preserving the intellectual heritage of Rome, as evidenced by his extensive correspondence and record‑keeping, including the Variae epistolae that document the governance of the kingdom.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In his later years Cassiodorus withdrew from public life to devote himself to Christian learning, founding the Vivarium monastery on his family estates along the Ionian Sea. There he composed the Institutiones divinarum et saecularium litterarum, a structured curriculum that combined biblical exegesis with the liberal arts, and he assembled a vast library that included both the Vetus Latina and Greek Bibles. His efforts to preserve classical texts—such as the Codex Grandior—ensured that works of Cicero, Galen, and other antiquity authors survived the upheavals of the 6th century and influenced monastic copying practices for centuries to come.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Cassiodorus’s Vivarium monastery was unique in that it housed both a coenobitic community of monks and a retreat for hermits, allowing for communal and solitary religious life to coexist on the same site.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He compiled the Codex Grandior, a comprehensive Latin Bible, which was later purchased by the Anglo‑Saxon monk Ceolfrith and served as the model for the famous Codex Amiatinus, one of the earliest complete Latin Bibles.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cassiodorus held the office of praetorian prefect of Italy, effectively acting as the prime minister of the Ostrogothic kingdom and wielding significant influence over both civil and military affairs.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 485,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 585,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Gesta_Theodorici_-_Flavius_Magnus_Aurelius_Cassiodorus_(c_485_-_c_580).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Gesta_Theodorici_-_Flavius_Magnus_Aurelius_Cassiodorus_(c_485_-_c_580).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Gesta_Theodorici_-_Flavius_Magnus_Aurelius_Cassiodorus_%28c_485_-_c_580%29.jpg/960px-Gesta_Theodorici_-_Flavius_Magnus_Aurelius_Cassiodorus_%28c_485_-_c_580%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Gesta_Theodorici_-_Flavius_Magnus_Aurelius_Cassiodorus_%28c_485_-_c_580%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Fulda workshop",
+    "author": "Fulda workshop",
+    "width": 1098,
+    "height": 1701,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Cassiodorus",
+    "url": "https://en.wikipedia.org/wiki/Cassiodorus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:50:38.855Z"
+  }
+}

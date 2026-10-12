@@ -1,0 +1,69 @@
+{
+  "id": "pope-marcellus-i",
+  "name": "Pope Marcellus I",
+  "wikidataId": "Q102131",
+  "wikipediaTitle": "Pope Marcellus I",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Marcellus I was elected bishop of Rome in the spring of 308, after a long vacancy that followed the death of Marcellinus in 304. According to the Liber Pontificalis, he reorganised the church by dividing it into twenty‑five districts, each overseen by a priest who handled baptisms, penances, burials and the commemoration of martyrs. He also established a new cemetery on the Via Salaria, the Cœmeterium Novellœ, to provide a burial place for the dead and to honour the martyrs.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Marcellus’s strict insistence that those who had lapsed during the persecution perform penance led to violent conflict within the Christian community. Maxentius, who had himself apostatized, seized the pope and sent him into exile at the end of 308 or the beginning of 309. Marcellus died shortly after leaving Rome, on 16 January 309, and was buried in the catacomb of St. Priscilla. His relics now lie beneath the altar of San Marcello al Corso, and his feast day, traditionally 16 January, is no longer listed in the General Roman Calendar.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Marcellus divided the church into twenty‑five districts (tituli) and appointed a priest to each.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His relics are under the altar of San Marcello al Corso in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His feast day, traditionally kept on 16 January, is no longer inscribed in the General Roman Calendar.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 255,
+      "month": 1,
+      "day": 6,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 309,
+      "month": 1,
+      "day": 16,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Roma-sanmarcelloalcorso2.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Roma-sanmarcelloalcorso2.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Roma-sanmarcelloalcorso2.jpg/960px-Roma-sanmarcelloalcorso2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Roma-sanmarcelloalcorso2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 2.0",
+    "attribution": "antmoose",
+    "author": "antmoose",
+    "width": 1592,
+    "height": 2108,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": false
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Marcellus I",
+    "url": "https://en.wikipedia.org/wiki/Pope_Marcellus_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:02:55.099Z"
+  }
+}

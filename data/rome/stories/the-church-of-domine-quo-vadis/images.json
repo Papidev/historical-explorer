@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Domine_quo_vadis_(Santa_Maria_in_Palmis)_-_esterno.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Domine_quo_vadis_(Santa_Maria_in_Palmis)_-_esterno.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Domine_quo_vadis_%28Santa_Maria_in_Palmis%29_-_esterno.jpg/960px-Domine_quo_vadis_%28Santa_Maria_in_Palmis%29_-_esterno.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Domine_quo_vadis_%28Santa_Maria_in_Palmis%29_-_esterno.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "SonyGM",
+      "author": "SonyGM",
+      "width": 5106,
+      "height": 6625,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "14_560_Santa_Maria_in_Palmis.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:14_560_Santa_Maria_in_Palmis.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/14_560_Santa_Maria_in_Palmis.jpg/960px-14_560_Santa_Maria_in_Palmis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/14_560_Santa_Maria_in_Palmis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Falk2",
+      "author": "Falk2",
+      "width": 4621,
+      "height": 3014,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Pinelli_-_Chiesa_del_Quo_Vadis.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pinelli_-_Chiesa_del_Quo_Vadis.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Pinelli_-_Chiesa_del_Quo_Vadis.jpg/960px-Pinelli_-_Chiesa_del_Quo_Vadis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/28/Pinelli_-_Chiesa_del_Quo_Vadis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Achille Pinelli (1809-1841)",
+      "author": "Achille Pinelli (1809-1841)",
+      "width": 1024,
+      "height": 724,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Domine_quo_vadis_(Santa_Maria_in_Palmis)_-_esterno.jpg"
+}

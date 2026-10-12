@@ -1,0 +1,77 @@
+{
+  "id": "francois-duquesnoy",
+  "name": "Francois Duquesnoy",
+  "wikidataId": "Q960381",
+  "wikipediaTitle": "François Duquesnoy",
+  "content": {
+    "description": [
+      {
+        "text": "François Duquesnoy was born on 12 January 1597 in Brussels, a Flemish Baroque sculptor who spent the bulk of his career in Rome. Known in Italy as Il Fiammingo, he carved a quieter, more restrained version of Baroque sculpture that stood in contrast to the dramatic style of Gian Lorenzo Bernini, while showing a strong affinity for the classicism of Alessandro Algardi.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Duquesnoy’s most celebrated works include the marble Saint Susanna (1629) and the statue of Saint Andrew in the transept of St. Peter’s Basilica (1629‑33). He also collaborated with Bernini on the angels that adorn the baldacchino, and he was called upon to restore and complete ancient Roman torsos such as the Rondanini Faun. He died on 18 July 1643, having suffered from gout, vertigo and a fatal fall from a scaffolding while working on his Susanna.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was called Il Fiammingo by Italians and François Flamand by the French.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "When he first arrived in Rome in 1618, Duquesnoy studied antique sculpture in detail, even climbing over the equestrian statue of Marcus Aurelius to examine its casting.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Duquesnoy collaborated with Bernini on the design of the angels that offer garlands to the baldacchino in St. Peter’s, and the four angels are entirely his work.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He suffered from gout and vertigo, and he fell from a scaffolding while attaching a gilded palm branch to his Susanna, an incident that contributed to his death.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cardinal Richelieu recommended him to Louis XIII, offering him the position of royal sculptor in Paris, but Duquesnoy died before he could sail from Livorno.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1597,
+      "month": 1,
+      "day": 12,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1643,
+      "month": 7,
+      "day": 18,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Anthonis_van_Dyck_024.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Anthonis_van_Dyck_024.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Anthonis_van_Dyck_024.jpg/960px-Anthonis_van_Dyck_024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Anthonis_van_Dyck_024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Anthony van Dyck",
+    "author": "Anthony van Dyck",
+    "width": 1000,
+    "height": 1236,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "François Duquesnoy",
+    "url": "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Duquesnoy"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:38:19.688Z"
+  }
+}

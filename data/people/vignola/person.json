@@ -1,0 +1,48 @@
+{
+  "id": "vignola",
+  "name": "Vignola",
+  "wikidataId": "Q100111",
+  "wikipediaTitle": "Vignola",
+  "content": {
+    "description": [
+      {
+        "text": "Vignola is a city in the province of Modena in northern Italy. Its economy is largely based on agriculture, especially fruit farming, but it also hosts mechanical industries and service companies. The town sits near an ancient Etruscan road that linked Bologna with Parma, and legend says it was founded in 826 as a castle to guard the lands of the nearby Abbey of Nonantola.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Throughout its history Vignola has changed hands many times. It was held by bishops until 1247, then fought over by the Guelphs and Ghibellines, and later came under the control of the Grassoni family until 1399. The House of Este acquired it, and it was later granted as a county to Uguccione de Contrari. After the death of Ercole Contrari in 1557 it passed to Giacomo Boncompagni, the son of Pope Gregory XIII, before falling to the Napoleonic conquest. Following the Congress of Vienna in 1814 Vignola became part of the Duchy of Modena. The city is also the birthplace of the Renaissance architect Jacopo Barozzi da Vignola.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The name Vignola comes from the Latin word vineola, meaning 'small vine'.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Vignola is the birthplace of the Renaissance architect Jacopo Barozzi da Vignola, who lived from 1507 to 1573.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The town's castle, known as the Rocca, was first documented in 1178 and may date back to the Carolingian era.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 826,
+      "precision": "approximate"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Vignola",
+    "url": "https://en.wikipedia.org/wiki/Vignola"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:39:32.416Z"
+  }
+}

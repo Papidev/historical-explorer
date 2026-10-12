@@ -1,0 +1,71 @@
+{
+  "id": "girolamo-gastaldi",
+  "name": "Girolamo Gastaldi",
+  "wikidataId": "Q3107685",
+  "wikipediaTitle": "Girolamo Gastaldi",
+  "content": {
+    "description": [
+      {
+        "text": "Girolamo Gastaldi was born in 1616 at the Castle of Taggia into a Genoese patrician family that held the title of Marquis of Serra Nova.  From an early age he was directed toward a clerical career because he was born with deformities that made other professions difficult, and he was sent to Rome to study law, where he earned a degree in jurisprudence and became a lawyer for the courts of the Holy See.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After serving as a presbyter and as a referendary of the Apostolic Signatura during the papacy of Innocent X, Gastaldi rose through the Church’s administrative ranks, becoming Commissary General for Health in 1657, then a cleric of the Apostolic Camera and later its Treasurer General under Clement IX.  He was elevated to the cardinalate on 12 June 1673, received the titular church of Santa Pudenziana in July, and later the title of Sant'Anastasia.  In 1680 he was appointed Archbishop of Benevento, and in 1685 he became Camerlengo of the Sacred College of Cardinals, a position he held until his death in Rome on 8 April 1685.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Gastaldi’s early deformities directed him toward a life in the Church, a common practice for nobles whose physical conditions limited other career paths.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as Commissary General for the Health of the Church, overseeing medical and sanitary matters within the Papal States.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Gastaldi was elected a cardinal on 12 June 1673, a date that marked his formal entry into the College of Cardinals.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He held the office of Camerlengo of the Sacred College of Cardinals from 15 January 1685 until his death, managing the College’s finances and administrative affairs.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1616,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1685,
+      "month": 4,
+      "day": 8,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "1673_HIERONYMUS_GASTALDUS_-_GASTALDI_GIROLAMO.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:1673_HIERONYMUS_GASTALDUS_-_GASTALDI_GIROLAMO.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/1673_HIERONYMUS_GASTALDUS_-_GASTALDI_GIROLAMO.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/1673_HIERONYMUS_GASTALDUS_-_GASTALDI_GIROLAMO.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 250,
+    "height": 355,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Girolamo Gastaldi",
+    "url": "https://it.wikipedia.org/wiki/Girolamo_Gastaldi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:34:41.567Z"
+  }
+}

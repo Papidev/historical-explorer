@@ -1,0 +1,73 @@
+{
+  "id": "saint-john-the-evangelist",
+  "name": "Saint John the Evangelist",
+  "wikidataId": "Q328804",
+  "wikipediaTitle": "John the Evangelist",
+  "content": {
+    "description": [
+      {
+        "text": "John the Evangelist, traditionally identified with the apostle John, is believed to have lived from around 6 AD to around 100 AD. His identity, however, is contested; scholars debate whether the same individual can be linked to the apostle, the author of the Gospel of John, John of Patmos, and John the Presbyter.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The authorship of the Johannine corpus remains a subject of scholarly debate. While the Gospel of John and the epistles are often attributed to the apostle, many modern scholars argue that they were written by different authors or by a community in Ephesus. The Book of Revelation is generally accepted as having a separate author, John of Patmos, around 95 AD.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "John is commemorated on 27 December in the Catholic, Anglican, and Lutheran calendars, a date that coincides with the third day of Christmastide.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In medieval art, John is frequently depicted with an androgynous or feminized appearance, a portrayal that some scholars suggest made him more relatable to female believers and served as a model of affective piety.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A popular legend from the Acts of John tells that he drank a cup of poison, which was rendered harmless by divine intervention, a story that contributed to the iconographic symbol of a chalice with a snake.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "John is symbolically represented by an eagle, a motif drawn from the Book of Revelation and the prophetic vision of Ezekiel.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The feast day of Saint John was historically celebrated by Freemasons, who used it for the installation of Grand Masters in the 18th century.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 6,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 100,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Grandes_Heures_Anne_de_Bretagne_Saint_Jean.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Grandes_Heures_Anne_de_Bretagne_Saint_Jean.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Grandes_Heures_Anne_de_Bretagne_Saint_Jean.jpg/960px-Grandes_Heures_Anne_de_Bretagne_Saint_Jean.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Grandes_Heures_Anne_de_Bretagne_Saint_Jean.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Jean Bourdichon",
+    "author": "Jean Bourdichon",
+    "width": 3168,
+    "height": 4808,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "John the Evangelist",
+    "url": "https://en.wikipedia.org/wiki/John_the_Evangelist"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:19:58.514Z"
+  }
+}

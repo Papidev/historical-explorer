@@ -1,0 +1,73 @@
+{
+  "id": "jacopo-barozzi-da-vignola",
+  "name": "Jacopo Barozzi da Vignola",
+  "wikidataId": "Q297565",
+  "wikipediaTitle": "Jacopo Barozzi da Vignola",
+  "content": {
+    "description": [
+      {
+        "text": "Jacopo Barozzi da Vignola began his artistic career in Bologna as a painter and perspective draughtsman before turning to architecture. Influenced by the treatises of Sebastiano Serlio and the work of Baldassarre Peruzzi, he studied and measured ancient monuments for scholars such as Marcello Cervini, Alessandro Manzuoli and Bernardino Maffei. His early commissions included sketches for wooden shutters and collaboration on the Belvedere under Peruzzi, and he was introduced to the St. Peter’s workshop around 1538, where he later assisted Michelangelo after the latter’s death in 1564.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Vignola’s most enduring legacy is his 1562 treatise Regola delli cinque ordini d'architettura, which codified the classical orders and became a foundational text for architects across Europe for centuries. He also designed the square‑plan temple of Sant’Andrea with an oval dome (1551‑1553) and the grand Palazzo Farnese in Caprarola, a hallmark of Mannerist architecture. After Michelangelo’s death, he served as chief architect of St. Peter’s Basilica, and he worked for Pope Julius III on Villa Giulia. Vignola died in 1573 and was interred in the Pantheon, a testament to his prominence in Rome’s architectural history.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 1562 Vignola published the influential Regola delli cinque ordini d'architettura, a treatise that codified the classical orders and became a foundational text for architects across Europe for centuries.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After Michelangelo’s death in 1564, Vignola became the chief architect of St. Peter’s Basilica, overseeing its continued construction and design.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He designed the square‑plan temple of Sant’Andrea with an oval dome (1551‑1553), a notable example of Mannerist architectural innovation.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Vignola was buried in the Pantheon in 1573, a rare honor that reflected his status as one of Rome’s most celebrated architects.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He worked on the Villa Giulia for Pope Julius III beginning in 1550, contributing to the villa’s design and later modifications by other architects.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Between 1541 and 1543, Vignola served as an assistant to Primaticcio at the French court of Fontainebleau, where he painted perspectives and oversaw bronze castings of Roman statues.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 1573,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Portret_van_Giacomo_Barozzi_da_Vignola_Titelpagina_voor_Giacomo_Barozzi_da_Vignola,_Reigle_des_Cinq_Ordres_d'Architecture,_s.a.,_RP-P-1982-1310.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Portret_van_Giacomo_Barozzi_da_Vignola_Titelpagina_voor_Giacomo_Barozzi_da_Vignola%2C_Reigle_des_Cinq_Ordres_d'Architecture%2C_s.a.%2C_RP-P-1982-1310.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Portret_van_Giacomo_Barozzi_da_Vignola_Titelpagina_voor_Giacomo_Barozzi_da_Vignola%2C_Reigle_des_Cinq_Ordres_d%27Architecture%2C_s.a.%2C_RP-P-1982-1310.jpg/960px-Portret_van_Giacomo_Barozzi_da_Vignola_Titelpagina_voor_Giacomo_Barozzi_da_Vignola%2C_Reigle_des_Cinq_Ordres_d%27Architecture%2C_s.a.%2C_RP-P-1982-1310.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Portret_van_Giacomo_Barozzi_da_Vignola_Titelpagina_voor_Giacomo_Barozzi_da_Vignola%2C_Reigle_des_Cinq_Ordres_d%27Architecture%2C_s.a.%2C_RP-P-1982-1310.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC0",
+    "attribution": "Rijksmuseum",
+    "author": "Rijksmuseum",
+    "width": 3950,
+    "height": 6686,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Jacopo Barozzi da Vignola",
+    "url": "https://it.wikipedia.org/wiki/Jacopo_Barozzi_da_Vignola"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:39:39.064Z"
+  }
+}

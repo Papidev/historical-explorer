@@ -1,0 +1,71 @@
+{
+  "id": "pope-zephyrinus",
+  "name": "Pope Zephyrinus",
+  "wikidataId": "Q101306",
+  "wikipediaTitle": "Pope Zephyrinus",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Zephyrinus served as bishop of Rome from 199 until his death on 20 December 217. During his 18‑year pontificate he faced persecution under Emperor Septimius Severus and fought against heresies such as Marcion, Praxeas, Valentinus and the Montanists.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Although he was not physically martyred, his suffering earned him the title of martyr, which was later repealed. His feast day was originally celebrated on 26 August but was removed in the 1969 revision of the General Roman Calendar; it is now observed on 20 December in the Maronite and Orthodox Churches.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was succeeded by his principal advisor, Callixtus I.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He combated the blasphemies of the two Theodotuses, who later called him the greatest defender of the divinity of Christ.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was accused of being seduced by Monarchian views.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His feast day was inserted in the General Roman Calendar in the 13th century but removed in 1969.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was known for defending the divinity of Christ.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 217,
+      "month": 12,
+      "day": 20,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Fresco_of_Pope_Zephyrinus_-_Basilica_of_Saint_Paul_Outside_the_Walls_(Before_1823).png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Fresco_of_Pope_Zephyrinus_-_Basilica_of_Saint_Paul_Outside_the_Walls_(Before_1823).png",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Fresco_of_Pope_Zephyrinus_-_Basilica_of_Saint_Paul_Outside_the_Walls_%28Before_1823%29.png/960px-Fresco_of_Pope_Zephyrinus_-_Basilica_of_Saint_Paul_Outside_the_Walls_%28Before_1823%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Fresco_of_Pope_Zephyrinus_-_Basilica_of_Saint_Paul_Outside_the_Walls_%28Before_1823%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author; Photo taken by Arnaldo Vescovo",
+    "author": "Unknown authorUnknown author; Photo taken by Arnaldo Vescovo",
+    "width": 966,
+    "height": 990,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Zephyrinus",
+    "url": "https://en.wikipedia.org/wiki/Pope_Zephyrinus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:04:36.931Z"
+  }
+}

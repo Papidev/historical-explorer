@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Italy-0465_-_Statue_of_Cupid_and_Psyche_(5165528054).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Italy-0465_-_Statue_of_Cupid_and_Psyche_(5165528054).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Italy-0465_-_Statue_of_Cupid_and_Psyche_%285165528054%29.jpg/960px-Italy-0465_-_Statue_of_Cupid_and_Psyche_%285165528054%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Italy-0465_-_Statue_of_Cupid_and_Psyche_%285165528054%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.0",
+      "attribution": "Dennis G. Jarvis",
+      "author": "Dennis G. Jarvis",
+      "width": 2848,
+      "height": 4288,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Domus_di_Amore_e_Psiche_Ostia_Antica_2006-09-08_n3.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Domus_di_Amore_e_Psiche_Ostia_Antica_2006-09-08_n3.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Domus_di_Amore_e_Psiche_Ostia_Antica_2006-09-08_n3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Domus_di_Amore_e_Psiche_Ostia_Antica_2006-09-08_n3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.5",
+      "attribution": "Marie-Lan Nguyen (User:Jastrow)",
+      "author": "Marie-Lan Nguyen (User:Jastrow)",
+      "width": 750,
+      "height": 1666,
+      "discoveredVia": "wikipedia-page-image",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Italy-0465_-_Statue_of_Cupid_and_Psyche_(5165528054).jpg"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "st-phanie-guerzoni",
+  "name": "Stéphanie Guerzoni",
+  "wikidataId": "Q63461353",
+  "wikipediaTitle": "Stéphanie Guerzoni",
+  "content": {
+    "description": [
+      {
+        "text": "Stéphanie Guerzoni was born in Austria to Bernard Pechkranz and Elise Clavel. After her mother moved to Geneva following her early widowhood, Stéphanie pursued formal art training at the École des Beaux‑Arts in Geneva, first under Louis Dunki and later under the Swiss master Ferdinand Hodler. She quickly became one of Hodler’s most favored students and, after his death in 1918, she took over his studio on rue du Grand‑Bureau in the Acacias district, continuing his teaching and artistic legacy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Her artistic career was interwoven with a series of diplomatic marriages that took her from Geneva to Paris, Italy, and back to Switzerland. In Paris she exhibited at the Salon des indépendants, met prominent artists such as Suzanne Valadon and André Utter, and was awarded the French Legion of Honour in 1934. In Italy she painted frescoes for the Casa del Fascio in Genova, a Madonna for Città di Castello, and three Christ‑life scenes in Francavilla al Mare. After the war she returned to Rome, where she used a specially arranged roulotte called the “Colombine” as her studio and gave conferences on Hodler, culminating in a 1957 monograph dedicated to the Swiss master.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 1934, the French government honored Stéphanie Guerzoni with the Legion of Honour for her contributions to the arts.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She painted a miraculous Madonna in Città di Castello at the request of the local bishop, a work that remains a notable example of her religious commissions.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Between 1960 and 1965 she completed a series of frescoes in the Cathedral of Sacred Hearts of Jesus and Mary in La Storta, including a self‑portrait and a depiction of her daughter Denise.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1957 she published a comprehensive study of Ferdinand Hodler titled “Ferdinand Hodler: sa vie, son œuvre, son enseignement, souvenirs personnels,” dedicating it to journalist Carl Albert Loosli.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During her time in Rome she used a roulotte, the “Colombine,” as a mobile studio, allowing her to work in various locations while maintaining a stable workspace.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She painted the canvas “Notre‑Dame de la Vigne” in Saint‑Aubin at the behest of Abbot Louis Glasson, showcasing her continued engagement with ecclesiastical art.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Her first child, Denise, was born on 11 October 1914, and Denise later became a frequent collaborator and muse in Stéphanie’s later fresco projects.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the death of her first husband in 1921, she married Czech diplomat Josef Palivek, and later, in Italy, she married Michelangelo Spanio, remaining widowed for thirty years.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Stéphanie Guerzoni",
+    "url": "https://it.wikipedia.org/wiki/St%C3%A9phanie_Guerzoni"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:10:44.361Z"
+  }
+}

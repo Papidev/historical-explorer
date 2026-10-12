@@ -1,0 +1,57 @@
+{
+  "id": "psiche-mitologia",
+  "name": "Psiche",
+  "wikidataId": "Q843382",
+  "wikipediaTitle": "Psiche (mitologia)",
+  "content": {
+    "description": [
+      {
+        "text": "Psiche (Ψυχή) is a figure of Greek mythology who personifies the concept of the soul (psyché), encompassing the soul’s emotional movements and, by extension, the idea of a soulmate or human love. Her story begins with a youthful beauty that incites the jealousy of Aphrodite, who orders Cupid (Eros) to make Psiche fall for a base man. Instead, Cupid falls in love with her and visits her nightly in a magnificent palace, revealing himself only in darkness and instructing her never to look upon his face.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "When Psiche’s curiosity leads her to light a lamp over Cupid’s sleeping form, a drop of hot oil falls on him, awakening him and causing him to abandon her. She then embarks on a series of arduous trials set by Aphrodite—sorting grain, gathering golden fleece, and retrieving a fragment of beauty from the underworld—before ultimately returning to Olympus. There, after a divine intervention that heals her sleep, she marries Eros, is granted immortality, and is transformed into a goddess who protects young girls. The couple’s daughter, named Edone (or Voluptas in Roman tradition), embodies the notion of pleasure.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The tale of Eros and Psiche, especially as recounted in Apuleius’s *Metamorphoses*, captivated Renaissance artists, who depicted its episodes in the decorative schemes of noble palaces.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Psiche’s name is the root of the modern English word “psyche,” meaning soul, reflecting her symbolic role as the embodiment of the human spirit.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Her daughter Edone, also called Voluptas in Roman mythology, literally means “pleasure,” underscoring the thematic link between love, beauty, and joy in the myth.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "John_William_Waterhouse_-_Psyche_Opening_the_Door_into_Cupid's_Garden,_1903.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:John_William_Waterhouse_-_Psyche_Opening_the_Door_into_Cupid's_Garden%2C_1903.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b5/John_William_Waterhouse_-_Psyche_Opening_the_Door_into_Cupid%27s_Garden%2C_1903.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b5/John_William_Waterhouse_-_Psyche_Opening_the_Door_into_Cupid%27s_Garden%2C_1903.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "John William Waterhouse",
+    "author": "John William Waterhouse",
+    "width": 377,
+    "height": 600,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Psiche (mitologia)",
+    "url": "https://it.wikipedia.org/wiki/Psiche_(mitologia)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:09:22.477Z"
+  }
+}

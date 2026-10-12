@@ -1,0 +1,162 @@
+{
+  "introduction": {
+    "text": "The Domus Aurea, or \"Golden House\", was Nero's extravagant palace complex built on Rome's Oppian Hill after the Great Fire of 64 AD. Its lavish architecture, extensive frescoes, and influence on later art and architecture make it a key monument of Roman imperial excess and artistic innovation.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Construction of the Domus Aurea began after the Great Fire of 64 AD and was nearly completed before Nero's death in 68 AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 64,
+          "precision": "exact",
+          "endYear": 68,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "The Domus Aurea was destroyed in a fire under Emperor Trajan in 104 AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 104,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "The Domus Aurea was partially reopened in 2007.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2007,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "The Domus Aurea was closed again in 2008 due to safety concerns.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2008,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "A 60 m² section of the Domus Aurea collapsed on March 30, 2010.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2010,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "The Domus Aurea was reopened to the public in 2014.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2014,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The Domus Aurea featured extensive gold leaf, stuccoed ceilings with semi‑precious stones, ivory veneers, and frescoed walls.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "An artificial lake fed by a branch of the Aqua Claudia was part of the complex.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "The Octagonal Room had a dome with an oculus and a rotating mechanism that could be operated by slaves.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design4",
+        "description": "The palace employed Roman concrete construction, an early use of the material in large interior spaces.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "The Domus Aurea housed Fourth Style frescoes, including grotesque decorations that influenced Renaissance artists.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "Famulus was the main fresco artist, known for his work in the Golden House.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "The Sphinx Room frescoes depict mythological scenes with panthers, centaurs, and a sphinx.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Nero",
+      "personId": "emperor-nero",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pliny the Elder",
+      "personId": "pliny-the-elder",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Tacitus",
+      "personId": "tacitus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Famulus",
+      "personId": "famulus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Suetonius",
+      "personId": "suetonius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Vespasian",
+      "personId": "vespasian",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Trajan",
+      "personId": "trajan",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Otho",
+      "personId": "otho",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Titus",
+      "personId": "titus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Vitellius",
+      "personId": "vitellius",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

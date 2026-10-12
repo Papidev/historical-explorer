@@ -1,0 +1,57 @@
+{
+  "id": "giuseppe-de-fabris",
+  "name": "Giuseppe De Fabris",
+  "wikidataId": "Q1528743",
+  "wikipediaTitle": "Giuseppe De Fabris",
+  "content": {
+    "description": [
+      {
+        "text": "Giuseppe De Fabris was born in 1790 in Nove, a town in the province of Vicenza, where his father directed a factory that produced ceramic decorations.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He moved to Rome as a young man, where he gained the patronage of Pope Gregory XVI and was appointed director of the musei pontifici, a prestigious position that underscored his reputation as a leading Neoclassical sculptor.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "De Fabris’s appointment as director of the musei pontifici was a rare honor for a sculptor of his era, reflecting the high esteem in which he was held by the papal court.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1790,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1860,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Bust_of_Giuseppe_De_Fabris_at_the_Museo_del_Risorgimento_in_Milan.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Bust_of_Giuseppe_De_Fabris_at_the_Museo_del_Risorgimento_in_Milan.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Bust_of_Giuseppe_De_Fabris_at_the_Museo_del_Risorgimento_in_Milan.jpg/960px-Bust_of_Giuseppe_De_Fabris_at_the_Museo_del_Risorgimento_in_Milan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Bust_of_Giuseppe_De_Fabris_at_the_Museo_del_Risorgimento_in_Milan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Joaquin008",
+    "author": "Joaquin008",
+    "width": 3024,
+    "height": 4032,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giuseppe De Fabris",
+    "url": "https://en.wikipedia.org/wiki/Giuseppe_De_Fabris"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:31:27.334Z"
+  }
+}

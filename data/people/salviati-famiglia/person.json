@@ -1,0 +1,69 @@
+{
+  "id": "salviati-famiglia",
+  "name": "Salviati",
+  "wikidataId": "Q3065487",
+  "wikipediaTitle": "Salviati (famiglia)",
+  "content": {
+    "description": [
+      {
+        "text": "The Salviati were an ancient Florentine ducal family, traced back to Gottifredo in the 12th century, but the first historically documented member is Cambio di Salvi, a priore and Gonfaloniere of Justice in 1335. The family held many public offices in the Florentine Republic, with 63 priors, 21 Gonfaloniere, and six high prelates, and their wealth came from banking and wool trade. They built a house‑tower near the Badia Fiorentina and gave their name to the Salviatino quarter.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In the 16th century the Salviati became closely linked to the Medici through the marriage of Jacopo Salviati to Lucrezia de' Medici, and they were elevated to marquesses of Montieri in 1621. They were patrons of the arts, commissioning the Cappella Salviati in San Marco with works by Giambologna, Passignano, and others, and they founded the Accademia della Crusca. The family also left a legacy in healthcare, donating the San Giacomo degli Incurabili hospital and founding the Bambino Gesù hospital in Rome.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Salviati family had a house‑tower near the Badia Fiorentina and the Salviatino quarter is named after them.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The family was involved in the Pazzi conspiracy; Archbishop Francesco Salviati was executed by hanging from a window of Palazzo Vecchio.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Cappella Salviati in San Marco was built by the family and houses the remains of their patron archbishop.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The family donated the San Giacomo degli Incurabili hospital, which operated for almost seven centuries until its closure in 2008 and was later reopened after legal battles.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Salviati founded the Bambino Gesù hospital in 1869, which grew to 1,000 patients by 1907.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A branch of the family settled in Liguria; violinist Pietro Giovanni Salviati was decorated with the Order of Vittorio Veneto for his service in World War I.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Stamma_salviati_vetrata2.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Stamma_salviati_vetrata2.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Stamma_salviati_vetrata2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Stamma_salviati_vetrata2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 2.5",
+    "attribution": "No machine-readable author provided. Sailko assumed (based on copyright claims).",
+    "author": "No machine-readable author provided. Sailko assumed (based on copyright claims).",
+    "width": 434,
+    "height": 462,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Salviati (famiglia)",
+    "url": "https://it.wikipedia.org/wiki/Salviati_(famiglia)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:12:54.942Z"
+  }
+}

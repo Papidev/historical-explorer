@@ -1,0 +1,73 @@
+{
+  "id": "neri-maria-corsini",
+  "name": "Neri Maria Corsini",
+  "wikidataId": "Q2424131",
+  "wikipediaTitle": "Neri Maria Corsini",
+  "content": {
+    "description": [
+      {
+        "text": "Neri Maria Corsini was born on 19 May 1685 in Florence into the prominent Corsini family. He began his career as a diplomat for the Grand Duchy of Tuscany, serving as ambassador to France and England and playing a key role in the negotiations that produced the Treaty of the Hague in 1720. After the death of Grand Duke Cosimo III in 1723, Corsini moved to Rome, where he became secretary to his uncle, Cardinal Lorenzo Corsini, who was elected Pope Clement XII in 1730. In that same year, the new pope appointed Neri Maria as a cardinal deacon in pectore, a decision that was made public later that year and gave him the titular church of S. Adriano.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Corsini’s influence extended far beyond the papal court. He opened the Capitoline Museums to the public in 1734, donated the library of the Agonal Palace to the Holy See, and built the Palazzo Corsini on an ancient estate in Rome. He served as Prefect of the Supreme Tribunal of the Apostolic Signatura, Secretary of the Roman Inquisition from 1753 until his death, and Protector of Ireland. He was a patron of several artists, including Jacopo Zoboli, Agostino Masucci, and Giovanni Paolo Panini, and he participated in three papal conclaves, helping to elect Popes Benedict XIV, Clement XIII, and Clement XIV. Corsini died at his palace on 6 December 1770 and was buried in the Corsini Chapel of the Basilica of St. John Lateran.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Corsini opened the Capitoline Museums to the public in 1734, making Rome’s ancient art collection accessible to a wider audience.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He donated the library of the Agonal Palace to the Holy See and opened his own library to the public, expanding the Vatican’s scholarly resources.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Corsini was appointed Protector of Ireland in 1737, a diplomatic role that involved representing Irish interests within the Holy See.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as Secretary of the Roman Inquisition from 1753 until his death, overseeing the Church’s doctrinal enforcement.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1685,
+      "month": 5,
+      "day": 19,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1770,
+      "month": 12,
+      "day": 6,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Hyacinte_Rigaud_-_Portrait_of_Neri_Maria_Corsini.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Hyacinte_Rigaud_-_Portrait_of_Neri_Maria_Corsini.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Hyacinte_Rigaud_-_Portrait_of_Neri_Maria_Corsini.jpg/960px-Hyacinte_Rigaud_-_Portrait_of_Neri_Maria_Corsini.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/Hyacinte_Rigaud_-_Portrait_of_Neri_Maria_Corsini.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Hyacinthe Rigaud",
+    "author": "Hyacinthe Rigaud",
+    "width": 1836,
+    "height": 2364,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Neri Maria Corsini",
+    "url": "https://en.wikipedia.org/wiki/Neri_Maria_Corsini"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:42:51.040Z"
+  }
+}

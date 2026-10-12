@@ -1,0 +1,75 @@
+{
+  "id": "luca-giordano",
+  "name": "Luca Giordano",
+  "wikidataId": "Q332494",
+  "wikipediaTitle": "Luca Giordano",
+  "content": {
+    "description": [
+      {
+        "text": "Luca Giordano was born in Naples on 18 October 1634 to a modest family; his father, Antonio, was a merchant of paintings and a small‑time painter.  From a young age he worked in his father’s workshop, copying the works of the city’s churches, and by the time he was six or eight he had already completed the unfinished commissions of his father, including frescoes in the chapel of Santa Maria la Nova.  Giordano’s early style was strongly influenced by the naturalism of Caravaggio and the Spanish painter Jusepe de Ribera, and he was known for his remarkable speed, earning the nickname “Luca Fapresto” (Luca the Fast).  His rapid execution allowed him to produce an astonishing output, with estimates of more than three thousand finished works, ranging from small altarpieces to large fresco cycles for public and private patrons across Italy and Spain.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Throughout his career Giordano travelled extensively, studying in Rome and Venice and later spending several years in Florence and Madrid.  In Naples he became one of the leading figures of the Baroque, receiving commissions from the viceroy of Naples, the Medici family, and the Spanish court.  He painted grand frescoes in the Certosa di San Martino (1703–1704), the Escorial in Madrid (1693–1694), and the Cathedral of Toledo (1698), and he was awarded the title of “caballero” by King Charles II.  His work blended the dramatic chiaroscuro of Ribera with the luminous colorism of the Venetian masters, influencing a generation of painters such as Francesco Solimena, Giambattista Tiepolo, and Corrado Giaquinto.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Giordano earned the nickname “Luca Fapresto” because he could complete large canvases in a matter of days, a reputation that earned him the admiration of patrons and fellow artists alike.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He painted more than three thousand works during his career, a figure that includes canvases, frescoes, and numerous drawings and sketches.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "King Charles II of Spain conferred upon him the title of “caballero,” recognizing his contributions to the royal court’s artistic program.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Giordano owned a summer villa in San Giorgio a Cremano, where he spent time with his family and worked on commissions for the local aristocracy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His son Lorenzo was born in 1669; Giordano’s family life was intertwined with his prolific artistic output.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1634,
+      "month": 10,
+      "day": 18,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1705,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "LucaGiordano1692c-Self-portrait-Naples.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:LucaGiordano1692c-Self-portrait-Naples.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/LucaGiordano1692c-Self-portrait-Naples.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/LucaGiordano1692c-Self-portrait-Naples.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Luca Giordano",
+    "author": "Luca Giordano",
+    "width": 360,
+    "height": 467,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Luca Giordano",
+    "url": "https://it.wikipedia.org/wiki/Luca_Giordano"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:45:25.435Z"
+  }
+}

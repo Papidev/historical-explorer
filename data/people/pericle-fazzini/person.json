@@ -1,0 +1,63 @@
+{
+  "id": "pericle-fazzini",
+  "name": "Pericle Fazzini",
+  "wikidataId": "Q472646",
+  "wikipediaTitle": "Pericle Fazzini",
+  "content": {
+    "description": [
+      {
+        "text": "Pericle Fazzini began his artistic training in his father’s carpentry workshop before moving to Rome in 1930 with the support of poet Mario Rivosecchi. There he studied at the Scuola libera del nudo and quickly gained recognition, winning a competition for a monument to Cardinal Dusmet in 1931 and later a scholarship for the National Artistic Pension through his bas‑relief \"Uscita dall'arca\" in 1932–1933.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Throughout the 1930s and 1940s Fazzini exhibited widely, with a 1934 show in Paris where his portrait of Anita was purchased by the Musée Jeu de Paume, and a 1935 participation in the II Quadriennale di Roma that earned him a prize for his reliefs \"Danza\" and \"Tempesta\". He opened a studio on Via Margutta in 1938, taught at the Accademia di Belle Arti di Roma from 1958 to 1980, and produced monumental works such as the unbuilt monument to Kennedy and the \"Resurrezione\" for the Vatican, before passing away in Rome on 4 December 1987.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Fazzini's portrait of Anita was acquired by the Musée Jeu de Paume in Paris in 1934, making him one of the few Italian sculptors whose work entered a major French museum that early in his career.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He taught at the Accademia di Belle Arti di Roma for 22 years, from 1958 until 1980, mentoring a generation of Italian sculptors including Vito Pancella and Giovanni Menada.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Despite winning a competition for a monument to Cardinal Dusmet in 1931, the commission was never realized, a fate that befell several of his large‑scale projects such as the monument to Kennedy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 1987,
+      "month": 12,
+      "day": 4,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pericle_Fazzini_La_Sibilla.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pericle_Fazzini_La_Sibilla.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Pericle_Fazzini_La_Sibilla.JPG/960px-Pericle_Fazzini_La_Sibilla.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Pericle_Fazzini_La_Sibilla.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 2.5",
+    "attribution": "Dietmar Walberg",
+    "author": "Dietmar Walberg",
+    "width": 2336,
+    "height": 3504,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pericle Fazzini",
+    "url": "https://it.wikipedia.org/wiki/Pericle_Fazzini"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:35:33.042Z"
+  }
+}

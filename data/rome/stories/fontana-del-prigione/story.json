@@ -1,0 +1,114 @@
+{
+  "introduction": {
+    "text": "The Fontana del Prigione is a historic fountain in Rome, notable for its Renaissance design, its association with Pope Sixtus V, and its role in the city’s water supply history.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "acquedotto-restoration-1587",
+        "description": "Restoration of the ancient Aquedotto Alessandrino completed in 1587, which prompted the construction of new fountains.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1587,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "construction-1587-1590",
+        "description": "Construction of the fountain by Domenico Fontana for Villa Montalto Peretti between 1587 and 1590.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1587,
+          "precision": "exact",
+          "endYear": 1590,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1636-description",
+        "description": "In 1636 the Massimo family described the fountain’s statue as a prisoner.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1636,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1888-acquisition",
+        "description": "The fountain was acquired by the Municipality of Rome in 1888.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1888,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1894-1895-reconstruction",
+        "description": "Reconstruction of the fountain as the foundation of Via Genova in 1894-1895.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1894,
+          "precision": "exact",
+          "endYear": 1895,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1923-reassembly",
+        "description": "The fountain was disassembled again in 1923 and reassembled at its current location.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1923,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "2005-2006-restoration",
+        "description": "Restoration work carried out by the municipality in 2005-2006.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2005,
+          "precision": "exact",
+          "endYear": 2006,
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "The fountain features a niche with two lesenes supporting a decorated pediment, lion heads, a central lion spouting water, six small columns, and travertine pillars with volutes.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-1",
+        "description": "The fountain originally included a group of marble statues: Apollo, a prisoner, Venus, and an aceless statue of Esculapio, now lost.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "papa Sisto V",
+      "personId": "pope-sixtus-v",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Domenico Fontana",
+      "personId": "domenico-fontana",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Massimo (famiglia)",
+      "personId": "massimo-famiglia",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

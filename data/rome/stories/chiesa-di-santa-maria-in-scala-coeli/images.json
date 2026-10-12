@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "034Abbazia3Fontane.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:034Abbazia3Fontane.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/034Abbazia3Fontane.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/034Abbazia3Fontane.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "MarkusMark",
+      "author": "MarkusMark",
+      "width": 800,
+      "height": 600,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Tre_Fontane_01791_santa_Maria_in_Scala_Coeli.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Tre_Fontane_01791_santa_Maria_in_Scala_Coeli.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Tre_Fontane_01791_santa_Maria_in_Scala_Coeli.JPG/960px-Tre_Fontane_01791_santa_Maria_in_Scala_Coeli.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Tre_Fontane_01791_santa_Maria_in_Scala_Coeli.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Lalupa",
+      "author": "Lalupa",
+      "width": 1536,
+      "height": 2048,
+      "discoveredVia": "wikipedia-page-image",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "034Abbazia3Fontane.jpg"
+}

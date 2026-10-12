@@ -1,0 +1,77 @@
+{
+  "introduction": {
+    "text": "Casa Museo di Luigi Pirandello, archivio e biblioteca is a museum in Rome that preserves the former apartment of the Nobel laureate Luigi Pirandello, offering insight into his life and works.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "living-1933-1936",
+        "description": "Luigi Pirandello lived in the apartment from 1933 to 1936, where he worked on his later plays.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1933,
+          "precision": "exact",
+          "endYear": 1936,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "nobel-1934",
+        "description": "Pirandello received news of his Nobel Prize award in 1934 while staying in the house.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1934,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "death-1936",
+        "description": "Pirandello died on 10 December 1936.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1936,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "founding-1962",
+        "description": "In 1962 the Institute of Pirandellian Studies and Contemporary Theatre was founded, preserving the apartment as a museum.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1962,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "interior-preservation",
+        "description": "The apartment has been preserved with original furnishings, paintings, books, and manuscripts, reflecting the living environment of Pirandello.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-collection",
+        "description": "The museum houses paintings, books, manuscripts, and other original objects belonging to Pirandello.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Luigi Pirandello",
+      "personId": "luigi-pirandello",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Umberto Bosco",
+      "personId": "umberto-bosco",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

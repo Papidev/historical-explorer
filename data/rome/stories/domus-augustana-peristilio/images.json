@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Domus-augustana-map.png",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Domus-augustana-map.png",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Domus-augustana-map.png/960px-Domus-augustana-map.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Domus-augustana-map.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Cassius Ahenobarbus",
+      "author": "Cassius Ahenobarbus",
+      "width": 1330,
+      "height": 1186,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "0_Circus_Maximus_et_Domus_Augustana_-_Rome_(1).JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:0_Circus_Maximus_et_Domus_Augustana_-_Rome_(1).JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/0_Circus_Maximus_et_Domus_Augustana_-_Rome_%281%29.JPG/960px-0_Circus_Maximus_et_Domus_Augustana_-_Rome_%281%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/0_Circus_Maximus_et_Domus_Augustana_-_Rome_%281%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "Jean-Pol GRANDMONT",
+      "author": "Jean-Pol GRANDMONT",
+      "width": 3888,
+      "height": 2592,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "0_Circus_Maximus_et_Domus_Augustana_-_Rome.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:0_Circus_Maximus_et_Domus_Augustana_-_Rome.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/0_Circus_Maximus_et_Domus_Augustana_-_Rome.JPG/960px-0_Circus_Maximus_et_Domus_Augustana_-_Rome.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/0_Circus_Maximus_et_Domus_Augustana_-_Rome.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "Jean-Pol GRANDMONT",
+      "author": "Jean-Pol GRANDMONT",
+      "width": 3888,
+      "height": 2592,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Domus-augustana-map.png"
+}

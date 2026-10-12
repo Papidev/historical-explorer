@@ -1,0 +1,85 @@
+{
+  "id": "miguel-dar-o-miranda-y-g-mez",
+  "name": "Miguel Darío Miranda y Gómez",
+  "wikidataId": "Q651698",
+  "wikipediaTitle": "Miguel Darío Miranda y Gómez",
+  "content": {
+    "description": [
+      {
+        "text": "Miguel Darío Miranda y Gómez was born on 19 December 1895 in León, Guanajuato, and entered the seminary there before continuing his studies at the Pontifical Gregorian University in Rome. He was ordained a priest on 28 October 1918, served in pastoral work in León, and later taught at the seminary. In 1925 he became Director of the National Social Secretariat, but the anti‑church persecutions of President Plutarco Elías Calles led to his imprisonment and forced exile from 1926 to 1929.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Miranda was appointed Bishop of Tulancingo in 1937 and consecrated in December of that year. He greeted French leader Charles de Gaulle at the Guadalupe Basilica in 1942, and in 1955 became Coadjutor Archbishop of Mexico City. He succeeded as Archbishop in 1956, attended the Second Vatican Council (1962‑65), served as President of the Latin American Episcopal Conference (1958‑63), was elevated to the cardinalate in 1969, and acted as papal legate for the dedication of the Basilica of Our Lady of Guadalupe in 1976. He resigned in 1977 and died in León on 15 March 1986.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Miranda greeted Charles de Gaulle at the Guadalupe Basilica during the French leader’s 1942 visit to Mexico.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was imprisoned and forced to leave Mexico during the anti‑church persecutions of President Plutarco Elías Calles.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Miranda attended the Second Vatican Council and was a key advocate for social justice in Latin America.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as President of the Latin American Episcopal Conference from 1958 to 1963.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Miranda was the papal legate for the 1976 dedication of the Basilica of Our Lady of Guadalupe.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He never participated in a papal conclave because he reached the age limit for cardinal electors in 1975.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Miranda is buried in the Mexico City Metropolitan Cathedral.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1895,
+      "month": 12,
+      "day": 19,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1986,
+      "month": 3,
+      "day": 15,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Miguel_Darío_Miranda_Gómez_(1964).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Miguel_Dar%C3%ADo_Miranda_G%C3%B3mez_(1964).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Miguel_Dar%C3%ADo_Miranda_G%C3%B3mez_%281964%29.jpg/960px-Miguel_Dar%C3%ADo_Miranda_G%C3%B3mez_%281964%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Miguel_Dar%C3%ADo_Miranda_G%C3%B3mez_%281964%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC0",
+    "attribution": "Hugo van Gelderen for Anefo",
+    "author": "Hugo van Gelderen for Anefo",
+    "width": 1395,
+    "height": 1645,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Miguel Darío Miranda y Gómez",
+    "url": "https://en.wikipedia.org/wiki/Miguel_Dar%C3%ADo_Miranda_y_G%C3%B3mez"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:15:53.460Z"
+  }
+}

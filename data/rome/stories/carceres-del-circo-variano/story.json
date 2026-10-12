@@ -1,0 +1,92 @@
+{
+  "introduction": {
+    "text": "Carceres del Circo Variano is the site of the ancient Roman Circus Varianus, a large chariot racing arena that illustrates the imperial patronage of Caracalla and the later modifications of Elagabalus. Its remains, located near Porta Maggiore and the Aurelian Walls, provide insight into Roman urban planning, entertainment, and the reuse of monumental objects such as the obelisk originally from Antinoöpolis.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "construction-caracalla",
+        "description": "The circus was built during the reign of Caracalla (198–217 AD).",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 198,
+          "precision": "exact",
+          "endYear": 217,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "restructuring-elagabalus",
+        "description": "Elagabalus (218–222 AD) restructured the circus, removing the western end, moving the starting gates, and adding two towers.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 218,
+          "precision": "exact",
+          "endYear": 222,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "cut-by-aurelian-walls",
+        "description": "In 271 AD the Aurelian Walls cut the circus in two, leaving the major part outside the city walls.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 271,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "obelisk-found-16th-century",
+        "description": "Records from the 16th century note that an obelisk was found at the site, originally from the temple of Antinous at Antinoöpolis.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1500,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "dimensions",
+        "description": "The circus measured 565 by 125 metres, slightly smaller than the Circus Maximus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "location-horti-spei-veteris",
+        "description": "It was located within the palatial villa complex known as the Horti Spei Veteris, later the Sessorium, which also included the Amphitheatrum Castrense.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "restructuring-elagabalus-design",
+        "description": "Elagabalus removed the western end to create more space for the palace, moving the starting gates back and building two towers at the end.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "cut-by-aurelian-walls-design",
+        "description": "The Aurelian Walls cut the circus in two in 271 AD, leaving the major part outside the city walls.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Caracalla",
+      "personId": "caracalla",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Elagabalus",
+      "personId": "elagabalus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Antinous",
+      "personId": "antinous",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

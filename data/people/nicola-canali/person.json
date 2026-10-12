@@ -1,0 +1,77 @@
+{
+  "id": "nicola-canali",
+  "name": "Nicola Canali",
+  "wikidataId": "Q641939",
+  "wikipediaTitle": "Nicola Canali",
+  "content": {
+    "description": [
+      {
+        "text": "Nicola Canali was born on 6 June 1874 in Rieti, Italy, to Marquis Filippo Canali and Countess Leonetta Vincentini. He studied at the Pontifical Gregorian University and the Angelicum before being ordained a priest on 31 March 1900 in the Lateran Basilica. In 1903 he entered the Roman Curia as private secretary to Cardinal Rafael Merry del Val, and within the same year he was made a Privy Chamberlain of His Holiness. His rapid rise continued with appointments as Substitute for General Affairs of the Secretariat of State in 1908, Secretary of the Sacred Congregation of Ceremonies in 1914, assessor of the Holy Office in 1926, and Protonotary Apostolic in 1927.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pope Pius XI elevated him to the cardinalate on 16 December 1935, naming him Cardinal‑Deacon of S. Nicola in Carcere. He was elected as the first President of the Pontifical Commission for Vatican City State in 1939 and became Major Penitentiary in 1941, a post he held until his death. In 1949 he was appointed Grand Master of the Order of the Holy Sepulchre, a position he retained until 1960. Canali announced the election of Pope John XXIII in 1958 and crowned him on 4 November of that year. He died of pneumonia on 3 August 1961 at the age of 87, and was buried in the church of S. Onofrio al Gianicolo in Rome.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the last non‑bishop cardinal to die before Pope John XXIII issued the 1962 motu proprio Cum gravissima, which required all cardinals to receive episcopal consecration.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He refused to allow Azione Cattolica to sell souvenirs in St. Peter's Square in 1949, citing that the square was a house of prayer; this decision followed a planned pickpocketing incident and led to a ban on vendors, photographers, and beggars.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He sought election as Grand Master of the Sovereign Order of Malta in 1951, but the role was incompatible with his duties in the Order of the Holy Sepulchre, leading to a Vatican decision that the Order of Malta remained sovereign.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As Major Penitentiary, he was responsible for the Church's penitential and sacramental matters, a role he held for 20 years.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as Pro‑President of the Administration of the Patrimony of the Apostolic See from 1951 until his death, overseeing the Vatican's financial assets.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1874,
+      "month": 6,
+      "day": 6,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1961,
+      "month": 8,
+      "day": 3,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Portrait_Cardinal_Canali.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Portrait_Cardinal_Canali.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Portrait_Cardinal_Canali.jpg/960px-Portrait_Cardinal_Canali.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Portrait_Cardinal_Canali.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Serge Ivanoff",
+    "author": "Serge Ivanoff",
+    "width": 1822,
+    "height": 2076,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Nicola Canali",
+    "url": "https://en.wikipedia.org/wiki/Nicola_Canali"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:32:11.716Z"
+  }
+}

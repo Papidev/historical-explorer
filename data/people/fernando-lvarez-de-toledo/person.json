@@ -1,0 +1,65 @@
+{
+  "id": "fernando-lvarez-de-toledo",
+  "name": "Fernando Álvarez de Toledo",
+  "wikidataId": "Q80847",
+  "wikipediaTitle": "Fernando Álvarez de Toledo",
+  "content": {
+    "description": [
+      {
+        "text": "Fernando Álvarez de Toledo, a Spanish nobleman and military commander, served as plenipotentiary for King Philip II and held high offices across the Spanish Empire, including governorship of Milan and viceroy of Naples.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His most infamous tenure was as Governor‑General of the Spanish Netherlands, where he imposed harsh military measures and fiscal policies that earned him the nicknames \"Duke of Iron\" and \"butcher of Flanders\" among Dutch Protestants.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Dutch Protestants dubbed him the \"Duke of Iron\" for his uncompromising military discipline.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was also called the \"butcher of Flanders\" because of the brutal tactics he used during campaigns in the Low Countries.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Álvarez de Toledo distinguished himself at the Battle of Mühlberg in 1547, contributing decisively to the defeat of the Schmalkaldic League.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1507,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1582,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Fernando_Álvarez_de_Toledo,_III_Duque_de_Alba,_retratado_por_Antonio_Moro.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Fernando_%C3%81lvarez_de_Toledo%2C_III_Duque_de_Alba%2C_retratado_por_Antonio_Moro.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Fernando_%C3%81lvarez_de_Toledo%2C_III_Duque_de_Alba%2C_retratado_por_Antonio_Moro.jpg/960px-Fernando_%C3%81lvarez_de_Toledo%2C_III_Duque_de_Alba%2C_retratado_por_Antonio_Moro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/74/Fernando_%C3%81lvarez_de_Toledo%2C_III_Duque_de_Alba%2C_retratado_por_Antonio_Moro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Antonis Mor",
+    "author": "Antonis Mor",
+    "width": 3335,
+    "height": 4271,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Fernando Álvarez de Toledo",
+    "url": "https://it.wikipedia.org/wiki/Fernando_%C3%81lvarez_de_Toledo"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:33:30.550Z"
+  }
+}

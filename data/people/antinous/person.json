@@ -1,0 +1,61 @@
+{
+  "id": "antinous",
+  "name": "Antinous",
+  "wikidataId": "Q171876",
+  "wikipediaTitle": "Antinous",
+  "content": {
+    "description": [
+      {
+        "text": "Antinous, a Greek youth from Bithynia, became the favourite and lover of the Roman emperor Hadrian in the early second century CE. Little is known of his early life, but he was born in Claudiopolis (modern Bolu, Turkey) around 111 CE and was introduced to Hadrian in 123 CE before being taken to Italy for education.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After becoming Hadrian’s companion, Antinous travelled with the emperor across the Roman Empire, attending the Eleusinian Mysteries in Athens and accompanying Hadrian during the lion hunt in Libya. In October 130 CE, while on a Nile flotilla, Antinous died under mysterious circumstances, possibly drowning, which led Hadrian to deify him and found the city of Antinoöpolis in his memory.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Following Antinous’s death, Hadrian established a formal cult that spread throughout the Empire, with temples and games held in his honour in cities such as Antinoöpolis, Athens, and Alexandria.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Antinous’s deification was unusual for a non‑imperial figure; Hadrian proclaimed him a god without Senate approval, and the cult blended Greek and Egyptian religious elements, identifying Antinous with Osiris.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 111,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 130,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Bust_Antinous_Hermitage_GR-4220_n1.jpeg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Bust_Antinous_Hermitage_GR-4220_n1.jpeg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Bust_Antinous_Hermitage_GR-4220_n1.jpeg/960px-Bust_Antinous_Hermitage_GR-4220_n1.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/52/Bust_Antinous_Hermitage_GR-4220_n1.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "© Marie-Lan Nguyen / Wikimedia Commons",
+    "author": "Marie-Lan Nguyen",
+    "width": 4400,
+    "height": 5500,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Antinous",
+    "url": "https://en.wikipedia.org/wiki/Antinous"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:53:26.173Z"
+  }
+}

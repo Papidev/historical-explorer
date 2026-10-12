@@ -1,0 +1,69 @@
+{
+  "id": "giovanni-maria-lancisi",
+  "name": "Giovanni Maria Lancisi",
+  "wikidataId": "Q1230485",
+  "wikipediaTitle": "Giovanni Maria Lancisi",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Maria Lancisi was born on 26 October 1654 in Rome, where he received a rigorous education at the Collegio Romano and the University of Rome. By the age of eighteen he had qualified in medicine and began his career at the hospital of Santo Spirito in Sassia, later training at the Picentine College of Lauro. In 1684 he accepted a chair of anatomy at Sapienza University, a position he held for thirteen years, during which he edited and published the long‑forgotten anatomical plates of Bartolomeo Eustachius in 1714 as the Tabulae anatomicae. His reputation as a meticulous anatomist earned him appointments as physician to Popes Innocent XI, Clement XI and Innocent XII, and he became a central figure in the scientific community of early‑modern Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Lancisi’s most enduring legacy lies in his pioneering work in epidemiology and cardiology. In 1717 he published De Noxiis Paludum Effluviis, in which he identified mosquito‑infested swamps as the breeding ground for malaria and advocated drainage of marshes to curb the disease. He also studied rinderpest, proposing early quarantine measures and the culling of sick animals in 1715, a strategy later adopted by Thomas Bates. In cardiology, he described vegetations on heart valves, cardiac syphilis, aneurysms, and classified heart disease, culminating in his posthumous De Motu Cordis et Aneurysmatibus (1728).",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Lancisi was the first to correlate the presence of mosquitoes with the prevalence of malaria, a groundbreaking insight that predated the formal discovery of the malaria parasite by over a century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He advocated for the early use of quarantine and culling of infected cattle during rinderpest outbreaks, laying the groundwork for modern veterinary epidemiology.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Lancisi described the corpus callosum as the \"seat of the soul,\" arguing that it housed the functions of imagination, deliberation, and judgment, a view that influenced contemporary debates on the localization of mental faculties.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1654,
+      "month": 10,
+      "day": 26,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1720,
+      "month": 1,
+      "day": 20,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Giovanni_Maria_Lancisi.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Giovanni_Maria_Lancisi.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Giovanni_Maria_Lancisi.jpg/960px-Giovanni_Maria_Lancisi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Giovanni_Maria_Lancisi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 4.0",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 2712,
+    "height": 3977,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giovanni Maria Lancisi",
+    "url": "https://en.wikipedia.org/wiki/Giovanni_Maria_Lancisi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:19:51.452Z"
+  }
+}

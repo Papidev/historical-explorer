@@ -1,0 +1,152 @@
+{
+  "introduction": {
+    "text": "The Fontana dell'Acqua Paola is a monumental fountain on Rome's Janiculum Hill that commemorates the restoration of the Acqua Paola aqueduct by Pope Paul V in 1612. It is significant for providing clean water to the city, influencing later fountains such as the Trevi Fountain, and displaying papal authority through its iconography.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-1",
+        "description": "The Acqua Traiana aqueduct was originally built by Emperor Trajan in 109 CE and later restored by Pope Paul V.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 109,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-2",
+        "description": "The Fontana dell'Acqua Felice was built by Pope Sixtus V between 1585 and 1588, inspiring the design of the Fontana dell'Acqua Paola.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1585,
+          "precision": "approximate",
+          "endYear": 1588,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-3",
+        "description": "The Fontana dell'Acqua Paola was constructed in 1612 to mark the completion of the Acqua Paola aqueduct.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1612,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-4",
+        "description": "In 1690, Carlo Fontana designed an additional semicircular pool for the fountain.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1690,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-5",
+        "description": "An ordinance issued in 1707 forbade residents from bathing in the fountain.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1707,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-6",
+        "description": "In 2019, a Fendi-sponsored campaign funded a partial renovation of the fountain.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2019,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "Giovanni Fontana and Flaminio Ponzio designed the fountain, featuring a massive gateway of five arches that channel water into five marble basins.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-2",
+        "description": "White marble from the ruins of the Roman Temple of Minerva in the Forum of Nerva was used in the construction.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-3",
+        "description": "Atop the fountain, a papal tiara and keys, the Borghese family coat of arms, and angels support the inscription praising Pope Paul V.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-1",
+        "description": "The fountain’s theme focuses on water, with five streams pouring through arches into marble basins and an additional semicircular pool added in 1690.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-2",
+        "description": "An inscription atop the fountain praises Pope Paul V for bringing water to the residents of the Janiculum Hill.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-3",
+        "description": "Iconographic elements include the papal tiara, keys, Borghese coat of arms, and angels.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Pope Paul V",
+      "personId": "papa-paolo-v",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Sixtus V",
+      "personId": "pope-sixtus-v",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Emperor Trajan",
+      "personId": "trajan",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giovanni Fontana (Dominican)",
+      "personId": "giovanni-fontana-dominican",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Flaminio Ponzio",
+      "personId": "flaminio-ponzio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Carlo Verdone",
+      "personId": "carlo-verdone",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Charles T. Griffes",
+      "personId": "charles-t-griffes",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "William Sharp (writer)",
+      "personId": "william-sharp-writer",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Paolo Sorrentino",
+      "personId": "paolo-sorrentino",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

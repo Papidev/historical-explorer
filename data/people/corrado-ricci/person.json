@@ -1,0 +1,69 @@
+{
+  "id": "corrado-ricci",
+  "name": "Corrado Ricci",
+  "wikidataId": "Q3694305",
+  "wikipediaTitle": "Corrado Ricci",
+  "content": {
+    "description": [
+      {
+        "text": "Corrado Ricci was an Italian art historian, museum director, and public servant whose career spanned the late nineteenth and early twentieth centuries. Educated in law and literature, he applied his scholarly background to the management of major cultural institutions, directing the Galleria Estense in Modena, the Galleria nazionale di Parma, the Pinacoteca di Brera in Milan, and the Galleria Nazionale in Florence, while also overseeing the restoration of key monuments in Ravenna such as the Basilica of San Vitale and the mausoleum of Galla Placidia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1906 Ricci was appointed director general of the Italian Ministry of Public Education, a post he held through seven successive governments until 1919. During this tenure he drafted law 364, which established the institutional framework for the protection of Italy’s artistic and archaeological heritage, and he founded a monthly art bulletin to disseminate scholarly research. He later served as senator in 1923 and was a signatory of the 1925 Manifesto of Fascist intellectuals, reflecting his complex engagement with the political currents of his time.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Ricci led the restoration of the Basilica of San Vitale in Ravenna from 1898 to 1906, a project that preserved one of the city’s most important early Christian mosaics.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was instrumental in the 1911 initiative to excavate the imperial forums of Rome, a plan that ultimately led to the 1930s excavations of the Forum of Caesar, the Forum of Augustus, and other imperial sites.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ricci organized the 1904 antique art exhibition in Siena, inaugurating it on 17 April 1904 and showcasing Italy’s classical heritage to a national audience.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He founded a monthly art bulletin while serving as director general of the Ministry of Public Education, providing a platform for contemporary art criticism and scholarship.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ricci was a signatory of the 1925 Manifesto of Fascist intellectuals, aligning himself with the political ideology that dominated Italy in the interwar period.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1923 he was appointed senator of the Kingdom of Italy, a recognition of his contributions to cultural administration and heritage preservation.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "E._Tito_Corrado_Ricci.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:E._Tito_Corrado_Ricci.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/E._Tito_Corrado_Ricci.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/E._Tito_Corrado_Ricci.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Ettore Tito",
+    "author": "Ettore Tito",
+    "width": 500,
+    "height": 352,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Corrado Ricci",
+    "url": "https://it.wikipedia.org/wiki/Corrado_Ricci"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:42:33.551Z"
+  }
+}

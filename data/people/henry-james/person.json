@@ -1,0 +1,73 @@
+{
+  "id": "henry-james",
+  "name": "Henry James",
+  "wikidataId": "Q170509",
+  "wikipediaTitle": "Henry James",
+  "content": {
+    "description": [
+      {
+        "text": "Henry James (1843–1916) was an American‑British novelist whose work bridged literary realism and modernism, earning him a reputation as a key transitional figure in the English language. His novels, such as The Portrait of a Lady and The Turn of the Screw, explore the psychological interiority of characters and the cultural clash between American expatriates and European society, employing a style marked by ambiguity, layered motives, and a focus on the subtle shifts of consciousness.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Born in New York City on 15 April 1843, James spent much of his life abroad, eventually settling in England where he became a British citizen in 1915. He was nominated for the Nobel Prize in Literature in 1911, 1912, and 1916, and his prolific output included novels, short stories, essays, and plays that continue to be studied for their innovative narrative techniques and deep psychological insight.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "James had a stutter when speaking English, a flaw that did not appear when he spoke French, reflecting his fluency in the language he grew up with in Europe.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He became a naturalised British citizen in 1915, a year before his death, and was awarded the Order of Merit in 1917.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "James was nominated for the Nobel Prize in Literature three times—1911, 1912, and 1916—though he never received the award.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His novella The Turn of the Screw, published in 1898, is regarded as the most analysed and ambiguous ghost story in the English language and remains his most widely adapted work.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1843,
+      "month": 4,
+      "day": 15,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1916,
+      "month": 2,
+      "day": 28,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Henry_James_by_John_Singer_Sargent_cleaned.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Henry_James_by_John_Singer_Sargent_cleaned.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Henry_James_by_John_Singer_Sargent_cleaned.jpg/960px-Henry_James_by_John_Singer_Sargent_cleaned.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Henry_James_by_John_Singer_Sargent_cleaned.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "John Singer Sargent (died 1925)",
+    "author": "John Singer Sargent (died 1925)",
+    "width": 2400,
+    "height": 3001,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Henry James",
+    "url": "https://en.wikipedia.org/wiki/Henry_James"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:51:09.017Z"
+  }
+}

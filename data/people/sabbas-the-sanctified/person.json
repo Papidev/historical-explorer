@@ -1,0 +1,65 @@
+{
+  "id": "sabbas-the-sanctified",
+  "name": "Sabbas the Sanctified",
+  "wikidataId": "Q316440",
+  "wikipediaTitle": "Sabbas the Sanctified",
+  "content": {
+    "description": [
+      {
+        "text": "Sabbas the Sanctified was born in 439 in the Cappadocian village of Moutalaske near Caesarea. From a young age he was drawn to monastic life, entering the monastery of Bishop Flavian of Antioch at eight and receiving his tonsure at seventeen. He spent a decade at Flavian’s monastery before moving to Jerusalem and then to the strict cenobitic community of Abba Theoctistus, where he lived in obedience until the age of thirty.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the death of Euthymius the Great, Sabbas withdrew to a cave near the Jordan and attracted a growing number of disciples. He founded the Great Lavra in the Kidron Valley in 484, later establishing the New Lavra near Thekoa to accommodate monks who preferred a semi-eremitical life. His leadership extended beyond the walls of his monasteries; he composed the Jerusalem Typikon, the first monastic rule of church services, and actively opposed Monophysite and Origenist doctrines by appealing to emperors Anastasios I and Justinian I.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The spring that appeared at Sabbas’s lavra during a drought is said to have been a miracle, providing abundant water to the monks.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sabbas’s relics were seized by Crusaders in the 12th century during the War of Saint Sabas and remained in Venice until Pope Paul VI returned them to Mar Saba in 1965.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The San Saba River in Texas was named after him when Juan Antonio Bustillo y Ceballos discovered it on his feast day, 5 December 1732.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 439,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 532,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "SabbastheSanctified.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:SabbastheSanctified.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/SabbastheSanctified.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/SabbastheSanctified.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "The original uploader was Alekjds at English Wikipedia.",
+    "author": "The original uploader was Alekjds at English Wikipedia.",
+    "width": 600,
+    "height": 881,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Sabbas the Sanctified",
+    "url": "https://en.wikipedia.org/wiki/Sabbas_the_Sanctified"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:37:33.506Z"
+  }
+}

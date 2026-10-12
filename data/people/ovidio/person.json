@@ -1,0 +1,67 @@
+{
+  "id": "ovidio",
+  "name": "Ovidio",
+  "wikidataId": "Q7198",
+  "wikipediaTitle": "Publio Ovidio Nasone",
+  "content": {
+    "description": [
+      {
+        "text": "Publius Ovidius Naso was born on 20 March 43 BC in Sulmona, a town in the Samnite region of Italy. He moved to Rome at the age of twelve with his brother to study grammar and rhetoric under prominent teachers such as Marcus Aurelius Fusco and Marcus Porcius Latronius. Although he served briefly in minor public offices, he chose to devote himself to literature, forming early connections with the Messalla circle and with poets like Propertius and, briefly, Virgil.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ovid’s poetic output is traditionally divided into three phases: the youthful love elegies (Amores, Heroides) from 23 BC to 2 AD; the mature masterpieces, notably the Metamorphoses and the Fasti, from 2 AD to 8 AD; and the exile poems (Tristia, Epistulae ex Ponto, Ibis) from 8 AD until his death. In 8 AD he was banished by Emperor Augustus to the remote port of Tomi (modern Constanța, Romania), where he remained until his death around 18 AD.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Metamorphoses, Ovid’s most celebrated work, consists of 15 books and over 12,000 lines of hexameter, compiling more than 250 myths of transformation.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ovid’s exile to Tomi was a political punishment that lasted a decade, during which he produced some of his most poignant elegiac poetry.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Despite his exile, Ovid’s influence extended far beyond antiquity, inspiring writers such as Dante, Shakespeare, and Petrarch.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -43,
+      "month": 3,
+      "day": 20,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 18,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Ovid_by_an_anonymous_sculptor.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ovid_by_an_anonymous_sculptor.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Ovid_by_an_anonymous_sculptor.jpg/960px-Ovid_by_an_anonymous_sculptor.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Ovid_by_an_anonymous_sculptor.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Lucasaw",
+    "author": "Lucasaw",
+    "width": 3024,
+    "height": 4032,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Publio Ovidio Nasone",
+    "url": "https://it.wikipedia.org/wiki/Publio_Ovidio_Nasone"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:24:42.222Z"
+  }
+}

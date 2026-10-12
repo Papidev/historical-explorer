@@ -1,0 +1,151 @@
+{
+  "introduction": {
+    "text": "The Galleria Spada is a museum in Rome housed in the historic Palazzo Spada, notable for its Baroque architecture, forced perspective gallery, and collection of 16th‑17th‑century paintings.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The Palazzo Spada was originally built in 1540 for Cardinal Girolamo Capodiferro.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1540,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "In 1632 Cardinal Spada purchased the palazzo and commissioned Francesco Borromini to redesign it, creating the famous forced perspective gallery.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1632,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "The Galleria Spada was opened to the public in 1927 after the Italian State acquired the building.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1927,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "The gallery closed during the 1940s and reopened in 1951 after restoration efforts.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "history5",
+        "description": "The collection largely derives from the private holdings of Bernardino Spada, supplemented by works from Virgilio Spada.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "Francesco Borromini’s forced perspective gallery features diminishing columns and a rising floor, creating the illusion of a 37‑meter long corridor that is actually only 8 meters.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The palazzo’s façade and interior stuccowork were crafted by Bartolomeo Baronino and Giulio Mazzoni, exemplifying Baroque ornamentation.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "The Room of the Popes contains fifty inscriptions on the walls describing the lives of selected pontiffs, commissioned by Cardinal Bernardino Spada.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Portrait of Cardinal Bernardino Spada (1631) by Guido Reni, a key example of Baroque portraiture.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "Portrait of Cardinal Bernardino Spada (1631) by Guercino, showcasing dramatic chiaroscuro.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "The Revolt of Masaniello by Michelangelo Cerquozzi, a dynamic Baroque painting.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art4",
+        "description": "Saint Cecilia by Artemisia Gentileschi, illustrating the artist’s powerful depiction of music.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art5",
+        "description": "David with the Head of Goliath by Orazio Gentileschi, a dramatic biblical scene.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art6",
+        "description": "Christ and the Samaritan by Giovanni Battista Gaulli, a Baroque religious work.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Francesco Borromini",
+      "personId": "francesco-borromini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Bernardino Spada",
+      "personId": "bernardino-spada",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Federico Zeri",
+      "personId": "federico-zeri",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Girolamo Recanati Capodiferro",
+      "personId": "girolamo-recanati-capodiferro",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Guido Reni",
+      "personId": "guido-reni",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Guercino",
+      "personId": "guercino",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Artemisia Gentileschi",
+      "personId": "artemisia-gentileschi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Orazio Gentileschi",
+      "personId": "orazio-gentileschi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giovanni Battista Gaulli",
+      "personId": "giovanni-battista-gaulli",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Michelangelo Cerquozzi",
+      "personId": "michelangelo-cerquozzi",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "introduction": {
+    "text": "The Fonte di Anna Perenna is a votive fountain dating to the 4th century BC, dedicated to the Roman goddess Anna Perenna. Discovered in 1999 during construction work, it provides a rare glimpse into the cult practices and magical rituals that continued at the site until the 6th century AD.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-1",
+        "description": "The fountain was constructed in the 4th century BC as part of the cult of the goddess Anna Perenna.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -400,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-2",
+        "description": "The fountain remained in use until the 6th century AD, when it was abandoned.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 500,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-3",
+        "description": "The site was excavated and the fountain was discovered in 1999 during the construction of an underground parking lot.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1999,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "The fountain is rectangular, built from tuff blocks and bricks, and features an altar on its front façade.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-1",
+        "description": "A Latin inscription on the altar reads \"NYMPHIS SACRATIS ANNAE PERENNAE\", and the site yielded numerous artifacts including coins, bronze vessels, ceramic bowls, and lead tablets with curses.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Anna Perenna",
+      "personId": "anna-perenna",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ovidio",
+      "personId": "ovidio",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

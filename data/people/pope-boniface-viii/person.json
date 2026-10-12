@@ -1,0 +1,71 @@
+{
+  "id": "pope-boniface-viii",
+  "name": "Pope Boniface VIII",
+  "wikidataId": "Q134646",
+  "wikipediaTitle": "Pope Boniface VIII",
+  "content": {
+    "description": [
+      {
+        "text": "Benedetto Caetani, later Pope Boniface VIII, was born around 1230 in the small town of Anagni, southeast of Rome, into a baronial family that already had close ties to the papacy.  He entered the ecclesiastical world as a canon and legal scholar, serving as a secretary to Cardinal Simon de Brion on diplomatic missions to France and England before being created a cardinal deacon in 1281.  When Pope Celestine V abdicated in December 1294, Caetani was elected by the conclave and took the name Boniface VIII, immediately returning the Curia to Rome and asserting an unprecedented claim that the papal office held supreme authority over both spiritual and temporal matters.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Boniface VIII’s pontificate was marked by a series of bold legal and political actions.  He compiled the Liber Sextus in 1298, a comprehensive collection of canon law that remains a foundational text for ecclesiastical jurisprudence.  In 1300 he proclaimed the first Roman Jubilee, inviting pilgrims to Rome and generating significant revenue for the papal treasury.  His insistence on papal supremacy brought him into direct conflict with King Philip IV of France, culminating in the 1303 attack on his palace at Anagni, where he was briefly imprisoned before dying of fever in October 1303.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Boniface VIII established the first Catholic Jubilee year in 1300, a tradition that would recur every 25 years and become a major source of pilgrimage and income for the Church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He compiled the Liber Sextus in 1298, a codification of canon law that included 88 of his own decisions and the Regulæ Juris, which are still cited by canon lawyers today.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1303 he founded Sapienza University of Rome, the first university in Italy to be granted a papal charter, laying the groundwork for the city’s reputation as a center of learning.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His conflict with King Philip IV of France led to the famous 1303 assault on his palace at Anagni, where he was held captive for three days before being released and dying a month later.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1230,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1303,
+      "month": 10,
+      "day": 11,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Giotto,_bonifacio_VIII_proclama_il_giubileo_del_1300,_frammento_02.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Giotto%2C_bonifacio_VIII_proclama_il_giubileo_del_1300%2C_frammento_02.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Giotto%2C_bonifacio_VIII_proclama_il_giubileo_del_1300%2C_frammento_02.jpg/960px-Giotto%2C_bonifacio_VIII_proclama_il_giubileo_del_1300%2C_frammento_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/83/Giotto%2C_bonifacio_VIII_proclama_il_giubileo_del_1300%2C_frammento_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Giotto",
+    "author": "Giotto",
+    "width": 1668,
+    "height": 1832,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Boniface VIII",
+    "url": "https://en.wikipedia.org/wiki/Pope_Boniface_VIII"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:34:47.221Z"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "CappellaDiReginald_Pole.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:CappellaDiReginald_Pole.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/CappellaDiReginald_Pole.JPG/960px-CappellaDiReginald_Pole.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/CappellaDiReginald_Pole.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Notafly",
+      "author": "Notafly",
+      "width": 4000,
+      "height": 3000,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Roma_-_Cappella_di_Reginald_Pole_-_2025-09-29_16-03-33_001.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Roma_-_Cappella_di_Reginald_Pole_-_2025-09-29_16-03-33_001.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Roma_-_Cappella_di_Reginald_Pole_-_2025-09-29_16-03-33_001.jpg/960px-Roma_-_Cappella_di_Reginald_Pole_-_2025-09-29_16-03-33_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/Roma_-_Cappella_di_Reginald_Pole_-_2025-09-29_16-03-33_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Marcamps",
+      "author": "Marcamps",
+      "width": 5477,
+      "height": 3651,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Roma_-_Cappella_di_Reginald_Pole_-_2025-09-29_16-03-33_002.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Roma_-_Cappella_di_Reginald_Pole_-_2025-09-29_16-03-33_002.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Roma_-_Cappella_di_Reginald_Pole_-_2025-09-29_16-03-33_002.jpg/960px-Roma_-_Cappella_di_Reginald_Pole_-_2025-09-29_16-03-33_002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Roma_-_Cappella_di_Reginald_Pole_-_2025-09-29_16-03-33_002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Marcamps",
+      "author": "Marcamps",
+      "width": 3590,
+      "height": 4487,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "CappellaDiReginald_Pole.JPG"
+}

@@ -1,0 +1,65 @@
+{
+  "id": "umberto-bosco",
+  "name": "Umberto Bosco",
+  "wikidataId": "Q3548193",
+  "wikipediaTitle": "Umberto Bosco",
+  "content": {
+    "description": [
+      {
+        "text": "Umberto Bosco was an Italian literary scholar who rose to prominence as the chief editor of the Enciclopedia Italiana Treccani. After earning a degree in Letters from the University of Rome La Sapienza in 1923, he began teaching at secondary schools in 1925 and secured a university chair in 1929 following a doctoral thesis on Galileo as a writer. He served as an ordinary professor of Italian literature at the University of Milan from 1942 and at the Faculty of Education in Rome from 1946, shaping generations of students with his rigorous approach to literary history.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Bosco’s scholarly output was extensive and focused on key figures of Italian literature, including Petrarch, Dante, and Leopardi, as well as broader movements such as the Renaissance and Romanticism. He directed several major reference works—most notably the Enciclopedia dantesca and the Dizionario Enciclopedico Italiano—and produced a celebrated annotated edition of Dante’s Commedia in 1979 with Giovanni Reggio. His academic influence extended beyond publishing; he was a national member of the Accademia della Crusca, a member of the Accademia Nazionale dei Lincei, and served as president on honor of the International Association for Italian Language and Literature Studies.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Bosco was the editor‑in‑chief of the Enciclopedia Italiana Treccani, guiding the encyclopedia’s editorial direction during a pivotal period of its development.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He directed the monumental Enciclopedia dantesca and collaborated with Giovanni Reggio to publish a commentated edition of Dante’s Commedia in 1979.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Bosco held an ordinary professorship in Italian literature at the University of Milan from 1942 and at the Faculty of Education in Rome from 1946, reflecting his dual commitment to higher education and teacher training.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a national member of the Accademia della Crusca, a member of the Accademia Nazionale dei Lincei, and served as president on honor of the International Association for Italian Language and Literature Studies.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Among his many publications, Bosco authored the 1942 volume *Aspetti del Romanticismo italiano*, which remains a foundational text for studies of Italian Romantic literature.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Umberto_Bosco_(1900-1987).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Umberto_Bosco_(1900-1987).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/Umberto_Bosco_%281900-1987%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/Umberto_Bosco_%281900-1987%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 413,
+    "height": 552,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Umberto Bosco",
+    "url": "https://it.wikipedia.org/wiki/Umberto_Bosco"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T21:06:54.490Z"
+  }
+}

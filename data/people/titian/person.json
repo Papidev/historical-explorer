@@ -1,0 +1,63 @@
+{
+  "id": "titian",
+  "name": "Titian",
+  "wikidataId": "Q47551",
+  "wikipediaTitle": "Titian",
+  "content": {
+    "description": [
+      {
+        "text": "Tiziano Vecellio, known as Titian, was born around 1488–1490 in Pieve di Cadore near Belluno, a small town under Venetian rule. He trained under several masters, including Sebastiano Zuccato, Gentile Bellini, Giovanni Bellini, and Giorgione, before establishing his own distinctive style that blended vibrant colour, expressive brushwork, and a keen sense of composition. His early works already show a mastery of portraiture, landscape, and mythological themes that would become hallmarks of his career.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Titian’s reputation grew rapidly, and he became the most sought‑after painter of the Venetian school, attracting commissions from the Republic, northern Italian princes, the Habsburgs, and the papacy. He was appointed First Painter to the Most Serene Republic of Venice after Giovanni Bellini’s death, and later served as court painter to Charles V, producing iconic altarpieces, portraits, and mythological scenes that influenced generations of artists. His late works, such as the Venus of Urbino and the Danaë, showcase a mature colourito that remains celebrated for its sensuality and technical mastery.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Titian’s painting methods, especially his use of colour, profoundly influenced not only late Italian Renaissance painters but also future Western artists.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was appointed First Painter to the Most Serene Republic of Venice upon the death of Giovanni Bellini, a position that elevated his status beyond that of a mere tradesman.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1489,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1576,
+      "month": 8,
+      "day": 27,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Vecellio_di_Gregorio_Tiziano_-_autoritratto.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Vecellio_di_Gregorio_Tiziano_-_autoritratto.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Vecellio_di_Gregorio_Tiziano_-_autoritratto.jpg/960px-Vecellio_di_Gregorio_Tiziano_-_autoritratto.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/12/Vecellio_di_Gregorio_Tiziano_-_autoritratto.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Titian",
+    "author": "Titian",
+    "width": 2247,
+    "height": 3051,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Titian",
+    "url": "https://en.wikipedia.org/wiki/Titian"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:39:08.713Z"
+  }
+}

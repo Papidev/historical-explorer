@@ -1,0 +1,73 @@
+{
+  "id": "virgil",
+  "name": "Virgil",
+  "wikidataId": "Q1398",
+  "wikipediaTitle": "Virgil",
+  "content": {
+    "description": [
+      {
+        "text": "Publius Vergilius Maro, known simply as Virgil, was born on 15 October 70 BC in the village of Andes near Mantua in Cisalpine Gaul. He grew up in Cremona, Milan and Rome, where he studied rhetoric, medicine and astronomy before turning to poetry. His early pastoral poems, the Eclogues, were published around 39–38 BC and established him as the successor to Ennius, while his didactic Georgics, written under the patronage of Maecenas, demonstrated his skill in agricultural instruction. By the end of the 30s BC Virgil had become a central figure in the literary circle of Octavian, and his reputation as a classic author was already secured in his own lifetime.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Virgil spent the last eleven years of his life composing the epic Aeneid, a twelve‑book poem that traces the journey of the Trojan hero Aeneas to Italy and lays the foundation for Rome’s imperial destiny. He died on 21 September 19 BC while returning from a trip to Greece, and Augustus ordered the unfinished poem to be published with minimal changes. Virgil’s influence extended far beyond antiquity: he became the guide of Dante’s soul through Hell and Purgatory, his poems were used in medieval divination practices such as the Sortes Vergilianae, and his tomb in Naples was the subject of pilgrimages and legends that even claimed the Apostle Paul visited it. His works remain a cornerstone of Western literary education and continue to inspire writers, artists and scholars.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In Dante Alighieri’s *Divine Comedy*, Virgil is portrayed as the guide who leads Dante through Hell and Purgatory.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the Middle Ages, people practiced the *Sortes Vergilianae*, a form of divination in which passages from Virgil’s poems were selected at random to answer questions.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A medieval legend holds that the Apostle Paul visited Virgil’s tomb in Naples and wept at the sight of the great poet’s resting place.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "For over two centuries, Virgil was regarded as a magician; his poems were believed to possess magical powers and were used in various folk practices.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -70,
+      "month": 10,
+      "day": 15,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": -19,
+      "month": 9,
+      "day": 21,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Parco_della_Grotta_di_Posillipo5_(crop).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Parco_della_Grotta_di_Posillipo5_(crop).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Parco_della_Grotta_di_Posillipo5_%28crop%29.jpg/960px-Parco_della_Grotta_di_Posillipo5_%28crop%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Parco_della_Grotta_di_Posillipo5_%28crop%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Armando Mancini",
+    "author": "Armando Mancini",
+    "width": 1617,
+    "height": 2010,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Virgil",
+    "url": "https://en.wikipedia.org/wiki/Virgil"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:52:46.946Z"
+  }
+}

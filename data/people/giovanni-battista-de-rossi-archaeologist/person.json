@@ -1,0 +1,65 @@
+{
+  "id": "giovanni-battista-de-rossi-archaeologist",
+  "name": "Giovanni Battista de Rossi",
+  "wikidataId": "Q699662",
+  "wikipediaTitle": "Giovanni Battista de Rossi (archaeologist)",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Battista de Rossi was born in Rome on 23 February 1822 into a family that valued education and culture. From an early age he showed a fascination with Christian antiquity, a passion that was sparked during a family trip to Tuscany in 1838 when he was exposed to the region’s artistic treasures. He pursued studies in philosophy at the Collegio Romano (1838–1840) before turning to jurisprudence at the Sapienza, where he earned a doctorate in law in 1844. During this period he also began his archaeological work, visiting the neglected catacombs under the guidance of Jesuit Giuseppe Marchi, a partnership that would earn them the nickname “inseparable friends.”",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "De Rossi’s career was defined by his systematic approach to Christian epigraphy and his pioneering work in early Christian archaeology. He was instrumental in compiling the Corpus Inscriptionum Latinarum, editing the Roman inscriptions that form its sixth volume, and he collaborated closely with Theodor Mommsen and Wilhelm Henzen. In 1849 he rediscovered the Catacombs of Callixtus along the Via Appia Antica, revealing the burial site of nine third‑century popes. Later, in 1888, he demonstrated that the Codex Amiatinus, the oldest surviving complete Latin Vulgate Bible, was of English origin, overturning a long‑held belief that it was Italian. His scholarship earned him membership in several prestigious societies, including the American Philosophical Society, the Royal Netherlands Academy of Arts and Sciences, and the American Antiquarian Society.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "De Rossi was known as the “inseparable friend” of Jesuit Giuseppe Marchi, a partnership that began in 1841 and continued throughout his life.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He discovered that the Codex Amiatinus, previously thought to be Italian, was actually linked to the English monk Ceolfrith, reshaping the understanding of early biblical manuscripts.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1822,
+      "month": 2,
+      "day": 23,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1894,
+      "month": 9,
+      "day": 20,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Giovanni_Battista_Carlo_De_Rossi_-_Imagines_philologorum.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Giovanni_Battista_Carlo_De_Rossi_-_Imagines_philologorum.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/75/Giovanni_Battista_Carlo_De_Rossi_-_Imagines_philologorum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/75/Giovanni_Battista_Carlo_De_Rossi_-_Imagines_philologorum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Alfred Gudeman",
+    "author": "Alfred Gudeman",
+    "width": 420,
+    "height": 512,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giovanni Battista de Rossi (archaeologist)",
+    "url": "https://en.wikipedia.org/wiki/Giovanni_Battista_de_Rossi_(archaeologist)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:59:45.530Z"
+  }
+}

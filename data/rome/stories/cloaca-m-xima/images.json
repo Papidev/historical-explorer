@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "040227_tevere16CloacaMaxima.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:040227_tevere16CloacaMaxima.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/040227_tevere16CloacaMaxima.jpg/960px-040227_tevere16CloacaMaxima.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/040227_tevere16CloacaMaxima.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "user:Lalupa",
+      "author": "user:Lalupa",
+      "width": 1943,
+      "height": 1403,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "012618-08-Forum-Boarium-Architecture-Art-History-Roman-Rome.png",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:012618-08-Forum-Boarium-Architecture-Art-History-Roman-Rome.png",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/012618-08-Forum-Boarium-Architecture-Art-History-Roman-Rome.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/012618-08-Forum-Boarium-Architecture-Art-History-Roman-Rome.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Ministry for Arts and Cultural Activities, Special Superintendency for Archaeology of Rome",
+      "author": "Ministry for Arts and Cultural Activities, Special Superintendency for Archaeology of Rome",
+      "width": 828,
+      "height": 827,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "A_handbook_of_Rome_and_the_Campagna_(1899)_(14762616811).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:A_handbook_of_Rome_and_the_Campagna_(1899)_(14762616811).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/A_handbook_of_Rome_and_the_Campagna_%281899%29_%2814762616811%29.jpg/960px-A_handbook_of_Rome_and_the_Campagna_%281899%29_%2814762616811%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/A_handbook_of_Rome_and_the_Campagna_%281899%29_%2814762616811%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "No restrictions",
+      "attribution": "Internet Archive Book Images",
+      "author": "Internet Archive Book Images",
+      "width": 2480,
+      "height": 1548,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "040227_tevere16CloacaMaxima.jpg"
+}

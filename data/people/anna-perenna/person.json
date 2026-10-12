@@ -1,0 +1,65 @@
+{
+  "id": "anna-perenna",
+  "name": "Anna Perenna",
+  "wikidataId": "Q539796",
+  "wikipediaTitle": "Anna Perenna",
+  "content": {
+    "description": [
+      {
+        "text": "Anna Perenna was an ancient Roman goddess who presided over the course of the year, embodying its perpetual renewal. She was celebrated at the beginning of the Roman calendar, which fell in March, and her name—sometimes rendered as Anna or Peranna—reflected the hope that the year would pass smoothly and abundantly.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The goddess’s festival on 15 March was marked by elaborate banquets held in a sacred forest, where Romans could indulge in dancing, bawdy songs, and revelry. Archaeological finds in the Parioli district of Rome, including a votive spring and late‑ancient lead tablets with curses, attest to the cult’s presence as far back as the 4th century BCE. Scholars have linked her to the Sanskrit root 'ann' meaning food, suggesting a role as a deity of abundance, and Ovid’s Fasti even identifies her as the sister of Dido, weaving her into the mythic tapestry of the city.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Her festival was celebrated on 15 March with long banquets in a sacred forest, where Romans could indulge in dancing, bawdy songs, and revelry.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Archaeological evidence in Rome’s Parioli district, including a votive spring and late‑ancient lead tablets with curses, dates the cult of Anna Perenna to the 4th century BCE.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Scholars have linked Anna Perenna to the Sanskrit root 'ann' meaning food, suggesting she may have been a goddess of abundance and nourishment.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In Ovid’s Fasti, Anna Perenna is identified as the sister of Dido, connecting her to the mythic narrative of the city.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Some traditions hold that Anna Perenna helped plebeians during the 494 BCE riots by providing them with baked goods, and the Romans honored her with a statue.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Anniusfamiliycoin.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Anniusfamiliycoin.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Anniusfamiliycoin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Anniusfamiliycoin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Classical Numismatic Group, Inc. http://www.cngcoins.com",
+    "author": "CNGcoins",
+    "width": 500,
+    "height": 249,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Anna Perenna",
+    "url": "https://it.wikipedia.org/wiki/Anna_Perenna"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:24:26.800Z"
+  }
+}

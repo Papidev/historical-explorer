@@ -1,0 +1,77 @@
+{
+  "id": "bernardino-spada",
+  "name": "Bernardino Spada",
+  "wikidataId": "Q822934",
+  "wikipediaTitle": "Bernardino Spada",
+  "content": {
+    "description": [
+      {
+        "text": "Bernardino Spada was born on 21 April 1594 in Brisighella, a town in the province of Ravenna. He studied law in Bologna, Perugia and Rome, earning a doctorate before entering the Papal Curia in 1617. In 1623 he was consecrated bishop and appointed papal nuncio to France, later serving as papal legate in Bologna and returning to Rome in 1631 where he held several influential curial positions.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Spada became a cardinal in 1626 and was a noted patron of the arts. He purchased the Palazzo Spada in 1632, commissioning the architect Francesco Borromini to remodel it in a Baroque style that now houses his extensive art collection. He also supported the literary work of Martha Marchina, a soapmaker poet, and oversaw the publication of her posthumous collection, *Musa Posthuma*, after his death.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Spada commissioned the renowned architect Francesco Borromini to redesign the Palazzo Spada, transforming it into a Baroque masterpiece that remains a key example of 17th‑century Roman architecture.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the plague epidemic of 1630/31, Spada helped organize the health care system in Bologna, coordinating relief efforts to mitigate the outbreak.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As a plenipotentiary during the First War of Castro, Spada negotiated a truce with the Duchy of Parma, later publishing a manifesto that defended his actions against accusations from Pope Urban VIII.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Spada was implicated in the death of Andrea Casale, a former prisoner of war who returned to Bologna; Casale was imprisoned and beaten to death under Spada’s management, a story that later caused scandal.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the patron of Martha Marchina, an Italian soapmaker who wrote Latin poetry; Spada’s support led to the publication of her collection *Musa Posthuma* after his death in 1662.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1594,
+      "month": 4,
+      "day": 21,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1661,
+      "month": 11,
+      "day": 10,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Ritratto_del_cardinale_Bernardino_Spada_-_Guercino.png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ritratto_del_cardinale_Bernardino_Spada_-_Guercino.png",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Ritratto_del_cardinale_Bernardino_Spada_-_Guercino.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Ritratto_del_cardinale_Bernardino_Spada_-_Guercino.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Guercino",
+    "author": "Guercino",
+    "width": 797,
+    "height": 865,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Bernardino Spada",
+    "url": "https://en.wikipedia.org/wiki/Bernardino_Spada"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:47:39.833Z"
+  }
+}

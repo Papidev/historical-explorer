@@ -1,0 +1,53 @@
+{
+  "id": "chigi-family",
+  "name": "Chigi family",
+  "wikidataId": "Q1072540",
+  "wikipediaTitle": "Chigi family",
+  "content": {
+    "description": [
+      {
+        "text": "The House of Chigi is an Italian princely family that traces its roots to the 13th‑century counts of Ardenghesca in southern Tuscany.  The earliest authentic mention of the family appears in Siena’s archives, where an Alemanno served as counsellor to the Republic of Siena.  By the late fifteenth century, the family had established a Roman branch under Mariano Chigi (1439–1504), a banker who twice served as Siena’s ambassador to Popes Alexander VI and Julius II, thereby securing the family’s influence in the papal court.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The most celebrated member of the family was Agostino Chigi (1465–1520), whose wealth and patronage made him a central figure of the Italian Renaissance.  He financed the construction of the Farnesina palace and its gardens, which were later decorated by masters such as Raphael, Sebastiano del Piombo, Giulio Romano, and Il Sodoma.  Pope Julius II effectively made Agostino his finance minister and granted him the privilege of quartering the Della Rovere arms alongside the Chigi coat of arms, a rare honor that underscored the family’s close ties to the papacy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Chigi family palace on Via del Corso in Rome is currently the seat of the Italian government.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The family’s mausoleum is located in the Chigi Chapel of the Basilica of Santa Maria del Popolo in Rome, a masterpiece designed by Raphael and Gian Lorenzo Bernini.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Arms_of_the_House_of_Chigi_(1).svg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Arms_of_the_House_of_Chigi_(1).svg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Arms_of_the_House_of_Chigi_%281%29.svg/960px-Arms_of_the_House_of_Chigi_%281%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/72/Arms_of_the_House_of_Chigi_%281%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "MostEpic",
+    "author": "MostEpic",
+    "width": 430,
+    "height": 500,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Chigi family",
+    "url": "https://en.wikipedia.org/wiki/Chigi_family"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:20:15.586Z"
+  }
+}

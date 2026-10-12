@@ -1,0 +1,53 @@
+{
+  "id": "adam",
+  "name": "Adam",
+  "wikidataId": "Q70899",
+  "wikipediaTitle": "Adam",
+  "content": {
+    "description": [
+      {
+        "text": "According to the biblical account in Genesis, Adam is the first human created by God from the dust of the ground and given life through divine breath. He is placed in the Garden of Eden, where he and his companion Eve are commanded not to eat from the tree of the knowledge of good and evil. Their disobedience introduces sin and mortality into the human experience, leading to their expulsion from the garden and the beginning of human labor and death. This narrative is foundational not only for Judaism and Christianity but also informs Islamic teachings, where Adam is portrayed as the first human and the first prophet, whose repentance is seen as a model for all believers.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Across the Abrahamic faiths, Adam occupies a central theological role. In Judaism, he is seen as the archetypal human whose soul reflects the divine image, and Jewish midrashic literature expands on his creation from dust of all four corners of the earth. Christianity regards him as the original sinner whose fall necessitated the redemptive work of Christ, while Gnostic traditions reinterpret his bodily creation as a negative event, emphasizing the soul's imprisonment in matter. Islamic tradition further elevates Adam to the status of Khalifa, the divine deputy on earth, and his story is used to illustrate the human capacity for repentance and divine forgiveness.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In Islamic tradition, Adam is considered the first prophet and the first Muslim, and his story is used to illustrate the human capacity for repentance and divine forgiveness.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The story of Adam and Eve has been linked to the folk tradition of the Christmas tree, with 24 December once celebrated as \"Adam and Eve Day\" in parts of Germany and central Europe, where a fir tree with apples was used to reenact the Garden of Eden.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Michelangelo,_Creation_of_Adam_03.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Michelangelo%2C_Creation_of_Adam_03.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Michelangelo%2C_Creation_of_Adam_03.jpg/960px-Michelangelo%2C_Creation_of_Adam_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Michelangelo%2C_Creation_of_Adam_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Michelangelo",
+    "author": "Michelangelo",
+    "width": 1042,
+    "height": 840,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Adam",
+    "url": "https://en.wikipedia.org/wiki/Adam"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:57:42.433Z"
+  }
+}

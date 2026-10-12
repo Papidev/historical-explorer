@@ -1,0 +1,71 @@
+{
+  "id": "gillo-dorfles",
+  "name": "Gillo Dorfles",
+  "wikidataId": "Q2273489",
+  "wikipediaTitle": "Gillo Dorfles",
+  "content": {
+    "description": [
+      {
+        "text": "Gillo Dorfles was born in Trieste, then part of Austria‑Hungary, to a Jewish naval engineer father and a Genoese Jewish mother. He earned a medical degree with a specialization in psychiatry, but from the early 1930s he was already studying painting, aesthetics and the arts. His fascination with abstract drawings made by his father, combined with his exposure to Rudolf Steiner’s anthroposophy in 1934, steered his artistic practice toward mysticism and aligned it more with Central European themes than with the contemporary Italian scene.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1948 he co‑founded the Movimento per l'arte concreta (MAC) and became a professor of aesthetics at the universities of Milan, Cagliari and Trieste. Throughout the 1950s he exhibited with MAC in Italy and abroad, and he published influential essays such as Discorso tecnico delle arti (1952) and Il divenire delle arti (1959). He also wrote monographs on artists ranging from Bosch to Wols, and he was the first to identify baroque elements in modern art in 1951. His later works critiqued hyper‑consumption and the media, and he received numerous honors, including the Compasso d’oro and honorary doctorates from several universities. Dorfles died in Milan on 2 March 2018, shortly before his 108th birthday.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the first to see baroque trends in modern art in 1951, a concept that would later be termed neobarocco.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He co‑founded the Movimento per l'arte concreta (MAC) in 1948, helping to shape the concrete art movement in Italy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1992 he ran for the Italian Chamber of Deputies with the Lista Marco Pannella, but received only 74 votes.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He received the Compasso d’oro from the Association for Industrial Design and the Medaglia d’oro from the Triennale.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a professor of aesthetics at three universities—Milan, Cagliari, and Trieste—throughout his career.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 2018,
+      "month": 3,
+      "day": 2,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Gillo_Dorfles_2013.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Gillo_Dorfles_2013.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Gillo_Dorfles_2013.JPG/960px-Gillo_Dorfles_2013.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Gillo_Dorfles_2013.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Niccolò Caranti",
+    "author": "Niccolò Caranti",
+    "width": 2591,
+    "height": 3886,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Gillo Dorfles",
+    "url": "https://it.wikipedia.org/wiki/Gillo_Dorfles"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:26:20.183Z"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "francesco-di-giorgio-martini",
+  "name": "Francesco di Giorgio Martini",
+  "wikidataId": "Q434425",
+  "wikipediaTitle": "Francesco di Giorgio Martini",
+  "content": {
+    "description": [
+      {
+        "text": "Francesco di Giorgio Martini was born in Siena in 1439 and was baptized on 23 September of that year as Franciescho Maurizio di Giorgio di Martino pollaiolo. He received his artistic training under the painter and sculptor Vecchietta, and his earliest documented works date to 1460, when he was named a painter alongside Benvenuto di Giovanni. During the 1460s he produced small‑scale paintings, illuminated manuscripts, and a wooden sculpture of Saint John the Baptist, demonstrating his versatility in both painting and sculpture. By 1469 he had already been appointed superintendent of Siena’s Bottini, the underground aqueduct system, indicating his early involvement in engineering projects.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Between 1475 and 1477 Martini moved to Urbino, where he served the court of Duke Federico da Montefeltro as a civil and military architect, completing the Ducal Palace and designing fortifications throughout the duchy. He also authored a comprehensive treatise on civil and military architecture, which included numerous technical drawings and was later studied by Leonardo da Vinci. In 1490 he travelled to Milan, where he consulted with Leonardo, Bramante and Amadeo on the design of the Duomo’s tiburio, and he continued to receive commissions in Siena, Naples and other Italian cities until his death in 1501.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 1490 Martini travelled to Milan and consulted with Leonardo da Vinci, Bramante and Giovanni Antonio Amadeo on the design of the Duomo’s tiburio.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was appointed superintendent of the Bottini of Siena in 1469, overseeing the underground aqueduct system that supplied water to the city.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His treatise on civil and military architecture was preserved in the Biblioteca Medicea Laurenziana and was later commented on by Leonardo da Vinci.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A wooden sculpture of Saint Cristoforo created in 1494 for the Bichi chapel in Sant’Agostino is now housed in the Louvre.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1439,
+      "month": 9,
+      "day": 23,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1501,
+      "month": 11,
+      "day": 29,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Ritratto_di_Francesco_di_Giorgio_Martini.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ritratto_di_Francesco_di_Giorgio_Martini.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Ritratto_di_Francesco_di_Giorgio_Martini.jpg/960px-Ritratto_di_Francesco_di_Giorgio_Martini.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/Ritratto_di_Francesco_di_Giorgio_Martini.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Giovanni Battista Cecchi",
+    "author": "Giovanni Battista Cecchi",
+    "width": 1689,
+    "height": 2334,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Francesco di Giorgio Martini",
+    "url": "https://it.wikipedia.org/wiki/Francesco_di_Giorgio_Martini"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:34:22.110Z"
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "introduction": {
+    "text": "The Cloaca Maxima is one of the world’s earliest sewage systems, built in ancient Rome to drain marshes and remove waste, and it remains a symbol of Roman engineering and culture.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Construction ordered by King Tarquinius Priscus around 600 BC to drain the Forum area.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -600,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "By the 2nd century BC the system had a 101‑metre canal that was covered and expanded.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -200,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "From 31 BC to 192 AD manholes were used to access the drainage, which could be traversed by canal.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -31,
+          "precision": "exact",
+          "endYear": 192,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "By the 1st century AD the eleven aqueducts were connected to the Cloaca Maxima to keep the system clear.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "In the 1600s Cardinal Chamberlain imposed a tax to pay for the sewer’s upkeep.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1600,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "In the 1800s the Cloaca Maxima became a popular tourist attraction.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1800,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "Between 1842 and 1852 sections of the drainage were drained for study.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1842,
+          "precision": "exact",
+          "endYear": 1852,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history8",
+        "description": "In 1862 Pietro Narducci surveyed and restored parts of the drainage near the Forum.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1862,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history9",
+        "description": "In 1890 Otto Ludwig Richter created a map of the drainage.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1890,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The original system was an open‑air canal lined with bricks and later covered with wooden bridges or scaffolding.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "Later stages used barrel vaults, Roman concrete and flint to create a covered sewer that could carry large volumes of water.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "Marcus Vipsanius Agrippa renovated and reconstructed much of the sewer, extending its capacity.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Lucius Tarquinius Priscus",
+      "personId": "lucius-tarquinius-priscus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Marcus Vipsanius Agrippa",
+      "personId": "marcus-vipsanius-agrippa",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pliny the Elder",
+      "personId": "pliny-the-elder",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Livy",
+      "personId": "livy",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Cassiodorus",
+      "personId": "cassiodorus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Henry James",
+      "personId": "henry-james",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Venus (mythology)",
+      "personId": "venus-mythology",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Cloacina",
+      "personId": "cloacina",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "derrick-de-kerckhove",
+  "name": "Derrick de Kerckhove",
+  "wikidataId": "Q1904943",
+  "wikipediaTitle": "Derrick de Kerckhove",
+  "content": {
+    "description": [
+      {
+        "text": "Derrick de Kerckhove is a sociologist and academic who has spent most of his career exploring the intersection of culture, technology, and media. He earned a Ph.D. in philosophy and French literature from the University of Toronto in 1975 and a second Ph.D. in the sociology of art from the University of Tours in 1979, after which he became a long‑time associate of the Centre for Culture and Technology and worked closely with Marshall McLuhan for more than a decade as translator, assistant, and co‑author.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "From 1983 to 2008 he directed the McLuhan Program in Culture & Technology at the University of Toronto, while also teaching at the University of Naples Federico II and the Universitas Mercatorum. His scholarship includes the influential book *The Skin of Culture and Connected Intelligence*, which extends Pierre Lévy’s theory of collective intelligence to the digital network context, and the concept of a “brainframe,” describing how digital technologies reshape deep cognitive organization.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He introduced the concept of a brainframe, a deep cognitive architecture of the brain that is altered by the use of digital technologies.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He worked with Marshall McLuhan for over ten years, serving as translator, assistant, and co‑author on several projects.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 2026 he acquired Italian citizenship after many years of residence and academic activity in Italy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Derrick_de_Kerckhove,_2018_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Derrick_de_Kerckhove%2C_2018_(cropped).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Derrick_de_Kerckhove%2C_2018_%28cropped%29.jpg/960px-Derrick_de_Kerckhove%2C_2018_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Derrick_de_Kerckhove%2C_2018_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 2.0",
+    "attribution": "Joi Ito from Inbamura, Japan",
+    "author": "Joi Ito from Inbamura, Japan",
+    "width": 1332,
+    "height": 1885,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Derrick de Kerckhove",
+    "url": "https://it.wikipedia.org/wiki/Derrick_de_Kerckhove"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:34:59.366Z"
+  }
+}

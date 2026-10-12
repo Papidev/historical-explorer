@@ -1,0 +1,69 @@
+{
+  "id": "antonio-raggi",
+  "name": "Antonio Raggi",
+  "wikidataId": "Q604526",
+  "wikipediaTitle": "Antonio Raggi",
+  "content": {
+    "description": [
+      {
+        "text": "Antonio Raggi, born in 1624 in Vico Morcote on the shores of Lake Lugano, was a Swiss‑born sculptor who became a central figure in the Roman Baroque. After an early apprenticeship in Alessandro Algardi’s studio, he entered the orbit of Gianlorenzo Bernini, where for nearly thirty years he worked as a close and prolific pupil. Bernini supplied Raggi with detailed models and supervised his work so closely that Raggi’s statues often conveyed Bernini’s artistic conceit almost as convincingly as works directly executed by Bernini himself.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Raggi’s oeuvre spans stucco and marble, including the stucco decoration of San Tomaso di Villanova in Castel Gandolfo, the statues of Saint Bernardino and Pope Alexander VII Chigi for Siena’s Duomo, and the marble relief of the Death of Saint Cecilia in Sant’Agnese in Agone, which many regard as his masterpiece. He also contributed to the illusionistic stucco of Giovanni Battista Gaulli’s ceiling in the Gesù, the statue of the Danube in Bernini’s Fountain of Four Rivers, and an angel on the Ponte Sant’Angelo, among other commissions. His skill earned him election to the Accademia di San Luca on 1 July 1657, and he remained active in Rome until his death in 1686.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Raggi was known by the alternate name Antonio Lombardo, a detail that appears in contemporary records but is often overlooked in modern scholarship.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Despite his close association with Bernini, Raggi’s work on the marble relief of the Death of Saint Cecilia demonstrates a distinct personal style that has led some art historians to consider it a masterpiece in its own right.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Raggi’s contribution to the illusionistic stucco decoration accompanying Giovanni Battista Gaulli’s ceiling fresco in the Church of the Gesù showcases his ability to blend sculptural and architectural elements, a hallmark of Baroque artistry.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was elected to the Accademia di San Luca on 1 July 1657, a prestigious recognition that underscored his standing among Rome’s leading artists of the period.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1624,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1686,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Antonio_Raggi.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Antonio_Raggi.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Antonio_Raggi.jpg/960px-Antonio_Raggi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/61/Antonio_Raggi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 2686,
+    "height": 3806,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Antonio Raggi",
+    "url": "https://en.wikipedia.org/wiki/Antonio_Raggi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:28:55.398Z"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "mitra-divinit",
+  "name": "Mitra",
+  "wikidataId": "Q6497135",
+  "wikipediaTitle": "Mitra (divinità)",
+  "content": {
+    "description": [
+      {
+        "text": "Mitra is a deity that appears in the Vedic hymns as one of the Aditya, the solar gods, and is associated with friendship, contracts, and the governance of the day.  The earliest known reference to the name Mitra dates to about 1200 BC, where it is invoked in Vedic hymns and later in the Avestan texts of the Persian Zoroastrian tradition as a protector of truth and a judge of souls.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "From its Indo‑Iranian origins, Mitra’s cult spread into the Persian Empire, where he became a major deity of the Zoroastrian pantheon, and later into the Hellenistic and Roman worlds, where he was reinterpreted as a mystery god whose central rite was the tauroctonia, the bull‑slaying ceremony.  In the Roman Empire, temples dedicated to Mitra were often associated with the military and the imperial administration, and the god was sometimes equated with Apollo or the sun god Elio.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The earliest surviving reference to Mitra is found in a treaty dated to about 1400 BC between the Hittites and the Mitanni kingdom, where the god is listed among five Indo‑Iranian deities guaranteeing the agreement.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In the Roman mystery cult, the tauroctonia—Mitra’s ritual slaying of a bull—was depicted in temple art, with the god holding a short sword and the bull’s head turned backward, symbolizing the triumph over chaos.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Mitra’s name is derived from the Indo‑Iranian root meaning “friendship” or “contract,” reflecting his role as a guarantor of oaths and agreements in both Vedic and Persian societies.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The god was often invoked by kings and military leaders, and many royal names in the Parthian and Armenian realms incorporated the element “Mitra,” indicating the deity’s protective influence over rulers and armies.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Mithras_tauroctony_Louvre_Ma3441b.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Mithras_tauroctony_Louvre_Ma3441b.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Mithras_tauroctony_Louvre_Ma3441b.jpg/960px-Mithras_tauroctony_Louvre_Ma3441b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Mithras_tauroctony_Louvre_Ma3441b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Jastrow",
+    "author": "Jastrow",
+    "width": 1754,
+    "height": 1618,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Mitra (divinità)",
+    "url": "https://it.wikipedia.org/wiki/Mitra_(divinit%C3%A0)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:04:08.308Z"
+  }
+}

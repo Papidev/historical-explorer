@@ -1,0 +1,48 @@
+{
+  "id": "antipope-constantine-ii",
+  "name": "Antipope Constantine II",
+  "wikidataId": "Q313495",
+  "wikipediaTitle": "Antipope Constantine II",
+  "content": {
+    "description": [
+      {
+        "text": "Antipope Constantine II, a Roman noble from Nepi, seized the papal throne in 767 after the death of Pope Paul I. With the backing of his brother Toto and a band of Tuscan nobles, he entered Rome by force, forced the Bishop of Praeneste to ordain him as a monk, deacon, and bishop in a single day, and was proclaimed pope on 5 July 767. His election was carried out by armed men rather than by the traditional clerical process, and he was a layman at the time of his consecration, a fact that would later be used against him.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The next year, Lombard forces and local Roman opposition toppled Constantine. He was imprisoned, publicly paraded, and later blinded in a brutal act ordered by the papal court. The blinded Constantine was brought before the Lateran Council of 769, where he was beaten, had his tongue torn out, and was excommunicated. Afterward he was confined to a monastery, and no further record of him survives.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Constantine was ordained as a monk, subdeacon, deacon, and bishop in rapid succession, violating canon law's requirement for intervals between major orders.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After being deposed, Constantine was publicly paraded on a horse, then blinded and left in the street before being reimprisoned in a monastery.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He sent letters to Pepin the Short seeking approval, but the Frankish king ignored them.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 769,
+      "precision": "approximate"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Antipope Constantine II",
+    "url": "https://en.wikipedia.org/wiki/Antipope_Constantine_II"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:38:01.399Z"
+  }
+}

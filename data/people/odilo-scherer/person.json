@@ -1,0 +1,75 @@
+{
+  "id": "odilo-scherer",
+  "name": "Odilo Scherer",
+  "wikidataId": "Q704881",
+  "wikipediaTitle": "Odilo Scherer",
+  "content": {
+    "description": [
+      {
+        "text": "Odilo Pedro Scherer was born on 21 September 1949 in Cerro Largo, Rio Grande do Sul, Brazil, the seventh of eleven children in a German‑Brazilian family. After completing preparatory studies at the minor seminary of São José in Curitiba, he pursued philosophy at the Queen of the Apostles Major Seminary and the Faculty of Education of the University of Passo Fundo, later adding theological studies at the Pontifical Gregorian University in Rome. He was ordained a priest on 7 December 1976 and spent the next two decades teaching philosophy and theology, serving as rector of diocesan seminaries in Cascavel and Toledo, and earning a doctorate in theology from the Gregorian University.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 2001 Pope John Paul II appointed Scherer as auxiliary bishop of São Paulo and titular bishop of Novi; he was installed as Archbishop of São Paulo in 2007, a post he has held since. That same year he was elevated to the College of Cardinals by Pope Benedict XVI, and he has since served on several Vatican congregations, including the Congregation for the Clergy and the Council for the Economy. Scherer participated in the 2013 conclave that elected Pope Francis, was mentioned as a potential papal candidate, and later took part in the 2025 conclave that elected Pope Leo XIV. In 2024 he submitted his resignation at the age of 75, but Pope Francis asked him to remain for two more years.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "During the 2013 conclave that elected Pope Francis, Scherer was mentioned in international media as a potential successor to Pope Benedict XVI and received some votes.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Scherer has been described as an intellectual with great command of finance and economics, and his theology and pastoral approach has been called theologically moderate.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 2009 Scherer argued that removing crucifixes from public places would not serve the interests of Brazilian secularism.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Scherer was one of 133 cardinal electors who participated in the 2025 papal conclave, which elected Pope Leo XIV.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Scherer serves as the Grand Prior of the São Paulo Lieutenancy of the Equestrian Order of the Holy Sepulchre of Jerusalem.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "On 6 August 2020 Pope Francis named Scherer a member of the Vatican Council for the Economy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1949,
+      "month": 9,
+      "day": 21,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Dom_Odilo_Scherer,_October_2024_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Dom_Odilo_Scherer%2C_October_2024_(cropped).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Dom_Odilo_Scherer%2C_October_2024_%28cropped%29.jpg/960px-Dom_Odilo_Scherer%2C_October_2024_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Dom_Odilo_Scherer%2C_October_2024_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 2.0",
+    "attribution": "Celso Silva / Governo do Estado de SP",
+    "author": "Celso Silva / Governo do Estado de SP",
+    "width": 2274,
+    "height": 3154,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Odilo Scherer",
+    "url": "https://en.wikipedia.org/wiki/Odilo_Scherer"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:28:00.387Z"
+  }
+}

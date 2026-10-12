@@ -1,0 +1,61 @@
+{
+  "id": "guido-calza",
+  "name": "Guido Calza",
+  "wikidataId": "Q481249",
+  "wikipediaTitle": "Guido Calza",
+  "content": {
+    "description": [
+      {
+        "text": "Guido Calza studied at the University of Rome, where he was mentored by scholars such as Loewy, Marucchi, Vaglieri, and Beloch. He earned his degree in 1911 with a thesis on the Roman conquest of Crete, and in 1912 he was appointed inspector of antiquities at Ostia Antica following a competitive selection. Under the direction of Dante Vaglieri, Calza began a lifelong dedication to the excavation and study of Ostia, a commitment that continued after Vaglieri’s death in 1913 under the guidance of Angelo Pasqui and later Roberto Paribeni, who succeeded him as superintendent in 1924.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After serving as an engineer officer during the First World War, Calza turned his attention to the archaeological reorganization of the Venezia Giulia region, producing an illustrated guide to Pola at the suggestion of Ugo Ojetti. He returned to Ostia in 1922, where he unearthed the city’s earliest traces, dating them to around 335 BC, and clarified its urban layout and commercial infrastructure, including the horrea east of Via dei Molini described with Italo Gismondi in 1921. During the Second World War he maintained control of Ostia’s excavations, inaugurating new museum halls in 1945, and at the time of his death he was director of Ostia, the Forum Romanum, and the Palatino excavations. He married Raisa Gurevič, the former wife of Giorgio de Chirico, in 1945 and died at the age of 57, being buried in the chapel of San Ercolano at Ostia Antica beside Dante Vaglieri.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Calza’s marriage in 1945 to Raisa Gurevič, who had previously been married to the famous painter Giorgio de Chirico, linked him to a prominent figure in the Italian art world.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the First World War, Calza served as an engineer officer, a role that later informed his meticulous approach to archaeological site management.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He authored an illustrated guide to Pola in 1919, a project initiated at the suggestion of Ugo Ojetti, which contributed to the preservation of the region’s cultural heritage.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Calza was buried in the chapel of San Ercolano at Ostia Antica, next to his mentor Dante Vaglieri, underscoring the close professional and personal ties that shaped his career.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Insula_reconstrustion._Casa_di_Diana._Gismondi.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Insula_reconstrustion._Casa_di_Diana._Gismondi.JPG",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Insula_reconstrustion._Casa_di_Diana._Gismondi.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Insula_reconstrustion._Casa_di_Diana._Gismondi.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Italo Gismondi in GUIDO CALZA: Le origini latine dell'abitazione moderna (I)",
+    "author": "Italo Gismondi in GUIDO CALZA: Le origini latine dell'abitazione moderna (I)",
+    "width": 623,
+    "height": 627,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Guido Calza",
+    "url": "https://it.wikipedia.org/wiki/Guido_Calza"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:57:13.268Z"
+  }
+}

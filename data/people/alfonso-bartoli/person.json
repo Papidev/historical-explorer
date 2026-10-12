@@ -1,0 +1,73 @@
+{
+  "id": "alfonso-bartoli",
+  "name": "Alfonso Bartoli",
+  "wikidataId": "Q21587523",
+  "wikipediaTitle": "Alfonso Bartoli",
+  "content": {
+    "description": [
+      {
+        "text": "Alfonso Bartoli was an Italian archaeologist and teacher who spent most of his career overseeing excavations at the Roman Forum and Palatine Hill.  He began working for the Superintendency of Antiquities and Fine Arts of Rome in 1904, and by 1911 he had become the inspector of the Forum, a position he held through the 1920s and beyond, refusing promotion to superintendent in order to remain focused on the site.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond his fieldwork, Bartoli was a prolific scholar who published detailed reports on Roman imperial architecture and medieval topography.  He also engaged in the restoration of key monuments, most notably the Curia Iulia, and used his findings to argue that the Roman Senate persisted in some form until the 12th century.  His work earned him a life‑senate appointment in 1932, though he later faced political repercussions for refusing to support the fascist regime.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He refused the promotion to superintendent of antiquities three times, choosing instead to stay on the Roman Forum.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Bartoli declined to take an oath to the Italian Social Republic after 8 September 1943, a decision that led to his removal from the Senate.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was appointed senator for life in 1932, but the High Court of Justice for the Sanctions against Fascism stripped him of the title in 1944, a sentence later confirmed by the Cassation in 1948.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His restoration of the Curia Iulia included deconsecrating the former church of Sant'Adriano al Foro, allowing the Senate of the Kingdom to meet in a room arranged in its original Roman configuration.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1874,
+      "month": 1,
+      "day": 1,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1957,
+      "month": 1,
+      "day": 26,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Alfonso_bartoli.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Alfonso_bartoli.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/Alfonso_bartoli.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/Alfonso_bartoli.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0 it",
+    "attribution": "senato.it",
+    "author": "Senato italiano",
+    "width": 720,
+    "height": 993,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Alfonso Bartoli",
+    "url": "https://en.wikipedia.org/wiki/Alfonso_Bartoli"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:56:31.678Z"
+  }
+}

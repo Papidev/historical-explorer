@@ -1,0 +1,54 @@
+{
+  "introduction": {
+    "text": "Ficana was an ancient city in Latium that was conquered by Rome’s fourth king, Ancus Marcius, and subsequently destroyed. The city never recovered and is now an archaeological site near modern Rome. Its brief existence illustrates Rome’s early expansion and the fate of neighboring settlements.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Ficana was an ancient city of Latium that was conquered by Rome’s fourth king, Ancus Marcius, who moved its inhabitants to Rome and destroyed the city.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "history2",
+        "description": "After its destruction, Ficana was never repopulated and is listed among the extinct cities of Latium by Pliny the Elder.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "history3",
+        "description": "The city was located on the Via Ostiensis, eleven miles from Rome, adjoining the Tiber and having a port at Puilia Saxa.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Ancus Marcius",
+      "personId": "ancus-marcius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Livy",
+      "personId": "livy",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pliny the Elder",
+      "personId": "pliny-the-elder",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Marcus Antistius Labeo",
+      "personId": "marcus-antistius-labeo",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Fabius Pictor",
+      "personId": "fabius-pictor",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

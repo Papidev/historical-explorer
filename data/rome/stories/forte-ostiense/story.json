@@ -1,0 +1,45 @@
+{
+  "introduction": {
+    "text": "Forte Ostiense is a historic fort in Rome, built in the late 19th century as part of the city's defensive network and notable for its role in the Italian Resistance during World War II.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-1",
+        "description": "Rome's fortification system was built between 1877 and 1891.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1877,
+          "precision": "exact",
+          "endYear": 1891,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-2",
+        "description": "Forte Ostiense was constructed between 1882 and 1884.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1882,
+          "precision": "exact",
+          "endYear": 1884,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-3",
+        "description": "On 10 September 1943, Forte Ostiense was the site of a resistance action during the German occupation.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1943,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [],
+    "art": []
+  },
+  "relatedPeople": []
+}

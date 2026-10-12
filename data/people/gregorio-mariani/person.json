@@ -1,0 +1,56 @@
+{
+  "id": "gregorio-mariani",
+  "name": "Gregorio Mariani",
+  "wikidataId": "Q16030632",
+  "wikipediaTitle": "Gregorio Mariani",
+  "content": {
+    "description": [
+      {
+        "text": "Gregorio Mariani was born in Ascoli Piceno on 24 August 1833 and studied at the Accademia di San Luca, where he developed a reputation as a painter of genre scenes and portraits. His early work in oil and watercolor showcased a keen eye for costume detail and everyday life, earning him recognition in the Italian art circles of his time.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Later, Mariani shifted his focus to engraving and chromolithography, producing detailed plates of Roman antiquities. He was commissioned by the Prussian Archaeological Institute to illustrate the Tombs of Via Latina, frescoes from the Palazzo dei Cesari, and the ruins of Corneto Tarquinia, thereby contributing valuable visual documentation to the study of ancient Rome.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Mariani spent months working in the Catacomb of Callixtus under candlelight, meticulously drawing sepulchral inscriptions and murals of early Christians.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Many of his drawings were incorporated into Giovanni Battista de Rossi’s illustrated book on the Catacombs, helping to disseminate knowledge of early Christian burial practices.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He also produced numerous lithographic designs for the Bulletin of the Roman Archeological Commission, further cementing his role as a visual historian of Roman antiquities.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1833,
+      "month": 8,
+      "day": 24,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1902,
+      "month": 1,
+      "day": 23,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Gregorio Mariani",
+    "url": "https://en.wikipedia.org/wiki/Gregorio_Mariani"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:09:44.761Z"
+  }
+}

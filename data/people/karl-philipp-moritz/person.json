@@ -1,0 +1,85 @@
+{
+  "id": "karl-philipp-moritz",
+  "name": "Karl Philipp Moritz",
+  "wikidataId": "Q215781",
+  "wikipediaTitle": "Karl Philipp Moritz",
+  "content": {
+    "description": [
+      {
+        "text": "Karl Philipp Moritz was born in Hameln on 15 September 1756 into a poor family. After a brief schooling he became an apprentice to a hat maker, a common trade that gave him a practical view of everyday life. His talent for language soon attracted the attention of a patron in Hanover, who enabled him to attend a gymnasium. He later worked as an actor under Ekhof in Gotha, then studied at Erfurt, joined the Moravian Church in Barby, and pursued theology at Wittenberg. These varied experiences shaped his later writings, which blended personal observation with philosophical reflection.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In Berlin Moritz established himself as a prolific writer, journalist, and educator. He edited the Vossische Zeitung, taught at the Royal Academy of Fine Arts, and became a professor of antiquities. His friendship with Goethe and his role as a mentor to students such as Ludwig Tieck and Alexander von Humboldt positioned him at the heart of the Sturm und Drang and early Romantic movements. Moritz authored a four‑part autobiographical novel, Anton Reiser, and produced pioneering psychological essays in his Journal of Experiential Psychology, among the first German‑language journals on psychology. His aesthetic treatise, Über die bildende Nachahmung des Schönen, was cited by Goethe in his Italian Journey, underscoring Moritz’s influence on contemporary literary theory.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He began his career as a hatter’s apprentice before turning to literature.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After joining the Moravian Church, he studied theology at Wittenberg.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He edited the Vossische Zeitung with the aim of making it proletarian.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as a professor of antiquities at the Royal Academy of Fine Arts in Berlin.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His Journal of Experiential Psychology was one of the first German‑language journals on psychology.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Goethe cited Moritz’s treatise Über die bildende Nachahmung des Schönen in his Italian Journey.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He mentored future luminaries such as Ludwig Tieck and Alexander von Humboldt.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1756,
+      "month": 9,
+      "day": 15,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1793,
+      "month": 6,
+      "day": 26,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Moritz1.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Moritz1.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Moritz1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Moritz1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Friedrich Rehberg",
+    "author": "Friedrich Rehberg",
+    "width": 893,
+    "height": 992,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Karl Philipp Moritz",
+    "url": "https://en.wikipedia.org/wiki/Karl_Philipp_Moritz"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T21:00:32.040Z"
+  }
+}

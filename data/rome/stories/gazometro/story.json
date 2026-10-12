@@ -1,0 +1,149 @@
+{
+  "introduction": {
+    "text": "The Gazometro di Roma is a former gasometer located in Rome’s Ostiense district. Built in the 1930s, it was the largest gasometer in Italy and became a symbol of the area’s industrial heritage. In the 21st century it has been transformed into the Luxometro, a contemporary art installation that illuminates the site with LED lights, turning the industrial landmark into a cultural icon.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "design-1909",
+        "description": "Design of the Gazometro was conceived in 1909 by Mayor Ernesto Nathan.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1909,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "minor-gasometers-1910-1912",
+        "description": "Three smaller gasometers were built by Samuel Cuttler & Sons between 1910 and 1912.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1910,
+          "precision": "exact",
+          "endYear": 1912,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "construction-1935-1937",
+        "description": "Construction of the main gasometer and its supporting metal framework was carried out by Ansaldo and Klonne Dortmund between 1935 and 1937.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1935,
+          "precision": "exact",
+          "endYear": 1937,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "ownership-1967",
+        "description": "Since 1967 the Gazometro area has been owned by Eni, following its acquisition of Italgas through Snam.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1967,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "renovation-2006",
+        "description": "In 2006 the municipality of Rome and Eni launched the Luxometro project, converting the site into a contemporary art installation.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2006,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "school-2020",
+        "description": "In 2020 Eni opened the Joule business school on the site, an accelerator for sustainable entrepreneurship.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2020,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "zero-2021",
+        "description": "Since 2021 the area hosts ZERO, a cleantech startup accelerator.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2021,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "maker-faire-2021-2022",
+        "description": "The Gazometro hosted Maker Faire Rome in 2021 and 2022.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2021,
+          "precision": "exact",
+          "endYear": 2022,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "eni-2050-lab-2022",
+        "description": "In 2022 the Eni 2050 Lab was inaugurated in building 30.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2022,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "road-2023",
+        "description": "On 17 May 2023 the ROAD project was inaugurated, aiming to promote energy innovation.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2023,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "dimensions",
+        "description": "The main gasometer had a height of 89.10 m, a diameter of 63 m, and a volume of 200,000 m³, supported by 1,551 steel poles spanning 36 km.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "metal-framework",
+        "description": "The structure consists of a steel framework that once encircled the gas cylinder, now standing after the cylinder was removed.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "luxometro-lights",
+        "description": "The Luxometro installation uses over one million LED lamps arranged along more than ten kilometres of fibre optic cable.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "luxometro-installation",
+        "description": "Luxometro is a contemporary art piece that transforms the Gazometro into a luminous landmark, turning industrial heritage into a visual spectacle.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "artistic-reinvention",
+        "description": "The LED lighting turns the former gasometer into an icon of cultural and artistic significance in Rome.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Ernesto Nathan",
+      "personId": "ernesto-nathan",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

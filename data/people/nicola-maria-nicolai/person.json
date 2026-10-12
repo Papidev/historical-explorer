@@ -1,0 +1,53 @@
+{
+  "id": "nicola-maria-nicolai",
+  "name": "Nicola Maria Nicolai",
+  "wikidataId": "Q3876275",
+  "wikipediaTitle": "Nicola Maria Nicolai",
+  "content": {
+    "description": [
+      {
+        "text": "Nicola Maria Nicolai was an erudite prelate with wide-ranging interests, serving as a votant in the Tribunal of the Signatura of Grace and as commissioner general of the Apostolic Camera for roughly fifty years. He also presided over the Pontifical Roman Academy of Archaeology from 1817 until his death and led the Accademia dei Lincei.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As an economist, Nicolai pursued a comprehensive tax reform of the Papal State, notably restructuring the port of Civitavecchia and introducing eucalyptus trees into marsh reclamation projects. He also drafted an unfinished \"Storia de' luoghi\" of the Roman countryside, collaborating with Antonio Coppi to gather memories and documents, though much of the material was later lost.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Nicolai’s 1800 work \"De' bonificamenti delle Terre Pontine\" combined historical, legal, economic, and hydrosystemic analysis of the Pontine marshes.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He introduced eucalyptus trees into the reclamation of marshy areas, a practice that was innovative for the time.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Nicola_Maria_Nicolai_-_BEIC_6316968.tif",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Nicola_Maria_Nicolai_-_BEIC_6316968.tif",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Nicola_Maria_Nicolai_-_BEIC_6316968.tif/lossy-page1-960px-Nicola_Maria_Nicolai_-_BEIC_6316968.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/81/Nicola_Maria_Nicolai_-_BEIC_6316968.tif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Nicola Maria Nicolai",
+    "author": "Nicola Maria Nicolai",
+    "width": 2486,
+    "height": 3469,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Nicola Maria Nicolai",
+    "url": "https://it.wikipedia.org/wiki/Nicola_Maria_Nicolai"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:29:38.030Z"
+  }
+}

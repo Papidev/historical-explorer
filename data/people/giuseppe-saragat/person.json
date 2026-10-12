@@ -1,0 +1,55 @@
+{
+  "id": "giuseppe-saragat",
+  "name": "Giuseppe Saragat",
+  "wikidataId": "Q1238",
+  "wikipediaTitle": "Giuseppe Saragat",
+  "content": {
+    "description": [
+      {
+        "text": "Giuseppe Saragat was a central figure in post‑war Italian politics, rising from a modest background in Turin to become a leading socialist and eventually the President of the Republic. He joined the socialist movement in the early 1920s, helped re‑establish the party in exile, and returned to Italy after the fall of Fascism to play a key role in the Constituent Assembly and the early governments of the new republic.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Elected president in 1964, Saragat presided over a period of political consolidation and social reform. He was known for his staunch support of the Atlantic alliance, his efforts to unify the fragmented socialist parties, and his symbolic donation of a large public beach to Rome. After his term he remained active in politics as a life senator and party secretary until his death in 1988.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "During his presidency, Saragat donated the beach at Castelporziano to the city of Rome, creating the largest public beach in Europe.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 1988,
+      "month": 6,
+      "day": 11,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Giuseppe_Saragat_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Giuseppe_Saragat_(cropped).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/Giuseppe_Saragat_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/Giuseppe_Saragat_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Ghitta Carell",
+    "author": "Ghitta Carell",
+    "width": 389,
+    "height": 543,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giuseppe Saragat",
+    "url": "https://it.wikipedia.org/wiki/Giuseppe_Saragat"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:25:11.511Z"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "davide-rivalta",
+  "name": "Davide Rivalta",
+  "wikidataId": "Q119901444",
+  "wikipediaTitle": "Davide Rivalta",
+  "content": {
+    "description": [
+      {
+        "text": "Davide Rivalta was born in Bologna in 1974 and completed his studies at the Accademia di Belle Arti di Bologna in 1996 before continuing at the Akademie der Bildenden Künste in Munich from 1997 to 1998. Since 2004 he has taught at the same academy, while his artistic focus evolved from the human figure to large-scale animal sculptures crafted in resin, bronze, aluminum, and stainless steel, often in collaboration with the Fonderia de Carli.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Rivalta’s career was launched in 1998 when he won a competition to place an artwork in the courtyard of the Palazzo di Giustizia in Ravenna. His sculptures now adorn public spaces across Italy and abroad—including Ravenna, Rimini, Como, Trieste, Reggio Emilia, Neuchâtel, Mougins, and the Quirinale—and he has exhibited in numerous galleries and museums, while from 2017 onward he has actively positioned his works in urban environments to foster dialogue between nature and human-made settings.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "A lion sculpture by Rivalta is installed beneath the Loggia delle Regioni at the Palazzo del Quirinale.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A horse sculpture can be found in the presidential estate of Castelporziano.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Rivalta’s work is displayed in Place Pury, in front of the Collegiate Church and the University Library in Neuchâtel.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A sculpture by Rivalta is located in Notre-Dame-de-Vie in Mougins.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His sculpture is part of the collection at the Rocca Estense of San Martino in Rio.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1974,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Leoni_Galleria_nazionale_Rivalta_2017.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Leoni_Galleria_nazionale_Rivalta_2017.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Leoni_Galleria_nazionale_Rivalta_2017.jpg/960px-Leoni_Galleria_nazionale_Rivalta_2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Leoni_Galleria_nazionale_Rivalta_2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Ettore Rivalta",
+    "author": "Ettore Rivalta",
+    "width": 7297,
+    "height": 4811,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Davide Rivalta",
+    "url": "https://it.wikipedia.org/wiki/Davide_Rivalta"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:27:09.147Z"
+  }
+}

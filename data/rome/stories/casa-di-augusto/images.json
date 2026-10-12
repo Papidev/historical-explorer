@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Augustus-Maskenraum01b.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Augustus-Maskenraum01b.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Augustus-Maskenraum01b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Augustus-Maskenraum01b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Unknown authorUnknown author",
+      "author": "Unknown authorUnknown author",
+      "width": 800,
+      "height": 577,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "01_Domus_Augusti_Studio.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:01_Domus_Augusti_Studio.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/01_Domus_Augusti_Studio.jpg/960px-01_Domus_Augusti_Studio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c7/01_Domus_Augusti_Studio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "NateBergin",
+      "author": "NateBergin",
+      "width": 5000,
+      "height": 3750,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "02_Domus_Augusti_Studio.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:02_Domus_Augusti_Studio.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/02_Domus_Augusti_Studio.jpg/960px-02_Domus_Augusti_Studio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/02_Domus_Augusti_Studio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "NateBergin",
+      "author": "NateBergin",
+      "width": 4500,
+      "height": 6000,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Augustus-Maskenraum01b.jpg"
+}

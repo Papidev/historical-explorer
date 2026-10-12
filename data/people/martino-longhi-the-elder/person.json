@@ -1,0 +1,52 @@
+{
+  "id": "martino-longhi-the-elder",
+  "name": "Martino Longhi the Elder",
+  "wikidataId": "Q349522",
+  "wikipediaTitle": "Martino Longhi the Elder",
+  "content": {
+    "description": [
+      {
+        "text": "Martino Longhi the Elder was born in 1534 in the small town of Viggiù, a place that already had a tradition of architecture in his family. He began his career in Germany, working for the Altemps family, who were relatives of the Milanese Borromeo. In 1566 he was summoned by Pope Pius IV to collaborate on the church of Santa Croce in Bosco Marengo, the pope’s hometown, working alongside the renowned Giorgio Vasari and Jacopo Barozzi da Vignola.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1569 Longhi moved to Rome, where he became a prolific architect. He contributed to the design of Palazzo Altemps and Palazzo Borghese, and he designed several churches, including Santa Maria della Consolazione, the Palazzo Cesi-Armellini, and San Girolamo degli Schiavoni. One of his most notable interventions was the tower of the Palazzo Senatorio on the Capitoline Hill, which he modified from Michelangelo’s original design. Longhi remained in Rome until his death in 1591.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Longhi’s work on Santa Croce in Bosco Marengo was a collaborative effort with Giorgio Vasari and Jacopo Barozzi da Vignola, two of the most prominent architects of the time.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He is credited with modifying the tower of the Palazzo Senatorio on the Capitoline Hill, a structure originally designed by Michelangelo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Longhi came from a lineage of architects: he was the father of Onorio Longhi and the grandfather of Martino Longhi the Younger, continuing the family’s architectural legacy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1534,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1591,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Martino Longhi the Elder",
+    "url": "https://en.wikipedia.org/wiki/Martino_Longhi_the_Elder"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:47:26.608Z"
+  }
+}

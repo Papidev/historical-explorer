@@ -1,0 +1,147 @@
+{
+  "introduction": {
+    "text": "The Catacombs of Santa Felicita are a three‑level underground burial complex in Rome that illustrate early Christian burial practices and the evolving veneration of martyrs.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The edict of Milan in 313 made Christianity legal, after which the catacombs were first recorded under the name of Felicitas of Rome.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 313,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Pope Boniface I (418‑422) built a small underground basilica dedicated to Silanus and an above‑ground oratory for Felicitas, and was buried in a semi‑underground tomb on the site.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 418,
+          "precision": "exact",
+          "endYear": 422,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "In the late 7th or early 8th century, a fresco depicting Felicitas surrounded by her seven children was found in the small basilica.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 700,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Pope Leo III translated Felicitas’ remains to Santa Susanna in the early 9th century, leading to the catacomb’s gradual abandonment.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 800,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "In the 17th century the catacombs were also known as the Catacomb of Sant’Antonio after the Vienne monastery that owned the land.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1600,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "The catacombs were rediscovered at the end of the 18th century after a crumbling building collapsed.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1700,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "Giovanni Battista de Rossi’s 19th‑century excavations confirmed the catacombs belonged to Felicitas.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1800,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history8",
+        "description": "In 1884 a late 7th or early 8th‑century picture of Felicitas with her seven children was found in the small basilica.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1884,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "A small underground basilica dedicated to Silanus, featuring an altar with his remains.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "An above‑ground oratory dedicated to Felicitas, with a semi‑underground tomb for Pope Boniface I.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "The catacombs consist of three levels of burial chambers carved into the subsoil.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "A late 7th or early 8th‑century fresco depicting Felicitas surrounded by her seven children, found in the small basilica.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Felicitas of Rome",
+      "personId": "felicitas-of-rome",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Boniface I",
+      "personId": "pope-boniface-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "pope Leo III",
+      "personId": "pope-leo-iii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giovanni Battista de Rossi (archaeologist)",
+      "personId": "giovanni-battista-de-rossi-archaeologist",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Gregorio Mariani",
+      "personId": "gregorio-mariani",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Marcus Aurelius",
+      "personId": "marcus-aurelius",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

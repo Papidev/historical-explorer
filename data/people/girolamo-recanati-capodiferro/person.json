@@ -1,0 +1,56 @@
+{
+  "id": "girolamo-recanati-capodiferro",
+  "name": "Girolamo Recanati Capodiferro",
+  "wikidataId": "Q3107694",
+  "wikipediaTitle": "Girolamo Recanati Capodiferro",
+  "content": {
+    "description": [
+      {
+        "text": "Girolamo Recanati Capodiferro was born in Rome on 22 June 1502 to the patrician families of Recanati and Capodiferro. From a young age he entered the service of Cardinal Alessandro Farnese, the future Pope Paul III, and later received a series of appointments in the Roman Curia under Pope Clement VII, including several diplomatic missions.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1541 he was named nuncio to Portugal and then to France, where he announced the calling of the Council of Trent. He became a cardinal deacon in December 1544, was appointed papal legate in Romagna, and played a key role in the conclaves that elected Popes Julius III, Marcellus II, Paul IV, and Pius IV. He died on 1 December 1559 during the conclave that elected Pius IV and was buried in Santa Maria della Pace.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the cardinal who announced the measures the Papal States would take to defend itself against a possible Ottoman attack.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as datary from 1541 to 1544 and as treasurer of the Apostolic Camera in 1541.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He proposed a marriage between a French princess and the pope's natural son to Francis I of France.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1502,
+      "month": 6,
+      "day": 22,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1559,
+      "month": 12,
+      "day": 1,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Girolamo Recanati Capodiferro",
+    "url": "https://en.wikipedia.org/wiki/Girolamo_Recanati_Capodiferro"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:48:12.619Z"
+  }
+}

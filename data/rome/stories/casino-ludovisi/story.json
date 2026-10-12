@@ -1,0 +1,162 @@
+{
+  "introduction": {
+    "text": "Casino di Villa Boncompagni Ludovisi is a historic building in Rome’s Ludovisi district, notable for its Renaissance architecture, artistic treasures, and its role in the cultural life of the city.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Cardinal Francesco Maria Del Monte established a suburban retreat in the 16th century, creating the original villa that would become Casino Ludovisi.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1500,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "From 1549 to 1627, Del Monte collected art and patronised figures such as Galileo and Caravaggio, and commissioned works for the villa.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1549,
+          "precision": "exact",
+          "endYear": 1627,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "In 1621, Del Monte sold the villa to Ludovico Ludovisi, who expanded the property into a 30‑hectare park.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1621,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "In 1883, the Boncompagni‑Ludovisi heirs subdivided and sold the estate, leading to the development of Rome’s Ludovisi district.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1883,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "The property was put up for sale in 2021 following the death of Prince Nicolò Boncompagni‑Ludovisi.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2021,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "An auction was held in 2022 with a starting bid of €471 million.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2022,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "In 2023, Princess Rita was evicted from the premises after a court ruling.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2023,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The casino’s architecture was designed by Domenichino, featuring classical proportions and a grand staircase.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The surrounding gardens were attributed to André Le Nôtre, reflecting French formal garden style.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Caravaggio’s ceiling painting Jupiter, Neptune and Pluto, the only ceiling work by the artist, adorns a small room in the casino.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "Guercino’s fresco of Aurora in the main reception hall gives the casino its alternative name, Casino dell’Aurora.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "The collection includes works by Pomarancio (Niccolò Circignani) and Michelangelo, as well as Roman and Greek artefacts.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Francesco Maria Del Monte",
+      "personId": "francesco-maria-del-monte",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Caravaggio",
+      "personId": "caravaggio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Guercino",
+      "personId": "guercino",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ludovico Ludovisi",
+      "personId": "ludovico-ludovisi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Gregory XV",
+      "personId": "pope-gregory-xv",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Domenichino",
+      "personId": "domenichino",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "André Le Nôtre",
+      "personId": "andr-le-n-tre",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Rita Jenrette",
+      "personId": "rita-jenrette",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Michelangelo",
+      "personId": "michelangelo-buonarroti",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Galileo",
+      "personId": "galileo-galilei",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

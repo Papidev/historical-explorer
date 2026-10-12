@@ -1,0 +1,121 @@
+{
+  "introduction": {
+    "text": "The Galleria Nazionale d'Arte Antica is Rome's principal national museum of older paintings, showcasing works mainly from before 1800 and housed in the historic palaces of Palazzo Barberini and Palazzo Corsini.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-expansion",
+        "description": "The gallery expanded through acquisitions and donations, including the Torlonia and Monte di Pietà collections in 1892, the donation of Henriette Hertz in 1915, and the purchase of the Chigi collection in 1918.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1892,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-establishment",
+        "description": "The Galleria Nazionale d'Arte Antica is the principal national collection of older paintings in Rome, focusing on works before 1800 and excluding antiquities.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design-barberini",
+        "description": "Palazzo Barberini was designed by Carlo Maderno for Pope Urban VIII and features a central salon with a ceiling painted by Pietro da Cortona.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-corsini",
+        "description": "Palazzo Corsini, originally Palazzo Riario, was rebuilt in the eighteenth century by Ferdinando Fuga for Cardinal Neri Maria Corsini.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-bernini",
+        "description": "Works by Gian Lorenzo Bernini are part of the collection.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-caravaggio",
+        "description": "Works by Caravaggio are part of the collection.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-raphael",
+        "description": "Works by Raphael are part of the collection.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-titian",
+        "description": "Works by Titian are part of the collection.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-rubens",
+        "description": "Works by Peter Paul Rubens are part of the collection.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-elgreco",
+        "description": "Works by El Greco are part of the collection.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Bernini",
+      "personId": "gian-lorenzo-bernini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Caravaggio",
+      "personId": "caravaggio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Raphael",
+      "personId": "raphael",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Titian",
+      "personId": "titian",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Rubens",
+      "personId": "peter-paul-rubens",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "El Greco",
+      "personId": "el-greco",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Urban VIII",
+      "personId": "pope-urban-viii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Carlo Maderno",
+      "personId": "carlo-maderno",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ferdinando Fuga",
+      "personId": "ferdinando-fuga",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Neri Maria Corsini",
+      "personId": "neri-maria-corsini",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "introduction": {
+    "text": "The Catacombe di San Callisto is a major Roman catacomb on the Appian Way, notable for its Crypt of the Popes and its extensive underground network of burial chambers that span several centuries.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-creation",
+        "description": "The catacomb was originally established by future Pope Callixtus I, a deacon of Rome, under the direction of Pope Zephyrinus, expanding pre‑existing early Christian hypogea.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 200,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-tombs",
+        "description": "The Crypt of the Popes contains the tombs of nine popes from the 2nd to the 4th centuries, including Pontian, Anterus, Fabian, Lucius I, Eutychian, and Sixtus II.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 200,
+          "precision": "approximate",
+          "endYear": 400,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-staircase",
+        "description": "Pope Damasus I built a staircase in the 4th century to provide access to the region of the Popes.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 300,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-translations",
+        "description": "Relics from the crypt were translated to churches of Rome, with the final wave of translations carried out under Pope Sergius II in the 9th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 800,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-rediscovery",
+        "description": "The catacomb and its crypt were rediscovered in 1854 by the Italian archaeologist Giovanni Battista de Rossi.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1854,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-structure",
+        "description": "The catacomb comprises five underground levels, with roughly twenty kilometres of passageways, covering about fifteen hectares, and containing an estimated half a million bodies.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-paintings",
+        "description": "Early Christian paintings and frescoes in the catacomb depict biblical scenes such as baptism, the Eucharist, and the Good Shepherd, and include Greek inscriptions on walls.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Pope Callixtus I",
+      "personId": "pope-callixtus-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Zephyrinus",
+      "personId": "pope-zephyrinus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Damasus I",
+      "personId": "pope-damasus-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Sixtus II",
+      "personId": "pope-sixtus-ii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Cornelius",
+      "personId": "pope-cornelius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Caius",
+      "personId": "pope-caius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Eusebius of Rome",
+      "personId": "eusebius-of-rome",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giovanni Battista de Rossi (archaeologist)",
+      "personId": "giovanni-battista-de-rossi-archaeologist",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Furius Dionysius Filocalus",
+      "personId": "furius-dionysius-filocalus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Sergius II",
+      "personId": "pope-sergius-ii",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

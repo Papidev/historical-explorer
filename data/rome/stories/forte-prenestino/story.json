@@ -1,0 +1,148 @@
+{
+  "introduction": {
+    "text": "Forte Prenestina is a historic fort in Rome’s Prenestino‑Centocelle district, built in the late 19th century and later transformed into a self‑managed social center that hosts cultural events.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Construction of Forte Prenestina began in 1877 and was completed in 1891 as part of Rome’s fortification system.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1877,
+          "precision": "exact",
+          "endYear": 1891,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "The fort was specifically built between 1880 and 1884 on the site of the fourth kilometre of Via Prenestina.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1880,
+          "precision": "exact",
+          "endYear": 1884,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "In 1986 the fort was occupied by local youth during the Festa del non lavoro, marking the beginning of its use as a social centre.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1986,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "The Cordata per l’autoproduzione collective was founded in 1993 within the fort, promoting alternative music production.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1993,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "The Reali Autentici Sound (RAS) reggae sound‑system events were held at the fort from 1995 to 1997.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1995,
+          "precision": "exact",
+          "endYear": 1997,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "The fort hosted the Hackmeeting in 2000, a gathering of hackers and technologists.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2000,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "The international comics festival Crack! Fumetti dirompenti began in 2005 at the fort.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2005,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history8",
+        "description": "The independent photography festival OcchiRossi started in 2009 at the fort.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2009,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history9",
+        "description": "Since 2010 the fort has hosted the Electrode independent electronic music festival and the Partizan Fucina antiautoritaria anti‑fascist festival.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2010,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Crack! Fumetti dirompenti, an international comics festival held at the fort since 2005.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "OcchiRossi, an independent photography festival that began in 2009 at the fort.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "Electrode, an independent electronic music festival that has taken place at the fort since 2010.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Banda Bassotti (gruppo musicale)",
+      "personId": "banda-bassotti-gruppo-musicale",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Assalti Frontali",
+      "personId": "assalti-frontali",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "AK47 (gruppo musicale)",
+      "personId": "ak47-gruppo-musicale",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Derrick de Kerckhove",
+      "personId": "derrick-de-kerckhove",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Andrea Tiddi",
+      "personId": "andrea-tiddi",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

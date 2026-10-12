@@ -1,0 +1,73 @@
+{
+  "id": "baldassarre-peruzzi",
+  "name": "Baldassarre Peruzzi",
+  "wikidataId": "Q177213",
+  "wikipediaTitle": "Baldassarre Peruzzi",
+  "content": {
+    "description": [
+      {
+        "text": "Baldassarre Peruzzi was a true Renaissance polymath, trained as a painter in Siena under Pinturicchio and Francesco di Giorgio Martini before turning to architecture at the age of twenty.  His early commission for the Villa le Volte of the Chigi family marked him as a promising designer, and in 1503 he moved to Rome where the patronage of the powerful banker Agostino Chigi secured him the design of the Villa Farnesina, a pioneering U‑shaped villa that combined elegant architecture with a lush garden and a fresco program that involved Raphael and other leading artists.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Peruzzi’s career later spanned military engineering, theatrical scenography, and ambitious architectural experiments.  During the 1527 Sack of Rome he was captured by the Spanish, paid a ransom, and fled to Siena by sea.  Back in his native city he became the architect of the Republic, designing angular bastions that eliminated blind spots for firearms and strengthening Siena’s walls.  He also proposed a central‑plan church for St. Peter that differed from Raphael’s design, and his drawings were later published by Sebastiano Serlio.  Though he left a rich corpus of drawings and studies of antiquity, his name faded after the 16th century, only to be rediscovered in the 20th century.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Peruzzi was regarded as a \"universal man\" comparable to Raphael and Michelangelo, capable of influencing many artistic disciplines.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He designed the Villa Farnesina, one of the earliest examples of a U‑shaped villa with a formal garden, and oversaw its fresco program that featured Raphael, Sebastiano del Piombo, and others.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the Sack of Rome in 1527 he was taken prisoner by the Spanish, paid a ransom, and escaped to Siena by sea.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Peruzzi applied new military architecture concepts, designing angular bastions without blind spots to counter firearms, influencing fortifications in Siena and the Maremma.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He worked on the mosaics of the chapel of Santa Elena in Santa Croce in Gerusalemme, a notable contribution to Roman art.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He proposed a central‑plan church for St. Peter that differed from Raphael’s design, and his drawings were published by Sebastiano Serlio.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Peruzzi was a specialist in temporary stage apparatus, designing the coronation set for Clement VII in 1524.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Vite_de'_più_eccellenti_pittori,_scultori_e_architetti_(1791)_(14598379677).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Vite_de'_pi%C3%B9_eccellenti_pittori%2C_scultori_e_architetti_(1791)_(14598379677).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Vite_de%27_pi%C3%B9_eccellenti_pittori%2C_scultori_e_architetti_%281791%29_%2814598379677%29.jpg/960px-Vite_de%27_pi%C3%B9_eccellenti_pittori%2C_scultori_e_architetti_%281791%29_%2814598379677%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Vite_de%27_pi%C3%B9_eccellenti_pittori%2C_scultori_e_architetti_%281791%29_%2814598379677%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Giorgio Vasari",
+    "author": "Giorgio Vasari",
+    "width": 1556,
+    "height": 2258,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Baldassarre Peruzzi",
+    "url": "https://it.wikipedia.org/wiki/Baldassarre_Peruzzi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:32:57.778Z"
+  }
+}

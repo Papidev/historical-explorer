@@ -1,0 +1,81 @@
+{
+  "id": "lucio-vero",
+  "name": "Lucio Vero",
+  "wikidataId": "Q1433",
+  "wikipediaTitle": "Lucio Vero",
+  "content": {
+    "description": [
+      {
+        "text": "Lucio Vero, adopted by Emperor Antoninus Pius, rose through the Roman cursus honorum at a remarkably young age. He was appointed questore at the age of twenty‑three, two years before the legal age, and later attained the consulship at twenty‑five. Unlike his adoptive brother Marcus Aurelius, Vero was known for his love of athletic pursuits, especially hunting and the spectacle of gladiatorial games, and he did not marry until the year 164. His career was marked by a steady accumulation of honors, but he never held titles beyond “figlio dell’Augusto.”",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 161, Vero was elevated to co‑emperor alongside Marcus Aurelius, a rare diarchic arrangement that granted him nominal control of the army. He married the young Lucilla and fathered a son who would later be named Lucio Vero. During the 162‑166 campaigns against the Parthians, he earned the titles Armeniacus, Parthicus Maximus, and Medicus for his successes in Armenia and Mesopotamia. His reign ended in the early part of 169, when he likely succumbed to a stroke or the devastating plague that swept the empire.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He became questore at 23, two years before the legal age.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As co‑emperor he was given nominal control of the Roman army.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was awarded the title Armeniacus after capturing Artaxata, even though he did not participate directly in the campaign.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He earned the title Parthicus Maximus following victories in Mesopotamia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He received the title Medicus after the 166 campaign in Armenia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was known for his enthusiasm for gladiatorial games and other athletic spectacles.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He married Lucilla, a young woman of about fifteen years old.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He had a son who was also named Lucio Vero.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 169,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Lucius_Verus_-_MET_-_L.2007.26.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Lucius_Verus_-_MET_-_L.2007.26.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Lucius_Verus_-_MET_-_L.2007.26.jpg/960px-Lucius_Verus_-_MET_-_L.2007.26.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Lucius_Verus_-_MET_-_L.2007.26.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC0",
+    "attribution": "PierreSelim",
+    "author": "PierreSelim",
+    "width": 3427,
+    "height": 3965,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Lucio Vero",
+    "url": "https://it.wikipedia.org/wiki/Lucio_Vero"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:18:03.116Z"
+  }
+}

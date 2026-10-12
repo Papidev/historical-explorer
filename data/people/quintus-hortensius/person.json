@@ -1,0 +1,73 @@
+{
+  "id": "quintus-hortensius",
+  "name": "Quintus Hortensius",
+  "wikidataId": "Q320902",
+  "wikipediaTitle": "Quintus Hortensius",
+  "content": {
+    "description": [
+      {
+        "text": "Quintus Hortensius Hortalus, born in 114 BC, was a prominent Roman lawyer, orator, and statesman who aligned with the Optimates. He rose through the cursus honorum, serving as quaestor in 81 BC, aedile in 75 BC, praetor in 72 BC, and ultimately attaining the consulship in 69 BC alongside Quintus Caecilius Metellus Creticus. His legal career was marked by high-profile cases, including the defense of Nicomedes III of Bithynia at nineteen and later the prosecution of Gaius Verres, which established his reputation as a formidable advocate.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond his public life, Hortensius was known for his flamboyant oratory style, described by Cicero as Asiatic and highly theatrical, and for his personal pursuits. He earned the nickname Dionysia after a celebrated actress and was later called Piscinarius by Cicero, reflecting his hobby of fish-breeding. He also owned luxurious villas near Rome and in Gaeta, and he introduced peacocks as a table delicacy in Roman society. His personal life included a controversial marriage to Marcia, the daughter of Lucius Marcius Philippus, after Cato the Younger divorced her, a union that produced a child and later became a point of scandal after Hortensius’s death.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Hortensius earned the nickname Dionysia after a famous actress, a testament to his flair for performance.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cicero referred to him as Piscinarius, meaning “fish fancier,” highlighting his hobby of fish-breeding.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He is credited with introducing peacocks as a table delicacy at Rome, a novelty that added to his reputation for extravagance.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Hortensius owned the Villa della Palombara near Rome and another villa in Gaeta, showcasing his wealth and taste for grand estates.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His marriage to Marcia, the daughter of Lucius Marcius Philippus, followed Cato the Younger’s divorce of her, a union that produced a child and later sparked a minor scandal after Hortensius’s death.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -113,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": -49,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Bust_of_Hortensius.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Bust_of_Hortensius.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Bust_of_Hortensius.jpg/960px-Bust_of_Hortensius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Bust_of_Hortensius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "James Leigh Strachan-Davidson / J.J. Bernoulli",
+    "author": "James Leigh Strachan-Davidson / J.J. Bernoulli",
+    "width": 1760,
+    "height": 2848,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Quintus Hortensius",
+    "url": "https://en.wikipedia.org/wiki/Quintus_Hortensius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:55:30.075Z"
+  }
+}

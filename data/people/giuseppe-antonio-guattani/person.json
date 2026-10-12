@@ -1,0 +1,40 @@
+{
+  "id": "giuseppe-antonio-guattani",
+  "name": "Giuseppe Antonio Guattani",
+  "wikidataId": "Q3769992",
+  "wikipediaTitle": "Giuseppe Antonio Guattani",
+  "content": {
+    "description": [
+      {
+        "text": "Giuseppe Antonio Guattani was born in Rome in 1748 to a family with roots in the Valle Anzasca, specifically the commune of Bannio Anzino, a frazione of Pontegrande. His father, Carlo Guattani, was a respected anatomical surgeon who served three popes, while his mother, Caterina Pagliarini, came from a prominent Roman printing family and was the sister of a court typographer appointed by Clement XIV to the Portuguese royal court.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In Rome, Guattani became the perpetual secretary of the Accademia di belle arti and the Accademia di Archeologia (now the Accademia Nazionale di San Luca), positions that placed him at the center of the artistic community. There he met notable artists such as the young Neoclassical painter Vincenzo Camuccini. Guattani’s own artistic output included the publication *Monumenti antichi inediti*, whose cover was engraved by Carlo Labruzzi, and he produced detailed contour engravings for Stanislao Morelli’s *La pittura comparata*, a comparative study of painting across major schools.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Guattani’s *Monumenti antichi inediti* featured a cover engraved by Carlo Labruzzi, a detail that highlights the collaboration between artists and engravers in late eighteenth‑century Rome.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1748,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giuseppe Antonio Guattani",
+    "url": "https://it.wikipedia.org/wiki/Giuseppe_Antonio_Guattani"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:49:39.585Z"
+  }
+}

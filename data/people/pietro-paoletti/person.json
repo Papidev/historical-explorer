@@ -1,0 +1,44 @@
+{
+  "id": "pietro-paoletti",
+  "name": "Pietro Paoletti",
+  "wikidataId": "Q16198880",
+  "wikipediaTitle": "Pietro Paoletti",
+  "content": {
+    "description": [
+      {
+        "text": "Pietro Paoletti studied the fresco technique under Giovanni De Min and, in 1827, travelled to Rome at the suggestion of Count Leopoldo Cicognara. There he secured the patronage of Cardinal Giacinto Placido Zurla, a fellow Belluno native, and worked under the neoclassical painter Vincenzo Camuccini.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Paoletti’s skill as a fresco artist earned him commissions across Italy, including the Basilica of Montecassino, Santa Maria Formosa in Venice, and numerous Torlonia residences in Rome such as Palazzo Torlonia and Villa Torlonia. He also frescoed the abside and cupola of the Cathedral of Rieti with biblical scenes, and his work can be found in places ranging from the Loggia del Vaticano to the Caffè Pedrocchi in Padua.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He painted the abside and cupola of the Cathedral of Rieti with stories from the Bible.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His frescoes adorn the Loggia del Vaticano, a testament to his reach beyond provincial commissions.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Paoletti’s brother, Giuseppe Paoletti, was a noted painter of vedute, indicating a family tradition of artistic pursuit.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pietro Paoletti",
+    "url": "https://it.wikipedia.org/wiki/Pietro_Paoletti"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:22:40.366Z"
+  }
+}

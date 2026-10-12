@@ -1,0 +1,69 @@
+{
+  "id": "sforza",
+  "name": "Sforza",
+  "wikidataId": "Q130858",
+  "wikipediaTitle": "Sforza",
+  "content": {
+    "description": [
+      {
+        "text": "The Sforza family rose from humble beginnings in the 14th century to become one of the most powerful dynasties in northern Italy. Their founder, Muzio Attendolo, earned the nickname “Sforza” – Italian for “strong” – after his prowess as a condottiero for the Angevin kings of Naples. In 1450, his son Francesco Sforza, a celebrated military commander, married Bianca Maria Visconti, the last legitimate heir of the Visconti line, and thereby secured the Duchy of Milan for the Sforza.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During their reign, the Sforza were notable patrons of the arts, commissioning works from masters such as Leonardo da Vinci and Bramante, and overseeing the construction of the magnificent Castello Sforzesco. Their political influence extended through strategic marriages and alliances, linking them to the Medici, the papacy, and the Habsburgs. Despite their cultural achievements, the family’s fortunes waned amid the Italian Wars, culminating in the loss of Milan to the French in 1499 and the eventual absorption of their territories by the Holy Roman Empire.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The family name “Sforza” literally means “strong” in Italian, a nickname given to Muzio Attendolo for his military strength.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Francesco Sforza was a renowned condottiero who, after a successful military career, became Duke of Milan in 1450 following his marriage to Bianca Maria Visconti.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Sforza commissioned the construction of the Castello Sforzesco in Milan, which remains a key symbol of their legacy and a major Renaissance fortress.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Caterina Sforza, daughter of Galeazzo Maria Sforza, married Girolamo Riario, the nephew of Pope Sixtus IV, thereby linking the Sforza to papal power.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Sforza were key players in the League of Cambrai, a coalition against the Republic of Venice that marked a turning point in the Italian Wars.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A branch of the family, the Sforza Cesarini, established themselves in Rome after marrying into the Cesarini family, and their descendants held titles such as Prince of Genzano and Duke of Segni into the 20th century.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Arms_of_the_House_of_Sforza.svg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Arms_of_the_House_of_Sforza.svg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Arms_of_the_House_of_Sforza.svg/960px-Arms_of_the_House_of_Sforza.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/Arms_of_the_House_of_Sforza.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Heralder, Eagle by Sodacan",
+    "author": "Heralder, Eagle by Sodacan",
+    "width": 593,
+    "height": 704,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Sforza",
+    "url": "https://it.wikipedia.org/wiki/Sforza"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:12:22.847Z"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "giovanni-raimondo-torlonia",
+  "name": "Giovanni Raimondo Torlonia",
+  "wikidataId": "Q3768001",
+  "wikipediaTitle": "Giovanni Raimondo Torlonia",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Raimondo Torlonia, born into a family of textile merchants in late eighteenth‑century Rome, turned the modest trading house of his father into a banking enterprise that would become the cornerstone of the Torlonia fortune. During the French occupation of Italy he capitalised on the economic chaos, extending lucrative loans to the Roman aristocracy secured by their land and property, and engaging in speculative ventures with the occupying forces. His Banco Marino Torlonia grew into a powerful financial institution that, by the mid‑nineteenth century, controlled vast assets and became the de facto supplier of public works for the papal state.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond banking, Torlonia pursued an ambitious programme of social patronage and status building. He founded schools, orphanages, and hospitals, and restored important churches such as the Basilica dei Santi Apostoli, thereby earning the goodwill of both the Church and the populace. To cement his family’s place among Rome’s historic nobility he acquired a series of titles—ducal and marquisate—between 1803 and 1822, and purchased key properties including the Palazzo di città in 1807, the Villa Torlonia on Via Nomentana (designed by Valadier), and the Villa dei Quintili on the Appia Antica. These acquisitions, coupled with his elevation to 1st Prince of Civitella Cesi in 1814, established the Torlonia as a dominant force in Roman society.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 1794, Torlonia was already recognised as a noble of the Holy Roman Empire, a title that pre‑dated his later Roman honours.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was appointed 1st Prince of Civitella Cesi in 1814, a title created specifically for him by Pope Pius VII.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Palazzo di città, purchased by Torlonia in 1807, was later demolished in 1903 to make way for the Vittoriano.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Villa Torlonia, acquired on Via Nomentana in 1797 and redesigned by the architect Valadier, became the family’s suburban residence and a symbol of their newfound prestige.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Torlonia’s philanthropic legacy includes the establishment of schools, orphanages, hospitals, and the restoration of the Basilica dei Santi Apostoli, reflecting his commitment to both social welfare and religious patronage.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Giovanni_Raimondo_Torlonia.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Giovanni_Raimondo_Torlonia.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Giovanni_Raimondo_Torlonia.JPG/960px-Giovanni_Raimondo_Torlonia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Giovanni_Raimondo_Torlonia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Stefano Bolognini",
+    "author": "Stefano Bolognini",
+    "width": 1536,
+    "height": 2048,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giovanni Raimondo Torlonia",
+    "url": "https://it.wikipedia.org/wiki/Giovanni_Raimondo_Torlonia"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:21:38.305Z"
+  }
+}

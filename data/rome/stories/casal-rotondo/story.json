@@ -1,0 +1,60 @@
+{
+  "introduction": {
+    "text": "Casal Rotondo is the largest surviving circular ancient Roman mausoleum on the Appian Way, southeast of Rome, Italy. It is significant as a rare example of Roman funerary architecture and for its later medieval use as a farmhouse and watchtower.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "construction",
+        "description": "The mausoleum was constructed around 30 BCE at the sixth mile of the Appian Way.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -30,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "canina-inscription",
+        "description": "In the mid‑18th century, Luigi Canina interpreted an epigraphic fragment as evidence that the monument was built by Marcus Aurelius Cotta Maximus Messalinus for his father Marcus Valerius Messalla Corvinus.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1700,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "savelli-watchtower",
+        "description": "A medieval farmhouse was built atop the mausoleum by the Savelli family, serving as a watchtower along the Appian Way.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design",
+        "description": "The mausoleum is a large circular structure with a diameter of 27 m, originally featuring a conical roof, frieze ornamentation, and seating encircling its base.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Luigi Canina",
+      "personId": "luigi-canina",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Marcus Aurelius Cotta Maximus Messalinus",
+      "personId": "marcus-aurelius-cotta-maximus-messalinus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Marcus Valerius Messalla Corvinus",
+      "personId": "marcus-valerius-messalla-corvinus",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

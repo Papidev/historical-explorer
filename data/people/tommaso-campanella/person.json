@@ -1,0 +1,69 @@
+{
+  "id": "tommaso-campanella",
+  "name": "Tommaso Campanella",
+  "wikidataId": "Q191850",
+  "wikipediaTitle": "Tommaso Campanella",
+  "content": {
+    "description": [
+      {
+        "text": "Tommaso Campanella was born on 5 September 1568 in Stignano, Calabria, into a poor family. He entered the Dominican Order before the age of fourteen, adopting the name fra' Tommaso in honour of Thomas Aquinas. Campanella quickly became a child prodigy, studying theology and philosophy under several masters and developing a strong interest in the empiricism of Bernardino Telesio. His early work, *Philosophia sensibus demonstrata* (1591), defended Telesio’s view that knowledge comes from sensation and challenged the prevailing Aristotelian orthodoxy, which led to his arrest by the Roman Inquisition in 1594 and a two‑year house arrest.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his release, Campanella returned to Calabria, where he was accused of conspiring against Spanish rule in 1599. He was tortured and imprisoned in Naples for 27 years, during which he produced his most significant works, including *The City of the Sun* (originally written in 1602), a utopian vision of an egalitarian theocratic society. He also defended Galileo Galilei in *The Defense of Galileo* (written 1616, published 1622) and advised Pope Urban VIII on astrological matters, predicting eclipses in 1628 and 1630 that the Pope survived. Campanella was released in 1629, later fled to France, and spent his final years in a Parisian convent until his death on 21 May 1639.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "During his 27‑year imprisonment in Naples, Campanella wrote a vast corpus of philosophical, theological, and astrological treatises, including *The City of the Sun*, *The Monarchy of Spain*, and *Atheismus triumphatus*.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a vocal defender of Galileo, writing a letter to the astronomer in 1632 that criticized the Congregation’s attempts to suppress the *Dialogue Concerning the Two Chief World Systems* and argued that the Pope’s opposition was based on theological rather than scientific grounds.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Campanella’s astrological predictions were taken seriously by Pope Urban VIII, who relied on him to avert the perceived dangers of eclipses in 1628 and 1630, thereby securing the Pope’s survival and granting Campanella a position as an advisor in Rome.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1568,
+      "month": 9,
+      "day": 5,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1639,
+      "month": 5,
+      "day": 21,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Cozza_Tommaso_Campanella.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Cozza_Tommaso_Campanella.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Cozza_Tommaso_Campanella.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Cozza_Tommaso_Campanella.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Francesco Cozza",
+    "author": "Francesco Cozza",
+    "width": 744,
+    "height": 1024,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Tommaso Campanella",
+    "url": "https://en.wikipedia.org/wiki/Tommaso_Campanella"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:51:20.494Z"
+  }
+}

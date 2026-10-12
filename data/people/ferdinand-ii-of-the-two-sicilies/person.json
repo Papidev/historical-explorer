@@ -1,0 +1,85 @@
+{
+  "id": "ferdinand-ii-of-the-two-sicilies",
+  "name": "Ferdinand II of the Two Sicilies",
+  "wikidataId": "Q332717",
+  "wikipediaTitle": "Ferdinand II of the Two Sicilies",
+  "content": {
+    "description": [
+      {
+        "text": "Ferdinand II was born on 12 January 1810 in Palermo to King Francis I and Maria Isabella of Spain. He ascended to the throne of the Two Sicilies in 1830 and initially enjoyed popular support. He promised impartial justice, fiscal reform, and the healing of long‑standing wounds. During his early reign he cut taxes, built the first railway between Naples and Portici, introduced the first steamship on the Italian Peninsula, and established telegraphic links between Naples and Palermo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The liberal tide of 1848 forced Ferdinand to grant a constitution modeled on the French Charter of 1830, but he dissolved the parliament in 1849 after riots continued. He earned the nickname “re bomba” for bombarding Messina for eight hours after its defenders had surrendered, killing many civilians. In 1856 a soldier attempted to assassinate him, and the infection from the bayonet wound is believed to have contributed to his death on 22 May 1859.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He earned the nickname “re bomba” (The Bomb King) for bombarding Messina for eight hours after its defenders had surrendered, killing many civilians.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He granted asylum to Pope Pius IX at Gaeta during the papal exile caused by revolutionary disturbances.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He built the first railway in Italy, connecting Naples with Portici, during his early reign.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He introduced the first steamship on the Italian Peninsula, modernising naval transport.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He established telegraphic connections between Naples and Palermo, improving communication across the kingdom.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1848 he was forced to grant a constitution modeled on the French Charter of 1830, but he dissolved the parliament in 1849 after riots continued.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "An attempted assassination in 1856, in which a soldier bayoneted him, is believed to have caused an infection that contributed to his death in 1859.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1810,
+      "month": 1,
+      "day": 12,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1859,
+      "month": 5,
+      "day": 22,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Raffaele_Messina_-_Ferdinando_II_in_abito_di_San_Gennaro_a_Palazzo_Reale_con_eruzione_del_Vesuvio_sullo_sfondo_1832.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Raffaele_Messina_-_Ferdinando_II_in_abito_di_San_Gennaro_a_Palazzo_Reale_con_eruzione_del_Vesuvio_sullo_sfondo_1832.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Raffaele_Messina_-_Ferdinando_II_in_abito_di_San_Gennaro_a_Palazzo_Reale_con_eruzione_del_Vesuvio_sullo_sfondo_1832.jpg/960px-Raffaele_Messina_-_Ferdinando_II_in_abito_di_San_Gennaro_a_Palazzo_Reale_con_eruzione_del_Vesuvio_sullo_sfondo_1832.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Raffaele_Messina_-_Ferdinando_II_in_abito_di_San_Gennaro_a_Palazzo_Reale_con_eruzione_del_Vesuvio_sullo_sfondo_1832.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Raffaele Messina",
+    "author": "Raffaele Messina",
+    "width": 991,
+    "height": 1280,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Ferdinand II of the Two Sicilies",
+    "url": "https://en.wikipedia.org/wiki/Ferdinand_II_of_the_Two_Sicilies"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:57:03.025Z"
+  }
+}

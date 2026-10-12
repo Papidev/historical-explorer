@@ -1,0 +1,69 @@
+{
+  "id": "camillo-pamphili",
+  "name": "Camillo Pamphili",
+  "wikidataId": "Q2935138",
+  "wikipediaTitle": "Camillo Francesco Maria Pamphili",
+  "content": {
+    "description": [
+      {
+        "text": "Camillo Francesco Maria Pamphili was born in Naples on 21 February 1622 into the influential Pamphili family. He was the son of Pamphilio Pamphili and Olimpia Maidalchini, and the nephew of Pope Innocent X. From a young age he studied poetry, philosophy, mathematics and architecture, and after his uncle’s election to the papacy he was appointed General of the Papal Army and later created Cardinal Deacon in November 1644. Although he held the title of cardinal‑nephew, contemporary accounts describe him as a carefree young man who often slept until the evening.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1647, against his mother’s wishes, Pamphili resigned the cardinalate and married Olimpia Aldobrandini, the granddaughter of Pope Clement VIII. The union brought a vast dowry that included the Palazzo Aldobrandini and the estates that would become the nucleus of the Galleria Doria Pamphilj. He used the wealth to build a grand villa on the Janiculum hill and commissioned Bernini to design the Church of Sant’Andrea al Quirinale, which was finished after his death in 1666.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was appointed General of the Papal Army, a position usually reserved for a lay‑nephew of the Pope.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Contemporary records describe him as a happy young man who sometimes did not rise from bed until 7:00 pm.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He commissioned Gian Lorenzo Bernini to build the baroque Church of Sant’Andrea al Quirinale, which was not completed until 1670, after Pamphili’s death.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1622,
+      "month": 2,
+      "day": 21,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1666,
+      "month": 7,
+      "day": 26,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Ritratto_in_Armatura_del_Principe_Camillo_Pamphilj.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ritratto_in_Armatura_del_Principe_Camillo_Pamphilj.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/37/Ritratto_in_Armatura_del_Principe_Camillo_Pamphilj.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/37/Ritratto_in_Armatura_del_Principe_Camillo_Pamphilj.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Baciccio",
+    "author": "Baciccio",
+    "width": 675,
+    "height": 889,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Camillo Francesco Maria Pamphili",
+    "url": "https://en.wikipedia.org/wiki/Camillo_Francesco_Maria_Pamphili"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:26:02.507Z"
+  }
+}

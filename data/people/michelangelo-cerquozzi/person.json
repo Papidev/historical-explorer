@@ -1,0 +1,69 @@
+{
+  "id": "michelangelo-cerquozzi",
+  "name": "Michelangelo Cerquozzi",
+  "wikidataId": "Q979862",
+  "wikipediaTitle": "Michelangelo Cerquozzi",
+  "content": {
+    "description": [
+      {
+        "text": "Michelangelo Cerquozzi was born in Rome on 18 February 1602 into a well‑off family; his father, Marcello Cerquozzi, was a leather merchant. He began his artistic training at the age of twelve in the studio of Giuseppe Cesari, where he was exposed to the history‑painting tradition that also attracted Caravaggio.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the 1620s Cerquozzi worked alongside Flemish and Dutch painters in Rome, absorbing the Bamboccianti style of small cabinet scenes that depicted everyday life. He became a prominent battle painter, earning the nickname 'Michelangelo delle Battaglie', and also produced still lifes, religious and mythological works. His career was marked by collaborations with landscape and architectural painters such as Viviano Codazzi, and he was admitted to the Accademia di San Luca in 1634, a rare honor for a genre painter.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Cerquozzi never married and remained childless.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was admitted to the Accademia di San Luca in 1634 at the age of 30, a notable achievement for a genre painter.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He collaborated with Viviano Codazzi on a canvas depicting the Revolt of Masaniello, a historical event that took place in 1647.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1602,
+      "month": 2,
+      "day": 18,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1660,
+      "month": 4,
+      "day": 6,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Michelangelo_Cerquozzi_-_The_Rehearsal,_or_A_Scene_from_the_Commedia_dell'Arte.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Michelangelo_Cerquozzi_-_The_Rehearsal%2C_or_A_Scene_from_the_Commedia_dell'Arte.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Michelangelo_Cerquozzi_-_The_Rehearsal%2C_or_A_Scene_from_the_Commedia_dell%27Arte.jpg/960px-Michelangelo_Cerquozzi_-_The_Rehearsal%2C_or_A_Scene_from_the_Commedia_dell%27Arte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/Michelangelo_Cerquozzi_-_The_Rehearsal%2C_or_A_Scene_from_the_Commedia_dell%27Arte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Michelangelo Cerquozzi",
+    "author": "Michelangelo Cerquozzi",
+    "width": 1880,
+    "height": 976,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Michelangelo Cerquozzi",
+    "url": "https://en.wikipedia.org/wiki/Michelangelo_Cerquozzi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:48:44.202Z"
+  }
+}

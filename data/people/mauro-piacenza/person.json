@@ -1,0 +1,63 @@
+{
+  "id": "mauro-piacenza",
+  "name": "Mauro Piacenza",
+  "wikidataId": "Q614498",
+  "wikipediaTitle": "Mauro Piacenza",
+  "content": {
+    "description": [
+      {
+        "text": "Mauro Piacenza was born in Genoa on 15 September 1944 and entered the priesthood after completing a doctorate summa cum laude in canon law at the Pontifical Lateran University.  He served as a parochial vicar, chaplain to the University of Genoa, and professor of canon law and theology at several institutions before being made a canon of the Genoa Cathedral in 1986.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1990 Piacenza joined the staff of the Congregation for the Clergy, rising to Undersecretary in 2000 and Secretary in 2007.  He was appointed Prefect of that Congregation in 2010, created a cardinal deacon by Pope Benedict XVI the same year, and later became Major Penitentiary of the Apostolic Penitentiary in 2013, a position he held until 2024.  He also served as President of the Pontifical Commission for the Cultural Heritage of the Church and as a cardinal elector in the 2013 conclave that elected Pope Francis.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Piacenza served as Major Penitentiary of the Apostolic Penitentiary from 2013 until his successor was appointed in 2024.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was one of the cardinal electors who participated in the 2013 papal conclave that elected Pope Francis.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 2003 he was appointed President of the Pontifical Commission for the Cultural Heritage of the Church, a role that underscored his expertise in canon law and church history.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1944,
+      "month": 9,
+      "day": 15,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Card._Piacenza_M._festa_Ascensione_2022_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Card._Piacenza_M._festa_Ascensione_2022_(cropped).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Card._Piacenza_M._festa_Ascensione_2022_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Card._Piacenza_M._festa_Ascensione_2022_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Bartolomeo Villa",
+    "author": "Bartolomeo Villa",
+    "width": 400,
+    "height": 400,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Mauro Piacenza",
+    "url": "https://en.wikipedia.org/wiki/Mauro_Piacenza"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:22:33.341Z"
+  }
+}

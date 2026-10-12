@@ -1,0 +1,73 @@
+{
+  "id": "ippolito-aldobrandini-1596-1638",
+  "name": "Ippolito Aldobrandini",
+  "wikidataId": "Q1050128",
+  "wikipediaTitle": "Ippolito Aldobrandini (camerlengo)",
+  "content": {
+    "description": [
+      {
+        "text": "Ippolito Aldobrandini (c. 1580–1638) was a prominent Italian cardinal of the early 17th century, belonging to the influential Aldobrandini family that produced several high‑ranking church officials. He was created a cardinal deacon by Pope Gregory XV in the consistory of 19 April 1621, receiving the deaconry of Santa Maria Nuova, and was ordained a presbyter the same year by Cardinal Ottavio Bandini, the bishop of Palestrina.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his ordination, Aldobrandini served as abbot commendatario of Sant'Angelo di Procida and Santa Maria della Gironda, and was appointed cardinal camerlengo of the Holy Roman Church in 1623, a position he held until his death in Rome in 1638. His funeral was celebrated in the Basilica dei Santi XII Apostoli, and his remains were later transferred to the family chapel in the Basilica of Santa Maria sopra Minerva.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was a great‑nephew (pronipote) of Pope Clement VIII, whose papacy lasted from 1592 to 1605.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a nephew of Pietro Aldobrandini, a cardinal who served as a papal nuncio and was a key figure in the Catholic Reformation.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was appointed cardinal camerlengo in 1623, a role that made him responsible for the administration of the Holy See's temporal goods during papal interregnums.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He held the commendatory abbacy of Sant'Angelo di Procida, a small island community in the Tyrrhenian Sea, and of Santa Maria della Gironda, a monastery in the Lazio region.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His ordination as a presbyter was performed by Cardinal Ottavio Bandini, who later became the Bishop of Palestrina and a prominent patron of the arts.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his death, his remains were transferred from the Basilica dei Santi XII Apostoli to the family chapel in Santa Maria sopra Minerva, reflecting the Aldobrandini family's prominence in Rome.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 1638,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Ippolito_Aldobrandini_(d._1638).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ippolito_Aldobrandini_(d._1638).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Ippolito_Aldobrandini_%28d._1638%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Ippolito_Aldobrandini_%28d._1638%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown contemporary author",
+    "author": "Unknown contemporary author",
+    "width": 180,
+    "height": 271,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Ippolito Aldobrandini (camerlengo)",
+    "url": "https://it.wikipedia.org/wiki/Ippolito_Aldobrandini_(camerlengo)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:38:30.772Z"
+  }
+}

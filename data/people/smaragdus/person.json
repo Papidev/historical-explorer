@@ -1,0 +1,56 @@
+{
+  "id": "smaragdus",
+  "name": "Smaragdus",
+  "wikidataId": "Q1340553",
+  "wikipediaTitle": "Smaragdus",
+  "content": {
+    "description": [
+      {
+        "text": "Smaragdus served twice as Exarch of Ravenna, first from 585 to 589 and again from 603 to 611. During his first tenure he formed an alliance with the Franks and Avars to counter the Lombards, but the Franks were not fully committed to the campaign, and the effort ultimately failed. He did, however, recover the strategic port of Classis from the Lombards in 588, restoring Byzantine control over the lagoon. Smaragdus was also known for his harsh treatment of the followers of the schismatic bishops during the Three Chapters schism, forcing Archbishop Severinus of Aquileia to attend a synod in Ravenna and to publicly declare loyalty to the Orthodox creed. His violence and alleged insanity led to his removal from office in 589.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 603, Emperor Phocas restored Smaragdus to the exarchate, where he inherited a war with the Lombards. He refused to release the daughter of Lombard king Agilulf and her husband, both of whom had been taken prisoner in 601, which prompted Agilulf to besiege Cremona with Avar help, capturing it on 21 August 605 and razing it, then taking Mantua on 1 September. When his army reached the fortress of Vulturina, the garrison surrendered, burning Brescello as they fled. Smaragdus was forced to release his hostages in April 605 to secure peace, which held for the rest of his administration. He also erected a gilded statue of Emperor Phocas on the column of Phocas in the Roman Forum, a rare example of a Byzantine official commemorating a contemporary ruler in Rome. After Phocas was deposed by Heraclius in 610, Smaragdus was replaced by John I.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Smaragdus’s alliance with the Franks and Avars was an early attempt to curb Lombard expansion, but the Franks were not fully committed to the campaign.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He successfully recaptured the strategic port of Classis from the Lombards in 588, restoring Byzantine control over the lagoon.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Smaragdus was notorious for his harsh treatment of the schismatic bishops of the Three Chapters, forcing Archbishop Severinus of Aquileia to publicly affirm Orthodox doctrine.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His violent conduct and rumors of insanity were cited as reasons for his removal from office in 589.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After being restored by Emperor Phocas, Smaragdus erected a gilded statue of the emperor on the column of Phocas in the Roman Forum, a rare example of a Byzantine official commemorating a contemporary ruler in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The peace he secured with the Lombards after releasing hostages in 605 endured for the remainder of his second tenure, illustrating his diplomatic success despite earlier military setbacks.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Smaragdus",
+    "url": "https://en.wikipedia.org/wiki/Smaragdus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:59:32.020Z"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "charles-t-griffes",
+  "name": "Charles T. Griffes",
+  "wikidataId": "Q477571",
+  "wikipediaTitle": "Charles Tomlinson Griffes",
+  "content": {
+    "description": [
+      {
+        "text": "Charles Tomlinson Griffes was born in Elmira, New York, on 17 September 1884. He began piano lessons with his sister Katherine and later studied with Mary Selena Broughton, who guided him to the Stern Conservatory in Berlin. While there he absorbed German Romanticism before turning toward the exotic sound of French Impressionism and the synthetic scales of Scriabin, which would shape his mature style.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After returning to the United States in 1907, Griffes served as director of music studies at the Hackley School, a position that provided financial stability but left little time for composition. Despite this, he produced a prolific output, including the piano work White Peacock (1915), the tone poem The Pleasure-Dome of Kubla Khan (1912), and the Japanese‑inspired pantomime Sho‑jo (1917). He died of influenza in New York City on 8 April 1920, at the age of 35, during the Spanish flu pandemic.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Griffes was among the first American composers to write a one‑act pantomime directly inspired by Japanese music, with his 1917 work Sho‑jo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He collaborated with Japanese dancer Michio Ito, who performed three dance recitals interpreting White Peacock in 1918, with Griffes accompanying at the piano.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Griffes kept meticulous diaries in both English and German that documented his musical achievements and candid reflections on his homosexuality, including visits to gay bathhouses in New York.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Although he was advised against pursuing composition by his teacher Broughton, Griffes left the Stern Conservatory and studied briefly with composer Engelbert Humperdinck, a move that helped him transition from performance to composition.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1884,
+      "month": 9,
+      "day": 17,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1920,
+      "month": 4,
+      "day": 8,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Charles_Griffes.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Charles_Griffes.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/Charles_Griffes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/Charles_Griffes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 189,
+    "height": 251,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Charles Tomlinson Griffes",
+    "url": "https://en.wikipedia.org/wiki/Charles_Tomlinson_Griffes"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:21:39.970Z"
+  }
+}

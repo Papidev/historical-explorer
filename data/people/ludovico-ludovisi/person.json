@@ -1,0 +1,73 @@
+{
+  "id": "ludovico-ludovisi",
+  "name": "Ludovico Ludovisi",
+  "wikidataId": "Q707750",
+  "wikipediaTitle": "Ludovico Ludovisi",
+  "content": {
+    "description": [
+      {
+        "text": "Ludovico Ludovisi was born in Bologna in 1595 to Orazio Ludovisi and Lavinia Albergati.  Educated at the Jesuit Collegio Germanico in Rome and later at the University of Bologna, he earned a doctorate in canon law on 25 February 1615.  When his uncle, Alessandro Ludovisi, ascended to the papacy as Gregory XV, Ludovico was made a cardinal the very next day, at the age of 25, and was soon appointed archbishop of Bologna, a title he held in name while remaining in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond his ecclesiastical titles, Ludovico served as papal legate in Fermo and Avignon, and briefly as Camerlengo of the Holy Roman Church from 19 April 1621 to 7 June 1623.  He participated in the 1623 conclave that elected Pope Urban VIII, after which he was compelled to leave Rome due to a conflict with the new pope’s family.  He continued to wield influence as prefect of the Propaganda Fide (1622–1632) and Vice-Chancellor of the Holy Roman Church (1623–1632), while simultaneously cultivating a renowned collection of antiquities at the Villa Ludovisi and commissioning works by Bernini, Maderno, and Guercino.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Ludovico was made cardinal at the unusually young age of 25, a testament to his uncle’s influence and his own reputation as a capable administrator.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was appointed archbishop of Bologna but never actually resided there, preferring to remain in Rome to serve the papacy directly.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his tenure as Camerlengo, he oversaw the financial affairs of the Holy See for over two years, a role that required both legal expertise and diplomatic skill.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Villa Ludovisi, which he developed into a grand complex of gardens and art, housed the Ludovisi Ares, a spectacular bronze statue discovered in 1622 that became a centerpiece of his collection.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1595,
+      "month": 10,
+      "day": 22,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1632,
+      "month": 11,
+      "day": 18,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Portrait_of_Ludovico_Ludovisi.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_Ludovico_Ludovisi.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Portrait_of_Ludovico_Ludovisi.jpg/960px-Portrait_of_Ludovico_Ludovisi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Portrait_of_Ludovico_Ludovisi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Ottavio Leoni",
+    "author": "Ottavio Leoni",
+    "width": 1109,
+    "height": 1500,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Ludovico Ludovisi",
+    "url": "https://en.wikipedia.org/wiki/Ludovico_Ludovisi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:20:21.426Z"
+  }
+}

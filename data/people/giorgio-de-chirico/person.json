@@ -1,0 +1,65 @@
+{
+  "id": "giorgio-de-chirico",
+  "name": "Giorgio de Chirico",
+  "wikidataId": "Q156622",
+  "wikipediaTitle": "Giorgio de Chirico",
+  "content": {
+    "description": [
+      {
+        "text": "Giorgio de Chirico was born in Volos, Greece, on 10 July 1888. He studied art in Athens and Munich before returning to Italy, where he founded the Metaphysical art movement in the years before World War I. His early paintings, such as The Enigma of an Autumn Afternoon, featured empty Roman arcades, long shadows, and mannequin‑like figures, creating a haunting, dream‑like atmosphere that would profoundly influence the emerging Surrealist movement.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the war he returned to Italy, championing a return to traditional craftsmanship and adopting a neo‑Baroque style in the 1930s. De Chirico also produced back‑dated self‑forgeries of his early works, a practice he used both to profit from the market and to protest the critical preference for his metaphysical paintings. He died in Rome on 20 November 1978.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "De Chirico's metaphysical paintings were a major influence on the Surrealist movement; artists such as Max Ernst, Salvador Dalí, and René Magritte were inspired by his work.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was known to create back‑dated self‑forgeries of his early paintings, a practice he used both to profit from the market and as a form of artistic revenge against critics who favored his early work.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1888,
+      "month": 7,
+      "day": 10,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1978,
+      "month": 11,
+      "day": 20,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Giorgio_de_Chirico_(portrait).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Giorgio_de_Chirico_(portrait).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Giorgio_de_Chirico_%28portrait%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Giorgio_de_Chirico_%28portrait%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Carl Van Vechten",
+    "author": "Carl Van Vechten",
+    "width": 290,
+    "height": 358,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giorgio de Chirico",
+    "url": "https://en.wikipedia.org/wiki/Giorgio_de_Chirico"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:40:40.408Z"
+  }
+}

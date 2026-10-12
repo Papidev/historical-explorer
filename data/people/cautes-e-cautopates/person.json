@@ -1,0 +1,65 @@
+{
+  "id": "cautes-e-cautopates",
+  "name": "Cautes e Cautopates",
+  "wikidataId": "Q1051640",
+  "wikipediaTitle": "Cautes e Cautopates",
+  "content": {
+    "description": [
+      {
+        "text": "Cautes and Cautopates are the two attendants who accompany Mithra in the ancient Roman Mithraic cult. They appear beside him in many frescoes and bas-reliefs depicting the birth of Mithra and the tauroctony. Their iconography shows them smaller than Mithra, wearing Persian garments and a Phrygian cap, with Cautes holding a lit torch and Cautopates holding it pointed toward the ground.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Scholars have linked them to astronomical symbolism, suggesting they may represent the points of sunrise and sunset or the equinoctial intersections of the celestial equator with the zodiac. They also resemble the Vedic Ashvin twins, the divine horsemen who appear on their chariot at dawn and dusk, and they share similarities with the Greek Dioscuri, who are likewise depicted with Phrygian caps and a horse. Because of their Phrygian trousers, some have mistakenly identified them as shepherds, leading to the belief that shepherds witnessed Mithra’s birth, analogous to the shepherds at Bethlehem.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "They are consistently depicted smaller than Mithra to emphasize his supreme status.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cautes carries a lit torch while Cautopates holds it pointed downward.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Their roles have been interpreted as representing the sunrise and sunset points or the equinoctial crossings of the celestial equator with the zodiac.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "They are thought to correspond to the Vedic Ashvin twins, who are associated with the constellation Aries.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Their Phrygian trousers have led some to mistakenly identify them as shepherds, giving rise to a folk belief that shepherds witnessed Mithra’s birth.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Le_Mystère_Mithra_5.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Le_Myst%C3%A8re_Mithra_5.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Le_Myst%C3%A8re_Mithra_5.jpg/960px-Le_Myst%C3%A8re_Mithra_5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Le_Myst%C3%A8re_Mithra_5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 4.0",
+    "attribution": "Léna",
+    "author": "Léna",
+    "width": 4608,
+    "height": 2592,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Cautes e Cautopates",
+    "url": "https://it.wikipedia.org/wiki/Cautes_e_Cautopates"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:04:22.543Z"
+  }
+}

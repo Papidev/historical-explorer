@@ -1,0 +1,77 @@
+{
+  "id": "ignazio-di-loyola",
+  "name": "Ignazio di Loyola",
+  "wikidataId": "Q44281",
+  "wikipediaTitle": "Ignazio di Loyola",
+  "content": {
+    "description": [
+      {
+        "text": "Ignazio di Loyola was born on 23 October 1491 in the Basque town of Azpeitia, the youngest of a large family that combined military service with ecclesiastical ties.  He grew up as a knight, excelling in music, dance and chivalric tournaments, and served as a soldier in the Spanish campaigns of the early 16th century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1521, while defending the city of Pamplona, he was struck in the right leg by a cannonball, a wound that left him permanently lame.  During his long convalescence he read the lives of saints and began a spiritual conversion that culminated in the founding of the Society of Jesus in 1534, an order that combined rigorous education with missionary zeal.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Ignazio’s injury at Pamplona was so severe that he was left with a broken leg that never fully healed, a fact that earned him the nickname “the lame knight” in contemporary accounts.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Before establishing the Jesuits, he was briefly imprisoned by the Spanish Inquisition for 42 days because of suspicions that he was a mystic or ‘alumbrado’.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The first Jesuit college was founded by Ignazio in Messina in 1548, setting a model that would be replicated in cities across Europe and the Americas.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was declared a saint by Pope Gregory XV in 1622, a recognition that was shared with other prominent Spanish mystics such as Teresa of Avila.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ignazio introduced a fourth vow—absolute obedience to the Pope—into the Jesuit rule, a distinctive feature that underscored the order’s close relationship with papal authority.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1491,
+      "month": 10,
+      "day": 23,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1556,
+      "month": 7,
+      "day": 31,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "St_Ignatius_of_Loyola_(1491-1556)_Founder_of_the_Jesuits.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:St_Ignatius_of_Loyola_(1491-1556)_Founder_of_the_Jesuits.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/St_Ignatius_of_Loyola_%281491-1556%29_Founder_of_the_Jesuits.jpg/960px-St_Ignatius_of_Loyola_%281491-1556%29_Founder_of_the_Jesuits.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/St_Ignatius_of_Loyola_%281491-1556%29_Founder_of_the_Jesuits.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Own work",
+    "author": "Own work",
+    "width": 1956,
+    "height": 3220,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Ignazio di Loyola",
+    "url": "https://it.wikipedia.org/wiki/Ignazio_di_Loyola"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:51:28.312Z"
+  }
+}

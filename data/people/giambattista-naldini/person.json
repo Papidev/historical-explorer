@@ -1,0 +1,65 @@
+{
+  "id": "giambattista-naldini",
+  "name": "Giambattista Naldini",
+  "wikidataId": "Q2459386",
+  "wikipediaTitle": "Giovanni Battista Naldini",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Battista Naldini was born in 1535 in Florence and trained under the prominent Mannerist painter Jacopo Pontormo from 1549 to 1557. His early apprenticeship shaped his late-Mannerist style, which later drew comparisons to the works of Andrea del Sarto through the influence of his mentors and their pupils.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1562, Naldini was recruited by Giorgio Vasari to work in Rome, where he produced two crowded, mannerist canvases for the Studiolo of Francesco I in the Palazzo Vecchio— the Allegory of Dreams and the Gathering of Ambergris. He went on to supply altarpieces for Santa Maria Novella and Santa Croce, and painted the Calling of Saint Matthew for the Salviati Chapel in San Marco, collaborating with Francesco Morandini.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Naldini painted a cycle of frescoes depicting St. John the Baptist in the chapel of the saint in the church of Trinità dei Monti in Rome in 1580, a work that remains well-preserved today.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He created a side‑altar at San Giovanni Battista Decollato in Rome, which showcased the Florentine high Maniera style.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Among his pupils were the painters Francesco Curradi, Cosimo Gamberucci, and Cosimo Duti, who continued the Mannerist tradition in Florence.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1535,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1591,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Giovanni_Battista_Naldini,_madonna_col_bambino_e_sei_santi,_1550-60_ca.,_01.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Giovanni_Battista_Naldini%2C_madonna_col_bambino_e_sei_santi%2C_1550-60_ca.%2C_01.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Giovanni_Battista_Naldini%2C_madonna_col_bambino_e_sei_santi%2C_1550-60_ca.%2C_01.jpg/960px-Giovanni_Battista_Naldini%2C_madonna_col_bambino_e_sei_santi%2C_1550-60_ca.%2C_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/Giovanni_Battista_Naldini%2C_madonna_col_bambino_e_sei_santi%2C_1550-60_ca.%2C_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0",
+    "attribution": "Sailko",
+    "author": "Sailko",
+    "width": 3114,
+    "height": 4056,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giovanni Battista Naldini",
+    "url": "https://en.wikipedia.org/wiki/Giovanni_Battista_Naldini"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:45:02.254Z"
+  }
+}

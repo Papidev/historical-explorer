@@ -1,0 +1,64 @@
+{
+  "id": "giuseppe-albanese-ruffo",
+  "name": "Giuseppe Albanese Ruffo",
+  "wikidataId": "Q86360400",
+  "wikipediaTitle": "Giuseppe Albanese Ruffo",
+  "content": {
+    "description": [
+      {
+        "text": "Giuseppe Albanese Ruffo was born in Aquila on 18 November 1915. He completed his technical education at the Pietro Giannone Institute in Foggia before enlisting in the Royal Army in 1934. He was admitted to the Royal Military Academy of Infantry and Cavalry in Modena, where he earned the rank of second lieutenant in 1936 and was assigned to the infantry. After attending the Infantry Application School in Parma, he was posted to the 8th Bersaglieri Regiment.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "When Italy entered the war on 10 June 1940, Ruffo fought on the western front as commander of an anti‑tank company. He remained on the French front until the formation of the 133rd Armored Division Littorio, after which he was transferred to the 12th Bersaglieri Regiment. He completed a course for armored units and in November 1941 was assigned to the CXXXIII Bersaglieri Battalion, which in February 1942 became the 8th Bersaglieri Armored Battalion for North Africa. Promoted to captain, he commanded the 1st Company, reached the Castellenito airfield on 18 April 1942, and was killed in combat at Got el Ualeb on 29 May 1942. For his bravery he was posthumously awarded the Gold Medal of Military Valor, and a street in Rome and a barracks bear his name.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was posthumously awarded the Gold Medal of Military Valor.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A street in Rome and a barracks are named after him.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was killed in combat at Got el Ualeb on 29 May 1942.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He reached the airport of Castellenito on 18 April 1942.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He commanded an anti‑tank company on the western front.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1915,
+      "month": 11,
+      "day": 18,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1942,
+      "month": 5,
+      "day": 29,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giuseppe Albanese Ruffo",
+    "url": "https://it.wikipedia.org/wiki/Giuseppe_Albanese_Ruffo"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:35:48.984Z"
+  }
+}

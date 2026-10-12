@@ -1,0 +1,50 @@
+{
+  "id": "anna-fraentzel-celli",
+  "name": "Anna Fraentzel Celli",
+  "wikidataId": "Q6555240",
+  "wikipediaTitle": "Anna Fraentzel Celli",
+  "content": {
+    "description": [
+      {
+        "text": "Anna Fraentzel Celli was born in Berlin into a Jewish bourgeois family; she was the third of four sisters and grew up with a strong medical tradition, as both her father Oscar Fraentzel and her maternal grandfather Ludwig Traube were celebrated physicians. After her father's sudden death in 1894, the family faced financial hardship and Anna, then seventeen, had to abandon her dream of studying medicine, instead turning to nursing work to support herself.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1895 she met Professor Angelo Celli in Hamburg, who helped her secure a position as a nurse at a local hospital and taught her Italian. Their friendship blossomed into a secret engagement, and in 1899 they married in San Vito di Cadore after Anna converted to Catholicism. Together they moved to Rome, where Anna joined the Santo Spirito hospital and became involved in malaria research, establishing field stations, educating rural populations, and later directing the pediatric outpatient clinic La Scarpetta in Trastevere. She remained active in public health until her death in Rome on 28 September 1958.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Anna was the third of four sisters in a family that valued medical science, with both her father and grandfather being prominent physicians.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She converted to Catholicism in order to marry Angelo Celli, a decision that reflected the religious expectations of their marriage ceremony.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1944 she published a short autobiographical story under the pseudonym L. M. Heid titled *Uomini che non scompaiono*, which later appeared in a German edition with a different title.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 1958,
+      "month": 9,
+      "day": 28,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Anna Fraentzel Celli",
+    "url": "https://it.wikipedia.org/wiki/Anna_Fraentzel_Celli"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:13:18.892Z"
+  }
+}

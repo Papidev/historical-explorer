@@ -1,0 +1,49 @@
+{
+  "id": "federico-hermanin",
+  "name": "Federico Hermanin",
+  "wikidataId": "Q26222255",
+  "wikipediaTitle": "Federico Hermanin",
+  "content": {
+    "description": [
+      {
+        "text": "Federico Hermanin de Reichenfeld was born in Rome to a Protestant family of Austro‑German origin. He studied philology at the University of Rome, graduating in 1895, and then turned to art history under the guidance of Adolfo Venturi, winning a scholarship to catalogue the national print collection at the Galleria nazionale d'arte antica.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "From 1898 to 1938 Hermanin directed the Galleria nazionale d'arte antica and the Gabinetto nazionale delle stampe, expanded their collections, and published a series of catalogues and monographs. He also served as superintendent of the Lazio and Abruzzi galleries, oversaw restorations of major works, and founded the art journal *Roma* in 1923, which later became the official voice of the Istituto nazionale di studi romani.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "During restorations at Santa Cecilia in Trastevere in 1900, Hermanin uncovered a 14th‑century fresco of the Judgment, which he attributed to the Roman painter Pietro Cavallini.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Michelangelo_Merisi_da_Caravaggio_-_Narcissus_-_WGA04109.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Michelangelo_Merisi_da_Caravaggio_-_Narcissus_-_WGA04109.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Michelangelo_Merisi_da_Caravaggio_-_Narcissus_-_WGA04109.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Michelangelo_Merisi_da_Caravaggio_-_Narcissus_-_WGA04109.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Caravaggio",
+    "author": "Caravaggio",
+    "width": 819,
+    "height": 1000,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Federico Hermanin",
+    "url": "https://it.wikipedia.org/wiki/Federico_Hermanin"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:46:49.773Z"
+  }
+}

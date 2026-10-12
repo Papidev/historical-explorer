@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Acqua_Acetosa_3060-1.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Acqua_Acetosa_3060-1.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Acqua_Acetosa_3060-1.JPG/960px-Acqua_Acetosa_3060-1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/70/Acqua_Acetosa_3060-1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "user:Lalupa",
+      "author": "user:Lalupa",
+      "width": 1100,
+      "height": 1268,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Acqua_acetosa_05.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Acqua_acetosa_05.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Acqua_acetosa_05.jpg/960px-Acqua_acetosa_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Acqua_acetosa_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "No machine-readable author provided. Carlomorino assumed (based on copyright claims).",
+      "author": "No machine-readable author provided. Carlomorino assumed (based on copyright claims).",
+      "width": 2048,
+      "height": 1536,
+      "discoveredVia": "wikipedia-page-image",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Acqua_Acetosa_3060-1.JPG"
+}

@@ -1,0 +1,69 @@
+{
+  "id": "johann-heinrich-wilhelm-tischbein",
+  "name": "Johann Heinrich Wilhelm Tischbein",
+  "wikidataId": "Q213973",
+  "wikipediaTitle": "Johann Heinrich Wilhelm Tischbein",
+  "content": {
+    "description": [
+      {
+        "text": "Johann Heinrich Wilhelm Tischbein, born on 15 February 1751 in Haina, began his artistic education under the guidance of his uncle Johann Heinrich Tischbein the Elder at the age of fourteen. His early career saw him move through several German cities—Hamburg, Bremen, and Kassel—before he ventured to Holland in 1772 and 1773, broadening his exposure to the Dutch painting tradition.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1779, a stipend from the Kunsthochschule Kassel enabled Tischbein to study in Rome, where his style evolved from Rococo to Classicism. He became a close companion of Johann Wolfgang von Goethe during the latter’s Italian journey, teaching him to draw and painting the famed portrait of Goethe in the Roman Campagna. Later, he served as director of the Accademia di Belle Arti di Napoli from 1789 until the French invasion in 1799, after which he returned to Germany and eventually settled in Hamburg before moving to Eutin, where he died on 26 June 1829.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He earned the nickname \"Goethe Tischbein\" because of his friendship with Goethe and his portrait of the writer in the Roman Campagna.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Tischbein held the directorship of the Accademia di Belle Arti di Napoli for a decade, a prestigious position he lost when the French established the Parthenopean Republic.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "While in Naples, he produced etchings and engravings of antique vase motifs and illustrations for Homer’s Iliad and Odyssey, intended for a supplementary volume of Sir William Hamilton’s collection.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1751,
+      "month": 2,
+      "day": 15,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1829,
+      "month": 6,
+      "day": 26,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Tischbein_JHW_Selbstbildnis_1783@20150929.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Tischbein_JHW_Selbstbildnis_1783%4020150929.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Tischbein_JHW_Selbstbildnis_1783%4020150929.JPG/960px-Tischbein_JHW_Selbstbildnis_1783%4020150929.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Tischbein_JHW_Selbstbildnis_1783%4020150929.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Johann Heinrich Wilhelm Tischbein",
+    "author": "Johann Heinrich Wilhelm Tischbein",
+    "width": 2046,
+    "height": 2867,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Johann Heinrich Wilhelm Tischbein",
+    "url": "https://en.wikipedia.org/wiki/Johann_Heinrich_Wilhelm_Tischbein"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:58:58.937Z"
+  }
+}

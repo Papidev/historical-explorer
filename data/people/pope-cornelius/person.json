@@ -1,0 +1,70 @@
+{
+  "id": "pope-cornelius",
+  "name": "Pope Cornelius",
+  "wikidataId": "Q54798",
+  "wikipediaTitle": "Pope Cornelius",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Cornelius served as Bishop of Rome from March 251 until his martyrdom in June 253, a period marked by the Decian persecution and a schism over the treatment of Christians who had lapsed during the persecution.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He convened a synod of 60 bishops that confirmed his election, excommunicated the Novatianist faction, and established a policy that allowed lapsed Christians to be readmitted after penance, contrasting with Novatian’s stricter stance.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Cornelius’s letters from exile provide the earliest known reference to an office of \"exorcist\" within the early church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his exile in Centumcellae, he is said to have died from the hardships of banishment, though some later accounts claim he was beheaded.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "According to tradition, a statue of Cornelius in the Corneliuskapelle of Neuss was said to lean forward and bless a forbidden couple, leading to their marriage.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In the Rhineland, he was venerated as one of the Four Holy Marshals alongside Quirinus of Neuss, Hubertus, and Anthony the Great.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Legend has it that the Carnac stones were once pagan soldiers turned to stone by Cornelius during his flight.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 253,
+      "month": 6,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Heiliger_Cornelius.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Heiliger_Cornelius.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Heiliger_Cornelius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Heiliger_Cornelius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Master of Messkirch",
+    "author": "Master of Messkirch",
+    "width": 840,
+    "height": 1968,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Cornelius",
+    "url": "https://en.wikipedia.org/wiki/Pope_Cornelius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:04:58.960Z"
+  }
+}

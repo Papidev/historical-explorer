@@ -1,0 +1,58 @@
+{
+  "id": "ambrose",
+  "name": "Ambrose",
+  "wikidataId": "Q43689",
+  "wikipediaTitle": "Ambrose",
+  "content": {
+    "description": [
+      {
+        "text": "Ambrose of Milan was a 4th‑century Roman theologian and statesman who became bishop in 374 after popular acclamation. He used his rhetorical training to defend Nicene orthodoxy, oppose Arianism, and mediate imperial disputes, while also promoting asceticism and monasticism.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His prolific writings—including De Virginibus, De Sacramentis, and the Exameron—shaped Latin theology and liturgy, and his sermons and letters influenced Augustine of Hippo, helping convert him to Christianity. Ambrose's leadership style combined civic responsibility with spiritual authority, exemplified by his refusal to surrender churches to Arians and his insistence that an emperor is within the church, not over it.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "A legend says a swarm of bees settled on Ambrose's face as an infant, a sign of his future eloquence.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ambrose is venerated as the patron saint of beekeepers.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He played a decisive role in converting Augustine of Hippo to Christianity.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He authored the influential treatise De Virginibus, which discusses the literal and metaphorical significance of virginity.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 339,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 397,
+      "month": 4,
+      "day": 4,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Ambrose",
+    "url": "https://en.wikipedia.org/wiki/Ambrose"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:06:41.396Z"
+  }
+}

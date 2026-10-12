@@ -1,0 +1,196 @@
+{
+  "introduction": {
+    "text": "Chiesa di Sant'Onofrio al Gianicolo is a historic Roman church on the Janiculum hill, notable as the titular church of the Order of the Holy Sepulchre and for its Renaissance architecture and rich artistic heritage.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "St Onuphrius, a 4th‑century Egyptian hermit, is the patron saint of the church.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 300,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "A hermitage founded by Nicola da Forca Palena around 1419 served as the basis for the later monastery.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1419,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "The monastery was constructed around 1439 on the hermitage site.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1439,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Lunettes by Domenichino, painted in 1605, commemorate the hermits and depict scenes from St Jerome's life.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1605,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "Since 1946 the church has been cared for by the American congregation of the Franciscan Friars of the Atonement.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1946,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "The Salita di Sant'Onofrio was used as a location for the 1958 film Big Deal on Madonna Street.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1958,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "Pierbattista Pizzaballa has served as the Cardinal‑Priest of the church since 2023.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2023,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The church features a Renaissance portico and a single cross‑vaulted nave with five chapels.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The cloister, possibly the oldest part of the complex, contains frescoes depicting scenes from St Onuphrius's life.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "A fountain in the churchyard incorporates salvaged elements from the former Piazza Giudia fountain.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Lunettes by Domenichino (1605) celebrate hermits and illustrate scenes from St Jerome's life.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "An altarpiece by Agostino Carracci, The Madonna of Loreto, is the artist's only work in a Roman church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "Frescoes in the apse by Baldassare Peruzzi depict scenes from the Life of Mary.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art4",
+        "description": "The first chapel to the right contains an Annunciation by Antoniazzo Romano and an Eternal Father attributed to Baldassarre Peruzzi.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art5",
+        "description": "The second chapel to the right features frescoes and stuccoes by Giovanni Battista Ricci (1605) and an altarpiece of the Madonna di Loreto by pupils of Annibale Carracci.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art6",
+        "description": "The third chapel on the left holds a monument to Torquato Tasso (1857) by Giuseppe De Fabris.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art7",
+        "description": "The second chapel on the left contains a Trinity fresco on the ceiling by Francesco Trevisani.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art8",
+        "description": "The sacristy ceiling is frescoed by Girolamo Pesci, while the walls feature a Peter of Pisa by Francesco Trevisani.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art9",
+        "description": "The cloister frescoes by Giuseppe Cesari (Cavaliere d'Arpino) and others depict scenes from the life of Saint Onuphrius.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Onuphrius",
+      "personId": "onuphrius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Nicola da Forca Palena",
+      "personId": "nicola-da-forca-palena",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Domenichino",
+      "personId": "domenichino",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Agostino Carracci",
+      "personId": "agostino-carracci",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Baldassare Peruzzi",
+      "personId": "baldassarre-peruzzi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Torquato Tasso",
+      "personId": "torquato-tasso",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giuseppe De Fabris",
+      "personId": "giuseppe-de-fabris",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Filippo Sega",
+      "personId": "filippo-sega",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pierbattista Pizzaballa",
+      "personId": "pierbattista-pizzaballa",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Nicola Canali",
+      "personId": "nicola-canali",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "thomas-mann",
+  "name": "Thomas Mann",
+  "wikidataId": "Q37030",
+  "wikipediaTitle": "Thomas Mann",
+  "content": {
+    "description": [
+      {
+        "text": "Thomas Mann was born on 6 June 1875 in Lübeck to a Hanseatic merchant family. His father, a senator and grain merchant, died when Mann was sixteen, after which the family moved to Munich. Mann studied science, history, economics, art history and literature at the Ludwig‑Maximilians‑Universität München and the Technische Hochschule München before turning to journalism and fiction. His first short story, “Little Herr Friedemann,” appeared in 1898, and his breakthrough novel Buddenbrooks (1901) depicted the decline of a Lübeck merchant family, establishing him as a leading German novelist.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the rise of the Nazi regime in 1933, Mann fled to Switzerland and later to the United States, where he continued to write and lecture. He used the BBC German Service to broadcast anti‑Nazi speeches, condemning Hitler and the regime from abroad. In 1949 he returned to Switzerland, never again living in Germany, and died on 12 August 1955 in Zürich after a fatal aneurysm. His legacy includes the Nobel Prize in Literature (1929) and a body of work that critically examined German culture and politics.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Mann’s mother, Júlia da Silva Bruhns, was a Brazilian of German, Portuguese and Native Brazilian ancestry, making Mann a descendant of diverse cultural backgrounds.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Mann’s anti‑Nazi broadcasts were recorded in the United States and transmitted from London, reaching German listeners on the longwave band.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Three of Mann’s six children—Erika, Klaus and Golo—became notable writers in their own right.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1875,
+      "month": 6,
+      "day": 6,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1955,
+      "month": 8,
+      "day": 12,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Thomas_Mann_1929.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Thomas_Mann_1929.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Thomas_Mann_1929.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Thomas_Mann_1929.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Nobel Foundation",
+    "author": "Nobel Foundation",
+    "width": 464,
+    "height": 696,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Thomas Mann",
+    "url": "https://en.wikipedia.org/wiki/Thomas_Mann"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T21:01:19.171Z"
+  }
+}

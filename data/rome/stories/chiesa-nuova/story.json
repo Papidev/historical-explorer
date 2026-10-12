@@ -1,0 +1,305 @@
+{
+  "introduction": {
+    "text": "Chiesa Nuova, formally Santa Maria in Vallicella, is a Roman Catholic church in Rome that serves as the principal church of the Oratorians. Its architecture and interior art exemplify Counter‑Reformation ideals and house masterpieces by leading Baroque artists.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-12th-century",
+        "description": "The first church on the site was built by tradition under St. Gregory the Great and was dedicated to Santa Maria in Vallicella by the 12th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1100,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-1561",
+        "description": "St. Philip Neri founded the Oratorians in 1561, establishing the congregation that would later take over the church.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1561,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1575-recognition",
+        "description": "In 1575 Pope Gregory XIII recognized the Oratorians as a religious congregation and granted them the church.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1575,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1575-rebuild",
+        "description": "Reconstruction of the church began in 1575 under the patronage of Pier Donato Cardinal Cesi.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1575,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1577-nave",
+        "description": "The nave was completed in 1577.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1577,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1593-spada",
+        "description": "The Spada family chapel was completed in 1593 by Rainaldi.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1593,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1593-94-cavaliere",
+        "description": "The Presentation of Mary to the Temple was painted by Federico Barocci in 1593–94.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1593,
+          "precision": "approximate",
+          "endYear": 1594,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1599-consecration",
+        "description": "The church was consecrated in 1599.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1599,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1600-longhi",
+        "description": "Onorio Longhi designed the chapel dedicated to St. Philip Neri in 1600.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1600,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1605-facade",
+        "description": "The facade was completed in 1605 or 1606.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1605,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1606-08-rubens",
+        "description": "Peter Paul Rubens painted the altarpiece for the church between 1606 and 1608.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1606,
+          "precision": "approximate",
+          "endYear": 1608,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1606-08-madonna",
+        "description": "The Madonna della Vallicella altarpiece with side panels was created between 1606 and 1608.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1606,
+          "precision": "approximate",
+          "endYear": 1608,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1620-1690-interior",
+        "description": "The interior was richly decorated between 1620 and 1690 with works by leading artists.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1620,
+          "precision": "approximate",
+          "endYear": 1690,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1621-1629-sacristy",
+        "description": "The sacristy was begun in 1621 and completed in 1629.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1621,
+          "precision": "approximate",
+          "endYear": 1629,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1633-34-ceiling",
+        "description": "The ceiling fresco of Angels carrying the instruments of the Passion was painted in 1633–34.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1633,
+          "precision": "approximate",
+          "endYear": 1634,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1635-salucci",
+        "description": "Alessandro Salucci painted frescoes in the Chapel of the Presentation of Our Lady in 1635.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1635,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1647-1651-dome",
+        "description": "Pietro da Cortona painted the Trinity in the dome from 1647 to 1651.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1647,
+          "precision": "approximate",
+          "endYear": 1651,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1655-56-prophets",
+        "description": "The prophets Isaiah, Jeremiah, Daniel, and Ezekiel were painted in 1655–56.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1655,
+          "precision": "approximate",
+          "endYear": 1656,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1659-60-prophets",
+        "description": "The prophets were painted again in 1659–60.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1659,
+          "precision": "approximate",
+          "endYear": 1660,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1664-65-miracle",
+        "description": "The Miracle of the Madonna della Vallicella was painted in 1664–65.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1664,
+          "precision": "approximate",
+          "endYear": 1665,
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-layout",
+        "description": "The church follows the Counter‑Reformation model of a single nave with transepts and side chapels, leading to a high altar, mirroring the layout of the Gesù.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-facade",
+        "description": "The facade, completed in 1605–1606, was designed by Fausto Rughesi and features the Cesi heraldry.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-barocci",
+        "description": "Baroque altarpieces by Federico Barocci, including the Presentation of Mary to the Temple (1593–94) and the Visitation (1583–1586), adorn the church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-cortona",
+        "description": "Pietro da Cortona's frescoes, such as the Trinity in the dome (1647–1651) and the Assumption of the Virgin in the apse, dominate the interior.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-rubens",
+        "description": "Peter Paul Rubens painted the unique altarpiece of the Madonna della Vallicella (1606–08) on a slate, canvas, and copper support.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-others",
+        "description": "Other notable works include the Crucifixion by Scipione Pulzone, the Ascension by Girolamo Muziano, and the Annunciation by Domenico Passignano.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Saint Philip Neri",
+      "personId": "saint-philip-neri",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pier Donato Cesi (1521–1586)",
+      "personId": "pier-donato-cesi-1521-1586",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Gregory XIII",
+      "personId": "pope-gregory-xiii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Martino Longhi the Elder",
+      "personId": "martino-longhi-the-elder",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pietro da Cortona",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Peter Paul Rubens",
+      "personId": "peter-paul-rubens",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Guido Reni",
+      "personId": "guido-reni",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Onorio Longhi",
+      "personId": "onorio-longhi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Francesco Borromini",
+      "personId": "francesco-borromini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Barocci",
+      "personId": "barocci",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

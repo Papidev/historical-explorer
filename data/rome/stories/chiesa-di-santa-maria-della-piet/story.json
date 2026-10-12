@@ -1,0 +1,218 @@
+{
+  "introduction": {
+    "text": "The Chiesa di Santa Maria della Pietà is a Roman Catholic church in Rome’s Borgo district, serving as the national church for Austria, Germany, and the Netherlands. It is historically significant as the site of a medieval hospice for German pilgrims founded by Charlemagne and as a center of German cultural and religious life in Rome.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "In 796 Charlemagne, with permission from Pope Leo III, founded a hospice for German pilgrims adjacent to the site, including a church and burial ground.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 796,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "During the Avignon Papacy (1309–1378) and the Western Schism, the hospice and surrounding foundations fell into decay.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1309,
+          "precision": "exact",
+          "endYear": 1378,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Under Pope Martin V (1417–1431) the cemetery was expanded and surrounded by a wall built by Fredericus Alemannus.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1417,
+          "precision": "exact",
+          "endYear": 1431,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "In 1448, during a plague outbreak, Johannis Assonensis founded a brotherhood to provide burial for poor German pilgrims.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1448,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "The Holy Year of 1450 saw the brotherhood build a new church and hospice, establishing the Campo Santo as a German national institution.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1450,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "The present church was constructed in 1501.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1501,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "During the Sack of Rome in 1527, the Swiss Guard made their last stand in the Teutonic Cemetery, holding off invaders.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1527,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history8",
+        "description": "In 1876 Pope Pius IX founded a seminary for German-speaking priests to replace the Schola Francorum.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1876,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history9",
+        "description": "In 1957 a portal by sculptor Elmar Hillebrand was given to the church by German President Theodor Heuss.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1957,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history10",
+        "description": "The church was remodeled in 1972.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1972,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The present church was built in 1501, replacing earlier medieval structures.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The church was remodeled in 1972, updating its interior and exterior.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "A portal by sculptor Elmar Hillebrand was installed in 1957, providing access from the cemetery.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Main altarpiece depicting a Deposition by Polidoro di Caravaggio, flanked by a painting by Giacinto d'Hasse.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "Tomb monument of Giacinto d'Hasse inside the church, sculpted by Francois Duquesnoy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "Lateral altar with a St Erasmus by Giacinto Gimignani.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art4",
+        "description": "Lateral altar with an Epiphany by Scarsellino.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art5",
+        "description": "Altar dedicated to St Charles Borromeo featuring a Flight to Egypt by Arrigo Fiammingo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art6",
+        "description": "Altar with St John Nepomunk by Ignazio Stern.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art7",
+        "description": "Sacristy holds an Immaculate Conception by Luigi Garzi.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Charlemagne",
+      "personId": "charlemagne",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Leo III",
+      "personId": "pope-leo-iii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Martin V",
+      "personId": "papa-martino-v",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Bishop of Wurzburg",
+      "personId": "bishop-of-wurzburg",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Pius IX",
+      "personId": "pope-pius-ix",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Elmar Hillebrand",
+      "personId": "elmar-hillebrand",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Theodor Heuss",
+      "personId": "theodor-heuss",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Polidoro di Caravaggio",
+      "personId": "polidoro-di-caravaggio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Francois Duquesnoy",
+      "personId": "francois-duquesnoy",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giacinto Gimignani",
+      "personId": "giacinto-gimignani",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "introduction": {
+    "text": "The Chiesa di Nostra Signora di Guadalupe a Monte Mario is a Roman Catholic parish church in Rome’s Monte Mario district, notable for its dedication to the Mexican patron Our Lady of Guadalupe and its status as a titular church of the Catholic hierarchy.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-construction",
+        "description": "Construction of the church by the Daughters of Mary Immaculate of Guadalupe, completed between 1928 and 1932.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1928,
+          "precision": "exact",
+          "endYear": 1932,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-parish",
+        "description": "Establishment of the parish on 22 June 1936 by decree of Cardinal Vicar Francesco Marchetti Selvaggiani Dominici Gregis.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1936,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-titular",
+        "description": "Creation of the titular church title by Pope Paul VI on 29 April 1969.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1969,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-cardinal-protector",
+        "description": "Appointment of Timothy M. Dolan as cardinal-protector in 2012.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2012,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-presbytery",
+        "description": "The presbytery features an altar made of perforated white marble.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-our-lady-image",
+        "description": "High altar houses the image of Our Lady of Guadalupe, a Mexican priest’s work donated to Pope Leo XIII in 1880 and later to the nuns in 1929.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-crown",
+        "description": "In 1955, Pius XII proclaimed Our Lady of Guadalupe Queen of labor and a crown made by Guido Veroi was placed on the image.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Timothy M. Dolan",
+      "personId": "timothy-m-dolan",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pius XI",
+      "personId": "pius-xi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Miguel Darío Miranda y Gómez",
+      "personId": "miguel-dar-o-miranda-y-g-mez",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Franz Hengsbach",
+      "personId": "franz-hengsbach",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Adolfo Antonio Suárez Rivera",
+      "personId": "adolfo-antonio-su-rez-rivera",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

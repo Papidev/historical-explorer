@@ -1,0 +1,71 @@
+{
+  "id": "pope-vigilius",
+  "name": "Pope Vigilius",
+  "wikidataId": "Q168734",
+  "wikipediaTitle": "Pope Vigilius",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Vigilius was born into a Roman aristocratic family; his father John was a consul in Constantinople, and his brother Reparatus was a senator who escaped a Goth‑hostage situation. He entered the Church and was ordained a deacon in 531, and later served as papal apocrisiarius in Constantinople, where he became a key diplomatic figure for the papacy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He became pope on 29 March 537 after the deposition of Silverius, a move that was controversial and not formally regular. During his reign he faced the Three Chapters controversy, refusing to sign Emperor Justinian’s edict, which led to his arrest in 545 and transport to Constantinople. He eventually accepted the condemnation of the Three Chapters in 553, returned to Rome in 555, but died on 7 June 555 while traveling from Sicily to Rome.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He is considered the first pope of the Byzantine papacy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was arrested in 545 and taken to Constantinople.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He died at Syracuse while returning to Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His body was buried in San Martino ai Monti over the Catacomb of Priscilla.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was ordained a deacon in 531.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 555,
+      "month": 6,
+      "day": 7,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Vigilius.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Vigilius.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Vigilius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Vigilius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 186,
+    "height": 139,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Vigilius",
+    "url": "https://en.wikipedia.org/wiki/Pope_Vigilius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:03:46.649Z"
+  }
+}

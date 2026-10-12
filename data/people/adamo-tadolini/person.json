@@ -1,0 +1,69 @@
+{
+  "id": "adamo-tadolini",
+  "name": "Adamo Tadolini",
+  "wikidataId": "Q351651",
+  "wikipediaTitle": "Adamo Tadolini",
+  "content": {
+    "description": [
+      {
+        "text": "Adamo Tadolini was born on 21 December 1788 in Bologna into a family of sculptors, the grandson of Petronio Tadolini. He studied at the Accademia di Belle Arti in Bologna from 1808 to 1813 under Giacomo De Maria, winning a prize for a terracotta relief of Venus and Aeneas that earned him a scholarship to Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In Rome he worked in the studio of the neo‑classical master Antonio Canova, producing a plaster statue of Ajax cursing the Gods. Canova helped him establish his own studio at Via Del Babuino 150 in 1822, a site that later became the Canova‑Tadolini Museum. Tadolini’s career included a range of public monuments, from the marble statue of St. Paul in St. Peter’s Square to a bronze equestrian statue of Simón Bolívar in Lima’s Plaza Bolívar.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Tadolini’s studio at Via Del Babuino 150 is now a museum that houses a treasury of his and his family’s works.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His sons Scipione and Tito collaborated with him; after his death Scipione took ownership of the studio, which later passed to Giulio and Enrico Tadolini.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Among his most celebrated works is the bronze equestrian statue of Simón Bolívar, erected in the 1850s in Lima’s Plaza Bolívar and later replicated in Caracas.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1788,
+      "month": 12,
+      "day": 21,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1863,
+      "month": 2,
+      "day": 16,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Adamo_Tadolini-David-Colonna_dell'Immacolata.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Adamo_Tadolini-David-Colonna_dell'Immacolata.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Adamo_Tadolini-David-Colonna_dell%27Immacolata.jpg/960px-Adamo_Tadolini-David-Colonna_dell%27Immacolata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Adamo_Tadolini-David-Colonna_dell%27Immacolata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Yair Haklai",
+    "author": "Yair Haklai",
+    "width": 2448,
+    "height": 3264,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Adamo Tadolini",
+    "url": "https://en.wikipedia.org/wiki/Adamo_Tadolini"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:57:13.573Z"
+  }
+}

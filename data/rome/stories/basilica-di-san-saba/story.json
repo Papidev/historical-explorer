@@ -1,0 +1,196 @@
+{
+  "introduction": {
+    "text": "The Basilica di San Saba is an ancient basilica church in Rome, Italy, notable for its early Christian heritage, its association with the Sabaite monks, and its rich artistic and architectural features.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-645",
+        "description": "Fugitive monks from Mar Saba settled in Rome after the Islamic invasion and founded an eremitic cell on the Piccolo Aventino.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 645,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-768",
+        "description": "Antipope Constantine II was held prisoner in the monastery before being killed by the Lombards.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 768,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-10thcentury",
+        "description": "The Benedictine monks of Monte Cassino received the church after it was rebuilt in the 10th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 901,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-1144",
+        "description": "The monastery was ceded to Cluniac monks in 1144.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1144,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-13thcentury",
+        "description": "The basilica was completely renovated in the 13th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1201,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-1463",
+        "description": "Pope Pius II granted the monastery to Cardinal Francesco Todeschini Piccolomini in commendam, initiating extensive restoration.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1463,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1503",
+        "description": "The Cistercians were entrusted with the church in 1503.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1503,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1573",
+        "description": "The church was conveyed to the Jesuits in 1573.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1573,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1931",
+        "description": "The church was made parochial in 1931 and entrusted to the care of the Society of Jesus.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1931,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1959",
+        "description": "San Saba was made a titular church in 1959.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1959,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-2022",
+        "description": "Arthur Roche became the Cardinal Deacon of the Titulus S. Sabae in 2022.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2022,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-layout",
+        "description": "The church has a nave with two aisles ending in three apses, preceded by a small porch from the 13th century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-floor",
+        "description": "The floor features Cosmatesque marble art from the beginning of the 13th century.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-frescoes",
+        "description": "Lower church contains fresco fragments depicting scenes from the life of Christ and Mary, the first instance of Marian subject matter in western Europe, dated to the first half of the 8th century and using Egyptian blue and lapis lazuli.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-crypt",
+        "description": "The crypt, built on the house of St. Silvia, holds the relics of St. Sabas.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Sabbas the Sanctified",
+      "personId": "sabbas-the-sanctified",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Gregory I",
+      "personId": "pope-gregory-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "St. Silvia",
+      "personId": "st-silvia",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Antipope Constantine II",
+      "personId": "antipope-constantine-ii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Pius II",
+      "personId": "pope-pius-ii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Arthur Roche",
+      "personId": "arthur-roche",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Jorge Medina (cardinal)",
+      "personId": "jorge-medina-cardinal",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Augustin Bea",
+      "personId": "augustin-bea",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Jean Daniélou",
+      "personId": "jean-dani-lou",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Anselm",
+      "personId": "anselm",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

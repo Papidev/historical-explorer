@@ -1,0 +1,52 @@
+{
+  "id": "carlo-lombardi",
+  "name": "Carlo Lombardi",
+  "wikidataId": "Q5041542",
+  "wikipediaTitle": "Carlo Lambardi",
+  "content": {
+    "description": [
+      {
+        "text": "Carlo Lombardi, born in 1559 in Arezzo, was an Italian architect who flourished during the late Renaissance and early Baroque periods, primarily working in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His architectural portfolio includes the Palazzo Aldobrandini in the Quirinal district, the facade of Santa Prisca, and the villa Giustinianini outside Porta del Popolo, as well as a marble portico and facade for the church of Santa Francesca Romana in the Roman Forum, commissioned by Pope Paul V and the Olivetan monks.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Lombardi authored a book on the flooding of the Tiber River, reflecting his interest in hydraulic engineering.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The marble portico and facade he designed for Santa Francesca Romana were specifically commissioned during the reign of Pope Paul V.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His work on the facade of Santa Prisca demonstrates his contribution to the architectural embellishment of Rome’s churches.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1559,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1620,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Carlo Lambardi",
+    "url": "https://en.wikipedia.org/wiki/Carlo_Lambardi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:41:46.334Z"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "ignazio-jacometti",
+  "name": "Ignazio Jacometti",
+  "wikidataId": "Q16063070",
+  "wikipediaTitle": "Ignazio Jacometti",
+  "content": {
+    "description": [
+      {
+        "text": "Ignazio Jacometti was born on 16 January 1819 in Rome, the third of five children in a family that traced its roots to the ancient Orsini aristocracy. Though his parents initially wanted him to pursue a legal career, he abandoned the Collegio Nazareno in 1835 to study sculpture at the Accademia di San Luca, where he would later become a professor.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Jacometti’s career was marked by a series of prestigious commissions and academic appointments. He created notable works such as the Bacio di Giuda, which Pope Pius IX acquired in 1855, and the statue of Moses for the Column of the Immacolata in 1857. He served as resident professor, chair of nude sculpture, and eventually president of the Accademia di San Luca, while also being named a knight and commendatore of the Order of St Gregory the Great by Pius IX.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "His sculpture Bacio di Giuda was placed flanking the atrium at the base of the Scala Santa at San Giovanni in Laterano in 1855.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1854, the secretary of the Papal state, Giovanni Antonelli, commissioned Jacometti to create the statuary group Ecce Homo, which now stands across from the Bacio group.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Jacometti was appointed director of the Papal Galleries and Museums in 1870, where he played a key role in compiling an inventory of the Vatican’s collections.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was honored by Pope Pius IX with the title of knight and later the commendatore of the Order of St Gregory the Great.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1819,
+      "month": 1,
+      "day": 16,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1883,
+      "month": 4,
+      "day": 22,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Piazza_di_Spagna_002.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Piazza_di_Spagna_002.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Piazza_di_Spagna_002.JPG/960px-Piazza_di_Spagna_002.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Piazza_di_Spagna_002.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0",
+    "attribution": "Georges Jansoone (JoJan)",
+    "author": "Georges Jansoone (JoJan)",
+    "width": 1952,
+    "height": 2592,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Ignazio Jacometti",
+    "url": "https://en.wikipedia.org/wiki/Ignazio_Jacometti"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:57:22.715Z"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "antonino-pio",
+  "name": "Antonino Pio",
+  "wikidataId": "Q1429",
+  "wikipediaTitle": "Antonino Pio",
+  "content": {
+    "description": [
+      {
+        "text": "Antoninus Pius reigned from 138 to 161 AD, a period that historians call the golden age of the Roman Empire.  His rule was marked by internal peace, economic prosperity, and a strict adherence to the traditions of the Senate.  He avoided large-scale building projects and major reforms, preferring instead to maintain the status quo and keep the imperial administration stable.  The emperor was known for his respectful attitude toward the Senate, his avoidance of persecution of non‑official cults, and his careful stewardship of the empire’s finances, leaving a substantial treasury for his successors.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "On the frontiers, Antoninus Pius pursued a cautious but effective policy.  In Britain he pushed the frontier beyond Hadrian’s Wall, erecting a new wall that was abandoned after only twenty years of use.  He also advanced the limes Germanicus‑Reticus and dealt with uprisings in Egypt, Mauretania, and Dacia.  His reign saw the adoption of his nephew Marcus Aurelius and the young Lucius Verus, setting the stage for a future co‑emperor arrangement.  Antoninus died in March 161 AD at the age of 75, after a reign that left the empire more stable and prosperous than it had been in decades.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The emperor’s epithet, \"Pius,\" was earned for his filial devotion to his adoptive father, the late Emperor Hadrian, and for his overall piety and respect for Roman traditions.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Antoninus Pius advanced the frontier in Britain beyond Hadrian’s Wall, constructing a new wall that was abandoned after only twenty years of use.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Unlike many of his predecessors, he did not initiate major construction projects or urban reforms, choosing instead to preserve the existing infrastructure and focus on internal stability.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 86,
+      "month": 9,
+      "day": 19,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 161,
+      "month": 3,
+      "day": 7,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Antoninus_Pius_Glyptothek_Munich_337_cropped.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Antoninus_Pius_Glyptothek_Munich_337_cropped.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Antoninus_Pius_Glyptothek_Munich_337_cropped.jpg/960px-Antoninus_Pius_Glyptothek_Munich_337_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Antoninus_Pius_Glyptothek_Munich_337_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown artistUnknown artist",
+    "author": "Unknown artistUnknown artist",
+    "width": 1930,
+    "height": 2410,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Antonino Pio",
+    "url": "https://it.wikipedia.org/wiki/Antonino_Pio"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:17:40.304Z"
+  }
+}

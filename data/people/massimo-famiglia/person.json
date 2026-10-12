@@ -1,0 +1,61 @@
+{
+  "id": "massimo-famiglia",
+  "name": "Massimo",
+  "wikidataId": "Q367826",
+  "wikipediaTitle": "Massimo (famiglia)",
+  "content": {
+    "description": [
+      {
+        "text": "The Massimo family is an ancient Roman princely dynasty that remains active in branches such as the Princes of Arsoli and Massimo delle Colonne. Their origins are obscure and legendary, with a mythic tradition linking them to the Gens Fabia and Quinto Fabio Rulliano in the 4th century BC, as recorded by Onofrio Panvinio in 1556. The family claims descent from two early popes, Anastasius I and Paschal I, and was considered by some, including Vittorio Spreti, the oldest family in Europe. Napoleon Bonaparte was asked about the veracity of this lineage, to which Francesco Camillo VII Massimo replied that it was a rumor only circulating for a dozen centuries.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The first documented member bearing the name de Maximis appears in a 1012 stone at the Basilica of San Bonifacio e Alessio on the Aventine, commemorating Leo de Maximis. The family rose to prominence in the 14th and 15th centuries, acquiring a vast fortune through commerce and professional activities, and forming marital alliances with other Roman aristocratic houses such as the Santacroce, Mazzatosta, Planca, Spannocchi, Mattei, Cesarini, Mancini, and Colonna. In 1544 they were granted the title of marquesses, and in 1826 they became princes, with the title of dukes following in 1828. The family split in the 16th century into the \"delle Colonne\" branch, still residing in Palazzo Massimo alle Colonne, and the \"di Aracoeli\" branch, now extinct in the male line.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Massimo family owned the first printing press in Rome, operated by Conrad Sweynheym and Arnold Pannartz, assisted by brothers Pietro and Francesco Camillo VII, who were sons of Massimo di Lello di Cecco.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "All male primogenitors of the Massimo family from the 16th century onward signed public acts with the name \"Camillo\" in memory of Camillo Massimo (1577‑1640), the first primogeniture founder.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The family's main burial site is the chapel of Santa Maria Annunziata in San Lorenzo in Damaso, Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The family has a palace, Palazzo Massimo alle Terme, now the National Museum of Rome.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Stemma_Massimo_fam_ITA.svg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Stemma_Massimo_fam_ITA.svg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Stemma_Massimo_fam_ITA.svg/960px-Stemma_Massimo_fam_ITA.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Stemma_Massimo_fam_ITA.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Sanngreal",
+    "author": "Sanngreal",
+    "width": 430,
+    "height": 500,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Massimo (famiglia)",
+    "url": "https://it.wikipedia.org/wiki/Massimo_(famiglia)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:18:55.213Z"
+  }
+}

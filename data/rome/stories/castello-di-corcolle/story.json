@@ -1,0 +1,50 @@
+{
+  "introduction": {
+    "text": "Castello di Corcolle is a fortress east of Rome on Via Zagarolese, notable for its role as a transition fortress of the late 15th century and its association with prominent Roman families.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The castle was a transition fortress of the late 15th century, marking the emergence of modern fortifications.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1400,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "The castle was owned by the Colonna, Barberini, and Orsini families.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The castle exemplifies a transition fortress design of the late 15th century, bridging medieval and modern fortification styles.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Colonna",
+      "personId": "colonna",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Barberini",
+      "personId": "barberini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Orsini",
+      "personId": "orsini-family",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

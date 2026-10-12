@@ -1,0 +1,63 @@
+{
+  "id": "pope-sixtus-ii",
+  "name": "Pope Sixtus II",
+  "wikidataId": "Q127385",
+  "wikipediaTitle": "Pope Sixtus II",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Sixtus II, who served as the Bishop of Rome from 31 August 257 until his death on 6 August 258, is recorded in the Liber Pontificalis as a Greek philosopher before his elevation to the papacy. Modern scholars dispute this claim, suggesting that the text may have confused him with a contemporary Greek student of Pythagoreanism named Xystus. Despite the uncertainty about his background, Sixtus is credited with restoring diplomatic ties with the African and Eastern churches that had been severed by his predecessor over the Novatianist controversy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the persecution of Christians under Emperor Valerian in 258, Sixtus II was among the first victims. He was beheaded on 6 August, together with seven deacons, including the famed Lawrence of Rome. His martyrdom is commemorated in the Roman Canon of the Mass, and he was originally celebrated on 6 August in the Tridentine calendar before the 1969 revision moved the memorial to 7 August.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Sixtus II is mentioned by name in the Roman Canon of the Mass, indicating his early importance in the liturgical tradition.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was martyred alongside Lawrence of Rome, who died four days later on 10 August, illustrating the close association between the bishop and his deacon.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "An inscription on his tomb in the catacomb of Callixtus, commissioned by Pope Damasus I, praises Sixtus for offering his head to the sword rather than allowing the soldiers to harm the faithful.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 258,
+      "month": 8,
+      "day": 6,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Sandro_Botticelli_–_Sixtus_II.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_%E2%80%93_Sixtus_II.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Sandro_Botticelli_%E2%80%93_Sixtus_II.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Sandro_Botticelli_%E2%80%93_Sixtus_II.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Sandro Botticelli",
+    "author": "Sandro Botticelli",
+    "width": 508,
+    "height": 758,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Sixtus II",
+    "url": "https://en.wikipedia.org/wiki/Pope_Sixtus_II"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:04:47.660Z"
+  }
+}

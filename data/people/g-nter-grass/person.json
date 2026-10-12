@@ -1,0 +1,69 @@
+{
+  "id": "g-nter-grass",
+  "name": "Günter Grass",
+  "wikidataId": "Q6538",
+  "wikipediaTitle": "Günter Grass",
+  "content": {
+    "description": [
+      {
+        "text": "Günter Grass was born on 16 October 1927 in the Free City of Danzig, a place that would later become Gdańsk, Poland.  At the age of 17 he was drafted into the Waffen‑SS and served with the 10th SS Panzer Division Frundsberg until he was wounded and captured by U.S. forces in April 1945, a fact he publicly revealed only in 2006.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the war he trained as a stonemason and sculptor, before turning to literature in the 1950s.  His debut novel, The Tin Drum (1959), established him as a leading voice in German post‑war literature and earned him the Nobel Prize in Literature in 1999.  Grass was also an outspoken supporter of the Social Democratic Party of Germany and a co‑founder of the influential literary group Group 47.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Grass was a co‑founder of Group 47, a literary collective that helped shape post‑war German literature.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Before becoming a writer, Grass worked as a stonemason and studied sculpture and graphics at the Kunstakademie Düsseldorf.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1999 he received the Nobel Prize in Literature, with the Swedish Academy praising his work as a “frolicsome black fable” that portrayed the forgotten face of history.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1927,
+      "month": 10,
+      "day": 16,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 2015,
+      "month": 4,
+      "day": 13,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Günter_Grass_auf_dem_Blauen_Sofa.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:G%C3%BCnter_Grass_auf_dem_Blauen_Sofa.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/G%C3%BCnter_Grass_auf_dem_Blauen_Sofa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/G%C3%BCnter_Grass_auf_dem_Blauen_Sofa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 2.0",
+    "attribution": "Blaues Sofa from Berlin, Deutschland",
+    "author": "Blaues Sofa from Berlin, Deutschland",
+    "width": 534,
+    "height": 800,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Günter Grass",
+    "url": "https://en.wikipedia.org/wiki/G%C3%BCnter_Grass"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T21:01:34.849Z"
+  }
+}

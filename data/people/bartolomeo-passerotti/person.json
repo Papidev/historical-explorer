@@ -1,0 +1,73 @@
+{
+  "id": "bartolomeo-passerotti",
+  "name": "Bartolomeo Passerotti",
+  "wikidataId": "Q809512",
+  "wikipediaTitle": "Bartolomeo Passarotti",
+  "content": {
+    "description": [
+      {
+        "text": "Bartolomeo Passerotti, born in 1529 in Bologna, was a prominent Mannerist painter who spent the early part of his career in Rome under the tutelage of Giacomo Barozzi da Vignola and Taddeo Zuccari. After returning to his hometown, he established a large studio and produced a significant altarpiece for the Basilica of San Giacomo Maggiore between 1564 and 1565. His work during this period shows the influence of Tuscan masters such as Giorgio Vasari and Prospero Fontana, reflecting a blend of Roman and Bolognese styles.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In his later years, Passerotti continued to develop genre scenes that would later inspire the Baroque generation, notably Annibale Carracci's brother Agostino, and he produced his last known painting, The Presentation of Mary in the Temple, in 1583, which now resides in the Pinacoteca Nazionale di Bologna. His artistic legacy extended to his family, with three sons—Ventura, Aurelio, and Tiburzio—who all pursued painting, and his studio played a crucial role in shaping the next wave of Bolognese artists.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "His last known work, The Presentation of Mary in the Temple (1583), is housed at the Pinacoteca Nazionale di Bologna.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He painted a large altarpiece for the Basilica of San Giacomo Maggiore between 1564 and 1565.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His genre scenes, such as The Beaneater and The Butcher's Shop, were originally attributed to him and influenced Annibale Carracci's brother Agostino.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Three of his sons—Ventura (1566–1618), Aurelio (1560–1609), and Tiburzio—became painters.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The painting \"Homer's Riddle\" was lost for centuries and was recently recovered by the Uffizi Gallery.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1529,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1592,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Bartolomeo_Passarotti_Selfportrait.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Bartolomeo_Passarotti_Selfportrait.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Bartolomeo_Passarotti_Selfportrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Bartolomeo_Passarotti_Selfportrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Circle of Bartolomeo Passarotti",
+    "author": "Circle of Bartolomeo Passarotti",
+    "width": 472,
+    "height": 700,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Bartolomeo Passarotti",
+    "url": "https://en.wikipedia.org/wiki/Bartolomeo_Passarotti"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:23:00.028Z"
+  }
+}

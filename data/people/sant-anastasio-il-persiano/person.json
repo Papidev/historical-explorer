@@ -1,0 +1,65 @@
+{
+  "id": "sant-anastasio-il-persiano",
+  "name": "sant'Anastasio il Persiano",
+  "wikidataId": "Q254896",
+  "wikipediaTitle": "Anastasio il Persiano",
+  "content": {
+    "description": [
+      {
+        "text": "Magundat, later known as Anastasio the Persian, was born in Persia and raised in the Mazdean tradition by his father Han. He served in the Persian army until the reign of King Khosrow II, who seized Jerusalem in 614 and brought the True Cross of Christ back to Persia. The presence of the relic sparked Magundat’s curiosity, leading him to seek the Christian faith and ultimately travel to Jerusalem for baptism, where he adopted the name Anastasio, meaning \"the resurrected.\"",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After seven years of monastic life, Anastasio moved to Caesarea Maritima, where he was captured by the Persians for his Christian devotion and transported to Sergiopolis. There he was martyred by decapitation. His remains were later carried to Rome by Emperor Heraclius around 640 and placed in the monastery of the Aquae Salviae, later dedicated to Saints Vincent and Anastasio. The cult of Saint Anastasio gained prominence in Italy, especially after King Liutprand of the Lombards, in accord with Pope Gregory II, established monasteries in his honor and spread devotion throughout the region. The Council of Nicea in 787 formally recognized the saint’s miracles, cementing his status in both the Catholic and Orthodox traditions.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Anastasio was originally named Magundat and was raised in the Mazdean religion before converting to Christianity.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was martyred by decapitation in Sergiopolis after being imprisoned by Persians for his faith.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His relics were transported to Rome by Emperor Heraclius around 640 and housed in the monastery of the Aquae Salviae.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Council of Nicea in 787 officially recognized the miracles attributed to Saint Anastasio.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "King Liutprand of the Lombards, influenced by the saint’s cult, founded monasteries in his name and promoted devotion across Italy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "St_Anastasius_the_Persian.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:St_Anastasius_the_Persian.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/St_Anastasius_the_Persian.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/St_Anastasius_the_Persian.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Liturgia Latina",
+    "author": "Liturgia Latina",
+    "width": 300,
+    "height": 400,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Anastasio il Persiano",
+    "url": "https://it.wikipedia.org/wiki/Anastasio_il_Persiano"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:13:32.596Z"
+  }
+}

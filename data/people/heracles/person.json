@@ -1,0 +1,61 @@
+{
+  "id": "heracles",
+  "name": "Heracles",
+  "wikidataId": "Q122248",
+  "wikipediaTitle": "Heracles",
+  "content": {
+    "description": [
+      {
+        "text": "Heracles, the son of Zeus and the mortal Alcmene, is celebrated as the greatest of Greek heroes, renowned for his superhuman strength and daring exploits. He was worshipped as both a hero and a god, with festivals offering sacrifices to him first as a hero and then as a god, reflecting his unique dual status. No tomb has ever been identified for him, a rarity among Greek heroes, and he served as a patron of young men and gymnasia, embodying the ideal of physical prowess and moral fortitude.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Heracles' myth is marked by the enmity of Hera, who drove him mad and caused him to kill his wife Megara and their children. He then performed the Twelve Labours, a series of seemingly impossible tasks that included slaying the Nemean lion and the Lernaean Hydra. After serving a term of slavery to Omphale, he was eventually deified: his wife Deianira gave him a poisoned garment, leading to his self‑immolation on Mount Oeta, after which he ascended to Olympus and married the goddess Hebe. His legacy endured in Roman culture, where emperors such as Commodus adopted the name Hercules and identified themselves with the hero.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Heracles was worshipped as both a hero and a god, with sacrifices offered to him first as a hero and then as a god at the same festival.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "No tomb has ever been identified for Heracles, making him unique among Greek heroes.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Heracles' apotheosis involved his wife Deianira giving him a garment smeared with poisoned blood, which led to his self‑immolation on Mount Oeta and his ascent to Olympus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Roman emperors such as Commodus and Maximian identified themselves with Heracles, adopting the name Hercules and drawing on his heroic image.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Antonio_del_Pollaiolo_-_Ercole_e_l'Idra_e_Ercole_e_Anteo_-_Google_Art_Project.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Antonio_del_Pollaiolo_-_Ercole_e_l'Idra_e_Ercole_e_Anteo_-_Google_Art_Project.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Antonio_del_Pollaiolo_-_Ercole_e_l%27Idra_e_Ercole_e_Anteo_-_Google_Art_Project.jpg/960px-Antonio_del_Pollaiolo_-_Ercole_e_l%27Idra_e_Ercole_e_Anteo_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Antonio_del_Pollaiolo_-_Ercole_e_l%27Idra_e_Ercole_e_Anteo_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Antonio del Pollaiuolo",
+    "author": "Antonio del Pollaiuolo",
+    "width": 2217,
+    "height": 3147,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Heracles",
+    "url": "https://en.wikipedia.org/wiki/Heracles"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:53:18.553Z"
+  }
+}

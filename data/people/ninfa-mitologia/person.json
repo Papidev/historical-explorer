@@ -1,0 +1,57 @@
+{
+  "id": "ninfa-mitologia",
+  "name": "Ninfa",
+  "wikidataId": "Q373916",
+  "wikipediaTitle": "Ninfa (mitologia)",
+  "content": {
+    "description": [
+      {
+        "text": "In Greek mythology, ninfe are minor female deities that personify aspects of nature. They are typically linked to a particular place or natural feature, such as a forest, mountain, spring, or tree, and are considered immortal like other gods, with the exception of the amadriadi whose existence is bound to a specific tree.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ninfe serve as benefactors of the natural world, making the land fertile and protecting couples who bathe in their springs. They are often associated with the goddess Artemis, and their unions with mortals can produce demigods and heroes. Scholars classify them into several groups—epigee (earthly), idriadi (aquatic), uranie (celestial), and occasionally ctonie (underworld)—reflecting the diverse environments they inhabit.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Only the amadriadi, a type of tree nymph, have a lifespan tied to a particular tree; all other ninfe are immortal.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In artistic depictions, ninfe are portrayed as beautiful young women with flowing hair, wearing light garments and rarely nude.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ninfe are divided into epigee (earthly), idriadi (aquatic), uranie (celestial), and sometimes ctonie (underworld) groups, each associated with a specific natural domain.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Rape_Hylas_Massimo.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Rape_Hylas_Massimo.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Rape_Hylas_Massimo.jpg/960px-Rape_Hylas_Massimo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Rape_Hylas_Massimo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Jastrow (2006)",
+    "author": "Jastrow (2006)",
+    "width": 2400,
+    "height": 1670,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Ninfa (mitologia)",
+    "url": "https://it.wikipedia.org/wiki/Ninfa_(mitologia)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:15:37.319Z"
+  }
+}

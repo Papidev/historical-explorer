@@ -1,0 +1,123 @@
+{
+  "introduction": {
+    "text": "The Column of Marcus Aurelius is a Roman victory column in Piazza Colonna, Rome, built to honor Emperor Marcus Aurelius and his campaigns against Germanic tribes. It is a key monument that links Roman imperial propaganda, architectural tradition, and the history of the Marcomannic Wars.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history2",
+        "description": "The column commemorates the Marcomannic Wars fought by Marcus Aurelius from 169 to 180 AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 169,
+          "precision": "exact",
+          "endYear": 180,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history1",
+        "description": "Construction began after Marcus Aurelius' death in 180 AD and was completed around 193 AD under Septimius Severus.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 180,
+          "precision": "exact",
+          "endYear": 193,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "The bronze statue atop the column was originally of Marcus Aurelius and was replaced by St. Paul in the 16th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1500,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "In 1589 Pope Sixtus V commissioned a restoration that replaced the missing bronze statue of Marcus Aurelius with one of St. Paul.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1589,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "The column was modeled after Trajan's Column, a precedent for Roman imperial victory monuments.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The column is a Doric order structure made of Carrara marble, standing 29.6 m tall with a 10.1 m base.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "Its shaft contains a spiral staircase of 190–200 steps, illuminated through narrow slits in the marble.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "The column's frieze is a 112 m long spiral relief depicting scenes of the emperor's campaigns.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "The relief shows the emperor's campaigns against Germanic and Sarmatian tribes, with dramatic scenes such as the miracle rain.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "The symbolic language of the frieze emphasizes imperial dominance and authority, using clear but clumsy figures.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "The depiction of the miracle rain scene illustrates divine intervention during the Marcomannic Wars.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Marcus Aurelius",
+      "personId": "marcus-aurelius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Septimius Severus",
+      "personId": "septimius-severus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Cassius Dio",
+      "personId": "cassius-dio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Sixtus V",
+      "personId": "pope-sixtus-v",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Domenico Fontana",
+      "personId": "domenico-fontana",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "St. Paul",
+      "personId": "paul-the-apostle",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

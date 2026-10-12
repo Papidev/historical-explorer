@@ -1,0 +1,72 @@
+{
+  "introduction": {
+    "text": "The Berretta del Prete is a Roman mausoleum located in the Parco regionale dell'Appia antica near Santa Maria delle Mole, notable for its dome, height over 12 m, and its historical significance as a funerary monument dating to the late Roman period.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "A brick tomb of the \"a edicola\" type adjacent to the mausoleum, datable to the 2nd century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 101,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Construction of the mausoleum, a dome structure with semicircular niches, dated to the years near 300.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 300,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Document of 950 records the purchase of the mausoleum and surrounding land by the church of San Gregorio al Celio, which retained ownership until 1828.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 950,
+          "precision": "exact",
+          "endYear": 1828,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "In 1981, exploratory excavations led by archaeologist Marisa de Spagnolis uncovered marble fragments, including a column with an ibis and serpent, now housed in the Museo Nazionale Romano.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1981,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The mausoleum features a dome exceeding 12 m in height, external semicircular niches, and a single entrance door with a peperino lintel less than one meter wide.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Marble column with an ibis and serpent motif, recovered during the 1981 excavations, now displayed at the Museo Nazionale Romano.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Giovanni Battista Piranesi",
+      "personId": "giovanni-battista-piranesi",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

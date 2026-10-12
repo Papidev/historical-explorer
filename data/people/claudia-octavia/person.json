@@ -1,0 +1,67 @@
+{
+  "id": "claudia-octavia",
+  "name": "Claudia Octavia",
+  "wikidataId": "Q231262",
+  "wikipediaTitle": "Claudia Octavia",
+  "content": {
+    "description": [
+      {
+        "text": "Claudia Octavia, born in Rome around 39 or 40 CE, was the eldest daughter of Emperor Claudius and his third wife, Valeria Messalina. She grew up in a court already marked by intrigue, as her mother was executed in 48 CE after an alleged plot with Senator Gaius Silius. Octavia’s early life was shaped by the political manoeuvres of her father’s remarriage to Agrippina the Younger, which made her the stepsister of the future emperor Nero.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 53 CE, Octavia was married to Nero, a union arranged by Agrippina to secure Nero’s succession. Although the marriage was politically useful, it was personally unhappy; Nero’s infidelities and his disdain for Octavia led to her eventual divorce, banishment, and execution in 62 CE. Her death sparked public outcry, and she was remembered by the Roman people as a virtuous and popular empress.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Octavia’s portrait appeared on coins minted in the eastern half of the Roman Empire, a rare honor for a woman of her time.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Unlike many of her successors, Octavia was never granted the imperial title Augusta, reflecting the limited role she played in Nero’s reign.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Her execution was carried out by suffocation in a room of hot steam, a method described by Tacitus and recorded in contemporary accounts.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 39,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 62,
+      "month": 6,
+      "day": 9,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Clevelandart_1925.943.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Clevelandart_1925.943.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Clevelandart_1925.943.jpg/960px-Clevelandart_1925.943.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Clevelandart_1925.943.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC0",
+    "attribution": "https://clevelandart.org/art/1925.943",
+    "author": "https://clevelandart.org/art/1925.943",
+    "width": 2666,
+    "height": 3400,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Claudia Octavia",
+    "url": "https://en.wikipedia.org/wiki/Claudia_Octavia"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:55:29.068Z"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "fabius-pictor",
+  "name": "Fabius Pictor",
+  "wikidataId": "Q313500",
+  "wikipediaTitle": "Quintus Fabius Pictor",
+  "content": {
+    "description": [
+      {
+        "text": "Quintus Fabius Pictor, born around 270 BC, was a patrician of the gens Fabia whose family had already been involved in Roman politics; his grandfather Gaius Fabius Pictor had decorated the temple of Salus in 304 BC and his father Gaius served as consul in 269 BC.  Fabius himself served in the Roman army against the Gauls and Ligurians in the 230s, was a junior officer under his cousin Quintus Fabius Maximus Verrucosus in 233 BC, and later held the praetorship before the Second Punic War, eventually becoming a senator and a member of the delegation that travelled to Delphi in 216 BC to seek divine counsel after the defeat at Cannae.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Fabius is best known for writing the earliest surviving Roman history, composed in Greek between 215 and 200 BC.  His work, the Annales Graeci or Romaika praxeis, combined mythic origins with contemporary events, using the Greek Olympiad system to date Rome’s founding to 747 BC and presenting the Republic as a well‑ordered state loyal to its allies.  Though the original text is lost, fragments quoted by later historians such as Polybius, Livy, and Plutarch show that his narrative was heavily influenced by Greek historiographical methods, especially those of Timaeus, and that it introduced a nationalistic tone that framed the Second Punic War as a consequence of Carthaginian aggression.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 216 BC, Fabius was appointed to travel to the oracle at Delphi, a mission likely arranged by his cousin Fabius Verrucosus and motivated by his knowledge of Greek language and culture.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His decision to write in Greek, rather than Latin, was driven by the fact that Greek was the lingua‑media of the educated Mediterranean world at the time and allowed him to reach a broader audience.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Fabius used the Greek Olympiad chronology to date the founding of Rome, aligning it with the first year of the eighth Olympiad (747 BC) and thereby creating a cultural bridge between Roman and Greek histories.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -270,
+      "precision": "approximate"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Quintus Fabius Pictor",
+    "url": "https://en.wikipedia.org/wiki/Quintus_Fabius_Pictor"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:15:40.142Z"
+  }
+}

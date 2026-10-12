@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Casa_di_goethe_fassade.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Casa_di_goethe_fassade.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Casa_di_goethe_fassade.JPG/960px-Casa_di_goethe_fassade.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Casa_di_goethe_fassade.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Tom86",
+      "author": "Tom86",
+      "width": 4176,
+      "height": 2784,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Casa_di_goethe_eingang.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Casa_di_goethe_eingang.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Casa_di_goethe_eingang.JPG/960px-Casa_di_goethe_eingang.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/df/Casa_di_goethe_eingang.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Tom86",
+      "author": "Tom86",
+      "width": 2784,
+      "height": 4176,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Via_del_Corso_-_panoramio_(1).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Via_del_Corso_-_panoramio_(1).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Via_del_Corso_-_panoramio_%281%29.jpg/960px-Via_del_Corso_-_panoramio_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Via_del_Corso_-_panoramio_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "attribution": "Mister No",
+      "author": "Mister No",
+      "width": 1600,
+      "height": 1043,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Casa_di_goethe_fassade.JPG"
+}

@@ -1,0 +1,73 @@
+{
+  "id": "apollo",
+  "name": "Apollo",
+  "wikidataId": "Q37340",
+  "wikipediaTitle": "Apollo",
+  "content": {
+    "description": [
+      {
+        "text": "Apollo is the ancient Greek god of music, the arts, medicine, science, intellect, prophecy, love, and the Sun. He is often depicted with a lyre, the instrument that symbolizes his patronage of the Muses and his role as a divine musician.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond his artistic domains, Apollo is also known as a skilled archer who protected the city and the temple of Delphi, and he was worshipped in both Delo, where he was born with his twin sister Artemis, and in Delphi, the site of his famous oracle.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Apollo’s main symbol is the lyre, an instrument he is credited with inventing and which he used to guide the Muses.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was worshipped in the twin cities of Delo and Delphi, the latter being the center of his prophetic oracle.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Apollo was introduced to Rome around 421 BC, where he was later associated with the Roman emperor Augustus and the Ludi Apollinari games.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The NASA Apollo space program, which landed humans on the Moon in the 1960s and 1970s, was named after the Greek god.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In myth, Apollo killed the serpent Python, who guarded the oracle at Delphi, and he also turned the nymph Daphne into a laurel tree after a failed pursuit.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Apollo is the father of Asclepius, the god of medicine, and he played a key role in the Trojan War by aiding the Trojans and influencing the fate of heroes such as Cassandra.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Apollo gave the lyre to Hermes, who fashioned it from a tortoise shell, and later the instrument was associated with the legendary musician Orpheus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Apollo_of_the_Belvedere.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Apollo_of_the_Belvedere.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Apollo_of_the_Belvedere.jpg/960px-Apollo_of_the_Belvedere.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Apollo_of_the_Belvedere.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Livioandronico2013",
+    "author": "Livioandronico2013",
+    "width": 3113,
+    "height": 5305,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Apollo",
+    "url": "https://it.wikipedia.org/wiki/Apollo"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:07:18.317Z"
+  }
+}

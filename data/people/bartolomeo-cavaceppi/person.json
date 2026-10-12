@@ -1,0 +1,57 @@
+{
+  "id": "bartolomeo-cavaceppi",
+  "name": "Bartolomeo Cavaceppi",
+  "wikidataId": "Q3635356",
+  "wikipediaTitle": "Bartolomeo Cavaceppi",
+  "content": {
+    "description": [
+      {
+        "text": "Bartolomeo Cavaceppi was an Italian sculptor and restorer who flourished in Rome during the first half of the eighteenth century. He trained under the sculptor Carlo Antonio Napolioni and entered the studio of the French artist Pierre‑Étienne Monnot in 1729, although contemporary documents more reliably record his apprenticeship with Napolioni. In 1732 he entered the Clementine competition for sculpture organized by the Accademia di San Luca, presenting a model based on Gian Lorenzo Bernini’s Abacuc.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cavaceppi’s reputation as a restorer grew rapidly, especially after Cardinal Alessandro Albani, the leading antiquarian of Rome, appointed him in 1734 to oversee Albani’s prestigious collection of ancient works. His atelier became a hub for European collectors, including Frederick II of Prussia and Catherine II of Russia, and he forged a close friendship with the art historian Johann Joachim Winckelmann, who accompanied him on a German tour in 1768. He worked on the restoration of key sculptures in the Capitoline Museums under Popes Benedict XIV and Clement XIII, and while he rarely signed his pieces, some of his copies were so faithful that they were occasionally mistaken for originals.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Cavaceppi’s atelier attracted many of the era’s most prominent collectors, including Frederick II of Prussia and Catherine II of Russia, who commissioned him to produce copies of ancient statues for their private collections.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He maintained a close friendship with the German art historian Johann Joachim Winckelmann, who joined Cavaceppi on his final German tour in 1768.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Although he produced original works such as statues of Carlo I, Ceres, Diana and Frederick II, Cavaceppi was better known for his meticulous copies of ancient sculptures, and his restorations were so convincing that some were later confused with genuine antiquities.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Anton_von_maron,_ritratto_di_bartolomeo_cavaceppi,_1782.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Anton_von_maron%2C_ritratto_di_bartolomeo_cavaceppi%2C_1782.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Anton_von_maron%2C_ritratto_di_bartolomeo_cavaceppi%2C_1782.JPG/960px-Anton_von_maron%2C_ritratto_di_bartolomeo_cavaceppi%2C_1782.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Anton_von_maron%2C_ritratto_di_bartolomeo_cavaceppi%2C_1782.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0",
+    "attribution": "Sailko",
+    "author": "Sailko",
+    "width": 2160,
+    "height": 2776,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Bartolomeo Cavaceppi",
+    "url": "https://it.wikipedia.org/wiki/Bartolomeo_Cavaceppi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:22:29.508Z"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "margherita-guarducci",
+  "name": "Margherita Guarducci",
+  "wikidataId": "Q1059594",
+  "wikipediaTitle": "Margherita Guarducci",
+  "content": {
+    "description": [
+      {
+        "text": "Margherita Guarducci was born on 20 December 1902 in Italy and earned her diploma in Bologna in 1924 before studying at the National School of Archeology in Rome. She became one of the first Italian women to practice archaeology in Greece, directing the Scuola Alessandro Della Seta and leading excavations on Crete, where she completed the monumental work of her mentor Federico Halbherr by publishing the Inscriptiones Creticae, a definitive collection of Greek and Latin inscriptions from the island.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1953 Guarducci was appointed head of the Vatican Necropolis excavations, where her expertise in epigraphy enabled her to identify the bones of Saint Peter and interpret the inscriptions on the Graffiti Wall. Her findings were publicly confirmed by Pope Paul VI in 1968 and later by Pope Francis in 2013, cementing her legacy as a pioneering scholar who bridged classical antiquity and contemporary religious history.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Guarducci was the first woman to lead archaeological excavations at the Vatican, succeeding Ludwig Kaas and completing the work on Saint Peter’s tomb.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She argued that the inscription on the Praeneste fibula was a forgery, a controversial stance that sparked debate among scholars of Roman epigraphy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Guarducci was elected a member of the Accademia Nazionale dei Lincei in 1956, one of Italy’s most prestigious scientific societies.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1902,
+      "month": 12,
+      "day": 20,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1999,
+      "month": 9,
+      "day": 2,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Margherita Guarducci",
+    "url": "https://en.wikipedia.org/wiki/Margherita_Guarducci"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:07:04.717Z"
+  }
+}

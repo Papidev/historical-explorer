@@ -1,0 +1,71 @@
+{
+  "id": "pope-gelasius-i",
+  "name": "Pope Gelasius I",
+  "wikidataId": "Q162135",
+  "wikipediaTitle": "Pope Gelasius I",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Gelasius I served as bishop of Rome from 1 March 492 until his death on 21 November 496. During his short reign he intensified the Acacian schism by demanding the removal of the name of the deceased Patriarch Acacius from the diptychs, thereby asserting Rome’s primacy over the Eastern Church. He also maintained cordial relations with the Ostrogothic king Theodoric the Great, who was an Arian, and used his influence to keep the Western Church stable under a foreign ruler. In 494 he issued the influential letter Duo sunt to Emperor Anastasius, which articulated the relationship between Church and state and would be cited by later popes for centuries.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Gelasius was a prolific writer, with more than a hundred surviving letters, many of which dealt with church administration in Italy. He is traditionally credited with authoring the Decretum Gelasianum, a list of canonical and apocryphal books that later became associated with the canon of Scripture, although the text is now considered a later pseudo‑work. The pseudo‑Gelasian Sacramentary, a liturgical book compiled in the eighth century, also bears his name, reflecting the enduring influence of his writings. He died on 21 November 496, and his feast day is celebrated on the same date.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Gelasius suppressed the ancient Roman festival of the Lupercalia, a fertility and purification rite that had persisted among Christians.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He authored the treatise *De duabus in Christo naturis*, which articulated Catholic doctrine on the dual nature of Christ.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The letter *Duo sunt* he sent to Emperor Anastasius in 494 had political impact for more than a millennium, being cited by later popes.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Over 100 of his letters survive, with 49 fragmentary, making him one of the most prolific writers among early bishops of Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Decretum Gelasianum, a list of canonical and apocryphal books, is traditionally attributed to Gelasius but is now considered a later pseudo‑work.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 496,
+      "month": 11,
+      "day": 21,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_Gelasius_I.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Gelasius_I.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Pope_Gelasius_I.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Pope_Gelasius_I.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Artaud de Montor (1772–1849)",
+    "author": "Artaud de Montor (1772–1849)",
+    "width": 432,
+    "height": 597,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Gelasius I",
+    "url": "https://en.wikipedia.org/wiki/Pope_Gelasius_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:20:16.482Z"
+  }
+}

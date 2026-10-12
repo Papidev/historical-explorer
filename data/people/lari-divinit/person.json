@@ -1,0 +1,57 @@
+{
+  "id": "lari-divinit",
+  "name": "Lari",
+  "wikidataId": "Q504377",
+  "wikipediaTitle": "Lari (divinità)",
+  "content": {
+    "description": [
+      {
+        "text": "The Lari were protective spirits of the deceased ancestors in Roman religion, believed to watch over the well‑being of the household, property, and general activities.  Families kept small terracotta, wooden, or wax effigies called sigillum in a niche of a larario, and would light a flame upon them during important life events such as coming of age, travel, marriage, or childbirth.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond the domestic sphere, the Lari had a public cult that included the Lares Compitales at crossroads, the Lares Permarini for navigation, the Lares Praestites guarding city boundaries, and the Lares Augusti who protected the emperor and the empire.  They were also associated with the legendary founders Romulus and Remus, and their images sometimes appeared as youthful figures in tunics, or as dogs, and were offered wine from a rhyton.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Some Lari were depicted as dogs, and their images were kept near the house door, according to Plautus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The festival of Sigillaria, held on 23 December, involved the exchange of small statuettes (sigilla) representing deceased ancestors or Lari.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Lari were identified with the legendary founders Romulus and Remus, linking them to Rome’s mythic origins.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Lar_romano_de_bronce_(M.A.N._Inv.2943)_01.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Lar_romano_de_bronce_(M.A.N._Inv.2943)_01.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Lar_romano_de_bronce_%28M.A.N._Inv.2943%29_01.jpg/960px-Lar_romano_de_bronce_%28M.A.N._Inv.2943%29_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Lar_romano_de_bronce_%28M.A.N._Inv.2943%29_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Luis García",
+    "author": "Luis García (Zaqarbal), 3 December 2008.",
+    "width": 1868,
+    "height": 2936,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Lari (divinità)",
+    "url": "https://it.wikipedia.org/wiki/Lari_(divinit%C3%A0)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:15:46.925Z"
+  }
+}

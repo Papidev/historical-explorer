@@ -1,0 +1,189 @@
+{
+  "introduction": {
+    "text": "The Catacombe di Commodilla is a three‑level underground burial complex in Rome, notable for its early Christian tombs, unique burial niches, and the frescoes that illustrate the cult of its martyrs Felix and Adauctus.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The martyrdom of Felix and Adauctus occurred in the last years of Diocletian.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 300,
+          "precision": "approximate",
+          "endYear": 305,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "The Catacombs of Commodilla were originally a pozzolana quarry that was repurposed as a burial site in the early 4th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 310,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "The complex was fully transformed into a cemetery in the second half of the 4th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 350,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Several popes restored the underground basilica up until the 9th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 800,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "Coins with the head of Pope Gregory IV (827‑844) have been found in the catacombs.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 827,
+          "precision": "exact",
+          "endYear": 844,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "Pope Leo IV (847‑855) removed the relics of Felix and Adauctus, leading to the complex’s abandonment.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 847,
+          "precision": "exact",
+          "endYear": 855,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "Antonio Bosio rediscovered the catacombs in 1595.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1595,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history8",
+        "description": "Giovanni Battista de Rossi identified the catacombs as Commodilla in the 19th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1800,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history9",
+        "description": "Restoration work at the start of the 20th century excavated the second cemetery level.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1900,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The underground basilica dedicated to Felix and Adauctus, featuring two niches and a fresco above them.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The \"tomb of Turtura\", a mid‑6th‑century burial with a fresco of the woman, the martyrs, and the Madonna and Christ Child.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "The \"cubiculum of Leo\", a Roman annona official’s burial chamber discovered in 1953, covered with biblical frescoes.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "A fresco of Saint Luke from the second half of the 7th century, depicting him with surgical instruments.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "A fresco showing a seated Christ on a globe giving the keys to Saint Peter, surrounded by saints including Adauctus, Merita, Paul of Tarsus, Felix, and Stephen.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "A fresco of the \"tomb of Turtura\" featuring the woman, the martyrs, and the Madonna and Christ Child.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Felix and Adauctus",
+      "personId": "felix-and-adauctus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Diocletian",
+      "personId": "diocletian",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "pope Gregory IV",
+      "personId": "pope-gregory-iv",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "pope Leo IV",
+      "personId": "papa-leone-iv",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Antonio Bosio",
+      "personId": "antonio-bosio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giovanni Battista de Rossi (archaeologist)",
+      "personId": "giovanni-battista-de-rossi-archaeologist",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Paul I",
+      "personId": "pope-paul-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope John I",
+      "personId": "pope-john-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Saint Luke",
+      "personId": "st-luke",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Lothar I",
+      "personId": "lothar-i",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

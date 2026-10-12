@@ -1,0 +1,67 @@
+{
+  "id": "giovanni-lajolo",
+  "name": "Giovanni Lajolo",
+  "wikidataId": "Q312043",
+  "wikipediaTitle": "Giovanni Lajolo",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Lajolo was born on 3 January 1935 in Novara, Italy, and entered the priesthood after studying philosophy and theology at the Pontifical Gregorian University. He was ordained a priest on 29 April 1960 and earned a doctorate in canon law from LMU Munich in 1965 before joining the elite Pontifical Ecclesiastical Academy to train as a diplomat.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Lajolo’s diplomatic career led him to serve in the Secretariat of State, where he became Secretary for Relations with States in 2003, effectively acting as the Vatican’s foreign minister. In 2006 he was appointed President of the Pontifical Commission for Vatican City State and Governorate, a role that granted him legislative and executive authority over the microstate until his resignation in 2011. He was elevated to the College of Cardinals in 2007 and participated as a cardinal elector in the 2013 conclave that elected Pope Francis.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 2005, Lajolo was awarded the Knight Grand Cross of the Order of Merit of the Italian Republic.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as the Vatican’s foreign minister, the Secretary for Relations with States, from 2003 until his appointment as president of the Pontifical Commission in 2006.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As president of the Pontifical Commission and Governorate, he held both legislative and executive powers over Vatican City from 2006 to 2011.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Lajolo was one of the cardinal electors who chose Pope Francis in the 2013 papal conclave.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1935,
+      "month": 1,
+      "day": 3,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Lajolo_Zarvanytsya2009.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Lajolo_Zarvanytsya2009.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Lajolo_Zarvanytsya2009.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Lajolo_Zarvanytsya2009.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Attribution",
+    "attribution": "Religious Information Service of Ukraine",
+    "author": "Religious Information Service of Ukraine",
+    "width": 225,
+    "height": 289,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giovanni Lajolo",
+    "url": "https://en.wikipedia.org/wiki/Giovanni_Lajolo"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:42:52.056Z"
+  }
+}

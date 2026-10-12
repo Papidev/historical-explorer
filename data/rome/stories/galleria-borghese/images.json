@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Roma_Museo_Borghese.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Roma_Museo_Borghese.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Roma_Museo_Borghese.jpg/960px-Roma_Museo_Borghese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Roma_Museo_Borghese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Sergio D’Afflitto",
+      "author": "Blackcat",
+      "width": 2304,
+      "height": 1296,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Calcografia_degli_edifizj_di_Roma_1779_(69608960).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Calcografia_degli_edifizj_di_Roma_1779_(69608960).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Calcografia_degli_edifizj_di_Roma_1779_%2869608960%29.jpg/960px-Calcografia_degli_edifizj_di_Roma_1779_%2869608960%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Calcografia_degli_edifizj_di_Roma_1779_%2869608960%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Unknown authorUnknown author",
+      "author": "Unknown authorUnknown author",
+      "width": 5969,
+      "height": 4613,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Fra_Bartolomeo_-_Cristo_benedicente,_421.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Fra_Bartolomeo_-_Cristo_benedicente%2C_421.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Fra_Bartolomeo_-_Cristo_benedicente%2C_421.jpg/960px-Fra_Bartolomeo_-_Cristo_benedicente%2C_421.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Fra_Bartolomeo_-_Cristo_benedicente%2C_421.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Fra Bartolomeo",
+      "author": "Fra Bartolomeo",
+      "width": 3144,
+      "height": 4000,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Roma_Museo_Borghese.jpg"
+}

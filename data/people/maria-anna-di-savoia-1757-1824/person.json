@@ -1,0 +1,77 @@
+{
+  "id": "maria-anna-di-savoia-1757-1824",
+  "name": "Maria Anna di Savoia",
+  "wikidataId": "Q783340",
+  "wikipediaTitle": "Maria Anna di Savoia (1757-1824)",
+  "content": {
+    "description": [
+      {
+        "text": "Maria Anna di Savoia was born in 1757 at the Royal Palace of Turin to King Victor Amadeus III of Savoy and Infanta Maria Antonia Ferdinanda of Spain, making her a princess of the House of Savoy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "On 19 March 1775 she married her uncle, Benedetto of Savoy, Duke of Chablais; the marriage produced no children and she maintained close relations with her sisters‑in‑law Maria Clotilde of France and Maria Teresa of Austria‑Este, while always seeing Benedetto as her uncle rather than husband.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "During the French occupation by Napoleon, the court and the Dukes of Chablais fled Turin for Sardinia, staying there until the end of 1799 before moving to Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Widowed in 1808, Maria Anna lived in the Palazzo Chiablese, which she later left in her will to Charles Felix of Savoy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1820 she purchased Villa Rufinella from Lucien Bonaparte.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She died in 1824 at the hunting lodge of Stupinigi at the age of 66.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She had no children from her marriage to Benedetto.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She was known for her good relations with Maria Clotilde of France and Maria Teresa of Austria‑Este.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1757,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1824,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Maria_Anna_of_Savoy,_Duchess_of_Chablais_-_Royal_Palace_of_Turin.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Maria_Anna_of_Savoy%2C_Duchess_of_Chablais_-_Royal_Palace_of_Turin.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Maria_Anna_of_Savoy%2C_Duchess_of_Chablais_-_Royal_Palace_of_Turin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Maria_Anna_of_Savoy%2C_Duchess_of_Chablais_-_Royal_Palace_of_Turin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unidentified painter",
+    "author": "Unidentified painter",
+    "width": 551,
+    "height": 831,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Maria Anna di Savoia (1757-1824)",
+    "url": "https://it.wikipedia.org/wiki/Maria_Anna_di_Savoia_(1757-1824)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:40:04.585Z"
+  }
+}

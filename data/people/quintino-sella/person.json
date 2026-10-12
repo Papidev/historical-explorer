@@ -1,0 +1,69 @@
+{
+  "id": "quintino-sella",
+  "name": "Quintino Sella",
+  "wikidataId": "Q541300",
+  "wikipediaTitle": "Quintino Sella",
+  "content": {
+    "description": [
+      {
+        "text": "Quintino Sella (1827–1884) was an Italian engineer, mineralogist and politician whose work bridged the worlds of science and public administration. After earning a degree in hydraulic engineering from the University of Turin, he studied at the École des Mines in Paris and travelled extensively through France, the United Kingdom and Germany, absorbing the latest advances in mining technology. His most celebrated scientific contribution was the design of the electro‑magnetic separator, a device that used electromagnetism to separate magnetite from pyrite, for which he received a patent in 1855 and a gold medal at the 1862 London Universal Exposition.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sella’s scientific reputation paved the way for a distinguished political career. He served as Minister of Finance twice, implementing austere fiscal policies to stabilize the newly unified Italian state. In addition to his governmental duties, he was a passionate mountaineer, founding the Club Alpino Italiano in 1863 and participating in early ascents of the Monviso, Monte Rosa and the Matterhorn. His legacy also includes the establishment of Biella’s first public technical school and a pyramid‑shaped tomb in the Oropa cemetery, a monument that reflects the region’s medieval heritage.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Sella was a patron of the Banca Biellese, a bank founded in 1869 in which his brother Giuseppe Venanzio Sella served as the first president.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He founded the first public professional school in Biella in 1869, which still bears his name as the ITIS Q. Sella.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sella’s pyramid‑shaped tomb in the Cimitero monumentale di Oropa is a rare example of Egyptian‑inspired funerary architecture in northern Italy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was instrumental in the acquisition of the Horti Farnesiani on the Palatine Hill for the Italian state in 1870, a project that involved negotiations with Emperor Napoleon III.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1827,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1884,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Quintino_Sella3.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Quintino_Sella3.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Quintino_Sella3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Quintino_Sella3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "ENSMP",
+    "author": "ENSMP",
+    "width": 404,
+    "height": 546,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Quintino Sella",
+    "url": "https://it.wikipedia.org/wiki/Quintino_Sella"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:24:28.239Z"
+  }
+}

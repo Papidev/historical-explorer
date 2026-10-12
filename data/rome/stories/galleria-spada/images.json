@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Galleria_spada,_sala_3,_01.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Galleria_spada%2C_sala_3%2C_01.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Galleria_spada%2C_sala_3%2C_01.jpg/960px-Galleria_spada%2C_sala_3%2C_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Galleria_spada%2C_sala_3%2C_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Francesco Bini",
+      "author": "Francesco Bini",
+      "width": 3456,
+      "height": 2304,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Cortile_interno_di_palazzo_Spada_(già_Capodiferro),_Roma.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Cortile_interno_di_palazzo_Spada_(gi%C3%A0_Capodiferro)%2C_Roma.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Cortile_interno_di_palazzo_Spada_%28gi%C3%A0_Capodiferro%29%2C_Roma.jpg/960px-Cortile_interno_di_palazzo_Spada_%28gi%C3%A0_Capodiferro%29%2C_Roma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Cortile_interno_di_palazzo_Spada_%28gi%C3%A0_Capodiferro%29%2C_Roma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "IlSistemone",
+      "author": "IlSistemone",
+      "width": 4608,
+      "height": 3456,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Roma_-_Galleria_Spada_-_\"La_Prospettiva\"_del_Borromini.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Roma_-_Galleria_Spada_-_%22La_Prospettiva%22_del_Borromini.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Roma_-_Galleria_Spada_-_%22La_Prospettiva%22_del_Borromini.JPG/960px-Roma_-_Galleria_Spada_-_%22La_Prospettiva%22_del_Borromini.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Roma_-_Galleria_Spada_-_%22La_Prospettiva%22_del_Borromini.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Monica_Rondoni",
+      "author": "Monica_Rondoni",
+      "width": 3323,
+      "height": 4985,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Galleria_spada,_sala_3,_01.jpg"
+}

@@ -1,0 +1,182 @@
+{
+  "introduction": {
+    "text": "The Catacombe di Sant'Agnese is a Roman catacomb located near the Basilica of Sant'Agnese fuori le mura. It is significant because it contains the burial of Saint Agnes, the earliest Christian martyr buried there, and because its layers record the development of early Christian burial practices and the architectural evolution of the site from the 3rd to the 7th century.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The catacomb was first used in the second half of the 3rd century as a burial place for Christians.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 200,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "In the 4th century the burial nucleus was enlarged, creating three additional regions.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 300,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Pope Liberius (352–366) erected an aedicule in memory of Saint Agnes above the catacomb.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 352,
+          "precision": "exact",
+          "endYear": 366,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Pope Symmachus (498–514) transformed the aedicule into a small basilica.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 498,
+          "precision": "exact",
+          "endYear": 514,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "Pope Honorius I rebuilt the basilica in the first half of the 7th century, partially destroying the underlying catacomb.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 600,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "The catacomb was rediscovered in the early 16th century by Dominican friar Onofrio Panvinio.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1500,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "Excavations in the 18th century damaged the second region of the catacomb.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1700,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history8",
+        "description": "Mariano Armellini conducted excavations in the second half of the 19th century, preserving parts of the catacomb.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1800,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history9",
+        "description": "In the early 20th century, priest Augusto Bacci carried out excavations that were crucial for the restoration of the catacomb.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1900,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history10",
+        "description": "The fourth region was studied in 1971–1972 by priest Umberto Maria Fasola.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1970,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "An aedicule was built above the catacomb under Pope Liberius.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The basilica was reconstructed by Pope Honorius I, altering the layout of the catacomb.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "The catacomb consists of four regions spread over three levels.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Agnes of Rome",
+      "personId": "agnes-of-rome",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Liberius",
+      "personId": "pope-liberius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Symmachus",
+      "personId": "pope-symmachus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Honorius I",
+      "personId": "pope-honorius-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Costantine the Great",
+      "personId": "constantine-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Decius",
+      "personId": "decius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Valerian (emperor)",
+      "personId": "valerian-emperor",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Diocletian",
+      "personId": "diocletian",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Onofrio Panvinio",
+      "personId": "onofrio-panvinio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Antonio Bosio",
+      "personId": "antonio-bosio",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

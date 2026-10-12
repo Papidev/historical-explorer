@@ -1,0 +1,71 @@
+{
+  "id": "lucilio-vanini",
+  "name": "Lucilio Vanini",
+  "wikidataId": "Q553128",
+  "wikipediaTitle": "Lucilio Vanini",
+  "content": {
+    "description": [
+      {
+        "text": "Lucilio Vanini was born in 1585 in the small town of Taurisano near Lecce, Italy, and studied philosophy, theology, and the emerging natural sciences at the University of Naples.  He became a physician and a free‑thinking philosopher who challenged scholasticism and argued that the universe operates according to natural laws, making him one of the earliest modern proponents of what would later be called naturalism.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Vanini travelled extensively across Europe, publishing the anti‑atheist work *Amphitheatrum* in 1615 and the more radical *De Admirandis* in 1616.  He was imprisoned in London for 49 days, fled to France, and ultimately was arrested in Toulouse in 1618.  On 9 February 1619 he was executed by strangulation at the stake, his tongue was cut out, and his body was burned to ashes.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Vanini was one of the first thinkers to describe the universe as governed by natural laws, a view that prefigured later scientific determinism.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was an early advocate of biological evolution, arguing that humans and apes share common ancestors.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his imprisonment in London he was held for 49 days before escaping.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His execution in Toulouse involved the cutting of his tongue, strangulation at the stake, and subsequent burning of his body.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1585,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1619,
+      "month": 2,
+      "day": 9,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "6655_-_Roma_-_Ettore_Ferrari,_Giulio_Cesare_Vanini_(1889)_-_Foto_Giovanni_Dall'Orto,_6-Apr-2008.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:6655_-_Roma_-_Ettore_Ferrari%2C_Giulio_Cesare_Vanini_(1889)_-_Foto_Giovanni_Dall'Orto%2C_6-Apr-2008.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/6655_-_Roma_-_Ettore_Ferrari%2C_Giulio_Cesare_Vanini_%281889%29_-_Foto_Giovanni_Dall%27Orto%2C_6-Apr-2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/6655_-_Roma_-_Ettore_Ferrari%2C_Giulio_Cesare_Vanini_%281889%29_-_Foto_Giovanni_Dall%27Orto%2C_6-Apr-2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Attribution",
+    "attribution": "G.dallorto",
+    "author": "G.dallorto",
+    "width": 486,
+    "height": 486,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Lucilio Vanini",
+    "url": "https://en.wikipedia.org/wiki/Lucilio_Vanini"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:51:53.570Z"
+  }
+}

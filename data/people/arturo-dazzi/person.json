@@ -1,0 +1,65 @@
+{
+  "id": "arturo-dazzi",
+  "name": "Arturo Dazzi",
+  "wikidataId": "Q3624527",
+  "wikipediaTitle": "Arturo Dazzi",
+  "content": {
+    "description": [
+      {
+        "text": "Arturo Dazzi was born on 13 July 1881 in Carrara, a town renowned for its marble quarries. He studied at the Accademia di Belle Arti di Carrara from 1892 to 1899 under sculptor Lio Gangeri, winning the Pensionato Artistico Triennale Prize in 1901 and the Quadriennale Prize in 1905, which enabled him to move to Rome and further his career.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Dazzi became a prominent figure in Italian sculpture and painting, receiving commissions for public monuments such as the Monument to Enrico Toti and the Monument to the Railway Worker. He collaborated with architect Marcello Piacentini on major projects including the Banca d’Italia building, the Arco della Vittoria in Genoa, and the Palazzo di Giustizia in Milan, while also exhibiting his works at international exhibitions in Paris, New York, and San Francisco.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "From 1929 to 1951, Dazzi held the chair of sculpture at the Carrara Academy, mentoring a generation of artists including Clara Fasano.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His monument to Guglielmo Marconi was displayed at the 1939 New York universal exhibition, and he later created a large stele dedicated to Marconi in Rome’s EUR district in 1959.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1881,
+      "month": 7,
+      "day": 13,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1966,
+      "month": 10,
+      "day": 16,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Artgate_Fondazione_Cariplo_-_Dazzi_Arturo,_Natura_morta_(frutta).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Artgate_Fondazione_Cariplo_-_Dazzi_Arturo%2C_Natura_morta_(frutta).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Artgate_Fondazione_Cariplo_-_Dazzi_Arturo%2C_Natura_morta_%28frutta%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Artgate_Fondazione_Cariplo_-_Dazzi_Arturo%2C_Natura_morta_%28frutta%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Fondazione Cariplo",
+    "author": "Arturo Dazzi",
+    "width": 800,
+    "height": 625,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Arturo Dazzi",
+    "url": "https://en.wikipedia.org/wiki/Arturo_Dazzi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:41:43.033Z"
+  }
+}

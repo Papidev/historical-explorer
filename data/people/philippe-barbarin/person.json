@@ -1,0 +1,71 @@
+{
+  "id": "philippe-barbarin",
+  "name": "Philippe Barbarin",
+  "wikidataId": "Q711554",
+  "wikipediaTitle": "Philippe Barbarin",
+  "content": {
+    "description": [
+      {
+        "text": "Philippe Barbarin was born on 17 October 1950 in Rabat, then a French protectorate in Morocco.  He studied at the Lycée Marcellin Berthelot, the Collège des Francs‑Bourgeois, and later earned a theology degree from the Institut Catholique de Paris before being ordained a priest on 17 December 1977.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He rose through the ranks of the French Catholic hierarchy, becoming Bishop of Moulins in 1998 and Archbishop of Lyon in 2002.  In 2003 he was elevated to the College of Cardinals, and he participated as a cardinal elector in the papal conclaves of 2005, 2013 and 2025.  His tenure was marked by efforts in interfaith dialogue, a 2010 seminary program for the 1962 Missal, and a 2019 conviction for failing to report alleged abuse that was later overturned in 2020, after which he resigned as archbishop.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 2019, Barbarin was convicted of failing to report alleged sexual abuse by a priest and received a suspended six‑month prison sentence.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was made a cardinal in 2003 and served as a cardinal elector in the 2005, 2013, and 2025 papal conclaves.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 2010 he created a program at the diocesan seminary to prepare Francophone candidates for the priesthood who wished to celebrate Mass according to the 1962 Roman Missal.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Barbarin suffered a double heart attack in 2013 while traveling to World Youth Day in Rio de Janeiro and later underwent a triple bypass operation.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He has been a leading figure in Islamic‑Christian dialogue, visiting the village of Tibhirine in Algeria in 2013 and refugee camps in Iraq in 2014.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1950,
+      "month": 10,
+      "day": 17,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Philippe_Barbarin_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Philippe_Barbarin_(cropped).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Philippe_Barbarin_%28cropped%29.jpg/960px-Philippe_Barbarin_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/Philippe_Barbarin_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 2.0",
+    "attribution": "MEDEF",
+    "author": "MEDEF",
+    "width": 2060,
+    "height": 2798,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Philippe Barbarin",
+    "url": "https://en.wikipedia.org/wiki/Philippe_Barbarin"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:45:18.322Z"
+  }
+}

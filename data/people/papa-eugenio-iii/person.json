@@ -1,0 +1,63 @@
+{
+  "id": "papa-eugenio-iii",
+  "name": "papa Eugenio III",
+  "wikidataId": "Q167610",
+  "wikipediaTitle": "Papa Eugenio III",
+  "content": {
+    "description": [
+      {
+        "text": "Eugenio III was born in Montemagno, a small village near Pisa, into the noble Paganelli family. The earliest records describe him as a \"homo rusticanus\" or rustic man, and his early years were spent in the cloister of the Cistercian Abbey of Clairvaux, where he became a disciple of the renowned abbot Bernard of Clairvaux. His monastic formation was marked by a deep commitment to austerity and scholarship, and he was later elected abbot of the monastery of SS. Anastasio and Vincenzo at the Three Fountains outside Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was elected pope in 1145 after the death of Lucius II, taking the name Eugene. His election was contested by the Roman Republic, and he was forced to flee Rome, spending time in Viterbo, Tusculum, and other monasteries before returning to Rome in 1152 after a negotiated settlement with the city’s senators. During his papacy he organized the Second Crusade, convened synods across northern Europe, created 38 cardinals, and sought to restore papal temporal authority, but he died in Tivoli on 8 July 1153.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Eugenio III created 38 cardinals during his pontificate, a significant expansion of the College of Cardinals.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was beatified by Pope Pio IX in 1872, and his feast day is celebrated on 8 July.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His burial place in St. Peter's Basilica became a site of reported miracles and healings, contributing to his veneration as a blessed.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 1153,
+      "month": 7,
+      "day": 8,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "B_Eugen_III.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:B_Eugen_III.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/B_Eugen_III.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/B_Eugen_III.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 373,
+    "height": 461,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Papa Eugenio III",
+    "url": "https://it.wikipedia.org/wiki/Papa_Eugenio_III"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:13:23.112Z"
+  }
+}

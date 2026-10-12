@@ -1,0 +1,57 @@
+{
+  "id": "borghese-famiglia",
+  "name": "Borghese",
+  "wikidataId": "Q241133",
+  "wikipediaTitle": "Borghese (famiglia)",
+  "content": {
+    "description": [
+      {
+        "text": "The Borghese family, originally from Siena, rose from a 13th‑century wool merchant, Tiezzo da Monticiano, to become one of Rome’s most powerful noble houses. Their ascent was marked by strategic marriages, papal appointments, and the acquisition of vast estates, culminating in the construction of the Villa Borghese and the establishment of the Galleria Borghese.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Throughout the Renaissance and beyond, the Borghese produced several popes, cardinals, and military leaders, most notably Pope Paul V (Camillo Borghese) and the patron Scipione Caffarelli‑Borghese, who fostered the arts and secured the legacy of Bernini’s masterpieces. Their influence extended into politics, culture, and even modern Italian history, with members serving as diplomats, generals, and political figures.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Scipione Caffarelli‑Borghese adopted the family name after being adopted by Pope Paul V, becoming a key patron of Bernini and the founder of the Galleria Borghese.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The family’s Villa Borghese, originally a private estate, was sold to the Italian state in 1901 and donated to the city of Rome, preserving the collection of art that remains a major attraction.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A branch of the family, the Borghese‑Aldobrandini, held the title of Prince of Meldola and intermarried with the influential Aldobrandini family, further consolidating their status in Roman aristocracy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Arms_of_the_house_of_Borghese.svg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Arms_of_the_house_of_Borghese.svg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Arms_of_the_house_of_Borghese.svg/960px-Arms_of_the_house_of_Borghese.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Arms_of_the_house_of_Borghese.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "MostEpic",
+    "author": "MostEpic",
+    "width": 430,
+    "height": 500,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Borghese (famiglia)",
+    "url": "https://it.wikipedia.org/wiki/Borghese_(famiglia)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:12:36.858Z"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "giuseppe-vasi",
+  "name": "Giuseppe Vasi",
+  "wikidataId": "Q1348867",
+  "wikipediaTitle": "Giuseppe Vasi",
+  "content": {
+    "description": [
+      {
+        "text": "Giuseppe Vasi was born on 27 August 1710 in Corleone, Sicily, and trained as a printmaker in Palermo before relocating to Rome around 1736. In Rome he gained the patronage of Cardinal Troiano Acquaviva d'Aragona and worked at the Calcografia Camerale, producing early panoramas such as the Trevi Fountain and the Spanish Steps.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Vasi’s career peaked with a prolific output of vedute, including a ten‑volume series of about 240 engravings of Rome published between 1747 and 1761, and a monumental map of the city released in the early 1760s. He also authored nine of the ten volumes of the “Magnificenze” and the widely circulated “Itinerario Istruttivo,” which was translated into French and English and re‑edited throughout the 18th century.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "During a brief period in his workshop, Vasi mentored the young Giovanni Battista Piranesi, who would later become a celebrated engraver in his own right.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Vasi’s map of Rome, conceived more than twenty years before its publication, remains one of the earliest large‑scale cartographic representations of the city.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Despite his prominence in the 18th century, Vasi fell into obscurity for over two centuries until a 1981 monograph by Luisa Scalabroni revived scholarly interest in his work.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1710,
+      "month": 8,
+      "day": 27,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1782,
+      "month": 4,
+      "day": 16,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Piazza_di_S_(77564002)._Giovanni_in_Laterano.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Piazza_di_S_(77564002)._Giovanni_in_Laterano.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Piazza_di_S_%2877564002%29._Giovanni_in_Laterano.jpg/960px-Piazza_di_S_%2877564002%29._Giovanni_in_Laterano.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Piazza_di_S_%2877564002%29._Giovanni_in_Laterano.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Giuseppe Vasi",
+    "author": "Giuseppe Vasi",
+    "width": 6570,
+    "height": 4654,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giuseppe Vasi",
+    "url": "https://en.wikipedia.org/wiki/Giuseppe_Vasi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:59:56.720Z"
+  }
+}

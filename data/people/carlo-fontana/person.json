@@ -1,0 +1,57 @@
+{
+  "id": "carlo-fontana",
+  "name": "Carlo Fontana",
+  "wikidataId": "Q704356",
+  "wikipediaTitle": "Carlo Fontana",
+  "content": {
+    "description": [
+      {
+        "text": "Carlo Fontana was a Swiss-born architect who moved to Rome as a youth and studied under Pietro da Cortona and Carlo Rainaldi before joining the circle of Gian Lorenzo Bernini. In Bernini’s workshop he became an indispensable collaborator, renowned for his technical expertise and skillful drawing, which helped shape many of the master’s projects.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Fontana rose to become a leading architect of late seventeenth‑ and early eighteenth‑century Rome, synthesising the styles of Bernini, Borromini and Cortona into a distinctive eclectic classicism. He designed major works such as the Tempio Vaticano (1694), the redesign of the Piazza San Pietro, and the Basilica dei Santi XII Apostoli, while also mentoring a generation of architects who would go on to shape European architecture.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "His workshop produced a remarkable cohort of architects, including James Gibbs, Johann Bernhard Fischer von Erlach, and Filippo Juvarra, who would become prominent figures in the architectural scenes of Britain, Austria, and Italy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Tempio Vaticano, published in 1694, was not only a monumental illustrated volume but also contained plans for the third arm of the piazza and the removal of medieval houses that paved the way for the modern Via della Conciliazione.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Fontana collaborated with Bernini on the Church of Santa Maria dei Miracoli (1662‑1679) and designed the baptismal font of St. Peter’s Basilica (1692‑1698).",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Carlo_Fontana.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Carlo_Fontana.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/58/Carlo_Fontana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/58/Carlo_Fontana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 391,
+    "height": 517,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Carlo Fontana",
+    "url": "https://it.wikipedia.org/wiki/Carlo_Fontana"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:34:54.886Z"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "id": "paolo-sorrentino",
+  "name": "Paolo Sorrentino",
+  "wikidataId": "Q374678",
+  "wikipediaTitle": "Paolo Sorrentino",
+  "content": {
+    "description": [
+      {
+        "text": "Paolo Sorrentino was born on 31 May 1970 in Naples, Italy, and grew up in the Vomero district. After the tragic loss of both parents to a carbon‑monoxide leak when he was 16, he pursued studies in economics at the University of Naples Federico II, though he never completed the degree. He began his filmmaking career with short films such as L'amore non ha confini (1998) and La notte lunga (2001) before making his feature‑directorial debut with the comedy‑drama One Man Up in 2001, which earned him the Nastro d'Argento for Best New Director. Sorrentino’s visual style—rich, ornate, and often surreal—has drawn comparisons to the great Italian auteurs Federico Fellini and Michelangelo Antonioni, and his work is celebrated for its complex narratives and striking cinematography.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sorrentino’s breakthrough came with the biographical drama Il Divo (2008), a stylised portrait of politician Giulio Andreotti that won the Cannes Jury Prize, followed by the internationally acclaimed The Great Beauty (2013), which secured the Academy Award, Golden Globe, and BAFTA for Best Foreign Language Film. He has also directed the HBO series The Young Pope (2016) and The New Pope (2019), and the autobiographical The Hand of God (2021), which was nominated for an Academy Award. Beyond cinema, he has written three books and received an Honorary Doctorate of Humane Letters from the American University of Rome in 2015. Married to his childhood friend Daniela D'Antonio, he is a father of two and continues to be a leading voice in contemporary Italian cinema.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He lost both parents to a carbon‑monoxide leak in their holiday house when he was 16.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He studied economics at the University of Naples Federico II but did not graduate.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He received the Nastro d'Argento for Best New Director for his debut film One Man Up.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He has written three books.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was awarded an Honorary Doctorate of Humane Letters at the American University of Rome in 2015.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1970,
+      "month": 5,
+      "day": 31,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Paolo_Sorrentino_2018.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Paolo_Sorrentino_2018.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Paolo_Sorrentino_2018.jpg/960px-Paolo_Sorrentino_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/64/Paolo_Sorrentino_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Pietro Luca Cassarino",
+    "author": "Pietro Luca Cassarino",
+    "width": 3122,
+    "height": 3071,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Paolo Sorrentino",
+    "url": "https://en.wikipedia.org/wiki/Paolo_Sorrentino"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:22:25.539Z"
+  }
+}

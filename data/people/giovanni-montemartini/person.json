@@ -1,0 +1,65 @@
+{
+  "id": "giovanni-montemartini",
+  "name": "Giovanni Montemartini",
+  "wikidataId": "Q63290990",
+  "wikipediaTitle": "Giovanni Montemartini",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Montemartini was an Italian economist and politician born in Montù Beccaria, a small town in the province of Pavia. He earned a law degree at the University of Pavia but soon turned his attention to economics, studying the theories of Luigi Cossa and the Italian rationalists Antonio De Viti De Marco, Angelo Messedaglia and Maffeo Pantaleoni. In 1893–94 he travelled to Vienna to attend courses by the Austrian economist Carl Menger, a visit that profoundly shaped his later work on economic crises and the theory of savings. His early publications, including *La teorica delle crisi* (1891) and *Il problema della grande e piccola coltivazione delle terre* (1892), established him as a serious scholar and earned him a place in the prestigious *Giornale degli economisti* where he published a 1893 article on the economic–social definition of savings, later expanded in *Il risparmio nell’economia pura* (1896).",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Montemartini’s academic career led him to teach at technical institutes in Foggia, Cremona and Milan before returning to Pavia as a full professor of political economy. He entered public life in 1901 as a member of the Milan Humanitarian Society and soon became involved in labour and immigration policy, eventually directing the Ministry’s Office of Work and Statistics. From 1904 to 1910 he served as editor‑in‑chief of the *Giornale degli economisti* and, in 1905, helped found the International Institute of Agriculture, a precursor to the United Nations Food and Agriculture Organization. In 1907 he was elected to Rome’s city council with the highest number of votes for the socialist list (16,000), and as a councilor he championed the municipalisation of public transport and electricity, leading to the creation of ATAC and ACEA. He died suddenly at the age of 46 during a council debate on public transport, leaving a legacy that includes the first municipal electric plant in Rome, later housed in the Capitoline Museums.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He studied under the Austrian economist Carl Menger while in Vienna between 1893 and 1894.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Montemartini served as editor‑in‑chief of the *Giornale degli economisti* from 1904 to 1910.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1905 he helped found the International Institute of Agriculture, a forerunner of the FAO.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was elected to Rome’s city council in 1907 with 16,000 votes, the highest for the socialist list.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He died at the age of 46 after a sudden illness during a council debate on public transport.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Giovanni_Montemartini.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Giovanni_Montemartini.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Giovanni_Montemartini.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Giovanni_Montemartini.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 270,
+    "height": 270,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giovanni Montemartini",
+    "url": "https://it.wikipedia.org/wiki/Giovanni_Montemartini"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:11:43.821Z"
+  }
+}

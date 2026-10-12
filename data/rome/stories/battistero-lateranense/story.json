@@ -1,0 +1,122 @@
+{
+  "introduction": {
+    "text": "The Lateran Baptistery, also known as the Battistero Lateranense, is an octagonal baptistery in Rome that served as the city's sole baptistery for centuries and influenced the design of other baptisteries across Italy.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Founded by Pope Sixtus III in 440, the baptistery was built on a site that may have previously existed.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 440,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "During Pope Urban VIII's pontificate (1623–1644) the baptistery underwent extensive restoration, with interior architecture consolidated and embellished.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1623,
+          "precision": "approximate",
+          "endYear": 1644,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Around 1633, Gian Lorenzo Bernini drafted plans to consolidate and embellish the baptistery.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1633,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "In the late 1650s or early 1660s, Francesco Borromini designed a frieze for the baptistery, incorporating the arms of Pope Alexander VII.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1660,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Legend claims Constantine the Great was baptized here, but this is unlikely.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The baptistery is an octagonal structure with a domed roof, an octagonal basin for full immersion, eight porphyry columns with marble Corinthian capitals, and an ambulatory surrounding the font.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The interior features a fine porch with two porphyry columns and richly carved capitals, bases, and entablatures, and a frieze designed by Francesco Borromini.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "The ceiling of the baptistery depicts the Battle of the Milvian Bridge (312 AD).",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "A fresco cycle by Andrea Sacchi illustrates scenes from the life of Constantine, painted in the ambulatory.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "The baptistery inspired illuminated manuscripts, notably the 'Fountain of Life' motif.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Pope Sixtus III",
+      "personId": "pope-sixtus-iii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Constantine the Great",
+      "personId": "constantine-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Urban VIII",
+      "personId": "pope-urban-viii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Gian Lorenzo Bernini",
+      "personId": "gian-lorenzo-bernini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Andrea Sacchi",
+      "personId": "andrea-sacchi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Francesco Borromini",
+      "personId": "francesco-borromini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Alexander VII",
+      "personId": "pope-alexander-vii",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

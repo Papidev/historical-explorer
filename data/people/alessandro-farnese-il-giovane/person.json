@@ -1,0 +1,69 @@
+{
+  "id": "alessandro-farnese-il-giovane",
+  "name": "Alessandro Farnese il Giovane",
+  "wikidataId": "Q248459",
+  "wikipediaTitle": "Alessandro Farnese il Giovane",
+  "content": {
+    "description": [
+      {
+        "text": "Alessandro Farnese il Giovane, born in the castle of Valentano, was thrust into the ecclesiastical world from infancy. His family, keen to secure papal influence, sent him to Parma and later to the Collegio Ancarano in Bologna, where he studied literature, law and theology. In a remarkable display of nepotism, he was elevated to the College of Cardinals on 18 December 1534 at the age of fourteen, making him the youngest cardinal in history. The appointment was orchestrated by his grandfather, Pope Paul III, and the ceremony was conducted by Cardinal Del Monte, who later became Pope Julius III.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his long career he held a succession of administrative posts, from Vice‑Chancellor of the Holy See to governor of Parma and several dioceses across Italy and Spain. He was a key diplomatic agent in the negotiations between Emperor Charles V and King Francis I of France, and he even proposed a marriage alliance between the emperor and the French king’s daughter. A devoted patron of the arts, he commissioned the construction of the church of the Gesù, the Palazzo Farnese in Caprarola, and the Horti Farnesiani, and he employed masters such as Vignola, Taddeo and Federico Zuccari, and Tiziano. He died of a stroke in 1589 and was buried in the church of the Gesù, where his funeral was attended by forty‑two cardinals.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the youngest cardinal in history, being created at the age of fourteen.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a major patron of the arts, commissioning works by Tiziano, Vasari, Giulio Clovio and other leading artists of the Renaissance.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He commissioned the construction of the church of the Gesù in Rome and the Palazzo Farnese in Caprarola, both masterpieces of Renaissance architecture.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He had an illegitimate daughter, Clelia, born in 1557, who later married Giovan Giorgio Cesarini and then Marco Pio di Savoia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as Vice‑Chancellor of the Holy See from 13 August 1535 until his death in 1589, a position that made him one of the most powerful officials in the papal administration.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 1589,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Portrait_of_Cardinal_Alessandro_Farnese_(by_Titian)FXD.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_Cardinal_Alessandro_Farnese_(by_Titian)FXD.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Portrait_of_Cardinal_Alessandro_Farnese_%28by_Titian%29FXD.jpg/960px-Portrait_of_Cardinal_Alessandro_Farnese_%28by_Titian%29FXD.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Portrait_of_Cardinal_Alessandro_Farnese_%28by_Titian%29FXD.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Titian",
+    "author": "Titian",
+    "width": 1163,
+    "height": 1536,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Alessandro Farnese il Giovane",
+    "url": "https://it.wikipedia.org/wiki/Alessandro_Farnese_il_Giovane"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:39:15.851Z"
+  }
+}

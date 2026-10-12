@@ -1,0 +1,75 @@
+{
+  "id": "jan-hus",
+  "name": "Jan Hus",
+  "wikidataId": "Q43977",
+  "wikipediaTitle": "Jan Hus",
+  "content": {
+    "description": [
+      {
+        "text": "Jan Hus was born around 1372 in the village of Husinec in southern Bohemia, a peasant community that later gave him his surname, which means \"goose\" in Czech. He entered monastic life at about ten years old, impressed his teachers, and was sent to Prague where he studied at the University of Prague, earning a Bachelor of Arts in 1393 and a master’s degree in 1396.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After ordination as a Catholic priest in 1400, Hus became a prominent preacher and academic, serving as master, dean, and rector at Charles University between 1409 and 1410. He openly criticized the Church’s moral failings, simony, and the sale of indulgences, leading to his excommunication and eventual trial at the Council of Constance, where he was burned at the stake on 6 July 1415 for heresy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Hus took his surname from his home village Husinec, a custom that reflected his humble origins.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He held the positions of master, dean, and rector at Charles University in Prague during 1409–1410, making him a leading academic of his time.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "On 6 July 1415, Hus was executed by burning at the stake in Constance, becoming a martyr whose death sparked the Hussite Wars.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Hus was also a musical composer; several of his writings were later adapted into musical pieces by other composers.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He introduced reforms to Czech orthography, notably the use of the hook diacritic (háček) to represent consonants such as č, š, and ž.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1372,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1415,
+      "month": 7,
+      "day": 6,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Jan_hus_1.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Jan_hus_1.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Jan_hus_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Jan_hus_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 420,
+    "height": 531,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Jan Hus",
+    "url": "https://en.wikipedia.org/wiki/Jan_Hus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:53:15.474Z"
+  }
+}

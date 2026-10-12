@@ -1,0 +1,62 @@
+{
+  "introduction": {
+    "text": "Equus Traiani was a colossal bronze equestrian statue of Emperor Trajan, erected in the Forum of Trajan in Rome. It symbolized Trajan's military victories and imperial power, and was a key monument in the forum.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "erection",
+        "description": "The statue was erected between 112 and 114 CE, following Trajan's victories over the Dacians.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 112,
+          "precision": "approximate",
+          "endYear": 114,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "survival",
+        "description": "The statue remained intact into the IV century, as noted by Constantius II during his visit to Rome in 357 CE.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 357,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "colossal",
+        "description": "A colossal bronze equestrian statue, likely 10–12 meters tall, modeled after the statue of Marcus Aurelius.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "pose",
+        "description": "The statue copied the pose of the horse and rider from the statue of Marcus Aurelius.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Traiano",
+      "personId": "trajan",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Costanzo II",
+      "personId": "constantius-ii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ammiano Marcellino",
+      "personId": "ammiano-marcellino",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

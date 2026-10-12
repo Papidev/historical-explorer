@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "TRAIANUS_RIC_II_291_732081.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:TRAIANUS_RIC_II_291_732081.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e2/TRAIANUS_RIC_II_291_732081.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e2/TRAIANUS_RIC_II_291_732081.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.5",
+      "attribution": "Classical Numismatic Group, Inc. http://www.cngcoins.com",
+      "author": "CNG",
+      "width": 500,
+      "height": 237,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Equus_Traiani_et_Equus_Marci_Aurelii_Antonini.PNG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Equus_Traiani_et_Equus_Marci_Aurelii_Antonini.PNG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Equus_Traiani_et_Equus_Marci_Aurelii_Antonini.PNG/960px-Equus_Traiani_et_Equus_Marci_Aurelii_Antonini.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Equus_Traiani_et_Equus_Marci_Aurelii_Antonini.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Traianus: Hartmann Linge Marcus Aurelius: MatthiasKabel derivative work: Cristiano64 (talk)",
+      "author": "Traianus: Hartmann Linge Marcus Aurelius: MatthiasKabel derivative work: Cristiano64 (talk)",
+      "width": 2428,
+      "height": 2443,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Hypothesis_of_the_equestrian_statue_of_Trajan.PNG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Hypothesis_of_the_equestrian_statue_of_Trajan.PNG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Hypothesis_of_the_equestrian_statue_of_Trajan.PNG/960px-Hypothesis_of_the_equestrian_statue_of_Trajan.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Hypothesis_of_the_equestrian_statue_of_Trajan.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Traianus: Hartmann Linge Marcus Aurelius: MatthiasKabel derivative work: Cristiano64 (talk)",
+      "author": "Traianus: Hartmann Linge Marcus Aurelius: MatthiasKabel derivative work: Cristiano64 (talk)",
+      "width": 1531,
+      "height": 2450,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "TRAIANUS_RIC_II_291_732081.jpg"
+}

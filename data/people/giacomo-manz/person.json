@@ -1,0 +1,77 @@
+{
+  "id": "giacomo-manz",
+  "name": "Giacomo Manzù",
+  "wikidataId": "Q505010",
+  "wikipediaTitle": "Giacomo Manzù",
+  "content": {
+    "description": [
+      {
+        "text": "Giacomo Manzù was born in Bergamo on 22 December 1908 and grew up in a modest family; his father was a shoemaker and sacristan.  With only a few evening art classes to his credit, Manzù was largely self‑taught in sculpture, beginning to work with wood during his military service in Verona in 1928 and later refining his craft after a brief stay in Paris before settling in Milan.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Manzù achieved national recognition in 1933 with a series of busts exhibited at the Triennale di Milano and later gained international acclaim for his religious commissions, most notably the Doors of Death for St. Peter’s Basilica in Rome (completed in 1964).  He also created the 6‑metre‑tall “Mother and Child” sculpture that was gifted to the United Nations in 1989, and he maintained a close friendship with Pope John XXIII despite being an atheist, a relationship documented in the book *An Artist and The Pope*.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Manzù was a self‑taught sculptor who learned only from evening classes and his own experimentation.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He designed the Doors of Death for St. Peter’s Basilica, the first new doors in the cathedral in 500 years.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The 6‑metre‑tall sculpture “Mother and Child” was placed in the gardens of the United Nations headquarters in New York City and was gifted by Italy in 1989.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Manzù was a personal friend of Pope John XXIII, a friendship that was documented in the book *An Artist and The Pope* by Curtis Bill Pepper.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Although he was an atheist, Manzù received important liturgical commissions for the Vatican, including the Doors of Death for St. Peter’s Basilica.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1908,
+      "month": 12,
+      "day": 22,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1991,
+      "month": 1,
+      "day": 17,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Giacomo_Manzù_1964.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Giacomo_Manz%C3%B9_1964.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Giacomo_Manz%C3%B9_1964.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Giacomo_Manz%C3%B9_1964.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Walter Mori (Mondadori Publishers)",
+    "author": "Walter Mori (Mondadori Publishers)",
+    "width": 672,
+    "height": 738,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giacomo Manzù",
+    "url": "https://en.wikipedia.org/wiki/Giacomo_Manz%C3%B9"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:41:08.492Z"
+  }
+}

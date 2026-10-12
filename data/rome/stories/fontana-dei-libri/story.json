@@ -1,0 +1,71 @@
+{
+  "introduction": {
+    "text": "The Fontana dei Libri is a fountain in Rome that marks the site of the Palazzo della Sapienza and is notable for its distinctive design featuring books and a deer, reflecting the local rione and the university.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The fountain was built by Pietro Lombardi between 1925 and 1927 as the last of ten fountains.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1925,
+          "precision": "exact",
+          "endYear": 1927,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "The fountain was restored in 1998 to remove limestone deposits.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1998,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "The fountain was restored again in 2018 after damage to a nearby fountain.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2018,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "The fasces symbols on the books were removed after the establishment of the republic.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "history5",
+        "description": "The rione's number is engraved as IV instead of the correct VIII.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The fountain features a deer from the rione's coat of arms, two stacks of books symbolizing Sapienza University, and an engraved rione name and number.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The fountain replaced an iron nasone that was considered unsightly.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Pietro Lombardi (architect)",
+      "personId": "pietro-lombardi-architect",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

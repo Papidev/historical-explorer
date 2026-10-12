@@ -1,0 +1,42 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Catacombs_S._Sebastiano_Rome1.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Catacombs_S._Sebastiano_Rome1.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Catacombs_S._Sebastiano_Rome1.jpg/960px-Catacombs_S._Sebastiano_Rome1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Catacombs_S._Sebastiano_Rome1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.0",
+      "width": 2048,
+      "height": 1536,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Sculture_e_pitture_sagre_estratte_dai_cimiterj_di_Roma_-_pubblicate_gia_dagli_autori_della_Roma_sotterranea_ed_ora_nuovamente_date_in_luce_colle_spiegazioni_per_ordine_di_n._s._Clemente_XII_(1737)_(14760292146).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Sculture_e_pitture_sagre_estratte_dai_cimiterj_di_Roma_-_pubblicate_gia_dagli_autori_della_Roma_sotterranea_ed_ora_nuovamente_date_in_luce_colle_spiegazioni_per_ordine_di_n._s._Clemente_XII_(1737)_(14760292146).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Sculture_e_pitture_sagre_estratte_dai_cimiterj_di_Roma_-_pubblicate_gia_dagli_autori_della_Roma_sotterranea_ed_ora_nuovamente_date_in_luce_colle_spiegazioni_per_ordine_di_n._s._Clemente_XII_%281737%29_%2814760292146%29.jpg/960px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Sculture_e_pitture_sagre_estratte_dai_cimiterj_di_Roma_-_pubblicate_gia_dagli_autori_della_Roma_sotterranea_ed_ora_nuovamente_date_in_luce_colle_spiegazioni_per_ordine_di_n._s._Clemente_XII_%281737%29_%2814760292146%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "No restrictions",
+      "attribution": "Bottari, Giovanni Gaetano, 1689-1775",
+      "author": "Bottari, Giovanni Gaetano, 1689-1775",
+      "width": 3000,
+      "height": 2080,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Catacombe_di_San_Sebastiano_-_panoramio_(3).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Catacombe_di_San_Sebastiano_-_panoramio_(3).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Catacombe_di_San_Sebastiano_-_panoramio_%283%29.jpg/960px-Catacombe_di_San_Sebastiano_-_panoramio_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/08/Catacombe_di_San_Sebastiano_-_panoramio_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "attribution": "Mister No",
+      "author": "Mister No",
+      "width": 1600,
+      "height": 1081,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Sculture_e_pitture_sagre_estratte_dai_cimiterj_di_Roma_-_pubblicate_gia_dagli_autori_della_Roma_sotterranea_ed_ora_nuovamente_date_in_luce_colle_spiegazioni_per_ordine_di_n._s._Clemente_XII_(1737)_(14760292146).jpg"
+}

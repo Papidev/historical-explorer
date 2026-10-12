@@ -1,0 +1,61 @@
+{
+  "id": "thomas-ashby",
+  "name": "Thomas Ashby",
+  "wikidataId": "Q442669",
+  "wikipediaTitle": "Thomas Ashby",
+  "content": {
+    "description": [
+      {
+        "text": "Thomas Ashby was born into a bourgeois family in Middlesex, the only son of a Quaker brewer and his wife. He studied at Winchester College from 1887 to 1893 before earning a degree at Christ Church, Oxford in 1897. His passion for Roman antiquities led him to Rome on a scholarship to the British School at Rome, where he rose from student to vice‑director in 1903 and director in 1906, a position he held until 1924.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his tenure he mapped the ancient streets of Rome, completed Samuel Ball Platner’s topographical dictionary, and produced a posthumous monograph on Rome’s aqueducts. Ashby also travelled extensively through Abruzzo, photographing local customs such as the San Domenico festival at Cocullo, and contributed numerous entries to the Encyclopaedia Britannica on Roman topics. He died while traveling by train, after a long career of scholarship and fieldwork.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "During World War I, Ashby volunteered as an ambulance driver for the British Red Cross First Section in Friuli, operating ambulances at the Villa Trento hospital in Dolegnano.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He completed the unfinished topographical dictionary of ancient Rome originally compiled by Samuel Ball Platner, publishing the revised edition in 1929.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ashby’s photographs of the San Domenico festival in Cocullo and the livestock fair in L'Aquila are celebrated for their vivid depiction of early 20th‑century Italian rural life.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1870,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Thomas_Ashby_20.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Thomas_Ashby_20.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Thomas_Ashby_20.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Thomas_Ashby_20.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 408,
+    "height": 560,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Thomas Ashby",
+    "url": "https://it.wikipedia.org/wiki/Thomas_Ashby"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:38:05.226Z"
+  }
+}

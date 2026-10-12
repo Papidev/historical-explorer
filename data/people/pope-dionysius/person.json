@@ -1,0 +1,63 @@
+{
+  "id": "pope-dionysius",
+  "name": "Pope Dionysius",
+  "wikidataId": "Q131162",
+  "wikipediaTitle": "Pope Dionysius",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Dionysius served as Bishop of Rome from 22 July 259 until his death on 26 December 268, a period that bridged the violent persecutions of Emperor Valerian with the relative peace granted by Gallienus. During this time he reorganised the Roman church, assigning presbyters to individual parishes and restoring the church’s administrative order after a year of vacancy following the martyrdom of Sixtus II.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was also a key participant in early conciliar disputes that shaped early Trinitarian theology. The Synods of Antioch (264–268) condemned Paul of Samosata and addressed a joint letter to Dionysius and Maximus of Alexandria, marking the earliest known conciliar decree. In a post‑synodal letter, he defended the divine monarchy and rejected both Sabellianism and Alexandrian subordination, affirming that the Son of God was not a created work—a stance that pre‑empted the Nicene condemnation of Arianism.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Dionysius sent large sums of money to the churches of Cappadocia, which had been devastated by marauding Goths, to help ransom captives and rebuild the community.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was born in Terranova da Sibari in the early 3rd century, a small town in southern Italy, though the exact year of his birth remains unknown.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In artistic depictions, Dionysius is portrayed wearing papal vestments and holding a book, symbolizing his role as a theological writer.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 268,
+      "month": 12,
+      "day": 26,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_Dionysius.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Dionysius.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Pope_Dionysius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Pope_Dionysius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 284,
+    "height": 702,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Dionysius",
+    "url": "https://en.wikipedia.org/wiki/Pope_Dionysius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:03:22.950Z"
+  }
+}

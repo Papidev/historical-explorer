@@ -1,0 +1,85 @@
+{
+  "id": "polidoro-di-caravaggio",
+  "name": "Polidoro di Caravaggio",
+  "wikidataId": "Q964822",
+  "wikipediaTitle": "Polidoro da Caravaggio",
+  "content": {
+    "description": [
+      {
+        "text": "Polidoro Caldara, known as Polidoro da Caravaggio, was born around 1499 in the Lombard town of Caravaggio. According to Giorgio Vasari, he first worked as a laborer carrying building materials for the Vatican logge, where he impressed the workshop of Raphael. By 1517 he had joined Raphael’s large studio and contributed to the decoration of the Raphael Rooms. His early career was marked by a partnership with Maturino da Firenze, with whom he produced elaborate sgraffito facades for Roman palaces, a style that would define his reputation.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the Sack of Rome in 1527, Polidoro fled first to Naples and then to Messina, where he continued to paint and became highly successful. His surviving works include a Crucifixion in Messina and a Christ Carrying the Cross that shows Northern influence. In 1543 he was murdered by an assistant, Tonno Calabrese, while preparing to return to Rome. His tomb in Messina was later destroyed during the Counter‑Reformation, and most of his facade paintings have been lost, though they were widely copied and served as a visual textbook for generations of artists.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Polidoro was a pupil of Raphael and worked on the Raphael Rooms in the Vatican.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He specialized in sgraffito facade decoration on Roman palaces, many of which are now lost.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He fled to Naples after the 1527 Sack of Rome, where he achieved success.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was murdered by an assistant named Tonno Calabrese in 1543.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His tomb in Messina was destroyed during the Counter‑Reformation.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His painting \"Christ Carrying the Cross\" shows Northern influence.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He had a pupil Deodato Guinaccia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His works were used as visual textbooks by generations of young artists.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1499,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1543,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "PolidoroCaldara.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:PolidoroCaldara.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/PolidoroCaldara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/PolidoroCaldara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Francesco Susinno",
+    "author": "Francesco Susinno",
+    "width": 821,
+    "height": 1217,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Polidoro da Caravaggio",
+    "url": "https://en.wikipedia.org/wiki/Polidoro_da_Caravaggio"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:37:53.090Z"
+  }
+}

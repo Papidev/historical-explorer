@@ -1,0 +1,47 @@
+{
+  "introduction": {
+    "text": "Casa dell'Architettura is a contemporary architectural space located in Rome, housed in the historic Acquario Romano building, a notable example of late 19th‑century civic architecture.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Designed by Ettore Bernich, the Acquario Romano was built between 1885 and 1887 as an aquarium.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1885,
+          "precision": "exact",
+          "endYear": 1887,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "After a period of abandonment, the building was restored and now serves as the Casa dell'Architettura, hosting exhibitions and performances.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The building features a circular plan with a pronaos and aediculae, marine-themed decorations, caryatids, medallions, and a cylindrical body subdivided by lesenes and pilasters.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Marine subject decorations are inserted between the sculptures in the aediculae, creating a thematic artistic narrative.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Umberto I",
+      "personId": "umberto-i",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

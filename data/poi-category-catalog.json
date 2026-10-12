@@ -102,6 +102,54 @@
     {
       "id": "Street",
       "name": "Street"
+    },
+    {
+      "id": "Baptistery",
+      "name": "Baptistery"
+    },
+    {
+      "id": "Library",
+      "name": "Library"
+    },
+    {
+      "id": "Temple",
+      "name": "Temple"
+    },
+    {
+      "id": "Circus",
+      "name": "Circus"
+    },
+    {
+      "id": "Roman house",
+      "name": "Roman house"
+    },
+    {
+      "id": "Destroyed building or structure",
+      "name": "Destroyed building or structure"
+    },
+    {
+      "id": "Work of art",
+      "name": "Work of art"
+    },
+    {
+      "id": "Cemetery",
+      "name": "Cemetery"
+    },
+    {
+      "id": "Architectural ensemble",
+      "name": "Architectural ensemble"
+    },
+    {
+      "id": "Monument",
+      "name": "Monument"
+    },
+    {
+      "id": "Fountain",
+      "name": "Fountain"
+    },
+    {
+      "id": "Fort",
+      "name": "Fort"
     }
   ],
   "deletedNames": ["Shrine"]

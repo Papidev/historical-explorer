@@ -1,0 +1,65 @@
+{
+  "id": "assalti-frontali",
+  "name": "Assalti Frontali",
+  "wikidataId": "Q3625365",
+  "wikipediaTitle": "Assalti Frontali",
+  "content": {
+    "description": [
+      {
+        "text": "Assalti Frontali emerged in Rome in 1990 from the ashes of the Onda Rossa Posse collective, a group that had formed in the late 1980s around the local radio station Radio Onda Rossa. Their first release, the minialbum *Batti il tuo tempo*, came out on 15 June 1990 and is considered one of the earliest Italian‑language hip‑hop records; it sold roughly ten thousand copies and helped spark the Italian posse movement. The group quickly established a reputation for politically charged lyrics, releasing the anti‑Gulf War single *Baghdad 1.9.9.1.* in 1991 and the album *Terra di nessuno* in 1992, the first Italian rap LP.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Throughout the 1990s and 2000s, Assalti Frontali continued to blend activism with music, performing at venues ranging from the Stadio Olimpico to the Rebibbia prison, and collaborating with other Italian hip‑hop acts. They founded the independent label Cordata in 1994, released the award‑winning album *Mi sa che stanotte…* in 2006, and later produced socially conscious projects such as the 2016 documentary *Numero zero* and the 2024 album *Notte Immensa*, which reflects on the Palestinian tragedy. Their recent releases, including the 2022 album *Courage* and the 2025 single *Fino all'ultimo respiro*, continue to address political and humanitarian themes while maintaining a strong presence in the underground scene.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The single *Sud* (1993) was featured in the soundtrack of the film *Sud*, directed by Gabriele Salvatores, marking one of the first instances of Italian hip‑hop being used in mainstream cinema.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 2006, the album *Mi sa che stanotte…* won the best independent album award at the MEI (Meeting delle Etichette Indipendenti), a significant recognition for underground Italian artists.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The 1994 documentary *Batti Il Tuo Tempo* chronicles the early days of Italian rap and the rise of Assalti Frontali, providing a rare visual record of the genre’s formative years.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Militant A, the group’s lead vocalist, has extended his influence beyond music by conducting rap workshops in schools across Italy and even in Lebanon, as part of the European project \"Singing for peace\".",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The 2025 single *Fino all'ultimo respiro* was released in collaboration with 99 Posse and Il Muro del Canto, continuing the group’s tradition of partnering with other politically engaged artists.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Assalti_Frontali_01.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Assalti_Frontali_01.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Assalti_Frontali_01.jpg/960px-Assalti_Frontali_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Assalti_Frontali_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Filippo Caranti aka Terrasque",
+    "author": "Filippo Caranti aka Terrasque",
+    "width": 3485,
+    "height": 2485,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Assalti Frontali",
+    "url": "https://it.wikipedia.org/wiki/Assalti_Frontali"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:34:36.735Z"
+  }
+}

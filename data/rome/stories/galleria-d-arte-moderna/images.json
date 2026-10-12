@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Galleria_d'arte_moderna_di_roma_capitale,_esterno_01.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Galleria_d'arte_moderna_di_roma_capitale%2C_esterno_01.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Galleria_d%27arte_moderna_di_roma_capitale%2C_esterno_01.jpg/960px-Galleria_d%27arte_moderna_di_roma_capitale%2C_esterno_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Galleria_d%27arte_moderna_di_roma_capitale%2C_esterno_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "attribution": "Sailko",
+      "author": "Sailko",
+      "width": 2588,
+      "height": 2240,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Colonna_-_v_Crispi_-_Galleria_Comunale_AMC_1250415.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Colonna_-_v_Crispi_-_Galleria_Comunale_AMC_1250415.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Colonna_-_v_Crispi_-_Galleria_Comunale_AMC_1250415.jpg/960px-Colonna_-_v_Crispi_-_Galleria_Comunale_AMC_1250415.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Colonna_-_v_Crispi_-_Galleria_Comunale_AMC_1250415.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Lalupa",
+      "author": "Lalupa",
+      "width": 2816,
+      "height": 2112,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Galleria_CAM_-_cortile_1220661.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Galleria_CAM_-_cortile_1220661.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Galleria_CAM_-_cortile_1220661.JPG/960px-Galleria_CAM_-_cortile_1220661.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Galleria_CAM_-_cortile_1220661.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Lalupa",
+      "author": "Lalupa",
+      "width": 2816,
+      "height": 2112,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Galleria_d'arte_moderna_di_roma_capitale,_esterno_01.jpg"
+}

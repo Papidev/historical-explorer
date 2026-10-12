@@ -1,0 +1,67 @@
+{
+  "id": "vittorio-emanuele-ii",
+  "name": "Vittorio Emanuele II",
+  "wikidataId": "Q168691",
+  "wikipediaTitle": "Vittorio Emanuele II di Savoia",
+  "content": {
+    "description": [
+      {
+        "text": "Vittorio Emanuele II, the second king of the House of Savoy, is remembered as the \"Re galantuomo\" for his decision to retain the Statuto Albertino after his father’s reforms. His leadership during the Risorgimento culminated in the proclamation of the Kingdom of Italy, earning him the title \"Padre della Patria\" and a place on the Vittoriano monument in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond his political achievements, Vittorio Emanuele’s personal life was marked by a marriage to Maria Adelaide d’Austria and a long‑term relationship with Rosa Vercellana, with whom he fathered several illegitimate children. A passionate hunter and a superstitious monarch, he died of fever on 5 January 1878 after a bout of illness in the Lazio countryside.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He earned the nickname \"Re galantuomo\" because he chose to keep the Statuto Albertino, preserving constitutional liberties after his father’s reforms.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Vittorio Emanuele fathered numerous illegitimate children, including those with Rosa Vercellana and other women such as Laura Bon and Virginia Rho.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was an avid hunter, often spending his leisure time on the hunt and enjoying the outdoors.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Despite his royal stature, he was known for his superstitious nature, often seeking guidance from clergy and the Pope.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 1878,
+      "month": 1,
+      "day": 5,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "VictorEmmanuel2_(3).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:VictorEmmanuel2_(3).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/VictorEmmanuel2_%283%29.jpg/960px-VictorEmmanuel2_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/94/VictorEmmanuel2_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Eugène Disdéri",
+    "author": "Eugène Disdéri",
+    "width": 1575,
+    "height": 2384,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Vittorio Emanuele II di Savoia",
+    "url": "https://it.wikipedia.org/wiki/Vittorio_Emanuele_II_di_Savoia"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:25:02.857Z"
+  }
+}

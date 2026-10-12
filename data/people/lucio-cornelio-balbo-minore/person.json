@@ -1,0 +1,65 @@
+{
+  "id": "lucio-cornelio-balbo-minore",
+  "name": "Lucio Cornelio Balbo",
+  "wikidataId": "Q201102",
+  "wikipediaTitle": "Lucio Cornelio Balbo (minore)",
+  "content": {
+    "description": [
+      {
+        "text": "Lucio Cornelio Balbo, a Roman of Punic descent born in Cadiz, was a member of the gens Cornelia and the first member of that family to rise to prominence during the Augustan era.  He was a homo novus, a newcomer to the Roman aristocracy, and was noted for his intellectual pursuits as a writer, thinker, and politician.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Balbo distinguished himself through a combination of literary and military achievements.  He authored the Exegetica, a now fragmentary work of commentary, and a dramatic play based on the civil war.  His military career included campaigns in Africa, where he served as proconsul in the territories of the Getuli and later the Garamantes in 20 BC, and a remarkable expedition deep into the Sahara that reached the oasis of Cydamus and the Garamantian capital of Garama.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the last Roman not belonging to the imperial family to celebrate a triumph, a rare honor that underscored his military success.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 13 BC he built the theater of Balbo in Rome, complete with the Crypta Balbi, a vaulted passage that still stands as a testament to his patronage of the arts.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His Sahara expedition covered roughly 550 km to Cydamus, then another 650–700 km through the Hamada el‑Hamra to Garama, and may have extended as far as the Niger River in the Fezzan region.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Exegetica he wrote survives only in fragments, but it indicates his engagement with contemporary literary criticism and theological commentary.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As a homo novus of the gens Cornelia, Balbo exemplified the social mobility possible in the early Roman Empire, breaking the traditional aristocratic mold.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Lucio_Cornelio_Balbo_\"El_Menor\".JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Lucio_Cornelio_Balbo_%22El_Menor%22.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Lucio_Cornelio_Balbo_%22El_Menor%22.JPG/960px-Lucio_Cornelio_Balbo_%22El_Menor%22.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/94/Lucio_Cornelio_Balbo_%22El_Menor%22.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Peejayem",
+    "author": "Peejayem",
+    "width": 1728,
+    "height": 2304,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Lucio Cornelio Balbo (minore)",
+    "url": "https://it.wikipedia.org/wiki/Lucio_Cornelio_Balbo_(minore)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:03:08.449Z"
+  }
+}

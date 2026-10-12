@@ -1,0 +1,65 @@
+{
+  "id": "pietro-lombardi-architect",
+  "name": "Pietro Lombardi",
+  "wikidataId": "Q5962684",
+  "wikipediaTitle": "Pietro Lombardi (architect)",
+  "content": {
+    "description": [
+      {
+        "text": "Pietro Lombardi was an Italian architect born on 30 July 1894 who began his career working in the studios of prominent architects Armando Brasini and Marcello Piacentini, gaining experience in the neoclassical and rationalist styles that dominated early twentieth‑century Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1925 Lombardi won a national competition to design nine fountains for seven of Rome’s traditional quarters, a project that included the Fontana delle Anfore in Testaccio and cemented his reputation as a leading public‑works designer of his era.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He worked in the studios of Armando Brasini and Marcello Piacentini, two of the most influential architects in Italy during the interwar period.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Lombardi’s 1925 competition win involved designing nine fountains across seven of Rome’s traditional rioni, showcasing his ability to blend classical motifs with modern urban needs.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1894,
+      "month": 7,
+      "day": 30,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1984,
+      "month": 2,
+      "day": 5,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Fontana_dei_libri.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Fontana_dei_libri.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Fontana_dei_libri.jpg/960px-Fontana_dei_libri.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Fontana_dei_libri.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Castro Pretorio",
+    "author": "Castro Pretorio",
+    "width": 4252,
+    "height": 5339,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pietro Lombardi (architect)",
+    "url": "https://en.wikipedia.org/wiki/Pietro_Lombardi_(architect)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:16:27.446Z"
+  }
+}

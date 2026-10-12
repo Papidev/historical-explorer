@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Santa_Maria_dei_Miracoli_in_Rome_(3).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Santa_Maria_dei_Miracoli_in_Rome_(3).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Santa_Maria_dei_Miracoli_in_Rome_%283%29.jpg/960px-Santa_Maria_dei_Miracoli_in_Rome_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Santa_Maria_dei_Miracoli_in_Rome_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Krzysztof Golik",
+      "author": "Krzysztof Golik",
+      "width": 4259,
+      "height": 4672,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "14_523_Santa_Maria_dei_Miracoli,_-_in_Montesanto.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:14_523_Santa_Maria_dei_Miracoli%2C_-_in_Montesanto.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/14_523_Santa_Maria_dei_Miracoli%2C_-_in_Montesanto.jpg/960px-14_523_Santa_Maria_dei_Miracoli%2C_-_in_Montesanto.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/14_523_Santa_Maria_dei_Miracoli%2C_-_in_Montesanto.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Falk2",
+      "author": "Falk2",
+      "width": 5153,
+      "height": 3429,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "20140803_Santa_Maria_dei_Miracoli_and_Santa_Maria_in_Montesanto_0173.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:20140803_Santa_Maria_dei_Miracoli_and_Santa_Maria_in_Montesanto_0173.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/20140803_Santa_Maria_dei_Miracoli_and_Santa_Maria_in_Montesanto_0173.jpg/960px-20140803_Santa_Maria_dei_Miracoli_and_Santa_Maria_in_Montesanto_0173.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/20140803_Santa_Maria_dei_Miracoli_and_Santa_Maria_in_Montesanto_0173.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Jakub Hałun",
+      "author": "Jakub Hałun",
+      "width": 4499,
+      "height": 3056,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Santa_Maria_dei_Miracoli_in_Rome_(3).jpg"
+}

@@ -1,0 +1,60 @@
+{
+  "introduction": {
+    "text": "Forte Aurelia Antica is a historic fort in Rome’s Gianicolense district, built in the late 19th century as part of a network of 15 forts. It has served military, humanitarian, and law‑enforcement roles and is currently undergoing restoration.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "construction",
+        "description": "Construction of Forte Aurelia Antica began in 1877 and was completed in 1881.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1877,
+          "precision": "exact",
+          "endYear": 1881,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "fortNetwork",
+        "description": "The fort is one of 15 forts built in Rome between 1877 and 1891.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1877,
+          "precision": "exact",
+          "endYear": 1891,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "guardiaFinanza",
+        "description": "Since 1958 the fort has been occupied by a Guardia di Finanza logistics centre.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1958,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "restoration",
+        "description": "Since 2017 the entire complex is undergoing a comprehensive restoration and conservation project.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2017,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "postWWII",
+        "description": "After the Second World War the fort housed 8,000 displaced persons and later served as a hospital.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [],
+    "art": []
+  },
+  "relatedPeople": []
+}

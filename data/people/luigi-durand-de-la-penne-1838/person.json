@@ -1,0 +1,57 @@
+{
+  "id": "luigi-durand-de-la-penne-1838",
+  "name": "Luigi Durand de la Penne",
+  "wikidataId": "Q19960815",
+  "wikipediaTitle": "Luigi Durand de la Penne (generale)",
+  "content": {
+    "description": [
+      {
+        "text": "Luigi Durand de la Penne entered the Turin military academy as a young man and became an officer of the Engineer Corps in 1857. He took part in the siege of Gaeta in 1861 and in the second and third wars of independence, establishing himself as a capable engineer officer.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1878 he was appointed head of the Military Engineer Service in Rome, where he designed the Military Hospital of Celio and promoted the restoration of Castel Sant'Angelo. He rose to major general in 1887, then to lieutenant general and served as inspector general of the Engineer Corps from July 1897 to February 1906. In 1900 he was named senator of the Kingdom, and he died in La Penne, a village in the Maritime Alps of France that had long been a family fief.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He designed the Military Hospital of Celio in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He promoted the restoration of Castel Sant'Angelo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was appointed senator of the Kingdom in 1900.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Luigi_Durand_De_La_Penne.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Luigi_Durand_De_La_Penne.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Luigi_Durand_De_La_Penne.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Luigi_Durand_De_La_Penne.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0 it",
+    "attribution": "senato.it",
+    "author": "Unknown authorUnknown author",
+    "width": 948,
+    "height": 1189,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Luigi Durand de la Penne (generale)",
+    "url": "https://it.wikipedia.org/wiki/Luigi_Durand_de_la_Penne_(generale)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:32:06.370Z"
+  }
+}

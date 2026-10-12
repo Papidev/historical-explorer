@@ -1,0 +1,52 @@
+{
+  "id": "antonio-mar-a-javierre-ortas",
+  "name": "Antonio María Javierre Ortas",
+  "wikidataId": "Q539180",
+  "wikipediaTitle": "Antonio María Javierre Ortas",
+  "content": {
+    "description": [
+      {
+        "text": "Antonio María Javierre Ortas was born on 21 February 1921 in Siétamo, Spain. He entered the Salesian order, was ordained a priest in 1949, and earned a doctorate in theology from the University of Louvain. Over the next decades he taught fundamental theology and dogmatics in Turin, Rome, Peru, Guatemala, and Poland, becoming a respected scholar and a key voice for Spanish bishops during the Second Vatican Council, particularly on ecumenical matters.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1976 Pope Paul VI appointed him archbishop and secretary of the Congregation for Catholic Education. He was created a cardinal deacon in 1988, served as the Vatican’s librarian and archivist, and in 1992 was elevated to cardinal priest and prefect of the Congregation for Divine Worship and the Discipline of the Sacraments, a post he held until 1996. He participated in the 1992 decision to allow female altar servers and, in 1994, advised that such service could be permitted at the discretion of local bishops. Cardinal Javierre Ortas died in Rome on 1 February 2007.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Before his cardinalate, Javierre Ortas served as the librarian and archivist of the Holy Roman Church, overseeing the Vatican’s vast collections of manuscripts and documents.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a prolific lecturer, giving courses in fundamental theology and dogmatics in a wide range of countries, including Italy, Spain, Peru, Guatemala, and Poland, which helped spread his theological influence across continents.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1921,
+      "month": 2,
+      "day": 21,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 2007,
+      "month": 2,
+      "day": 1,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Antonio María Javierre Ortas",
+    "url": "https://en.wikipedia.org/wiki/Antonio_Mar%C3%ADa_Javierre_Ortas"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:42:42.341Z"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "introduction": {
+    "text": "The Colombario di via Olevano Romano is a Roman burial chamber located at via Olevano Romano 3, near the intersection with via Prenestina in Rome. It is significant for its early Imperial architecture and the surviving funerary inscriptions that provide insight into Roman burial practices.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The chamber was constructed between the 1st century BC and the 1st century AD in opus reticolatum.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -100,
+          "precision": "approximate",
+          "endYear": 100,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "A tomb dated to 69 AD indicates the chamber was in use at least until the second half of the 1st century AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 69,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The chamber has a rectangular plan of about 3.75 m by 4.65 m, accessed by a staircase on the north side and supported by a barrel vault.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The walls were originally decorated with small squares and floral motifs; later the floor was raised and the walls were repainted with geometric designs.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Decorative motifs include geometric patterns and floral designs on the walls.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "Latin inscriptions survive, including a poem addressed by a husband to his deceased wife, Iunia Formosa.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": []
+}

@@ -1,0 +1,46 @@
+{
+  "introduction": {
+    "text": "The Mitreo delle Pareti Dipinte (III,I,6) was a Mithraeum in Ostia, a Roman city on the coast, notable for its wall paintings depicting Mithraic iconography.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The Mitreo delle Pareti Dipinte was a Mithraeum located in region III of Ostia, a Roman city on the coast.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The Mithraeum consisted of a small vestibule leading to a cella measuring 14 by 4 metres, divided by two walls into front and rear sections, each with benches for initiates. The rear floor was decorated with travertine, the front with a stepped marble altar built in opus vittatum.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Wall paintings include figures of Mithra (Sol-Mithras) with a bust, the lunar symbols, the attendants Cautes and Cautopates, a figure with a cloak, a figure with a javelin, and Venus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Mitra (divinità)",
+      "personId": "mitra-divinit",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Cautes e Cautopates",
+      "personId": "cautes-e-cautopates",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Venere (divinità)",
+      "personId": "venus-mythology",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

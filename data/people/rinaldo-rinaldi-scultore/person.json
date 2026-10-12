@@ -1,0 +1,57 @@
+{
+  "id": "rinaldo-rinaldi-scultore",
+  "name": "Rinaldo Rinaldi",
+  "wikidataId": "Q6072755",
+  "wikipediaTitle": "Rinaldo Rinaldi (scultore)",
+  "content": {
+    "description": [
+      {
+        "text": "Rinaldo Rinaldi, born to Domenico, an intagliatore, and Teresa Pisani, emerged as a prominent Italian sculptor in the early 19th century. After initial training at the Accademia di Venezia, he was sent to Rome in 1811 by Leopoldo Cicognara on the recommendation of Napoleon Bonaparte, where he studied under Antonio Canova at the Accademia di San Luca. During this period he collaborated with Adamo Tadolini and produced his first notable work, a stone sculpture of Saint Anthony in 1808 for the sanctuary of the Arcella.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Rinaldi's career flourished through a series of high‑profile commissions, including monuments to Cardinal Lorenzo Prospero Bottini (1818), Monseigneur Carlo Zen (1825), and Pope Gregory XVI (1850). He was entrusted by Canova himself to complete the latter's unfinished works after Canova's death in 1822, a testament to his skill and reputation. Despite facing severe financial hardship that same year, he continued to produce works for the Canova studio under Cincinnato Baruzzi. His later years saw him exhibit at the XIII Esposizione della Società promotrice di belle arti di Torino (1854) and the Italian Agricultural, Industrial and Artistic Exhibition in Florence (1861), while his sculptures entered the international auction market, with a gypsum stele sold at Sotheby's in 2007 for $132,000 and later at Christie's in 2013 for $68,500.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Rinaldi was specifically named by Canova as the successor to complete his unfinished sculptures after Canova's death, indicating a high level of trust and recognition within the neoclassical circle.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1822, despite severe financial difficulties that threatened to halt his commissions, Rinaldi was still selected to finish Canova's works, demonstrating his resilience and the demand for his craftsmanship.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A gypsum stele of Rinaldi's work, inspired by Canova's Mellerio stele, was auctioned at Sotheby's in 2007 for $132,000, then resold at Christie's in 2013 for $68,500, illustrating the fluctuating value of neoclassical sculptures in the modern art market.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Basilica_di_Santa_Maria_dei_Frari_interno_-_Monumento_di_Canova_-_Il_Leone_di_Venezia_in_posa_mesta_-_Rinaldo_Rinaldi.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Basilica_di_Santa_Maria_dei_Frari_interno_-_Monumento_di_Canova_-_Il_Leone_di_Venezia_in_posa_mesta_-_Rinaldo_Rinaldi.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Basilica_di_Santa_Maria_dei_Frari_interno_-_Monumento_di_Canova_-_Il_Leone_di_Venezia_in_posa_mesta_-_Rinaldo_Rinaldi.jpg/960px-Basilica_di_Santa_Maria_dei_Frari_interno_-_Monumento_di_Canova_-_Il_Leone_di_Venezia_in_posa_mesta_-_Rinaldo_Rinaldi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/Basilica_di_Santa_Maria_dei_Frari_interno_-_Monumento_di_Canova_-_Il_Leone_di_Venezia_in_posa_mesta_-_Rinaldo_Rinaldi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Didier Descouens",
+    "author": "Didier Descouens",
+    "width": 8256,
+    "height": 5504,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Rinaldo Rinaldi (scultore)",
+    "url": "https://it.wikipedia.org/wiki/Rinaldo_Rinaldi_(scultore)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:22:17.151Z"
+  }
+}

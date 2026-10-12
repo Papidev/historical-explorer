@@ -1,0 +1,36 @@
+{
+  "id": "famulus",
+  "name": "Famulus",
+  "wikidataId": "Q1395422",
+  "wikipediaTitle": "Famulus",
+  "content": {
+    "description": [
+      {
+        "text": "Famulus, sometimes called Fabulus, Fabullus, or Amulius, was a Roman fresco painter who worked in the Domus Aurea, the opulent Golden House built by Emperor Nero.  Pliny the Elder records that Famulus and his assistants covered a vast portion of the palace’s walls with elaborate murals, and that he was one of the principal artists commissioned for the project.  Pliny notes that Famulus would work only a few hours each day, choosing the time of day when the light was most favorable, and that he always kept his toga on while painting, a detail that suggests a disciplined, almost austere approach to his craft.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Famulus’s style is classified as Pompeian Style IV, characterized by impressionistic coloring—deep blues, greens, indigos, purples, and cinnabar reds—and by a sense of motion and animation in the figures.  Though most of his large mythological scenes, such as the lost panel of Achilles at Skyros, have not survived, the surviving fragments and contemporary accounts show that his work had a profound influence on later art.  The white walls, delicate swags, and frieze bands of the Domus Aurea were later echoed by Renaissance masters like Raphael in his Vatican loggias, and the motifs reappeared in 18th‑century Neoclassicism, cementing Famulus’s place as one of the most influential painters in art history.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "According to Pliny, Famulus kept his toga on while painting, a practice that underscores his seriousness and perhaps a desire to maintain a dignified appearance even while working in the lavish setting of Nero’s palace.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Famulus",
+    "url": "https://en.wikipedia.org/wiki/Famulus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:06:11.791Z"
+  }
+}

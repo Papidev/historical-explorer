@@ -1,0 +1,161 @@
+{
+  "introduction": {
+    "text": "The Galleria Comunale d'Arte Moderna in Rome is the city’s museum of modern and contemporary art, housed in a 17th‑century former Barefoot Carmelite monastery.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-1883",
+        "description": "The collection began with a purchase by the comune of Rome of works from the 1883 Esposizione Internazionale di Belle Arti.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1883,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1925",
+        "description": "The museum was officially constituted in 1925.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1925,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1931",
+        "description": "Renamed Galleria Mussolini in 1931.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1931,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1938",
+        "description": "Closed in 1938.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1938,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1949",
+        "description": "Re‑opened in 1949.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1949,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1995",
+        "description": "Moved to present premises in 1995.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1995,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-2003",
+        "description": "Closed for restoration in 2003.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2003,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-2011",
+        "description": "Re‑opened in 2011.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2011,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-2014",
+        "description": "In 2014 an expansion of the gallery was proposed.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2014,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-monastery",
+        "description": "The gallery occupies a 17th‑century former Barefoot Carmelite monastery.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-adjacent-church",
+        "description": "The building is adjacent to the church of San Giuseppe a Capo le Case.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-collection-size",
+        "description": "The gallery holds more than 3,000 sculptures, paintings and graphic works from the late 19th and early 20th centuries.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-notable-artists",
+        "description": "Notable artists represented include Giacomo Balla, Carlo Carrà, Arturo Dazzi, Giorgio de Chirico, Renato Guttuso, Giacomo Manzù and Giorgio Morandi.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Giacomo Balla",
+      "personId": "giacomo-balla",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Carlo Carrà",
+      "personId": "carlo-carr",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giorgio de Chirico",
+      "personId": "giorgio-de-chirico",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Renato Guttuso",
+      "personId": "renato-guttuso",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giacomo Manzù",
+      "personId": "giacomo-manz",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giorgio Morandi",
+      "personId": "giorgio-morandi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Arturo Dazzi",
+      "personId": "arturo-dazzi",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

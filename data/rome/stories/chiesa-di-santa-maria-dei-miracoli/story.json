@@ -1,0 +1,181 @@
+{
+  "introduction": {
+    "text": "The Chiesa di Santa Maria dei Miracoli is a Baroque church in Rome’s Campo Marzio district, notable for its miraculous origin, its twin relationship with Santa Maria in Montesanto, and its architectural and artistic features.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "A miracle on 20 June 1325 led to the construction of a small chapel dedicated to the Virgin, the origin of the church.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1325,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "In 1525 Pope Clement VII entrusted the chapel to the nearby Hospital of San Giacomo degli Incurabili.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1525,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "The chapel passed to the Capuchins in 1529, but was flooded by the Tiber the following year.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1529,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "In 1590 the image of the Madonna was moved to the newly built church of San Giacomo in Augusta.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1590,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "Pope Alessandro VII ordered a new church on Piazza del Popolo in 1661 to house the image.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1661,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "Construction of the new church began in 1675.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1675,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "The church was completed in 1679 and consecrated two years later.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1679,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history8",
+        "description": "In 1793 the church was granted to the Confraternity of the Most Holy Sacrament.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1793,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history9",
+        "description": "In 1856 it passed to the Arciconfraternita of San Gregorio Taumaturgo.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1856,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history10",
+        "description": "Since 1915 the church has been administered by the Priests of the Sacred Heart of Jesus of Bétharram.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1915,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The façade features a deep rectangular pronao crowned by a tympanum bearing the name of benefactor Cardinal Gastaldi.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "A cupola octagonally shaped and covered with slate tiles was designed and built by Carlo Fontana.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "The bell tower, mirroring that of Santa Maria in Montesanto, was attributed to Francesco Navone.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design4",
+        "description": "The interior follows a circular plan with four side chapels and a deep presbytery, designed by Carlo Rainaldi and executed by Carlo Fontana.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Ten statues of saints on the exterior balustrade were executed between 1676 and 1677 by Filippo Carcani, Ercole Ferrata, and others.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "The central altar features a 1646 copy of the Madonna dei Miracoli, originally a 16th‑century fresco.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "Interior decorations include stucco work by Antonio Raggi and a marble bust of Pope Pio VI.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Girolamo Gastaldi",
+      "personId": "girolamo-gastaldi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Carlo Fontana",
+      "personId": "carlo-fontana",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Carlo Rainaldi",
+      "personId": "carlo-rainaldi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ercole Ferrata",
+      "personId": "ercole-ferrata",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Antonio Canova",
+      "personId": "antonio-canova",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pericle Fazzini",
+      "personId": "pericle-fazzini",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "introduction": {
+    "text": "The Casa di Augusto, also known as the House of Augustus, is a Roman imperial residence on Rome's Palatine Hill. It is significant because it is traditionally linked to the first emperor Augustus and illustrates early imperial domestic architecture and the political symbolism of the Palatine.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "purchase-41-40BC",
+        "description": "The house was originally owned by the orator Quintus Hortensius and was purchased by Augustus around 41–40 BC.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -41,
+          "precision": "approximate",
+          "endYear": -40,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "peristyleA-39BC",
+        "description": "Peristyle A, the private quarters of the villa, was constructed around 39 BC.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -39,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "peristyleB-39-36BC",
+        "description": "Peristyle B was built between 39 and 36 BC, possibly serving a public function.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -39,
+          "precision": "approximate",
+          "endYear": -36,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "lightning-36BC",
+        "description": "A lightning strike struck the house in 36 BC, leading Augustus to declare it public property and dedicate a temple to Apollo Palatinus.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -36,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "room-masks-30BC",
+        "description": "The Room of the Masks, featuring perspective architectural paintings, dates to 30 BC.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -30,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "temple-finished-28BC",
+        "description": "The Temple of Apollo Palatinus was finished in 28 BC.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -28,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "oak-crown-27BC",
+        "description": "In 27 BC an oak crown was placed on the front door as a tribute to the Senate's dedication.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -27,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "fire-AD3",
+        "description": "The house burned around AD 3 before being rebuilt.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 3,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "fire-AD64",
+        "description": "The house was permanently destroyed in the Great Fire of Rome in AD 64.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 64,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "excavation-1865",
+        "description": "Pietro Rosa began excavations at the site in 1865.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1865,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "survey-1937",
+        "description": "Alfonso Bartoli conducted further surveys in 1937.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1937,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "excavation-1956",
+        "description": "Extensive excavations began in 1956 under Gianfilippo Carettoni.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1956,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "restoration-2008",
+        "description": "A restoration program was completed in 2008, giving the public access.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2008,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "identification-dispute",
+        "description": "The identification of the site as the House of Augustus is disputed among scholars.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "peristyles-structure",
+        "description": "The house consists of two peristyles bordered by rooms, with the Temple of Apollo Palatinus situated between them.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "terraces-and-opus",
+        "description": "The villa was built on two terraces and features walls constructed in opus quadratum.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "room-masks-paintings",
+        "description": "The Room of the Masks contains perspective architectural paintings and theatrical masks, characteristic of the Second Style of Roman wall painting.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "decorative-pine-branches",
+        "description": "Another room features paintings of decorative pine branches similar to those in the House of Livia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "geometric-mosaics",
+        "description": "The eastern rooms were decorated with geometric floor mosaics.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Augustus",
+      "personId": "augustus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Quintus Hortensius",
+      "personId": "quintus-hortensius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Quintus Lutatius Catulus Capitolinus",
+      "personId": "quintus-lutatius-catulus-capitolinus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Velleius Paterculus",
+      "personId": "velleius-paterculus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Cassius Dio",
+      "personId": "cassius-dio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Suetonius",
+      "personId": "suetonius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Napoleon III",
+      "personId": "napoleon-iii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Alfonso Bartoli",
+      "personId": "alfonso-bartoli",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

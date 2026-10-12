@@ -1,0 +1,77 @@
+{
+  "id": "mercurino-arborio-di-gattinara",
+  "name": "Mercurino Arborio di Gattinara",
+  "wikidataId": "Q385613",
+  "wikipediaTitle": "Mercurino di Gattinara",
+  "content": {
+    "description": [
+      {
+        "text": "Mercurino Arborio di Gattinara, born on 10 June 1465 in the small town of Gattinara near Vercelli in Piedmont, rose from a local legal scholar to become the principal chancellor of Charles V, the King of Spain and later Holy Roman Emperor. After serving as a legal adviser to Margaret of Austria in Savoy and to the young Duke Charles II of Burgundy, he succeeded Jean le Sauvage as Grand Chancellor of Burgundy in 1518, a position that made him the chief administrator of all of Charles’s domains. His tenure as chancellor, which lasted until his death in 1530, was marked by a steady shift from a Burgundian‑centric outlook toward a universal Christian vision of empire.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Gattinara was a Catholic humanist and Erasmian scholar whose writings urged Charles V to pursue a dynastic empire that would unite Christendom under a single ruler and confront the Protestants, Turks, and New‑World infidels. He was instrumental in steering the emperor’s policy from regional dynastic concerns to a grand project of imperial expansion, especially through Italy, where he saw the key to controlling the Habsburg holdings of Spain, France, and the Low Countries. In 1529 he was elevated to the cardinalate of San Giovanni a Porta Latina, and he continued to advise on matters ranging from the tolerance of Moors to the reform of the Inquisition, always balancing idealism with the practical demands of realpolitik.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 1529, Gattinara was elevated to the cardinalate of San Giovanni a Porta Latina.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Before becoming chancellor, he served as a legal adviser to Margaret of Austria in Savoy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Gattinara was a humanist influenced by Erasmus and the works of Dante.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He advised Charles V on the reform of the Inquisition and on the tolerance of Moors and infidels.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was instrumental in shifting Charles V’s policy from a Burgundian‑centric outlook to a universal imperial project.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1465,
+      "month": 6,
+      "day": 10,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1530,
+      "month": 6,
+      "day": 5,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Jan_Cornelisz._Vermeyen_001.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Jan_Cornelisz._Vermeyen_001.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Jan_Cornelisz._Vermeyen_001.jpg/960px-Jan_Cornelisz._Vermeyen_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/Jan_Cornelisz._Vermeyen_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "After Jan Cornelisz Vermeyen / Jan van Scorel",
+    "author": "After Jan Cornelisz Vermeyen / Jan van Scorel",
+    "width": 2048,
+    "height": 1447,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Mercurino di Gattinara",
+    "url": "https://en.wikipedia.org/wiki/Mercurino_di_Gattinara"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:21:18.478Z"
+  }
+}

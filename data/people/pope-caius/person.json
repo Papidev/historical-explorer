@@ -1,0 +1,71 @@
+{
+  "id": "pope-caius",
+  "name": "Pope Caius",
+  "wikidataId": "Q160882",
+  "wikipediaTitle": "Pope Caius",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Caius, who served as bishop of Rome from 17 December 283 until his death in 296, is known mainly through the Liber Pontificalis and a legendary account of the martyrdom of Susanna of Rome. According to tradition, he was a native of Salona in Dalmatia, the son of a man also named Caius, and a member of a noble family related to Emperor Diocletian. During his pontificate he instituted a strict progression of ecclesiastical offices—porter, lector, exorcist, acolyte, subdeacon, deacon, and priest—before one could be consecrated bishop, and he divided the districts of Rome among the deacons to improve administration.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Caius is said to have taken refuge in the catacombs of Rome during the increasing persecution of Christians, and he was eventually discovered and martyred, though the exact manner of his death is disputed. His tomb, bearing an original epitaph, was found in the catacomb of Callixtus, and a ring used to seal his letters was recovered there. In 1631 his former residence was turned into a church, later demolished in 1880, and his relics were transferred to the chapel of the Barberini family. His feast day, celebrated on 22 April, is commemorated jointly with Pope Soter in the Roman Martyrology.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Caius decreed that a candidate for bishop must first serve as porter, lector, exorcist, acolyte, subdeacon, deacon, and priest.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He divided the districts of Rome among the deacons to improve church administration.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His tomb was discovered in the catacomb of Callixtus, and a ring used to seal his letters was found there.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His former residence in Rome was turned into a church in 1631, demolished in 1880, and his relics were transferred to the chapel of the Barberini family.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His feast day is celebrated on 22 April, jointly with Pope Soter, and is mentioned in the Roman Martyrology.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 296,
+      "month": 4,
+      "day": 22,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "PCaius.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:PCaius.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/PCaius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/PCaius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "User Känsterle on nl.wikipedia",
+    "author": "User Känsterle on nl.wikipedia",
+    "width": 377,
+    "height": 382,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Caius",
+    "url": "https://en.wikipedia.org/wiki/Pope_Caius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:05:16.302Z"
+  }
+}

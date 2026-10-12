@@ -1,0 +1,54 @@
+{
+  "id": "anselm",
+  "name": "Anselm",
+  "wikidataId": "Q4770609",
+  "wikipediaTitle": "Anselm of St Saba",
+  "content": {
+    "description": [
+      {
+        "text": "Anselm of St Saba was born into a noble family; his father Burgundius and mother Richeza were relatives of the Archbishop of Canterbury. From a young age he entered the Benedictine abbey of Saint Michael's on Mount Pirchiriano in the March of Susa, where he was guided by his chaplain and biographer Eadmer. He later became abbot of Saint Saba in Rome and served twice as papal legate to England between 1115 and 1119.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1121 Anselm was elected abbot of Bury St Edmunds, a position he held until his brief election to the see of London in 1136. His election as bishop of London was quashed by Pope Innocent II in 1138, after which he returned to Bury St Edmunds. He died on 3 January 1148 and is remembered for building a church to St James in the abbey, which may have been the first such church in England.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Anselm was elected abbot of Bury St Edmunds in 1121.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was elected to the see of London about 22 March 1136, but the election was quashed by Pope Innocent II in 1138.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Anselm died on 3 January 1148.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He had a church to St James built in the abbey, possibly the first such church in England.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 1148,
+      "month": 1,
+      "day": 3,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Anselm of St Saba",
+    "url": "https://en.wikipedia.org/wiki/Anselm_of_St_Saba"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:39:20.852Z"
+  }
+}

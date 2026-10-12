@@ -1,0 +1,69 @@
+{
+  "id": "max-beckmann",
+  "name": "Max Beckmann",
+  "wikidataId": "Q164683",
+  "wikipediaTitle": "Max Beckmann",
+  "content": {
+    "description": [
+      {
+        "text": "Max Beckmann was born on 12 February 1884 in Leipzig, a city that would shape his early artistic ambitions. From a young age he challenged the conventions of the old masters, and his experience as a medical orderly during World War I left him with a nervous breakdown that would profoundly alter his style. The trauma of the war pushed him away from academically correct depictions toward a distortion of figure and space that reflected his altered vision of humanity, a shift that would become a hallmark of his work.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the rise of the Nazi regime, Beckmann was dismissed from his teaching post, labelled a \"cultural Bolshevik,\" and forced into exile in the Netherlands. He spent a decade in Amsterdam, producing some of his most powerful triptychs, before moving to the United States in 1947. There he taught at Washington University and the Brooklyn Museum, and his final years were marked by a series of intense paintings that culminated in his death from a heart attack on 27 December 1950 in New York City.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Nazis confiscated more than 500 of Beckmann's works in 1937, displaying many in the infamous Degenerate Art exhibition in Munich.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1944, the German army attempted to draft Beckmann into the military, but his heart attack and age prevented his enlistment.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beckmann's self-portrait with a horn, painted in 1938 while in exile, is considered one of the most melancholy and mystifying of his self-portraits.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1884,
+      "month": 2,
+      "day": 12,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1950,
+      "month": 12,
+      "day": 27,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Max_Beckmann_1928,_by_Hugo_Erfurth.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Max_Beckmann_1928%2C_by_Hugo_Erfurth.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Max_Beckmann_1928%2C_by_Hugo_Erfurth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Max_Beckmann_1928%2C_by_Hugo_Erfurth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Hugo Erfurth",
+    "author": "Hugo Erfurth",
+    "width": 373,
+    "height": 470,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Max Beckmann",
+    "url": "https://en.wikipedia.org/wiki/Max_Beckmann"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T21:00:45.364Z"
+  }
+}

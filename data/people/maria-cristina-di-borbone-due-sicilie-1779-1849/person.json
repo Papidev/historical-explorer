@@ -1,0 +1,77 @@
+{
+  "id": "maria-cristina-di-borbone-due-sicilie-1779-1849",
+  "name": "Maria Cristina di Borbone-Due Sicilie",
+  "wikidataId": "Q235513",
+  "wikipediaTitle": "Maria Cristina di Borbone-Due Sicilie (regina di Sardegna)",
+  "content": {
+    "description": [
+      {
+        "text": "Maria Cristina Amalia Teresa di Borbone‑Due Sicilie was born on 17 January 1779 at the Royal Palace of Caserta, the third daughter of Ferdinand IV of Naples and Maria Carolina of Austria.  She was a member of the Bourbon‑Naples line, which also carried the blood of the Habsburg‑Lorraine, Wittelsbach, Wettin, Farnese and Savoy families, and she was the sister of several prominent European monarchs, including Maria Teresa, the Holy Roman Empress, Maria Amalia, Queen of France, and Maria Antonia, Princess of Asturias.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1807 she married Carlo Felice of Savoy, who was then the heir to the throne of Sardinia.  The couple had no children and she became Queen consort of Sardinia in 1821 when Carlo Felice ascended the throne.  During her reign she restored the Castello di Govone, encouraged archaeological excavations at the Villa Tuscolana in Frascati, and after her husband's death in 1831 she lived in Turin until her own death on 11 March 1849.  She was buried in the Abbey of Altacomba, where a sculpture by Giovanni Albertoni depicts her, and several monuments—including a gate in Cagliari and a fort in Aussois—were named in her honor.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Maria Cristina had a twin sister, Maria Cristina Amalia, who died at the age of four on 26 February 1783.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She was involved in the first archaeological excavations at the Villa Tuscolana, hiring Luigi Biondi of the Pontifical Academy of Archaeology to begin digs in 1831.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Castello di Govone, which she restored based on her own designs, served as one of the royal summer residences in the 19th century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A sculpture by Giovanni Albertoni, depicting her as queen, was erected at her burial site in the Abbey of Altacomba.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A gate in the Castello district of Cagliari, built by her husband when he was king, bears the inscription Mariae Christinae Reginae and is commonly known as Porta Cristina.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1779,
+      "month": 1,
+      "day": 17,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1849,
+      "month": 3,
+      "day": 11,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Berger_-_Maria_Cristina_of_Naples_and_Sicily_-_Castle_of_Agliè.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Berger_-_Maria_Cristina_of_Naples_and_Sicily_-_Castle_of_Agli%C3%A8.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Berger_-_Maria_Cristina_of_Naples_and_Sicily_-_Castle_of_Agli%C3%A8.jpg/960px-Berger_-_Maria_Cristina_of_Naples_and_Sicily_-_Castle_of_Agli%C3%A8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Berger_-_Maria_Cristina_of_Naples_and_Sicily_-_Castle_of_Agli%C3%A8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Giacomo Berger",
+    "author": "Giacomo Berger",
+    "width": 1891,
+    "height": 2919,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Maria Cristina di Borbone-Due Sicilie (regina di Sardegna)",
+    "url": "https://it.wikipedia.org/wiki/Maria_Cristina_di_Borbone-Due_Sicilie_(regina_di_Sardegna)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:40:17.380Z"
+  }
+}

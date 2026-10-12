@@ -1,0 +1,73 @@
+{
+  "id": "manius-acilius-glabrio-consul-191-bc",
+  "name": "Manius Acilius Glabrio",
+  "wikidataId": "Q472433",
+  "wikipediaTitle": "Manius Acilius Glabrio (consul 191 BC)",
+  "content": {
+    "description": [
+      {
+        "text": "Manius Acilius Glabrio, a plebeian of the Acilii family, rose to prominence as the first member of his clan to reach the consulship in 191 BC. He led Rome’s forces against the Seleucid emperor Antiochus III in Greece, defeating him at Thermopylae and forcing a retreat across the Aegean. His campaign secured Roman dominance over the eastern Mediterranean and earned him a triumph upon his return to Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond the battlefield, Glabrio enacted the lex Acilia, which assigned the pontiffs the duty of intercalating the Roman calendar, thereby curbing senatorial manipulation of the months. He also vowed to build a Temple of Piety, a monument that his son would later complete; the temple’s gilt statue of Glabrio was the first gold statue of a Roman citizen in the city. Accused of concealing spoils from his Greek campaigns, he withdrew from a bid for censorship and largely retired from public life thereafter.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Glabrio’s gilt statue in front of the Temple of Piety was the first gold statue of a Roman citizen in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He introduced the practice of gilding to Roman artisans, according to Ammianus Marcellinus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The lex Acilia, passed during his consulship, made the pontiffs responsible for intercalating the Roman calendar, preventing political manipulation of election dates.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Glabrio was the first member of the Acilii family to become consul, making him a \"novus homo\" or new man.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was accused of embezzling spoils from his Greek campaigns, leading to his withdrawal from the censorship race.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -230,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": -170,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Tobias_Stimmer,_Manius_Acilius_Glabrios_triumftog_i_Rom,_1574,_KKSgb22330,_Statens_Museum_for_Kunst.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Tobias_Stimmer%2C_Manius_Acilius_Glabrios_triumftog_i_Rom%2C_1574%2C_KKSgb22330%2C_Statens_Museum_for_Kunst.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Tobias_Stimmer%2C_Manius_Acilius_Glabrios_triumftog_i_Rom%2C_1574%2C_KKSgb22330%2C_Statens_Museum_for_Kunst.jpg/960px-Tobias_Stimmer%2C_Manius_Acilius_Glabrios_triumftog_i_Rom%2C_1574%2C_KKSgb22330%2C_Statens_Museum_for_Kunst.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Tobias_Stimmer%2C_Manius_Acilius_Glabrios_triumftog_i_Rom%2C_1574%2C_KKSgb22330%2C_Statens_Museum_for_Kunst.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Tobias Stimmer",
+    "author": "Tobias Stimmer",
+    "width": 5327,
+    "height": 3696,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Manius Acilius Glabrio (consul 191 BC)",
+    "url": "https://en.wikipedia.org/wiki/Manius_Acilius_Glabrio_(consul_191_BC)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:26:58.607Z"
+  }
+}

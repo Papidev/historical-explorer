@@ -1,0 +1,69 @@
+{
+  "id": "johann-friedrich-reiffenstein",
+  "name": "Johann Friedrich Reiffenstein",
+  "wikidataId": "Q1336796",
+  "wikipediaTitle": "Johann Friedrich Reiffenstein",
+  "content": {
+    "description": [
+      {
+        "text": "Johann Friedrich Reiffenstein was a German cicerone, painter, antiquarian and agent for art collectors in Rome, known for guiding grand tourists through the city’s artistic treasures.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Born on 22 November 1719 in Ragnit, he spent his career in Rome where he combined his artistic talents with his expertise in antiquities to serve the needs of wealthy European travelers.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was born in Ragnit, a town in what is now Kaliningrad Oblast, Russia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He died in Rome on 6 October 1793, having spent the majority of his adult life in the city.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Reiffenstein served as a cicerone, guiding grand tourists through Rome’s art and antiquities, and acted as an agent for art collectors seeking to acquire works.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1719,
+      "month": 11,
+      "day": 22,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1793,
+      "month": 10,
+      "day": 6,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Johann_Friedrich_Reiffenstein_(1719–1793),_by_Angelica_Kauffmann.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Johann_Friedrich_Reiffenstein_(1719%E2%80%931793)%2C_by_Angelica_Kauffmann.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Johann_Friedrich_Reiffenstein_%281719%E2%80%931793%29%2C_by_Angelica_Kauffmann.jpg/960px-Johann_Friedrich_Reiffenstein_%281719%E2%80%931793%29%2C_by_Angelica_Kauffmann.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Johann_Friedrich_Reiffenstein_%281719%E2%80%931793%29%2C_by_Angelica_Kauffmann.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Angelica Kauffmann",
+    "author": "Angelica Kauffmann",
+    "width": 1630,
+    "height": 2000,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Johann Friedrich Reiffenstein",
+    "url": "https://en.wikipedia.org/wiki/Johann_Friedrich_Reiffenstein"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T21:00:11.964Z"
+  }
+}

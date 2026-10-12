@@ -1,0 +1,66 @@
+{
+  "id": "giovan-battista-caretti",
+  "name": "Giovan Battista Caretti",
+  "wikidataId": "Q26035003",
+  "wikipediaTitle": "Giovanni Battista Caretti",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Battista Caretti was born in November 1803 in a hamlet of Cannobio, a town in the Piedmont region near the Swiss border. Little is known of his early training, but he is believed to have worked for the Roman banker and patron Prince Alessandro Raffaele Torlonia, contributing as an architect, painter and decorator to several of the prince’s commissions.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Caretti’s work was marked by an eclectic blend of styles, combining Gothic, Renaissance and classical motifs within the same interior spaces. He added a new floor, an Ionic pronao and Doric porticoes to the Villa Torlonia’s Casino Nobile, and decorated the Casino dei Principi with stucco reliefs, mosaics and paintings. Although the Palazzo Torlonia on Piazza Venezia was demolished in 1902–1903, an example of his decorative work survives in the Alcova Torlonia, now housed in the Museo di Roma at Palazzo Braschi.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Caretti’s decorative scheme for the Palazzo Torlonia on Piazza Venezia featured a single room that combined Gothic, Renaissance and classical elements side by side, reflecting the client’s eclectic tastes.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "An example of Caretti’s work can still be seen in the Alcova Torlonia, preserved in the Museo di Roma at Palazzo Braschi.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He added a new floor and an Ionic pronao to the Villa Torlonia’s Casino Nobile, as well as Doric porticoes on the building’s sides.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Casino dei Principi, which Caretti renovated between 1835 and 1840, featured a subterranean gallery that was used for parties and social events.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1803,
+      "month": 11,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Roma_Villa_Torlonia_-_Casino_nobile_4.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Roma_Villa_Torlonia_-_Casino_nobile_4.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Roma_Villa_Torlonia_-_Casino_nobile_4.JPG/960px-Roma_Villa_Torlonia_-_Casino_nobile_4.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/27/Roma_Villa_Torlonia_-_Casino_nobile_4.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Gaux",
+    "author": "Gaux",
+    "width": 4000,
+    "height": 3000,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giovanni Battista Caretti",
+    "url": "https://it.wikipedia.org/wiki/Giovanni_Battista_Caretti"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:22:54.893Z"
+  }
+}

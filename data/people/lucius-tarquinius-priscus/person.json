@@ -1,0 +1,57 @@
+{
+  "id": "lucius-tarquinius-priscus",
+  "name": "Lucius Tarquinius Priscus",
+  "wikidataId": "Q212671",
+  "wikipediaTitle": "Lucius Tarquinius Priscus",
+  "content": {
+    "description": [
+      {
+        "text": "Lucius Tarquinius Priscus, originally named Lucumo in Etruria, was the son of the Greek merchant Demaratus of Corinth. After inheriting his father’s fortune, he was denied political office in Tarquinii because of his foreign lineage. Persuaded by his prophetic wife Tanaquil, he migrated to Rome, where an omen involving an eagle and his cap foretold his rise to kingship.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Reigning for thirty‑eight years, Tarquinius Priscus expanded Rome through military campaigns against the Latins, Sabines, and Etruscans, and he instituted sweeping reforms. He doubled the Senate, reorganised the cavalry, and introduced Etruscan religious practices and civil symbols such as the fasces, the curule chair, and the toga praetexta. His building projects—most notably the Circus Maximus and the Cloaca Maxima—laid the foundations for Rome’s urban and civic infrastructure.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He built Rome’s first permanent chariot‑racing stadium, the Circus Maximus, which became the city’s central venue for public spectacles.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Tarquinius introduced the fasces, a bundle of rods with an axe, as a symbol of magistrates’ authority—a tradition that would endure throughout Roman history.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He established Rome’s first triumphal procession, a grand parade celebrating military victories, modeled after Etruscan customs.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Tarquinius-Priscus.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Tarquinius-Priscus.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Tarquinius-Priscus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Tarquinius-Priscus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Published by Guillaume Rouille (1518?-1589)",
+    "author": "Published by Guillaume Rouille (1518?-1589)",
+    "width": 374,
+    "height": 375,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Lucius Tarquinius Priscus",
+    "url": "https://en.wikipedia.org/wiki/Lucius_Tarquinius_Priscus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:50:24.022Z"
+  }
+}

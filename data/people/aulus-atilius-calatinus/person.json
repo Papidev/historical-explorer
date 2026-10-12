@@ -1,0 +1,52 @@
+{
+  "id": "aulus-atilius-calatinus",
+  "name": "Aulus Atilius Calatinus",
+  "wikidataId": "Q714798",
+  "wikipediaTitle": "Aulus Atilius Caiatinus",
+  "content": {
+    "description": [
+      {
+        "text": "Aulus Atilius Calatinus, also spelled Caiatinus, was a Roman general and statesman who rose to prominence during the First Punic War. He served as consul in 258 BC, leading successful campaigns in Sicily, including the capture of Hippana and the siege of Mytistraton, and celebrated a triumph in Rome on 19 January 256 BC. He was elected consul again in 254 BC, commanded a fleet that captured Cephaloedium, and later served as dictator in 249 BC, becoming the first Roman dictator to lead an army outside mainland Italy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the war, Atilius continued to hold high office, serving as censor in 247 BC and mediating a dispute between proconsul Lutatius Catulus and propraetor Valerius Falto in 241 BC over the right to celebrate a triumph for the Battle of the Aegates. He also dedicated temples to Spes and Fides at Rome and was buried at the Porta Capena, where Cicero preserved part of his epitaph. His career exemplified the rapid rise of plebeian families into the highest ranks of the Roman Republic during the late 3rd century BC.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the first Roman dictator to lead an army outside mainland Italy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He celebrated a triumph on 19 January 256 BC for his victories in Sicily during his first consulship.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He dedicated temples to Spes in the Forum Holitorium and to Fides on the Capitoline Hill.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a maternal grandson of Fabius Rullianus, linking a plebeian family to a patrician clan.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -300,
+      "precision": "approximate"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Aulus Atilius Caiatinus",
+    "url": "https://en.wikipedia.org/wiki/Aulus_Atilius_Caiatinus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:26:20.420Z"
+  }
+}

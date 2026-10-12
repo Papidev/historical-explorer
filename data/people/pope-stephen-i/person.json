@@ -1,0 +1,75 @@
+{
+  "id": "pope-stephen-i",
+  "name": "Pope Stephen I",
+  "wikidataId": "Q134666",
+  "wikipediaTitle": "Pope Stephen I",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Stephen I was born in Rome to the noble family of Jovius and served as archdeacon under Pope Lucius I before being appointed his successor. He held the papacy from 12 May 254 until his death on 2 August 257, during a period of intense persecution under Emperor Decius and later Valerian. Stephen’s tenure was marked by his decisive stance on the treatment of the lapsi—Christians who had renounced their faith under persecution—advocating that those who had been baptized by schismatics should not be rebaptized, a view that eventually gained wide acceptance in the Latin Church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "According to the Golden Legend, Stephen was beheaded while celebrating Mass when imperial agents arrived to enforce Valerian’s renewed persecution. Although the Depositio episcoporum of 354 does not list him as a martyr, the tradition of his martyrdom persisted, and his chair is said to have been preserved, stained with blood, until the eighteenth century. His feast day, 2 August, remains in the Martyrologium Romanum, and he is honored as the patron saint of Hvar and Modigliana Cathedral.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was beheaded while celebrating Mass, an event recorded in the Golden Legend.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Stephen insisted on restoring the bishops of León and Astorga, who had been deposed during the persecution but later repented.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the son of Jovius, a member of a Roman noble family that had long since converted to Christianity.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Before becoming pope, Stephen served as archdeacon under Pope Lucius I.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His chair, allegedly stained with blood, was preserved until the eighteenth century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He is the patron saint of the island of Hvar and of Modigliana Cathedral.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 257,
+      "month": 8,
+      "day": 2,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_Stephen_I.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Stephen_I.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Pope_Stephen_I.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Pope_Stephen_I.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Artaud de Montor (1772–1849)",
+    "author": "Artaud de Montor (1772–1849)",
+    "width": 432,
+    "height": 614,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Stephen I",
+    "url": "https://en.wikipedia.org/wiki/Pope_Stephen_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:03:08.975Z"
+  }
+}

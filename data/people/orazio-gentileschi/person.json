@@ -1,0 +1,68 @@
+{
+  "id": "orazio-gentileschi",
+  "name": "Orazio Gentileschi",
+  "wikidataId": "Q367360",
+  "wikipediaTitle": "Orazio Gentileschi",
+  "content": {
+    "description": [
+      {
+        "text": "Orazio Gentileschi was born in Pisa in July 1563 and grew up in a family of artists; his father, Giovan Battista Lomi, was a Florentine goldsmith who had moved to Pisa, and his mother’s family gave him the surname Gentileschi.  He began painting at a young age and, by his early twenties, had moved to Rome where he worked on frescoes in the Vatican library and created medals for Pope Clement VIII, earning 540 ducati for his craftsmanship.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the first decades of the 17th century Gentileschi’s style evolved under the influence of Caravaggio, producing three versions of *San Francesco sorretto da un angelo* that demonstrate a shift from late‑Mannerist composition to a more naturalistic, chiaroscuro‑driven approach.  His career later took him to France, England, and the courts of Genoa and Naples, but it was the 1612 trial in which his son‑in‑law was accused of raping his daughter Artemisia that cast a long shadow over his legacy.  He died in London on 7 February 1639, never returning to Italy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Gentileschi’s early commissions included frescoes in the Sistine library of the Vatican and the creation of medals for Pope Clement VIII, a rare honor for a young painter.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He produced three distinct versions of *San Francesco sorretto da un angelo* (circa 1600–1603), a collaboration that illustrates his adoption of Caravaggio’s dramatic lighting and naturalism.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1612, Gentileschi testified in a court case where his son‑in‑law, Agostino Tassi, was charged with raping his daughter Artemisia, a scandal that profoundly affected both his personal life and his artistic reputation.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1563,
+      "month": 7,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1639,
+      "month": 2,
+      "day": 7,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Orazio_Gentileschi_by_Anthony_van_Dyck_ca._1635.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Orazio_Gentileschi_by_Anthony_van_Dyck_ca._1635.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Orazio_Gentileschi_by_Anthony_van_Dyck_ca._1635.jpg/960px-Orazio_Gentileschi_by_Anthony_van_Dyck_ca._1635.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Orazio_Gentileschi_by_Anthony_van_Dyck_ca._1635.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Anthony van Dyck",
+    "author": "Anthony van Dyck",
+    "width": 1399,
+    "height": 1853,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Orazio Gentileschi",
+    "url": "https://it.wikipedia.org/wiki/Orazio_Gentileschi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:43:46.987Z"
+  }
+}

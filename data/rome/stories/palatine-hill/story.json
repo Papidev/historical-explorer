@@ -1,0 +1,203 @@
+{
+  "introduction": {
+    "text": "The Palatine Hill is the central hill of Rome and the traditional site of the city’s founding. It has been the political and ceremonial heart of Rome from its earliest settlements through the imperial era, and today it is a major archaeological and cultural attraction.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Bronze Age settlement evidence shows habitation on the hill as early as the 10th century BC.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -1000,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Excavations uncovered huts used for funerary purposes between the 9th and 7th centuries BC.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -900,
+          "precision": "approximate",
+          "endYear": -600,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Augustus built the first imperial palace on the Palatine Hill, marking the hill’s transition to the exclusive domain of emperors.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -27,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Tiberius added his own residence, the Domus Tiberiana, to the hill’s imperial complex.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 14,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "The Great Fire of Rome destroyed Nero’s Domus Transitoria on the Palatine.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 64,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "Nero rebuilt a larger palace, the Domus Aurea, on the hill after the fire.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 69,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "Domitian rebuilt the hill’s palaces, creating the Palace of Domitian that dominates the site today.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 81,
+          "precision": "exact",
+          "endYear": 96,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history8",
+        "description": "From the 16th century the hill was owned by the Farnese family and became the site of the Farnese Gardens.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1500,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history9",
+        "description": "The Villa Mattei was built on the hill in the 16th century and later purchased around 1830 by Charles Mills.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1830,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history10",
+        "description": "The Palatine Museum was installed in the surviving part of the Villa Mattei after partial demolition from 1928.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1928,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history11",
+        "description": "In 2006 archaeologists announced the discovery of the Palatine House, believed to be the birthplace of Augustus.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2006,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history12",
+        "description": "In 2007 a cave beneath the House of Livia was claimed to be the legendary Lupercal.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2007,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The hill hosts the remains of imperial palaces, including the Palace of Domitian, the Domus Tiberiana, and the Domus Severiana, showcasing Roman architectural evolution.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The Palatine Gardens, originally part of the Farnese estate, illustrate Renaissance landscape design integrated with ancient ruins.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Frescoes and mosaics found in the House of Livia and the Palatine House reveal the artistic styles of the late Republic and early Empire.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "The Lupercal cave’s richly decorated vault, with mosaics and seashells, reflects Roman decorative motifs of the Neronian period.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Augustus",
+      "personId": "augustus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Tiberius",
+      "personId": "tiberius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Domitian",
+      "personId": "domitian",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Nero",
+      "personId": "emperor-nero",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Livia",
+      "personId": "livia",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Livy",
+      "personId": "livy",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Virgil",
+      "personId": "virgil",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Romulus and Remus",
+      "personId": "romulus-and-remus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Heracles",
+      "personId": "heracles",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

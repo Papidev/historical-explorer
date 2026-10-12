@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Santa_Maria_Liberatrice_Rome.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Santa_Maria_Liberatrice_Rome.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Santa_Maria_Liberatrice_Rome.jpg/960px-Santa_Maria_Liberatrice_Rome.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/74/Santa_Maria_Liberatrice_Rome.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Jensens",
+      "author": "Jensens",
+      "width": 2100,
+      "height": 2334,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "010617_46_testaccio.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:010617_46_testaccio.JPG",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/46/010617_46_testaccio.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/46/010617_46_testaccio.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "user:Lalupa",
+      "author": "user:Lalupa",
+      "width": 800,
+      "height": 600,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "20_-_s_M_Liberatrice_mosaici_e_stemmi_-_part_re_P1040942.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:20_-_s_M_Liberatrice_mosaici_e_stemmi_-_part_re_P1040942.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/20_-_s_M_Liberatrice_mosaici_e_stemmi_-_part_re_P1040942.jpg/960px-20_-_s_M_Liberatrice_mosaici_e_stemmi_-_part_re_P1040942.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/20_-_s_M_Liberatrice_mosaici_e_stemmi_-_part_re_P1040942.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Lalupa",
+      "author": "Lalupa",
+      "width": 1266,
+      "height": 780,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Santa_Maria_Liberatrice_Rome.jpg"
+}

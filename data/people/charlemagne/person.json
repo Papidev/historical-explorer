@@ -1,0 +1,69 @@
+{
+  "id": "charlemagne",
+  "name": "Charlemagne",
+  "wikidataId": "Q3044",
+  "wikipediaTitle": "Charlemagne",
+  "content": {
+    "description": [
+      {
+        "text": "Charlemagne, born on 2 April 748, rose from the eldest son of Pepin the Short to become the first western emperor in more than three centuries. After securing the Frankish kingdom in 768 and annexing the Lombard kingdom in 774, he was crowned emperor by Pope Leo III in Rome on 25 December 800, a ceremony that symbolised the revival of Roman imperial authority in the West and cemented his role as a unifying figure across Europe.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his reign he introduced sweeping administrative reforms, established the missi dominici to oversee justice, and promoted the Carolingian Renaissance, a cultural revival that standardised Latin, fostered learning, and produced a flourishing of manuscripts. His legal codifications and educational policies laid the foundations for a unified European identity, earning him the enduring title of the “Father of Europe.”",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Charlemagne was the first western emperor crowned by a pope since the fall of the Western Roman Empire, a milestone that re‑established the concept of a Roman emperor in the West.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 802 he received an elephant named Abul‑Abbas from the Abbasid caliph Harun al‑Rashid, a gift that symbolised diplomatic ties between the Frankish Empire and the Muslim world.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He fathered at least twenty children with his wives and concubines, a fact that contributed to the complex succession disputes that followed his death.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 748,
+      "month": 4,
+      "day": 2,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 814,
+      "month": 1,
+      "day": 28,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Charlemagne_denier_Mayence_812_814.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Charlemagne_denier_Mayence_812_814.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Charlemagne_denier_Mayence_812_814.jpg/960px-Charlemagne_denier_Mayence_812_814.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Charlemagne_denier_Mayence_812_814.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Charlemagne. Autorité émettrice de monnaie indéterminé. Atelier monétaire. Émetteur",
+    "author": "Charlemagne. Autorité émettrice de monnaie indéterminé. Atelier monétaire. Émetteur",
+    "width": 2070,
+    "height": 2070,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Charlemagne",
+    "url": "https://en.wikipedia.org/wiki/Charlemagne"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:36:48.622Z"
+  }
+}

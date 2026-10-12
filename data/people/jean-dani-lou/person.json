@@ -1,0 +1,65 @@
+{
+  "id": "jean-dani-lou",
+  "name": "Jean Daniélou",
+  "wikidataId": "Q355495",
+  "wikipediaTitle": "Jean Daniélou",
+  "content": {
+    "description": [
+      {
+        "text": "Jean‑Guenolé‑Marie Daniélou was born on 14 May 1905 in Neuilly‑sur‑Seine, the son of the anticlerical politician Charles Daniélou and the Catholic educator Madeleine Clamorgan. He studied at the Sorbonne, passed his agrégation in grammar in 1927, joined the Society of Jesus in 1929, and was ordained a priest on 19 August 1938 after theological studies under Henri de Lubac.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the Second World War he served in the French Air Force (1939‑1940) before completing a doctoral thesis on Gregory of Nyssa in 1942. He became a chaplain at the École Normale Supérieure, co‑founded the Sources Chrétiennes series, taught early Christian history at the Institut Catholique de Paris, served as a peritus at the Second Vatican Council, was made a cardinal in 1969 (titular see of Taormina, cardinal‑deacon of San Saba), elected to the Académie française in 1972, and died unexpectedly on 20 May 1974.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 1967 he co‑founded the Institut de science et théologie des religions (ISTR) together with Henri Bouillard.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was twice offered the cardinalate but declined both times before finally accepting it at the insistence of Pope Paul VI.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1905,
+      "month": 5,
+      "day": 14,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1974,
+      "month": 5,
+      "day": 20,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Giorgio_La_Pira_and_Jean_Daniélou.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Giorgio_La_Pira_and_Jean_Dani%C3%A9lou.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Giorgio_La_Pira_and_Jean_Dani%C3%A9lou.jpg/960px-Giorgio_La_Pira_and_Jean_Dani%C3%A9lou.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Giorgio_La_Pira_and_Jean_Dani%C3%A9lou.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 1100,
+    "height": 857,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Jean Daniélou",
+    "url": "https://en.wikipedia.org/wiki/Jean_Dani%C3%A9lou"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:39:09.995Z"
+  }
+}

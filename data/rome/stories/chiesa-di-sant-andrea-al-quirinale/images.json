@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Sant'Andrea_al_Quirinale.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Sant'Andrea_al_Quirinale.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Sant%27Andrea_al_Quirinale.jpg/960px-Sant%27Andrea_al_Quirinale.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Sant%27Andrea_al_Quirinale.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Architas",
+      "author": "Architas",
+      "width": 3895,
+      "height": 6340,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Roma_-_chiesa_di_Sant'Andrea_al_Quirinale_-_La_cupola_del_Bernini.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Roma_-_chiesa_di_Sant'Andrea_al_Quirinale_-_La_cupola_del_Bernini.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Roma_-_chiesa_di_Sant%27Andrea_al_Quirinale_-_La_cupola_del_Bernini.JPG/960px-Roma_-_chiesa_di_Sant%27Andrea_al_Quirinale_-_La_cupola_del_Bernini.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Roma_-_chiesa_di_Sant%27Andrea_al_Quirinale_-_La_cupola_del_Bernini.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Monica_Rondoni",
+      "author": "Monica_Rondoni",
+      "width": 3882,
+      "height": 2588,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Via_del_Quirinale_-_panoramio.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Via_del_Quirinale_-_panoramio.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Via_del_Quirinale_-_panoramio.jpg/960px-Via_del_Quirinale_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Via_del_Quirinale_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "attribution": "Mister No",
+      "author": "Mister No",
+      "width": 1600,
+      "height": 1200,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Sant'Andrea_al_Quirinale.jpg"
+}

@@ -1,0 +1,101 @@
+{
+  "introduction": {
+    "text": "The Column of Phocas is a Roman monumental column in the Roman Forum of Rome, built during the Eastern Roman Empire after the reconquest from the Ostrogoths. It is the last architectural addition to the Forum and commemorates Emperor Phocas, symbolizing imperial authority in a period of political instability.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-608",
+        "description": "Erected in front of the Rostra and dedicated on August 1, 608 AD to Emperor Phocas.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 608,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-610",
+        "description": "Phocas was overthrown and killed in October 610 AD, leading to the removal of his statues.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 610,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-19th-century",
+        "description": "The column's socle was buried by silt and debris until the 19th century, when it was excavated.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1800,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-1813",
+        "description": "The base of the column was uncovered in 1813.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1813,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "The column is a fluted Corinthian column standing 13.6 m tall on a cubical white marble socle, both recycled from earlier structures.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-1",
+        "description": "Atop the column's capital once stood a gilded statue of Emperor Phocas, erected by Smaragdus, the Exarch of Ravenna.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Phocas",
+      "personId": "phocas",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Smaragdus",
+      "personId": "smaragdus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Boniface IV",
+      "personId": "pope-boniface-iv",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Diocletian",
+      "personId": "diocletian",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Augustus",
+      "personId": "augustus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giuseppe Vasi",
+      "personId": "giuseppe-vasi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giambattista Piranesi",
+      "personId": "giovanni-battista-piranesi",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

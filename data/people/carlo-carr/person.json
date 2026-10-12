@@ -1,0 +1,77 @@
+{
+  "id": "carlo-carr",
+  "name": "Carlo Carrà",
+  "wikidataId": "Q168496",
+  "wikipediaTitle": "Carlo Carrà",
+  "content": {
+    "description": [
+      {
+        "text": "Carlo Carrà was born on 11 February 1881 in Quargnento, a small comune near Alessandria in Piedmont. From the age of twelve he left home to work as a mural decorator, a formative experience that would later inform his bold use of color and form. In 1899–1900 he travelled to Paris, where he decorated pavilions for the Exposition Universelle and absorbed the influence of contemporary French art. After a brief stay in London among exiled Italian anarchists, he returned to Milan in 1901 and, in 1906, enrolled at the Brera Academy under Cesare Tallone. By 1910 he had become a leading figure in the Italian Futurist movement, signing the Manifesto of Futurist Painters alongside Boccioni, Russolo and Balla, and producing his most celebrated works such as The Funeral of the Anarchist Galli (1911).",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Carrà’s Futurist phase gave way as World War I approached, and he began to explore stillness and form, culminating in a 1913 manifesto that linked synaesthesia to painting. In 1917 he met Giorgio de Chirico in Ferrara, and together they pioneered metaphysical painting, incorporating mannequin imagery and dreamlike settings. By 1919 his style shifted toward archaicism, drawing inspiration from Giotto and producing works like The Daughters of Lot. Throughout the 1920s and 1930s he focused on atmospheric landscapes, yet his political views evolved from anarchism to ultranationalism; he supported fascism after 1918 and joined the Strapaese group, which promoted Neo‑classical art aligned with the regime. Carrà died in Milan on 13 April 1966 at the age of 85.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "At the age of twelve, Carrà left home to work as a mural decorator, a job that would shape his early artistic development.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1910, he signed the Manifesto of Futurist Painters, marking his formal entry into the Futurist movement.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Carrà’s 1913 manifesto, 'The Painting of Sounds, Noises and Smells,' explored the concept of synaesthesia, linking sensory experiences to visual art.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1917, Carrà collaborated with Giorgio de Chirico in Ferrara, co‑creating the metaphysical painting style that featured mannequin imagery and surreal, dreamlike scenes.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After World War I, Carrà shifted from anarchism to ultranationalism, supporting fascism and joining the Strapaese group, which promoted Neo‑classical art aligned with the regime.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1881,
+      "month": 2,
+      "day": 11,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1966,
+      "month": 4,
+      "day": 13,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Carrà_in_front_of_Le_Figaro,_Paris,_9_February_1912_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Carr%C3%A0_in_front_of_Le_Figaro%2C_Paris%2C_9_February_1912_(cropped).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/20/Carr%C3%A0_in_front_of_Le_Figaro%2C_Paris%2C_9_February_1912_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/20/Carr%C3%A0_in_front_of_Le_Figaro%2C_Paris%2C_9_February_1912_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 287,
+    "height": 322,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Carlo Carrà",
+    "url": "https://en.wikipedia.org/wiki/Carlo_Carr%C3%A0"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:40:23.346Z"
+  }
+}

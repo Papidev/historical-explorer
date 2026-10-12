@@ -1,0 +1,161 @@
+{
+  "introduction": {
+    "text": "The Catacombe di San Sebastiano are a hypogeum cemetery on the Appian Way in Rome, notable for being one of the few Christian burial sites that has remained continuously accessible and for its early association with the relics of Apostles Peter and Paul.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The site was originally a pozzolan mine abandoned at the end of the 2nd century, later used for pagan burials.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 200,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "In the mid‑3rd century, relics of Apostles Peter and Paul were transferred to the catacombs.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 250,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "During the first half of the 4th century, the catacombs were buried to build the Constantinian basilica.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 300,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Excavations were carried out at the end of the 19th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1890,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "Further excavations took place during the 20th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1900,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "The catacombs have been known as di San Sebastiano since the Early Middle Ages.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "history7",
+        "description": "The catacombs contain the graves of martyrs Sebastian, Quirinus, and Eutychius.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "history8",
+        "description": "The catacombs have remained accessible throughout history.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The catacombs consist of three levels of galleries, including mausolea and a crypt of Saint Sebastian.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The crypt of Saint Sebastian houses an altar shelf and a bust attributed to Gian Lorenzo Bernini.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "The site includes a ladder leading to tunnels with cubicles, such as the Jonah cubicle.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Paintings in the Jonah cubicle depict four scenes of the prophet's life, dating to the late 4th century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "Graffiti invoking Apostles Peter and Paul adorn the walls of the triclia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "Mausoleum decorations include stuccoes, a gorgon head, and Greek inscriptions.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Saint Peter",
+      "personId": "saint-peter-the-apostle",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Paul the Apostle",
+      "personId": "paul-the-apostle",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Saint Sebastian",
+      "personId": "saint-sebastian",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Quirinus of Sescia",
+      "personId": "quirinus-of-sescia",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Damasus I",
+      "personId": "pope-damasus-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ambrose",
+      "personId": "ambrose",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Constantine the Great",
+      "personId": "constantine-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Gian Lorenzo Bernini",
+      "personId": "gian-lorenzo-bernini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Antonio Ferrua",
+      "personId": "antonio-ferrua",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Margherita Guarducci",
+      "personId": "margherita-guarducci",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

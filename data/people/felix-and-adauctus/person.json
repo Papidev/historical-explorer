@@ -1,0 +1,65 @@
+{
+  "id": "felix-and-adauctus",
+  "name": "Felix and Adauctus",
+  "wikidataId": "Q1291005",
+  "wikipediaTitle": "Felix and Adauctus",
+  "content": {
+    "description": [
+      {
+        "text": "Felix and Adauctus were Christian martyrs who, according to tradition, suffered during the Great Persecution under the Roman emperor Diocletian. Felix, a Roman priest, was ordered to offer sacrifice to the gods and was brought by the prefect Dracus to the temples of Serapis, Mercury, and Diana. At the prayer of the saint the idols fell shattered to the ground, after which he was led to execution. On the way an unknown person joined him, professed himself a Christian, and was also killed; the Christians gave him the name Adauctus, the Latin word for \"added\", and both were beheaded.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Their veneration is very old, with commemoration in the Sacramentary of Gregory the Great and in ancient martyrologies. A church in Rome, built over their graves in the catacomb of Commodilla near the Basilica of Saint Paul Outside the Walls, was restored by Pope Leo III and rediscovered in 1905. Pope Leo IV is said to have given their relics to Irmengard, wife of Lothair I, who placed them in the abbey of canonesses at Eschau in Alsace. The relics were later brought to the church of St. Stephen in Vienna in 1361, and the heads are claimed by the houses of Anjou and Cologne. The painter Carlo Innocenzo Carlone created a painting of their glorification for the cupola of the church of San Felice del Benaco on Lake Garda.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "A church in Rome was built over the graves of Felix and Adauctus in the catacomb of Commodilla and was restored by Pope Leo III.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pope Leo IV is said to have given their relics to Irmengard, wife of Lothair I, who placed them in the abbey of canonesses at Eschau in Alsace.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The heads of Felix and Adauctus are claimed by the houses of Anjou and Cologne, and the relics were brought to the church of St. Stephen in Vienna in 1361.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Carlo Innocenzo Carlone painted \"The Glorification of Saints Felix and Adauctus\" (1759–61) for the cupola of the church of San Felice del Benaco on Lake Garda.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 303,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "The_Glorification_of_St_Felix_and_St_Adauctus.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:The_Glorification_of_St_Felix_and_St_Adauctus.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/The_Glorification_of_St_Felix_and_St_Adauctus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/The_Glorification_of_St_Felix_and_St_Adauctus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "[1], uploaded by user Polylerus http://www.bada.org/provenart/dealer_stock_details.cgi?d_id=9&amp;c_id=139&amp;a_id=50 Image:Glorificationfelixadauctus.jpg",
+    "author": "[1], uploaded by user Polylerus http://www.bada.org/provenart/dealer_stock_details.cgi?d_id=9&amp;c_id=139&amp;a_id=50 Image:Glorificationfelixadauctus.jpg",
+    "width": 272,
+    "height": 256,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Felix and Adauctus",
+    "url": "https://en.wikipedia.org/wiki/Felix_and_Adauctus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:59:24.601Z"
+  }
+}

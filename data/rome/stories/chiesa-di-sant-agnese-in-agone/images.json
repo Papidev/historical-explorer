@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Sant'Agnese_in_Agone_(Rome)_esterno.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Sant'Agnese_in_Agone_(Rome)_esterno.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Sant%27Agnese_in_Agone_%28Rome%29_esterno.jpg/960px-Sant%27Agnese_in_Agone_%28Rome%29_esterno.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Sant%27Agnese_in_Agone_%28Rome%29_esterno.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "NikonZ7II",
+      "author": "NikonZ7II",
+      "width": 7624,
+      "height": 6816,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "212_of_'Rome_et_ses_monuments._Guide_du_voyageur_catholique_dans_la_capitale_du_monde_chrétien_..._Avec_cinquante-et-un_plans_annotés'_(11241987205).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:212_of_'Rome_et_ses_monuments._Guide_du_voyageur_catholique_dans_la_capitale_du_monde_chr%C3%A9tien_..._Avec_cinquante-et-un_plans_annot%C3%A9s'_(11241987205).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/212_of_%27Rome_et_ses_monuments._Guide_du_voyageur_catholique_dans_la_capitale_du_monde_chr%C3%A9tien_..._Avec_cinquante-et-un_plans_annot%C3%A9s%27_%2811241987205%29.jpg/960px-212_of_%27Rome_et_ses_monuments._Guide_du_voyageur_catholique_dans_la_capitale_du_monde_chr%C3%A9tien_..._Avec_cinquante-et-un_plans_annot%C3%A9s%27_%2811241987205%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/59/212_of_%27Rome_et_ses_monuments._Guide_du_voyageur_catholique_dans_la_capitale_du_monde_chr%C3%A9tien_..._Avec_cinquante-et-un_plans_annot%C3%A9s%27_%2811241987205%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "No restrictions",
+      "attribution": "The British Library",
+      "author": "The British Library",
+      "width": 1243,
+      "height": 1040,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "0_Fontana_dei_Quattro_Fumini_-_Piazza_Navone_(3).JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:0_Fontana_dei_Quattro_Fumini_-_Piazza_Navone_(3).JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/0_Fontana_dei_Quattro_Fumini_-_Piazza_Navone_%283%29.JPG/960px-0_Fontana_dei_Quattro_Fumini_-_Piazza_Navone_%283%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9a/0_Fontana_dei_Quattro_Fumini_-_Piazza_Navone_%283%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "Jean-Pol GRANDMONT",
+      "author": "Jean-Pol GRANDMONT",
+      "width": 2542,
+      "height": 3812,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Sant'Agnese_in_Agone_(Rome)_esterno.jpg"
+}

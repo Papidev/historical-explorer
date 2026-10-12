@@ -1,0 +1,65 @@
+{
+  "id": "adolfo-antonio-su-rez-rivera",
+  "name": "Adolfo Antonio Suárez Rivera",
+  "wikidataId": "Q364992",
+  "wikipediaTitle": "Adolfo Suárez Rivera",
+  "content": {
+    "description": [
+      {
+        "text": "Adolfo Antonio Suárez Rivera was born on 9 January 1927 in Mexico and entered the priesthood after studying classical literature at the conciliar seminary of Chiapas in San Cristóbal. He was ordained a priest in 1952 and went on to study philosophy at the archdiocesan seminary of Xalapa and the Pontifical Seminary of Montezuma in New Mexico, before earning a doctorate in theology from the Pontifical Gregorian University in Rome. For a decade he taught classical literature and philosophy at the diocesan seminary of San Cristóbal de las Casas, later serving as a department head and secretary in the Archdiocesan Curia and advising the Christian Family Movement.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1971 Suárez Rivera was appointed Bishop of Tepic, and he later served as Archbishop of Monterrey from 1983 to 2003. He was elevated to the College of Cardinals by Pope John Paul II in 1994, receiving the title of Cardinal‑Priest of Nostra Signora di Guadalupe a Monte Mario. Although eligible to vote in the 2005 papal conclave that elected Pope Benedict XVI, he could not attend due to medical reasons, making him one of only two cardinal electors absent that year. Cardinal Suárez Rivera passed away on 22 March 2008 in Monterrey, Nuevo León.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He helped found the Union for Mutual Episcopal Aid in the 1960s and 1970s, a network that supports bishops in their pastoral duties.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Suárez Rivera served as an adjunct member of the Congregation for Bishops from 1979 to 1983 and was a delegate to the 1983 Sixth General Assembly of the Synod of Bishops on Reconciliation and Penance.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1927,
+      "month": 1,
+      "day": 9,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 2008,
+      "month": 3,
+      "day": 22,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Cardenal_Adolfo_Antonio_Súarez_Rivera.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Cardenal_Adolfo_Antonio_S%C3%BAarez_Rivera.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Cardenal_Adolfo_Antonio_S%C3%BAarez_Rivera.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Cardenal_Adolfo_Antonio_S%C3%BAarez_Rivera.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Conferencia del Episcopado Mexicano",
+    "author": "Conferencia del Episcopado Mexicano",
+    "width": 233,
+    "height": 280,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Adolfo Suárez Rivera",
+    "url": "https://en.wikipedia.org/wiki/Adolfo_Su%C3%A1rez_Rivera"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:18:53.814Z"
+  }
+}

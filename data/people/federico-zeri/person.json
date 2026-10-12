@@ -1,0 +1,73 @@
+{
+  "id": "federico-zeri",
+  "name": "Federico Zeri",
+  "wikidataId": "Q1089074",
+  "wikipediaTitle": "Federico Zeri",
+  "content": {
+    "description": [
+      {
+        "text": "Federico Zeri was born in central Rome on 12 August 1921 and graduated from Sapienza University of Rome in 1945. Rather than pursuing a traditional academic career, he worked in the Ministry of Public Education until 1952 and was appointed director of the Galleria Spada in Rome in 1948, where he began to build a reputation as a meticulous connoisseur of Italian Renaissance painting.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Zeri’s influence extended beyond the museum walls. He spent the academic year 1962‑63 as a Fulbright scholar at Harvard, later becoming a founding member of the Getty Villa’s board of trustees. He famously argued that the Getty kouros was a forgery, a stance that led to his resignation in 1984. Throughout his career he denounced forgeries and misattributions, famously calling out a group of student‑made sculptures in Livorno and insisting that certain frescoes in the Basilica of San Francesco d'Assisi were the work of Pietro Cavallini rather than Giotto. His insistence on attributing works solely through careful visual analysis earned him both acclaim and controversy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Zeri was a well‑known television personality in Italy, bringing art historical expertise to a broad audience.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as a founding member of the Getty Villa’s board of trustees, a position he held until his resignation over the kouros controversy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Zeri bequeathed his extensive estate—including a library, 400 ancient inscriptions, and a large photographic collection—to the University of Bologna, where it is managed by the Federico Zeri Foundation.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Throughout his life, Zeri maintained close connections with prominent art historians Bernard Berenson, Roberto Longhi, and his teacher Pietro Toesca, and he taught at the University of Rome while holding visiting positions at Harvard and Columbia University.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1921,
+      "month": 8,
+      "day": 12,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1998,
+      "month": 10,
+      "day": 5,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Federico_Zeri.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Federico_Zeri.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Federico_Zeri.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Federico_Zeri.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 640,
+    "height": 427,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Federico Zeri",
+    "url": "https://en.wikipedia.org/wiki/Federico_Zeri"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:47:57.275Z"
+  }
+}

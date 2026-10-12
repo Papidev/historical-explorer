@@ -1,0 +1,77 @@
+{
+  "id": "banda-bassotti-gruppo-musicale",
+  "name": "Banda Bassotti",
+  "wikidataId": "Q806241",
+  "wikipediaTitle": "Banda Bassotti (gruppo musicale)",
+  "content": {
+    "description": [
+      {
+        "text": "The Banda Bassotti formed in 1987 in Rome, but its roots go back to 1981 in Montespaccato where a group of young activists organized solidarity projects for Palestinian fighters, the Sandinista Front in Nicaragua, and the Farabundo Martí Front in El Salvador, building schools and housing in those countries. Influenced by The Clash and The Specials, they adopted a ska‑punk sound and a strongly anti‑fascist stance, releasing politically charged songs such as \"Sveglia\" and \"All Are Equal for the Law\" in 1991.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Over the years the band has taken controversial political positions, supporting the Donbass separatists and later the Russian Federation, as well as the governments of Hugo Chávez, Nicolás Maduro, and Bashar al‑Assad, which has drawn criticism from left‑wing circles. Their concerts have also attracted violent attacks from far‑right groups, most notably in June 2007 when a mob injured two spectators after a show near Villa Ada, and again in July 2007 during a festival in Oriolo Romano. Despite the hostility, they have continued to tour worldwide, from Japan to Germany, and have released a series of studio and live albums, including the 2001 live double CD recorded before 9,000 people at the Centro sociale \"Villaggio Globale\" in Rome.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The band traces its origins to 1981 in Montespaccato, where members organized solidarity projects for Palestinian fighters, the Sandinista Front in Nicaragua, and the Farabundo Martí Front in El Salvador, building schools and housing in those countries.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 2001 the band recorded a live double CD, \"Un altro giorno d'amore\", at the Centro sociale \"Villaggio Globale\" in Rome in front of 9,000 people.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The band has been the target of far‑right attacks, including a violent incident on 28 June 2007 near Villa Ada where two spectators were injured.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 2014 the band publicly supported the Donbass separatists and later the Russian Federation, a stance that sparked accusations of pro‑Russian bias among left‑wing audiences.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The band has expressed support for the governments of Hugo Chávez, Nicolás Maduro, and Bashar al‑Assad, aligning with their anti‑Western policies.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Angelo \"Sigaro\" Conti, a founding guitarist, died in 2018, leaving a lasting legacy in the band's history.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 2001 the band added a brass section composed of members from the Ramiccia band, expanding their sound.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The band has toured internationally, performing in countries ranging from Japan to Germany.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Banda_Bassotti,_1._May_2008_Kreuzberg.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Banda_Bassotti%2C_1._May_2008_Kreuzberg.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Banda_Bassotti%2C_1._May_2008_Kreuzberg.jpg/960px-Banda_Bassotti%2C_1._May_2008_Kreuzberg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/70/Banda_Bassotti%2C_1._May_2008_Kreuzberg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Codeispoetry",
+    "author": "Codeispoetry",
+    "width": 3129,
+    "height": 1029,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Banda Bassotti (gruppo musicale)",
+    "url": "https://it.wikipedia.org/wiki/Banda_Bassotti_(gruppo_musicale)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:34:24.808Z"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "bishop-of-wurzburg",
+  "name": "Bishop of Wurzburg",
+  "wikidataId": "Q250224",
+  "wikipediaTitle": "Diocese of Würzburg",
+  "content": {
+    "description": [
+      {
+        "text": "The Diocese of Würzburg was founded in 741 by Saint Boniface, who consecrated Saint Burchard as its first bishop. Burchard built the first cathedral and buried St. Kilian there, establishing a strong ecclesiastical presence in the region.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 752 or 753 the bishopric was granted immunity for all its possessions, giving the bishops secular jurisdiction and laying the groundwork for the later Prince-Bishopric. The diocese survived as a Latin Church diocese to the present day, having lost all temporal power after the Napoleonic wars.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The first mention of Würzburg appears in 704 as Castellum Virtebuch.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Saint Kilian, an Irish missionary, converted the Frankish duke Gozbert, leading to the construction of the first church at Marienberg.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Burchard’s cathedral was the burial site of St. Kilian and his companions, cementing the diocese’s spiritual significance.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Bishop Arno rebuilt the cathedral between 855 and 892 after it was destroyed by lightning.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The bishopric’s temporal authority ended with the secularization of the Prince-Bishopric during the Napoleonic wars.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Dom_Wuerzburg.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Dom_Wuerzburg.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Dom_Wuerzburg.jpg/960px-Dom_Wuerzburg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Dom_Wuerzburg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Christian Horvat, modified by xavax (perspective).",
+    "author": "Christian Horvat, modified by xavax (perspective).",
+    "width": 1752,
+    "height": 3916,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Diocese of Würzburg",
+    "url": "https://en.wikipedia.org/wiki/Diocese_of_W%C3%BCrzburg"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:36:59.813Z"
+  }
+}

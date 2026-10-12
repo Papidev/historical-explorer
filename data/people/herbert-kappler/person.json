@@ -1,0 +1,53 @@
+{
+  "id": "herbert-kappler",
+  "name": "Herbert Kappler",
+  "wikidataId": "Q61861",
+  "wikipediaTitle": "Herbert Kappler",
+  "content": {
+    "description": [
+      {
+        "text": "Herbert Kappler was a German SS officer who rose to the rank of Obersturmbannführer and served as the head of the Sicherheitsdienst (SD) in Rome during the German occupation of Italy.  He was responsible for orchestrating the Ardeatine massacre, the roundup of the Roman ghetto, and the deportation of thousands of Jews and anti‑fascists to concentration camps.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the war he was arrested by the British, handed over to Italian authorities, and in 1948 was sentenced to life imprisonment for the Ardeatine killings and the persecution of the Roman Jewish community.  In August 1977, while being treated in a military hospital in Rome, he escaped and fled to Germany, where he died six months later.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Kappler was convicted in 1948 in Italy to life imprisonment for the Ardeatine massacre and the roundup of the Roman ghetto.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In August 1977 he escaped from the military hospital of Celio in Rome, allegedly with the help of his wife and a network of friends, and fled to Germany, where he died in February 1978.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "HF1946Photo.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:HF1946Photo.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/HF1946Photo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/HF1946Photo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "United States War Department",
+    "author": "United States War Department",
+    "width": 167,
+    "height": 221,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Herbert Kappler",
+    "url": "https://it.wikipedia.org/wiki/Herbert_Kappler"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:31:10.351Z"
+  }
+}

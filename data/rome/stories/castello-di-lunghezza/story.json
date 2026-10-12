@@ -1,0 +1,49 @@
+{
+  "introduction": {
+    "text": "The Castello di Lunghezza is a medieval fortification east of Rome, notable for its construction in 761 AD and later restoration by Malcolm Munthe.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "construction",
+        "description": "Constructed in 761 AD",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 761,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "13th-century",
+        "description": "Poli family fell out of favor with Pope Boniface VIII in the 13th century",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1200,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "1950s",
+        "description": "Purchased by British curator Malcolm Munthe in the 1950s",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Pope Boniface VIII",
+      "personId": "pope-boniface-viii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Malcolm Munthe",
+      "personId": "malcolm-munthe",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

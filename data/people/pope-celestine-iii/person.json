@@ -1,0 +1,67 @@
+{
+  "id": "pope-celestine-iii",
+  "name": "Pope Celestine III",
+  "wikidataId": "Q103437",
+  "wikipediaTitle": "Pope Celestine III",
+  "content": {
+    "description": [
+      {
+        "text": "Giacinto Bobone, later known as Pope Celestine III, was born around 1105 into the noble Orsini family in Rome. He entered the ecclesiastical hierarchy early, becoming a cardinal‑deacon in 1144 and serving as a legate to Spain on two separate missions in the mid‑1150s and early 1170s, where he earned a reputation as an expert on Spanish affairs.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Elected pope on 29 or 30 March 1191, Celestine was ordained a priest on 13 April and promptly crowned Emperor Henry VI. His pontificate was marked by a series of diplomatic and punitive measures against European monarchs: he recognized Tancred as king of Sicily, threatened excommunication of Henry VI over the imprisonment of Richard I, placed Pisa under interdict, and issued papal bulls to mediate disputes in Denmark and to condemn King Alfonso IX of León for his marriage and political alliances.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Celestine issued a bull in December 1196 acknowledging the possessions of the Teutonic Knights, thereby granting them formal recognition within Christendom.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He sent a cardinal‑priest named Cinthius to Denmark in 1192 to address a conflict between Danish princes, and the resulting papal bulls threatened excommunication of the offending duke and an interdict over the kingdom.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Celestine’s reign saw the first papal interdict imposed on the city of Pisa, a rare and severe ecclesiastical censure that was lifted only after his successor, Innocent III, took office in 1198.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1105,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1198,
+      "month": 1,
+      "day": 8,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_Celestine_III.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Celestine_III.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Pope_Celestine_III.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Pope_Celestine_III.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Artaud de Montor (1772–1849)",
+    "author": "Artaud de Montor (1772–1849)",
+    "width": 428,
+    "height": 625,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Celestine III",
+    "url": "https://en.wikipedia.org/wiki/Pope_Celestine_III"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:20:25.668Z"
+  }
+}

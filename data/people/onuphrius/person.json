@@ -1,0 +1,61 @@
+{
+  "id": "onuphrius",
+  "name": "Onuphrius",
+  "wikidataId": "Q464959",
+  "wikipediaTitle": "Onuphrius",
+  "content": {
+    "description": [
+      {
+        "text": "Onuphrius, also known as Onophrios, was a hermit who lived in the desert of Upper Egypt during the 4th or 5th centuries. He is counted among the Desert Fathers, a group of early Christian ascetics who sought solitude in the harsh Egyptian wilderness to deepen their prayer life. According to the account of Paphnutius the Ascetic, Onuphrius had spent seventy years in the desert, enduring extreme thirst, hunger and discomfort, and was described as a wild figure covered in hair and wearing a loincloth of leaves. Paphnutius encountered him after a 16‑day pilgrimage, and the hermit explained that his guardian angel had brought him to that desolate place; bread and water miraculously appeared outside his cell, and Onuphrius died near the end of that night.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Onuphrius is venerated in both the Roman Catholic and Eastern Orthodox traditions, with his feast day celebrated on 12 June. He is often depicted in art as a wild man completely covered with hair, a motif that led to his patronage of weavers. His relics were said to have been preserved in the church of Saint Acindinus in Constantinople, and he was commemorated in a 1520 painting by Hans Schäufelein. Churches and monasteries bearing his name—such as Sant'Onofrio in Rome and the St. Onuphrius Monastery in Jerusalem—attest to his lasting influence across the Christian world.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The legend says that Onuphrius’ cell crumbled after his burial, a sign that the desert itself did not want him to remain there.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In Arabic tradition he is known as Abū Nufir or Nofer, a name that also means \"herbivore\".",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Onuphrius is said to have been chosen by the saint himself as the site for a monastery in Jablechna, Poland, where Orthodox seminarians begin their spiritual training.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The saint’s head was conserved in the church of Saint Acindinus (Akindinos) in Constantinople, according to an archbishop of Novgorod writing around 1200 AD.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "OnuphriusByzantineIcon4thCentury.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:OnuphriusByzantineIcon4thCentury.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/OnuphriusByzantineIcon4thCentury.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/OnuphriusByzantineIcon4thCentury.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "http://www.oca.org/",
+    "author": "http://www.oca.org/",
+    "width": 600,
+    "height": 1174,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Onuphrius",
+    "url": "https://en.wikipedia.org/wiki/Onuphrius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:30:52.033Z"
+  }
+}

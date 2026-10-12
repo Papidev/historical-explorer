@@ -1,0 +1,69 @@
+{
+  "id": "gordiano-iii",
+  "name": "Gordiano III",
+  "wikidataId": "Q1812",
+  "wikipediaTitle": "Gordiano III",
+  "content": {
+    "description": [
+      {
+        "text": "Gordian III ascended to the Roman throne in 238 at the age of thirteen, becoming a youthful figurehead while real power rested with senatorial regents. Contemporary accounts portray him as a symbol of unity and popular support, with the Senate and the people rallying behind his youthful image.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his reign he attempted to confront the Sasanid Empire, leading campaigns that saw Roman forces capture key cities such as Carre and Nisibis. His rule ended abruptly in 244 when he was killed by soldiers under the command of Philip the Arab, after which he was deified by the Senate to appease the populace.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 241 Gordian III married Furia Sabina Tranquillina, the daughter of the Prefect of the Praetorian Guard, in an attempt to strengthen his political position.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was killed by soldiers who were fed by Philip the Arab's orders, leading to his assassination during a campaign against the Sasanids.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his death the Senate deified Gordian III, a rare honor for a ruler who had died in battle, to placate the populace and prevent further unrest.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Gordian III was the youngest emperor to rule Rome, ascending at thirteen and serving as a symbolic figurehead for the senatorial elite.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 225,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 244,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Bust_Gordianus_III_Louvre_Ma1063.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Bust_Gordianus_III_Louvre_Ma1063.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Bust_Gordianus_III_Louvre_Ma1063.jpg/960px-Bust_Gordianus_III_Louvre_Ma1063.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Bust_Gordianus_III_Louvre_Ma1063.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "© Marie-Lan Nguyen / Wikimedia Commons",
+    "author": "Marie-Lan Nguyen",
+    "width": 2500,
+    "height": 3750,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Gordiano III",
+    "url": "https://it.wikipedia.org/wiki/Gordiano_III"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:18:19.573Z"
+  }
+}

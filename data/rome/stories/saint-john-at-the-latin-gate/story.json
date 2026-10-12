@@ -1,0 +1,215 @@
+{
+  "introduction": {
+    "text": "Chiesa di San Giovanni a Porta Latina is a basilica church in Rome near the Porta Latina of the Aurelian Wall. It is historically significant for its association with the martyrdom of St John the Evangelist, its long architectural evolution from the 5th to the 20th centuries, and its role as a site of early same‑sex marriage.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "st-john-survival-92",
+        "description": "St John the Evangelist survived a boiling oil martyrdom in 92 AD at the Latin Gate.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 92,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "construction-gelasius",
+        "description": "Basilica construction during Pope Gelasius I’s pontificate (492–496).",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 492,
+          "precision": "approximate",
+          "endYear": 496,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "restoration-adrian",
+        "description": "Restoration by Pope Adrian I in the 8th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 700,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "reconsecration-celestine",
+        "description": "Reconcerned by Pope Celestine III at the end of the 12th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1200,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "baroque-additions",
+        "description": "Baroque ceiling and features added in the 16th and 17th centuries.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1500,
+          "precision": "approximate",
+          "endYear": 1700,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "same-sex-wedding-1581",
+        "description": "First recorded same‑sex wedding in western Europe held at the basilica on 18 March 1581.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1581,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "fresco-restoration",
+        "description": "Frescoes above the main altar restored 1913–1915.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1913,
+          "precision": "approximate",
+          "endYear": 1915,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "rosminian-care",
+        "description": "Rosminian Fathers given care of the basilica in 1938.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1938,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "baroque-removal",
+        "description": "Baroque features removed and basilica returned to simplicity in 1940–1941.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1940,
+          "precision": "exact",
+          "endYear": 1941,
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "portico-columns",
+        "description": "Portico supported by four reused classical columns of different marble, forming five arches.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "main-door-mosaic",
+        "description": "Main door framed with a simple mosaic of red and green porphyry.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "well-head-inscription",
+        "description": "8th‑century well‑head with Latin inscription and Isaiah quote.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "nave-columns",
+        "description": "Three naves divided by rows of columns with Ionic capitals and fluted white marble.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "apse-window",
+        "description": "Half‑hexagon apse with large honey‑coloured onyx windows.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "altar-mosaic",
+        "description": "Cosmatesque mosaic pavement in front of the altar.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "crucifixion-wooden",
+        "description": "Carved wooden crucifixion scene on the central window ledge.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "titulus",
+        "description": "Ancient titulus of the basilica discovered during 1940 renovations.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "frescoes",
+        "description": "About 50 medieval frescoes depicting Old and New Testament scenes.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "crucifixion-scene",
+        "description": "Wooden crucifixion scene including Saint John the Evangelist and the Blessed Virgin Mary.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "cosmatesque-mosaic",
+        "description": "Cosmatesque style mosaic pavement.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Saint John the Evangelist",
+      "personId": "saint-john-the-evangelist",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Gelasius I",
+      "personId": "pope-gelasius-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Adrian I",
+      "personId": "pope-adrian-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Celestine III",
+      "personId": "pope-celestine-iii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Michel de Montaigne",
+      "personId": "michel-de-montaigne",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giovanni Domenico de Cupis",
+      "personId": "giovanni-domenico-de-cupis",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Mercurino Arborio di Gattinara",
+      "personId": "mercurino-arborio-di-gattinara",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Gabriel de Gramont",
+      "personId": "gabriel-de-gramont",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Juan Pardo de Tavera",
+      "personId": "juan-pardo-de-tavera",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Francisco Mendoza de Bobadilla",
+      "personId": "francisco-mendoza-de-bobadilla",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

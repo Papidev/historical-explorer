@@ -1,0 +1,79 @@
+{
+  "introduction": {
+    "text": "The Cappella della Visione di Sant'Ignazio di Loyola is a chapel in La Storta, Rome, where Saint Ignatius of Loyola had a pivotal vision that inspired the founding of the Society of Jesus. It is a significant pilgrimage site for Jesuits and those interested in Catholic mysticism.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "vision-1537",
+        "description": "In November 1537, Ignatius of Loyola, accompanied by Pietro Favre and Diego Laínez, stopped at a small chapel near La Storta and experienced a vision of Christ with the cross, which marked his spiritual calling.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1537,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "founding-1540",
+        "description": "After the vision, the Society of Jesus was founded in 1540, and the chapel became a site of veneration and pilgrimage.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1540,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "destruction-1944",
+        "description": "During a bombing in May 1944, the original chapel was destroyed.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1944,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "reconstruction-1983",
+        "description": "The chapel was rebuilt in 1944 and reopened in July 1983 after restoration.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1983,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "original-chapel",
+        "description": "A small chapel existed along the Via Francigena in La Storta before the 16th century.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Ignazio di Loyola",
+      "personId": "ignazio-di-loyola",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pietro Favre",
+      "personId": "pietro-favre",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Diego Laínez",
+      "personId": "diego-la-nez",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Almazán",
+      "personId": "almaz-n",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

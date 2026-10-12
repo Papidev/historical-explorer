@@ -1,0 +1,58 @@
+{
+  "id": "pietro-capocci",
+  "name": "Pietro Capocci",
+  "wikidataId": "Q2094395",
+  "wikipediaTitle": "Pietro Capocci",
+  "content": {
+    "description": [
+      {
+        "text": "Pietro Capocci was born around 1200 in Rome into a family connected to Pope Honorius III and other noble houses. He entered the clerical life early, becoming a canon of St. Peter’s in 1222 and receiving a prebend at Guilden Morden in Cambridgeshire. In May 1244 he was created cardinal deacon of San Giorgio in Velabro by Pope Innocent IV, and he became a patron of several churches, including Santa Prassede and San Martino ai Monti, while also donating land adjacent to the San Giorgio tower.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1249 Capocci was named papal legate to the Marca Anconitana, Sabina, Campagna e Marittima and the duchy of Spoleto, where he led papal forces against Emperor Frederick II but was defeated at Cingoli. He later built a chapel at Santa Maria in Via after a reported miracle at a well, and in 1256 he bequeathed a large part of his fortune to establish a hospital for patients with skin diseases, a foundation that later became associated with the church of Sant’Antonio Abate all’Esquilino; legend even claims that Francis of Assisi was once hospitalized there. Capocci died in Rome on 19/21 May 1259 and was buried in the Capocci chapel of Santa Barbara at Santa Maria Maggiore, a chapel he himself had built.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Capocci held a prebend at the English parish of Guilden Morden in Cambridgeshire, a rare example of an Italian cardinal holding a benefice in England.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his tenure as legate, Capocci commanded papal troops against Emperor Frederick II but suffered defeat at the battle of Cingoli.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A miraculous event at a well in the stable yard of his house next to Santa Maria in Via led Capocci to commission a chapel, which was later incorporated into the church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Capocci's endowment for a hospital dedicated to treating skin diseases, including the so‑called \"St Antony fire\", is commemorated by an inscription on the façade of Sant’Antonio Abate all’Esquilino, and folklore holds that Francis of Assisi was once admitted there.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1200,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1259,
+      "month": 5,
+      "day": 19,
+      "precision": "approximate"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pietro Capocci",
+    "url": "https://en.wikipedia.org/wiki/Pietro_Capocci"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:40:57.108Z"
+  }
+}

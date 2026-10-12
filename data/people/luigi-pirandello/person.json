@@ -1,0 +1,65 @@
+{
+  "id": "luigi-pirandello",
+  "name": "Luigi Pirandello",
+  "wikidataId": "Q1403",
+  "wikipediaTitle": "Luigi Pirandello",
+  "content": {
+    "description": [
+      {
+        "text": "Luigi Pirandello was born in 1867 in the Sicilian town of Agrigento, where his family’s mercantile background and the region’s rich cultural heritage shaped his early life and literary sensibilities.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He rose to international acclaim as a playwright and novelist, earning the Nobel Prize in Literature in 1934 for his innovative contributions to drama and his exploration of identity and perception.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Pirandello’s novel *Il fu Mattia Pascal* (1904) was adapted into several films, including a 1926 silent version by Marcel L'Herbier and a 1937 adaptation by Pierre Chenal.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Despite his literary success, Pirandello’s personal life was marked by the mental illness of his wife, which influenced his later interest in psychoanalysis and the psychology of the self.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a member of the Italian Fascist Party, joining in 1924, though his relationship with the regime was complex and often ambivalent.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1867,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1936,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Luigi_Pirandello_1932.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Luigi_Pirandello_1932.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Luigi_Pirandello_1932.jpg/960px-Luigi_Pirandello_1932.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/Luigi_Pirandello_1932.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Agence de presse Meurisse",
+    "author": "Agence de presse Meurisse",
+    "width": 3342,
+    "height": 4021,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Luigi Pirandello",
+    "url": "https://it.wikipedia.org/wiki/Luigi_Pirandello"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T21:06:37.497Z"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "san-vincenzo-di-saragozza",
+  "name": "san Vincenzo di Saragozza",
+  "wikidataId": "Q318974",
+  "wikipediaTitle": "Vincenzo di Saragozza",
+  "content": {
+    "description": [
+      {
+        "text": "Vincenzo di Saragozza, also known as Vincenzo of Tarragona, was born in the early 4th century in the region of Huesca or nearby cities of Valencia and Zaragoza, according to the most reliable tradition. He came from a noble family, the son of the consul Eutichio and the matron Enola, and received an education befitting his status. His father entrusted him to Bishop Valerio of Zaragoza, who trained him spiritually and appointed him archdeacon, giving him the responsibility of preaching in the bishop’s stead.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the reign of Diocletian, the emperor’s edicts demanded the destruction of Christian symbols and the persecution of believers. Vincenzo, together with Bishop Valerio, refused to abandon their duties and continued to testify to their faith. They were arrested by the provincial prefect Daciano, brought to Valencia, flogged, tortured, and ultimately executed. After his death, the cult of the martyr grew: under Constantine a basilica was erected in his honor, and later, during the Moorish invasion, his body was hidden in a small chapel on a promontory that would become known as Capo San Vincenzo. The relics were later transported to Lisbon in 1173, where a ship bearing the saint’s remains was said to have been watched over by two ravens, a legend that inspired the city’s coat‑of‑arms.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "According to legend, the ship that carried Vincenzo’s relics to Lisbon in 1173 was watched over by two ravens perched on the bow and stern, symbolizing the saint’s continued protection. This image inspired the coat‑of‑arms of Lisbon, which depicts the ship with the two ravens.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The arrival of Vincenzo’s relics in Lisbon was commemorated by the minting of special coins in 1173, and the event is still celebrated in the city’s annual festivals.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Vicente_de_Zaragoza_by_Tomás_Giner,_1462–1466.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Vicente_de_Zaragoza_by_Tom%C3%A1s_Giner%2C_1462%E2%80%931466.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Vicente_de_Zaragoza_by_Tom%C3%A1s_Giner%2C_1462%E2%80%931466.jpg/960px-Vicente_de_Zaragoza_by_Tom%C3%A1s_Giner%2C_1462%E2%80%931466.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Vicente_de_Zaragoza_by_Tom%C3%A1s_Giner%2C_1462%E2%80%931466.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Tomás Giner",
+    "author": "Tomás Giner",
+    "width": 1830,
+    "height": 2952,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Vincenzo di Saragozza",
+    "url": "https://it.wikipedia.org/wiki/Vincenzo_di_Saragozza"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:13:51.019Z"
+  }
+}
