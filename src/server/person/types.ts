@@ -1,4 +1,4 @@
-import type { MainImageCandidate } from "@/server/wikiPipeline/types";
+import { mainImageCandidateSchema, type MainImageCandidate } from "@/server/wikiPipeline/types";
 import { getPersonDisplayName } from "@/utils/getPersonDisplayName";
 import { z } from "zod";
 
@@ -44,21 +44,52 @@ export type PersonSource = {
   content: string;
 };
 
-export type Person = {
-  id: string;
-  name: string;
-  wikidataId: string;
-  wikipediaTitle: string;
-  content: PersonContent;
-  image?: MainImageCandidate;
-  source: Omit<PersonSource, "content">;
-  generation: {
-    aiMode: "local" | "cloud";
-    aiProvider: "ollama" | "gemini";
-    aiModel: string;
-    completedAt: string;
-  };
-};
+export const personSchema = z
+  .object({
+    id: z.string().min(1),
+    name: z.string().min(1),
+    wikidataId: z.string().min(1),
+    wikipediaTitle: z.string().min(1),
+    content: personContentSchema,
+    image: mainImageCandidateSchema.optional(),
+    source: z
+      .object({
+        id: z.string().min(1),
+        kind: z.literal("wikipedia"),
+        title: z.string().min(1),
+        url: z.url(),
+      })
+      .strict(),
+    generation: z
+      .object({
+        aiMode: z.enum(["local", "cloud"]),
+        aiProvider: z.enum(["ollama", "gemini"]),
+        aiModel: z.string().min(1),
+        completedAt: z.iso.datetime(),
+      })
+      .strict(),
+  })
+  .strict()
+  .superRefine((person, context) => {
+    for (const [field, blocks] of [
+      ["description", person.content.description],
+      ["curiosities", person.content.curiosities],
+    ] as const) {
+      blocks.forEach((block, index) => {
+        block.sourceIds.forEach((sourceId, sourceIndex) => {
+          if (sourceId !== person.source.id) {
+            context.addIssue({
+              code: "custom",
+              path: ["content", field, index, "sourceIds", sourceIndex],
+              message: `Unknown Person Source ${sourceId}.`,
+            });
+          }
+        });
+      });
+    }
+  });
+
+export type Person = z.infer<typeof personSchema>;
 
 export type PublicPerson = {
   id: string;

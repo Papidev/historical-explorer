@@ -1,5 +1,13 @@
 # historical-explorer
 
+## 0.1.4
+
+### Patch Changes
+
+- Display the application version in the home footer and the Rome map and content admin headers.
+
+- Validate saved People and Main Image Candidate files before using them, reporting malformed fields and inconsistent references with the affected file path.
+
 ## 0.1.3
 
 ### Patch Changes

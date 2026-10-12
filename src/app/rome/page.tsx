@@ -1,3 +1,4 @@
+import { AppVersion } from "@/app/components/ui/AppVersion";
 import { RefreshPoiCategories } from "@/app/components/RefreshPoiCategories";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 import { RomeMap } from "@/app/components/RomeMap";
@@ -36,16 +37,19 @@ export default async function RomePage({ searchParams }: Props) {
             </p>
           </div>
         </div>
-        {process.env.NODE_ENV === "development" && (
-          <Link
-            href="/admin"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="shrink-0 rounded-lg px-3 py-2 text-sm font-medium text-zinc-600 hover:bg-zinc-100 hover:text-zinc-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-600"
-          >
-            Admin
-          </Link>
-        )}
+        <div className="flex shrink-0 items-center gap-2 md:gap-3">
+          <AppVersion />
+          {process.env.NODE_ENV === "development" && (
+            <Link
+              href="/admin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 rounded-lg px-3 py-2 text-sm font-medium text-zinc-600 hover:bg-zinc-100 hover:text-zinc-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-600"
+            >
+              Admin
+            </Link>
+          )}
+        </div>
       </header>
 
       <section className="min-h-0 flex-1">

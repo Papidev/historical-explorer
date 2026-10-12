@@ -1,6 +1,13 @@
-import { existsSync, mkdirSync, readFileSync, readdirSync, renameSync, writeFileSync } from "node:fs";
+import {
+  existsSync,
+  mkdirSync,
+  readFileSync,
+  readdirSync,
+  renameSync,
+  writeFileSync,
+} from "node:fs";
 import path from "node:path";
-import type { Person, PersonSource } from "./types";
+import { personSchema, type Person, type PersonSource } from "./types";
 
 const writeAtomically = (filePath: string, content: string) => {
   mkdirSync(path.dirname(filePath), { recursive: true });
@@ -18,9 +25,16 @@ export const createFilesystemPersonRepository = (rootPath = process.cwd()) => {
   const repository = {
     get: (personId: string) => {
       const filePath = personPath(personId);
-      return existsSync(filePath)
-        ? (JSON.parse(readFileSync(filePath, "utf-8")) as Person)
-        : undefined;
+      if (!existsSync(filePath)) return undefined;
+      try {
+        const person = personSchema.parse(JSON.parse(readFileSync(filePath, "utf-8")));
+        if (person.id !== personId) {
+          throw new Error(`Person ID ${person.id} does not match directory ${personId}.`);
+        }
+        return person;
+      } catch (error) {
+        throw new Error(`Invalid Person file ${filePath}: ${String(error)}`, { cause: error });
+      }
     },
     list: () => {
       const directory = peoplePath();

@@ -61,6 +61,8 @@ release merges first, regenerate your increment from the new version while
 preserving the merged changelog history. CI checks the bump and changelog before
 merge and creates a `v<version>` Git tag after CI passes on `main`.
 
+The application version is visible in the home footer and the Rome map and content admin headers.
+
 `GET /api/version` returns the version and full commit SHA embedded in the build.
 The SHA comes from `VERCEL_GIT_COMMIT_SHA`, then `GITHUB_SHA`, then the local Git
 checkout; it is `null` when unavailable. This endpoint identifies the running
@@ -117,6 +119,8 @@ Versioned content lives under `data/<city>/`; rebuildable `generated/` outputs a
 | Canonical People                   | `data/people/<person-id>/person.json`                    |
 
 POI IDs are stable and app-owned; external IDs such as `wikidataId` are optional. `geoPlaceId` preserves the original feature identity, enabling regeneration without Wikidata. Legacy records recover it only from a unique exact name/geometry match. Admin shows one row per linked source and preserves existing duplicates.
+
+Person records and Main Image Candidate artifacts are validated with Zod when read. Invalid files report their path and validation errors; empty candidate lists and missing image selections remain valid workflow states. Selected images must reference an available candidate, and Person IDs must match their directory names.
 
 Wikipedia Sources use a text snapshot and metadata with ID `wikipedia`, title, and URL. Generation validates Source References; admin displays them when local Sources exist, while public responses omit them.
 

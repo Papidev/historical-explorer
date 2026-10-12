@@ -29,7 +29,12 @@ const createRepository = (...existingIds: string[]) => {
         wikidataId: `Q-${id}`,
         wikipediaTitle: id,
         content,
-        source,
+        source: {
+          id: source.id,
+          kind: source.kind,
+          title: source.title,
+          url: source.url,
+        },
         generation: {
           aiMode: "local",
           aiProvider: "ollama",
