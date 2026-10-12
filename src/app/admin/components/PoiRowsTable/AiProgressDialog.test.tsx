@@ -3,9 +3,10 @@
 import "@testing-library/jest-dom/vitest";
 import { cleanup, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
+import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from "vitest";
 import { http, HttpResponse } from "msw";
 import { setupServer } from "msw/node";
+import { StrictMode } from "react";
 import { AiProgressDialog } from "./AiProgressDialog";
 import { BatchProgressDialog } from "./BatchProgressDialog";
 
@@ -14,11 +15,101 @@ const server = setupServer();
 beforeAll(() => server.listen({ onUnhandledRequest: "error" }));
 afterEach(() => {
   cleanup();
+  vi.restoreAllMocks();
   server.resetHandlers();
 });
 afterAll(() => server.close());
 
 describe("AI progress dialog", () => {
+  // Cover the first portal mount before other dialogs complete Headless UI's handoff.
+  it.each(["queue", "single"])(
+    "follows new Person log entries in the %s progress dialog",
+    async (mode) => {
+      vi.spyOn(Element.prototype, "scrollHeight", "get").mockReturnValue(900);
+      const entries = [
+        {
+          at: "2026-09-25T00:00:01.000Z",
+          message: "Generating Hadrian with Ollama (qwen3.5:9b).",
+        },
+      ];
+      server.use(
+        http.get("/api/admin/ai-progress/:runId", () =>
+          HttpResponse.json({
+            status: "running",
+            startedAt: "2026-09-25T00:00:00.000Z",
+            entries,
+          }),
+        ),
+      );
+
+      const { rerender } = render(
+        mode === "single" ? (
+          <AiProgressDialog
+            runId="123"
+            title="Resolving Related People"
+            isFinished={false}
+            onClose={() => {}}
+          />
+        ) : (
+          <BatchProgressDialog
+            runs={[{ geoPlaceId: "church", progressId: "123", name: "Church", isFinished: false }]}
+            error={null}
+            onClose={() => {}}
+          />
+        ),
+        { wrapper: StrictMode },
+      );
+      if (mode === "queue") {
+        await waitFor(() =>
+          expect(screen.getByRole("region", { name: "Story queue progress" }).scrollTop).toBe(900),
+        );
+        await userEvent.setup().click(screen.getByRole("button", { name: "Show log for Church" }));
+      }
+
+      expect(
+        await screen.findByText("Generating Hadrian with Ollama (qwen3.5:9b)."),
+      ).toBeInTheDocument();
+      expect(screen.getByRole("dialog")).toBeInTheDocument();
+      expect(screen.getByRole("button", { name: "Hide" })).toBeInTheDocument();
+
+      const log = screen.getByRole("log");
+      Object.defineProperty(log, "scrollHeight", { value: 600, configurable: true });
+      log.scrollTop = 0;
+      if (mode === "queue") {
+        Object.defineProperty(
+          screen.getByRole("region", { name: "Story queue progress" }),
+          "scrollHeight",
+          { value: 900, configurable: true },
+        );
+        screen.getByRole("region", { name: "Story queue progress" }).scrollTop = 0;
+      }
+      entries.push({ at: "2026-09-25T00:00:02.000Z", message: "Resolved Hadrian." });
+
+      expect(
+        await screen.findByText("Resolved Hadrian.", {}, { timeout: 2_500 }),
+      ).toBeInTheDocument();
+      await waitFor(() => expect(log.scrollTop).toBe(600));
+      if (mode === "queue") {
+        const progressRegion = screen.getByRole("region", { name: "Story queue progress" });
+        await waitFor(() => expect(progressRegion.scrollTop).toBe(900));
+        Object.defineProperty(progressRegion, "scrollHeight", { value: 1200, configurable: true });
+        progressRegion.scrollTop = 0;
+        rerender(
+          <BatchProgressDialog
+            runs={[
+              { geoPlaceId: "church", progressId: "123", name: "Church", isFinished: true },
+              { geoPlaceId: "museum", progressId: "456", name: "Museum", isFinished: false },
+            ]}
+            error={null}
+            onClose={() => {}}
+          />,
+        );
+        expect(await screen.findByText("Museum")).toBeVisible();
+        await waitFor(() => expect(progressRegion.scrollTop).toBe(1200));
+      }
+    },
+  );
+
   it("reports an unavailable log after generation finishes", async () => {
     server.use(
       http.get("/api/admin/ai-progress/:runId", () => new HttpResponse(null, { status: 500 })),
@@ -234,87 +325,4 @@ describe("AI progress dialog", () => {
       ),
     ).not.toBeInTheDocument();
   });
-
-  it.each(["single", "queue"])(
-    "follows new Person log entries in the %s progress dialog",
-    async (mode) => {
-      const entries = [
-        {
-          at: "2026-09-25T00:00:01.000Z",
-          message: "Generating Hadrian with Ollama (qwen3.5:9b).",
-        },
-      ];
-      server.use(
-        http.get("/api/admin/ai-progress/:runId", () =>
-          HttpResponse.json({
-            status: "running",
-            startedAt: "2026-09-25T00:00:00.000Z",
-            entries,
-          }),
-        ),
-      );
-
-      const { rerender } = render(
-        mode === "single" ? (
-          <AiProgressDialog
-            runId="123"
-            title="Resolving Related People"
-            isFinished={false}
-            onClose={() => {}}
-          />
-        ) : (
-          <BatchProgressDialog
-            runs={[{ geoPlaceId: "church", progressId: "123", name: "Church", isFinished: false }]}
-            error={null}
-            onClose={() => {}}
-          />
-        ),
-      );
-      if (mode === "queue") {
-        await userEvent.setup().click(screen.getByRole("button", { name: "Show log for Church" }));
-      }
-
-      expect(
-        await screen.findByText("Generating Hadrian with Ollama (qwen3.5:9b)."),
-      ).toBeInTheDocument();
-      expect(screen.getByRole("dialog")).toBeInTheDocument();
-      expect(screen.getByRole("button", { name: "Hide" })).toBeInTheDocument();
-
-      const log = screen.getByRole("log");
-      Object.defineProperty(log, "scrollHeight", { value: 600, configurable: true });
-      log.scrollTop = 0;
-      if (mode === "queue") {
-        Object.defineProperty(
-          screen.getByRole("region", { name: "Story queue progress" }),
-          "scrollHeight",
-          { value: 900, configurable: true },
-        );
-        screen.getByRole("region", { name: "Story queue progress" }).scrollTop = 0;
-      }
-      entries.push({ at: "2026-09-25T00:00:02.000Z", message: "Resolved Hadrian." });
-
-      expect(
-        await screen.findByText("Resolved Hadrian.", {}, { timeout: 2_500 }),
-      ).toBeInTheDocument();
-      await waitFor(() => expect(log.scrollTop).toBe(600));
-      if (mode === "queue") {
-        const progressRegion = screen.getByRole("region", { name: "Story queue progress" });
-        await waitFor(() => expect(progressRegion.scrollTop).toBe(900));
-        Object.defineProperty(progressRegion, "scrollHeight", { value: 1200, configurable: true });
-        progressRegion.scrollTop = 0;
-        rerender(
-          <BatchProgressDialog
-            runs={[
-              { geoPlaceId: "church", progressId: "123", name: "Church", isFinished: true },
-              { geoPlaceId: "museum", progressId: "456", name: "Museum", isFinished: false },
-            ]}
-            error={null}
-            onClose={() => {}}
-          />,
-        );
-        expect(await screen.findByText("Museum")).toBeVisible();
-        await waitFor(() => expect(progressRegion.scrollTop).toBe(1200));
-      }
-    },
-  );
 });

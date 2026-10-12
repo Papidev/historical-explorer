@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.1.5
+
+### Patch Changes
+
+- Fix automatic scrolling on the first opening of the Story queue dialog by attaching scroll observers when the content mounts.
+
 ## 0.1.4
 
 ### Patch Changes
