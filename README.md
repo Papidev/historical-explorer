@@ -118,6 +118,8 @@ Versioned content lives under `data/<city>/`; rebuildable `generated/` outputs a
 
 POI IDs are stable and app-owned; external IDs such as `wikidataId` are optional. `geoPlaceId` preserves the original feature identity, enabling regeneration without Wikidata. Legacy records recover it only from a unique exact name/geometry match. Admin shows one row per linked source and preserves existing duplicates.
 
+Person records and Main Image Candidate artifacts are validated with Zod when read. Invalid files report their path and validation errors; empty candidate lists and missing image selections remain valid workflow states. Selected images must reference an available candidate, and Person IDs must match their directory names.
+
 Wikipedia Sources use a text snapshot and metadata with ID `wikipedia`, title, and URL. Generation validates Source References; admin displays them when local Sources exist, while public responses omit them.
 
 ## Editorial workflow
