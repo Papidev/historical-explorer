@@ -4,6 +4,23 @@
 
 - For product context, read `docs/product/vision.md` before making architecture or UX decisions.
 
+## Agent skills
+
+### Issue tracker
+
+Track work in GitHub Issues and the Cultural Atlas Project.
+Read `docs/agents/issue-tracker.md` before issue tracker operations.
+
+### Triage labels
+
+Use the five default triage labels.
+Read `docs/agents/triage-labels.md` before applying triage labels.
+
+### Domain docs
+
+Use the single-context layout.
+Read `docs/agents/domain.md` before domain exploration.
+
 ## Before Starting Work
 
 - Before starting further work on the current branch, check whether its pull request has already been merged. If it has, create a new `feat/` branch from updated `main` before making any changes, even if the current branch still exists locally. Check the PR's merge status rather than Git ancestry, because squash merges do not preserve the branch commits.
