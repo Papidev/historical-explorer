@@ -762,6 +762,40 @@ describe("Story Workflow Interface", () => {
       await expect(
         createFilesystemStoryWorkflowRepository("alexandria").get(pointOfInterest.id),
       ).resolves.toBeUndefined();
+      const saved = await workflow.draftStory.get({ poiId: pointOfInterest.id });
+      const persisted = createFilesystemStoryWorkflowRepository("rome");
+      const checkpoint = { durationMs: 1, completedAt: "2026-08-22T11:00:00.000Z" };
+      await expect(
+        persisted.replaceStoryContent(
+          pointOfInterest.id,
+          { ...storyContent(), introduction: { text: "", sourceIds: ["wikipedia"] } },
+          checkpoint,
+        ),
+      ).rejects.toThrow();
+      await expect(
+        persisted.replaceStoryContent(
+          pointOfInterest.id,
+          {
+            ...storyContent(),
+            relatedPeople: [
+              { name: "Missing Person", personId: "missing", sourceIds: ["wikipedia"] },
+            ],
+          },
+          checkpoint,
+        ),
+      ).rejects.toThrow("references missing Person missing");
+      await expect(
+        persisted.replaceMainImageCandidates(
+          pointOfInterest.id,
+          [candidate("replacement.jpg")],
+          "missing.jpg",
+          checkpoint,
+        ),
+      ).rejects.toThrow("Selected Main Image must reference an available candidate");
+      await expect(
+        persisted.selectDraftMainImage(pointOfInterest.id, "missing.jpg"),
+      ).rejects.toThrow("Selected Main Image must reference an available candidate");
+      expect(await workflow.draftStory.get({ poiId: pointOfInterest.id })).toEqual(saved);
       unlinkSync(path.join(temporaryDirectory, "data/rome/generated/wikipedia/forum-boarium.txt"));
       unlinkSync(
         path.join(temporaryDirectory, "data/rome/generated/wikipedia/forum-boarium.metadata.json"),
