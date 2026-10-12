@@ -1,10 +1,7 @@
-import { useEffect, useRef } from "react";
+import { useCallback } from "react";
 
-export const useAutoScroll = <T extends HTMLElement>() => {
-  const scrollRef = useRef<T>(null);
-
-  useEffect(() => {
-    const element = scrollRef.current;
+export const useAutoScroll = <T extends HTMLElement>() =>
+  useCallback((element: T | null) => {
     if (!element) return;
     const scrollToBottom = () => {
       element.scrollTop = element.scrollHeight;
@@ -14,6 +11,3 @@ export const useAutoScroll = <T extends HTMLElement>() => {
     observer.observe(element, { childList: true, characterData: true, subtree: true });
     return () => observer.disconnect();
   }, []);
-
-  return scrollRef;
-};
