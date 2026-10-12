@@ -11,11 +11,6 @@
 Track work in GitHub Issues and the Cultural Atlas Project.
 Read `docs/agents/issue-tracker.md` before issue tracker operations.
 
-### Triage labels
-
-Use the five default triage labels.
-Read `docs/agents/triage-labels.md` before applying triage labels.
-
 ### Domain docs
 
 Use the single-context layout.
