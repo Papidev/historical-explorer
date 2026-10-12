@@ -1,0 +1,61 @@
+{
+  "id": "afrodite",
+  "name": "Afrodite",
+  "wikidataId": "Q35500",
+  "wikipediaTitle": "Afrodite",
+  "content": {
+    "description": [
+      {
+        "text": "Afrodite, the Greek goddess of beauty, love, and fertility, is said to have sprung from the foam of the sea after the severed genitals of Uranus were cast into the waters by Cronus. The myth, recorded by Hesiod, links her name to the Greek word for foam, a detail that has led scholars to view her as an imported deity from the eastern Mediterranean, with early cults traced to Cyprus and the Phoenician city of Citrea. Her cult was both solemn and austere, yet she was also invoked by prostitutes and sailors, who celebrated her with the festival of Afrodisie at the end of a voyage.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In art, Afrodite’s image evolved from the dignified, clothed representations of the early Archaic period to the celebrated nude of the Hellenistic era, such as the Venus de Milo. The goddess was associated with a range of sacred animals—dolphin, dove, swan—and plants like rose and myrtle, and she was honored as a protector of safe navigation. Her mythic narratives include her role as mother of Aeneas, her jealousy of Psyche, and her participation in the Judgment of Paris, where she secured the golden apple that sparked the Trojan War.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Afrodite’s name derives from the Greek word for foam (ἀφρός), reflecting her birth from sea foam.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sailors celebrated her with the festival of Afrodisie, a maritime rite performed at the conclusion of a voyage.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Her sacred animals include the dolphin, dove, swan, and especially the dove, symbolizing love.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Venus de Milo, a famous Hellenistic statue of Afrodite, is known as the \"Venus of the Island of Melos\" and dates to the 2nd century BCE.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Aphrodite8.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Aphrodite8.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/70/Aphrodite8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/70/Aphrodite8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Ricardo André Frantz (User:Tetraktys)",
+    "author": "Ricardo André Frantz (User:Tetraktys)",
+    "width": 495,
+    "height": 660,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Afrodite",
+    "url": "https://it.wikipedia.org/wiki/Afrodite"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:08:06.658Z"
+  }
+}

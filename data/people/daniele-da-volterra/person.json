@@ -1,0 +1,71 @@
+{
+  "id": "daniele-da-volterra",
+  "name": "Daniele da Volterra",
+  "wikidataId": "Q540489",
+  "wikipediaTitle": "Daniele da Volterra",
+  "content": {
+    "description": [
+      {
+        "text": "Daniele Ricciarelli, better known as Daniele da Volterra, was a Mannerist painter and sculptor born around 1509 in Volterra, Tuscany. He began his artistic training with the Sienese masters Il Sodoma and Baldassare Peruzzi before moving to Rome, where he worked on frescoes in the Palazzo Massimo alle Colonne and apprenticed under Perino del Vaga. In Rome he entered the circle of Michelangelo, receiving sketches from the master and producing works such as the Descent from the Cross in Trinità dei Monti that were highly praised for their composition and colouring.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After Michelangelo’s death, Daniele was commissioned to cover the nudity in Michelangelo’s Last Judgment fresco in the Sistine Chapel, a task that earned him the nickname Il Braghettone. He also served as superintendent of the Vatican works under Pope Paul III, a position he lost when the pope died in 1549. Later he turned to sculpture, creating pieces such as Cleopatra in the Belvedere and a bronze equestrian horse for Henry II. Daniele died in Rome on 4 April 1566.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Daniele earned the nickname Il Braghettone for covering the genitals and backsides in Michelangelo’s Last Judgment with vestments and fig‑leaves after Pope Pius IV ordered the ‘imbraghettamento’ in 1564.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was superintendent of the works of the Vatican under Pope Paul III, a post that gave him influence over major commissions until the pope’s death in 1549.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Daniele’s painting of the Descent from the Cross, based on Michelangelo’s drawings, was once grouped with Raphael’s Transfiguration and Domenichino’s Last Communion of St. Jerome as the most famous pictures in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After losing his pension when Pope Paul III died, Daniele devoted himself chiefly to sculpture, producing works such as Cleopatra in the Belvedere and a bronze equestrian horse that later became part of a statue of Louis XIII.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1509,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1566,
+      "month": 4,
+      "day": 4,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "151_le_vite,_danilo_ricciarelli_da_volterra.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:151_le_vite%2C_danilo_ricciarelli_da_volterra.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/151_le_vite%2C_danilo_ricciarelli_da_volterra.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/151_le_vite%2C_danilo_ricciarelli_da_volterra.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Giorgio Vasari",
+    "author": "Giorgio Vasari",
+    "width": 263,
+    "height": 300,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Daniele da Volterra",
+    "url": "https://en.wikipedia.org/wiki/Daniele_da_Volterra"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:44:52.406Z"
+  }
+}

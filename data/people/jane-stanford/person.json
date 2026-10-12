@@ -1,0 +1,73 @@
+{
+  "id": "jane-stanford",
+  "name": "Jane Stanford",
+  "wikidataId": "Q2891993",
+  "wikipediaTitle": "Jane Stanford",
+  "content": {
+    "description": [
+      {
+        "text": "Jane Elizabeth Lathrop Stanford was an American philanthropist and co‑founder of Stanford University. She and her husband Leland Stanford established the university in 1885 to honor their son Leland Stanford Jr., who died of typhoid fever in 1884. After Leland’s death in 1893, Jane took control of the university, funding it almost single‑handedly and steering its early focus toward the arts and co‑education.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Jane Stanford’s later years were marked by intrigue and tragedy. In 1905 she died in Hawaii from strychnine poisoning, an event that was initially covered up by university president David Starr Jordan. The poisoning was first suspected after a bitter mineral water incident in San Francisco, and a subsequent investigation found strychnine in a bottle of bicarbonate of soda she drank that night. The case remained unsolved until the 1980s, when historians concluded that her maid Bertha Berner was likely responsible.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "She served as the eighth First Lady of California while her husband was governor from 1862 to 1863.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1897 she traveled to London to sell her rubies and other jewels to raise funds for the university, but most of her jewelry remained unsold.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Jewel Fund, established after her death, continues to support Stanford’s library collections and is administered by the Jewel Society.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Jane Stanford was buried in the Stanford family mausoleum on the university campus, alongside her husband and son.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1828,
+      "month": 8,
+      "day": 25,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1905,
+      "month": 2,
+      "day": 28,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "MrandMrsLelandStanford1850.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:MrandMrsLelandStanford1850.JPG",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/MrandMrsLelandStanford1850.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/MrandMrsLelandStanford1850.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Mike Cline",
+    "author": "Mike Cline",
+    "width": 855,
+    "height": 1384,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Jane Stanford",
+    "url": "https://en.wikipedia.org/wiki/Jane_Stanford"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:12:42.855Z"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "id": "eug-ne-tisserant",
+  "name": "Eugène Tisserant",
+  "wikidataId": "Q648584",
+  "wikipediaTitle": "Eugène Tisserant",
+  "content": {
+    "description": [
+      {
+        "text": "Eugène Tisserant was a French cardinal, linguist, and archivist who rose to prominence in the mid‑twentieth‑century Catholic Church. After studying Hebrew, Syriac, Arabic, Ethiopian, and Assyrian at the École Biblique and the Catholic Institute of Paris, he became a conservator of oriental manuscripts at the Vatican Library, a role that paved the way for his later appointments as secretary of the Congregation for the Oriental Churches, archbishop of Iconium, and cardinal vicar of Porto and Santa Rufina. He also served on the presidency of the Second Vatican Council and was elected a member of the Académie française.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the Second World War Tisserant used his influence to shelter Jews, hiding them in the Vatican Library and helping them obtain visas, and later presided over the conclaves of 1958 and 1963 as dean of the College of Cardinals. He was gran maestro of the Order of the Holy Sepulchre, presided over the 950th‑anniversary celebrations of the Cathedral of Sansepolcro in 1962, and served as archivist and librarian of Santa Romana Chiesa from 1957 until 1971. He died on 21 February 1972 in Albano Laziale.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Tisserant was the first French cardinal to serve as dean of the College of Cardinals, presiding over the conclaves that elected Popes John XXIII and Paul VI.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He helped Jews during World War II by hiding them in the Vatican Library and facilitating the acquisition of visas.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Tisserant was a polyglot, fluent in Hebrew, Syriac, Arabic, Ethiopian, and Assyrian, languages he studied at the École Biblique and the Catholic Institute of Paris.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1961 he was elected to the Académie française, succeeding the physicist Maurice de Broglie.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as gran maestro of the Order of the Holy Sepulchre and presided over the 950th‑anniversary celebrations of the Cathedral of Sansepolcro in 1962.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "From 1957 to 1971 he held the post of archivist and librarian of Santa Romana Chiesa, a position he maintained for fourteen years.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 1972,
+      "month": 2,
+      "day": 21,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Portrait_Cardinal_Tisserant.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Portrait_Cardinal_Tisserant.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Portrait_Cardinal_Tisserant.jpg/960px-Portrait_Cardinal_Tisserant.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Portrait_Cardinal_Tisserant.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Serge Ivanoff",
+    "author": "Serge Ivanoff",
+    "width": 1000,
+    "height": 1163,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Eugène Tisserant",
+    "url": "https://it.wikipedia.org/wiki/Eug%C3%A8ne_Tisserant"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:10:28.531Z"
+  }
+}

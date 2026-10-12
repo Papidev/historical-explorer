@@ -1,0 +1,65 @@
+{
+  "id": "enrico-viii-d-inghilterra",
+  "name": "Enrico VIII d'Inghilterra",
+  "wikidataId": "Q38370",
+  "wikipediaTitle": "Enrico VIII d'Inghilterra",
+  "content": {
+    "description": [
+      {
+        "text": "Henry VIII was born on 28 June 1491 in Greenwich, the second son of Henry VII and Elizabeth of York. He ascended to the throne in 1509 after his father's death and quickly consolidated his power by curbing the influence of the high nobility and relying on the support of the provincial gentry.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His reign is most famously marked by his six marriages and the break with the Roman Catholic Church, which he achieved by declaring himself the Supreme Head of the Church of England in 1534. This act led to the dissolution of monasteries, the annexation of Wales, and a series of religious and political reforms that reshaped English society.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 1521 Pope Leo X granted Henry the title Defensor Fidei (Defender of the Faith), a title that still appears on modern English coins.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Henry was the first English monarch to regularly use the title 'Vostra Maestà' (Your Majesty) in official documents.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1491,
+      "month": 6,
+      "day": 28,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1547,
+      "month": 1,
+      "day": 28,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Hans_Holbein,_the_Younger,_Around_1497-1543_-_Portrait_of_Henry_VIII_of_England_-_Google_Art_Project.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Hans_Holbein%2C_the_Younger%2C_Around_1497-1543_-_Portrait_of_Henry_VIII_of_England_-_Google_Art_Project.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Hans_Holbein%2C_the_Younger%2C_Around_1497-1543_-_Portrait_of_Henry_VIII_of_England_-_Google_Art_Project.jpg/960px-Hans_Holbein%2C_the_Younger%2C_Around_1497-1543_-_Portrait_of_Henry_VIII_of_England_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Hans_Holbein%2C_the_Younger%2C_Around_1497-1543_-_Portrait_of_Henry_VIII_of_England_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Hans Holbein the Younger",
+    "author": "Hans Holbein the Younger",
+    "width": 2994,
+    "height": 4203,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Enrico VIII d'Inghilterra",
+    "url": "https://it.wikipedia.org/wiki/Enrico_VIII_d'Inghilterra"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:52:49.201Z"
+  }
+}

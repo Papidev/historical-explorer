@@ -1,0 +1,63 @@
+{
+  "id": "paolo-giordano-i-orsini",
+  "name": "Paolo Giordano I Orsini",
+  "wikidataId": "Q519364",
+  "wikipediaTitle": "Paolo Giordano I Orsini",
+  "content": {
+    "description": [
+      {
+        "text": "Paolo Giordano I Orsini was a scion of the powerful Roman Orsini family, born to Girolamo Orsini and Francesca Sforza of Santa Fiora.  In 1543 he became Lord of San Gregorio, a fief that was initially governed by his tutor, Cardinal Sforza, a relative of his mother.  He entered into a politically significant marriage with Isabella de Medici in 1553, which was solemnised in 1558, and later moved to Rome after the death of Cosimo I, where he undertook major restoration projects at Monte Giordano and the fortress of Bracciano.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the Battle of Lepanto he served as a captain, breaking the Ottoman line and engaging the galley of the Pascià.  In 1576 he is widely believed to have orchestrated the murder of his wife Isabella, whom he suspected of adultery with Troilo Orsini, and the subsequent killing of Leonora Alvarez, Isabella’s cousin and close friend.  He later entered into an affair with Vittoria Accoramboni, whose husband was allegedly murdered on his behalf in 1581; the ensuing chain of assassinations culminated in his own death by poisoning on 13 November 1585.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the probable mastermind behind the murder of his wife Isabella in 1576, motivated by suspicions of her affair with Troilo Orsini.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as a captain at the Battle of Lepanto, where he broke the Ottoman line and fought the galley of the Pascià.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His affair with Vittoria Accoramboni led to a series of retaliatory assassinations, including the murder of Accoramboni herself and the eventual poisoning of Orsini in 1585.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 1585,
+      "month": 11,
+      "day": 13,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Paolo_Giordano_I_Orsini.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Paolo_Giordano_I_Orsini.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Paolo_Giordano_I_Orsini.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Paolo_Giordano_I_Orsini.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "AnonymousUnknown author",
+    "author": "AnonymousUnknown author",
+    "width": 485,
+    "height": 648,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Paolo Giordano I Orsini",
+    "url": "https://it.wikipedia.org/wiki/Paolo_Giordano_I_Orsini"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:39:52.474Z"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Bagni_severiani_sul_palatino.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Bagni_severiani_sul_palatino.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Bagni_severiani_sul_palatino.jpg/960px-Bagni_severiani_sul_palatino.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Bagni_severiani_sul_palatino.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.0",
+      "attribution": "antmoose",
+      "author": "antmoose",
+      "width": 1600,
+      "height": 1200,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Septiconium_Luci_Septimi_Severi.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Septiconium_Luci_Septimi_Severi.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Septiconium_Luci_Septimi_Severi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Septiconium_Luci_Septimi_Severi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "width": 500,
+      "height": 726,
+      "discoveredVia": "wikipedia-page-image",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Bagni_severiani_sul_palatino.jpg"
+}

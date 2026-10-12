@@ -1,0 +1,64 @@
+{
+  "id": "nicola-da-forca-palena",
+  "name": "Nicola da Forca Palena",
+  "wikidataId": "Q3876401",
+  "wikipediaTitle": "Nicola da Forca Palena",
+  "content": {
+    "description": [
+      {
+        "text": "Nicola da Forca Palena was born on 10 September 1349 in a modest house in Forca, Chieti, to devout parents who raised him in a life of humility. The day before his birth, a devastating earthquake struck the region, an event that would later be seen by some as a sign of the extraordinary destiny that lay ahead for the young man. He entered the Third Order of Saint Francis, where his penitential acts and austere practices earned him a reputation for holiness, and at the age of thirty he moved to Palena, taking up a pastoral role as deputy curate of St. Anthony’s church, where he was celebrated for his compassion and active ministry.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A pilgrimage to Rome in 1400, where he visited the tombs of the apostles, inspired Nicola to pursue an even more austere life. He joined a hermitage led by Rinaldo di Piedimonte, later establishing a hermitage on the Janiculum Hill in 1419 that would become the church of Sant'Onofrio. There he met Blessed Pietro Gambacorta, and together they founded the Poor Hermits of Saint Jerome, a congregation that received papal approval from Pope Martin V in 1421 and was formally approved by Pope Eugene IV in 1446. Nicola’s close friendship with both Pope Eugene IV and Pope Nicholas V, and his eventual beatification by Pope Clement XIV in 1771, underscore his enduring influence within the Church.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Nicola was a close friend of both Pope Eugene IV and Pope Nicholas V, who both recognized his sanctity and entrusted him with the direction of several convents.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He founded a hermitage in Sperlonga, Naples, and a hospice at the square of Sant'Agnello, extending his charitable work beyond Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his death on 1 October 1449, Nicola’s remains were moved to the main altar of Sant'Onofrio in 1712, where they remain today.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The congregation of the Poor Hermits of Saint Jerome was dissolved by Pope Pius XI on 12 January 1933, ending a centuries‑old religious order.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sant'Onofrio became a titular see for cardinals in 1519 and has served as the headquarters of the Order of the Holy Sepulchre since 1945.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1349,
+      "month": 9,
+      "day": 10,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1449,
+      "month": 10,
+      "day": 1,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Nicola da Forca Palena",
+    "url": "https://en.wikipedia.org/wiki/Nicola_da_Forca_Palena"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:31:07.240Z"
+  }
+}

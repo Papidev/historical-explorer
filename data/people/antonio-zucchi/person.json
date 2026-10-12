@@ -1,0 +1,85 @@
+{
+  "id": "antonio-zucchi",
+  "name": "Antonio Zucchi",
+  "wikidataId": "Q374111",
+  "wikipediaTitle": "Antonio Zucchi",
+  "content": {
+    "description": [
+      {
+        "text": "Antonio Pietro Francesco Zucchi was born in Venice on 1 May 1726. He studied under his uncle Carlo Zucchi, as well as Francesco Fontebasso and Jacopo Amigoni, before marrying the celebrated painter Angelica Kauffman in 1781. The couple later moved to Rome, where Zucchi produced a series of etchings depicting capriccio and veduta of classical ruins.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Zucchi's reputation extended beyond Italy; he collaborated with the architect Robert Adam on the decoration of several English country houses, including Kenwood, Newby Hall, Osterley Park, Nostell Priory, and Luton House. In 1756 he was elected to the Accademia di Belle Arti in Venice, and in 1770 he became an associate of the Royal Academy of Arts. Lady Boringdon commissioned him to paint the ceilings of rooms redesigned by Adam at Saltram House in Devon, and she also purchased works by his wife for the estate.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He married Angelica Kauffman, a prominent painter, in 1781.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He collaborated with Robert Adam on the decoration of English country houses such as Kenwood, Newby Hall, Osterley Park, Nostell Priory, and Luton House.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was elected to the Accademia di Belle Arti in Venice in 1756.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He became an associate of the Royal Academy of Arts in 1770.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Lady Boringdon commissioned him to paint the ceilings of rooms redesigned by Adam at Saltram House in Devon.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He produced etchings of capriccio and veduta of classical buildings or ruins while in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He died in Rome on 1 December 1795.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1726,
+      "month": 5,
+      "day": 1,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1795,
+      "month": 12,
+      "day": 1,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Angelica_Kaufmann_Antonio_Zucchi.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Angelica_Kaufmann_Antonio_Zucchi.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Angelica_Kaufmann_Antonio_Zucchi.jpg/960px-Angelica_Kaufmann_Antonio_Zucchi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Angelica_Kaufmann_Antonio_Zucchi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Angelica Kauffmann",
+    "author": "Angelica Kauffmann",
+    "width": 1865,
+    "height": 2249,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Antonio Zucchi",
+    "url": "https://en.wikipedia.org/wiki/Antonio_Zucchi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:59:30.471Z"
+  }
+}

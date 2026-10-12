@@ -1,0 +1,69 @@
+{
+  "id": "carlo-maratta",
+  "name": "Carlo Maratta",
+  "wikidataId": "Q538998",
+  "wikipediaTitle": "Carlo Maratta",
+  "content": {
+    "description": [
+      {
+        "text": "Carlo Maratta was born on 18 May 1625 in Camerano, a small town in the Marche region of the Papal States. He moved to Rome in 1636, where he entered the workshop of Andrea Sacchi and remained under his influence until Sacchi’s death in 1661, developing a classicizing style that set him apart from the exuberant Baroque of his contemporaries.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Maratta became the leading painter of Rome in the second half of the 17th century, receiving commissions from popes, cardinals and European courts. He served as director of the Accademia di San Luca, restored Raphael’s frescoes in the Raphael Rooms, and was knighted by Pope Clement XI in 1704, cementing his status as a preeminent artist of his era.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 1704 Maratta was knighted by Pope Clement XI, a rare honor that reflected his prominence in the Roman art world.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Maratta’s restoration work on the frescoes of the Raphael Rooms in 1702 earned him the appointment as Director of the Antiquities of Rome, a position he held until his death.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He had a daughter, Faustina, with his mistress Francesca Gommi; the child was legally recognized in 1698 and later became a noted poet and member of the Academy of Arcadia.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1625,
+      "month": 5,
+      "day": 18,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1713,
+      "month": 12,
+      "day": 15,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Carlo_Maratta_-_Self-portrait_in_Uffizi_Gallery.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Carlo_Maratta_-_Self-portrait_in_Uffizi_Gallery.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Carlo_Maratta_-_Self-portrait_in_Uffizi_Gallery.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Carlo_Maratta_-_Self-portrait_in_Uffizi_Gallery.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Carlo Maratta",
+    "author": "Carlo Maratta",
+    "width": 576,
+    "height": 720,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Carlo Maratta",
+    "url": "https://en.wikipedia.org/wiki/Carlo_Maratta"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:29:36.529Z"
+  }
+}

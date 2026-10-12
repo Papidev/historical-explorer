@@ -1,0 +1,71 @@
+{
+  "id": "benedetto-pamphilj",
+  "name": "Benedetto Pamphilj",
+  "wikidataId": "Q777310",
+  "wikipediaTitle": "Benedetto Pamphilj",
+  "content": {
+    "description": [
+      {
+        "text": "Benedetto Pamphilj was born in Rome in 1653 into a family already steeped in ecclesiastical influence; his grandfather was a cardinal who had renounced the cardinalate to marry. In 1681, at the age of 28, he was elevated to the College of Cardinals by Pope Innocent XI, becoming the youngest Italian cardinal of his time. He quickly assumed a series of important administrative roles, serving as prefect of the Segnatura di grazia, cardinal legate to Bologna, and protodiacono. He also held the prestigious positions of archpriest of Santa Maria Maggiore and San Giovanni in Laterano, and in 1704 he was appointed bibliotecario of the Vatican Library and archivist of the Secret Archives.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond his administrative duties, Pamphilj was a fervent patron of the arts, especially music. He joined the Arcadia academy under the pseudonym Fenicio Larisseo and wrote libretti for several operas, collaborating with composers such as Alessandro Scarlatti and Alessandro Melani. He provided financial support and performance opportunities to a host of musicians, including Arcangelo Corelli and Giovanni Lorenzo Lulier. His friendship with the German composer Georg Friedrich Händel produced a series of cantatas dedicated to him, the most famous being \"Il trionfo del tempo e del disinganno,\" performed in 1707. Pamphilj also oversaw the creation of the Galleria Doria Pamphilj's Flemish painting collection, commissioning the design of its chapel from Carlo Fontana.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the youngest Italian cardinal at the time of his appointment in 1681.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a member of the Arcadia academy under the pseudonym Fenicio Larisseo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He maintained a close friendship with the composer Georg Friedrich Händel, who dedicated several cantatas to him, including \"Il trionfo del tempo e del disinganno\" performed in 1707.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as the bibliotecario of the Vatican Library and archivist of the Secret Archives, overseeing the collection of manuscripts.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1653,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1730,
+      "month": 3,
+      "day": 22,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Benedetto_Pamphilj.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Benedetto_Pamphilj.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/Benedetto_Pamphilj.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/Benedetto_Pamphilj.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 400,
+    "height": 533,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Benedetto Pamphilj",
+    "url": "https://it.wikipedia.org/wiki/Benedetto_Pamphilj"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:30:13.859Z"
+  }
+}

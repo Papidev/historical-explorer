@@ -1,0 +1,65 @@
+{
+  "id": "jesus-christ",
+  "name": "Jesus Christ",
+  "wikidataId": "Q302",
+  "wikipediaTitle": "Jesus",
+  "content": {
+    "description": [
+      {
+        "text": "Jesus (c. 6 to 4 BC – AD 30 or 33) was a Jewish preacher and religious leader active in the Roman province of Judaea during the first century. He is the central figure of Christianity, the world's largest religion, and is regarded by most branches of Christianity as the incarnation of God the Son and the awaited Messiah. Accounts of his life are contained in the four canonical Gospels of the New Testament, and modern scholars largely agree that Jesus existed historically.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "According to Christian tradition, Jesus was circumcised at eight days old and presented at the Temple in Jerusalem at 40 days. He was baptized by John the Baptist, spent forty days and nights of fasting in the Judean wilderness, and then began his public ministry as an itinerant teacher who performed healings, taught in parables, and gathered a group of twelve apostles. He was arrested in Jerusalem, tried by the Sanhedrin, handed over to the Roman authorities, and crucified on the order of Pontius Pilate; his resurrection on the third day after his death became the foundation of the early Christian Church.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Jesus was circumcised at eight days old and presented at the Temple in Jerusalem at 40 days.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Jesus was a carpenter, a builder‑craftsman, as described by the Greek term τεκτων in the Gospel of Mark.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Jesus was crucified on the order of Pontius Pilate, the Roman prefect of Judaea.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -4,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 33,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Spas_vsederzhitel_sinay_(cropped1).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Spas_vsederzhitel_sinay_(cropped1).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Spas_vsederzhitel_sinay_%28cropped1%29.jpg/960px-Spas_vsederzhitel_sinay_%28cropped1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Spas_vsederzhitel_sinay_%28cropped1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown artistUnknown artist",
+    "author": "Unknown artistUnknown artist",
+    "width": 1866,
+    "height": 3626,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Jesus",
+    "url": "https://en.wikipedia.org/wiki/Jesus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:14:36.986Z"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "sanseverino-famiglia",
+  "name": "Sanseverino",
+  "wikidataId": "Q751988",
+  "wikipediaTitle": "Sanseverino (famiglia)",
+  "content": {
+    "description": [
+      {
+        "text": "The Sanseverino family rose from a Norman knight, Turgisio, who received the County of Rota from Robert Guiscard in the 11th century.  From that point the family expanded across southern Italy, controlling more than 300 fiefs, 40 counties, 9 marquisates, 12 duchies and 10 principalities, especially in Basilicata, Calabria, Campania and Puglia, and even extending into Lombardy, Piedmont, Veneto, Emilia‑Romagna, Switzerland and France.  Their influence was so great that they built the Certosa di Padula, the largest Carthusian monastery in Europe, and the second largest fortified castle on the continent.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In the 16th century the Sanseverinos enjoyed a semi‑sovereign status in the Kingdom of Naples, a privilege confirmed by Charles V in 1520 that forbade the division of their fiefs through female succession.  Their heraldic emblem, a silver field with a red stripe, was adopted after a 13th‑century battle when a soldier’s blood‑stained shirt was attached to his sword, inspiring the family’s coat of arms.  Today the only surviving branch of the historic house is the Barons of Marcellinara, who continue to hold the title in Calabria.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Certosa di Padula, founded by the Sanseverinos, is the largest Carthusian monastery in Europe.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The family’s privilege that fiefs could not be divided by female succession was confirmed by Charles V in 1520.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Sanseverino coat of arms features a silver field with a red stripe, a design that originated from a battlefield incident in 1266.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Barons of Marcellinara, a branch of the Sanseverino family, still exist today and hold the baronial title in Calabria.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Blason_famille_it_Sanseverino.svg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Blason_famille_it_Sanseverino.svg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Blason_famille_it_Sanseverino.svg/960px-Blason_famille_it_Sanseverino.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/Blason_famille_it_Sanseverino.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "This SVG coat of arms includes elements from this file:",
+    "author": "This SVG coat of arms includes elements from this file:",
+    "width": 600,
+    "height": 660,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Sanseverino (famiglia)",
+    "url": "https://it.wikipedia.org/wiki/Sanseverino_(famiglia)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:37:49.472Z"
+  }
+}

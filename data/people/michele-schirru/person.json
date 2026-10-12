@@ -1,0 +1,49 @@
+{
+  "id": "michele-schirru",
+  "name": "Michele Schirru",
+  "wikidataId": "Q3629101",
+  "wikipediaTitle": "Assassination attempts on Benito Mussolini",
+  "content": {
+    "description": [
+      {
+        "text": "Michele Schirru was an American anarchist who became known for his attempt to assassinate Italian Fascist leader Benito Mussolini in 1931.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was arrested in May 1931 and executed by the Italian authorities, illustrating the regime's willingness to eliminate perceived threats through swift and severe punishment.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Schirru's execution in 1931 was part of a broader pattern of Italian fascist repression against anarchists and political opponents during the 1930s.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Mussolini_ferito_2.webp",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Mussolini_ferito_2.webp",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Mussolini_ferito_2.webp/960px-Mussolini_ferito_2.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Mussolini_ferito_2.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 1080,
+    "height": 1005,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Assassination attempts on Benito Mussolini",
+    "url": "https://en.wikipedia.org/wiki/Assassination_attempts_on_Benito_Mussolini"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:29:55.015Z"
+  }
+}

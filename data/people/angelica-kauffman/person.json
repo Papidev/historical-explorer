@@ -1,0 +1,69 @@
+{
+  "id": "angelica-kauffman",
+  "name": "Angelica Kauffman",
+  "wikidataId": "Q123098",
+  "wikipediaTitle": "Angelica Kauffman",
+  "content": {
+    "description": [
+      {
+        "text": "Angelica Kauffman was born on 30 October 1741 in Chur, Switzerland, and was raised in a family that moved through the Alpine regions of Switzerland, Austria, and Italy.  Trained by her father, the Austrian muralist Joseph Johann Kauffmann, she became a child prodigy, mastering four languages—German, Italian, French, and English—by the age of twelve and already receiving commissions from bishops and nobles.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Kauffman’s career flourished in London and Rome, where she became one of only two female founding members of the Royal Academy of Art in 1768.  She distinguished herself as a history painter—a rare and prestigious genre for women at the time—while also producing celebrated portraits, landscapes, and decorative works that earned her acclaim across Europe.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "She was one of only two women—alongside Mary Moser—to be a founding member of the Royal Academy of Art in London in 1768.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "By the age of twelve, Kauffman was already painting for bishops and nobles, demonstrating her early mastery of the craft.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In addition to her artistic talent, she was a gifted singer and had to choose between a career in opera and painting after a Catholic priest warned her that opera was a dangerous place filled with \"seedy people.\"",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1741,
+      "month": 10,
+      "day": 30,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1807,
+      "month": 11,
+      "day": 5,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Angelika_Kauffmann_-_Self_Portrait_-_1784.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Angelika_Kauffmann_-_Self_Portrait_-_1784.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Angelika_Kauffmann_-_Self_Portrait_-_1784.jpg/960px-Angelika_Kauffmann_-_Self_Portrait_-_1784.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Angelika_Kauffmann_-_Self_Portrait_-_1784.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Angelica Kauffmann",
+    "author": "Angelica Kauffmann",
+    "width": 3816,
+    "height": 4852,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Angelica Kauffman",
+    "url": "https://en.wikipedia.org/wiki/Angelica_Kauffman"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:59:10.838Z"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "bessarione-cardinale",
+  "name": "Bessarione",
+  "wikidataId": "Q299446",
+  "wikipediaTitle": "Bessarione (cardinale)",
+  "content": {
+    "description": [
+      {
+        "text": "Bessarion was born in 1416 in Trebizond, a city then part of the small empire ruled by the Megas Komnenoi.  He studied in Trebizond before moving to Constantinople, where he became a Basilian monk and took the name Bessarion.  In the early 1430s he travelled to Egypt and later to Mistra, where he studied Neoplatonism under Giorgio Gemisto Pletone and began to advocate for the union of the Roman Catholic and Eastern Orthodox churches.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After being named metropolitan of Nicea in 1437, Bessarion travelled to Italy with Cardinal Cusano to participate in the Councils of Ferrara and Florence, where he argued for ecclesiastical union and helped persuade Cosimo de' Medici to found the Neoplatonic Academy that would later inspire Marsilio Ficino.  He was made a cardinal by Pope Eugene IV in 1439 and spent the rest of his life in Rome and Venice, where he collected Greek manuscripts, donated his library to Venice in 1468, and died in Ravenna on 18 November 1472.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 1468 Bessarion donated his extensive collection of Greek manuscripts to the city of Venice, forming the core of the Biblioteca Marciana, the first public library in Europe.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Bessarion’s circle, known as the Academia Bessarionis, was a key intellectual hub that bridged Greek and Latin scholarship, influencing prominent humanists such as Pomponio Leto and Marsilio Ficino.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He translated numerous Greek works into Latin, including Demosthenes’ First Olintica and the works of Senofonte, thereby preserving classical literature for Western scholars after the fall of Constantinople.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1416,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1472,
+      "month": 11,
+      "day": 18,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Johannes_Bessarion_aport012.png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Johannes_Bessarion_aport012.png",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/Johannes_Bessarion_aport012.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/Johannes_Bessarion_aport012.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Theodor de Bry",
+    "author": "Theodor de Bry",
+    "width": 403,
+    "height": 542,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Bessarione (cardinale)",
+    "url": "https://it.wikipedia.org/wiki/Bessarione_(cardinale)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:29:12.472Z"
+  }
+}

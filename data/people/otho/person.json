@@ -1,0 +1,72 @@
+{
+  "id": "otho",
+  "name": "Otho",
+  "wikidataId": "Q1416",
+  "wikipediaTitle": "Otho",
+  "content": {
+    "description": [
+      {
+        "text": "Marcus Salvius Otho was born on 28 April 32 AD into a noble Etruscan family that had recently been granted patrician status by Emperor Claudius.  He became a close friend and courtier of the young Emperor Nero, but his marriage to Nero’s mistress Poppaea Sabina caused a rift that led to his exile to the province of Lusitania in 58 AD, where he served as governor and proved capable of moderate rule.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Otho’s political fortunes rose during the chaotic Year of the Four Emperors.  He allied with Galba, killed Galba in January 69, and was proclaimed emperor.  His reign was cut short by the revolt of Vitellius, culminating in the Battle of Bedriacum on 14 April 69.  After a decisive defeat, Otho chose to end the civil war by committing suicide on 16 April 69, a decision that earned him posthumous respect for sparing Rome from further bloodshed.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Suetonius recorded that Otho was of moderate height, splayed feet, and was noted for his meticulous personal grooming, shaving daily and applying moist bread to his face to keep a clean-shaven look.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Otho was exiled to Lusitania as governor after Nero forced him to divorce Poppaea Sabina, the emperor’s mistress, in order to marry her himself.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He committed suicide by stabbing himself with a dagger concealed under his pillow, stating that he could die more honourably than he could reign.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Otho’s reign lasted only 91 days, making it the shortest Roman imperial reign until Pertinax’s 87‑day rule in 193 AD.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 32,
+      "month": 4,
+      "day": 28,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 69,
+      "month": 4,
+      "day": 16,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "OthoDen.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:OthoDen.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/61/OthoDen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/61/OthoDen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Classical Numismatic Group, Inc. http://www.cngcoins.com",
+    "width": 170,
+    "height": 166,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Otho",
+    "url": "https://en.wikipedia.org/wiki/Otho"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:06:25.376Z"
+  }
+}

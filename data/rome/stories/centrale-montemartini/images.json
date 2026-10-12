@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Le_musée_de_la_centrale_Montemartini_(Rome)_(34321364485).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Le_mus%C3%A9e_de_la_centrale_Montemartini_(Rome)_(34321364485).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Le_mus%C3%A9e_de_la_centrale_Montemartini_%28Rome%29_%2834321364485%29.jpg/960px-Le_mus%C3%A9e_de_la_centrale_Montemartini_%28Rome%29_%2834321364485%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Le_mus%C3%A9e_de_la_centrale_Montemartini_%28Rome%29_%2834321364485%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.0",
+      "attribution": "Jean-Pierre Dalbéra from Paris, France",
+      "author": "Jean-Pierre Dalbéra from Paris, France",
+      "width": 1525,
+      "height": 1200,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "0_'Sanglier'_-_Musei_Capitolini_-_Centrale_Montemartini_à_Rome.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:0_'Sanglier'_-_Musei_Capitolini_-_Centrale_Montemartini_%C3%A0_Rome.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/0_%27Sanglier%27_-_Musei_Capitolini_-_Centrale_Montemartini_%C3%A0_Rome.JPG/960px-0_%27Sanglier%27_-_Musei_Capitolini_-_Centrale_Montemartini_%C3%A0_Rome.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/0_%27Sanglier%27_-_Musei_Capitolini_-_Centrale_Montemartini_%C3%A0_Rome.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "Jean-Pol GRANDMONT",
+      "author": "Jean-Pol GRANDMONT",
+      "width": 3888,
+      "height": 2592,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "0100_Centrale_Montemartini_-_Frammenti_da_esedra_funebre_di_guerriero_(attribuzione_a_Publius_Ventidius_Bassus,_vincitore_dei_Parti_nel_39_a.c.)_I_sec._a.c.,_da_Via_Druso.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:0100_Centrale_Montemartini_-_Frammenti_da_esedra_funebre_di_guerriero_(attribuzione_a_Publius_Ventidius_Bassus%2C_vincitore_dei_Parti_nel_39_a.c.)_I_sec._a.c.%2C_da_Via_Druso.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/0100_Centrale_Montemartini_-_Frammenti_da_esedra_funebre_di_guerriero_%28attribuzione_a_Publius_Ventidius_Bassus%2C_vincitore_dei_Parti_nel_39_a.c.%29_I_sec._a.c.%2C_da_Via_Druso.jpg/960px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/0100_Centrale_Montemartini_-_Frammenti_da_esedra_funebre_di_guerriero_%28attribuzione_a_Publius_Ventidius_Bassus%2C_vincitore_dei_Parti_nel_39_a.c.%29_I_sec._a.c.%2C_da_Via_Druso.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Luciano Tronati",
+      "author": "Luciano Tronati",
+      "width": 5210,
+      "height": 2295,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Le_musée_de_la_centrale_Montemartini_(Rome)_(34321364485).jpg"
+}

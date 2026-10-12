@@ -1,0 +1,84 @@
+{
+  "introduction": {
+    "text": "Forte Casilina is one of Rome’s 15 19th‑century forts, built between 1877 and 1891 to defend the city. It played a role in the city’s military history and is now the focus of restoration projects that aim to return it to public use.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "defensive_ring",
+        "description": "Forte Casilina was part of Rome's fortification ring built between 1871 and 1885.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1871,
+          "precision": "exact",
+          "endYear": 1885,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "construction",
+        "description": "Construction of Forte Casilina began in 1881 and was completed in 1882.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1881,
+          "precision": "exact",
+          "endYear": 1882,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "naming",
+        "description": "The fort was named Forte Casilina by royal decree on 1 November 1882.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1882,
+          "precision": "exact",
+          "endYear": 1882,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "postwar_storage",
+        "description": "After the war, the fort served as a storage facility for air squadron logistics until May 1965.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1965,
+          "precision": "exact",
+          "endYear": 1965,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "ww2_use",
+        "description": "During World War II, the fort was used by German troops stationed at the nearby airport.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "current_restoration",
+        "description": "Presently, projects are underway to restore the fort for public use.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "layout",
+        "description": "The fort’s layout is a trapezoidal shape with a single entrance on the longer side, a dry moat, and internal service rooms.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Luigi Durand de la Penne (1838)",
+      "personId": "luigi-durand-de-la-penne-1838",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Torlonia",
+      "personId": "torlonia",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

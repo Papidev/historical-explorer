@@ -1,0 +1,63 @@
+{
+  "id": "bernard-of-clairvaux",
+  "name": "Bernard of Clairvaux",
+  "wikidataId": "Q188411",
+  "wikipediaTitle": "Bernard of Clairvaux",
+  "content": {
+    "description": [
+      {
+        "text": "Bernard of Clairvaux was a 12th‑century French abbot, mystic, and influential reformer of the Benedictine order through the Cistercian movement. He founded Clairvaux Abbey in 1115 and oversaw the rapid expansion of the Cistercian order, establishing more than sixty monasteries across Europe.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Bernard also played a decisive diplomatic role in church politics, supporting Pope Innocent II during the 1130 schism, and he was a key figure in the Council of Troyes where he outlined the early rules of the Knights Templar. His preaching, especially the famous sermon at Vézelay in 1146, helped rally support for the Second Crusade, though the campaign ultimately failed.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was canonized 21 years after his death and declared a Doctor of the Church in 1830.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Bernard was a co‑founder of the Knights Templar, contributing to the early structure of the order at the Council of Troyes.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1090,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1153,
+      "month": 8,
+      "day": 20,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Bernhard_von_Clairvaux_(Initiale-B).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Bernhard_von_Clairvaux_(Initiale-B).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Bernhard_von_Clairvaux_%28Initiale-B%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Bernhard_von_Clairvaux_%28Initiale-B%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 208,
+    "height": 250,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Bernard of Clairvaux",
+    "url": "https://en.wikipedia.org/wiki/Bernard_of_Clairvaux"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:39:43.449Z"
+  }
+}

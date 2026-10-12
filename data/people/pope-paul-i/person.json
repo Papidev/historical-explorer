@@ -1,0 +1,67 @@
+{
+  "id": "pope-paul-i",
+  "name": "Pope Paul I",
+  "wikidataId": "Q103404",
+  "wikipediaTitle": "Pope Paul I",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Paul I was born around the year 700 into the Roman aristocratic Orsini family and received his early ecclesiastical training at the Lateran Palace. He served as a Roman deacon and was frequently employed by his brother, Pope Stephen II, in diplomatic negotiations with the Lombard kings. After Stephen’s death on 26 April 757, Paul prevailed over a faction that wanted to elevate Archdeacon Theophylact to the papacy and was elected by the majority who sought continuity of Stephen’s policies.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his decade-long pontificate, Paul I navigated a complex web of political alliances, maintaining a delicate balance between the Frankish king Pepin the Short and the Lombard king Desiderius while also managing tensions with the Eastern Roman emperor. He wrote to Pepin urging the preservation of the Frankish alliance and later to Desiderius, demanding the return of Lombard hostages held by the Franks. Despite limited success in these negotiations, Pepin eventually acted as an arbiter between Rome and the Lombards, restoring papal privileges in several Italian duchies. Paul I died in Rome on 28 June 767.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Paul I was a member of the influential Orsini family, one of Rome’s prominent aristocratic lineages.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as a Roman deacon before becoming pope, a role that involved significant diplomatic work with Lombard rulers.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his pontificate, Paul I had to write to Pepin the Short to secure the Frankish alliance and to Desiderius to negotiate the return of Lombard hostages, illustrating the papacy’s active engagement in secular politics.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 700,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 767,
+      "month": 6,
+      "day": 28,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Paus_Paulus_I_Paulus_primus_(titel_op_object)_Liber_Chronicarum_(serietitel,_RP-P-2016-49-56-10).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Paus_Paulus_I_Paulus_primus_(titel_op_object)_Liber_Chronicarum_(serietitel%2C_RP-P-2016-49-56-10).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/83/Paus_Paulus_I_Paulus_primus_%28titel_op_object%29_Liber_Chronicarum_%28serietitel%2C_RP-P-2016-49-56-10%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/83/Paus_Paulus_I_Paulus_primus_%28titel_op_object%29_Liber_Chronicarum_%28serietitel%2C_RP-P-2016-49-56-10%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC0",
+    "attribution": "Rijksmuseum",
+    "author": "Rijksmuseum",
+    "width": 801,
+    "height": 1079,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Paul I",
+    "url": "https://en.wikipedia.org/wiki/Pope_Paul_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:59:54.886Z"
+  }
+}

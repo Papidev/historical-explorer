@@ -1,0 +1,77 @@
+{
+  "id": "onofrio-panvinio",
+  "name": "Onofrio Panvinio",
+  "wikidataId": "Q1771889",
+  "wikipediaTitle": "Onofrio Panvinio",
+  "content": {
+    "description": [
+      {
+        "text": "Onofrio Panvinio was born in Verona on 23 February 1529 and entered the Augustinian order at the age of eleven. He moved to Rome in 1539, where the city’s topography, epigraphy, and the histories of its ancient and medieval writers captivated him, setting the stage for a lifetime of scholarly pursuit.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After earning a Bachelor of Arts in 1553 and a Doctor of Theology in 1557, Panvinio served as a teacher for novices in Rome and Florence, and later became the corrector and reviser of the Vatican Library’s books in 1556. He produced a celebrated archaeological map of ancient Rome in 1565, collaborated with the French engraver Étienne Dupérac on illustrated editions, and was appointed librarian to Cardinal Alessandro Farnese, with whom he traveled until his death in Palermo in 1568.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He declined an offer to become a bishop, preferring instead the scholarly work of revising the Vatican Library’s texts.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The renowned printer Paulus Manutius dubbed him \"antiquitatis helluo,\" meaning a glutton for antiquity, while the scholar Julius Caesar Scaliger called him \"pater omnis historiae,\" or father of all history.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A portrait of Panvinio painted by Tintoretto hangs in the Galleria Colonna in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He died in Palermo while accompanying Cardinal Farnese to the Synod of Monreale in 1568.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His archaeological map of Rome, produced in 1565, was one of the earliest detailed representations of the city’s ancient remains.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1529,
+      "month": 2,
+      "day": 23,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1568,
+      "month": 4,
+      "day": 27,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Jacopo_Tintoretto_-_Portrait_of_Onofrio_Panvinio_-_79_-_Palazzo_Colonna.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Jacopo_Tintoretto_-_Portrait_of_Onofrio_Panvinio_-_79_-_Palazzo_Colonna.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Jacopo_Tintoretto_-_Portrait_of_Onofrio_Panvinio_-_79_-_Palazzo_Colonna.jpg/960px-Jacopo_Tintoretto_-_Portrait_of_Onofrio_Panvinio_-_79_-_Palazzo_Colonna.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Jacopo_Tintoretto_-_Portrait_of_Onofrio_Panvinio_-_79_-_Palazzo_Colonna.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Jacopo Tintoretto",
+    "author": "Jacopo Tintoretto",
+    "width": 1646,
+    "height": 2048,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Onofrio Panvinio",
+    "url": "https://en.wikipedia.org/wiki/Onofrio_Panvinio"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:08:39.789Z"
+  }
+}

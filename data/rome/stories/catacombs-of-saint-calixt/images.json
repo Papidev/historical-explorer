@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Catacombe.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Catacombe.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Catacombe.jpg/960px-Catacombe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/08/Catacombe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "User GerardM on nl.wikipedia",
+      "author": "User GerardM on nl.wikipedia",
+      "width": 1600,
+      "height": 1200,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Geschichte_Roms_und_der_Papste_im_Mittelalter_1898_(143026286).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Geschichte_Roms_und_der_Papste_im_Mittelalter_1898_(143026286).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Geschichte_Roms_und_der_Papste_im_Mittelalter_1898_%28143026286%29.jpg/960px-Geschichte_Roms_und_der_Papste_im_Mittelalter_1898_%28143026286%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Geschichte_Roms_und_der_Papste_im_Mittelalter_1898_%28143026286%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Hartmann Grisar",
+      "author": "Hartmann Grisar",
+      "width": 2988,
+      "height": 4392,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Sculture_e_pitture_sagre_estratte_dai_cimiterj_di_Roma_-_pubblicate_gia_dagli_autori_della_Roma_sotterranea_ed_ora_nuovamente_date_in_luce_colle_spiegazioni_per_ordine_di_n._s._Clemente_XII_(1737)_(14596603949).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Sculture_e_pitture_sagre_estratte_dai_cimiterj_di_Roma_-_pubblicate_gia_dagli_autori_della_Roma_sotterranea_ed_ora_nuovamente_date_in_luce_colle_spiegazioni_per_ordine_di_n._s._Clemente_XII_(1737)_(14596603949).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Sculture_e_pitture_sagre_estratte_dai_cimiterj_di_Roma_-_pubblicate_gia_dagli_autori_della_Roma_sotterranea_ed_ora_nuovamente_date_in_luce_colle_spiegazioni_per_ordine_di_n._s._Clemente_XII_%281737%29_%2814596603949%29.jpg/960px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Sculture_e_pitture_sagre_estratte_dai_cimiterj_di_Roma_-_pubblicate_gia_dagli_autori_della_Roma_sotterranea_ed_ora_nuovamente_date_in_luce_colle_spiegazioni_per_ordine_di_n._s._Clemente_XII_%281737%29_%2814596603949%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "No restrictions",
+      "attribution": "Bottari, Giovanni Gaetano, 1689-1775",
+      "author": "Bottari, Giovanni Gaetano, 1689-1775",
+      "width": 2867,
+      "height": 2134,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Catacombe.jpg"
+}

@@ -1,0 +1,67 @@
+{
+  "id": "phocas",
+  "name": "Phocas",
+  "wikidataId": "Q31556",
+  "wikipediaTitle": "Phocas",
+  "content": {
+    "description": [
+      {
+        "text": "Phocas, a middle‑ranking officer in the Eastern Roman army, rose to prominence as the spokesman for disgruntled soldiers during Emperor Maurice’s reign. In 602, when the Thracian army rebelled over unpaid wages and harsh winter campaigns, Phocas became the de facto leader of the mutiny, marched to Constantinople, and forced Maurice to abdicate and be executed. His coronation on 23 November 602 marked the beginning of a reign that was immediately challenged by internal purges and external threats.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his eight‑year rule, Phocas struggled to maintain control over a fractured empire. He faced a massive Sasanian invasion that seized eastern provinces, while the exarch of Africa, Heraclius the Elder, fomented rebellion that culminated in Heraclius the Younger’s capture of Constantinople on 5 October 610. Phocas was executed the same day, ending a reign remembered for ruthless suppression of opposition and the collapse of Byzantine territorial integrity.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Phocas was consistently depicted with a beard on coinage and in portraits, a style that became the norm for Byzantine emperors until the empire’s end.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 608, a gilded statue of Phocas was erected on a monumental column in the Roman Forum, known as the Column of Phocas, the only public structure built with taxes in Rome during his reign.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Phocas issued a decree recognizing Boniface III as the universal bishop and declared Rome \"the head of all churches,\" a move that influenced later discussions of papal primacy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 547,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 610,
+      "month": 10,
+      "day": 5,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Phocas_cons.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Phocas_cons.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Phocas_cons.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Phocas_cons.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Wikipedia",
+    "author": "Wikipedia",
+    "width": 774,
+    "height": 324,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Phocas",
+    "url": "https://en.wikipedia.org/wiki/Phocas"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:58:26.402Z"
+  }
+}

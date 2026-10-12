@@ -1,0 +1,61 @@
+{
+  "id": "ammiano-marcellino",
+  "name": "Ammiano Marcellino",
+  "wikidataId": "Q172198",
+  "wikipediaTitle": "Ammiano Marcellino",
+  "content": {
+    "description": [
+      {
+        "text": "Ammiano Marcellino, a Roman historian of the late fourth century, was born in Antioch in Syria, a city steeped in Hellenistic culture. Despite his eastern origins, he composed his entire body of work in Latin, positioning himself as a successor to Tacitus and continuing the Roman historical narrative from the reign of Nerva (96) to the catastrophic Battle of Adrianople (378). His principal work, the Res Gestae, was intended as a comprehensive chronicle of the Roman Empire’s political and military affairs during this turbulent period.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Marcellino’s career was marked by active military service; he entered the army under Emperor Constantine II and served as a protector domestici, a position reserved for those of noble birth. He participated in campaigns against the Persian king Shapur II, followed the emperor Julian on the ill‑fated Persian expedition, and later witnessed the trials of Teodor, the successor of Valens, in Antioch. After retiring from active duty, he settled in Antioch and later Rome, where he delivered public readings of his Res Gestae, earning the admiration of contemporaries such as Libanius. The exact dates of his birth and death remain unknown, though he was likely still alive in 397 and may have died shortly thereafter.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Although born in the Hellenistic city of Antioch, Ammiano wrote his history entirely in Latin, reflecting his deep identification with Roman culture.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Res Gestae originally comprised 31 books, but only 18 survive, covering the years 353 to 378.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Marcellino’s status as a protector domestici indicates that he was of noble birth and held a prestigious position within the imperial household.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was present at the trial of Teodor, the successor of Valens, and recorded the torture and execution of many witnesses in Antioch.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Ammianus_Marcellinus.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ammianus_Marcellinus.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Ammianus_Marcellinus.jpg/960px-Ammianus_Marcellinus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Ammianus_Marcellinus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0",
+    "attribution": "Author of the original work of art is long dead, while the uploader of the picture portraying it released it under a CC BY 3.0 license.",
+    "author": "Author of the original work of art is long dead, while the uploader of the picture portraying it released it under a CC BY 3.0 license.",
+    "width": 1357,
+    "height": 1920,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Ammiano Marcellino",
+    "url": "https://it.wikipedia.org/wiki/Ammiano_Marcellino"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:13:55.427Z"
+  }
+}

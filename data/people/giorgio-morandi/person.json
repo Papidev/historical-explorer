@@ -1,0 +1,73 @@
+{
+  "id": "giorgio-morandi",
+  "name": "Giorgio Morandi",
+  "wikidataId": "Q309618",
+  "wikipediaTitle": "Giorgio Morandi",
+  "content": {
+    "description": [
+      {
+        "text": "Giorgio Morandi was born in Bologna on 20 July 1890 and spent almost his entire life in that city, where he studied at the Accademia di Belle Arti from 1907 to 1913. After a brief foray into Futurism in 1914, he returned to still‑life painting, a genre he would refine for the rest of his career. During World War I he served in the army, suffered a breakdown, and was discharged; the experience sharpened his focus on the quiet, ordered world of bottles, bowls and vases that would become his signature motif.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In the post‑war years Morandi abandoned the rhetoric of the avant‑garde and developed a subtle, almost meditative language of muted tones and restrained composition. His mature works, small in scale and dominated by domestic objects, reveal a meticulous investigation of light, volume and spatial tension, and they earned him first prize at the Venice Biennale in 1948. Though he was briefly arrested in 1943 for his sympathies with the Fascist party, his art remained largely untainted by politics, and he is now regarded as a forerunner of minimalism whose influence can be traced in the work of artists such as Philip Guston and Frank Gehry.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He served as a professor of etching at the Accademia di Belle Arti from 1930 to 1956.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was briefly arrested in 1943 because of his friendships with anti‑Fascist figures, despite his earlier sympathy for the Fascist party.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His portrait on his family tomb in the Certosa di Bologna was painted by Giacomo Manzù.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He won the Grand Prize for engraving at the São Paulo Art Biennial in 1953 and the Grand Prize for painting in 1957.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1890,
+      "month": 7,
+      "day": 20,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1964,
+      "month": 6,
+      "day": 18,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Giorgio_Morandi,_cropped.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Giorgio_Morandi%2C_cropped.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Giorgio_Morandi%2C_cropped.jpg/960px-Giorgio_Morandi%2C_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/61/Giorgio_Morandi%2C_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "AnonymousUnknown author / Imagno",
+    "author": "AnonymousUnknown author / Imagno",
+    "width": 1302,
+    "height": 1736,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giorgio Morandi",
+    "url": "https://en.wikipedia.org/wiki/Giorgio_Morandi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:41:26.158Z"
+  }
+}

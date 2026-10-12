@@ -1,0 +1,65 @@
+{
+  "id": "valerian-emperor",
+  "name": "Valerian",
+  "wikidataId": "Q46750",
+  "wikipediaTitle": "Valerian (emperor)",
+  "content": {
+    "description": [
+      {
+        "text": "Valerian rose to the Roman throne during the turbulent Crisis of the Third Century, a period marked by rapid changes in leadership and external threats. Born around 199 CE into a senatorial family, he had a modest political career before being proclaimed emperor by the troops of the Raetian legion after the death of Aemilianus in 253 CE. He immediately appointed his son, Gallienus, as co‑emperor, a move that helped stabilize the western part of the empire while he focused on the eastern front against the Sassanid Persians.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Valerian’s reign ended in dramatic fashion when he was defeated and captured by Persian king Shapur I at the Battle of Edessa in 260 CE, becoming the first Roman emperor ever taken prisoner. While in captivity, he was subjected to harsh treatment and was forced to issue a ransom, and his death in Persian hands—whether by flaying, molten gold, or other means—remains a subject of debate among historians. During his reign he also issued harsh anti‑Christian edicts, ordering the persecution and execution of numerous Christian leaders, a policy that was reversed after his son Gallienus took the throne.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Valerian was the first Roman emperor to be taken captive in battle, a humiliation that shocked the empire and led to widespread instability.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He appointed his son Gallienus as co‑emperor in 253 CE, a rare instance of a Roman emperor sharing power with his heir during the Crisis of the Third Century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Valerian’s persecution of Christians included the execution of several prominent saints such as Pope Sixtus II, Saint Lawrence, and Saint Prudent, illustrating the severity of his anti‑Christian policies.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 199,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 260,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Aureus_Valerian-RIC_0034-transparent.png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Aureus_Valerian-RIC_0034-transparent.png",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Aureus_Valerian-RIC_0034-transparent.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Aureus_Valerian-RIC_0034-transparent.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Classical Numismatic Group, Inc. http://www.cngcoins.com",
+    "author": "http://www.cngcoins.com/Coin.aspx?CoinID=16714",
+    "width": 416,
+    "height": 200,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Valerian (emperor)",
+    "url": "https://en.wikipedia.org/wiki/Valerian_(emperor)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:08:31.284Z"
+  }
+}

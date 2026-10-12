@@ -1,0 +1,71 @@
+{
+  "id": "ciro-ferri",
+  "name": "Ciro Ferri",
+  "wikidataId": "Q975452",
+  "wikipediaTitle": "Ciro Ferri",
+  "content": {
+    "description": [
+      {
+        "text": "Ciro Ferri was born in Rome in 1634 and became the chief pupil and successor of the celebrated Baroque master Pietro da Cortona.  Under Cortona’s guidance Ferri worked on the extensive fresco decorations of the Quirinal Palace between 1656 and 1659, and later helped complete the frescoed ceilings of the Pitti Palace in Florence from 1659 to 1665.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After establishing himself as an independent artist, Ferri produced a series of scriptural frescoes in the Basilica di Santa Maria Maggiore in Bergamo and an altarpiece of St Ambrose Healing the Sick for Sant'Ambrogio della Massima in Rome.  In 1670 he began painting the cupola of Sant'Agnese in Agone, a project that would be finished posthumously by Sebastiano Corbellini in 1693.  Beyond painting, Ferri served as an architect, directed Florentine students in Rome, and was a member of the Accademia di San Luca from 1657.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Ferri was appointed to direct the Florentine students in Rome, and among his leading pupils was the painter Anton Domenico Gabbiani.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He created a bronze ciborium for the high altar of Santa Maria in Vallicella, regarded as a masterpiece of 17th‑century decorative sculpture.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ferri was responsible for the reliquary of the Arm of St. John the Baptist, which is housed in St John’s Co‑Cathedral in Malta.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He contributed five illustrations to the missal of Pope Alexander VII Chigi, published in 1662.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1634,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1689,
+      "month": 9,
+      "day": 13,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Image_from_page_13_of_\"Serie_degli_uomini_i_più_illustri_nella_pittura,_scultura,_e_architettura_-_con_i_loro_elogi,_e_ritratti_incisi_in_rame_cominciando_dalla_sua_prima_restaurazione_fino_ai_tempi_presenti_..\"_(1769).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Image_from_page_13_of_%22Serie_degli_uomini_i_pi%C3%B9_illustri_nella_pittura%2C_scultura%2C_e_architettura_-_con_i_loro_elogi%2C_e_ritratti_incisi_in_rame_cominciando_dalla_sua_prima_restaurazione_fino_ai_tempi_presenti_..%22_(1769).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Image_from_page_13_of_%22Serie_degli_uomini_i_pi%C3%B9_illustri_nella_pittura%2C_scultura%2C_e_architettura_-_con_i_loro_elogi%2C_e_ritratti_incisi_in_rame_cominciando_dalla_sua_prima_restaurazione_fino_ai_tempi_presenti_..%22_%281769%29.jpg/960px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Image_from_page_13_of_%22Serie_degli_uomini_i_pi%C3%B9_illustri_nella_pittura%2C_scultura%2C_e_architettura_-_con_i_loro_elogi%2C_e_ritratti_incisi_in_rame_cominciando_dalla_sua_prima_restaurazione_fino_ai_tempi_presenti_..%22_%281769%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC0",
+    "attribution": "Internet Archive Book Images",
+    "author": "Internet Archive Book Images",
+    "width": 1592,
+    "height": 2048,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Ciro Ferri",
+    "url": "https://en.wikipedia.org/wiki/Ciro_Ferri"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:26:27.197Z"
+  }
+}

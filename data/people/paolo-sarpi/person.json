@@ -1,0 +1,77 @@
+{
+  "id": "paolo-sarpi",
+  "name": "Paolo Sarpi",
+  "wikidataId": "Q1349158",
+  "wikipediaTitle": "Paolo Sarpi",
+  "content": {
+    "description": [
+      {
+        "text": "Paolo Sarpi was a Venetian Servite friar whose sharp criticism of papal authority and defense of republican liberties made him a celebrated figure in early modern Europe.  He argued that the clergy should be subject to secular courts and that the papacy could not impose its will on a sovereign state, a stance that earned him the support of the Venetian Senate during the interdict crisis of 1605‑1607 and the war with Austria over the Uskok pirates.  His polemical writings, especially the History of the Council of Trent, were so influential that they inspired later historians such as Hobbes and Gibbon to challenge the traditional narratives of priestcraft.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond his political activism, Sarpi was a prolific scholar and experimental scientist.  He championed the Copernican system, corresponded with Galileo Galilei, and studied anatomy, astronomy, and ballistics at the University of Padua.  He also published pamphlets defending Venice’s maritime rights and advocated for the removal of censorship of news, positioning him as an early proponent of press freedom.  In 1607 he survived an assassination attempt by a defrocked friar and his accomplices, a plot uncovered by Venetian authorities that highlighted the danger he faced from papal adversaries.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Sarpi’s last words, “Esto perpetua” (may she endure forever), were later adopted as the state motto of Idaho and appear on the 2007 Idaho quarter.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a patron of Galileo Galilei and a strong proponent of the Copernican heliocentric model, which he promoted through his scientific correspondence.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1607 Sarpi survived an assassination attempt by a defrocked friar and two brothers‑in‑law who had been hired by the papal court; the plot was uncovered and the would‑be assassins were arrested.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sarpi’s pamphlets defending Venice’s rights over the Adriatic and his advocacy for the removal of censorship of the Avvisi made him an early advocate of freedom of the press, even though the concept did not yet exist in his lifetime.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His History of the Council of Trent was so critical of the papacy that it inspired later historians like Hobbes and Gibbon to write their own historical debunkings of priestcraft.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1552,
+      "month": 8,
+      "day": 14,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1623,
+      "month": 1,
+      "day": 15,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Paolo_Sarpi_2.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Paolo_Sarpi_2.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Paolo_Sarpi_2.jpg/960px-Paolo_Sarpi_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/Paolo_Sarpi_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 4.0",
+    "attribution": "Mezzotint by William Dickinson, 1777, after F. Zucchero, 1777",
+    "author": "Mezzotint by William Dickinson, 1777, after F. Zucchero, 1777",
+    "width": 1154,
+    "height": 1452,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Paolo Sarpi",
+    "url": "https://en.wikipedia.org/wiki/Paolo_Sarpi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:51:08.569Z"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "elmar-hillebrand",
+  "name": "Elmar Hillebrand",
+  "wikidataId": "Q881019",
+  "wikipediaTitle": "Elmar Hillebrand",
+  "content": {
+    "description": [
+      {
+        "text": "Elmar Hillebrand was born in Cologne on 11 October 1925. After finishing high school at Apostelgymnasium in 1943, he served in the military and was taken as a prisoner of war. He returned to study sculpture at the Düsseldorf Art Academy from 1946 to 1950 under Joseph Enseling and later as a master student with Ewald Mataré and Joseph Beuys. He also studied at the Académie de la Grande Chaumière in Paris with Ossip Zadkine and travelled abroad, including to Algeria, before exhibiting his first works in 1952.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Hillebrand’s career was marked by a close collaboration with architects and fellow artists of the Cologne School. He taught sculpture at RWTH Aachen University, becoming a full professor in 1967 and retiring as emeritus in 1988. He was a signatory of the 1968 Marburg Manifesto, opposing university co‑determination. His public commissions include the main altar of Cologne Cathedral, a statue of St. Francis in the lobby of the United Nations City in Vienna, and a statue of Cardinal Joseph Frings on the Cologne Council Tower, among many other altars, fountains, and weather vanes across Germany and beyond.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 1968 Hillebrand was one of the signatories of the Marburg Manifesto, a collective statement by professors from RWTH Aachen University opposing the emerging co‑determination at universities.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The main altar of Cologne Cathedral is considered Hillebrand’s principal work, reflecting his close collaboration with architects such as Hans Schilling and Gottfried Böhm during the cathedral’s reconstruction.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A bronze statue of St. Francis created by Hillebrand stands in the lobby of the United Nations City in Vienna, showcasing his international reach.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Hillebrand sculpted a statue of Cardinal Joseph Frings that now graces the Cologne Council Tower, a prominent public monument in the city.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In May 2011 he donated his estate from 1952 to 2009 to the historical archive of the Archdiocese of Cologne, ensuring the preservation of his artistic legacy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1925,
+      "month": 10,
+      "day": 11,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 2016,
+      "month": 1,
+      "day": 8,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Elmar Hillebrand",
+    "url": "https://en.wikipedia.org/wiki/Elmar_Hillebrand"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:37:17.175Z"
+  }
+}

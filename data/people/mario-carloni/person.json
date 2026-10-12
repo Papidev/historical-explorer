@@ -1,0 +1,77 @@
+{
+  "id": "mario-carloni",
+  "name": "Mario Carloni",
+  "wikidataId": "Q10326466",
+  "wikipediaTitle": "Mario Carloni",
+  "content": {
+    "description": [
+      {
+        "text": "Mario Carloni was born on 27 December 1894 in Italy and began his military career as a volunteer in the 5th Regiment of Bersaglieri in 1912. He served in World War I and continued to rise through the ranks, reaching the rank of colonel by 1940. During World War II he fought in Greece, on the Russian front, and in the Italian Campaign, where his son Bruno was killed in 1942.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the 1943 Italian Armistice, Carloni was briefly imprisoned by the Germans before joining the Italian Social Republic, where he was appointed commander of the 4th \"Monte Rosa\" Alpine Division. He led the German‑Italian forces in the 1944 battle of Garfagnana, defeating the U.S. 92nd \"Buffalo\" Division, and was promoted to general of division on 1 March 1945. He surrendered to the Brazilian Expeditionary Force on 29 April 1945, was later prosecuted by the U.S. Army for the murder of Lieutenant Alfred Lyth but was acquitted, and was released from Italian custody in 1951 after being demoted and stripped of his RSI awards.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Carloni was promoted to the rank of general of division on 1 March 1945, a rare achievement for an RSI officer.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He surrendered to the Brazilian Expeditionary Force, a unit of the Allied forces that fought in Italy, after the battle of Collecchio.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Carloni was prosecuted by the U.S. Army for the murder of American pilot Lieutenant Alfred Lyth, but he was acquitted and later released from Italian custody in 1951.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the battle of Garfagnana in December 1944, Carloni’s forces defeated the U.S. 92nd \"Buffalo\" Division.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His son Bruno was killed on the Russian front in 1942, a personal loss that marked his wartime experience.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1894,
+      "month": 12,
+      "day": 27,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1962,
+      "month": 1,
+      "day": 30,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Mario_Carloni.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Mario_Carloni.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Mario_Carloni.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Mario_Carloni.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 311,
+    "height": 445,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Mario Carloni",
+    "url": "https://en.wikipedia.org/wiki/Mario_Carloni"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:29:14.193Z"
+  }
+}

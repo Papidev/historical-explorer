@@ -1,0 +1,73 @@
+{
+  "id": "giovanni-domenico-de-cupis",
+  "name": "Giovanni Domenico de Cupis",
+  "wikidataId": "Q249103",
+  "wikipediaTitle": "Giovanni Domenico de Cupis",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Domenico de Cupis was born in 1493 and entered the Roman Curia at a young age, eventually being elevated to the cardinalate by Pope Leo X in a consistory held on 1 July 1517. His early advancement was largely due to the patronage of Pope Julius II, who had previously fathered a daughter with de Cupis’s mother, Lucrezia Normanni, before she married Bernardino de Cupis, Giovanni’s father.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Throughout his career he held a succession of suburbicarian sees—first Albano in 1531, then Sabina in 1532, Porto e Santa Rufina in 1535, and Ostia in 1537—before being appointed Dean of the College of Cardinals in 1541. He also served as Crown-cardinal of the Kingdom of Scotland and was a close friend of Ignatius Loyola, the founder of the Society of Jesus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He served as Crown-cardinal of Scotland, a role that linked the Scottish monarchy to the Roman Curia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a close friend of Ignatius Loyola, the founder of the Jesuit order.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His mother, Lucrezia Normanni, had a daughter with Pope Julius II before marrying his father, making Giovanni a half-nephew of the papal offspring.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He held four different suburbicarian sees in rapid succession, a testament to his influence within the Church hierarchy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was appointed Dean of the College of Cardinals in 1541, the highest office among the cardinals.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1493,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1553,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "1517_JOANNES_DOMINICUS_DE_CUPIS_-_CUPIS_GIOVANNI_DOMENICO.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:1517_JOANNES_DOMINICUS_DE_CUPIS_-_CUPIS_GIOVANNI_DOMENICO.JPG",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/1517_JOANNES_DOMINICUS_DE_CUPIS_-_CUPIS_GIOVANNI_DOMENICO.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/1517_JOANNES_DOMINICUS_DE_CUPIS_-_CUPIS_GIOVANNI_DOMENICO.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 250,
+    "height": 363,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giovanni Domenico de Cupis",
+    "url": "https://en.wikipedia.org/wiki/Giovanni_Domenico_de_Cupis"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:20:58.035Z"
+  }
+}

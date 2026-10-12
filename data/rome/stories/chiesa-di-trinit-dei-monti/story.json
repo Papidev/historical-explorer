@@ -1,0 +1,176 @@
+{
+  "introduction": {
+    "text": "The Church of Santissima Trinità dei Monti, commonly known as Trinità dei Monti, is a Roman Catholic church in Rome situated above the Spanish Steps. Its historical and artistic significance, along with its role as a French national church, make it a notable landmark in the city.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-1494",
+        "description": "In 1494, King Charles VIII of France purchased part of the ancient Gardens of Lucullus and secured papal permission to establish a monastery for the Minim Order.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1494,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1502",
+        "description": "In 1502, Louis XII began construction of the church of Trinità dei Monti to celebrate his successful invasion of the Kingdom of Naples.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1502,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1585",
+        "description": "The present Italian Renaissance church was consecrated in 1585 by Pope Sixtus V.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1585,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1587",
+        "description": "In 1587, the Titulus Santissimae Trinitatis in Monte Pincio was established, making the church a titular church.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1587,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1789",
+        "description": "In 1789, the Obelisco Sallustiano was moved to the front of the church.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1789,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1798",
+        "description": "During the French Revolution, the church suffered partial destruction in 1798.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1798,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1816",
+        "description": "In 1816, the church was restored at the expense of King Louis XVIII after the Bourbon restoration.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1816,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1828",
+        "description": "In 1828, the complex was entrusted to the Religious of the Sacred Heart.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1828,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-2006",
+        "description": "In 2006, the school closed and the complex was transferred to the Monastic Fraternities of Jerusalem.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2006,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-2016",
+        "description": "In 2016, the care of the complex was transferred to the Emmanuel Community.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2016,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-renaissance",
+        "description": "The church was originally begun in a French Gothic style but was ultimately completed in the Italian Renaissance style, featuring a prominent façade possibly designed by Giacomo della Porta and a double staircase by Domenico Fontana.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-works",
+        "description": "The interior houses works by notable artists such as Giambattista Naldini, Daniele da Volterra, Cesare Nebbia, Perino del Vaga, and others, including frescoes and canvases depicting biblical scenes.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Charles VIII of France",
+      "personId": "charles-viii-of-france",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Louis XII",
+      "personId": "louis-xii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Sixtus V",
+      "personId": "pope-sixtus-v",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giacomo Della Porta",
+      "personId": "giacomo-della-porta",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Domenico Fontana",
+      "personId": "domenico-fontana",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Francois Jacquier",
+      "personId": "francois-jacquier",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Andrea Pozzo",
+      "personId": "andrea-pozzo",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Daniele da Volterra",
+      "personId": "daniele-da-volterra",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giambattista Naldini",
+      "personId": "giambattista-naldini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Philippe Barbarin",
+      "personId": "philippe-barbarin",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

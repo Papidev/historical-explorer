@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Santa_Maria_in_Via_-_facciata.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Via_-_facciata.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Santa_Maria_in_Via_-_facciata.jpg/960px-Santa_Maria_in_Via_-_facciata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Santa_Maria_in_Via_-_facciata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Castro Pretorio",
+      "author": "Castro Pretorio",
+      "width": 4976,
+      "height": 7594,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "068SMariaInVia.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:068SMariaInVia.JPG",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fd/068SMariaInVia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fd/068SMariaInVia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "MarkusMark",
+      "author": "MarkusMark",
+      "width": 800,
+      "height": 600,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "069SMariaInVia.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:069SMariaInVia.JPG",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/78/069SMariaInVia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/78/069SMariaInVia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "MarkusMark",
+      "author": "MarkusMark",
+      "width": 525,
+      "height": 700,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Santa_Maria_in_Via_-_facciata.jpg"
+}

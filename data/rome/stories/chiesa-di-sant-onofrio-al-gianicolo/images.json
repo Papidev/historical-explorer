@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Rom,_die_Kirche_Sant'Onofrio_al_Gianicolo.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Rom%2C_die_Kirche_Sant'Onofrio_al_Gianicolo.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Rom%2C_die_Kirche_Sant%27Onofrio_al_Gianicolo.JPG/960px-Rom%2C_die_Kirche_Sant%27Onofrio_al_Gianicolo.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Rom%2C_die_Kirche_Sant%27Onofrio_al_Gianicolo.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "attribution": "Dguendel",
+      "author": "Dguendel",
+      "width": 2551,
+      "height": 1701,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Paolo_Monti_-_Servizio_fotografico_(Roma,_1966)_-_BEIC_6329132.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Paolo_Monti_-_Servizio_fotografico_(Roma%2C_1966)_-_BEIC_6329132.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Paolo_Monti_-_Servizio_fotografico_%28Roma%2C_1966%29_-_BEIC_6329132.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Paolo_Monti_-_Servizio_fotografico_%28Roma%2C_1966%29_-_BEIC_6329132.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Paolo Monti",
+      "author": "Paolo Monti",
+      "width": 862,
+      "height": 1280,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Trastevere_-_sant'Onofrio_-_chiostro_esterno_-_fontana_3104.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Trastevere_-_sant'Onofrio_-_chiostro_esterno_-_fontana_3104.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Trastevere_-_sant%27Onofrio_-_chiostro_esterno_-_fontana_3104.JPG/960px-Trastevere_-_sant%27Onofrio_-_chiostro_esterno_-_fontana_3104.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Trastevere_-_sant%27Onofrio_-_chiostro_esterno_-_fontana_3104.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "user:Lalupa",
+      "author": "user:Lalupa",
+      "width": 2272,
+      "height": 1704,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Rom,_die_Kirche_Sant'Onofrio_al_Gianicolo.JPG"
+}

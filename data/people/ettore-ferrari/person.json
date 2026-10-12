@@ -1,0 +1,85 @@
+{
+  "id": "ettore-ferrari",
+  "name": "Ettore Ferrari",
+  "wikidataId": "Q2570299",
+  "wikipediaTitle": "Ettore Ferrari",
+  "content": {
+    "description": [
+      {
+        "text": "Ettore Ferrari was born in Rome on 25 March 1845 into an artistic family; his father was a painter. He became a professor at the Accademia di San Luca, served as a deputy in the Italian Parliament, and rose to become Grand Master of the Grande Oriente d'Italia, the main Masonic body in Italy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ferrari’s sculptural legacy includes the rough draft plans for the Victor Emmanuel II Monument in 1884, a statue of Ovid erected in Constanţa in 1887 and later duplicated for Sulmona in 1925, a bronze statue of Giuseppe Garibaldi in Pisa (1892), and the controversial Monument to Giordano Bruno in Rome’s Campo de’ Fiori.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was initiated into the Masonic lodge \"Rienzi\" in Rome in 1881 and became its Grand Master in 1892.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "From 1904 to 1917 he served as Grand Master of the Grand Orient of Italy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ferrari was a professor at the Accademia di San Luca, influencing a generation of Italian artists.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His 1887 statue of Ovid for Constanţa was later duplicated in 1925 for Ovid’s birthplace, Sulmona.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1892 he created a bronze statue of Giuseppe Garibaldi that now stands in Pisa’s Garibaldi Square.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He collaborated with Pio Piacentini in 1884 to draft the plans for the Victor Emmanuel II Monument, a key symbol of Italy’s unification.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ferrari sculpted the Monument to Giordano Bruno in Rome’s Campo de’ Fiori, a work that sparked controversy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1845,
+      "month": 3,
+      "day": 25,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1929,
+      "month": 8,
+      "day": 19,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Ettore_Ferrari.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ettore_Ferrari.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/14/Ettore_Ferrari.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/14/Ettore_Ferrari.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "http://www.grandeoriente.it/studi/stmas/15italia1908.htm",
+    "author": "http://www.grandeoriente.it/studi/stmas/15italia1908.htm",
+    "width": 351,
+    "height": 526,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Ettore Ferrari",
+    "url": "https://en.wikipedia.org/wiki/Ettore_Ferrari"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:50:38.254Z"
+  }
+}

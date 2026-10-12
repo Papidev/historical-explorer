@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "BerrettadelpreteAppiaAntica2018.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:BerrettadelpreteAppiaAntica2018.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/BerrettadelpreteAppiaAntica2018.jpg/960px-BerrettadelpreteAppiaAntica2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/BerrettadelpreteAppiaAntica2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Giorgio Pietrocola",
+      "author": "Giorgio Pietrocola",
+      "width": 4000,
+      "height": 3000,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Priest’s_Cap_(End_of_the_3rd_c._CE-Beginning_of_the_4th_c._CE)_-_14570161640.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Priest%E2%80%99s_Cap_(End_of_the_3rd_c._CE-Beginning_of_the_4th_c._CE)_-_14570161640.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Priest%E2%80%99s_Cap_%28End_of_the_3rd_c._CE-Beginning_of_the_4th_c._CE%29_-_14570161640.jpg/960px-Priest%E2%80%99s_Cap_%28End_of_the_3rd_c._CE-Beginning_of_the_4th_c._CE%29_-_14570161640.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/Priest%E2%80%99s_Cap_%28End_of_the_3rd_c._CE-Beginning_of_the_4th_c._CE%29_-_14570161640.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.0",
+      "attribution": "Sarah E. Bond",
+      "author": "Sarah E. Bond",
+      "width": 3264,
+      "height": 2448,
+      "discoveredVia": "wikipedia-page-image",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "BerrettadelpreteAppiaAntica2018.jpg"
+}

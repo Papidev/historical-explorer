@@ -1,0 +1,60 @@
+{
+  "id": "gabriel-de-gramont",
+  "name": "Gabriel de Gramont",
+  "wikidataId": "Q3094019",
+  "wikipediaTitle": "Gabriel de Gramont",
+  "content": {
+    "description": [
+      {
+        "text": "Gabriel de Gramont was born in 1486 in Gascony to Roger de Gramont, the lord of Bidache, and Eléonore de Béarn. He entered the clergy early, being ordained a deacon before 1515, when he was elected Bishop of Couserans. His career advanced quickly: in 1524 he was transferred to the diocese of Tarbes, and he served as maître des suppliques under King Francis I. The king entrusted him with delicate diplomatic missions, sending him to Spain in 1525 to secure Francis’s release and later dispatching him to England in 1526 to persuade Henry VIII to divorce Catherine of Aragon and marry Marguerite de Navarre, the king’s sister.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1529 Gramont was elected Archbishop of Bordeaux, a position he confirmed with the Pope the same year, and he was made a cardinal priest in June 1530. He held the titular churches of San Giovanni a Porta Latina and later Santa Cecilia in Trastevere. He was appointed Bishop of Poitiers in 1532 and, in 1533, negotiated the marriage of Henry, Duke of Orléans, to Catherine de Medici, the Pope’s niece. He was named Archbishop of Toulouse in October 1533 and remained in that post until his death from typhoid fever at the château of Balma on 26 March 1534.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was imprisoned by Charles V in 1526 for his role in the League of Cognac, but was released after the emperor ordered his release.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was sent to England in 1526 to influence Henry VIII’s divorce from Catherine of Aragon and to encourage a marriage with Marguerite de Navarre, the king’s sister.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He received the red hat and the titular church of San Giovanni a Porta Latina on 22 June 1530, before opting for Santa Cecilia in Trastevere in January 1531.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1533 he negotiated the marriage between Henry, Duke of Orléans, and Catherine de Medici, the niece of Pope Clement VII.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He died of typhoid fever at the château of Balma on 26 March 1534 and was buried in the church of Bidache.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1486,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1534,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Gabriel de Gramont",
+    "url": "https://en.wikipedia.org/wiki/Gabriel_de_Gramont"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:21:36.532Z"
+  }
+}

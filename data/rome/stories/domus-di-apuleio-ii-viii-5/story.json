@@ -1,0 +1,81 @@
+{
+  "introduction": {
+    "text": "The Domus di Apuleio is a Roman domus located in the II region of ancient Ostia, notable for its rich mosaics and its association with the inscription of Lucio Apuleio Marcello, possibly the author of the Metamorphoses.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "construction-1st-century",
+        "description": "Construction of the domus likely took place in the 1st century AD, commissioned by Publius Lucilius Gamala.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "remains-2nd-century",
+        "description": "Most of the surviving remains date to the early 2nd century AD, with some later additions.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 101,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "interventions-3rd-century",
+        "description": "Later interventions in the 3rd century AD are also evident in the archaeological record.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 201,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "layout",
+        "description": "The domus features an L-shaped plan with a large courtyard, an impluvium with a fountain bordered by eight marble columns, an atrium on the southern side, a tablinium on the northern side, and a latrine.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "mosaic-charioteer",
+        "description": "A mosaic depicting a charioteer holding a palm of victory.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "mosaic-satyr-maenad",
+        "description": "A mosaic showing a satyr and a maenad.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "mosaic-dolphins-birds",
+        "description": "A mosaic featuring dolphins and birds.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "mosaic-nereids",
+        "description": "A mosaic of nereids riding sea monsters.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Apuleio",
+      "personId": "apuleio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Rodolfo Lanciani",
+      "personId": "rodolfo-lanciani",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

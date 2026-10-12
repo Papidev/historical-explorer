@@ -1,0 +1,77 @@
+{
+  "id": "robert-bellarmine",
+  "name": "Robert Bellarmine",
+  "wikidataId": "Q298664",
+  "wikipediaTitle": "Robert Bellarmine",
+  "content": {
+    "description": [
+      {
+        "text": "Robert Bellarmine was born on 4 October 1542 in Montepulciano, Italy, and entered the Jesuit novitiate in 1560. He rose through the ranks of the Society of Jesus to become a professor of theology, rector of the Roman College, and in 1602 Archbishop of Capua. Bellarmine was a central figure in the Counter‑Reformation, supporting the decrees of the Council of Trent and playing a decisive role in the trials of Giordano Bruno and Galileo, as well as in the controversy with King James I of England.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond his ecclesiastical duties, Bellarmine was a prolific writer and scholar. He authored the extensive *Disputationes de controversiis christianae fidei*, a systematic defense of Catholic doctrine against Protestant arguments, and a catechism approved by Pope Clement VIII. He also composed hymns, including one on Mary Magdalene that entered the Roman Breviary, and wrote a Hebrew grammar. Bellarmine was canonized in 1930 and declared a Doctor of the Church in 1931, cementing his legacy as a leading theologian of his era.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Bellarmine was the first Jesuit to teach at the University of Leuven, where he lectured on Thomas Aquinas’s *Summa Theologica* and earned a reputation as a rigorous scholar.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He wrote a Hebrew grammar, a rare achievement for a Catholic theologian of the 16th century, reflecting his broad linguistic interests.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Bellarmine authored a certificate for Galileo in 1616 that clarified the Church’s position on the Copernican system, allowing Galileo to continue teaching the mathematical aspects of heliocentrism as a theoretical tool.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He composed a hymn on Mary Magdalene that was included in the Roman Breviary, demonstrating his contribution to Catholic liturgical music.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Bellarmine’s *Disputationes* was briefly placed on the Index of Forbidden Books in 1590 by Pope Sixtus V, only to be removed from the Index during the brief reign of Pope Urban VII.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1542,
+      "month": 10,
+      "day": 4,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1621,
+      "month": 9,
+      "day": 17,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Portret_van_kardinaal_Robertus_Bellarminus,_onbekend,_schilderij,_Museum_Plantin-Moretus_(Antwerpen)_-_MPM_V_IV_110_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Portret_van_kardinaal_Robertus_Bellarminus%2C_onbekend%2C_schilderij%2C_Museum_Plantin-Moretus_(Antwerpen)_-_MPM_V_IV_110_(cropped).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Portret_van_kardinaal_Robertus_Bellarminus%2C_onbekend%2C_schilderij%2C_Museum_Plantin-Moretus_%28Antwerpen%29_-_MPM_V_IV_110_%28cropped%29.jpg/960px-Portret_van_kardinaal_Robertus_Bellarminus%2C_onbekend%2C_schilderij%2C_Museum_Plantin-Moretus_%28Antwerpen%29_-_MPM_V_IV_110_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Portret_van_kardinaal_Robertus_Bellarminus%2C_onbekend%2C_schilderij%2C_Museum_Plantin-Moretus_%28Antwerpen%29_-_MPM_V_IV_110_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC0",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 4991,
+    "height": 6480,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Robert Bellarmine",
+    "url": "https://en.wikipedia.org/wiki/Robert_Bellarmine"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:41:37.069Z"
+  }
+}

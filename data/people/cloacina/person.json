@@ -1,0 +1,53 @@
+{
+  "id": "cloacina",
+  "name": "Cloacina",
+  "wikidataId": "Q2879107",
+  "wikipediaTitle": "Cloacina",
+  "content": {
+    "description": [
+      {
+        "text": "Cloacina was a Roman goddess who presided over the Cloaca Maxima, Rome’s ancient sewer and drainage system.  She was seen as a purifier, and her name was linked to Venus as the epithet Venus Cloacina, meaning ‘the purifier’.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A small shrine to Venus Cloacina stood in the Roman Forum, directly above the Cloaca Maxima, and the goddess was commemorated on Roman coins that show the shrine with two female figures.  In later centuries she became a satirical symbol, with writers using her name as a euphemism for the toilet and mocking her as a foul‑smelling deity.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The shrine of Venus Cloacina was located directly above the Cloaca Maxima, indicating the Romans’ belief that the sewer itself had sacred and purifying qualities.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Roman denarii from the late first century BCE depict the shrine of Venus Cloacina, suggesting that the goddess was celebrated in public art and coinage.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Coins-venus-cloacina.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Coins-venus-cloacina.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Coins-venus-cloacina.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Coins-venus-cloacina.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 2.5",
+    "attribution": "CNG",
+    "author": "CNG",
+    "width": 539,
+    "height": 281,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Cloacina",
+    "url": "https://en.wikipedia.org/wiki/Cloacina"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:51:17.041Z"
+  }
+}

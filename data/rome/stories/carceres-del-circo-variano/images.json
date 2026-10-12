@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Pincio-obelisk.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pincio-obelisk.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Pincio-obelisk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Pincio-obelisk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Maus-Trauden",
+      "author": "Maus-Trauden at German Wikipedia",
+      "width": 600,
+      "height": 800,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Circus_Varianus_1.png",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Circus_Varianus_1.png",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Circus_Varianus_1.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Circus_Varianus_1.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Rjdeadly",
+      "author": "Rjdeadly",
+      "width": 786,
+      "height": 648,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Pincio-obelisk.jpg"
+}

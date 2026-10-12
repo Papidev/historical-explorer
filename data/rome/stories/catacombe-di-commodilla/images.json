@@ -1,0 +1,42 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Christ_with_beard.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Christ_with_beard.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Christ_with_beard.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Christ_with_beard.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "width": 558,
+      "height": 595,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Agnello_che_benedice_i_pani,_metà_del_IV_secolo,_affresco_40x28cm_catacomba_di_commodilla,_roma.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Agnello_che_benedice_i_pani%2C_met%C3%A0_del_IV_secolo%2C_affresco_40x28cm_catacomba_di_commodilla%2C_roma.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Agnello_che_benedice_i_pani%2C_met%C3%A0_del_IV_secolo%2C_affresco_40x28cm_catacomba_di_commodilla%2C_roma.jpg/960px-Agnello_che_benedice_i_pani%2C_met%C3%A0_del_IV_secolo%2C_affresco_40x28cm_catacomba_di_commodilla%2C_roma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Agnello_che_benedice_i_pani%2C_met%C3%A0_del_IV_secolo%2C_affresco_40x28cm_catacomba_di_commodilla%2C_roma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "book",
+      "author": "book",
+      "width": 1565,
+      "height": 834,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Catacombe_Comodilla_01.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Catacombe_Comodilla_01.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Catacombe_Comodilla_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Catacombe_Comodilla_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Unknown authorUnknown author",
+      "author": "Unknown authorUnknown author",
+      "width": 895,
+      "height": 1024,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Agnello_che_benedice_i_pani,_metà_del_IV_secolo,_affresco_40x28cm_catacomba_di_commodilla,_roma.jpg"
+}

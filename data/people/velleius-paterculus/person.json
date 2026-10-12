@@ -1,0 +1,85 @@
+{
+  "id": "velleius-paterculus",
+  "name": "Velleius Paterculus",
+  "wikidataId": "Q316098",
+  "wikipediaTitle": "Velleius Paterculus",
+  "content": {
+    "description": [
+      {
+        "text": "Marcus Velleius Paterculus was born into a noble Campanian family around 19 BC, a time when his ancestors had already secured Roman citizenship through their service in the Social War. He began his career as a military tribune in Rome’s eastern provinces, and in AD 2 he accompanied Gaius Caesar’s army to the Euphrates, where he witnessed the meeting with Parthian king Phraates V. Two years later he served as a cavalry prefect under Tiberius in Germania and had already held the post of praefectus castrorum. In AD 7 he was elected quaestor, and in AD 15 he entered the praetorship, a position that had been designated for him by Augustus before the emperor’s death.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Paterculus is best remembered for his two‑volume Roman history, a compendium that spans from the aftermath of the Trojan War to the consulship of Marcus Vinicius in AD 30. Written in a highly rhetorical Silver‑Age Latin style, the work is especially valuable for the period between Caesar’s death in 44 BC and Augustus’s death in AD 14, filling gaps left by Livy’s lost narratives. Though praised for its vivid character portraits and energetic prose, modern scholars note that Paterculus omitted many literary figures such as Plautus, Horace, and Propertius, and that his accounts sometimes reflect the biases of his close association with the courtier Sejanus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He served as a military tribune in Rome’s eastern provinces and was with Gaius Caesar’s army in AD 2.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a cavalry prefect under Tiberius in Germania and had already held the post of praefectus castrorum.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was elected quaestor in AD 7.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was designated praetor by Augustus but elected under Tiberius in AD 15.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He dedicated his history to Marcus Vinicius.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a friend of Sejanus and praised him in his writing.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He likely died soon after Sejanus’ downfall in AD 31.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His history covers the period from the Trojan War to AD 30, but is most useful for 44 BC to AD 14.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -18,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 31,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Marcus_Velleius_Paterculus_krijgt_als_Romeinse_veldheer_wapentrofeeën_aangeboden_Titelpagina_voor_Pieter_Burman,_Gaius_Velleius_Paterculus,_Leiden_1719_C._Velleius_Paterculus_(titel_op_object),_RP-P-BI-1238.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Marcus_Velleius_Paterculus_krijgt_als_Romeinse_veldheer_wapentrofee%C3%ABn_aangeboden_Titelpagina_voor_Pieter_Burman%2C_Gaius_Velleius_Paterculus%2C_Leiden_1719_C._Velleius_Paterculus_(titel_op_object)%2C_RP-P-BI-1238.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Marcus_Velleius_Paterculus_krijgt_als_Romeinse_veldheer_wapentrofee%C3%ABn_aangeboden_Titelpagina_voor_Pieter_Burman%2C_Gaius_Velleius_Paterculus%2C_Leiden_1719_C._Velleius_Paterculus_%28titel_op_object%29%2C_RP-P-BI-1238.jpg/960px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/55/Marcus_Velleius_Paterculus_krijgt_als_Romeinse_veldheer_wapentrofee%C3%ABn_aangeboden_Titelpagina_voor_Pieter_Burman%2C_Gaius_Velleius_Paterculus%2C_Leiden_1719_C._Velleius_Paterculus_%28titel_op_object%29%2C_RP-P-BI-1238.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC0",
+    "attribution": "Rijksmuseum",
+    "author": "Rijksmuseum",
+    "width": 4176,
+    "height": 6130,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Velleius Paterculus",
+    "url": "https://en.wikipedia.org/wiki/Velleius_Paterculus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:56:09.244Z"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "EingangDomusAurea.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:EingangDomusAurea.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/EingangDomusAurea.jpg/960px-EingangDomusAurea.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/EingangDomusAurea.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Rabax63",
+      "author": "Rabax63",
+      "width": 6000,
+      "height": 4000,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "A_handbook_of_Rome_and_the_Campagna_(1899)_(14765451712).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:A_handbook_of_Rome_and_the_Campagna_(1899)_(14765451712).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/A_handbook_of_Rome_and_the_Campagna_%281899%29_%2814765451712%29.jpg/960px-A_handbook_of_Rome_and_the_Campagna_%281899%29_%2814765451712%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/A_handbook_of_Rome_and_the_Campagna_%281899%29_%2814765451712%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "No restrictions",
+      "attribution": "Internet Archive Book Images",
+      "author": "Internet Archive Book Images",
+      "width": 1659,
+      "height": 660,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Pianta_regio_III_da_Lanciani.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pianta_regio_III_da_Lanciani.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Pianta_regio_III_da_Lanciani.jpg/960px-Pianta_regio_III_da_Lanciani.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Pianta_regio_III_da_Lanciani.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Lalupa",
+      "author": "Lalupa",
+      "width": 1049,
+      "height": 892,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "EingangDomusAurea.jpg"
+}

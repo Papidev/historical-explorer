@@ -1,0 +1,77 @@
+{
+  "id": "saint-philip-neri",
+  "name": "Saint Philip Neri",
+  "wikidataId": "Q217791",
+  "wikipediaTitle": "Philip Neri",
+  "content": {
+    "description": [
+      {
+        "text": "Philip Neri was born Filippo Romolo Neri on 21 July 1515 in Florence, the son of a lawyer and a noblewoman.  After a brief apprenticeship in his uncle’s mercantile house, he moved to Rome in 1533, where he began a life of lay ministry, preaching to the poor, prostitutes, and pilgrims, and later becoming a tutor and a deacon before his ordination as a priest in 1551.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In Rome he founded the Congregation of the Oratory in 1556, a society of secular clergy that combined prayer, music, and informal spiritual gatherings.  Neri’s charismatic leadership earned him the title of the “Second Apostle of Rome,” and he played a key role in the Counter‑Reformation by promoting personal holiness, pastoral care, and the use of music such as the laude in worship.  His influence extended beyond Rome when he intervened in 1593–1595 to secure the reconciliation of Henry IV of France with the Church, a political act that earned him both praise and criticism.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was known as the “Second Apostle of Rome,” a title that reflected his widespread influence in the city’s spiritual life.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Neri encouraged the singing of the laude, a form of spiritual song that became a staple of Oratorian worship and influenced later sacred music.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He initiated the tradition of the Seven Churches Walk, a one‑day pilgrimage that combined prayer, music, and a picnic, which later became a popular practice on Holy Week.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Neri’s intervention helped lift the excommunication of Henry IV of France, demonstrating his willingness to engage in political matters for the sake of peace.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was canonised by Pope Gregory XV in 1622, and his feast day is celebrated on 26 May.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1515,
+      "month": 7,
+      "day": 21,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1595,
+      "month": 5,
+      "day": 26,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Chiesa_di_San_Polo_(Venice)_-_Oratorio_del_Crocifisso_-_St._Philip_Neri_by_Giandomenico_Tiepolo.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Chiesa_di_San_Polo_(Venice)_-_Oratorio_del_Crocifisso_-_St._Philip_Neri_by_Giandomenico_Tiepolo.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Chiesa_di_San_Polo_%28Venice%29_-_Oratorio_del_Crocifisso_-_St._Philip_Neri_by_Giandomenico_Tiepolo.jpg/960px-Chiesa_di_San_Polo_%28Venice%29_-_Oratorio_del_Crocifisso_-_St._Philip_Neri_by_Giandomenico_Tiepolo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/27/Chiesa_di_San_Polo_%28Venice%29_-_Oratorio_del_Crocifisso_-_St._Philip_Neri_by_Giandomenico_Tiepolo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Didier Descouens",
+    "author": "Didier Descouens",
+    "width": 3264,
+    "height": 6592,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Philip Neri",
+    "url": "https://en.wikipedia.org/wiki/Philip_Neri"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:46:41.494Z"
+  }
+}

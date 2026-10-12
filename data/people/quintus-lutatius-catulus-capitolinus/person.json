@@ -1,0 +1,52 @@
+{
+  "id": "quintus-lutatius-catulus-capitolinus",
+  "name": "Quintus Lutatius Catulus Capitolinus",
+  "wikidataId": "Q463027",
+  "wikipediaTitle": "Quintus Lutatius Catulus Capitolinus",
+  "content": {
+    "description": [
+      {
+        "text": "Quintus Lutatius Catulus Capitolinus, born around 121 BC, was a Roman politician who earned the agnomen \"Capitolinus\" after defending the city of Rome against the forces of Lepidus in 77 BC.  He was the son of the consul Quintus Lutatius Catulus of 102 BC, and inherited his father’s deep antipathy toward Marius, which shaped his moderate aristocratic stance throughout his career.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Catulus’s political life was marked by a series of high‑profile conflicts: he served as consul in 78 BC alongside Marcus Aemilius Lepidus, defeated Lepidus at the Milvian Bridge and near Cosa, opposed the Gabinian and Manilian laws of 67–66 BC, and repeatedly challenged Julius Caesar’s authority, even attempting to implicate him in the Catilinarian conspiracy.  He briefly held the office of censor before resigning over disagreements with his colleague Crassus, and his legacy continued through his great‑grandson, the emperor Galba, who proudly claimed descent from him.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Catulus earned the agnomen \"Capitolinus\" for his role in defending the capital during the 77 BC conflict with Lepidus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was involved in the reconstruction of the Temple of Jupiter Optimus Maximus after its destruction by fire in 83 BC, a project that bore his name.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His great‑grandson was the emperor Galba, who is recorded as having added the inscription that he was the great‑grandson of Quintus Lutatius Catulus Capitolinus to his statues.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -121,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": -61,
+      "precision": "approximate"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Quintus Lutatius Catulus Capitolinus",
+    "url": "https://en.wikipedia.org/wiki/Quintus_Lutatius_Catulus_Capitolinus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:55:41.887Z"
+  }
+}

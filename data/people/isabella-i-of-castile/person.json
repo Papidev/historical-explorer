@@ -1,0 +1,65 @@
+{
+  "id": "isabella-i-of-castile",
+  "name": "Isabella I of Castile",
+  "wikidataId": "Q45859",
+  "wikipediaTitle": "Isabella I of Castile",
+  "content": {
+    "description": [
+      {
+        "text": "Isabella I of Castile, born on 22 April 1451, became Queen of Castile and León in 1474 and Queen of Aragon in 1479, ruling jointly with her husband Ferdinand II. Their reign, known as the Catholic Monarchs, completed the Reconquista, unified the Iberian kingdoms, and laid the foundations for the Spanish Empire, making Spain a dominant European power.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During her reign she enacted sweeping reforms: she established the Santa Hermandad police force, restructured the royal council, and restored the kingdom’s finances by reclaiming alienated estates. She also financed Christopher Columbus’s 1492 voyage, which opened the New World to Spanish exploration and colonization, and endorsed the first comprehensive grammar of Castilian, promoting the language across the emerging empire.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Isabella was the first woman to be featured on United States postage stamps, appearing on three stamps in the 1893 Columbian Issue.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She was the first woman to be depicted on a U.S. coin, the 1893 commemorative Isabella quarter, celebrating the 400th anniversary of Columbus’s first voyage.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1451,
+      "month": 4,
+      "day": 22,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1504,
+      "month": 11,
+      "day": 26,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Juan_de_Flandes_-_Isabel_la_Católica_(Palacio_Real,_Madrid,_1500-04._Óleo_sobre_tabla,_63_x_55_cm).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Juan_de_Flandes_-_Isabel_la_Cat%C3%B3lica_(Palacio_Real%2C_Madrid%2C_1500-04._%C3%93leo_sobre_tabla%2C_63_x_55_cm).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Juan_de_Flandes_-_Isabel_la_Cat%C3%B3lica_%28Palacio_Real%2C_Madrid%2C_1500-04._%C3%93leo_sobre_tabla%2C_63_x_55_cm%29.jpg/960px-Juan_de_Flandes_-_Isabel_la_Cat%C3%B3lica_%28Palacio_Real%2C_Madrid%2C_1500-04._%C3%93leo_sobre_tabla%2C_63_x_55_cm%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/66/Juan_de_Flandes_-_Isabel_la_Cat%C3%B3lica_%28Palacio_Real%2C_Madrid%2C_1500-04._%C3%93leo_sobre_tabla%2C_63_x_55_cm%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Juan de Flandes",
+    "author": "Juan de Flandes",
+    "width": 1697,
+    "height": 2138,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Isabella I of Castile",
+    "url": "https://en.wikipedia.org/wiki/Isabella_I_of_Castile"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:24:15.668Z"
+  }
+}

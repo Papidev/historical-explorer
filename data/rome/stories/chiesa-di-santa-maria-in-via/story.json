@@ -1,0 +1,161 @@
+{
+  "introduction": {
+    "text": "Chiesa di Santa Maria in Via is a historic church in Rome that has served as a national church for the Ecuadorian community and a site of medieval miracles.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-9th-century",
+        "description": "The site originally hosted a church or chapel in the 9th century, later rebuilt after a reported miracle.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 801,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-1165-recording",
+        "description": "In 1165 the church was recorded as Santa Maria in Via.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1165,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1256-miracle",
+        "description": "On 26 September 1256 a well overflowed and a floating image of Our Lady disappeared, recognized as a miracle by Pope Alexander IV.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1256,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-construction-1491-1513",
+        "description": "Construction of the current church was ordered by Pope Innocent VIII and carried out from 1491 to 1513.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1491,
+          "precision": "approximate",
+          "endYear": 1513,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-servite-order-1513",
+        "description": "The Servite Order began serving the church following a grant by Pope Leo X in 1513.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1513,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-titulus-1551",
+        "description": "The titular church of Santa Maria in Via was instituted by Pope Julius III in 1551.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1551,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-completion-1604",
+        "description": "The works on the church were completed under Cardinal Saint Robert Bellarmine in 1604.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1604,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-facade-1660",
+        "description": "The façade and portico were designed by Pietro da Cortona in 1660.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1660,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-renovations",
+        "description": "Renovations were performed under Francesco da Volterra and later by Carlo Lombardi.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design-facade",
+        "description": "The façade and portico were designed by Pietro da Cortona in 1660.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-altar",
+        "description": "The main altar was decorated by Santi Ghetti.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-renovations",
+        "description": "Renovations were performed under Francesco da Volterra and later by Carlo Lombardi.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Pietro Capocci",
+      "personId": "pietro-capocci",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Alexander IV",
+      "personId": "pope-alexander-iv",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Innocent VIII",
+      "personId": "pope-innocent-viii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Leo X",
+      "personId": "pope-leo-x",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Julius III",
+      "personId": "pope-julius-iii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pietro da Cortona",
+      "personId": "pietro-da-cortona",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Robert Bellarmine",
+      "personId": "robert-bellarmine",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Francesco da Volterra",
+      "personId": "francesco-da-volterra",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Carlo Lombardi",
+      "personId": "carlo-lombardi",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

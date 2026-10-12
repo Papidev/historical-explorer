@@ -1,0 +1,77 @@
+{
+  "id": "pius-xi",
+  "name": "Pius XI",
+  "wikidataId": "Q42323",
+  "wikipediaTitle": "Pope Pius XI",
+  "content": {
+    "description": [
+      {
+        "text": "Ambrogio Damiano Achille Ratti was born in Desio, Italy, on 31 May 1857. He entered the priesthood in 1879 and spent the next decade as a scholar, earning doctorates in philosophy, canon law and theology from the Gregorian University. Ratti became a professor at a seminary in Padua and later the head of the Ambrosian Library in Milan, where he reorganised its collections and published an edition of the Ambrosian Missal. An avid mountaineer, he climbed Mont Blanc, the Matterhorn and the Dufourspitze, and wrote several mountaineering books, a combination of scholarship and athleticism that was rare among churchmen of his time.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1922 he was elected pope as Pius XI and immediately set about resolving the long‑standing conflict between the papacy and the Italian state. The Lateran Treaty of 1929 recognised Vatican City as an independent sovereign state and ended the Roman Question. Pius XI issued a series of influential encyclicals, including Quadragesimo anno, which warned against the excesses of capitalism and communism, and Casti connubii, which prohibited the use of contraception. He also founded Vatican Radio in 1931, becoming the first pope to use modern mass communication to reach a global audience.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Pius XI became the first sovereign of Vatican City when the Lateran Treaty created the independent state in 1929.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Before his papacy he was an accomplished mountaineer; the Italian normal route to Mont Blanc now bears his name, and he was part of the first Italian rope team to summit the Dufourspitze.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He founded Vatican Radio in 1931, making him the first pope to broadcast on radio and to use modern communication to reach a worldwide audience.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1937 he issued the encyclical Mit brennender Sorge, the only papal encyclical written in German, which condemned the Nazi regime.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his pontificate he canonised 34 saints, including Thérèse of Lisieux and John Vianney, and beatified 464 individuals.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1857,
+      "month": 5,
+      "day": 31,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1939,
+      "month": 2,
+      "day": 10,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pius_XI,_by_Nicola_Perscheid,_circa_1922_(retouched).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pius_XI%2C_by_Nicola_Perscheid%2C_circa_1922_(retouched).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Pius_XI%2C_by_Nicola_Perscheid%2C_circa_1922_%28retouched%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Pius_XI%2C_by_Nicola_Perscheid%2C_circa_1922_%28retouched%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Nicola Perscheid",
+    "author": "Nicola Perscheid",
+    "width": 884,
+    "height": 1158,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Pius XI",
+    "url": "https://en.wikipedia.org/wiki/Pope_Pius_XI"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:15:36.014Z"
+  }
+}

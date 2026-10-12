@@ -1,0 +1,77 @@
+{
+  "id": "henryk-sienkiewicz",
+  "name": "Henryk Sienkiewicz",
+  "wikidataId": "Q41502",
+  "wikipediaTitle": "Henryk Sienkiewicz",
+  "content": {
+    "description": [
+      {
+        "text": "Henryk Sienkiewicz was born on 5 May 1846 in the village of Wola Okrzejska, then part of the Russian Empire, into an impoverished Polish noble family with Lipka Tatar ancestry.  After a modest education in Warsaw and a brief attempt to study medicine and law, he turned to journalism, publishing his first pieces in the late 1860s and adopting the pen name \"Litwos\" for his early columns in the Polish Gazette.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sienkiewicz rose to prominence with his historical novels, most famously the Trilogy—*With Fire and Sword*, *The Deluge*, and *Sir Michael*—which dramatise 17th‑century Polish history, and the international bestseller *Quo Vadis*, set in Nero’s Rome.  His literary success earned him the 1905 Nobel Prize in Literature, making him the first Polish writer to receive the award, and his works remain widely read and adapted into film and stage productions worldwide.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He used the pseudonym \"Litwos\" in his early journalistic work, a name that reflected his Lithuanian heritage.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1876 Sienkiewicz travelled to the United States, where he wrote a series of travel essays that were published in the Polish Gazette and later collected as a book.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was awarded the Nobel Prize in Literature in 1905, becoming the first Polish laureate and receiving the prize for his “outstanding merits as an epic writer.”",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Before achieving literary fame, Sienkiewicz worked as a private tutor for the Weyher family and later for the princely Woroniecki family, experiences that helped sustain him during his early career.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He established a fund, named after his late wife, to aid artists suffering from tuberculosis, demonstrating his commitment to philanthropy beyond his literary pursuits.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1846,
+      "month": 5,
+      "day": 5,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1916,
+      "month": 11,
+      "day": 15,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Henryk_Sienkiewicz_ca_1885_(45871548)_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Henryk_Sienkiewicz_ca_1885_(45871548)_(cropped).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Henryk_Sienkiewicz_ca_1885_%2845871548%29_%28cropped%29.jpg/960px-Henryk_Sienkiewicz_ca_1885_%2845871548%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/Henryk_Sienkiewicz_ca_1885_%2845871548%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 1264,
+    "height": 1754,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Henryk Sienkiewicz",
+    "url": "https://en.wikipedia.org/wiki/Henryk_Sienkiewicz"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:14:47.482Z"
+  }
+}

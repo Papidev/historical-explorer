@@ -1,0 +1,77 @@
+{
+  "id": "marcus-valerius-messalla-corvinus",
+  "name": "Marcus Valerius Messalla Corvinus",
+  "wikidataId": "Q508117",
+  "wikipediaTitle": "Marcus Valerius Messalla Corvinus",
+  "content": {
+    "description": [
+      {
+        "text": "Marcus Valerius Messalla Corvinus was born in 64 BC into the patrician Valerii Messallae family, the son of consul Marcus Valerius Messalla Niger and his wife Palla. He received a classical education in Athens alongside Horace and the younger Cicero, and in his youth he was drawn to republican ideals, a stance he maintained even as he navigated the political landscape of the late Republic.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the turbulent years following Caesar’s assassination he survived a proscription in 43 BC by taking refuge with Brutus and Cassius, later shifting his allegiance to Octavian after the Battle of Philippi. He served as consul in 31 BC, fought at Actium, and later commanded in the East, where he suppressed a revolt in Gallia Aquitania and celebrated a triumph in 27 BC. In addition to his military career, Corvinus was a prolific patron of the arts, gathering a circle of poets that included Tibullus, Lygdamus, and the poetess Sulpicia, and he authored several now‑lost works on history, poetry, and grammar.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Corvinus owned a house on Rome’s Palatine Hill that had previously belonged to Mark Antony before Augustus transferred it to him.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He possessed the famed Gardens of Lucullus (Horti Luculliani) on the Pincian Hill, which are the site of today’s Villa Borghese gardens.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A luxurious villa attributed to Corvinus was discovered on the via dei Laghi near Ciampino in 2012, containing seven colossal Niobid statues that had toppled into a piscina, likely due to an earthquake.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Another villa on the island of Elba, identified in 2014, was burned in the first century AD and yielded five wine dolia stamped with the inscription \"Hermia Va(leri) (M)arci s(ervus)fecit\".",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Corvinus resigned from the post of Prefect of the city in 25 BC after only six days, reportedly because the position conflicted with his constitutional principles.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first patron to notice and encourage the young poet Ovid, who later expressed his gratitude in his works.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -64,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 8,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Warsaw_2023_214_Krasinski_Palace_Valerius_Statue.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Warsaw_2023_214_Krasinski_Palace_Valerius_Statue.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Warsaw_2023_214_Krasinski_Palace_Valerius_Statue.jpg/960px-Warsaw_2023_214_Krasinski_Palace_Valerius_Statue.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/20/Warsaw_2023_214_Krasinski_Palace_Valerius_Statue.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "© Scotch Mist / Wikimedia Commons / CC BY-SA 4.0",
+    "author": "Scotch Mist",
+    "width": 1951,
+    "height": 2935,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Marcus Valerius Messalla Corvinus",
+    "url": "https://en.wikipedia.org/wiki/Marcus_Valerius_Messalla_Corvinus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T21:08:11.061Z"
+  }
+}

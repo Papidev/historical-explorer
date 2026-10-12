@@ -1,0 +1,44 @@
+{
+  "id": "domenico-bovone",
+  "name": "Domenico Bovone",
+  "wikidataId": "Q23818753",
+  "wikipediaTitle": "Domenico Bovone",
+  "content": {
+    "description": [
+      {
+        "text": "Domenico Bovone was a Piedmontese anti‑fascist who joined the Concentrazione antifascista di Parigi and led an organization linked to Giustizia e Libertà, distributing its printed material from 1931 onward.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "On 5 September 1931 an explosion at Bovone’s house killed his mother; police discovered explosives both in his home and at a mill he owned in Rivarolo Ligure, leading authorities to suspect he was planning an attack on Mussolini. He was subsequently condemned to death by the Special Tribunal and executed in Rome on 17 June 1932.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The explosion that killed Bovone’s mother occurred on 5 September 1931.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Bovone owned a mill in Rivarolo Ligure where additional explosives were found during the police investigation.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was executed by the Special Tribunal in Rome on 17 June 1932.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Domenico Bovone",
+    "url": "https://it.wikipedia.org/wiki/Domenico_Bovone"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:30:46.341Z"
+  }
+}

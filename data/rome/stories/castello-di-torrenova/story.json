@@ -1,0 +1,219 @@
+{
+  "introduction": {
+    "text": "Castello di Torrenova is a historic castle in Rome, notable for its medieval tower, Renaissance restorations, and its association with prominent Roman families such as the Cenci, Aldobrandini, and Borghese.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "13th-century-settlement",
+        "description": "An older Roman-era settlement, possibly a villa, existed on the site before the medieval casale.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1250,
+          "precision": "approximate",
+          "endYear": 1300,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1500-capranica",
+        "description": "In 1500 the property belonged to the Capranica family.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1500,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1562-cenci-sale",
+        "description": "In 1562 the estate was sold to Cristoforo Cenci.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1562,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1599-execution",
+        "description": "In 1599 Francesco Cenci was executed.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1599,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1600-expansion",
+        "description": "By 1600 the estate had expanded to 925 rubbia, over 1700 hectares.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1600,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1601-aldobrandini-death",
+        "description": "In 1601 Gian Francesco Aldobrandini died.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1601,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1607-olimpia-annex",
+        "description": "In 1607 Olimpia Aldobrandini annexed Casa Calda.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1607,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1637-acquisition",
+        "description": "In 1637 the property acquired the casale of Tor Vergata.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1637,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1638-aldobrandini-death",
+        "description": "In 1638 Ippolito Aldobrandini died, ending the main Aldobrandini line.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1638,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1647-olimpia-marriage",
+        "description": "In 1647 Olimpia Aldobrandini remarried Camillo Pamphili.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1647,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1683-borghese-possession",
+        "description": "In 1683 Giambattista Borghese took possession of Torrenova.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1683,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1848-donation",
+        "description": "In 1848 the property was donated to the municipality of Rome.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1848,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1909-1914-bonifica",
+        "description": "Between 1909 and 1914 the estate was reclaimed by Scipione Borghese.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1909,
+          "precision": "exact",
+          "endYear": 1914,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1923-migliore",
+        "description": "In 1923 Giuseppe Migliorelli purchased the castle and surrounding park.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1923,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1950-1952-lottizzazione",
+        "description": "Between 1950 and 1952 the estate was subdivided and sold.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1950,
+          "precision": "exact",
+          "endYear": 1952,
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "tower-structure",
+        "description": "The castle features a rectangular tower with merli a coda di rondine and a surrounding merlata castle, built in imitation of older fortifications.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "restoration-aldobrandini",
+        "description": "The Aldobrandini family rebuilt the tower into a merlata castle and added the adjacent church of San Clemente.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "ninfeo-bella-cenci",
+        "description": "A 16th-century fountain, the ninfeo 'Bagno della Bella Cenci', remains in the garden.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Settimio Severo",
+      "personId": "septimius-severus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Caracalla",
+      "personId": "caracalla",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Geta",
+      "personId": "geta-emperor",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Antonio Nibby",
+      "personId": "antonio-nibby",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Francesco Cenci",
+      "personId": "francesco-cenci",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Beatrice Cenci",
+      "personId": "beatrice-cenci",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ippolito Aldobrandini (1596-1638)",
+      "personId": "ippolito-aldobrandini-1596-1638",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

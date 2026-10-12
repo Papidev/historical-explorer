@@ -1,0 +1,311 @@
+{
+  "introduction": {
+    "text": "The Tenuta presidenziale di Castelporziano, commonly known as Castello, is one of Italy’s three presidential residences. Located 25 km from Rome, it serves as a historic estate, a presidential retreat, a natural reserve, and a venue for contemporary art. Its layered history, architectural features, and cultural programs make it a significant cultural and political landmark.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-5th-century",
+        "description": "In the 5th century the area was owned by the Basilica of Santa Croce in Gerusalemme.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 400,
+          "precision": "exact",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-10th-century",
+        "description": "In the 10th century the property was granted to the monks of San Saba.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 900,
+          "precision": "exact",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-1561",
+        "description": "In 1561 part of the estate was ceded to the Arcispedale di Santo Spirito and to the Naro family.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1561,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1586",
+        "description": "In 1586 the estate was transferred to the Del Nero family, who became barons of Porcigliano.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1586,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1823",
+        "description": "In 1823 the Grazioli family acquired the property and converted it into a sumptuous residence.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1823,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1872",
+        "description": "In 1872 the Italian State purchased the estate for use as a royal residence, hunting reserve, and agricultural enterprise.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1872,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1948",
+        "description": "In 1948 the estate became part of the presidential residence as stipulated by the Constitution.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1948,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1966",
+        "description": "In 1966 President Saragat donated a portion of the coast to Rome, creating the largest free beach in Europe.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1966,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1977",
+        "description": "In 1977 President Leone abolished hunting on the estate.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1977,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1985",
+        "description": "In 1985 President Pertini added about 1,000 hectares of Capocotta to the estate.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1985,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1997",
+        "description": "In 1997 a fire destroyed about 20 hectares of the park.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1997,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1999",
+        "description": "In 1999 the estate was designated a state natural reserve and later a site of community interest.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1999,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-2000",
+        "description": "In 2000 the estate was included in the national fire protection plan under law 21 November 2000, n. 353.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2000,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-2015",
+        "description": "In 2015 the estate began hosting a summer center for people with disabilities.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2015,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-2016",
+        "description": "In 2016 the center was opened to the public.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2016,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "Castello Grazioli, the main building, houses representative salons decorated with hunting trophies and the president’s private study.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-2",
+        "description": "Since 2020 the estate hosts contemporary design works, including six artworks and three design pieces placed in both interior and exterior spaces.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-gillo-dorfles",
+        "description": "A painting by Gillo Dorfles.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-mario-ceroli",
+        "description": "A sculpture by Mario Ceroli.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-davide-rivalta",
+        "description": "A sculpture by Davide Rivalta.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-massimo-listri",
+        "description": "A photograph by Massimo Listri.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-michelangelo-pistoletto",
+        "description": "A land art piece by Michelangelo Pistoletto.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-paola-navone",
+        "description": "An object by Paola Navone.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-mario-trimarchi",
+        "description": "An object by Mario Trimarchi.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-corrado-cagli",
+        "description": "A mosaic by Corrado Cagli.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-nino-caruso",
+        "description": "A sculpture by Nino Caruso.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-giuliana-cuneaz",
+        "description": "A sculpture by Giuliana Cunéaz.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-gino-marotta",
+        "description": "A sculpture by Gino Marotta.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-luigi-caccia-dominioni",
+        "description": "An object by Luigi Caccia Dominioni.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-piero-castiglioni",
+        "description": "An object by Piero Castiglioni.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-ferruccio-laviani",
+        "description": "An object by Ferruccio Laviani.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-nicolo-morales",
+        "description": "An object by Nicolò Morales.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-mario-nanni",
+        "description": "An object by Mario Nanni.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-francesco-rota",
+        "description": "An object by Francesco Rota.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Quintino Sella",
+      "personId": "quintino-sella",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Vittorio Emanuele II",
+      "personId": "vittorio-emanuele-ii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giuseppe Saragat",
+      "personId": "giuseppe-saragat",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giovanni Leone",
+      "personId": "giovanni-leone",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Sandro Pertini",
+      "personId": "sandro-pertini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Oscar Luigi Scalfaro",
+      "personId": "oscar-luigi-scalfaro",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Sergio Mattarella",
+      "personId": "sergio-mattarella",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Gillo Dorfles",
+      "personId": "gillo-dorfles",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Mario Ceroli",
+      "personId": "mario-ceroli",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Davide Rivalta",
+      "personId": "davide-rivalta",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

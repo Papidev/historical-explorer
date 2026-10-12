@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Colonna_di_Foca_Forum_Romanum_Rome.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Colonna_di_Foca_Forum_Romanum_Rome.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Colonna_di_Foca_Forum_Romanum_Rome.jpg/960px-Colonna_di_Foca_Forum_Romanum_Rome.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Colonna_di_Foca_Forum_Romanum_Rome.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC0",
+      "attribution": "Jebulon",
+      "author": "Jebulon",
+      "width": 3060,
+      "height": 5032,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Map_of_Forum_Romanum.Position.of.Column.of.Phokas.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Map_of_Forum_Romanum.Position.of.Column.of.Phokas.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Map_of_Forum_Romanum.Position.of.Column.of.Phokas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Map_of_Forum_Romanum.Position.of.Column.of.Phokas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Unknown authorUnknown author",
+      "author": "Unknown authorUnknown author",
+      "width": 445,
+      "height": 233,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "0_la_colonne_de_Phocas_et_le_forum_Romain_à_Rome.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:0_la_colonne_de_Phocas_et_le_forum_Romain_%C3%A0_Rome.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/0_la_colonne_de_Phocas_et_le_forum_Romain_%C3%A0_Rome.jpg/960px-0_la_colonne_de_Phocas_et_le_forum_Romain_%C3%A0_Rome.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/0_la_colonne_de_Phocas_et_le_forum_Romain_%C3%A0_Rome.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "Jean-Pol GRANDMONT",
+      "author": "Jean-Pol GRANDMONT",
+      "width": 3756,
+      "height": 2494,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Colonna_di_Foca_Forum_Romanum_Rome.jpg"
+}

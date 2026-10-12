@@ -1,0 +1,49 @@
+{
+  "id": "lenny-kravitz",
+  "name": "Lenny Kravitz",
+  "wikidataId": "Q180224",
+  "wikipediaTitle": "Lenny Kravitz",
+  "content": {
+    "description": [
+      {
+        "text": "Leonard Albert Kravitz was born on May 26, 1964, in New York City to a television news producer and an actress of African‑American and Bahamian descent.  From the age of three he was playing drums and by five he was already determined to become a musician, drawing early inspiration from the R&B, jazz, and gospel that filled his household and the rock and blues he discovered after moving to Los Angeles in 1974.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Kravitz’s debut album, Let Love Rule, released in 1989, blended rock, funk, reggae, and soul and quickly established him as a distinctive voice in contemporary music.  Over the next decade he produced a string of chart‑topping singles, won four consecutive Grammy Awards for Best Male Rock Vocal Performance, and expanded his creative output by founding the design firm Kravitz Design Inc., while also venturing into film acting and furniture design.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In addition to his musical career, Kravitz founded the creative studio Kravitz Design Inc., which has worked on interior and furniture projects for high‑profile clients such as Swarovski and the Setai Resort.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Untold_2024_-_Lenny_Kravitz_56.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Untold_2024_-_Lenny_Kravitz_56.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Untold_2024_-_Lenny_Kravitz_56.jpg/960px-Untold_2024_-_Lenny_Kravitz_56.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Untold_2024_-_Lenny_Kravitz_56.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 2.0",
+    "attribution": "Nuță Lucian",
+    "author": "Nuță Lucian",
+    "width": 1362,
+    "height": 2001,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": false
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Lenny Kravitz",
+    "url": "https://en.wikipedia.org/wiki/Lenny_Kravitz"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:12:52.658Z"
+  }
+}

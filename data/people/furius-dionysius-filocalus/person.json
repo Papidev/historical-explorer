@@ -1,0 +1,61 @@
+{
+  "id": "furius-dionysius-filocalus",
+  "name": "Furius Dionysius Filocalus",
+  "wikidataId": "Q1474972",
+  "wikipediaTitle": "Furius Dionysius Filocalus",
+  "content": {
+    "description": [
+      {
+        "text": "Furius Dionysius Filocalus was a Roman scribe and stone engraver who flourished in the second half of the fourth century.  His most celebrated work is the Chronography of 354, the oldest surviving Christian calendar, which contains the earliest known reference to the celebration of Christmas while also incorporating Roman festivals.  The original manuscript has been lost, but a 17th‑century copy preserved in the Barberini collection is the most complete surviving witness to this important document.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Filocalus also served as the official engraver for Pope Damasus I, describing himself as the pope’s admirer and personal friend.  In this capacity he produced the Epigrammata Damasiana, a series of stone inscriptions honoring martyrs, and developed the distinctive filocalian script characterized by thin, wavy ornamental serifs and a strong contrast between thick downward strokes and thin ascenders.  This letterform influenced contemporary engravers and later typographic styles, leaving a lasting legacy in the history of lettering.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Chronography of 354 is not only the oldest Christian calendar but also the first known document to mention the celebration of Christmas.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Filocalus’s filocalian script features vertically squashed forms, especially in letters such as C, D, G, and M, giving it a distinctive, ornamental appearance.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Three fourth‑century stone fragments bearing Filocalus’s signature, “Furius Dionysius Filocalus scribsit,” survive as examples of his work on the poems of Pope Damasus I.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The filocalian letter’s ornamental serifs served as an ancestor for the Tuscan‑style metal sorts that emerged in the early nineteenth century and remain in use today.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Muestra_del_tipo_de_letra_Filocalus,_publicado_por_el_diseñador_de_tipos_Ellmer_Stefan_en_2016,_basado_en_la_letra_filocaliana.png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Muestra_del_tipo_de_letra_Filocalus%2C_publicado_por_el_dise%C3%B1ador_de_tipos_Ellmer_Stefan_en_2016%2C_basado_en_la_letra_filocaliana.png",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Muestra_del_tipo_de_letra_Filocalus%2C_publicado_por_el_dise%C3%B1ador_de_tipos_Ellmer_Stefan_en_2016%2C_basado_en_la_letra_filocaliana.png/960px-Muestra_del_tipo_de_letra_Filocalus%2C_publicado_por_el_dise%C3%B1ador_de_tipos_Ellmer_Stefan_en_2016%2C_basado_en_la_letra_filocaliana.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Muestra_del_tipo_de_letra_Filocalus%2C_publicado_por_el_dise%C3%B1ador_de_tipos_Ellmer_Stefan_en_2016%2C_basado_en_la_letra_filocaliana.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Teknad",
+    "author": "Teknad",
+    "width": 3508,
+    "height": 2480,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Furius Dionysius Filocalus",
+    "url": "https://en.wikipedia.org/wiki/Furius_Dionysius_Filocalus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:05:36.811Z"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "introduction": {
+    "text": "The Forte Pietralata is one of Rome's 15 forts built between 1877 and 1891. It is the largest of the forts and now houses the Antonio Gandin barracks of the Granatieri di Sardegna mechanized brigade.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The 15 forts of Rome were constructed during the period 1877 to 1891.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1877,
+          "precision": "exact",
+          "endYear": 1891,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Forte Pietralata was built from 1881 to 1885.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1881,
+          "precision": "exact",
+          "endYear": 1885,
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The fort features a ditch and a drawbridge to control access.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "It covers 25.4 hectares on a slight plateau near the Aniene River.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "The fort is located on Via di Pietralata in the Q. XXI Pietralata district.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Antonio Gandin",
+      "personId": "antonio-gandin",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

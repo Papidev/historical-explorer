@@ -1,0 +1,53 @@
+{
+  "id": "annona-divinit",
+  "name": "Annona",
+  "wikidataId": "Q581656",
+  "wikipediaTitle": "Annona (divinità)",
+  "content": {
+    "description": [
+      {
+        "text": "Annona was an ancient Italic goddess who embodied the abundance of the yearly harvest. Unlike the more general goddess of abundance, she presided over a single season, personifying the annual crop and often depicted alongside Ceres with sheaves of grain in her hands.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In Roman civic life, the Annona became a state office that evaluated the harvest for taxation and for the creation of reserves to guard against famine. The goddess was also linked to the military annona, a tribute in kind that fed the army, which later evolved into a monetary tax under Diocletian.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The office of the Annona was responsible for partitioning grain for future sowing and for maintaining a reserve store, making the goddess’s role both sacral and legally binding for farmers.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The military annona, instituted by Emperor Septimius Severus, was originally an exceptional measure to supply the army with grain, but it became a recurring tribute in kind before being replaced by a monetary tax during Diocletian’s reign.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Nero_Lugdunum_sestertius_691535.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Nero_Lugdunum_sestertius_691535.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/Nero_Lugdunum_sestertius_691535.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/Nero_Lugdunum_sestertius_691535.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Classical Numismatic Group, Inc. http://www.cngcoins.com",
+    "author": "CNG",
+    "width": 500,
+    "height": 229,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Annona (divinità)",
+    "url": "https://it.wikipedia.org/wiki/Annona_(divinit%C3%A0)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:08:18.537Z"
+  }
+}

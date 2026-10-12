@@ -1,0 +1,61 @@
+{
+  "id": "etruschi",
+  "name": "Etruschi",
+  "wikidataId": "Q17161",
+  "wikipediaTitle": "Etruschi",
+  "content": {
+    "description": [
+      {
+        "text": "The Etruschi were an ancient Italian people who inhabited the region of Etruria—roughly modern Tuscany, western Umbria, and northern Lazio—from the 9th to the 1st centuries BCE. Their civilization evolved through the Villanovan culture into a distinct Etruscan society that blended indigenous traditions with influences from Greek, Phoenician, and Near‑Eastern traders. Modern scholarship, supported by archaeological and genetic evidence, agrees that the Etruscans were autochthonous to the Italian peninsula rather than migrants from the east.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Etruscan culture is noted for its unique language, which is not Indo‑European, and for an alphabet derived from the Greek script that they adapted to their own phonology. Their burial practices were elaborate, featuring cremation with ossuaries in the early period and later inhumation in monumental tombs such as those at Tarquinia and Cerveteri. The Etruscans also practiced a sophisticated form of divination called aruspicia, interpreting the entrails of sacrificed animals, and their religious and artistic traditions had a lasting influence on Roman culture, architecture, and religious rites.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Etruscans adopted an alphabet derived from the Greek alphabet, which they adapted to their language.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Their burial customs included cremation with ossuaries, and later inhumation, with elaborate tombs such as the \"civita\" in Tarquinia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Modern genetic studies confirm that the Etruscans were autochthonous to Italy, with no significant Anatolian or Mediterranean migration.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Etruscans had a unique religious practice of divination called aruspicia, interpreting the entrails of sacrificed animals.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Closeup_of_engraving_depicting_Pollux_tying_the_defeated_Amykos_to_a_tree_on_the_Ficoroni_Cista_Bronze_340-330_BCE_made_by_Novios_Plautios_from_Palestrina_National_Etruscan_Museum_of_Villa_Giulia.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Closeup_of_engraving_depicting_Pollux_tying_the_defeated_Amykos_to_a_tree_on_the_Ficoroni_Cista_Bronze_340-330_BCE_made_by_Novios_Plautios_from_Palestrina_National_Etruscan_Museum_of_Villa_Giulia.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Closeup_of_engraving_depicting_Pollux_tying_the_defeated_Amykos_to_a_tree_on_the_Ficoroni_Cista_Bronze_340-330_BCE_made_by_Novios_Plautios_from_Palestrina_National_Etruscan_Museum_of_Villa_Giulia.jpg/960px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Closeup_of_engraving_depicting_Pollux_tying_the_defeated_Amykos_to_a_tree_on_the_Ficoroni_Cista_Bronze_340-330_BCE_made_by_Novios_Plautios_from_Palestrina_National_Etruscan_Museum_of_Villa_Giulia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Novios Plautios (340-330 BCE) photos by Egistos Sani",
+    "author": "Novios Plautios (340-330 BCE) photos by Egistos Sani",
+    "width": 1412,
+    "height": 1200,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Etruschi",
+    "url": "https://it.wikipedia.org/wiki/Etruschi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:38:23.012Z"
+  }
+}

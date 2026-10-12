@@ -1,0 +1,44 @@
+{
+  "id": "rabirius-architect",
+  "name": "Rabirius",
+  "wikidataId": "Q3409247",
+  "wikipediaTitle": "Rabirius (architect)",
+  "content": {
+    "description": [
+      {
+        "text": "Rabirius was an ancient Roman architect active in the 1st and 2nd centuries CE, whose work was closely tied to the imperial patronage of Emperor Domitian. He is credited with designing the massive Flavian Palace on the Palatine Hill and the Alban Villa at present‑day Castel Gandolfo, projects that exemplify the grandeur of Flavian architecture.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Scholars have proposed that Rabirius may have been the architect behind the Arch of Titus, a commemorative arch on the Via Sacra celebrating the joint triumph of Titus and Vespasian in 71 CE. Additionally, some suggest that he could have designed the Flavian Amphitheatre, the iconic Colosseum, though this attribution remains speculative.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Rabirius was commissioned by Emperor Domitian to build both the Flavian Palace and the Alban Villa.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Arch of Titus, a surviving monument on the Via Sacra, is sometimes attributed to Rabirius.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Flavian Amphitheatre, the most famous Roman building of the Flavian era, may have been designed by Rabirius, though this attribution is conjectural.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Rabirius (architect)",
+    "url": "https://en.wikipedia.org/wiki/Rabirius_(architect)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:05:04.987Z"
+  }
+}

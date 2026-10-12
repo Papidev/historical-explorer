@@ -1,0 +1,73 @@
+{
+  "id": "theodor-heuss",
+  "name": "Theodor Heuss",
+  "wikidataId": "Q2594",
+  "wikipediaTitle": "Theodor Heuss",
+  "content": {
+    "description": [
+      {
+        "text": "Theodor Heuss (31 January 1884 – 12 December 1963) was a German politician who served as the first president of West Germany from 1949 to 1959. He is one of only two German presidents, along with Richard von Weizsäcker, to have served two full five‑year terms. His calm civil demeanor and cordial nature contrasted with the stern character of Chancellor Konrad Adenauer and helped stabilize democracy during the Wirtschaftswunder years. Before entering politics, Heuss worked as a political journalist and was a major representative of social liberalism in Germany.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Born in Brackenheim, a small wine‑making town near Heilbronn, Heuss studied economics, art history and political science at the Ludwig‑Maximilians‑Universität München and the Friedrich Wilhelm University of Berlin, earning a doctorate in 1905 under Lujo Brentano. He was a student of the social liberal Friedrich Naumann and became a journalist, editing several liberal newspapers and magazines. After World War I he joined the German Democratic Party, served in the Reichstag, and later opposed the Nazi regime, though he voted for the Enabling Act in 1933. After the war he helped draft West Germany’s Basic Law, became president, and promoted democratic values while supporting re‑armament and NATO membership.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Heuss was a student of Friedrich Naumann, the social liberal politician and theologian who influenced his early political views.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1933 he voted in favor of Adolf Hitler’s Enabling Act, a decision he later justified as a mistake and argued was ultimately irrelevant to Nazi tyranny.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1957 Heuss donated a sculpted portal entry to the Camposanto of the Teutons and the Flemish in Vatican City, a gesture that linked German heritage with the Catholic Church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He preferred to be addressed simply as \"Herr Heuss\" rather than the formal title \"Excellency\", setting a precedent for the personal style of German presidents.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1884,
+      "month": 1,
+      "day": 31,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1963,
+      "month": 12,
+      "day": 12,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Bundesarchiv_Bild_146-1983-098-20a,_Heuss.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_146-1983-098-20a%2C_Heuss.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Bundesarchiv_Bild_146-1983-098-20a%2C_Heuss.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Bundesarchiv_Bild_146-1983-098-20a%2C_Heuss.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0 de",
+    "attribution": "Bundesarchiv, Bild 146-1983-098-20 / CC-BY-SA 3.0",
+    "author": "Unknown authorUnknown author",
+    "width": 232,
+    "height": 294,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Theodor Heuss",
+    "url": "https://en.wikipedia.org/wiki/Theodor_Heuss"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:37:35.708Z"
+  }
+}

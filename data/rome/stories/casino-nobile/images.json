@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Villa_Torlonia_01304.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Villa_Torlonia_01304.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Villa_Torlonia_01304.JPG/960px-Villa_Torlonia_01304.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/Villa_Torlonia_01304.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Lalupa",
+      "author": "Lalupa",
+      "width": 2048,
+      "height": 1536,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "2019-06_Roma_(44).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:2019-06_Roma_(44).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/2019-06_Roma_%2844%29.jpg/960px-2019-06_Roma_%2844%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/2019-06_Roma_%2844%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "Marek Mróz",
+      "author": "Marek Mróz",
+      "width": 2791,
+      "height": 1860,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "2019-06_Roma_(45).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:2019-06_Roma_(45).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/2019-06_Roma_%2845%29.jpg/960px-2019-06_Roma_%2845%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/08/2019-06_Roma_%2845%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "Marek Mróz",
+      "author": "Marek Mróz",
+      "width": 2799,
+      "height": 1866,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Villa_Torlonia_01304.JPG"
+}

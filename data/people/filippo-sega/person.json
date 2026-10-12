@@ -1,0 +1,61 @@
+{
+  "id": "filippo-sega",
+  "name": "Filippo Sega",
+  "wikidataId": "Q1080460",
+  "wikipediaTitle": "Filippo Sega",
+  "content": {
+    "description": [
+      {
+        "text": "Filippo Sega was born on 22 August 1537 in Bologna to a noble family originally from Ravenna. He studied at the University of Bologna, earning a doctorate in both civil and canon law on 26 September 1560, and entered the papal administration as a protonotary apostolic. He served as governor of several Italian cities—Cesena, Forlì, Imola, Romagna, and the March of Ancona—before being appointed Bishop of Ripatransone in 1575 and later Bishop of Piacenza in 1578.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sega became a key papal diplomat, first as a special envoy to John of Austria in the Spanish Netherlands, then as Nuncio to Spain from 1577 to 1581. He later carried out missions to Vienna as Nuncio to Emperor Rudolf II (1586‑87) and to France as Nuncio to King Charles X (1589‑94). In 1591 he was created a cardinal priest, receiving the titular church of Sant’Onofrio in 1594, and in 1595 he presided over the Congregatio Germanica. He retired to a villa near Trastevere and died in Rome on 29 May 1596.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 1585, as part of Pope Sixtus V’s reform program, Sega was one of the two bishops chosen for the “Monsignori Riformatori” mission to conduct an official visitation of all churches and colleges in Rome, including the English, German, Greek, and Maronite colleges.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1537,
+      "month": 8,
+      "day": 22,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1596,
+      "month": 5,
+      "day": 29,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Filippo_Sega.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Filippo_Sega.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Filippo_Sega.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Filippo_Sega.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 300,
+    "height": 336,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Filippo Sega",
+    "url": "https://en.wikipedia.org/wiki/Filippo_Sega"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:31:39.282Z"
+  }
+}

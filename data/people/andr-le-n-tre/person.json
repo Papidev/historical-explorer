@@ -1,0 +1,69 @@
+{
+  "id": "andr-le-n-tre",
+  "name": "André Le Nôtre",
+  "wikidataId": "Q273849",
+  "wikipediaTitle": "André Le Nôtre",
+  "content": {
+    "description": [
+      {
+        "text": "André Le Nôtre was born on 12 March 1613 in Paris into a family of gardeners, and he grew up surrounded by the royal gardens of the Tuileries.  From a young age he combined practical horticulture with studies in mathematics, painting and architecture, learning under the painter Simon Vouet and the architect François Mansart.  In 1637 he became head gardener of the Tuileries, a position he would hold for decades, and by 1657 he was appointed Controller‑General of the Royal Buildings, giving him overall responsibility for all of France’s royal gardens.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Le Nôtre’s most celebrated work is the design of the gardens of the Palace of Versailles, where he laid out the grand axial plan, the vast parterres, and the iconic fountains that embody the French formal garden style.  His influence extended beyond France: he designed gardens at Vaux‑le‑Vicomte, Fontainebleau, Saint‑Germain‑en‑Laye, Saint‑Cloud, and even abroad at Bicton Park in Devon, Greenwich Park in London, and the gardens of Venaria and Turin in Italy.  His work was later cited by Pierre Charles L’Enfant in the master plan for Washington, D.C., and he is often compared with the English landscape architect Capability Brown.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 1675, Le Nôtre was ennobled by King Louis XIV, elevating him to the French nobility.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Le Nôtre accompanied the royal court during the Siege of Cambrai in 1677, a rare instance of a landscape architect participating in a military campaign.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His design for Bicton Park Botanical Gardens in Devon, England, remains a living example of his work outside France.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1613,
+      "month": 3,
+      "day": 12,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1700,
+      "month": 9,
+      "day": 15,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Andre-Le-Nostre1.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Andre-Le-Nostre1.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Andre-Le-Nostre1.jpg/960px-Andre-Le-Nostre1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/df/Andre-Le-Nostre1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Carlo Maratta",
+    "author": "Carlo Maratta",
+    "width": 1515,
+    "height": 2000,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "André Le Nôtre",
+    "url": "https://en.wikipedia.org/wiki/Andr%C3%A9_Le_N%C3%B4tre"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:20:36.355Z"
+  }
+}

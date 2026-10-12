@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "San_Pietro_in_Montorio_-_esterno.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:San_Pietro_in_Montorio_-_esterno.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/San_Pietro_in_Montorio_-_esterno.jpg/960px-San_Pietro_in_Montorio_-_esterno.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/San_Pietro_in_Montorio_-_esterno.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "PubblicUsername",
+      "author": "PubblicUsername",
+      "width": 5032,
+      "height": 6384,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "001San-Pietro-in-Montorio-Rome.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:001San-Pietro-in-Montorio-Rome.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/001San-Pietro-in-Montorio-Rome.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/001San-Pietro-in-Montorio-Rome.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Quinok",
+      "author": "Quinok",
+      "width": 600,
+      "height": 900,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "002San-Pietro-in-Montorio-Rome.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:002San-Pietro-in-Montorio-Rome.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a6/002San-Pietro-in-Montorio-Rome.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a6/002San-Pietro-in-Montorio-Rome.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Quinok",
+      "author": "Quinok",
+      "width": 600,
+      "height": 900,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "San_Pietro_in_Montorio_-_esterno.jpg"
+}

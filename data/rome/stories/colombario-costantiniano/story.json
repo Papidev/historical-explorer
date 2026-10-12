@@ -1,0 +1,51 @@
+{
+  "introduction": {
+    "text": "The Colombario Costantiniano is a small funerary chapel located in the Parco regionale dell'Appia antica in Rome. It is significant as an example of early Roman funerary architecture that survived into the medieval period and later served as a mill before its destruction in the 17th–18th centuries.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Construction of the chapel in the 2nd century AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 100,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Fire in the 17th–18th centuries that led to its abandonment.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1600,
+          "precision": "approximate",
+          "endYear": 1799,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Use of the building as a medieval mill with a horizontal paddle wheel.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "Rectangular plan (5.4 × 7.8 m) with two floors, a pronao in antis, and laterite walls painted in yellow and red.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Decorative niches with arcosoli and small windows, originally covered with marble slabs.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": []
+}

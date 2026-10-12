@@ -1,0 +1,61 @@
+{
+  "id": "francesco-podesti",
+  "name": "Francesco Podesti",
+  "wikidataId": "Q1441194",
+  "wikipediaTitle": "Francesco Podesti",
+  "content": {
+    "description": [
+      {
+        "text": "Francesco Podesti was born in Ancona in 1800, the son of a tailor who supplied the French army during the Napoleonic period. After the loss of both parents in his teens, the city of Ancona granted him a stipend that allowed him to study at the Accademia di Belle Arti di San Luca in Rome for a decade, where he was taught by Gaspare Landi and Vincenzo Camuccini. His early career was marked by success in competitions organized by Canova and the School of Nude, and he quickly gained commissions for altarpieces in Ancona’s churches, including the martyrdom of San Lorenzo and the Annunziata.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In the 1850s Podesti became renowned for his large-scale frescoes, most notably the 1855‑1864 decoration of the Sala dell’Immacolata in the Vatican, where he depicted scenes of the Immaculate Conception with a fidelity that clashed with the Curia’s preferences for more idealized imagery. He also painted the celebrated “Giuramento degli Anconetani,” a monumental canvas that earned prizes at the 1851 London and 1855 Paris Universal Expositions. Despite his fame, Podesti declined an offer to head the Academy of Fine Arts in Turin, preferring to maintain artistic independence, and he continued to work until the early 1880s, when he was still painting frescoes for the dome of the Chiesa del Santissimo Sacramento in Ancona.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Podesti is considered the last major Italian painter of historical painting and one of the final masters of the fresco technique in Italy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He refused the prestigious position of director of the Academy of Fine Arts of Turin, fearing that the role would restrict his creative freedom.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1800,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1895,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Francesco_Podesti_-_Autoritratto.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Francesco_Podesti_-_Autoritratto.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Francesco_Podesti_-_Autoritratto.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Francesco_Podesti_-_Autoritratto.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Giovanni Costa",
+    "author": "Giovanni Costa",
+    "width": 744,
+    "height": 949,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Francesco Podesti",
+    "url": "https://it.wikipedia.org/wiki/Francesco_Podesti"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:23:06.742Z"
+  }
+}

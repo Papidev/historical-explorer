@@ -1,0 +1,69 @@
+{
+  "id": "beatrice-cenci",
+  "name": "Beatrice Cenci",
+  "wikidataId": "Q237908",
+  "wikipediaTitle": "Beatrice Cenci",
+  "content": {
+    "description": [
+      {
+        "text": "Beatrice Cenci was born in 1585 into the affluent Cenci family of Rome, the daughter of Count Francesco Cenci and Ersilia Santacroce.  After her mother died in 1584, she was sent to a Franciscan convent at the age of seven, but returned to her family at fifteen, where she endured severe physical and sexual abuse at the hands of her father.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1598, after a series of failed attempts, Beatrice and her conspirators murdered her father in the Rocca of Petrella Salto.  She was later tried and executed by beheading on 11 September 1599, a public spectacle attended by notable artists such as Caravaggio, Orazio Gentileschi and Artemisia Gentileschi.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The execution of Beatrice Cenci was witnessed by the young Caravaggio, who later painted the dramatic scene of her death.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After her beheading, Beatrice’s body was interred in a nameless grave at the altar of San Pietro in Montorio, in accordance with the customs for executed persons.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Her father, Count Francesco Cenci, was a nobleman and treasurer of the Apostolic Camera, notorious for his violence, avarice and repeated accusations of sodomy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beatrice’s case inspired a vast array of artistic works, including Percy Bysshe Shelley’s tragedy \"The Cenci\" (1819) and numerous paintings by Guido Reni and his followers.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1585,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1599,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "01_Portret_Beatrice_Cenci.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:01_Portret_Beatrice_Cenci.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/01_Portret_Beatrice_Cenci.jpg/960px-01_Portret_Beatrice_Cenci.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/63/01_Portret_Beatrice_Cenci.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Attributed to Ginevra Cantofoli / Formerly attributed to Guido Reni",
+    "author": "Attributed to Ginevra Cantofoli / Formerly attributed to Guido Reni",
+    "width": 2539,
+    "height": 3378,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Beatrice Cenci",
+    "url": "https://it.wikipedia.org/wiki/Beatrice_Cenci"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:38:09.145Z"
+  }
+}

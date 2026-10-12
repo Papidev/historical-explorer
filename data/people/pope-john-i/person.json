@@ -1,0 +1,79 @@
+{
+  "id": "pope-john-i",
+  "name": "Pope John I",
+  "wikidataId": "Q160916",
+  "wikipediaTitle": "Pope John I",
+  "content": {
+    "description": [
+      {
+        "text": "Pope John I, who served as bishop of Rome from 13 August 523 until his death on 18 May 526, was a native of Siena (or the Castello di Serena near Chiusdino) in Italy. Although he was already a deacon in Rome and had once sided with the antipope Laurentius, he was elected pope despite his frailty and was immediately tasked by the Ostrogoth king Theoderic the Great to travel to Constantinople to negotiate a more lenient treatment for Arians under the decree of Emperor Justin I.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "John returned to Ravenna only to be imprisoned on suspicion of conspiring with the Eastern emperor; the neglect and ill‑treatment he suffered in captivity led to his death. His body was transported to Rome and interred in the Basilica of St. Peter, and he is remembered in art as a prisoner looking through bars. He also played a key role in standardizing the calculation of Easter in 525 with Dionysius Exiguus, and he is credited with repairing several martyrs' cemeteries on the Via Ardeatina.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He helped standardize the calculation of Easter in 525 with the monk Dionysius Exiguus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was imprisoned by King Theoderic upon his return to Ravenna on suspicion of conspiring with Emperor Justin.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He died of neglect and ill‑treatment while imprisoned.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His body was transported to Rome and buried in the Basilica of St. Peter.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He repaired the cemeteries of the martyrs Nereus and Achilleus, Felix and Adauctus, and Priscilla on the Via Ardeatina.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He is depicted in art as a prisoner looking through bars.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His feast day is 18 May, the anniversary of his death.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 526,
+      "month": 5,
+      "day": 18,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Johannes_I.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Johannes_I.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Johannes_I.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Johannes_I.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 209,
+    "height": 158,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope John I",
+    "url": "https://en.wikipedia.org/wiki/Pope_John_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:00:11.044Z"
+  }
+}

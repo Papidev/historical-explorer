@@ -1,0 +1,73 @@
+{
+  "id": "apuleio",
+  "name": "Apuleio",
+  "wikidataId": "Q170512",
+  "wikipediaTitle": "Apuleio",
+  "content": {
+    "description": [
+      {
+        "text": "Apuleius, known fully as Lucius Apuleius Madaurensis, was born around 125 BC in Madaura, a modest yet significant Roman provincial town in Africa Proconsularis (modern Souk Ahras, Algeria).  He came from a Berber family of mixed Numidian and Getulid heritage that had fully Romanised; his father served as a duumvir and left a fortune of nearly two million sesterces, which Apuleius spent on extensive travels.  He studied grammar and rhetoric in Carthage and later pursued poetry, geometry, music and philosophy in Athens, also engaging with the mystery cults of Asclepius in Carthage and the Eleusinian mysteries in Athens.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Apuleius became a renowned itinerant orator, philosopher, and lawyer, eventually attaining the prestigious office of sacerdos provinciae in Carthage, where he oversaw imperial cult rites and civic duties.  His most celebrated work, the Latin novel *Metamorphoses* (also known as *The Golden Ass*), survives in full and is the only complete Latin novel from antiquity; it recounts the adventures of Lucius, a man transformed into an ass, and is noted for its blend of comedy, satire and philosophical reflection.  In the late second century he was tried for magic in Sabratha on accusations of seducing a widow with enchantments, but his defense speech, *Apologia*, secured his acquittal; he died sometime after 170 AD, probably before 180 AD.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Apuleius married the wealthy widow Emilia Pudentilla after meeting her brother Ponziano in Oea; the marriage was later contested in a trial for alleged use of magic to obtain her inheritance.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His defense speech *Apologia* is the only surviving judicial oration from the Imperial period and is notable for its rhetorical flourishes, including irony and neologisms.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Two statues were erected in his honor by the Carthaginians, and a stone base of a statue dedicated to him still exists in Madaura.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Apuleius studied the mystery cults of Asclepius in Carthage and the Eleusinian mysteries in Athens, reflecting his interest in healing and the divine.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His novel *Metamorphoses* was rediscovered in the 14th century by Boccaccio, who translated it into Italian, leading to its widespread influence on European literature.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -125,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 170,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Apuleius-Kontorniat.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Apuleius-Kontorniat.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Apuleius-Kontorniat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Apuleius-Kontorniat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Johann Jacob Bernoulli",
+    "author": "Johann Jacob Bernoulli",
+    "width": 400,
+    "height": 392,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Apuleio",
+    "url": "https://it.wikipedia.org/wiki/Apuleio"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:10:14.612Z"
+  }
+}

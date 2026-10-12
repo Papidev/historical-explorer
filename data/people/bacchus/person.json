@@ -1,0 +1,65 @@
+{
+  "id": "bacchus",
+  "name": "Bacchus",
+  "wikidataId": "Q41680",
+  "wikipediaTitle": "Dionysus",
+  "content": {
+    "description": [
+      {
+        "text": "Bacchus is the Roman name for the Greek god Dionysus, the deity of wine‑making, orchards, fruit, vegetation, fertility, festivity, insanity, ritual madness, religious ecstasy, and theatre.  He is often depicted holding a thyrsus—a fennel‑stalk sceptre wound with ivy and dripping honey—which serves both as a beneficent wand and a weapon used to destroy those who oppose his cult.  The thyrsus and Bacchus’s ecstatic rites were believed to free followers from self‑conscious fear and to subvert the oppressive restraints of the powerful.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The origins of Dionysus/Bacchus are uncertain, but his cult is attested in Mycenaean Linear B tablets from Pylos dated to the twelfth or thirteenth century BC, indicating an early worship of a god associated with wine.  In Rome he was identified with Liber Pater, the “free father” of viniculture and male fertility, and the state initially treated the Bacchanalia—his popular festivals that mixed classes and genders—as a capital offence, later allowing only toned‑down, state‑approved gatherings.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The thyrsus, a fennel‑stalk sceptre wound with ivy and dripping honey, is both a beneficent wand and a weapon used to destroy those who oppose Bacchus’s cult.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The earliest attestation of Dionysus’s name appears in Linear B tablets from Pylos, dating to the twelfth or thirteenth century BC, showing that his worship predates classical Greece.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Roman authorities initially banned the Bacchanalia as a capital offence, but later allowed smaller, state‑approved gatherings that mixed social classes and genders.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Bacchus’s thyrsus is sometimes described as winding with ivy and dripping honey, symbolising both fertility and the intoxicating power of wine.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The cult of Dionysus is also described as a “cult of the souls,” in which maenads feed the dead through blood‑offerings, linking the god to the underworld and the cycle of death and rebirth.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Dionysos_Louvre_Ma87_n2.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Dionysos_Louvre_Ma87_n2.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Dionysos_Louvre_Ma87_n2.jpg/960px-Dionysos_Louvre_Ma87_n2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Dionysos_Louvre_Ma87_n2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 2.5",
+    "attribution": "© Marie-Lan Nguyen / Wikimedia Commons",
+    "author": "Marie-Lan Nguyen",
+    "width": 1700,
+    "height": 3350,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Dionysus",
+    "url": "https://en.wikipedia.org/wiki/Dionysus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:33:50.091Z"
+  }
+}

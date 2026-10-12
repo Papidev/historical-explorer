@@ -1,0 +1,73 @@
+{
+  "id": "olimpia-aldobrandini",
+  "name": "Olimpia Aldobrandini",
+  "wikidataId": "Q7086876",
+  "wikipediaTitle": "Olimpia Aldobrandini",
+  "content": {
+    "description": [
+      {
+        "text": "Olimpia Aldobrandini was born on 20 April 1623 into the powerful Aldobrandini family of Rome, a lineage that had produced two popes and held extensive estates across Italy. As the sole heiress to her family's vast fortune, she inherited a wealth that made her one of the richest women in 17th‑century Italy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1638 she married Prince Paolo Borghese, and after his death in 1646 she wed Camillo Pamphili, a cardinal who renounced his ecclesiastical career to become her husband. Her dowry, which included a collection of paintings from the Duke of Ferrara’s “Camerino d’Alabastro” and several villas, transferred the Aldobrandini estates to the Pamphili family and later formed the core of the Galleria Doria Pamphilj.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Her dowry contained masterpieces that had been removed from the Duke of Ferrara’s famed Camerino d’Alabastro.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Aldobrandini estates that she brought into her second marriage became the nucleus for the Galleria Doria Pamphilj, one of Rome’s most important art collections.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Camillo Pamphili, her second husband, renounced his cardinalate to marry her, a rare move for a high‑ranking cleric in the 17th century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As the sole heiress to the Aldobrandini fortune, Olimpia was among the wealthiest women in Italy during her lifetime.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1623,
+      "month": 4,
+      "day": 20,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1681,
+      "month": 12,
+      "day": 18,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Voet_-_Olimpia_Aldobrandini_Pamphilj_-_Galleria_Doria_Pamphilj.png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Voet_-_Olimpia_Aldobrandini_Pamphilj_-_Galleria_Doria_Pamphilj.png",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Voet_-_Olimpia_Aldobrandini_Pamphilj_-_Galleria_Doria_Pamphilj.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Voet_-_Olimpia_Aldobrandini_Pamphilj_-_Galleria_Doria_Pamphilj.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Jacob Ferdinand Voet",
+    "author": "Jacob Ferdinand Voet",
+    "width": 554,
+    "height": 738,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Olimpia Aldobrandini",
+    "url": "https://en.wikipedia.org/wiki/Olimpia_Aldobrandini"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:26:14.379Z"
+  }
+}

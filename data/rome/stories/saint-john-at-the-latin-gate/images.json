@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "DSC09436_MSan_Giovanni_a_Porta_Latina_(Rome).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:DSC09436_MSan_Giovanni_a_Porta_Latina_(Rome).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/DSC09436_MSan_Giovanni_a_Porta_Latina_%28Rome%29.jpg/960px-DSC09436_MSan_Giovanni_a_Porta_Latina_%28Rome%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/DSC09436_MSan_Giovanni_a_Porta_Latina_%28Rome%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "Ardeatino",
+      "author": "Ardeatino",
+      "width": 4430,
+      "height": 4055,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Rom_2025_-_Basilica_di_S._Giovanni_-_by-RaBoe_001.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Rom_2025_-_Basilica_di_S._Giovanni_-_by-RaBoe_001.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Rom_2025_-_Basilica_di_S._Giovanni_-_by-RaBoe_001.jpg/960px-Rom_2025_-_Basilica_di_S._Giovanni_-_by-RaBoe_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Rom_2025_-_Basilica_di_S._Giovanni_-_by-RaBoe_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Raboe001",
+      "author": "Raboe001",
+      "width": 5642,
+      "height": 3712,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Rom_2025_-_Basilica_di_S._Giovanni_-_by-RaBoe_002.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Rom_2025_-_Basilica_di_S._Giovanni_-_by-RaBoe_002.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Rom_2025_-_Basilica_di_S._Giovanni_-_by-RaBoe_002.jpg/960px-Rom_2025_-_Basilica_di_S._Giovanni_-_by-RaBoe_002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/Rom_2025_-_Basilica_di_S._Giovanni_-_by-RaBoe_002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Raboe001",
+      "author": "Raboe001",
+      "width": 5569,
+      "height": 3712,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "DSC09436_MSan_Giovanni_a_Porta_Latina_(Rome).jpg"
+}

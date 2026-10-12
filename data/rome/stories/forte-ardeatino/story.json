@@ -1,0 +1,63 @@
+{
+  "introduction": {
+    "text": "Forte Ardeatino is one of Rome's 15 forts built between 1877 and 1891, located in the Ardeatino quarter. It has served various military and civic functions and was restored in 2006.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "construction",
+        "description": "Construction of the fort began in 1879 and was completed in 1882 on a 11.2-hectare site at the fourth kilometre of via Ardeatina.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1879,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "military-warehouse",
+        "description": "From the 1920s the fort was used as a military warehouse for the Commissariat and Health Direction.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1920,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "abandonment",
+        "description": "The fort was abandoned by military authorities in 1961.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1961,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "municipal-transfer",
+        "description": "In 1982 the fort was handed over to the Municipality of Rome.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1982,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "restoration",
+        "description": "After restoration works, the park outside the fort was opened to the public in May 2006, though the interior remains inaccessible.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2006,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [],
+    "art": []
+  },
+  "relatedPeople": []
+}

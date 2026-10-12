@@ -1,0 +1,75 @@
+{
+  "id": "giacinto-brandi",
+  "name": "Giacinto Brandi",
+  "wikidataId": "Q1748199",
+  "wikipediaTitle": "Giacinto Brandi",
+  "content": {
+    "description": [
+      {
+        "text": "Giacinto Brandi was born in Rome in 1621 and began his artistic training in the studio of the sculptor Alessandro Algardi, who noted that Brandi was more suited to painting than to sculpture. He later joined the studio of Giovanni Giacomo Sementi, travelled to Naples in 1638, and returned to Rome in 1647 to work under Giovanni Lanfranco. During this period he befriended the painter Mattia Preti, with whom he would collaborate on several projects. Brandi joined the Pontifical Academy of Fine Arts and Letters of the Virtuosi al Pantheon in 1647 and became a member of the Accademia di San Luca in 1651. His early works included scenes from the Life of the Virgin for the ceiling of Santa Maria in Via Lata and frescoes of mythological scenes in the Palazzo Pamphilj in 1653.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Between 1655 and 1660 Brandi was strongly influenced by Preti, producing works such as Lot and his Daughters that blended Preti’s naturalism with Guercino’s light effects. He decorated the chapel of San Giuseppe and painted St. Roch, a work that impressed Preti so much that in 1665 he praised Brandi over Pier Francesco Mola, Ciro Ferri, and Carlo Maratta. In 1668 he was elected Principe of the Accademia di San Luca, and he later frescoed the dome and lantern of Sant’Ambrogio e Carlo al Corso from 1671 to 1677, adding prophets and the Fall of the Rebel Angels. Brandi’s later canvases, including the Martyrdom of St. Andrew in 1685, show a shift toward a tighter, classicising style. He died in Rome on 19 January 1691. His pupils included Carlo Lamparelli of Spello and Alessandro Vassello.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Alessandro Algardi, a noted sculptor, observed that Brandi was more suited to painting than to sculpture.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1665 Mattia Preti praised Brandi over Pier Francesco Mola, Ciro Ferri, and Carlo Maratta in a letter to the Sicilian collector Antonio Ruffo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Brandi was elected Principe (president) of the Accademia di San Luca in 1668, a prestigious position that highlighted his standing among contemporary artists.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "From 1671 to 1677 Brandi completed a large fresco program for Sant’Ambrogio e Carlo al Corso, including the dome, lantern, prophets on the pendentives, and the Fall of the Rebel Angels.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1666 Brandi painted the Martyrdom of St. Erasmus in the crypt of the cathedral in Gaeta, showcasing his emerging personal style of thick brushwork and sculptural light.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1621,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1691,
+      "month": 1,
+      "day": 19,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Luigi_Garzi_-_Portrait_of_Giacinto_Brandi_-_NMH_575-1863_-_Nationalmuseum.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Luigi_Garzi_-_Portrait_of_Giacinto_Brandi_-_NMH_575-1863_-_Nationalmuseum.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Luigi_Garzi_-_Portrait_of_Giacinto_Brandi_-_NMH_575-1863_-_Nationalmuseum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Luigi_Garzi_-_Portrait_of_Giacinto_Brandi_-_NMH_575-1863_-_Nationalmuseum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Luigi Garzi",
+    "author": "Luigi Garzi",
+    "width": 704,
+    "height": 1000,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giacinto Brandi",
+    "url": "https://en.wikipedia.org/wiki/Giacinto_Brandi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:29:23.622Z"
+  }
+}

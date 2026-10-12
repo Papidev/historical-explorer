@@ -1,0 +1,85 @@
+{
+  "id": "luigi-canina",
+  "name": "Luigi Canina",
+  "wikidataId": "Q1041712",
+  "wikipediaTitle": "Luigi Canina",
+  "content": {
+    "description": [
+      {
+        "text": "Luigi Canina was born on 23 October 1795 in Casale Monferrato and studied architecture at the University of Turin under Ferdinando Bonsignore and Giuseppe Talucchi. After a brief military service in Alessandria, he earned his degree in 1814 and secured a three‑year grant from the Court of Turin to study in Rome, where he began working on engravings of Roman monuments and produced a detailed survey of the Colosseum that impressed the architects of the Accademia di San Luca, including Giuseppe Valadier.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the 1820s Canina expanded the Villa Borghese gardens, designed Egyptian‑styled propylaea and a mechanical chair lift for the Palazzo Borghese, and published his magnum opus on ancient architecture. In 1839 he was appointed Commissario alle Antichità di Roma, directing excavations at Tusculum and Veii, and later served as president of the Capitoline Museums. His international reputation led to restoration work at Alnwick Castle in England and proposals for Pompeian decoration of Joseph Paxton’s Crystal Palace. He died on 17 October 1856 in Florence while returning from Alnwick.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Canina was the second recipient of the Royal Gold Medal, awarded by the Royal Institute of British Architects in 1849.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He designed a mechanical chair lift for the Palazzo Borghese, an early example of automated vertical transport in architecture.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1856 he proposed a Pompeian‑style interior decoration for Joseph Paxton’s Crystal Palace, blending ancient motifs with modern industrial materials.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Canina served as Commissario alle Antichità di Roma, overseeing excavations at Tusculum and Veii and contributing to the preservation of Roman antiquities.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was elected president of the Capitoline Museums in 1855, a position that underscored his influence in Rome’s cultural institutions.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1843 he was made an Honorary member of the National Academy of Design in the United States, reflecting his international recognition.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Canina restored the interiors of Alnwick Castle in Northumberland, England, bringing Neoclassical accuracy to the historic residence.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1795,
+      "month": 10,
+      "day": 23,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1856,
+      "month": 10,
+      "day": 17,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Luigi_Canina.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Luigi_Canina.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Luigi_Canina.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Luigi_Canina.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 274,
+    "height": 400,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Luigi Canina",
+    "url": "https://en.wikipedia.org/wiki/Luigi_Canina"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T21:07:27.893Z"
+  }
+}

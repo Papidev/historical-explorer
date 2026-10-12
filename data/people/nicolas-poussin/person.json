@@ -1,0 +1,57 @@
+{
+  "id": "nicolas-poussin",
+  "name": "Nicolas Poussin",
+  "wikidataId": "Q41554",
+  "wikipediaTitle": "Nicolas Poussin",
+  "content": {
+    "description": [
+      {
+        "text": "Nicolas Poussin was born in a bourgeois family near Andelys in Normandy. At eighteen he left home because his parents disapproved of his choice to become a painter. He worked as a self‑taught artist, taking commissions such as the decoration of the Luxembourg Palace with Philippe de Champaigne and six plates on the life of Ignatius of Loyola for the Jesuits in 1623, which gave him early recognition.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1624 he moved to Italy under the patronage of Cardinal Barberini, and later the Medici court, where he produced works for the Basilica of St. Peter, including the Martyrdom of Saint Erasmus (1628‑29). He returned to France in 1640 at the invitation of Paul Fréart de Chantelou, was appointed first painter of the king and director of the Louvre’s decorations, but jealousy and political intrigues limited his output. He eventually abandoned the French court, returning to Rome in 1642, where he continued to paint mythological and biblical scenes that secured his reputation across Europe.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Poussin was a self‑taught painter who never attended an academic art school, yet he studied optics, geometry, and perspective to achieve the clarity and order that defined his classicist style.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Despite his fame, Poussin chose to be buried in an unmarked grave in the Basilica of San Lorenzo in Lucina in Rome, and only in 1831 a cenotaph with a bust and inscription was erected at the request of François‑René de Chateaubriand.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His work became the benchmark for 19th‑century classicist painters such as Jacques‑Louis David, Jean‑Augustin‑Dominique Ingres, and Nicolas‑Pierre Loir, who looked to his compositions for clarity, logic, and order.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Nicolas_Poussin_078.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Nicolas_Poussin_078.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Nicolas_Poussin_078.jpg/960px-Nicolas_Poussin_078.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Nicolas_Poussin_078.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Nicolas Poussin",
+    "author": "Nicolas Poussin",
+    "width": 1152,
+    "height": 1500,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Nicolas Poussin",
+    "url": "https://it.wikipedia.org/wiki/Nicolas_Poussin"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:44:16.589Z"
+  }
+}

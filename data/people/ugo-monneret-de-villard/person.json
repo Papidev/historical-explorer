@@ -1,0 +1,85 @@
+{
+  "id": "ugo-monneret-de-villard",
+  "name": "Ugo Monneret de Villard",
+  "wikidataId": "Q4002845",
+  "wikipediaTitle": "Ugo Monneret de Villard",
+  "content": {
+    "description": [
+      {
+        "text": "Ugo Monneret de Villard was born in Milan to a Bolognese family that had moved from Piedmont during the French Revolution. He studied at the Politecnico di Milano and, in 1913, became the institution’s first professor of medieval archaeology, while also teaching the history of architecture until 1924.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After establishing himself in Milan, Monneret travelled extensively on behalf of the Italian Ministry of Foreign Affairs, visiting Egypt, India, Central Asia and other parts of Africa and Asia. His fieldwork produced a prolific body of work on Nubia, Coptic and Muslim art, and he eventually donated his extensive archive to the Biblioteca di Archeologia e Storia dell’Arte in Rome, housed in Palazzo Venezia.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the first university lecturer of medieval archaeology at the Politecnico di Milano.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His travels for the Ministry of Foreign Affairs took him from Egypt to India and across Central Asia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The archive he amassed was donated to the Biblioteca di Archeologia e Storia dell’Arte in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He authored a study on the church of Santa Barbara in Old Cairo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He wrote about the necropolis of Aswan and the cemetery of Sakinya.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He investigated the monasteries of Saint Simeon near Aswan and in Wadi en‑Natrun.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He produced research on the ancient city of Aksum and its topography.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He examined the paintings on the ceiling of the Cappella Palatina in Palermo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He explored the legends of the Magi in his work on oriental legends.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He studied the influence of Islam in Europe during the 12th and 13th centuries.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Ugo_Monneret_de_Villard,_1898.png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ugo_Monneret_de_Villard%2C_1898.png",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Ugo_Monneret_de_Villard%2C_1898.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Ugo_Monneret_de_Villard%2C_1898.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 568,
+    "height": 750,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Ugo Monneret de Villard",
+    "url": "https://it.wikipedia.org/wiki/Ugo_Monneret_de_Villard"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:46:15.282Z"
+  }
+}

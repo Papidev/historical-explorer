@@ -1,0 +1,75 @@
+{
+  "id": "ernesto-nathan",
+  "name": "Ernesto Nathan",
+  "wikidataId": "Q969393",
+  "wikipediaTitle": "Ernesto Nathan",
+  "content": {
+    "description": [
+      {
+        "text": "Ernesto Nathan was born in London on 5 October 1845 to Sara Levi Nathan and Moses Meyer Nathan, both of Jewish descent. Raised in a family deeply involved in the Italian Risorgimento, his mother was a fervent supporter of Giuseppe Mazzini and financed revolutionary activities. Nathan spent his adolescence in Florence, Lugano, Milan and Sardinia, where he managed a cotton mill that ultimately failed, and was shaped by the political ideas of Mazzini and Aurelio Saffi.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1870 he moved to Rome to work for the Mazzinian newspaper La Roma del Popolo and soon entered politics as a staunchly secular, anti‑clerical republican. He was elected to the city council in 1898, became assessor of the economy and cultural assets, and in 1907 was elected mayor, the first outsider to the landowning elite to hold the office. During his tenure he introduced a comprehensive urban plan, municipalized tram and electricity services, opened around 150 public kindergartens, and pursued a laicist education policy, all while facing opposition from the Catholic Church and wealthy landowners.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the first mayor of Rome not belonging to the land‑owning class, breaking a tradition that had lasted until 1907.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Nathan served twice as Gran Maestro of the Grande Oriente d’Italia, first from 1896 to 1904 and again from 1917 to 1919.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1889 he was among the founders of the Società Dante Alighieri, an Italian cultural association.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As mayor he famously cancelled a budget line titled “frattaglie per gatti”, after learning it funded cats that protected municipal documents from mice.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1911 King Vittorio Emanuele III knighted him as Cavaliere di Gran Croce of the Order of Saints Maurice and Lazarus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1845,
+      "month": 10,
+      "day": 5,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1921,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Ernesto_Nathan.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ernesto_Nathan.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/64/Ernesto_Nathan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/64/Ernesto_Nathan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "George Grantham Bain Collection (Library of Congress)",
+    "author": "George Grantham Bain Collection (Library of Congress)",
+    "width": 314,
+    "height": 425,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Ernesto Nathan",
+    "url": "https://it.wikipedia.org/wiki/Ernesto_Nathan"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:11:56.490Z"
+  }
+}

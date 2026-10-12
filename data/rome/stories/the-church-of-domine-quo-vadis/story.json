@@ -1,0 +1,86 @@
+{
+  "introduction": {
+    "text": "Chiesa del Domine Quo Vadis is a small church in Rome that commemorates the meeting of Saint Peter with the risen Christ, a key moment in early Christian tradition.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-sanctuary-9th-century",
+        "description": "A sanctuary has existed on the site since the ninth century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 9,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-current-church-1637",
+        "description": "The current church building was constructed in 1637.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1637,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-inscription-removal-1845",
+        "description": "Pope Gregory XVI ordered the removal of an inscription on the façade in 1845.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1845,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-façade-17th-century",
+        "description": "The façade of the church was added in the 17th century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-modern-column",
+        "description": "A modern column bearing a bust of Henryk Sienkiewicz, the author of *Quo Vadis*, stands in the church.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-footprints",
+        "description": "A marble slab in the centre of the church bears two footprints believed to be those of Jesus Christ.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Saint Peter",
+      "personId": "saint-peter-the-apostle",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Jesus Christ",
+      "personId": "jesus-christ",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Henryk Sienkiewicz",
+      "personId": "henryk-sienkiewicz",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Damasus I",
+      "personId": "pope-damasus-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Gregory XVI",
+      "personId": "pope-gregory-xvi",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

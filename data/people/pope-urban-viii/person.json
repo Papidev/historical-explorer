@@ -1,0 +1,73 @@
+{
+  "id": "pope-urban-viii",
+  "name": "Pope Urban VIII",
+  "wikidataId": "Q131579",
+  "wikipediaTitle": "Pope Urban VIII",
+  "content": {
+    "description": [
+      {
+        "text": "Maffeo Vincenzo Barberini, later Pope Urban VIII, was born on 5 April 1568 in Barberino Val d’Elsa to a Florentine noble family. Educated by the Jesuits and holding a doctorate of law from the University of Pisa, he rose rapidly through the Church hierarchy, becoming a papal legate and archbishop before being created a cardinal in 1606.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Elected in the conclave of 6 August 1623, he took the name Urban VIII and reigned for 21 years, a period that encompassed the Thirty Years’ War. His pontificate was marked by expansive patronage of the arts—commissioning works from Bernini and Poussin—, aggressive political maneuvering that annexed the Duchy of Urbino and the Mantuan duchy of Castro, and a notorious opposition to Copernican astronomy, culminating in Galileo’s trial in 1633.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Urban VIII was the last pope to adopt the name Urban.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He granted the first canonical coronation of a Marian icon, crowning the La Madonna della Febbre in 1631.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His papal bull *Commissum Nobis* (1638) protected Jesuit missions in South America by forbidding the enslavement of natives, while simultaneously repealing the Jesuit monopoly on missionary work in China and Japan.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Urban VIII’s reign saw the accumulation of a massive papal debt, rising from 16 million scudi at his accession to 35 million by 1640, which consumed over 80 % of the papal income in interest payments.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1568,
+      "month": 4,
+      "day": 5,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1644,
+      "month": 7,
+      "day": 29,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pietro_da_Cortona_-_Portrait_of_Urban_VIII_(ca._1624-1627)_-_Google_Art_Project_-_edited.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pietro_da_Cortona_-_Portrait_of_Urban_VIII_(ca._1624-1627)_-_Google_Art_Project_-_edited.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Pietro_da_Cortona_-_Portrait_of_Urban_VIII_%28ca._1624-1627%29_-_Google_Art_Project_-_edited.jpg/960px-Pietro_da_Cortona_-_Portrait_of_Urban_VIII_%28ca._1624-1627%29_-_Google_Art_Project_-_edited.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Pietro_da_Cortona_-_Portrait_of_Urban_VIII_%28ca._1624-1627%29_-_Google_Art_Project_-_edited.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Pietro da Cortona",
+    "author": "Pietro da Cortona",
+    "width": 2238,
+    "height": 3552,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Urban VIII",
+    "url": "https://en.wikipedia.org/wiki/Pope_Urban_VIII"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:40:13.461Z"
+  }
+}

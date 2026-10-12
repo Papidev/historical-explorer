@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Forte_Antenne_Roma_esterno_02.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Forte_Antenne_Roma_esterno_02.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Forte_Antenne_Roma_esterno_02.jpg/960px-Forte_Antenne_Roma_esterno_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Forte_Antenne_Roma_esterno_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Flazaza",
+      "author": "Flazaza",
+      "width": 3120,
+      "height": 4160,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Forte_Antenne_Roma_esterno_03.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Forte_Antenne_Roma_esterno_03.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Forte_Antenne_Roma_esterno_03.jpg/960px-Forte_Antenne_Roma_esterno_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/10/Forte_Antenne_Roma_esterno_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Flazaza",
+      "author": "Flazaza",
+      "width": 3120,
+      "height": 4160,
+      "discoveredVia": "wikipedia-page-image",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Forte_Antenne_Roma_esterno_02.jpg"
+}

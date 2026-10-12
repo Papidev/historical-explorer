@@ -1,0 +1,56 @@
+{
+  "introduction": {
+    "text": "The Cappella di Reginald Pole is a small historic chapel in Rome, built by Cardinal Reginald Pole in 1539 as a memorial to a thwarted assassination attempt. It exemplifies Roman classical architectural style and houses a Marian icon.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-1539",
+        "description": "Construction of the chapel by Cardinal Reginald Pole in 1539, following a failed assassination attempt by King Henry VIII.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1539,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-20th-century",
+        "description": "The chapel was transferred to the Venerabile Collegio Inglese and later abandoned and desacralized in the early 20th century, with its portals sealed.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1900,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-architecture",
+        "description": "The chapel is a small, elegant structure echoing Roman classical tombs, featuring eight yellow brick lesenes with granite plinths and capitals, a travertine entablature, a cupola, four small windows, and two perpendicular portals.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-icon",
+        "description": "An original Marian icon once housed inside the chapel.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Reginald Pole",
+      "personId": "reginald-pole",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Enrico VIII d'Inghilterra",
+      "personId": "enrico-viii-d-inghilterra",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

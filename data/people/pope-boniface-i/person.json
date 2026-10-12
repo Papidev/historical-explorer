@@ -1,0 +1,75 @@
+{
+  "id": "pope-boniface-i",
+  "name": "Pope Boniface I",
+  "wikidataId": "Q160907",
+  "wikipediaTitle": "Pope Boniface I",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Boniface I, who served as bishop of Rome from 28 December 418 until his death on 4 September 422, was elected amid a contested process that saw his rival Eulalius initially recognized by Emperor Honorius before the emperor reversed his decision. The dispute, which involved the Lateran and the intervention of the Urban Prefect Aurelius Anicius Symmachus, led to a brief period of imprisonment for Boniface and a synod at Spoleto, but ultimately Boniface secured the papacy after the emperor acknowledged him as the rightful bishop on 3 April 419.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his short pontificate, Boniface focused on church discipline and the restoration of metropolitan authority, restoring privileges to the sees of Narbonne and Vienne and reducing the jurisdiction of the Bishop of Arles. He also supported Augustine of Hippo in the fight against Pelagianism, forwarding critical letters to Augustine and receiving a dedicated reply in return, and he persuaded Emperor Theodosius II to return Illyricum to Western jurisdiction, thereby defending the rights of the Holy See.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Boniface was married before becoming pope, and his wife died before his election.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was ordained by Pope Damasus I and served as a representative of Pope Innocent I at Constantinople around 405.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He restored certain privileges to the metropolitical sees of Narbonne and Vienne, exempting them from any subjection to the primacy of Arles.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He supported Augustine of Hippo in combating Pelagianism by forwarding two Pelagian letters to Augustine, and Augustine dedicated a rejoinder to him.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He persuaded Emperor Theodosius II to return Illyricum to Western jurisdiction.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He ordered the singing of the Gloria in excelsis on Maundy Thursday during his pontificate.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 422,
+      "month": 9,
+      "day": 4,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_Boniface_I.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Boniface_I.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/68/Pope_Boniface_I.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/68/Pope_Boniface_I.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "AnonymousUnknown author",
+    "author": "AnonymousUnknown author",
+    "width": 146,
+    "height": 200,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Boniface I",
+    "url": "https://en.wikipedia.org/wiki/Pope_Boniface_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:09:35.871Z"
+  }
+}

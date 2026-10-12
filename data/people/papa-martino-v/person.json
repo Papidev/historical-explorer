@@ -1,0 +1,77 @@
+{
+  "id": "papa-martino-v",
+  "name": "Papa Martino V",
+  "wikidataId": "Q169612",
+  "wikipediaTitle": "Papa Martino V",
+  "content": {
+    "description": [
+      {
+        "text": "Oddone Colonna, later Pope Martino V, was born on 25 January 1369 in Genazzano, the capital of his father's feudal state, and studied at the University of Perugia before entering the papal administration as protonotary apostolic under Pope Urban VI.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was elected pope on 11 November 1417, the day of Saint Martin, and his pontificate (1417–1431) saw the restoration of papal sovereignty, the promotion of early Renaissance artists, and the conclusion of the Western Schism, after which he returned to Rome in September 1420 as the first pope to do so in 135 years.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the first pope to have the \"Habemus Papam\" announcement, a ritual that is still used today.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1418 he issued the bull Inter Cunctas, condemning the ideas of Hussite and Lollard movements.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He founded the University of Leuven in 1425, the oldest Catholic university still in existence.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his long journey to Rome he stopped in many Italian cities, including consecrating the main altar of Milan Cathedral.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He engaged in diplomatic negotiations with the Orthodox Church in Constantinople, initiating early talks for reunification.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1369,
+      "month": 1,
+      "day": 25,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1431,
+      "month": 2,
+      "day": 20,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Bicci_di_lorenzo,_Papa_Martino_V_consacra_la_chiesa_di_Sant'Egidio_a_Firenze,_1424_ca.,_02(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Bicci_di_lorenzo%2C_Papa_Martino_V_consacra_la_chiesa_di_Sant'Egidio_a_Firenze%2C_1424_ca.%2C_02(cropped).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Bicci_di_lorenzo%2C_Papa_Martino_V_consacra_la_chiesa_di_Sant%27Egidio_a_Firenze%2C_1424_ca.%2C_02%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Bicci_di_lorenzo%2C_Papa_Martino_V_consacra_la_chiesa_di_Sant%27Egidio_a_Firenze%2C_1424_ca.%2C_02%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0",
+    "attribution": "Sailko (photographer); Lorenzo di Bicci (artist)",
+    "author": "Sailko (photographer); Lorenzo di Bicci (artist)",
+    "width": 462,
+    "height": 624,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Papa Martino V",
+    "url": "https://it.wikipedia.org/wiki/Papa_Martino_V"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:33:49.005Z"
+  }
+}

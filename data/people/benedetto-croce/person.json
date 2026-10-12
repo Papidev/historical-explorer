@@ -1,0 +1,65 @@
+{
+  "id": "benedetto-croce",
+  "name": "Benedetto Croce",
+  "wikidataId": "Q192348",
+  "wikipediaTitle": "Benedetto Croce",
+  "content": {
+    "description": [
+      {
+        "text": "Benedetto Croce (1866–1952) was an Italian philosopher, historian, and politician whose work is often described as the culmination of Italian idealism and neo‑idealism. He developed a philosophy of the spirit that rejected metaphysics and positivism, insisting that philosophy is the history of thought and that science is subordinate to philosophy. His writings on aesthetics, logic, and political theory were influential in shaping Italian intellectual life in the first half of the twentieth century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Croce's political career was marked by a complex relationship with the rise of fascism. Initially he supported Mussolini's government, but after the murder of Giacomo Matteotti he broke with the regime and published the Manifesto of the anti‑fascist intellectuals, becoming a moral conscience of the anti‑fascist movement. He opposed the racial laws of 1938, refused to sign the racial questionnaire, and was expelled from several academies, yet he remained a respected public intellectual and later served as a minister in the post‑war governments.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Croce survived the 1883 Casamicciola earthquake, during which he was buried under rubble for several hours and suffered severe injuries.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was proposed as a candidate for President of the Italian Republic after World War II, reflecting his stature as a leading intellectual.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Croce co‑founded the reconstituted Liberal Party (Partito Liberale Italiano) together with Luigi Einaudi.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was one of the few intellectuals who publicly opposed the 1938 racial laws, refusing to fill out the mandatory racial questionnaire and was expelled from the Accademia Nazionale dei Lincei.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Croce wrote the Manifesto of the anti‑fascist intellectuals in 1925, which was published in Il Mondo and marked his break with Giovanni Gentile.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Benedetto_Croce_01.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Benedetto_Croce_01.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Benedetto_Croce_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Benedetto_Croce_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Mario Nunes Vais",
+    "author": "Mario Nunes Vais",
+    "width": 602,
+    "height": 800,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Benedetto Croce",
+    "url": "https://it.wikipedia.org/wiki/Benedetto_Croce"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:42:18.653Z"
+  }
+}

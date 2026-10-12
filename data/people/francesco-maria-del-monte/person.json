@@ -1,0 +1,73 @@
+{
+  "id": "francesco-maria-del-monte",
+  "name": "Francesco Maria Del Monte",
+  "wikidataId": "Q140106",
+  "wikipediaTitle": "Francesco Maria del Monte",
+  "content": {
+    "description": [
+      {
+        "text": "Francesco Maria del Monte was born in Venice on 5 July 1549 into the aristocratic del Monte family of Tuscan origin. He rose quickly through the ecclesiastical hierarchy, becoming a cardinal deacon in 1588 and later holding several titular churches. Known for his refined taste, he became one of the earliest patrons of the young Caravaggio, acquiring several of the artist's early works and providing them with a crucial provenance that has helped scholars identify the painter’s formative period.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond painting, del Monte was a keen supporter of science. He helped his brother secure a mathematics lectureship for Galileo in Pisa in 1589 and Padua in 1592, and in 1610 he presented the astronomer with a telescope and a copy of his Sidereus Nuncius. His Palazzo Madama hosted intellectual salons that attracted scholars and artists alike, cementing his reputation as an influential patron of both the arts and the emerging scientific community.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the first recorded owner of the Portland Vase, a prized ancient Roman artifact that later entered the collection of the British Museum.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1610, he gifted Galileo a telescope and a copy of his Sidereus Nuncius, thereby supporting the astronomer’s groundbreaking observations of the heavens.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Del Monte patronised the German painter Adam Elsheimer and the Italian artist Andrea Sacchi, commissioning works that reflected the evolving Baroque style.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as Prefect of the Tridentine Council from 1606 to 1616, overseeing the implementation of the Council of Trent’s reforms within the Catholic Church.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1549,
+      "month": 7,
+      "day": 5,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1627,
+      "month": 8,
+      "day": 27,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Ottavio_Leoni_-_Francesco_Maria_del_Monte.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ottavio_Leoni_-_Francesco_Maria_del_Monte.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Ottavio_Leoni_-_Francesco_Maria_del_Monte.jpg/960px-Ottavio_Leoni_-_Francesco_Maria_del_Monte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Ottavio_Leoni_-_Francesco_Maria_del_Monte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Ottavio Leoni",
+    "author": "Ottavio Leoni",
+    "width": 1836,
+    "height": 2583,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Francesco Maria del Monte",
+    "url": "https://en.wikipedia.org/wiki/Francesco_Maria_del_Monte"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:19:52.392Z"
+  }
+}

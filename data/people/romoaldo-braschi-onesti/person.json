@@ -1,0 +1,73 @@
+{
+  "id": "romoaldo-braschi-onesti",
+  "name": "Romoaldo Braschi-Onesti",
+  "wikidataId": "Q1259608",
+  "wikipediaTitle": "Romoaldo Braschi-Onesti",
+  "content": {
+    "description": [
+      {
+        "text": "Born on 19 July 1753 in Cesena, Romoaldo Braschi‑Onesti was a scion of the noble Onesti family, whose members held titles such as marquess and count. His mother, Elena Giulia Francesca Braschi, came from the Counts of Falcino, and the family’s connections to the papacy were already evident through his uncle, Pope Pius VI, who would later adopt him and bring him into the inner circle of the Church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After being elevated to the cardinalate on 18 December 1786, Braschi‑Onesti served as Cardinal‑Deacon of San Nicola in Carcere and later as Camerlengo of the Holy Roman Church from 30 October 1800 to 10 November 1801. He held the post of Archpriest of St. Peter’s Basilica from 1807 until his death in 1817, and from 1784 to 1817 he was Grand Prior of Rome for the Sovereign Military Hospitaller Order of Saint John of Jerusalem, of Rhodes and of Malta. At his death, his body was interred in St. Peter’s Basilica while his praecordia were buried in the Pantheon.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the penultimate cardinal‑nephew appointed by a pope, a rare occurrence in Church history.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Braschi‑Onesti served as Camerlengo during the turbulent period of the Napoleonic occupation of Rome, overseeing the administration of the Holy See.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As Grand Prior of Rome, he oversaw the Order of St. John’s charitable activities in the city, including the care of the sick and the maintenance of hospitals.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His praecordia were buried separately in the Chapel of the Madonna of Clemency in the Pantheon, reflecting the customs of the time for high‑ranking clergy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1753,
+      "month": 7,
+      "day": 19,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1817,
+      "month": 4,
+      "day": 30,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Branschi-onesti.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Branschi-onesti.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/13/Branschi-onesti.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/13/Branschi-onesti.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unidentified painter",
+    "author": "Unidentified painter",
+    "width": 453,
+    "height": 608,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Romoaldo Braschi-Onesti",
+    "url": "https://en.wikipedia.org/wiki/Romoaldo_Braschi-Onesti"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:29:47.590Z"
+  }
+}

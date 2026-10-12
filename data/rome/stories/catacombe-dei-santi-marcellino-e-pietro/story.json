@@ -1,0 +1,87 @@
+{
+  "introduction": {
+    "text": "The Catacombs of Marcellinus and Peter are a subterranean burial complex located about three kilometres southeast of Rome, notable for its extensive 4th‑century galleries and the rich blend of pagan and Christian frescoes that illustrate the religious transition of early Christianity.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-2",
+        "description": "Mass graves dating from the 1st century AD were uncovered during excavations, indicating earlier use of the site.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 100,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-3",
+        "description": "Mass graves dating from the 3rd century AD were uncovered during excavations, indicating earlier use of the site.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 200,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-1",
+        "description": "The catacombs were constructed in the 4th century AD, reflecting early Christian burial practices.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 300,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-4",
+        "description": "Excavations carried out between 2004 and 2010 uncovered approximately 20,000 skeletons and revealed the catacombs' complex layout.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2004,
+          "precision": "exact",
+          "endYear": 2010,
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "The catacombs span 3 hectares and contain 4.5 kilometres of galleries on three levels, featuring loculi, arcosolia, and cubicala burial chambers.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-1",
+        "description": "Frescoes in rooms 79 and 66 display a mixture of pagan and Christian imagery, including scenes of Moses, Orpheus/King David, the raising of Lazarus, and Daniel in the lion's den.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-2",
+        "description": "A prominent Jonah fresco in the catacombs illustrates the biblical story with unique iconography influenced by Jewish midrashic traditions.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Marcellinus and Peter",
+      "personId": "marcellinus-and-peter",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "St. Tiburtius",
+      "personId": "st-tiburtius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Jonah",
+      "personId": "jonah",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

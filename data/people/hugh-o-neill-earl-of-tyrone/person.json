@@ -1,0 +1,67 @@
+{
+  "id": "hugh-o-neill-earl-of-tyrone",
+  "name": "Hugh O'Neill, Earl of Tyrone",
+  "wikidataId": "Q225649",
+  "wikipediaTitle": "Hugh O'Neill, Earl of Tyrone",
+  "content": {
+    "description": [
+      {
+        "text": "Hugh O'Neill was born around 1550 into the powerful O'Neill clan of Tír Eoghain in Ulster. After his father’s assassination in 1558, the young O'Neill and his brother were taken to the Pale and raised by the English Hovenden family, a move intended to mould them into loyal subjects of the Crown. The experience gave him a unique fluency in English and an understanding of English political culture, which he later used to build a network of allies among both Gaelic lords and English officials.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In the 1590s O'Neill emerged as the chief architect of the Nine Years' War, leading a confederacy of Irish lords against English expansion. He introduced firearms and continental military tactics to Irish forces, turning the conflict into a modern war of infantry and artillery. After a series of victories, he negotiated the Treaty of Mellifont in 1603, but the Crown’s refusal to grant him the presidency of Ulster prompted his flight to continental Europe in 1607. He spent the last years of his life in Rome, where he received a pension from Pope Paul V before dying on 10 July 1616.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "O'Neill’s upbringing in the Pale allowed him to act as a cultural intermediary, enabling him to negotiate with English officials while maintaining strong ties to Gaelic chieftains.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first Irish lord to systematically employ firearms and pike-and-shot formations, a military revolution that gave his forces a decisive advantage over the largely infantry-based English army.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the Flight of the Earls, O'Neill was granted a modest pension by Pope Paul V and lived in Rome until his death, where he was buried in the church of San Pietro in Montorio.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1550,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1616,
+      "month": 7,
+      "day": 10,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Hugh_O'Neill_Engraving_William_Holl.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Hugh_O'Neill_Engraving_William_Holl.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Hugh_O%27Neill_Engraving_William_Holl.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Hugh_O%27Neill_Engraving_William_Holl.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "William Holl",
+    "author": "William Holl",
+    "width": 594,
+    "height": 820,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Hugh O'Neill, Earl of Tyrone",
+    "url": "https://en.wikipedia.org/wiki/Hugh_O'Neill%2C_Earl_of_Tyrone"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:24:56.757Z"
+  }
+}

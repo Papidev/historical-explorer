@@ -1,0 +1,69 @@
+{
+  "id": "cerere",
+  "name": "Cerere",
+  "wikidataId": "Q32102",
+  "wikipediaTitle": "Cerere",
+  "content": {
+    "description": [
+      {
+        "text": "Cerere was the Roman goddess of the earth and fertility, a mother figure who protected harvests and was also associated with birth. She was believed to have taught humans how to cultivate fields, and she was often depicted as a dignified matron wearing a crown of wheat, holding a torch and a basket of grain and fruit. In Roman mythology she was the sister of Vesta, Juno, Pluto, Neptune and Jupiter, and the daughter of Saturn and Ops, and her most famous child was Proserpina. The cult of Cerere was rooted in ancient Italic traditions and was later identified with the Greek goddess Demeter, making her an archetypal Great Mother.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cerere’s worship included a flamen minor and was linked to the rites of Liber and Libera. Her sanctuary at the foot of the Aventine was founded in the 5th century BC, and the festival of Cerealia on 12 April involved offerings of fruit, honey, and sacrifices of bulls and pigs. The Romans also celebrated her with the ludi ceriales from 12 to 19 April, and later in August, and the ritual of sacrum anniversarium Cereris. Cerere was closely associated with the earth goddess Tellus, with festivals such as Fordicidia and Cerialia occurring within a four‑day span, and she was also connected to the world of the dead through the Caereris mundus, a pit opened only on 24 August, 5 October and 8 November.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Cerere was believed to have taught the ancient Romans how to cultivate their fields.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A flamen minor was assigned to the cult of Cerere.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the Cerealia festival on 12 April, bulls and pigs were sacrificed to honor Cerere.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Caereris mundus, a pit associated with Cerere, was opened only on 24 August, 5 October and 8 November, suspending public activities.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The term cerritus, meaning \"possessed\", was linked to Cerere and suggested she was seen as the mother of ghosts.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cerere’s festivals were closely tied to those of Tellus, with Fordicidia on 15 April and Cerialia on 19 April occurring within a four‑day interval.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Ceres_of_Mérida_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ceres_of_M%C3%A9rida_(cropped).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Ceres_of_M%C3%A9rida_%28cropped%29.jpg/960px-Ceres_of_M%C3%A9rida_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Ceres_of_M%C3%A9rida_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0",
+    "attribution": "Óscar Marín Repoller - User:Oscurecido. Original uploader was Cynwolfe at en.wikipedia",
+    "author": "Óscar Marín Repoller - User:Oscurecido. Original uploader was Cynwolfe at en.wikipedia",
+    "width": 1231,
+    "height": 2162,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Cerere",
+    "url": "https://it.wikipedia.org/wiki/Cerere"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:15:17.635Z"
+  }
+}

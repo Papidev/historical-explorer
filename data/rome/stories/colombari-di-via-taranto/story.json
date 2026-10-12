@@ -1,0 +1,111 @@
+{
+  "introduction": {
+    "text": "The Colombari di via Taranto are two ancient Roman burial chambers located in the Tuscolano district of Rome, discovered in the 1930s during construction. They provide insight into early Roman funerary practices and the area's historical development.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history6",
+        "description": "Colombario 1 dates to the late 1st century AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "Colombario 2 dates to the 2nd century AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 101,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "In 1122 a canal, the Acqua Marrana, flowed nearby.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1122,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "In the 19th century the area was occupied by vineyards.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1800,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "In the 20th century the area was declared buildable.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1900,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history1",
+        "description": "Discovery of the two colombari during construction of Via Pescara 2 in 1932.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1932,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "The area was traversed by the Roman roads Via Latina and Via Labicana.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "Two underground burial chambers, one for cremation and one for inhumation, featuring vaulted ceilings.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "Colombario 1 has two small side chambers with urns and walls decorated with geometric patterns, garlands, and the goddess Fortuna.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "Colombario 2 contains ten niches with terracotta urns and three inhumation graves, with a vaulted ceiling in the shape of a barrel.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Decorations include motifs of pomegranates, grape clusters, and geometric frames, with a painted depiction of the goddess Fortuna.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "The vaulted ceilings feature geometric and floral designs.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "fortuna (divinità)",
+      "personId": "fortuna-divinit",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

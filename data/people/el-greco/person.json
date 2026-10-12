@@ -1,0 +1,73 @@
+{
+  "id": "el-greco",
+  "name": "El Greco",
+  "wikidataId": "Q301",
+  "wikipediaTitle": "El Greco",
+  "content": {
+    "description": [
+      {
+        "text": "Doménikos Theotokópoulos, better known as El Greco, was born on 1 October 1541 in Crete, then part of the Republic of Venice.  Trained as an icon painter in the Cretan school, he moved to Venice at age 26, then to Rome in 1570, where he absorbed Venetian and Mannerist influences before settling in Toledo, Spain, in 1577, where he produced his most celebrated works.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "El Greco’s dramatic, elongated figures and expressive use of colour made his style seem almost otherworldly to his contemporaries, yet he is now regarded as a precursor of both Expressionism and Cubism.  He left a legacy that inspired artists such as Velázquez, Goya, Delacroix, Manet, Cézanne, and Picasso.  He died on 7 April 1614 in Toledo and was buried in the Church of Santo Domingo el Antiguo.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "El Greco signed his paintings with his full birth name in Greek letters, often adding the word Κρής (Krḗs), meaning “Cretan.”",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His son, Jorge Manuel, born in 1578, became a painter and continued his father’s studio after El Greco’s death.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Before he died, El Greco directed that his son be given the power to make his will, a will witnessed by two Greek friends.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "El Greco’s burial place is the Church of Santo Domingo el Antiguo in Toledo, where he was interred at the age of 72.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1541,
+      "month": 10,
+      "day": 1,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1614,
+      "month": 4,
+      "day": 7,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "El_Greco_-_Portrait_of_a_Man_-_WGA10554.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:El_Greco_-_Portrait_of_a_Man_-_WGA10554.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/El_Greco_-_Portrait_of_a_Man_-_WGA10554.jpg/960px-El_Greco_-_Portrait_of_a_Man_-_WGA10554.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/El_Greco_-_Portrait_of_a_Man_-_WGA10554.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "El Greco",
+    "author": "El Greco",
+    "width": 3312,
+    "height": 3668,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "El Greco",
+    "url": "https://en.wikipedia.org/wiki/El_Greco"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:42:35.983Z"
+  }
+}

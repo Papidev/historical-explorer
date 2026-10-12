@@ -1,0 +1,61 @@
+{
+  "introduction": {
+    "text": "The Domus del Protiro (V,II,5) was a wealthy Roman house located in the V region of Ostia, notable for its elaborate architecture and the archaeological finds of classical statues.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The Domus del Protiro was built in the 3rd century AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 200,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "The Domus del Protiro was a wealthy aristocratic residence in Ostia, featuring a central courtyard, a marble double niche, and a subterranean complex that may have served as a cult space.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The Domus featured a central courtyard with a basin, a double marble niche, and a subterranean complex accessed via a staircase in the portico.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Statues of Venus, Diana, Apollo, and a Genio with serpent and cornucopia were found in the Domus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Venere (divinità)",
+      "personId": "venus-mythology",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Diana",
+      "personId": "diana",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Apollo",
+      "personId": "apollo",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Genio (divinità)",
+      "personId": "genio-divinit",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

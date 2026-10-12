@@ -1,0 +1,69 @@
+{
+  "id": "victorien-sardou",
+  "name": "Victorien Sardou",
+  "wikidataId": "Q354828",
+  "wikipediaTitle": "Victorien Sardou",
+  "content": {
+    "description": [
+      {
+        "text": "Victorien Sardou (5 September 1831 – 8 November 1908) was a French dramatist best known for co‑developing the well‑made play with Eugène Scribe. His prolific output included historical dramas such as La Tosca, Fédora, Madame Sans‑Gêne and Gismonda, many of which were later adapted into popular 19th‑century operas by composers like Puccini, Giordano, and Février. Sardou’s meticulous plotting and dramatic structure earned him a reputation as a master of the “well‑made” genre, and his works were staged across Europe and in the United States.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond the stage, Sardou was a celebrated public figure: he was awarded the Légion d’honneur in 1863, elected to the Académie française in 1878, and amassed an impressive personal library of about 80,000 books. His influence extended into culinary culture, with dishes such as Eggs Sardou in Louisiana and Lobster Thermidor in Paris named in his honour. The playwright’s name also entered theatrical slang as “Sardoodledom,” coined by George Bernard Shaw to mock Sardou’s perceived contrivance.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The dish Eggs Sardou, a Louisiana specialty, was created by Antoine Alciatore in tribute to Sardou’s visit to New Orleans.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Lobster Thermidor, a classic French entrée, was also named after Sardou, reflecting his connection to Parisian culinary traditions.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "George Bernard Shaw coined the term “Sardoodledom” to criticize Sardou’s perceived reliance on contrived dramatic machinery.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1831,
+      "month": 9,
+      "day": 5,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1908,
+      "month": 11,
+      "day": 8,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "VictorienSardou_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:VictorienSardou_(cropped).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/VictorienSardou_%28cropped%29.jpg/960px-VictorienSardou_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/VictorienSardou_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "HdL85",
+    "author": "HdL85",
+    "width": 1410,
+    "height": 2026,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Victorien Sardou",
+    "url": "https://en.wikipedia.org/wiki/Victorien_Sardou"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:28:14.652Z"
+  }
+}

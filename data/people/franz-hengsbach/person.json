@@ -1,0 +1,81 @@
+{
+  "id": "franz-hengsbach",
+  "name": "Franz Hengsbach",
+  "wikidataId": "Q64060",
+  "wikipediaTitle": "Franz Hengsbach",
+  "content": {
+    "description": [
+      {
+        "text": "Franz Hengsbach was born on 10 September 1910 in Velmede, Germany, and entered the priesthood in 1937 after completing theological studies at the Ludwig-Maximilians-Universität München. He served as a vicar in Herne-Bukau and later held several administrative positions within the German Catholic Church, including secretary general of the Central Committee for the Preparation of German Catholics and director of the archdiocesan pastoral office in Paderborn.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1957 he became the first Bishop of the newly created Diocese of Essen, a role he held until 1991. During his episcopacy he founded the organization Adveniat to support Latin American churches, served as bishop of the German Military Ordinariate, attended the Second Vatican Council, and was elevated to the cardinalate by Pope John Paul II in 1988. He died on 24 June 1991 in Essen after complications from a stomach operation.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Hengsbach was the inaugural Bishop of Essen, establishing the diocese’s administrative and pastoral structures.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He founded Adveniat, an organization of German bishops aimed at assisting the Roman Catholic Church in Latin America.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Hengsbach served as Grand Prior of the Equestrian Order of the Holy Sepulchre of Jerusalem, a senior position within the Catholic chivalric order.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a member of the Council of the European Episcopal Conference, contributing to the coordination of Catholic activities across Europe.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Upon reaching the age of eighty in 1990, he lost the right to participate in papal conclaves, a customary rule for cardinals over that age.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In September 2023, following allegations of sexual misconduct, a monumental statue of Hengsbach in front of Essen Cathedral was removed.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1910,
+      "month": 9,
+      "day": 10,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1991,
+      "month": 6,
+      "day": 24,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Franz_Hengsbach_(Silke_Rehberg).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Franz_Hengsbach_(Silke_Rehberg).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Franz_Hengsbach_%28Silke_Rehberg%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Franz_Hengsbach_%28Silke_Rehberg%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0",
+    "attribution": "Rainer Halama (detail: Rabanus Flavus)",
+    "author": "Rainer Halama (detail: Rabanus Flavus)",
+    "width": 592,
+    "height": 756,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Franz Hengsbach",
+    "url": "https://en.wikipedia.org/wiki/Franz_Hengsbach"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:18:46.118Z"
+  }
+}

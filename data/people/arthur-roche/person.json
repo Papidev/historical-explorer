@@ -1,0 +1,59 @@
+{
+  "id": "arthur-roche",
+  "name": "Arthur Roche",
+  "wikidataId": "Q711174",
+  "wikipediaTitle": "Arthur Roche",
+  "content": {
+    "description": [
+      {
+        "text": "Arthur Roche was born on 6 March 1950 in Batley Carr, West Riding of Yorkshire. He entered the priesthood in 1975 after studying theology at St Alban's College in Valladolid and the Comillas Pontifical University. His early ministry included assistant priest roles in Barnsley and private secretary work for Bishop William Wheeler, followed by positions as vice‑chancellor and financial secretary of the Diocese of Leeds.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Roche’s episcopal career began with his appointment as auxiliary bishop of Westminster in 2001, then as coadjutor and later bishop of Leeds. In 2012 he entered the Roman Curia as secretary of the Congregation for Divine Worship and the Discipline of the Sacraments, a post he later held as prefect. Elevated to the College of Cardinals in 2022, he has overseen major liturgical reforms, including the 2011 English translation of the Roman Missal and the implementation of Pope Francis’s 2021 motu proprio Traditionis Custodes.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Roche was the sole author of the commentary that accompanied Pope Francis’s 2017 document *Magnum principium*, which transferred the authority to translate liturgical texts from the Congregation to national bishops’ conferences.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In December 2021 he issued a *Responsa ad Dubia* clarifying the restrictions imposed by *Traditionis Custodes* on the celebration of the Traditional Latin Mass, including a ban on sacraments of Holy Orders and Confirmation in the old rite.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1950,
+      "month": 3,
+      "day": 6,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "SMM_Ascensione_Roche_17.05.2026.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:SMM_Ascensione_Roche_17.05.2026.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/SMM_Ascensione_Roche_17.05.2026.jpg/960px-SMM_Ascensione_Roche_17.05.2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/SMM_Ascensione_Roche_17.05.2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Lorenzo Iorfino",
+    "author": "Lorenzo Iorfino",
+    "width": 4000,
+    "height": 6000,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Arthur Roche",
+    "url": "https://en.wikipedia.org/wiki/Arthur_Roche"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:38:13.027Z"
+  }
+}

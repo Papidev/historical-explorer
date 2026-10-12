@@ -1,0 +1,65 @@
+{
+  "id": "giovanni-leone",
+  "name": "Giovanni Leone",
+  "wikidataId": "Q1235",
+  "wikipediaTitle": "Giovanni Leone",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Leone began his career as a jurist and academic, earning a law degree at 21 and a degree in political science a year later. He held a chair in criminal procedure at the University of Camerino in 1933, later teaching at Messina and Bari, where he mentored future statesman Aldo Moro. Leone also contributed to the drafting of the 1942 Italian Navigation Code, particularly its criminal provisions, and served as a military justice judge during the war, issuing an order in 1943 that freed 49 anti‑fascist militants from the Poggioreale prison.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Transitioning to politics, Leone was elected to the Constituent Assembly in 1946 and became President of the Chamber of Deputies in 1955, a post he held until 1963. He led two brief governments in 1963 and 1968, and in 1971 was elected President of the Republic. As head of state he was the first to dissolve Parliament early (1972 and 1976) and resigned in 1978 amid the Lockheed scandal, though later investigations cleared him of any wrongdoing.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Leone was the first Italian president to exercise the power of early dissolution of Parliament, doing so twice during his tenure.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During World War II, as a military judge, he issued an order that freed 49 anti‑fascist militants from the Poggioreale prison, an act that earned him a solemn commendation in 1998.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1908,
+      "month": 11,
+      "day": 3,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 2001,
+      "month": 11,
+      "day": 9,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Presidente_Leone.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Presidente_Leone.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Presidente_Leone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Presidente_Leone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Attribution",
+    "attribution": "Quirinale.it",
+    "author": "Unknown authorUnknown author",
+    "width": 450,
+    "height": 600,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giovanni Leone",
+    "url": "https://it.wikipedia.org/wiki/Giovanni_Leone"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:25:22.400Z"
+  }
+}

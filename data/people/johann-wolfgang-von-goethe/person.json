@@ -1,0 +1,73 @@
+{
+  "id": "johann-wolfgang-von-goethe",
+  "name": "Johann Wolfgang von Goethe",
+  "wikidataId": "Q5879",
+  "wikipediaTitle": "Johann Wolfgang von Goethe",
+  "content": {
+    "description": [
+      {
+        "text": "Johann Wolfgang von Goethe was born in Frankfurt on 28 August 1749 and quickly distinguished himself as a prodigious writer and thinker. After studying law at Leipzig and Strasbourg, he published the novel *The Sorrows of Young Werther* in 1774, a work that sparked a cultural phenomenon and propelled him into the literary spotlight. In 1775 he moved to Weimar, where he became a central figure in the court of Duke Karl August and helped shape the intellectual movement known as Weimar Classicism, collaborating with contemporaries such as Friedrich Schiller and engaging in public service as a war and highway commissioner.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond his literary achievements, Goethe pursued scientific inquiry, producing influential treatises on botany, anatomy, and colour theory. His 1810 work *Theory of Colours* challenged Newtonian optics and laid groundwork for later aesthetic and psychological studies of colour. In the late 1780s he embarked on an Italian journey that deepened his appreciation for classical art and led him to famously remark that seeing Sicily was essential to seeing Italy. Goethe’s multifaceted career spanned literature, science, politics, and the arts until his death in Weimar on 22 March 1832.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Goethe’s last words are commonly quoted as “Mehr Licht!” (More light!), a phrase that has become emblematic of his Enlightenment outlook.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1782 he was ennobled by Duke Karl August, adding the particle “von” to his name and marking his formal entry into the German aristocracy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his Italian tour, Goethe famously declared that to have seen Italy without having seen Sicily was to have seen only a part of the country, underscoring Sicily’s importance in his artistic vision.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Goethe’s scientific work on colour, particularly his opposition to Newton’s analytical approach, influenced not only artists like J. M. W. Turner but also philosophers such as Ludwig Wittgenstein, who later wrote *Remarks on Colour*.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1749,
+      "month": 8,
+      "day": 28,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1832,
+      "month": 3,
+      "day": 22,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Goethe_(Stieler_1828).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Goethe_(Stieler_1828).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Goethe_%28Stieler_1828%29.jpg/960px-Goethe_%28Stieler_1828%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Goethe_%28Stieler_1828%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Joseph Karl Stieler",
+    "author": "Joseph Karl Stieler",
+    "width": 1972,
+    "height": 2432,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Johann Wolfgang von Goethe",
+    "url": "https://en.wikipedia.org/wiki/Johann_Wolfgang_von_Goethe"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:58:45.057Z"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "pope-boniface-iv",
+  "name": "Pope Boniface IV",
+  "wikidataId": "Q170505",
+  "wikipediaTitle": "Pope Boniface IV",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Boniface IV, born around 550 in the region that is now L'Aquila, served as a deacon under Pope Gregory the Great and was a member of the Benedictine order.  He managed the Lateran Palace as a monastery and promoted monasticism throughout his early career.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Elected in 608 after a nine‑month vacancy, Boniface IV converted the ancient Pantheon into a Christian church with imperial permission, consecrated it in 609, and corresponded with Bishop Mellitus of London, sending letters to King Æthelberht of Kent and other English clergy.  He died on 8 May 615 and was buried in the portico of St. Peter’s Basilica, where his remains were moved several times over the centuries.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the first pope to convert a pagan temple into a Christian church, transforming the Pantheon into a place of worship for the Virgin Mary and all the Martyrs.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His correspondence with Mellitus of London included letters to the English king Æthelberht, which were considered genuine by some scholars and spurious by others, reflecting early attempts to organize the English Church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Boniface IV’s remains were relocated three times: first in the tenth or eleventh century, again at the close of the thirteenth century under Boniface VIII, and finally to the new St. Peter’s Basilica on 21 October 1603.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 550,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 615,
+      "month": 5,
+      "day": 8,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "San_Bonifacio_IV_papa1.gif",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:San_Bonifacio_IV_papa1.gif",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/San_Bonifacio_IV_papa1.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/San_Bonifacio_IV_papa1.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "original uploader User:Deep also it",
+    "author": "original uploader User:Deep also it",
+    "width": 372,
+    "height": 376,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Boniface IV",
+    "url": "https://en.wikipedia.org/wiki/Pope_Boniface_IV"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:59:42.572Z"
+  }
+}

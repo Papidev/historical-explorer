@@ -1,0 +1,65 @@
+{
+  "id": "st-silvia",
+  "name": "St. Silvia",
+  "wikidataId": "Q1088039",
+  "wikipediaTitle": "Saint Silvia",
+  "content": {
+    "description": [
+      {
+        "text": "Silvia, also known as Sylvia, lived in the late fifth and early sixth centuries (c. 515 – c. 592).  She was the mother of Pope Gregory the Great and came from a distinguished Roman family; her husband, Gordianus, was a regionarius of the gens Anicia.  Her native place is sometimes cited as Sicily and sometimes as Rome, and the family home was located on the Clivus Scauri.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After Gordianus died around 573, Silvia devoted herself to religious life in a new cell by the gate of Blessed Paul.  She continued to support Gregory’s monastic house by providing vegetables from her garden, and a mosaic portrait of her parents was later executed at the monastery of Saint Andrew.  Early veneration of Silvia is evident: she built a chapel on the Aventine, was honoured by Romans as a Christian widow, and later monks from Mar Saba settled in her house, dedicating it to Saint Sabas.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Silvia is venerated as a patroness of pregnant women, and she is invoked by expectant mothers for a safe delivery.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She provided fresh vegetables from her garden to support the monastic community founded by her son Gregory, demonstrating her practical piety.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A mosaic portrait of Silvia and her husband was commissioned by Gregory the Great and is described in detail by Johannes Diaconus at the monastery of Saint Andrew.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 515,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 592,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Santa_Silvia_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Santa_Silvia_(cropped).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Santa_Silvia_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Santa_Silvia_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 183,
+    "height": 307,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Saint Silvia",
+    "url": "https://en.wikipedia.org/wiki/Saint_Silvia"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:37:46.123Z"
+  }
+}

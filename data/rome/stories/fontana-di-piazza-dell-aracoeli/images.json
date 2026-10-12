@@ -1,0 +1,18 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "La_fontana_di_piazza_d'Aracoeli.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:La_fontana_di_piazza_d'Aracoeli.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/La_fontana_di_piazza_d%27Aracoeli.jpg/960px-La_fontana_di_piazza_d%27Aracoeli.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/La_fontana_di_piazza_d%27Aracoeli.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Sara Di Marcello at Italian Wikipedia",
+      "author": "Sara Di Marcello at Italian Wikipedia",
+      "width": 1600,
+      "height": 1200,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    }
+  ],
+  "selectedCommonsFileName": "La_fontana_di_piazza_d'Aracoeli.jpg"
+}

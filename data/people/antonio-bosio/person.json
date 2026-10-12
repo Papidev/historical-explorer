@@ -1,0 +1,48 @@
+{
+  "id": "antonio-bosio",
+  "name": "Antonio Bosio",
+  "wikidataId": "Q600982",
+  "wikipediaTitle": "Antonio Bosio",
+  "content": {
+    "description": [
+      {
+        "text": "Antonio Bosio was born in Malta around 1575 and, after studying literature, philosophy and jurisprudence, abandoned his legal career to devote himself to the systematic exploration of Rome’s subterranean catacombs. Sent to Rome as a boy under the care of his uncle, a representative of the Knights of Malta at the Holy See, he began his investigations in 1578 following the accidental discovery of an ancient cemetery on the Via Salaria. Over the next decade he combined extensive literary research—consulting early Christian texts for clues to the locations of burial sites—with meticulous fieldwork, mapping passages and recording inscriptions in two large folio volumes now housed in the Vallicelliana library.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Bosio’s pioneering work was published posthumously in 1632 as Roma Sotterranea, a folio volume edited by Giovanni Severani and patronized by the Knights of Malta and Cardinal Francesco Barberini. The book catalogued the names, founders and notable interments of each cemetery, and, although many of his conclusions were later found erroneous, his methodical approach laid the groundwork for Christian archaeology. The publication also led to the commercial exploitation of the catacombs, as the newly revealed entrances attracted collectors and traders, resulting in the loss of some sites through subsequent construction.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Bosio earned the nickname “Columbus of the Catacombs” for his pioneering systematic exploration of Rome’s underground burial sites.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The posthumous edition of Roma Sotterranea was printed in 1632 under the patronage of the Knights of Malta and Cardinal Francesco Barberini, and a Latin translation appeared in 1651.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1575,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1629,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Antonio Bosio",
+    "url": "https://en.wikipedia.org/wiki/Antonio_Bosio"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:59:33.606Z"
+  }
+}

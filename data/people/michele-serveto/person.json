@@ -1,0 +1,69 @@
+{
+  "id": "michele-serveto",
+  "name": "Michele Serveto",
+  "wikidataId": "Q185914",
+  "wikipediaTitle": "Michael Servetus",
+  "content": {
+    "description": [
+      {
+        "text": "Michael Servetus was a Spanish theologian, physician, cartographer, and Renaissance humanist who became famous for his anti‑trinitarian writings and his pioneering description of pulmonary circulation. He was a polymath versed in many sciences—mathematics, astronomy, meteorology, geography, anatomy, medicine, pharmacology, jurisprudence, translation, poetry, and biblical studies—making him a key figure in the intellectual currents of the Reformation.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Born in 1511 (approximate) in Villanueva de Sigena, Aragon, Servetus died on 27 October 1553 in Geneva, where he was burned at the stake for heresy. His 1553 work *Christianismi Restitutio* contained the first European description of pulmonary circulation, and his radical theology sparked intense conflict with John Calvin and the Geneva council, marking a pivotal moment in the emergence of religious tolerance.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the first European to correctly describe the function of pulmonary circulation.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was executed by burning at stake in Geneva on 27 October 1553.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a polymath who wrote on mathematics, astronomy, meteorology, geography, anatomy, medicine, pharmacology, jurisprudence, translation, poetry, and biblical studies.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1511,
+      "month": 9,
+      "day": 29,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1553,
+      "month": 10,
+      "day": 27,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Michael_Servetus.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Michael_Servetus.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Michael_Servetus.jpg/960px-Michael_Servetus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Michael_Servetus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Christian Fritzsch",
+    "author": "Christian Fritzsch",
+    "width": 5000,
+    "height": 6828,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Michael Servetus",
+    "url": "https://en.wikipedia.org/wiki/Michael_Servetus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:52:51.527Z"
+  }
+}

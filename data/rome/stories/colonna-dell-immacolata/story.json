@@ -1,0 +1,121 @@
+{
+  "introduction": {
+    "text": "The Colonna dell'Immacolata is a nineteenth‑century monument in Rome that commemorates the dogma of the Immaculate Conception and serves as a focal point for annual papal celebrations.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The Corinthian column was discovered on 17 September 1777 during construction of the monastery for the Benedictine Order of Santa Maria della Concezione in Campo Marzio.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1777,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "The dogma of the Immaculate Conception was proclaimed ex cathedra by Pope Pius IX in 1854.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1854,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "The column was designed by Luigi Poletti and commissioned by Ferdinand II of the Two Sicilies, and dedicated on 8 December 1857.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1857,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "In 1922 a replica of the column was raised on the campus of the University of Saint Mary of the Lake in Mundelein, Illinois.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1922,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "Since December 1953, pontiffs have visited the monument annually and offered a bouquet of flowers at the base of the column.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1953,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "The column was erected by city firemen, who raised it on December 18.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The monument consists of a square marble base with four bas‑reliefs and statues of biblical figures at the corners, supporting a 11.8‑meter Cipollino marble column topped by a bronze statue of the Virgin Mary.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Four statues of Hebrew figures—King David, Isaiah, Ezekiel, and Moses—each accompanied by a Latin biblical verse, adorn the base of the column.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Luigi Poletti (architect)",
+      "personId": "luigi-poletti-architect",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ferdinand II of the Two Sicilies",
+      "personId": "ferdinand-ii-of-the-two-sicilies",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Pius IX",
+      "personId": "pope-pius-ix",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Pius XII",
+      "personId": "pope-pius-xii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope John XXIII",
+      "personId": "pope-john-xxiii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Adamo Tadolini",
+      "personId": "adamo-tadolini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ignazio Jacometti",
+      "personId": "ignazio-jacometti",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Adam",
+      "personId": "adam",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

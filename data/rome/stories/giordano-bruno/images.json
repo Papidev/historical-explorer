@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Bronze_statue_of_Giordano_Bruno_by_Ettore_Ferrari_,_Campo_de'_Fiori,_Roma.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Bronze_statue_of_Giordano_Bruno_by_Ettore_Ferrari_%2C_Campo_de'_Fiori%2C_Roma.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Bronze_statue_of_Giordano_Bruno_by_Ettore_Ferrari_%2C_Campo_de%27_Fiori%2C_Roma.jpg/960px-Bronze_statue_of_Giordano_Bruno_by_Ettore_Ferrari_%2C_Campo_de%27_Fiori%2C_Roma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Bronze_statue_of_Giordano_Bruno_by_Ettore_Ferrari_%2C_Campo_de%27_Fiori%2C_Roma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Livioandronico2013",
+      "author": "Livioandronico2013",
+      "width": 3703,
+      "height": 5041,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "2016_Monument_to_Giordano_Bruno_(Rome)_01.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:2016_Monument_to_Giordano_Bruno_(Rome)_01.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/2016_Monument_to_Giordano_Bruno_%28Rome%29_01.jpg/960px-2016_Monument_to_Giordano_Bruno_%28Rome%29_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/26/2016_Monument_to_Giordano_Bruno_%28Rome%29_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Jordiferrer",
+      "author": "Jordiferrer",
+      "width": 1944,
+      "height": 2592,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "2016_Monument_to_Giordano_Bruno_(Rome)_02.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:2016_Monument_to_Giordano_Bruno_(Rome)_02.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/2016_Monument_to_Giordano_Bruno_%28Rome%29_02.jpg/960px-2016_Monument_to_Giordano_Bruno_%28Rome%29_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/2016_Monument_to_Giordano_Bruno_%28Rome%29_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Jordiferrer",
+      "author": "Jordiferrer",
+      "width": 1944,
+      "height": 2592,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Bronze_statue_of_Giordano_Bruno_by_Ettore_Ferrari_,_Campo_de'_Fiori,_Roma.jpg"
+}

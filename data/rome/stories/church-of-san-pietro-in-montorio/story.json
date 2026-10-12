@@ -1,0 +1,156 @@
+{
+  "introduction": {
+    "text": "Chiesa di San Pietro in Montorio is a Roman Catholic church in Rome that houses the Tempietto del Bramante and serves as a shrine to the site of St. Peter’s crucifixion.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-9th-century",
+        "description": "The site originally hosted a 9th‑century church dedicated to Saint Peter on Rome’s Janiculum hill.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 800,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-15th-century-friars",
+        "description": "In the 15th century the ruins were given to the Amadist friars, a reform branch of the Franciscans.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1400,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-1500-consecration",
+        "description": "The church was rebuilt and consecrated in 1500 by Pope Alexander VI.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1500,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1502-tempietto",
+        "description": "The Tempietto del Bramante was possibly built as early as 1502.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1502,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1607-flight-ears",
+        "description": "In 1607 the Flight of the Earls brought Irish nobles to the church.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1607,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1616-tyrone-death",
+        "description": "Hugh O'Neill, Earl of Tyrone, died in 1616 and was buried in the church.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1616,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-tempietto",
+        "description": "The Tempietto del Bramante, a small commemorative martyrium, exemplifies High Renaissance architecture.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-raimondi-chapel",
+        "description": "The Raimondi Chapel, designed by Gian Lorenzo Bernini in 1640, features Baroque sculptures.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-raphael-transfiguration",
+        "description": "Raphael’s Transfiguration once graced the high altar until 1797.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-sebastiano-flagellation",
+        "description": "Sebastiano del Piombo’s Flagellation, with figure drawings by Michelangelo, is in the first chapel on the right.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-vasari-conversion",
+        "description": "Giorgio Vasari painted the Conversion of St. Paul on the ceiling of the fifth chapel.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-baburen-entombment",
+        "description": "Dirck van Baburen’s Entombment in the Pietà Chapel reflects Caravaggio’s influence.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Donato Bramante",
+      "personId": "donato-bramante",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ferdinand II of Aragon",
+      "personId": "ferdinand-ii-of-aragon",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Isabella I of Castile",
+      "personId": "isabella-i-of-castile",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Alexander VI",
+      "personId": "pope-alexander-vi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Sixtus IV",
+      "personId": "pope-sixtus-iv",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Amadeus of Portugal",
+      "personId": "amadeus-of-portugal",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Michelangelo",
+      "personId": "michelangelo-buonarroti",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Raphael",
+      "personId": "raphael",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Gian Lorenzo Bernini",
+      "personId": "gian-lorenzo-bernini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Hugh O'Neill, Earl of Tyrone",
+      "personId": "hugh-o-neill-earl-of-tyrone",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

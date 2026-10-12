@@ -1,0 +1,65 @@
+{
+  "id": "napoleon-iii",
+  "name": "Napoleon III",
+  "wikidataId": "Q7721",
+  "wikipediaTitle": "Napoleon III",
+  "content": {
+    "description": [
+      {
+        "text": "Napoleon III, born Charles‑Louis Napoléon Bonaparte on 20 April 1808, was the nephew of Emperor Napoleon I and the first person elected as President of France in 1848. After two failed coup attempts and a period of exile, he seized power in 1851, declared himself Emperor in 1852, and ruled until his defeat at the Franco‑Prussian War in 1870.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his 22‑year reign he oversaw a sweeping program of industrialization, expanded the railway network, modernized the banking system, and launched the reconstruction of Paris under Haussmann, which reshaped the city’s streets, parks and public buildings. He also pursued an ambitious foreign policy, supporting Italian unification, building the Suez Canal, and attempting to establish a French protectorate in Mexico, though his empire ultimately collapsed after the loss of Alsace‑Lorraine.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the first elected president of France, a milestone in the country’s political history.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Napoleon III commissioned the famous urban planner Georges‑Eugène Haussmann to redesign Paris, creating the wide boulevards and parks that define the city today.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1808,
+      "month": 4,
+      "day": 20,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1873,
+      "month": 1,
+      "day": 9,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Franz_Xaver_Winterhalter_Napoleon_III.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Franz_Xaver_Winterhalter_Napoleon_III.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Franz_Xaver_Winterhalter_Napoleon_III.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Franz_Xaver_Winterhalter_Napoleon_III.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Franz Xaver Winterhalter",
+    "author": "Franz Xaver Winterhalter",
+    "width": 898,
+    "height": 1400,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Napoleon III",
+    "url": "https://en.wikipedia.org/wiki/Napoleon_III"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:56:19.649Z"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "artemisia-gentileschi",
+  "name": "Artemisia Gentileschi",
+  "wikidataId": "Q212657",
+  "wikipediaTitle": "Artemisia Gentileschi",
+  "content": {
+    "description": [
+      {
+        "text": "Artemisia Gentileschi was born in Rome on 8 July 1593 and was trained from a very early age in her father Orazio Gentileschi’s workshop.  By the age of fifteen she was already producing professional work, and her first surviving painting, *Susanna and the Elders* (1610), shows a mastery of Caravaggio’s dramatic chiaroscuro combined with a naturalistic treatment of the female figure that would become her hallmark.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Gentileschi’s career spanned several major Italian cities and the English court.  She became the first woman admitted to the Accademia di Arte del Disegno in Florence, worked for the Medici and later for Charles I of England between 1638 and 1642, and continued to receive commissions in Naples until at least January 1654, the date of her last known work.  Her oeuvre, dominated by powerful biblical and mythological heroines, remains a testament to her skill and to the rare opportunities she secured as a female artist in the 17th century.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "She was the first woman to become a member of the Accademia di Arte del Disegno in Florence.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She worked as an expatriate painter in the court of Charles I of England from 1638 to 1642.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Her last known commission was in January 1654, indicating she was still active at that time.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1593,
+      "month": 7,
+      "day": 8,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1654,
+      "month": 1,
+      "day": 1,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Artemisia_Gentileschi_Selfportrait_Martyr.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Artemisia_Gentileschi_Selfportrait_Martyr.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Artemisia_Gentileschi_Selfportrait_Martyr.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Artemisia_Gentileschi_Selfportrait_Martyr.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Artemisia Gentileschi",
+    "author": "Artemisia Gentileschi",
+    "width": 800,
+    "height": 1073,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Artemisia Gentileschi",
+    "url": "https://en.wikipedia.org/wiki/Artemisia_Gentileschi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:48:24.613Z"
+  }
+}

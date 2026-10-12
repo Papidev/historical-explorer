@@ -1,0 +1,75 @@
+{
+  "introduction": {
+    "text": "The Cisterna delle Sette Sale is a large Roman cistern complex on Rome's Oppian Hill that supplied water to the Baths of Trajan. Its engineering, scale, and archaeological remains illustrate the sophistication of Roman hydraulic infrastructure and its continued use through the centuries.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Construction of the cistern coincided with the building of the Baths of Trajan in the early 2nd century AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 109,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "In the 4th century, a domus was erected atop the cistern complex.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 300,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "During the Middle Ages, the northern chambers were used as catacombs, and a 1967 excavation uncovered over a thousand skeletons.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1967,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "In the mid‑eighteenth century, only seven chambers were noted, giving the cistern its name.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The cistern has two levels, each with nine parallel compartments 5 m wide and 30–40 m long, supported by a cryptoporticus on the lower level.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "Walls and floors were lined with waterproof plaster, and the upper level featured alternating rectangular and semicircular niches for ventilation.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "Water entered through a branch aqueduct from Esquiline Hill and exited via pipes in the lower level, feeding the Baths of Trajan.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design4",
+        "description": "The cistern’s front wall is straight with alternating rectangular and semicircular niches, and large openings in the upper level provided ventilation.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "A grotto on the ground level contains marble slabs that were part of the Domus Aurea.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": []
+}

@@ -1,0 +1,44 @@
+{
+  "id": "andrea-tiddi",
+  "name": "Andrea Tiddi",
+  "wikidataId": "Q3616067",
+  "wikipediaTitle": "Andrea Tiddi",
+  "content": {
+    "description": [
+      {
+        "text": "Andrea Tiddi earned a degree from the Sapienza University of Rome and began his scholarly career by applying Walter Benjamin’s philosophical method to the study of urban cultural contexts.  He examined how the 1990s saw the emergence of self‑managed social centers in metropolitan areas as attempts to create a concrete, present‑moment utopia, and he published *Il cerchio e la saetta* (1997) through Costa & Nolan.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Tiddi’s research later turned to the concept of a guaranteed income, addressing the collapse of the welfare state and the changing nature of work.  He co‑authored *Reddito di cittadinanza verso la società del non lavoro* (2000) with Castelvecchi, and in 2001 released *Precari*, a study that helped spark debate on precarious employment.  In 2007 he helped found the Basic Income Network Italia, a research center advocating for welfare reform and the introduction of a basic income.  His later work also explored the proto‑history of Europe, linking ancient myths to Neolithic and Bronze Age transitions, and he published *Le origini dell'Europa antica* (2013).",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Tiddi’s early work was influenced by Walter Benjamin’s concept of the political exception, which he applied to the analysis of self‑managed urban spaces.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a founding member of the Basic Income Network Italia, a center dedicated to studying and promoting the implementation of a guaranteed income in Italy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Tiddi’s research on the origins of Europe connects matrilineal Neolithic societies with the rise of Indo‑European pastoral and warrior cultures, drawing on the theories of Marija Gimbutas, Mircea Eliade, and Georges Dumézil.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Andrea Tiddi",
+    "url": "https://it.wikipedia.org/wiki/Andrea_Tiddi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:35:09.402Z"
+  }
+}

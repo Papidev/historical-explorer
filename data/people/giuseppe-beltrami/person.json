@@ -1,0 +1,61 @@
+{
+  "id": "giuseppe-beltrami",
+  "name": "Giuseppe Beltrami",
+  "wikidataId": "Q371783",
+  "wikipediaTitle": "Giuseppe Beltrami",
+  "content": {
+    "description": [
+      {
+        "text": "Giuseppe Beltrami was born on 17 January 1889 in Fossano, Italy, and entered the local seminary where he was ordained a priest on 5 March 1916. He served as a chaplain in the Italian Army during the final years of World War I, after which he pursued advanced studies, earning doctorates in theology, canon law, and letters by 1923.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beltrami’s diplomatic career began in the Vatican Library and the Secretariat of State, where he worked as a lawyer for canonisation causes. He was appointed Apostolic Nuncio to Guatemala and El Salvador in 1940, then to Colombia in 1945, Lebanon in 1950, and the Netherlands in 1959. He attended the Second Vatican Council, was made a cardinal in 1967, and died in Rome on 13 December 1973.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "While serving as a lawyer for the Sacred Congregation of Rites, Beltrami handled the causes of canonisation and beatification until 1940.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1889,
+      "month": 1,
+      "day": 17,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1973,
+      "month": 12,
+      "day": 13,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Minister-president_de_Jong_(links)_en_mgr._Beltrami,_Bestanddeelnr_920-4066.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Minister-president_de_Jong_(links)_en_mgr._Beltrami%2C_Bestanddeelnr_920-4066.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Minister-president_de_Jong_%28links%29_en_mgr._Beltrami%2C_Bestanddeelnr_920-4066.jpg/960px-Minister-president_de_Jong_%28links%29_en_mgr._Beltrami%2C_Bestanddeelnr_920-4066.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Minister-president_de_Jong_%28links%29_en_mgr._Beltrami%2C_Bestanddeelnr_920-4066.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC0",
+    "attribution": "Fotograaf Onbekend / Anefo",
+    "author": "Fotograaf Onbekend / Anefo",
+    "width": 2406,
+    "height": 3648,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giuseppe Beltrami",
+    "url": "https://en.wikipedia.org/wiki/Giuseppe_Beltrami"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:42:15.204Z"
+  }
+}

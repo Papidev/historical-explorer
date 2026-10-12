@@ -1,0 +1,124 @@
+{
+  "introduction": {
+    "text": "Galeria Antica is a protected natural area in Lazio, Italy, known for its abandoned medieval town and rich archaeological remains.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Founded in the Etruscan period as Careia, serving as a guard outpost between Veio and Cerveteri.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 800,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Roman conquest introduced typical Roman architecture such as semicircular arches and opus incertum.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 840,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Rebuilt in the 13th century by the Orsini family after being owned by the Counts of Tuscolo.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1200,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "The 16th century saw the destruction of Santa Maria della Valle by lightning.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1600,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "The 18th century malaria epidemic caused a population decline.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1700,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "The town was abandoned in 1809 after repeated attacks and disease.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1809,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "Sant'Andrea church was destroyed by fire in 1816.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1816,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history8",
+        "description": "The site was declared a natural monument in 1999.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1999,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "papa Adriano I",
+      "personId": "pope-adrian-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "papa Gregorio IV",
+      "personId": "pope-gregory-iv",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Orsini",
+      "personId": "orsini-family",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Sanseverino (famiglia)",
+      "personId": "sanseverino-famiglia",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Thomas Ashby",
+      "personId": "thomas-ashby",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Etruschi",
+      "personId": "etruschi",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

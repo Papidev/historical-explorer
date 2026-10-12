@@ -1,0 +1,77 @@
+{
+  "id": "germanicus",
+  "name": "Germanicus",
+  "wikidataId": "Q191039",
+  "wikipediaTitle": "Germanicus",
+  "content": {
+    "description": [
+      {
+        "text": "Germanicus Julius Caesar, born on 24 May 15 BC, was a Roman general and politician who rose rapidly through the cursus honorum.  He was the son of Nero Claudius Drusus and Antonia the Younger, and was born into the influential patrician gens Claudia before being adopted by his uncle Tiberius in AD 4, which made him a member of the gens Julia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Germanicus is best remembered for his campaigns against the Germanic tribes led by Arminius, in which he avenged the Roman defeat at the Battle of the Teutoburg Forest, recovered two of the three lost legionary eagles, and restored Roman prestige.  He held high offices—including quaestor, praetor, consul, and proconsul of Germania Inferior, Germania Superior, and Gaul—before being sent to the East to reorganise Asia Minor.  He died in Antioch on 10 October AD 19, a death that ancient sources blamed on poisoning by the governor Gnaeus Calpurnius Piso, though this was never proven.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Germanicus was adopted by Tiberius in AD 4, which transferred him from the gens Claudia to the gens Julia and positioned him as a potential heir to the Roman Empire.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his campaigns in Germania he recovered two of the three legionary eagles lost at the Teutoburg Forest, a feat that earned him a triumph in AD 17.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He reorganised the eastern provinces of Asia Minor, incorporating the kingdoms of Cappadocia and Commagene into the Roman provincial system.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Germanicus was rumored to have been poisoned by Piso, the governor of Syria, though no definitive evidence was ever found.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a prolific writer, producing a Latin version of Aratus’s *Phainomena* that was noted for its adaptation to Roman tastes.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -15,
+      "month": 5,
+      "day": 24,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 19,
+      "month": 10,
+      "day": 10,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "(Toulouse)_Portrait_de_Germanicus_-_Musée_Saint-Raymond_Ra_342_c.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:(Toulouse)_Portrait_de_Germanicus_-_Mus%C3%A9e_Saint-Raymond_Ra_342_c.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/%28Toulouse%29_Portrait_de_Germanicus_-_Mus%C3%A9e_Saint-Raymond_Ra_342_c.jpg/960px-%28Toulouse%29_Portrait_de_Germanicus_-_Mus%C3%A9e_Saint-Raymond_Ra_342_c.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d5/%28Toulouse%29_Portrait_de_Germanicus_-_Mus%C3%A9e_Saint-Raymond_Ra_342_c.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Didier Descouens",
+    "author": "Didier Descouens",
+    "width": 11008,
+    "height": 16512,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Germanicus",
+    "url": "https://en.wikipedia.org/wiki/Germanicus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:27:14.332Z"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "duilio-cambellotti",
+  "name": "Duilio Cambellotti",
+  "wikidataId": "Q3716133",
+  "wikipediaTitle": "Duilio Cambellotti",
+  "content": {
+    "description": [
+      {
+        "text": "Duilio Cambellotti was born in Rome in the late nineteenth century and grew up in a family of craftsmen: his father was a woodcarver and his mother a seamstress.  Although he never attended a formal art school, he studied at the Accademia di Belle Arti di Roma from 1893 to 1897, taking courses in carving and engraving under Alessandro Morani and Raffaello Ojetti.  After leaving the academy he worked as a designer, creating lamps, mirrors, and small boxes in the pure Liberty style that earned him recognition across Europe.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cambellotti’s career spanned many disciplines: he was a sculptor, ceramist, illustrator, architect, and scenographer.  He designed the stage sets for the Teatro Stabile di Roma and the Istituto Nazionale del Dramma Antico in Siracusa, and he was involved in rural education projects, helping to found schools for peasant workers in 1905 and organising the 1911 exhibition of the Agro Romano.  His work also included the decoration of the new Palazzo del Governo di Ragusa in 1933 and the creation of artistic stained‑glass windows such as the “Civette” and “Rondini” at Villa Torlonia.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Cambellotti considered himself an autodidact, stating that he had never attended school or had a master, and that he was always irregular among artists.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He designed the famous “lampade di Cambellotti” in pure Liberty style, which were produced for several French, German, Austrian, and Italian companies.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his travels to Greece and Turkey he helped decorate the pavilion in honour of the German Emperor for the Sultan’s visit.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1905 he helped found the first schools for peasant workers on the outskirts of the Pontine marshes, and he organised the 1911 exhibition of the Agro Romano.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He illustrated the Divine Comedy, as well as other literary works such as “De I fioretti di san Francesco” and numerous magazines.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He decorated the new Palazzo del Governo di Ragusa in 1933 with tempera paintings inspired by the fascist revolution.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Some of his most celebrated stained‑glass windows, including “Civette” and “Rondini”, are located in the Casina delle Civette at Villa Torlonia in Rome.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "MBAM_2004.143,_lectern_by_Duilio_Cambellotti.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:MBAM_2004.143%2C_lectern_by_Duilio_Cambellotti.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/MBAM_2004.143%2C_lectern_by_Duilio_Cambellotti.JPG/960px-MBAM_2004.143%2C_lectern_by_Duilio_Cambellotti.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1f/MBAM_2004.143%2C_lectern_by_Duilio_Cambellotti.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Sandstein",
+    "author": "Sandstein",
+    "width": 3648,
+    "height": 5472,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Duilio Cambellotti",
+    "url": "https://it.wikipedia.org/wiki/Duilio_Cambellotti"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:12:07.117Z"
+  }
+}

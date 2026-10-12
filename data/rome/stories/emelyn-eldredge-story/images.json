@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Rome_WWStory_angel_in_grief.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Rome_WWStory_angel_in_grief.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Rome_WWStory_angel_in_grief.jpg/960px-Rome_WWStory_angel_in_grief.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Rome_WWStory_angel_in_grief.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Original photo by Raja Patnaik, post-processed and uploaded by Alessio Damato (with permission of the author)",
+      "author": "Original photo by Raja Patnaik, post-processed and uploaded by Alessio Damato (with permission of the author)",
+      "width": 2304,
+      "height": 3072,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "MetCemSisterDespondentAngel.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:MetCemSisterDespondentAngel.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/MetCemSisterDespondentAngel.jpg/960px-MetCemSisterDespondentAngel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/14/MetCemSisterDespondentAngel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.5",
+      "attribution": "Infrogmation",
+      "author": "Infrogmation",
+      "width": 2112,
+      "height": 2816,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Angel_of_Grief_(18152968943).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Angel_of_Grief_(18152968943).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Angel_of_Grief_%2818152968943%29.jpg/960px-Angel_of_Grief_%2818152968943%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Angel_of_Grief_%2818152968943%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.0",
+      "attribution": "See1,Do1,Teach1",
+      "author": "See1,Do1,Teach1",
+      "width": 2448,
+      "height": 3264,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Rome_WWStory_angel_in_grief.jpg"
+}

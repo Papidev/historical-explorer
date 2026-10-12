@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Borgo_(CdV)_-_Edificio_con_SM_in_Camposanto_teutonico.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Borgo_(CdV)_-_Edificio_con_SM_in_Camposanto_teutonico.JPG",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/52/Borgo_%28CdV%29_-_Edificio_con_SM_in_Camposanto_teutonico.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/52/Borgo_%28CdV%29_-_Edificio_con_SM_in_Camposanto_teutonico.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "The original uploader was Croberto68 at Italian Wikipedia.",
+      "author": "The original uploader was Croberto68 at Italian Wikipedia.",
+      "width": 800,
+      "height": 600,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "2019_03_11_Aida_Ajaccio_(143).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:2019_03_11_Aida_Ajaccio_(143).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/2019_03_11_Aida_Ajaccio_%28143%29.jpg/960px-2019_03_11_Aida_Ajaccio_%28143%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/2019_03_11_Aida_Ajaccio_%28143%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Bewahrerderwerte",
+      "author": "Bewahrerderwerte",
+      "width": 4000,
+      "height": 3000,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "2019_03_11_Aida_Ajaccio_(150).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:2019_03_11_Aida_Ajaccio_(150).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/2019_03_11_Aida_Ajaccio_%28150%29.jpg/960px-2019_03_11_Aida_Ajaccio_%28150%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/52/2019_03_11_Aida_Ajaccio_%28150%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Bewahrerderwerte",
+      "author": "Bewahrerderwerte",
+      "width": 4000,
+      "height": 3000,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Borgo_(CdV)_-_Edificio_con_SM_in_Camposanto_teutonico.JPG"
+}

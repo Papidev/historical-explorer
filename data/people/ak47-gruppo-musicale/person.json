@@ -1,0 +1,44 @@
+{
+  "id": "ak47-gruppo-musicale",
+  "name": "AK47",
+  "wikidataId": "Q3600992",
+  "wikipediaTitle": "AK47 (gruppo musicale)",
+  "content": {
+    "description": [
+      {
+        "text": "The AK47 were an Italian hip‑hop group formed in Rome in 1993 by Castro X, a former member of the Onda Rossa Posse and the vocal group Assalti Frontali. The band was part of the Posse movement and aimed to deliver left‑wing politically charged rap that echoed the ideals that had driven the Posse scene.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "They released an EP titled 0516490872 in 1993, a self‑produced record whose title references the prison registration number of activist Silvia Baraldini. In 1996 they issued the album Fuori dal centro, which was later featured in compilations such as Parole Italiane and Epicentro Romano. After a long hiatus the group re‑emerged in 2013 with the single Sole di notte, a critique of state violence.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The AK47 were among the first hip‑hop groups to perform in Cuba, playing a concert in Havana that raised money for the Federation of Cuban Women.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1994 the group co‑founded the independent record label La Cordata, together with Assalti Frontali, One Love Hi Pawa and 00199.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Their EP title 0516490872 is a direct reference to the prison number of activist Silvia Baraldini, linking their music to contemporary political activism.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "AK47 (gruppo musicale)",
+    "url": "https://it.wikipedia.org/wiki/AK47_(gruppo_musicale)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:34:49.901Z"
+  }
+}

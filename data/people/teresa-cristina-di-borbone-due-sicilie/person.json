@@ -1,0 +1,61 @@
+{
+  "id": "teresa-cristina-di-borbone-due-sicilie",
+  "name": "Teresa Cristina di Borbone-Due Sicilie",
+  "wikidataId": "Q209353",
+  "wikipediaTitle": "Teresa Cristina di Borbone-Due Sicilie",
+  "content": {
+    "description": [
+      {
+        "text": "Teresa Cristina Maria was born on 14 March 1822 in Naples as a princess of the Kingdom of the Two Sicilies, the daughter of King Francesco I and Infanta Maria Isabella of Spain.  She grew up in a conservative, religious environment and was known for her gentle, shy disposition, a contrast to the more assertive members of her family.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1843 she married Emperor Pedro II of Brazil, becoming the imperial consort.  Though she never pursued political influence, she devoted herself to charitable work, the arts, and the collection of archaeological artifacts, which she later donated to Brazil as the Fondo Teresa Cristina Maria, now part of UNESCO heritage.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Teresa Cristina assembled a significant collection of classical archaeological artifacts during her time in Brazil, exchanging hundreds with her brother King Ferdinand II of the Two Sicilies and sponsoring archaeological studies in Italy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1822,
+      "month": 3,
+      "day": 14,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1889,
+      "month": 11,
+      "day": 15,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Imperatriz_Teresa_Cristina,_Nadar,_1888.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Imperatriz_Teresa_Cristina%2C_Nadar%2C_1888.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Imperatriz_Teresa_Cristina%2C_Nadar%2C_1888.jpg/960px-Imperatriz_Teresa_Cristina%2C_Nadar%2C_1888.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/98/Imperatriz_Teresa_Cristina%2C_Nadar%2C_1888.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Nadar",
+    "author": "Nadar",
+    "width": 1125,
+    "height": 1474,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Teresa Cristina di Borbone-Due Sicilie",
+    "url": "https://it.wikipedia.org/wiki/Teresa_Cristina_di_Borbone-Due_Sicilie"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:40:26.121Z"
+  }
+}

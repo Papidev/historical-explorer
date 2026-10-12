@@ -1,0 +1,69 @@
+{
+  "id": "barberini",
+  "name": "Barberini",
+  "wikidataId": "Q807815",
+  "wikipediaTitle": "Barberini",
+  "content": {
+    "description": [
+      {
+        "text": "The Barberini family, originally known as the Tafani, hailed from Barberino Val d'Elsa in Tuscany. Their name was changed to Barberini as their fortunes grew, a change reflected in their coat of arms where the old tafani were replaced by noble bees. The family reached the height of its power when Maffeo Barberini was elected Pope Urban VIII in 1623, a papacy that allowed the Barberini to amass wealth and influence. During this period they became prominent patrons of the arts, surrounding themselves with masters such as Gian Lorenzo Bernini, Francesco Borromini, and Pietro da Cortona. Their patronage is evident in the construction of the magnificent Palazzo Barberini and the elaborate church of Sant'Ivo alla Sapienza in Rome, both considered masterpieces of Baroque architecture.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Barberini's reputation for extravagance earned them the Latin saying 'Quod non fecerunt barbari, fecerunt Barberini,' meaning 'What the barbarians did not do, the Barberini did.' In 1627 they were granted the title Prince of Palestrina, a hereditary honor that passed through several generations. They also founded a Carmelite monastery in Rome, affectionately called the 'Barberine,' which played a role in spreading Carmelite spirituality. Although the male line of the family ended with Urbano Barberini in 1722, the female line continued through marriages into the Colonna family, and descendants still hold the titles of Prince of Palestrina and Prince of Carbognano today.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Barberini family was originally called the Tafani, a name that was changed to Barberini as their fortunes grew, a change also reflected in their coat of arms where the old tafani were replaced by noble bees.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Latin saying 'Quod non fecerunt barbari, fecerunt Barberini'—meaning 'What the barbarians did not do, the Barberini did'—is famously associated with the family.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the papacy of Urban VIII, the Barberini became prominent patrons of the arts, surrounding themselves with masters such as Gian Lorenzo Bernini, Francesco Borromini, and Pietro da Cortona.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The family commissioned the construction of the magnificent Palazzo Barberini and the elaborate church of Sant'Ivo alla Sapienza in Rome, both considered masterpieces of Baroque architecture.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1627 the Barberini were granted the hereditary title Prince of Palestrina, a honor that passed through several generations.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "They founded a Carmelite monastery in Rome, affectionately called the 'Barberine,' which played a role in spreading Carmelite spirituality.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Coat_of_arms_of_the_House_of_Barberini.svg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_the_House_of_Barberini.svg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Coat_of_arms_of_the_House_of_Barberini.svg/960px-Coat_of_arms_of_the_House_of_Barberini.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Coat_of_arms_of_the_House_of_Barberini.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "F l a n k e r",
+    "author": "F l a n k e r",
+    "width": 430,
+    "height": 500,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Barberini",
+    "url": "https://it.wikipedia.org/wiki/Barberini"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:28:10.194Z"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "rita-jenrette",
+  "name": "Rita Jenrette",
+  "wikidataId": "Q4160176",
+  "wikipediaTitle": "Rita Jenrette",
+  "content": {
+    "description": [
+      {
+        "text": "Rita Jenrette, born Rita Carpenter, earned a cum laude history degree from the University of Texas in 1971 before launching a career in Republican research. She served as director of research for the Republican Party of Texas in 1973, later became opposition research director for the Republican National Committee in 1975, and in 1976 married Democratic Congressman John Jenrette, who would later be convicted in the Abscam scandal. During the 1970s she also worked as a research associate at the Office of Technology Assessment and co‑authored a report on the Food for Peace program that was presented to the Presidential Commission on World Food Hunger.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Jenrette transitioned to entertainment in the early 1980s, winning the Drama‑Logue Critics Award in 1982 and appearing in television series such as Fantasy Island and The Equalizer. She later pivoted to real‑estate, becoming a broker in New York and being described as a “Power Broker New York Style” by Crain’s in 1996. In 2009 she married Prince Nicolò Boncompagni Ludovisi and helped renovate the Casino Ludovisi in Rome, a historic 16th‑century villa that later attracted a 2022 auction for $531 million. In April 2023 she was ordered to vacate the property after a wall collapse, during which she sustained broken ribs and a clavicle.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "She was a Clairol model before her political career.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1978 she was named one of four dynamic young women of Washington, DC by Washington Post Sunday magazine.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She co‑authored a report on the Food for Peace program with Ray Hoehle that was presented to the Presidential Commission on World Food Hunger.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She received the Drama‑Logue Critics Award in 1982 for her performance in The Philadelphia Story.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Crain’s New York Business described her as a “Power Broker New York Style” in 1996.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In April 2023 she was ordered to vacate Casino Ludovisi after a wall collapse, during which she broke two ribs and her clavicle.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Rita_Jenrette_in_Rome_at_November_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Rita_Jenrette_in_Rome_at_November_(cropped).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Rita_Jenrette_in_Rome_at_November_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Rita_Jenrette_in_Rome_at_November_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Rita Jenrette - [1]",
+    "author": "Rita Jenrette - [1]",
+    "width": 268,
+    "height": 502,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Rita Jenrette",
+    "url": "https://en.wikipedia.org/wiki/Rita_Jenrette"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:20:54.606Z"
+  }
+}

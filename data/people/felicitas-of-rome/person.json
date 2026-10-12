@@ -1,0 +1,56 @@
+{
+  "id": "felicitas-of-rome",
+  "name": "Felicitas of Rome",
+  "wikidataId": "Q257960",
+  "wikipediaTitle": "Felicitas of Rome",
+  "content": {
+    "description": [
+      {
+        "text": "Felicitas of Rome, who lived roughly from 101 to 165 CE, is remembered as a Christian martyr whose most certain historical detail is her burial in the Cemetery of Maximus on the Via Salaria.  Her feast day was first recorded in the Martyrologium Hieronymianum and has been celebrated on 25 January in the Roman Church, a tradition that continues in the Eastern Orthodox liturgy on 25 January as well.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The scant biographical record has been supplemented by a legend that portrays her as a wealthy widow who raised seven sons, all of whom were martyred alongside her.  This narrative, though not corroborated by contemporary sources, has become part of the popular hagiography associated with the seven martyrs commemorated on 10 July.  The legend also links Felicitas to Saint Symphorosa, suggesting that the two saints may have been conflated over time.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Her tomb was located in a church above the catacomb of Maximus, and the crypt where she was interred was enlarged into a subterranean chapel that was rediscovered in 1885.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Some of her relics are preserved in the Capuchin church at Montefiascone, Tuscany, while others are housed in the church of Santa Susanna in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The earliest mention of her feast in the Roman liturgical calendar appears in the Martyrologium Hieronymianum, indicating that her veneration dates back to at least the early medieval period.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "According to the legend, Felicitas was a rich and pious Christian widow who was persecuted by pagan priests during the reign of Emperor Marcus Aurelius, leading to her martyrdom and that of her seven sons.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 101,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 165,
+      "precision": "approximate"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Felicitas of Rome",
+    "url": "https://en.wikipedia.org/wiki/Felicitas_of_Rome"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:09:20.074Z"
+  }
+}

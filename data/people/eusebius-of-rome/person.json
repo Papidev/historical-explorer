@@ -1,0 +1,65 @@
+{
+  "id": "eusebius-of-rome",
+  "name": "Eusebius of Rome",
+  "wikidataId": "Q3820734",
+  "wikipediaTitle": "Eusebius of Rome",
+  "content": {
+    "description": [
+      {
+        "text": "Eusebius of Rome was a Roman patrician and priest who is credited with founding the church on the Esquiline Hill that bears his name; he is listed in the Roman Martyrology as a saint venerated on 14 August and is described as a confessor at Rome under the Arian emperor Constantius II, with his burial traditionally placed in the cemetery of Callistus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The surviving Acta Eusebii, discovered in 1479, recount a dramatic episode in which Eusebius publicly denounced Pope Liberius and Constantius II for abandoning the Nicene Creed, was imprisoned in a narrow dungeon, and died after seven months; the Acts, however, are widely regarded as forgeries with historical inconsistencies noted by scholars such as the Bollandists and Tillemont, and his commemoration in the Tridentine calendar was removed in the 1969 revision.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He is credited with founding the church on the Esquiline Hill that bears his name.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Acts of Eusebius are considered likely forgeries, with historical difficulties noted by the Bollandists and Tillemont.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He is venerated on 14 August in the Roman Martyrology.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Tridentine calendar had a commemoration of him that was removed in the 1969 revision.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 357,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Anton_Raphael_Mengs_-_The_Glory_of_St._Eusebius_of_Rome.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Anton_Raphael_Mengs_-_The_Glory_of_St._Eusebius_of_Rome.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Anton_Raphael_Mengs_-_The_Glory_of_St._Eusebius_of_Rome.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Anton_Raphael_Mengs_-_The_Glory_of_St._Eusebius_of_Rome.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Anton Raphael Mengs",
+    "author": "Anton Raphael Mengs",
+    "width": 668,
+    "height": 1468,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Eusebius of Rome",
+    "url": "https://en.wikipedia.org/wiki/Eusebius_of_Rome"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:05:29.308Z"
+  }
+}

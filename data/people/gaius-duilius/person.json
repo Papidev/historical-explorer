@@ -1,0 +1,69 @@
+{
+  "id": "gaius-duilius",
+  "name": "Gaius Duilius",
+  "wikidataId": "Q435408",
+  "wikipediaTitle": "Gaius Duilius",
+  "content": {
+    "description": [
+      {
+        "text": "Gaius Duilius was a Roman general and statesman who served as consul in 260 BC during the First Punic War.  He is best known for winning Rome’s first naval victory at the Battle of Mylae, where he employed the corvus—a 1.2 m wide, 11 m long boarding bridge with a spike that allowed legionaries to board enemy ships—turning a sea engagement into an infantry fight against the more experienced Carthaginian galleys.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the victory he resumed command of the legions in Sicily, celebrated a triumph, built a temple to Janus, and erected a column in the Forum adorned with the ramming beaks (rostra) of captured warships.  He later served as censor in 258–257 BC, was appointed dictator to hold elections in 231 BC, and lived to old age, never taking another military command.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The corvus was a 1.2 m wide, 11 m long bridge with a spike that allowed Roman legionaries to board enemy ships, effectively turning naval battles into infantry engagements.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The column with ramming beaks (rostra) erected in the Forum gave rise to the Latin word \"rostrum,\" meaning a dais or platform for speakers.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Several warships of the Regia Marina and the modern Italian Navy have been named after Duilius.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In Sid Meier’s Civilization VI, Duilius appears as a Great Admiral.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -260,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": -231,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "MCR_-_colonna_rostrata_di_C_Duilio_1150130.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:MCR_-_colonna_rostrata_di_C_Duilio_1150130.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/MCR_-_colonna_rostrata_di_C_Duilio_1150130.JPG/960px-MCR_-_colonna_rostrata_di_C_Duilio_1150130.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/MCR_-_colonna_rostrata_di_C_Duilio_1150130.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Lalupa",
+    "author": "Lalupa",
+    "width": 2112,
+    "height": 2816,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Gaius Duilius",
+    "url": "https://en.wikipedia.org/wiki/Gaius_Duilius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:25:59.992Z"
+  }
+}

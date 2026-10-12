@@ -1,0 +1,95 @@
+{
+  "introduction": {
+    "text": "The Case romane del Celio are the remains of a Roman residential complex beneath the Basilica of Santi Giovanni e Paolo in Rome's Celio district. They offer a rare glimpse into the evolution of Roman domestic architecture and the early Christian transformation of urban spaces.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-111",
+        "description": "The earliest part of the complex dates to the year 111, consisting of a bath on the ground floor and apartments above.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 111,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-3rd",
+        "description": "In the 3rd century the two insulae were united into a single property and transformed into a luxurious domus with frescoed rooms.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 200,
+          "precision": "exact",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-4th",
+        "description": "In the 4th century the complex became the property of the senator Byzas, who established a Christian titulus that later passed to his son Pammachio.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 300,
+          "precision": "exact",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-5th",
+        "description": "During the 5th century the foundation of the upper basilica led to the partial obliteration and burial of the Roman rooms.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 400,
+          "precision": "exact",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-19th",
+        "description": "The Roman rooms were uncovered at the end of the 19th century by the rector of the basilica, Padre Germano di S. Stanislao, who excavated beyond the martyrium.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1800,
+          "precision": "exact",
+          "granularity": "century"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-insulae",
+        "description": "The original layout comprised two insulae: one with a bath and upper apartments, the other with ground‑floor shops and upper residential spaces.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-domus",
+        "description": "The 3rd‑century unification created a single domus featuring luxuriously frescoed rooms and a courtyard that later became a nymphaeum.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-arches",
+        "description": "Arches that now line the basilica’s Clivo di Scauro preserve traces of the original shop façades and the courtyard’s transformation.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-marine",
+        "description": "A large fresco scene depicting marine deities in the nymphaeum.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-aula",
+        "description": "The Aula dell'orante fresco, likely associated with Christian use of the domus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-confessio",
+        "description": "Frescoes in the Confessio room, which housed tombs or relics of the basilica’s titular martyrs.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": []
+}

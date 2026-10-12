@@ -1,0 +1,67 @@
+{
+  "id": "papa-leone-xii",
+  "name": "papa Leone XII",
+  "wikidataId": "Q43727",
+  "wikipediaTitle": "Papa Leone XII",
+  "content": {
+    "description": [
+      {
+        "text": "Born in the Marche region to Count Ilario della Genga and Countess Maria Luisa Periberti, Annibale della Genga studied theology at the Collegio Campana in Osimo and later at the Collegio Piceno in Rome. He entered the ecclesiastical service in the 1780s, receiving the diaconate in 1782 and being ordained a presbyter on 14 June 1783. His diplomatic career began in 1790 with a celebrated sermon in honour of Emperor Joseph II, and he was appointed secretary to Pope Pius VI in 1792. In 1793 he became titular archbishop of Tyre and a canon of St. Peter’s Basilica, after which he served as apostolic nuncio first in Lucerne and then in Cologne, undertaking delicate missions to the courts of Dresden, Vienna, Munich, Württemberg and even to Napoleon Bonaparte during the First Coalition war.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Elected pope on 28 September 1823, Pope Leo XII reigned for five years until his death in 1829. He is best remembered for convening the 1825 Jubilee, the only regular Jubilee celebrated in the nineteenth century until the 1900 Jubilee. His pontificate was marked by fiscal prudence, a reorganisation of the papal administration, and a series of reforms that included the abolition of compulsory vaccination in 1824, the suppression of the Carbonari, the banning of Protestant societies, and the re‑establishment of the free circulation of Galileo’s works. Leo XII also created 25 cardinals during his pontificate and was the last pope to have a statue on the Pasquino in Rome, where his epitaph read, “Qui della Genga giace, per sua e nostra pace.” He died in Rome on 10 February 1829.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Leo XII was the last pope to celebrate a Jubilee in the nineteenth century; the next one would not occur until 1900.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He made the vaccination against smallpox optional in 1824, a decision that was later clarified as a removal of compulsory status rather than a ban.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his pontificate he ordered the execution of two Carbonari, Angelo Targhini and Leonida Montanari, in a public hanging at Piazza del Popolo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A statue of Leo XII on the Pasquino in Rome bears an epitaph that reads, “Qui della Genga giace, per sua e nostra pace.”",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 1829,
+      "month": 2,
+      "day": 10,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Charles_Picqué_–_Portrait_de_Léon_XII_(1828).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Charles_Picqu%C3%A9_%E2%80%93_Portrait_de_L%C3%A9on_XII_(1828).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Charles_Picqu%C3%A9_%E2%80%93_Portrait_de_L%C3%A9on_XII_%281828%29.jpg/960px-Charles_Picqu%C3%A9_%E2%80%93_Portrait_de_L%C3%A9on_XII_%281828%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Charles_Picqu%C3%A9_%E2%80%93_Portrait_de_L%C3%A9on_XII_%281828%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Charles Picqué",
+    "author": "Charles Picqué",
+    "width": 2748,
+    "height": 3426,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Papa Leone XII",
+    "url": "https://it.wikipedia.org/wiki/Papa_Leone_XII"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:30:33.713Z"
+  }
+}

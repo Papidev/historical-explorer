@@ -1,0 +1,67 @@
+{
+  "id": "pope-sergius-ii",
+  "name": "Pope Sergius II",
+  "wikidataId": "Q228644",
+  "wikipediaTitle": "Pope Sergius II",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Sergius II, born into a noble Roman family, received a musical education in the schola cantorum before being ordained a cardinal‑priest of Sts. Martin and Sylvester by Pope Paschal I.  He rose to archpriest under Gregory IV and was chosen as pope by the aristocracy after Gregory’s death in January 844, even as the Roman populace favored the deacon John.  Sergius suppressed the opposition, saved John’s life, and was consecrated without seeking the approval of the Frankish court, a move that angered Emperor Lothair I.  The emperor sent an army under his son Louis, who had just been named king of Italy, but the two parties reached an accommodation in which Sergius crowned Louis, thereby re‑establishing imperial authority while retaining papal autonomy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his reign, Sergius II undertook extensive urban redevelopment, improving churches, aqueducts, and the Lateran Basilica, and he and his brother Benedict financed these projects by selling church appointments to the highest bidders.  In August 846 the Arabs raided Rome, sacking the churches of St. Peter and St. Paul and threatening Portus and Ostia; Sergius watched the city’s defenses crumble behind the Aurelian Walls, a failure that has been criticized for inadequate preparation.  He died on 27 January 847 while negotiating between the patriarchs of Aquileia and Grado, and he was later portrayed by John Goodman in the 2009 film Pope Joan.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Sergius II and his brother Benedict funded their building projects by selling appointments to various church positions to the highest bidder.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He died while negotiating between the patriarchs of Aquileia and Grado.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was portrayed by John Goodman in the 2009 film Pope Joan.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sergius crowned Louis as king of Italy, thereby re‑establishing imperial authority during his pontificate.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 847,
+      "month": 1,
+      "day": 27,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_Sergius_II_Illustration.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Sergius_II_Illustration.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Pope_Sergius_II_Illustration.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Pope_Sergius_II_Illustration.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Artaud de Montor (1772–1849)",
+    "author": "Artaud de Montor (1772–1849)",
+    "width": 432,
+    "height": 630,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Sergius II",
+    "url": "https://en.wikipedia.org/wiki/Pope_Sergius_II"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:05:48.888Z"
+  }
+}

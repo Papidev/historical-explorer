@@ -1,0 +1,44 @@
+{
+  "id": "marcus-aurelius-cotta-maximus-messalinus",
+  "name": "Marcus Aurelius Cotta Maximus Messalinus",
+  "wikidataId": "Q1216093",
+  "wikipediaTitle": "Marcus Aurelius Cotta Maximus Messalinus",
+  "content": {
+    "description": [
+      {
+        "text": "Marcus Aurelius Cotta Maximus Messalinus was a Roman senator who flourished in the late first century BC and early first century AD. He was born and raised in Rome to Marcus Valerius Messalla Corvinus, suffect consul in 31 BC, and Aurelia Cotta, a Roman noblewoman mentioned by Ovid. Although his birth date is not recorded, it is known that he was not born earlier than 24 BC and may have been born around 14 BC. He was adopted into the Aurelii Cottae, which explains why he is known by that name rather than his birth name.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Maximus was a close friend and patron of the poet Ovid, to whom he provided material, psychological, and possibly financial support during Ovid's exile. In the Senate he was a leading figure during the reign of Tiberius, serving as consul in 20 AD and later as Proconsul of Asia, a position confirmed by a Greek inscription at Ephesus dated 25/26 AD. He was also known for his extravagant lifestyle, as described by Pliny the Elder and Tacitus, and for his patronage of the arts, a trait highlighted by Juvenal.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He served as Proconsul of Asia after his consulship, a role attested by a Greek inscription at Ephesus dated 25/26 AD.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a patron of Ovid and helped him during his exile, providing support and hoping to intercede with the emperor.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Tacitus described him as an extravagant gourmet and a patron of the arts, while Pliny the Elder noted his extravagant lifestyle.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Marcus Aurelius Cotta Maximus Messalinus",
+    "url": "https://en.wikipedia.org/wiki/Marcus_Aurelius_Cotta_Maximus_Messalinus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T21:07:49.959Z"
+  }
+}

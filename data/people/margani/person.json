@@ -1,0 +1,49 @@
+{
+  "id": "margani",
+  "name": "Margani",
+  "wikidataId": "Q48800904",
+  "wikipediaTitle": "Margani",
+  "content": {
+    "description": [
+      {
+        "text": "The Margani were a prominent family of Rome’s minor nobility, or “di campanile,” whose influence spanned from the 14th to the 17th century. Their wealth was rooted in mercantile ventures and the sale of the Castello di Montelibretti in 1272, a transaction that underscored their early affluence. The family held a variety of civic offices—including Conservatore of Rome, judge, and ambassador—while maintaining a strong presence in the city’s Campitelli district, where they owned houses and a tower that later became part of the Piazza Margana complex.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Margani’s fortunes fluctuated over the centuries. A violent feud with the Santacroce family in 1480 culminated in the murder of Pietro Margani, but the conflict was eventually quelled by Pope Innocenzo VIII in 1486. The family continued to hold ecclesiastical and civic posts into the early 16th century, even securing the vicariate of Anticoli di Campagna under Pope Leo X, though local unrest forced them to relinquish the fief in 1517. By the 17th century the line had largely faded, with the last male heir, Onofrio Margani, dying in 1662. Notable members included Ludovico Grato Margani, a mathematician and astronomer who died in 1531 and was commemorated with a monument in the Basilica di Santa Maria in Aracoeli. Their heraldic emblem—an eagle on a gold field above three red bands on blue—was first recorded in the 15th century and remains visible on the architrave of the Castello della Cecchignola.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "According to the chronicler Sebastiano Tedallini, Cesare Borgia seduced the wife of Stefano Margani in the early 1500s, prompting Stefano to seek revenge—an attempt that ultimately failed.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "The_destruction_of_ancient_Rome_-_a_sketch_of_the_history_of_the_monuments_(1901)_(14757618046).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:The_destruction_of_ancient_Rome_-_a_sketch_of_the_history_of_the_monuments_(1901)_(14757618046).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/The_destruction_of_ancient_Rome_-_a_sketch_of_the_history_of_the_monuments_%281901%29_%2814757618046%29.jpg/960px-The_destruction_of_ancient_Rome_-_a_sketch_of_the_history_of_the_monuments_%281901%29_%2814757618046%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/The_destruction_of_ancient_Rome_-_a_sketch_of_the_history_of_the_monuments_%281901%29_%2814757618046%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "No restrictions",
+    "attribution": "Internet Archive Book Images",
+    "author": "Internet Archive Book Images",
+    "width": 1860,
+    "height": 2326,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Margani",
+    "url": "https://it.wikipedia.org/wiki/Margani"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:29:25.503Z"
+  }
+}

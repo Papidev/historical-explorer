@@ -1,0 +1,77 @@
+{
+  "id": "jorge-medina-cardinal",
+  "name": "Jorge Medina",
+  "wikidataId": "Q546807",
+  "wikipediaTitle": "Jorge Medina (cardinal)",
+  "content": {
+    "description": [
+      {
+        "text": "Jorge Arturo Agustín Medina Estévez (23 December 1926 – 3 October 2021) was a Chilean prelate who rose through the ranks of the Catholic Church to become a cardinal and a key figure in the Roman Curia. After ordination in 1954, he served as bishop of Rancagua (1987–1993) and then of Valparaíso (1993–1996) before being appointed Prefect of the Congregation for Divine Worship and the Discipline of the Sacraments in 1996. Created a cardinal in 1998, Medina held the office of Cardinal Protodeacon from 2005 until his retirement in 2002, and he famously announced the election of Pope Benedict XVI in 2005, becoming the first non‑Italian and the first Latin American to do so.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Medina was also an academic, earning a doctorate in theology in 1955 and teaching philosophy and theology at the Major Seminary of Santiago and the Pontifical Catholic University of Chile. He served as a peritus at the Second Vatican Council and later received an honorary doctorate from the University of Notre Dame. His career was not without controversy: he was a supporter of General Augusto Pinochet’s regime and was implicated in the denouncement of students and faculty suspected of left‑wing sympathies, and he made contentious remarks regarding the sexual abuse case of priest Fernando Karadima. He died in Santiago in 2021, and a park in his hometown was named in his honor shortly after his death.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Medina was the longest‑serving cardinal deacon in the history of the Catholic Church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first Latin American cardinal to announce the election of a new pope as Cardinal Protodeacon.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Medina served as a peritus (expert advisor) at the Second Vatican Council.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a supporter of General Augusto Pinochet’s 1973 coup and the subsequent military regime.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the investigation of priest Fernando Karadima, Medina publicly questioned the severity of the canonical sanctions imposed on the priest.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1926,
+      "month": 12,
+      "day": 23,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 2021,
+      "month": 10,
+      "day": 3,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Jorge_Medina_Estévez_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Jorge_Medina_Est%C3%A9vez_(cropped).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Jorge_Medina_Est%C3%A9vez_%28cropped%29.jpg/960px-Jorge_Medina_Est%C3%A9vez_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Jorge_Medina_Est%C3%A9vez_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 2.0",
+    "attribution": "Biblioteca (BCN) Congreso Nacional de Chile from Valparaíso, Chile",
+    "author": "Biblioteca (BCN) Congreso Nacional de Chile from Valparaíso, Chile",
+    "width": 1621,
+    "height": 1614,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Jorge Medina (cardinal)",
+    "url": "https://en.wikipedia.org/wiki/Jorge_Medina_(cardinal)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:38:46.460Z"
+  }
+}

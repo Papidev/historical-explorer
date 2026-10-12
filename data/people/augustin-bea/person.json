@@ -1,0 +1,73 @@
+{
+  "id": "augustin-bea",
+  "name": "Augustin Bea",
+  "wikidataId": "Q61060",
+  "wikipediaTitle": "Augustin Bea",
+  "content": {
+    "description": [
+      {
+        "text": "Augustin Bea (28 May 1881 – 16 November 1968) was a German Jesuit priest, cardinal, and a leading biblical scholar who taught at the Pontifical Gregorian University and the Pontifical Biblical Institute. Born in Riedböhringen, he entered the Society of Jesus in 1902, was ordained in 1912, and went on to hold several academic and administrative posts, including rector of the Pontifical Biblical Institute for nineteen years.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Bea became a cardinal in 1959 and was appointed the first president of the Secretariat for Promoting Christian Unity in 1960, a role he held until his death. He played a decisive part in the Second Vatican Council, particularly in drafting the declaration Nostra aetate, which repudiated anti‑Jewish sentiment, and he engaged in secret talks with Jewish leaders such as Abraham Joshua Heschel. His ecumenical work earned him numerous honors, including the Grand Cross of Merit of the Federal Republic of Germany.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He served as the personal confessor of Pope Pius XII.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first president of the Secretariat for Promoting Christian Unity, which later became the Pontifical Council for Promoting Christian Unity.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He invited Protestant theologian Karl Barth to attend the Second Vatican Council as an observer, but Barth was unable to attend due to health reasons.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was awarded the Grand Cross of Merit of the Federal Republic of Germany in 1954 and again in 1960.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1881,
+      "month": 5,
+      "day": 28,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1968,
+      "month": 11,
+      "day": 16,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "CardinalBea.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:CardinalBea.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/CardinalBea.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/CardinalBea.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Ambrosius007",
+    "author": "Ambrosius007 at English Wikipedia",
+    "width": 591,
+    "height": 887,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Augustin Bea",
+    "url": "https://en.wikipedia.org/wiki/Augustin_Bea"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:38:59.085Z"
+  }
+}

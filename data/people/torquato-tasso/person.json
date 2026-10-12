@@ -1,0 +1,65 @@
+{
+  "id": "torquato-tasso",
+  "name": "Torquato Tasso",
+  "wikidataId": "Q168962",
+  "wikipediaTitle": "Torquato Tasso",
+  "content": {
+    "description": [
+      {
+        "text": "Torquato Tasso was born on 11 March 1544 in Sorrento, a small town in the Kingdom of Naples. His father, Bernardo Tasso, was a courtier and poet who served the Sanseverino family, and his mother, Porzia de' Rossi, came from a Tuscan noble lineage. From a young age he was educated by Jesuits and later studied law at the University of Padua, but his passion for poetry led him to write his first epic, Rinaldo, in 1562, and to begin the monumental work that would become the Gerusalemme liberata.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The completion of the Gerusalemme liberata in 1575 brought Tasso both acclaim and suspicion. His intense religious devotion and the epic's Christian triumph over the Saracens drew the attention of the Inquisition, and in 1576 he was imprisoned in the Ospedale di Sant'Anna in Ferrara for seven years. During this confinement he continued to write, producing the Discorsi dell'arte poetica and many lyrical poems, while his reputation as a tormented genius grew, influencing later Romantic writers such as Goethe and Leopardi.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Tasso's Gerusalemme liberata was first published in 1581 and was immediately translated into several languages, gaining widespread popularity across Europe.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Tasso spent seven years in the Ospedale di Sant'Anna in Ferrara, where he was confined by the duke Alfonso II, a period that profoundly shaped his later religious poetry.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1544,
+      "month": 3,
+      "day": 11,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1595,
+      "month": 4,
+      "day": 25,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Torquato_Tasso,_aged_22,_by_Jacopo_da_Ponte,_called_Jacopo_Bassano_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Torquato_Tasso%2C_aged_22%2C_by_Jacopo_da_Ponte%2C_called_Jacopo_Bassano_(cropped).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Torquato_Tasso%2C_aged_22%2C_by_Jacopo_da_Ponte%2C_called_Jacopo_Bassano_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Torquato_Tasso%2C_aged_22%2C_by_Jacopo_da_Ponte%2C_called_Jacopo_Bassano_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Jacopo Bassano",
+    "author": "Jacopo Bassano",
+    "width": 638,
+    "height": 940,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Torquato Tasso",
+    "url": "https://it.wikipedia.org/wiki/Torquato_Tasso"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:46:51.926Z"
+  }
+}

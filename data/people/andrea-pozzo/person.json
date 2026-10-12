@@ -1,0 +1,69 @@
+{
+  "id": "andrea-pozzo",
+  "name": "Andrea Pozzo",
+  "wikidataId": "Q380103",
+  "wikipediaTitle": "Andrea Pozzo",
+  "content": {
+    "description": [
+      {
+        "text": "Andrea Pozzo (30 November 1642 – 31 August 1709) was an Italian Jesuit brother who became one of the most celebrated Baroque painters, architects, and stage designers. Trained in the Jesuit schools of Trento, he studied under the influence of Palma il Giovane and later Andrea Sacchi, absorbing the high‑Baroque style that would later define his work. After entering the Jesuit Order in 1665, Pozzo devoted his artistic career to decorating Jesuit churches across Italy, using his mastery of perspective to create dramatic illusionistic spaces.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His most renowned achievement is the ceiling of Sant'Ignazio in Rome, where he painted a 17‑metre‑wide trompe‑l'œil dome that gives the flat surface the illusion of a vaulted heavens. By employing linear perspective, foreshortening, and a carefully orchestrated light source, Pozzo made the nave appear to open into a celestial realm, a technique that set a new standard for Baroque ceiling frescoes throughout Catholic Europe. His work at Sant'Ignazio, completed between 1685 and 1694, remains a pinnacle of illusionistic art and a testament to the Jesuit commitment to visual grandeur.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 1681, Pozzo painted a self‑portrait for Cosimo III de' Medici, now housed in the Uffizi Gallery; the canvas uniquely shows him pointing to a trompe‑l'œil dome, hinting at his future masterpieces.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pozzo relocated to Vienna in 1702 to serve Emperor Leopold I, where he created the monumental ceiling fresco of the Hercules Hall in the Liechtenstein garden palace, a work that was highly praised by contemporaries for its celestial illusion.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He authored Perspectiva pictorum et architectorum (1693–1698), one of the earliest manuals on perspective for painters and architects; the book was translated into several languages and remained in print into the 19th century.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1642,
+      "month": 11,
+      "day": 30,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1709,
+      "month": 8,
+      "day": 31,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Andrea_Pozzo,_autoportrait.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Andrea_Pozzo%2C_autoportrait.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Andrea_Pozzo%2C_autoportrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Andrea_Pozzo%2C_autoportrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Andrea Pozzo",
+    "author": "Andrea Pozzo",
+    "width": 663,
+    "height": 879,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Andrea Pozzo",
+    "url": "https://en.wikipedia.org/wiki/Andrea_Pozzo"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:44:32.823Z"
+  }
+}

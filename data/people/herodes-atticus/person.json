@@ -1,0 +1,65 @@
+{
+  "id": "herodes-atticus",
+  "name": "Herodes Atticus",
+  "wikidataId": "Q311879",
+  "wikipediaTitle": "Herodes Atticus",
+  "content": {
+    "description": [
+      {
+        "text": "Herodes Atticus was an Athenian rhetorician and Roman senator who became one of the most celebrated philanthropists of the Antonine period. He commissioned a number of public works that survive to this day, most famously the Panathenaic Stadium and the Odeon in Athens, and he served as consul in 143 AD.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In addition to his literary and rhetorical pursuits, Atticus was a skilled civil engineer, designing aqueducts and the Nymphaeum at Olympia, and building a villa in the Peloponnese that included an aqueduct. He also taught the future emperor Marcus Aurelius and Lucius Verus, but his reputation was marred by the alleged murder of his wife Regilla, a charge from which he was ultimately exonerated by the emperor.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Panathenaic Stadium, which he commissioned, remains a prominent landmark in Athens and is still used for sporting events.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Atticus served as a tutor to Marcus Aurelius, who later became one of Rome’s most respected emperors.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was implicated in the death of his wife Regilla, who was killed by a freedman, but the charges were dropped after Marcus Aurelius cleared him.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 101,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 177,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Herodes_Atticus_Louvre_Ma1164_n2.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Herodes_Atticus_Louvre_Ma1164_n2.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Herodes_Atticus_Louvre_Ma1164_n2.jpg/960px-Herodes_Atticus_Louvre_Ma1164_n2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Herodes_Atticus_Louvre_Ma1164_n2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0",
+    "attribution": "Marie-Lan Nguyen (2010)",
+    "author": "Marie-Lan Nguyen (2010)",
+    "width": 2848,
+    "height": 4100,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Herodes Atticus",
+    "url": "https://en.wikipedia.org/wiki/Herodes_Atticus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:32:58.919Z"
+  }
+}

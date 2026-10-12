@@ -1,0 +1,162 @@
+{
+  "introduction": {
+    "text": "The Forum Holitorium, also known as the Forum Olitorium, was the vegetable market of ancient Rome, situated on the slopes of the Capitoline Hill. It played a key role in the city's daily life and economy, and its archaeological remains reveal the layout of Roman market spaces and nearby temples.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-sacred-area-construction",
+        "description": "The sacred area of the Forum Holitorium was built during the Republican age, between the First and Second Punic Wars.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -264,
+          "precision": "approximate",
+          "endYear": -146,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-janus-construction",
+        "description": "The Temple of Janus was erected by Gaius Duilius during the First Punic War.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -264,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-spes-construction",
+        "description": "The Temple of Spes was constructed by Aulus Atilius Calatinus during the First Punic War.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -264,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-juno-sospita-construction",
+        "description": "The Temple of Juno Sospita was erected around 195 BC by Gaius Cornelius Cethegus.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -195,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-caesar-renovations",
+        "description": "The sacred area underwent renovations during the reign of Julius Caesar in the 1st century BC.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -100,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-juno-sospita-restoration",
+        "description": "The Temple of Juno Sospita was restored in 90 BC by Caecilia Metella.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -90,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-janus-restoration",
+        "description": "The Temple of Janus was restored in AD 17 by Emperor Tiberius.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 17,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-spes-restoration",
+        "description": "The Temple of Spes was restored in AD 17 by Germanicus Julius Caesar.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 17,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-janus-temple",
+        "description": "The Temple of Janus was a peripteros temple with eight tuff columns on the long sides and six on the front, covered with stucco.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-spes-temple",
+        "description": "The Temple of Spes was a peripteros Doric temple with six columns on the front and eleven on the long side, made of travertine and stucco.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-juno-sospita-temple",
+        "description": "The Temple of Juno Sospita was a peripteros Ionic temple with six columns on the facade, three rows on the front and two on the back, and a travertine staircase.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-market-layout",
+        "description": "The Forum Holitorium was a vegetable market situated between the Forum Boarium and the Circus Flaminius, with a sacred area containing three small temples.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-spes-columns",
+        "description": "Six columns of the Temple of Spes, including their architrave, are preserved and incorporated into the left side of the church of San Nicola in Carcere.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-juno-sospita-columns",
+        "description": "Three columns of the Temple of Juno Sospita are incorporated into the facade of the church of San Nicola in Carcere, and the basement of the temple can be visited inside the church.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Gaius Duilius",
+      "personId": "gaius-duilius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Aulus Atilius Calatinus",
+      "personId": "aulus-atilius-calatinus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Gaius Cornelius Cethegus (consul)",
+      "personId": "gaius-cornelius-cethegus-consul",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Manius Acilius Glabrio (consul 191 BC)",
+      "personId": "manius-acilius-glabrio-consul-191-bc",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Julius Caesar",
+      "personId": "julius-caesar",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Tiberius",
+      "personId": "tiberius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Germanicus",
+      "personId": "germanicus",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

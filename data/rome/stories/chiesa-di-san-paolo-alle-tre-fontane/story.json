@@ -1,0 +1,141 @@
+{
+  "introduction": {
+    "text": "Chiesa di San Paolo alle Tre Fontane is a Roman Catholic church in Rome dedicated to Paul the Apostle, located at the traditional site of his martyrdom. Its history spans from the 5th century to the present, and it houses significant art and architectural features that reflect its long heritage.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "First church built in the 5th century at the site of Paul the Apostle's martyrdom.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 400,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Rebuilt in 1599 by Giacomo della Porta under the patronage of Cardinal Pietro Aldobrandini.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1599,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Fountains sealed in 1950 due to pollution.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1950,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Cardinal Mauro Piacenza appointed as Cardinal-Deacon of the church in 2010, marking its first use as a cardinalatial diaconia.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2010,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "Legend of Paul's head bouncing three times and fountains springing at each impact.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "Baroque architectural style with polychrome marble and porphyry columns.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "Three symbolic monumental covers to the fountains that once sprang at Paul's death.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "Facade statues created by Nicolas Cordier.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design4",
+        "description": "Column believed to be the one to which Paul was bound when beheaded.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Original Crucifixion canvas by Guido Reni, now in the Vatican.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "Decapitation of St Paul by Bartolomeo Passerotti in the right chapel.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "Late Roman mosaic floor preserved in the nave, donated by Pope Pius IX.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art4",
+        "description": "Statues on the facade by Nicolas Cordier.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Paul the Apostle",
+      "personId": "paul-the-apostle",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Mauro Piacenza",
+      "personId": "mauro-piacenza",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giacomo della Porta",
+      "personId": "giacomo-della-porta",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pietro Aldobrandini",
+      "personId": "pietro-aldobrandini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Guido Reni",
+      "personId": "guido-reni",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Bartolomeo Passerotti",
+      "personId": "bartolomeo-passerotti",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Nicolas Cordier",
+      "personId": "nicolas-cordier",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Pius IX",
+      "personId": "pope-pius-ix",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "pope-leo-xiii",
+  "name": "Pope Leo XIII",
+  "wikidataId": "Q43922",
+  "wikipediaTitle": "Pope Leo XIII",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Leo XIII, born Gioacchino Vincenzo Raffaele Luigi Pecci on 2 March 1810, was a towering intellectual figure who sought to reconcile the Catholic Church with the modern world.  During his 25‑year reign he wrote 86 encyclicals, most famously Rerum novarum (1891), which articulated the rights of workers and laid the groundwork for Catholic social teaching.  He earned the sobriquet “Social Pope” and “Pope of the Workers” for this pioneering work, while also reviving Thomism by issuing the 1879 Editio Leonina and the 1879 encyclical Aeterni Patris, which made the philosophy of Thomas Aquinas the official theological foundation of the Church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Leo XIII’s papacy was marked by a blend of scholarly rigor and pastoral outreach.  He was the first pope to be filmed by a motion‑picture camera in 1898 and the first pope born in the 19th century, living to the age of 93 before dying of pneumonia on 20 July 1903.  His death marked the end of an era in which the papacy had begun to engage more directly with the social and scientific concerns of the age.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Leo XIII wrote a total of 86 encyclicals during his papacy, the most by any pope at the time.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first pope to be filmed by a motion‑picture camera in 1898, a pioneering moment in the history of cinema.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1810,
+      "month": 3,
+      "day": 2,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1903,
+      "month": 7,
+      "day": 20,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Papa_Leone_XIII_(3x4_cropped).jpeg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Papa_Leone_XIII_(3x4_cropped).jpeg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Papa_Leone_XIII_%283x4_cropped%29.jpeg/960px-Papa_Leone_XIII_%283x4_cropped%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/27/Papa_Leone_XIII_%283x4_cropped%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Braun et Compagnie",
+    "author": "Braun et Compagnie",
+    "width": 1355,
+    "height": 1807,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Leo XIII",
+    "url": "https://en.wikipedia.org/wiki/Pope_Leo_XIII"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:50:51.831Z"
+  }
+}

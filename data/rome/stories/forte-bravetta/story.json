@@ -1,0 +1,105 @@
+{
+  "introduction": {
+    "text": "Forte Bravetta is a Roman fort built between 1877 and 1883, later used as a site of executions during the fascist era and World War II, and now a memorial park.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "construction",
+        "description": "Construction of the fort began in 1877 and was completed in 1883.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1877,
+          "precision": "exact",
+          "endYear": 1883,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "fascist-executions",
+        "description": "In 1932 the fort was used to execute the republican Domenico Bovone and the anarchist Angelo Sbardellotto for plotting against Benito Mussolini.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1932,
+          "precision": "exact",
+          "endYear": 1932,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "wwii-executions",
+        "description": "Between 11 October 1943 and 3 June 1944, 77 partisans were executed by the German military tribunal and Gestapo.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1943,
+          "precision": "exact",
+          "endYear": 1944,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "postwar-executions",
+        "description": "From 1944 to 1945, fascists condemned to death by the High Court of Justice for fascist crimes were also executed at the fort.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1944,
+          "precision": "exact",
+          "endYear": 1945,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "parco-martiri",
+        "description": "On 9 September 2009 the mayor of Rome inaugurated the Parco dei Martiri, a ten-hectare memorial garden dedicated to the victims of Nazism and Fascism.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2009,
+          "precision": "exact",
+          "endYear": 2009,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "museum",
+        "description": "In June 2011 the fort was reopened to the public and a Museum of Memory was established within its buildings.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2011,
+          "precision": "exact",
+          "endYear": 2011,
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Benito Mussolini",
+      "personId": "benito-mussolini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Domenico Bovone",
+      "personId": "domenico-bovone",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Angelo Sbardellotto",
+      "personId": "angelo-sbardellotto",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Herbert Kappler",
+      "personId": "herbert-kappler",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Gianni Alemanno",
+      "personId": "gianni-alemanno",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

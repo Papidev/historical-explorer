@@ -1,0 +1,65 @@
+{
+  "id": "jusepe-de-ribera",
+  "name": "Jusepe de Ribera",
+  "wikidataId": "Q297838",
+  "wikipediaTitle": "Jusepe de Ribera",
+  "content": {
+    "description": [
+      {
+        "text": "Jusepe de Ribera was born in Xàtiva, Valencia, in 1591 to a shoemaker and a mother named Margalida Cucó.  He moved to Italy around 1600, where he first worked in Rome and later settled in Naples in 1616, adopting the nickname “Spagnoletto” because of his short stature.  In Rome he absorbed the dramatic chiaroscuro of Caravaggio and the naturalistic detail of the Carracci, while in Naples he became the leading figure of the Neapolitan Caravaggisti, developing a tenebristic style that intensified the violence and realism of his subjects.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ribera’s career in Naples was marked by major commissions from Spanish viceroys and local patrons, including five altarpieces for the Collegiate of Osuna and a series of apostle paintings for the San Girolamini.  He also decorated the Certosa di San Martino and the Gesù Nuovo, producing works that combined dramatic lighting with a growing interest in luminous color and landscape.  In his later years he taught the young Luca Giordano, and despite a degenerative mental illness that slowed his output, he continued to produce powerful religious scenes until his death in 1652.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "From 1624 onward Ribera added the particle “de” to his signature, writing “Jusepe de Ribera” to suggest a noble origin.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The nickname “Spagnoletto” (little Spaniard) was used by contemporaries to distinguish him from his taller brother Juan and to refer to his modest height.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ribera served as a mentor to the young Luca Giordano, who later became a prominent Neapolitan painter.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1591,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1652,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Ribera_-_Self-portrait.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ribera_-_Self-portrait.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Ribera_-_Self-portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Ribera_-_Self-portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Jusepe de Ribera",
+    "author": "Jusepe de Ribera",
+    "width": 577,
+    "height": 714,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Jusepe de Ribera",
+    "url": "https://it.wikipedia.org/wiki/Jusepe_de_Ribera"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:43:58.983Z"
+  }
+}

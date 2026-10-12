@@ -1,0 +1,65 @@
+{
+  "id": "mario-ceroli",
+  "name": "Mario Ceroli",
+  "wikidataId": "Q3848437",
+  "wikipediaTitle": "Mario Ceroli",
+  "content": {
+    "description": [
+      {
+        "text": "Mario Ceroli was an Italian sculptor and scenographer known for his experimental use of wood and later diverse materials. He studied at the Accademia di belle arti di Roma under Leoncillo Leonardi, Pericle Fazzini and Ettore Colla, and began by reproducing ceramic sculptures before turning to wood in 1957. He won the Premio per la giovane scultura italiana alla GNAM in 1958 and became a prominent figure in the 1960s, creating large human silhouettes in raw wood that became a signature motif. He was influenced by Pop Art and worked with artists such as Louise Nevelson and Joe Tilson, and exhibited at the Quadriennale di Roma (1965) and the Biennale di Venezia (1966).",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond sculpture, Ceroli was a prolific scenographer for theater, cinema and television, collaborating with Luca Ronconi, the Teatro Stabile di Torino and the Scala di Milano. He also designed public installations, including the 'Casa del Nettuno' in Bologna (1988) and the 'Unicorno alato' at the Rai headquarters in 1990. His later work incorporated glass panels and monumental installations in public spaces. He donated a wooden copy of 'L'uomo vitruviano' to his hometown Castel Frentano in 1997 and painted the Palio drapery in Siena in 2008. Ceroli's oeuvre, numbering over 500 pieces, remains housed in a 3,000‑square‑meter studio near Rome that he intended to open to the public.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Ceroli won the Premio per la giovane scultura italiana alla GNAM in 1958.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He created the 'Casa del Nettuno' in Bologna in 1988, a wooden container decorated with the silhouette of a floating man that served as a restoration workshop for Giambologna's bronze Neptune.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He designed the 'Unicorno alato' (winged unicorn) in 1990, a wooden sculpture covered in gold, displayed at the entrance of the Rai headquarters in Saxa Rubra.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 2008 he painted the drappellone for the Palio in Siena, depicting the Madonna Assunta and the winning contrada's horse and rider.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ceroli collaborated with the Teatro Stabile di Torino on the scenography for Shakespeare's 'Riccardo III' in 1968, producing the sculpture 'La grande Cina' that is now preserved at the CSAC of Parma.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Paolo_Monti_-_Servizio_fotografico_(Bologna,_1970)_-_BEIC_6332551.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Paolo_Monti_-_Servizio_fotografico_(Bologna%2C_1970)_-_BEIC_6332551.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Paolo_Monti_-_Servizio_fotografico_%28Bologna%2C_1970%29_-_BEIC_6332551.jpg/960px-Paolo_Monti_-_Servizio_fotografico_%28Bologna%2C_1970%29_-_BEIC_6332551.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Paolo_Monti_-_Servizio_fotografico_%28Bologna%2C_1970%29_-_BEIC_6332551.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Paolo Monti",
+    "author": "Paolo Monti",
+    "width": 1280,
+    "height": 845,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Mario Ceroli",
+    "url": "https://it.wikipedia.org/wiki/Mario_Ceroli"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:26:49.071Z"
+  }
+}

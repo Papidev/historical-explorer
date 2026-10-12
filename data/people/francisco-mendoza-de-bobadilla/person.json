@@ -1,0 +1,69 @@
+{
+  "id": "francisco-mendoza-de-bobadilla",
+  "name": "Francisco Mendoza de Bobadilla",
+  "wikidataId": "Q662239",
+  "wikipediaTitle": "Francisco Mendoza de Bobadilla",
+  "content": {
+    "description": [
+      {
+        "text": "Francisco Mendoza de Bobadilla was born on 25 September 1508 in Cuenca, the son of Diego Hurtado de Mendoza, 2nd Marquis of Cañete and Viceroy of Navarre. He studied at the universities of Alcalá de Henares and Salamanca, and later taught at Salamanca, Évora and Coimbra.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1533 he was elected bishop of Coria at the age of 24, a year before the canonical age of 27, and received a dispensation. He was created cardinal priest on 19 December 1544 by Pope Paul III, opted for the title of Santa Maria in Aracoeli, participated in the Papal conclave of 1549–1550, then opted for S. Eusebio and was promoted to the Diocese of Burgos on 27 June 1550. He spent much of his later life at the Spanish court, serving on missions for King Philip II, and died on 1 December 1566 in Arcos de la Llana near Burgos.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Mendoza de Bobadilla was elected bishop of Coria before reaching the canonical age of 27, a rare occurrence that required a dispensation from the Church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He took part in the Papal conclave of 1549–1550, which elected Pope Julius III.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Spanish king Philip II sent him on several diplomatic missions, reflecting his close ties to the royal court.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1508,
+      "month": 9,
+      "day": 25,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1566,
+      "month": 12,
+      "day": 1,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Francisco_de_Mendoza_y_Bobadilla_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Francisco_de_Mendoza_y_Bobadilla_(cropped).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Francisco_de_Mendoza_y_Bobadilla_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Francisco_de_Mendoza_y_Bobadilla_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Grabado de Luis Fernández Noseret por dibujo de Manuel Eraso",
+    "author": "Grabado de Luis Fernández Noseret por dibujo de Manuel Eraso",
+    "width": 334,
+    "height": 492,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Francisco Mendoza de Bobadilla",
+    "url": "https://en.wikipedia.org/wiki/Francisco_Mendoza_de_Bobadilla"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:21:55.909Z"
+  }
+}

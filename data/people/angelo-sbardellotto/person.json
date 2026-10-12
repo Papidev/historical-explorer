@@ -1,0 +1,63 @@
+{
+  "id": "angelo-sbardellotto",
+  "name": "Angelo Sbardellotto",
+  "wikidataId": "Q1070762",
+  "wikipediaTitle": "Angelo Pellegrino Sbardellotto",
+  "content": {
+    "description": [
+      {
+        "text": "Angelo Sbardellotto, born in Italy, left his homeland in 1924 and settled first in France, then Luxembourg, and finally Belgium, where he worked as a mechanical worker. In 1928 he rejected conscription and declared his commitment to anarchism in a letter to his Catholic mother, which was read by the local parish priest and a schoolteacher and ultimately led to his inclusion on the Belgian list of 270 most dangerous Italian anti‑fascists.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sbardellotto’s anti‑fascist activities culminated in several attempts to assassinate Benito Mussolini. He was issued a forged Swiss passport, a pistol and two bombs, and tried to reach Mussolini during the 1931 Rome anniversary of the March on Rome and again in 1932. After being arrested in Belgium and later in Italy, he was executed by firing squad on 17 June 1932 at Forte Bravetta.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was listed among 270 Italian anti‑fascists considered most dangerous by the Belgian authorities.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his imprisonment, he recognized the exiled Italian journalist Alberto Tarchiani as “the gray gentleman with wire‑rimmed glasses” in a photograph.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Mussolini himself reportedly praised Sbardellotto’s courage before the execution, remarking that he would have shown clemency to him.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 1932,
+      "month": 6,
+      "day": 17,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Mussolini_ferito_2.webp",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Mussolini_ferito_2.webp",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Mussolini_ferito_2.webp/960px-Mussolini_ferito_2.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Mussolini_ferito_2.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 1080,
+    "height": 1005,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Angelo Pellegrino Sbardellotto",
+    "url": "https://it.wikipedia.org/wiki/Angelo_Pellegrino_Sbardellotto"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:31:01.396Z"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Palazzo_Corsini_GNAA_AvL.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Palazzo_Corsini_GNAA_AvL.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Palazzo_Corsini_GNAA_AvL.JPG/960px-Palazzo_Corsini_GNAA_AvL.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Palazzo_Corsini_GNAA_AvL.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "AlexanderVanLoon",
+      "author": "AlexanderVanLoon",
+      "width": 4896,
+      "height": 3264,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Blocco_di_ambra_rossa_dal_baltico_con_supporto_settecentesco_in_bronzo,_01.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Blocco_di_ambra_rossa_dal_baltico_con_supporto_settecentesco_in_bronzo%2C_01.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Blocco_di_ambra_rossa_dal_baltico_con_supporto_settecentesco_in_bronzo%2C_01.jpg/960px-Blocco_di_ambra_rossa_dal_baltico_con_supporto_settecentesco_in_bronzo%2C_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Blocco_di_ambra_rossa_dal_baltico_con_supporto_settecentesco_in_bronzo%2C_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Francesco Bini",
+      "author": "Francesco Bini",
+      "width": 1384,
+      "height": 2840,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Blocco_di_ambra_rossa_dal_baltico_con_supporto_settecentesco_in_bronzo,_02.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Blocco_di_ambra_rossa_dal_baltico_con_supporto_settecentesco_in_bronzo%2C_02.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Blocco_di_ambra_rossa_dal_baltico_con_supporto_settecentesco_in_bronzo%2C_02.jpg/960px-Blocco_di_ambra_rossa_dal_baltico_con_supporto_settecentesco_in_bronzo%2C_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Blocco_di_ambra_rossa_dal_baltico_con_supporto_settecentesco_in_bronzo%2C_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Francesco Bini",
+      "author": "Francesco Bini",
+      "width": 1440,
+      "height": 2944,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Palazzo_Corsini_GNAA_AvL.JPG"
+}

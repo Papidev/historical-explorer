@@ -1,0 +1,212 @@
+{
+  "introduction": {
+    "text": "Castello della Cecchignola is a historic complex in Rome that has served as a cultural hub, housing the University of Marmorari and a specialized library. Its layers of architecture—from Roman foundations to medieval and modern additions—make it a living record of Rome's evolving heritage.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The site was a Roman villa outside the city walls, and a domus from the Republican era (II–I century BC) was discovered in 1939.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -200,
+          "precision": "approximate",
+          "endYear": -100,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "First written mention of the Castello in a papal bull issued by Pope Onorio III in 1217.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1217,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Sale of the property to Cardinal Basilio Bessarione in 1458.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1458,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Inheritance by the chapel of Sant’Eugenia in 1467.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1467,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "Sale to Pietro Margani in 1477.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1477,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "Construction of a park by Pope Paul V between 1618 and 1619.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1618,
+          "precision": "exact",
+          "endYear": 1619,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "Cardinal Pamphilj hosted a lunch at the Castello in 1695.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1695,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history8",
+        "description": "Transfer to the Gran Priorato of Malta in 1770.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1770,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history9",
+        "description": "Transfer to Alessandro Torlonia in 1832.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1832,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history11",
+        "description": "Restoration work carried out during the 20th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1900,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history10",
+        "description": "Discovery of the Roman domus in 1939.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1939,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history12",
+        "description": "Restoration work carried out during the 21st century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2000,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history13",
+        "description": "The tower remains at two thirds of its original height.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The tower’s base incorporates Roman foundations and remains of ancient roads.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The tower features architectural elements from the 13th century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "The tower includes 18th‑century architectural features.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design4",
+        "description": "The tower includes 19th‑century architectural features.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "papa Onorio III",
+      "personId": "pope-honorius-iii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Bessarione (cardinale)",
+      "personId": "bessarione-cardinale",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Margani",
+      "personId": "margani",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Nicola Maria Nicolai",
+      "personId": "nicola-maria-nicolai",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Scipione Caffarelli-Borghese",
+      "personId": "scipione-borghese",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "papa Paolo V",
+      "personId": "papa-paolo-v",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Benedetto Pamphilj",
+      "personId": "benedetto-pamphilj",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "papa Leone XII",
+      "personId": "papa-leone-xii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "papa Pio VIII",
+      "personId": "papa-pio-viii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Alessandro Raffaele Torlonia",
+      "personId": "alessandro-raffaele-torlonia",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

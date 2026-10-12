@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Casino_di_Villa_Lodovisi_-_Plate_189_-_Giuseppe_Vasi.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Casino_di_Villa_Lodovisi_-_Plate_189_-_Giuseppe_Vasi.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Casino_di_Villa_Lodovisi_-_Plate_189_-_Giuseppe_Vasi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Casino_di_Villa_Lodovisi_-_Plate_189_-_Giuseppe_Vasi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Giuseppe Vasi",
+      "author": "Giuseppe Vasi",
+      "width": 730,
+      "height": 464,
+      "discoveredVia": "commons-category",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Guerchin_108.1.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Guerchin_108.1.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Guerchin_108.1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Guerchin_108.1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Guercino",
+      "author": "Guercino",
+      "width": 732,
+      "height": 530,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Guercino_-_Ceiling_painting,_Casino_dell'Aurora,_11aurora.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Guercino_-_Ceiling_painting%2C_Casino_dell'Aurora%2C_11aurora.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Guercino_-_Ceiling_painting%2C_Casino_dell%27Aurora%2C_11aurora.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Guercino_-_Ceiling_painting%2C_Casino_dell%27Aurora%2C_11aurora.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Guercino",
+      "author": "Guercino",
+      "width": 834,
+      "height": 1500,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Casino_di_Villa_Lodovisi_-_Plate_189_-_Giuseppe_Vasi.jpg"
+}

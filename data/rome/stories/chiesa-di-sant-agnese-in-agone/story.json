@@ -1,0 +1,198 @@
+{
+  "introduction": {
+    "text": "Chiesa di Sant'Agnese in Agone is a 17th‑century Baroque church in Rome that serves as a titular deaconry and a cultural venue, notable for its architectural rivalry between Borromini and Bernini and its richly decorated interior.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Construction of the church began in 1652 under the patronage of Pope Innocent X, with architects Girolamo and Carlo Rainaldi.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1652,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "In 1653 the Rainaldis were replaced by Francesco Borromini, who introduced a concave façade and a central dome.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1653,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "By 1655 Pope Innocent X had died; the façade had reached the top of the lower order, but the project stalled.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1655,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "In 1657 Borromini resigned after losing support, and Carlo Rainaldi was reappointed.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1657,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "The pendentives of the dome were painted with the Cardinal Virtues between 1662 and 1672 by Giovanni Battista Gaulli.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1662,
+          "precision": "approximate",
+          "endYear": 1672,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "In 1668 Camillo Borghese took over responsibility for the church, reinstating Carlo Rainaldi and commissioning Ciro Ferri for dome frescoes.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1668,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "The cupola fresco of the Apotheosis of Saint Agnes was begun in 1670 by Ciro Ferri and finished in 1689 by Sebastiano Corbellini.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1670,
+          "precision": "approximate",
+          "endYear": 1689,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history8",
+        "description": "The Two Holy Families relief was completed in 1676 by Domenico Guidi.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1676,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history9",
+        "description": "The church has served as a titular deaconry, with Gerhard Ludwig Müller as the current Cardinal‑Deacon since 2014.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2014,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The façade features a concave profile with twin towers framing a central dome, a design influenced by Bernini's bell towers at Saint Peter's.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "Curved steps descend from the façade to Piazza Navona, creating an oval landing that harmonises the building with the piazza.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "The interior follows a Greek cross plan, with a near‑circular nave and marble sculptural masterpieces dedicated to martyred saints.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Cupola fresco of the Apotheosis of Saint Agnes (1670–1689) by Ciro Ferri and Sebastiano Corbellini.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "Pendentives painted with the Cardinal Virtues (1662–1672) by Giovanni Battista Gaulli.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "Sacristy painting Glory of Saint Agnes by Paolo Gismondi.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art4",
+        "description": "The Two Holy Families relief (1676) by Domenico Guidi.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art5",
+        "description": "Sculptural reliefs of the Martyrdom of Saint Eustace by Melchiorre Cafà and collaborators.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art6",
+        "description": "Statues of Saint Agnes and Saint Sebastian in illusionistic marble architecture by Pier Paolo Campi and Pierre Le Gros.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Girolamo Rainaldi",
+      "personId": "girolamo-rainaldi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Carlo Rainaldi",
+      "personId": "carlo-rainaldi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Borromini",
+      "personId": "francesco-borromini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Bernini",
+      "personId": "gian-lorenzo-bernini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Innocent X",
+      "personId": "pope-innocent-x",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Camillo Pamphili",
+      "personId": "camillo-pamphili",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Olimpia Aldobrandini",
+      "personId": "olimpia-aldobrandini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ciro Ferri",
+      "personId": "ciro-ferri",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giovanni Battista Gaulli",
+      "personId": "giovanni-battista-gaulli",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

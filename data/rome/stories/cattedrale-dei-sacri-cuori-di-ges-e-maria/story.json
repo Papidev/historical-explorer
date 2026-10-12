@@ -1,0 +1,142 @@
+{
+  "introduction": {
+    "text": "The Cattedrale dei Sacri Cuori di Gesù e Maria is a Catholic cathedral located in La Storta, a suburb of Rome, and serves as the episcopal seat of the suburban see of Porto-Santa Rufina. It is significant for its association with the 1537 vision of Ignatius of Loyola, its modern neoromanic architecture, and its artistic decorations that commemorate the Sacred Hearts of Jesus and Mary.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "h1",
+        "description": "In 1537 Ignatius of Loyola had a vision of Jesus and the Father in La Storta, leading to the construction of a chapel called the Vision.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1537,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h2",
+        "description": "In 1923 a committee was formed to build a sanctuary dedicated to the vision, but construction was delayed due to site constraints.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1923,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h3",
+        "description": "The first stone of the new church was laid on 31 July 1926, and construction began under a new design.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1926,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h4",
+        "description": "In 1946 Cardinal Eugène Tisserant, then bishop of Porto and Santa Rufina, revived the project and changed the dedication to the Sacred Hearts of Jesus and Mary.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1946,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h5",
+        "description": "The cathedral was consecrated on 25 March 1950.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1950,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h6",
+        "description": "The bell tower, designed by Scipione Tadolini, was completed in 1955.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1955,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h7",
+        "description": "Pope Pio XII visited the cathedral on 27 October 1957.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1957,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h8",
+        "description": "The cathedral was closed for restoration between 2008 and 2010.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2008,
+          "precision": "exact",
+          "endYear": 2010,
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "d1",
+        "description": "The cathedral is built in a sober neoromanic style, with a Greek cross plan, a single nave, side chapels, semicircular apses, a portico with three arches, and a bell tower.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "a1",
+        "description": "A mosaic of the Sacred Hearts of Jesus and Mary by Luciano Vinardi, created around 1960, adorns the façade.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "a2",
+        "description": "Stained‑glass windows by Luciano Vinardi, produced between 1961 and 1974, depict various saints.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "a3",
+        "description": "Frescoes by Stéphanie Guerzoni, painted from 1960 to 1965, illustrate the Sacred Heart of Jesus among saints and the Pentecost.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "a4",
+        "description": "An organ built by Mascioni in 1950, with 16 registers on a single manual and pedalboard, is located in the right transept apse.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Ignazio di Loyola",
+      "personId": "ignazio-di-loyola",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Eugène Tisserant",
+      "personId": "eug-ne-tisserant",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "papa Pio XII",
+      "personId": "pope-pius-xii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Stéphanie Guerzoni",
+      "personId": "st-phanie-guerzoni",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

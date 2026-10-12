@@ -1,0 +1,161 @@
+{
+  "introduction": {
+    "text": "Chiesa dei Santi Vincenzo e Anastasio alle Tre Fontane is the main church of the Abbey of the Three Fountains in Rome’s Ardeatino district. It is historically significant as a site of early Christian worship, monastic life, and papal patronage, and it remains an active Catholic parish.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "founding-625",
+        "description": "Founded by Pope Onorio I in 625 as part of the Abbey of the Three Fountains.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 625,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "martyrdom-628",
+        "description": "Martyrdom of Saint Anastasius the Persian in 628, whose relics were brought to the church.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 628,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "restoration-796",
+        "description": "Restored by Pope Leo III in 796.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 796,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "renewal-1128",
+        "description": "Renewed by Pope Innocenzo II in 1128.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1128,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "eugenio-1145",
+        "description": "Abbot Pietro Bernardo Pisano became Pope Eugenio III in 1145.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1145,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "consecration-1221",
+        "description": "Consecrated by Pope Onorio III in 1221.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1221,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "relics-1370",
+        "description": "Relics of Saint Vincent of Zaragoza added in 1370.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1370,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "monastic-1868",
+        "description": "Transferred to Trappist monks in 1868.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1868,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "organ-1954",
+        "description": "Installed a Mascioni pipe organ in 1954.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1954,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "jurisdiction-1981",
+        "description": "Papal bull in 1981 transferred spiritual jurisdiction to the Diocese of Pitigliano‑Sovana‑Orbetello.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1981,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "The church features a brick façade with a central rose window, five round windows, a 13th‑century portico with Ionic marble columns, and a Latin cross plan with three naves.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-1",
+        "description": "The interior contains large figures of apostles on the nave pillars and a Mascioni pipe organ.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "papa Onorio I",
+      "personId": "pope-honorius-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "papa Onorio III",
+      "personId": "pope-honorius-iii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "papa Eugenio III",
+      "personId": "papa-eugenio-iii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "papa Adriano I",
+      "personId": "pope-adrian-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "papa Gregorio I",
+      "personId": "pope-gregory-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "sant'Anastasio il Persiano",
+      "personId": "sant-anastasio-il-persiano",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "san Vincenzo di Saragozza",
+      "personId": "san-vincenzo-di-saragozza",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "introduction": {
+    "text": "Casale della Cervelletta is a historic farmstead in Rome’s Aniene Valley, notable for its medieval tower, its evolution into a noble country residence, and its role in agricultural and public health history.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The tower dates to the 12th century and features a guelf merlature.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1100,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "In 1630 the Borghese family transformed the casale into a country residence.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1630,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "In the late 19th century the casale hosted an experimental malaria station with Angelo Celli.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1800,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "The Salviati family acquired the property in 1835 and carried out canalisation works.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1835,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "The entire estate was incorporated into the Valle dell'Aniene Natural Reserve in 1997.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1997,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "The Comune di Roma purchased the casale in 2001.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2001,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "The casale was temporarily entrusted to the association La Cervelletta from 2014 to 2015.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2014,
+          "precision": "exact",
+          "endYear": 2015,
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The medieval tower stands about 30 metres tall and retains original merlature and defensive features.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The central body of the casale, added by the Borghese, displays the family crest on the upper window.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "A covered loggia with two large arched openings provides a prominent façade.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Sforza",
+      "personId": "sforza",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Scipione Caffarelli-Borghese",
+      "personId": "scipione-borghese",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Borghese (famiglia)",
+      "personId": "borghese-famiglia",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Salviati (famiglia)",
+      "personId": "salviati-famiglia",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Angelo Celli",
+      "personId": "angelo-celli",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Anna Fraentzel Celli",
+      "personId": "anna-fraentzel-celli",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

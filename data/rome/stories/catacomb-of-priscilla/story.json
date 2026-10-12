@@ -1,0 +1,219 @@
+{
+  "introduction": {
+    "text": "The Catacomb of Priscilla is a vast underground burial site on Rome's Via Salaria, notable for its extensive network of tunnels and its rich collection of early Christian art and relics.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Catacomb used for Christian burials from late 2nd century through 4th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 200,
+          "precision": "approximate",
+          "endYear": 400,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history9",
+        "description": "Susannah and the Elders fresco possibly depicts a 2nd century AD woman.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 200,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Pope Marcellinus buried in the catacomb (296-304).",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 296,
+          "precision": "exact",
+          "endYear": 304,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history10",
+        "description": "Greek Chapel frescoes from early 3rd century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 300,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history11",
+        "description": "Madonna and Child and Prophet Isaiah frescoes from early 3rd century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 300,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Pope Marcellus I buried in the catacomb (308-309).",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 308,
+          "precision": "exact",
+          "endYear": 309,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "Pope Paschal I moved bones of Saints Praxedes and Pudentiana to Santa Prassede in the 9th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 800,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history8",
+        "description": "Saint Philomena remains found in 1802.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1802,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Pope Sylvester I relics exhumed and enshrined in San Martino ai Monti.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "history5",
+        "description": "Pope Stephen I relics exhumed and enshrined.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "history6",
+        "description": "Pope Dionysius relics exhumed and enshrined.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "Underground network extends over seven miles, making it one of Rome's most extensive catacombs.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "Catacomb divided into Greek Chapel, cryptoporticus, and tombs.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "Greek Chapel is a square chamber excavated by Giovanni Battista de Rossi and Josef Wilpert.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design4",
+        "description": "Entrance accessed via Via Salaria through cloister of Benedictines of Priscilla.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design5",
+        "description": "Walls display early Christian frescos and inscriptions.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Good Shepherd fresco reproduced in Bottari's folio 1754.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "Susannah and the Elders fresco, earliest surviving illustration of the biblical scene.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "Madonna and Child and Prophet Isaiah frescoes from early 3rd century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art4",
+        "description": "Figure and lion fresco possibly depicting David or Thecla.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art5",
+        "description": "Story of Daniel 3 fresco.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art6",
+        "description": "Cubiculum of the Velata portraits depicting the life of an unnamed woman.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Pope Marcellinus",
+      "personId": "pope-marcellinus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Marcellus I",
+      "personId": "pope-marcellus-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Sylvester I",
+      "personId": "pope-silvester-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Stephen I",
+      "personId": "pope-stephen-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Dionysius",
+      "personId": "pope-dionysius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Paschal I",
+      "personId": "pope-paschal-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Damasus I",
+      "personId": "pope-damasus-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Siricius",
+      "personId": "pope-siricius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Celestine I",
+      "personId": "pope-celestine-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Vigilius",
+      "personId": "pope-vigilius",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

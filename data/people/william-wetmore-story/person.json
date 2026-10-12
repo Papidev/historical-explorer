@@ -1,0 +1,73 @@
+{
+  "id": "william-wetmore-story",
+  "name": "William Wetmore Story",
+  "wikidataId": "Q1335728",
+  "wikipediaTitle": "William Wetmore Story",
+  "content": {
+    "description": [
+      {
+        "text": "William Wetmore Story was born on February 12, 1819, the son of U.S. Supreme Court judge Joseph Story and Sarah Waldo Wetmore. He graduated from Harvard College in 1838 and Harvard Law School in 1840, practiced law briefly, and published two legal treatises before abandoning the profession to pursue sculpture. In 1850 he settled in Rome, where he became part of the expatriate artistic community, befriending the Brownings and Walter Savage Landor, and where he produced many of his most celebrated statues.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Story’s oeuvre includes monumental works such as the bust of his father for Harvard, the bronze statue of Joseph Henry on the Mall in Washington, D.C., and the marble Cleopatra housed at the Metropolitan Museum of Art. He also designed the Angel of Grief monument to his wife and submitted a design for the Washington Monument that, while praised for its artistic merit, was ultimately not adopted. He died on October 7, 1895, at Vallombrosa Abbey in Italy, where he had long felt a deep attachment.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "During the American Civil War, Story’s pamphlet \"The American Question\" and his articles in Blackwood’s Magazine influenced English opinion on U.S. neutrality.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He designed a bronze statue of scientist Joseph Henry that now stands on the Mall in Washington, D.C.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Story submitted a design for the Washington Monument that was considered \"vastly superior in artistic taste and beauty\" by the Washington National Monument Society, though it was not adopted.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His marble sculpture of Cleopatra, created in 1858, was exhibited at the 1863 Universal Exposition in London and is currently displayed in Gallery 700 of the Metropolitan Museum of Art.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1819,
+      "month": 2,
+      "day": 12,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1895,
+      "month": 10,
+      "day": 7,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "William_Wetmore_Story_-_Brady-Handy.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:William_Wetmore_Story_-_Brady-Handy.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/William_Wetmore_Story_-_Brady-Handy.jpg/960px-William_Wetmore_Story_-_Brady-Handy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/81/William_Wetmore_Story_-_Brady-Handy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Mathew Benjamin Brady / Levin Corbin Handy",
+    "author": "Mathew Benjamin Brady / Levin Corbin Handy",
+    "width": 2888,
+    "height": 3872,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "William Wetmore Story",
+    "url": "https://en.wikipedia.org/wiki/William_Wetmore_Story"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:12:25.854Z"
+  }
+}

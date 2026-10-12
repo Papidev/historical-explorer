@@ -1,0 +1,51 @@
+{
+  "introduction": {
+    "text": "Fontana dei Quattro Fiumi, the Fountain of the Four Rivers, is a Baroque fountain in Rome’s Piazza Navona. Designed by Gian Lorenzo Bernini in 1651 for Pope Innocent X, it symbolizes papal authority across the four continents and remains a key example of Baroque sculpture and urban waterworks.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Unveiled on 12 June 1651.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1651,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "Bernini’s design features a travertine basin supporting four river‑god statues and a Roman copy of an Egyptian obelisk topped with the Pamphili family dove emblem.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "The fountain’s allegorical river gods—Nile, Danube, Ganges, and Río de la Plata—are sculpted in naturalistic style, each carrying symbolic attributes that reflect their respective continents.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Gian Lorenzo Bernini",
+      "personId": "gian-lorenzo-bernini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Innocent X",
+      "personId": "pope-innocent-x",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Filippo Baldinucci",
+      "personId": "filippo-baldinucci",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "st-urban",
+  "name": "St. Urban",
+  "wikidataId": "Q692666",
+  "wikipediaTitle": "St. Urban",
+  "content": {
+    "description": [
+      {
+        "text": "St. Urban is a town situated in the Gurktal Alps of north‑central Carinthia, Austria, lying about ten kilometres northeast of Feldkirchen and centred on St. Urban Lake.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The town’s terrain ranges from a low point of 520 metres in the Glan valley to a high point of 1,338 metres on the Hocheck, and it is surrounded by gently rolling hills such as the Gößeberg, Paulsberg and Illmitzer forest.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Dobra Moor, also known as Jakobi or Freundsamer moor, sits at an altitude of 902 metres and is home to a rare Nordic Birch, a relic from the ice age that was first discovered in Carinthia in 1922.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "St. Urban Lake, a glacial lake that gives the town its name, is a notable feature of the local landscape.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Sankt_urban_panorama.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Sankt_urban_panorama.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Sankt_urban_panorama.JPG/960px-Sankt_urban_panorama.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/68/Sankt_urban_panorama.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Horst Thaller",
+    "author": "Horst Thaller",
+    "width": 2048,
+    "height": 1536,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "St. Urban",
+    "url": "https://en.wikipedia.org/wiki/St._Urban"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:33:07.571Z"
+  }
+}

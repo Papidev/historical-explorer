@@ -1,0 +1,173 @@
+{
+  "introduction": {
+    "text": "The Fontana dell'Acqua Acetosa is a historic fountain in Rome's Parioli quarter, known for its iron‑rich water that was celebrated by Pope Paul V for its medicinal properties and for being a popular monument among Italians.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-16th-century",
+        "description": "In the 16th century, the Romans discovered the ferruginous water known as acqua acetosa flowing in the area.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1500,
+          "precision": "approximate",
+          "endYear": 1599,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-1613",
+        "description": "In 1613, Pope Paul V had the water analyzed and found it to be drinkable and curative for various diseases.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1613,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1619",
+        "description": "In 1619, Pope Paul V commissioned architect Giovanni Vasanzio to build a fountain at the site.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1619,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1663",
+        "description": "In 1663, the profession of selling the water, called acquacetosari, was first mentioned.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1663,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1712",
+        "description": "In 1712, Pope Clement XI commissioned a restoration of the fountain, addressing low water flow and quality issues.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1712,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1821",
+        "description": "In 1821, stone seats were installed at the fountain thanks to funding from Ludwig I of Bavaria.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1821,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1959",
+        "description": "In 1959, the fountain was closed due to aquifer pollution and later reopened with water from the mains.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1959,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-2003",
+        "description": "In 2003, the Fondo Ambiente Italiano identified the fountain as the monument Italians are most fond of.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2003,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-2008-2009",
+        "description": "Between 2008 and 2009, the fountain underwent significant renovation and a small fenced park was created.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2008,
+          "precision": "exact",
+          "endYear": 2009,
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "The fountain features a tympanum with the papal coat of arms, a staircase leading downwards, and an exedra‑shaped façade with three niches displaying the Chigi family coat of arms.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-2",
+        "description": "The design is attributed to Andrea Sacchi or Marco Antonio De 'Rossi, not to Gian Lorenzo Bernini.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-1",
+        "description": "The niches of the fountain display the Chigi family coat of arms, showing six mountains and an eight‑pointed star.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-2",
+        "description": "The tympanum above the fountain bears the papal coat of arms.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Pope Paul V",
+      "personId": "papa-paolo-v",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giovanni Vasanzio",
+      "personId": "giovanni-vasanzio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Innocent X",
+      "personId": "pope-innocent-x",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Alexander VII",
+      "personId": "pope-alexander-vii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Clement XI",
+      "personId": "pope-clement-xi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giovanni Maria Lancisi",
+      "personId": "giovanni-maria-lancisi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ludwig I of Bavaria",
+      "personId": "ludwig-i-of-bavaria",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Gian Lorenzo Bernini",
+      "personId": "gian-lorenzo-bernini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Chigi family",
+      "personId": "chigi-family",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

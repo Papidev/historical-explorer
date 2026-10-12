@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Trastevere_-_Fontana_del_Prigione_00721-2.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Trastevere_-_Fontana_del_Prigione_00721-2.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Trastevere_-_Fontana_del_Prigione_00721-2.JPG/960px-Trastevere_-_Fontana_del_Prigione_00721-2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/Trastevere_-_Fontana_del_Prigione_00721-2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "user:Lalupa",
+      "author": "user:Lalupa",
+      "width": 977,
+      "height": 1024,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Rome,_Italy_(24895427675).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Rome%2C_Italy_(24895427675).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Rome%2C_Italy_%2824895427675%29.jpg/960px-Rome%2C_Italy_%2824895427675%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/27/Rome%2C_Italy_%2824895427675%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.0",
+      "attribution": "Alejandro from Mexico City, MEXICO",
+      "author": "Alejandro from Mexico City, MEXICO",
+      "width": 2560,
+      "height": 1920,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Trastevere_-_v_Luciano_Manara_P1030863.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Trastevere_-_v_Luciano_Manara_P1030863.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Trastevere_-_v_Luciano_Manara_P1030863.JPG/960px-Trastevere_-_v_Luciano_Manara_P1030863.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Trastevere_-_v_Luciano_Manara_P1030863.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Lalupa",
+      "author": "Lalupa",
+      "width": 4608,
+      "height": 2592,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Trastevere_-_Fontana_del_Prigione_00721-2.JPG"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "nicola-calipari",
+  "name": "Nicola Calipari",
+  "wikidataId": "Q569777",
+  "wikipediaTitle": "Nicola Calipari",
+  "content": {
+    "description": [
+      {
+        "text": "Nicola Calipari was an Italian major general and a senior officer of the military intelligence agency SISMI. Born in Reggio Calabria on 23 June 1953, he rose through the ranks of the Italian police before joining SISMI in the early 2000s, where he was involved in several high‑profile rescue operations against organized crime groups such as the 'Ndrangheta during the 1990s.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Calipari’s life ended abruptly on 4 March 2005 in Iraq when he was accidentally shot by American soldiers while escorting the recently released Italian hostage journalist Giuliana Sgrena to Baghdad International Airport. The incident triggered a major diplomatic crisis between the United States and Italy and led to a post‑humous award of the Gold Medal of Military Valor.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was one of only five U.S. or European general officers to be injured or killed during combat operations in Iraq and Afghanistan.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his death, tens of thousands of Italians paid their respects at a state funeral held on 8 March 2005, and he was posthumously awarded the Gold Medal of Military Valor by President Carlo Azeglio Ciampi on 22 March 2005.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The shooting that killed Calipari was carried out by New York State National Guardsman Mario Lozano, a member of the 1st Battalion of the 69th Infantry Regiment, and the incident led to a prolonged legal dispute between Italian prosecutors and the U.S. military.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1953,
+      "month": 6,
+      "day": 23,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 2005,
+      "month": 3,
+      "day": 4,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Nicola Calipari",
+    "url": "https://en.wikipedia.org/wiki/Nicola_Calipari"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:30:15.779Z"
+  }
+}

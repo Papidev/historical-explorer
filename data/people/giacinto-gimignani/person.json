@@ -1,0 +1,71 @@
+{
+  "id": "giacinto-gimignani",
+  "name": "Giacinto Gimignani",
+  "wikidataId": "Q3105019",
+  "wikipediaTitle": "Giacinto Gimignani",
+  "content": {
+    "description": [
+      {
+        "text": "Giacinto Gimignani (1606–1681) was an Italian painter and engraver who worked mainly in Rome during the Baroque period. Born in Pistoia, he was the son of the painter Alessio Gimignani, who had studied with Jacopo Ligozzi. By 1630 his father had arranged for him to travel to Rome, where he is said to have begun training under Nicolas Poussin and, by 1632, had transferred to work under Pietro da Cortona. Luigi Lanzi notes that he learned design from Poussin and color from Cortona, a combination that gave his work a classical, grand‑manner style.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In Rome Gimignani produced a number of frescoes, including the Rest on the Flight to Egypt in the Palazzo Barberini (1632) and the Vision of the Cross by Constantine the Great in the baptistery of San Giovanni in Laterano, the latter completed under the guidance of Andrea Sacchi. He assisted Cortona in the decoration of the Palazzo Pamphili in 1648, joined the Accademia di San Luca in 1650, and married the daughter of the painter Alessandro Turchi of Verona. He spent his later years back in Tuscany, where several of his works are now housed in the Museo Clemente Rospigliosi in Pistoia, and his son Ludovico Gimignani followed in his footsteps as a fresco painter.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Gimignani was patronized by Guido Rospigliosi, Cardinal Secretary of State, a prominent member of the Rospigliosi family of Pistoia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He painted a fresco of the Meeting of Venus and Adonis that is now displayed in the Museo Clemente Rospigliosi in Pistoia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1648 he assisted Pietro da Cortona in the decoration of the Palazzo Pamphili in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His son Ludovico Gimignani also became a noted fresco painter in Rome.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1606,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1681,
+      "month": 12,
+      "day": 9,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Giacinto_Gimignani_-_Venus_Appearing_to_Aeneas_and_Achates_-_WGA08998.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Giacinto_Gimignani_-_Venus_Appearing_to_Aeneas_and_Achates_-_WGA08998.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Giacinto_Gimignani_-_Venus_Appearing_to_Aeneas_and_Achates_-_WGA08998.jpg/960px-Giacinto_Gimignani_-_Venus_Appearing_to_Aeneas_and_Achates_-_WGA08998.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/39/Giacinto_Gimignani_-_Venus_Appearing_to_Aeneas_and_Achates_-_WGA08998.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Giacinto Gimignani",
+    "author": "Giacinto Gimignani",
+    "width": 991,
+    "height": 700,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giacinto Gimignani",
+    "url": "https://en.wikipedia.org/wiki/Giacinto_Gimignani"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:38:34.574Z"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "fortuna-divinit",
+  "name": "fortuna",
+  "wikidataId": "Q4654",
+  "wikipediaTitle": "Fortuna (divinità)",
+  "content": {
+    "description": [
+      {
+        "text": "Fortuna is a Roman deity of chance and destiny, celebrated as Fors Fortuna on June 24 by the Romans. She was an ancient goddess, possibly predating Rome, and the cult of Fortuna was introduced by King Servius Tullius, who dedicated twenty‑six temples to her in the capital, each with a different epiclepsis. Servius Tullius is said to have been favored by Fortuna, who loved him despite his mortal status, and a statue of the king stands in her temple. Fortuna had a dual character but always positive, helping ventures succeed and bringing erotic blessings, as reflected in the saying \"to be kissed by fortune\".",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Fortuna was worshipped with various epithets such as Fortuna Muliebris, Primigenia, Redux, Stata, and Virilis, and her Greek counterpart was Tyche. In the Middle Ages, Boethius’s De consolatione philosophiae (c. 524 CE) portrayed her as a capricious yet providential force, and the image of the wheel of fortune became a lasting icon, appearing in manuscripts, cathedral stained glass, and even the Tarot. During the Renaissance, artists depicted her in many forms—on a sphere, as a sea goddess, with a tuft of hair, or holding a cornucopia—often contrasting her with Mercury, the god of reason.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The region Fortuna Tessera on the surface of Venus was named in honor of the goddess Fortuna.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The 2019 film La dea fortuna by Ferzan Özpetek takes its title from the Sanctuary of Fortuna Primigenia in Palestrina, where one of the protagonists works, and explores the theme of fortune as destiny.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Charles_Samuel,_La_Fortune_(1894),_KBS-FRB_03.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Charles_Samuel%2C_La_Fortune_(1894)%2C_KBS-FRB_03.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Charles_Samuel%2C_La_Fortune_%281894%29%2C_KBS-FRB_03.jpg/960px-Charles_Samuel%2C_La_Fortune_%281894%29%2C_KBS-FRB_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Charles_Samuel%2C_La_Fortune_%281894%29%2C_KBS-FRB_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Charles Samuel",
+    "author": "Charles Samuel",
+    "width": 2835,
+    "height": 3969,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Fortuna (divinità)",
+    "url": "https://it.wikipedia.org/wiki/Fortuna_(divinit%C3%A0)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:54:00.075Z"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "colonna",
+  "name": "Colonna",
+  "wikidataId": "Q4817",
+  "wikipediaTitle": "Colonna",
+  "content": {
+    "description": [
+      {
+        "text": "The column is a vertical load‑bearing element of circular cross‑section, typically composed of a base, shaft and capital. In ancient Egyptian architecture, as early as 2600 BC, Imhotep introduced stone columns decorated with hieroglyphics and motifs of papyrus, lotus and palm, exemplified by the 134 columns in the great hall of Karnak.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In classical antiquity the Greeks and Romans developed distinct orders—Doric, Ionic, Corinthian—each with characteristic shaft fluting, entasis, and capital design. The Doric column, for instance, features a fluted shaft with a subtle bulge at one‑third height to correct optical illusion, while the Ionic order rests on a base and has more slender fluting.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Egyptian papyrus‑shaped columns, known as \"papiriform\", date back to the Fifth Dynasty and mimic the stalk of a lotus, with a capital that flares and then narrows like a bud.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Persian columns at Persepolis, erected by Darius I, incorporated double‑toroid capitals and were taller and more slender than Egyptian columns because they supported wooden beams rather than stone.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In medieval Europe, the use of classical column orders declined, but the Romanesque period saw a revival of Roman columns, and later Gothic architecture favored more flexible, often carved capitals with foliage and figurative scenes.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Denderah_cour.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Denderah_cour.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Denderah_cour.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Denderah_cour.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "No machine-readable author provided. Bradipus assumed (based on copyright claims).",
+    "author": "No machine-readable author provided. Bradipus assumed (based on copyright claims).",
+    "width": 410,
+    "height": 614,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Colonna",
+    "url": "https://it.wikipedia.org/wiki/Colonna"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:32:14.453Z"
+  }
+}

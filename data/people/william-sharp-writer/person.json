@@ -1,0 +1,69 @@
+{
+  "id": "william-sharp-writer",
+  "name": "William Sharp",
+  "wikidataId": "Q1575288",
+  "wikipediaTitle": "William Sharp (writer)",
+  "content": {
+    "description": [
+      {
+        "text": "William Sharp was born on 12 September 1855 in Paisley, Scotland, and studied at Glasgow Academy and the University of Glasgow, though he left without a degree in 1872 after contracting typhoid. He worked briefly in a Glasgow law office, travelled to Australia for health reasons, and later joined a London bank, but by 1891 he had abandoned his banking career to devote himself entirely to writing, publishing poetry, literary biographies, and editing the works of Ossian, Walter Scott, Matthew Arnold, Algernon Charles Swinburne, and Eugene Lee‑Hamilton.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "From 1893 Sharp began publishing under the pseudonym Fiona Macleod, a name he kept secret during his lifetime; the persona was inspired by his romantic attachment to Edith Wingate Rinder and was used to publish novels such as Pharais (1894) and the play The Immortal Hour (1899). He was a member of the Hermetic Order of the Golden Dawn and in 1892 issued the single‑issue Pagan Review, which advocated a neo‑paganism that sought to abolish gender inequality. Sharp died on 12 December 1905 at the Castello di Maniace near Bronte in Sicily, where he was a guest of Sir Alexander Nelson Hood, 5th Duke of Bronté, and was buried in the ducal cemetery.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Sharp’s poems under the Fiona Macleod name were set to music by several composers, most famously Rutland Boughton, who adapted The Immortal Hour into an opera that ran 216 consecutive performances in London in 1922 and was staged in New York City in 1926.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his Golden Dawn membership he published the Pagan Review in August 1892 under a series of pen names, including W. H. Brooks and W. S. Fanshawe, and the review was met with harsh criticism for its departure from classical pagan literature.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sharp’s relationship with W. B. Yeats was complex; Yeats initially found the Fiona Macleod persona acceptable, but later the dual identity strained their friendship, leading Sharp to dictate Macleod manuscripts to his sister Mary Beatrice Sharp so they could be passed off as genuine.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1855,
+      "month": 9,
+      "day": 12,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1905,
+      "month": 12,
+      "day": 12,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "William_Sharp_(writer)_-_Project_Gutenberg_eText_19028.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:William_Sharp_(writer)_-_Project_Gutenberg_eText_19028.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/William_Sharp_%28writer%29_-_Project_Gutenberg_eText_19028.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/William_Sharp_%28writer%29_-_Project_Gutenberg_eText_19028.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "From Project Gutenberg's Irish Plays and Playwrights, by Cornelius Weygandt http://www.gutenberg.org/etext/19028",
+    "author": "From Project Gutenberg's Irish Plays and Playwrights, by Cornelius Weygandt http://www.gutenberg.org/etext/19028",
+    "width": 350,
+    "height": 441,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "William Sharp (writer)",
+    "url": "https://en.wikipedia.org/wiki/William_Sharp_(writer)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:21:58.843Z"
+  }
+}

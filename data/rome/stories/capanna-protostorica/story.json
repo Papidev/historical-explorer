@@ -1,0 +1,60 @@
+{
+  "introduction": {
+    "text": "The Capanna Protostorica is a reconstructed Iron Age hut that provides insight into late 9th‑century BC life in the ancient city of Fidenae, near Rome.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-1",
+        "description": "The original hut dates to the late 9th century BC, during the Iron Age.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -900,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-2",
+        "description": "The site was discovered in 1988, revealing well‑preserved remains.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1988,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-3",
+        "description": "Excavations were conducted from 1991 to 1993, uncovering posts, wall fragments, pots, and a brazier.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1991,
+          "precision": "exact",
+          "endYear": 1993,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-4",
+        "description": "In January 2020, the reconstructed hut was damaged by an accidental fire.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2020,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "The reconstruction uses the same construction techniques and materials as the original Iron Age hut.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": []
+}

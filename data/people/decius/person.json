@@ -1,0 +1,78 @@
+{
+  "id": "decius",
+  "name": "Decius",
+  "wikidataId": "Q1830",
+  "wikipediaTitle": "Decius",
+  "content": {
+    "description": [
+      {
+        "text": "Gaius Messius Quintus Trajanus Decius, born around 201 AD in Budalia near Sirmium, rose through the senatorial ranks before being proclaimed emperor by his troops after quelling a rebellion in Moesia. He defeated the reigning emperor Philip the Arab at Verona in September 249 and was subsequently recognized by the Senate, adopting the cognomen Traianus in homage to the earlier emperor. During his brief reign he sought to restore the strength of the Roman state, both militarily and morally, by reviving the office of censor and sponsoring building projects such as the Baths of Decius on the Aventine Hill.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Decius is most remembered for issuing the first organized persecution of Christians in 250, demanding public sacrifice to the emperor and issuing certificates to those who complied. The edict led to the execution of prominent Christians, including Pope Fabian, and set a precedent for later persecutions. His reign ended abruptly when he and his son Herennius Etruscus were killed in the Battle of Abritus against the Goths in June 251, making him the first emperor to die in battle against a foreign enemy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Decius was the first Roman emperor to die in battle against a foreign enemy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He issued the first organized persecution of Christians in the Roman Empire, known as the Decian persecution.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He built the Baths of Decius (Thermae Decianae) on the Aventine Hill, completed in 252, and the structure survived until the 16th century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Decius revived the office of censor in an attempt to restore public piety and moral order.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The story of the Seven Sleepers, who hid in a cave during the Decian persecution, became associated with his name and is mentioned in the Quranic account of Al‑Kahf.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In Persian culture the phrase \"age of Decius\" (daqyānus) is used to refer to ancient times or outdated views.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 201,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 251,
+      "month": 6,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Emperor_Traianus_Decius_(Mary_Harrsch).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Emperor_Traianus_Decius_(Mary_Harrsch).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Emperor_Traianus_Decius_%28Mary_Harrsch%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Emperor_Traianus_Decius_%28Mary_Harrsch%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 2.0",
+    "attribution": "Mary Harrsch",
+    "author": "Mary Harrsch",
+    "width": 450,
+    "height": 600,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Decius",
+    "url": "https://en.wikipedia.org/wiki/Decius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:08:15.084Z"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Roma_Gazometro.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Roma_Gazometro.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Roma_Gazometro.jpg/960px-Roma_Gazometro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Roma_Gazometro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Gidipa",
+      "author": "Gidipa",
+      "width": 3934,
+      "height": 4918,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Gasometro_(20634225493).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Gasometro_(20634225493).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Gasometro_%2820634225493%29.jpg/960px-Gasometro_%2820634225493%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Gasometro_%2820634225493%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.0",
+      "attribution": "Lunna Campos",
+      "author": "Lunna Campos",
+      "width": 4928,
+      "height": 3264,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Gasometro_(3968264885).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Gasometro_(3968264885).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Gasometro_%283968264885%29.jpg/960px-Gasometro_%283968264885%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Gasometro_%283968264885%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.0",
+      "attribution": "Luigi Guarino from Bonn, Germany",
+      "author": "Luigi Guarino from Bonn, Germany",
+      "width": 1280,
+      "height": 960,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Roma_Gazometro.jpg"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "carlo-ludovico-visconti",
+  "name": "Carlo Ludovico Visconti",
+  "wikidataId": "Q23719067",
+  "wikipediaTitle": "Carlo Ludovico Visconti",
+  "content": {
+    "description": [
+      {
+        "text": "Carlo Lodovico Visconti was the last member of the Roman archaeological Visconti dynasty, which began with Giovanni Battista Visconti in 1768 and continued for four generations, dominating archaeology and antiquities administration in the Papal States. He began excavations in Rome and its provinces in 1855 and assisted his uncle Pietro Ercole Visconti in projects commissioned by Pope Pius IX in 1859.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1883 he became director of the Museo Torlonia and in 1884 took charge of the Vatican collections as Director of the Pontifical Museums and Galleries and Commissioner of Antiquities for the Pontifical Museums. He led systematic digs at Ostia, discovering the Domus Cilonis and the excubitorium in Regio XIV, and mentored the young Rodolfo Lanciani, who became his most important student.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He discovered the Domus Cilonis, the city villa of the late second‑century consul and prefect Lucius Fabio Cilone, which later became part of the church of Santa Balbina on the Aventine.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He uncovered an excubitorium, a fire‑brigade station for the Roman vigiles, in the Regio XIV on Monte de' Fiori near San Crisogono.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as permanent secretary of the Pontifical Roman Academy of Archaeology and as secretary of the Pontifical Academy of Fine Arts and Letters, and was a founding member of the Municipal Archaeological Commission of Rome in 1872.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Carlo Ludovico Visconti",
+    "url": "https://it.wikipedia.org/wiki/Carlo_Ludovico_Visconti"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:49:28.959Z"
+  }
+}

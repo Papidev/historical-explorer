@@ -1,0 +1,71 @@
+{
+  "id": "timothy-m-dolan",
+  "name": "Timothy M. Dolan",
+  "wikidataId": "Q225823",
+  "wikipediaTitle": "Timothy Dolan",
+  "content": {
+    "description": [
+      {
+        "text": "Timothy Michael Dolan was born on February 6, 1950, in St. Louis, Missouri, and entered the priesthood after completing a Bachelor of Arts in philosophy and a Licentiate of Sacred Theology in Rome. He was ordained a priest on June 19, 1976, and served in various pastoral and academic roles, including as rector of the Pontifical North American College in Rome from 1994 to 2001.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He rose through the episcopal ranks, becoming auxiliary bishop of St. Louis in 2001, archbishop of Milwaukee in 2002, and archbishop of New York in 2009. In 2012 he was elevated to the College of Cardinals by Pope Benedict XVI, and from 2010 to 2013 he served as president of the United States Conference of Catholic Bishops. His tenure in New York was marked by efforts to address the sexual‑abuse scandal, school and parish closures, and public engagement on social issues.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In February 2026, Dolan was appointed co‑chief chaplain of the New York City Police Department.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He delivered the first benediction at President Donald Trump’s inauguration on January 20, 2017.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Dolan was the first archbishop of New York since 1946 not to receive the titular church of Santi Giovanni e Paolo, a tradition that had been held by his predecessor.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as president of the United States Conference of Catholic Bishops from 2010 to 2013, becoming the first New York prelate to hold that post.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the 2025 papal conclave, Dolan was reported to have acted as a consensus‑builder among American and Latin American cardinals, helping to steer support toward Cardinal Robert Prevost.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1950,
+      "month": 2,
+      "day": 6,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Timothy_Dolan_apr_2015.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Timothy_Dolan_apr_2015.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Timothy_Dolan_apr_2015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Timothy_Dolan_apr_2015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Heidi Green",
+    "author": "Heidi Green",
+    "width": 711,
+    "height": 984,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Timothy Dolan",
+    "url": "https://en.wikipedia.org/wiki/Timothy_Dolan"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:15:20.427Z"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "gaius-cornelius-cethegus-consul",
+  "name": "Gaius Cornelius Cethegus",
+  "wikidataId": "Q629910",
+  "wikipediaTitle": "Gaius Cornelius Cethegus (consul)",
+  "content": {
+    "description": [
+      {
+        "text": "Gaius Cornelius Cethegus rose to prominence in the early 2nd century BC, first serving as propraetor in Hispania in 200 BC. In that campaign he confronted the Sedetani, a hostile tribe in the region, and reportedly inflicted a heavy defeat that left 15,000 of the enemy dead—a figure that modern scholars, such as Heitland, regard with skepticism. While still stationed abroad, he was elected aedile in absentia and used the office to organize lavish public games, a testament to his ambition to leave a lasting legacy even when not physically present in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cethegus reached the pinnacle of his career when he was elected consul in 197 BC. During his term he led Roman forces into Gallia Cisalpina, where he successfully defeated the Insubrians and Cenomani, earning the senate a triumph in recognition of his military achievements. He later served as censor in 194 BC, and in 193 BC he joined Scipio Africanus and Marcus Minucius Rufus as a commissioner tasked with mediating the conflict between Masinissa of Numidia and Carthage, illustrating his continued involvement in both domestic and foreign affairs.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "As aedile in absentia, Cethegus arranged magnificent games that showcased his wealth and influence.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His triumph for defeating the Insubrians and Cenomani in 197 BC remains one of the few recorded triumphs of the late Republic.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 193 BC, he served alongside Scipio Africanus as a commissioner to mediate the war between Masinissa and Carthage, highlighting his diplomatic role beyond military service.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Gaius Cornelius Cethegus (consul)",
+    "url": "https://en.wikipedia.org/wiki/Gaius_Cornelius_Cethegus_(consul)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:26:38.156Z"
+  }
+}

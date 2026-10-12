@@ -1,0 +1,73 @@
+{
+  "id": "marcellinus-and-peter",
+  "name": "Marcellinus and Peter",
+  "wikidataId": "Q449701",
+  "wikipediaTitle": "Marcellinus and Peter",
+  "content": {
+    "description": [
+      {
+        "text": "Marcellinus, a Roman priest, and Peter, an exorcist, were martyred in 304 during the Diocletianic persecution. According to later hagiography, they were beheaded by the magistrate Severus or Serenus at a remote thicket three miles from Rome, a location chosen to prevent Christians from burying them.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Their bodies were later discovered by two women, Lucilla and Firmina, and buried near St. Tiburtius on the Via Labicana, giving rise to the Catacombs of Marcellinus and Peter. Over the centuries their cult grew, with a basilica erected by Constantine the Great and their relics eventually translated to Seligenstadt in the ninth century.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The execution site was a thicket overgrown with thorns, brambles, and briers, chosen specifically to keep other Christians from burying the martyrs.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Lucilla and Firmina, guided by divine revelation, found the bodies and ensured they were properly buried near the body of St. Tiburtius on the Via Labicana.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Their feast day is celebrated on 2 June in the Catholic Church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Constantine the Great is said to have built a basilica in their honor, following the destruction of an earlier structure by the Goths.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In the ninth century, the relics of Marcellinus and Peter were translated to Seligenstadt in Germany by Einhard, the secretary to Charlemagne.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A later account claims that a Roman deacon named Deusdona stole the relics from a catacomb and transported them to Michelstadt, leading to disputes over their authenticity.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Frescoes in the catacombs depict Marcellinus and Peter without aureolae, holding palms of martyrdom, and sometimes a crown each.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Codex_Bodmer_127_073r_Detail_1.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Codex_Bodmer_127_073r_Detail_1.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Codex_Bodmer_127_073r_Detail_1.jpg/960px-Codex_Bodmer_127_073r_Detail_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Codex_Bodmer_127_073r_Detail_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Frater Rufillus",
+    "author": "Frater Rufillus",
+    "width": 1971,
+    "height": 1449,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Marcellinus and Peter",
+    "url": "https://en.wikipedia.org/wiki/Marcellinus_and_Peter"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:41:11.948Z"
+  }
+}

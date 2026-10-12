@@ -1,0 +1,128 @@
+{
+  "introduction": {
+    "text": "Castello di Giulio II is a late‑15th‑century defensive complex located at the southern edge of Ostia Antica in Rome. It exemplifies the transition from medieval to modern fortification design and played a key role in protecting Rome’s coast and securing supply routes during the Renaissance.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-1423-1424",
+        "description": "Between 1423 and 1424 Pope Martin V erected a circular tower with a surrounding moat to guard the river area near the saltworks and to serve as a papal customs post.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1423,
+          "precision": "approximate",
+          "endYear": 1424,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1461-1483",
+        "description": "Cardinal Guillaume d’Estouteville reinforced the walls of the village, expanding its fortifications between 1461 and 1483.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1461,
+          "precision": "approximate",
+          "endYear": 1483,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1483-construction",
+        "description": "Construction of the main castle began in 1483 at the behest of Cardinal Giuliano della Rovere, future Pope Julius II, to strengthen Rome’s coastal defense and secure food supplies.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1483,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1556-assault",
+        "description": "In 1556 the castle suffered severe damage during an assault by the Duke of Alba, Fernando Álvarez de Toledo.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1556,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1557-abandonment",
+        "description": "The castle was abandoned in 1557 after a catastrophic flood altered the course of the Tiber and turned the surrounding area into unhealthy swamps.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1557,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-structure",
+        "description": "The fort has a triangular layout with three towers—two circular and one polygonal—connected by a single rampart. It was originally surrounded by a moat fed by the Tiber. The walls are built of thick brick, angled to deflect artillery fire, and feature gun embrasures called troniere.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-peruzzi-fresco",
+        "description": "The monumental staircase of the castle is decorated with a fresco by Baldassarre Peruzzi depicting mythological scenes related to Hercules.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Giuliano della Rovere",
+      "personId": "giuliano-della-rovere",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Baccio Pontelli",
+      "personId": "baccio-pontelli",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Baldassarre Peruzzi",
+      "personId": "baldassarre-peruzzi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Guillaume d'Estouteville",
+      "personId": "guillaume-d-estouteville",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Fernando Álvarez de Toledo",
+      "personId": "fernando-lvarez-de-toledo",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Papa Martino V",
+      "personId": "papa-martino-v",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Papa Gregorio IV",
+      "personId": "pope-gregory-iv",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giorgio Vasari",
+      "personId": "giorgio-vasari",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giuliano da Sangallo",
+      "personId": "giuliano-da-sangallo",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Francesco di Giorgio Martini",
+      "personId": "francesco-di-giorgio-martini",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

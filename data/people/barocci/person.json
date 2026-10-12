@@ -1,0 +1,71 @@
+{
+  "id": "barocci",
+  "name": "Barocci",
+  "wikidataId": "Q316731",
+  "wikipediaTitle": "Federico Barocci",
+  "content": {
+    "description": [
+      {
+        "text": "Federico Barocci, born around 1535 in Urbino, began his artistic journey apprenticing under his sculptor father and later with the painter Battista Franco Veneziano. His early exposure to the Mannerist style of the Zuccari studio in Rome helped shape a dynamic approach that blended dramatic composition with a subtle, almost ethereal, use of color.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After returning to Urbino, Barocci produced a series of altarpieces that earned him the patronage of Duke Francesco Maria II della Rovere. His mature works, such as the Visitation and Presentation of the Virgin for the Capuchin order, foreshadowed the Baroque movement and left a lasting influence on artists like Peter Paul Rubens, who drew inspiration from Barocci’s emotive brushwork.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Barocci was nicknamed Il Baroccio, a playful reference to his surname that later echoed the name of the Baroque period.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He pioneered the use of pastel studies, producing the earliest surviving examples of this medium and demonstrating a soft, opalescent rendering that anticipated later Baroque techniques.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his second stay in Rome, Barocci fell ill and suspected that a salad he ate had been poisoned by jealous rivals, a claim that illustrates the intense artistic rivalries of the time.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Peter Paul Rubens is known to have made a sketch of Barocci’s Martyrdom of St Vitale, indicating the direct influence of Barocci’s dramatic compositions on the Flemish master.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1535,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1612,
+      "month": 9,
+      "day": 30,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Federico_Barocci_-_Autoportrait.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Federico_Barocci_-_Autoportrait.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/93/Federico_Barocci_-_Autoportrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/93/Federico_Barocci_-_Autoportrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Federico Barocci",
+    "author": "Federico Barocci",
+    "width": 360,
+    "height": 427,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Federico Barocci",
+    "url": "https://en.wikipedia.org/wiki/Federico_Barocci"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:48:09.373Z"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "introduction": {
+    "text": "The Chiesa di Santa Maria Liberatrice a Monte Testaccio is a 20th‑century parish and titular church in Rome, notable for its Romanesque and Byzantine revival architecture and for serving the growing suburb of Monte Testaccio.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "construction",
+        "description": "The church was built in 1908 to serve the new suburb at Monte Testaccio.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1908,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "titular-status",
+        "description": "On 5 February 1965 it was made a titular church to be held by a cardinal‑deacon.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1965,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "cardinal-beltrami",
+        "description": "Giuseppe Beltrami served as cardinal‑protector from 1967 to 1973.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1967,
+          "precision": "exact",
+          "endYear": 1973,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "cardinal-rossi",
+        "description": "Opilio Rossi served as cardinal‑protector from 1976 to 1987.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1976,
+          "precision": "exact",
+          "endYear": 1987,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "cardinal-javierre",
+        "description": "Antonio María Javierre Ortas served as cardinal‑protector from 1988 to 2007.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1988,
+          "precision": "exact",
+          "endYear": 2007,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "cardinal-lajolo",
+        "description": "Giovanni Lajolo has served as cardinal‑protector since 2007.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2007,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "roman-revival",
+        "description": "The church features Romanesque Revival architectural elements.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "byzantine-revival",
+        "description": "The church also incorporates Byzantine Revival architectural features.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "transferred-artwork",
+        "description": "Much of the artwork was transferred from the old Santa Maria Liberatrice in the Forum.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Giuseppe Beltrami",
+      "personId": "giuseppe-beltrami",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Opilio Rossi",
+      "personId": "opilio-rossi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Antonio María Javierre Ortas",
+      "personId": "antonio-mar-a-javierre-ortas",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giovanni Lajolo",
+      "personId": "giovanni-lajolo",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

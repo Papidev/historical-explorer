@@ -1,0 +1,56 @@
+{
+  "introduction": {
+    "text": "Il Caseggiato del Larario (I, IX, 3) è un edificio storico di Ostia, noto per la sua architettura commerciale e le iscrizioni religiose che riflettono la vita quotidiana e le pratiche di culto della città romana.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "construction",
+        "description": "Costruito intorno al 120 d.C., il caseggiato serviva probabilmente alla vendita di beni di lusso e ospitava abitazioni al secondo piano.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 120,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "materials",
+        "description": "L'edificio è caratterizzato dall'uso esteso di piccoli blocchi di travertino nelle pareti.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "mosaic",
+        "description": "Il vestibolo e il cortile erano ricoperti da un mosaico bianco e nero, successivamente restaurato con lastre di marmo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "statue",
+        "description": "La nicchia nel cortile interno ospitava una statua di culto dedicata alle divinità dei Larì.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Cerere",
+      "personId": "cerere",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ninfa (mitologia)",
+      "personId": "ninfa-mitologia",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Lari (divinità)",
+      "personId": "lari-divinit",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

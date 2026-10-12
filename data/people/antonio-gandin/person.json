@@ -1,0 +1,65 @@
+{
+  "id": "antonio-gandin",
+  "name": "Antonio Gandin",
+  "wikidataId": "Q602114",
+  "wikipediaTitle": "Antonio Gandin",
+  "content": {
+    "description": [
+      {
+        "text": "Antonio Gandin was born in 1891 in Avezzano, Abruzzo, to a family with strong military traditions. He earned a degree in letters before attending the Royal Military Academy of Modena, where he was commissioned as a second lieutenant in 1910. He served in the Italo‑Turkish War on the Libyan front and later fought in World War I with the 136th Regiment, earning a silver and bronze medal and two War Crosses for valor.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the war he held several important positions for the Ministry of War and the SIM, and taught at the War School. He rose to colonel in 1935, commanded the 40th Infantry Regiment, and entered the Army Staff in 1937. Promoted to brigadier general in 1940, he became a division general and was awarded the German Iron Cross 1st Class during the Eastern Front battles. In June 1943 he commanded the Acqui Division on Cephalonia, where he refused to accept the German unconditional surrender and was executed by the Germans after a brief consultation with his troops.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was awarded the German Iron Cross 1st Class during the Eastern Front battles.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was executed by the Germans for refusing to accept unconditional surrender on Cephalonia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Before his military career, he was a graduate in letters.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1891,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1943,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Antonio_Gandin.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Antonio_Gandin.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/64/Antonio_Gandin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/64/Antonio_Gandin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 160,
+    "height": 233,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Antonio Gandin",
+    "url": "https://it.wikipedia.org/wiki/Antonio_Gandin"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:33:24.163Z"
+  }
+}

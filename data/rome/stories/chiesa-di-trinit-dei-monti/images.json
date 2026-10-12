@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Trinità_dei_Monti_(Rome)_-_esterno.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Trinit%C3%A0_dei_Monti_(Rome)_-_esterno.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Trinit%C3%A0_dei_Monti_%28Rome%29_-_esterno.jpg/960px-Trinit%C3%A0_dei_Monti_%28Rome%29_-_esterno.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/Trinit%C3%A0_dei_Monti_%28Rome%29_-_esterno.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "SonyGM",
+      "author": "SonyGM",
+      "width": 3184,
+      "height": 3856,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "016_Rome,_Jan_1978_-_51947093866.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:016_Rome%2C_Jan_1978_-_51947093866.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/016_Rome%2C_Jan_1978_-_51947093866.jpg/960px-016_Rome%2C_Jan_1978_-_51947093866.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/016_Rome%2C_Jan_1978_-_51947093866.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.0",
+      "attribution": "wilford peloquin",
+      "author": "wilford peloquin",
+      "width": 1920,
+      "height": 2560,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Oratio_in_fvnere_m._Antonii_Mvreti_..._-_habita_Romae_in_templo_S._Trinitatis_in_colle_hortulorum_(IA_oratioinfvnerema00benc).pdf",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Oratio_in_fvnere_m._Antonii_Mvreti_..._-_habita_Romae_in_templo_S._Trinitatis_in_colle_hortulorum_(IA_oratioinfvnerema00benc).pdf",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Oratio_in_fvnere_m._Antonii_Mvreti_..._-_habita_Romae_in_templo_S._Trinitatis_in_colle_hortulorum_%28IA_oratioinfvnerema00benc%29.pdf/page1-500px-Oratio_in_fvnere_m._Antonii_Mvreti_..._-_habita_Romae_in_templo_S._Trinitatis_in_colle_hortulorum_%28IA_oratioinfvnerema00benc%29.pdf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Oratio_in_fvnere_m._Antonii_Mvreti_..._-_habita_Romae_in_templo_S._Trinitatis_in_colle_hortulorum_%28IA_oratioinfvnerema00benc%29.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Benci, Francesco, 1542-1594",
+      "author": "Benci, Francesco, 1542-1594",
+      "width": 793,
+      "height": 1147,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Trinità_dei_Monti_(Rome)_-_esterno.jpg"
+}

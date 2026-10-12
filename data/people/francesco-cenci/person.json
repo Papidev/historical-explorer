@@ -1,0 +1,67 @@
+{
+  "id": "francesco-cenci",
+  "name": "Francesco Cenci",
+  "wikidataId": "Q3749769",
+  "wikipediaTitle": "Francesco Cenci",
+  "content": {
+    "description": [
+      {
+        "text": "Francesco Cenci was born in Rome in 1549 to Cristoforo del ramo dei Cenci di Arenula and Beatrice Arias.  After his father's death in 1562 he inherited a fortune of nearly five hundred thousand scudi, making him one of the wealthiest men in the Papal States.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "At the age of fourteen he married Ersilia Santacroce, and the couple had twelve children, seven of whom survived to adulthood.  In 1593 he remarried Lucrezia Petroni, a widow who already had six children.  Despite his wealth, Cenci was known for his violent and authoritarian temperament, which led to numerous quarrels and legal troubles, including a sodomy charge that could have resulted in the death penalty.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Cenci's inheritance of 500,000 scudi in 1562 was a substantial fortune for the time, allowing him to maintain a lavish lifestyle and pay off debts that later contributed to his downfall.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was murdered on 9 September 1598 at the Rocca in Petrella Salto by two servants, Olimpio Calvetti and Marzio da Fioran, with the complicity of his children Giacomo and Beatrice and his wife Lucrezia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Following his murder, a trial revealed that his wife and daughter were executed by decapitation, Giacomo was quartered, and his younger brother Bernardo was condemned to perpetual galley service before eventually regaining his freedom after a large payment.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1549,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1598,
+      "month": 9,
+      "day": 9,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Petrella_Salto_-_rocca_e_abitato.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Petrella_Salto_-_rocca_e_abitato.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Petrella_Salto_-_rocca_e_abitato.jpg/960px-Petrella_Salto_-_rocca_e_abitato.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Petrella_Salto_-_rocca_e_abitato.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Gabriele Marcelli - gabriel.dot.marcelli.at.gmail.dot.com",
+    "author": "Gabriele Marcelli - gabriel.dot.marcelli.at.gmail.dot.com",
+    "width": 3599,
+    "height": 2399,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Francesco Cenci",
+    "url": "https://it.wikipedia.org/wiki/Francesco_Cenci"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:37:54.801Z"
+  }
+}

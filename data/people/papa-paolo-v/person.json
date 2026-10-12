@@ -1,0 +1,65 @@
+{
+  "id": "papa-paolo-v",
+  "name": "papa Paolo V",
+  "wikidataId": "Q132711",
+  "wikipediaTitle": "Papa Paolo V",
+  "content": {
+    "description": [
+      {
+        "text": "Camillo Borghese, later Pope Paul V, was born in Rome to a noble Sienese family that had recently moved to the city. He studied law at Perugia and Padua, was ordained in 1577, and rose through the Curia to become a cardinal in 1596. His election in the May 1605 conclave was the result of a compromise between French and Spanish factions, and he was chosen for his reputation as a moderate and his legal expertise.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his reign he pursued a program of ecclesiastical reform and architectural patronage. He approved the new façade of St. Peter’s, commissioned the Acqua Paola aqueduct and its monumental fountain, founded the Banco di Santo Spirito, and issued a brief allowing Jesuit missionaries in China to use Classical Chinese in liturgy. He also created 60 cardinals, a record that reflected his efforts to strengthen papal influence across Europe.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He commissioned the new façade of St. Peter’s Basilica, a project that altered the iconic dome and introduced the inscription “PAVLVS V BVRGHESIVS” on the tympanum.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He authorized the construction of the Acqua Paola aqueduct, which supplied water to the Trastevere district and included the famous Fontana dell’Acqua Paola on the Janiculum hill.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first pope to issue a decree allowing Jesuit missionaries in China to use Classical Chinese in liturgical services, a move that was later revoked by subsequent popes.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He established the Banco di Santo Spirito in 1605 to stabilize Rome’s banking system after a series of private bank failures.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He created 60 cardinals during his pontificate, a record that reflected his efforts to strengthen papal influence across Europe.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Pope_Paul_V.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Paul_V.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Pope_Paul_V.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Pope_Paul_V.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Attributed to Caravaggio",
+    "author": "Attributed to Caravaggio",
+    "width": 644,
+    "height": 1088,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Papa Paolo V",
+    "url": "https://it.wikipedia.org/wiki/Papa_Paolo_V"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:29:53.675Z"
+  }
+}

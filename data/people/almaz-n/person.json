@@ -1,0 +1,61 @@
+{
+  "id": "almaz-n",
+  "name": "Almazán",
+  "wikidataId": "Q5202",
+  "wikipediaTitle": "Almazán",
+  "content": {
+    "description": [
+      {
+        "text": "Almazán is a Spanish municipality in the province of Soria, Castile and León, situated on the left bank of the Duero River at an altitude of 950 metres.  As of 2001 it had a population of 5,546 residents, who are concentrated in the town centre.  The local economy is dominated by agriculture and livestock, but the town is also renowned for its furniture‑making industry, earning it the nickname “city of furniture”.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The town was founded during the Arab period and was captured by King Alfonso I the Battler in 1128.  In the Middle Ages it grew into a fortified settlement with a wall enclosing the historic centre and four gates.  Almazán played a diplomatic role in 1395 when a peace treaty between Castile and Aragon was signed there.  The city was later governed by a mayor and six councillors, and remained a march of the Counts of Altamira until the abolition of feudal privileges in the mid‑nineteenth century.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Almazán’s medieval wall still surrounds the historic core and contains the gates of the Villa, the Market, and the Ironworkers.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The town’s main church, Iglesia de San Miguel, dates back to the twelfth century and features a façade from the sixteenth century.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During Semana Santa, Almazán’s processions feature heavy wooden floats (pasos) that are carried on the shoulders of participants for hours.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Bajada de Jesús festival in early September includes a nighttime procession from the bell tower to the Hermitage of Jesús Nazareno, after which the city lights are extinguished and fireworks illuminate the streets.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Almazan_-_032_(46535718484).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Almazan_-_032_(46535718484).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Almazan_-_032_%2846535718484%29.jpg/960px-Almazan_-_032_%2846535718484%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Almazan_-_032_%2846535718484%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 2.0",
+    "attribution": "Luis Rogelio HM",
+    "author": "Luis Rogelio HM",
+    "width": 4288,
+    "height": 2848,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Almazán",
+    "url": "https://it.wikipedia.org/wiki/Almaz%C3%A1n"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:52:06.314Z"
+  }
+}

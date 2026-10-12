@@ -1,0 +1,128 @@
+{
+  "introduction": {
+    "text": "Casino Nobile is a historic building within Villa Torlonia in Rome, notable for its neoclassical architecture, artistic collections, and its role as Mussolini's residence during the fascist era.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "h1",
+        "description": "Restoration and enlargement of the Casino Nobile by Giuseppe Valadier, including stucco work and interior painting, carried out between 1802 and 1806.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1802,
+          "precision": "exact",
+          "endYear": 1806,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h2",
+        "description": "Casino Nobile served as Mussolini's residence at Villa Torlonia, with added bunkers and modernizations, from 1925 to 1943.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1925,
+          "precision": "exact",
+          "endYear": 1943,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "h3",
+        "description": "Giovanni Raimondo Torlonia acquired the Vigna Colonna estate and commissioned restoration of its buildings.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "d1",
+        "description": "Giuseppe Valadier designed the Casino Nobile's pronao, portico, loggia, and Ionic columns, creating a monumental entrance.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "d2",
+        "description": "The fronton features a terracotta relief of Bacchus' triumph by Rinaldo Rinaldi.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "d3",
+        "description": "The vestibule includes a coffered ceiling with gilded elements and putti, reflecting neoclassical style.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "a1",
+        "description": "The Casino houses marble copies of the Amazone Mattei and a Fauno by Bartolomeo Cavaceppi.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "a2",
+        "description": "Pietro Paoletti painted wall frescoes depicting mythological scenes such as Leda, Diana, and the Rape of Europa.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "a3",
+        "description": "Giovan Battista Caretti contributed landscape paintings to the Casino's interior.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "a4",
+        "description": "Francesco Podesti painted the Bacchus story frescoes in the Sala di Bacco.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "a5",
+        "description": "Luigi Fioroni created Egyptian-inspired frescoes depicting Cleopatra and Marco Antonio.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Giovanni Raimondo Torlonia",
+      "personId": "giovanni-raimondo-torlonia",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giuseppe Valadier",
+      "personId": "valadier",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Alessandro Raffaele Torlonia",
+      "personId": "alessandro-raffaele-torlonia",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Rinaldo Rinaldi (scultore)",
+      "personId": "rinaldo-rinaldi-scultore",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Benito Mussolini",
+      "personId": "benito-mussolini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Bartolomeo Cavaceppi",
+      "personId": "bartolomeo-cavaceppi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pietro Paoletti",
+      "personId": "pietro-paoletti",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giovan Battista Caretti",
+      "personId": "giovan-battista-caretti",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Francesco Podesti",
+      "personId": "francesco-podesti",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

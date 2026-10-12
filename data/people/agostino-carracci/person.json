@@ -1,0 +1,73 @@
+{
+  "id": "agostino-carracci",
+  "name": "Agostino Carracci",
+  "wikidataId": "Q316269",
+  "wikipediaTitle": "Agostino Carracci",
+  "content": {
+    "description": [
+      {
+        "text": "Agostino Carracci was born on 16 August 1557 in Bologna as the son of a tailor.  He began his artistic career as a goldsmith before turning to painting, studying under Prospero Fontana and Bartolomeo Passarotti and later travelling to Parma and Venice to absorb the works of Correggio, Veronese and Tintoretto.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Alongside his brother Annibale and cousin Ludovico, Agostino helped found the Accademia degli Incamminati, a progressive school that sought to replace the prevailing Mannerist style with a more naturalistic approach.  He was a prolific reproductive engraver, copying masterpieces of the 16th‑century masters, and also produced original works such as the Communion of St. Jerome, which is regarded as his masterwork.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He initially trained as a goldsmith before switching to painting.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "From 1574 he worked as a reproductive engraver, copying works of Federico Barocci, Tintoretto, Antonio Campi, Veronese and Correggio.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His engraving after Paolo Fiammingo’s Love in the Golden Age later inspired Henri Matisse’s Le bonheur de vivre (Joy of Life).",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Communion of St. Jerome, painted in 1592, is considered his masterwork and was later the subject of a plagiarism accusation by Giovanni Lanfranco against another Carracci student.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1557,
+      "month": 8,
+      "day": 16,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1602,
+      "month": 3,
+      "day": 22,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Carracci_Self-portrait.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Carracci_Self-portrait.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Carracci_Self-portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Carracci_Self-portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Agostino Carracci",
+    "author": "Agostino Carracci",
+    "width": 550,
+    "height": 673,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Agostino Carracci",
+    "url": "https://en.wikipedia.org/wiki/Agostino_Carracci"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:31:17.513Z"
+  }
+}

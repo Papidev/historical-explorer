@@ -1,0 +1,67 @@
+{
+  "id": "john-wycliffe",
+  "name": "John Wycliffe",
+  "wikidataId": "Q173893",
+  "wikipediaTitle": "John Wycliffe",
+  "content": {
+    "description": [
+      {
+        "text": "John Wycliffe was a 14th‑century English scholastic philosopher and theology professor at the University of Oxford, whose writings challenged the wealth and authority of the Catholic clergy.  He argued that the Church should renounce property and that clergy ought to live in poverty, a stance that brought him into conflict with both ecclesiastical and secular authorities, including Pope Gregory XI and King Edward III.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Wycliffe’s ideas laid the groundwork for the Lollard movement and influenced later reformers such as Jan Hus.  He is traditionally credited with initiating a translation of the Bible into Middle English, and his theological tracts were widely circulated among the laity, inspiring a growing demand for scripture in the vernacular and contributing to the intellectual climate that would later erupt in the Peasants’ Revolt.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He served as Master of Balliol College in 1361 before relinquishing the position to take up a parish living at Fillingham.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Wycliffe is traditionally believed to have begun the translation of the Vulgate Bible into Middle English, a project that later saw completion by his associates such as John Purvey.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Some of his followers, known as Lollards, are said to have preached in the streets of London during the Peasants’ Revolt of 1381, and a contemporary record links his teachings to the revolt’s rhetoric.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1328,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1384,
+      "month": 12,
+      "day": 31,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Wycliffe_by_Kirby.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Wycliffe_by_Kirby.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Wycliffe_by_Kirby.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Wycliffe_by_Kirby.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Thomas Kirkby",
+    "author": "Thomas Kirkby",
+    "width": 917,
+    "height": 1200,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "John Wycliffe",
+    "url": "https://en.wikipedia.org/wiki/John_Wycliffe"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:53:01.214Z"
+  }
+}

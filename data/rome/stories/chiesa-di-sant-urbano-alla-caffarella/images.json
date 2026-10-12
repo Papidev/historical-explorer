@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Sant_Urbano1.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Sant_Urbano1.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Sant_Urbano1.jpg/960px-Sant_Urbano1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Sant_Urbano1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "attribution": "Roundtheworld (talk) 13:26, 27 March 2011 (UTC)",
+      "author": "Roundtheworld (talk) 13:26, 27 March 2011 (UTC)",
+      "width": 1880,
+      "height": 2816,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "20260613_Sant'Urbano_alla_Caffarella-10.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:20260613_Sant'Urbano_alla_Caffarella-10.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/20260613_Sant%27Urbano_alla_Caffarella-10.jpg/960px-20260613_Sant%27Urbano_alla_Caffarella-10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1c/20260613_Sant%27Urbano_alla_Caffarella-10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Marcamps",
+      "author": "Marcamps",
+      "width": 5970,
+      "height": 3980,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "20260613_Sant'Urbano_alla_Caffarella-11.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:20260613_Sant'Urbano_alla_Caffarella-11.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/20260613_Sant%27Urbano_alla_Caffarella-11.jpg/960px-20260613_Sant%27Urbano_alla_Caffarella-11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/20260613_Sant%27Urbano_alla_Caffarella-11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Marcamps",
+      "author": "Marcamps",
+      "width": 3704,
+      "height": 5556,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Sant_Urbano1.jpg"
+}

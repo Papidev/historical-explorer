@@ -1,0 +1,81 @@
+{
+  "id": "ferdinand-ii-of-aragon",
+  "name": "Ferdinand II of Aragon",
+  "wikidataId": "Q12860",
+  "wikipediaTitle": "Ferdinand II of Aragon",
+  "content": {
+    "description": [
+      {
+        "text": "Ferdinand II of Aragon, born on 10 March 1452 in Sos del Rey Católico, rose to prominence through his marriage to Isabella I of Castile in 1469. Their union, governed by a prenuptial agreement that emphasized shared power, allowed Ferdinand to become king of Castile in 1475 and king of Aragon in 1479, thereby creating a personal union of the two crowns that laid the groundwork for a unified Spanish monarchy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During their joint reign, Ferdinand and Isabella completed the Reconquista with the fall of Granada in 1492, issued the Alhambra Decree expelling Jews, and financed Christopher Columbus's voyage, which opened the Americas to Spanish exploration. He also engaged in the Italian Wars, annexed Naples and most of Navarre, and, after Isabella's death, served as regent of Castile until his own death in 1516.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was known as Ferdinand the Catholic, a title that reflected his commitment to religious unity.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He is considered the de facto first king of Spain, even though Castile and Aragon remained legally separate kingdoms during his reign.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1502 he forced all Muslims in Castile and Aragon to convert to Catholicism or be expelled, extending the policy of religious conformity beyond the Jews.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He married Germaine of Foix in 1506, a union that strengthened his alliance with France and linked him to the French royal family through her lineage.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His daughter Catherine of Aragon became Queen of England by marrying Henry VIII, making Ferdinand the grandfather of Queen Mary I.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He had a son, John, Prince of Girona, who was born on 3 May 1509 but died within hours, a tragedy that affected the succession plans of the Crown of Aragon.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1452,
+      "month": 3,
+      "day": 10,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1516,
+      "month": 1,
+      "day": 23,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "FerdinandIIA.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:FerdinandIIA.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/FerdinandIIA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/FerdinandIIA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "anonymous / Unidentified painter",
+    "author": "anonymous / Unidentified painter",
+    "width": 545,
+    "height": 844,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Ferdinand II of Aragon",
+    "url": "https://en.wikipedia.org/wiki/Ferdinand_II_of_Aragon"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:24:06.896Z"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "umberto-i",
+  "name": "Umberto I",
+  "wikidataId": "Q153688",
+  "wikipediaTitle": "Umberto I of Italy",
+  "content": {
+    "description": [
+      {
+        "text": "Umberto I ascended the Italian throne in 1878 after the death of his father, Victor Emmanuel II. A staunch militarist, he championed the Triple Alliance with Germany and Austria‑Hungary and pushed Italy into a colonial venture that saw the annexation of Eritrea and Somalia, although the ill‑fated First Italo‑Ethiopian War ended in defeat at the Battle of Adwa.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His reign was marred by social unrest and political repression. The 1898 Bava Beccaris massacre in Milan, which he publicly praised, inflamed opposition, and in 1900 he was assassinated by anarchist Gaetano Bresci in Monza, ending his 22‑year rule.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Umberto I was one of the recipients of a letter from Friedrich Nietzsche, known as a 'Wahnbrief', which was a satirical note sent to various European leaders.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The architectural style that emerged during his reign, characterized by eclectic and monumental designs, was dubbed 'Umbertino' in his honor.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Despite his conservative image, Umberto maintained a common‑law relationship with his mistress Eugenia, the wife of Duke Litta Visconti‑Arese, who lived at the royal court.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was known for his austere upbringing, as his father Victor Emmanuel II forbade him any political education and required him to kiss his father's hand before speaking.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1844,
+      "month": 3,
+      "day": 14,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1900,
+      "month": 7,
+      "day": 29,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Fratelli_Vianelli_(Giuseppe_e_Luigi,_flor._1860-1890_ca)_-_VE_-_Umberto_I_di_Savoia_1.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Fratelli_Vianelli_(Giuseppe_e_Luigi%2C_flor._1860-1890_ca)_-_VE_-_Umberto_I_di_Savoia_1.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Fratelli_Vianelli_%28Giuseppe_e_Luigi%2C_flor._1860-1890_ca%29_-_VE_-_Umberto_I_di_Savoia_1.jpg/960px-Fratelli_Vianelli_%28Giuseppe_e_Luigi%2C_flor._1860-1890_ca%29_-_VE_-_Umberto_I_di_Savoia_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Fratelli_Vianelli_%28Giuseppe_e_Luigi%2C_flor._1860-1890_ca%29_-_VE_-_Umberto_I_di_Savoia_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Fratelli Vianelli",
+    "author": "Fratelli Vianelli",
+    "width": 2763,
+    "height": 3619,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Umberto I of Italy",
+    "url": "https://en.wikipedia.org/wiki/Umberto_I_of_Italy"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:54:14.224Z"
+  }
+}

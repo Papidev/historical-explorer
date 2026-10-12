@@ -1,0 +1,69 @@
+{
+  "id": "quirinus-of-sescia",
+  "name": "Quirinus of Sescia",
+  "wikidataId": "Q776193",
+  "wikipediaTitle": "Quirinus of Sescia",
+  "content": {
+    "description": [
+      {
+        "text": "Quirinus of Sescia, who died in 309 AD, is recorded by Eusebius of Caesarea as an early bishop of the city now known as Sisak in Croatia. According to a Passio that is considered unreliable, he was arrested during Diocletian’s persecution, attempted to flee, was imprisoned, and managed to convert his jailer, Marcellus, to Christianity. After three days the governor of Pannonia Prima, Amantius, ordered Quirinus taken to Sabaria, where an attempt to force him to renounce his faith ended with the bishop being thrown into the Gyöngyös River with a millstone around his neck.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his death, local Christians in Savaria recovered his body and buried it near the gate known as the Scarbateus. When the barbarians invaded Pannonia at the end of the fourth century, his relics were taken to Rome and placed in a mausoleum called Platonia behind the Basilica of San Sebastiano fuori le mura on the Appian Way. The cult of Quirinus spread widely, with itineraries of the seventh century noting translations of his relics to places such as Correggio, Milan, Aquileia, and the Basilica of Santa Maria in Trastevere, and a later tradition links him to the Republic of San Marino where a fog on his feast day in 1543 is said to have thwarted a conquest.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Quirinus is considered one of the national protectors of the Republic of San Marino.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A church dedicated to him exists at Jesenovik, Croatia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His feast day is observed on 4 June.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The mausoleum known as Platonia was long believed to be the temporary tomb of Peter and Paul, but it actually housed Quirinus’s relics.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Some traditions suggest that Quirinus may be the same saint as Saint Quirinus of Tivoli.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 309,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Croatia_Krk_BW_2014-10-12_12-16-56.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Croatia_Krk_BW_2014-10-12_12-16-56.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Croatia_Krk_BW_2014-10-12_12-16-56.jpg/960px-Croatia_Krk_BW_2014-10-12_12-16-56.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Croatia_Krk_BW_2014-10-12_12-16-56.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Berthold Werner",
+    "author": "Berthold Werner",
+    "width": 3500,
+    "height": 2307,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Quirinus of Sescia",
+    "url": "https://en.wikipedia.org/wiki/Quirinus_of_Sescia"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:06:31.472Z"
+  }
+}

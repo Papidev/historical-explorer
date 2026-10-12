@@ -1,0 +1,75 @@
+{
+  "id": "reginald-pole",
+  "name": "Reginald Pole",
+  "wikidataId": "Q313445",
+  "wikipediaTitle": "Reginald Pole",
+  "content": {
+    "description": [
+      {
+        "text": "Reginald Pole was born into a family closely related to the English royal house; his father, Richard Pole, was a cousin of Henry VIII and his mother, Margaret Pole, Countess of Salisbury, was a niece of Edward IV and a revered Catholic figure. From a young age he was destined for a religious life, receiving minor orders and early ecclesiastical benefices while still a child.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After studying in Italy—first at Padua and later in Venice—Pole returned to England in 1527, where he was drawn into the political and theological turmoil surrounding Henry VIII’s divorce from Catherine of Aragon. He was later elevated to the cardinalate by Pope Paul III in 1536, served as a papal legate to England, and ultimately became the last Catholic Archbishop of Canterbury, dying in Lambeth in 1558 shortly after Queen Mary’s death.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Pole was appointed a cardinal by Pope Paul III in 1536, receiving the deaconry of Santi Nereo e Achilleo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was involved in the controversial divorce of Henry VIII from Catherine of Aragon, providing a favorable opinion from the Sorbonne theologians.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pole was the last Catholic Archbishop of Canterbury, a position he held until his death in 1558, and he was buried in Canterbury Cathedral.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served on the commission that drafted the Consilium de emendanda Ecclesia, a key document for the Church’s reform efforts.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pole attended the early sessions of the Council of Trent but left before the decree on justification was adopted, citing health reasons.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1500,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1558,
+      "month": 11,
+      "day": 17,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Reginald_Pole_cardinal.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Reginald_Pole_cardinal.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Reginald_Pole_cardinal.jpg/960px-Reginald_Pole_cardinal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Reginald_Pole_cardinal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Sebastiano del Piombo",
+    "author": "Sebastiano del Piombo",
+    "width": 1594,
+    "height": 1920,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Reginald Pole",
+    "url": "https://it.wikipedia.org/wiki/Reginald_Pole"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:52:38.090Z"
+  }
+}

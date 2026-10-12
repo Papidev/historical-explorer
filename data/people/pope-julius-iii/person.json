@@ -1,0 +1,81 @@
+{
+  "id": "pope-julius-iii",
+  "name": "Pope Julius III",
+  "wikidataId": "Q169911",
+  "wikipediaTitle": "Pope Julius III",
+  "content": {
+    "description": [
+      {
+        "text": "Giovanni Maria Ciocchi del Monte was born on 10 September 1487 in Monte San Savino, the son of a distinguished Roman jurist. He received a humanist education under Raffaele Brandolini Lippo and studied law at the universities of Perugia and Siena. His reputation as a brilliant canonist rather than a theologian earned him the favor of the papal court, and he entered the ecclesiastical hierarchy as the nephew of Archbishop Antonio Maria Ciocchi del Monte. In 1513 he succeeded his uncle as Bishop of Manfredonia, and in 1520 he was appointed Bishop of Pavia. During the Sack of Rome in 1527 he was taken hostage by the emperor’s forces but escaped execution, a harrowing episode that underscored his diplomatic skill. Pope Paul III created him a cardinal in 1536 and later raised him to the dignity of cardinal‑bishop of Palestrina in 1543, positioning him for the papal conclave that would follow the death of Paul III.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Elected on 7 February 1550 as a compromise candidate, Julius III’s papacy was marked by a mixture of political maneuvering, artistic patronage, and a notorious scandal. He reopened the Council of Trent at the behest of Emperor Charles V, only to suspend it again in 1553 after reconciling with the Duke of Parma and France. His reign saw the restoration of Catholicism in England under Queen Mary, with Cardinal Reginald Pole acting as his legate. Julius also founded the Collegium Germanicum in 1552 to train German priests and brought the composer Giovanni Pierluigi da Palestrina to Rome as maestro di cappella. Yet his personal life drew criticism when he adopted and elevated the teenage Innocenzo Ciocchi Del Monte to cardinal‑nephew, a move that sparked rumors of impropriety and ultimately led to the strengthening of the office of Papal Secretary of State. Julius III died on 23 March 1555, leaving a papacy remembered more for its indulgences and scandals than for lasting reforms.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Julius III founded the Collegium Germanicum in 1552 to provide a seminary for German priests, a move that helped to strengthen Catholic education in the Holy Roman Empire.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a patron of the great Renaissance composer Giovanni Pierluigi da Palestrina, bringing him to Rome as his maestro di cappella and supporting his musical career.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his papacy, Catholicism was restored in England under Queen Mary in 1553, with Cardinal Reginald Pole sent as legate to oversee the re‑establishment of the Church.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The scandal surrounding his adopted nephew Innocenzo Ciocchi Del Monte led to the eventual elevation of the position of Papal Secretary of State, as the office had to assume duties that Innocenzo was deemed unfit to perform.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Julius III spent lavishly on the Villa Giulia, commissioning architectural and artistic works from Vignola, Ammannati, Vasari, and even Michelangelo, turning the palace into a center of Renaissance culture.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the most recent pope to take the pontifical name 'Julius', a title that had not been used by any pope since Julius II.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1487,
+      "month": 9,
+      "day": 10,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1555,
+      "month": 3,
+      "day": 23,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Girolamo_Sicciolante_-_Paus_Julius_III.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Girolamo_Sicciolante_-_Paus_Julius_III.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Girolamo_Sicciolante_-_Paus_Julius_III.jpg/960px-Girolamo_Sicciolante_-_Paus_Julius_III.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Girolamo_Sicciolante_-_Paus_Julius_III.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Circle of Girolamo Siciolante da Sermoneta",
+    "author": "Circle of Girolamo Siciolante da Sermoneta",
+    "width": 5162,
+    "height": 6482,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Julius III",
+    "url": "https://en.wikipedia.org/wiki/Pope_Julius_III"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:41:24.024Z"
+  }
+}

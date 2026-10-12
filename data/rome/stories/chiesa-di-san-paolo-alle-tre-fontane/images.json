@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "DSC05855_St._Paul_at_the_Three_Fountains.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:DSC05855_St._Paul_at_the_Three_Fountains.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/DSC05855_St._Paul_at_the_Three_Fountains.jpg/960px-DSC05855_St._Paul_at_the_Three_Fountains.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c6/DSC05855_St._Paul_at_the_Three_Fountains.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "TreFontane",
+      "author": "TreFontane",
+      "width": 5272,
+      "height": 4576,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Tre_Fontane_–_San_Paolo_-001-.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Tre_Fontane_%E2%80%93_San_Paolo_-001-.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Tre_Fontane_%E2%80%93_San_Paolo_-001-.jpg/960px-Tre_Fontane_%E2%80%93_San_Paolo_-001-.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/70/Tre_Fontane_%E2%80%93_San_Paolo_-001-.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Petr Adam Dohnálek",
+      "author": "Petr Adam Dohnálek",
+      "width": 1200,
+      "height": 1600,
+      "discoveredVia": "wikipedia-page-image",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "DSC05855_St._Paul_at_the_Three_Fountains.jpg"
+}

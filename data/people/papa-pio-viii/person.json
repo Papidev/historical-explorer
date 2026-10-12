@@ -1,0 +1,89 @@
+{
+  "id": "papa-pio-viii",
+  "name": "papa Pio VIII",
+  "wikidataId": "Q4443",
+  "wikipediaTitle": "Papa Pio VIII",
+  "content": {
+    "description": [
+      {
+        "text": "Francesco Saverio Maria Felice Castiglioni, later Pope Pio VIII, was born on 20 November 1761 in Cingoli, a town in the former Papal States. He entered the seminary in 1773, was ordained a priest in 1785, and served in various diocesan roles before being appointed Bishop of Montalto in 1800. His refusal to swear loyalty to Napoleon led to his exile to Pavia, Mantua, Turin, and Milan, but he returned to Montalto after the emperor’s fall. In 1816 Pope Pio VII elevated him to the cardinalate, assigning him the suburbicarian see of Frascati and later the prefecture of the Index of Prohibited Books.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Elected in 1829, Pio VIII’s pontificate was brief but reformist. He abolished nepotism and the practice of ecclesiastical spying, issued an amnesty, and moderated the Church’s stance on mixed marriages in Germany. He promulgated a single encyclical, *Traditi humilitati nostrae*, in May 1829, and created six new cardinals during his reign. His health deteriorated under the strain of his duties, and he succumbed to gout on 30 November 1830, after a reign of just over a year and a half.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Pio VIII was the only pope to issue a single encyclical during his pontificate, the *Traditi humilitati nostrae* of 24 May 1829.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He abolished the long‑standing practice of nepotism and the use of spies within the Church, marking a significant shift toward greater transparency.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His refusal to swear an oath of loyalty to Napoleon resulted in his exile to several northern Italian cities, a rare instance of a pope being deported by a secular ruler.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In November 1829 he was appointed Prefect of the Congregation of the Index, giving him authority over the censorship of books deemed heretical.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He founded the Order of San Carpocrate in 1830 to honor clergy and laity who defended Catholic faith and supported Eastern Catholic communities.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his death, his remains were transferred to the Vatican Grottoes in 1846, where many popes are interred.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his reign he created six new cardinals, a notable number for a pontificate lasting only a little over a year.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pio VIII’s health was severely affected by gout, which ultimately contributed to his death at the age of 69.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1761,
+      "month": 11,
+      "day": 20,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1830,
+      "month": 11,
+      "day": 30,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Ritratto_di_Papa_Pio_VIII,_by_Clemente_Alberi.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ritratto_di_Papa_Pio_VIII%2C_by_Clemente_Alberi.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Ritratto_di_Papa_Pio_VIII%2C_by_Clemente_Alberi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Ritratto_di_Papa_Pio_VIII%2C_by_Clemente_Alberi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Clemente Alberi",
+    "author": "Clemente Alberi",
+    "width": 568,
+    "height": 768,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Papa Pio VIII",
+    "url": "https://it.wikipedia.org/wiki/Papa_Pio_VIII"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:30:58.270Z"
+  }
+}

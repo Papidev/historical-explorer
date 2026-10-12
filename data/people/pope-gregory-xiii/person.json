@@ -1,0 +1,69 @@
+{
+  "id": "pope-gregory-xiii",
+  "name": "Pope Gregory XIII",
+  "wikidataId": "Q83029",
+  "wikipediaTitle": "Pope Gregory XIII",
+  "content": {
+    "description": [
+      {
+        "text": "Ugo Boncompagni, later Pope Gregory XIII, was born in Bologna on 7 January 1502. He studied law, graduated in 1530, and taught jurisprudence to future cardinals such as Alexander Farnese and Charles Borromeo. His career in Rome began under Pope Paul III, where he served as judge, abbreviator, and vice‑chancellor, and later as datarius under Pope IV. In 1572 he was elected pope in a conclave that lasted less than 24 hours, a swift decision that many historians attribute to the influence of the Spanish king and the support of reformist cardinals.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As pope he pursued the reforms of the Council of Trent, abolished the Cardinals Consistories, and patronised the Jesuits and the newly established Discalced Carmelites. His most enduring legacy is the Gregorian calendar, introduced by a papal bull in 1582 to correct the drift of the Julian calendar; the new calendar is still the civil standard worldwide. He also engaged in foreign policy aimed at countering Protestantism, supporting Spanish plans against Elizabeth I, and receiving the first Japanese embassy, which brought him the Azuchi Screens.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Gregory XIII had an illegitimate son, Giacomo Boncompagni, born to Maddalena Fulchini before he entered holy orders, making him the last pope to have left issue.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first Pope to receive a Japanese embassy, the Tenshō embassy, and was gifted the Azuchi Screens, which were displayed in the Vatican.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Under his patronage, the Vatican Gallery of Maps was completed by the Jesuit astronomer Ignazio Danti, providing a detailed cartographic representation of the world.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1502,
+      "month": 1,
+      "day": 7,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1585,
+      "month": 4,
+      "day": 10,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Lavinia_Fontana_-_Portrait_of_Pope_Gregory_XIII.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Lavinia_Fontana_-_Portrait_of_Pope_Gregory_XIII.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Lavinia_Fontana_-_Portrait_of_Pope_Gregory_XIII.jpg/960px-Lavinia_Fontana_-_Portrait_of_Pope_Gregory_XIII.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/12/Lavinia_Fontana_-_Portrait_of_Pope_Gregory_XIII.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Lavinia Fontana",
+    "author": "Lavinia Fontana",
+    "width": 1689,
+    "height": 2026,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Gregory XIII",
+    "url": "https://en.wikipedia.org/wiki/Pope_Gregory_XIII"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:47:15.030Z"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "giacomo-balla",
+  "name": "Giacomo Balla",
+  "wikidataId": "Q368254",
+  "wikipediaTitle": "Giacomo Balla",
+  "content": {
+    "description": [
+      {
+        "text": "Giacomo Balla was born on 18 July 1871 in Turin, the son of a chemist who had an interest in photography. After his father’s death in 1878, Balla worked in a lithography shop to support his mother, and by the age of twenty he had decided to pursue formal art studies at local academies. He exhibited early works at local exhibitions and later studied at the University of Turin before moving to Rome in 1895, where he married Elisa Marcucci and worked as an illustrator, caricaturist and portrait painter. His work was shown at major exhibitions in Rome, Venice, Munich, Berlin, Düsseldorf, Paris and Rotterdam, establishing him as a respected artist in the Italian art world.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Around 1902 Balla began teaching Divisionist techniques to future Futurists Umberto Boccioni and Gino Severini, and by 1910 he had embraced the Futurist style, signing the Futurist Manifesto that year. His paintings, such as *Dynamism of a Dog on a Leash* (1912) and *Abstract Speed + Sound* (1914), sought to capture light, movement and speed, often depicting multiple overlapping planes of motion. In 1914 he expanded into Futurist furniture and clothing design, and in 1915 produced the sculpture *Boccioni's Fist*. Although initially sympathetic to fascism, he later renounced Futurism and returned to a naturalistic style in the 1930s, and he died in Rome on 1 March 1958.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Balla was a signatory of the Futurist Manifesto in 1910, making him one of the older founding members of the movement.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1871,
+      "month": 7,
+      "day": 18,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1958,
+      "month": 3,
+      "day": 1,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Balla_signature.png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Balla_signature.png",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Balla_signature.png/960px-Balla_signature.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Balla_signature.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Giacomo Balla",
+    "author": "Giacomo Balla",
+    "width": 2915,
+    "height": 2759,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giacomo Balla",
+    "url": "https://en.wikipedia.org/wiki/Giacomo_Balla"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:39:58.712Z"
+  }
+}

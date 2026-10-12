@@ -1,0 +1,65 @@
+{
+  "id": "luigi-poletti-architect",
+  "name": "Luigi Poletti",
+  "wikidataId": "Q1757169",
+  "wikipediaTitle": "Luigi Poletti (architect)",
+  "content": {
+    "description": [
+      {
+        "text": "Luigi Poletti was born on 28 October 1792 in Modena, where he later returned after earning a doctorate in Mathematics and Philosophy in Bologna. He served as an engineer for the Garfagnana region and taught Mechanics and Hydraulics at the local university before receiving a stipend to study in Rome under Raffaele Stern.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Poletti’s architectural career is marked by a series of neoclassical projects across Italy. He was commissioned to rebuild the Basilica of San Paolo fuori le Mura after its 1823 fire, proposing a design that honored the original while incorporating contemporary scholarship. He added a choir to the Pantheon in 1840, constructed theaters in Fano, Rimini and Terni, and rebuilt several churches damaged by earthquakes, including San Venanzio in Camerino and Santa Maria degli Angeli in Assisi.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 1840, Poletti added a choir to the Pantheon, a notable modification to one of Rome’s most iconic ancient monuments.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He designed a lighthouse and arsenal for the port of Ripa Grande, demonstrating his versatility beyond ecclesiastical architecture.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1792,
+      "month": 10,
+      "day": 28,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1869,
+      "month": 8,
+      "day": 2,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Narciso_Malatesta,_Ritratto_di_Luigi_Poletti,_1870,_Museo_Civico_di_Modena.tif",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Narciso_Malatesta%2C_Ritratto_di_Luigi_Poletti%2C_1870%2C_Museo_Civico_di_Modena.tif",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Narciso_Malatesta%2C_Ritratto_di_Luigi_Poletti%2C_1870%2C_Museo_Civico_di_Modena.tif/lossy-page1-960px-Narciso_Malatesta%2C_Ritratto_di_Luigi_Poletti%2C_1870%2C_Museo_Civico_di_Modena.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Narciso_Malatesta%2C_Ritratto_di_Luigi_Poletti%2C_1870%2C_Museo_Civico_di_Modena.tif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Archivio fotografico del Museo Civico di Modena",
+    "author": "Narciso Malatesta",
+    "width": 3565,
+    "height": 4345,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Luigi Poletti (architect)",
+    "url": "https://en.wikipedia.org/wiki/Luigi_Poletti_(architect)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:56:42.345Z"
+  }
+}

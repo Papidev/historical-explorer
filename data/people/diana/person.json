@@ -1,0 +1,61 @@
+{
+  "id": "diana",
+  "name": "Diana",
+  "wikidataId": "Q132543",
+  "wikipediaTitle": "Diana",
+  "content": {
+    "description": [
+      {
+        "text": "Diana is the Italic, Latin, and Roman goddess of the forest, protector of wild animals, guardian of springs and rivers, and patroness of women, especially during childbirth. She is often equated with the Greek goddess Artemis, though scholars argue that the syncretism between the two figures occurred only later in the imperial period. Diana is portrayed as a virgin huntress, swift and fierce, who values solitude and is hostile to feasting and revelry. She is the twin of Apollo (or Febo) and the daughter of Jupiter and Latona.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The cult of Diana was centered on several key sanctuaries, most notably the lake of Nemi in the Alban Hills, where the forest was called nemus aricinum. The Aventine temple, founded by Servius Tullius, became the new federal cult center, and a temple also existed in the Carinae district of the Esquiline. In addition to these, Diana was worshipped at Ariccia, Tusculum, Lanuvio, Tivoli, and even in the Maremma natural park, where a sanctuary dedicated to Diana Umbronensis was recently discovered. Her iconography often features a deer, a laurel tree, and a silver candelabrum with symbolic elements such as a conical pole, deer horns, and a torch.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "A silver candelabrum in the Vatican Museums does not depict Diana in human form but instead uses a series of symbols—such as a laurel tree, a conical pole with deer horns, a sacrificial altar, a pinecone, and a torch—to evoke her numen.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The lake of Nemi, surrounded by the forest known as nemus aricinum, was the principal site of Diana’s worship, where the Romans performed communal rites and where the goddess was believed to reside in the sacred woods.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Although Diana is frequently identified with Artemis, the fusion of their identities is considered a later development; early sources treat them as distinct deities with different emphases—Diana as a protector of childbirth and Artemis as a guardian of forests and animals.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A legend recorded by Livy recounts that a sacrificial cow was offered to Diana to secure Roman sovereignty over the Lazio region; the priest’s clever diversion of the sacrificial act led to the cow being offered to the goddess, and the horns of the cow were subsequently affixed to the temple entrance as a tangible reminder of Rome’s dominion.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Diana_of_Versailles.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Diana_of_Versailles.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Diana_of_Versailles.jpg/960px-Diana_of_Versailles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Diana_of_Versailles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Commonists",
+    "author": "Commonists",
+    "width": 2990,
+    "height": 5699,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Diana",
+    "url": "https://it.wikipedia.org/wiki/Diana"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:57:30.655Z"
+  }
+}

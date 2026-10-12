@@ -1,0 +1,73 @@
+{
+  "id": "giorgio-vasari",
+  "name": "Giorgio Vasari",
+  "wikidataId": "Q128027",
+  "wikipediaTitle": "Giorgio Vasari",
+  "content": {
+    "description": [
+      {
+        "text": "Giorgio Vasari (1511–1574) was a Florentine polymath who excelled as a painter, architect, and, most famously, as the first systematic art historian.  His 1550 publication *Le Vite de’ più eccellenti pittori, scultori e architettori* organized the biographies of more than 160 artists from Cimabue to his contemporaries, establishing a model for art historical writing that dominated the 16th and 17th centuries.  Vasari’s own artistic output was closely tied to the Medici court; he decorated the Salone dei Cinquecento in Palazzo Vecchio, the Salone dei Cento Giorni in the Palazzo della Cancelleria, and designed the Uffizi complex, a monumental building that still houses the Florentine magistrature.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond his paintings and architectural commissions, Vasari was a prolific collector of drawings, assembling a library that later passed into the hands of prominent collectors such as Lord Arundel and Crozat.  He co‑founded the Accademia del Disegno in Florence in 1563, the first public art academy in Italy, and his own *Libro de’ disegni* served as an illustrated history of art.  Vasari’s influence extended into the realm of terminology: he coined the Italian word *Rinascita* (Renaissance) to describe the cultural rebirth of his era.  His legacy endures not only in the buildings he designed and the biographies he penned but also in the asteroid 216757 Vasari, named in his honor.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Vasari founded the Accademia del Disegno in Florence in 1563, the first public art academy in Italy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His extensive collection of drawings, known as the *Libro de’ disegni*, was later dispersed to collectors such as Lord Arundel, Crozat, Mariette, and Jabach.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Vasari coined the Italian term *Rinascita* (Renaissance) to describe the cultural revival of his time.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "An asteroid, 216757 Vasari, bears his name as a tribute to his contributions to art and history.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1511,
+      "month": 7,
+      "day": 30,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1574,
+      "month": 6,
+      "day": 27,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Zucchi,_Jacopo_-_Vasari,_Giorgio_-_Uffizi_ICCD.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Zucchi%2C_Jacopo_-_Vasari%2C_Giorgio_-_Uffizi_ICCD.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Zucchi%2C_Jacopo_-_Vasari%2C_Giorgio_-_Uffizi_ICCD.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Zucchi%2C_Jacopo_-_Vasari%2C_Giorgio_-_Uffizi_ICCD.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Attributed to Jacopo Zucchi",
+    "author": "Attributed to Jacopo Zucchi",
+    "width": 773,
+    "height": 982,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giorgio Vasari",
+    "url": "https://it.wikipedia.org/wiki/Giorgio_Vasari"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:34:03.550Z"
+  }
+}

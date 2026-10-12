@@ -1,0 +1,77 @@
+{
+  "id": "charles-viii-of-france",
+  "name": "Charles VIII of France",
+  "wikidataId": "Q134452",
+  "wikipediaTitle": "Charles VIII of France",
+  "content": {
+    "description": [
+      {
+        "text": "Charles VIII of France, born on 30 June 1470, ascended to the throne at the age of thirteen after the death of his father Louis XI. During his minority, his elder sister Anne and her husband Peter II of Bourbon served as regents, steering the kingdom through the turbulent Mad War and consolidating royal authority against rebellious nobles. Contemporary accounts describe him as affable and pleasant, yet also somewhat naïve and ill-suited for the rigors of governance, a reputation that earned him the nickname the Affable.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "At twenty-one, Charles married Anne of Brittany, a union that secured Brittany for France and prevented the Habsburgs from gaining a foothold on the western frontier. His reign is most famously marked by the Italian Wars of 1494–1498, during which he invaded the Italian Peninsula, captured Naples, and briefly held the title of King of Naples. His return to France was cut short by an accidental head injury at the Château d'Amboise, an event whose true cause has been debated by modern scholars, who suggest neurosyphilis may have played a role.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Charles was known as the Affable, a nickname that reflected his pleasant disposition but also his perceived lack of political acumen.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His marriage to Anne of Brittany followed her proxy marriage to Maximilian I, a move that allowed France to avoid Habsburg encirclement and secure Brittany as a personal union.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The accidental death attributed to a head injury on the lintel of a door at Château d'Amboise has been re‑examined in recent studies, which argue that severe brain injury from neurosyphilis could have been the actual cause.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Charles VIII was the last monarch of the elder branch of the House of Valois; his death without a male heir led to the succession of Louis XII, a relative from the Orléans cadet line.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Despite his brief reign, Charles's Italian campaign introduced French troops to advanced artillery techniques and helped spark a cultural exchange that energized French art and literature during the Renaissance.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1470,
+      "month": 6,
+      "day": 30,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1498,
+      "month": 4,
+      "day": 7,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Charles_VIII_Ecole_Francaise_16th_century_Musee_de_Conde_Chantilly.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Charles_VIII_Ecole_Francaise_16th_century_Musee_de_Conde_Chantilly.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Charles_VIII_Ecole_Francaise_16th_century_Musee_de_Conde_Chantilly.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Charles_VIII_Ecole_Francaise_16th_century_Musee_de_Conde_Chantilly.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "After Jean Perréal",
+    "author": "After Jean Perréal",
+    "width": 480,
+    "height": 635,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Charles VIII of France",
+    "url": "https://en.wikipedia.org/wiki/Charles_VIII_of_France"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:43:36.457Z"
+  }
+}

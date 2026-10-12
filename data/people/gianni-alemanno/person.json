@@ -1,0 +1,57 @@
+{
+  "id": "gianni-alemanno",
+  "name": "Gianni Alemanno",
+  "wikidataId": "Q463130",
+  "wikipediaTitle": "Gianni Alemanno",
+  "content": {
+    "description": [
+      {
+        "text": "Gianni Alemanno was born in Gallipoli, in the province of Lecce, to parents of Salentine origin. He spent his childhood moving with his father's military postings until the family settled in Rome when he was twelve, where he attended the scientific high school Augusto Righi in the Ludovisi district. He married Isabella Rauti in 1992, the daughter of the MSI secretary Pino Rauti, and they had a son, Manfredi. Alemanno studied environmental engineering at the University of Perugia, graduating in 2004 with a thesis on biomass exploitation for energy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Alemanno entered politics at a young age, joining the youth wing of the Italian Social Movement (MSI) and rising to secretary of its Fronte della Gioventù. He was arrested three times during the Years of Lead but was always acquitted. He served as Minister of Agriculture and Forestry from 2001 to 2006 in the Berlusconi II and III governments, where he promoted organic farming and attempted to limit the coexistence of GMO and traditional crops. In 2008 he was elected Mayor of Rome, a position he held until 2013, during which he tackled the city's debt, introduced a municipal waste tax based on family size, and initiated the construction of the new eastern ring road.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 2004 Alemanno served as honorary expedition leader for the K2 climb commemorating the 50th anniversary of the Italian conquest of the second highest peak in the world, reaching the 5,000‑meter base camp.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He has been a member of the Order of Journalists of Lazio since 2001, working as a publicist journalist.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1990 he founded the service company Euroservice, which operates in construction and youth employment services, and has since been an honorary member of the Argentine Chamber of Commerce and Industry.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Alemanno_Colosseo.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Alemanno_Colosseo.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Alemanno_Colosseo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Alemanno_Colosseo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 2.0",
+    "attribution": "oscar federico bodini from Milan, Italy",
+    "author": "oscar federico bodini from Milan, Italy",
+    "width": 683,
+    "height": 1024,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Gianni Alemanno",
+    "url": "https://it.wikipedia.org/wiki/Gianni_Alemanno"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:31:28.958Z"
+  }
+}

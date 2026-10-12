@@ -1,0 +1,87 @@
+{
+  "introduction": {
+    "text": "Forte Braschi is a 19th‑century fort in Rome that later became a key site for Italian military intelligence.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "construction",
+        "description": "Construction of Forte Braschi began in 1877 and was completed in 1881.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1877,
+          "precision": "exact",
+          "endYear": 1881,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "strategic_end",
+        "description": "In 1925 the fort ceased its strategic military function.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1925,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "1931_shooting",
+        "description": "On 29 May 1931 the fort was the scene of the shooting of anarchist Michele Schirru.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1931,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "sismi",
+        "description": "From 1977 to 2007 the fort housed the operation centre of the military intelligence, SISMI.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1977,
+          "precision": "exact",
+          "endYear": 2007,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "current_use",
+        "description": "Today the fort hosts the headquarters of AISE and RUD.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "entrenched_field",
+        "description": "Forte Braschi is one of the 15 forts that form Rome's entrenched field.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Romoaldo Braschi-Onesti",
+      "personId": "romoaldo-braschi-onesti",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Michele Schirru",
+      "personId": "michele-schirru",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Benito Mussolini",
+      "personId": "benito-mussolini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Nicola Calipari",
+      "personId": "nicola-calipari",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

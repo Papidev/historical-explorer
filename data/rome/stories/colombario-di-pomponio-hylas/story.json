@@ -1,0 +1,68 @@
+{
+  "introduction": {
+    "text": "The Columbarium of Pomponius Hylas is a 1st‑century Roman burial structure near Porta Latina in Rome, notable for its early dating, inscriptions, and mosaic decoration that illustrate Roman funerary practices and art.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The columbarium was constructed between 14 and 54 CE, as indicated by inscriptions dedicated to freedmen of Tiberius and Claudia Octavia.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 14,
+          "precision": "approximate",
+          "endYear": 54,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Pomponius Hylas, who owned the columbarium, lived during the Flavian period (69–96 CE).",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 69,
+          "precision": "approximate",
+          "endYear": 96,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "The columbarium was discovered and excavated in 1831 by Pietro Campana.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1831,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The columbarium is a Roman burial structure located near Porta Latina on Via di Porta Latina, featuring niches for urns.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "A mosaic panel over the entrance steps, added by Pomponius Hylas, depicts griffins and bears a dedication to Pomponius Hylas and his freedwoman Pomponia Vitalinis.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Tiberius",
+      "personId": "tiberius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Claudia Octavia",
+      "personId": "claudia-octavia",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

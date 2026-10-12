@@ -1,0 +1,75 @@
+{
+  "id": "amadeus-of-portugal",
+  "name": "Amadeus of Portugal",
+  "wikidataId": "Q2528283",
+  "wikipediaTitle": "Amadeus of Portugal",
+  "content": {
+    "description": [
+      {
+        "text": "Amadeus of Portugal was born João de Menezes da Silva around 1420 in Campo Maior, Portugal, the youngest of eleven children of Rui Gomes da Silva and Isabel de Menezes.  He married at eighteen but abandoned his bride immediately, then went to Spain where he fought against the Moors under King John II before turning to a religious life.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He entered the Hieronymite monastery of Santa María de Guadalupe, spent a decade there, and later joined the Franciscan Order as a lay brother in 1452, being ordained in 1459.  In Milan he attracted attention for his virtue and purported miracles, founded the friary of Our Lady of Peace in 1469, and became confessor to Pope Sixtus IV, while also authoring the prophetic work *Apocalypsis nova* and establishing a distinct branch of the Friars Minor that later became known as the Amadeans.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was born João de Menezes da Silva, the youngest of eleven children of Rui Gomes da Silva, the first alcaide of Campo Maior.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He left his bride immediately after marriage and went to Spain to fight against the Moors under King John II.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He entered the Franciscan Order as a lay brother in 1452, was ordained in 1459, and later founded the friary of Our Lady of Peace in Milan in 1469.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as confessor to Pope Sixtus IV and composed the prophetic dialogue *Apocalypsis nova* with the Archangel Gabriel.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A distinct branch of the Friars Minor, called the Amadeans, was founded by him; it had twenty‑eight houses in Italy and was suppressed in 1568 when the Pope united all Franciscan branches into the Friars Minor Observants.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1420,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1482,
+      "month": 8,
+      "day": 10,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Beato_Amadeo_da_Silva.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Beato_Amadeo_da_Silva.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Beato_Amadeo_da_Silva.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Beato_Amadeo_da_Silva.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 571,
+    "height": 885,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Amadeus of Portugal",
+    "url": "https://en.wikipedia.org/wiki/Amadeus_of_Portugal"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:24:42.647Z"
+  }
+}

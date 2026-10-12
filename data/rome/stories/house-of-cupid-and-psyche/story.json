@@ -1,0 +1,91 @@
+{
+  "introduction": {
+    "text": "The Domus di Amore e Psiche is a late‑antique Roman house in Ostia, notable for its elaborate interior decoration and the discovery of a small statue group of Amor and Psyche, which gives the building its name.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "pre-existing-2nd-century",
+        "description": "The Domus was built upon a 2nd‑century commercial building that had previously housed taverns.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 150,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "construction-4th-century",
+        "description": "Construction of the Domus in the second quarter of the 4th century AD on a pre‑existing 2nd‑century building.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 350,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "statue-group",
+        "description": "The house is named after a small statue group of Amor and Psyche found in one of the cubicoli.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "entrance-vestibule",
+        "description": "The entrance opens onto a vestibule with a side door leading to a central room with a mosaic floor and a private latrine.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "cubicoli-mosaics",
+        "description": "Three small cubicoli feature white and black geometric mosaics, with one having painted walls and an opus sectile floor.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "garden-ninfeo",
+        "description": "A small internal garden with a ninfeo, a podium with niches, and a marble water channel.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "representational-room",
+        "description": "A two‑story representation room with opus sectile flooring and marble walls, including a fountain niche.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "amore-psiche-statue",
+        "description": "A small marble group depicting Amor and Psyche, the central artistic element of the house.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "mosaics",
+        "description": "Geometric mosaics in the vestibule and cubicoli, including opus sectile.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "frescoes",
+        "description": "Painted walls in one cubicolo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "marble-ornaments",
+        "description": "Marble columns and marble lunense used in the garden and interior.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Eros",
+      "personId": "eros",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Psiche (mitologia)",
+      "personId": "psiche-mitologia",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

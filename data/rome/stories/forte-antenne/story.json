@@ -1,0 +1,76 @@
+{
+  "introduction": {
+    "text": "Forte Antenne is a 19th‑century fort in Rome’s Parioli district, built to strengthen the city’s defenses. Its historical significance lies in its role as a signal depot, its connection to the 1960 Olympics, and its current status as a protected heritage site.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "construction",
+        "description": "Construction of Forte Antenne began in 1882 and was completed in 1891 on Monte Antenne.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1882,
+          "precision": "exact",
+          "endYear": 1891,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "depot",
+        "description": "The fort served as a depot for the Signal Corps until the 1940s.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1891,
+          "precision": "approximate",
+          "endYear": 1940,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "sale",
+        "description": "In 1958 the fort was sold to the Municipality of Rome to be used as a camping site.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1958,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "olympics",
+        "description": "The fort was considered for use during the 1960 Rome Olympics.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1960,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "protection",
+        "description": "The fort was declared a protected heritage site by a ministerial decree on 6 August 2008.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2008,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Umberto I of Italy",
+      "personId": "umberto-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Romulus",
+      "personId": "romulus",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

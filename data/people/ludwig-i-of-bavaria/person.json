@@ -1,0 +1,69 @@
+{
+  "id": "ludwig-i-of-bavaria",
+  "name": "Ludwig I of Bavaria",
+  "wikidataId": "Q44361",
+  "wikipediaTitle": "Ludwig I of Bavaria",
+  "content": {
+    "description": [
+      {
+        "text": "Ludwig I of Bavaria, born on 25 August 1786, ascended to the Bavarian throne in 1825 and ruled until the revolutions of 1848 forced his abdication. During his reign he championed industrial progress, inaugurating the Ludwig Canal and overseeing the construction of the first German railway between Fürth and Nuremberg. His reign also saw Bavaria join the Zollverein in 1834, a key step toward economic integration in the German states.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond politics, Ludwig was a fervent patron of the arts, commissioning neoclassical masterpieces such as the Walhalla temple and the Glyptothek in Munich. After abdicating, he continued to influence cultural life for two decades, living in Nice until his death on 29 February 1868. His legacy endures in the many public buildings he funded and in the continued prominence of the House of Wittelsbach, all of whom trace their lineage back to him.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Ludwig’s wedding to Therese of Saxe-Hildburghausen on 12 October 1810 was the occasion of the first-ever Oktoberfest.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He commissioned the Walhalla temple, a monumental hall of fame that houses busts of German figures, reflecting his admiration for ancient Greece and the Italian Renaissance.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ludwig was known for his eccentric poetry, which Heinrich Heine mocked in a series of satirical verses.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1786,
+      "month": 8,
+      "day": 25,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1868,
+      "month": 2,
+      "day": 29,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Ludwig_I_of_Bavaria.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ludwig_I_of_Bavaria.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Ludwig_I_of_Bavaria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Ludwig_I_of_Bavaria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "photo taken by User:Cybershot800i",
+    "author": "photo taken by User:Cybershot800i",
+    "width": 631,
+    "height": 900,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Ludwig I of Bavaria",
+    "url": "https://en.wikipedia.org/wiki/Ludwig_I_of_Bavaria"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:20:05.359Z"
+  }
+}

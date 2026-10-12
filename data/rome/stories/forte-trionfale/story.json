@@ -1,0 +1,87 @@
+{
+  "introduction": {
+    "text": "Forte Trionfale is a historic fort in Rome, built in the late 19th century as part of the city’s defensive network. It later served as a military barracks and now houses municipal offices, reflecting its evolving role in Rome’s urban and military history.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Rome’s fortification system was expanded between 1877 and 1891, during which Forte Trionfale was planned.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1877,
+          "precision": "exact",
+          "endYear": 1891,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Construction of Forte Trionfale began in 1882 and was completed in 1888 on Via Trionfale.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1882,
+          "precision": "exact",
+          "endYear": 1888,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "In 1907, Captain Arnaldo Ulivelli died in an aerostat accident on Via Cassia.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1907,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "In 1921, the fort was used as a barracks for units of the Italian Army.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1921,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "During the 1930s, an airship hangar was built to house dirigibles.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1930,
+          "precision": "approximate",
+          "endYear": 1939,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "In the early 2000s, the fort was decommissioned by the Ministry of Defence.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2000,
+          "precision": "approximate",
+          "endYear": 2009,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "In 2015, the City of Rome purchased the fort to serve as the new seat of Municipio Roma XIV and other public facilities.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2015,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [],
+    "art": []
+  },
+  "relatedPeople": []
+}

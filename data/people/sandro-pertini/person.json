@@ -1,0 +1,69 @@
+{
+  "id": "sandro-pertini",
+  "name": "Sandro Pertini",
+  "wikidataId": "Q1233",
+  "wikipediaTitle": "Sandro Pertini",
+  "content": {
+    "description": [
+      {
+        "text": "Sandro Pertini was born in Stella, Italy, on 25 September 1896. He served as a lieutenant on the Isonzo front during World War I, where he was proposed for the Silver Medal of Military Valor in 1917 but did not receive it until 1985 because of his socialist sympathies.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the war he became a leading anti‑fascist, was imprisoned and escaped from Regina Coeli in 1944, and later helped organize the resistance in Rome. In the post‑war period he served in the Constituent Assembly, the Senate and the Chamber of Deputies, and in 1978 was elected the seventh President of the Italian Republic, the first socialist to hold the office.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Pertini was the only member of the Italian Socialist Party to become President of the Republic.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his presidency he received the highest popular vote ever in a presidential election, 82.3%.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He refused the Silver Medal of Military Valor until 1985, the year he became president.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1896,
+      "month": 9,
+      "day": 25,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1990,
+      "month": 2,
+      "day": 24,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pertini_ritratto.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pertini_ritratto.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/Pertini_ritratto.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/Pertini_ritratto.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Attribution",
+    "attribution": "Quirinale.it",
+    "author": "Unknown authorUnknown author",
+    "width": 229,
+    "height": 320,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Sandro Pertini",
+    "url": "https://it.wikipedia.org/wiki/Sandro_Pertini"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:25:42.081Z"
+  }
+}

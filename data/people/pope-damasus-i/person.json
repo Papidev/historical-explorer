@@ -1,0 +1,67 @@
+{
+  "id": "pope-damasus-i",
+  "name": "Pope Damasus I",
+  "wikidataId": "Q130997",
+  "wikipediaTitle": "Pope Damasus I",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Damasus I, who served as bishop of Rome from October 366 until his death in 384, is best known for presiding over the Council of Rome in 382, which produced a definitive list of the books that would later form the Christian biblical canon. The council’s decree, later reproduced by Gelasius in 495, is identical to the canon adopted at the Council of Trent, and it is widely regarded as an authentic product of Damasus’s papacy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his reign he also championed the work of Jerome, appointing him as his secretary and encouraging the revision of the Latin Bible into the Vulgate. Damasus’s support helped standardize the text and solidify the canon in the West, while his patronage of martyrs and the restoration of their tombs reinforced the cult of the martyrs in Rome.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was involved in a violent succession dispute with the rival candidate Ursinus, which included massacres and the exile of Ursinus to Gaul.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He is the first pope for whom contemporary images survive, appearing on gold glass cups that likely depict him.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He is venerated as a saint in the Catholic Church, with his feast day celebrated on 11 December.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 305,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 384,
+      "month": 12,
+      "day": 11,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Pope_Damasus.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Pope_Damasus.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/58/Pope_Damasus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/58/Pope_Damasus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "anonymous",
+    "author": "anonymous",
+    "width": 780,
+    "height": 1063,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Damasus I",
+    "url": "https://en.wikipedia.org/wiki/Pope_Damasus_I"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:03:34.858Z"
+  }
+}

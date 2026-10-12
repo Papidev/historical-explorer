@@ -1,0 +1,65 @@
+{
+  "id": "torlonia",
+  "name": "Torlonia",
+  "wikidataId": "Q3993839",
+  "wikipediaTitle": "Torlonia",
+  "content": {
+    "description": [
+      {
+        "text": "The Torlonia family, originally French merchants known as Tourlonias, settled in Rome in the mid‑18th century, trading textiles and establishing a modest banking enterprise. Through astute loans and property acquisitions during the Napoleonic occupation, they amassed considerable wealth, eventually earning a ducal title from the papacy that was later elevated to a princely rank. Their fortune was so vast and ostentatious that the name Torlonia entered Roman slang as a synonym for excessive, almost embarrassing wealth.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond commerce, the Torlonia wielded significant political and cultural influence: they served as senators, ministers, and even rented the Casino Nobile to Benito Mussolini, who resided there from 1925 to 1943. Their alliances with other Roman dynasties—such as the Colonna, Orsini, and Borghese—cemented their status, and their lineage extends to modern figures like actress Brooke Shields. The family also left a lasting architectural legacy, including the Museo Torlonia in Rome and the restoration of the Fucino lake through the Banca del Fucino.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The name Torlonia became a popular slang term in Rome for ostentatious, excessive wealth.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The family founded the Banco Marino Torlonia, a small bank that played a pivotal role in their economic ascent.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Casino Nobile, a historic villa in Rome, was rented by the Torlonia family to Benito Mussolini, who lived there from 1925 to 1943.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Torlonia family is an ancestor of actress Brooke Shields.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "They established the Museo Torlonia in Rome, showcasing a vast collection of art amassed over generations.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Coat_of_arms_of_the_House_of_Torlonia.svg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_the_House_of_Torlonia.svg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Coat_of_arms_of_the_House_of_Torlonia.svg/960px-Coat_of_arms_of_the_House_of_Torlonia.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Coat_of_arms_of_the_House_of_Torlonia.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "F l a n k e r",
+    "author": "F l a n k e r",
+    "width": 165,
+    "height": 205,
+    "discoveredVia": "wikipedia-page-image",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Torlonia",
+    "url": "https://it.wikipedia.org/wiki/Torlonia"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:32:24.065Z"
+  }
+}

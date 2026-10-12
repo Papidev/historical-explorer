@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Castello_Barberini_(San_Vittorino,_Rome).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Castello_Barberini_(San_Vittorino%2C_Rome).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Castello_Barberini_%28San_Vittorino%2C_Rome%29.jpg/960px-Castello_Barberini_%28San_Vittorino%2C_Rome%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/72/Castello_Barberini_%28San_Vittorino%2C_Rome%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "7Colli",
+      "author": "7Colli",
+      "width": 6904,
+      "height": 5726,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "San_Vittorino_Romano_03_Castello_Barberini.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:San_Vittorino_Romano_03_Castello_Barberini.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/San_Vittorino_Romano_03_Castello_Barberini.JPG/960px-San_Vittorino_Romano_03_Castello_Barberini.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/San_Vittorino_Romano_03_Castello_Barberini.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Croberto68",
+      "author": "Croberto68",
+      "width": 2272,
+      "height": 1704,
+      "discoveredVia": "wikipedia-page-image",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Castello_Barberini_(San_Vittorino,_Rome).jpg"
+}

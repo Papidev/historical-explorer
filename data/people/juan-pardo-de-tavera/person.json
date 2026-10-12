@@ -1,0 +1,69 @@
+{
+  "id": "juan-pardo-de-tavera",
+  "name": "Juan Pardo de Tavera",
+  "wikidataId": "Q1913626",
+  "wikipediaTitle": "Juan Pardo de Tavera",
+  "content": {
+    "description": [
+      {
+        "text": "Juan Pardo de Tavera was born on 16 May 1472 in Toro, Zamora, and studied at the University of Salamanca, where he earned a bachelor's degree in 1500 and a Licentiate of Canon Law in 1505. He became rector of the university that same year and was soon appointed to the cathedral chapter of Seville Cathedral by his uncle, Diego Deza, who served as his patron and mentor.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Pardo de Tavera rose rapidly through the ecclesiastical hierarchy, serving as Bishop of Ciudad Rodrigo, Osma, and Santiago de Compostela before being named Archbishop of Toledo in 1534, making him Primate of Spain. He was created a cardinal in 1531, appointed Grand Inquisitor in 1539, and acted as regent of Castile for Charles V from 1539 to 1541, while also presiding over several Cortes Generales.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "As president of the Royal Council from 1524 to 1539, he reorganized the council and split the Council of the Indies from the Council of Castile.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as regent of Castile during Charles V’s absence after the death of Isabella of Portugal, effectively governing the kingdom for two years.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His marble tomb in the Hospital de San Juan Bautista de Toledo was designed by the renowned sculptor Alonso Berruguete.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1472,
+      "month": 5,
+      "day": 16,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1545,
+      "month": 8,
+      "day": 1,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Cardenal_Tavera.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Cardenal_Tavera.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Cardenal_Tavera.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Cardenal_Tavera.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "El Greco",
+    "author": "El Greco",
+    "width": 800,
+    "height": 1014,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Juan Pardo de Tavera",
+    "url": "https://en.wikipedia.org/wiki/Juan_Pardo_de_Tavera"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:21:45.096Z"
+  }
+}

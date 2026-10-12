@@ -1,0 +1,63 @@
+{
+  "id": "rodolfo-lanciani",
+  "name": "Rodolfo Lanciani",
+  "wikidataId": "Q481474",
+  "wikipediaTitle": "Rodolfo Lanciani",
+  "content": {
+    "description": [
+      {
+        "text": "Rodolfo Lanciani was an Italian engineer, archaeologist and historian who grew up in a noble family from Monticelli and studied philosophy, mathematics and engineering at the University of Rome. He became a central figure in the excavation and documentation of ancient Rome, serving as secretary of the Commissione Archeologica Comunale from its foundation in 1872 and later as engineer of the Direzione Generale dei Musei e Scavi at the Ministry of Public Education.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Lanciani is best known for his monumental works on the topography of Rome, including the 1:1000 scale plan *Forma Urbis Romae* (1893‑1901) and the multi‑volume *Storia degli Scavi di Roma* (1902‑1912). These publications remain valuable resources for scholars and travelers alike. He also held the title of senator of the Kingdom of Italy from 1911 and was a founder of the Società romana di storia patria.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was appointed senator of the Kingdom of Italy on 3 June 1911.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The town of Guidonia Montecelio dedicated its Civic Museum to him, located in the former Convent of San Michele.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His 1:1000 scale plan *Forma Urbis Romae* includes all known Roman monuments up to the 6th century and also overlays modern streets and buildings.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 1929,
+      "month": 5,
+      "day": 21,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Rodolfo_Lanciani_ca._1910.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Rodolfo_Lanciani_ca._1910.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Rodolfo_Lanciani_ca._1910.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Rodolfo_Lanciani_ca._1910.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author (died most probably more than 70 years ago)",
+    "author": "Unknown authorUnknown author (died most probably more than 70 years ago)",
+    "width": 410,
+    "height": 550,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Rodolfo Lanciani",
+    "url": "https://it.wikipedia.org/wiki/Rodolfo_Lanciani"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:42:47.534Z"
+  }
+}

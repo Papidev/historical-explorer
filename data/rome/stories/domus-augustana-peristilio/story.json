@@ -1,0 +1,72 @@
+{
+  "introduction": {
+    "text": "The Domus Augustana – Peristilio is the central residential part of the Roman Palace of Domitian on the Palatine Hill, notable for its complex layout of peristyles, courtyards, and an exedra that offered views of the Circus Maximus.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-2",
+        "description": "The term 'Domus Augustana' references the imperial title of Augustus, who reigned from 27 BC to AD 14.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -27,
+          "precision": "exact",
+          "endYear": 14,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1",
+        "description": "Construction of the Domus Augustana as part of Domitian's palace in 92 AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 92,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "The Domus Augustana is built on two levels, featuring a 2nd Peristyle, a 3rd Peristyle with a large pool and seascape, a courtyard complex with a lower pool, and a great exedra overlooking the Circus Maximus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-1",
+        "description": "Artistic elements include a seascape with a Greek mythological island, sculptures in the pool, and a possible temple of Minerva on the island.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Augustus",
+      "personId": "augustus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Rabirius (architect)",
+      "personId": "rabirius-architect",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Trajan",
+      "personId": "trajan",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Minerva",
+      "personId": "minerva",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Amazons",
+      "personId": "amazons",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

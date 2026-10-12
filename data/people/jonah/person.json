@@ -1,0 +1,69 @@
+{
+  "id": "jonah",
+  "name": "Jonah",
+  "wikidataId": "Q2468262",
+  "wikipediaTitle": "Jonah",
+  "content": {
+    "description": [
+      {
+        "text": "Jonah was a Jewish prophet from Gath‑hepher in the Northern Kingdom of Israel around the 8th century BCE. He is the central figure of the Book of Jonah, a minor prophetic book that records his reluctance to deliver God’s judgment to the city of Nineveh, his attempt to flee to Jaffa, his being cast overboard, swallowed by a large fish, surviving three days and nights, and finally being released to complete his mission.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The narrative of Jonah has been interpreted across Judaism, Christianity, and Islam. In Judaism it is read on Yom Kippur as a lesson in repentance; in Christianity Jesus refers to Jonah’s three‑day stay in the fish as a sign of his own resurrection; in Islam Jonah (Yūnus) is a prophet and the Quran contains a chapter named after him. Scholars debate the historicity of the story, with some suggesting it is satirical or allegorical and noting that the Hebrew text simply calls the creature a “great fish” rather than a whale.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Hebrew text refers to the creature that swallowed Jonah as a “great fish” (dag gadol), not a whale, and the term has been the subject of speculation by naturalists in the 17th and 18th centuries.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In the New Testament Jesus cites Jonah’s three days in the fish as a foreshadowing of his own resurrection, calling it the “sign of Jonah.”",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Jonah is the only one of the Twelve Minor Prophets to be named in the Quran, and the tenth chapter of the Quran is called Surah Yūnus after him.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Some modern Bible scholars suggest that the Book of Jonah is fictional and satirical, composed long after the events it describes, based on postexilic Aramaic language and motifs.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": -800,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": -700,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Jonah.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Jonah.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/27/Jonah.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/27/Jonah.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "18 century icon painter",
+    "author": "18 century icon painter",
+    "width": 241,
+    "height": 300,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Jonah",
+    "url": "https://en.wikipedia.org/wiki/Jonah"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:41:41.985Z"
+  }
+}

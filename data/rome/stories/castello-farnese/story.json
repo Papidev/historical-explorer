@@ -1,0 +1,155 @@
+{
+  "introduction": {
+    "text": "Castello Farnese is a medieval castle in Rome’s Isola Farnese district, originally built by the Orsini family in the 13th century and later transformed by the Farnese family in the 16th century. It is notable for its architectural evolution and the prominent historical figures who owned it.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Construction by the Orsini family in the 13th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1200,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Transfer to the Farnese family in the 16th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1500,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Acquisition by Alessandro Olgiati in 1560.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1560,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Cardinal Alessandro Farnese commissioned a redesign in 1567 by architect Jacopo Barozzi da Vignola.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1567,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "Transfer to the Camera Apostolica in 1649.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1649,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "Ownership by Maria Anna di Savoia in 1806.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1806,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "Ownership by Maria Cristina di Borbone-Due Sicilie in 1824.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1824,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history8",
+        "description": "Purchase by the Ferraioli family in 1892.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1892,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history9",
+        "description": "Inheritance by Teresa Cristina di Borbone-Due Sicilie in 1949.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1949,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history10",
+        "description": "Ownership by the Di Robilant family from 1961.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1961,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "Redesign of the castle by Jacopo Barozzi da Vignola in 1567 for Cardinal Alessandro Farnese.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Alessandro Farnese il Giovane",
+      "personId": "alessandro-farnese-il-giovane",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Jacopo Barozzi da Vignola",
+      "personId": "jacopo-barozzi-da-vignola",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Paolo Giordano I Orsini",
+      "personId": "paolo-giordano-i-orsini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Maria Anna di Savoia (1757-1824)",
+      "personId": "maria-anna-di-savoia-1757-1824",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Maria Cristina di Borbone-Due Sicilie (1779-1849)",
+      "personId": "maria-cristina-di-borbone-due-sicilie-1779-1849",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Teresa Cristina di Borbone-Due Sicilie",
+      "personId": "teresa-cristina-di-borbone-due-sicilie",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Rodolfo Lanciani",
+      "personId": "rodolfo-lanciani",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

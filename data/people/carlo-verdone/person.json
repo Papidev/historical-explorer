@@ -1,0 +1,63 @@
+{
+  "id": "carlo-verdone",
+  "name": "Carlo Verdone",
+  "wikidataId": "Q53046",
+  "wikipediaTitle": "Carlo Verdone",
+  "content": {
+    "description": [
+      {
+        "text": "Carlo Gregorio Verdone was born on 17 November 1950 in Rome to Mario Verdone, a respected film critic and academic. He attended the Italian Liceo classico in Rome, where he shared a desk with future actor Christian De Sica, and later earned degrees in Modern Literature from Sapienza University of Rome and in Film Direction from the Centro Sperimentale di Cinematografia. During the 1970s he began a television career, appearing in the Carosello advertising segment and launching his comic characters on the popular series Non Stop in 1978.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Verdone made his directorial debut in 1980 with Fun Is Beautiful, in which he portrayed three distinct characters, a formula he repeated in 1981's Bianco, rosso e Verdone, produced by Sergio Leone and featuring a soundtrack by Ennio Morricone. The 1982 film Talcum Powder earned him multiple David di Donatello awards, while his later works such as Damned the Day I Met You (1992) and My Best Enemy (2006) explored more serious themes. He married Gianna Scarpelli in 1980, had two children, and later separated in 1996; his siblings Luca and Silvia are also involved in the film industry.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In his debut film Fun Is Beautiful, Verdone played three different characters.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Verdone’s father, Mario Verdone, was an important Italian film critic and academic.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his school years, Verdone shared a desk with future actor Christian De Sica at the Italian Liceo classico in Rome.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1950,
+      "month": 11,
+      "day": 17,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Carlo_Verdone_2007_cropped.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Carlo_Verdone_2007_cropped.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Carlo_Verdone_2007_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Carlo_Verdone_2007_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 2.0",
+    "attribution": "Carlo_Verdone_2007.jpg: matteomerletto derivative work: RanZag (talk)",
+    "author": "Carlo_Verdone_2007.jpg: matteomerletto derivative work: RanZag (talk)",
+    "width": 333,
+    "height": 417,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Carlo Verdone",
+    "url": "https://en.wikipedia.org/wiki/Carlo_Verdone"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:21:21.602Z"
+  }
+}

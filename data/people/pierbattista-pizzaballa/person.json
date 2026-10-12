@@ -1,0 +1,59 @@
+{
+  "id": "pierbattista-pizzaballa",
+  "name": "Pierbattista Pizzaballa",
+  "wikidataId": "Q2092723",
+  "wikipediaTitle": "Pierbattista Pizzaballa",
+  "content": {
+    "description": [
+      {
+        "text": "Pierbattista Pizzaballa was born on 21 April 1965 in Cologno al Serio, Bergamo, Italy, and entered the Franciscan Order at the age of 11. He completed his novitiate at La Verna, made his perpetual vows in 1989, and was ordained a priest in 1990. After earning a diploma in classical studies and a bachelor’s degree in theology, he was sent to the Holy Land, where he studied biblical theology at the Studium Biblicum Franciscanum and later at the Hebrew University of Jerusalem. He earned a PhD from the Hebrew University and served as an assistant professor of Biblical Hebrew and Judaism at the Franciscan Faculty of Biblical and Archaeological Sciences in Jerusalem, while also translating the Roman Missal into Hebrew.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1999 Pizzaballa joined the Custody of the Holy Land and was elected Custos in 2004, a position he held for twelve years. He was consecrated a bishop in 2016 and appointed Apostolic Administrator of the Latin Patriarchate of Jerusalem, becoming its Latin Patriarch in 2020. Pope Francis elevated him to the College of Cardinals in 2023, and after the pope’s death he was considered a papabile candidate at the 2025 conclave. Throughout his tenure he has promoted interfaith dialogue, organized peace prayers, and taken a public stance on the Israeli–Palestinian conflict, including advocating for humanitarian aid to Gaza and condemning violence on both sides.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Pizzaballa was the only Christian studying Scripture at the Hebrew University of Jerusalem during his time there, a fact that highlighted his unique position in bridging Jewish and Christian scholarship.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 2026, Israeli police blocked Pizzaballa from entering the Church of the Holy Sepulchre for security reasons, an unprecedented move that drew criticism from the Latin Patriarchate and the Israeli Prime Minister.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1965,
+      "month": 4,
+      "day": 21,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Mons._Pierbattista_Pizzaballa.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Mons._Pierbattista_Pizzaballa.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Mons._Pierbattista_Pizzaballa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Mons._Pierbattista_Pizzaballa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Giovanni Zennaro",
+    "author": "Giovanni Zennaro",
+    "width": 368,
+    "height": 611,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pierbattista Pizzaballa",
+    "url": "https://en.wikipedia.org/wiki/Pierbattista_Pizzaballa"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:31:50.940Z"
+  }
+}

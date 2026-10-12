@@ -1,0 +1,69 @@
+{
+  "id": "renato-guttuso",
+  "name": "Renato Guttuso",
+  "wikidataId": "Q381277",
+  "wikipediaTitle": "Renato Guttuso",
+  "content": {
+    "description": [
+      {
+        "text": "Aldo Renato Guttuso was born on 26 December 1911 in Bagheria, near Palermo, and began signing and dating his works at the age of thirteen. He studied at the University of Palermo and was influenced by European figurative trends, from Courbet to Picasso. In the late 1920s he exhibited in Palermo and, by 1931, his paintings were accepted by the jury of the Quadriennale di Roma, which brought him to the attention of the Milanese art scene. Guttuso rejected academic conventions and joined the Corrente movement, using his art to oppose Fascist rule and to highlight the suffering of ordinary people, as seen in works such as *Flight from Etna* (1938–39) and *Crucifixion* (1941).",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After World War II he helped found the Fronte Nuovo delle Arti and became a prominent figure in Italian expressionism. His political engagement deepened when he joined the Italian Communist Party in 1940 and later served as a senator from 1976 to 1983. Guttuso’s later paintings, including the 1974 *Vucciria di Palermo*, continued to blend social commentary with vivid, raw realism. He died in Rome of lung cancer on 18 January 1987, leaving a legacy of politically charged canvases and a significant contribution to 20th‑century Italian art.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Guttuso designed the banner for the 1971 Palio di Siena, a traditional horse race in Siena.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a close friend of Pablo Picasso, a relationship that lasted until Picasso’s death in 1973.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Guttuso’s wife, Mimise Dotti, served as his confidant and model, and the poet Pablo Neruda was a witness at their wedding in 1956.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1911,
+      "month": 12,
+      "day": 26,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1987,
+      "month": 1,
+      "day": 18,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Renato_Guttuso_1960.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Renato_Guttuso_1960.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Renato_Guttuso_1960.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Renato_Guttuso_1960.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Walter Mori (Mondadori Publishers)",
+    "author": "Walter Mori (Mondadori Publishers)",
+    "width": 662,
+    "height": 738,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Renato Guttuso",
+    "url": "https://en.wikipedia.org/wiki/Renato_Guttuso"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:40:51.879Z"
+  }
+}

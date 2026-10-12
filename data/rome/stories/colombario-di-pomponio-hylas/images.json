@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Interior_Of_The_Columbarium_Of_Pomponius_Hylas,_Rome.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Interior_Of_The_Columbarium_Of_Pomponius_Hylas%2C_Rome.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Interior_Of_The_Columbarium_Of_Pomponius_Hylas%2C_Rome.jpg/960px-Interior_Of_The_Columbarium_Of_Pomponius_Hylas%2C_Rome.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/66/Interior_Of_The_Columbarium_Of_Pomponius_Hylas%2C_Rome.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.0",
+      "attribution": "Tyler Bell",
+      "author": "Tyler Bell",
+      "width": 1803,
+      "height": 1186,
+      "discoveredVia": "commons-category",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Interior_Of_The_Columbarium_Of_Pomponius_Hylas.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Interior_Of_The_Columbarium_Of_Pomponius_Hylas.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Interior_Of_The_Columbarium_Of_Pomponius_Hylas.jpg/960px-Interior_Of_The_Columbarium_Of_Pomponius_Hylas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/Interior_Of_The_Columbarium_Of_Pomponius_Hylas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.0",
+      "attribution": "Tyler Bell",
+      "author": "Tyler Bell",
+      "width": 1801,
+      "height": 1187,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Parco_d_Scipioni_-_accesso_al_colombario_di_Pomponio_Hylas_1270032.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Parco_d_Scipioni_-_accesso_al_colombario_di_Pomponio_Hylas_1270032.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Parco_d_Scipioni_-_accesso_al_colombario_di_Pomponio_Hylas_1270032.JPG/960px-Parco_d_Scipioni_-_accesso_al_colombario_di_Pomponio_Hylas_1270032.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/89/Parco_d_Scipioni_-_accesso_al_colombario_di_Pomponio_Hylas_1270032.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Lalupa",
+      "author": "Lalupa",
+      "width": 2112,
+      "height": 2816,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Interior_Of_The_Columbarium_Of_Pomponius_Hylas,_Rome.jpg"
+}

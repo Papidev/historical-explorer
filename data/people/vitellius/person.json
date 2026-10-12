@@ -1,0 +1,73 @@
+{
+  "id": "vitellius",
+  "name": "Vitellius",
+  "wikidataId": "Q1417",
+  "wikipediaTitle": "Vitellius",
+  "content": {
+    "description": [
+      {
+        "text": "Aulus Vitellius was a Roman emperor who ruled for eight months in 69 AD, during the chaotic Year of the Four Emperors.  Originally from Campania, he served as consul in 48 and governor of Africa before being chosen by Galba to command the army of Germania Inferior.  After Galba’s assassination, the Rhine legions proclaimed him emperor, and he defeated Otho at the Battle of Bedriacum, earning recognition from the Senate and adopting the honorific Germanicus instead of Caesar.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Vitellius’s reign was marked by excess and political instability.  He expanded the Praetorian Guard with his own men, banned astrologers, and was famed for lavish feasts that included exotic dishes such as the “Shield of Minerva.”  He was defeated by Vespasian at the Second Battle of Bedriacum, and after a brutal urban battle in Rome he was executed on 20 December 69.  He was the first emperor not born into a senatorial family.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Vitellius added the honorific title Germanicus to his name instead of Caesar upon his accession.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He banned astrologers from Rome and Italy on 1 October 69, executing any he encountered.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Vitellius was known for extravagant feasts, including a dish called “The Shield of Minerva” that contained exotic ingredients from far away.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first emperor not born in the senatorial family.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 15,
+      "month": 9,
+      "day": 24,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 69,
+      "month": 12,
+      "day": 20,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Aulus_Vitellius_(MRABASF_Matritum)_01.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Aulus_Vitellius_(MRABASF_Matritum)_01.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Aulus_Vitellius_%28MRABASF_Matritum%29_01.jpg/960px-Aulus_Vitellius_%28MRABASF_Matritum%29_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Aulus_Vitellius_%28MRABASF_Matritum%29_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Luis García",
+    "author": "anonymous",
+    "width": 1671,
+    "height": 2676,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Vitellius",
+    "url": "https://en.wikipedia.org/wiki/Vitellius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:06:38.435Z"
+  }
+}

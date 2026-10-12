@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.1.3
+
+### Patch Changes
+
+- Expand Rome content with 110 generated stories, 339 related people, selected image metadata, and enriched POI categories.
+
 ## 0.1.2
 
 ### Patch Changes

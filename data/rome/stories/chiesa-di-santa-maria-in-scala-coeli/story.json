@@ -1,0 +1,121 @@
+{
+  "introduction": {
+    "text": "The Chiesa di Santa Maria in Scala Coeli is a Roman Catholic church in Rome, part of the Tre Fontane Abbey complex, notable for its historical association with St Paul the Apostle's imprisonment and its architectural and devotional significance.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "indulgence-1500",
+        "description": "In 1500, Henry VII of England was granted the scala coeli indulgence for his new chapel in Westminster Abbey.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1500,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "bequests-1520s",
+        "description": "By the 1520s, bequests for masses at Scala Coeli were common.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1520,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "refurbishment-1582",
+        "description": "The ancient church was refurbished in 1582 by Vignola under the patronage of Cardinal Alessandro Farnese.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1582,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "grant-2002",
+        "description": "Pope John Paul II officially granted the church to the Romanian Orthodox community in 2002.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2002,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "design-della-porta",
+        "description": "The present church was designed by Giacomo della Porta under the patronage of Cardinal Pietro Aldobrandini.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "tradition-st-paul",
+        "description": "The location of the church is held by tradition to be where St Paul the Apostle was imprisoned.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "octagonal-layout",
+        "description": "The interior layout of the church is octagonal.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "stair-scratchings",
+        "description": "Stairs leading to the church have writings and drawings scratched into the stone, likely instructions from the architect to the builders.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "mosaic-zucca",
+        "description": "The presbytery contains a mosaic by Francesco Zucca based on designs by Giovanni della Vecchia.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Paul of Tarsus",
+      "personId": "paul-the-apostle",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Vignola",
+      "personId": "vignola",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Alessandro Farnese (cardinal)",
+      "personId": "alessandro-farnese-il-giovane",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giacomo della Porta",
+      "personId": "giacomo-della-porta",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pietro Aldobrandini",
+      "personId": "pietro-aldobrandini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Bernard of Clairvaux",
+      "personId": "bernard-of-clairvaux",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Henry VII of England",
+      "personId": "henry-vii-of-england",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope John Paul II",
+      "personId": "pope-john-paul-ii",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

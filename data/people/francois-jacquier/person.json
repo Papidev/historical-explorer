@@ -1,0 +1,81 @@
+{
+  "id": "francois-jacquier",
+  "name": "Francois Jacquier",
+  "wikidataId": "Q675224",
+  "wikipediaTitle": "François Jacquier",
+  "content": {
+    "description": [
+      {
+        "text": "François Jacquier was born on 7 June 1711 in Vitry‑le‑François, a small town in northeastern France. His early education was overseen by his uncle, a priest, who recognized the boy’s natural aptitude for mathematics and science. At the age of sixteen he entered the Order of Minims and was sent to Rome, where he studied at the French monastery of Trinità dei Monti. While in Rome he specialized in mathematics and also mastered Hebrew and Greek, speaking the latter as if it were his native tongue.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Jacquier’s scholarly reputation earned him the patronage of Cardinal Alberoni and Cardinal Portocarrero. He accompanied Alberoni on a diplomatic mission to Ravenna and was tasked with inspecting the flood‑control works of Eustachio Manfredi. Upon his return he held the chair of Sacred Scripture at the College of Propaganda and later the chair of experimental physics at the Roman College, where he advised on scientific matters. In 1745 he was appointed professor of physics at the University of Turin, and in 1763 he became instructor in physics and mathematics to Prince Ferdinand of Parma. He was elected a Fellow of the Royal Society in 1741 and, after the suppression of the Jesuits, took the chair of mathematics at the Roman College in 1773. He died on 3 July 1788 in Rome, leaving a legacy of scientific writings and a network that spanned the major intellectual societies of Europe.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Jacquier was elected a Fellow of the Royal Society in 1741, a rare honor for a French friar of his time.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1745, the King of Sardinia appointed him professor of physics at the University of Turin, reflecting his growing reputation in the scientific community.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as instructor in physics and mathematics to Prince Ferdinand of Parma in 1763, bridging royal patronage and academic instruction.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the Jesuits were suppressed, Jacquier took the chair of mathematics at the Roman College in 1773, a position that underscored his prominence in European academia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Jacquier’s linguistic prowess included fluency in Hebrew and Greek, the latter he spoke as naturally as his native language.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was tasked with inspecting the flood‑control works of Eustachio Manfredi in Ravenna, demonstrating his expertise in applied engineering.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1711,
+      "month": 6,
+      "day": 7,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1788,
+      "month": 7,
+      "day": 3,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Laurent_Pécheux,_Portrait_du_père_François_Jacquier,_1764,_collection_particulière.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Laurent_P%C3%A9cheux%2C_Portrait_du_p%C3%A8re_Fran%C3%A7ois_Jacquier%2C_1764%2C_collection_particuli%C3%A8re.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Laurent_P%C3%A9cheux%2C_Portrait_du_p%C3%A8re_Fran%C3%A7ois_Jacquier%2C_1764%2C_collection_particuli%C3%A8re.jpg/960px-Laurent_P%C3%A9cheux%2C_Portrait_du_p%C3%A8re_Fran%C3%A7ois_Jacquier%2C_1764%2C_collection_particuli%C3%A8re.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/Laurent_P%C3%A9cheux%2C_Portrait_du_p%C3%A8re_Fran%C3%A7ois_Jacquier%2C_1764%2C_collection_particuli%C3%A8re.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Laurent Pêcheux",
+    "author": "Laurent Pêcheux",
+    "width": 3687,
+    "height": 4193,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "François Jacquier",
+    "url": "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Jacquier"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:44:17.910Z"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "ercole-ferrata",
+  "name": "Ercole Ferrata",
+  "wikidataId": "Q1348674",
+  "wikipediaTitle": "Ercole Ferrata",
+  "content": {
+    "description": [
+      {
+        "text": "Ercole Ferrata was born in 1610 in Pellio Intelvi and moved to Genoa as a young man, where he became a pupil and collaborator of Tommaso Orsolino. Together they worked on a series of sculptures for the Duomo of Pavia. Between 1637 and 1645 Ferrata relocated to Naples, joining the studios of Cosimo Fanzago and Giuliano Finelli and encountering the Baroque dynamism of Gian Lorenzo Bernini for the first time.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1647 Ferrata settled in Rome, studying under Alessandro Algardi and later collaborating with him on the Visione di san Nicola da Tolentino. He gradually abandoned Algardi’s classicism in favor of Bernini’s expressive style, producing works such as the Sant'Agnese sul rogo for Sant'Agnese in Agone, the Martirio di santa Emerenziana, and the Angelo con la Croce for the Ponte Sant'Angelo. He opened a workshop in 1659 that trained future masters like Melchiorre Cafà and Giovanni Battista Foggini, and in 1673 was appointed director of the Accademia di Palazzo Madama. Ferrata continued to work on major commissions until his death in 1686, including a statue of Pope Clement X for St. Peter’s Basilica.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Ferrata’s Sant'Agnese sul rogo served as inspiration for Banksy’s “Madonna con la pistola” stencil in Naples.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1673 Ferrata was appointed head of the Accademia di Palazzo Madama in Rome by Grand Duke Cosimo III of Tuscany, a position he shared with painter Ciro Ferri.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ferrata restored ancient works, including a torso found during the construction of Santa Maria in Vallicella and possibly the arm of the Venus de' Medici.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ferrata never lost ties to his hometown; his last documented trip to Pellio Intelvi was in December 1685, just before he returned to Rome.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1610,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1686,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Ercole_Ferrata.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ercole_Ferrata.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Ercole_Ferrata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Ercole_Ferrata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "AnonymousUnknown author",
+    "author": "AnonymousUnknown author",
+    "width": 318,
+    "height": 263,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Ercole Ferrata",
+    "url": "https://it.wikipedia.org/wiki/Ercole_Ferrata"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:35:16.353Z"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "guillaume-courtois",
+  "name": "Guillaume Courtois",
+  "wikidataId": "Q1749032",
+  "wikipediaTitle": "Guillaume Courtois",
+  "content": {
+    "description": [
+      {
+        "text": "Guillaume Courtois, born in 1628 in Saint‑Hippolyte in the Free County of Burgundy, was the son of the obscure painter Jean‑Pierre Courtois. Little is known of his early years, but it is assumed he received his first lessons from his father before the family moved to Italy around 1636. In Rome, he entered the studio of Pietro da Cortona, where he refined his technique by copying the works of Giovanni Lanfranco and Andrea Sacchi and studying the Bolognese masters such as Guercino. This training gave him a classicising style that combined the dynamism of the Baroque with the calm of the Classicist, a synthesis that would define his later history paintings and portraits.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Courtois spent most of his career in Rome, where he received commissions for large public works such as the frescoes in San Marco and the Battle of Joshua for the Gallery of Alexander VII in the Quirinal Palace. He was also sought after as a staffage painter, often collaborating with his brother Jacques on battle scenes and with artists like Abraham Brueghel on still lifes. His portraits are noted for their realistic sensitivity and expressive faces, and his preparatory drawings—many in chalk—attest to his prolific output. He died of gout on 14 or 15 June 1679, leaving behind a legacy of works that bridged the Baroque and Classicist traditions.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was nicknamed Il Borgognone, meaning \"the Burgundian\", reflecting his origins.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He died of gout.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He collaborated with Abraham Brueghel on a still life that featured a female figure painted by Courtois.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He painted the Battle of Joshua for the Gallery of Alexander VII in the Quirinal Palace.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was recommended by Pietro da Cortona to Niccolò Sagredo, the Venetian ambassador in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His preparatory drawings are preserved in institutions such as the Istituto Nazionale per la Grafica and the Nationalmuseum in Stockholm.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1628,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1679,
+      "month": 6,
+      "day": 14,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Guillaume_Courtois_-_Presumed_self-portrait.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Guillaume_Courtois_-_Presumed_self-portrait.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Guillaume_Courtois_-_Presumed_self-portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Guillaume_Courtois_-_Presumed_self-portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Guillaume Courtois",
+    "author": "Guillaume Courtois",
+    "width": 560,
+    "height": 716,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Guillaume Courtois",
+    "url": "https://en.wikipedia.org/wiki/Guillaume_Courtois"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:28:36.731Z"
+  }
+}

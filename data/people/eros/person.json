@@ -1,0 +1,57 @@
+{
+  "id": "eros",
+  "name": "Eros",
+  "wikidataId": "Q121973",
+  "wikipediaTitle": "Eros",
+  "content": {
+    "description": [
+      {
+        "text": "Eros is the Greek god of physical love and desire, known in Latin as Cupido. In the earliest Greek sources he is a primordial deity, the fourth being created after Chaos, Gaia, and Tartarus, according to Hesiod.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Later myths portray him as the son of Aphrodite and Ares, and he is often depicted as a youthful figure with a bow and arrow or as an adult holding a lyre. Eros is linked to athletics, is considered a protector of homosexual love, and is frequently shown with dolphins, flutes, roosters, roses, and torches.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In Athens the fourth day of every month was dedicated to Eros, reflecting his importance in the city’s religious calendar.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A fertility cult of Eros existed at Tespie, where he was worshipped in a context distinct from that of Aphrodite.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Orphic cosmogonies describe Eros emerging from Nyx (Night) and as the first divine being to generate the cosmos, positioning him as a foundational figure in the creation myth.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "William-Adolphe_Bouguereau_-_The_abduction_of_Psyche,_1895.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:William-Adolphe_Bouguereau_-_The_abduction_of_Psyche%2C_1895.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/William-Adolphe_Bouguereau_-_The_abduction_of_Psyche%2C_1895.jpg/960px-William-Adolphe_Bouguereau_-_The_abduction_of_Psyche%2C_1895.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/William-Adolphe_Bouguereau_-_The_abduction_of_Psyche%2C_1895.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "William-Adolphe Bouguereau",
+    "author": "William-Adolphe Bouguereau",
+    "width": 978,
+    "height": 1757,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Eros",
+    "url": "https://it.wikipedia.org/wiki/Eros"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:09:10.962Z"
+  }
+}

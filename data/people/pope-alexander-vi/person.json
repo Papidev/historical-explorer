@@ -1,0 +1,75 @@
+{
+  "id": "pope-alexander-vi",
+  "name": "Pope Alexander VI",
+  "wikidataId": "Q108316",
+  "wikipediaTitle": "Pope Alexander VI",
+  "content": {
+    "description": [
+      {
+        "text": "Roderic de Borja y Llançol, later known as Pope Alexander VI, was born around 1431 in Xàtiva, a town in the Kingdom of Valencia under the Crown of Aragon.  He entered the Church at a young age, becoming a sacristan at 14 and later a canon of several Spanish cathedrals before studying law at the University of Bologna.  His uncle, Alfonso de Borja, who became Pope Callixtus III, appointed him as a cardinal in 1456 and later as vice‑chancellor, a position he held for 35 years and which gave him immense influence and wealth within the Roman Curia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1492, after the death of Pope Innocent VIII, Rodrigo Borgia was elected pope and took the name Alexander VI.  His pontificate was marked by a blend of administrative competence and ruthless nepotism: he confirmed the Spanish crown’s rights in the New World with the Inter caetera bull, opened the first holy door in St. Peter’s Basilica in 1499, and openly acknowledged four children with his mistress Vannozza dei Cattanei.  He was also a patron of the arts, commissioning works by Raphael, Michelangelo and others, and he welcomed Jews expelled from Spain, allowing them to settle in Rome.  Alexander VI died on 18 August 1503 after a brief illness.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the first pope to open a holy door in St. Peter’s Basilica, a tradition that continues today.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Inter caetera bull of 4 May 1493 divided the newly discovered lands between Spain and Portugal, laying the groundwork for the Treaty of Tordesillas.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He openly acknowledged four children—Cesare, Giovanni, Lucrezia and Gioffre—by his mistress Vannozza, a rare admission for a pope of his time.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Alexander VI was a patron of the arts, commissioning paintings by Raphael, Michelangelo and Pinturicchio for the Apostolic Palace.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He welcomed Jews expelled from Spain in 1492, allowing them to settle in Rome and practice their faith freely.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1431,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1503,
+      "month": 8,
+      "day": 18,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Portrait_of_Pope_Alexander_VI_Borgia_(Vatican_Museums_-_Musei_Vaticani,_Vatican).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_Pope_Alexander_VI_Borgia_(Vatican_Museums_-_Musei_Vaticani%2C_Vatican).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Portrait_of_Pope_Alexander_VI_Borgia_%28Vatican_Museums_-_Musei_Vaticani%2C_Vatican%29.jpg/960px-Portrait_of_Pope_Alexander_VI_Borgia_%28Vatican_Museums_-_Musei_Vaticani%2C_Vatican%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Portrait_of_Pope_Alexander_VI_Borgia_%28Vatican_Museums_-_Musei_Vaticani%2C_Vatican%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Attributed to Pedro Berruguete",
+    "author": "Attributed to Pedro Berruguete",
+    "width": 3005,
+    "height": 4202,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Alexander VI",
+    "url": "https://en.wikipedia.org/wiki/Pope_Alexander_VI"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:24:29.373Z"
+  }
+}

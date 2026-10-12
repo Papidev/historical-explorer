@@ -1,0 +1,76 @@
+{
+  "introduction": {
+    "text": "The Domus della Fortuna Annonaria is a Roman domus in Ostia dating to the 2nd century AD, notable for its elaborate architecture, mosaics, and statues that illustrate the social status of its owner and the cult of Fortuna Annonaria.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Transformation of a row of taverns into a domus during the 4th century BC.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -400,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Construction of the Domus della Fortuna Annonaria in the 2nd century AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 200,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "First archaeological excavation of the domus in 1938.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1938,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The domus features a rectangular plan with a northern entrance, an atrium, a peristyle courtyard surrounded by travertine columns, and a southern wall with a niche and a statue.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "A 3rd-century AD mosaic depicting the myth of the Lupa nursing the twins, along with statues of Diana, Silvanus, and Aphrodite found in the domus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Diana",
+      "personId": "diana",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Afrodite",
+      "personId": "afrodite",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Fortuna (divinità)",
+      "personId": "fortuna-divinit",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Annona (divinità)",
+      "personId": "annona-divinit",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

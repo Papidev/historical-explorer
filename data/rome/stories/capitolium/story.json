@@ -1,0 +1,153 @@
+{
+  "introduction": {
+    "text": "The Capitolium is a Roman temple located in Regio I of the Ostia archaeological area in Rome. It was the main temple of the city, dedicated to the Capitoline Triad.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The Capitolium was built in 120 AD during Emperor Hadrian's reign.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 120,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "The temple was closed and abandoned after 394 AD when Christianity became the official religion of the Roman Empire.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 394,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "The city was systematically destroyed from the 9th century onward, with the Capitolium remaining as one of the few visible remains.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 800,
+          "precision": "approximate",
+          "endYear": 900,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "Excavations in 1802-1804 identified the building as the temple of the Capitoline Triad.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1802,
+          "precision": "approximate",
+          "endYear": 1804,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "In 1864, excavations uncovered four rooms beneath the podium.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1864,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "The temple was converted into an ovile and called 'casa rossa' due to its brick construction.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The temple was a prostilo esastilo with six front columns, two on the pronaos, in Corinthian order.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "It had a high podium with 21 steps, similar to the Temple of Jupiter Optimus Maximus on the Capitoline Hill.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "The cella was rectangular, with three niches for the deities, and was covered in white and colored marble.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design4",
+        "description": "The interior rooms beneath the podium had opus spicatum flooring and were accessed by a rear door.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design5",
+        "description": "The temple was constructed in brick (laterite) and had a bronze entrance door.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "The altar was covered in marble slabs decorated with reliefs of weapons.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "The cella's marble panels were white and colored, with traces of the original arrangement.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "The bronze entrance door was similar to those preserved at the Pantheon.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Publio Elio Traiano Adriano",
+      "personId": "hadrian",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Antonio Nibby",
+      "personId": "antonio-nibby",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Carlo Ludovico Visconti",
+      "personId": "carlo-ludovico-visconti",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giuseppe Antonio Guattani",
+      "personId": "giuseppe-antonio-guattani",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giove (divinità)",
+      "personId": "giove-divinit",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giunone",
+      "personId": "giunone",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Minerva",
+      "personId": "minerva",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Vulcano",
+      "personId": "vulcano",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

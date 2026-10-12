@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "CatacombeSAflm.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:CatacombeSAflm.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/CatacombeSAflm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/CatacombeSAflm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.5",
+      "attribution": "The original uploader was Folajimi at English Wikipedia.",
+      "author": "The original uploader was Folajimi at English Wikipedia.",
+      "width": 800,
+      "height": 544,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Sculture_e_pitture_sagre_estratte_dai_cimiterj_di_Roma_-_pubblicate_gia_dagli_autori_della_Roma_sotterranea_ed_ora_nuovamente_date_in_luce_colle_spiegazioni_per_ordine_di_n._s._Clemente_XII_(1737)_(14596763367).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Sculture_e_pitture_sagre_estratte_dai_cimiterj_di_Roma_-_pubblicate_gia_dagli_autori_della_Roma_sotterranea_ed_ora_nuovamente_date_in_luce_colle_spiegazioni_per_ordine_di_n._s._Clemente_XII_(1737)_(14596763367).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Sculture_e_pitture_sagre_estratte_dai_cimiterj_di_Roma_-_pubblicate_gia_dagli_autori_della_Roma_sotterranea_ed_ora_nuovamente_date_in_luce_colle_spiegazioni_per_ordine_di_n._s._Clemente_XII_%281737%29_%2814596763367%29.jpg/960px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Sculture_e_pitture_sagre_estratte_dai_cimiterj_di_Roma_-_pubblicate_gia_dagli_autori_della_Roma_sotterranea_ed_ora_nuovamente_date_in_luce_colle_spiegazioni_per_ordine_di_n._s._Clemente_XII_%281737%29_%2814596763367%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "No restrictions",
+      "attribution": "Bottari, Giovanni Gaetano, 1689-1775",
+      "author": "Bottari, Giovanni Gaetano, 1689-1775",
+      "width": 2093,
+      "height": 3000,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "559_of_'Rome_et_ses_monuments._Guide_du_voyageur_catholique_dans_la_capitale_du_monde_chrétien_..._Avec_cinquante-et-un_plans_annotés'_(11051469623).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:559_of_'Rome_et_ses_monuments._Guide_du_voyageur_catholique_dans_la_capitale_du_monde_chr%C3%A9tien_..._Avec_cinquante-et-un_plans_annot%C3%A9s'_(11051469623).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/559_of_%27Rome_et_ses_monuments._Guide_du_voyageur_catholique_dans_la_capitale_du_monde_chr%C3%A9tien_..._Avec_cinquante-et-un_plans_annot%C3%A9s%27_%2811051469623%29.jpg/960px-559_of_%27Rome_et_ses_monuments._Guide_du_voyageur_catholique_dans_la_capitale_du_monde_chr%C3%A9tien_..._Avec_cinquante-et-un_plans_annot%C3%A9s%27_%2811051469623%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/559_of_%27Rome_et_ses_monuments._Guide_du_voyageur_catholique_dans_la_capitale_du_monde_chr%C3%A9tien_..._Avec_cinquante-et-un_plans_annot%C3%A9s%27_%2811051469623%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "No restrictions",
+      "attribution": "The British Library",
+      "author": "The British Library",
+      "width": 1146,
+      "height": 722,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "CatacombeSAflm.jpg"
+}

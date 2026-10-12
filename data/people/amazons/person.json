@@ -1,0 +1,61 @@
+{
+  "id": "amazons",
+  "name": "Amazons",
+  "wikidataId": "Q134154",
+  "wikipediaTitle": "Amazons",
+  "content": {
+    "description": [
+      {
+        "text": "In Greek mythology the Amazons were a legendary tribe of female warriors renowned for their physical agility, strength, archery, riding skills, and mastery of combat arts. Their society was closed to men, raising only daughters and returning sons to their fathers for brief social contact before reproduction.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Amazons are depicted in many ancient epic poems and legends, including the Labours of Heracles, the Argonautica, and the Iliad, and were said to have undertaken extensive military expeditions across the known world, founding cities such as Ephesos, Cyme, Smyrna, Sinope, Myrina, Magnesia, and Pygela.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Archaeological discoveries of burial sites of female warriors in the Eurasian Steppes suggest that the horse cultures of the Scythian and Sarmatian peoples likely inspired the Amazon myth.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Amazons were portrayed in a number of ancient epic poems and legends, such as the Labours of Heracles, the Argonautica and the Iliad.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Amazons were known for their physical agility, strength, archery, riding skills, and the arts of combat.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Amazons were said to have founded several ancient cities, including Ephesos, Cyme, Smyrna, Sinope, Myrina, Magnesia, and Pygela.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Amazon_from_the_Industrial_arts_of_the_Nineteenth_Century_(1851-1853)_by_Sir_Matthew_Digby_wyatt_(1820-1877)._(41947327202).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Amazon_from_the_Industrial_arts_of_the_Nineteenth_Century_(1851-1853)_by_Sir_Matthew_Digby_wyatt_(1820-1877)._(41947327202).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Amazon_from_the_Industrial_arts_of_the_Nineteenth_Century_%281851-1853%29_by_Sir_Matthew_Digby_wyatt_%281820-1877%29._%2841947327202%29.jpg/960px-Amazon_from_the_Industrial_arts_of_the_Nineteenth_Century_%281851-1853%29_by_Sir_Matthew_Digby_wyatt_%281820-1877%29._%2841947327202%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Amazon_from_the_Industrial_arts_of_the_Nineteenth_Century_%281851-1853%29_by_Sir_Matthew_Digby_wyatt_%281820-1877%29._%2841947327202%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 2.0",
+    "attribution": "Rawpixel Ltd",
+    "author": "Rawpixel Ltd",
+    "width": 2500,
+    "height": 2158,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Amazons",
+    "url": "https://en.wikipedia.org/wiki/Amazons"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:05:22.199Z"
+  }
+}

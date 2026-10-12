@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Obelisco_Fontana_dei_Fiumi_Piazza_Navona_Roma.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Obelisco_Fontana_dei_Fiumi_Piazza_Navona_Roma.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Obelisco_Fontana_dei_Fiumi_Piazza_Navona_Roma.jpg/960px-Obelisco_Fontana_dei_Fiumi_Piazza_Navona_Roma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Obelisco_Fontana_dei_Fiumi_Piazza_Navona_Roma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+      "author": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+      "width": 6763,
+      "height": 13926,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "0_Fontana_dei_Quattro_Fumini_-_Piazza_Navone_(4).JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:0_Fontana_dei_Quattro_Fumini_-_Piazza_Navone_(4).JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/0_Fontana_dei_Quattro_Fumini_-_Piazza_Navone_%284%29.JPG/960px-0_Fontana_dei_Quattro_Fumini_-_Piazza_Navone_%284%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c9/0_Fontana_dei_Quattro_Fumini_-_Piazza_Navone_%284%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "Jean-Pol GRANDMONT",
+      "author": "Jean-Pol GRANDMONT",
+      "width": 2592,
+      "height": 3888,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "0_Piazza_Navone_-_Fontana_dei_Fiumi_(1).JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:0_Piazza_Navone_-_Fontana_dei_Fiumi_(1).JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/0_Piazza_Navone_-_Fontana_dei_Fiumi_%281%29.JPG/960px-0_Piazza_Navone_-_Fontana_dei_Fiumi_%281%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/0_Piazza_Navone_-_Fontana_dei_Fiumi_%281%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "Jean-Pol GRANDMONT",
+      "author": "Jean-Pol GRANDMONT",
+      "width": 3888,
+      "height": 2592,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Obelisco_Fontana_dei_Fiumi_Piazza_Navona_Roma.jpg"
+}

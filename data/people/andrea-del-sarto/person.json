@@ -1,0 +1,57 @@
+{
+  "id": "andrea-del-sarto",
+  "name": "Andrea del Sarto",
+  "wikidataId": "Q5571",
+  "wikipediaTitle": "Andrea del Sarto",
+  "content": {
+    "description": [
+      {
+        "text": "Andrea del Sarto, born in Florence in 1486, was the son of a tailor and began his artistic training at a very young age, first learning metalwork before moving to the workshop of Giovanni Barili and later to that of Piero di Cosimo.  He quickly earned a reputation for technical skill and a calm, almost imperceptible precision that earned him the nickname “pittore senza errori” (painter without mistakes) from Giorgio Vasari, who praised his formal perfection, speed, and confidence in execution.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the first decade of the 1500s, Andrea became a master of the Florentine school, working on large-scale commissions such as the frescoes in the Chiostro dei Voti of the Santissima Annunziata and the Chiostro dello Scalzo, where he experimented with monochrome and later with vibrant color.  He also travelled to Rome around 1510, absorbing the influence of Raphael and Michelangelo, and later spent a brief period in France at the court of Francis I, where he produced works like the Carità.  His mature style blended the monumental solidity of Raphael with the atmospheric softness of Leonardo, and he left a lasting legacy through both his paintings and his prolific drawings, which were studied by the next generation of Florentine artists.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Vasari described Andrea as a painter “without errors,” a testament to his flawless technique and compositional control.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Andrea’s apprenticeship began with an orator and later in the workshop of Piero di Cosimo, where he learned to experiment with different painting techniques, a practice that set him apart from his contemporaries.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He spent a short but influential period in France at the court of Francis I, where he produced the Carità, a work that reflected both Florentine and French artistic trends.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Andredelsartoselfportrait.jpeg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Andredelsartoselfportrait.jpeg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Andredelsartoselfportrait.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Andredelsartoselfportrait.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Andrea del Sarto",
+    "author": "Andrea del Sarto",
+    "width": 700,
+    "height": 930,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Andrea del Sarto",
+    "url": "https://it.wikipedia.org/wiki/Andrea_del_Sarto"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:46:40.994Z"
+  }
+}

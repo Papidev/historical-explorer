@@ -1,0 +1,104 @@
+{
+  "introduction": {
+    "text": "The Casa di Diana, also known as the Caseggiato di Diana, is an ancient Roman insula located in Regio I of Ostia. It is significant for its well‑preserved residential architecture, terracotta relief of the goddess Diana, and evidence of early Roman urban life.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "construction",
+        "description": "The insula was built in the first half of the 2nd century AD, likely on the site of an earlier domus.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "mitre-discovery",
+        "description": "A small mitre was discovered during excavations in 1914–1915.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1914,
+          "precision": "exact",
+          "endYear": 1915,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "initial-excavation",
+        "description": "The site was first investigated by Guido Calza between 1914 and 1916.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1914,
+          "precision": "exact",
+          "endYear": 1916,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "later-excavation",
+        "description": "Further excavations were carried out by Alfredo Marinucci from 1994 to 1997.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1994,
+          "precision": "exact",
+          "endYear": 1997,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "domus-base",
+        "description": "The insula was constructed over an older Roman domus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "courtyard-architecture",
+        "description": "The building is organized around a porticoed courtyard, with multiple floors—possibly five—housing residential units and ground‑floor taverns.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "arcades-and-cistern",
+        "description": "Arcades surround the courtyard; later they were filled in, and a covered cistern was built above a terracotta relief of Diana.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "facade-niches",
+        "description": "The north façade of the first floor featured niches intended for small sculptures.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "terracotta-relief",
+        "description": "A terracotta relief depicting the goddess Diana holding a bow and arrow, a dog, and a deer, located above the cistern.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "frescoes",
+        "description": "Several rooms on the upper floors contain frescoed walls, and some taverns have remnants of frescoes.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "mosaic",
+        "description": "A polychrome mosaic on the ground‑floor courtyard and a marble basin with mosaic floors were found.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Guido Calza",
+      "personId": "guido-calza",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Diana",
+      "personId": "diana",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

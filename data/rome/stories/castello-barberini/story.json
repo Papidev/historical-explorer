@@ -1,0 +1,45 @@
+{
+  "introduction": {
+    "text": "Castello Barberini is a 17th‑century castle in Piazza del castello Barberini, San Vittorino, Rome, built on 12th‑century foundations, notable for its Baroque architecture and the Barberini family emblem.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-12th-century",
+        "description": "The castle was built on 12th‑century foundations.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1100,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-17th-century",
+        "description": "The castle was constructed in the 17th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1600,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-architecture",
+        "description": "The castle features a square tower, merlature, tufa walls, and the Barberini coat of arms.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Barberini",
+      "personId": "barberini",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "introduction": {
+    "text": "Forte Tiburtina is one of Rome's 15 forts built between 1877 and 1891, located in the Collatino quarter of Municipio Roma IV. It played a key role in the city's defensive network and remains a notable example of late 19th‑century military architecture.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history2",
+        "description": "Rome's fortification program between 1877 and 1891.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1877,
+          "precision": "exact",
+          "endYear": 1891,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history1",
+        "description": "Construction of Forte Tiburtina from 1880 to 1884.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1880,
+          "precision": "exact",
+          "endYear": 1884,
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "Forte Tiburtina is situated at the fourth kilometre of Via Tiburtina in the Collatino quarter, covering an area of 23.8 hectares.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Giuseppe Albanese Ruffo",
+      "personId": "giuseppe-albanese-ruffo",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

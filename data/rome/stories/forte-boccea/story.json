@@ -1,0 +1,61 @@
+{
+  "introduction": {
+    "text": "Forte Boccea is one of Rome’s 15 forts, built between 1877 and 1891 as part of the city’s entrenched field. The fort later served as a military remand prison and is now being converted into a cultural park.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Construction of Forte Boccea began in 1877 and was completed in 1881, covering an area of 7.3 hectares at the first kilometre of Via di Boccea.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1877,
+          "precision": "exact",
+          "endYear": 1881,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "General Mario Carloni was held as a prisoner in the fort from 1946 to 19 May 1951.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1946,
+          "precision": "exact",
+          "endYear": 1951,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "In 2013, a resolution approved the conversion of Forte Boccea into a park for cultural initiatives.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2013,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "After its completion, the fort functioned as a military remand prison until 2005.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Mario Carloni",
+      "personId": "mario-carloni",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Victor Emmanuel II of Italy",
+      "personId": "vittorio-emanuele-ii",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

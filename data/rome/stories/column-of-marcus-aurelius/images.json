@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Colonna_di_Marco_aurelio_-_Frontale.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Colonna_di_Marco_aurelio_-_Frontale.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Colonna_di_Marco_aurelio_-_Frontale.jpg/960px-Colonna_di_Marco_aurelio_-_Frontale.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Colonna_di_Marco_aurelio_-_Frontale.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "WikiRomaWiki",
+      "author": "WikiRomaWiki",
+      "width": 3799,
+      "height": 8574,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "0_Colonne_de_Marc-Aurèle_à_Rome_(1).JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:0_Colonne_de_Marc-Aur%C3%A8le_%C3%A0_Rome_(1).JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/0_Colonne_de_Marc-Aur%C3%A8le_%C3%A0_Rome_%281%29.JPG/960px-0_Colonne_de_Marc-Aur%C3%A8le_%C3%A0_Rome_%281%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/0_Colonne_de_Marc-Aur%C3%A8le_%C3%A0_Rome_%281%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "Jean-Pol GRANDMONT",
+      "author": "Jean-Pol GRANDMONT",
+      "width": 2592,
+      "height": 3888,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "064ColonnaAureliana.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:064ColonnaAureliana.JPG",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/064ColonnaAureliana.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/064ColonnaAureliana.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "MarkusMark",
+      "author": "MarkusMark",
+      "width": 525,
+      "height": 700,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Colonna_di_Marco_aurelio_-_Frontale.jpg"
+}

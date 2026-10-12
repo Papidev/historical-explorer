@@ -1,0 +1,69 @@
+{
+  "id": "pope-marcellinus",
+  "name": "Pope Marcellinus",
+  "wikidataId": "Q160373",
+  "wikipediaTitle": "Pope Marcellinus",
+  "content": {
+    "description": [
+      {
+        "text": "Pope Marcellinus served as bishop of Rome from 30 June 296 until his death in 304. His tenure began when Emperor Diocletian had not yet begun the persecution of Christians, and during this period the Christian community in Rome grew in numbers and influence. The Liberian Catalogue records him as a Roman, son of Proiectus, and notes that he succeeded Caius as bishop on 30 June 296.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Marcellinus's pontificate later intersected with the harsh measures of Diocletian's reign. According to the Liber Pontificalis, he is said to have offered incense to pagan idols during the persecution, but then repented and was martyred with several companions. The details of his martyrdom and burial are uncertain, with the Liber Pontificalis placing his burial on 26 April 304 and the Liberian Catalogue giving 25 October. His veneration has been uneven: he was once commemorated in the General Roman Calendar on 26 April, a joint feast with Saint Cletus that was removed in 1969, and he is still listed in the Serbian Prologue of Ohrid on 7 June (Julian).",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Some sources claim that Marcellinus may have renounced Christianity during Diocletian's persecution, a claim that Augustine of Hippo later rejected.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Liber Pontificalis records that Marcellinus offered incense to idols during the persecution, but that he repented shortly afterward and was martyred with several companions.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Marcellinus was buried on 26 April 304 in the cemetery of Priscilla on the Via Salaria, although the Liberian Catalogue lists 25 October as the burial date.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His feast day was originally celebrated on 26 April in the General Roman Calendar, but the joint feast with Saint Cletus was removed from the calendar in 1969.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In the Serbian Prologue of Ohrid, Marcellinus is commemorated on 7 June according to the Julian Calendar.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 304,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Marcellinus.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Marcellinus.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Marcellinus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Marcellinus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 208,
+    "height": 159,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Pope Marcellinus",
+    "url": "https://en.wikipedia.org/wiki/Pope_Marcellinus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T23:02:39.940Z"
+  }
+}

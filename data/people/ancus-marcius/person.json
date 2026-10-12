@@ -1,0 +1,65 @@
+{
+  "id": "ancus-marcius",
+  "name": "Ancus Marcius",
+  "wikidataId": "Q206741",
+  "wikipediaTitle": "Ancus Marcius",
+  "content": {
+    "description": [
+      {
+        "text": "Ancus Marcius, the legendary fourth king of Rome, was the grandson of the revered pontifex maximus Numa Pompilius and the son of Marcius and Pompilia. According to Livy, his first act as king was to order the Pontifex Maximus to copy the religious rites of Numa onto wooden tablets so that they could be displayed publicly and performed correctly. He also restored many of the religious edicts that had been repealed by his predecessor, Tullus Hostilius, thereby combining the martial spirit of Romulus with the pious governance of Numa.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His reign was marked by both war and construction. He declared war on the Latin League using the fetial rites, captured the town of Politorium, and brought its inhabitants into Rome as citizens. He founded the port of Ostia, built the first Roman prison at Mamertine, incorporated the Janiculum into the city with a wooden bridge across the Tiber, and erected the ditch fortification known as the Fossa Quiritium. These projects expanded Rome’s territory and infrastructure, and he celebrated at least one triumph over the Sabines and Veientes.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Ancus Marcius was the first Roman king to declare war by means of the fetial rites.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He built Rome's first prison, the Mamertine prison.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He founded the port of Ostia, establishing salt-works around the port.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He incorporated the Janiculum into the city, fortifying it with a wall and connecting it with a wooden bridge across the Tiber, the Pons Sublicius.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ancus Marcius was the namesake of the plebeian family Marcii.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Ancus-Martius.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ancus-Martius.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Ancus-Martius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Ancus-Martius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Published by Guillaume Rouille (1518?-1589)",
+    "author": "Published by Guillaume Rouille (1518?-1589)",
+    "width": 405,
+    "height": 393,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Ancus Marcius",
+    "url": "https://en.wikipedia.org/wiki/Ancus_Marcius"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-11T00:15:19.016Z"
+  }
+}

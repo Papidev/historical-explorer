@@ -1,0 +1,61 @@
+{
+  "id": "diego-la-nez",
+  "name": "Diego Laínez",
+  "wikidataId": "Q301664",
+  "wikipediaTitle": "Diego Laínez",
+  "content": {
+    "description": [
+      {
+        "text": "Diego Laínez was born in Almazán, Castile, in 1512. He studied at the University of Alcalá before traveling to Paris in 1533 to study theology and meet Ignatius of Loyola, becoming his spiritual disciple.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1537 he went to Rome with Ignatius and Pietro Favre, where he served briefly as a professor of positive theology at the Sapienza University in 1538, commenting on Gabriel Biel’s Canon Missae. He later became a key preacher, helped found the Jesuit order, served as its preceptor general from 1558 for six years, and was sent by Pope Pius IV to France in 1561 to support the Catholic cause against Protestantism, notably participating in the Colloquio di Poissy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Laínez served as a professor of positive theology at the Sapienza University in 1538, where he commented on the Canon Missae of Gabriel Biel.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was appointed preceptor general of the Jesuit order in 1558, a position he held for six years, helping to consolidate the new order.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1561 Pope Pius IV sent him to France to support the Catholic cause against Protestantism, where he participated in the Colloquio di Poissy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1512,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Portret_van_de_jezuïet_Jacobus_Laynez_Portretten_van_generaal_oversten_van_de_jezuïeten_(serietitel)_Effigies_præpositorvm_generalivm_societatis_Iesv_(serietitel),_RP-P-1910-4016.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Portret_van_de_jezu%C3%AFet_Jacobus_Laynez_Portretten_van_generaal_oversten_van_de_jezu%C3%AFeten_(serietitel)_Effigies_pr%C3%A6positorvm_generalivm_societatis_Iesv_(serietitel)%2C_RP-P-1910-4016.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Portret_van_de_jezu%C3%AFet_Jacobus_Laynez_Portretten_van_generaal_oversten_van_de_jezu%C3%AFeten_%28serietitel%29_Effigies_pr%C3%A6positorvm_generalivm_societatis_Iesv_%28serietitel%29%2C_RP-P-1910-4016.jpg/960px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Portret_van_de_jezu%C3%AFet_Jacobus_Laynez_Portretten_van_generaal_oversten_van_de_jezu%C3%AFeten_%28serietitel%29_Effigies_pr%C3%A6positorvm_generalivm_societatis_Iesv_%28serietitel%29%2C_RP-P-1910-4016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC0",
+    "attribution": "Rijksmuseum",
+    "author": "Rijksmuseum",
+    "width": 3140,
+    "height": 5178,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Diego Laínez",
+    "url": "https://it.wikipedia.org/wiki/Diego_La%C3%ADnez"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T20:51:52.555Z"
+  }
+}

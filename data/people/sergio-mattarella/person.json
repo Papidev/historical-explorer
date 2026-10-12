@@ -1,0 +1,49 @@
+{
+  "id": "sergio-mattarella",
+  "name": "Sergio Mattarella",
+  "wikidataId": "Q3956186",
+  "wikipediaTitle": "Sergio Mattarella",
+  "content": {
+    "description": [
+      {
+        "text": "Sergio Mattarella is an Italian politician who has served as the President of the Republic since 2015. Before that he was a long‑time member of the Chamber of Deputies, representing the Christian Democracy and its successors from 1983 to 2008, and held several ministerial posts, including Minister of Education (1989–1990), Minister of Defence (1999–2001) and Minister for Relations with Parliament (1987–1989). From 2011 to 2015 he sat on the Constitutional Court, where he contributed to the 2014 ruling that declared the Porcellum electoral law unconstitutional.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Mattarella comes from a prominent Sicilian political family; his father Bernardo was a minister in the 1950s and 1960s, and his brother Piersanti was assassinated by the Mafia in 1980. He earned a law degree from the Sapienza University of Rome in 1964, later becoming a lawyer and a professor of public law at the University of Palermo. He played a key role in drafting the 1993 electoral reform known as the 'Mattarellum', which introduced a mixed system of proportional representation and a majority bonus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Mattarella is the first person from Sicily to be elected President of the Italian Republic.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Sergio_Mattarella_Presidente_della_Repubblica_Italiana.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Sergio_Mattarella_Presidente_della_Repubblica_Italiana.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Sergio_Mattarella_Presidente_della_Repubblica_Italiana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Sergio_Mattarella_Presidente_della_Repubblica_Italiana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Attribution",
+    "attribution": "Quirinale.it",
+    "author": "Unknown authorUnknown author",
+    "width": 598,
+    "height": 748,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Sergio Mattarella",
+    "url": "https://it.wikipedia.org/wiki/Sergio_Mattarella"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-10T22:26:00.555Z"
+  }
+}
