@@ -36,15 +36,9 @@ jobs:
           run_checks=true
           if [ "$EVENT_NAME" != "workflow_dispatch" ] &&
             [ -n "$CHANGE_BASE" ] &&
-            [ "$CHANGE_BASE" != "0000000000000000000000000000000000000000" ]; then
-            git diff --no-renames --name-only -z "$CHANGE_BASE" HEAD > /tmp/ci-changed-files
+            [ "$CHANGE_BASE" != "0000000000000000000000000000000000000000" ] &&
+            git diff --quiet --no-renames "$CHANGE_BASE" HEAD -- . ':!docs/' ':!README.md' ':!AGENTS.md'; then
             run_checks=false
-            while IFS= read -r -d '' file; do
-              case "$file" in
-                docs/*|README.md|AGENTS.md) ;;
-                *) run_checks=true; break ;;
-              esac
-            done < /tmp/ci-changed-files
           fi
           echo "run_checks=$run_checks" >> "$GITHUB_OUTPUT"
           if [ "$run_checks" = "false" ]; then
