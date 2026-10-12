@@ -88,7 +88,13 @@ describe("public catalog", () => {
       "Forum Boarium",
     );
     expect(catalog.getStoryContent("rome", "basilica-costantiniana-di-s-agnese")).toBeUndefined();
-    expect(catalog.getPerson("pope-alexander-iv")).toBeUndefined();
+    expect(new Set(snapshot.people.map(({ id }) => id))).toEqual(
+      new Set(
+        snapshot.pois.flatMap(({ storyContent }) =>
+          storyContent.relatedPeople.map(({ personId }) => personId),
+        ),
+      ),
+    );
     for (const { storyContent } of snapshot.pois) {
       for (const { personId } of storyContent.relatedPeople) {
         expect(catalog.getPerson(personId!)).toBeDefined();
