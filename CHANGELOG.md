@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.1.5
+
+### Patch Changes
+
+- Validate Story Content, People, and image candidates before saving, preserving existing content when validation fails.
+
 ## 0.1.4
 
 ### Patch Changes

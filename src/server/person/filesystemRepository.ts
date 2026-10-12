@@ -47,6 +47,7 @@ export const createFilesystemPersonRepository = (rootPath = process.cwd()) => {
     findByWikidataId: (wikidataId: string) =>
       repository.list().find((person) => person.wikidataId === wikidataId),
     replace: (person: Person, source: PersonSource) => {
+      personSchema.parse(person);
       writeAtomically(sourcePath(person.id), `${source.content.trim()}\n`);
       writeAtomically(personPath(person.id), `${JSON.stringify(person, null, 2)}\n`);
     },
