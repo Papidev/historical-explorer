@@ -27,35 +27,67 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Decide whether application checks are needed
+        id: changes
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          CHANGE_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          run_checks=true
+          if [ "$EVENT_NAME" != "workflow_dispatch" ] &&
+            [ -n "$CHANGE_BASE" ] &&
+            [ "$CHANGE_BASE" != "0000000000000000000000000000000000000000" ]; then
+            git diff --no-renames --name-only -z "$CHANGE_BASE" HEAD > /tmp/ci-changed-files
+            run_checks=false
+            while IFS= read -r -d '' file; do
+              case "$file" in
+                docs/*|README.md|AGENTS.md) ;;
+                *) run_checks=true; break ;;
+              esac
+            done < /tmp/ci-changed-files
+          fi
+          echo "run_checks=$run_checks" >> "$GITHUB_OUTPUT"
+          if [ "$run_checks" = "false" ]; then
+            echo "Documentation only: skipping application checks."
+          fi
+
       - name: Set up pnpm
+        if: steps.changes.outputs.run_checks == 'true'
         uses: pnpm/action-setup@v6
         with:
           version: 10.18.0
 
       - name: Set up Node.js
+        if: steps.changes.outputs.run_checks == 'true'
         uses: actions/setup-node@v5
         with:
           node-version: 24
           cache: pnpm
 
       - name: Install dependencies
+        if: steps.changes.outputs.run_checks == 'true'
         run: pnpm install --frozen-lockfile
 
       - name: Check application version
+        if: steps.changes.outputs.run_checks == 'true'
         env:
           RELEASE_BASE: ${{ inputs.release_base || github.event.pull_request.base.sha || github.event.before }}
         run: pnpm release:check "$RELEASE_BASE"
 
       - name: Lint
+        if: steps.changes.outputs.run_checks == 'true'
         run: pnpm lint
 
       - name: Test
+        if: steps.changes.outputs.run_checks == 'true'
         run: pnpm test
 
       - name: Build
+        if: steps.changes.outputs.run_checks == 'true'
         run: pnpm build
 
       - name: Check built app starts
+        if: steps.changes.outputs.run_checks == 'true'
         run: |
           pnpm start --hostname 127.0.0.1 --port 3000 > /tmp/next-start.log 2>&1 &
           server_pid=$!

@@ -31,6 +31,11 @@ Open [http://localhost:3000](http://localhost:3000). Installation activates Husk
 
 ## Publication and deployment
 
+CI skips dependency installation and application checks when every changed file
+is under `docs/` or is `README.md` or `AGENTS.md`. The required `ci` check still
+completes successfully. Other changes and manually dispatched runs use the full
+CI workflow.
+
 ### Application versions
 
 Application releases use Changesets. Each application PR includes one version
