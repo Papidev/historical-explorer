@@ -1,5 +1,6 @@
 "use client";
 
+import { AppVersion } from "@/app/components/ui/AppVersion";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import { PeopleTable } from "./PeopleTable";
@@ -70,7 +71,10 @@ export const AdminDashboard = ({
     <main className="flex h-screen min-h-screen flex-col bg-neutral-50 p-4 sm:p-6">
       <header className="mb-4 flex flex-wrap items-start justify-between gap-4 border-b border-black/10 pb-3">
         <div>
-          <h1 className="text-xl font-semibold text-black">Content Admin</h1>
+          <div className="flex items-center gap-3">
+            <h1 className="text-xl font-semibold text-black">Content Admin</h1>
+            <AppVersion />
+          </div>
           <p className="mt-1 text-xs text-black/55">
             Generate and review Rome POI content and People.
           </p>

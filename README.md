@@ -61,6 +61,8 @@ release merges first, regenerate your increment from the new version while
 preserving the merged changelog history. CI checks the bump and changelog before
 merge and creates a `v<version>` Git tag after CI passes on `main`.
 
+The application version is visible in the home footer and the Rome map and content admin headers.
+
 `GET /api/version` returns the version and full commit SHA embedded in the build.
 The SHA comes from `VERCEL_GIT_COMMIT_SHA`, then `GITHUB_SHA`, then the local Git
 checkout; it is `null` when unavailable. This endpoint identifies the running
