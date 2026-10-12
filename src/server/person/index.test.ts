@@ -85,6 +85,20 @@ describe("People", () => {
   it("regenerates saved content while preserving identity, image, and source", async () => {
     const repository = createRepository("hercules");
     const original = repository.get("hercules")!;
+    expect(() =>
+      repository.replace(
+        {
+          ...original,
+          content: {
+            ...content,
+            curiosities: [{ text: "Invalid reference", sourceIds: ["missing-source"] }],
+          },
+        },
+        { ...repository.readSource(original), content: "Replacement source" },
+      ),
+    ).toThrow("Unknown Person Source");
+    expect(repository.get("hercules")).toEqual(original);
+    expect(repository.readSource(original).content).toBe("Stored source");
     repository.replace({ ...original, image: image(true) }, repository.readSource(original));
     const people = createPeople({
       repository,

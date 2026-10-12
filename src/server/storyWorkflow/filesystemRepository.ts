@@ -26,6 +26,9 @@ import {
 } from "@/server/wikiPipeline/io";
 import { sanitizePoiIdForFile } from "@/server/wikiPipeline/normalize";
 import type { Source } from "./types";
+import { personRepository } from "@/server/person/filesystemRepository";
+import { mainImageCandidatesArtifactSchema } from "@/server/wikiPipeline/types";
+import { parseStoryContent } from "./storyContent";
 
 const writeAtomically = (filePath: string, content: string) => {
   const temporaryFilePath = `${filePath}.tmp`;
@@ -117,6 +120,7 @@ export const createFilesystemStoryWorkflowRepository = (city: string): StoryWork
     console.info(`[wiki] Saved readable Wikipedia text for ${poiId} to ${outputFilePath}.`);
   },
   replaceMainImageCandidates: async (poiId, candidates, selectedCommonsFileName, checkpoint) => {
+    mainImageCandidatesArtifactSchema.parse({ candidates, selectedCommonsFileName });
     const outputFilePath = buildMainImageCandidateArtifactFilePath(city, poiId);
     writeAtomically(
       outputFilePath,
@@ -128,6 +132,12 @@ export const createFilesystemStoryWorkflowRepository = (city: string): StoryWork
     );
   },
   replaceStoryContent: async (poiId, storyContent, checkpoint, relatedPeopleCheckpoint) => {
+    parseStoryContent(storyContent, ["wikipedia"]);
+    for (const { personId } of storyContent.relatedPeople) {
+      if (personId && !personRepository.get(personId)) {
+        throw new Error(`Story ${poiId} references missing Person ${personId}.`);
+      }
+    }
     const outputFilePath = buildStoryContentFilePath(city, poiId);
     writeAtomically(outputFilePath, `${JSON.stringify(storyContent, null, 2)}\n`);
     replaceGenerationCheckpoint(city, poiId, "storyContent", checkpoint);
@@ -141,6 +151,10 @@ export const createFilesystemStoryWorkflowRepository = (city: string): StoryWork
     if (!artifact) {
       throw new Error(`Main Image Candidates for ${poiId} not found.`);
     }
+    mainImageCandidatesArtifactSchema.parse({
+      ...artifact,
+      selectedCommonsFileName: commonsFileName,
+    });
     writeAtomically(
       buildMainImageCandidateArtifactFilePath(city, poiId),
       `${JSON.stringify({ ...artifact, selectedCommonsFileName: commonsFileName }, null, 2)}\n`,

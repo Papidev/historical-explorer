@@ -122,6 +122,8 @@ POI IDs are stable and app-owned; external IDs such as `wikidataId` are optional
 
 Person records and Main Image Candidate artifacts are validated with Zod when read. Invalid files report their path and validation errors; empty candidate lists and missing image selections remain valid workflow states. Selected images must reference an available candidate, and Person IDs must match their directory names.
 
+Person records, Story Content, and Main Image Candidate artifacts are also validated before saving. Story saves check only their referenced Person records; unresolved references remain valid drafts. Validation failures preserve previous content and checkpoints. Unreferenced People and images awaiting Story Content are retained for reuse and retry.
+
 Wikipedia Sources use a text snapshot and metadata with ID `wikipedia`, title, and URL. Generation validates Source References; admin displays them when local Sources exist, while public responses omit them.
 
 ## Editorial workflow
