@@ -146,7 +146,12 @@ export const Sidebar = ({
             >
               <span className="font-medium">{poi.name}</span>
               <span className="mt-1 block text-xs text-zinc-500">
-                {poi.categories?.join(" · ") || "Uncategorized"}
+                {poi.categories
+                  ?.map(
+                    (id) => categoryDefinitions.find((category) => category.id === id)?.name ?? id,
+                  )
+                  .sort((a, b) => a.localeCompare(b, "en"))
+                  .join(" · ") || "Uncategorized"}
               </span>
             </button>
           </li>
