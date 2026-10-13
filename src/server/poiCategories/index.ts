@@ -99,6 +99,7 @@ export const createPoiCategoriesForCity = (
       if (!existsSync(catalogPath)) return;
       const catalog = JSON.parse(readFileSync(catalogPath, "utf-8")) as GeoJson;
       const rules = mappings();
+      const saved = getAll();
       save(
         Object.fromEntries(
           (catalog.features ?? []).map((feature) => {
@@ -115,16 +116,16 @@ export const createPoiCategoriesForCity = (
                   .replace(/^-+|-+$/g, "") || "unknown-poi"
               }.json`,
             );
+            if (!feature.wikidataId || !existsSync(typesPath))
+              return [String(feature.id), saved[String(feature.id)] ?? []];
             return [
               String(feature.id),
               derivePoiCategories(
-                feature.wikidataId && existsSync(typesPath)
-                  ? (
-                      JSON.parse(readFileSync(typesPath, "utf-8")) as {
-                        types: Array<{ id: string }>;
-                      }
-                    ).types
-                  : [],
+                (
+                  JSON.parse(readFileSync(typesPath, "utf-8")) as {
+                    types: Array<{ id: string }>;
+                  }
+                ).types,
                 rules,
                 String(feature.properties?.name ?? ""),
                 readPoiCategoryCatalog(dataDirectory).categories,

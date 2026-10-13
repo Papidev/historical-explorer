@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.1.7
+
+### Patch Changes
+
+- Preserve saved POI categories during catalog regeneration when local Wikidata type files are unavailable.
+
 ## 0.1.6
 
 ### Patch Changes
