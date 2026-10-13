@@ -90,6 +90,9 @@ const CatalogProvider = () => {
 it("lets the Curator assign several categories, reload, ignore and clear a shared rule across cities", async () => {
   const user = userEvent.setup();
   const view = render(<CatalogProvider />);
+  expect(screen.getByRole("button", { name: /church building[\s\S]*Q16970/ })).toHaveTextContent(
+    "Church, Churches & cathedrals",
+  );
   await user.click(screen.getByRole("checkbox", { name: "Museum" }));
   await user.click(screen.getByRole("button", { name: "Save categories" }));
   await waitFor(() =>
