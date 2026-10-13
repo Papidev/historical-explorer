@@ -36,8 +36,8 @@ Read `docs/agents/domain.md` before domain exploration.
 
 - When creating a worktree, copy all local resources from the source checkout: environment files, every uncommitted file and directory under `data/` (including modified tracked files, untracked files, and ignored files), `.tailwind-plus/`, Catalyst references, and any other uncommitted local libraries or assets. Preserve directory structure and contents, keep ignored resources uncommitted, and verify that all resources are present before starting work.
 - After the task is complete and its PR is confirmed merged, stop the application and any task processes started from that worktree, including their child processes. Identify processes by their association with the worktree and leave applications running from other checkouts alone.
-- Before removing the worktree, back up only generated data that is not versioned in Git (untracked or ignored), preserving it in the main checkout or a recoverable backup and verifying the copy. If the destination contains different content, ask the user before overwriting it. Environment files, local libraries, build output, caches, and already versioned data do not require a separate backup. Managed worktree archives exclude ignored files, so preserve eligible generated data separately before archiving.
-- Once processes are stopped and any unversioned generated data is preserved, remove the entire task worktree and its registration; use the Codex archive tool for managed worktrees. A completed task with a merged PR must leave no running application or worktree directory behind.
+- Worktree cleanup does not require separate backups of local resources or generated data.
+- Once processes are stopped, remove the entire task worktree and its registration; use the Codex archive tool for managed worktrees. A completed task with a merged PR must leave no running application or worktree directory behind.
 
 ## Tooling & Commands
 
