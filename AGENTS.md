@@ -96,7 +96,7 @@ Update `AGENTS.md` only with important stuff that cannot be clearly/quickly deri
 
 ## Commits & PR Hygiene
 
-- Before opening any PR, inspect the checkout of its branch for modified tracked generated data and untracked generated data that is not ignored by Git. Always commit and include these files in the PR, and verify that none remains only local. Respect `.gitignore`: keep ignored files uncommitted and never force-add them. This applies equally to the main checkout and every worktree; keeping eligible generated data in Git replaces separate backups.
+- Before opening any PR, commit and include all uncommitted Stories, People, and POI metadata present in its branch checkout, including modified tracked files and untracked files that are not ignored by Git. Verify that none remains only local, so merging the branch preserves its content. Respect `.gitignore`; never force-add ignored files. Apply this rule in every checkout, including worktrees, without separate backups.
 - Before opening application PRs, follow [Application versions](README.md#application-versions): prepare an English Changeset, consume it into exactly one version increment and changelog entry relative to current `main`, and regenerate after alignment if another release merged. Internal documentation and the CI/release automation files allowed by `scripts/check-release.mjs` are exempt; dependency manifests and lockfiles still require a release.
 
 - Track bugs, improvements, and future ideas in GitHub Issues and the repository's Cultural Atlas Project. Search existing issues before creating one; retain unresolved decisions and revisit conditions in the issue body. Markdown documents explain product and architecture decisions.

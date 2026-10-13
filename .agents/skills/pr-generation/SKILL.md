@@ -22,13 +22,12 @@ advanced again, align the branch and rerun the affected checks first.
 
 Before preparing the release or opening any PR, follow the generated-data rule in
 [Commits & PR Hygiene](../../../AGENTS.md#commits--pr-hygiene). Inspect the checkout
-of the PR branch for modified tracked generated data and untracked generated
-data that is not ignored by Git. Use `git ls-files --others --exclude-standard`
-to list eligible untracked files. Stage and commit the eligible generated data
-with ordinary `git add`; respect `.gitignore` and never force-add ignored files.
-Check the committed diff and remaining local files to verify that all eligible
-generated data is included in the PR. Apply this check in both the main checkout
-and worktrees.
+of the PR branch for uncommitted Stories, People, and POI metadata, including
+modified tracked files and untracked files. Use
+`git ls-files --others --exclude-standard` to list untracked files that are not
+ignored. Commit all this content with ordinary `git add`, respecting `.gitignore`
+and never force-adding ignored files. Verify that none remains only local before
+opening the PR, whether working in the main checkout or a worktree.
 
 ## Application Version
 
