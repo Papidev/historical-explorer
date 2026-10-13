@@ -1,0 +1,53 @@
+{
+  "id": "francesco-rutelli",
+  "name": "Francesco Rutelli",
+  "wikidataId": "Q535345",
+  "wikipediaTitle": "Francesco Rutelli",
+  "content": {
+    "description": [
+      {
+        "text": "Francesco Rutelli began his political career in the mid‑1970s with the Radical Party, becoming its national secretary in 1980 and serving as a deputy from 1983 to 1990. He later founded the Rainbow Greens, which merged into the Federation of the Greens, and briefly held the post of Minister of the Environment in the Ciampi government before resigning after a single day in protest over the handling of the Mani Pulite investigation.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Rutelli’s most prominent role was as Mayor of Rome from 1993 to 2001, during which he oversaw extensive urban renewal projects such as the restoration of the Forum, the expansion of the metro system, and the creation of the Auditorium Parco della Musica. After leaving the mayoralty, he remained active in national politics, serving as Minister for Cultural Heritage and later as a senator until 2013, before turning his focus to cultural and environmental initiatives and leading the National Association of Film and Audiovisual Industries (ANICA).",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "During his early political career, Rutelli was nicknamed “Cicciobello” by former Senate President Francesco Cossiga, a moniker that reflected both his charismatic appearance and his energetic activism.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1981, Rutelli was arrested for participating in a non‑violent protest against the operation of the Latina nuclear power plant, spending three days in custody before being fully acquitted.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Rutelli_Termoli-27_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Rutelli_Termoli-27_(cropped).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/34/Rutelli_Termoli-27_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/34/Rutelli_Termoli-27_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 2.0",
+    "attribution": "Massimiliano Scarabeo",
+    "author": "Massimiliano Scarabeo",
+    "width": 524,
+    "height": 792,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Francesco Rutelli",
+    "url": "https://it.wikipedia.org/wiki/Francesco_Rutelli"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:16:01.008Z"
+  }
+}

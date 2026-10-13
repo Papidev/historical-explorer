@@ -1,0 +1,77 @@
+{
+  "id": "charles-albert-of-sardinia",
+  "name": "Charles Albert of Sardinia",
+  "wikidataId": "Q181261",
+  "wikipediaTitle": "Charles Albert of Sardinia",
+  "content": {
+    "description": [
+      {
+        "text": "Charles Albert of Sardinia was born on 2 October 1798 at the Palazzo Carignano in Turin into a junior branch of the House of Savoy.  During the Napoleonic occupation he was educated in France, attending the Collège Stanislas in Paris and later the military school in Bourges, where he earned the rank of lieutenant of dragoons.  His early years were marked by a liberal education and a brief flirtation with revolutionary ideas, but he soon adopted a more conservative stance, participating in the 1823 French expedition that suppressed the Spanish liberal revolt.  These experiences shaped a ruler who would later oscillate between liberal reforms and reactionary policies, reflecting the turbulent politics of early nineteenth‑century Europe.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ascending to the throne in 1831 after the death of Charles Felix, Charles Albert initially pursued conservative policies but, facing the wave of revolutions in 1848, granted the Statuto Albertino, Italy’s first constitution, and declared war on Austria in the First Italian War of Independence.  Despite early victories, the Piedmontese army suffered a decisive defeat at Novara in 1849, prompting the king to abdicate in favour of his son, Victor Emmanuel II.  He spent his final months in exile in Porto, Portugal, where he died on 28 July 1849.  His reign left a complex legacy, remembered both for his constitutional gesture and for the costly military campaigns that ultimately paved the way for Italian unification.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was nicknamed “the Italian Hamlet” by Giosuè Carducci for his gloomy and hesitant character, and also called “the Hesitant King” for his prolonged indecision between constitutionalism and absolutism.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Charles Albert was the first monarch in Italy to grant a constitution, the Statuto Albertino, which remained in force until 1947.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He abdicated after the defeat at the Battle of Novara and died in exile in Porto, Portugal, where his body was later interred in the Basilica of Superga in Turin.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the 1823 French expedition to Spain, he was awarded the Legion of Honour for his participation in the assault on the Trocadero fortress.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a prolific writer, publishing works such as “Notes on the Waldensians” and “Voyage to Sardinia,” which he later ordered withdrawn from circulation.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1798,
+      "month": 10,
+      "day": 2,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1849,
+      "month": 7,
+      "day": 28,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Carlo_Alberto_by_Cavalleri.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Carlo_Alberto_by_Cavalleri.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Carlo_Alberto_by_Cavalleri.jpg/960px-Carlo_Alberto_by_Cavalleri.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/08/Carlo_Alberto_by_Cavalleri.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Ferdinando Cavalleri",
+    "author": "Ferdinando Cavalleri",
+    "width": 1360,
+    "height": 2048,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Charles Albert of Sardinia",
+    "url": "https://en.wikipedia.org/wiki/Charles_Albert_of_Sardinia"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T22:52:17.071Z"
+  }
+}

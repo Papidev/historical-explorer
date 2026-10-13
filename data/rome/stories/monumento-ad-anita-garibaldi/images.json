@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "AnitaGaribaldi.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:AnitaGaribaldi.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/AnitaGaribaldi.JPG/960px-AnitaGaribaldi.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/AnitaGaribaldi.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Notafly",
+      "author": "Notafly",
+      "width": 2304,
+      "height": 3072,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "AGarib.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:AGarib.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/AGarib.jpg/960px-AGarib.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/AGarib.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Notafly",
+      "author": "Notafly",
+      "width": 1188,
+      "height": 1758,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Tomba_di_Anita_Garibaldi.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Tomba_di_Anita_Garibaldi.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Tomba_di_Anita_Garibaldi.JPG/960px-Tomba_di_Anita_Garibaldi.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Tomba_di_Anita_Garibaldi.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Marten253",
+      "author": "Marten253",
+      "width": 2448,
+      "height": 3264,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "AnitaGaribaldi.JPG"
+}

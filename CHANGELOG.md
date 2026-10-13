@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.1.8
+
+### Patch Changes
+
+- Add generated Rome stories, selected images, and people, and update the POI catalog and category mappings.
+
 ## 0.1.7
 
 ### Patch Changes

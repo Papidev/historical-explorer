@@ -1,0 +1,65 @@
+{
+  "id": "giuseppe-biancheri",
+  "name": "Giuseppe Biancheri",
+  "wikidataId": "Q3770120",
+  "wikipediaTitle": "Giuseppe Biancheri",
+  "content": {
+    "description": [
+      {
+        "text": "Giuseppe Biancheri was an Italian statesman who served as President of the Chamber of Deputies for an unprecedented eighteen years, from 1870 to 1907, making him the longest‑serving presiding officer in the history of unified Italy. His tenure spanned six separate terms, during which he upheld parliamentary prerogatives and maintained the stability of the legislative body through periods of political turbulence, including the rise of the liberal and radical movements.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Born in 1821 in Ventimiglia, Biancheri studied law at the University of Turin and entered politics as a deputy for Sanremo in 1853. He was a member of the right‑wing historical faction, opposed Cavour’s policies, and opposed the Crimean War, yet he supported the cession of Nice to France with minor border adjustments. He also championed infrastructure projects, notably proposing a railway line through the Val Roia that would connect Ventimiglia to Breil‑sur‑Roya, and later served as Minister of the Navy in 1867.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Biancheri’s 18‑year presidency of the Chamber of Deputies remains the longest continuous term held by any Italian parliamentary speaker.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was instrumental in the planning of the railway that now constitutes part of the Tenda line, linking Ventimiglia to Breil‑sur‑Roya through the Val Roia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his death in 1908, several public places were named in his honor, including a middle school in Ventimiglia, a street in Genoa’s Sestri Ponente district, and the main square of Breil‑sur‑Roya.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1821,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1908,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Giuseppe_Biancheri_iii.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Giuseppe_Biancheri_iii.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Giuseppe_Biancheri_iii.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Giuseppe_Biancheri_iii.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 736,
+    "height": 981,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giuseppe Biancheri",
+    "url": "https://it.wikipedia.org/wiki/Giuseppe_Biancheri"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:18:12.169Z"
+  }
+}

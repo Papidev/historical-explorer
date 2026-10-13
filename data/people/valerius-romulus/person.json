@@ -1,0 +1,61 @@
+{
+  "id": "valerius-romulus",
+  "name": "Valerius Romulus",
+  "wikidataId": "Q443147",
+  "wikipediaTitle": "Valerius Romulus",
+  "content": {
+    "description": [
+      {
+        "text": "Marcus Aurelius Valerius Romulus was the son of Emperor Maxentius and Valeria Maximilla, daughter of Emperor Galerius. He held the title clarissimus puer in his youth and later nobilissimus vir, and served as consul alongside his father in 308 and 309.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his death in 309, Valerius was buried in a tomb along the Via Appia. He was posthumously elevated to Divus, and his father Maxentius dedicated the Temple of Divus Romulus to him near the Roman Forum. A series of commemorative coins were issued in his name, depicting a domed shrine with one door ajar and an eagle on top.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Valerius Romulus was buried in a tomb along the Via Appia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Maxentius dedicated the Temple of Divus Romulus to his son near the Roman Forum.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Commemorative coins issued in his name showed a domed shrine with one door ajar and an eagle on top.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 309,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Valerius_Romulus.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Valerius_Romulus.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/28/Valerius_Romulus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/28/Valerius_Romulus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "http://www.wildwinds.com/coins/ric/romulus/i.html (differents coins of this model but not the exact file)",
+    "author": "http://www.wildwinds.com/coins/ric/romulus/i.html (differents coins of this model but not the exact file)",
+    "width": 400,
+    "height": 176,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Valerius Romulus",
+    "url": "https://en.wikipedia.org/wiki/Valerius_Romulus"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T17:26:08.827Z"
+  }
+}

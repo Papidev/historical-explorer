@@ -1,0 +1,65 @@
+{
+  "id": "faustina-minore",
+  "name": "Faustina minore",
+  "wikidataId": "Q236936",
+  "wikipediaTitle": "Faustina minore",
+  "content": {
+    "description": [
+      {
+        "text": "Faustina minore was betrothed to her cousin, the future emperor Marco Aurelio, in 139 and married him in 145.  In 147 she was elevated to the rank of Augusta, a title that reflected her prominence within the imperial family.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She accompanied Marco Aurelio on his northern campaigns (170‑174) and on the eastern expedition that followed the usurpation of Avidio Cassio.  Faustina died during a stop at Halala in southern Cappadocia in the summer of 175, after which her husband deified her, built a temple in Rome in her honor, and founded a charitable fund for girls called the second Puellae Faustinae.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Faustina’s portraits and coins depict her with a simple hairstyle divided into two soft bands tied in a low knot, though some versions show a more elaborate braid reminiscent of her mother, Faustina maior.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Historia Augusta records that Faustina entertained sailors and gladiators at her luxurious villa in Gaeta, and that she allegedly had a relationship with a gladiator who may have fathered her son Commodo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After her death, the emperor founded the colony of Faustinopolis at the site of her passing, and the Baths of Faustina in Miletus were dedicated to her memory.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Faustina and Marco Aurelio had at least fourteen children, including two sets of twins, but only six survived to adulthood.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 175,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Faustine_la_Jeune_02.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Faustine_la_Jeune_02.JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Faustine_la_Jeune_02.JPG/960px-Faustine_la_Jeune_02.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Faustine_la_Jeune_02.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Clio20 (2006-02-18)",
+    "author": "Clio20 (2006-02-18)",
+    "width": 1536,
+    "height": 2048,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Faustina minore",
+    "url": "https://it.wikipedia.org/wiki/Faustina_minore"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T22:43:14.065Z"
+  }
+}

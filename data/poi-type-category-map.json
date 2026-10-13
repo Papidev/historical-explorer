@@ -100,7 +100,14 @@
     "Q1785071": ["Fort"],
     "Q179049": [],
     "Q473972": [],
-    "Q121076356": ["Museum"]
+    "Q121076356": ["Museum"],
+    "Q27916659": ["Mausoleum"],
+    "Q1107656": ["Garden"],
+    "Q22698": ["Park"],
+    "Q1151014": ["Temple"],
+    "Q5003624": ["Monument"],
+    "Q4989906": ["Monument"],
+    "Q173387": ["Grave"]
   },
   "origins": {
     "Q3748441": "automatic",
@@ -180,7 +187,14 @@
     "Q1785071": "automatic",
     "Q179049": "automatic",
     "Q473972": "automatic",
-    "Q121076356": "automatic"
+    "Q121076356": "automatic",
+    "Q27916659": "automatic",
+    "Q1107656": "automatic",
+    "Q22698": "automatic",
+    "Q1151014": "automatic",
+    "Q5003624": "automatic",
+    "Q4989906": "automatic",
+    "Q173387": "automatic"
   },
   "reasons": {
     "Q3748441": "\"forum venalium\" is a Roman marketplace, which is a type of public square.",
@@ -246,6 +260,13 @@
     "Q1785071": "The type \"fort\" is not represented by any existing category in the supplied list, so a new top‑level category \"Fort\" is created to capture this cultural visitor type.",
     "Q179049": "Type 'nature reserve' is a broad natural heritage classification not relevant to a cultural visitor map.",
     "Q473972": "Type 'protected area' is a broad natural heritage classification not relevant to a cultural visitor map.",
-    "Q121076356": "The type \"Istituto museale ad autonomia speciale\" denotes a museum institute; the affected place Galleria Borghese is a museum, so it fits the existing Museum category."
+    "Q121076356": "The type \"Istituto museale ad autonomia speciale\" denotes a museum institute; the affected place Galleria Borghese is a museum, so it fits the existing Museum category.",
+    "Q27916659": "The affected place 'Mausoleo di Sant'Urbano martire' is a mausoleum, so the type 'former place' maps to the existing category 'Mausoleum'.",
+    "Q1107656": "No existing category matches 'garden'; created new top-level category.",
+    "Q22698": "No existing category matches 'park'; created new top-level category.",
+    "Q1151014": "A mithraeum is a temple dedicated to the mystery cult of Mithras, so it fits the existing Temple category.",
+    "Q5003624": "The type \"memorial\" corresponds to the existing category \"Monument\".",
+    "Q4989906": "The type 'monument' directly corresponds to the existing category 'Monument'.",
+    "Q173387": "The type 'grave' refers to a burial site, which is not represented by existing categories; a new category 'Grave' is created."
   }
 }

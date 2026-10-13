@@ -1,0 +1,81 @@
+{
+  "introduction": {
+    "text": "Il Mitreo delle Sette Porte (IV,V,13) è un sito di culto del mitraismo situato nella regione IV di Ostia. È importante perché conserva elementi architettonici, mosaici e pitture che illustrano le pratiche religiose e l’arte del primo secolo d.C. in una delle principali città romane.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Il mitreo risale al primo secolo d.C. e si trovava in una delle stanze di un magazzino (horrea) nella regione IV di Ostia.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "Il santuario è accessibile tramite una porta larga due metri con soglia in travertino. All’interno sono presenti podi in mattoni, mosaico pavimentale, altari rettangolari in marmo e una grande nicchia quadrata ad arco dipinta di blu con macchie rosse.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Il mosaico pavimentale raffigura un ampio cancello centrale con sei porte minori, simbolo delle sette sfere planetarie. Altri motivi includono Marte, Luna, Venere, Mercurio e una donna nuda con una falce di luna.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Adriano",
+      "personId": "hadrian",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Antonino Pio",
+      "personId": "antonino-pio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Marco Aurelio",
+      "personId": "marcus-aurelius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Faustina minore",
+      "personId": "faustina-minore",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Cerere",
+      "personId": "cerere",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Marte (divinità)",
+      "personId": "marte-divinit",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Venere (divinità)",
+      "personId": "venus-mythology",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Mercurio (divinità)",
+      "personId": "mercury-mythology",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Luna (divinità)",
+      "personId": "luna-divinit",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

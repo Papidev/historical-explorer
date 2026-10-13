@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Monument_to_the_Bersagliere_(Rome).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Monument_to_the_Bersagliere_(Rome).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Monument_to_the_Bersagliere_%28Rome%29.jpg/960px-Monument_to_the_Bersagliere_%28Rome%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Monument_to_the_Bersagliere_%28Rome%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Monticiano",
+      "author": "Monticiano",
+      "width": 4666,
+      "height": 7064,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "2010-09-19_Roma_Monumento_bersagliere_con_basamento.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:2010-09-19_Roma_Monumento_bersagliere_con_basamento.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/2010-09-19_Roma_Monumento_bersagliere_con_basamento.jpg/960px-2010-09-19_Roma_Monumento_bersagliere_con_basamento.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/2010-09-19_Roma_Monumento_bersagliere_con_basamento.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0 it",
+      "attribution": "Sergio D’Afflitto",
+      "author": "Blackcat",
+      "width": 2134,
+      "height": 2848,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "2010-09-19_Roma_Monumento_bersagliere.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:2010-09-19_Roma_Monumento_bersagliere.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/2010-09-19_Roma_Monumento_bersagliere.jpg/960px-2010-09-19_Roma_Monumento_bersagliere.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/2010-09-19_Roma_Monumento_bersagliere.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Blackcat",
+      "author": "Blackcat",
+      "width": 2848,
+      "height": 2134,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Monument_to_the_Bersagliere_(Rome).jpg"
+}

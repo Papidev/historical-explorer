@@ -1,0 +1,111 @@
+{
+  "introduction": {
+    "text": "The Mausoleo di Sant'Urbano martire is a Roman mausoleum located at the IV mile of the Appian Way in Rome, notable for its early Christian burial practices and subsequent transformations through history.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Construction of the mausoleum during the Antonine period, in the 2nd century AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 101,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Demolition of the original staircase during Diocleziano's persecution (late 3rd to early 4th century) and subsequent reconstruction with a more majestic facade and a tetrastilo portico.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 284,
+          "precision": "approximate",
+          "endYear": 305,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "The mausoleum served as a Christian cemetery until the Gothic invasions in the 5th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 401,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Transformation of the mausoleum into a fortified tower (torrione dei Borgiani) in the 13th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1201,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "Excavations conducted by the Lugari in the late 19th century, revealing the Domus Marmeniae and other archaeological features.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1801,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Use of the mausoleum as a Christian burial site after the death of Marmenia, with remains of Sant'Urbano transferred from the Catacombs of Pretestato.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The mausoleum consists of an underground hypogeum and an upper hall for worship.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The original entrance was via a staircase inside the vestibule, which was demolished during Diocleziano's persecution and later rebuilt with a more majestic facade and a tetrastilo portico.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "The hypogeum features a vestibule and a large square chamber with three apses: a central semicircular apse and two rectangular side apses.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design4",
+        "description": "In the 13th century, the mausoleum was converted into a fortified tower known as the 'torrione dei Borgiani'.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design5",
+        "description": "A large Roman cistern and basin were found near the monument.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Rodolfo Lanciani",
+      "personId": "rodolfo-lanciani",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Papa Urbano I",
+      "personId": "pope-urban-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Diocleziano",
+      "personId": "diocletian",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

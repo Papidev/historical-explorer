@@ -1,0 +1,44 @@
+{
+  "id": "edoardo-negri-de-salvi",
+  "name": "Edoardo Negri de Salvi",
+  "wikidataId": "Q3719834",
+  "wikipediaTitle": "Edoardo Negri de Salvi",
+  "content": {
+    "description": [
+      {
+        "text": "Born in 1866 into an aristocratic family, Edoardo Negri de Salvi joined the volunteer corps of Giuseppe Garibaldi during the Third Italian War of Independence. He saw action at Gargnano on 2 July and fought in the Battle of Pieve di Ledro on 18 July, earning the baptism of fire for his bravery.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the war he entered the Royal Italian Army, rising to the rank of lieutenant colonel in the territorial alpine militia. He was elected to the Italian Chamber of Deputies in 1900 and served four consecutive legislatures, while also acting as a municipal and provincial councilor in Vicenza. From 1914 to 1918 he presided over the Federazione Italiana Scherma, guiding Italian fencing through the First World War.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Negri de Salvi served as president of the Italian Fencing Federation during the First World War, a period when the sport was used to promote physical fitness and national morale.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He participated in the Battle of Pieve di Ledro, a significant engagement in the Trentino region against Austrian forces.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1866,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Edoardo Negri de Salvi",
+    "url": "https://it.wikipedia.org/wiki/Edoardo_Negri_de_Salvi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T17:37:19.498Z"
+  }
+}

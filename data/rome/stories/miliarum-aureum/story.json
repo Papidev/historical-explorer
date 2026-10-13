@@ -1,0 +1,61 @@
+{
+  "introduction": {
+    "text": "The Milliarium Aureum, or Golden Milestone, was a marble or gilded bronze monument erected by Emperor Augustus near the Temple of Saturn in the Roman Forum. It served as the symbolic zero point for all Roman roads, making it a key reference for distance measurement across the empire.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Augustus erected the monument in 20 BCE as curator viarum, establishing it as the starting point of the Roman road system.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -20,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The monument was a marble column coated in gilded bronze, with a probable height of 3.7 m and a diameter of 1.15 m for the column alone, or up to 3 m including the base.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Marble fragments bearing an anthemion frieze decoration have been identified as part of the monument’s base, indicating decorative elements typical of Roman milestones.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Augustus",
+      "personId": "augustus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Cassius Dio",
+      "personId": "cassius-dio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pliny the Elder",
+      "personId": "pliny-the-elder",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Philip Schaff",
+      "personId": "philip-schaff",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Christian Hülsen",
+      "personId": "christian-h-lsen",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "introduction": {
+    "text": "The Mausoleo di Lucilio Peto is a Roman burial monument located on the border of the Pincian Hill, notable for its late 1st‑century construction and its layered history of use and restoration.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Original construction during the middle to late Augustan age, likely in the late 1st century AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Second construction phase during the Trajanic age, adding a series of small hypogeal tombs.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 101,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Third phase in the 4th century AD, involving reuse of internal spaces and excavation of an ambulatory.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 301,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Fourth phase in the 16th century, when the marble façade was spoliated and the burial chamber was violated.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1501,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "Discovery of the mausoleum in 1887 during construction of a retaining wall.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1887,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "Construction of access ramps in 1925.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1925,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "Evidence of occupation during the Second World War, with a tunnel appearing after 1940.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1940,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history8",
+        "description": "Restoration and reopening to the public in August 2010.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2010,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The mausoleum is a flat cylindrical tumulus with a 34‑metre diameter tambour built in opus quadratum and opus caementicium, covered in travertine, and featuring a dromos with a barrel vault leading to a cross‑shaped burial chamber.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "An eastern arch bears a marble epigraph with a kyma lesbio, commemorating M. Lucilius Paetus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Rodolfo Lanciani",
+      "personId": "rodolfo-lanciani",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Apollodoro di Damasco",
+      "personId": "apollodoro-di-damasco",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Traiano",
+      "personId": "trajan",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Augusto",
+      "personId": "augustus",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

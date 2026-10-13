@@ -1,0 +1,72 @@
+{
+  "id": "valentinian-iii",
+  "name": "Valentinian III",
+  "wikidataId": "Q170026",
+  "wikipediaTitle": "Valentinian III",
+  "content": {
+    "description": [
+      {
+        "text": "Valentinian III was born on 2 July 419 in Ravenna and became the youngest sole emperor of the Western Roman Empire at the age of six, a status that placed him under the heavy influence of his mother, Galla Placidia, and the powerful general Flavius Aetius.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his thirty‑year reign, Valentinian presided over a period of relentless civil strife and barbarian incursions, culminating in the loss of North Africa, Spain, and most of Gaul. His attempts to stabilize the empire were undermined by the assassination of Aetius in 454 and his own murder by Aetius’s former bodyguards in 455.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the youngest sole emperor in the Western Roman Empire, ascending to the throne at just six years old.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Valentinian was assassinated on 16 March 455 by two Scythian followers of the former general Aetius, who had been ordered to kill him by Petronius Maximus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He married Licinia Eudoxia, the daughter of Eastern Emperor Theodosius II, in 437, strengthening ties between the Western and Eastern dynasties.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 451, Valentinian sent Pope Leo I and two senators to negotiate with Attila the Hun, a mission that helped persuade the Huns to withdraw from Italy.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 419,
+      "month": 7,
+      "day": 2,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 455,
+      "month": 3,
+      "day": 16,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Solidus_ValentinianIII-wedding.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Solidus_ValentinianIII-wedding.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Solidus_ValentinianIII-wedding.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Solidus_ValentinianIII-wedding.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Classical Numismatic Group, Inc. http://www.cngcoins.com",
+    "width": 425,
+    "height": 212,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Valentinian III",
+    "url": "https://en.wikipedia.org/wiki/Valentinian_III"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T17:18:18.262Z"
+  }
+}

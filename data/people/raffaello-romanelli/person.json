@@ -1,0 +1,69 @@
+{
+  "id": "raffaello-romanelli",
+  "name": "Raffaello Romanelli",
+  "wikidataId": "Q1283938",
+  "wikipediaTitle": "Raffaello Romanelli",
+  "content": {
+    "description": [
+      {
+        "text": "Raffaello Romanelli was born in Florence on 13 May 1856 into a family of sculptors. From a young age he assisted his father Pasquale in the family studio, where he learned marble carving and later studied at the Florence Academy under Augusto Rivalta and Emilio Zocchi. His talent was recognised early when, at twenty, he won the Academy's Annual Prize for Sculpture with a bas‑relief of Jacob and Rachel at the Well, and later a national competition for his depiction of the possessed man at Christ's feet. These successes earned him a scholarship to the Rome Academy of Arts and established him as a promising portraitist and monument sculptor.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Romanelli's career expanded across Europe and the Americas, producing monuments to figures such as Giuseppe Garibaldi, Donatello, King Carlo Alberto, and Tsar Alexander II, as well as portrait busts of popes, kings, and artists. He worked from two former churches in Florence’s Oltrarno district, and his realistic style combined marble and bronze techniques. His most celebrated commissions include the equestrian statue of Garibaldi in Siena, the bronze bust of Benvenuto Cellini on the Ponte Vecchio, and the portrait bust of Pope Benedict XV, the first pope to pose for a sculpture. He continued to produce works until his death in 1928, leaving a legacy of over 2,300 pieces.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Romanelli's two studios in the Oltrarno district were former churches that were deconsecrated and converted into sculpture workshops, providing ample high‑ceiling space for his large commissions.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was the first pope to pose for a portrait, with Pope Benedict XV sitting and standing for Romanelli in 1915, a unique event in papal history.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Romanelli sculpted a monument to Tsar Alexander II in 1915, which became one of the largest monuments in Europe.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1856,
+      "month": 5,
+      "day": 13,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1928,
+      "month": 4,
+      "day": 3,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Raffaello_Romanelli.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Raffaello_Romanelli.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Raffaello_Romanelli.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Raffaello_Romanelli.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Mario Nunes Vais",
+    "author": "Mario Nunes Vais",
+    "width": 523,
+    "height": 712,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Raffaello Romanelli",
+    "url": "https://en.wikipedia.org/wiki/Raffaello_Romanelli"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T22:53:28.604Z"
+  }
+}

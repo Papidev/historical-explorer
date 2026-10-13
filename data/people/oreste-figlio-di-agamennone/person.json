@@ -1,0 +1,57 @@
+{
+  "id": "oreste-figlio-di-agamennone",
+  "name": "Oreste",
+  "wikidataId": "Q192407",
+  "wikipediaTitle": "Oreste (figlio di Agamennone)",
+  "content": {
+    "description": [
+      {
+        "text": "Oreste, son of Agamemnon and Clytemnestra, was a central figure in Greek mythology. He was the brother of Electra, Iphigenia, and Chrysothemis, and later became king of Argos, Mycenae, and Sparta. His reign is noted for the violent acts he committed in pursuit of justice for his father's murder, including the killing of his mother and his uncle.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After murdering Clytemnestra and Agamemnon's murderer, Egisto, Oreste was pursued by the Furies and brought before the Areopagus, where he was acquitted. He then undertook a perilous journey to Tauris, where he stole the wooden statue of Artemis, an act that helped him escape the Furies. The myth ends with his death by a snake bite in Arcadia, and his burial at Tegea.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Oreste was king of three major Greek city-states: Argos, Mycenae, and Sparta.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was tried at the Areopagus in Athens and was acquitted, a rare outcome for a murderer in Greek myth.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He stole the wooden statue of Artemis from Tauris, which later became known as the Tauropolos.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Orestes_Apollo_Louvre_Cp710.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Orestes_Apollo_Louvre_Cp710.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Orestes_Apollo_Louvre_Cp710.jpg/960px-Orestes_Apollo_Louvre_Cp710.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Orestes_Apollo_Louvre_Cp710.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Eumenides Painter",
+    "author": "Eumenides Painter",
+    "width": 2151,
+    "height": 1956,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Oreste (figlio di Agamennone)",
+    "url": "https://it.wikipedia.org/wiki/Oreste_(figlio_di_Agamennone)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:11:00.528Z"
+  }
+}

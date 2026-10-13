@@ -1,0 +1,73 @@
+{
+  "id": "christian-h-lsen",
+  "name": "Christian Hülsen",
+  "wikidataId": "Q69896",
+  "wikipediaTitle": "Christian Hülsen",
+  "content": {
+    "description": [
+      {
+        "text": "Christian Karl Friedrich Hülsen was born in Charlottenburg on 29 November 1858 and grew up in Berlin, where he studied classical philology, ancient history and archaeology under prominent scholars such as Ernst Curtius, Johann Gustav Droysen, Emil Hübner, Johannes Vahlen and Theodor Mommsen.  His dissertation on Ovid, supervised by Mommsen and Hübner, earned him a stipend from the Deutsches Archäologisches Institut (DAI) to travel to Rome, where he assisted in compiling the Corpus Inscriptionum Latinarum for the city of Rome and later published the influential Das Forum Romanum in 1904.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After a distinguished career as a topographical scholar—most notably his 1907 volume three of Topographie der Stadt Rom im Alterthum—Hülsen was twice denied the appointment of first secretary at the DAI.  Disillusioned, he left the institute and settled in Florence, where he redirected his research to medieval and Renaissance art, producing studies on the historic drawings of Rome by Maarten van Heemskerck, Giuliano da Sangallo and Giovanni Antonio Dosio, and publishing Le Chiese di Roma nel Medio Evo in 1927.  He also taught for five years at the University of Heidelberg, received honorary degrees from Oxford, Erlangen and New York, and remained in Florence until his death on 19 January 1935.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Hülsen’s work on the Roman Forum was widely translated and remains a foundational reference for scholars of Roman topography.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Despite his significant contributions, Hülsen was twice denied the position of first secretary at the DAI, a fact that prompted his move to Florence.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as a professor at the University of Heidelberg for five years before returning permanently to Florence.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Hülsen received honorary degrees from three prestigious institutions—Oxford, Erlangen, and New York—recognizing his impact across multiple fields of art history.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1858,
+      "month": 11,
+      "day": 29,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1935,
+      "month": 1,
+      "day": 19,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Christian_Hülsen.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Christian_H%C3%BClsen.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Christian_H%C3%BClsen.jpg/960px-Christian_H%C3%BClsen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Christian_H%C3%BClsen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 1068,
+    "height": 1568,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Christian Hülsen",
+    "url": "https://en.wikipedia.org/wiki/Christian_H%C3%BClsen"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T17:48:20.952Z"
+  }
+}

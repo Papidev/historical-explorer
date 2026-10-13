@@ -1,0 +1,65 @@
+{
+  "id": "filippo-coarelli",
+  "name": "Filippo Coarelli",
+  "wikidataId": "Q1357503",
+  "wikipediaTitle": "Filippo Coarelli",
+  "content": {
+    "description": [
+      {
+        "text": "Filippo Coarelli began his academic journey studying law before turning to archaeology. While still a student, he took part in excavations at the walls of Alatri, Monteleone Sabino, and even at Begram in Afghanistan. He earned his archaeology degree in 1961 from the University of Rome under the guidance of Ranuccio Bianchi Bandinelli, and soon after became Bandinelli’s assistant. Coarelli’s research has focused on the ancient topography of Rome and Italy, combining classical literary sources with archaeological evidence and applying methods from cultural anthropology to reconstruct the past.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Since 1967 he has edited the journal *Dialoghi di Archeologia*, founded by Bandinelli. From 1978 he directed the excavations of the Latin colony Fregellae, and in 2003 he became scientific director of the digs at the Sanctuary of Diana in Nemi, later taking the same role at Villa San Silvestro in Cascia in 2006. He taught Roman history and classical antiquities at the University of Perugia from 1980 to 2008, produced a 1983 Rai television series on ancient Italy, and was awarded the Gold Medal for Culture and Art by President Carlo Azeglio Ciampi in 2003. Coarelli is a member of several prestigious academies, including the British Academy, and is currently professor emeritus at the University of Perugia.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Coarelli participated in archaeological work at Begram in Afghanistan, a site far removed from his Italian homeland.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Between 1968 and 1973 he served as the archaeological inspector for the municipality of Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He has been the scientific director of the excavations at the Sanctuary of Diana in Nemi since 2003.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 2003 he received the Gold Medal for Culture and Art from the President of the Italian Republic.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Coarelli is a member of the British Academy, one of the world’s leading scholarly societies.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Coarelli_-_Forum_Roma_(2018).png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Coarelli_-_Forum_Roma_(2018).png",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Coarelli_-_Forum_Roma_%282018%29.png/960px-Coarelli_-_Forum_Roma_%282018%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/58/Coarelli_-_Forum_Roma_%282018%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Hindukusc",
+    "author": "Hindukusc",
+    "width": 1260,
+    "height": 575,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Filippo Coarelli",
+    "url": "https://it.wikipedia.org/wiki/Filippo_Coarelli"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T17:52:16.526Z"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "carlo-armellini",
+  "name": "Carlo Armellini",
+  "wikidataId": "Q1041849",
+  "wikipediaTitle": "Carlo Armellini",
+  "content": {
+    "description": [
+      {
+        "text": "Carlo Armellini was born in Rome in 1777 to a well‑to‑be Roman family that had long been loyal to the Holy See.  He married the painter Faustina Bracci after the death of his first wife, and the couple had two sons, Augusto and Vincenza.  Armellini’s legal career flourished when he was appointed procurator in the Marche, a post that opened doors to the Roman aristocracy.  He later won a landmark court case that made him the Prince of the Forum, cementing his status as a prominent lawyer and public figure.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In the turbulent years of the 1840s, Armellini became a key player in the liberal movement that sought to modernise the Papal States.  He served as Minister of the Interior in December 1848 and, in March 1849, joined Giuseppe Mazzini and Aurelio Saffi in the triumvirate that governed the short‑lived Roman Republic.  After the Republic’s collapse at the hands of the French, he was forced into exile in Belgium, where he died in 1863.  His legacy continued through his children, who went on to hold civic offices in Rome.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Armellini was a collaborator on the political weekly *Il contemporaneo*, which promoted progressive ideas in the Papal States.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as Minister of the Interior of the Papal States from 23 December 1848 until the fall of the Roman Republic.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In March 1849 he became a member of the triumvirate that governed the Roman Republic alongside Giuseppe Mazzini and Aurelio Saffi.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Armellini’s legal victory in a three‑year case over the inheritance of the late Marquis Lovatelli earned him the title Prince of the Forum, a prestigious honor in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He died in exile in Saint‑Josse‑ten‑Noode, Belgium, in 1863, after a long period of political persecution.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1777,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1863,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Carloarmellini.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Carloarmellini.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/39/Carloarmellini.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/39/Carloarmellini.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 596,
+    "height": 800,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Carlo Armellini",
+    "url": "https://it.wikipedia.org/wiki/Carlo_Armellini"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T17:35:26.909Z"
+  }
+}

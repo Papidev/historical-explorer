@@ -1,0 +1,61 @@
+{
+  "id": "giuseppe-guastalla",
+  "name": "Giuseppe Guastalla",
+  "wikidataId": "Q3770736",
+  "wikipediaTitle": "Giuseppe Guastalla",
+  "content": {
+    "description": [
+      {
+        "text": "Giuseppe Guastalla was an Italian sculptor who studied under the renowned artist Ettore Ferrari. He gained recognition for his bronze works, most notably the Guerriero Sannita, a bronze figure of a Samnite warrior that was inaugurated on 2 October 1922 and displayed at the Museo delle Terme di Diocleziano in Rome. Another significant commission was the Monumento ai Caduti, a 7‑metre bronze monument in Pietrabbondante that commemorated the town’s World War I casualties and featured an inscription by the philologist Francesco D'Ovidio.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond his artistic achievements, Guastalla was deeply involved in Freemasonry. He was a member of the Grande Oriente d’Italia, served as Master Venerable of the Romagnosi lodge in Rome, and participated in the 1925 committee that managed the organization after the arrest of Grand Master Domizio Torrigiani. In 1944, on the eve of Rome’s liberation, he led the symbolic occupation of Palazzo Giustiniani, the historic seat of the Grande Oriente, and later held the title of Sovereign Grand Commander of the Supreme Council of Italy for the Ancient and Accepted Scottish Rite.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Guastalla’s Guerriero Sannita was originally exhibited at the Museo delle Terme di Diocleziano in Rome before a replica was placed in the center of Pietrabbondante.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Monumento ai Caduti’s bronze was partially funded by the Ministry of War, which provided the material both free of charge and at a discounted price.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the 1925 Freemason committee meeting, Guastalla worked alongside Giuseppe Meoni and Alberto Pavoni to coordinate the Grande Oriente d’Italia’s operations following the arrest of its Grand Master.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1945–1946, Guastalla served as Sovereign Grand Commander of the Supreme Council of Italy for the Ancient and Accepted Scottish Rite, a position he held until 1946.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Giuseppe_Guastalla.png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Giuseppe_Guastalla.png",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Giuseppe_Guastalla.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Giuseppe_Guastalla.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 410,
+    "height": 409,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giuseppe Guastalla",
+    "url": "https://it.wikipedia.org/wiki/Giuseppe_Guastalla"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:17:02.077Z"
+  }
+}

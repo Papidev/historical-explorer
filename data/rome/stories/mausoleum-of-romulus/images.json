@@ -1,0 +1,42 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Roma,_Circo_di_Massenzio,_mausoleo_(1).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Roma%2C_Circo_di_Massenzio%2C_mausoleo_(1).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Roma%2C_Circo_di_Massenzio%2C_mausoleo_%281%29.jpg/960px-Roma%2C_Circo_di_Massenzio%2C_mausoleo_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Roma%2C_Circo_di_Massenzio%2C_mausoleo_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Palickap",
+      "author": "Palickap",
+      "width": 3968,
+      "height": 2976,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Appia-Massenzio-Romolo-001.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Appia-Massenzio-Romolo-001.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Appia-Massenzio-Romolo-001.JPG/960px-Appia-Massenzio-Romolo-001.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Appia-Massenzio-Romolo-001.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "user:Lalupa",
+      "author": "user:Lalupa",
+      "width": 2272,
+      "height": 1704,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Rome-Villa_of_Maxentius.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Rome-Villa_of_Maxentius.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Rome-Villa_of_Maxentius.JPG/960px-Rome-Villa_of_Maxentius.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/10/Rome-Villa_of_Maxentius.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "width": 1280,
+      "height": 960,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Roma,_Circo_di_Massenzio,_mausoleo_(1).jpg"
+}

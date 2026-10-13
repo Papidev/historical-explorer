@@ -1,0 +1,57 @@
+{
+  "id": "dottor-faust",
+  "name": "dottor Faust",
+  "wikidataId": "Q332885",
+  "wikipediaTitle": "Dottor Faust",
+  "content": {
+    "description": [
+      {
+        "text": "The tale of Doctor Faust, first printed anonymously in 1587 by Johann Spies as *Historia von D. Johann Fausten*, tells of an alchemist who bargains with the devil, Mefistofele, for 24 years of absolute knowledge in exchange for his soul. The narrative, rooted in German folklore, was later translated into English and served as the basis for Christopher Marlowe’s 1590 play *The Tragical History of Doctor Faustus* and, ultimately, Goethe’s celebrated *Faust*.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Scholars suggest that the legendary figure may have been inspired by the real Johann Georg Faust, who lived roughly between 1480 and 1540, earned a doctorate at the University of Heidelberg in 1509, and was reputed to practice alchemy and necromancy. Though the historical record is sparse, the association of his name with tales of hubris and demonic bargains helped cement the character’s enduring mythic status.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Faustian pact has become a pervasive cultural motif, symbolizing the perilous pursuit of forbidden knowledge and the moral cost of ambition.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1480,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1540,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Orville_Harrold_(Faust).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Orville_Harrold_(Faust).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Orville_Harrold_%28Faust%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Orville_Harrold_%28Faust%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Bain News Service, publisher",
+    "author": "Bain News Service, publisher",
+    "width": 345,
+    "height": 534,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Dottor Faust",
+    "url": "https://it.wikipedia.org/wiki/Dottor_Faust"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:09:10.834Z"
+  }
+}

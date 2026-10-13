@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "2019-06_Roma_(38).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:2019-06_Roma_(38).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/2019-06_Roma_%2838%29.jpg/960px-2019-06_Roma_%2838%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/2019-06_Roma_%2838%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "attribution": "Marek Mróz",
+      "author": "Marek Mróz",
+      "width": 1842,
+      "height": 2762,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "ATAC_Irisbus_CityClass_(4417).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:ATAC_Irisbus_CityClass_(4417).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/ATAC_Irisbus_CityClass_%284417%29.jpg/960px-ATAC_Irisbus_CityClass_%284417%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/ATAC_Irisbus_CityClass_%284417%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Kaga tau",
+      "author": "Kaga tau",
+      "width": 2218,
+      "height": 1579,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Controversial_statue_of_John_Paul_II_in_Piazza_dei_Cinquecento,_Rome,_Italy,_July_2011.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Controversial_statue_of_John_Paul_II_in_Piazza_dei_Cinquecento%2C_Rome%2C_Italy%2C_July_2011.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Controversial_statue_of_John_Paul_II_in_Piazza_dei_Cinquecento%2C_Rome%2C_Italy%2C_July_2011.jpg/960px-Controversial_statue_of_John_Paul_II_in_Piazza_dei_Cinquecento%2C_Rome%2C_Italy%2C_July_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Controversial_statue_of_John_Paul_II_in_Piazza_dei_Cinquecento%2C_Rome%2C_Italy%2C_July_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "MichalPL",
+      "author": "MichalPL",
+      "width": 1686,
+      "height": 2248,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "2019-06_Roma_(38).jpg"
+}

@@ -1,0 +1,77 @@
+{
+  "id": "giuseppe-garibaldi",
+  "name": "Giuseppe Garibaldi",
+  "wikidataId": "Q539",
+  "wikipediaTitle": "Giuseppe Garibaldi",
+  "content": {
+    "description": [
+      {
+        "text": "Born on 4 July 1807 in Nice, Giuseppe Garibaldi grew up in a maritime family and later worked as a sailor and teacher in the Ottoman Empire. He joined the Young Italy movement, participated in the failed 1834 Piedmont insurrection, and fled to South America where he fought in the Ragamuffin War and the Uruguayan Civil War, earning the nickname \"Hero of the Two Worlds\" for his campaigns on both continents.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Returning to Italy in 1848, Garibaldi led the Hunters of the Alps and the Expedition of the Thousand, conquering Sicily and southern Italy and helping to unify the country. He later commanded the Army of the Vosges during the Franco‑Prussian War, was a prominent Freemason, and died on 2 June 1882 on the island of Caprera.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was known as the \"Hero of the Two Worlds\" because of his military enterprises in South America and Europe.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Garibaldi was a Freemason and was elected Grand Master of the Grand Orient of Italy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His wife Anita, a gaucho, taught him gaucho culture and they had four children together.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A grandson was named William in honour of Admiral William Brown, who had helped Garibaldi escape from Argentine forces.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was offered a commission in the United States Army by Abraham Lincoln but declined the offer.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1807,
+      "month": 7,
+      "day": 4,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1882,
+      "month": 6,
+      "day": 2,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Giuseppe_Garibaldi_1861.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Giuseppe_Garibaldi_1861.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Giuseppe_Garibaldi_1861.jpg/960px-Giuseppe_Garibaldi_1861.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Giuseppe_Garibaldi_1861.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "In album: Cartes-de-visite portraits of U.S. Army officers, children, and others, p. 15, right.",
+    "author": "In album: Cartes-de-visite portraits of U.S. Army officers, children, and others, p. 15, right.",
+    "width": 1624,
+    "height": 2509,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giuseppe Garibaldi",
+    "url": "https://en.wikipedia.org/wiki/Giuseppe_Garibaldi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T22:50:01.805Z"
+  }
+}

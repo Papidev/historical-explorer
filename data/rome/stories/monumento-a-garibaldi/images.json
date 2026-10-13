@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "180MonumentoGaribaldi.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:180MonumentoGaribaldi.JPG",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/180MonumentoGaribaldi.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/180MonumentoGaribaldi.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "MarkusMark",
+      "author": "MarkusMark",
+      "width": 800,
+      "height": 600,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "'Garibaldi'_Rome_(6499631751).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:'Garibaldi'_Rome_(6499631751).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/%27Garibaldi%27_Rome_%286499631751%29.jpg/960px-%27Garibaldi%27_Rome_%286499631751%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e9/%27Garibaldi%27_Rome_%286499631751%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.0",
+      "attribution": "FaceMePLS from The Hague, The Netherlands",
+      "author": "FaceMePLS from The Hague, The Netherlands",
+      "width": 1024,
+      "height": 680,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "180MonumentoGaribaldi_(cropped).JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:180MonumentoGaribaldi_(cropped).JPG",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/180MonumentoGaribaldi_%28cropped%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/180MonumentoGaribaldi_%28cropped%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "MarkusMark",
+      "author": "MarkusMark",
+      "width": 362,
+      "height": 409,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "180MonumentoGaribaldi.JPG"
+}

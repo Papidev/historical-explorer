@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Villa_Gordiani_-_Park_of_Rome_a.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Villa_Gordiani_-_Park_of_Rome_a.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Villa_Gordiani_-_Park_of_Rome_a.jpg/960px-Villa_Gordiani_-_Park_of_Rome_a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Villa_Gordiani_-_Park_of_Rome_a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Alessandro Zangrilli",
+      "author": "Alessandro Zangrilli",
+      "width": 2592,
+      "height": 1944,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Piranesi-2030.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Piranesi-2030.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Piranesi-2030.jpg/960px-Piranesi-2030.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Piranesi-2030.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Giovanni Battista Piranesi",
+      "author": "Giovanni Battista Piranesi",
+      "width": 4501,
+      "height": 6400,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Piranesi-2031.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Piranesi-2031.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Piranesi-2031.jpg/960px-Piranesi-2031.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Piranesi-2031.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Giovanni Battista Piranesi",
+      "author": "Giovanni Battista Piranesi",
+      "width": 4499,
+      "height": 6400,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Villa_Gordiani_-_Park_of_Rome_a.jpg"
+}

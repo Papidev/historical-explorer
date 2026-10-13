@@ -1,0 +1,65 @@
+{
+  "id": "apollodoro-di-damasco",
+  "name": "Apollodoro di Damasco",
+  "wikidataId": "Q189375",
+  "wikipediaTitle": "Apollodoro di Damasco",
+  "content": {
+    "description": [
+      {
+        "text": "Apollodoro di Damasco was a Nabatean architect who became a favorite of Emperor Trajan. He designed many of Trajan's monumental projects in Rome and beyond, including the Trajan Bridge at Drobeta, the Trajan Baths, the Odeon of Domitian, the Port of Trajan at Porto, the Forum and Column of Trajan, and the last refacimento of the Pantheon. He is also credited with the Arco di Traiano in Benevento, the molo of Ancona, and the Arco di Traiano that stands on it.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Despite his achievements, Apollodoro fell out of favor under Emperor Hadrian, who exiled and eventually killed him after a dispute over architectural designs. He also authored a treatise on siege machines (Πολιορκητικά) dedicated to Trajan. His legacy includes being considered the \"Maestro delle imprese di Trajan\" and his influence on Roman architecture during the early imperial period.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Apollodoro wrote a treatise on siege machines, titled Πολιορκητικά, which he dedicated to Emperor Trajan.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was exiled by Emperor Hadrian and later killed after a heated dispute over architectural designs.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Apollodoro is credited with the last refacimento of the Pantheon in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was of Nabatean origin, despite his Greek name.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He is referred to as the \"Maestro delle imprese di Trajan\", a title that suggests he was the chief architect of Trajan's building projects.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Apollodorus_of_Damascus,_Greek_Architect_and_Engineer._Pic_01.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Apollodorus_of_Damascus%2C_Greek_Architect_and_Engineer._Pic_01.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Apollodorus_of_Damascus%2C_Greek_Architect_and_Engineer._Pic_01.jpg/960px-Apollodorus_of_Damascus%2C_Greek_Architect_and_Engineer._Pic_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Apollodorus_of_Damascus%2C_Greek_Architect_and_Engineer._Pic_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Gun Powder Ma",
+    "author": "Gun Powder Ma",
+    "width": 1920,
+    "height": 2560,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Apollodoro di Damasco",
+    "url": "https://it.wikipedia.org/wiki/Apollodoro_di_Damasco"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T17:23:00.423Z"
+  }
+}

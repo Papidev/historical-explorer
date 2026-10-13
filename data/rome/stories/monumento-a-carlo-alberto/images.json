@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Monti_-_giardini_del_Quirinale_monumento_a_carlo_alberto_1180955_(Romanelli).JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Monti_-_giardini_del_Quirinale_monumento_a_carlo_alberto_1180955_(Romanelli).JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Monti_-_giardini_del_Quirinale_monumento_a_carlo_alberto_1180955_%28Romanelli%29.JPG/960px-Monti_-_giardini_del_Quirinale_monumento_a_carlo_alberto_1180955_%28Romanelli%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Monti_-_giardini_del_Quirinale_monumento_a_carlo_alberto_1180955_%28Romanelli%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Lalupa",
+      "author": "Lalupa",
+      "width": 2112,
+      "height": 2816,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "2016_Equestrian_statue_of_Carlo_Alberto_(Rome)_01.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:2016_Equestrian_statue_of_Carlo_Alberto_(Rome)_01.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/2016_Equestrian_statue_of_Carlo_Alberto_%28Rome%29_01.jpg/960px-2016_Equestrian_statue_of_Carlo_Alberto_%28Rome%29_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/2016_Equestrian_statue_of_Carlo_Alberto_%28Rome%29_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Jordiferrer",
+      "author": "Jordiferrer",
+      "width": 2592,
+      "height": 1944,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "2016_Equestrian_statue_of_Carlo_Alberto_(Rome)_02.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:2016_Equestrian_statue_of_Carlo_Alberto_(Rome)_02.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/2016_Equestrian_statue_of_Carlo_Alberto_%28Rome%29_02.jpg/960px-2016_Equestrian_statue_of_Carlo_Alberto_%28Rome%29_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/2016_Equestrian_statue_of_Carlo_Alberto_%28Rome%29_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Jordiferrer",
+      "author": "Jordiferrer",
+      "width": 1944,
+      "height": 2592,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Monti_-_giardini_del_Quirinale_monumento_a_carlo_alberto_1180955_(Romanelli).JPG"
+}

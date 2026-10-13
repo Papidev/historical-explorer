@@ -1,0 +1,77 @@
+{
+  "id": "stendhal",
+  "name": "Stendhal",
+  "wikidataId": "Q502",
+  "wikipediaTitle": "Stendhal",
+  "content": {
+    "description": [
+      {
+        "text": "Marie‑Henri Beyle, better known as Stendhal, was born on 23 January 1783 in Grenoble, France, into a bourgeois family. He grew up in the countryside near Grenoble, where he was an unhappy child who disliked his father and mourned his mother, who died in 1790. His early years were marked by a love of travel and a fascination with the military and theatrical worlds of the First French Empire, which he experienced as an assistant war commissioner in the Kingdom of Westphalia and later as a war commissioner in the Napoleonic invasion of Russia. These experiences would later inform his acute psychological realism and his reputation as a first‑rate psychologist before the term was coined.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Stendhal's literary output includes the realist masterpieces Le Rouge et le Noir (1830) and La Chartreuse de Parme (1839), written in 52 days, as well as the pioneering essay De l’amour (1822) in which he introduced the concept of crystallization to describe the stages of passionate love. He was a dandy, a witty observer of Parisian society, and an obsessive womaniser whose empathy for women earned him praise from Simone de Beauvoir. His life ended on 23 March 1842 in Paris after a seizure, and he was buried in the Cimetière de Montmartre. The psychosomatic condition he reportedly experienced in Florence, later named Stendhal syndrome, and the overnight train service called the Stendhal Express, both bear his name.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Stendhal coined the term \"Beylism\" to describe the egotism he saw in his characters.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He introduced the psychological concept of \"crystallization\" in his 1822 essay De l'amour, a pioneering attempt to analyze passionate love.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Stendhal served as the French consul in Trieste and Civitavecchia from 1830, a post that was denied him by Metternich because of his liberalism.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He wrote The Charterhouse of Parma in just 52 days, a testament to his prolific writing speed.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The psychosomatic condition he experienced in Florence, later named Stendhal syndrome, is still recognized today.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1783,
+      "month": 1,
+      "day": 23,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1842,
+      "month": 3,
+      "day": 23,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Stendhal.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Stendhal.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Stendhal.jpg/960px-Stendhal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Stendhal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Olof Johan Södermark",
+    "author": "Olof Johan Södermark",
+    "width": 2197,
+    "height": 2817,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Stendhal",
+    "url": "https://en.wikipedia.org/wiki/Stendhal"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T22:50:20.099Z"
+  }
+}

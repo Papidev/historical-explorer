@@ -1,0 +1,78 @@
+{
+  "introduction": {
+    "text": "The Mitreo delle Sette Sfere (II,VIII,6) is a Mithraeum located in the Roman city of Ostia. It is significant because its mosaics and architectural features provide key evidence for the study of the Mithraic cult in the Roman Empire.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "construction",
+        "description": "The Mithraeum was constructed in opus latericium between the 1st and 2nd centuries AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1,
+          "precision": "approximate",
+          "endYear": 200,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "petrini-excavation",
+        "description": "Excavation conducted 1802-1806 by Giuseppe Petrini under the direction of Pope Pius VII.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1802,
+          "precision": "exact",
+          "endYear": 1806,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "lanciani-excavation",
+        "description": "Excavation conducted in 1866 by Rodolfo Lanciani.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1866,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "layout",
+        "description": "The Mithraeum consists of an ancient lower chamber built in opus latericium, with a modern upper addition protecting the mosaics.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "benches-altars",
+        "description": "Inside the chamber are benches that could hold about 32 people, two small travertine altars in the front corners, and a masonry podium on the back wall.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "mosaics",
+        "description": "The Mithraeum features black and white mosaics on the benches depicting the 12 zodiac signs horizontally and six planetary symbols vertically, as well as seven black arches on the floor.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "inscriptions",
+        "description": "Four inscriptions from the Mithraeum are preserved in the Vatican Museums.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Rodolfo Lanciani",
+      "personId": "rodolfo-lanciani",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "papa Pio VII",
+      "personId": "pope-pius-vii",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

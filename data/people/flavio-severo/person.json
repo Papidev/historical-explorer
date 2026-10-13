@@ -1,0 +1,57 @@
+{
+  "id": "flavio-severo",
+  "name": "Flavio Severo",
+  "wikidataId": "Q46814",
+  "wikipediaTitle": "Flavio Severo",
+  "content": {
+    "description": [
+      {
+        "text": "Flavio Severo, originally from the Illyrian provinces, rose from humble origins to become a commander of the Roman army. He was a close ally of the emperor Galerius, and on 1 May 305, after Diocletian and Maximian had relinquished power, he was appointed Caesar of the West by Constantine Chlorus, the new Augustus of the western half of the empire.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Severo’s authority expanded to include Italy, Rezia, Noricum, and the African diocese, but his position was short‑lived. In the summer of 306, following Constantine Chlorus’s death, he was elevated to Augustus. The following year, Maxentius declared himself emperor in Rome; Severo was sent with an army to depose him, but his troops defected. He fled to Ravenna, surrendered, and was taken hostage to Tres Tabernae, where he was killed or forced to kill himself in the spring or summer of 307. He was buried in the mausoleum of Gallienus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was originally from the Illyrian provinces, a region that is now part of modern-day Croatia and Bosnia and Herzegovina.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a friend of the Roman emperor Galerius, who played a key role in his political career.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was named Caesar of the West by Constantine Chlorus, a title that signified his authority over Italy, Rezia, Noricum, and the African diocese.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Gold_Aureus_of_Severus_II_(MANTIS).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Gold_Aureus_of_Severus_II_(MANTIS).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Gold_Aureus_of_Severus_II_%28MANTIS%29.jpg/960px-Gold_Aureus_of_Severus_II_%28MANTIS%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Gold_Aureus_of_Severus_II_%28MANTIS%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC0",
+    "attribution": "American Numismatic Society",
+    "author": "American Numismatic Society",
+    "width": 2254,
+    "height": 2204,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Flavio Severo",
+    "url": "https://it.wikipedia.org/wiki/Flavio_Severo"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T17:20:01.413Z"
+  }
+}

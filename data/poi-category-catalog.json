@@ -150,6 +150,18 @@
     {
       "id": "Fort",
       "name": "Fort"
+    },
+    {
+      "id": "Garden",
+      "name": "Garden"
+    },
+    {
+      "id": "Park",
+      "name": "Park"
+    },
+    {
+      "id": "Grave",
+      "name": "Grave"
     }
   ],
   "deletedNames": ["Shrine"]

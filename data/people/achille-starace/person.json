@@ -1,0 +1,77 @@
+{
+  "id": "achille-starace",
+  "name": "Achille Starace",
+  "wikidataId": "Q340254",
+  "wikipediaTitle": "Achille Starace",
+  "content": {
+    "description": [
+      {
+        "text": "Achille Starace was born on 18 August 1889 in Gallipoli, Apulia, and rose from a modest background to become one of Benito Mussolini’s most loyal and visible operatives. After earning a degree in accounting and serving as a Bersaglieri officer in World War I, he joined the Fascist movement in 1920 and quickly climbed its ranks, becoming vice‑secretary of the National Fascist Party in 1921 and later its secretary in 1931. As secretary, he orchestrated massive parades, issued daily orders to party members, and expanded Mussolini’s cult of personality, while also pushing anti‑Semitic racial measures and attempting to model the Fascist Youth on the Hitler Youth. His tenure was marked by both unprecedented party growth and growing criticism from within the regime, and he remained the longest‑serving secretary of the party for eight years.\n",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Starace’s career was not confined to politics; he was also a military commander and a sports enthusiast. He led a mechanized column during the 1935–36 Italian invasion of Ethiopia, covering 120 km in three days, and was known for his flamboyant leadership style, earning the nickname “Panther Man.” In the realm of sport, he served as president of the Italian National Olympic Committee from 1933 to 1939 and performed daring stunts such as jumping through a fire circle at the Marmi Stadium in 1938 and horse‑jumping over a saloon car. After Mussolini’s fall, Starace was arrested twice, imprisoned in a Verona concentration camp, and ultimately executed by anti‑Fascist partisans on 29 April 1945 after saluting Mussolini’s corpse.\n",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Starace was a member of the Freemason lodge La Vedetta in Udine, joining in March 1917 before fully committing to the Fascist movement.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a lieutenant general of the Blackshirts, the paramilitary wing of the Fascist Party, and later served as chief of staff of the Blackshirts until 1941.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the Italian invasion of Ethiopia, Starace commanded a mixed group of Blackshirts and the 3rd Bersaglieri Regiment, and his mechanized column famously covered 120 km in three days.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As president of the Italian National Olympic Committee, he promoted sports as a tool of Fascist propaganda and famously performed stunts such as jumping through a fire circle and horse‑jumping over a saloon car.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was executed by anti‑Fascist partisans on 29 April 1945 after saluting Mussolini’s body, and his corpse was displayed alongside Mussolini’s in Piazzale Loreto.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1889,
+      "month": 8,
+      "day": 18,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1945,
+      "month": 4,
+      "day": 29,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Achille_Starace.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Achille_Starace.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Achille_Starace.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Achille_Starace.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Camera dei Fasci e delle Corporazioni",
+    "author": "Camera dei Fasci e delle Corporazioni",
+    "width": 300,
+    "height": 467,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Achille Starace",
+    "url": "https://en.wikipedia.org/wiki/Achille_Starace"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:28:31.898Z"
+  }
+}

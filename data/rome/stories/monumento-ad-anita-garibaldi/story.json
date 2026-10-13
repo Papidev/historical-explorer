@@ -1,0 +1,166 @@
+{
+  "introduction": {
+    "text": "The Monument to Anita Garibaldi is a large equestrian statue on Rome’s Gianicolo hill that commemorates the revolutionary heroine Anita Garibaldi and her role in the Italian unification.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "idea-1905",
+        "description": "The idea for a monument to Anita Garibaldi was conceived in 1905 to mark the 100th anniversary of Giuseppe Garibaldi’s birth.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1905,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "subscription-1906",
+        "description": "A public subscription to fund the monument was launched in April 1906.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1906,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "first-concurs-1907",
+        "description": "The first competition in 1907 produced no acceptable designs.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1907,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "land-grant-1928",
+        "description": "In 1928 the Ministry of the Interior granted a plot on the Gianicolo for the monument.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1928,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "project-1929",
+        "description": "In 1929 the project was finalized and Mario Rutelli was selected as the sculptor.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1929,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "casting-1931",
+        "description": "Bronze casting of the statue was completed in August 1931.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1931,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "inauguration-1932",
+        "description": "The monument was inaugurated on 4 June 1932.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1932,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "restoration-1990",
+        "description": "Restoration work on the monument was carried out in 1990.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1990,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "restoration-2011",
+        "description": "Further restoration was announced in 2011.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2011,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "The monument is an equestrian statue of Anita Garibaldi holding her son Menotti, mounted on a bronze pedestal with bas-reliefs depicting key episodes of her life.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-1",
+        "description": "Bronze bas-reliefs on the pedestal illustrate scenes such as Anita’s charge at Curitibanos, her escape after capture, and her final moments with Garibaldi.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Anita Garibaldi",
+      "personId": "anita-garibaldi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giuseppe Garibaldi",
+      "personId": "giuseppe-garibaldi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ezio Garibaldi",
+      "personId": "ezio-garibaldi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Francesco Rutelli",
+      "personId": "francesco-rutelli",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Antonio Sciortino (scultore)",
+      "personId": "antonio-sciortino-scultore",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giuseppe Guastalla",
+      "personId": "giuseppe-guastalla",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Silvestre Cuffaro",
+      "personId": "silvestre-cuffaro",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Menotti Garibaldi",
+      "personId": "menotti-garibaldi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giuseppe Biancheri",
+      "personId": "giuseppe-biancheri",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Carlo Fontana (scultore)",
+      "personId": "carlo-fontana-scultore",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

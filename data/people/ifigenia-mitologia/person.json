@@ -1,0 +1,57 @@
+{
+  "id": "ifigenia-mitologia",
+  "name": "Ifigenia",
+  "wikidataId": "Q192673",
+  "wikipediaTitle": "Ifigenia (mitologia)",
+  "content": {
+    "description": [
+      {
+        "text": "Ifigenia was a princess of Mycenae, the eldest daughter of Agamemnon and either Clytemnestra or, in some traditions, of Theseus and Helen. According to the myth, when the Greek fleet was blocked at Aulis, Agamemnon was told by the seer Calchas that the wrath of Artemis could only be appeased by sacrificing his daughter. Ifigenia was therefore offered on the altar, but the goddess intervened, replacing her with a deer and transporting her to Tauris, where she became a priestess of Artemis and, in some accounts, was made a deity herself.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "While in Tauris, Ifigenia aided her brother Orestes when he was captured by the Taurians and destined for sacrifice. She helped him escape by stealing the statue of Artemis from the temple, bringing it to Athens where it became the famed Tauropolo. After this, Ifigenia returned to Mycenae, where she was reunited with her family and the myth of her sacrifice and rescue became a symbol of innocence and the tragic cost of war.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Artemis is said to have transformed Ifigenia into the goddess Echeta, according to Pausanias citing a passage from Hesiod.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The statue of Artemis that Ifigenia stole from the Taurian temple was later carried to Athens and became the Tauropolo, a sacred bull statue that was central to Athenian religious rites.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Ifigenia’s story inspired several ancient tragedies, including Aeschylus’s *Agamemnon*, Euripides’s *Iphigenia in Aulis* and *Iphigenia in Tauris*, and Sophocles’s mention of her in *Electra*.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Fourth_Style_fresco_depicting_the_Sacrifice_of_Iphigenia,_from_the_House_of_the_Tragic_Poet_in_Pompeii,_Naples_National_Archaeological_Museum_(17430222481).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Fourth_Style_fresco_depicting_the_Sacrifice_of_Iphigenia%2C_from_the_House_of_the_Tragic_Poet_in_Pompeii%2C_Naples_National_Archaeological_Museum_(17430222481).jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Fourth_Style_fresco_depicting_the_Sacrifice_of_Iphigenia%2C_from_the_House_of_the_Tragic_Poet_in_Pompeii%2C_Naples_National_Archaeological_Museum_%2817430222481%29.jpg/960px-Fourth_Style_fresco_depicting_the_Sacrifice_of_Iphigenia%2C_from_the_House_of_the_Tragic_Poet_in_Pompeii%2C_Naples_National_Archaeological_Museum_%2817430222481%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Fourth_Style_fresco_depicting_the_Sacrifice_of_Iphigenia%2C_from_the_House_of_the_Tragic_Poet_in_Pompeii%2C_Naples_National_Archaeological_Museum_%2817430222481%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 2.0",
+    "attribution": "Carole Raddato from FRANKFURT, Germany",
+    "author": "Carole Raddato from FRANKFURT, Germany",
+    "width": 2932,
+    "height": 2999,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Ifigenia (mitologia)",
+    "url": "https://it.wikipedia.org/wiki/Ifigenia_(mitologia)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:10:13.826Z"
+  }
+}

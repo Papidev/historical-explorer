@@ -1,0 +1,86 @@
+{
+  "introduction": {
+    "text": "The Monument to the Cairoli Brothers is a prominent patriotic statuary group on the Pincian Hill in Rome, commemorating the sacrifice of the Cairoli brothers during the Italian unification.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-1859",
+        "description": "Ernesto Cairoli was killed in 1859 at the Battle of Varese.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1859,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1860",
+        "description": "Luigi Cairoli fought in 1860 as part of the Expedition of the Thousand.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1860,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1867",
+        "description": "Enrico Cairoli was killed in 1867 at the Battle of Villa Glori.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1867,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1872",
+        "description": "A plaster model of the monument was exhibited in 1872 at the Fine Arts Exhibition of Rome.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1872,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1883",
+        "description": "The bronze monument was inaugurated on 27 May 1883.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1883,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "The monument was designed by Ercole Rosa and depicts Giovanni Cairoli holding his wounded brother while defiantly raising a gun, with a base listing the names of 70 soldiers who fought at Villa Glori.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-1",
+        "description": "The arrangement of the two soldiers echoes the Hellenistic model of Menelaus supporting the body of Patroclus, creating a dramatic contrast between grief and defiance.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Ercole Rosa",
+      "personId": "ercole-rosa",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Benedetto Cairoli",
+      "personId": "benedetto-cairoli",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

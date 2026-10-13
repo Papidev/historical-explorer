@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Goethe-Denkmal.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Goethe-Denkmal.jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Goethe-Denkmal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Goethe-Denkmal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.5",
+      "attribution": "Frankazis81",
+      "author": "Frankazis81",
+      "width": 768,
+      "height": 1024,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "20160426_013_Roma_-_Villa_Borghese_-_Goethe_Statue_(26637772562).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:20160426_013_Roma_-_Villa_Borghese_-_Goethe_Statue_(26637772562).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/20160426_013_Roma_-_Villa_Borghese_-_Goethe_Statue_%2826637772562%29.jpg/960px-20160426_013_Roma_-_Villa_Borghese_-_Goethe_Statue_%2826637772562%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/20160426_013_Roma_-_Villa_Borghese_-_Goethe_Statue_%2826637772562%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.0",
+      "attribution": "Sjaak Kempe from Groningen, The Netherlands",
+      "author": "Sjaak Kempe from Groningen, The Netherlands",
+      "width": 3888,
+      "height": 5184,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "20160426_015_Roma_-_Villa_Borghese_-_Goethe_Statue_-_Faust_and_Mephisto_(26637798522).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:20160426_015_Roma_-_Villa_Borghese_-_Goethe_Statue_-_Faust_and_Mephisto_(26637798522).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/20160426_015_Roma_-_Villa_Borghese_-_Goethe_Statue_-_Faust_and_Mephisto_%2826637798522%29.jpg/960px-20160426_015_Roma_-_Villa_Borghese_-_Goethe_Statue_-_Faust_and_Mephisto_%2826637798522%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5d/20160426_015_Roma_-_Villa_Borghese_-_Goethe_Statue_-_Faust_and_Mephisto_%2826637798522%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.0",
+      "attribution": "Sjaak Kempe from Groningen, The Netherlands",
+      "author": "Sjaak Kempe from Groningen, The Netherlands",
+      "width": 5184,
+      "height": 3888,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Goethe-Denkmal.jpg"
+}

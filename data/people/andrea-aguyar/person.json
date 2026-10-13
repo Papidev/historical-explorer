@@ -1,0 +1,73 @@
+{
+  "id": "andrea-aguyar",
+  "name": "Andrea Aguyar",
+  "wikidataId": "Q3615466",
+  "wikipediaTitle": "Andrea Aguyar",
+  "content": {
+    "description": [
+      {
+        "text": "Andrea Aguyar was born in Montevideo, Uruguay, to parents who were enslaved. He remained a slave until the abolition of slavery in Uruguay in 1842, when both liberal Colorados and conservative Blancos declared emancipation to strengthen their forces during the civil war. During the siege of Montevideo, the Italian general Giuseppe Garibaldi recognized the valor of the approximately 5,000 former slaves, including Aguyar, who defended the city. After Garibaldi returned to Europe in 1848, Aguyar followed him, becoming a key figure in the Italian revolutionary movement.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In Italy, Aguyar fought alongside Garibaldi from the early stages of the First Italian War of Independence, taking part in the victories at Luino and Morazzone. He earned a reputation for bravery and horsemanship, saving Garibaldi’s life on several occasions, such as during the Battle of Velletri when he protected the general from falling off his horse. Though illiterate, he was promoted to lieutenant by Garibaldi and was remembered for his loyalty, even offering his saddle and building a tent for the general’s comfort. He was mortally wounded by a French grenade on 30 June 1849 in Rome and died shortly thereafter, uttering a final salute to the republics of America and Rome.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Aguyar was promoted to the rank of lieutenant by Garibaldi, a rare honor for a former slave in the 19th‑century Italian military.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He is considered the first black martyr of Italian patriotism, a status that was largely ignored during the fascist regime and only recently acknowledged with a bust on the Gianicolo in 2024.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 2013 Uruguay issued a 45‑centime stamp featuring Aguyar, designed by Mary Porto Casas, commemorating his contribution to both Uruguayan and Italian history.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Aguyar was portrayed by Thamisanqa Molepo in the 2012 miniseries \"Anita Garibaldi\" directed by Claudio Bonivento, bringing his story to a contemporary audience.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A staircase in Monteverde, originally named Scalea Andrea il Moro, was renamed in 2024 to honor Aguyar as “Scalea Andrea il Moro: Andrés Aguiar – Luogotenente della Repubblica Romana (1810‑1849).”",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1810,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1849,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Andrea_Aguyar_(Anghier)_-_portrait.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Andrea_Aguyar_(Anghier)_-_portrait.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Andrea_Aguyar_%28Anghier%29_-_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Andrea_Aguyar_%28Anghier%29_-_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 805,
+    "height": 989,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Andrea Aguyar",
+    "url": "https://it.wikipedia.org/wiki/Andrea_Aguyar"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T17:37:01.282Z"
+  }
+}

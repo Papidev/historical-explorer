@@ -1,0 +1,75 @@
+{
+  "id": "menotti-garibaldi",
+  "name": "Menotti Garibaldi",
+  "wikidataId": "Q2520822",
+  "wikipediaTitle": "Menotti Garibaldi",
+  "content": {
+    "description": [
+      {
+        "text": "Menotti Garibaldi was born in the São Luis district of Rio Grande do Sul, Brazil, the eldest son of Giuseppe and Anita Garibaldi. Baptised as Domenico, he was also given the name Menotti in honour of the Italian patriot Ciro Menotti, a tradition that reflected his family's strong ties to the Italian Risorgimento.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He entered the Italian military at nineteen, serving as a cavalry guide in the Cacciatori delle Alpi during the Second Italian War of Independence. Garibaldi later distinguished himself in the Expedition of the Thousand, notably at the Battle of Calatafimi, and rose to the rank of colonel, commanding the 9th Volunteer Regiment in the Third War of Independence. His leadership at the Battle of Bezzecca earned him the Gold Medal of Military Valor, and he later fought in the Franco‑Prussian War, where he was awarded the French Legion of Honour.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Garibaldi was a Freemason, belonging to the Roman lodge “Propaganda massonica” of the Grand Orient of Italy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as a deputy in the Italian Chamber of Deputies for eight legislatures, representing Velletri and Rome from 1876 to 1900.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond his military and political career, Garibaldi was an agricultural entrepreneur; he founded the experimental wine cellar of Velletri and secured a perpetual enfeoffment of a large estate in the Agro Romano, later known as Aprilia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His funeral in 1903 was a state ceremony attended by prominent figures such as Gabriele D’Annunzio, who delivered the eulogy, and the French government, reflecting his international recognition.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Garibaldi died of malaria in Rome on 25 August 1903 at the age of 62; his remains were interred in a mausoleum he had built himself in Carano, a suburb of Velletri.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1841,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1903,
+      "month": 8,
+      "day": 25,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Ritratto_di_Menotti_Garibaldi.JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ritratto_di_Menotti_Garibaldi.JPG",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Ritratto_di_Menotti_Garibaldi.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Ritratto_di_Menotti_Garibaldi.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 656,
+    "height": 696,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Menotti Garibaldi",
+    "url": "https://it.wikipedia.org/wiki/Menotti_Garibaldi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T17:32:27.540Z"
+  }
+}

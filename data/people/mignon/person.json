@@ -1,0 +1,57 @@
+{
+  "id": "mignon",
+  "name": "Mignon",
+  "wikidataId": "Q657595",
+  "wikipediaTitle": "Mignon",
+  "content": {
+    "description": [
+      {
+        "text": "Mignon is a three‑act lyrical tragedy by Ambroise Thomas, with a libretto by Jules Barbier and Michel Carré adapted from Goethe's Wilhelm Meister. The opera premiered at Paris' Opéra‑Comique on 17 November 1866, starring Célestine Galli‑Marié as the title role. Initially the work ended tragically, mirroring Goethe's text, but the convention of the time demanded a more uplifting conclusion, so the ending was rewritten to allow Mignon to marry and live happily, a change that helped the opera achieve immediate success.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The opera quickly entered the repertoire, with notable early performances in London in 1870 by Christina Nilsson and later by Sigrid Arnoldson, who debuted at the Opéra‑Comique in 1887 and went on to perform the role worldwide. Arnoldson celebrated her 500th performance in Dresden in 1907, a milestone that Thomas himself acknowledged in a letter praising her fidelity to the role. The work remains a staple of the French operatic canon, remembered for its charming melodies and the dramatic transformation of its ending.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The opera originally ended tragically, as Goethe's text had it, but the ending was rewritten to a happy conclusion to satisfy contemporary conventions.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Célestine Galli‑Marié was the first performer of Mignon, creating the role at the premiere in 1866.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Sigrid Arnoldson celebrated her 500th performance of Mignon in Dresden in 1907, a milestone personally acknowledged by Thomas in a letter.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Mignon_(opera)_1866_poster_NGO3p383.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Mignon_(opera)_1866_poster_NGO3p383.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Mignon_%28opera%29_1866_poster_NGO3p383.jpg/960px-Mignon_%28opera%29_1866_poster_NGO3p383.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Mignon_%28opera%29_1866_poster_NGO3p383.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Jules Chéret",
+    "author": "Jules Chéret",
+    "width": 1504,
+    "height": 1952,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Mignon",
+    "url": "https://it.wikipedia.org/wiki/Mignon"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:10:01.234Z"
+  }
+}

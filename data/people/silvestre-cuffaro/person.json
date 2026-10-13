@@ -1,0 +1,63 @@
+{
+  "id": "silvestre-cuffaro",
+  "name": "Silvestre Cuffaro",
+  "wikidataId": "Q3960718",
+  "wikipediaTitle": "Silvestre Cuffaro",
+  "content": {
+    "description": [
+      {
+        "text": "Silvestre Cuffaro was born on 5 January 1905 in Bagheria, the son of Pasquale Cuffaro, a landowner and public works assessor, and Girolama Bartolotta.  His family, originally from Cammarata, had been known as Coffaro until the early twentieth century.  Cuffaro pursued a formal education in sculpture, first at the Istituto di Belle Arti di Palermo and later at the Accademia di Belle Arti di Roma, where he also earned a diploma from the Scuola dell'arte della medaglia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cuffaro’s professional life combined artistic creation with civic engagement.  He served as mayor of Bagheria from 1952 to 1956, during which he founded the town’s Biblioteca Comunale.  In 1957 he became director of the Accademia di Belle Arti di Palermo.  His oeuvre includes numerous public monuments—such as the Monumento a Giuseppe Bagnera in Bagheria, the Monumento ai Caduti della Guerra in 1954, and the Fontana della dea Cerere in Gela—as well as a series of exhibitions across Italy and abroad, including a 1959 show in Montevideo, Uruguay.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 1933 Cuffaro signed the Manifesto, together with Renato Guttuso and other Sicilian artists, protesting the exclusion of Sicilian artists from the Venice Biennale.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "While mayor, he established the Biblioteca Comunale of Bagheria, a lasting cultural institution for the town.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Cuffaro’s 1959 participation in the ‘Esposizione d’Arte grafica contemporanea’ in Montevideo marked one of the few international exhibitions of his work.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1905,
+      "month": 1,
+      "day": 5,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Lo_scultore_Silvestre_Cuffaro_(1926).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Lo_scultore_Silvestre_Cuffaro_(1926).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Lo_scultore_Silvestre_Cuffaro_%281926%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Lo_scultore_Silvestre_Cuffaro_%281926%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Ferpint",
+    "author": "Ferpint",
+    "width": 302,
+    "height": 302,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Silvestre Cuffaro",
+    "url": "https://it.wikipedia.org/wiki/Silvestre_Cuffaro"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:18:00.671Z"
+  }
+}

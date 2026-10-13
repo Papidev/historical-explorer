@@ -1,0 +1,73 @@
+{
+  "id": "ercole-rosa",
+  "name": "Ercole Rosa",
+  "wikidataId": "Q1279705",
+  "wikipediaTitle": "Ercole Rosa",
+  "content": {
+    "description": [
+      {
+        "text": "Ercole Rosa was born on 13 February 1846 in Rome to a modest stonemason. From a young age he assisted his father in crafting small terracotta figurines that were sold locally, a practice that honed his hand for sculpture. In 1861 he was already working as an aide for several established sculptors in Rome, and the Bishop of San Severino Marche, recognizing his talent, sponsored his formal education at the Academy of St Luke.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Rosa’s career accelerated after his participation in the 1867 Battle of Mentana with Garibaldi’s troops. He gained prominence with a bronze group depicting the Brothers Cairoli, which earned him a commission for a bronze monument placed in the Pincian Gardens overlooking central Rome. Over the next twelve years he labored on the Monument to Vittorio Emanuele II in Milan, a work that was inaugurated in 1896, three years after his death on 12 October 1893. His oeuvre also includes statues on the façade of Rome’s Palazzo delle Finanze, a bust of Alessandro Manzoni for the Galleria nazionale d'arte moderna e contemporanea, and busts of Bartolomeo Eustachi, Nicola Fabrizi, and Giuseppe Garibaldi.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Rosa’s early exposure to terracotta figurines under his father’s guidance laid the foundation for his later mastery of bronze and marble.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He fought alongside Garibaldi’s forces at the Battle of Mentana in 1867, an experience that later influenced the patriotic themes in his public monuments.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The bronze monument he created for the Pincian Gardens was placed in a prominent spot overlooking the center of Rome, underscoring his recognition by civic authorities.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Rosa spent twelve years completing the Monument to Vittorio Emanuele II in Milan, a project that was finished and inaugurated posthumously in 1896.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1846,
+      "month": 2,
+      "day": 13,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1893,
+      "month": 10,
+      "day": 12,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Ercole_Rosa_(1846.1893),_da_L'Edilizia_Moderna_(1896).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ercole_Rosa_(1846.1893)%2C_da_L'Edilizia_Moderna_(1896).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Ercole_Rosa_%281846.1893%29%2C_da_L%27Edilizia_Moderna_%281896%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Ercole_Rosa_%281846.1893%29%2C_da_L%27Edilizia_Moderna_%281896%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "AnonymousUnknown author",
+    "author": "AnonymousUnknown author",
+    "width": 778,
+    "height": 1017,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Ercole Rosa",
+    "url": "https://en.wikipedia.org/wiki/Ercole_Rosa"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:25:23.774Z"
+  }
+}

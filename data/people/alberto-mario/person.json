@@ -1,0 +1,81 @@
+{
+  "id": "alberto-mario",
+  "name": "Alberto Mario",
+  "wikidataId": "Q3608424",
+  "wikipediaTitle": "Alberto Mario",
+  "content": {
+    "description": [
+      {
+        "text": "Alberto Mario was born on 4 June 1825 in Lendinara, Italy, where he received his early education at the local schools of the Fathers Cavanis and later at the seminary of Rovigo. In 1844 he entered the University of Padua, initially studying mathematics and then law, but his real passion lay in history. He became actively involved in the revolutionary movements of 1848, joining student volunteers in Bologna and fighting against Austrian forces in Bassano del Grappa, Treviso and Vicenza. After the failed campaign he fled to Milan, where he met key figures of the Risorgimento such as Giuseppe Garibaldi and Giuseppe Mazzini.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "From 1849 to 1857 Mario lived in exile in Genoa, spending several months in the Sant'Andrea prison for his revolutionary activities. In 1858 he moved to London, married Jessie White—a journalist for the London Daily News—and together they travelled to the United States to promote the Italian unification cause. Returning to Italy, he was briefly imprisoned, then expelled from the Kingdom of Sardinia and settled in Lugano where he directed the Mazzinian newspaper Pensiero ed azione. He later joined Garibaldi’s second expedition to Sicily, fought in the 1866 campaign commanding flotilla units on Lake Garda, and in 1867 participated in the battles at Monterotondo and Mentana. A committed federalist, Mario resigned from the Chamber of Deputies in March 1863, citing his republican convictions. After unification he devoted himself to journalism, directing La Provincia di Mantova, Rivista Repubblicana and Lega della Democrazia, while authoring works such as La camicia rossa (1862) and La mente di Carlo Cattaneo (1870). He returned to Lendinara after the annexation of Veneto, where he served as a provincial councilor until his death on 2 June 1883. His widow Jessie White arranged for Giosuè Carducci to deliver the funeral oration at his tomb in the cemetery of Lendinara.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Mario married Jessie White, a journalist for the London Daily News, in 1858 while they were living in London.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He wrote the memoir La camicia rossa in 1862, which was published in English and detailed the expedition of the Thousand.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In January 1863 he was elected to the Chamber of Deputies of the Kingdom of Italy for Modica, but he resigned on 11 March of the same year, stating that his republican faith made him unwilling to accept the position.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the unification of Italy, Mario directed several newspapers that promoted a federalist perspective, including La Provincia di Mantova (1872‑1874), Rivista Repubblicana (1878‑1879) and Lega della Democrazia (1880‑1883).",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the 1866 campaign he commanded flotilla units on Lake Garda, contributing to the Italian forces’ naval operations.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His widow, Jessie White, arranged for the renowned poet Giosuè Carducci to deliver the funeral oration at Mario’s burial in Lendinara.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1825,
+      "month": 6,
+      "day": 4,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1883,
+      "month": 6,
+      "day": 2,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Lapide_commemorativa_dedicata_ad_Alberto_Mario_(Adria,_Italy).JPG",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Lapide_commemorativa_dedicata_ad_Alberto_Mario_(Adria%2C_Italy).JPG",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Lapide_commemorativa_dedicata_ad_Alberto_Mario_%28Adria%2C_Italy%29.JPG/960px-Lapide_commemorativa_dedicata_ad_Alberto_Mario_%28Adria%2C_Italy%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Lapide_commemorativa_dedicata_ad_Alberto_Mario_%28Adria%2C_Italy%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Threecharlie",
+    "author": "Threecharlie",
+    "width": 2976,
+    "height": 3968,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Alberto Mario",
+    "url": "https://it.wikipedia.org/wiki/Alberto_Mario"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:05:02.044Z"
+  }
+}

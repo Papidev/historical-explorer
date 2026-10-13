@@ -1,0 +1,95 @@
+{
+  "introduction": {
+    "text": "Monte Testaccio is an artificial mound in Rome made almost entirely of broken olive oil amphorae. It is one of the largest spoil heaps in the ancient world and provides a unique record of Rome's imperial oil trade and state distribution system.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "construction",
+        "description": "Monte Testaccio was constructed as a structured waste disposal for olive oil amphorae, with terraces and retaining walls, and was used from around AD 140 to 250.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 140,
+          "precision": "approximate",
+          "endYear": 250,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "peak-imports",
+        "description": "At its peak, Rome imported up to 130,000 amphorae per year, representing about 7.5 million liters of olive oil annually.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 200,
+          "precision": "approximate",
+          "endYear": 250,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "end-dumping",
+        "description": "Dumping of amphorae ceased after about the 260s.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 260,
+          "precision": "approximate",
+          "endYear": 260,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "military-use",
+        "description": "In 1849, the hill was used as a gun battery under Giuseppe Garibaldi during the defence of Rome.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1849,
+          "precision": "exact",
+          "endYear": 1849,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "archaeology",
+        "description": "The first archaeological investigation began in 1872 by Heinrich Dressel, with further work in the 1980s and 1994.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1872,
+          "precision": "approximate",
+          "endYear": 1994,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "religious-significance",
+        "description": "The hill was used on Good Friday to represent Golgotha during papal processions.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "terraces",
+        "description": "The mound consists of a series of level terraces with retaining walls made of intact amphorae filled with sherds, and lime was sprinkled over the broken pots.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Heinrich Dressel",
+      "personId": "heinrich-dressel",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giuseppe Garibaldi",
+      "personId": "giuseppe-garibaldi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Stendhal",
+      "personId": "stendhal",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

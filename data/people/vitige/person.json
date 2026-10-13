@@ -1,0 +1,57 @@
+{
+  "id": "vitige",
+  "name": "Vitige",
+  "wikidataId": "Q312607",
+  "wikipediaTitle": "Vitige",
+  "content": {
+    "description": [
+      {
+        "text": "Vitige, a general of the Ostrogothic army, rose to power in 536 after quelling a revolt in Locri and was acclaimed king in place of the murdered Teodato. He was not of noble birth, but his military reputation earned him the throne.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During his reign he waged the Gothic War against the Byzantine forces of Emperor Justinian, notably besieging Rome from 537 to 538, cutting the city’s aqueducts to starve the defenders, and ultimately being captured by Belisarius and taken to Constantinople where he died two years later.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Vitige married Matasunta, the only daughter of Queen Amalasuntha, thereby forging a political link with the family of the former king Theodoric the Great.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "While besieging Rome, Vitige ordered the cutting of all ancient aqueducts that supplied the city, a move that severely disrupted Rome’s water supply.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After being defeated by Belisarius, Vitige was taken prisoner to Constantinople, where he died two years later without leaving any heirs.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Quarter_Siliqua_of_Witigis.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Quarter_Siliqua_of_Witigis.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Quarter_Siliqua_of_Witigis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Quarter_Siliqua_of_Witigis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 2.5",
+    "attribution": "Classical Numismatic Group, Inc. http://www.cngcoins.com",
+    "author": "Unknown authorUnknown author",
+    "width": 800,
+    "height": 392,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Vitige",
+    "url": "https://it.wikipedia.org/wiki/Vitige"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T17:15:01.068Z"
+  }
+}

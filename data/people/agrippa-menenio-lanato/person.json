@@ -1,0 +1,57 @@
+{
+  "id": "agrippa-menenio-lanato",
+  "name": "Agrippa Menenio Lanato",
+  "wikidataId": "Q396971",
+  "wikipediaTitle": "Agrippa Menenio Lanato",
+  "content": {
+    "description": [
+      {
+        "text": "Agrippa Menenio Lanato served as one of the two consuls of the Roman Republic in 503 BC.  During his term he led the Roman army against the Sabines, securing a decisive victory near Eretum, and later confronted the Aurunci forces that had taken the cities of Pometia and Cori.  After defeating the Aurunci, the consuls marched on Pometia, where a fierce battle ended with a Roman triumph; according to the historian Dionysius, Menenio alone received the triumph while his colleague, Publius Postumius Tubertus, was granted only an ovation because of his reckless conduct in the early clashes with the Sabines.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Menenio is best remembered for his moderate stance during the first major conflict between patricians and plebeians.  He mediated the resolution of the plebeian secession on the Sacred Mount in 494 BC, presenting the plebeians with a well‑known allegory that compared Roman society to a human body: each part must cooperate for the whole to survive.  His speech helped restore peace between the classes, and he died later that same year.  Because he possessed only modest property, the state paid for a lavish funeral funded by voluntary contributions from the plebeians, after which the Senate decreed that the funeral expenses be borne by the treasury.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Menenio used an allegorical ‘apologo’—a metaphor likening the Roman social order to a human body—to explain how cooperation among the different classes was essential for the Republic’s survival.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "While both consuls of 503 BC were awarded triumphs, only Menenio received the full honor; his colleague was granted a lesser ovation because of his imprudent actions during the early battles with the Sabines.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": -494,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Agrippa_Menenius_Lanatus.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Agrippa_Menenius_Lanatus.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Agrippa_Menenius_Lanatus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Agrippa_Menenius_Lanatus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "ÖNB",
+    "author": "ÖNB",
+    "width": 501,
+    "height": 591,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Agrippa Menenio Lanato",
+    "url": "https://it.wikipedia.org/wiki/Agrippa_Menenio_Lanato"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T17:24:44.870Z"
+  }
+}

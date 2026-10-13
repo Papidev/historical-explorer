@@ -1,0 +1,24 @@
+{
+  "introduction": {
+    "text": "The Mitreo delle Terme del Mitra was a Mithraic sanctuary located in the western corner of the Baths of the Mithra in Ostia, Rome. It is significant because it offers insight into the spread of Mithraism in the Roman Empire and the architectural features of early Mithraic temples.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The sanctuary measured 15.37 by 4.55 meters, with a vaulted ceiling 2.10 meters high. It consisted of an entrance hall and a main cult chamber, separated by a wall with an eastern door leading to a service area. The vault featured two square skylights, one at the center and one in the south, illuminating the statue of Mithra. The interior included a low podium with a reinforced arch, small Tuscan pillars, and niches that likely held small altar slabs.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "A marble statue of Mithra, 170 cm tall, originally stood in the sanctuary. The statue depicted Mithra holding a knife, with a frieze and metallic rays, though the knife and frieze are missing. Fragments of the statue, including the head of the bull and parts of Mithra's head and arm, were found in a drainage channel, likely discarded by Christians.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": []
+}

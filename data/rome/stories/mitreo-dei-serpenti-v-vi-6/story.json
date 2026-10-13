@@ -1,0 +1,84 @@
+{
+  "introduction": {
+    "text": "The Mitreo dei Serpenti (V,VI,6) is a Roman Mithraic sanctuary located in the V region of Ostia. It is significant for its preserved architectural features and serpent-themed frescoes, which provide insight into the spread of Mithraism in the late Roman Empire.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-1",
+        "description": "The western walls of the sanctuary are built from tuff in a reticulated style dating to the 1st century BC.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -100,
+          "precision": "approximate",
+          "endYear": -1,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-2",
+        "description": "The eastern walls of the sanctuary were constructed in two phases during the 2nd and 3rd centuries AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 100,
+          "precision": "approximate",
+          "endYear": 300,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-4",
+        "description": "A fresco depicting a female serpent on the east wall and a male serpent with crest on the north wall predates the sanctuary, dating to the third quarter of the 3rd century AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 225,
+          "precision": "approximate",
+          "endYear": 250,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-3",
+        "description": "The sanctuary was built in the second half of the 3rd century AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 250,
+          "precision": "approximate",
+          "endYear": 300,
+          "granularity": "century"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "The sanctuary occupies a rectangular space of about 60 m², accessed from the northern short side.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-2",
+        "description": "The walls are constructed from tuff with a reticulated masonry technique.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-1",
+        "description": "A fresco of a female serpent on the east wall.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-2",
+        "description": "A fresco of a male serpent with crest on the north wall.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-3",
+        "description": "Remnants of a small altar at the base of the sanctuary.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": []
+}

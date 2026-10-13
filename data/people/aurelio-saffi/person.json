@@ -1,0 +1,56 @@
+{
+  "id": "aurelio-saffi",
+  "name": "Aurelio Saffi",
+  "wikidataId": "Q775698",
+  "wikipediaTitle": "Aurelio Saffi",
+  "content": {
+    "description": [
+      {
+        "text": "Aurelio Saffi was a key figure of the Italian Risorgimento and a leading politician of the radical republican wing that followed Giuseppe Mazzini. Born into an aristocratic family in Forlì, he studied law at the University of Ferrara and began his political career in his hometown, serving as municipal councilor and secretary of the province from 1844 to 1845. He quickly aligned with Mazzini’s ideas and, in 1849, took part in the creation of the Roman Republic, serving as a deputy, minister of the interior, and a member of the triumvirate that governed the short‑lived republic alongside Carlo Armellini and Mazzini himself. After the republic collapsed in July 1849, Saffi fled to exile in Civezza, then to Switzerland, and later to London.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Saffi returned to Italy in 1852 to plan revolutionary uprisings, including the 1853 revolt in Milan, but was condemned in absentia to twenty years imprisonment and fled once more to England. In London he married the Scottish woman Giorgina Janet Craufurd in 1857 and had four sons. He later served as a deputy in the new Kingdom of Italy’s parliament from 1861, returned to London in 1864, and settled permanently in San Varano in 1867. A Freemason initiated in 1862 in Turin’s Dante Alighieri lodge, he later joined the Roman Propaganda lodge in 1885. He taught public law at the University of Bologna in 1877, was briefly arrested in 1874 for alleged anti‑monarchist activity but released in December, and died at the age of 70 in his home, where he is buried in Forlì’s monumental cemetery.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Saffi was a member of the triumvirate that governed the Roman Republic in 1849, alongside Carlo Armellini and Giuseppe Mazzini.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was initiated into Freemasonry on 1 March 1862 in the Dante Alighieri lodge of Turin and later affiliated with the Roman Propaganda lodge of the Grand Orient of Italy in 1885.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1877 he began a career as a professor of public law at the University of Bologna.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Saffi served as the first president of the Circolo Giuseppe Mazzini in Forlì, a club that became a national political hub.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He married the Scottish woman Giorgina Janet Craufurd in 1857 and had four sons, all of whom were born in different cities across Italy and England.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In August 1874 he was arrested in Rimini on charges of participating in an anti‑monarchist uprising, but was released in December of the same year.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Aurelio Saffi",
+    "url": "https://it.wikipedia.org/wiki/Aurelio_Saffi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T17:35:07.805Z"
+  }
+}

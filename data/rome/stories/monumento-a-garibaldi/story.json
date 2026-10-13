@@ -1,0 +1,86 @@
+{
+  "introduction": {
+    "text": "The Monument to Garibaldi in Rome is an imposing equestrian statue that commemorates the Italian national hero Giuseppe Garibaldi. It stands on the highest point of the Janiculum hill and is significant for its artistic design, historical symbolism, and the political meanings it has carried through Italy’s modern history.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-1",
+        "description": "Inaugurated on September 20, 1895 by Enrico Gallori.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1895,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-2",
+        "description": "After the Lateran Treaty in 1929, the statue was turned to face Rome.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1929,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-3",
+        "description": "During Fascism it was replaced by fascist symbols and a copy was put in place only in 1943.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1943,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-4",
+        "description": "Restored by the Municipality of Rome in 1990.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1990,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "Designed by Emilio Gallori in 1895, the monument features a bronze equestrian statue of Garibaldi atop a marble base.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-1",
+        "description": "Bas-reliefs on the sides commemorate the landing in Marsala, the resistance of Boiada, the defence of Rome, and the group of liberty.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-2",
+        "description": "Allegorical figures of Europe and America are engraved on each side of the marble base.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Giuseppe Garibaldi",
+      "personId": "giuseppe-garibaldi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Emilio Gallori",
+      "personId": "emilio-gallori",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ettore Ferrari",
+      "personId": "ettore-ferrari",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

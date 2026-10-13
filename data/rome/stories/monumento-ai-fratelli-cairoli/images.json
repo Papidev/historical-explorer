@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Monumento_ai_fratelli_Cairoli,_Roma,_Italia.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Monumento_ai_fratelli_Cairoli%2C_Roma%2C_Italia.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Monumento_ai_fratelli_Cairoli%2C_Roma%2C_Italia.jpg/960px-Monumento_ai_fratelli_Cairoli%2C_Roma%2C_Italia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Monumento_ai_fratelli_Cairoli%2C_Roma%2C_Italia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Gaux",
+      "author": "Gaux",
+      "width": 1108,
+      "height": 1074,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Enrico_e_Giovanni_Cairoli_monument,_Villa_Borghese,_Rome,_Italy.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Enrico_e_Giovanni_Cairoli_monument%2C_Villa_Borghese%2C_Rome%2C_Italy.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Enrico_e_Giovanni_Cairoli_monument%2C_Villa_Borghese%2C_Rome%2C_Italy.jpg/960px-Enrico_e_Giovanni_Cairoli_monument%2C_Villa_Borghese%2C_Rome%2C_Italy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/df/Enrico_e_Giovanni_Cairoli_monument%2C_Villa_Borghese%2C_Rome%2C_Italy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC0",
+      "attribution": "Bj.schoenmakers",
+      "author": "Bj.schoenmakers",
+      "width": 3353,
+      "height": 2515,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "I_fratelli_Cairoli,_gruppo_di_Ercole_Rosa_(xilografia).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:I_fratelli_Cairoli%2C_gruppo_di_Ercole_Rosa_(xilografia).jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/I_fratelli_Cairoli%2C_gruppo_di_Ercole_Rosa_%28xilografia%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/I_fratelli_Cairoli%2C_gruppo_di_Ercole_Rosa_%28xilografia%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Autore: Ercole Rosa - Incisore: Ballarini",
+      "author": "Autore: Ercole Rosa - Incisore: Ballarini",
+      "width": 911,
+      "height": 1141,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Monumento_ai_fratelli_Cairoli,_Roma,_Italia.jpg"
+}

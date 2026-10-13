@@ -1,0 +1,147 @@
+{
+  "introduction": {
+    "text": "The Monument to Goethe in Rome is a marble monument dedicated to the German writer Johann Wolfgang von Goethe, located in Villa Borghese. It commemorates Goethe's influence on Italian literature and reflects early 20th‑century cultural ties between Italy and Germany.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "donation",
+        "description": "The monument was donated by Emperor Wilhelm II to the city of Rome in 1902.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1902,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "inauguration",
+        "description": "The monument was inaugurated on 5 August 1904 in the presence of King Vittorio Emanuele III.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1904,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "wwi-threat",
+        "description": "During World War I the monument was threatened with removal because Germany was an enemy of Italy.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1914,
+          "precision": "exact",
+          "endYear": 1918,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "vandalism-1972",
+        "description": "In 1972 the statue’s head of Mephistopheles was removed in a vandalism act and later restored.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1972,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "vandalism-2010",
+        "description": "In 2010 the head of Mephistopheles was again removed and subsequently reinstalled.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2010,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "material",
+        "description": "The monument is carved from Carrara marble.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "height",
+        "description": "The monument stands approximately eight metres tall.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "capitello",
+        "description": "It rests on a composite Ionic‑Corinthian capital.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "sculptural-groups",
+        "description": "Three sculptural groups surround the capital, representing philosophy, lyrical poetry, and dramatic poetry.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "goethe-figure",
+        "description": "The central figure depicts a young Goethe, reflecting his time in Rome and his works such as Iphigenia in Tauris and the Roman Elegies.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "philosophy-group",
+        "description": "The group of Doctor Faust and Mephistopheles symbolizes philosophy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "poetry-group",
+        "description": "The group of Mignon and the harpist Lotario symbolizes lyrical poetry.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "drama-group",
+        "description": "The group of Iphigenia and Oreste symbolizes dramatic poetry.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Johann Wolfgang von Goethe",
+      "personId": "johann-wolfgang-von-goethe",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Guglielmo II di Germania",
+      "personId": "guglielmo-ii-di-germania",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Vittorio Emanuele III",
+      "personId": "vittorio-emanuele-iii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Mefistofele",
+      "personId": "mefistofele",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "dottor Faust",
+      "personId": "dottor-faust",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Mignon",
+      "personId": "mignon",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ifigenia (mitologia)",
+      "personId": "ifigenia-mitologia",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Oreste (figlio di Agamennone)",
+      "personId": "oreste-figlio-di-agamennone",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}
