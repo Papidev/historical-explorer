@@ -30,7 +30,7 @@ export const TypeMappings = ({
 }) => {
   const model = useTypeMappings(catalog, saveRule, categoryActions, classifyRules, aiSelectionRef);
   return (
-    <div className="min-h-0 flex-1 overflow-auto pb-5 text-gray-900 [contain:layout]">
+    <div className="min-h-0 flex-1 overflow-auto pr-3 pb-5 text-gray-900 [contain:layout]">
       <header className="mb-5 flex flex-wrap items-start justify-between gap-4">
         <div>
           <h2 className="text-xl font-semibold">Type mappings</h2>
