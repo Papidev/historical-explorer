@@ -45,6 +45,9 @@ export const CityExplorer = ({
   const selectedCategories = (categorySelection ?? availableCategories).filter((id) =>
     categoryDefinitions.some((category) => category.id === id),
   );
+  const allCategoriesSelected =
+    availableCategories.length > 0 &&
+    availableCategories.every((category) => selectedCategories.includes(category));
   const [sidebarOpen, setSidebarOpen] = useState<boolean | null>(null);
   const isDesktop = useDesktopLayout();
   const sidebarVisible = sidebarOpen ?? isDesktop;
@@ -59,7 +62,7 @@ export const CityExplorer = ({
   const visiblePois = pois.filter(
     (poi) =>
       selectedCategories.length > 0 &&
-      (availableCategories.every((category) => selectedCategories.includes(category)) ||
+      (allCategoriesSelected ||
         selectedCategories.some((category) =>
           matchesPoiCategory(poi.categories, category, categoryDefinitions),
         )),
@@ -101,7 +104,7 @@ export const CityExplorer = ({
         side="left"
         width={sidebarWidth}
         {...closeFiltersSwipe}
-        className="z-30 touch-pan-y lg:w-[var(--panel-width,18rem)]"
+        className="z-30 touch-pan-y lg:w-[var(--panel-width,22rem)]"
       >
         <Sidebar
           citySlug={citySlug}
@@ -109,25 +112,37 @@ export const CityExplorer = ({
           pois={pois}
           visiblePois={visiblePois}
           selectedCategories={selectedCategories}
+          availableCategories={availableCategories}
+          allCategoriesSelected={allCategoriesSelected}
           selectedPoiId={selectedPoiId}
           onToggleCategory={(category) => {
             const children: PoiCategory[] = categoryDefinitions
               .filter(({ parent }) => parent === category)
               .map(({ id }) => id);
-            updateCategories(
-              selectedCategories.includes(category)
-                ? selectedCategories.filter(
-                    (selected) =>
-                      selected !== category &&
-                      !children.includes(selected) &&
-                      selected !==
-                        categoryDefinitions.find((definition) => definition.id === category)
-                          ?.parent,
-                  )
-                : [...new Set([...selectedCategories, category, ...children])],
-            );
+            const parent = categoryDefinitions.find(
+              (definition) => definition.id === category,
+            )?.parent;
+            const next = selectedCategories.includes(category)
+              ? selectedCategories.filter(
+                  (selected) =>
+                    selected !== category && !children.includes(selected) && selected !== parent,
+                )
+              : [...new Set([...selectedCategories, category, ...children])];
+            if (
+              parent &&
+              !next.includes(parent) &&
+              categoryDefinitions
+                .filter(
+                  (definition) =>
+                    definition.parent === parent && availableCategories.includes(definition.id),
+                )
+                .every((definition) => next.includes(definition.id))
+            ) {
+              next.push(parent);
+            }
+            updateCategories(next);
           }}
-          onClear={() => updateCategories([])}
+          onToggleAll={() => updateCategories(allCategoriesSelected ? [] : availableCategories)}
           onOpenPoi={openPoi}
           onClose={() => setSidebarOpen(false)}
         />

@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.2.0
+
+### Minor Changes
+
+- Add a collapsible category filter tree with an All categories checkbox, consistent parent selection states, a selection summary, alphabetical ordering, and a wider visitor filter drawer.
+
 ## 0.1.7
 
 ### Patch Changes
