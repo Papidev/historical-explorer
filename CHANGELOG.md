@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.1.7
+
+### Patch Changes
+
+- Simplify visitor category filters with an All categories checkbox, consistent parent selection states, a selection summary, and a wider collapsible filter drawer with alphabetically ordered categories.
+
 ## 0.1.6
 
 ### Patch Changes

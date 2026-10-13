@@ -29,6 +29,7 @@ export const CategoryGroup = ({
   ).length;
   const children = definitions
     .filter(({ parent }) => parent === category)
+    .sort((a, b) => (a.label ?? a.name).localeCompare(b.label ?? b.name, "en"))
     .map(({ id }) => ({
       name: id,
       count: pois.filter((poi) => matchesPoiCategory(poi.categories, id, definitions)).length,
@@ -43,6 +44,10 @@ export const CategoryGroup = ({
           definitions={definitions}
           count={count}
           checked={selectedCategories.includes(category)}
+          indeterminate={
+            !selectedCategories.includes(category) &&
+            children.some(({ name }) => selectedCategories.includes(name))
+          }
           onToggle={() => onToggleCategory(category)}
         />
         {children.length > 0 ? (
