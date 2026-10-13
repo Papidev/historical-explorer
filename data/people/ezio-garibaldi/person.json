@@ -1,0 +1,65 @@
+{
+  "id": "ezio-garibaldi",
+  "name": "Ezio Garibaldi",
+  "wikidataId": "Q3736379",
+  "wikipediaTitle": "Ezio Garibaldi",
+  "content": {
+    "description": [
+      {
+        "text": "Ezio Garibaldi, the youngest son of the famed Italian patriot Ricciotti Garibaldi and his English wife Harriet Constance Hopcraft, was born in the small town of Riofreddo near Rome. He left school at the industrial institute of Fermo in 1911 to join the Garibaldi Legion in Greece, and later fought on the French and Italian fronts during the First World War, where he rose to the rank of captain and was wounded twice, once in 1915 on Monte Mesola and again at the end of 1918. In 1915 he also became a Master Mason in the Loggia \"Francesco Guardabassi\" of Perugia, and in 1917 he met and married the American Hope Mac Michael, with whom he had a daughter, Anita, in 1937.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the war Garibaldi moved to Mexico City as a representative of the American Baldwin Locomotive Works, but returned to Italy in 1924 where he served as mayor of Riofreddo and later launched the monthly magazine \"Camicia rossa\" in 1925. He became a prominent Fascist politician, serving as a deputy from 1929 to 1934, a national councilor in 1939, and a Freemason in 1949. He was captured by Allied forces in 1944 and interned at the Padula concentration camp, but survived the war and continued to promote Garibaldi’s legacy until his death in Rome in 1969 at the age of 75.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Garibaldi was wounded in the throat by a rifle bullet on 22 October 1915 while fighting on Monte Mesola, an injury that nearly killed him.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1925 he launched the monthly magazine \"Camicia rossa\", which ran throughout the Fascist period and promoted a political message that sought to position Fascism as a \"third way\" between capitalism and communism.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the Second World War he was interned at the Padula concentration camp after being captured by Allied forces in 1944.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1949 he co-founded a Scottish Rite Masonic lodge in the Palazzo Brancaccio, continuing his lifelong involvement with Freemasonry.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 1969,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Bundesarchiv_Bild_102-08233,_Edzio_Garibaldi_mit_seiner_Mutter_Constanza.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_102-08233%2C_Edzio_Garibaldi_mit_seiner_Mutter_Constanza.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Bundesarchiv_Bild_102-08233%2C_Edzio_Garibaldi_mit_seiner_Mutter_Constanza.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Bundesarchiv_Bild_102-08233%2C_Edzio_Garibaldi_mit_seiner_Mutter_Constanza.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0 de",
+    "attribution": "Bundesarchiv, Bild 102-08233 / CC BY-SA 3.0 DE",
+    "author": "UnknownUnknown",
+    "width": 538,
+    "height": 800,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Ezio Garibaldi",
+    "url": "https://it.wikipedia.org/wiki/Ezio_Garibaldi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T17:33:03.664Z"
+  }
+}

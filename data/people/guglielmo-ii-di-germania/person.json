@@ -1,0 +1,77 @@
+{
+  "id": "guglielmo-ii-di-germania",
+  "name": "Guglielmo II di Germania",
+  "wikidataId": "Q2677",
+  "wikipediaTitle": "Guglielmo II di Germania",
+  "content": {
+    "description": [
+      {
+        "text": "Guglielmo II ascended to the German throne in 1888 after the deaths of his father and grandfather. He quickly set out to reshape the empire’s foreign policy, abandoning Bismarck’s cautious diplomacy in favour of an assertive, militaristic stance. His reign was marked by a massive naval buildup, the construction of the first German battleship and a series of aggressive moves in Europe and Asia that pushed Germany further from Britain and the United Kingdom. The Kaiser’s support for Austria-Hungary in the Balkans and his decision to declare war on Russia in 1914 are widely regarded as key factors that precipitated the outbreak of the First World War.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The war’s disastrous outcome forced Guglielmo to abdicate in November 1918, after which he spent the rest of his life in exile in the Netherlands. He remained a symbol of the old imperial order, refusing to return to Germany even after the monarchy was abolished. He died on 4 June 1941 at the castle of Doorn, where he had spent his final years. Although his reign is remembered for its militarism and the role it played in the war, his personal legacy is also tied to the tragic decline of the German Empire and the political upheavals that followed.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He had a left arm atrophied due to a traumatic birth, which left him with a limp.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a first cousin of King George V of the United Kingdom, making him a nephew of Queen Victoria.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a strong advocate of naval expansion, leading to the launch of the first German battleship and the construction of a large fleet.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was considered one of the main instigators of World War I due to his support for Austria‑Hungary and his decision to declare war on Russia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After abdicating, he lived in exile in the Netherlands at the castle of Amerongen until his death in 1941.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1859,
+      "month": 1,
+      "day": 27,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1941,
+      "month": 6,
+      "day": 4,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Kaiser_Wilhelm_II_of_Germany_-_1902.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Kaiser_Wilhelm_II_of_Germany_-_1902.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Kaiser_Wilhelm_II_of_Germany_-_1902.jpg/960px-Kaiser_Wilhelm_II_of_Germany_-_1902.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Kaiser_Wilhelm_II_of_Germany_-_1902.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Studio of Thomas Heinrich Voigt",
+    "author": "Studio of Thomas Heinrich Voigt",
+    "width": 3743,
+    "height": 5388,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Guglielmo II di Germania",
+    "url": "https://it.wikipedia.org/wiki/Guglielmo_II_di_Germania"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:07:20.733Z"
+  }
+}

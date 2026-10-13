@@ -1,0 +1,65 @@
+{
+  "id": "prince-emanuele-filiberto-duke-of-aosta-1869-1931",
+  "name": "Prince Emanuele Filiberto, Duke of Aosta",
+  "wikidataId": "Q445106",
+  "wikipediaTitle": "Prince Emanuele Filiberto, Duke of Aosta",
+  "content": {
+    "description": [
+      {
+        "text": "Prince Emanuele Filiberto Vittorio Eugenio Alberto Genova Giuseppe Maria di Savoia, 2nd Duke of Aosta, was born on 13 January 1869 in Genoa as the eldest son of Prince Amadeo of Savoy, who later became King of Spain before returning to Italy.  He inherited the title of Duke of Aosta in 1890 after his father's death and was a cousin of King Victor Emmanuel III, placing him firmly within the upper echelons of the House of Savoy.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Emanuele Filiberto distinguished himself as a military commander, leading the Italian Third Army during World War I and earning the nickname “Undefeated Duke” for his army’s unbroken record.  In 1926 he was promoted to Marshal of Italy by Benito Mussolini, and he died on 4 July 1931 in Turin.  In accordance with his will, he was interred in the military cemetery of Redipuglia alongside thousands of soldiers from the Third Army.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was buried in the military cemetery of Redipuglia together with thousands of soldiers of the Third Army.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was promoted to Marshal of Italy by Benito Mussolini in 1926.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1869,
+      "month": 1,
+      "day": 13,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1931,
+      "month": 7,
+      "day": 4,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Emanuele_Filiberto,_II_duca_d'Aosta.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Emanuele_Filiberto%2C_II_duca_d'Aosta.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Emanuele_Filiberto%2C_II_duca_d%27Aosta.jpg/960px-Emanuele_Filiberto%2C_II_duca_d%27Aosta.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Emanuele_Filiberto%2C_II_duca_d%27Aosta.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Alexander Bassano",
+    "author": "Alexander Bassano",
+    "width": 1359,
+    "height": 1903,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Prince Emanuele Filiberto, Duke of Aosta",
+    "url": "https://en.wikipedia.org/wiki/Prince_Emanuele_Filiberto%2C_Duke_of_Aosta"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:28:01.085Z"
+  }
+}

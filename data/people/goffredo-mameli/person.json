@@ -1,0 +1,57 @@
+{
+  "id": "goffredo-mameli",
+  "name": "Goffredo Mameli",
+  "wikidataId": "Q721738",
+  "wikipediaTitle": "Goffredo Mameli",
+  "content": {
+    "description": [
+      {
+        "text": "Goffredo Mameli was born in 1827 in Genoa, where he received his early education at the Pie schools and later at the Carcare college. From a young age he showed a talent for poetry, writing romantic verses such as \"Il giovine crociato\" and \"La vergine e l’amante\".",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "By his early twenties Mameli had become a key figure in the Italian Risorgimento, organising patriotic demonstrations and composing political songs. In 1847 he wrote the lyrics that would become the Italian national anthem, and in 1848 he joined Garibaldi’s forces as a captain, fighting in the battles of Palestrina and Velletri before succumbing to a wound in Rome in 1849.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Mameli died at the age of 21 in Rome after a wound during the defense of the Roman Republic led to gangrene and sepsis.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1827,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1849,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Induno_Domenico_Goffredo_Mameli.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Induno_Domenico_Goffredo_Mameli.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Induno_Domenico_Goffredo_Mameli.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Induno_Domenico_Goffredo_Mameli.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Domenico Induno",
+    "author": "Domenico Induno",
+    "width": 946,
+    "height": 1181,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Goffredo Mameli",
+    "url": "https://it.wikipedia.org/wiki/Goffredo_Mameli"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T17:34:00.744Z"
+  }
+}

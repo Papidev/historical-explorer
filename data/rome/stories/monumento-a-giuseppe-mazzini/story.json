@@ -1,0 +1,156 @@
+{
+  "introduction": {
+    "text": "The Monument to Giuseppe Mazzini is a commemorative monument in Rome, erected on the slopes of the Aventine facing the Circus Maximus, honoring the Italian patriot and republican leader Giuseppe Mazzini.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "In 1887, the idea to erect a monument to Giuseppe Mazzini was first presented to the Chamber of Deputies.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1887,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "In 1890, the proposal was presented again, this time initiated by Prime Minister Francesco Crispi.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1890,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "In 1902, the commission for the monument was awarded to sculptor Ettore Ferrari.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1902,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "In 1914, the revised project was approved and the location on the Aventine was decided.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1914,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "In 1922, the first stone of the monument was laid.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1922,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "By 1929, the marble sculptures were finished, though the bronze statue was still in the foundry.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1929,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history7",
+        "description": "After World War II, construction resumed in 1948 under the guidance of Ettore Guastalla and Gian Giacomo Ferrari.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1948,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history8",
+        "description": "The monument was inaugurated on 2 June 1949, the centenary of the Roman Republic of 1849.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1949,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The monument features a tall square base with a semicircular rear element, decorated on three sides with a continuous high‑relief frieze of 27 m that allegorically depicts Mazzini’s ideals of freedom, triumph over oppression, and the re‑composition of martyr remains.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "A bronze statue of a seated Giuseppe Mazzini sits atop the marble base, surrounded by marble friezes and medallions that portray figures such as Carlo Pisacane, Goffredo Mameli, Federico Campanella, Aurelio Saffi, Maurizio Quadrio, Alberto Mario, Jessie White, Rosolino Pilo, and Adriano Lemmi.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Giuseppe Mazzini",
+      "personId": "giuseppe-mazzini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Francesco Crispi",
+      "personId": "francesco-crispi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ettore Ferrari",
+      "personId": "ettore-ferrari",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Carlo Pisacane",
+      "personId": "carlo-pisacane",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Goffredo Mameli",
+      "personId": "goffredo-mameli",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Federico Campanella",
+      "personId": "federico-campanella",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Aurelio Saffi",
+      "personId": "aurelio-saffi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Maurizio Quadrio",
+      "personId": "maurizio-quadrio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Alberto Mario",
+      "personId": "alberto-mario",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Jessie White",
+      "personId": "jessie-white",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

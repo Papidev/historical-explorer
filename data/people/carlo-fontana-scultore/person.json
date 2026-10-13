@@ -1,0 +1,77 @@
+{
+  "id": "carlo-fontana-scultore",
+  "name": "Carlo Fontana",
+  "wikidataId": "Q3659351",
+  "wikipediaTitle": "Carlo Fontana (scultore)",
+  "content": {
+    "description": [
+      {
+        "text": "Carlo Fontana was born in Carrara within the city walls, the son of a distinguished artistic family that included architect Domenico Fontana and sculptor Pietro Fontana. He studied at the Accademia di belle arti di Carrara, winning the Medaglia d'Oro in 1884 and the first prize in the Rome pensionato contest of 1888. In Rome he worked with Ercole Rosa and Ettore Ferrari, earning a silver medal at the national exhibition of fine arts in 1889 and further prizes in 1890 and 1891. At the age of 21 he created the sculpture Bagasc, a tender depiction of a boy apprentice in the Carrara quarries, which he regarded as one of his most conscientious studies and a stylistic masterpiece.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Fontana's career included a series of public commissions: a monument to Pietro Tacca in 1901, a large crucifix in Livorno the same year, and the monumental Genio della stirpe (Il Titano) in 1907, which was installed in 1914 in Sarzana. He won the 1908 contest for the Quadriga dell'Unità, a bronze group that crowned the Vittoriano's left pronaus in 1928 after twenty years of work. In 1921 he created the Fontana d'Italia in Gessopalena, funded by emigrants from Abruzzo in the United States, featuring a statue of Italy on a ship's prow and a verse by Gabriele D'Annunzio. He taught plastic figure at the Accademia di belle arti di Carrara from 1915 to 1929, and planned a 40‑metre Prometheus for La Spezia, later re‑imagined for Marina di Carrara. His final major project was a 22‑metre marble column of Latinity for the 1942 EUR exhibition, which was halted by the outbreak of World War II, and after the war he erected a monument to the sailors of the battleship Roma and other ships on Santo Stefano island.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "At the age of 21, Fontana created Bagasc, a tender depiction of a boy apprentice in the Carrara quarries, which he considered one of his most conscientious studies.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His monument to Pietro Tacca, erected in 1901, features Tacca's hands tied behind his back, a detail that references the four mori bronze by Tacca for Ferdinando I Medici.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Quadriga dell'Unità, which Fontana won the contest for in 1908, took twenty years to complete and was installed in the Vittoriano in 1928.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Fontana d'Italia in Gessopalena, commissioned in 1921, includes a statue of Italy on a ship's prow and a verse by Gabriele D'Annunzio on its base.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Fontana planned a colossal 40‑metre Prometheus for the port of La Spezia, later re‑imagined for Marina di Carrara.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as professor of plastic figure at the Accademia di belle arti di Carrara from 1915 to 1929.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His last major project was a 22‑metre marble column of Latinity for the 1942 EUR exhibition, which was halted by World War II.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the war he erected a monument to the sailors of the battleship Roma and other ships on Santo Stefano island.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Roma_Vittoriano_-_Quadriga_dell'Unità.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Roma_Vittoriano_-_Quadriga_dell'Unit%C3%A0.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Roma_Vittoriano_-_Quadriga_dell%27Unit%C3%A0.jpg/960px-Roma_Vittoriano_-_Quadriga_dell%27Unit%C3%A0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/Roma_Vittoriano_-_Quadriga_dell%27Unit%C3%A0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "RenioLinossi",
+    "author": "RenioLinossi",
+    "width": 2898,
+    "height": 2274,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Carlo Fontana (scultore)",
+    "url": "https://it.wikipedia.org/wiki/Carlo_Fontana_(scultore)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:19:01.671Z"
+  }
+}

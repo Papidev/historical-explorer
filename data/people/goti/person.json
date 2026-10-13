@@ -1,0 +1,61 @@
+{
+  "id": "goti",
+  "name": "Goti",
+  "wikidataId": "Q42193",
+  "wikipediaTitle": "Goti",
+  "content": {
+    "description": [
+      {
+        "text": "The Goti, also known as Gothones, were an eastern Germanic federation that emerged in the late Roman Empire. According to their own tradition and the Italian Wikipedia article, they traced their roots to the island of Gotland and the Götaland region of Sweden, and later migrated across the Baltic Sea into what is now northern Poland. The federation was initially divided into at least twelve tribes, with the most prominent being the Tervingi in the west and the Grutungi in the east, which later became the Visigoths and Ostrogoths respectively.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the third and fourth centuries the Goti came into frequent conflict with the Roman Empire, sometimes as enemies and sometimes as allies against other barbarian groups. Their military reputation was amplified by the practice of sacrificing captured soldiers to the god Tyz, and by the construction of a distinct Gothic alphabet invented by Bishop Ulfilas in the fourth century. The Goths eventually established the Visigothic kingdom in the western Mediterranean and the Ostrogothic kingdom in Italy and the Balkans, leaving a lasting legacy in the political and cultural history of medieval Europe.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The name of the Goths in their own language was Gut-þiuda, meaning \"Gothic people\".",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Goths practiced the sacrifice of captured soldiers to the god Tyz, often displaying the captives’ arms on trees as offerings.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Bishop Ulfilas created a Gothic alphabet in the fourth century, drawing on Greek, Latin, and runic influences to translate the Bible for the Goths.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Goths were known for their use of round shields and short swords, a distinctive military style noted by contemporary Roman writers.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Ostgoten-fibel.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ostgoten-fibel.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Ostgoten-fibel.jpg/960px-Ostgoten-fibel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/66/Ostgoten-fibel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 1528,
+    "height": 2584,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Goti",
+    "url": "https://it.wikipedia.org/wiki/Goti"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T17:15:19.316Z"
+  }
+}

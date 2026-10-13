@@ -1,0 +1,51 @@
+{
+  "introduction": {
+    "text": "The Monument to Pope John Paul II is a bronze statue in Rome that honors the late pontiff and stands near Termini Train station.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "inauguration-2011",
+        "description": "The monument was inaugurated on 18 May 2011.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2011,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "re-inauguration-2012",
+        "description": "After repairs, the statue was re‑inaugurated in 2012.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2012,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "Designed by Oliviero Rainaldi, the bronze statue is titled Conversations: Homage to John Paul II.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-1",
+        "description": "The bronze sculpture features an open vestment that has been compared to a tent or bell.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "John Paul II",
+      "personId": "pope-john-paul-ii",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

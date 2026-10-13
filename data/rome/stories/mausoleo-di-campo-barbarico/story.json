@@ -1,0 +1,111 @@
+{
+  "introduction": {
+    "text": "The Mausoleo di Campo Barbarico is a Roman funerary building of the \"tomb with temple\" type located in Rome's Municipio VII, notable for its 2nd‑century construction, later use as a hay barn, and 16th‑century drawings that reveal its rich interior decoration.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-2nd-century-construction",
+        "description": "Construction of the mausoleum in the 2nd century AD using opus latericium.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 100,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-gothic-camp",
+        "description": "The site was used as a Gothic camp by the forces of Vitiges in 539 during the siege of Rome.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 539,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1570-drawing",
+        "description": "First documented description by an anonymous artist in 1570, producing drawings preserved at Windsor.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1570,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-19th-century-use",
+        "description": "Continued use as a hay barn until the end of the 19th century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1800,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-1974-restoration",
+        "description": "Consolidation and restoration work began in 1974.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1974,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-middle-ages-reconstruction",
+        "description": "After abandonment and seismic collapses, the mausoleum was partially reconstructed in the Middle Ages and served as a hay barn until the end of the 19th century.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design-rectangular-plan",
+        "description": "The mausoleum has a rectangular plan measuring 8.30 by 9.90 meters, with an entrance facing Via Latina.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-barrel-vault",
+        "description": "The interior consists of a single rectangular space covered by a barrel vault with coffering; only the vault's base remains.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-walls-niches",
+        "description": "Lateral walls feature three orders of niches and arches; the back wall has two registers with a central niche and staircases leading to a double tympanum.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-exterior-reconstruction",
+        "description": "The exterior, especially the main facade, was partially reconstructed after collapses, but originally it was rather plain.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-16th-century-drawings",
+        "description": "The mausoleum's interior decoration was rich, as evidenced by 16th‑century drawings and some surviving fresco fragments.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art-fresco-fragments",
+        "description": "Surviving fresco fragments on the back wall indicate the presence of painted decoration.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Vitige",
+      "personId": "vitige",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Goti",
+      "personId": "goti",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "introduction": {
+    "text": "The Mitreo Barberini is one of the best preserved Mithraic temples in Rome, located behind Palazzo Barberini. It provides valuable insight into the early Roman mystery cult of Mithraism.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-2",
+        "description": "The western part of the building was converted into a Mithraeum in the 3rd century.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 200,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-1",
+        "description": "The site was excavated in 1936, revealing the remains of a 2nd-century building.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1936,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "The Mithraeum is an 11.85 × 6.25 m vaulted hall with two benches on either side where participants lay during rites.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-1",
+        "description": "The central wall painting depicts the tauroctonia, with Mitra killing a bull, accompanied by Cautes, Cautopates, a dog, a serpent, and a scorpion, and zodiacal symbols above.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Filippo Coarelli",
+      "personId": "filippo-coarelli",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Mitra (divinità)",
+      "personId": "mitra-divinit",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Cautes",
+      "personId": "cautes-e-cautopates",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Cautopates",
+      "personId": "cautes-e-cautopates",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

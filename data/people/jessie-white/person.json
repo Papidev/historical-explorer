@@ -1,0 +1,71 @@
+{
+  "id": "jessie-white",
+  "name": "Jessie White",
+  "wikidataId": "Q1131305",
+  "wikipediaTitle": "Jessie White",
+  "content": {
+    "description": [
+      {
+        "text": "Jessie White, born into a wealthy Hampshire shipping family, became a prominent figure in the Italian unification movement. She earned the nicknames Miss Uragano and the “Giovanna d’Arco della causa italiana” from Giuseppe Mazzini, reflecting her fierce commitment to the cause. After studying philosophy at the Sorbonne, she met Emma Roberts, a friend of Garibaldi, and was drawn into the struggle for Italian unity, eventually joining Garibaldi’s campaigns as a nurse and activist.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond her battlefield service, White conducted extensive social research, exposing the dire conditions of Naples’ poor and Sicilian sulfur miners. Her 1877 work, *La miseria in Napoli*, detailed how many residents lived in caves and under streets, while her investigations into child labor and miners’ health highlighted systemic abuses. She continued to write biographies of key figures such as Garibaldi and Mazzini, and after the unification she remained active in journalism and public advocacy until her death in Florence on 5 March 1906.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Mazzini dubbed her Miss Uragano and the “Giovanna d’Arco della causa italiana,” underscoring her passionate dedication to the Italian cause.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "White served as a nurse in four separate campaigns with Garibaldi, including the Battle of Volturno and the Franco‑Prussian war of 1870.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Her 1877 publication *La miseria in Napoli* revealed that a large portion of the city’s population lived in caves and under streets, challenging the government’s portrayal of Naples as prosperous.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the failed Pisacane expedition, White was imprisoned in Genoa for four months and was released on 14 November 1857.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Streets in Rovigo and Genoa, as well as a primary school in Genoa, were named in her honor, reflecting her lasting impact on Italian society.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "deathDate": {
+      "year": 1906,
+      "month": 3,
+      "day": 5,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Jessie_White_Mario.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Jessie_White_Mario.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Jessie_White_Mario.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Jessie_White_Mario.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 500,
+    "height": 813,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Jessie White",
+    "url": "https://it.wikipedia.org/wiki/Jessie_White"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:05:18.748Z"
+  }
+}

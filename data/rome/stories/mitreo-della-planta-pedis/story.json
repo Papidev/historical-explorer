@@ -1,0 +1,57 @@
+{
+  "introduction": {
+    "text": "The Mitreo della Planta Pedis is a Mithraeum located in Ostia, Rome, notable for its early 3rd‑century construction and its archaeological evidence of the Mithraic cult.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The Mitreo della Planta Pedis was constructed at the beginning of the 3rd century AD in Ostia.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 200,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "A coin of Emperor Valerian (reigned 253–259 AD) bearing the emperor and Sol was found in the Mitreo.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 253,
+          "precision": "exact",
+          "endYear": 259,
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The sanctuary is a three‑nave hall built in opus latericium and opus vittatum, with pillars separating the nave and a cult niche at the back.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Mosaics in the entrance hall include a serpent and a footprint of Mithra, geometric patterns, and a footprint of Mithra's foot.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "Reliefs in the cult niche depict the personifications of Sol and Luna.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Valeriano",
+      "personId": "valerian-emperor",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

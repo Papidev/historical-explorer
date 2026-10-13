@@ -6955,6 +6955,1176 @@
         "coordinates": [12.5239923, 41.9032494]
       },
       "geoPlaceId": "node/9705652612"
+    },
+    {
+      "id": "mausoleo-di-aquilio-regolo",
+      "type": "Feature",
+      "properties": {
+        "name": "Mausoleo di Aquilio Regolo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5454451, 41.9042268]
+      },
+      "geoPlaceId": "node/12571509623"
+    },
+    {
+      "id": "mausoleo-di-campo-barbarico",
+      "wikidataId": "Q97180948",
+      "type": "Feature",
+      "properties": {
+        "name": "Mausoleo di Campo Barbarico",
+        "wikimedia_commons": "Category:Mausoleum Campo Barbarico",
+        "wikipedia": "it:Mausoleo di Campo Barbarico"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5403963, 41.8590828]
+      },
+      "geoPlaceId": "way/534090923"
+    },
+    {
+      "id": "mausoleo-di-costanza",
+      "wikidataId": "Q831361",
+      "type": "Feature",
+      "properties": {
+        "name": "Mausoleo di Costanza",
+        "tourism": "attraction",
+        "wikimedia_commons": "Category:Santa Costanza (Rome)",
+        "wikipedia": "it:Mausoleo di Santa Costanza"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5173727, 41.9226092]
+      },
+      "geoPlaceId": "way/35306502"
+    },
+    {
+      "id": "mausoleum-of-helena",
+      "wikidataId": "Q1548855",
+      "type": "Feature",
+      "properties": {
+        "email": "santimarcellinoepietro@gmail.com",
+        "name": "Mausoleo di Elena",
+        "name:en": "Mausoleum of Helena",
+        "website": "https://www.soprintendenzaspecialeroma.it/schede/mausoleo-di-sant-elena_2979/",
+        "wikimedia_commons": "File:Mausoleo di Elena, Roma, Italia Feb 28, 2021 01-14-37 PM.jpeg",
+        "wikipedia": "it:Mausoleo di Elena"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5488063, 41.8789028]
+      },
+      "geoPlaceId": "way/112655535"
+    },
+    {
+      "id": "mausoleo-di-gallieno",
+      "wikidataId": "Q48809427",
+      "type": "Feature",
+      "properties": {
+        "name": "Mausoleo di Gallieno",
+        "website": "http://www.viaappiaantica.com/2014/04/19/mausoleo-di-gallieno/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5887752, 41.790934]
+      },
+      "geoPlaceId": "way/292208401"
+    },
+    {
+      "id": "mausoleo-di-gallieno-2",
+      "type": "Feature",
+      "properties": {
+        "name": "Mausoleo di Gallieno"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5887632, 41.7908995]
+      },
+      "geoPlaceId": "way/292208402"
+    },
+    {
+      "id": "mausoleo-di-lucilio-peto",
+      "wikidataId": "Q27808180",
+      "type": "Feature",
+      "properties": {
+        "name": "Mausoleo di Lucilio Peto",
+        "website": "https://www.sovraintendenzaroma.it/i_luoghi/roma_antica/monumenti/mausoleo_di_lucilio_peto",
+        "wikimedia_commons": "Category:Mausoleum of Lucilius Paetus",
+        "wikipedia": "it:Mausoleo di Lucilio Peto"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4965848, 41.9149852]
+      },
+      "geoPlaceId": "way/204040113"
+    },
+    {
+      "id": "mausoleo-di-menenio-agrippa",
+      "wikidataId": "Q56256261",
+      "type": "Feature",
+      "properties": {
+        "addr:city": "Roma",
+        "addr:housenumber": "627",
+        "addr:street": "Via Nomentana",
+        "name": "Mausoleo di Menenio Agrippa",
+        "website": "https://www.sovraintendenzaroma.it/i_luoghi/roma_antica/monumenti/mausoleo_cd_di_menenio_agrippa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5348794, 41.9344582]
+      },
+      "geoPlaceId": "node/2686006666"
+    },
+    {
+      "id": "mausoleum-of-romulus",
+      "wikidataId": "Q22919904",
+      "type": "Feature",
+      "properties": {
+        "name": "Mausoleo di Romolo",
+        "name:en": "Mausoleum of Romulus",
+        "tourism": "museum",
+        "wikimedia_commons": "Category:Mausoleum of Valerius Romulus (Rome)",
+        "wikipedia": "en:Mausoleum of Maxentius"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.518444, 41.8551188]
+      },
+      "geoPlaceId": "way/51706579"
+    },
+    {
+      "id": "mausoleo-di-sant-urbano-martire",
+      "type": "Feature",
+      "properties": {
+        "name": "Mausoleo di Sant'Urbano martire",
+        "wikipedia": "it:Mausoleo di Sant'Urbano martire"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5349541, 41.8386547]
+      },
+      "geoPlaceId": "way/531279782",
+      "wikidataId": "Q18785491"
+    },
+    {
+      "id": "mausoleo-di-tor-di-quinto",
+      "wikidataId": "Q62596148",
+      "type": "Feature",
+      "properties": {
+        "addr:city": "Roma",
+        "addr:housenumber": "361",
+        "addr:street": "Via Nomentana",
+        "name": "Mausoleo di Tor di Quinto",
+        "website": "https://www.sovraintendenzaroma.it/i_luoghi/roma_antica/monumenti/mausoleo_di_tor_di_quinto",
+        "wikimedia_commons": "Category:Mausoleo di Tor di Quinto (Rome)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5210434, 41.9241227]
+      },
+      "geoPlaceId": "way/30312713"
+    },
+    {
+      "id": "basilica-costantiniana",
+      "wikidataId": "Q3307980",
+      "type": "Feature",
+      "properties": {
+        "name": "Basilica Costantiniana",
+        "wikimedia_commons": "Category:Villa Gordiani (Rome)",
+        "wikipedia": "en:Villa Gordiani"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5557323, 41.8952146]
+      },
+      "geoPlaceId": "way/254502079"
+    },
+    {
+      "id": "mausoleo-mutilati-e-invalidi-di-guerra-sezione-di-roma",
+      "type": "Feature",
+      "properties": {
+        "name": "Mausoleo Mutilati e Invalidi di Guerra sezione di Roma"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5316348, 41.904393]
+      },
+      "geoPlaceId": "way/637313789"
+    },
+    {
+      "id": "mausoleo-ossario-garibaldino",
+      "wikidataId": "Q55360083",
+      "type": "Feature",
+      "properties": {
+        "name": "Mausoleo Ossario Garibaldino",
+        "website": "https://www.sovraintendenzaroma.it/i_luoghi/roma_medioevale_e_moderna/monumenti/mausoleo_ossario_garibaldino",
+        "wikimedia_commons": "Category:Mausoleo Ossario Garibaldino",
+        "wikipedia": "it:Mausoleo Ossario Garibaldino"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4656132, 41.8881928]
+      },
+      "geoPlaceId": "way/134198335"
+    },
+    {
+      "id": "mausoleo-romano",
+      "type": "Feature",
+      "properties": {
+        "name": "mausoleo romano"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5751885, 41.8029573]
+      },
+      "geoPlaceId": "way/474265368"
+    },
+    {
+      "id": "mausoleo-romano-2",
+      "type": "Feature",
+      "properties": {
+        "name": "Mausoleo romano"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4343027, 41.9746144]
+      },
+      "geoPlaceId": "node/6133428628"
+    },
+    {
+      "id": "memorial-irm-dulce",
+      "type": "Feature",
+      "properties": {
+        "name": "Memorial Irmã Dulce"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-38.5059589, -12.93593]
+      },
+      "geoPlaceId": "way/1317699190"
+    },
+    {
+      "id": "memoriale-a-goffredo-mameli",
+      "wikidataId": "Q122335500",
+      "type": "Feature",
+      "properties": {
+        "name": "Memoriale a Goffredo Mameli",
+        "wikimedia_commons": "Category:Monumento funerario a Goffredo Mameli (Cimitero del Verano, Rome)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5206932, 41.9019174]
+      },
+      "geoPlaceId": "node/3890226952"
+    },
+    {
+      "id": "memoriale-a-tutti-i-defunti",
+      "type": "Feature",
+      "properties": {
+        "name": "Memoriale a tutti i defunti"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5267912, 41.9028974]
+      },
+      "geoPlaceId": "node/6363693971"
+    },
+    {
+      "id": "memoriale-ai-caduti-pontifici-della-battaglia-di-mentana",
+      "type": "Feature",
+      "properties": {
+        "name": "Memoriale ai caduti pontifici della battaglia di Mentana"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5208721, 41.903155]
+      },
+      "geoPlaceId": "way/624857034"
+    },
+    {
+      "id": "memoriale-ai-partigiani-trasteverini",
+      "type": "Feature",
+      "properties": {
+        "name": "Memoriale ai partigiani trasteverini"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4705854, 41.8893473]
+      },
+      "geoPlaceId": "node/11482807948"
+    },
+    {
+      "id": "memoriale-dell-eccidio-del-ponte-dell-industria",
+      "type": "Feature",
+      "properties": {
+        "name": "Memoriale dell'eccidio del ponte dell'Industria"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.472765, 41.872157]
+      },
+      "geoPlaceId": "node/8796396267"
+    },
+    {
+      "id": "memoriale-di-walter-rossi",
+      "type": "Feature",
+      "properties": {
+        "name": "Memoriale di Walter Rossi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.443733, 41.911671]
+      },
+      "geoPlaceId": "node/1533905112"
+    },
+    {
+      "id": "mercato-di-monti",
+      "type": "Feature",
+      "properties": {
+        "addr:housenumber": "46",
+        "addr:postcode": "00184",
+        "addr:street": "Via Leonina",
+        "email": "info@mercatomonti.com",
+        "name": "Mercato di Monti",
+        "tourism": "attraction",
+        "website": "https://www.mercatomonti.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4927629, 41.8947131]
+      },
+      "geoPlaceId": "node/4250958790"
+    },
+    {
+      "id": "metropoliz-maam",
+      "type": "Feature",
+      "properties": {
+        "museum": "art",
+        "name": "Metropoliz MAAM",
+        "operator:type": "community",
+        "tourism": "museum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5954869, 41.8945777]
+      },
+      "geoPlaceId": "way/24243079"
+    },
+    {
+      "id": "miac-museo-italiano-dell-audiovisivo-e-del-cinema",
+      "type": "Feature",
+      "properties": {
+        "addr:city": "Roma",
+        "addr:postcode": "00173",
+        "addr:street": "Via Tuscolana",
+        "museum": "art",
+        "name": "MIAC - Museo Italiano dell’Audiovisivo e del Cinema",
+        "tourism": "museum",
+        "website": "https://www.museomiac.it/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5734988, 41.8505621]
+      },
+      "geoPlaceId": "node/9463852529"
+    },
+    {
+      "id": "michael-collins",
+      "type": "Feature",
+      "properties": {
+        "name": "Michael Collins",
+        "wikimedia_commons": "File:Targa ricordo Michael Collins.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4961603, 41.9142646]
+      },
+      "geoPlaceId": "node/8677541970"
+    },
+    {
+      "id": "miliarum-aureum",
+      "wikidataId": "Q916963",
+      "type": "Feature",
+      "properties": {
+        "name": "Miliarum Aureum",
+        "wikimedia_commons": "Category:Milliarium Aureum",
+        "wikipedia": "it:Miliario aureo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4843816, 41.8925782]
+      },
+      "geoPlaceId": "way/131557543"
+    },
+    {
+      "id": "militari-deceduti-per-causa-di-servizio",
+      "type": "Feature",
+      "properties": {
+        "name": "Militari deceduti per causa di servizio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5306853, 41.9026722]
+      },
+      "geoPlaceId": "way/34362882"
+    },
+    {
+      "id": "mino-erasmo-damato",
+      "type": "Feature",
+      "properties": {
+        "name": "Mino Erasmo Damato"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.479709, 41.8761762]
+      },
+      "geoPlaceId": "node/9061670821"
+    },
+    {
+      "id": "miracle-water",
+      "wikidataId": "Q76972137",
+      "type": "Feature",
+      "properties": {
+        "name": "Miracle Water",
+        "tourism": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4814682, 41.90157]
+      },
+      "geoPlaceId": "node/4450594029"
+    },
+    {
+      "id": "mitreo-barberini",
+      "wikidataId": "Q3859475",
+      "type": "Feature",
+      "properties": {
+        "name": "Mitreo Barberini",
+        "website": "https://www.soprintendenzaspecialeroma.it/schede/mitreo-barberini_2980/",
+        "wikimedia_commons": "Category:Palazzo Barberini (Rome) - Mithraeum",
+        "wikipedia": "it:Mitreo Barberini"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4912501, 41.9036724]
+      },
+      "geoPlaceId": "node/9244137967"
+    },
+    {
+      "id": "mitreo-dei-serpenti-v-vi-6",
+      "wikidataId": "Q124251336",
+      "type": "Feature",
+      "properties": {
+        "name": "Mitreo dei Serpenti (V,VI,6)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.2904095, 41.7546849]
+      },
+      "geoPlaceId": "node/10873805542"
+    },
+    {
+      "id": "mithraeum-of-felicissimus",
+      "wikidataId": "Q123469072",
+      "type": "Feature",
+      "properties": {
+        "name": "Mitreo del felicissimo (V,IX,1)",
+        "name:en": "Mithraeum of Felicissimus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.2916387, 41.7543294]
+      },
+      "geoPlaceId": "node/10873805531"
+    },
+    {
+      "id": "mitreo-della-planta-pedis",
+      "wikidataId": "Q123497173",
+      "type": "Feature",
+      "properties": {
+        "name": "Mitreo della Planta Pedis"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.2839507, 41.7528486]
+      },
+      "geoPlaceId": "way/1287550066"
+    },
+    {
+      "id": "mitreo-delle-sette-porte-iv-v-13",
+      "type": "Feature",
+      "properties": {
+        "name": "Mitreo delle Sette Porte (IV,V,13)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.2874585, 41.7524991]
+      },
+      "geoPlaceId": "way/965052525",
+      "wikidataId": "Q120005645"
+    },
+    {
+      "id": "mitreo-delle-sette-sfere-ii-viii-6",
+      "wikidataId": "Q130507607",
+      "type": "Feature",
+      "properties": {
+        "name": "Mitreo delle Sette Sfere (II,VIII,6)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.2904937, 41.7557779]
+      },
+      "geoPlaceId": "way/1105017198"
+    },
+    {
+      "id": "mithraeum-at-the-baths-of-mithra",
+      "wikidataId": "Q1939738",
+      "type": "Feature",
+      "properties": {
+        "name": "Mitreo delle Terme del Mitra",
+        "name:en": "Mithraeum at the Baths of Mithra",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.2851213, 41.7542479]
+      },
+      "geoPlaceId": "node/1926239997"
+    },
+    {
+      "id": "mitreo-di-lucrezio-menandro-i-iii-5",
+      "wikidataId": "Q112181347",
+      "type": "Feature",
+      "properties": {
+        "name": "Mitreo di Lucrezio Menandro (I,III,5)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.2886143, 41.7552632]
+      },
+      "geoPlaceId": "way/1065383694"
+    },
+    {
+      "id": "molino-del-silvano-reg-i-is-iii-1-2",
+      "type": "Feature",
+      "properties": {
+        "name": "Molino del Silvano (Reg. I, Is. III, 1-2)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.2889407, 41.7551314]
+      },
+      "geoPlaceId": "node/10313028761"
+    },
+    {
+      "id": "monte-testaccio",
+      "wikidataId": "Q781595",
+      "type": "Feature",
+      "properties": {
+        "name": "Monte Testaccio",
+        "wikimedia_commons": "Category:Monte Testaccio",
+        "wikipedia": "en:Monte Testaccio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.475191, 41.8759468]
+      },
+      "geoPlaceId": "way/23921018"
+    },
+    {
+      "id": "monteverde",
+      "type": "Feature",
+      "properties": {
+        "name": "Monteverde"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.522373, 41.9037448]
+      },
+      "geoPlaceId": "way/923957691"
+    },
+    {
+      "id": "monumento-a-carlo-alberto",
+      "wikidataId": "Q21141668",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento a Carlo Alberto",
+        "wikimedia_commons": "Category:Equestrian statue of Carlo Alberto (Rome)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4882633, 41.8996818]
+      },
+      "geoPlaceId": "way/201453763"
+    },
+    {
+      "id": "monumento-a-cavour",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento a Cavour",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4697558, 41.9053049]
+      },
+      "geoPlaceId": "way/358627079"
+    },
+    {
+      "id": "monumento-a-enrico-toti",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento a Enrico Toti",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4808277, 41.9124161]
+      },
+      "geoPlaceId": "way/201422664"
+    },
+    {
+      "id": "monumento-a-garibaldi",
+      "wikidataId": "Q3862680",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento a Garibaldi",
+        "wikimedia_commons": "Category:Monument to Giuseppe Garibaldi (Rome)",
+        "wikipedia": "it:Monumento a Giuseppe Garibaldi (Roma)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4607686, 41.8914637]
+      },
+      "geoPlaceId": "way/86251603"
+    },
+    {
+      "id": "monumento-a-giovanni-paolo-ii",
+      "wikidataId": "Q3862615",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento a Giovanni Paolo II",
+        "wikimedia_commons": "Category:Monumento per Giovanni Paolo II., Roma",
+        "wikipedia": "it:Monumento a Giovanni Paolo II"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4990131, 41.9019956]
+      },
+      "geoPlaceId": "node/1539350656"
+    },
+    {
+      "id": "monumento-a-giuseppe-mazzini",
+      "wikidataId": "Q16579818",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento a Giuseppe Mazzini",
+        "tourism": "artwork",
+        "wikimedia_commons": "Category:Monument to Giuseppe Mazzini (Rome)",
+        "wikipedia": "it:Monumento a Giuseppe Mazzini (Roma)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4843138, 41.8852083]
+      },
+      "geoPlaceId": "way/1005926720"
+    },
+    {
+      "id": "monumento-a-goethe",
+      "wikidataId": "Q1534099",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento a Goethe",
+        "tourism": "artwork",
+        "wikimedia_commons": "Category:Goethe monument in Rome",
+        "wikipedia": "de:Goethe-Denkmal (Rom)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.486335, 41.9115448]
+      },
+      "geoPlaceId": "way/201287519"
+    },
+    {
+      "id": "monumento-a-nicola-spedalieri",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento a Nicola Spedalieri",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4677422, 41.8982846]
+      },
+      "geoPlaceId": "way/662075333"
+    },
+    {
+      "id": "monumento-a-pier-paolo-pasolini",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento a Pier Paolo Pasolini"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.2489425, 41.7415372]
+      },
+      "geoPlaceId": "node/366064389"
+    },
+    {
+      "id": "monumento-a-simon-bolivar",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento a Simon Bolivar",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5342402, 41.9333796]
+      },
+      "geoPlaceId": "node/1286920242"
+    },
+    {
+      "id": "monumento-a-terenzio-mamiani-della-rovere",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento a Terenzio Mamiani della Rovere",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4657508, 41.8997977]
+      },
+      "geoPlaceId": "node/685957631"
+    },
+    {
+      "id": "monumento-ad-anita-garibaldi",
+      "wikidataId": "Q17636665",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento ad Anita Garibaldi",
+        "wikimedia_commons": "Category:Monument to Anita Garibaldi (Rome)",
+        "wikipedia": "it:Monumento ad Anita Garibaldi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.460117, 41.8934109]
+      },
+      "geoPlaceId": "way/365848852"
+    },
+    {
+      "id": "monumento-ai-caduti",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento ai Caduti"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.531538, 41.903781]
+      },
+      "geoPlaceId": "way/878019726"
+    },
+    {
+      "id": "monumento-ai-caduti-2",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento ai caduti"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.6046885, 41.8264142]
+      },
+      "geoPlaceId": "node/2394965917"
+    },
+    {
+      "id": "monumento-ai-caduti-della-i-guerra-mondiale",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento ai Caduti della I Guerra Mondiale"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4778433, 41.9305545]
+      },
+      "geoPlaceId": "way/220540580"
+    },
+    {
+      "id": "monumento-ai-caduti-di-nassirya",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento ai Caduti di Nassirya"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4780372, 41.8619742]
+      },
+      "geoPlaceId": "node/10578706896"
+    },
+    {
+      "id": "monumento-ai-caduti-di-torpignattara",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento ai caduti di Torpignattara"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5441773, 41.8790896]
+      },
+      "geoPlaceId": "node/6058891316"
+    },
+    {
+      "id": "monumento-ai-caduti-francesi",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento ai caduti francesi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4466589, 41.8888221]
+      },
+      "geoPlaceId": "way/740149284"
+    },
+    {
+      "id": "monumento-ai-fratelli-archibugi",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento ai fratelli Archibugi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4730653, 41.9194226]
+      },
+      "geoPlaceId": "node/8090512666"
+    },
+    {
+      "id": "monumento-ai-fratelli-cairoli",
+      "wikidataId": "Q116029788",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento ai Fratelli Cairoli",
+        "tourism": "artwork",
+        "wikimedia_commons": "Category:Monumento ai fratelli Cairoli (Rome)",
+        "wikipedia": "en:Monument to the Cairoli Brothers"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4799196, 41.9094228]
+      },
+      "geoPlaceId": "way/201419228"
+    },
+    {
+      "id": "monumento-ai-marinai-del-sebastiano-veniero",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento ai marinai del Sebastiano Veniero"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5312021, 41.9035352]
+      },
+      "geoPlaceId": "node/5570903795"
+    },
+    {
+      "id": "monumento-al-bersagliere",
+      "wikidataId": "Q56256393",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento al Bersagliere",
+        "tourism": "attraction",
+        "wikimedia_commons": "Category:Monument to the Bersagliere (Rome)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5017143, 41.9095808]
+      },
+      "geoPlaceId": "way/474053478"
+    },
+    {
+      "id": "monumento-al-deportato",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento al deportato"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5281611, 41.9005233]
+      },
+      "geoPlaceId": "way/638022586"
+    },
+    {
+      "id": "monumento-al-fante",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento al Fante"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5310069, 41.9035407]
+      },
+      "geoPlaceId": "node/5678491357"
+    },
+    {
+      "id": "monumento-al-fante-d-italia",
+      "type": "Feature",
+      "properties": {
+        "addr:city": "Roma",
+        "addr:postcode": "00123",
+        "addr:street": "Via della Stazione di Cesano",
+        "name": "Monumento al Fante d'Italia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.3311388, 42.0687057]
+      },
+      "geoPlaceId": "node/5923702159"
+    },
+    {
+      "id": "monumento-al-finanziere",
+      "wikidataId": "Q69560790",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento al Finanziere"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5197562, 41.9180456]
+      },
+      "geoPlaceId": "way/846605542"
+    },
+    {
+      "id": "monumento-al-metastasio",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento al Metastasio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4691898, 41.8979066]
+      },
+      "geoPlaceId": "node/13188762613"
+    },
+    {
+      "id": "monumento-all-alpino",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento all'Alpino"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4867231, 41.9149938]
+      },
+      "geoPlaceId": "node/12791585978"
+    },
+    {
+      "id": "monumento-all-umile-eroe",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento all'Umile Eroe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4867083, 41.9149798]
+      },
+      "geoPlaceId": "node/12791585977"
+    },
+    {
+      "id": "monumento-alla-resistenza",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento alla Resistenza"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4859757, 41.8610365]
+      },
+      "geoPlaceId": "way/959973420"
+    },
+    {
+      "id": "monumento-alle-torri-gemelle",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento alle Torri Gemelle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4893503, 41.8843355]
+      },
+      "geoPlaceId": "node/10568076767"
+    },
+    {
+      "id": "monumento-alle-vittime-del-terrorismo",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento alle Vittime del Terrorismo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4907757, 41.8827678]
+      },
+      "geoPlaceId": "node/11305156300"
+    },
+    {
+      "id": "monumento-alle-vittime-delle-foibe-istriane",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento alle vittime delle foibe istriane"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4791907, 41.8277925]
+      },
+      "geoPlaceId": "node/7962489719"
+    },
+    {
+      "id": "monumento-della-caravella",
+      "wikidataId": "Q98948923",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento della Caravella",
+        "wikimedia_commons": "Category:Rome-Paris twinning column (Rome)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4955575, 41.9037383]
+      },
+      "geoPlaceId": "node/4806269688"
+    },
+    {
+      "id": "taras-shevchenko-monument",
+      "wikidataId": "Q55655341",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento di Taras Shevchenko",
+        "name:en": "Taras Shevchenko monument",
+        "wikipedia": "uk:Пам'ятник Тарасові Шевченку (Рим)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.3978759, 41.912138]
+      },
+      "geoPlaceId": "node/3837119775"
+    },
+    {
+      "id": "monumento-equestre-al-carabiniere",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento equestre al Carabiniere",
+        "website": "https://www.carabinieri.it/arma/curiosita/non-tutti-sanno-che/m/monumento-equestre-al-carabiniere"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4585642, 41.9063225]
+      },
+      "geoPlaceId": "way/662016927"
+    },
+    {
+      "id": "monumento-funerario-iii-vii-2",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento Funerario (III,VII,2)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.2851488, 41.7508887]
+      },
+      "geoPlaceId": "way/982027344"
+    },
+    {
+      "id": "monumento-funerario-c-d-laterizio-i",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento Funerario c.d. Laterizio I",
+        "operator": "Soprintendenza Speciale per i Beni Archeologici di Roma"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5432794, 41.8320276]
+      },
+      "geoPlaceId": "way/158036042"
+    },
+    {
+      "id": "monumento-funerario-c-d-laterizio-ii",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento Funerario c.d. Laterizio II",
+        "operator": "Soprintendenza Speciale per i Beni Archeologici di Roma"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5435207, 41.8319451]
+      },
+      "geoPlaceId": "way/158036043"
+    },
+    {
+      "id": "monumento-funerario-colombario",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento Funerario Colombario",
+        "operator": "Soprintendenza Speciale per i Beni Archeologici di Roma"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5367178, 41.8375378]
+      },
+      "geoPlaceId": "way/158028763"
+    },
+    {
+      "id": "tomb-of-the-festoons",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento Funerario dei Festoni",
+        "name:en": "Tomb of the Festoons",
+        "operator": "Soprintendenza Archeologica di Roma",
+        "website": "http://www.viaappiaantica.com/2014/04/09/sepolcri-dei-festoni-e-del-frontespizio/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5396315, 41.8350404]
+      },
+      "geoPlaceId": "way/158029488"
+    },
+    {
+      "id": "monumento-funerario-del-frontespizio",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento Funerario del Frontespizio",
+        "operator": "Soprintendenza Speciale per i Beni Archeologici di Roma",
+        "website": "http://www.viaappiaantica.com/2014/04/09/sepolcri-dei-festoni-e-del-frontespizio/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5396697, 41.8350055]
+      },
+      "geoPlaceId": "way/158029487"
+    },
+    {
+      "id": "monumento-funerario-hilarus-fuscus",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento Funerario Hilarus Fuscus",
+        "operator": "Soprintendenza Speciale per i Beni Archeologici di Roma",
+        "website": "http://www.viaappiaantica.com/2014/04/09/sepolcro-di-ilaro-fusco/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5363257, 41.8380346]
+      },
+      "geoPlaceId": "way/158028765"
+    },
+    {
+      "id": "monumento-funerario-rabirii",
+      "wikidataId": "Q110838877",
+      "type": "Feature",
+      "properties": {
+        "name": "Monumento Funerario Rabirii",
+        "operator": "Soprintendenza Speciale per i Beni Archeologici di Roma",
+        "website": "http://www.viaappiaantica.com/2014/04/09/tomba-dei-rabirii/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.5386572, 41.835931]
+      },
+      "geoPlaceId": "way/158028766"
     }
   ]
 }

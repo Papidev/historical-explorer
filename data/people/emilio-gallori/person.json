@@ -1,0 +1,69 @@
+{
+  "id": "emilio-gallori",
+  "name": "Emilio Gallori",
+  "wikidataId": "Q3724407",
+  "wikipediaTitle": "Emilio Gallori",
+  "content": {
+    "description": [
+      {
+        "text": "Emilio Gallori was an Italian sculptor born in Florence in 1846. He studied at the Florentine Academy of Fine Arts under Aristodemo Costoli and later received a stipend to study in Rome from 1868 to 1872.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Gallori produced a number of historical and religious monuments, including a statue of Nero, the Monument to Metastasio in Rome, a statue of St. Peter for the Cathedral of Florence, and Angel medallions for its facade. He also created the statue of St. James the Less for the Basilica of Saint Paul Outside the Walls and designed the prominent Monument to Giuseppe Garibaldi on the Janiculum, which was inaugurated on 20 September 1895.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The equestrian statue of Garibaldi originally faced west toward the Vatican, but its orientation was inverted in 1929.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the death of sculptor Enrico Chiaradia in 1902, Gallori helped bring Chiaradia’s design to completion of the massive bronze equestrian statue of King Vittorio II for the Altare della Patria in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Gallori exhibited a statue titled Foster‑Sister at Turin in 1881.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He created the statue of St. Peter for the facade of the Cathedral in Florence and designed Angel medallions for the same facade.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1846,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1924,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Emilio_Gallori_-_Nero_dressed_as_a_woman_-_Curia_Iulia.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Emilio_Gallori_-_Nero_dressed_as_a_woman_-_Curia_Iulia.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Emilio_Gallori_-_Nero_dressed_as_a_woman_-_Curia_Iulia.jpg/960px-Emilio_Gallori_-_Nero_dressed_as_a_woman_-_Curia_Iulia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Emilio_Gallori_-_Nero_dressed_as_a_woman_-_Curia_Iulia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 3.0",
+    "attribution": "M0tty",
+    "author": "M0tty",
+    "width": 2530,
+    "height": 3344,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Emilio Gallori",
+    "url": "https://en.wikipedia.org/wiki/Emilio_Gallori"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T23:59:44.972Z"
+  }
+}

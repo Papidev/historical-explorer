@@ -1,0 +1,85 @@
+{
+  "id": "luciano-manara",
+  "name": "Luciano Manara",
+  "wikidataId": "Q1873330",
+  "wikipediaTitle": "Luciano Manara",
+  "content": {
+    "description": [
+      {
+        "text": "Luciano Manara was born on 23 March 1825 in Milan’s Sant’Andrea district into a wealthy bourgeois family. He was a close friend of the liberal thinker Carlo Cattaneo, completed his secondary education in Milan, and attended the naval school in Venice. Between 1840 and 1846 he spent long periods in Germany and France, and in 1843 he married Carmelita Fe in Antegnate, with whom he had three children. During his youth he spent summer holidays in Antegnate and, at the age of twenty, founded a small music school that he personally financed; the institution later evolved into the “Corpo Musicale Luciano Manara,” one of the oldest active bands in the Bergamo area, bearing his name since 1845.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Manara’s military career began with his participation in the Five Days of Milan, where he led the operation that captured Porta Tosa, later renamed Porta Vittoria. He served in the First Italian War of Independence, organizing the Bersaglieri Lombardi and fighting in the Trentino region, including the Battle of Sclemo. After the defeat at Novara he joined the defense of the Roman Republic, was promoted to lieutenant colonel and then colonel, and served as Chief of Staff to Giuseppe Garibaldi. On 30 June 1849, while defending Villa Spada, he was mortally wounded and died at the age of 24, having written a poignant letter to his friend Francesca Bonacina Spini urging that they must die to close the Forty‑Eight in earnest.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The music school he founded in Antegnate, which he personally financed, has survived to the present day as the “Corpo Musicale Luciano Manara,” one of the oldest active bands in the Bergamo area.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His brother Achille married Countess Amazilia Pacini, the daughter of the composer Giovanni Pacini.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The town of Cava Manara, located in the province of Pavia, was renamed in his honor after his actions at La Cava during the 1849 campaign.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After his death, his body was moved by sea from Rome to Genoa, then to Vezia (Lugano), and finally, in 1864, reburied in Barzanò where the Manara family erected a family monument tomb.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was promoted to the rank of colonel while serving in the Roman Republic, a notable achievement for a soldier only 24 years old.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "During the defense of Rome, he served as Chief of Staff to Giuseppe Garibaldi, a key position in the Republican forces.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He wrote a letter to his friend Francesca “Fanny” Bonacina Spini before his death, famously stating, “We must die to close the Forty‑Eight in earnest; for our example to be effective, we must die.”",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1825,
+      "month": 3,
+      "day": 23,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1849,
+      "month": 6,
+      "day": 30,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Manara.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Manara.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Manara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Manara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "AnonymousUnknown author",
+    "author": "AnonymousUnknown author",
+    "width": 175,
+    "height": 284,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Luciano Manara",
+    "url": "https://en.wikipedia.org/wiki/Luciano_Manara"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:29:15.667Z"
+  }
+}

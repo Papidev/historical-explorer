@@ -1,0 +1,49 @@
+{
+  "id": "carlo-pisacane",
+  "name": "Carlo Pisacane",
+  "wikidataId": "Q735241",
+  "wikipediaTitle": "Carlo Pisacane",
+  "content": {
+    "description": [
+      {
+        "text": "Carlo Pisacane was an Italian revolutionary who played a prominent role in the short‑lived Roman Republic of 1849, where he served as a military commander and chief of staff.  After the republic fell, he became best known for leading the ill‑fated Sapri uprising in 1857, an attempt to ignite a southern insurgency against the Bourbon monarchy.  The expedition ended in bloodshed at Sanza, where Pisacane chose suicide rather than surrender.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond his military exploits, Pisacane evolved into a thinker who blended nationalist aspirations with early utopian socialist ideas.  He argued that true national liberation required a simultaneous social revolution that would free peasants from feudal landowners and establish a non‑hierarchical, cantonal society.  His writings and the example he set influenced later Italian anarchists and contributed to the spread of Bakuninist thought in the country.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Pisacane is regarded as one of the first Italian proponents of utopian socialism, a stance that set him apart from contemporaries such as Giuseppe Mazzini.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Carlo_Pisacane_(1818-1857)_in_1855_-_Photograph_Collezione_Eredi_di_Silvio_Negro,_Rome.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Carlo_Pisacane_(1818-1857)_in_1855_-_Photograph_Collezione_Eredi_di_Silvio_Negro%2C_Rome.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/Carlo_Pisacane_%281818-1857%29_in_1855_-_Photograph_Collezione_Eredi_di_Silvio_Negro%2C_Rome.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/Carlo_Pisacane_%281818-1857%29_in_1855_-_Photograph_Collezione_Eredi_di_Silvio_Negro%2C_Rome.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 298,
+    "height": 420,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Carlo Pisacane",
+    "url": "https://it.wikipedia.org/wiki/Carlo_Pisacane"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:03:01.953Z"
+  }
+}

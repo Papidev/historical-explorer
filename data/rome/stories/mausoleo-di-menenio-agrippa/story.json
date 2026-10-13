@@ -1,0 +1,72 @@
+{
+  "introduction": {
+    "text": "The Mausoleo di Menenio Agrippa is a Roman mausoleum located on Via Nomentana near the Ponte Nomentano, notable for its 1st–2nd century AD construction and its association with the historical figure Menenio Agrippa.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Menenio Agrippa, who lived in the 1st century BC, is traditionally associated with the mausoleum, although he lived six centuries before its construction.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": -100,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "The mausoleum itself dates to the 1st–2nd century AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1,
+          "precision": "approximate",
+          "endYear": 200,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "In the 16th–17th centuries, the mausoleum was depicted with a medieval tower, a feature that no longer exists.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1500,
+          "precision": "approximate",
+          "endYear": 1700,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "Pillars of reinforcement were added to the structure on the Via Nomentana side.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "history5",
+        "description": "A portion of the wall was relocated to the opposite side of the street.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "history6",
+        "description": "Access to the mausoleum was blocked after its abandonment.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The mausoleum has a circular plan on a parallelepiped base, built with opus cementicium (mortar and yellow tuff). It features a vaulted funerary chamber made from amphora fragments, four niches, and windows.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Agrippa Menenio Lanato",
+      "personId": "agrippa-menenio-lanato",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

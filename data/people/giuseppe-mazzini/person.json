@@ -1,0 +1,69 @@
+{
+  "id": "giuseppe-mazzini",
+  "name": "Giuseppe Mazzini",
+  "wikidataId": "Q187336",
+  "wikipediaTitle": "Giuseppe Mazzini",
+  "content": {
+    "description": [
+      {
+        "text": "Giuseppe Mazzini was born in Genoa on 22 June 1805 to a family of modest means; his father, a physician, and his mother, a devout Jansenist, encouraged his early education. He studied law at the University of Genoa, where he earned a degree in civil and canon law in 1827, and soon became involved in the Carbonari, a secret society that sought Italian unification and republicanism.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After being arrested in 1830 for his conspiratorial activities, Mazzini fled to Marseille and founded the Giovine Italia in 1831, a movement that would become the backbone of the Italian Risorgimento. He spent the rest of his life in exile, travelling between Switzerland, France, and England, while continuing to write, organize, and inspire revolutionary movements across Europe. He died in Pisa on 10 March 1872, having lived under the false name Giorgio Brown to avoid arrest.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Mazzini founded the Giovine Italia in Marseille in 1831, which later became a key organization for Italian unification.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He died in Pisa under the alias Giorgio Brown, a pseudonym that reflected his fear of arrest and his desire to remain hidden from authorities.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Mazzini's ideas influenced not only the Italian Risorgimento but also later European republican movements, inspiring leaders such as Gandhi, Nehru, and Sun Yat-sen.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1805,
+      "month": 6,
+      "day": 22,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1872,
+      "month": 3,
+      "day": 10,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Giuseppe_Mazzini.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Giuseppe_Mazzini.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Giuseppe_Mazzini.jpg/960px-Giuseppe_Mazzini.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Giuseppe_Mazzini.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 1052,
+    "height": 1280,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Giuseppe Mazzini",
+    "url": "https://it.wikipedia.org/wiki/Giuseppe_Mazzini"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T17:34:21.391Z"
+  }
+}

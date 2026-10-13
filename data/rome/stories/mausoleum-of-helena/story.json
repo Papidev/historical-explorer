@@ -1,0 +1,117 @@
+{
+  "introduction": {
+    "text": "The Mausoleum of Helena is an ancient Roman mausoleum in Rome, built by Emperor Constantine I between 326 and 330 as his own tomb, later dedicated to his mother Saint Helena.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Construction of the mausoleum by Constantine I between 326 and 330.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 326,
+          "precision": "exact",
+          "endYear": 330,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Helena's death in 330 and the mausoleum's assignment as her tomb.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 330,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "In the 8th century the mausoleum was repurposed as a defensive fortress.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 700,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "In the 11th century the sarcophagus was moved to the Lateran.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1000,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "The area was used as a cemetery for the Equites singulares.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "history6",
+        "description": "The mausoleum was damaged by the reuse of its materials for other constructions.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The mausoleum has a circular plan with two cylindrical sections, the lower octagonal cylinder and the upper smaller diameter cylinder, originally 25.4 m tall.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The lower cylinder is octagonal with niches at the vertices, and the upper ring has eight arcaded windows.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "Large amphorae were used to lighten the dome, visible after the vault collapsed.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design4",
+        "description": "The mausoleum's height has reduced from 25.4 m to about 18 m.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "The sarcophagus of Helena, made of red porphyry, is decorated with war scenes.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "The rectangular niche facing the entrance likely contained the sarcophagus.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Constantine I",
+      "personId": "constantine-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Saint Helena of Constantinople",
+      "personId": "helena-mother-of-constantine-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Valentinian III",
+      "personId": "valentinian-iii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Maxentius",
+      "personId": "maxentius",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

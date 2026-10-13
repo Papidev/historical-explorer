@@ -1,0 +1,100 @@
+{
+  "introduction": {
+    "text": "The Mausoleo di Romolo, also known as the Mausoleum of Maxentius, is a Roman mausoleum on the Appian Way in Rome. It is significant as an example of early 4th‑century imperial funerary architecture and for its association with Emperor Maxentius and his son Valerius Romulus.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Construction of the mausoleum by Emperor Maxentius in the early 4th century as a family tomb.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 300,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "An 18th‑century farmhouse was built over the mausoleum, obscuring it from the Appian Way.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1700,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "The farmhouse was converted into a home by the Torlonia family, who owned it until it was taken over by the Fascist government in 1943.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1943,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "The mausoleum was reopened to the public in 2014 after extensive renovation.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2014,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "Valerius Romulus, the emperor’s young son, was buried in the mausoleum after his death.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "history3",
+        "description": "The mausoleum was part of a large complex on the Appian Way that included a palace and a chariot racing circus.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "history7",
+        "description": "Roman custom required bodies to be buried outside the city, influencing the mausoleum’s location on the Appian Way.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The mausoleum was a two‑story cylindrical rotunda with a diameter of about 35 metres, featuring a central octagonal pillar and a seven‑metre‑wide vaulted corridor with niches for sarcophagi.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "Only the semi‑underground floor of the rotunda survives; the upper floor and walls were never completed, as indicated by the lack of decoration.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "An 18th‑century farmhouse once stood where a columnar porch framed the tomb’s principal entrance.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": []
+  },
+  "relatedPeople": [
+    {
+      "name": "Maxentius",
+      "personId": "maxentius",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Valerius Romulus",
+      "personId": "valerius-romulus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "House of Torlonia",
+      "personId": "torlonia",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

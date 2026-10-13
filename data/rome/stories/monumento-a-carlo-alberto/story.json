@@ -1,0 +1,41 @@
+{
+  "introduction": {
+    "text": "The Monumento a Carlo Alberto is an equestrian statue of Charles Albert of Sardinia by Raffaello Romanelli, located in Rome.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "The statue commemorates Charles Albert of Sardinia.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The statue depicts Charles Albert on horseback.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "The statue is a bronze equestrian sculpture.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Charles Albert of Sardinia",
+      "personId": "charles-albert-of-sardinia",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Raffaello Romanelli",
+      "personId": "raffaello-romanelli",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

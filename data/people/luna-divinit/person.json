@@ -1,0 +1,61 @@
+{
+  "id": "luna-divinit",
+  "name": "Luna",
+  "wikidataId": "Q1235172",
+  "wikipediaTitle": "Luna (divinità)",
+  "content": {
+    "description": [
+      {
+        "text": "Luna was the Roman personification of the Moon, often depicted as the feminine counterpart of Sol, the sun deity. She was sometimes grouped with Proserpina and Ecate as a triform goddess, and at other times was treated more as an attribute of other goddesses such as Diana and Juno.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The cult of Luna dates back to the regal period of Rome. Varrone lists her among the twelve vital deities for agriculture, and Virgil also names her among the same group, calling her the brightest source of light. A temple on the Aventine, near Diana’s, was built under Servius Tullius and was destroyed in the Great Fire of 64 CE, never to be rebuilt. Another temple on the Palatine was dedicated to the name Noctiluca.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Luna was sometimes not considered a distinct deity but rather an attribute that qualified other goddesses such as Diana and Juno.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Her temple on the Aventine was destroyed in the Great Fire of 64 CE and was never rebuilt.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In Roman art, Luna is often depicted as a waxing moon pulled by a chariot drawn by two oxen.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In the Carmina Saecularia of 17 BC, Orazio refers to Luna as the \"queen of stars with two horns\", listening to the singing of two girls and Apollo's of two boys.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "The_Seven_Planets_-_Luna,_the_Moon.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:The_Seven_Planets_-_Luna%2C_the_Moon.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/The_Seven_Planets_-_Luna%2C_the_Moon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/The_Seven_Planets_-_Luna%2C_the_Moon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Scan by Yellow Lion",
+    "author": "Scan by Yellow Lion",
+    "width": 493,
+    "height": 709,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Luna (divinità)",
+    "url": "https://it.wikipedia.org/wiki/Luna_(divinit%C3%A0)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T22:45:01.271Z"
+  }
+}

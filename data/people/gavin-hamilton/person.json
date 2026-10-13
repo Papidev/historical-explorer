@@ -1,0 +1,61 @@
+{
+  "id": "gavin-hamilton",
+  "name": "Gavin Hamilton",
+  "wikidataId": "Q1496436",
+  "wikipediaTitle": "Gavin Hamilton",
+  "content": {
+    "description": [
+      {
+        "text": "Gavin Hamilton was born into a noble Scottish family and studied at the University of Glasgow before moving to Rome to learn painting under Agostino Masucci. After a brief return to Scotland and a period in London where he painted numerous portraits, he settled permanently in Rome in 1756, remaining there until his death.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In Rome Hamilton became known for his mythological scenes, notably the 1760 painting *Achille che piange sul corpo di Patroclo* and a cycle of six Iliad scenes that were later engraved by Domenico Cunego. He also painted the dramatic *Morte di Lucrezia* (c. 1765) and the famous *Giuramento degli Orazi* (1784). Beyond painting, Hamilton pursued archaeology, conducting excavations at sites such as the Villa Adriana, the Villa dei Quintili, and Ostia, and sold many recovered antiquities to British collectors like Charles Townley and William Petty.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Hamilton met the young Antonio Canova in 1779 through the Venetian ambassador Girolamo Zulian and helped Canova with his first Roman work, *Teseo*.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He painted the altar piece for the Scottish national church in Rome, Sant'Andrea degli Scozzesi, depicting the Martyrdom of St. Andrew.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Hamilton’s archaeological work included excavations at the Villa Adriana between 1769 and 1771, where he recovered sculptures from the ancient sacred grove.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Many of the antiquities Hamilton recovered were sold to prominent British collectors, notably the antiquarian Charles Townley and the minister William Petty.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Gavin_hamilton.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Gavin_hamilton.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Gavin_hamilton.jpg/960px-Gavin_hamilton.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Gavin_hamilton.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Ozias Humphry",
+    "author": "Ozias Humphry",
+    "width": 3477,
+    "height": 4351,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Gavin Hamilton",
+    "url": "https://it.wikipedia.org/wiki/Gavin_Hamilton"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T17:20:19.791Z"
+  }
+}

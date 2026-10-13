@@ -1,0 +1,73 @@
+{
+  "id": "ciceruacchio",
+  "name": "Ciceruacchio",
+  "wikidataId": "Q535661",
+  "wikipediaTitle": "Angelo Brunetti",
+  "content": {
+    "description": [
+      {
+        "text": "Angelo Brunetti, known by the nickname \"Ciceruacchio\", was born in Rome to a shoemaker in the Campo Marzio district. The nickname is a corruption of the Roman dialect word ciruacchiotto, meaning \"little fat\". He worked as a cart driver at the Ripetta port, transporting wine from the Roman countryside, and later ran a tavern near Porta del Popolo. In his youth he served as a \"garzone\" in the Seminario Romano at the Apollinare, a fact recorded in a pencil inscription in a small room on the entrance door.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Brunetti became a popular spokesman for the Roman people during the 1846–1849 revolutionary period. He publicly thanked Pope Pius IX for freeing political prisoners in July 1846, distributed wine, and lit a large fire near Porta del Popolo. He organized demonstrations in 1847, joined the demolition of the Jewish ghetto gates on 17 April 1848, and later fought against the French besiegers during the Roman Republic. After the fall of the Republic he fled with Garibaldi toward Venice, but was captured by Austrian forces and executed by firing squad on 10 August 1849, together with his 13‑year‑old son Lorenzo.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The nickname \"Ciceruacchio\" is a corruption of the Roman dialect word ciruacchiotto, meaning \"little fat\".",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He worked as a cart driver at the Ripetta port, transporting wine from the Roman countryside.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He ran a tavern near Porta del Popolo after his time as a cart driver.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In his youth he served as a \"garzone\" in the Seminario Romano at the Apollinare, with a pencil inscription in a small room on the entrance door.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In July 1846 he publicly thanked Pope Pius IX for freeing political prisoners, distributed wine, and lit a large fire near Porta del Popolo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was executed by firing squad on 10 August 1849 together with his 13‑year‑old son Lorenzo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A monument to him was erected in 1907 by the Sicilian sculptor Ettore Ximenes, later moved to the Gianicolo in 2011.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Angelo_Brunetti.png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Angelo_Brunetti.png",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Angelo_Brunetti.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Angelo_Brunetti.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "UnknownUnknown Original uploader was Querilinto at it.wikipedia",
+    "author": "UnknownUnknown Original uploader was Querilinto at it.wikipedia",
+    "width": 393,
+    "height": 445,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Angelo Brunetti",
+    "url": "https://it.wikipedia.org/wiki/Angelo_Brunetti"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T17:36:01.543Z"
+  }
+}

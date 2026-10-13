@@ -1,0 +1,96 @@
+{
+  "introduction": {
+    "text": "The Mausoleo di Gallieno is a large Roman mausoleum located at the IX mile of the ancient Appian Way, in the municipality of Ciampino. It is significant as the burial site of Emperor Gallienus and also contains the tomb of Flavius Severus, and it has been the subject of archaeological investigations and restoration work.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-gallieno",
+        "description": "The mausoleum was identified as the burial site of Emperor Gallienus, who died in 268.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 268,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-severo",
+        "description": "The site also contains the burial of Emperor Valerian's son Flavius Severus, who died in 307.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 307,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-hamilton",
+        "description": "In the 18th century, Gavin Hamilton conducted excavations at the site, recovering sculptures now dispersed.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1700,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-1959",
+        "description": "In 1959, surveys and studies were carried out, though unpublished.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1959,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-restoration",
+        "description": "Restoration work began in 2013 to preserve the monument.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 2013,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-location",
+        "description": "The mausoleum is located at the IX mile of the ancient Appian Way, in the municipality of Ciampino.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design-architecture",
+        "description": "The mausoleum is a large Roman structure built in laterite, originally faced with marble, resting on a circular base about 13 m in diameter. It features a tambour with niches, a dome, and was originally surrounded by a colonnade of 16 Corinthian columns.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-sculptures",
+        "description": "Sculptures recovered during 18th‑century excavations are now dispersed among museums and private collections.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Gallieno",
+      "personId": "gallienus",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Flavio Severo",
+      "personId": "flavio-severo",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Gavin Hamilton",
+      "personId": "gavin-hamilton",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

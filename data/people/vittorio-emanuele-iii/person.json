@@ -1,0 +1,77 @@
+{
+  "id": "vittorio-emanuele-iii",
+  "name": "Vittorio Emanuele III",
+  "wikidataId": "Q150642",
+  "wikipediaTitle": "Vittorio Emanuele III di Savoia",
+  "content": {
+    "description": [
+      {
+        "text": "Vittorio Emanuele III, born in Naples on 11 November 1869, ascended to the Italian throne in 1900 after the assassination of his father, Umberto I. During his 46‑year reign he guided Italy through two world wars, the introduction of universal male suffrage in 1912 and later universal female suffrage in 1946, and the signing of the Lateran Treaty that settled the Roman Question. He earned the nickname “Re soldato” for personally visiting front‑line troops during the First World War, and he was a passionate numismatist who published the multi‑volume Corpus Nummorum Italicorum.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Beyond domestic reforms, Vittorio Emanuele III oversaw Italy’s colonial ventures, including the conquest of Libya in 1911–12 and the annexation of Ethiopia in 1935–36, which earned him the title of Emperor of Ethiopia. His reign ended in 1946 when he abdicated in favour of his son Umberto II, after which he lived in exile in Egypt until his death in Alexandria on 28 December 1947.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was called “Re soldato” for personally visiting front‑line troops during the First World War.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He introduced universal male suffrage in 1912 and universal female suffrage in 1946.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a numismatist who published the multi‑volume Corpus Nummorum Italicorum.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He signed the Lateran Treaty in 1929, which settled the Roman Question.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He abdicated in 1946 and went into exile in Egypt, where he died in 1947.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1869,
+      "month": 11,
+      "day": 11,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1947,
+      "month": 12,
+      "day": 28,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Vitorio_Emanuel_III.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Vitorio_Emanuel_III.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/Vitorio_Emanuel_III.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/Vitorio_Emanuel_III.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Mario Nunes Vais",
+    "author": "Mario Nunes Vais",
+    "width": 517,
+    "height": 762,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Vittorio Emanuele III di Savoia",
+    "url": "https://it.wikipedia.org/wiki/Vittorio_Emanuele_III_di_Savoia"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:08:01.767Z"
+  }
+}

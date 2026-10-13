@@ -1,0 +1,83 @@
+{
+  "id": "maurizio-quadrio",
+  "name": "Maurizio Quadrio",
+  "wikidataId": "Q3301703",
+  "wikipediaTitle": "Maurizio Quadrio",
+  "content": {
+    "description": [
+      {
+        "text": "Maurizio Quadrio was born on 6 September 1800 in Chiavenna, the son of Angelica Pestalozzi and Carlo Quadrio, a local physician and small landowner. He studied at the University of Pavia under Giandomenico Romagnosi and became involved with the secret Carbonari federation. In 1820 he was imprisoned for supporting the Neapolitan uprisings, and the following year he joined the Battaglione della Minerva, marching to Piedmont where liberal revolts had broken out. After the failure of those insurrections he was forced into exile, first in Genoa where he met the young Giuseppe Mazzini, and then in Spain, France and Switzerland, establishing himself as a committed patriot who refused to live under Austrian rule.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Quadrio returned to Lombardy only to flee again, eventually settling in Odessa where he taught private lessons and served as a tutor to nobility. He joined the Polish uprising in 1830, returned to Russia, and after a brief stay in Switzerland he was captured by Austrian authorities and sentenced to death, a sentence later commuted to six months in prison. After his release he returned to Chiuro and helped the cholera victims of Valtellina, baptising 34 children between 1835 and 1848. In 1848 he was appointed commissioner for Valtellina by the provisional government of Milan, later serving as secretary of the provisional government in Tuscany, private secretary to the triumvirate in Rome, and director of the republican newspapers L'unità italiana and L'emancipazione, while also publishing Garibaldi’s “Il libro dei Mille” in 1879.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was imprisoned in 1820 for supporting the Neapolitan uprisings.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He joined the Battaglione della Minerva in 1821, one of 84 students among 893.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He met Giuseppe Mazzini in Genoa and later collaborated with him in London, directing the periodical Pensiero ed azione.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as private secretary to the triumvirate (Mazzini, Armellini, Saffi) in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He directed the republican newspaper L'unità italiana from 1859 to 1871.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He directed the newspaper L'emancipazione in Rome starting in 1872.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He baptised 34 children in Chiuro between 1835 and 1848.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He published Garibaldi's “Il libro dei Mille” in 1879.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1800,
+      "month": 9,
+      "day": 6,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Maurizio_Quadrio_busto.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Maurizio_Quadrio_busto.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Maurizio_Quadrio_busto.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Maurizio_Quadrio_busto.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 2.5",
+    "attribution": "No machine-readable author provided. Folini assumed (based on copyright claims).",
+    "author": "No machine-readable author provided. Folini assumed (based on copyright claims).",
+    "width": 600,
+    "height": 800,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Maurizio Quadrio",
+    "url": "https://it.wikipedia.org/wiki/Maurizio_Quadrio"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:04:29.046Z"
+  }
+}

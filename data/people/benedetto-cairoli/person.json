@@ -1,0 +1,73 @@
+{
+  "id": "benedetto-cairoli",
+  "name": "Benedetto Cairoli",
+  "wikidataId": "Q284294",
+  "wikipediaTitle": "Benedetto Cairoli",
+  "content": {
+    "description": [
+      {
+        "text": "Benedetto Cairoli was born on 28 January 1825 in Pavia, Lombardy, and became a prominent figure in the Italian Risorgimento. From 1848 until the completion of Italian unity in 1870, he served as a Garibaldian officer, political refugee, anti‑Austrian conspirator, and deputy to parliament. He commanded volunteer companies under Garibaldi in 1859 and 1860, sustaining injuries at Calatafimi and Palermo, and later, as a colonel in 1866, assisted Garibaldi in the Tyrol campaign before fighting at Mentana in 1867.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the Risorgimento, Cairoli entered politics, becoming the parliamentary leader of the Left in 1876. He served twice as Prime Minister of Italy, first from March to November 1878 and again from July 1879 to November 1880, pursuing a Francophile and irredentist policy that brought Italy close to war with Austria. His tenure was marked by diplomatic missteps, such as the Berlin Congress where Italy gained nothing, and the failure to anticipate the French occupation of Tunis in 1881. He resigned in 1880 to avoid further controversy, retired from public life thereafter, and died on 8 August 1889 while a guest of King Umberto at Capodimonte.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Cairoli was wounded twice during the campaigns with Garibaldi, suffering a slight injury at Calatafimi and a severe wound at Palermo.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1866, holding the rank of colonel, he assisted Garibaldi in the campaign in the County of Tyrol.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was awarded the knighthood of the Annunziata, Italy's highest decoration, in 1887.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The Italian Regia Marina destroyer Benedetto Cairoli was named in his honor.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1825,
+      "month": 1,
+      "day": 28,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1889,
+      "month": 8,
+      "day": 8,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Benedetto_Cairoli_iii.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Benedetto_Cairoli_iii.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Benedetto_Cairoli_iii.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Benedetto_Cairoli_iii.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 735,
+    "height": 989,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Benedetto Cairoli",
+    "url": "https://en.wikipedia.org/wiki/Benedetto_Cairoli"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:25:35.453Z"
+  }
+}

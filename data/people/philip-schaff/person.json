@@ -1,0 +1,69 @@
+{
+  "id": "philip-schaff",
+  "name": "Philip Schaff",
+  "wikidataId": "Q115922",
+  "wikipediaTitle": "Philip Schaff",
+  "content": {
+    "description": [
+      {
+        "text": "Philip Schaff was born in Chur, Switzerland, on 1 January 1819. After his father's death he was raised in an orphanage and later studied at the gymnasium in Stuttgart. He earned a Bachelor of Divinity at the University of Berlin in 1841 and began lecturing on exegesis and ecclesiastical history. In 1843 he accepted a professorship at the German Reformed Theological Seminary of Mercersburg, Pennsylvania, where his advocacy of medieval Catholicism and the Oxford Movement led to accusations of heresy that were ultimately dismissed by a synod in 1845.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Schaff’s scholarship reshaped American church history through his multi‑volume History of the Christian Church and his editorial work on the Nicene and Post‑Nicene Fathers. He also served as president of the committee that translated the American Standard Version of the Bible, founded the Philip Schaff Prize in 1888, and acted as a mediator between German and Anglo‑American theology, promoting Christian unity at the 1893 World’s Parliament of Religions in Chicago.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In 1865 Schaff founded the first German Sunday School in Stuttgart.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a delegate to the Russian emperor in 1871 to plead for the religious liberty of subjects in the Baltic provinces.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "From 1870 until his death he held successive chairs at Union Theological Seminary in New York City, including theological encyclopedia, Hebrew, sacred literature, and church history.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1819,
+      "month": 1,
+      "day": 1,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1893,
+      "month": 10,
+      "day": 20,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Philip_Schaff.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Philip_Schaff.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Philip_Schaff.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Philip_Schaff.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "AnonymousUnknown author",
+    "author": "AnonymousUnknown author",
+    "width": 198,
+    "height": 260,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Philip Schaff",
+    "url": "https://en.wikipedia.org/wiki/Philip_Schaff"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T17:48:01.326Z"
+  }
+}

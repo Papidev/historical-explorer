@@ -1,0 +1,85 @@
+{
+  "id": "enrico-toti",
+  "name": "Enrico Toti",
+  "wikidataId": "Q738527",
+  "wikipediaTitle": "Enrico Toti",
+  "content": {
+    "description": [
+      {
+        "text": "Enrico Toti was born on 20 August 1882 in Rome and grew up in the San Giovanni district. After a childhood spent on the decks of Italian warships, a tragic accident in 1908 left him with a missing left leg. Undeterred, he reinvented himself as a one‑legged cyclist and in 1911 rode across Europe, reaching as far as Lapland, and later traversed Egypt and the Sudan on a single‑legged bicycle.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "When Italy entered World War I, Toti could not enlist because of his disability, but he joined the front as an unpaid civilian volunteer. He served with the 3rd Bersaglieri Bicycle Battalion and was killed in the Sixth Battle of the Isonzo on 6 August 1916. Before he fell, he hurled his crutch at the enemy and shouted, \"Nun moro io!\" He was posthumously awarded the Gold Medal of Military Valor, and two Italian submarines were later named in his honor.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "After his accident, Toti worked as a stoker for the State Railways.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He pioneered one‑legged cycling, traveling from Paris to Lapland in 1911.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was posthumously awarded the Gold Medal of Military Valor by King Victor Emmanuel III.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Two Italian submarines were named after him: a Balilla‑class submarine built in 1925 and a Toti‑class submarine built in 1968.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "A street in San Cesareo, outside Rome, is named Via Enrico Toti in his honor.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Before falling in battle, he shouted \"Nun moro io!\", a Roman dialect phrase meaning \"I do not die!\".",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as an unpaid, unregistered civilian volunteer attached to several units before officially joining the 3rd Bersaglieri Bicycle Battalion.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1882,
+      "month": 8,
+      "day": 20,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1916,
+      "month": 8,
+      "day": 6,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Enrico_Toti.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Enrico_Toti.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/da/Enrico_Toti.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/da/Enrico_Toti.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Photograph",
+    "author": "Photograph",
+    "width": 591,
+    "height": 945,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Enrico Toti",
+    "url": "https://en.wikipedia.org/wiki/Enrico_Toti"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:30:01.748Z"
+  }
+}

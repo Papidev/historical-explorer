@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Mitreo_Barberini.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Mitreo_Barberini.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Mitreo_Barberini.JPG/960px-Mitreo_Barberini.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Mitreo_Barberini.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Costantinus",
+      "author": "Costantinus",
+      "width": 3096,
+      "height": 2144,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Sol_Invictus.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Sol_Invictus.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Sol_Invictus.JPG/960px-Sol_Invictus.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Sol_Invictus.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Costantinus",
+      "author": "Costantinus",
+      "width": 3456,
+      "height": 2304,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Mitreo_Barberini.JPG"
+}

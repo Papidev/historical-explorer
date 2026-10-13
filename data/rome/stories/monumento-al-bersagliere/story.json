@@ -1,0 +1,121 @@
+{
+  "introduction": {
+    "text": "The Monument to the Bersagliere in Rome commemorates the Bersaglieri soldiers who breached the city walls at Porta Pia in 1870, marking Rome’s integration into the Kingdom of Italy. It stands as a symbol of national unity and military valor.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-1870",
+        "description": "In 1870, Italian Bersaglieri breached Rome's Porta Pia, leading to Rome's annexation into the Kingdom of Italy.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1870,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1923",
+        "description": "In 1923, plans for a monument to the Bersaglieri were proposed.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1923,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1929",
+        "description": "The 1929 Lateran Treaty between Italy and the Vatican facilitated negotiations for the monument.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1929,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1930",
+        "description": "In 1930, a public competition for the monument design was held, receiving 24 submissions.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1930,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1932",
+        "description": "The monument was inaugurated on 18 September 1932 in the presence of King Vittorio Emanuele III, Prince Umberto, Benito Mussolini, Achille Starace, and Governor Francesco Boncompagni Ludovisi.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1932,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-1",
+        "description": "The monument features a bronze statue of a dynamic Bersaglieri running toward Porta Pia, holding a rifle and trumpet, mounted on a travertine base with bas-reliefs by Morbiducci.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-1",
+        "description": "Bas-reliefs on the travertine base depict Bersaglieri battles such as the Battle of Ponte di Goito, the death of Luciano Manara, the breach of Porta Pia, the Battle of Sciara Sciat, the wounding of Enrico Toti, and the death of Alberto Riva di Villasanta.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Benito Mussolini",
+      "personId": "benito-mussolini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Vittorio Emanuele III",
+      "personId": "vittorio-emanuele-iii",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Prince Emanuele Filiberto, Duke of Aosta (1869–1931)",
+      "personId": "prince-emanuele-filiberto-duke-of-aosta-1869-1931",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Publio Morbiducci",
+      "personId": "publio-morbiducci",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Achille Starace",
+      "personId": "achille-starace",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Francesco Boncompagni Ludovisi",
+      "personId": "francesco-boncompagni-ludovisi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Michelangelo",
+      "personId": "michelangelo-buonarroti",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Luciano Manara",
+      "personId": "luciano-manara",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Enrico Toti",
+      "personId": "enrico-toti",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

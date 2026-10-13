@@ -1,0 +1,61 @@
+{
+  "id": "anita-garibaldi",
+  "name": "Anita Garibaldi",
+  "wikidataId": "Q636688",
+  "wikipediaTitle": "Anita Garibaldi",
+  "content": {
+    "description": [
+      {
+        "text": "Anita Garibaldi was born in Brazil in 1822 and became the wife of the Italian revolutionary Giuseppe Garibaldi. She fought alongside him in the Brazilian War of the Confederation and later in the Italian Risorgimento, earning the nickname \"heroine of two worlds\" for her active participation in both continents' struggles for liberty.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In 1849, while accompanying her husband to defend Venice, Anita contracted malaria and died in Ravenna at the age of 27. Her body was later transferred to Rome, where she was interred at the monument on the Gianicolo hill in a ceremony attended by Benito Mussolini, a rare honor for a woman of her time.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Anita Garibaldi was buried at the monument on the Gianicolo hill in Rome, a rare honor for a woman in the 19th century, and her funeral was attended by the future Italian dictator Benito Mussolini.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "She was known as the \"heroine of two worlds\" because she fought in both the Brazilian and Italian revolutions, a distinction that set her apart from most contemporary female combatants.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1822,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 1849,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Anita_Garibaldi_-_1839.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Anita_Garibaldi_-_1839.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Anita_Garibaldi_-_1839.jpg/960px-Anita_Garibaldi_-_1839.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Anita_Garibaldi_-_1839.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Gaetano Gallino",
+    "author": "Gaetano Gallino",
+    "width": 1424,
+    "height": 2048,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Anita Garibaldi",
+    "url": "https://it.wikipedia.org/wiki/Anita_Garibaldi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:15:13.953Z"
+  }
+}

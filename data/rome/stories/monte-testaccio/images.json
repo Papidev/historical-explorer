@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Testaccio_monte_dei_cocci_051204-12-13.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Testaccio_monte_dei_cocci_051204-12-13.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Testaccio_monte_dei_cocci_051204-12-13.JPG/960px-Testaccio_monte_dei_cocci_051204-12-13.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Testaccio_monte_dei_cocci_051204-12-13.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "No machine-readable author provided. Lalupa assumed (based on copyright claims).",
+      "author": "No machine-readable author provided. Lalupa assumed (based on copyright claims).",
+      "width": 1771,
+      "height": 595,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Testaccio_1625.png",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Testaccio_1625.png",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Testaccio_1625.png/960px-Testaccio_1625.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Testaccio_1625.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Giovanni Maggi",
+      "author": "Giovanni Maggi",
+      "width": 1970,
+      "height": 1900,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Giovanni_Battista_Nolli-Nuova_Pianta_di_Roma_(1748)_10-12.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Giovanni_Battista_Nolli-Nuova_Pianta_di_Roma_(1748)_10-12.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Giovanni_Battista_Nolli-Nuova_Pianta_di_Roma_%281748%29_10-12.JPG/960px-Giovanni_Battista_Nolli-Nuova_Pianta_di_Roma_%281748%29_10-12.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Giovanni_Battista_Nolli-Nuova_Pianta_di_Roma_%281748%29_10-12.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Giovanni Battista Nolli",
+      "author": "Giovanni Battista Nolli",
+      "width": 8198,
+      "height": 5036,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Testaccio_monte_dei_cocci_051204-12-13.JPG"
+}

@@ -1,0 +1,142 @@
+{
+  "introduction": {
+    "text": "The Mausoleo Ossario Garibaldino on Rome’s Gianicolo hill is a monument that honors the soldiers who fought for the Roman Republic and later for the unification of Italy. It houses the remains of more than 1,600 patriots and serves as a national memorial to the struggle for freedom and national identity.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "1849: The last defense of the Roman Republic took place on the Gianicolo hill, marking the beginning of the period of battles that would last until 1870.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1849,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "1849-1870: The period during which the Republic’s defenders and later patriots were killed in battles for Rome’s liberation.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1849,
+          "precision": "exact",
+          "endYear": 1870,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "1879: A law authorized the collection of the remains of those who died defending Rome, leading to the first provisional burial on the hill.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1879,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "1884: Additional remains were interred in the mausoleum’s provisional burial area.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1884,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "1941: The mausoleum was completed and inaugurated on 3 November, after two years of construction under the fascist regime.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1941,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The mausoleum features a quadriportico of travertine with three arches on each side, creating an open, columned façade.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "At the center stands a single block of red granite from Baveno, forming the altar that bears allegorical Roman motifs.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "Monolithic travertine pillars support bronze lion heads that are lit during official ceremonies.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "Allegorical figures on the altar include the Capitoline wolf, the imperial eagle, and Roman legionary symbols, linking the 1849 Republic to ancient Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "Bronze lion heads and other decorative elements echo Roman iconography and reinforce the monument’s patriotic theme.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "Mosaic ceilings and marble walls inside the crypt display votive palms, crosses, and inscriptions that honor the fallen.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Menotti Garibaldi",
+      "personId": "menotti-garibaldi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ezio Garibaldi",
+      "personId": "ezio-garibaldi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Goffredo Mameli",
+      "personId": "goffredo-mameli",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Giuseppe Mazzini",
+      "personId": "giuseppe-mazzini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Aurelio Saffi",
+      "personId": "aurelio-saffi",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Carlo Armellini",
+      "personId": "carlo-armellini",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ciceruacchio",
+      "personId": "ciceruacchio",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Andrea Aguyar",
+      "personId": "andrea-aguyar",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Edoardo Negri de Salvi",
+      "personId": "edoardo-negri-de-salvi",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

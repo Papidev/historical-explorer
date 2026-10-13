@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Mausoleo_Ossuario_Garibaldino_-_Rome,_Italy_-_DSC00334.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Mausoleo_Ossuario_Garibaldino_-_Rome%2C_Italy_-_DSC00334.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Mausoleo_Ossuario_Garibaldino_-_Rome%2C_Italy_-_DSC00334.jpg/960px-Mausoleo_Ossuario_Garibaldino_-_Rome%2C_Italy_-_DSC00334.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Mausoleo_Ossuario_Garibaldino_-_Rome%2C_Italy_-_DSC00334.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC0",
+      "attribution": "Daderot",
+      "author": "Daderot",
+      "width": 5472,
+      "height": 3648,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "5417RomaOssarioGaribaldino.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:5417RomaOssarioGaribaldino.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/5417RomaOssarioGaribaldino.jpg/960px-5417RomaOssarioGaribaldino.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/16/5417RomaOssarioGaribaldino.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Geobia",
+      "author": "Geobia",
+      "width": 1280,
+      "height": 960,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Cedro_nell'area_del_mausoleo_garibaldino.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Cedro_nell'area_del_mausoleo_garibaldino.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Cedro_nell%27area_del_mausoleo_garibaldino.jpg/960px-Cedro_nell%27area_del_mausoleo_garibaldino.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/Cedro_nell%27area_del_mausoleo_garibaldino.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Marco nun",
+      "author": "Marco nun",
+      "width": 6000,
+      "height": 4000,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Mausoleo_Ossuario_Garibaldino_-_Rome,_Italy_-_DSC00334.jpg"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "federico-campanella",
+  "name": "Federico Campanella",
+  "wikidataId": "Q3067898",
+  "wikipediaTitle": "Federico Campanella",
+  "content": {
+    "description": [
+      {
+        "text": "Federico Campanella was born in Genoa on 10 July 1804. He entered the University of Genoa in 1822, where his strong anti‑clerical stance led to disciplinary sanctions, yet he earned a law degree in 1829. A close friend of Giuseppe Mazzini, Campanella helped found the first Genoese committee of Giovine Italia and joined Mazzini’s 1834 expedition to Savoy, which ended in failure and forced him into exile in Switzerland and later Marseille.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After returning to Italy, Campanella took part in the 1848 Milan uprising, served as chief of staff of the Guardia Nazionale in Genoa, and later joined Garibaldi’s forces during the defense of the Roman Republic. He fled to Athens and then Paris following the papal restoration, opposed the 1851 coup of Luigi Napoleone Bonaparte, and later joined Garibaldi’s Expedition of the Thousand. In 1868 he was elected Grand Master of the Grande Oriente di Palermo, where he pushed for a constitutional reform of Italian Freemasonry that culminated in a 1872 congress in Rome.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Campanella served as a colonel in the Guardia Nazionale during the 1848 Genoa insurrection, a role that positioned him at the centre of the city’s revolutionary leadership.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was one of the few Italian politicians to resign from the Italian Parliament in 1863 in protest against the government’s repression of Sicily, reflecting his unwavering republican convictions.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "As Grand Master of the Grande Oriente di Palermo, Campanella was instrumental in convening the 1872 constitutional congress that unified disparate Masonic lodges across Italy under a single framework.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1804,
+      "month": 7,
+      "day": 10,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Federico_Campanella.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Federico_Campanella.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Federico_Campanella.jpg/960px-Federico_Campanella.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/03/Federico_Campanella.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Menelik",
+    "author": "Menelik",
+    "width": 2097,
+    "height": 2384,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Federico Campanella",
+    "url": "https://it.wikipedia.org/wiki/Federico_Campanella"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:04:01.181Z"
+  }
+}

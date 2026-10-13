@@ -1,0 +1,141 @@
+{
+  "introduction": {
+    "text": "The Mausoleum of Constantina, also called Santa Costanza, is a 4th‑century Roman building in Rome that is one of the best preserved examples of Late Antique architecture and early Christian art. Its circular plan, dome, and surviving mosaics illustrate the transition from imperial funerary monuments to Christian worship spaces.",
+    "sourceIds": ["wikipedia"]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history1",
+        "description": "Construction of the Constantinian basilica, a funerary hall for Constantina, began in 338 AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 338,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history2",
+        "description": "The mausoleum was built around 350 AD, as shown by excavations.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 350,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history3",
+        "description": "Constantina died in 354 AD.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 354,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history4",
+        "description": "The building was used as a church by 865 AD, when Pope Nicholas I celebrated mass there.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 865,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history5",
+        "description": "Santa Costanza was consecrated as a church in 1254 by Pope Alexander IV.",
+        "sourceIds": ["wikipedia"],
+        "time": {
+          "startYear": 1254,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history6",
+        "description": "The mausoleum is one of the best preserved buildings from Late Antiquity in Rome.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "design": [
+      {
+        "id": "design1",
+        "description": "The building has a circular plan with a central dome and an ambulatory surrounded by a ring of columns.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design2",
+        "description": "The dome rests on a drum supported by twelve pairs of granite columns with composite capitals.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design3",
+        "description": "The interior is divided into an illuminated central space and a darker ambulatory, creating a contrast of light.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "art": [
+      {
+        "id": "art1",
+        "description": "The ambulatory walls contain 4th‑century mosaics with vine and plant motifs, reflecting a secular style.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art2",
+        "description": "Two apses feature early Christian mosaics depicting Christ as Pantocrator and a traditio legis scene.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "art3",
+        "description": "The central dome originally had biblical scenes, but the mosaics are now lost; watercolour copies were made in the 16th century.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Constantina",
+      "personId": "constantina-constantia",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Constantine I",
+      "personId": "constantine-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Silvester I",
+      "personId": "pope-silvester-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Nicholas I",
+      "personId": "pope-nicholas-i",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Alexander IV",
+      "personId": "pope-alexander-iv",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Ammianus",
+      "personId": "ammiano-marcellino",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Pope Mark",
+      "personId": "pope-mark",
+      "sourceIds": ["wikipedia"]
+    },
+    {
+      "name": "Julian the Apostate",
+      "personId": "julian-the-apostate",
+      "sourceIds": ["wikipedia"]
+    }
+  ]
+}

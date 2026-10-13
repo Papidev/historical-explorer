@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "10544_-_Rome_-_Circo_Massimo_(3507030024).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:10544_-_Rome_-_Circo_Massimo_(3507030024).jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/70/10544_-_Rome_-_Circo_Massimo_%283507030024%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/70/10544_-_Rome_-_Circo_Massimo_%283507030024%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.0",
+      "attribution": "xiquinhosilva",
+      "author": "xiquinhosilva",
+      "width": 800,
+      "height": 605,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "10545_-_Rome_-_Circo_Massimo_(3507030294).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:10545_-_Rome_-_Circo_Massimo_(3507030294).jpg",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/10545_-_Rome_-_Circo_Massimo_%283507030294%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/10545_-_Rome_-_Circo_Massimo_%283507030294%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.0",
+      "attribution": "xiquinhosilva",
+      "author": "xiquinhosilva",
+      "width": 800,
+      "height": 586,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Ripa_-_010206_a_mazzini_la_patria.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Ripa_-_010206_a_mazzini_la_patria.JPG",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Ripa_-_010206_a_mazzini_la_patria.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Ripa_-_010206_a_mazzini_la_patria.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "user:Lalupa",
+      "author": "user:Lalupa",
+      "width": 800,
+      "height": 600,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "10544_-_Rome_-_Circo_Massimo_(3507030024).jpg"
+}

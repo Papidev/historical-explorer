@@ -1,0 +1,57 @@
+{
+  "id": "mefistofele",
+  "name": "Mefistofele",
+  "wikidataId": "Q272805",
+  "wikipediaTitle": "Mefistofele",
+  "content": {
+    "description": [
+      {
+        "text": "Mefistofele is a name that has become synonymous with the devil in German folklore, often used as a representation of Satan.  The figure is usually depicted as a tall, human‑like man dressed in black, sometimes carrying a red book that bears the signatures of those who have sold their souls to him.  The name first appeared in the late sixteenth‑century chapbooks of the Faust legend, where it was used to identify the demon who bargains with the scholar Doctor Faust for knowledge and power.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Over the centuries Mefistofele has transcended its original mythic context and entered a wide range of cultural media.  From Shakespeare’s brief mention in *The Merry Wives of Windsor* to operatic adaptations such as Boito’s *Mefistofele* (1868) and Gounod’s *Faust* (1859), the character has been reinterpreted in many artistic forms.  In modern popular culture he appears in comic books, video games, and even automotive history, illustrating the enduring fascination with the archetype of the cunning, contract‑making devil.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Marvel Comics created a demonic super‑criminal named Mefisto, directly inspired by the mythic figure of Mefistofele.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "In the role‑playing game *Dungeons & Dragons*, Mefistofele is one of the rulers of the Nine Hells, specifically the eighth layer, Cania.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The 1924 Fiat SB4 Eldridge, a record‑breaking racing car, was nicknamed \"Mefistofele\" in homage to the devilish connotation of the name.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Mephistopheles2.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Mephistopheles2.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Mephistopheles2.jpg/960px-Mephistopheles2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Mephistopheles2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Eugène Delacroix",
+    "author": "Eugène Delacroix",
+    "width": 2132,
+    "height": 3000,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Mefistofele",
+    "url": "https://it.wikipedia.org/wiki/Mefistofele"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:08:11.369Z"
+  }
+}

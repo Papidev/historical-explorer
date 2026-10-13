@@ -1,0 +1,57 @@
+{
+  "id": "marte-divinit",
+  "name": "Marte",
+  "wikidataId": "Q112",
+  "wikipediaTitle": "Marte (divinità)",
+  "content": {
+    "description": [
+      {
+        "text": "Mars, known as Marte in Roman and Italic tradition, was the principal deity of war, duels, and, in older myths, thunder, rain, and fertility. He was identified with the Greek Ares and the Norse Týr, and was considered the divine ancestor of the Roman people, having fathered Romulus and Remus through the Vestal Rhea Silvia.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The cult of Marte evolved from an ancient Etruscan and Italic worship of Mamers and other local names, eventually becoming central to Roman state religion. He was honored in the early Roman calendar, with the month of March, the day of the week Tuesday, and many Roman names deriving from his name, reflecting his pervasive influence on civic identity and military tradition.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Roman festival of Feriae Martis, held from 1 to 24 March, featured the procession of the Salii priests carrying sacred shields (ancilia) and singing the ancient Carmen Saliare.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "Marte was often depicted in art wearing a helmet, spear or sword, and sometimes a cloak, but rarely a scepter, emphasizing his martial character.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The name of the planet Mars and the day Tuesday in many languages are derived from this god, illustrating his lasting cultural legacy beyond antiquity.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Berlin_-_Brandenburger_Tor_-_Mars_cropped.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Berlin_-_Brandenburger_Tor_-_Mars_cropped.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/6/68/Berlin_-_Brandenburger_Tor_-_Mars_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/68/Berlin_-_Brandenburger_Tor_-_Mars_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 2.5",
+    "attribution": "derivative work: QuartierLatin1968 (talk) Berlin_-_Brandenburger_Tor_-_Mars.jpg: Oliver Abels (SBT)",
+    "author": "derivative work: QuartierLatin1968 (talk) Berlin_-_Brandenburger_Tor_-_Mars.jpg: Oliver Abels (SBT)",
+    "width": 628,
+    "height": 1100,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Marte (divinità)",
+    "url": "https://it.wikipedia.org/wiki/Marte_(divinit%C3%A0)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-12T22:44:09.110Z"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "francesco-boncompagni-ludovisi",
+  "name": "Francesco Boncompagni Ludovisi",
+  "wikidataId": "Q3749648",
+  "wikipediaTitle": "Francesco Boncompagni Ludovisi",
+  "content": {
+    "description": [
+      {
+        "text": "Francesco Boncompagni Ludovisi was born on 20 October 1886 at Villa La Quiete in Foligno, into the princely Boncompagni family. He was the son of Don Ugo Maria, Prince Boncompagni‑Ludovisi, Duke of Sora, and his second wife, Donna Laura Altieri, and he was a descendant of Pope Gregory XIII. During the First World War he served in the Italian army and kept a photographic record of the conflict, the originals of which are now preserved in the Casino di Villa Boncompagni Ludovisi in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "After the war he entered politics, becoming the third fascist governor of Rome from 1928 to 1935 and later serving in the Senate of the Kingdom of Italy. He married Nicoletta of the Marquesses Prinetti‑Castelletti in 1908; the couple had four children. His wife died in 1931, and he himself passed away in Rome on 7 June 1955.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was heir to the former sovereign Italian state of Piombino, a title that had been held by his family for centuries.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His father, Don Ugo Maria, became a priest in 1895 after the death of his first wife, leaving Francesco to be raised by his mother and later by his stepmother.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "The photographs he took during World War I are kept in the Casino di Villa Boncompagni Ludovisi, offering a rare visual record of the Italian front.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as the third fascist governor of Rome, a position that placed him at the center of Mussolini's regime.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He was a member of the Senate of the Kingdom of Italy, participating in legislative affairs during the interwar period.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "birthDate": {
+      "year": 1886,
+      "month": 10,
+      "day": 20,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1955,
+      "month": 6,
+      "day": 7,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Francesco_Boncompagni_Ludovisi.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Francesco_Boncompagni_Ludovisi.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Francesco_Boncompagni_Ludovisi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Francesco_Boncompagni_Ludovisi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY 3.0 it",
+    "attribution": "senato.it",
+    "author": "Senato della Repubblica Italiana",
+    "width": 304,
+    "height": 317,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Francesco Boncompagni Ludovisi",
+    "url": "https://en.wikipedia.org/wiki/Francesco_Boncompagni_Ludovisi"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:29:01.330Z"
+  }
+}

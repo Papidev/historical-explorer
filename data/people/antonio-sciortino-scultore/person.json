@@ -1,0 +1,53 @@
+{
+  "id": "antonio-sciortino-scultore",
+  "name": "Antonio Sciortino",
+  "wikidataId": "Q3805421",
+  "wikipediaTitle": "Antonio Sciortino (scultore)",
+  "content": {
+    "description": [
+      {
+        "text": "Antonio Sciortino was a prominent Maltese sculptor who became the leading representative of both the Realist and Futurist movements in Malta. His early career began in Rome, where he studied and worked, and he was deeply influenced by the works of Auguste Rodin, which helped shape his own distinctive style.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "His original style earned him admiration from collectors across Russia, Brazil, and the United States, who not only purchased his works but also commissioned new pieces. In addition to his artistic achievements, Sciortino served as director of the British Academy of Arts in Rome and later as curator of Malta's National Museum of Fine Arts from 1937 until his death.",
+        "sourceIds": ["wikipedia"]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was the director of the British Academy of Arts in Rome.",
+        "sourceIds": ["wikipedia"]
+      },
+      {
+        "text": "He served as curator of Malta's National Museum of Fine Arts from 1937 until his death.",
+        "sourceIds": ["wikipedia"]
+      }
+    ]
+  },
+  "image": {
+    "commonsFileName": "Antonio_Sciortino,_aged_30_(cropped).jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Antonio_Sciortino%2C_aged_30_(cropped).jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Antonio_Sciortino%2C_aged_30_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Antonio_Sciortino%2C_aged_30_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Unknown authorUnknown author",
+    "author": "Unknown authorUnknown author",
+    "width": 120,
+    "height": 154,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Antonio Sciortino (scultore)",
+    "url": "https://it.wikipedia.org/wiki/Antonio_Sciortino_(scultore)"
+  },
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-13T00:16:12.488Z"
+  }
+}
