@@ -18,6 +18,16 @@ required checks on the aligned branch before publishing it and opening the PR.
 Repeat the fetch and ancestry check immediately before creating the PR; if main
 advanced again, align the branch and rerun the affected checks first.
 
+## Generated Data
+
+Before preparing the release or opening any PR, follow the generated-data rule in
+[Commits & PR Hygiene](../../../AGENTS.md#commits--pr-hygiene). Inspect the checkout
+of the PR branch for modified tracked, untracked, and ignored generated data;
+stage and commit all of it, using `git add -f` for ignored generated data when
+necessary. Check the committed diff and remaining local files to verify that all
+generated data is included in the PR. Apply this check in both the main checkout
+and worktrees.
+
 ## Application Version
 
 After branch alignment, follow [Application versions](../../../README.md#application-versions)
