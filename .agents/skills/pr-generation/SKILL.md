@@ -22,9 +22,11 @@ advanced again, align the branch and rerun the affected checks first.
 
 Before preparing the release or opening any PR, follow the generated-data rule in
 [Commits & PR Hygiene](../../../AGENTS.md#commits--pr-hygiene). Inspect the checkout
-of the PR branch for modified tracked, untracked, and ignored generated data;
-stage and commit all of it, using `git add -f` for ignored generated data when
-necessary. Check the committed diff and remaining local files to verify that all
+of the PR branch for modified tracked generated data and untracked generated
+data that is not ignored by Git. Use `git ls-files --others --exclude-standard`
+to list eligible untracked files. Stage and commit the eligible generated data
+with ordinary `git add`; respect `.gitignore` and never force-add ignored files.
+Check the committed diff and remaining local files to verify that all eligible
 generated data is included in the PR. Apply this check in both the main checkout
 and worktrees.
 
