@@ -59,8 +59,10 @@ paragraph explaining the problem and the resulting user experience in plain Engl
 Use a concrete before/after example when it makes the change clearer.
 
 Prefer short bulleted lists for changes and verification. Use Markdown to make the
-body easy to scan: bold for key behavior, headings for distinct sections, links for
-issues, and inline code for technical identifiers. Keep emphasis selective.
+body easy to scan: bold for key behavior, links for issues, and inline code for
+technical identifiers. Group changes under headings by type, such as Features,
+Fixes, Refactoring, Documentation, or Maintenance. Include only relevant categories;
+use one heading when all changes share a type. Keep emphasis selective.
 Group related behavior rather than listing every file, implementation step, or test.
 Include technical details only when they explain a decision, tradeoff, or risk.
 
