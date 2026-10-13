@@ -36,8 +36,8 @@ Read `docs/agents/domain.md` before domain exploration.
 
 - When creating a worktree, copy all local resources from the source checkout: environment files, every uncommitted file and directory under `data/` (including modified tracked files, untracked files, and ignored files), `.tailwind-plus/`, Catalyst references, and any other uncommitted local libraries or assets. Preserve directory structure and contents, keep ignored resources uncommitted, and verify that all resources are present before starting work.
 - After the task is complete and its PR is confirmed merged, stop the application and any task processes started from that worktree, including their child processes. Identify processes by their association with the worktree and leave applications running from other checkouts alone.
-- Before removing the worktree, preserve its local resources and any remaining uncommitted work in the main checkout or a recoverable backup. If the destination contains different content, ask the user before overwriting it. Managed worktree archives exclude ignored files, so preserve those separately and verify the copy before archiving.
-- Once processes are stopped and local resources are preserved, remove the entire task worktree and its registration; use the Codex archive tool for managed worktrees. A completed task with a merged PR must leave no running application or worktree directory behind.
+- Worktree cleanup does not require separate backups of local resources or generated data.
+- Once processes are stopped, remove the entire task worktree and its registration; use the Codex archive tool for managed worktrees. A completed task with a merged PR must leave no running application or worktree directory behind.
 
 ## Tooling & Commands
 
@@ -96,6 +96,7 @@ Update `AGENTS.md` only with important stuff that cannot be clearly/quickly deri
 
 ## Commits & PR Hygiene
 
+- Before opening any PR, commit and include all uncommitted Stories, People, and POI metadata present in its branch checkout, including modified tracked files and untracked files that are not ignored by Git. Verify that none remains only local, so merging the branch preserves its content. Respect `.gitignore`; never force-add ignored files. Apply this rule in every checkout, including worktrees, without separate backups.
 - Before opening application PRs, follow [Application versions](README.md#application-versions): prepare an English Changeset, consume it into exactly one version increment and changelog entry relative to current `main`, and regenerate after alignment if another release merged. Internal documentation and the CI/release automation files allowed by `scripts/check-release.mjs` are exempt; dependency manifests and lockfiles still require a release.
 
 - Track bugs, improvements, and future ideas in GitHub Issues and the repository's Cultural Atlas Project. Search existing issues before creating one; retain unresolved decisions and revisit conditions in the issue body. Markdown documents explain product and architecture decisions.

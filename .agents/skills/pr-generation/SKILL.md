@@ -18,6 +18,17 @@ required checks on the aligned branch before publishing it and opening the PR.
 Repeat the fetch and ancestry check immediately before creating the PR; if main
 advanced again, align the branch and rerun the affected checks first.
 
+## Generated Data
+
+Before preparing the release or opening any PR, follow the generated-data rule in
+[Commits & PR Hygiene](../../../AGENTS.md#commits--pr-hygiene). Inspect the checkout
+of the PR branch for uncommitted Stories, People, and POI metadata, including
+modified tracked files and untracked files. Use
+`git ls-files --others --exclude-standard` to list untracked files that are not
+ignored. Commit all this content with ordinary `git add`, respecting `.gitignore`
+and never force-adding ignored files. Verify that none remains only local before
+opening the PR, whether working in the main checkout or a worktree.
+
 ## Application Version
 
 After branch alignment, follow [Application versions](../../../README.md#application-versions)
