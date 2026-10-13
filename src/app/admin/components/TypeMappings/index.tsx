@@ -1,6 +1,7 @@
 "use client";
 
 import { ListboxSelect } from "@/app/components/ui/ListboxSelect";
+import { expandPoiCategorySelection } from "@/types/PoiCategory";
 import type {
   SaveTypeMapping,
   TypeMappingCatalog,
@@ -122,8 +123,8 @@ export const TypeMappings = ({
                   </span>
                   {Boolean(type.categories?.length) && (
                     <span className="mt-1 block text-xs text-indigo-700">
-                      {type.categories
-                        ?.map(
+                      {expandPoiCategorySelection(type.categories ?? [], model.categories)
+                        .map(
                           (id) =>
                             model.categories.find((category) => category.id === id)?.name ?? id,
                         )
