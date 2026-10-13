@@ -1,4 +1,4 @@
-import { useState, useTransition, type RefObject } from "react";
+import { useState, type RefObject } from "react";
 import type {
   SaveTypeMapping,
   TypeMappingCatalog,
@@ -20,7 +20,7 @@ export const useTypeMappings = (
   const [status, setStatus] = useState("All");
   const [draggedCategoryId, setDraggedCategoryId] = useState<string | null>(null);
   const [showIgnored, setShowIgnored] = useState(false);
-  const [saving, startTransition] = useTransition();
+  const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
   const types = catalog.types.map((type) => ({
@@ -34,22 +34,25 @@ export const useTypeMappings = (
       (status === "All" || type.status === status) &&
       `${type.label} ${type.id}`.toLowerCase().includes(query.toLowerCase()),
   );
-  const run = (action: () => Promise<{ cities: string[]; message: string }>) =>
-    startTransition(async () => {
-      setError("");
-      setMessage("");
-      try {
-        const result = await action();
-        if (typeof BroadcastChannel !== "undefined") {
-          const channel = new BroadcastChannel("poi-type-mappings");
-          channel.postMessage(result.cities);
-          channel.close();
-        }
-        setMessage(result.message);
-      } catch (error) {
-        setError(error instanceof Error ? error.message : "Could not save the changes. Try again.");
+  const run = async (action: () => Promise<{ cities: string[]; message: string }>) => {
+    if (saving) return;
+    setSaving(true);
+    setError("");
+    setMessage("");
+    try {
+      const result = await action();
+      if (typeof BroadcastChannel !== "undefined") {
+        const channel = new BroadcastChannel("poi-type-mappings");
+        channel.postMessage(result.cities);
+        channel.close();
       }
-    });
+      setMessage(result.message);
+    } catch (error) {
+      setError(error instanceof Error ? error.message : "Could not save the changes. Try again.");
+    } finally {
+      setSaving(false);
+    }
+  };
   return {
     draggedCategoryId,
     setDraggedCategoryId,

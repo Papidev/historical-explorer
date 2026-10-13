@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useEffectEvent, useRef, useState } from "react";
 import type { RefObject } from "react";
 import type { AiProgress } from "@/server/aiProgress";
 import type { AiSelection } from "../../lib/aiModels";
@@ -37,6 +37,7 @@ export const useBatchGeneration = ({
   const mounted = useRef(true);
   const running = useRef(false);
   const pauseRequested = useRef(false);
+  const reconnectAutomatically = useRef(false);
   const queue = useRef<StoryQueue | null>(null);
 
   // Browser storage is unavailable during server rendering; restore the external queue after hydration.
@@ -75,6 +76,7 @@ export const useBatchGeneration = ({
     try {
       saveStoryQueue(queue.current);
     } catch {
+      reconnectAutomatically.current = false;
       pauseRequested.current = true;
       setError(
         "The queue could not be saved. New generations are paused to avoid losing progress.",
@@ -184,9 +186,10 @@ export const useBatchGeneration = ({
               error: cause instanceof Error ? cause.message : getActionError(cause).title,
             };
             if (/Failed to fetch|NetworkError|Load failed/i.test(result.error ?? "")) {
+              if (!pauseRequested.current) reconnectAutomatically.current = true;
               pauseRequested.current = true;
               setError(
-                "Connection to the server was lost. Check the run's progress before resuming the queue.",
+                "Connection to the server was lost. The queue will check server progress and resume automatically when this page is active and connected.",
               );
               current.history = current.history.map((item) =>
                 item.progressId === run.progressId
@@ -225,6 +228,7 @@ export const useBatchGeneration = ({
             [result.error, result.result?.warning?.details].filter(Boolean).join("\n"),
           )
         ) {
+          reconnectAutomatically.current = false;
           pauseRequested.current = true;
           setError("Ollama reported a usage or request limit. Check your usage before resuming.");
         }
@@ -275,6 +279,31 @@ export const useBatchGeneration = ({
       await runQueue();
     });
 
+  const reconnect = useEffectEvent(() => {
+    if (
+      reconnectAutomatically.current &&
+      !running.current &&
+      document.visibilityState === "visible" &&
+      navigator.onLine
+    )
+      void processQueue();
+  });
+
+  useEffect(() => {
+    if (!isPaused || disabled) return;
+    window.addEventListener("online", reconnect);
+    window.addEventListener("focus", reconnect);
+    document.addEventListener("visibilitychange", reconnect);
+    // Also recover when the transport failure is delivered after the wake event.
+    const timer = setTimeout(reconnect, 5_000);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("online", reconnect);
+      window.removeEventListener("focus", reconnect);
+      document.removeEventListener("visibilitychange", reconnect);
+    };
+  }, [isPaused, disabled]);
+
   return {
     runs,
     total,
@@ -289,6 +318,7 @@ export const useBatchGeneration = ({
     savedLimit,
     discard: async () => {
       if (running.current) return;
+      reconnectAutomatically.current = false;
       await withQueueLock(async () => {
         localStorage.removeItem(storyQueueStorageKey);
         queue.current = null;
@@ -303,6 +333,7 @@ export const useBatchGeneration = ({
     },
     stop: async () => {
       if (!running.current || !queue.current || isStopping) return;
+      reconnectAutomatically.current = false;
       pauseRequested.current = true;
       setIsStopping(true);
       try {
@@ -366,10 +397,6 @@ export const useBatchGeneration = ({
         setIsOpen(true);
         await runQueue();
       });
-    },
-    pause: () => {
-      pauseRequested.current = true;
-      setIsPausing(true);
     },
     resume: async () => {
       if (disabled || !isPaused) return;

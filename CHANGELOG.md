@@ -1,10 +1,16 @@
 # historical-explorer
 
-## 0.2.4
+## 0.2.5
 
 ### Patch Changes
 
 - Update GitHub Actions dependencies.
+
+## 0.2.4
+
+### Patch Changes
+
+- Recover the Story queue after connection loss by checking server progress before continuing. Keep manual stops and Ollama usage-limit pauses manual, and allow category editing during long Story generations.
 
 ## 0.2.3
 
