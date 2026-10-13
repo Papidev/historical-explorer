@@ -250,6 +250,11 @@ it("shows two category levels and saves all children when their parent is select
   const user = userEvent.setup();
   const view = render(<CatalogProvider />);
   const children = screen.getByRole("group", { name: "Child categories of Churches & cathedrals" });
+  expect(
+    within(children)
+      .getAllByRole("checkbox")
+      .map((checkbox) => (checkbox as HTMLInputElement).labels?.[0].textContent?.trim()),
+  ).toEqual(["Basilica", "Cathedral", "Church"]);
   expect(within(children).getByRole("checkbox", { name: "Church" })).toBeChecked();
   await user.click(screen.getByRole("checkbox", { name: "Churches & cathedrals" }));
   await user.click(screen.getByRole("checkbox", { name: "Churches & cathedrals" }));
@@ -262,8 +267,8 @@ it("shows two category levels and saves all children when their parent is select
   );
   expect(createPoiTypeMappings(directory).getCatalog().types[0].categories).toEqual([
     "Churches & cathedrals",
-    "Cathedral",
     "Basilica",
+    "Cathedral",
     "Church",
   ]);
   for (const city of ["rome", "florence"])

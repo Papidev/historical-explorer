@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.2.3
+
+### Patch Changes
+
+- Sort categories and subcategories alphabetically in the admin and category summaries.
+
 ## 0.2.2
 
 ### Patch Changes
