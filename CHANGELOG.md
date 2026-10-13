@@ -1,10 +1,16 @@
 # historical-explorer
 
-## 0.1.8
+## 0.2.1
 
 ### Patch Changes
 
 - Add generated Rome stories, selected images, and people, and update the POI catalog and category mappings.
+
+## 0.2.0
+
+### Minor Changes
+
+- Add a collapsible category filter tree with an All categories checkbox, consistent parent selection states, a selection summary, alphabetical ordering, and a wider visitor filter drawer.
 
 ## 0.1.7
 

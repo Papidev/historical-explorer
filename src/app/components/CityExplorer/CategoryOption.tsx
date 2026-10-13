@@ -9,12 +9,14 @@ export const CategoryOption = ({
   definitions = DEFAULT_POI_CATEGORY_DEFINITIONS,
   count,
   checked,
+  indeterminate = false,
   onToggle,
 }: {
   category: PoiCategory;
   definitions?: PoiCategoryDefinition[];
   count: number;
   checked: boolean;
+  indeterminate?: boolean;
   onToggle: () => void;
 }) => {
   const definition = definitions.find((definition) => definition.id === category);
@@ -26,6 +28,9 @@ export const CategoryOption = ({
         aria-label={label}
         aria-describedby={definition?.parent ? `${category}-parent` : undefined}
         checked={checked}
+        ref={(input) => {
+          if (input) input.indeterminate = indeterminate;
+        }}
         onChange={onToggle}
         className="size-4 cursor-pointer accent-rose-700"
       />
