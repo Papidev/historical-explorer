@@ -1,5 +1,14 @@
 # AGENTS – Implementation Notes
 
+## Historical Explorer GitHub account
+
+For `Papidev/historical-explorer`, its main checkout, and every existing or future worktree, always authenticate GitHub operations as `Papidev`.
+
+- For every shell invocation that uses `gh`, obtain the stored account token with `papidev_token="$(env -u GH_TOKEN -u GITHUB_TOKEN gh auth token --hostname github.com --user Papidev)" || exit 1`, then require a nonempty token with `[ -n "$papidev_token" ] || exit 1`. Prefix every subsequent `gh` command with `GH_TOKEN="$papidev_token"`.
+- Before repository or Project operations, verify `GH_TOKEN="$papidev_token" gh api user --jq .login` returns `Papidev`; stop if it does not. Use `--repo Papidev/historical-explorer` for commands that accept it.
+- Account selection must be explicit per command: the globally active account may change in another session. Use another GitHub tool only when its authenticated identity is verified as `Papidev`.
+- Request `gh auth refresh -s project` only after verifying that the credentials actually used belong to `Papidev` and lack the required Project permission. Never print or save token values.
+
 ## Product Context
 
 - For product context, read `docs/product/vision.md` before making architecture or UX decisions.
