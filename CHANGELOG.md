@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.2.2
+
+### Patch Changes
+
+- Update GitHub Actions dependencies.
+
 ## 0.2.1
 
 ### Patch Changes
