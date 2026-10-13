@@ -34,8 +34,8 @@ export const RuleEditor = ({
             {new Set(type.pois.map((poi) => poi.city)).size} cities
           </p>
         </div>
-        <div className="space-y-2">
-          <div className="flex flex-wrap items-center gap-2">
+        <div className="ml-auto space-y-2 text-right">
+          <div className="flex flex-wrap items-center justify-end gap-2">
             <button
               disabled={model.saving || !draft.length}
               onClick={() => void model.save(type.id, draft)}
@@ -74,7 +74,7 @@ export const RuleEditor = ({
         <summary className="cursor-pointer font-medium text-gray-700">
           Affected POIs ({type.pois.length})
         </summary>
-        <ul className="mt-2 max-h-64 space-y-1 overflow-auto text-gray-500">
+        <ul className="mt-2 space-y-1 text-gray-500">
           {type.pois.map((poi) => (
             <li key={`${poi.city}/${poi.id}`}>
               {poi.name} <span className="text-xs text-gray-400">· {poi.city}</span>

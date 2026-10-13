@@ -1,4 +1,6 @@
 import { useState, type ReactNode } from "react";
+import { PencilSquareIcon, TrashIcon } from "@heroicons/react/24/outline";
+import { IconButton } from "@/app/components/ui/IconButton";
 import { SubmitButton } from "../SubmitButton";
 import type { PoiCategoryDefinition } from "@/types/PoiCategory";
 import type { useTypeMappings } from "./useTypeMappings";
@@ -39,7 +41,7 @@ export const CategoryRow = ({
         )
           model.moveCategory(model.draggedCategoryId, category.id);
       }}
-      className={`flex flex-wrap items-center gap-2 rounded-md border-b border-gray-100 py-3 ${model.draggedCategoryId && model.draggedCategoryId !== category.id && !category.parent ? "bg-indigo-50 outline-1 outline-indigo-200" : ""}`}
+      className={`flex flex-wrap items-center gap-2 rounded-md border-b border-gray-100 py-3 [&_[role=tooltip]]:right-0 [&_[role=tooltip]]:left-auto [&_[role=tooltip]]:translate-x-0 ${model.draggedCategoryId && model.draggedCategoryId !== category.id && !category.parent ? "bg-indigo-50 outline-1 outline-indigo-200" : ""}`}
     >
       <button
         type="button"
@@ -72,18 +74,19 @@ export const CategoryRow = ({
           onChange={(event) => setName(event.target.value)}
         />
       </label>
-      <button
-        aria-label={`Rename ${category.name}`}
+      <IconButton
+        label={`Rename ${category.name}`}
         disabled={model.saving || !name.trim() || name.trim() === category.name}
-        className="cursor-pointer rounded-md px-3 py-2 text-sm font-medium text-indigo-700 hover:bg-indigo-50 disabled:cursor-not-allowed disabled:opacity-40"
+        tone="primary"
         onClick={() => model.saveCategory(category.id, name)}
       >
-        Rename<span className="sr-only"> {category.name}</span>
-      </button>
+        <PencilSquareIcon />
+      </IconButton>
       <form action={() => model.deleteCategory(category.id)}>
         <SubmitButton
           idleLabel="Delete"
           pendingLabel="Deleting…"
+          icon={<TrashIcon />}
           tone="danger"
           disabled={model.saving}
           confirmMessage={`Remove ${category.name} from all type rules and POIs? Its child categories will also be deleted.`}
