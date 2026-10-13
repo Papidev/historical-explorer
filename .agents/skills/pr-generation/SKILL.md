@@ -54,29 +54,21 @@ Keep the title concise and scoped to the PR's main change.
 
 ## Body
 
-List the changes as a Markdown bulleted list, with one concrete change per item.
-Group the bullets under headings by change type, such as Features, Fixes,
-Refactoring, Documentation, or Maintenance. Include only types present in the PR;
-for a single type, use one heading.
-Write in plain English with short sentences. Lead each bullet with the concrete
-behavior that changes and why it matters to someone using or reviewing the app.
-Use a before/after example when it makes the change easier to understand.
-Include technical terms, filenames, or implementation details only when they help
-assess the change; explain unfamiliar terms on first use.
+Write for a human reviewer who has not read the conversation. Start with a short
+paragraph explaining the problem and the resulting user experience in plain English.
+Use a concrete before/after example when it makes the change clearer.
 
-Example: "When Wikipedia content is missing, the batch badge and detailed log
-both show 'Waiting for a source'. Previously, the badge showed 'Failed'."
-When creating or updating a PR through the GitHub connector, pass actual newlines
-in the body and a blank line before each list so headings and bullets render correctly.
+Keep small PR descriptions to one or two paragraphs. Use a short list when changes
+are easier to scan separately; add headings only when distinct sections need them.
+Group related behavior rather than listing every file, implementation step, or test.
+Include technical details only when they explain a decision, tradeoff, or risk.
 
-Include only sections that add concrete review value. Do not add placeholder
-sections or sections whose content is effectively "none", "not captured", or
-just a list of routine verification commands.
+Summarize verification in a short sentence. Explain what important behavior was
+verified instead of listing routine commands. Include screenshots, configuration
+changes, or limitations only when they help review the change. Omit placeholders,
+conversation history, and release bookkeeping that is already clear from the diff.
 
-- Summary of what changed
-- New data sources or environment variables, when added or changed
-- Screenshots or recordings, only when they are available and useful for review
-- Verification notes, only when they explain a non-obvious manual check, risk,
-  failure, limitation, or reviewer-relevant result
+When using the GitHub connector, pass actual newlines and leave a blank line before
+Markdown lists. Link the originating issue and use a closing keyword when appropriate.
 
 The local checks required by [AGENTS.md](../../../AGENTS.md) must pass before opening a PR or marking it ready for review.
