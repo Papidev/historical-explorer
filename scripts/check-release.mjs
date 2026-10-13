@@ -34,6 +34,7 @@ if (current.version === previous.version && !initialRelease) {
           "README.md",
           "AGENTS.md",
           ".changeset/README.md",
+          ".github/dependabot.yml",
           ".github/workflows/test.yml",
           ".github/workflows/dependabot-release.yml",
           "scripts/check-release.mjs",
