@@ -58,8 +58,9 @@ Write for a human reviewer who has not read the conversation. Start with a short
 paragraph explaining the problem and the resulting user experience in plain English.
 Use a concrete before/after example when it makes the change clearer.
 
-Keep small PR descriptions to one or two paragraphs. Use a short list when changes
-are easier to scan separately; add headings only when distinct sections need them.
+Prefer short bulleted lists for changes and verification. Use Markdown to make the
+body easy to scan: bold for key behavior, headings for distinct sections, links for
+issues, and inline code for technical identifiers. Keep emphasis selective.
 Group related behavior rather than listing every file, implementation step, or test.
 Include technical details only when they explain a decision, tradeoff, or risk.
 
