@@ -1,10 +1,16 @@
 # historical-explorer
 
-## 0.2.3
+## 0.2.4
 
 ### Patch Changes
 
 - Update GitHub Actions dependencies.
+
+## 0.2.3
+
+### Patch Changes
+
+- Sort categories and subcategories alphabetically in the admin and category summaries.
 
 ## 0.2.2
 
