@@ -1,10 +1,16 @@
 # historical-explorer
 
+## 0.2.0
+
+### Minor Changes
+
+- Add a collapsible category filter tree with an All categories checkbox, consistent parent selection states, a selection summary, alphabetical ordering, and a wider visitor filter drawer.
+
 ## 0.1.7
 
 ### Patch Changes
 
-- Simplify visitor category filters with an All categories checkbox, consistent parent selection states, a selection summary, and a wider collapsible filter drawer with alphabetically ordered categories.
+- Preserve saved POI categories during catalog regeneration when local Wikidata type files are unavailable.
 
 ## 0.1.6
 

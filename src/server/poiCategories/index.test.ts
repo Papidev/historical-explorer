@@ -218,17 +218,36 @@ describe("persisted POI categories", () => {
     expect(readCategories()["missing-types"]).toEqual(["Basilica"]);
   });
 
-  it("keeps other POI assignments intact when one type list is refreshed", () => {
+  it("preserves saved categories without local types during regeneration and refreshes available types", () => {
     const originalCatalog = readFileSync(catalogPath(), "utf-8");
     const categories = createPoiCategoriesForCity("rome", dataDirectory);
     expect(categories.getAll()).toEqual({});
     categories.rebuild();
     categories.refresh("ignored-type", [{ id: "Q16970" }]);
     categories.refresh("missing-types", [{ id: "Q33506" }]);
+    categories.refresh("no-wikidata", [{ id: "Q33506" }]);
+    const generated = prepareCatalog(
+      "way/1",
+      {
+        features: [{ id: "way/1", properties: { name: "New place" } }],
+      },
+      readCatalog(),
+    );
+    writeFileSync(catalogPath(), JSON.stringify(generated.catalog));
+    categories.rebuild();
     expect(readCategories()["missing-types"]).toEqual(["Museum"]);
-    expect(readCategories()["ignored-type"]).toEqual(["Church"]);
+    expect(readCategories()["no-wikidata"]).toEqual(["Museum"]);
+    expect(readCategories()["ignored-type"]).toEqual([]);
+    expect(readCategories()[generated.poiId]).toEqual([]);
     expect(readCategories()["civil-basilica"]).toEqual([]);
-    expect(readFileSync(catalogPath(), "utf-8")).toBe(originalCatalog);
+    expect(readCatalog().features?.slice(0, 5)).toEqual(JSON.parse(originalCatalog).features);
+    writeFileSync(
+      path.join(dataDirectory, "rome", "generated", "wikidata", "missing-types.json"),
+      JSON.stringify({ types: [] }),
+    );
+    categories.rebuild();
+    expect(readCategories()["missing-types"]).toEqual([]);
+    expect(readCategories()["no-wikidata"]).toEqual(["Museum"]);
   });
 
   it("recomputes categories after regeneration without merging the current church and its ruins", () => {
