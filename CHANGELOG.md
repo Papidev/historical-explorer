@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.2.2
+
+### Patch Changes
+
+- Show inherited parent categories in the admin type mappings list.
+
 ## 0.2.1
 
 ### Patch Changes
