@@ -128,6 +128,7 @@ export const TypeMappings = ({
                           (id) =>
                             model.categories.find((category) => category.id === id)?.name ?? id,
                         )
+                        .sort((a, b) => a.localeCompare(b, "en"))
                         .join(", ")}
                     </span>
                   )}

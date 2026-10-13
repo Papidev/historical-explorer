@@ -82,7 +82,9 @@ export const useTypeMappings = (
       setShowIgnored(checked);
       if (!checked && status === "Ignored") setStatus("All");
     },
-    categories: catalog.categories ?? DEFAULT_POI_CATEGORY_DEFINITIONS,
+    categories: [...(catalog.categories ?? DEFAULT_POI_CATEGORY_DEFINITIONS)].sort((a, b) =>
+      a.name.localeCompare(b.name, "en"),
+    ),
     save: (id: string, categories: PoiCategory[] | null) =>
       run(async () => {
         const result = await saveRule(id, categories);
