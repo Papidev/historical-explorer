@@ -1,10 +1,16 @@
 # historical-explorer
 
-## 0.2.5
+## 0.2.6
 
 ### Patch Changes
 
 - Update GitHub Actions dependencies.
+
+## 0.2.5
+
+### Patch Changes
+
+- Keep Type mappings in a single vertical scroll area, align rule actions to the right, and use accessible category action icons without horizontal overflow.
 
 ## 0.2.4
 
