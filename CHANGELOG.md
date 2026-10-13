@@ -1,10 +1,16 @@
 # historical-explorer
 
-## 0.2.2
+## 0.2.3
 
 ### Patch Changes
 
 - Update GitHub Actions dependencies.
+
+## 0.2.2
+
+### Patch Changes
+
+- Show inherited parent categories in the admin type mappings list.
 
 ## 0.2.1
 
