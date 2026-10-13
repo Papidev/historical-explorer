@@ -33,7 +33,6 @@ export const BatchGeneration = ({
     isPaused,
     isPausing,
     isStopping,
-    pause,
     resume,
     stop,
     savedLimit,
@@ -73,7 +72,6 @@ export const BatchGeneration = ({
           isPaused={isPaused}
           isStopping={isStopping}
           disabled={disabled}
-          onPause={pause}
           onResume={resume}
           onStop={stop}
         />
@@ -137,7 +135,6 @@ export const BatchGeneration = ({
             isPaused={isPaused}
             isStopping={isStopping}
             disabled={disabled}
-            onPause={pause}
             onResume={resume}
             onStop={stop}
           />
