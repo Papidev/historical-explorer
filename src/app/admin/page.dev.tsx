@@ -10,7 +10,6 @@ import {
   deletePoiCategory,
   regeneratePerson,
   generateDraftStory,
-  generateDraftStories,
   refreshStoryContent,
   refreshMainImageCandidates,
   refreshPoiTypes,
@@ -59,7 +58,6 @@ export default async function AdminPage() {
       aiModeOptions={aiModeOptions}
       initialAiSelection={initialAiSelection}
       generateDraftStoryAction={generateDraftStory}
-      generateDraftStoriesAction={generateDraftStories}
       refreshStoryContentAction={refreshStoryContent}
       resolveRelatedPeopleAction={resolveRelatedPeople}
       refreshMainImageCandidatesAction={refreshMainImageCandidates}

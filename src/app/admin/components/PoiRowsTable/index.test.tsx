@@ -1,3 +1,4 @@
+import { generateDraftStories } from "../../lib/generateDraftStories";
 import { storyQueueStorageKey } from "./storyQueueStorage";
 // @vitest-environment jsdom
 
@@ -89,15 +90,36 @@ describe("POI actions", () => {
     },
   );
 
-  it("processes at most 20 missing stories sequentially, pauses, and continues after POI errors", async () => {
+  it("processes at most 20 missing stories sequentially, stops queued work, and continues after POI errors", async () => {
     server.use(
       http.get("/api/admin/ai-progress/:runId", () => new HttpResponse(null, { status: 404 })),
+      http.post("/api/admin/ai-progress/:runId/stop", () => HttpResponse.json({ requested: true })),
     );
     const submitted: FormData[] = [];
     let finish = () => {};
     const firstResponse = new Promise<void>((resolve) => {
       finish = resolve;
     });
+    server.use(
+      http.post("/api/admin/story-generations", async ({ request }) => {
+        const formData = await request.formData();
+        submitted.push(formData);
+        if (submitted.length === 1) await firstResponse;
+        if (submitted.length === 2)
+          return HttpResponse.json({ error: "Provider unavailable" }, { status: 400 });
+        return HttpResponse.json([
+          {
+            geoPlaceId: String(formData.get("geoPlaceId")),
+            progressId: String(formData.get("progressId")),
+            ...(submitted.length === 3
+              ? { error: "sources-unavailable: HTTP 429" }
+              : submitted.length === 4
+                ? { result: { warning: { title: "Missing image" } } }
+                : { result: {} }),
+          },
+        ]);
+      }),
+    );
     const aiSelectionRef = { current: { mode: "cloud" as const, model: "cloud-model" } };
     render(
       <PoiRowsTable
@@ -110,22 +132,7 @@ describe("POI actions", () => {
         generateDraftStoryAction={async () => {
           throw new Error("Use the queue action");
         }}
-        generateDraftStoriesAction={async (formData) => {
-          submitted.push(formData);
-          if (submitted.length === 1) await firstResponse;
-          if (submitted.length === 2) throw new Error("Provider unavailable");
-          return [
-            {
-              geoPlaceId: String(formData.get("geoPlaceId")),
-              progressId: String(formData.get("progressId")),
-              ...(submitted.length === 3
-                ? { error: "sources-unavailable: HTTP 429" }
-                : submitted.length === 4
-                  ? { result: { warning: { title: "Missing image" } } }
-                  : { result: {} }),
-            },
-          ];
-        }}
+        generateDraftStoriesAction={generateDraftStories}
         refreshStoryContentAction={async () => {}}
         resolveRelatedPeopleAction={async () => {}}
         refreshMainImageCandidatesAction={async () => {}}
@@ -145,8 +152,9 @@ describe("POI actions", () => {
     ).not.toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Show log for Place 0" }));
     expect(await screen.findByRole("log")).toBeVisible();
-    await user.click(screen.getByRole("button", { name: "Pause queue" }));
-    expect(screen.getByRole("button", { name: "Pausing after current POI..." })).toBeDisabled();
+    expect(screen.queryByRole("button", { name: "Pause queue" })).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Stop current POI" }));
+    expect(screen.getByRole("button", { name: "Stopping current POI..." })).toBeDisabled();
     await user.click(screen.getByRole("button", { name: "Hide" }));
     await act(async () => {
       finish();
@@ -156,6 +164,10 @@ describe("POI actions", () => {
       "1 of 20 Story generations completed · Paused",
     );
     expect(screen.getByRole("spinbutton", { name: "Stories per run" })).toBeDisabled();
+    await act(async () => {
+      window.dispatchEvent(new Event("focus"));
+    });
+    expect(submitted).toHaveLength(1);
     aiSelectionRef.current.model = "changed-model";
     await user.click(screen.getByRole("button", { name: "Resume queue" }));
     await waitFor(() =>
@@ -272,6 +284,12 @@ describe("POI actions", () => {
     "quota",
     "partial-quota",
     "connection",
+    "connection-online",
+    "connection-visibility",
+    "connection-delayed",
+    "connection-quota",
+    "connection-running",
+    "connection-retry",
     "unmount",
     "not-started",
     "all-not-started",
@@ -281,16 +299,28 @@ describe("POI actions", () => {
       server.use(
         http.get("/api/admin/ai-progress/:runId", () => new HttpResponse(null, { status: 404 })),
       );
-      if (outcome === "connection")
+      let recoveryUnavailable = outcome === "connection-retry";
+      let progressReads = 0;
+      if (outcome.startsWith("connection"))
         server.use(
-          http.get("/api/admin/ai-progress/:runId", () =>
-            HttpResponse.json({
-              status: "succeeded",
+          http.get("/api/admin/ai-progress/:runId", () => {
+            if (recoveryUnavailable) return HttpResponse.error();
+            progressReads += 1;
+            return HttpResponse.json({
+              status:
+                outcome === "connection-quota"
+                  ? "partial"
+                  : outcome === "connection-running" && progressReads < 4
+                    ? "running"
+                    : "succeeded",
+              ...(outcome === "connection-quota"
+                ? { warning: { title: "People incomplete", details: "Ollama failed: HTTP 429" } }
+                : {}),
               storyContentStarted: true,
               startedAt: "2026-10-10T00:00:00.000Z",
               entries: [],
-            }),
-          ),
+            });
+          }),
         );
       const submitted: FormData[] = [];
       let finish = () => {};
@@ -326,7 +356,7 @@ describe("POI actions", () => {
             if (submitted.length === 1) {
               await firstResponse;
               if (outcome === "quota") throw new Error("Ollama failed: HTTP 429");
-              if (outcome === "connection") throw new TypeError("Failed to fetch");
+              if (outcome.startsWith("connection")) throw new TypeError("Failed to fetch");
             }
             return [
               {
@@ -374,22 +404,51 @@ describe("POI actions", () => {
         expect(submitted).toHaveLength(1);
         return;
       }
-      if (outcome === "quota" || outcome === "partial-quota" || outcome === "connection") {
+      if (outcome === "quota" || outcome === "partial-quota" || outcome.startsWith("connection")) {
         expect(submitted).toHaveLength(1);
         expect(screen.getByRole("alert")).toHaveTextContent(
-          outcome === "connection"
+          outcome.startsWith("connection")
             ? "Connection to the server was lost"
             : "Ollama reported a usage or request limit",
         );
-        await user.click(
-          within(screen.getByRole("dialog", { name: "Story queue" })).getByRole("button", {
-            name: "Resume queue",
-          }),
-        );
+        await act(async () => {
+          if (outcome === "connection-delayed") return;
+          if (outcome === "connection-visibility")
+            document.dispatchEvent(new Event("visibilitychange"));
+          else
+            window.dispatchEvent(new Event(outcome === "connection-online" ? "online" : "focus"));
+        });
+        if (outcome === "connection-retry") {
+          await waitFor(() =>
+            expect(screen.getByRole("alert")).toHaveTextContent("nothing has been resubmitted"),
+          );
+          expect(submitted).toHaveLength(1);
+          recoveryUnavailable = false;
+          await act(async () => {
+            window.dispatchEvent(new Event("online"));
+          });
+        }
+        if (outcome === "connection-quota") {
+          expect(await screen.findByRole("alert")).toHaveTextContent(
+            "Ollama reported a usage or request limit",
+          );
+          await act(async () => {
+            window.dispatchEvent(new Event("focus"));
+          });
+          expect(submitted).toHaveLength(1);
+        }
+        if (!outcome.startsWith("connection") || outcome === "connection-quota") {
+          expect(submitted).toHaveLength(1);
+          await user.click(
+            within(screen.getByRole("dialog", { name: "Story queue" })).getByRole("button", {
+              name: "Resume queue",
+            }),
+          );
+        }
       }
       const expectedAttempts =
         outcome === "all-not-started" ? 54 : outcome === "not-started" ? 3 : 2;
-      await waitFor(() => expect(submitted).toHaveLength(expectedAttempts));
+      await waitFor(() => expect(submitted).toHaveLength(expectedAttempts), { timeout: 7_000 });
       expect(submitted[1].getAll("geoPlaceId")).toEqual(["Q2"]);
       if (outcome === "not-started") expect(submitted[2].getAll("geoPlaceId")).toEqual(["Q3"]);
       await user.click(screen.getByRole("button", { name: "Close" }));
@@ -398,6 +457,7 @@ describe("POI actions", () => {
       );
       expect(screen.getByRole("status")).toHaveTextContent(`${expectedAttempts} POIs processed`);
     },
+    15_000,
   );
 
   it.each(["finished", "running", "restarted", "not-sent", "offline", "quota"])(
@@ -512,6 +572,11 @@ describe("POI actions", () => {
       expect(screen.getByRole("status")).toHaveTextContent(
         "0 of 2 Story generations completed · Paused",
       );
+      expect(submitted).toHaveLength(0);
+      await act(async () => {
+        window.dispatchEvent(new Event("focus"));
+        window.dispatchEvent(new Event("online"));
+      });
       expect(submitted).toHaveLength(0);
       await user.click(screen.getByRole("button", { name: "Resume queue" }));
       if (outcome === "running") expect(submitted).toHaveLength(0);

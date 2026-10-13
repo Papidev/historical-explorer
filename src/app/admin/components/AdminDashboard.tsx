@@ -5,7 +5,7 @@ import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import { PeopleTable } from "./PeopleTable";
 import { useRef } from "react";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { TypeMappings } from "./TypeMappings";
 import type {
   TypeMappingCatalog,
@@ -14,13 +14,8 @@ import type {
   ClassifyTypeMappings,
 } from "@/types/PoiTypeMapping";
 import type { AiModeOption, AiSelection } from "../lib/aiModels";
-import type {
-  AdminAction,
-  AdminBatchAction,
-  AdminArtifact,
-  AdminPoiRow,
-  AdminPerson,
-} from "../lib/types";
+import type { AdminAction, AdminArtifact, AdminPoiRow, AdminPerson } from "../lib/types";
+import { generateDraftStories } from "../lib/generateDraftStories";
 import { AiGenerationSettings } from "./AiGenerationSettings";
 import { PoiRowsTable } from "./PoiRowsTable";
 
@@ -37,7 +32,6 @@ export const AdminDashboard = ({
   aiModeOptions,
   initialAiSelection,
   generateDraftStoryAction,
-  generateDraftStoriesAction,
   refreshStoryContentAction,
   resolveRelatedPeopleAction,
   refreshMainImageCandidatesAction,
@@ -56,13 +50,13 @@ export const AdminDashboard = ({
   aiModeOptions: readonly AiModeOption[];
   initialAiSelection: AiSelection;
   generateDraftStoryAction: AdminAction;
-  generateDraftStoriesAction: AdminBatchAction;
   refreshStoryContentAction: AdminAction;
   resolveRelatedPeopleAction: AdminAction;
   refreshMainImageCandidatesAction: AdminAction;
   refreshPoiTypesAction: AdminAction;
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => {
+  const router = useRouter();
   const aiSelectionRef = useRef(initialAiSelection);
   const searchParams = useSearchParams();
   const unmappedTypes = typeMappings.types.filter((type) => type.categories === undefined).length;
@@ -140,7 +134,11 @@ export const AdminDashboard = ({
                 globalArtifacts={globalArtifacts}
                 aiSelectionRef={aiSelectionRef}
                 generateDraftStoryAction={generateDraftStoryAction}
-                generateDraftStoriesAction={generateDraftStoriesAction}
+                generateDraftStoriesAction={async (formData) => {
+                  const results = await generateDraftStories(formData);
+                  router.refresh();
+                  return results;
+                }}
                 refreshStoryContentAction={refreshStoryContentAction}
                 resolveRelatedPeopleAction={resolveRelatedPeopleAction}
                 refreshMainImageCandidatesAction={refreshMainImageCandidatesAction}

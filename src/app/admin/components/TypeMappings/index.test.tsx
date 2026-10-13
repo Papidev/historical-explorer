@@ -3,8 +3,8 @@ import "@testing-library/jest-dom/vitest";
 import { mkdtempSync, mkdirSync, readFileSync, writeFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
-import { useState, useRef } from "react";
-import { cleanup, render, screen, within, waitFor, fireEvent } from "@testing-library/react";
+import { useState, useRef, useTransition } from "react";
+import { act, cleanup, render, screen, within, waitFor, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, expect, it } from "vitest";
 import { createPoiTypeMappings } from "@/server/poiTypeMappings";
@@ -44,46 +44,60 @@ afterEach(() => {
   rmSync(directory, { recursive: true, force: true });
 });
 
-const CatalogProvider = () => {
+const CatalogProvider = ({ backgroundWork }: { backgroundWork?: Promise<void> }) => {
+  const [, startTransition] = useTransition();
   const repository = createPoiTypeMappings(directory);
   const [catalog, setCatalog] = useState(() => repository.getCatalog());
   const aiSelectionRef = useRef({ mode: "cloud" as const, model: "selected-model" });
   return (
-    <TypeMappings
-      catalog={catalog}
-      aiSelectionRef={aiSelectionRef}
-      saveRule={async (id, categories) => {
-        const result = repository.save(id, categories);
-        setCatalog(repository.getCatalog());
-        return result;
-      }}
-      categoryActions={{
-        move: async (id, parent) => {
-          const result = repository.moveCategory(id, parent);
+    <>
+      {backgroundWork ? (
+        <button
+          onClick={() =>
+            startTransition(async () => {
+              await backgroundWork;
+            })
+          }
+        >
+          Run background generation
+        </button>
+      ) : null}
+      <TypeMappings
+        catalog={catalog}
+        aiSelectionRef={aiSelectionRef}
+        saveRule={async (id, categories) => {
+          const result = repository.save(id, categories);
           setCatalog(repository.getCatalog());
           return result;
-        },
-        save: async (id, name) => {
-          const result = repository.saveCategory(id, name);
+        }}
+        categoryActions={{
+          move: async (id, parent) => {
+            const result = repository.moveCategory(id, parent);
+            setCatalog(repository.getCatalog());
+            return result;
+          },
+          save: async (id, name) => {
+            const result = repository.saveCategory(id, name);
+            setCatalog(repository.getCatalog());
+            return result;
+          },
+          delete: async (id) => {
+            const result = repository.deleteCategory(id);
+            setCatalog(repository.getCatalog());
+            return result;
+          },
+        }}
+        classifyRules={async (form) => {
+          const result = await repository.classify({
+            mode: form.get("aiMode") as "cloud",
+            model: String(form.get("aiModel")),
+            provider: "ollama",
+          });
           setCatalog(repository.getCatalog());
           return result;
-        },
-        delete: async (id) => {
-          const result = repository.deleteCategory(id);
-          setCatalog(repository.getCatalog());
-          return result;
-        },
-      }}
-      classifyRules={async (form) => {
-        const result = await repository.classify({
-          mode: form.get("aiMode") as "cloud",
-          model: String(form.get("aiModel")),
-          provider: "ollama",
-        });
-        setCatalog(repository.getCatalog());
-        return result;
-      }}
-    />
+        }}
+      />
+    </>
   );
 };
 
@@ -187,9 +201,14 @@ it("automatically creates a shared category with the selected AI, then lets the 
     }),
   );
   server.listen({ onUnhandledRequest: "error" });
+  let finishBackground = () => {};
+  const backgroundWork = new Promise<void>((resolve) => {
+    finishBackground = resolve;
+  });
   try {
     const user = userEvent.setup();
-    render(<CatalogProvider />);
+    render(<CatalogProvider backgroundWork={backgroundWork} />);
+    await user.click(screen.getByRole("button", { name: "Run background generation" }));
     await user.click(screen.getByRole("button", { name: "Classify unmapped types" }));
     await waitFor(() =>
       expect(screen.getByRole("status")).toHaveTextContent(
@@ -199,6 +218,10 @@ it("automatically creates a shared category with the selected AI, then lets the 
     await waitFor(() =>
       expect(screen.queryByRole("button", { name: "Working…" })).not.toBeInTheDocument(),
     );
+    expect(screen.getByRole("button", { name: "Save categories" })).toBeEnabled();
+    await act(async () => {
+      finishBackground();
+    });
     await user.click(
       within(screen.getByRole("navigation", { name: "Acquired types" })).getByRole("button", {
         name: /^tower/,
@@ -242,6 +265,7 @@ it("automatically creates a shared category with the selected AI, then lets the 
     for (const city of ["rome", "florence"])
       expect(createPoiCategoriesForCity(city, directory).getAll().tower).toEqual([]);
   } finally {
+    finishBackground();
     server.close();
   }
 });
