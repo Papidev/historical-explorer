@@ -30,7 +30,7 @@ export const TypeMappings = ({
 }) => {
   const model = useTypeMappings(catalog, saveRule, categoryActions, classifyRules, aiSelectionRef);
   return (
-    <div className="min-h-0 flex-1 overflow-auto pb-5 text-gray-900">
+    <div className="min-h-0 flex-1 overflow-auto pb-5 text-gray-900 [contain:layout]">
       <header className="mb-5 flex flex-wrap items-start justify-between gap-4">
         <div>
           <h2 className="text-xl font-semibold">Type mappings</h2>
@@ -103,10 +103,7 @@ export const TypeMappings = ({
         </p>
       )}
       <div className="grid items-start gap-5 lg:grid-cols-[minmax(240px,1fr)_2fr]">
-        <nav
-          aria-label="Acquired types"
-          className="max-h-[65vh] overflow-auto rounded-lg border border-gray-200 bg-white"
-        >
+        <nav aria-label="Acquired types" className="rounded-lg border border-gray-200 bg-white">
           {model.visibleTypes.length ? (
             model.visibleTypes.map((type) => (
               <button
@@ -163,7 +160,7 @@ export const TypeMappings = ({
           These POIs have no acquired direct types. Mapping gaps do not change Story completeness or
           remove POIs.
         </p>
-        <ul className="mt-3 max-h-52 space-y-1 overflow-auto">
+        <ul className="mt-3 space-y-1">
           {catalog.missingTypes.map((poi) => (
             <li key={`${poi.city}/${poi.id}`}>
               {poi.name} <span className="text-xs text-gray-400">· {poi.city}</span>

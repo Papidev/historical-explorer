@@ -34,7 +34,7 @@ export const CategoryManager = ({ model }: { model: ReturnType<typeof useTypeMap
       >
         Top level · drop here to remove a parent
       </div>
-      <ul className="mt-3 max-h-80 overflow-auto">
+      <ul className="mt-3">
         {model.categories
           .filter((category) => !category.parent)
           .map((category) => (
