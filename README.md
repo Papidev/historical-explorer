@@ -97,6 +97,12 @@ changes stop preparation rather than overwrite work. The workflow can also be
 run manually to refresh existing PRs. Repository or organization restrictions
 on Actions write permissions still apply.
 
+The `Dependabot auto-merge` workflow enables squash auto-merge for verified
+Dependabot patch and minor updates; major updates require manual review.
+Enable **Allow auto-merge** in repository settings and require the `ci` status
+check on `main` so GitHub waits for CI before merging. Required reviews still
+apply. The workflow reads PR metadata without checking out or executing PR code.
+
 ### Public catalog deployment
 
 Visitor routes/APIs read a build-generated public snapshot, never editorial files selected by request IDs. A POI needs valid versioned workflow-generated Story Content, a selected licensed/attributed Main Image, and saved records for every retained Related Person. Imported or metadata-only POIs are excluded. Explicit approval is optional future work; admin `Complete`, local Sources, generation logs, and acquired Types do not gate publication.

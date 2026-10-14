@@ -1,0 +1,37 @@
+name: Dependabot auto-merge
+
+on:
+  pull_request_target:
+    branches: [main]
+    types: [opened, reopened, synchronize]
+
+permissions:
+  contents: read
+
+jobs:
+  auto-merge:
+    if: >-
+      github.event.pull_request.user.login == 'dependabot[bot]' &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.repository == 'Papidev/historical-explorer'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      # Read verified Dependabot metadata without checking out or executing PR code.
+      - name: Fetch Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@d7267f607e9d3fb96fc2fbe83e0af444713e90b7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Enable auto-merge for patch and minor updates
+        if: >-
+          steps.metadata.outputs.update-type == 'version-update:semver-patch' ||
+          steps.metadata.outputs.update-type == 'version-update:semver-minor'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          PR_HEAD: ${{ github.event.pull_request.head.sha }}
+        run: gh pr merge --auto --squash --match-head-commit "$PR_HEAD" "$PR_URL"
