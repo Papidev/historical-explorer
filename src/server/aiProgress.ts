@@ -1,3 +1,4 @@
+import { getLocalDataDirectory } from "@/server/localData";
 import { randomUUID } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from "node:fs";
 import path from "node:path";
@@ -21,7 +22,7 @@ const getProgressPath = (runId: string) => {
   if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(runId)) {
     throw new Error("Invalid AI progress ID.");
   }
-  return path.join(process.cwd(), "data", "rome", "generated", "ai-progress", `${runId}.json`);
+  return path.join(getLocalDataDirectory(), "rome", "generated", "ai-progress", `${runId}.json`);
 };
 
 const writeProgress = (runId: string, progress: AiProgress) => {

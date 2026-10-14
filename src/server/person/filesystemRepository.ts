@@ -1,3 +1,4 @@
+import { getLocalDataDirectory } from "@/server/localData";
 import {
   existsSync,
   mkdirSync,
@@ -16,9 +17,13 @@ const writeAtomically = (filePath: string, content: string) => {
   renameSync(temporaryPath, filePath);
 };
 
-export const createFilesystemPersonRepository = (rootPath = process.cwd()) => {
+export const createFilesystemPersonRepository = (
+  rootPath?: string,
+  generatedDirectory = rootPath ? path.join(rootPath, "data") : getLocalDataDirectory(),
+) => {
+  rootPath ??= process.cwd();
   const peoplePath = () => path.join(rootPath, "data", "people");
-  const generatedPath = () => path.join(rootPath, "data", "generated", "people");
+  const generatedPath = () => path.join(generatedDirectory, "generated", "people");
   const personPath = (personId: string) => path.join(peoplePath(), personId, "person.json");
   const sourcePath = (personId: string) => path.join(generatedPath(), `${personId}.txt`);
 

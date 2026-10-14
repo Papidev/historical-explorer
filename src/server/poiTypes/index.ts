@@ -1,3 +1,4 @@
+import { getLocalDataDirectory } from "@/server/localData";
 import {
   fetchWithGenerationCancellation,
   throwIfGenerationCancelled,
@@ -120,7 +121,7 @@ export const createPoiTypes = ({
 
 export const createPoiTypesForCity = (city: string) =>
   createPoiTypes({
-    directory: path.join(process.cwd(), "data", toCitySlug(city), "generated", "wikidata"),
+    directory: path.join(getLocalDataDirectory(), toCitySlug(city), "generated", "wikidata"),
     onRefresh: createPoiCategoriesForCity(toCitySlug(city)).refresh,
     findPointOfInterest: (poiId) => {
       try {
