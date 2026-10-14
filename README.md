@@ -11,7 +11,7 @@ pnpm install
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000). Installation activates Husky: staged files are formatted with Prettier and staged JS/TS checked/fixed with ESLint. Run `pnpm lint` before a PR.
+Open [http://localhost:3000](http://localhost:3000). Installation activates Husky: staged files are formatted with Prettier and staged JS/TS checked/fixed with ESLint. Select checks according to [Testing & Verification](AGENTS.md#testing--verification).
 
 | Route              | Purpose                              |
 | ------------------ | ------------------------------------ |
