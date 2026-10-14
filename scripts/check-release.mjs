@@ -30,13 +30,12 @@ if (current.version === previous.version && !initialRelease) {
       (file) =>
         file.startsWith("docs/") ||
         file.startsWith(".agents/") ||
+        /^\.github\/workflows\/[^/]+\.ya?ml$/.test(file) ||
         [
           "README.md",
           "AGENTS.md",
           ".changeset/README.md",
           ".github/dependabot.yml",
-          ".github/workflows/test.yml",
-          ".github/workflows/dependabot-release.yml",
           "scripts/check-release.mjs",
           "scripts/prepare-dependabot-release.mjs",
         ].includes(file),

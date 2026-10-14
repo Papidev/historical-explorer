@@ -46,8 +46,7 @@ Read `docs/agents/domain.md` before domain exploration.
 - Use `pnpm` exclusively for dependency management and scripts (do not use npm or yarn).
 - If dependency installation fails, stop immediately and ask for help. Do not continue with alternative approaches intended to bypass the failed installation.
 - `pnpm lint` runs ESLint with the Next `core-web-vitals` rules plus `eslint-config-prettier` to keep formatting conflicts out.
-- During iteration, run the smallest useful verification. Run linting and formatting only immediately before opening a PR.
-- `pnpm lint` is not a full TypeScript type-check in this repo; when touching TS-heavy logic, also run `pnpm build` (or `tsc --noEmit` if a script is available) before considering the change complete.
+- Select local checks according to [Testing & Verification](#testing--verification), including before commits and PRs.
 
 ## Tailwind Plus / Catalyst
 
@@ -77,7 +76,7 @@ Read `docs/agents/domain.md` before domain exploration.
 - Before starting dense implementations, first check whether a consolidated, widely used, and up-to-date dependency can solve the problem.
 - Prefer adopting proven dependencies over re-inventing the wheel when the tradeoffs are acceptable for this project.
 - Keep data flow explicit and local; avoid “smart” indirection unless it clearly reduces complexity.
-- After each step, run the smallest useful verification before moving on.
+- After each step, select verification according to [Testing & Verification](#testing--verification).
 - When a feature is stable enough (behavior/API unlikely to change soon), update documentation accordingly: `README.md` for user/developer usage and `AGENTS.md` for implementation guidance/process updates.
 
 Update `AGENTS.md` only with important stuff that cannot be clearly/quickly derived from an exploration of the codebase.
@@ -88,16 +87,20 @@ Update `AGENTS.md` only with important stuff that cannot be clearly/quickly deri
 
 ## Testing & Verification
 
+- Run tests, TypeScript checks, lint, formatting, and builds only when the changed behavior or files justify them, or the user explicitly requests them. Opening a PR or committing does not by itself justify any check.
+- Before running a check, briefly state which concrete risk in the change it verifies. Choose the smallest relevant check; broaden or repeat only after new changes, failures, or unresolved concerns.
+- For documentation or agent-instruction-only edits, inspect the diff; skip application tests, TypeScript checks, lint, and builds. For scripts or CI changes, verify the affected script or workflow rather than automatically rebuilding the application.
+- `pnpm lint` is not a TypeScript check. Select a type check for type-related risk and a build for bundling or production behavior risk; run both only when both are relevant.
 - There is no automated map test harness yet; add colocated `*.test.tsx` files when introducing logic-heavy components and stub MapLibre APIs if needed.
 - Keep tests user-centric: verify visible behavior, interactions, and outcomes rather than implementation details.
 - Prefer accessible queries (for example `getByRole`, `getByLabelText`) and avoid brittle selectors.
-- Immediately before raising a PR, run `pnpm format <changed files>` for files supported by Prettier, then `pnpm lint` and `pnpm build`. CI checks that the built app starts and responds on the PR. Do not require browser smoke checks unless explicitly requested.
+- Report which checks ran and any relevant checks skipped in the PR description. CI checks that the built app starts and responds on the PR. Browser smoke checks require an explicit request.
 - Document any manual QA (e.g., “verified zoom-to markers on Chrome + Safari”) in PR descriptions until automated coverage exists.
 
 ## Commits & PR Hygiene
 
 - Before opening any PR, commit and include all uncommitted Stories, People, and POI metadata present in its branch checkout, including modified tracked files and untracked files that are not ignored by Git. Verify that none remains only local, so merging the branch preserves its content. Respect `.gitignore`; never force-add ignored files. Apply this rule in every checkout, including worktrees, without separate backups.
-- Before opening application PRs, follow [Application versions](README.md#application-versions): prepare an English Changeset, consume it into exactly one version increment and changelog entry relative to current `main`, and regenerate after alignment if another release merged. Internal documentation and the CI/release automation files allowed by `scripts/check-release.mjs` are exempt; dependency manifests and lockfiles still require a release.
+- Before opening application PRs, follow [Application versions](README.md#application-versions): prepare an English Changeset, consume it into exactly one version increment and changelog entry relative to current `main`, and regenerate after alignment if another release merged. Internal documentation, GitHub Actions workflows (including action dependency updates), and the other CI/release automation files allowed by `scripts/check-release.mjs` are exempt; application dependency manifests and lockfiles still require a release.
 
 - Track bugs, improvements, and future ideas in GitHub Issues and the repository's Cultural Atlas Project. Search existing issues before creating one; retain unresolved decisions and revisit conditions in the issue body. Markdown documents explain product and architecture decisions.
 - Whenever creating an issue, add it to the Cultural Atlas GitHub Project associated with this repository, assign Status and Area, and verify the placement before reporting completion. Default to Backlog. If Project access is unavailable, report the missing placement explicitly.
