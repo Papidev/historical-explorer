@@ -88,6 +88,7 @@ Update `AGENTS.md` only with important stuff that cannot be clearly/quickly deri
 ## Testing & Verification
 
 - Run tests, TypeScript checks, lint, formatting, and builds only when the changed behavior or files justify them, or the user explicitly requests them. Opening a PR or committing does not by itself justify any check.
+- Add or update tests when new or changed behavior warrants coverage, without requiring a separate user request. Cover meaningful outcomes rather than mirroring implementation details or testing trivial edits.
 - Before running a check, briefly state which concrete risk in the change it verifies. Choose the smallest relevant check; broaden or repeat only after new changes, failures, or unresolved concerns.
 - For documentation or agent-instruction-only edits, inspect the diff; skip application tests, TypeScript checks, lint, and builds. For scripts or CI changes, verify the affected script or workflow rather than automatically rebuilding the application.
 - `pnpm lint` is not a TypeScript check. Select a type check for type-related risk and a build for bundling or production behavior risk; run both only when both are relevant.
