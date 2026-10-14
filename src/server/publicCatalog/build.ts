@@ -23,7 +23,7 @@ export const buildPublicCatalog = async () => {
     }
     const snapshot: DraftStorySnapshot = {
       poiId,
-      storyContent: parseStoryContent(storyContent, ["wikipedia"]),
+      storyContent: parseStoryContent(storyContent),
       draftMainImage,
       mainImageCandidates: [],
       sources: [],

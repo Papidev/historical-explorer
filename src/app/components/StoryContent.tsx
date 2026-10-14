@@ -90,7 +90,7 @@ export const StoryContent = ({
         </section>
       ) : null}
       <Topic
-        title="Design"
+        title="Architecture"
         insights={content.topics.design.map(({ description, emphasis }, index) => (
           <StoryText key={index} text={description} emphasis={emphasis} />
         ))}

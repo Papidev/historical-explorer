@@ -9,6 +9,7 @@ import { fetchMainImageCandidates } from "@/server/storyWorkflow/mainImageCandid
 import { fetchWikiSnapshot } from "@/server/wikiPipeline/fetchWiki";
 import { buildWikipediaPageUrl } from "@/server/wikiPipeline/io";
 import { getPersonDisplayName } from "@/utils/getPersonDisplayName";
+import { acquireWikipediaSources } from "@/server/wikiPipeline/acquireWikipediaSources";
 import { toCitySlug } from "@/server/wikiPipeline/normalize";
 import type {
   MainImageCandidate,
@@ -91,6 +92,7 @@ const getProvider = (ai: AiSelection): "ollama" | "gemini" =>
       : "gemini";
 
 type PersonDependencies = {
+  acquireSources: typeof acquireWikipediaSources;
   repository: PersonRepository;
   fetchSnapshot: (title: string, language?: WikipediaLanguage) => Promise<WikiSnapshot>;
   generateContent: (
@@ -128,6 +130,7 @@ const generateAndPersist = async ({
   ai,
   dependencies,
   onProgress,
+  contextWikidataIds = [],
 }: {
   id: string;
   name: string;
@@ -136,6 +139,7 @@ const generateAndPersist = async ({
   ai: AiSelection & { provider: "ollama" | "gemini" };
   dependencies: PersonDependencies;
   onProgress?: (message: string) => void;
+  contextWikidataIds?: string[];
 }) => {
   const source: PersonSource = {
     id: "wikipedia",
@@ -144,12 +148,19 @@ const generateAndPersist = async ({
     url: buildWikipediaPageUrl(snapshot.title, snapshot.language),
     content: wikiTextToPlainText(snapshot.fullText),
   };
+  const acquired = await dependencies.acquireSources({
+    wikidataId,
+    initialSource: source,
+    countryProperty: "P27",
+    contextWikidataIds,
+  });
+  acquired.warnings.forEach((warning) => onProgress?.(`${name}: ${warning}`));
   onProgress?.(
     `Generating ${name} with ${ai.provider === "ollama" ? "Ollama" : "Gemini"} (${ai.model}).`,
   );
   const content = await dependencies.generateContent(
     { name: getPersonDisplayName(name), wikidataId },
-    [source],
+    acquired.sources,
     {
       mode: ai.mode,
       provider: ai.provider,
@@ -180,29 +191,39 @@ const generateAndPersist = async ({
     id: allocatePersonId(name, dependencies.repository),
     name: getPersonDisplayName(name),
     wikidataId,
-    wikipediaTitle: snapshot.title,
+    wikipediaTitle: acquired.sources[0].title,
     content,
     ...(image ? { image } : {}),
     source: {
-      id: source.id,
-      kind: source.kind,
-      title: source.title,
-      url: source.url,
+      id: acquired.sources[0].id,
+      kind: acquired.sources[0].kind,
+      title: acquired.sources[0].title,
+      url: acquired.sources[0].url,
     },
+    ...(acquired.sources.length > 1
+      ? {
+          additionalSources: acquired.sources
+            .slice(1)
+            .map(({ id, kind, title, url }) => ({ id, kind, title, url })),
+        }
+      : {}),
+    ...(contextWikidataIds.length ? { sourceContextWikidataIds: contextWikidataIds } : {}),
     generation: {
       aiMode: ai.mode,
       aiProvider: ai.provider,
       aiModel: ai.model,
       completedAt: dependencies.now().toISOString(),
+      ...(acquired.warnings.length ? { sourceWarnings: acquired.warnings } : {}),
     },
   };
   throwIfGenerationCancelled();
-  dependencies.repository.replace(person, source);
+  dependencies.repository.replace(person, acquired.sources[0], acquired.sources.slice(1));
   return person;
 };
 
 export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
   const dependencies: PersonDependencies = {
+    acquireSources: acquireWikipediaSources,
     repository: personRepository,
     fetchSnapshot: fetchWikiSnapshot,
     generateContent: generatePerson,
@@ -230,20 +251,45 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
       }
       const pending = (async () => {
         const source = dependencies.repository.readSource(person);
+        const acquired = await dependencies.acquireSources({
+          wikidataId: person.wikidataId,
+          initialSource: source,
+          countryProperty: "P27",
+          contextWikidataIds: person.sourceContextWikidataIds,
+        });
+        acquired.warnings.forEach((warning) => onProgress?.(warning));
         const provider = getProvider(ai);
         onProgress?.(`Generating ${person.name} with ${provider} (${ai.model}).`);
-        const content = await dependencies.generateContent(person, [source], { ...ai, provider });
+        const content = await dependencies.generateContent(person, acquired.sources, {
+          ...ai,
+          provider,
+        });
         const updated = {
           ...person,
           content,
+          wikipediaTitle: acquired.sources[0].title,
+          source: {
+            id: acquired.sources[0].id,
+            kind: acquired.sources[0].kind,
+            title: acquired.sources[0].title,
+            url: acquired.sources[0].url,
+          },
+          ...(acquired.sources.length > 1 || person.additionalSources
+            ? {
+                additionalSources: acquired.sources
+                  .slice(1)
+                  .map(({ id, kind, title, url }) => ({ id, kind, title, url })),
+              }
+            : {}),
           generation: {
             aiMode: ai.mode,
             aiProvider: provider,
             aiModel: ai.model,
             completedAt: dependencies.now().toISOString(),
+            ...(acquired.warnings.length ? { sourceWarnings: acquired.warnings } : {}),
           },
         };
-        dependencies.repository.replace(updated, source);
+        dependencies.repository.replace(updated, acquired.sources[0], acquired.sources.slice(1));
         return updated;
       })().finally(() => pendingPeople.delete(person.wikidataId));
       pendingPeople.set(person.wikidataId, pending);
@@ -261,6 +307,9 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
       onProgress?: (message: string) => void;
     }) => {
       const links = storySources.flatMap((source) => source.links ?? []);
+      const contextWikidataIds = [
+        ...new Set(storySources.flatMap(({ wikidataId }) => (wikidataId ? [wikidataId] : []))),
+      ];
       const uniquePeople = new Map<string, RelatedPerson>();
       for (const reference of references) {
         const person =
@@ -297,10 +346,12 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
       const personAi = { ...ai, provider: getProvider(ai) };
       const resolved: RelatedPerson[] = [];
       const failures: RelatedPeopleResolutionResult["failures"] = [];
+      const sourceWarnings: string[] = [];
 
       for (let index = 0; index < relatedPeople.length; index += 1) {
         const person = relatedPeople[index];
         if (person.personId) {
+          dependencies.repository.retainSourceContext(person.personId, contextWikidataIds);
           onProgress?.(
             `Skipping ${person.name} (${index + 1}/${relatedPeople.length}): already resolved.`,
           );
@@ -316,6 +367,7 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
         }
         try {
           const matchingSnapshots = new Map<string, WikiSnapshot>();
+          const unavailableLinks: string[] = [];
           for (const link of matchingLinks.values()) {
             onProgress?.(`Fetching the Wikipedia article for ${person.name}: ${link.title}.`);
             try {
@@ -323,10 +375,15 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
               if (snapshot.isDisambiguation) {
                 onProgress?.(`Ignoring ${link.title}: Wikipedia disambiguation page.`);
               } else {
-                matchingSnapshots.set(
-                  `${snapshot.language ?? "en"}:${normalizeTitle(snapshot.title)}`,
-                  snapshot,
-                );
+                const key =
+                  snapshot.wikidataId ??
+                  `${snapshot.language ?? "en"}:${normalizeTitle(snapshot.title)}`;
+                if (
+                  !matchingSnapshots.has(key) ||
+                  snapshot.language === undefined ||
+                  snapshot.language === "en"
+                )
+                  matchingSnapshots.set(key, snapshot);
               }
             } catch (error) {
               throwIfGenerationCancelled();
@@ -337,10 +394,15 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
                 onProgress?.(`Skipping ${person.name}: Wikipedia page not found.`);
                 continue;
               }
-              throw error;
+              if (matchingLinks.size === 1) throw error;
+              unavailableLinks.push(
+                `${person.name}: could not acquire ${link.language ?? "en"} Wikipedia: ${String(error)}`,
+              );
+              onProgress?.(unavailableLinks.at(-1)!);
             }
           }
           if (matchingSnapshots.size === 0) {
+            if (unavailableLinks.length) throw new Error(unavailableLinks.join("\n"));
             onProgress?.(
               `Skipping ${person.name}: no personal Wikipedia article among the matching links.`,
             );
@@ -356,6 +418,7 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
             continue;
           }
           const [snapshot] = matchingSnapshots.values();
+          sourceWarnings.push(...unavailableLinks);
           if (!snapshot.wikidataId) {
             resolved.push({ name: person.name, sourceIds: person.sourceIds });
             failures.push({
@@ -378,10 +441,18 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
               ai: personAi,
               dependencies,
               onProgress,
+              contextWikidataIds,
             }).finally(() => pendingPeople.delete(wikidataId));
             pendingPeople.set(wikidataId, pending);
           }
           const resolvedPerson = existing ?? (await pending!);
+          dependencies.repository.retainSourceContext(resolvedPerson.id, contextWikidataIds);
+          if (!existing)
+            sourceWarnings.push(
+              ...(resolvedPerson.generation.sourceWarnings ?? []).map(
+                (warning) => `${person.name}: ${warning}`,
+              ),
+            );
           resolved.push({
             name: person.name,
             personId: resolvedPerson.id,
@@ -421,7 +492,11 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
         }
       }
 
-      return { relatedPeople: resolved, failures };
+      return {
+        relatedPeople: resolved,
+        failures,
+        ...(sourceWarnings.length ? { sourceWarnings } : {}),
+      };
     },
     getPublic: (personId: string) => {
       const person = dependencies.repository.get(personId);

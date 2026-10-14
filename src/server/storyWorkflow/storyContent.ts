@@ -104,6 +104,25 @@ export type StoryInsight = z.infer<typeof storyInsightSchema>;
 export type HistoryInsight = z.infer<typeof historyInsightSchema>;
 export type RelatedPerson = z.infer<typeof relatedPersonSchema>;
 
+export const getMentionedRelatedPeople = (storyContent: StoryContent) => {
+  const normalize = (text: string) =>
+    ` ${text
+      .normalize("NFKC")
+      .toLowerCase()
+      .replace(/[^\p{L}\p{N}]+/gu, " ")
+      .trim()} `;
+  const textBlocks = [
+    storyContent.introduction.text,
+    ...Object.values(storyContent.topics).flatMap((insights) =>
+      insights.map(({ description }) => description),
+    ),
+  ].map(normalize);
+
+  return storyContent.relatedPeople.filter(({ name }) =>
+    textBlocks.some((text) => text.includes(normalize(getPersonDisplayName(name)))),
+  );
+};
+
 const sortHistoryInsights = (insights: HistoryInsight[]) =>
   [...insights].sort((left, right) => {
     if (!left.time && !right.time) return 0;
@@ -135,14 +154,18 @@ export const parseStoryContentStructure = (value: unknown) => {
   };
 };
 
-export const parseStoryContent = (value: unknown, sourceIds: string[]) => {
+export const parseStoryContent = (value: unknown, sourceIds?: string[]) => {
   const storyContent = parseStoryContentStructure(value);
-  const knownSourceIds = new Set(sourceIds);
+  const knownSourceIds = sourceIds ? new Set(sourceIds) : undefined;
   const contentIds = new Set<string>();
 
   const validateSourceIds = (references: string[], label: string) => {
     for (const sourceId of references) {
-      if (!knownSourceIds.has(sourceId)) {
+      if (
+        knownSourceIds
+          ? !knownSourceIds.has(sourceId)
+          : !/^wikipedia(?:-[a-z][a-z0-9]*(?:-[a-z0-9]+)*)?$/.test(sourceId)
+      ) {
         throw new Error(`${label} references unknown Source ${sourceId}.`);
       }
     }
@@ -198,7 +221,7 @@ export const toPublicStoryContent = (storyContent: StoryContent): PublicStoryCon
       ...(emphasis?.length ? { emphasis } : {}),
     })),
   },
-  relatedPeople: storyContent.relatedPeople.map(({ name, personId }) => ({
+  relatedPeople: getMentionedRelatedPeople(storyContent).map(({ name, personId }) => ({
     name: getPersonDisplayName(name),
     ...(personId ? { personId } : {}),
   })),

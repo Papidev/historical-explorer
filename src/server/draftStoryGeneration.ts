@@ -98,6 +98,13 @@ export const createDraftStoryGeneration =
               }
             },
           });
+          issues.push(
+            ...(result.sourceWarnings ?? []).map((message) => ({
+              stage: "sources" as const,
+              label: "Wikipedia Sources",
+              message,
+            })),
+          );
           if (result.mainImageCandidates === "failed") {
             issues.push({
               stage: "mainImageCandidates",

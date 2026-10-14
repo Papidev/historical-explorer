@@ -132,12 +132,12 @@ export const fetchWikiSnapshot = async (
       new Map(
         links.map((link) => [
           `${link.text()}\0${link.page()}`,
-          { label: link.text(), title: link.page(), ...(language === "it" ? { language } : {}) },
+          { label: link.text(), title: link.page(), ...(language !== "en" ? { language } : {}) },
         ]),
       ).values(),
     ),
     title: page.title ?? title,
-    ...(language === "it" ? { language } : {}),
+    ...(language !== "en" ? { language } : {}),
     ...(wikidataId ? { wikidataId } : {}),
     ...(page.pageprops?.disambiguation !== undefined ? { isDisambiguation: true } : {}),
   };

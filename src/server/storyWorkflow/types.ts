@@ -25,6 +25,7 @@ export type GenerationCheckpoint = {
   aiProvider?: "ollama" | "gemini";
   aiModel?: string;
   relatedPeopleFailures?: RelatedPeopleResolutionFailure[];
+  sourceWarnings?: string[];
 };
 
 export type DraftStoryGenerationStatus = {
@@ -51,6 +52,7 @@ export type DraftStoryGenerationResult = {
   storyContent: "generated";
   relatedPeople: "resolved" | "partial";
   relatedPeopleFailures: RelatedPeopleResolutionFailure[];
+  sourceWarnings?: string[];
 };
 
 export type RelatedPeopleResolutionFailure = {
@@ -61,6 +63,7 @@ export type RelatedPeopleResolutionFailure = {
 export type RelatedPeopleResolutionResult = {
   relatedPeople: StoryContent["relatedPeople"];
   failures: RelatedPeopleResolutionFailure[];
+  sourceWarnings?: string[];
 };
 
 export type StoryWorkflowErrorCode =
