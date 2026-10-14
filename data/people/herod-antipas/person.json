@@ -1,0 +1,90 @@
+{
+  "id": "herod-antipas",
+  "name": "Herod Antipas",
+  "wikidataId": "Q192950",
+  "wikipediaTitle": "Herod Antipas",
+  "content": {
+    "description": [
+      {
+        "text": "Herod Antipas, born around 20 BC, was a son of Herod the Great and inherited the title of tetrarch of Galilee and Perea after his father's death in 4 BC. Recognised by Augustus, he ruled as a client state of Rome for forty‑two years, undertaking extensive building projects such as the reconstruction of Sepphoris, the fortification of Betharamphtha, and the foundation of the new capital Tiberias on the western shore of the Sea of Galilee, which later became a centre of rabbinic learning.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      },
+      {
+        "text": "His reign was marked by personal and political turbulence: he divorced his first wife Phasael, the daughter of Nabatean king Aretas IV, and married Herodias, his half‑brother’s widow, a move that provoked a war with Nabatea and led to the execution of John the Baptist at his behest; he also played a role in the trial of Jesus, sending him back to Pilate after a brief interrogation. In 39 AD he was accused of conspiracy by his nephew Agrippa I, exiled to Gaul, and died in exile, probably in Lugdunum.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The city of Tiberias, founded by Antipas, was named after Emperor Tiberius and later became a major centre of rabbinic scholarship.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Antipas was only about seventeen years old when his father Herod the Great died in 4 BC.",
+        "sourceIds": [
+          "wikipedia-it"
+        ]
+      },
+      {
+        "text": "He was exiled to Lugdunum (modern Lyon) in Gaul, where he is believed to have died.",
+        "sourceIds": [
+          "wikipedia-it"
+        ]
+      },
+      {
+        "text": "John the Baptist was beheaded on a platter at Antipas’s request, following a banquet where the tetrarch promised to grant any wish of Herodias’s daughter Salome.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": -20,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Herod_Antipas_medal.svg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Herod_Antipas_medal.svg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Herod_Antipas_medal.svg/960px-Herod_Antipas_medal.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/Herod_Antipas_medal.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Georges Reverdy",
+    "author": "Georges Reverdy",
+    "width": 500,
+    "height": 500,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Herod Antipas",
+    "url": "https://en.wikipedia.org/wiki/Herod_Antipas"
+  },
+  "additionalSources": [
+    {
+      "id": "wikipedia-it",
+      "kind": "wikipedia",
+      "title": "Erode Antipa",
+      "url": "https://it.wikipedia.org/wiki/Erode_Antipa"
+    }
+  ],
+  "sourceContextWikidataIds": [
+    "Q2104896"
+  ],
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-14T22:04:36.302Z"
+  }
+}
