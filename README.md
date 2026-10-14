@@ -73,9 +73,8 @@ different commit SHAs. No npm publishing or additional secrets are required.
 
 Dependabot package and lockfile updates also produce a patch release of the
 application.
-GitHub Actions updates keep the current application version and changelog;
-the automation also removes any previously generated release metadata from
-workflow-only PRs. For package and lockfile updates, the
+GitHub Actions updates are skipped by the release automation. For package and
+lockfile updates, the
 `Prepare Dependabot releases` workflow prepares and consumes an English
 Changeset automatically after the first CI run on a bot PR, and refreshes every open
 bot PR when `main` changes. Repeated runs preserve exactly one patch increment

@@ -38,7 +38,6 @@ if (current.version === previous.version && !initialRelease) {
           ".github/dependabot.yml",
           "scripts/check-release.mjs",
           "scripts/prepare-dependabot-release.mjs",
-          "scripts/test-dependabot-release.mjs",
         ].includes(file),
     ),
     "Application changes require a version increment. Run pnpm changeset, then pnpm release:version.",

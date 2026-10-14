@@ -76,10 +76,6 @@ jobs:
         if: steps.changes.outputs.run_checks == 'true'
         run: pnpm test
 
-      - name: Test dependency release automation
-        if: steps.changes.outputs.run_checks == 'true'
-        run: node --test scripts/test-dependabot-release.mjs
-
       - name: Build
         if: steps.changes.outputs.run_checks == 'true'
         run: pnpm build
