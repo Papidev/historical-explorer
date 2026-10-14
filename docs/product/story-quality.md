@@ -35,7 +35,11 @@ The revised texts and checklist remain subject to the review in
 - **Readable English:** use clear contemporary language without promotional
   praise, unexplained specialist terms, duplicated facts, or assumptions that
   the reader is physically present. Group related information so each item is
-  easy to follow; independent details can remain independent.
+  easy to follow; independent details can remain independent. Prefer a paragraph
+  break after a sentence when a distinct idea, shift of focus, or useful reading
+  pause warrants it. Keep closely connected sentences together. This applies to
+  introductions and topic descriptions as an editorial preference, not a rule
+  for every period; abbreviations and decimal numbers do not mark sentence ends.
 - **Meaningful connections:** retain individuals significant to this Story,
   linked to saved Person records. A list of everyone mentioned in a Source is
   not a useful selection. Families and institutions are not individual People.

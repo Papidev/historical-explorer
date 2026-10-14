@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.5.1
+
+### Patch Changes
+
+- Prefer meaningful paragraph breaks in generated Story introductions and topic descriptions, and preserve newly generated Rome gate content and related People.
+
 ## 0.5.0
 
 ### Minor Changes
