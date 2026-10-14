@@ -69,18 +69,20 @@ export const prepareRelease = (repository, base, head) => {
         files.some((file) => file.startsWith(".github/workflows/")),
       "Expected a Dependabot lockfile or GitHub Actions update.",
     );
-    writeFileSync(
-      resolve(checkout, ".changeset/dependabot-release.md"),
-      `---\n${JSON.stringify(current.name)}: patch\n---\n\n${notes.join("\n") || "Update GitHub Actions dependencies."}\n`,
-    );
-    execFileSync(
-      process.execPath,
-      [resolve(repository, "node_modules/@changesets/cli/bin.js"), "version"],
-      {
-        cwd: checkout,
-        stdio: "inherit",
-      },
-    );
+    if (notes.length > 0 || files.includes("pnpm-lock.yaml")) {
+      writeFileSync(
+        resolve(checkout, ".changeset/dependabot-release.md"),
+        `---\n${JSON.stringify(current.name)}: patch\n---\n\n${notes.join("\n") || "Update application dependency lockfile."}\n`,
+      );
+      execFileSync(
+        process.execPath,
+        [resolve(repository, "node_modules/@changesets/cli/bin.js"), "version"],
+        {
+          cwd: checkout,
+          stdio: "inherit",
+        },
+      );
+    }
     execFileSync(process.execPath, [resolve(repository, "scripts/check-release.mjs"), base], {
       cwd: checkout,
       stdio: "inherit",
@@ -97,7 +99,7 @@ export const prepareRelease = (repository, base, head) => {
       "-p",
       base,
       "-m",
-      "Prepare dependency patch release [dependabot skip] [skip ci]",
+      "Prepare dependency update [dependabot skip] [skip ci]",
     ).trim();
   } finally {
     git("worktree", "remove", "--force", checkout);
@@ -148,7 +150,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       execFileSync("git", ["push", "origin", `${commit}:refs/heads/${pr.head.ref}`], {
         stdio: "inherit",
       });
-    } else console.log("Dependency release is already prepared.");
+    } else console.log("Dependency update is already prepared.");
     // [skip ci] suppresses the approval-required pull_request run from the bot push.
     // workflow_dispatch still runs CI on the prepared release with GITHUB_TOKEN.
     execFileSync(

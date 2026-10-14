@@ -44,9 +44,10 @@ The initial tracked release establishes the existing `0.1.0` as the baseline;
 the increment requirement applies to subsequent application changes.
 Use `patch` for fixes and small content/UI updates, `minor` for new features, and
 `major` for incompatible changes. Internal documentation and changes limited to
-the CI/release automation files allowed by `scripts/check-release.mjs` do not
-require an increment. Dependency manifests and lockfile updates still require
-an application release. Versions remain `0.x` during initial development.
+GitHub Actions workflows (including action dependency updates) and the other
+CI/release automation files allowed by `scripts/check-release.mjs` do not
+require an increment. Application dependency manifests and lockfile updates still
+require an application release. Versions remain `0.x` during initial development.
 
 ```bash
 pnpm changeset
@@ -70,11 +71,15 @@ artifact. A release tag identifies its source commit and does not confirm that
 Vercel deployment succeeded. Preview deploys can have the same version with
 different commit SHAs. No npm publishing or additional secrets are required.
 
-Dependabot updates also produce a patch release of the application. The
+Dependabot package and lockfile updates also produce a patch release of the
+application.
+GitHub Actions updates keep the current application version and changelog;
+the automation also removes any previously generated release metadata from
+workflow-only PRs. For package and lockfile updates, the
 `Prepare Dependabot releases` workflow prepares and consumes an English
 Changeset automatically after the first CI run on a bot PR, and refreshes every open
 bot PR when `main` changes. Repeated runs preserve exactly one patch increment
-from current `main`. Dependency major versions do not automatically imply an
+from current `main` for package and lockfile updates. Dependency major versions do not automatically imply an
 application major release. Normal CI and review still apply before merging.
 The generated release commit includes `[skip ci]` to suppress the duplicate
 `pull_request` run that GitHub requires a maintainer to approve after a

@@ -63,7 +63,7 @@ jobs:
           package-manager-cache: false
       - name: Install trusted release tooling
         run: pnpm install --frozen-lockfile --ignore-scripts
-      - name: Prepare and push patch release
+      - name: Prepare and push dependency update
         env:
           GH_TOKEN: ${{ github.token }}
           PR_NUMBER: ${{ matrix.pull }}
