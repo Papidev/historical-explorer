@@ -1,5 +1,6 @@
 import type { HistoryInsight, PublicStoryContent } from "@/server/storyWorkflow";
 import { Topic } from "@/app/components/Topic/Topic";
+import { StoryText } from "@/app/components/StoryText";
 
 const toOrdinal = (value: number) => {
   const remainder = value % 100;
@@ -58,7 +59,9 @@ export const StoryContent = ({
 
   return (
     <div className="mt-4 space-y-6 text-base leading-[1.7] text-zinc-800">
-      <p>{content.introduction}</p>
+      <p>
+        <StoryText text={content.introduction} emphasis={content.introductionEmphasis} />
+      </p>
       {period ? (
         <dl className="grid gap-2 rounded-lg bg-amber-50 p-3 text-sm">
           <div>
@@ -71,14 +74,16 @@ export const StoryContent = ({
         <section className="rounded-xl bg-orange-50/55 px-4 py-3 ring-1 ring-orange-950/5">
           <h3 className="text-sm font-semibold tracking-wide text-zinc-950 uppercase">History</h3>
           <ul className="mt-3 list-disc space-y-3 pl-5 marker:text-orange-400">
-            {history.map(({ description, time }, index) => (
+            {history.map(({ description, time, emphasis }, index) => (
               <li key={`history-${index}`} className="pl-1">
                 {time ? (
                   <p className="text-sm font-semibold text-orange-700">
                     {formatHistoricalTime(time)}
                   </p>
                 ) : null}
-                <p>{description}</p>
+                <p>
+                  <StoryText text={description} emphasis={emphasis} />
+                </p>
               </li>
             ))}
           </ul>
@@ -86,9 +91,16 @@ export const StoryContent = ({
       ) : null}
       <Topic
         title="Design"
-        insights={content.topics.design.map(({ description }) => description)}
+        insights={content.topics.design.map(({ description, emphasis }, index) => (
+          <StoryText key={index} text={description} emphasis={emphasis} />
+        ))}
       />
-      <Topic title="Art" insights={content.topics.art.map(({ description }) => description)} />
+      <Topic
+        title="Art"
+        insights={content.topics.art.map(({ description, emphasis }, index) => (
+          <StoryText key={index} text={description} emphasis={emphasis} />
+        ))}
+      />
       {content.relatedPeople.length > 0 ? (
         <section className="rounded-xl bg-sky-50/55 px-4 py-3 ring-1 ring-sky-950/5">
           <h3 className="text-sm font-semibold tracking-wide text-zinc-950 uppercase">

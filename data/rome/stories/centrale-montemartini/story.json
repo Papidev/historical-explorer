@@ -1,13 +1,14 @@
 {
   "introduction": {
-    "text": "The Centrale Montemartini is a former power plant in Rome that now functions as a museum, notable for its blend of industrial machinery and classical antiquities.",
-    "sourceIds": ["wikipedia"]
+    "text": "Centrale Montemartini is part of the Capitoline Museums, housed in a former municipal power station on Via Ostiense in Rome. The plant opened in 1912, and its restored machine and boiler halls now hold ancient sculptures alongside the industrial equipment preserved inside the building. Two enormous diesel engines form the backdrop to Roman figures in the machine hall. Elsewhere, the collections include Republican portraits, imperial sarcophagi and objects from the burial of Crepereia Tryphaena. Most of the antiquities come from excavations carried out in the second half of the nineteenth century and in the 1930s. The former boiler room 2 also houses carriages from Pope Pius IX's train, while outside stand two elaborate cast-iron lamp posts by Duilio Cambellotti.",
+    "sourceIds": ["wikipedia"],
+    "emphasis": ["former municipal power station", "diesel engines", "Pope Pius IX's train"]
   },
   "topics": {
     "history": [
       {
         "id": "history-1912",
-        "description": "Inaugurated on 30 June 1912 as Rome's first municipal power plant.",
+        "description": "Opened in 1912, the plant was the first to produce electricity for Rome's municipal electricity company. It was named after Giovanni Montemartini, an advocate of bringing public services under municipal control.",
         "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 1912,
@@ -16,61 +17,11 @@
         }
       },
       {
-        "id": "history-1933",
-        "description": "Inaugurated two 7500 HP diesel engines on 21 April 1933.",
-        "sourceIds": ["wikipedia"],
-        "time": {
-          "startYear": 1933,
-          "precision": "exact",
-          "granularity": "year"
-        }
-      },
-      {
-        "id": "history-1943",
-        "description": "Survived Allied bombing during World War II; remained the sole power plant for Rome.",
-        "sourceIds": ["wikipedia"],
-        "time": {
-          "startYear": 1943,
-          "precision": "exact",
-          "granularity": "year"
-        }
-      },
-      {
-        "id": "history-1968",
-        "description": "Closed in 1968 after becoming obsolete.",
-        "sourceIds": ["wikipedia"],
-        "time": {
-          "startYear": 1968,
-          "precision": "exact",
-          "granularity": "year"
-        }
-      },
-      {
         "id": "history-1997",
-        "description": "Opened as the second pole of the Capitoline Museums in 1997.",
+        "description": "In 1997, antiquities displaced by renovations at the Capitoline Museums went on display here in the exhibition Machines and Gods. What began as a temporary arrangement became a permanent museum.",
         "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 1997,
-          "precision": "exact",
-          "granularity": "year"
-        }
-      },
-      {
-        "id": "history-2016",
-        "description": "Expanded in November 2016 with the former boiler room 2, housing the pontifical train carriages of Pope Pius IX.",
-        "sourceIds": ["wikipedia"],
-        "time": {
-          "startYear": 2016,
-          "precision": "exact",
-          "granularity": "year"
-        }
-      },
-      {
-        "id": "history-2017",
-        "description": "Opened a room dedicated to imperial sarcophagi in December 2017.",
-        "sourceIds": ["wikipedia"],
-        "time": {
-          "startYear": 2017,
           "precision": "exact",
           "granularity": "year"
         }
@@ -78,30 +29,37 @@
     ],
     "design": [
       {
-        "id": "design-architecture",
-        "description": "The building's industrial architecture was restored by Acea and the Capitoline Superintendency, preserving original machinery and integrating museum spaces.",
+        "id": "design-river-and-transport",
+        "description": "The plant was built near the Tiber for a steady supply of water, with road and railway connections nearby. It stood outside the city's customs boundary, where fuel was exempt from import duties.",
         "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "design-machinery",
+        "description": "The plant combined steam turbines with diesel engines. The turbines supplied continuous power, while the engines were brought into use when electricity demand was highest.",
+        "sourceIds": ["wikipedia"],
+        "emphasis": ["steam turbines", "diesel engines"]
       },
       {
         "id": "design-lamp-posts",
-        "description": "Two large iron lamp posts designed by Duilio Cambellotti adorn the exterior.",
-        "sourceIds": ["wikipedia"]
-      },
-      {
-        "id": "design-restoration",
-        "description": "Restoration work in the 1990s converted the machine rooms into exhibition halls while retaining the original industrial layout.",
+        "description": "Two elaborate cast-iron lamp posts designed by Duilio Cambellotti stand outside the building.",
         "sourceIds": ["wikipedia"]
       }
     ],
     "art": [
       {
-        "id": "art-classical",
-        "description": "Displays Roman Republican sculptures, sarcophagi from the 2nd to 4th centuries CE, and other antiquities.",
+        "id": "art-machines-and-sculpture",
+        "description": "In the machine hall, ancient sculptures stand in front of two enormous diesel engines. The display keeps the industrial machinery visible alongside the antiquities.",
         "sourceIds": ["wikipedia"]
       },
       {
-        "id": "art-industrial",
-        "description": "Industrial machinery, including steam turbines and diesel engines, serves as a backdrop for the classical artworks.",
+        "id": "art-sarcophagi",
+        "description": "The collections include Roman portraits and imperial sarcophagi. The sarcophagus of Crepereia Tryphaena is displayed with objects from her burial.",
+        "sourceIds": ["wikipedia"],
+        "emphasis": ["Crepereia Tryphaena"]
+      },
+      {
+        "id": "art-papal-train",
+        "description": "The former boiler room 2 houses carriages from Pope Pius IX's train, another part of the museum's collection beyond the ancient sculpture.",
         "sourceIds": ["wikipedia"]
       }
     ]
@@ -113,17 +71,12 @@
       "sourceIds": ["wikipedia"]
     },
     {
-      "name": "Ernesto Nathan",
-      "personId": "ernesto-nathan",
-      "sourceIds": ["wikipedia"]
-    },
-    {
       "name": "Duilio Cambellotti",
       "personId": "duilio-cambellotti",
       "sourceIds": ["wikipedia"]
     },
     {
-      "name": "papa Pio IX",
+      "name": "Pope Pius IX",
       "personId": "pope-pius-ix",
       "sourceIds": ["wikipedia"]
     }

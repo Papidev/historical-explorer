@@ -1,4 +1,6 @@
-export const Topic = ({ title, insights }: { title: string; insights: string[] }) =>
+import type { ReactNode } from "react";
+
+export const Topic = ({ title, insights }: { title: string; insights: ReactNode[] }) =>
   insights.length > 0 ? (
     <section className="rounded-xl bg-zinc-50/80 px-4 py-3 ring-1 ring-zinc-950/5">
       <h3 className="text-sm font-semibold tracking-wide text-zinc-950 uppercase">{title}</h3>

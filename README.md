@@ -138,6 +138,12 @@ Person records, Story Content, and Main Image Candidate artifacts are also valid
 
 Wikipedia Sources use a text snapshot and metadata with ID `wikipedia`, title, and URL. Generation validates Source References; admin displays them when local Sources exist, while public responses omit them.
 
+Story text remains plain. Introductions and topic items may include an optional
+`emphasis` array of exact phrases to show in bold and a restrained color. Use it
+only where it improves reading; a paragraph or Story may have none. Existing
+Stories without this metadata keep their normal text. See the
+[Story quality references](docs/product/story-quality.md).
+
 ## Editorial workflow
 
 Admin has **POIs**, **People**, and **Type mappings** tabs. POIs has 50 rows per page; status/search apply across all pages and reset pagination. Name search is case-insensitive across original and generated names.
@@ -245,4 +251,4 @@ Licensed Tailwind Plus source is a local reference in gitignored `.tailwind-plus
 
 Track bugs, improvements, and future ideas in GitHub Issues and this repository's Cultural Atlas Project. Backlog status records an idea without scheduling implementation; conditional work retains its revisit conditions in the issue.
 
-[Product vision](docs/product/vision.md) · [Glossary](CONTEXT.md) · [Entity discovery](docs/entity-discovery.md)
+[Product vision](docs/product/vision.md) · [Story quality references](docs/product/story-quality.md) · [Glossary](CONTEXT.md) · [Entity discovery](docs/entity-discovery.md)
