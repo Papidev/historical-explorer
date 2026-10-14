@@ -1,6 +1,6 @@
 {
   "name": "historical-explorer",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "private": true,
   "packageManager": "pnpm@10.18.0",
   "engines": {
@@ -18,7 +18,7 @@
     "changeset": "changeset",
     "release:version": "changeset version",
     "release:check": "node scripts/check-release.mjs",
-    "categories:rebuild": "node scripts/rebuild-poi-categories.mjs",
+    "categories:rebuild": "tsx --env-file-if-exists=.env.local scripts/rebuild-poi-categories.mjs",
     "catalog:build": "tsx scripts/build-public-catalog.ts"
   },
   "dependencies": {

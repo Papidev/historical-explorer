@@ -1,3 +1,4 @@
+import { getLocalDataDirectory } from "@/server/localData";
 import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import type { GenerationCheckpoint } from "@/server/storyWorkflow/types";
@@ -11,7 +12,7 @@ export type GenerationMetadata = Record<
 >;
 
 const filePath = (city: string) =>
-  path.join(process.cwd(), "data", toCitySlug(city), "generated", "generation-metadata.json");
+  path.join(getLocalDataDirectory(), toCitySlug(city), "generated", "generation-metadata.json");
 
 export const readGenerationMetadata = (city: string) =>
   existsSync(filePath(city))

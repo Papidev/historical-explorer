@@ -1,3 +1,4 @@
+import { getLocalDataDirectory } from "@/server/localData";
 import {
   existsSync,
   readdirSync,
@@ -24,7 +25,11 @@ type MappingFile = {
   reasons?: Record<string, string>;
 };
 
-export const createPoiTypeMappings = (directory = path.join(process.cwd(), "data")) => {
+export const createPoiTypeMappings = (
+  directory?: string,
+  generatedDirectory = directory ?? getLocalDataDirectory(),
+) => {
+  directory ??= path.join(process.cwd(), "data");
   const mappingPath = path.join(directory, "poi-type-category-map.json");
   const categoryPath = path.join(directory, "poi-category-catalog.json");
   const readMapping = () => JSON.parse(readFileSync(mappingPath, "utf-8")) as MappingFile;
@@ -46,7 +51,7 @@ export const createPoiTypeMappings = (directory = path.join(process.cwd(), "data
         ).map((feature) => {
           const id = String(feature.id);
           const typesPath = path.join(
-            directory,
+            generatedDirectory,
             city,
             "generated",
             "wikidata",

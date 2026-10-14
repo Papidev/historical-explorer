@@ -1,3 +1,4 @@
+import { getLocalDataDirectory } from "@/server/localData";
 import { randomUUID } from "node:crypto";
 import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
@@ -15,7 +16,7 @@ type Context = {
 
 export const logAiResponseFailure = (context: Context, rawResponse: string, error: unknown) => {
   try {
-    const directory = path.join(process.cwd(), "data", "generated", "ai-response-failures");
+    const directory = path.join(getLocalDataDirectory(), "generated", "ai-response-failures");
     mkdirSync(directory, { recursive: true });
     const filePath = path.join(directory, `${context.kind}-${randomUUID()}.json`);
     writeFileSync(

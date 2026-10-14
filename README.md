@@ -105,7 +105,9 @@ Admin operations refresh the development snapshot. After directly editing conten
 
 ## Data layout
 
-Versioned content lives under `data/<city>/`; rebuildable `generated/` outputs are ignored.
+Versioned Stories, People, POIs, and category metadata live under `data/` in each checkout. Local Sources, acquired Types, checkpoints, AI progress, and diagnostic logs are read and written directly under `~/.local/share/historical-explorer`, shared by the main checkout and every worktree. No migration or setup command is needed for new worktrees. `data/public/` stays in each checkout because its build snapshot depends on that branch’s versioned content.
+
+`<local-data>` below means that shared external directory. Set `HISTORICAL_EXPLORER_LOCAL_DATA_DIR` in `.env.local` or the shell to override it; use the same absolute path in every checkout. Changing it selects another store without moving files. Edits and deletions of shared Sources and checkpoints affect all checkouts. Public builds use versioned content and do not require local Sources or AI credentials.
 
 | Artifact                           | Location                                                 |
 | ---------------------------------- | -------------------------------------------------------- |
@@ -113,9 +115,9 @@ Versioned content lives under `data/<city>/`; rebuildable `generated/` outputs a
 | App-ready POIs                     | `data/<city>/pois/pois.geojson`                          |
 | POI categories                     | `data/<city>/pois/categories.json`                       |
 | Story Content and image candidates | `data/<city>/stories/<poi-id>/story.json`, `images.json` |
-| Wikipedia text/source metadata     | `data/<city>/generated/wikipedia/`                       |
-| Acquired Wikidata Types            | `data/<city>/generated/wikidata/`                        |
-| Pipeline checkpoints/timings       | `data/<city>/generated/generation-metadata.json`         |
+| Wikipedia text/source metadata     | `<local-data>/<city>/generated/wikipedia/`               |
+| Acquired Wikidata Types            | `<local-data>/<city>/generated/wikidata/`                |
+| Pipeline checkpoints/timings       | `<local-data>/<city>/generated/generation-metadata.json` |
 | Canonical People                   | `data/people/<person-id>/person.json`                    |
 
 POI IDs are stable and app-owned; external IDs such as `wikidataId` are optional. `geoPlaceId` preserves the original feature identity, enabling regeneration without Wikidata. Legacy records recover it only from a unique exact name/geometry match. Admin shows one row per linked source and preserves existing duplicates.
@@ -193,13 +195,13 @@ Ollama Cloud does not support schema-constrained output. Story Content and new P
 
 ## Diagnostics
 
-Local `data/rome/generated/generation-logs/day-*.jsonl` records start/completion/failure with shared run IDs. Seven daily slots rotate, overwriting data when reused after seven days. Admin shows latest-run errors beside artifacts and Related People errors in the People drawer. Known credentials are redacted; stack traces stay in the console. Logs are gitignored and not a durable cross-machine/deployment audit.
+Local `<local-data>/rome/generated/generation-logs/day-*.jsonl` records start/completion/failure with shared run IDs. Seven daily slots rotate, overwriting data when reused after seven days. Admin shows latest-run errors beside artifacts and Related People errors in the People drawer. Known credentials are redacted; stack traces stay in the console. Logs stay outside the repository and are not a durable cross-machine/deployment audit.
 
 Admin shows current errors: newer successful checkpoints or successful operations supersede them. A failed refresh remains visible if its saved artifact is older; historical logs stay on disk. Completion uses current artifacts/errors, not obsolete failed runs.
 
 Single and batch Draft Story Generation share coordination and outcome reporting. Type acquisition, category classification, Main Image Candidates, and Related People issues are recorded as partial results and shown in progress and final warnings; classification failures can be retried from Type mappings.
 
-Rejected AI output is saved in gitignored `data/generated/ai-response-failures/`: exact `rawResponse`, generation kind, subject identity, provider/model/mode, attempt, time, and validation error. Invalid provider JSON and content are captured even before a successful retry. Console output links the file; requests, keys, and headers are not stored. Diagnostic write failure preserves the original error.
+Rejected AI output is saved in `<local-data>/generated/ai-response-failures/`: exact `rawResponse`, generation kind, subject identity, provider/model/mode, attempt, time, and validation error. Invalid provider JSON and content are captured even before a successful retry. Console output links the file; requests, keys, and headers are not stored. Diagnostic write failure preserves the original error.
 
 Story generation uses `jsonrepair` for malformed JSON, including stray quotes before topic objects. Repaired output must pass Story schema and Source-ID validation; otherwise preserve normal error/retry behavior.
 
