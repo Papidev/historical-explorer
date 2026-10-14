@@ -1,0 +1,8 @@
+/* MapLibre owns the marker SVG; outline its colored silhouette for contrast. */
+@layer components {
+  .religious-site-marker svg g[fill="#facc15"] > path {
+    fill: var(--color-yellow-400);
+    stroke: var(--color-yellow-900);
+    stroke-width: 1;
+  }
+}

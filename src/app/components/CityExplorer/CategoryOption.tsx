@@ -32,9 +32,25 @@ export const CategoryOption = ({
           if (input) input.indeterminate = indeterminate;
         }}
         onChange={onToggle}
-        className="size-4 cursor-pointer accent-rose-700"
+        className={`size-4 cursor-pointer ${
+          category === "Churches & cathedrals" || definition?.parent === "Churches & cathedrals"
+            ? "accent-yellow-400"
+            : "accent-rose-700"
+        }`}
       />
-      <span className="flex-1">{label}</span>
+      <span
+        className={`flex flex-1 items-center gap-2 ${
+          category === "Churches & cathedrals" ? "font-semibold" : ""
+        }`}
+      >
+        {category === "Churches & cathedrals" && (
+          <span
+            aria-hidden="true"
+            className="size-3.5 shrink-0 rounded-full border border-yellow-900 bg-yellow-400"
+          />
+        )}
+        {label}
+      </span>
       {definition?.parent && (
         <span id={`${category}-parent`} className="sr-only">
           Subcategory of{" "}

@@ -3,7 +3,7 @@
   "categories": [
     {
       "id": "Churches & cathedrals",
-      "name": "Churches & cathedrals"
+      "name": "Religious sites"
     },
     {
       "id": "Cathedral",
@@ -105,7 +105,8 @@
     },
     {
       "id": "Baptistery",
-      "name": "Baptistery"
+      "name": "Baptistery",
+      "parent": "Churches & cathedrals"
     },
     {
       "id": "Library",
@@ -113,7 +114,8 @@
     },
     {
       "id": "Temple",
-      "name": "Temple"
+      "name": "Temple",
+      "parent": "Churches & cathedrals"
     },
     {
       "id": "Circus",
