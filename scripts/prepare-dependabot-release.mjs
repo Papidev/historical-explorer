@@ -47,6 +47,7 @@ export const prepareRelease = (repository, base, head) => {
     ),
     "Only dependency manifests, lockfiles, workflows and generated release files are supported.",
   );
+  if (notes.length === 0 && !files.includes("pnpm-lock.yaml")) return head;
   const directory = mkdtempSync(resolve(tmpdir(), "dependabot-release-"));
   const checkout = resolve(directory, "checkout");
   try {
