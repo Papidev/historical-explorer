@@ -1,3 +1,4 @@
+import { getLocalDataDirectory } from "@/server/localData";
 import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import {
@@ -46,8 +47,10 @@ export const derivePoiCategories = (
 
 export const createPoiCategoriesForCity = (
   city: string,
-  dataDirectory = path.join(process.cwd(), "data"),
+  dataDirectory?: string,
+  generatedDirectory = dataDirectory ?? getLocalDataDirectory(),
 ) => {
+  dataDirectory ??= path.join(process.cwd(), "data");
   const catalogPath = path.join(dataDirectory, city, "pois", "pois.geojson");
   const categoriesPath = path.join(dataDirectory, city, "pois", "categories.json");
   const mappings = () =>
@@ -104,7 +107,7 @@ export const createPoiCategoriesForCity = (
         Object.fromEntries(
           (catalog.features ?? []).map((feature) => {
             const typesPath = path.join(
-              dataDirectory,
+              generatedDirectory,
               city,
               "generated",
               "wikidata",

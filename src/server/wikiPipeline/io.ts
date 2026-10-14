@@ -1,3 +1,4 @@
+import { getLocalDataDirectory } from "@/server/localData";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { getFeatureId, pickString, sanitizePoiIdForFile, toCitySlug } from "./normalize";
@@ -16,7 +17,7 @@ export const getDefaultInputPath = (city: string) =>
   path.join(process.cwd(), "data", toCitySlug(city), "pois", "pois.geojson");
 
 export const getDefaultOutputDir = (city: string) =>
-  path.join(process.cwd(), "data", toCitySlug(city), "generated", "wikipedia");
+  path.join(getLocalDataDirectory(), toCitySlug(city), "generated", "wikipedia");
 
 export const findPoiInGeoJson = (
   inputPath: string,

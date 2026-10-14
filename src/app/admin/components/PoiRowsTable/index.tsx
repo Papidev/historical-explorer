@@ -296,7 +296,7 @@ export const PoiRowsTable = ({
                   >
                     <ColumnHeader
                       title="Wikipedia Text"
-                      path="data/rome/generated/wikipedia/*.txt"
+                      path="<local-data>/rome/generated/wikipedia/*.txt"
                       description="Local snapshot; overwritten with each Story generation"
                       versioned={false}
                     />
@@ -307,7 +307,7 @@ export const PoiRowsTable = ({
                   >
                     <ColumnHeader
                       title="Wikidata Types"
-                      path="data/rome/generated/wikidata/*.json"
+                      path="<local-data>/rome/generated/wikidata/*.json"
                       description="Source types for future filters"
                       versioned={false}
                     />

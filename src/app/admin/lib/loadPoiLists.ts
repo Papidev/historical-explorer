@@ -1,3 +1,4 @@
+import { getLocalDataDirectory } from "@/server/localData";
 import { existsSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { readGenerationMetadata, type GenerationMetadata } from "@/server/generationMetadata";
@@ -71,11 +72,14 @@ const readArtifact = ({
   relativePath: string;
   versioned: boolean;
 }): AdminArtifact | undefined => {
-  const filePath = path.join(process.cwd(), "data", relativePath);
+  const filePath = path.join(
+    versioned ? path.join(process.cwd(), "data") : getLocalDataDirectory(),
+    relativePath,
+  );
   return existsSync(filePath)
     ? {
         label,
-        path: `data/${relativePath}`,
+        path: versioned ? `data/${relativePath}` : filePath,
         content: readFileSync(filePath, "utf-8"),
         versioned,
       }
@@ -283,7 +287,7 @@ export const loadPoiLists = async () => {
       ? formatUpdatedAt(transformedPath)
       : undefined;
     const generationMetadata = readGenerationMetadata("rome");
-    const generationRuns = readGenerationRuns(process.cwd(), "rome");
+    const generationRuns = readGenerationRuns("rome");
     const globalArtifacts: AdminArtifact[] = [];
 
     const rawGeoJson = JSON.parse(rawContent) as GeoJson;
@@ -367,8 +371,7 @@ export const loadPoiLists = async () => {
       );
       const types = row.transformedPoi ? poiTypes.get(row.id) : undefined;
       const poiTypesPath = path.join(
-        process.cwd(),
-        "data",
+        getLocalDataDirectory(),
         "rome",
         "generated",
         "wikidata",
@@ -446,7 +449,7 @@ export const loadPoiLists = async () => {
             : readArtifact({
                 label: "Wikipedia Source Metadata",
                 relativePath: path.relative(
-                  path.join(process.cwd(), "data"),
+                  getLocalDataDirectory(),
                   buildSourceMetadataFilePath(getDefaultOutputDir("rome"), row.id),
                 ),
                 versioned: false,

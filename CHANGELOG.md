@@ -1,10 +1,16 @@
 # historical-explorer
 
-## 0.2.6
+## 0.2.7
 
 ### Patch Changes
 
 - Update GitHub Actions dependencies.
+
+## 0.2.6
+
+### Patch Changes
+
+- Share local Sources, acquired Types, generation checkpoints, progress, and diagnostic logs across checkouts through an external data directory, while keeping versioned content and public snapshots specific to each branch.
 
 ## 0.2.5
 
