@@ -1,6 +1,16 @@
 import type { ReactNode } from "react";
+import { Markdown } from "./Markdown";
 
-export const StoryText = ({ text, emphasis = [] }: { text: string; emphasis?: string[] }) => {
+export const StoryText = ({
+  text,
+  emphasis = [],
+  textFormat,
+}: {
+  text: string;
+  emphasis?: string[];
+  textFormat?: "markdown";
+}) => {
+  if (textFormat === "markdown") return <Markdown text={text} />;
   const parts: ReactNode[] = [];
   let cursor = 0;
 

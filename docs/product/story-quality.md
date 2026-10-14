@@ -106,8 +106,12 @@ catalog or provide a comprehensive independent fact-check of their Sources.
 
 ## Emphasis in saved content
 
-Text remains plain. The introduction and individual topic items may carry an
-optional `emphasis` array of exact, case-sensitive phrases from their own text.
-An omitted or empty array means no emphasis. Validation rejects phrases absent
-from the block. The renderer emphasizes the first occurrence of each selected
-phrase and avoids overlapping selections. Existing Stories require no migration.
+New Story Content uses `textFormat: "markdown"`: introductions and topic
+descriptions separate paragraphs with blank lines and use `**bold**` directly
+for selective emphasis. React applies the same restrained color to bold text.
+
+Existing plain-text Stories may carry an optional `emphasis` array of exact,
+case-sensitive phrases from their own text. An omitted or empty array means
+no emphasis. Validation rejects phrases absent from the block. The plain-text
+renderer emphasizes the first occurrence of each selected phrase and avoids
+overlapping selections. Existing Stories require no migration.

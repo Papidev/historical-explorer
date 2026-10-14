@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.5.0
+
+### Minor Changes
+
+- Add Markdown formatting to Story introductions and topic descriptions, with spaced paragraphs, selective highlighted bold, italics, lists, and links. Preserve existing plain-text Stories and their emphasis metadata.
+
 ## 0.4.0
 
 ### Minor Changes
