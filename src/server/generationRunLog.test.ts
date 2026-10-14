@@ -18,14 +18,17 @@ it("keeps seven daily log files and overwrites the oldest slot on day eight", ()
   const directory = path.join(root, "data", "rome", "generated", "generation-logs");
 
   for (let day = 1; day <= 8; day += 1) {
-    writeGenerationLogEntry(root, {
-      city: "rome",
-      operation: "draftStory.generate",
-      runId: `run-${day}`,
-      at: `2026-10-${String(day).padStart(2, "0")}T12:00:00.000Z`,
-      event: "failed",
-      errorCode: "sources-unavailable",
-    });
+    writeGenerationLogEntry(
+      {
+        city: "rome",
+        operation: "draftStory.generate",
+        runId: `run-${day}`,
+        at: `2026-10-${String(day).padStart(2, "0")}T12:00:00.000Z`,
+        event: "failed",
+        errorCode: "sources-unavailable",
+      },
+      path.join(root, "data"),
+    );
   }
 
   expect(readdirSync(directory)).toHaveLength(7);
@@ -45,13 +48,16 @@ it("appends events from the same day without replacing earlier runs", () => {
   roots.push(root);
 
   for (const runId of ["first", "second"]) {
-    writeGenerationLogEntry(root, {
-      city: "rome",
-      operation: "storyContent.generate",
-      runId,
-      at: "2026-10-01T12:00:00.000Z",
-      event: "completed",
-    });
+    writeGenerationLogEntry(
+      {
+        city: "rome",
+        operation: "storyContent.generate",
+        runId,
+        at: "2026-10-01T12:00:00.000Z",
+        event: "completed",
+      },
+      path.join(root, "data"),
+    );
   }
 
   const directory = path.join(root, "data", "rome", "generated", "generation-logs");

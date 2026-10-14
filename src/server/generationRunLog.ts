@@ -1,3 +1,4 @@
+import { getLocalDataDirectory } from "@/server/localData";
 import { randomUUID } from "node:crypto";
 import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
@@ -40,12 +41,14 @@ export const sanitizeErrorMessage = (message: string) =>
     .replace(/AIza[0-9A-Za-z_-]{20,}/g, "[REDACTED]")
     .slice(0, 2_000);
 
-export const writeGenerationLogEntry = (rootPath: string, entry: GenerationLogEntry) => {
+export const writeGenerationLogEntry = (
+  entry: GenerationLogEntry,
+  generatedDirectory = getLocalDataDirectory(),
+) => {
   const day = entry.at.slice(0, 10);
   const slot = Math.floor(Date.parse(`${day}T00:00:00.000Z`) / 86_400_000) % retainedDays;
   const filePath = path.join(
-    rootPath,
-    "data",
+    generatedDirectory,
     toCitySlug(entry.city),
     "generated",
     "generation-logs",
@@ -64,8 +67,8 @@ export const writeGenerationLogEntry = (rootPath: string, entry: GenerationLogEn
   }
 };
 
-export const readGenerationRuns = (rootPath: string, city: string) => {
-  const directory = path.join(rootPath, "data", toCitySlug(city), "generated", "generation-logs");
+export const readGenerationRuns = (city: string, generatedDirectory = getLocalDataDirectory()) => {
+  const directory = path.join(generatedDirectory, toCitySlug(city), "generated", "generation-logs");
   const runs = new Map<string, GenerationLogEntry>();
 
   for (let slot = 0; slot < retainedDays; slot += 1) {
@@ -99,7 +102,7 @@ export const withGenerationRun = async <T>(
   const startedAt = Date.now();
   const write = (entry: Omit<GenerationLogEntry, keyof GenerationRun | "runId" | "at">) => {
     try {
-      writeGenerationLogEntry(process.cwd(), {
+      writeGenerationLogEntry({
         ...input,
         ...entry,
         errorMessage: entry.errorMessage ? sanitizeErrorMessage(entry.errorMessage) : undefined,
