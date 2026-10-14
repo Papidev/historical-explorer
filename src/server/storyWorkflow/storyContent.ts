@@ -75,6 +75,7 @@ const relatedPersonSchema = z
 
 const storyContentStructureSchema = z
   .object({
+    textFormat: z.literal("markdown").optional(),
     introduction: z
       .object({
         text: z.string().min(1),
@@ -95,6 +96,7 @@ const storyContentStructureSchema = z
 
 export const storyContentJsonSchema = z.toJSONSchema(
   storyContentStructureSchema.extend({
+    textFormat: z.literal("markdown"),
     relatedPeople: z.array(relatedPersonSchema.omit({ personId: true })).max(10),
   }),
 );
@@ -191,6 +193,7 @@ export const parseStoryContent = (value: unknown, sourceIds?: string[]) => {
 };
 
 export type PublicStoryContent = {
+  textFormat?: "markdown";
   introduction: string;
   introductionEmphasis?: string[];
   topics: {
@@ -202,6 +205,7 @@ export type PublicStoryContent = {
 };
 
 export const toPublicStoryContent = (storyContent: StoryContent): PublicStoryContent => ({
+  ...(storyContent.textFormat ? { textFormat: storyContent.textFormat } : {}),
   introduction: storyContent.introduction.text,
   ...(storyContent.introduction.emphasis?.length
     ? { introductionEmphasis: storyContent.introduction.emphasis }

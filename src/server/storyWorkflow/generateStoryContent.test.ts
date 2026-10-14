@@ -40,10 +40,10 @@ const sources: Source[] = [
 ];
 
 const generated = {
+  textFormat: "markdown",
   introduction: {
-    text: "Forum Boarium was Rome's ancient cattle market.",
+    text: "Forum Boarium was Rome's **ancient cattle market**.\n\nIts temples stand beside the river.",
     sourceIds: ["wikipedia"],
-    emphasis: ["ancient cattle market"],
   },
   topics: { history: [], design: [], art: [] },
   relatedPeople: [],

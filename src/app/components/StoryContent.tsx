@@ -59,9 +59,21 @@ export const StoryContent = ({
 
   return (
     <div className="mt-4 space-y-6 text-base leading-[1.7] text-zinc-800">
-      <p>
-        <StoryText text={content.introduction} emphasis={content.introductionEmphasis} />
-      </p>
+      {content.textFormat === "markdown" ? (
+        <StoryText text={content.introduction} textFormat={content.textFormat} />
+      ) : (
+        <div className="space-y-4">
+          {content.introduction
+            .split(/\r?\n\s*\r?\n/)
+            .map((paragraph) => paragraph.trim())
+            .filter(Boolean)
+            .map((paragraph, index) => (
+              <p key={index} className="whitespace-pre-line">
+                <StoryText text={paragraph} emphasis={content.introductionEmphasis} />
+              </p>
+            ))}
+        </div>
+      )}
       {period ? (
         <dl className="grid gap-2 rounded-lg bg-amber-50 p-3 text-sm">
           <div>
@@ -81,9 +93,13 @@ export const StoryContent = ({
                     {formatHistoricalTime(time)}
                   </p>
                 ) : null}
-                <p>
-                  <StoryText text={description} emphasis={emphasis} />
-                </p>
+                {content.textFormat === "markdown" ? (
+                  <StoryText text={description} textFormat={content.textFormat} />
+                ) : (
+                  <p>
+                    <StoryText text={description} emphasis={emphasis} />
+                  </p>
+                )}
               </li>
             ))}
           </ul>
@@ -92,13 +108,23 @@ export const StoryContent = ({
       <Topic
         title="Architecture"
         insights={content.topics.design.map(({ description, emphasis }, index) => (
-          <StoryText key={index} text={description} emphasis={emphasis} />
+          <StoryText
+            key={index}
+            text={description}
+            emphasis={emphasis}
+            textFormat={content.textFormat}
+          />
         ))}
       />
       <Topic
         title="Art"
         insights={content.topics.art.map(({ description, emphasis }, index) => (
-          <StoryText key={index} text={description} emphasis={emphasis} />
+          <StoryText
+            key={index}
+            text={description}
+            emphasis={emphasis}
+            textFormat={content.textFormat}
+          />
         ))}
       />
       {content.relatedPeople.length > 0 ? (

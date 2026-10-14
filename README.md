@@ -140,10 +140,19 @@ The allowed Wikipedia editions are English (`en`), Italian (`it`), French (`fr`)
 
 The primary Wikipedia Source retains its text snapshot and metadata with ID `wikipedia`, title, and URL. Additional editions use IDs such as `wikipedia-it` and are saved in `<poi-id>.sources.json` beside the primary snapshot. Person additional Sources are stored in `<local-data>/generated/people/<person-id>.sources.json`, with reference metadata in the versioned Person record. Existing single-source records remain readable. Generation validates Source References; admin displays them when local Sources exist, while public responses omit them. Existing Stories and People are updated only by their generation/refresh actions; this rule does not regenerate saved content automatically.
 
-Story text remains plain. Introductions and topic items may include an optional
-`emphasis` array of exact phrases to show in bold and a restrained color. Use it
-only where it improves reading; a paragraph or Story may have none. Existing
-Stories without this metadata keep their normal text. See the
+New Story Content uses `textFormat: "markdown"`. Write Markdown inside
+`introduction.text` and topic `description` strings: blank lines separate
+paragraphs, `**important detail**` applies the app’s colored bold style, and
+`*work title*` adds italics. Lists, links, headings, and block quotes are supported;
+React owns their styling. The Main Image stays separate; embedded images, HTML,
+and JSX are not rendered as Story elements. Generation favors short paragraphs
+and selective bold, without a fixed quota.
+
+Existing Stories without `textFormat` retain plain-text rendering and their
+optional `emphasis` arrays; no saved content is migrated automatically. When
+editing a Story to use Markdown, set `textFormat: "markdown"` at the top level
+and write emphasis directly as `**bold**` instead of using the legacy arrays.
+People descriptions remain plain text. See the
 [Story quality references](docs/product/story-quality.md).
 
 ## Editorial workflow

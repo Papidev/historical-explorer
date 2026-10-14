@@ -16,6 +16,28 @@ const validStoryContent = (): StoryContent => ({
 });
 
 describe("Story Content", () => {
+  it("preserves Markdown and its format in the public Story, including mentioned people", () => {
+    const content = validStoryContent();
+    content.textFormat = "markdown";
+    content.introduction.text =
+      "A temple beside the river.\n\n**John Smith** restored its *bronze doors*.";
+    content.topics.art = [
+      { id: "doors", description: "The **bronze doors** survive.", sourceIds: ["wikipedia"] },
+    ];
+    content.relatedPeople = [
+      { name: "John Smith", personId: "john-smith", sourceIds: ["wikipedia"] },
+    ];
+
+    expect(toPublicStoryContent(parseStoryContent(content, ["wikipedia"]))).toMatchObject({
+      textFormat: "markdown",
+      introduction: content.introduction.text,
+      topics: { art: [{ description: "The **bronze doors** survive." }] },
+      relatedPeople: [{ name: "John Smith", personId: "john-smith" }],
+    });
+    expect(toPublicStoryContent(validStoryContent())).not.toHaveProperty("textFormat");
+    expect(() => parseStoryContent({ ...content, textFormat: "mdx" }, ["wikipedia"])).toThrow();
+  });
+
   it("keeps selective emphasis and only mentioned people with distinct Person IDs", () => {
     const content = validStoryContent();
     content.introduction.text += " JOHN  SMITH worked here. The annex was restored.";
