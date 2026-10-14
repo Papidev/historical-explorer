@@ -16,8 +16,9 @@ const validStoryContent = (): StoryContent => ({
 });
 
 describe("Story Content", () => {
-  it("keeps selected emphasis and distinct Person IDs in public content", () => {
+  it("keeps selective emphasis and only mentioned people with distinct Person IDs", () => {
     const content = validStoryContent();
+    content.introduction.text += " JOHN  SMITH worked here. The annex was restored.";
     content.introduction.emphasis = ["ancient cattle market"];
     content.topics.design.push({
       id: "temples",
@@ -25,13 +26,22 @@ describe("Story Content", () => {
       sourceIds: ["wikipedia"],
       emphasis: ["Temples"],
     });
+    content.topics.history.push({
+      id: "commission",
+      description: "Commissioned by Pope Innocent\u202fX.",
+      sourceIds: ["wikipedia"],
+    });
     content.relatedPeople = [
       { name: "John Smith (architect)", personId: "smith-architect", sourceIds: ["wikipedia"] },
       { name: "John Smith (explorer)", personId: "smith-explorer", sourceIds: ["wikipedia"] },
+      { name: "Filippo Baldinucci", personId: "filippo-baldinucci", sourceIds: ["wikipedia"] },
+      { name: "Pope Innocent X", personId: "pope-innocent-x", sourceIds: ["wikipedia"] },
+      { name: "Ann", personId: "ann", sourceIds: ["wikipedia"] },
     ];
     expect(toPublicStoryContent(content).relatedPeople).toEqual([
       { name: "John Smith", personId: "smith-architect" },
       { name: "John Smith", personId: "smith-explorer" },
+      { name: "Pope Innocent X", personId: "pope-innocent-x" },
     ]);
     expect(content.relatedPeople[0].name).toBe("John Smith (architect)");
     expect(toPublicStoryContent(parseStoryContent(content, ["wikipedia"]))).toMatchObject({

@@ -5,7 +5,12 @@ import {
 import { jsonrepair } from "jsonrepair";
 import { logAiResponseFailure, readAiResponse } from "@/server/aiResponseLog";
 import type { PoiInput } from "@/server/wikiPipeline/types";
-import { parseStoryContent, storyContentJsonSchema, type StoryContent } from "./storyContent";
+import {
+  getMentionedRelatedPeople,
+  parseStoryContent,
+  storyContentJsonSchema,
+  type StoryContent,
+} from "./storyContent";
 import type { Source } from "./types";
 
 type AiGenerationConfig = {
@@ -35,10 +40,14 @@ type GeminiGenerateContentResponse = {
 
 const systemPrompt = `Create descriptive, source-grounded Story Content for a cultural POI.
 Return only data matching the provided JSON schema.
+Read all supplied Wikipedia editions as complementary Sources, including non-English text. Write the Story in English regardless of Source language. Preserve useful details found only in local editions. Do not assume English is more authoritative; when Sources disagree, preserve attribution and uncertainty or omit the disputed claim rather than silently choosing a version. Cite the specific Source IDs that support each block.
 The top-level object must contain exactly introduction, topics, and relatedPeople. introduction must contain text and sourceIds. topics must contain history, design, and art arrays. Every topic item must contain id, description, and sourceIds; introduction and topic items may optionally contain emphasis, an array of exact phrases from their own text. Only history items may additionally contain time. A time value must always be an object, never a number or string: use {"startYear": 312, "precision": "exact", "granularity": "year"} for a year, or use granularity "century" for a century. Include endYear only when the Source supports a range; it is optional for a single century. Every relatedPeople item must contain only name and sourceIds. Use sourceIds as arrays of supplied Source ID strings. Never return source, history, design, art, visitorInsights, or people as top-level fields.
 
 The introduction must give a developed, self-contained description of what and where the POI is, its spaces or structure, and interesting features, works, or objects it contains. Give readers a substantial first understanding, with depth proportionate to the supplied Sources rather than a fixed length. Describe interesting details on their own merits; the Story does not need a single central theme.
 Use only the optional Story Topics history, design, and art. Omit unsupported topics by returning an empty array. Each Visitor Insight must contain one useful, independent idea rather than a complete article summary.
+Concise means avoiding filler and repetition, not compressing every idea into a single sentence. When the Sources are rich, develop the strongest ideas in short paragraphs with enough context to explain the events, the stakes, and their significance for this place. Include motives and consequences only when explicitly supported by the Sources; preserve uncertainty and attribution.
+Prioritize distinctive, source-supported episodes that explain the POI's cultural meaning, including disputes, attempts to remove or preserve it, changes in use, and revealing artistic details. Do not reduce History to a list of dates or Art to a list of names. Prefer events and details about this POI; omit facts about other places unless they directly help explain it. Develop worthwhile details in readable paragraphs rather than reducing them to disconnected facts; there is no fixed number of insights. Do not pad sparse Sources or invent a missing episode from general knowledge.
+Select Related People only from people explicitly named in the introduction or topic descriptions you write. Mention each retained person's full name at least once in that text, omitting any parenthetical Wikipedia disambiguation suffix. Do not select people mentioned only in the Sources, and do not add incidental people to the Story just to populate Related People. Return an empty relatedPeople array when the Story names no relevant people.
 
 Emphasis is optional, both in the introduction and in topic items. Select a short exact phrase only when emphasizing it would genuinely help a reader recognize an important feature, orient themselves, or find a worthwhile detail while scanning. Use emphasis sparingly: there is no quota and no requirement to emphasize anything in a paragraph or Story. Omit emphasis or return an empty array when it would not help. Do not select names, dates, first words, or generic terms automatically. Every emphasis phrase must occur verbatim in that block's text, preserving case and punctuation. Never insert markup into the text.
 
@@ -131,7 +140,10 @@ const parseGeneratedContent = (content: string, sources: Source[]) => {
     console.warn("[story-content] Recovered malformed JSON and validated the Story schema.");
   return {
     ...storyContent,
-    relatedPeople: storyContent.relatedPeople.map(({ name, sourceIds }) => ({ name, sourceIds })),
+    relatedPeople: getMentionedRelatedPeople(storyContent).map(({ name, sourceIds }) => ({
+      name,
+      sourceIds,
+    })),
   };
 };
 

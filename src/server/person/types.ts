@@ -44,6 +44,15 @@ export type PersonSource = {
   content: string;
 };
 
+const sourceMetadataSchema = z
+  .object({
+    id: z.string().min(1),
+    kind: z.literal("wikipedia"),
+    title: z.string().min(1),
+    url: z.url(),
+  })
+  .strict();
+
 export const personSchema = z
   .object({
     id: z.string().min(1),
@@ -52,20 +61,16 @@ export const personSchema = z
     wikipediaTitle: z.string().min(1),
     content: personContentSchema,
     image: mainImageCandidateSchema.optional(),
-    source: z
-      .object({
-        id: z.string().min(1),
-        kind: z.literal("wikipedia"),
-        title: z.string().min(1),
-        url: z.url(),
-      })
-      .strict(),
+    source: sourceMetadataSchema,
+    additionalSources: z.array(sourceMetadataSchema).optional(),
+    sourceContextWikidataIds: z.array(z.string().min(1)).optional(),
     generation: z
       .object({
         aiMode: z.enum(["local", "cloud"]),
         aiProvider: z.enum(["ollama", "gemini"]),
         aiModel: z.string().min(1),
         completedAt: z.iso.datetime(),
+        sourceWarnings: z.array(z.string()).optional(),
       })
       .strict(),
   })
@@ -77,7 +82,10 @@ export const personSchema = z
     ] as const) {
       blocks.forEach((block, index) => {
         block.sourceIds.forEach((sourceId, sourceIndex) => {
-          if (sourceId !== person.source.id) {
+          if (
+            sourceId !== person.source.id &&
+            !person.additionalSources?.some(({ id }) => id === sourceId)
+          ) {
             context.addIssue({
               code: "custom",
               path: ["content", field, index, "sourceIds", sourceIndex],

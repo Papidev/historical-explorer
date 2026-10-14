@@ -1,5 +1,5 @@
 import { throwIfGenerationCancelled } from "@/server/generationCancellation";
-import type { MainImageCandidate, PoiInput } from "@/server/wikiPipeline/types";
+import type { MainImageCandidate, PoiInput, WikipediaLanguage } from "@/server/wikiPipeline/types";
 import { WikipediaSourceMissingError } from "@/server/wikiPipeline/resolve";
 import type { StoryContent } from "./storyContent";
 import {
@@ -39,11 +39,14 @@ export type StoryWorkflowRepository = {
 
 export type StoryWorkflowDependencies = {
   findPointOfInterest(poiId: string): Promise<PoiInput | undefined>;
-  acquireSources(pointOfInterest: PoiInput, previousSources?: Source[]): Promise<Source[]>;
+  acquireSources(
+    pointOfInterest: PoiInput,
+    previousSources?: Source[],
+  ): Promise<Source[] | { sources: Source[]; warnings: string[] }>;
   generateMainImageCandidates(
     pointOfInterest: PoiInput,
     wikipediaTitle?: string,
-    wikipediaLanguage?: "en" | "it",
+    wikipediaLanguage?: WikipediaLanguage,
   ): Promise<MainImageCandidate[]>;
   generateStoryContent(input: {
     pointOfInterest: PoiInput;
@@ -101,11 +104,16 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
   const acquireAndPersistSources = async (
     pointOfInterest: PoiInput,
     previousSources?: Source[],
+    onProgress?: (message: string) => void,
   ) => {
     const startedAt = now().getTime();
     let sources: Source[];
+    let warnings: string[] = [];
     try {
-      sources = await dependencies.acquireSources(pointOfInterest, previousSources);
+      const acquired = await dependencies.acquireSources(pointOfInterest, previousSources);
+      sources = Array.isArray(acquired) ? acquired : acquired.sources;
+      warnings = Array.isArray(acquired) ? [] : acquired.warnings;
+      warnings.forEach((warning) => onProgress?.(warning));
       if (sources.length === 0 || sources.some((source) => !source.content.trim())) {
         throw new Error("No usable sources were returned.");
       }
@@ -123,11 +131,10 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
     }
 
     try {
-      await dependencies.repository.replaceSources(
-        pointOfInterest.id,
-        sources,
-        toCheckpoint(startedAt, now),
-      );
+      await dependencies.repository.replaceSources(pointOfInterest.id, sources, {
+        ...toCheckpoint(startedAt, now),
+        ...(warnings.length ? { sourceWarnings: warnings } : {}),
+      });
     } catch (cause) {
       if (cause instanceof Error && cause.name === "AbortError") throw cause;
       throwIfGenerationCancelled();
@@ -146,7 +153,7 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
       candidates = await dependencies.generateMainImageCandidates(
         pointOfInterest,
         source?.title,
-        source && new URL(source.url).hostname === "it.wikipedia.org" ? "it" : "en",
+        source ? new URL(source.url).hostname.split(".")[0] : "en",
       );
     } catch (cause) {
       if (cause instanceof Error && cause.name === "AbortError") throw cause;
@@ -263,6 +270,9 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
           aiProvider: generated.provider,
           aiModel: ai.model,
           relatedPeopleFailures: resolution.failures,
+          ...(resolution.sourceWarnings?.length
+            ? { sourceWarnings: resolution.sourceWarnings }
+            : {}),
         },
       );
     } catch (cause) {
@@ -287,12 +297,12 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         const saved = resume ? await dependencies.repository.get(poiId) : undefined;
         onProgress?.("Finding the Point of Interest.");
         let pointOfInterest = await findPointOfInterest(poiId, dependencies);
-        onProgress?.("Fetching the Wikipedia Source.");
+        onProgress?.("Fetching Wikipedia Sources.");
         let sources: Source[];
         try {
           sources = saved?.sources.length
             ? saved.sources
-            : await acquireAndPersistSources(pointOfInterest);
+            : await acquireAndPersistSources(pointOfInterest, undefined, onProgress);
         } catch (error) {
           throwIfGenerationCancelled();
           if (error instanceof StoryWorkflowError && error.code === "source-not-found") {
@@ -337,8 +347,13 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
           ? await workflow.relatedPeople.resolve({ poiId, ai, onProgress })
           : await generateAndPersistStoryContent(pointOfInterest, sources, ai, onProgress);
 
+        const sourceWarnings = [
+          ...((await dependencies.repository.get(poiId))?.generation.sources?.sourceWarnings ?? []),
+          ...(relatedPeople.sourceWarnings ?? []),
+        ];
         return {
           poiId,
+          ...(sourceWarnings?.length ? { sourceWarnings } : {}),
           mainImageCandidates,
           ...(mainImageCandidatesError ? { mainImageCandidatesError } : {}),
           draftMainImage: selectedCommonsFileName ? "available" : "missing",
@@ -366,8 +381,19 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         const sources = await acquireAndPersistSources(
           pointOfInterest,
           (await dependencies.repository.get(poiId))?.sources,
+          onProgress,
         );
-        return generateAndPersistStoryContent(pointOfInterest, sources, ai, onProgress);
+        const resolution = await generateAndPersistStoryContent(
+          pointOfInterest,
+          sources,
+          ai,
+          onProgress,
+        );
+        const sourceWarnings = [
+          ...((await dependencies.repository.get(poiId))?.generation.sources?.sourceWarnings ?? []),
+          ...(resolution.sourceWarnings ?? []),
+        ];
+        return { ...resolution, ...(sourceWarnings.length ? { sourceWarnings } : {}) };
       },
       delete: async ({ poiId }) => {
         try {
@@ -395,7 +421,11 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         const sources =
           snapshot.sources.length > 0
             ? snapshot.sources
-            : await acquireAndPersistSources(await findPointOfInterest(poiId, dependencies));
+            : await acquireAndPersistSources(
+                await findPointOfInterest(poiId, dependencies),
+                undefined,
+                onProgress,
+              );
         const resolution = await dependencies.resolveRelatedPeople({
           relatedPeople: snapshot.storyContent.relatedPeople,
           sources,
@@ -417,6 +447,9 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
               aiMode: ai.mode,
               aiModel: ai.model,
               relatedPeopleFailures: resolution.failures,
+              ...(resolution.sourceWarnings?.length
+                ? { sourceWarnings: resolution.sourceWarnings }
+                : {}),
             },
           );
         } catch (cause) {

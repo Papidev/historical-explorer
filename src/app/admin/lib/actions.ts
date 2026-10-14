@@ -33,16 +33,23 @@ const getRequiredString = (formData: FormData, key: string, label: string) => {
 
 const toRelatedPeopleWarning = (
   failures: RelatedPeopleResolutionFailure[],
+  sourceWarnings: string[] = [],
 ): AdminActionResult | undefined => {
-  if (failures.length === 0) {
+  if (failures.length === 0 && sourceWarnings.length === 0) {
     return undefined;
   }
 
   return {
     warning: {
-      title: "Some Related People remain unresolved",
+      title: failures.length
+        ? "Some Related People remain unresolved"
+        : "Generated with incomplete Wikipedia Sources",
+      ...(sourceWarnings.length ? { details: sourceWarnings.join("\n") } : {}),
     },
-    failedSteps: ["Related People"],
+    failedSteps: [
+      ...(failures.length ? ["Related People"] : []),
+      ...(sourceWarnings.length ? ["Wikipedia Sources"] : []),
+    ],
   };
 };
 
@@ -58,24 +65,31 @@ export const refreshStoryContent = async (formData: FormData) =>
         withPoiGeneration(poiId, () =>
           storyWorkflow.storyContent.generate({ poiId, ai, onProgress }),
         ),
-      ({ failures }) => ({
-        status: failures.length > 0 ? "partial" : "success",
-        failedSteps: failures.length > 0 ? ["relatedPeople"] : [],
+      ({ failures, sourceWarnings = [] }) => ({
+        status: failures.length || sourceWarnings.length ? "partial" : "success",
+        failedSteps: [
+          ...(failures.length ? ["relatedPeople"] : []),
+          ...(sourceWarnings.length ? ["sources"] : []),
+        ],
         relatedPeopleFailureCount: failures.length,
-        errors: failures.map(({ name, message }) => ({ stage: "relatedPeople", name, message })),
+        errors: [
+          ...failures.map(({ name, message }) => ({ stage: "relatedPeople", name, message })),
+          ...sourceWarnings.map((message) => ({ stage: "sources", message })),
+        ],
       }),
     );
-    return toRelatedPeopleWarning(result.failures);
+    return toRelatedPeopleWarning(result.failures, result.sourceWarnings);
   });
 
 export const regeneratePerson = async (formData: FormData) =>
   runAiAction(formData, async (onProgress) => {
-    await people.regenerate({
+    const person = await people.regenerate({
       personId: getRequiredString(formData, "personId", "Person id"),
       ai: await resolveAiSelection(formData),
       onProgress,
     });
     revalidatePath("/rome");
+    return toRelatedPeopleWarning([], person.generation.sourceWarnings);
   });
 
 export const refreshPoiTypes = async (formData: FormData): Promise<AdminActionResult | void> => {
@@ -149,14 +163,20 @@ export const resolveRelatedPeople = async (formData: FormData) =>
         withPoiGeneration(poiId, () =>
           storyWorkflow.relatedPeople.resolve({ poiId, ai, onProgress }),
         ),
-      ({ failures }) => ({
-        status: failures.length > 0 ? "partial" : "success",
-        failedSteps: failures.length > 0 ? ["relatedPeople"] : [],
+      ({ failures, sourceWarnings = [] }) => ({
+        status: failures.length || sourceWarnings.length ? "partial" : "success",
+        failedSteps: [
+          ...(failures.length ? ["relatedPeople"] : []),
+          ...(sourceWarnings.length ? ["sources"] : []),
+        ],
         relatedPeopleFailureCount: failures.length,
-        errors: failures.map(({ name, message }) => ({ stage: "relatedPeople", name, message })),
+        errors: [
+          ...failures.map(({ name, message }) => ({ stage: "relatedPeople", name, message })),
+          ...sourceWarnings.map((message) => ({ stage: "sources", message })),
+        ],
       }),
     );
-    return toRelatedPeopleWarning(result.failures);
+    return toRelatedPeopleWarning(result.failures, result.sourceWarnings);
   });
 
 export const refreshMainImageCandidates = async (formData: FormData) => {

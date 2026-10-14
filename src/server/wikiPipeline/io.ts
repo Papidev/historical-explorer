@@ -73,6 +73,9 @@ export const buildOutputFilePath = (outputDir: string, poiId: string) =>
 export const buildSourceMetadataFilePath = (outputDir: string, poiId: string) =>
   path.join(outputDir, `${sanitizePoiIdForFile(poiId)}.metadata.json`);
 
+export const buildAdditionalSourcesFilePath = (outputDir: string, poiId: string) =>
+  path.join(outputDir, `${sanitizePoiIdForFile(poiId)}.sources.json`);
+
 export const buildWikipediaPageUrl = (title: string, language: WikipediaLanguage = "en") =>
   `https://${language}.wikipedia.org/wiki/${encodeURIComponent(title.trim().replace(/\s+/g, "_"))}`;
 

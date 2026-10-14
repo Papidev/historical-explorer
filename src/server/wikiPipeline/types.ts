@@ -34,7 +34,7 @@ export type PoiInput = {
   };
 };
 
-export type WikipediaLanguage = "en" | "it";
+export type WikipediaLanguage = string;
 
 export type ResolutionMethod =
   | "wikipedia_tag_en"

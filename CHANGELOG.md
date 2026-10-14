@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.4.0
+
+### Minor Changes
+
+- Generate English Stories and People from complementary Wikipedia editions in English, Italian, French, German, and Spanish, selected using the countries of the POI and Person. Preserve source references and continue with available editions when others are missing. Retain only Related People named in the Story text, develop meaningful source-supported details, and rename the Design section to Architecture.
+
 ## 0.3.0
 
 ### Minor Changes
