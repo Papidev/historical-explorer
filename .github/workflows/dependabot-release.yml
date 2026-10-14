@@ -19,11 +19,11 @@ jobs:
     outputs:
       pulls: ${{ steps.pulls.outputs.pulls }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
         with:
           ref: main
           persist-credentials: false
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
           package-manager-cache: false
@@ -49,7 +49,7 @@ jobs:
       cancel-in-progress: false
     steps:
       # Only main code and main dependencies are executed with write credentials.
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
         with:
           ref: main
           fetch-depth: 0
@@ -57,7 +57,7 @@ jobs:
       - uses: pnpm/action-setup@v6
         with:
           version: 10.18.0
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
           package-manager-cache: false
