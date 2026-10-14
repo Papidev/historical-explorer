@@ -165,6 +165,7 @@ export const CityExplorer = ({
           coordinates={coordinates}
           zoom={zoom}
           pois={visiblePois}
+          categoryDefinitions={categoryDefinitions}
           onZoomChange={setZoom}
           onOpenPoiDetails={openPoi}
           onMapClick={() => selectPoi(null)}

@@ -6,9 +6,9 @@ Status: direct-type mapping, visitor sidebar (#59), and shared Curator edits (#6
 
 POI Types are Wikidata source classifications; Categories are an editable app-owned vocabulary shared across cities, separate from Story Content. Membership may reflect current or historical nature/function and does not promise current use, opening hours, or access. A Story/category difference may reflect a change of use.
 
-Category names are singular; visitor labels may be plural. The initial vocabulary is Churches & cathedrals, Cathedral, Basilica, Church, Museum, Castle, Mausoleum, Aqueduct, Amphitheatre, Arch, Square, and Archaeological Site.
+Category names are singular; visitor labels may be plural. The initial vocabulary is Religious sites, Cathedral, Basilica, Church, Museum, Castle, Mausoleum, Aqueduct, Amphitheatre, Arch, Square, and Archaeological Site.
 
-The hierarchy has two levels. Each child has one top-level parent; categories with children cannot be nested. Churches & cathedrals contains Cathedral, Basilica, and Church, displayed as Cathedrals, Basilicas, and Churches. This hierarchy is independent of Wikidata's.
+The hierarchy has two levels. Each child has one top-level parent; categories with children cannot be nested. Religious sites contains Cathedral, Basilica, Church, Abbey, Baptistery, and Temple. The original parent ID `Churches & cathedrals` remains stable. This hierarchy is independent of Wikidata's.
 
 In Manage categories, drag a child or top-level leaf onto a parent, or onto Top level to detach it. Moving preserves IDs and selected children, updates shared rules to the new parent, and removes the old parent assignment when none of its children remain assigned. Renaming preserves IDs and assignments; AI-created categories start at the top level.
 
@@ -56,6 +56,10 @@ Active category subsets exclude uncategorized POIs. Religious child scopes are d
 After naming refinement, configured precedence is Cathedral over Basilica/Church, then Basilica over Church. Source types stay unchanged; child counts sum to the parent, and counts/detail retention use the same rules.
 
 The planned name-search visibility exception is described in [Entity Discovery](entity-discovery.md#agreed-discovery-and-search-filter-behavior).
+
+## Map colors
+
+Religious sites use golden-yellow markers with a dark outline. The visitor filters show a matching dot, yellow parent/child checkboxes, and a pale yellow background around the entire group, including expanded subcategories. Any POI matching that parent uses yellow, including places that also belong to other categories. Other markers retain the default map color. Category membership, including historical religious use, determines the color; it does not imply current worship or access.
 
 ## Curator workflow
 
