@@ -1,0 +1,82 @@
+{
+  "id": "john-the-baptist",
+  "name": "John the Baptist",
+  "wikidataId": "Q40662",
+  "wikipediaTitle": "John the Baptist",
+  "content": {
+    "description": [
+      {
+        "text": "John the Baptist, born around 6 BC, was a Jewish itinerant preacher who travelled the Jordan River region in the early first century AD, wearing a garment of camel's hair and subsisting on locusts and wild honey. He called for repentance and public baptism, positioning himself as the forerunner of the Messiah and proclaiming that a greater one would come who would baptise with the Holy Spirit. His ministry attracted large crowds and drew the attention of Herod Antipas, who feared the influence of John’s preaching.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      },
+      {
+        "text": "John was executed by beheading around AD 30 after rebuking Herod Antipas for his unlawful marriage to Herodias, the former wife of Herod’s brother. According to the New Testament and the historian Josephus, Herod ordered John’s death to prevent a potential uprising. John’s legacy continued through his followers, who later became part of the early Christian community, and he is venerated as a saint in Christianity, Islam, the Baháʼí Faith, the Druze faith, and Mandaeism.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Several churches claim to possess John the Baptist’s head, including the Umayyad Mosque in Damascus, the church of San Silvestro in Capite in Rome, Amiens Cathedral in France, and the Residenz Museum in Munich.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "John’s distinctive attire of camel hair and his diet of locusts and wild honey are frequently depicted in early Christian art and are mentioned in the Gospels as symbols of his ascetic lifestyle.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": -6,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 30,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Accademia_-_St_John_the_Baptist_by_Titian_Cat314.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Accademia_-_St_John_the_Baptist_by_Titian_Cat314.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Accademia_-_St_John_the_Baptist_by_Titian_Cat314.jpg/960px-Accademia_-_St_John_the_Baptist_by_Titian_Cat314.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Accademia_-_St_John_the_Baptist_by_Titian_Cat314.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Titian",
+    "author": "Titian",
+    "width": 4319,
+    "height": 6413,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "John the Baptist",
+    "url": "https://en.wikipedia.org/wiki/John_the_Baptist"
+  },
+  "additionalSources": [
+    {
+      "id": "wikipedia-it",
+      "kind": "wikipedia",
+      "title": "Giovanni Battista",
+      "url": "https://it.wikipedia.org/wiki/Giovanni_Battista"
+    }
+  ],
+  "sourceContextWikidataIds": [
+    "Q2104896"
+  ],
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-14T22:05:01.779Z"
+  }
+}

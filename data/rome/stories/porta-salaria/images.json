@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Porta_Salaria_(Rome)_(77563878).jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Porta_Salaria_(Rome)_(77563878).jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Porta_Salaria_%28Rome%29_%2877563878%29.jpg/960px-Porta_Salaria_%28Rome%29_%2877563878%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Porta_Salaria_%28Rome%29_%2877563878%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Giuseppe Vasi",
+      "author": "Giuseppe Vasi",
+      "width": 6672,
+      "height": 4528,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "1_Porta_salaria.PNG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:1_Porta_salaria.PNG",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/1_Porta_salaria.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/1_Porta_salaria.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Ragusaibla",
+      "author": "Ragusaibla",
+      "width": 713,
+      "height": 541,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "2_Porta_Salaria.PNG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:2_Porta_Salaria.PNG",
+      "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/2_Porta_Salaria.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/2_Porta_Salaria.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Ragusaibla",
+      "author": "Ragusaibla",
+      "width": 713,
+      "height": 532,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Porta_Salaria_(Rome)_(77563878).jpg"
+}

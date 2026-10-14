@@ -2,27 +2,69 @@
   "version": 1,
   "pois": {
     "basilica-costantiniana-di-s-agnese": [],
-    "cloisters-of-bramante": ["Museum", "Church"],
-    "forum-boarium": ["Square"],
-    "piazza-navona": ["Square"],
-    "castle-of-the-holy-angel": ["Museum", "Castle", "Mausoleum"],
-    "basilica-of-saint-paul-outside-the-walls": ["Basilica", "Church", "Churches & cathedrals"],
-    "torre-valca": ["Tower", "Archaeological Site"],
-    "palazzo-rondinini": ["Palace"],
-    "capitol-square": ["Square"],
-    "arch-of-titus": ["Arch", "Archaeological Site"],
-    "basilica-parrocchiale-dei-santi-pietro-e-paolo": ["Basilica", "Church"],
-    "accademia-di-san-luca": ["Museum", "Archive"],
-    "acqua-marcia": ["Aqueduct", "Archaeological Site"],
+    "cloisters-of-bramante": [
+      "Museum",
+      "Church"
+    ],
+    "forum-boarium": [
+      "Square"
+    ],
+    "piazza-navona": [
+      "Square"
+    ],
+    "castle-of-the-holy-angel": [
+      "Museum",
+      "Castle",
+      "Mausoleum"
+    ],
+    "basilica-of-saint-paul-outside-the-walls": [
+      "Basilica",
+      "Church",
+      "Churches & cathedrals"
+    ],
+    "torre-valca": [
+      "Tower",
+      "Archaeological Site"
+    ],
+    "palazzo-rondinini": [
+      "Palace"
+    ],
+    "capitol-square": [
+      "Square"
+    ],
+    "arch-of-titus": [
+      "Arch",
+      "Archaeological Site"
+    ],
+    "basilica-parrocchiale-dei-santi-pietro-e-paolo": [
+      "Basilica",
+      "Church"
+    ],
+    "accademia-di-san-luca": [
+      "Museum",
+      "Archive"
+    ],
+    "acqua-marcia": [
+      "Aqueduct",
+      "Archaeological Site"
+    ],
     "a-umberto-ii-re-d-italia": [],
     "acea-heritage": [],
     "achille-joachim-bligny": [],
     "acquedotto-dei-sette-bassi": [],
     "acquedotto-dei-sette-bassi-2": [],
     "acquedotto-dei-sette-bassi-3": [],
-    "basilica-of-saint-mary-major": ["Basilica"],
-    "amphitheatre-castrense": ["Amphitheatre", "Archaeological Site"],
-    "basilica-di-santa-maria-sopra-minerva": ["Church", "Basilica"],
+    "basilica-of-saint-mary-major": [
+      "Basilica"
+    ],
+    "amphitheatre-castrense": [
+      "Amphitheatre",
+      "Archaeological Site"
+    ],
+    "basilica-di-santa-maria-sopra-minerva": [
+      "Church",
+      "Basilica"
+    ],
     "acquedotto-dei-sette-bassi-4": [],
     "acquedotto-dei-sette-bassi-5": [],
     "acquedotto-dei-sette-bassi-6": [],
@@ -36,16 +78,25 @@
     "acquedotto-del-grande-ninfeo": [],
     "acquedotto-dei-sette-bassi-14": [],
     "acquedotto-dei-sette-bassi-15": [],
-    "acquedotto-dell-acqua-vergine": ["Aqueduct"],
+    "acquedotto-dell-acqua-vergine": [
+      "Aqueduct"
+    ],
     "acquedotto-julio": [],
-    "acquedotto-felice": ["Aqueduct"],
+    "acquedotto-felice": [
+      "Aqueduct"
+    ],
     "acquedotto-neroniano": [],
     "acquedotto-vergine": [],
-    "acquedotto-vergine-2": ["Aqueduct"],
+    "acquedotto-vergine-2": [
+      "Aqueduct"
+    ],
     "adele-elvira-sacerdoti": [],
     "aermacchi-mb-326": [],
     "agli-eroici-figli-di-ostia": [],
-    "ara-pacis-augustae": ["Archaeological Site", "Museum"],
+    "ara-pacis-augustae": [
+      "Archaeological Site",
+      "Museum"
+    ],
     "acquedotto-dell-acqua-vergine-2": [],
     "ahmed-shawky": [],
     "ai-commbattenti-jugoslavi": [],
@@ -75,7 +126,9 @@
     "antico-deposito-ghiaccio-birra-peroni": [],
     "antico-ponte-romano": [],
     "antico-pozzo-e-sale-dei-filosofi": [],
-    "antiquarium-di-ostia-antica": ["Museum"],
+    "antiquarium-di-ostia-antica": [
+      "Museum"
+    ],
     "anton-giulio-majano": [],
     "antonelli": [],
     "antonio-ciamarra": [],
@@ -85,22 +138,46 @@
     "aqua-rodeo": [],
     "aquila-iv-u-571": [],
     "archaic-regia-of-gabii": [],
-    "archivio-museo-storico-di-fiume": ["Museum", "Archive"],
+    "archivio-museo-storico-di-fiume": [
+      "Museum",
+      "Archive"
+    ],
     "arciconfraternita-del-ss-cuore-di-ges": [],
     "arciconfraternita-ss-ambrogio-e-carlo": [],
     "arciconfraternita-ss-ambrogio-e-carlo-2": [],
     "arco-copped": [],
-    "arco-degli-argentari": ["Arch", "Archaeological Site"],
+    "arco-degli-argentari": [
+      "Arch",
+      "Archaeological Site"
+    ],
     "arco-dei-banchi": [],
     "arco-dei-quattro-venti": [],
-    "arch-of-constantine": ["Archaeological Site", "Arch"],
-    "arco-di-druso": ["Arch", "Archaeological Site"],
-    "arch-of-gallienus": ["Arch"],
-    "arch-of-janus": ["Arch", "Archaeological Site"],
-    "arco-di-malborghetto": ["Arch", "Archaeological Site", "Museum"],
+    "arch-of-constantine": [
+      "Archaeological Site",
+      "Arch"
+    ],
+    "arco-di-druso": [
+      "Arch",
+      "Archaeological Site"
+    ],
+    "arch-of-gallienus": [
+      "Arch"
+    ],
+    "arch-of-janus": [
+      "Arch",
+      "Archaeological Site"
+    ],
+    "arco-di-malborghetto": [
+      "Arch",
+      "Archaeological Site",
+      "Museum"
+    ],
     "arco-di-paolo-v": [],
     "arco-di-paolo-v-2": [],
-    "arch-of-septimius-severus": ["Arch", "Archaeological Site"],
+    "arch-of-septimius-severus": [
+      "Arch",
+      "Archaeological Site"
+    ],
     "arco-di-settimio-severo": [],
     "arco-di-via-nola": [],
     "arco-di-via-nola-2": [],
@@ -110,15 +187,23 @@
     "area-archeologica-di-campetti-decumano": [],
     "area-archeologica-di-grottarossa": [],
     "area-archeologica-di-macchia-grande": [],
-    "area-archeologica-di-piano-della-comunit": ["Archaeological Site"],
+    "area-archeologica-di-piano-della-comunit": [
+      "Archaeological Site"
+    ],
     "area-archeologica-di-piazza-d-armi": [],
-    "area-archeologica-di-settecamini": ["Archaeological Site"],
+    "area-archeologica-di-settecamini": [
+      "Archaeological Site"
+    ],
     "area-archeologica-di-villa-campetti": [],
     "area-archeologica-monticchio": [],
     "area-archeologica-vicus-caprarius-la-citt-dell-acqua": [],
-    "area-sacra-dell-argentina": ["Square"],
+    "area-sacra-dell-argentina": [
+      "Square"
+    ],
     "area-sacra-dell-argentina-2": [],
-    "argiletum": ["Street"],
+    "argiletum": [
+      "Street"
+    ],
     "armando-diaz": [],
     "arnoldo-fo": [],
     "assassin-s-creed": [],
@@ -126,58 +211,133 @@
     "attilio-ferraris": [],
     "august-von-goethe": [],
     "augusto": [],
-    "aula-dei-mensores-i-xix-1-3": ["Archaeological Site"],
+    "aula-dei-mensores-i-xix-1-3": [
+      "Archaeological Site"
+    ],
     "aula-del-buon-pastore": [],
     "aula-gotica": [],
-    "aula-regia": ["Archaeological Site"],
+    "aula-regia": [
+      "Archaeological Site"
+    ],
     "ave-maria": [],
     "ave-maria-2": [],
     "aviator": [],
     "bartolomeo-pinelli": [],
-    "pedestal-of-colossus-of-nero": ["Monument"],
+    "pedestal-of-colossus-of-nero": [
+      "Monument"
+    ],
     "basilica-costantiniana-di-ostia": [],
     "basilica-cristiana-iii-i-4": [],
     "basilica-damasiana": [],
-    "basilica-dei-santi-bonifacio-ed-alessio-all-aventino": ["Church", "Basilica"],
+    "basilica-dei-santi-bonifacio-ed-alessio-all-aventino": [
+      "Church",
+      "Basilica"
+    ],
     "basilica-di-pianabella": [],
-    "basilica-di-san-marco": ["Church", "Basilica", "Churches & cathedrals"],
+    "basilica-di-san-marco": [
+      "Church",
+      "Basilica",
+      "Churches & cathedrals"
+    ],
     "saint-mark-s-basilica": [],
-    "basilica-di-san-pancrazio": ["Church", "Basilica"],
-    "saint-peter-in-chains": ["Church", "Basilica"],
-    "basilica-di-san-saba": ["Church", "Basilica"],
-    "basilica-di-san-sebastiano-fuori-le-mura": ["Basilica", "Church"],
-    "basilica-di-sant-agnese-fuori-le-mura": ["Church", "Basilica"],
-    "basilica-di-sant-andrea-della-valle": ["Basilica", "Church"],
+    "basilica-di-san-pancrazio": [
+      "Church",
+      "Basilica"
+    ],
+    "saint-peter-in-chains": [
+      "Church",
+      "Basilica"
+    ],
+    "basilica-di-san-saba": [
+      "Church",
+      "Basilica"
+    ],
+    "basilica-di-san-sebastiano-fuori-le-mura": [
+      "Basilica",
+      "Church"
+    ],
+    "basilica-di-sant-agnese-fuori-le-mura": [
+      "Church",
+      "Basilica"
+    ],
+    "basilica-di-sant-andrea-della-valle": [
+      "Basilica",
+      "Church"
+    ],
     "basilica-di-sant-andrea-delle-fratte": [
       "Church",
       "Basilica",
       "Abbey",
       "Churches & cathedrals"
     ],
-    "basilica-di-sant-antonio-da-padova-all-esquilino": ["Basilica"],
-    "basilica-di-santa-balbina": ["Basilica"],
-    "basilica-di-santa-cecilia-in-trastevere": ["Church", "Basilica"],
-    "basilica-of-the-holy-cross-in-jerusalem": ["Basilica", "Church"],
-    "basilica-di-santa-maria-degli-angeli-e-dei-martiri": ["Church", "Basilica"],
-    "basilica-of-santa-maria-del-popolo": ["Church", "Basilica"],
-    "basilica-di-santa-maria-in-trastevere": ["Church", "Basilica"],
-    "basilica-di-santa-prassede": ["Basilica", "Church"],
-    "basilica-of-st-pudentiana": ["Basilica", "Church"],
-    "basilica-di-santa-teresa-d-avila": ["Basilica", "Church"],
-    "basilica-di-santo-stefano": ["Basilica", "Churches & cathedrals", "Archaeological Site"],
+    "basilica-di-sant-antonio-da-padova-all-esquilino": [
+      "Basilica"
+    ],
+    "basilica-di-santa-balbina": [
+      "Basilica"
+    ],
+    "basilica-di-santa-cecilia-in-trastevere": [
+      "Church",
+      "Basilica"
+    ],
+    "basilica-of-the-holy-cross-in-jerusalem": [
+      "Basilica",
+      "Church"
+    ],
+    "basilica-di-santa-maria-degli-angeli-e-dei-martiri": [
+      "Church",
+      "Basilica"
+    ],
+    "basilica-of-santa-maria-del-popolo": [
+      "Church",
+      "Basilica"
+    ],
+    "basilica-di-santa-maria-in-trastevere": [
+      "Church",
+      "Basilica"
+    ],
+    "basilica-di-santa-prassede": [
+      "Basilica",
+      "Church"
+    ],
+    "basilica-of-st-pudentiana": [
+      "Basilica",
+      "Church"
+    ],
+    "basilica-di-santa-teresa-d-avila": [
+      "Basilica",
+      "Church"
+    ],
+    "basilica-di-santo-stefano": [
+      "Basilica",
+      "Churches & cathedrals",
+      "Archaeological Site"
+    ],
     "basilica-hilariana": [],
-    "basilica-iulia": ["Archaeological Site"],
+    "basilica-iulia": [
+      "Archaeological Site"
+    ],
     "basilica-paleocristiana": [],
-    "basilica-sotterranea-di-porta-maggiore": ["Archaeological Site", "Museum"],
+    "basilica-sotterranea-di-porta-maggiore": [
+      "Archaeological Site",
+      "Museum"
+    ],
     "basolato-della-via-cassia": [],
     "bastione-sinistro": [],
-    "battistero-lateranense": ["Baptistery"],
+    "battistero-lateranense": [
+      "Baptistery"
+    ],
     "beniamino-di-cori": [],
     "berloco": [],
     "bernardo-o-higgins": [],
-    "berretta-del-prete": ["Mausoleum"],
+    "berretta-del-prete": [
+      "Mausoleum"
+    ],
     "besso": [],
-    "biblioteca-di-archeologia-e-storia-dell-arte": ["Library", "Archive"],
+    "biblioteca-di-archeologia-e-storia-dell-arte": [
+      "Library",
+      "Archive"
+    ],
     "bici-volanti": [],
     "bijan-zarmandili": [],
     "bixio": [],
@@ -198,34 +358,64 @@
     "camere-di-sant-ignazio-al-collegio-del-ges": [],
     "campo-della-magna-mater": [],
     "cannone-di-mezzogiorno": [],
-    "capanna-protostorica": ["Archaeological Site"],
-    "capitolium": ["Archaeological Site"],
+    "capanna-protostorica": [
+      "Archaeological Site"
+    ],
+    "capitolium": [
+      "Archaeological Site"
+    ],
     "caposaldo-a": [],
     "cappella-dei-gesuiti": [],
     "cappella-dell-ordine-domenicano": [],
-    "cappella-della-visione": ["Church", "Churches & cathedrals"],
-    "cappella-di-reginald-pole": ["Church"],
-    "carceres-del-circo-variano": ["Archaeological Site"],
+    "cappella-della-visione": [
+      "Church",
+      "Churches & cathedrals"
+    ],
+    "cappella-di-reginald-pole": [
+      "Church"
+    ],
+    "carceres-del-circo-variano": [
+      "Archaeological Site"
+    ],
     "carl-friedrich-von-j-lich-cleve-und-berg": [],
     "carlo-emilio-gadda": [],
     "carlo-giorgio-garofalo": [],
     "casa-dei-cesaroni": [],
-    "casa-dell-architettura": ["Palace"],
+    "casa-dell-architettura": [
+      "Palace"
+    ],
     "casa-dell-ercole-bambino-ostia-antica-rii-vi-3-4": [],
     "casa-delle-volte-dipinte": [],
-    "casa-di-augusto": ["Roman house", "Archaeological Site"],
-    "casa-di-diana": ["Archaeological Site"],
-    "casa-di-diana-2": ["Archaeological Site"],
-    "casa-di-goethe": ["Museum"],
+    "casa-di-augusto": [
+      "Archaeological Site"
+    ],
+    "casa-di-diana": [
+      "Archaeological Site"
+    ],
+    "casa-di-diana-2": [
+      "Archaeological Site"
+    ],
+    "casa-di-goethe": [
+      "Museum"
+    ],
     "casa-museo-alberto-moravia": [],
-    "casa-museo-di-luigi-pirandello-archivio-e-biblioteca": ["Museum"],
-    "casal-rotondo": ["Archaeological Site"],
+    "casa-museo-di-luigi-pirandello-archivio-e-biblioteca": [
+      "Museum"
+    ],
+    "casal-rotondo": [
+      "Archaeological Site"
+    ],
     "casale-dell-ex-mulino": [],
-    "casale-della-cervelletta": ["Palace"],
+    "casale-della-cervelletta": [
+      "Palace"
+    ],
     "casale-della-vaccareccia": [],
     "casale-ghella": [],
     "medieval-and-roman-houses-at-monte-savello-square": [],
-    "case-romane-del-celio": ["Archaeological Site", "Museum"],
+    "case-romane-del-celio": [
+      "Archaeological Site",
+      "Museum"
+    ],
     "caseggiato-a-sud-della-domus-del-protiro-v-ii-3": [],
     "caseggiato-a-tabernae-i-xii-10": [],
     "caseggiato-con-fornace-i-xvii-1": [],
@@ -234,7 +424,9 @@
     "caseggiato-dei-lottatori-v-iii-1": [],
     "caseggiato-dei-misuratori-del-grano-ostia-antica-r1-vii-1-2": [],
     "caseggiato-del-cane-monnus-ii-i-1": [],
-    "caseggiato-del-larario-i-ix-3": ["Archaeological Site"],
+    "caseggiato-del-larario-i-ix-3": [
+      "Archaeological Site"
+    ],
     "caseggiato-del-sole-v-vi-1": [],
     "caseggiato-del-temistocle-v-xi-2": [],
     "caseggiato-delle-due-scale-iv-ix-6": [],
@@ -247,55 +439,120 @@
     "caseggiato-iii-xi-1": [],
     "caseggiato-tra-via-della-fortuna-annonaria-e-via-dell-invidioso-v-iv-2-3": [],
     "caseggiato-tra-via-semita-dei-cippi-e-via-della-domus-del-pozzo-v-ii-2": [],
-    "barracks-of-the-vigiles": ["Archaeological Site"],
+    "barracks-of-the-vigiles": [
+      "Archaeological Site"
+    ],
     "casette-tipo-iii-xii-1-2-iii-xiii-1-2": [],
     "casimiro-pisani": [],
     "casino-dell-uccelliera": [],
     "casino-della-meridiana": [],
     "casino-di-villa-altieri": [],
-    "casino-ludovisi": ["Palace"],
-    "casino-nobile": ["Palace", "Museum"],
+    "casino-ludovisi": [
+      "Palace"
+    ],
+    "casino-nobile": [
+      "Palace",
+      "Museum"
+    ],
     "casino-nobile-di-villa-leopardi": [],
     "castel-giubileo": [],
     "castellani": [],
     "castello": [],
-    "castello-barberini": ["Castle"],
-    "castello-della-cecchignola": ["Castle"],
-    "castello-di-corcolle": ["Castle"],
+    "castello-barberini": [
+      "Castle"
+    ],
+    "castello-della-cecchignola": [
+      "Castle"
+    ],
+    "castello-di-corcolle": [
+      "Castle"
+    ],
     "castello-di-giulio-ii": [],
-    "castello-di-lunghezza": ["Castle"],
-    "castello-di-torrenova": ["Castle"],
-    "castello-farnese": ["Castle"],
-    "catacombe-dei-santi-marcellino-e-pietro": ["Archaeological Site"],
-    "catacombe-di-commodilla": ["Archaeological Site"],
+    "castello-di-lunghezza": [
+      "Castle"
+    ],
+    "castello-di-torrenova": [
+      "Castle"
+    ],
+    "castello-farnese": [
+      "Castle"
+    ],
+    "catacombe-dei-santi-marcellino-e-pietro": [
+      "Archaeological Site"
+    ],
+    "catacombe-di-commodilla": [
+      "Archaeological Site"
+    ],
     "catacombe-di-ponziano": [],
-    "catacomb-of-priscilla": ["Archaeological Site", "Cemetery"],
-    "catacombs-of-saint-calixt": ["Archaeological Site", "Cemetery"],
+    "catacomb-of-priscilla": [
+      "Archaeological Site",
+      "Cemetery"
+    ],
+    "catacombs-of-saint-calixt": [
+      "Archaeological Site",
+      "Cemetery"
+    ],
     "catacombe-di-san-pancrazio": [],
-    "catacombe-di-san-sebastiano": ["Archaeological Site"],
-    "catacombe-di-san-zotico": ["Archaeological Site"],
-    "catacombe-di-sant-agnese": ["Archaeological Site"],
-    "catacombe-di-santa-felicita": ["Archaeological Site"],
+    "catacombe-di-san-sebastiano": [
+      "Archaeological Site"
+    ],
+    "catacombe-di-san-zotico": [
+      "Archaeological Site"
+    ],
+    "catacombe-di-sant-agnese": [
+      "Archaeological Site"
+    ],
+    "catacombe-di-santa-felicita": [
+      "Archaeological Site"
+    ],
     "caterina-patti": [],
-    "cattedrale-dei-sacri-cuori-di-ges-e-maria": ["Cathedral"],
+    "cattedrale-dei-sacri-cuori-di-ges-e-maria": [
+      "Cathedral"
+    ],
     "caupona-del-dio-pan-e-mitreo-dei-marmi-colorati-iv-ix-5": [],
     "caupona-di-alexander-e-helix": [],
     "caupona-di-fortunato": [],
     "cave-di-fosso-del-drago": [],
     "cave-romane-di-pian-dell-olmo": [],
-    "centrale-montemartini": ["Museum"],
+    "centrale-montemartini": [
+      "Museum"
+    ],
     "cesare-pascarella": [],
-    "chiesa-dei-santi-vincenzo-e-anastasio": ["Church"],
-    "the-church-of-domine-quo-vadis": ["Church"],
+    "chiesa-dei-santi-vincenzo-e-anastasio": [
+      "Church",
+      "Churches & cathedrals"
+    ],
+    "the-church-of-domine-quo-vadis": [
+      "Church"
+    ],
     "chiesa-della-beata-maria-vergine-immacolata": [],
-    "chiesa-di-nostra-signora-di-guadalupe-a-monte-mario": ["Church"],
-    "saint-john-at-the-latin-gate": ["Church"],
-    "chiesa-di-san-paolo-alle-tre-fontane": ["Church"],
-    "church-of-san-pietro-in-montorio": ["Church"],
-    "chiesa-di-sant-agnese-in-agone": ["Church"],
-    "chiesa-di-sant-andrea-al-quirinale": ["Church", "Churches & cathedrals"],
-    "chiesa-di-sant-onofrio-al-gianicolo": ["Church", "Abbey", "Churches & cathedrals"],
-    "chiesa-di-sant-urbano-alla-caffarella": ["Church"],
+    "chiesa-di-nostra-signora-di-guadalupe-a-monte-mario": [
+      "Church"
+    ],
+    "saint-john-at-the-latin-gate": [
+      "Church"
+    ],
+    "chiesa-di-san-paolo-alle-tre-fontane": [
+      "Church"
+    ],
+    "church-of-san-pietro-in-montorio": [
+      "Church"
+    ],
+    "chiesa-di-sant-agnese-in-agone": [
+      "Church"
+    ],
+    "chiesa-di-sant-andrea-al-quirinale": [
+      "Church",
+      "Churches & cathedrals"
+    ],
+    "chiesa-di-sant-onofrio-al-gianicolo": [
+      "Church",
+      "Abbey",
+      "Churches & cathedrals"
+    ],
+    "chiesa-di-sant-urbano-alla-caffarella": [
+      "Church"
+    ],
     "chiesa-di-santa-maria-dei-miracoli": [
       "Church",
       "Churches & cathedrals",
@@ -303,12 +560,27 @@
       "Basilica",
       "Abbey"
     ],
-    "chiesa-di-santa-maria-della-piet": ["Church", "Churches & cathedrals"],
-    "chiesa-di-santa-maria-in-scala-coeli": ["Church"],
-    "chiesa-di-santa-maria-in-via": ["Church"],
-    "chiesa-di-santa-maria-liberatrice": ["Church"],
-    "chiesa-di-trinit-dei-monti": ["Church", "Abbey", "Churches & cathedrals"],
-    "chiesa-nuova": ["Church"],
+    "chiesa-di-santa-maria-della-piet": [
+      "Church",
+      "Churches & cathedrals"
+    ],
+    "chiesa-di-santa-maria-in-scala-coeli": [
+      "Church"
+    ],
+    "chiesa-di-santa-maria-in-via": [
+      "Church"
+    ],
+    "chiesa-di-santa-maria-liberatrice": [
+      "Church"
+    ],
+    "chiesa-di-trinit-dei-monti": [
+      "Church",
+      "Abbey",
+      "Churches & cathedrals"
+    ],
+    "chiesa-nuova": [
+      "Church"
+    ],
     "chiesa-santa-maria-in-monasterio": [],
     "chiomenti-vassalli": [],
     "chiostro-del-borromini": [],
@@ -322,7 +594,9 @@
     "circo-maximo-experience": [],
     "ciro-principessa": [],
     "cisterna-piranesi": [],
-    "cisterna-delle-sette-sale": ["Archaeological Site"],
+    "cisterna-delle-sette-sale": [
+      "Archaeological Site"
+    ],
     "cisterna-di-porta-marina-iv-viii-2": [],
     "cisterna-fienile": [],
     "cisterna-monumentale": [],
@@ -336,27 +610,49 @@
     "cisterna-romana-a-villa-spada": [],
     "cisterna-romana-della-via-colombo": [],
     "cisterne": [],
-    "cloaca-m-xima": ["Archaeological Site"],
-    "palatine-hill": ["Museum", "Archaeological Site"],
+    "cloaca-m-xima": [
+      "Archaeological Site"
+    ],
+    "palatine-hill": [
+      "Museum",
+      "Archaeological Site"
+    ],
     "collegio-degli-augustali-v-vii-2": [],
     "colomba-di-segni": [],
-    "colombari-di-via-taranto": ["Mausoleum", "Archaeological Site"],
+    "colombari-di-via-taranto": [
+      "Mausoleum",
+      "Archaeological Site"
+    ],
     "colombario": [],
     "colombario-a": [],
     "colombario-b": [],
-    "colombario-costantiniano": ["Archaeological Site", "Mausoleum"],
+    "colombario-costantiniano": [
+      "Archaeological Site",
+      "Mausoleum"
+    ],
     "colombario-dei-liberti-di-augusto": [],
     "colombario-di-largo-preneste": [],
-    "colombario-di-pomponio-hylas": ["Mausoleum"],
+    "colombario-di-pomponio-hylas": [
+      "Mausoleum"
+    ],
     "colombario-di-via-del-casale-ferranti": [],
-    "colombario-di-via-olevano-romano": ["Archaeological Site"],
+    "colombario-di-via-olevano-romano": [
+      "Archaeological Site"
+    ],
     "torre-argentina-cat-sanctuary": [],
     "colonna-crucifera": [],
     "colonna-crucifera-2": [],
-    "colonna-dell-immacolata": ["Monument"],
+    "colonna-dell-immacolata": [
+      "Monument"
+    ],
     "colonna-della-pace-a-santa-maria-maggiore": [],
-    "column-of-phoca": ["Monument"],
-    "column-of-marcus-aurelius": ["Monument", "Archaeological Site", "Statue"],
+    "column-of-phoca": [
+      "Monument"
+    ],
+    "column-of-marcus-aurelius": [
+      "Monument",
+      "Archaeological Site"
+    ],
     "colonna-onoraria": [],
     "colonna-romana": [],
     "colonna-viaria-di-san-cesareo-de-appia": [],
@@ -367,7 +663,9 @@
     "criptoportico-neroniano": [],
     "croce-dedicata-a-giovanni-paolo-ii": [],
     "crocione": [],
-    "crypta-balbi": ["Museum"],
+    "crypta-balbi": [
+      "Museum"
+    ],
     "curva-nord": [],
     "curva-sud": [],
     "dario-di-cori": [],
@@ -382,23 +680,43 @@
     "divorum": [],
     "domus-and-mitreo-delle-pareti-dipinte-iii-i-6": [],
     "domus-annorum": [],
-    "domus-augustana-peristilio": ["Roman house", "Archaeological Site", "Palace"],
-    "domus-aurea": ["Archaeological Site", "Palace", "Roman house", "Museum"],
+    "domus-augustana-peristilio": [
+      "Archaeological Site",
+      "Palace"
+    ],
+    "domus-aurea": [
+      "Archaeological Site",
+      "Palace",
+      "Museum"
+    ],
     "domus-del-pozzo-v-iii-3": [],
-    "domus-del-protiro-v-ii-5": ["Archaeological Site"],
+    "domus-del-protiro-v-ii-5": [
+      "Archaeological Site"
+    ],
     "domus-del-serapeo-iii-xvii-3": [],
-    "domus-della-fortuna-annonaria-v-ii-8": ["Archaeological Site", "Roman house"],
+    "domus-della-fortuna-annonaria-v-ii-8": [
+      "Archaeological Site"
+    ],
     "domus-delle-colonne-iv-iii-1": [],
-    "domus-delle-gorgoni-i-xiii-6": ["Roman house", "Archaeological Site"],
-    "house-of-cupid-and-psyche": ["Roman house", "Archaeological Site"],
-    "domus-di-apuleio-ii-viii-5": ["Roman house", "Archaeological Site"],
+    "domus-delle-gorgoni-i-xiii-6": [
+      "Archaeological Site"
+    ],
+    "house-of-cupid-and-psyche": [
+      "Archaeological Site"
+    ],
+    "domus-di-apuleio-ii-viii-5": [
+      "Archaeological Site"
+    ],
     "domus-di-aufidia-cornelia": [],
     "domus-di-lucio-licinio-sura": [],
     "domus-di-via-albidona": [],
     "domus-di-vigna-guidi": [],
     "domus-romane-di-palazzo-valentini": [],
     "domus-rustica": [],
-    "domus-severiana": ["Roman house", "Archaeological Site", "Palace"],
+    "domus-severiana": [
+      "Archaeological Site",
+      "Palace"
+    ],
     "domus-su-via-deglia-augustali-v-x-1": [],
     "due-torri": [],
     "edificio-iii-xvi-3": [],
@@ -410,13 +728,17 @@
     "elettromotrice-stefer-82": [],
     "elisa-toscano": [],
     "elsa-morante": [],
-    "emelyn-eldredge-story": ["Statue", "Monument"],
+    "emelyn-eldredge-story": [
+      "Monument"
+    ],
     "emma-carelli": [],
     "ennio-morricone": [],
     "enrico-toti": [],
     "enzo-fioritto": [],
     "eps-historic-site-the-goldfish-fountain-of-the-physics-institute-of-panisperna-street": [],
-    "equus-traiani": ["Statue", "Work of art"],
+    "equus-traiani": [
+      "Monument"
+    ],
     "eradicazione-della-peste-bovina": [],
     "ercole-rosa": [],
     "esedra-di-marco-aurelio": [],
@@ -435,42 +757,88 @@
     "ferdowsi": [],
     "ferrovia-roma-albano-vecchio-tracciato": [],
     "ferrovia-roma-albano-vecchio-tracciato-2": [],
-    "ficana": ["Archaeological Site"],
+    "ficana": [
+      "Archaeological Site"
+    ],
     "fiorini": [],
     "first-chapel-in-roma": [],
     "fondazione-quartiere-vittorio-emanuele-iii": [],
     "font-ludovisi": [],
     "fontana-degli-undici-zampilli": [],
-    "fontana-dei-libri": ["Fountain"],
-    "fountain-of-the-four-rivers": ["Fountain"],
+    "fontana-dei-libri": [
+      "Fountain"
+    ],
+    "fountain-of-the-four-rivers": [
+      "Fountain"
+    ],
     "fontana-del-bottino": [],
-    "fontana-del-prigione": ["Fountain"],
-    "fontana-dell-acqua-acetosa": ["Fountain"],
-    "fontana-dell-acqua-paola": ["Fountain"],
+    "fontana-del-prigione": [
+      "Fountain"
+    ],
+    "fontana-dell-acqua-acetosa": [
+      "Fountain"
+    ],
+    "fontana-dell-acqua-paola": [
+      "Fountain"
+    ],
     "fontana-della-botte": [],
     "fontana-della-sfera": [],
-    "fontana-di-piazza-dell-aracoeli": ["Fountain"],
+    "fontana-di-piazza-dell-aracoeli": [
+      "Fountain"
+    ],
     "fontane-danzanti": [],
     "dogs-fountain": [],
     "fontanile-di-pio-ix": [],
     "fontanile-papa-benedetto-xiv": [],
     "fonte-dell-acqua-sacra": [],
-    "fonte-di-anna-perenna": ["Archaeological Site"],
-    "foro-olitorio": ["Archaeological Site", "Square"],
-    "forte-antenne": ["Fort"],
-    "forte-appia-antica": ["Fort"],
-    "forte-ardeatino": ["Fort"],
-    "forte-aurelia-antica": ["Fort"],
-    "forte-boccea": ["Fort"],
-    "forte-braschi": ["Fort"],
-    "forte-bravetta": ["Fort"],
-    "forte-casilina": ["Fort"],
-    "forte-monte-mario": ["Fort"],
-    "forte-ostiense": ["Fort"],
-    "forte-pietralata": ["Fort"],
-    "forte-prenestino": ["Fort"],
-    "forte-tiburtina": ["Fort"],
-    "forte-trionfale": ["Fort"],
+    "fonte-di-anna-perenna": [
+      "Archaeological Site"
+    ],
+    "foro-olitorio": [
+      "Archaeological Site"
+    ],
+    "forte-antenne": [
+      "Fort"
+    ],
+    "forte-appia-antica": [
+      "Fort"
+    ],
+    "forte-ardeatino": [
+      "Fort"
+    ],
+    "forte-aurelia-antica": [
+      "Fort"
+    ],
+    "forte-boccea": [
+      "Fort"
+    ],
+    "forte-braschi": [
+      "Fort"
+    ],
+    "forte-bravetta": [
+      "Fort"
+    ],
+    "forte-casilina": [
+      "Fort"
+    ],
+    "forte-monte-mario": [
+      "Fort"
+    ],
+    "forte-ostiense": [
+      "Fort"
+    ],
+    "forte-pietralata": [
+      "Fort"
+    ],
+    "forte-prenestino": [
+      "Fort"
+    ],
+    "forte-tiburtina": [
+      "Fort"
+    ],
+    "forte-trionfale": [
+      "Fort"
+    ],
     "fortunata-fiorentino": [],
     "fortuny": [],
     "fox-gallery": [],
@@ -489,12 +857,22 @@
     "gabii-santuario-orientale": [],
     "gaetano-gattinelli": [],
     "galeria": [],
-    "galleria-borghese": ["Museum"],
-    "galleria-d-arte-moderna": ["Museum"],
+    "galleria-borghese": [
+      "Museum"
+    ],
+    "galleria-d-arte-moderna": [
+      "Museum"
+    ],
     "galleria-lapidaria": [],
-    "national-gallery-of-ancient-art": ["Museum"],
-    "galleria-nazionale-d-arte-antica-di-palazzo-corsini": ["Museum"],
-    "galleria-spada": ["Museum"],
+    "national-gallery-of-ancient-art": [
+      "Museum"
+    ],
+    "galleria-nazionale-d-arte-antica-di-palazzo-corsini": [
+      "Museum"
+    ],
+    "galleria-spada": [
+      "Museum"
+    ],
     "gamm-museo-del-videogioco": [],
     "gamma-di-laudadio": [],
     "garden-houses": [],
@@ -506,7 +884,9 @@
     "giacomo-guidi-arte-contemporanea": [],
     "giacomo-matteotti-monumenti": [],
     "giardino-pantalica": [],
-    "giordano-bruno": ["Statue"],
+    "giordano-bruno": [
+      "Monument"
+    ],
     "giordano-bruno-monument": [],
     "giorgiana-masi": [],
     "giorgio-asproni": [],
@@ -521,15 +901,35 @@
     "mausoleo-di-aquilio-regolo": [],
     "mausoleo-di-campo-barbarico": [],
     "mausoleo-di-costanza": [],
-    "mausoleum-of-helena": ["Archaeological Site", "Mausoleum"],
-    "mausoleo-di-gallieno": ["Mausoleum", "Archaeological Site"],
+    "mausoleum-of-helena": [
+      "Archaeological Site",
+      "Mausoleum"
+    ],
+    "mausoleo-di-gallieno": [
+      "Mausoleum",
+      "Archaeological Site"
+    ],
     "mausoleo-di-gallieno-2": [],
-    "mausoleo-di-lucilio-peto": ["Mausoleum", "Archaeological Site"],
-    "mausoleo-di-menenio-agrippa": ["Mausoleum", "Archaeological Site"],
-    "mausoleum-of-romulus": ["Mausoleum", "Archaeological Site"],
-    "mausoleo-di-sant-urbano-martire": ["Mausoleum"],
+    "mausoleo-di-lucilio-peto": [
+      "Mausoleum",
+      "Archaeological Site"
+    ],
+    "mausoleo-di-menenio-agrippa": [
+      "Mausoleum",
+      "Archaeological Site"
+    ],
+    "mausoleum-of-romulus": [
+      "Mausoleum",
+      "Archaeological Site"
+    ],
+    "mausoleo-di-sant-urbano-martire": [
+      "Mausoleum"
+    ],
     "mausoleo-di-tor-di-quinto": [],
-    "basilica-costantiniana": ["Garden", "Archaeological Site"],
+    "basilica-costantiniana": [
+      "Garden",
+      "Archaeological Site"
+    ],
     "mausoleo-mutilati-e-invalidi-di-guerra-sezione-di-roma": [],
     "mausoleo-ossario-garibaldino": [],
     "mausoleo-romano": [],
@@ -549,29 +949,52 @@
     "militari-deceduti-per-causa-di-servizio": [],
     "mino-erasmo-damato": [],
     "miracle-water": [],
-    "mitreo-barberini": ["Archaeological Site"],
-    "mitreo-dei-serpenti-v-vi-6": ["Archaeological Site"],
-    "mithraeum-of-felicissimus": ["Archaeological Site"],
-    "mitreo-della-planta-pedis": ["Archaeological Site"],
-    "mitreo-delle-sette-porte-iv-v-13": ["Archaeological Site"],
+    "mitreo-barberini": [
+      "Archaeological Site"
+    ],
+    "mitreo-dei-serpenti-v-vi-6": [
+      "Archaeological Site"
+    ],
+    "mithraeum-of-felicissimus": [
+      "Archaeological Site"
+    ],
+    "mitreo-della-planta-pedis": [
+      "Archaeological Site"
+    ],
+    "mitreo-delle-sette-porte-iv-v-13": [
+      "Archaeological Site"
+    ],
     "mitreo-delle-sette-sfere-ii-viii-6": [],
     "mithraeum-at-the-baths-of-mithra": [],
     "mitreo-di-lucrezio-menandro-i-iii-5": [],
     "molino-del-silvano-reg-i-is-iii-1-2": [],
     "monte-testaccio": [],
     "monteverde": [],
-    "monumento-a-carlo-alberto": ["Monument"],
+    "monumento-a-carlo-alberto": [
+      "Monument"
+    ],
     "monumento-a-cavour": [],
     "monumento-a-enrico-toti": [],
-    "monumento-a-garibaldi": ["Monument"],
-    "monumento-a-giovanni-paolo-ii": ["Monument"],
-    "monumento-a-giuseppe-mazzini": ["Monument"],
-    "monumento-a-goethe": ["Monument"],
+    "monumento-a-garibaldi": [
+      "Monument"
+    ],
+    "monumento-a-giovanni-paolo-ii": [
+      "Monument"
+    ],
+    "monumento-a-giuseppe-mazzini": [
+      "Monument"
+    ],
+    "monumento-a-goethe": [
+      "Monument"
+    ],
     "monumento-a-nicola-spedalieri": [],
     "monumento-a-pier-paolo-pasolini": [],
     "monumento-a-simon-bolivar": [],
     "monumento-a-terenzio-mamiani-della-rovere": [],
-    "monumento-ad-anita-garibaldi": ["Monument", "Grave"],
+    "monumento-ad-anita-garibaldi": [
+      "Monument",
+      "Grave"
+    ],
     "monumento-ai-caduti": [],
     "monumento-ai-caduti-2": [],
     "monumento-ai-caduti-della-i-guerra-mondiale": [],
@@ -579,7 +1002,9 @@
     "monumento-ai-caduti-di-torpignattara": [],
     "monumento-ai-caduti-francesi": [],
     "monumento-ai-fratelli-archibugi": [],
-    "monumento-ai-fratelli-cairoli": ["Monument"],
+    "monumento-ai-fratelli-cairoli": [
+      "Monument"
+    ],
     "monumento-ai-marinai-del-sebastiano-veniero": [],
     "monumento-al-bersagliere": [],
     "monumento-al-deportato": [],
@@ -603,6 +1028,14 @@
     "tomb-of-the-festoons": [],
     "monumento-funerario-del-frontespizio": [],
     "monumento-funerario-hilarus-fuscus": [],
-    "monumento-funerario-rabirii": []
+    "monumento-funerario-rabirii": [],
+    "porta-salaria": [
+      "Arch",
+      "Archaeological Site"
+    ],
+    "porta-san-giovanni": [
+      "Arch",
+      "Archaeological Site"
+    ]
   }
 }

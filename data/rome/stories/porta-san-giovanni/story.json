@@ -1,0 +1,148 @@
+{
+  "introduction": {
+    "text": "Porta San Giovanni is a single grand arch that forms part of Rome's Aurelian Wall, named after the nearby Archbasilica of Saint John Lateran. Built for Pope Gregory XIII and probably designed by either Giacomo della Porta or Giacomo del Duca, the gate was inaugurated in 1574 to improve traffic flow to southern Italy and to replace the older Porta Asinaria. Its design favours the aesthetic of a villa entrance rather than a defensive structure, featuring pronounced rustication, a large bearded head on the external face, and a commemorative Latin inscription. The arch provides access to Via Campana (now Via Appia Nuova) and is associated with the now largely forgotten Roman tradition of the Notte di San Giovanni, a festival that once celebrated a witches' Sabbath on the Lateran meadows. In 1926 the surrounding Appio‑Latino quarter was built and fornici were opened on the gate's sides to accommodate modern traffic.",
+    "sourceIds": [
+      "wikipedia",
+      "wikipedia-it"
+    ],
+    "emphasis": [
+      "single grand arch"
+    ]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-1574",
+        "description": "The gate was inaugurated in 1574 as part of a reorganisation of the Lateran area to improve traffic flow to southern Italy, and its opening led to the closure of the older Porta Asinaria.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ],
+        "time": {
+          "startYear": 1574,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1926",
+        "description": "In 1926 the modern Appio‑Latino quarter was created outside the gate, and fornici were opened on its sides to improve traffic.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ],
+        "time": {
+          "startYear": 1926,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-architect",
+        "description": "The arch is attributed to either Giacomo della Porta or Giacomo del Duca, both of whom had worked with Michelangelo on Porta Pia; the confusion arises because contemporary chronicles mention only a famous architect named Giacomo.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      },
+      {
+        "id": "history-della-porta-death",
+        "description": "According to popular tradition, Giacomo della Porta died near the gate from indigestion after a trip to the Castelli Romani.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      },
+      {
+        "id": "history-notte-san-giovanni",
+        "description": "The gate is linked to the now largely disappeared Roman tradition of the Notte di San Giovanni (23 June), when a legend of Herodias' witches' Sabbath was celebrated with a festival and the custom of eating slugs.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      }
+    ],
+    "design": [
+      {
+        "id": "design-architecture",
+        "description": "The gate is designed more like the entrance to a villa than a defensive work, lacking side towers, ramparts, and battlements, and featuring pronounced rustication and a simple decorative scheme with a large bearded head on the external side.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ],
+        "emphasis": [
+          "bearded head"
+        ]
+      },
+      {
+        "id": "design-inscription",
+        "description": "A commemorative inscription above the arch records Pope Gregory XIII's construction of the gate in 1574.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ],
+        "emphasis": [
+          "commemorative inscription"
+        ]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-bearded-head",
+        "description": "A large bearded head atop the arch serves as the primary decorative element.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ],
+        "emphasis": [
+          "bearded head"
+        ]
+      },
+      {
+        "id": "art-inscription",
+        "description": "The Latin inscription above the arch commemorates the construction of the gate by Pope Gregory XIII in 1574.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ],
+        "emphasis": [
+          "Latin inscription"
+        ]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Pope Gregory XIII",
+      "personId": "pope-gregory-xiii",
+      "sourceIds": [
+        "wikipedia",
+        "wikipedia-it"
+      ]
+    },
+    {
+      "name": "Giacomo della Porta",
+      "personId": "giacomo-della-porta",
+      "sourceIds": [
+        "wikipedia",
+        "wikipedia-it"
+      ]
+    },
+    {
+      "name": "Giacomo del Duca",
+      "personId": "jacopo-del-duca",
+      "sourceIds": [
+        "wikipedia",
+        "wikipedia-it"
+      ]
+    },
+    {
+      "name": "Herodias",
+      "personId": "herodias",
+      "sourceIds": [
+        "wikipedia",
+        "wikipedia-it"
+      ]
+    }
+  ]
+}
