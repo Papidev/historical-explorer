@@ -233,6 +233,9 @@ it("expands AI parent assignments to the same children as manual assignments", a
     "Cathedral",
     "Basilica",
     "Church",
+    "Abbey",
+    "Baptistery",
+    "Temple",
   ]);
   for (const city of ["rome", "florence"])
     expect(createPoiCategoriesForCity(city, directory).getAll().tower).toEqual([
@@ -240,6 +243,9 @@ it("expands AI parent assignments to the same children as manual assignments", a
       "Cathedral",
       "Basilica",
       "Church",
+      "Abbey",
+      "Baptistery",
+      "Temple",
     ]);
 });
 

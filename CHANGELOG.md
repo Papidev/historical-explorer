@@ -1,10 +1,16 @@
 # historical-explorer
 
-## 0.2.7
+## 0.2.8
 
 ### Patch Changes
 
 - Update GitHub Actions dependencies.
+
+## 0.2.7
+
+### Patch Changes
+
+- Group religious sites under one category and identify them with yellow map markers and matching category filters.
 
 ## 0.2.6
 
