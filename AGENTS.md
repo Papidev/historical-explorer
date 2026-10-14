@@ -46,8 +46,7 @@ Read `docs/agents/domain.md` before domain exploration.
 - Use `pnpm` exclusively for dependency management and scripts (do not use npm or yarn).
 - If dependency installation fails, stop immediately and ask for help. Do not continue with alternative approaches intended to bypass the failed installation.
 - `pnpm lint` runs ESLint with the Next `core-web-vitals` rules plus `eslint-config-prettier` to keep formatting conflicts out.
-- During iteration, run the smallest useful verification. Run linting and formatting only immediately before opening a PR.
-- `pnpm lint` is not a full TypeScript type-check in this repo; when touching TS-heavy logic, also run `pnpm build` (or `tsc --noEmit` if a script is available) before considering the change complete.
+- Select local checks according to [Testing & Verification](#testing--verification), including before commits and PRs.
 
 ## Tailwind Plus / Catalyst
 
@@ -77,7 +76,7 @@ Read `docs/agents/domain.md` before domain exploration.
 - Before starting dense implementations, first check whether a consolidated, widely used, and up-to-date dependency can solve the problem.
 - Prefer adopting proven dependencies over re-inventing the wheel when the tradeoffs are acceptable for this project.
 - Keep data flow explicit and local; avoid “smart” indirection unless it clearly reduces complexity.
-- After each step, run the smallest useful verification before moving on.
+- After each step, select verification according to [Testing & Verification](#testing--verification).
 - When a feature is stable enough (behavior/API unlikely to change soon), update documentation accordingly: `README.md` for user/developer usage and `AGENTS.md` for implementation guidance/process updates.
 
 Update `AGENTS.md` only with important stuff that cannot be clearly/quickly derived from an exploration of the codebase.
@@ -88,10 +87,14 @@ Update `AGENTS.md` only with important stuff that cannot be clearly/quickly deri
 
 ## Testing & Verification
 
+- Run tests, TypeScript checks, lint, formatting, and builds only when the changed behavior or files justify them, or the user explicitly requests them. Opening a PR or committing does not by itself justify any check.
+- Before running a check, briefly state which concrete risk in the change it verifies. Choose the smallest relevant check; broaden or repeat only after new changes, failures, or unresolved concerns.
+- For documentation or agent-instruction-only edits, inspect the diff; skip application tests, TypeScript checks, lint, and builds. For scripts or CI changes, verify the affected script or workflow rather than automatically rebuilding the application.
+- `pnpm lint` is not a TypeScript check. Select a type check for type-related risk and a build for bundling or production behavior risk; run both only when both are relevant.
 - There is no automated map test harness yet; add colocated `*.test.tsx` files when introducing logic-heavy components and stub MapLibre APIs if needed.
 - Keep tests user-centric: verify visible behavior, interactions, and outcomes rather than implementation details.
 - Prefer accessible queries (for example `getByRole`, `getByLabelText`) and avoid brittle selectors.
-- Immediately before raising a PR, run `pnpm format <changed files>` for files supported by Prettier, then `pnpm lint` and `pnpm build`. CI checks that the built app starts and responds on the PR. Do not require browser smoke checks unless explicitly requested.
+- Report which checks ran and any relevant checks skipped in the PR description. CI checks that the built app starts and responds on the PR. Browser smoke checks require an explicit request.
 - Document any manual QA (e.g., “verified zoom-to markers on Chrome + Safari”) in PR descriptions until automated coverage exists.
 
 ## Commits & PR Hygiene
