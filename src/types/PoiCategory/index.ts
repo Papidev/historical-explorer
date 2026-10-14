@@ -19,6 +19,9 @@ export const POI_SUBCATEGORIES = [
   },
   { name: "Basilica", label: "Basilicas", parent: "Churches & cathedrals", supersedes: ["Church"] },
   { name: "Church", label: "Churches", parent: "Churches & cathedrals", supersedes: [] },
+  { name: "Abbey", label: "Abbeys", parent: "Churches & cathedrals", supersedes: [] },
+  { name: "Baptistery", label: "Baptisteries", parent: "Churches & cathedrals", supersedes: [] },
+  { name: "Temple", label: "Temples", parent: "Churches & cathedrals", supersedes: [] },
 ] as const satisfies readonly {
   name: string;
   label: string;
@@ -52,7 +55,7 @@ export const POI_CATEGORY_LABELS = Object.fromEntries(
 export const DEFAULT_POI_CATEGORY_DEFINITIONS: PoiCategoryDefinition[] = POI_CATEGORIES.map(
   (id) => ({
     id,
-    name: id,
+    name: id === "Churches & cathedrals" ? "Religious sites" : id,
     ...(POI_CATEGORY_LABELS[id] ? { label: POI_CATEGORY_LABELS[id] } : {}),
     ...(POI_CATEGORY_PARENTS[id] ? { parent: POI_CATEGORY_PARENTS[id] } : {}),
     ...(POI_SUBCATEGORIES.find((category) => category.name === id)

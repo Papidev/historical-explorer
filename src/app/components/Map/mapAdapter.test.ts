@@ -8,7 +8,7 @@ import type { Poi } from "@/types/Poi";
 
 const mapLibreFakes = vi.hoisted(() => ({
   maps: [] as Array<{ container: HTMLDivElement; removed: boolean }>,
-  markers: [] as Array<{ element: HTMLDivElement; removed: boolean }>,
+  markers: [] as Array<{ element: HTMLDivElement; removed: boolean; color?: string }>,
   popups: [] as Array<{ element?: HTMLElement; isOpen: boolean }>,
 }));
 
@@ -48,7 +48,10 @@ vi.mock("maplibre-gl", () => {
     element = document.createElement("div");
     removed = false;
 
-    constructor() {
+    color?: string;
+
+    constructor(options?: { color?: string }) {
+      this.color = options?.color;
       mapLibreFakes.markers.push(this);
     }
 
@@ -118,6 +121,7 @@ const pois: Poi[] = [
   {
     id: "forum-boarium",
     name: "Forum Boarium",
+    categories: ["Archaeological Site"],
     city: "Rome",
     coordinates: { lat: 41.889, lng: 12.481 },
     shortDescription: "The ancient cattle market beside the Tiber.",
@@ -127,6 +131,7 @@ const pois: Poi[] = [
   {
     id: "cloisters-of-bramante",
     name: "Cloisters of Bramante",
+    categories: ["Church", "Museum"],
     city: "Rome",
     coordinates: { lat: 41.9, lng: 12.47 },
     shortDescription: "A Renaissance cloister by Donato Bramante.",
@@ -157,6 +162,9 @@ describe("createMapLibreAdapter", () => {
     adapter.mount(container);
     adapter.updatePois(pois);
 
+    expect(mapLibreFakes.markers[0].color).toBeUndefined();
+    expect(mapLibreFakes.markers[1].color).toBe("#facc15");
+    expect(mapLibreFakes.markers[1].element).toHaveClass("religious-site-marker");
     expect(mapLibreFakes.markers[0].element).toHaveStyle({ cursor: "pointer" });
     dispatchPointerEvent(mapLibreFakes.markers[0].element, "pointerenter", "mouse");
     expect(await screen.findByRole("heading", { name: "Forum Boarium" })).toBeInTheDocument();

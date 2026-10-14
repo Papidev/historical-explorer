@@ -37,7 +37,13 @@ export const CategoryGroup = ({
     .filter(({ count }) => count > 0);
   if (!count) return null;
   return (
-    <div>
+    <div
+      className={
+        category === "Churches & cathedrals"
+          ? "rounded-lg border border-yellow-300 bg-yellow-50 p-2 text-yellow-950"
+          : undefined
+      }
+    >
       <div className="flex items-center gap-2">
         <CategoryOption
           category={category}
@@ -72,7 +78,9 @@ export const CategoryGroup = ({
         <div
           id={subcategoriesId}
           hidden={!expanded}
-          className="mt-2 ml-5 space-y-2 border-l border-zinc-200 pr-9 pl-3"
+          className={`mt-2 ml-5 space-y-2 border-l pr-9 pl-3 ${
+            category === "Churches & cathedrals" ? "border-yellow-300" : "border-zinc-200"
+          }`}
         >
           {children.map(({ name, count }) => (
             <CategoryOption

@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.2.7
+
+### Patch Changes
+
+- Group religious sites under one category and identify them with yellow map markers and matching category filters.
+
 ## 0.2.6
 
 ### Patch Changes
