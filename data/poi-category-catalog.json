@@ -80,20 +80,8 @@
       "name": "Archive"
     },
     {
-      "id": "Art collection",
-      "name": "Art collection"
-    },
-    {
-      "id": "Artist collective",
-      "name": "Artist collective"
-    },
-    {
       "id": "Guild",
       "name": "Guild"
-    },
-    {
-      "id": "Statue",
-      "name": "Statue"
     },
     {
       "id": "Lost sculpture",
@@ -118,28 +106,8 @@
       "parent": "Churches & cathedrals"
     },
     {
-      "id": "Circus",
-      "name": "Circus"
-    },
-    {
-      "id": "Roman house",
-      "name": "Roman house"
-    },
-    {
-      "id": "Destroyed building or structure",
-      "name": "Destroyed building or structure"
-    },
-    {
-      "id": "Work of art",
-      "name": "Work of art"
-    },
-    {
       "id": "Cemetery",
       "name": "Cemetery"
-    },
-    {
-      "id": "Architectural ensemble",
-      "name": "Architectural ensemble"
     },
     {
       "id": "Monument",
@@ -166,5 +134,15 @@
       "name": "Grave"
     }
   ],
-  "deletedNames": ["Shrine"]
+  "deletedNames": [
+    "Shrine",
+    "Architectural ensemble",
+    "Art collection",
+    "Artist collective",
+    "Circus",
+    "Destroyed building or structure",
+    "Work of art",
+    "Statue",
+    "Roman house"
+  ]
 }

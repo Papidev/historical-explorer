@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.2.8
+
+### Patch Changes
+
+- Refine POI categories and manual type mappings for monuments, gardens, religious sites, and archaeological sites.
+
 ## 0.2.7
 
 ### Patch Changes
