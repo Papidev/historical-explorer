@@ -1,212 +1,90 @@
 {
   "introduction": {
-    "text": "The Basilica di Santa Maria in Trastevere is a minor basilica and titular church in Rome, renowned for its early Christian heritage, medieval mosaics, and Baroque interior. It remains a key pilgrimage site and a living parish community.",
-    "sourceIds": ["wikipedia"]
+    "text": "Santa Maria in Trastevere is a church on the piazza of the same name in Rome's Trastevere district. Largely rebuilt under Pope Innocent II in the twelfth century, it has a central nave separated from its side aisles by 22 ancient granite columns, thought to have come from the Baths of Caracalla. The Romanesque bell tower and the façade restored by Carlo Fontana form part of its exterior. Inside, medieval mosaics above the altar include Innocent II holding a model of the church, with Pietro Cavallini's scenes from the Life of the Virgin below. Domenichino's painting of the Assumption sits within a wooden coffered ceiling. The Altemps Chapel houses the early medieval Madonna della Clemenza, while in Antonio Gherardi's Avila Chapel hidden windows illuminate a chamber above the dome.",
+    "sourceIds": ["wikipedia"],
+    "emphasis": ["22 ancient granite columns", "medieval mosaics", "Madonna della Clemenza"]
   },
   "topics": {
     "history": [
       {
-        "id": "fons-olei",
-        "description": "In 38 BC a gush of oil from underground, known as fons olei, was reported by Dio Cassius and St. Jerome.",
-        "sourceIds": ["wikipedia"],
-        "time": {
-          "startYear": -38,
-          "precision": "exact",
-          "granularity": "year"
-        }
-      },
-      {
-        "id": "callixtus-foundation",
-        "description": "Pope Callixtus I founded a house‑church on the site around 220, as recorded in the Liber Pontificalis.",
-        "sourceIds": ["wikipedia"],
-        "time": {
-          "startYear": 220,
-          "precision": "exact",
-          "granularity": "year"
-        }
-      },
-      {
-        "id": "early-4th-century",
-        "description": "The original church on the site was probably built in the early fourth century, making it one of Rome's oldest churches dedicated to Mary.",
-        "sourceIds": ["wikipedia"],
-        "time": {
-          "startYear": 300,
-          "precision": "approximate",
-          "endYear": 399,
-          "granularity": "century"
-        }
-      },
-      {
-        "id": "julius-rebuild",
-        "description": "Pope Julius I rebuilt the church on a larger scale in 340.",
-        "sourceIds": ["wikipedia"],
-        "time": {
-          "startYear": 340,
-          "precision": "exact",
-          "granularity": "year"
-        }
-      },
-      {
         "id": "innocent-reconstruction",
-        "description": "Under Pope Innocent II the church was re‑erected on its old foundations between 1140 and 1143.",
+        "description": "Pope Innocent II rebuilt the church on its earlier foundations between 1140 and 1143.",
         "sourceIds": ["wikipedia"],
         "time": {
           "startYear": 1140,
           "precision": "exact",
-          "endYear": 1143,
-          "granularity": "year"
+          "granularity": "year",
+          "endYear": 1143
         }
       },
       {
-        "id": "canonical-crown-1634",
-        "description": "In 1634 the icon of the Madonna di Strada Cupa was canonically crowned.",
-        "sourceIds": ["wikipedia"],
-        "time": {
-          "startYear": 1634,
-          "precision": "exact",
-          "granularity": "year"
-        }
-      },
-      {
-        "id": "canonical-crown-1659",
-        "description": "In 1659 the icon of Madonna della Clemenza was canonically crowned.",
-        "sourceIds": ["wikipedia"],
-        "time": {
-          "startYear": 1659,
-          "precision": "exact",
-          "granularity": "year"
-        }
-      },
-      {
-        "id": "gibbons-1887",
-        "description": "In 1887 Cardinal James Gibbons took possession of the titular church.",
-        "sourceIds": ["wikipedia"],
-        "time": {
-          "startYear": 1887,
-          "precision": "exact",
-          "granularity": "year"
-        }
-      },
-      {
-        "id": "prince-wedding-2014",
-        "description": "In 2014 the basilica hosted the wedding of Prince Amedeo of Belgium.",
-        "sourceIds": ["wikipedia"],
-        "time": {
-          "startYear": 2014,
-          "precision": "exact",
-          "granularity": "year"
-        }
-      },
-      {
-        "id": "pope-francis-2018",
-        "description": "In 2018 Pope Francis celebrated a mass at the basilica to mark the 50th anniversary of the Community of Sant'Egidio.",
-        "sourceIds": ["wikipedia"],
-        "time": {
-          "startYear": 2018,
-          "precision": "exact",
-          "granularity": "year"
-        }
+        "id": "callixtus-tradition",
+        "description": "Tradition links the site's earliest church to Pope Callixtus I, but the beginnings of Christian worship here remain uncertain.",
+        "sourceIds": ["wikipedia"]
       }
     ],
     "design": [
       {
-        "id": "campanile",
-        "description": "The Romanesque campanile dates from the 12th century.",
-        "sourceIds": ["wikipedia"]
-      },
-      {
-        "id": "façade-restoration",
-        "description": "Carlo Fontana restored the façade in 1702, adding a balustrade with statues of four popes.",
-        "sourceIds": ["wikipedia"]
-      },
-      {
         "id": "columns",
-        "description": "The 22 granite columns with Ionic and Corinthian capitals in the nave were taken from the Baths of Caracalla.",
+        "description": "The 22 ancient granite columns divide the central nave from the side aisles. They are thought to have come from the Baths of Caracalla.",
         "sourceIds": ["wikipedia"]
       },
       {
-        "id": "ceiling",
-        "description": "Domenichino painted the octagonal coffered ceiling in 1617, depicting the Assumption of the Virgin.",
-        "sourceIds": ["wikipedia"]
+        "id": "avila-light",
+        "description": "In the Avila Chapel, Antonio Gherardi used windows hidden from below to illuminate a chamber above the dome. Four small sculpted figures seem to carry a miniature temple within the opening, turning light into part of the architecture.",
+        "sourceIds": ["wikipedia"],
+        "emphasis": ["windows hidden from below"]
       },
       {
-        "id": "mosaics",
-        "description": "The basilica contains 12th‑ and late 13th‑century mosaics, including the Coronation of the Virgin (1130‑1143) and Life of the Virgin by Pietro Cavallini (1291).",
+        "id": "facade-and-tower",
+        "description": "The Romanesque bell tower dates from the twelfth century. Carlo Fontana restored the façade in 1702; a balustrade with statues of four popes stands above it.",
         "sourceIds": ["wikipedia"]
       }
     ],
     "art": [
       {
-        "id": "madonna-clemenza",
-        "description": "The Madonna della Clemenza is a 6th‑ to 9th‑century encaustic panel painting, one of the five oldest Marian icons from the medieval period.",
-        "sourceIds": ["wikipedia"]
-      },
-      {
-        "id": "cavallini-mosaic",
-        "description": "A 13th‑century mosaic of the Madonna and Child by Pietro Cavallini, located in a niche on the Romanesque campanile.",
-        "sourceIds": ["wikipedia"]
-      },
-      {
-        "id": "coronation-virgin",
-        "description": "A 12th‑century mosaic of the Coronation of the Virgin, depicting Pope Innocent II holding a model of the church.",
-        "sourceIds": ["wikipedia"]
-      },
-      {
         "id": "life-virgin",
-        "description": "Mosaic series on the Life of the Virgin by Pietro Cavallini (1291) adorns the basilica.",
+        "description": "The twelfth-century mosaic above the altar includes Pope Innocent II holding a model of the church. Below it, Pietro Cavallini's mosaics from 1291 show episodes from the Life of the Virgin.",
+        "sourceIds": ["wikipedia"],
+        "emphasis": ["holding a model of the church"]
+      },
+      {
+        "id": "madonna-clemenza",
+        "description": "The Altemps Chapel holds the Madonna della Clemenza, a painted image of the Virgin and Child dated between the sixth and ninth centuries.",
         "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "ceiling",
+        "description": "Domenichino painted the Assumption of the Virgin in 1617. The octagonal painting sits within the wooden coffered ceiling that he also designed.",
+        "sourceIds": ["wikipedia"],
+        "emphasis": ["Assumption of the Virgin"]
       }
     ]
   },
   "relatedPeople": [
-    {
-      "name": "Pope Callixtus I",
-      "personId": "pope-callixtus-i",
-      "sourceIds": ["wikipedia"]
-    },
     {
       "name": "Pope Innocent II",
       "personId": "pope-innocent-ii",
       "sourceIds": ["wikipedia"]
     },
     {
-      "name": "Pope Julius I",
-      "personId": "pope-julius-i",
+      "name": "Pietro Cavallini",
+      "personId": "pietro-cavallini",
       "sourceIds": ["wikipedia"]
     },
     {
-      "name": "Pope Alexander I",
-      "personId": "pope-alexander-i",
+      "name": "Domenichino",
+      "personId": "domenichino",
       "sourceIds": ["wikipedia"]
     },
     {
-      "name": "Pope John XI",
-      "personId": "pope-john-xi",
+      "name": "Carlo Fontana",
+      "personId": "carlo-fontana",
       "sourceIds": ["wikipedia"]
     },
     {
-      "name": "Pope Eugene IV",
-      "personId": "pope-eugene-iv",
-      "sourceIds": ["wikipedia"]
-    },
-    {
-      "name": "Giovanni Morone",
-      "personId": "giovanni-morone",
-      "sourceIds": ["wikipedia"]
-    },
-    {
-      "name": "Mark Sittich von Hohenems Altemps",
-      "personId": "mark-sittich-von-hohenems-altemps",
-      "sourceIds": ["wikipedia"]
-    },
-    {
-      "name": "Pietro Aldobrandini",
-      "personId": "pietro-aldobrandini",
-      "sourceIds": ["wikipedia"]
-    },
-    {
-      "name": "James Gibbons",
-      "personId": "james-gibbons",
+      "name": "Pope Callixtus I",
+      "personId": "pope-callixtus-i",
       "sourceIds": ["wikipedia"]
     }
   ]

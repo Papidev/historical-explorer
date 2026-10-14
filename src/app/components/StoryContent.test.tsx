@@ -8,10 +8,11 @@ describe("StoryContent", () => {
       <StoryContent
         period="Roman Republic"
         content={{
-          introduction: "Introduction",
+          introduction: "Introduction: C++ and <script> stay text. C++ appears again.",
+          introductionEmphasis: ["C++ and <script>", "C++", "missing phrase"],
           topics: {
             history: [
-              { description: "Undated history" },
+              { description: "Undated history", emphasis: ["Undated"] },
               {
                 description: "Medieval history",
                 time: { startYear: 1000, precision: "approximate", granularity: "century" },
@@ -34,7 +35,7 @@ describe("StoryContent", () => {
                 },
               },
             ],
-            design: [{ description: "Design insight" }],
+            design: [{ description: "Design insight", emphasis: ["Design"] }],
             art: [{ description: "Art insight" }],
           },
           relatedPeople: [{ name: "Related Person", personId: "related-person" }],
@@ -47,9 +48,18 @@ describe("StoryContent", () => {
     expect(html).toContain("c. 10th century AD");
     expect(html).not.toContain("1000 AD");
     expect(html.indexOf("Ancient history")).toBeLessThan(html.indexOf("Modern history"));
-    expect(html.indexOf("Modern history")).toBeLessThan(html.indexOf("Undated history"));
-    expect(html.indexOf("Undated history")).toBeLessThan(html.indexOf("Design insight"));
-    expect(html.indexOf("Design insight")).toBeLessThan(html.indexOf("Art insight"));
+    expect(html.indexOf("Modern history")).toBeLessThan(html.indexOf("Undated"));
+    expect(html.indexOf("Undated")).toBeLessThan(html.indexOf("Design"));
+    expect(html.indexOf("Design")).toBeLessThan(html.indexOf("Art insight"));
     expect(html.indexOf("Art insight")).toBeLessThan(html.indexOf("Related Person"));
+    expect(html).toContain(
+      '<strong class="font-semibold text-amber-900">C++ and &lt;script&gt;</strong>',
+    );
+    expect(html).toContain("C++ appears again.");
+    expect(html).not.toContain("<script>");
+    expect(html).not.toContain("missing phrase");
+    expect(html).toContain('<strong class="font-semibold text-amber-900">Undated</strong>');
+    expect(html).toContain('<strong class="font-semibold text-amber-900">Design</strong>');
+    expect(html).toContain("Art insight</li>");
   });
 });

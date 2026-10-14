@@ -16,8 +16,15 @@ const validStoryContent = (): StoryContent => ({
 });
 
 describe("Story Content", () => {
-  it("shows clean names while preserving distinct Person IDs and source names", () => {
+  it("keeps selected emphasis and distinct Person IDs in public content", () => {
     const content = validStoryContent();
+    content.introduction.emphasis = ["ancient cattle market"];
+    content.topics.design.push({
+      id: "temples",
+      description: "Temples stand beside the market.",
+      sourceIds: ["wikipedia"],
+      emphasis: ["Temples"],
+    });
     content.relatedPeople = [
       { name: "John Smith (architect)", personId: "smith-architect", sourceIds: ["wikipedia"] },
       { name: "John Smith (explorer)", personId: "smith-explorer", sourceIds: ["wikipedia"] },
@@ -27,6 +34,12 @@ describe("Story Content", () => {
       { name: "John Smith", personId: "smith-explorer" },
     ]);
     expect(content.relatedPeople[0].name).toBe("John Smith (architect)");
+    expect(toPublicStoryContent(parseStoryContent(content, ["wikipedia"]))).toMatchObject({
+      introductionEmphasis: ["ancient cattle market"],
+      topics: {
+        design: [{ description: "Temples stand beside the market.", emphasis: ["Temples"] }],
+      },
+    });
   });
   it("accepts up to ten Related People without requiring Insight links", () => {
     const content = validStoryContent();
@@ -36,6 +49,7 @@ describe("Story Content", () => {
       sourceIds: ["wikipedia"],
     }));
     expect(parseStoryContent(content, ["wikipedia"])).toEqual(content);
+    expect(toPublicStoryContent(content)).not.toHaveProperty("introductionEmphasis");
     expect(() =>
       parseStoryContent(
         {
@@ -107,7 +121,7 @@ describe("Story Content", () => {
     expect(() => parseStoryContent(content, ["wikipedia"])).toThrow(message);
   });
 
-  it("rejects duplicate Insight IDs and unknown Sources", () => {
+  it("rejects duplicate Insight IDs, unknown Sources, and emphasis absent from the text", () => {
     const duplicate = validStoryContent();
     const insight = { id: "same-id", description: "An insight.", sourceIds: ["wikipedia"] };
     duplicate.topics.design.push(insight);
@@ -117,5 +131,17 @@ describe("Story Content", () => {
     const danglingSource = validStoryContent();
     danglingSource.relatedPeople.push({ name: "Unknown", sourceIds: ["unknown"] });
     expect(() => parseStoryContent(danglingSource, ["wikipedia"])).toThrow("unknown Source");
+
+    const invalidEmphasis = validStoryContent();
+    invalidEmphasis.introduction.emphasis = ["not in the text"];
+    expect(() => parseStoryContent(invalidEmphasis, ["wikipedia"])).toThrow("absent from its text");
+    invalidEmphasis.introduction.emphasis = [];
+    invalidEmphasis.topics.art.push({
+      id: "art",
+      description: "An artwork.",
+      sourceIds: ["wikipedia"],
+      emphasis: ["another artwork"],
+    });
+    expect(() => parseStoryContent(invalidEmphasis, ["wikipedia"])).toThrow("absent from its text");
   });
 });

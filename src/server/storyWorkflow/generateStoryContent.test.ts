@@ -43,6 +43,7 @@ const generated = {
   introduction: {
     text: "Forum Boarium was Rome's ancient cattle market.",
     sourceIds: ["wikipedia"],
+    emphasis: ["ancient cattle market"],
   },
   topics: { history: [], design: [], art: [] },
   relatedPeople: [],

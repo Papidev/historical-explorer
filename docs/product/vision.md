@@ -6,7 +6,7 @@ Cultural Atlas helps visitors understand places through concise discoveries acro
 
 Each POI should offer a small cultural experience rather than an encyclopedia summary or generic tourist guide. Every insight should help the visitor notice a detail, understand the place, connect it to a wider context, remember something meaningful, or navigate a spatial relationship.
 
-Choose the strongest few source-supported ideas. Use text, images, maps, timelines, or other media only when they communicate those ideas well. Avoid promotional prose, decorative media, rigid templates, and excessive sections or clicks. Optional depth should add value without slowing the core experience.
+Describe the place and its interesting features with source-supported content. Include worthwhile details from its history, architecture, art, and other cultural aspects even when they do not share a single narrative theme. Select details for their interest and relevance to the place; a Story does not need a central argument or a fixed number of ideas. Use text, images, maps, timelines, or other media when they help communicate the content. Avoid promotional prose, decorative media, rigid templates, and excessive sections or clicks. Optional depth should add value without slowing the core experience.
 
 The map includes places with historical, artistic, architectural, archaeological, or cultural significance. Businesses qualify through that significance, not merely through tourist usefulness. Places valued primarily for natural interest remain an open scope decision.
 
@@ -24,9 +24,11 @@ Dedicated itinerary planning, expanded nearby discovery, post-visit review, and 
 
 Each POI has one canonical English Story: a required introduction, supported history/design/art content, and Related People. Omit unsupported material; topics may be empty and need not become separate UI sections.
 
+The Story Introduction gives a developed, self-contained description of the place: what and where it is, what its spaces or structure are like, and the interesting features, works, or objects it contains. Give readers a substantial first understanding of the place, with detail suited to the available Sources. This applies to every Story, without a fixed length or a requirement to give places with little supported material the same depth as richer ones.
+
 Write warm, precise contemporary English without promotional or academic language. Avoid assuming the reader is at the place, such as “you are looking at.” Useful observation prompts such as “a detail worth noticing is...” are acceptable.
 
-Story Content is structured plain text without Markdown, inline highlights, CSS, or presentation components. React owns presentation; MDX and configurable renderers remain future decisions. The Main Image is separate from Story Content and should help recognize the place or notice a meaningful visible detail.
+Story Content keeps its text plain, without Markdown, HTML, CSS, or presentation components. An introduction or topic item may separately identify exact phrases worth emphasizing. Emphasis is optional and selective: use it only when it helps readers recognize an important feature, orient themselves, or find an interesting detail. A paragraph or Story may have none. React displays selected phrases in bold with a restrained color; it owns the presentation. MDX and configurable renderers remain future decisions. The Main Image is separate from Story Content and should help recognize the place or notice a meaningful visible detail.
 
 AI drafts source-grounded content, proposes an image, and may suggest suitable media and editorial rationale. The Curator can review individual content blocks, edit, and enrich them; AI is not the final editorial authority. Draft introductions, topic items, and Related People retain Source References for review. Never invent facts, coordinates, media, or licenses.
 

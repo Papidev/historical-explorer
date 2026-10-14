@@ -2,12 +2,14 @@ import { getPersonDisplayName } from "@/utils/getPersonDisplayName";
 import { z } from "zod";
 
 const sourceIdsSchema = z.array(z.string().min(1)).min(1);
+const emphasisSchema = z.array(z.string().trim().min(1)).optional();
 
 const storyInsightSchema = z
   .object({
     id: z.string().min(1),
     description: z.string().min(1),
     sourceIds: sourceIdsSchema,
+    emphasis: emphasisSchema,
   })
   .strict();
 
@@ -77,6 +79,7 @@ const storyContentStructureSchema = z
       .object({
         text: z.string().min(1),
         sourceIds: sourceIdsSchema,
+        emphasis: emphasisSchema,
       })
       .strict(),
     topics: z
@@ -111,6 +114,18 @@ const sortHistoryInsights = (insights: HistoryInsight[]) =>
 
 export const parseStoryContentStructure = (value: unknown) => {
   const storyContent = storyContentStructureSchema.parse(value);
+  for (const { text, emphasis } of [
+    storyContent.introduction,
+    ...Object.values(storyContent.topics).flatMap((insights) =>
+      insights.map(({ description, emphasis }) => ({ text: description, emphasis })),
+    ),
+  ]) {
+    for (const phrase of emphasis ?? []) {
+      if (!text.includes(phrase)) {
+        throw new Error(`Story emphasis phrase ${JSON.stringify(phrase)} is absent from its text.`);
+      }
+    }
+  }
   return {
     ...storyContent,
     topics: {
@@ -154,23 +169,34 @@ export const parseStoryContent = (value: unknown, sourceIds: string[]) => {
 
 export type PublicStoryContent = {
   introduction: string;
+  introductionEmphasis?: string[];
   topics: {
-    history: Array<Pick<HistoryInsight, "description" | "time">>;
-    design: Array<Pick<StoryInsight, "description">>;
-    art: Array<Pick<StoryInsight, "description">>;
+    history: Array<Pick<HistoryInsight, "description" | "time" | "emphasis">>;
+    design: Array<Pick<StoryInsight, "description" | "emphasis">>;
+    art: Array<Pick<StoryInsight, "description" | "emphasis">>;
   };
   relatedPeople: Array<Pick<RelatedPerson, "name" | "personId">>;
 };
 
 export const toPublicStoryContent = (storyContent: StoryContent): PublicStoryContent => ({
   introduction: storyContent.introduction.text,
+  ...(storyContent.introduction.emphasis?.length
+    ? { introductionEmphasis: storyContent.introduction.emphasis }
+    : {}),
   topics: {
-    history: storyContent.topics.history.map(({ description, time }) => ({
+    history: storyContent.topics.history.map(({ description, time, emphasis }) => ({
       description,
       ...(time ? { time } : {}),
+      ...(emphasis?.length ? { emphasis } : {}),
     })),
-    design: storyContent.topics.design.map(({ description }) => ({ description })),
-    art: storyContent.topics.art.map(({ description }) => ({ description })),
+    design: storyContent.topics.design.map(({ description, emphasis }) => ({
+      description,
+      ...(emphasis?.length ? { emphasis } : {}),
+    })),
+    art: storyContent.topics.art.map(({ description, emphasis }) => ({
+      description,
+      ...(emphasis?.length ? { emphasis } : {}),
+    })),
   },
   relatedPeople: storyContent.relatedPeople.map(({ name, personId }) => ({
     name: getPersonDisplayName(name),

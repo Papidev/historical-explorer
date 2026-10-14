@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.3.0
+
+### Minor Changes
+
+- Add optional, selectively chosen bold and warm-colored emphasis to Story introductions and topic items. Enrich three Rome reference Stories and update editorial guidance for descriptive, source-grounded content.
+
 ## 0.2.8
 
 ### Patch Changes
