@@ -71,5 +71,11 @@
       "personId": "ramiro-i-of-asturias",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Aula regia",
+      "url": "https://en.wikipedia.org/wiki/Aula_regia"
+    }
   ]
 }

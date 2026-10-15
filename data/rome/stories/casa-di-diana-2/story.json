@@ -86,5 +86,11 @@
       "personId": "diana",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Caseggiato di Diana",
+      "url": "https://it.wikipedia.org/wiki/Caseggiato_di_Diana"
+    }
   ]
 }

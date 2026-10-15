@@ -215,5 +215,11 @@
       "personId": "ippolito-aldobrandini-1596-1638",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Castello di Torrenova",
+      "url": "https://it.wikipedia.org/wiki/Castello_di_Torrenova"
+    }
   ]
 }

@@ -223,5 +223,11 @@
       "personId": "gian-lorenzo-bernini",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "San Sebastiano fuori le mura",
+      "url": "https://en.wikipedia.org/wiki/San_Sebastiano_fuori_le_mura"
+    }
   ]
 }

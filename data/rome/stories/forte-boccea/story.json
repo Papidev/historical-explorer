@@ -57,5 +57,11 @@
       "personId": "vittorio-emanuele-ii",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Forte Boccea (Rome)",
+      "url": "https://en.wikipedia.org/wiki/Forte_Boccea_(Rome)"
+    }
   ]
 }

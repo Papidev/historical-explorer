@@ -142,5 +142,11 @@
       "personId": "carlo-maratta",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Sant'Andrea al Quirinale",
+      "url": "https://en.wikipedia.org/wiki/Sant'Andrea_al_Quirinale"
+    }
   ]
 }

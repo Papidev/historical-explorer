@@ -42,5 +42,11 @@
       "personId": "venus-mythology",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Mitreo delle Pareti Dipinte",
+      "url": "https://it.wikipedia.org/wiki/Mitreo_delle_Pareti_Dipinte"
+    }
   ]
 }

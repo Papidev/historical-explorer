@@ -82,5 +82,11 @@
       "personId": "benedetto-cairoli",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Monument to the Cairoli Brothers",
+      "url": "https://en.wikipedia.org/wiki/Monument_to_the_Cairoli_Brothers"
+    }
   ]
 }

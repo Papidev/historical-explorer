@@ -43,5 +43,11 @@
       "personId": "giuseppe-albanese-ruffo",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Forte Tiburtina",
+      "url": "https://it.wikipedia.org/wiki/Forte_Tiburtina"
+    }
   ]
 }

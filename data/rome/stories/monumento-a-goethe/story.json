@@ -143,5 +143,11 @@
       "personId": "oreste-figlio-di-agamennone",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Monumento a Goethe (Roma)",
+      "url": "https://it.wikipedia.org/wiki/Monumento_a_Goethe_(Roma)"
+    }
   ]
 }

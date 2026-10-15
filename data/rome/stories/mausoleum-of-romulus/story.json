@@ -96,5 +96,11 @@
       "personId": "torlonia",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Mausoleum of Maxentius",
+      "url": "https://en.wikipedia.org/wiki/Mausoleum_of_Maxentius"
+    }
   ]
 }

@@ -165,5 +165,11 @@
       "personId": "benito-mussolini",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Piazza del Campidoglio",
+      "url": "https://en.wikipedia.org/wiki/Piazza_del_Campidoglio"
+    }
   ]
 }

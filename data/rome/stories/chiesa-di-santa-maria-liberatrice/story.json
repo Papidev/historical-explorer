@@ -110,5 +110,11 @@
       "personId": "giovanni-lajolo",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Santa Maria Liberatrice a Monte Testaccio",
+      "url": "https://en.wikipedia.org/wiki/Santa_Maria_Liberatrice_a_Monte_Testaccio"
+    }
   ]
 }

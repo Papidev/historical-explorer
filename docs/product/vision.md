@@ -17,7 +17,7 @@ The map is the discovery entry point; the Story explains why a place matters. Se
 
 A POI appears only when it has workflow-generated, valid versioned Story Content, a selected Main Image with source, rights, license, and attribution, and saved records for every retained Related Person. Imported places and metadata-only POIs remain internal. Explicit approval is a possible future evolution, not a current requirement; content reaches the public site through deployment.
 
-“Insight” means cultural content shown to the visitor. Unpublished proposals are draft content; internal rationale is Editorial Notes. Sources, processing metadata, AI reasoning, and Editorial Notes stay out of the default visitor experience. Selected sources may later appear in a useful “learn more” section.
+“Insight” means cultural content shown to the visitor. Unpublished proposals are draft content; internal rationale is Editorial Notes. Sources, processing metadata, AI reasoning, and Editorial Notes stay out of the default visitor experience. A quiet Wikipedia link at the end of Story and Person details supports optional deeper reading in a new tab. Other cited language editions remain behind a compact disclosure so the app’s content stays primary.
 
 Dedicated itinerary planning, expanded nearby discovery, post-visit review, and deeper reading remain possible future modes.
 

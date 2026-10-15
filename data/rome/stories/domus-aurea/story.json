@@ -158,5 +158,11 @@
       "personId": "vitellius",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Domus Aurea",
+      "url": "https://en.wikipedia.org/wiki/Domus_Aurea"
+    }
   ]
 }

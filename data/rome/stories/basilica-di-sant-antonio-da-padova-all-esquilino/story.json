@@ -117,5 +117,11 @@
       "personId": "cl-udio-hummes",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Sant'Antonio da Padova in Via Merulana",
+      "url": "https://en.wikipedia.org/wiki/Sant'Antonio_da_Padova_in_Via_Merulana"
+    }
   ]
 }

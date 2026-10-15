@@ -118,5 +118,11 @@
       "personId": "rodolfo-lanciani",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Caserma dei Vigili",
+      "url": "https://it.wikipedia.org/wiki/Caserma_dei_Vigili"
+    }
   ]
 }

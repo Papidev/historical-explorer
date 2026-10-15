@@ -97,5 +97,11 @@
       "personId": "hercules",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Arcus Argentariorum",
+      "url": "https://en.wikipedia.org/wiki/Arcus_Argentariorum"
+    }
   ]
 }

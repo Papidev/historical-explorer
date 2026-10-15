@@ -68,5 +68,11 @@
       "personId": "amazons",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Domus Augustana",
+      "url": "https://en.wikipedia.org/wiki/Domus_Augustana"
+    }
   ]
 }

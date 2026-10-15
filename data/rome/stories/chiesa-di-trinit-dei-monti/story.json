@@ -172,5 +172,11 @@
       "personId": "philippe-barbarin",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Trinità dei Monti",
+      "url": "https://en.wikipedia.org/wiki/Trinit%C3%A0_dei_Monti"
+    }
   ]
 }

@@ -157,5 +157,11 @@
       "personId": "san-vincenzo-di-saragozza",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Chiesa dei Santi Vincenzo e Anastasio alle Tre Fontane",
+      "url": "https://it.wikipedia.org/wiki/Chiesa_dei_Santi_Vincenzo_e_Anastasio_alle_Tre_Fontane"
+    }
   ]
 }

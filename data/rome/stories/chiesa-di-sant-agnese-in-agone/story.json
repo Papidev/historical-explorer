@@ -194,5 +194,11 @@
       "personId": "giovanni-battista-gaulli",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Sant'Agnese in Agone",
+      "url": "https://en.wikipedia.org/wiki/Sant'Agnese_in_Agone"
+    }
   ]
 }

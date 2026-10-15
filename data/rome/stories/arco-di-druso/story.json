@@ -52,5 +52,11 @@
       "personId": "caracalla",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Arch of Drusus",
+      "url": "https://en.wikipedia.org/wiki/Arch_of_Drusus"
+    }
   ]
 }

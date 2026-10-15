@@ -42,5 +42,11 @@
       }
     ]
   },
-  "relatedPeople": []
+  "relatedPeople": [],
+  "wikipediaSources": [
+    {
+      "title": "Aula dei Mensores",
+      "url": "https://it.wikipedia.org/wiki/Aula_dei_Mensores"
+    }
+  ]
 }

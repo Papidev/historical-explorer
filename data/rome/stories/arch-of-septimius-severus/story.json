@@ -94,5 +94,11 @@
       "personId": "pertinax",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Arch of Septimius Severus",
+      "url": "https://en.wikipedia.org/wiki/Arch_of_Septimius_Severus"
+    }
   ]
 }

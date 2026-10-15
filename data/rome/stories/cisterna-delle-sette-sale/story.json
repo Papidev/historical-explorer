@@ -71,5 +71,11 @@
       }
     ]
   },
-  "relatedPeople": []
+  "relatedPeople": [],
+  "wikipediaSources": [
+    {
+      "title": "The Seven Halls",
+      "url": "https://en.wikipedia.org/wiki/The_Seven_Halls"
+    }
+  ]
 }

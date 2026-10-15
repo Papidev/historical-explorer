@@ -43,5 +43,11 @@
       "personId": "luigi-canina",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Casal Rotondo",
+      "url": "https://en.wikipedia.org/wiki/Casal_Rotondo"
+    }
   ]
 }

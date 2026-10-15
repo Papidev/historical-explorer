@@ -199,5 +199,11 @@
       "personId": "heracles",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Palatine Hill",
+      "url": "https://en.wikipedia.org/wiki/Palatine_Hill"
+    }
   ]
 }

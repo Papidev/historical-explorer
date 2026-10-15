@@ -97,5 +97,11 @@
       "personId": "pedro-barreto",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Santi Pietro e Paolo a Via Ostiense",
+      "url": "https://en.wikipedia.org/wiki/Santi_Pietro_e_Paolo_a_Via_Ostiense"
+    }
   ]
 }

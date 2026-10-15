@@ -1,6 +1,7 @@
 import { mainImageCandidateSchema, type MainImageCandidate } from "@/server/wikiPipeline/types";
 import { getPersonDisplayName } from "@/utils/getPersonDisplayName";
 import { z } from "zod";
+import { toWikipediaSources, type WikipediaSource } from "@/server/wikipediaSources";
 
 const sourceIdsSchema = z.array(z.string().min(1)).min(1);
 
@@ -100,6 +101,7 @@ export const personSchema = z
 export type Person = z.infer<typeof personSchema>;
 
 export type PublicPerson = {
+  wikipediaSources?: WikipediaSource[];
   id: string;
   name: string;
   description: [string, string];
@@ -110,6 +112,13 @@ export type PublicPerson = {
 };
 
 export const toPublicPerson = (person: Person): PublicPerson => ({
+  wikipediaSources: toWikipediaSources(
+    [person.source, ...(person.additionalSources ?? [])].filter(({ id }) =>
+      [...person.content.description, ...person.content.curiosities].some(({ sourceIds }) =>
+        sourceIds.includes(id),
+      ),
+    ),
+  ),
   id: person.id,
   name: getPersonDisplayName(person.name),
   description: person.content.description.map(({ text }) => text) as [string, string],

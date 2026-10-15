@@ -87,5 +87,11 @@
       "personId": "pope-callixtus-i",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Santa Maria in Trastevere",
+      "url": "https://en.wikipedia.org/wiki/Santa_Maria_in_Trastevere"
+    }
   ]
 }

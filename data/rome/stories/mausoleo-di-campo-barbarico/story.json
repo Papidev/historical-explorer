@@ -107,5 +107,11 @@
       "personId": "goti",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Mausoleo di Campo Barbarico",
+      "url": "https://it.wikipedia.org/wiki/Mausoleo_di_Campo_Barbarico"
+    }
   ]
 }

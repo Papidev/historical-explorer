@@ -80,5 +80,11 @@
       "personId": "pope-pius-ix",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Centrale Montemartini",
+      "url": "https://it.wikipedia.org/wiki/Centrale_Montemartini"
+    }
   ]
 }

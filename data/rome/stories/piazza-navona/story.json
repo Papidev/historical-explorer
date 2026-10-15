@@ -221,5 +221,11 @@
       "personId": "pietro-da-cortona",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Piazza Navona",
+      "url": "https://en.wikipedia.org/wiki/Piazza_Navona"
+    }
   ]
 }

@@ -82,5 +82,11 @@
       "personId": "pope-gregory-xvi",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Santa Maria in Palmis",
+      "url": "https://en.wikipedia.org/wiki/Santa_Maria_in_Palmis"
+    }
   ]
 }

@@ -193,5 +193,11 @@
       "personId": "antiochus-the-great",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Largo di Torre Argentina",
+      "url": "https://en.wikipedia.org/wiki/Largo_di_Torre_Argentina"
+    }
   ]
 }
