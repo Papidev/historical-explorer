@@ -236,6 +236,10 @@ Public homepage, POI preview, Story, and Person images use `next/image` with res
 
 Local transfer samples on October 10, 2026: Piazza Navona's 1,492,910-byte source becomes 37,620 bytes at 384 px in WebP; the Cloisters of Bramante's 177,020-byte source becomes 17,202 bytes. These are image-response measurements, not full-page performance benchmarks.
 
+## Content admin
+
+Use **Expand table** in the POI toolbar to give the table almost the full viewport while keeping search and status filters available. **Restore layout** brings back generation controls. AI settings, shared artifacts, queue instructions, and column metadata expand on demand.
+
 ## Security Notes
 
 Admin is temporary, unauthenticated, and available only with `pnpm dev`. Its page and AI-progress API use `.dev.tsx`/`.dev.ts`, excluded from production builds; admin UI is absent from production bundles and missing routes return 404. Server Actions reject production execution before reading inputs or doing work. Dev is not localhost-restricted; use a trusted network.
