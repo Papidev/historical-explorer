@@ -46,8 +46,10 @@ Use `patch` for fixes and small content/UI updates, `minor` for new features, an
 `major` for incompatible changes. Internal documentation and changes limited to
 GitHub Actions workflows (including action dependency updates) and the other
 CI/release automation files allowed by `scripts/check-release.mjs` do not
-require an increment. Application dependency manifests and lockfile updates still
-require an application release. Versions remain `0.x` during initial development.
+require an increment. Changes limited to dependency sections in `package.json`
+and the pnpm lockfile also do not require an application release. Other manifest
+changes, such as scripts or engines, still require a release. Versions remain
+`0.x` during initial development.
 
 ```bash
 pnpm changeset
@@ -71,31 +73,13 @@ artifact. A release tag identifies its source commit and does not confirm that
 Vercel deployment succeeded. Preview deploys can have the same version with
 different commit SHAs. No npm publishing or additional secrets are required.
 
-Dependabot package and lockfile updates also produce a patch release of the
-application.
-GitHub Actions updates are skipped by the release automation. For package and
-lockfile updates, the
-`Prepare Dependabot releases` workflow prepares and consumes an English
-Changeset automatically after the first CI run on a bot PR, and refreshes every open
-bot PR when `main` changes. Repeated runs preserve exactly one patch increment
-from current `main` for package and lockfile updates. Dependency major versions do not automatically imply an
-application major release. Normal CI and review still apply before merging.
-The generated release commit includes `[skip ci]` to suppress the duplicate
-`pull_request` run that GitHub requires a maintainer to approve after a
-`GITHUB_TOKEN` push. The automation explicitly dispatches CI on the prepared
-release branch instead; `workflow_dispatch` is unaffected by `[skip ci]` and
-checks the release version, lint, tests, build, and production startup.
-
-No GitHub App or additional secrets are needed. A `workflow_run` job uses the
-built-in `GITHUB_TOKEN` to push the prepared release and explicitly dispatch CI
-on the updated branch. Dispatched CI runs have read-only permissions and do not
-trigger another preparation run. The privileged workflow executes only code
-and tooling from `main`, without sharing dependency caches with PR jobs; it
-treats PR changes as data. It supports package dependencies, the pnpm lockfile
-and GitHub Actions updates. Conflicting dependency changes or unrelated file
-changes stop preparation rather than overwrite work. The workflow can also be
-run manually to refresh existing PRs. Repository or organization restrictions
-on Actions write permissions still apply.
+Dependabot updates use the normal pull request CI without generating a Changeset,
+version bump, changelog entry, or release commit. CI still runs lint, tests,
+build, and production startup checks for package and lockfile updates. Dependency
+updates deploy with the existing app version; `/api/version` identifies each
+build by its commit SHA. Application changes included alongside dependency
+updates still require a release. Run `node --test scripts/check-release.tests.mjs`
+to verify the release policy against temporary Git repositories.
 
 The `Dependabot auto-merge` workflow enables squash auto-merge for verified
 Dependabot patch and minor updates; major updates require manual review.

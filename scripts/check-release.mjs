@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
 import { readFileSync, readdirSync } from "node:fs";
+import { isDeepStrictEqual } from "node:util";
 
 const base = process.argv[2] ?? "origin/main";
 const previous = JSON.parse(
@@ -31,18 +32,36 @@ if (current.version === previous.version && !initialRelease) {
         file.startsWith("docs/") ||
         file.startsWith(".agents/") ||
         /^\.github\/workflows\/[^/]+\.ya?ml$/.test(file) ||
+        file === "pnpm-lock.yaml" ||
+        (file === "package.json" &&
+          isDeepStrictEqual(
+            ...[previous, current].map((manifest) =>
+              Object.fromEntries(
+                Object.entries(manifest).filter(
+                  ([key]) =>
+                    ![
+                      "dependencies",
+                      "devDependencies",
+                      "optionalDependencies",
+                      "peerDependencies",
+                    ].includes(key),
+                ),
+              ),
+            ),
+          )) ||
         [
           "README.md",
           "AGENTS.md",
           ".changeset/README.md",
           ".github/dependabot.yml",
           "scripts/check-release.mjs",
+          "scripts/check-release.tests.mjs",
           "scripts/prepare-dependabot-release.mjs",
         ].includes(file),
     ),
     "Application changes require a version increment. Run pnpm changeset, then pnpm release:version.",
   );
-  console.log("Documentation or release automation only: no release required.");
+  console.log("Documentation, dependency updates or release automation only: no release required.");
 } else {
   const versionPattern = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$/;
   assert.match(previous.version, versionPattern);
