@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.5.3
+
+### Patch Changes
+
+- Update @testing-library/user-event from ^14.6.6 to ^14.6.7.
+
 ## 0.5.2
 
 ### Patch Changes
