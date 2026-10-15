@@ -77,5 +77,11 @@
       "personId": "rodolfo-lanciani",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Domus di Apuleio",
+      "url": "https://it.wikipedia.org/wiki/Domus_di_Apuleio"
+    }
   ]
 }

@@ -52,5 +52,11 @@
       "personId": "lari-divinit",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Caseggiato del Larario",
+      "url": "https://it.wikipedia.org/wiki/Caseggiato_del_Larario"
+    }
   ]
 }

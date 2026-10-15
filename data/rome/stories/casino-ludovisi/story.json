@@ -158,5 +158,11 @@
       "personId": "galileo-galilei",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Casino di Villa Boncompagni Ludovisi",
+      "url": "https://en.wikipedia.org/wiki/Casino_di_Villa_Boncompagni_Ludovisi"
+    }
   ]
 }

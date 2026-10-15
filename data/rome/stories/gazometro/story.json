@@ -145,5 +145,11 @@
       "personId": "ernesto-nathan",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Gazometro di Roma",
+      "url": "https://it.wikipedia.org/wiki/Gazometro_di_Roma"
+    }
   ]
 }

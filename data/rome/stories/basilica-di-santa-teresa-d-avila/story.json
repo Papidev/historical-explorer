@@ -112,5 +112,11 @@
       "personId": "l-szl-l-kai",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Santa Teresa, Rome",
+      "url": "https://en.wikipedia.org/wiki/Santa_Teresa%2C_Rome"
+    }
   ]
 }

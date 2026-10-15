@@ -117,5 +117,11 @@
       "personId": "neri-maria-corsini",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Galleria Nazionale d'Arte Antica",
+      "url": "https://en.wikipedia.org/wiki/Galleria_Nazionale_d'Arte_Antica"
+    }
   ]
 }

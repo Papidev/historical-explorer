@@ -68,5 +68,11 @@
       "personId": "giovanni-battista-piranesi",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Berretta del prete",
+      "url": "https://it.wikipedia.org/wiki/Berretta_del_prete"
+    }
   ]
 }

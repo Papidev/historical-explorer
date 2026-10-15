@@ -307,5 +307,11 @@
       "personId": "davide-rivalta",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Tenuta presidenziale di Castelporziano",
+      "url": "https://it.wikipedia.org/wiki/Tenuta_presidenziale_di_Castelporziano"
+    }
   ]
 }

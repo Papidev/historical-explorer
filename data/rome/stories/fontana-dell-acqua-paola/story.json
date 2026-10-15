@@ -148,5 +148,11 @@
       "personId": "paolo-sorrentino",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Fontana dell'Acqua Paola",
+      "url": "https://en.wikipedia.org/wiki/Fontana_dell'Acqua_Paola"
+    }
   ]
 }

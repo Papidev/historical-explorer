@@ -41,5 +41,11 @@
       "personId": "barberini",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Castello Barberini",
+      "url": "https://it.wikipedia.org/wiki/Castello_Barberini"
+    }
   ]
 }

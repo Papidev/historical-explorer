@@ -31,5 +31,11 @@
       }
     ]
   },
-  "relatedPeople": []
+  "relatedPeople": [],
+  "wikipediaSources": [
+    {
+      "title": "Domus delle Gorgoni",
+      "url": "https://it.wikipedia.org/wiki/Domus_delle_Gorgoni"
+    }
+  ]
 }

@@ -58,5 +58,11 @@
       "personId": "ammiano-marcellino",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Statua equestre di Traiano",
+      "url": "https://it.wikipedia.org/wiki/Statua_equestre_di_Traiano"
+    }
   ]
 }

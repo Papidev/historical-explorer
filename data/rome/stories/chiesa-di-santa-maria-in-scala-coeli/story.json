@@ -117,5 +117,11 @@
       "personId": "pope-john-paul-ii",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Santa Maria Scala Coeli",
+      "url": "https://en.wikipedia.org/wiki/Santa_Maria_Scala_Coeli"
+    }
   ]
 }

@@ -73,5 +73,11 @@
       "personId": "umberto-bosco",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Istituto di studi pirandelliani e sul teatro contemporaneo",
+      "url": "https://it.wikipedia.org/wiki/Istituto_di_studi_pirandelliani_e_sul_teatro_contemporaneo"
+    }
   ]
 }

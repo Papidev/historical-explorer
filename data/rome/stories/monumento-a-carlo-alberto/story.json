@@ -37,5 +37,11 @@
       "personId": "raffaello-romanelli",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Equestrian statue of Charles Albert of Sardinia",
+      "url": "https://en.wikipedia.org/wiki/Equestrian_statue_of_Charles_Albert_of_Sardinia"
+    }
   ]
 }

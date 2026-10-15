@@ -229,5 +229,11 @@
       "personId": "peter-anton-von-verschaffelt",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Castel Sant'Angelo",
+      "url": "https://en.wikipedia.org/wiki/Castel_Sant'Angelo"
+    }
   ]
 }

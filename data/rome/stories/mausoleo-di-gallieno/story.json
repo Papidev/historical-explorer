@@ -92,5 +92,11 @@
       "personId": "gavin-hamilton",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Mausoleo di Gallieno",
+      "url": "https://it.wikipedia.org/wiki/Mausoleo_di_Gallieno"
+    }
   ]
 }

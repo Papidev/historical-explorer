@@ -119,5 +119,11 @@
       "personId": "paul-the-apostle",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Column of Marcus Aurelius",
+      "url": "https://en.wikipedia.org/wiki/Column_of_Marcus_Aurelius"
+    }
   ]
 }

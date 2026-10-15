@@ -80,5 +80,11 @@
       }
     ]
   },
-  "relatedPeople": []
+  "relatedPeople": [],
+  "wikipediaSources": [
+    {
+      "title": "Mitreo dei Serpenti",
+      "url": "https://it.wikipedia.org/wiki/Mitreo_dei_Serpenti"
+    }
+  ]
 }

@@ -124,5 +124,11 @@
       "personId": "francesco-di-giorgio-martini",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Castello di Giulio II",
+      "url": "https://it.wikipedia.org/wiki/Castello_di_Giulio_II"
+    }
   ]
 }

@@ -182,10 +182,19 @@ describe("Story Workflow Interface", () => {
       content.introduction.sourceIds = ["wikipedia-it"];
       await repository.replaceStoryContent(pointOfInterest.id, content, checkpoint);
       expect((await repository.get(pointOfInterest.id))?.sources).toEqual([source, italian]);
+      expect((await repository.get(pointOfInterest.id))?.storyContent?.wikipediaSources).toEqual([
+        { title: italian.title, url: italian.url },
+      ]);
       // Partial reacquisition must leave the previous Story readable until its replacement is ready.
       await repository.replaceSources(pointOfInterest.id, [source], checkpoint);
-      expect((await repository.get(pointOfInterest.id))?.storyContent).toEqual(content);
+      expect((await repository.get(pointOfInterest.id))?.storyContent).toEqual({
+        ...content,
+        wikipediaSources: [{ title: italian.title, url: italian.url }],
+      });
       await repository.replaceStoryContent(pointOfInterest.id, storyContent(), checkpoint);
+      expect((await repository.get(pointOfInterest.id))?.storyContent?.wikipediaSources).toEqual([
+        { title: source.title, url: source.url },
+      ]);
       await repository.reset(pointOfInterest.id);
       expect(await repository.get(pointOfInterest.id)).toBeUndefined();
     } finally {

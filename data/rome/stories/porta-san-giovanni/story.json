@@ -144,5 +144,15 @@
         "wikipedia-it"
       ]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Porta San Giovanni (Rome)",
+      "url": "https://en.wikipedia.org/wiki/Porta_San_Giovanni_(Rome)"
+    },
+    {
+      "title": "Porta San Giovanni (Roma)",
+      "url": "https://it.wikipedia.org/wiki/Porta_San_Giovanni_(Roma)"
+    }
   ]
 }

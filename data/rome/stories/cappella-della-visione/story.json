@@ -75,5 +75,11 @@
       "personId": "almaz-n",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Cappella della Visione di Sant'Ignazio di Loyola",
+      "url": "https://it.wikipedia.org/wiki/Cappella_della_Visione_di_Sant'Ignazio_di_Loyola"
+    }
   ]
 }

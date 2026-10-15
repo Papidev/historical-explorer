@@ -120,5 +120,11 @@
       "personId": "etruschi",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Monumento naturale di Galeria Antica",
+      "url": "https://it.wikipedia.org/wiki/Monumento_naturale_di_Galeria_Antica"
+    }
   ]
 }

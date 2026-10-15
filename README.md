@@ -228,6 +228,10 @@ The selected POI is stored in `?poiId=<id>`. Opening a different POI adds a brow
 
 Story loading feedback appears only after 200 ms, avoiding a brief loading-message flash for fast responses. Missing-content feedback appears only once the request finishes.
 
+Stories and Person details offer a quiet **Read on Wikipedia** link at the end of the content. It opens the cited English article when available, otherwise the first cited edition. **Other languages** expands a compact row of additional cited editions directly below the link. Every Wikipedia link opens in a new tab. Only acquired, cited article URLs are shown; missing links are omitted rather than guessed.
+
+Story saves retain `wikipediaSources` (article title and URL) in versioned Story Content, independently of local Source text. Person links use the Source metadata already in their versioned records. The generated public catalog includes these links, so production does not need local Sources. Older Stories without this optional metadata remain readable; existing Rome Stories have been populated from their saved Source metadata without regenerating their content.
+
 Public homepage, POI preview, Story, and Person images use `next/image` with responsive sizes and reserved layout space. Next.js resizes and caches images and serves WebP to supported browsers. The image optimizer accepts HTTPS Wikimedia Commons images from `thumb.wikimedia.org` and `upload.wikimedia.org`; query strings are allowed for Wikimedia's thumbnail metadata. Preview and Story image-error fallbacks remain available.
 
 Local transfer samples on October 10, 2026: Piazza Navona's 1,492,910-byte source becomes 37,620 bytes at 384 px in WebP; the Cloisters of Bramante's 177,020-byte source becomes 17,202 bytes. These are image-response measurements, not full-page performance benchmarks.

@@ -53,5 +53,11 @@
       "personId": "antonio-gandin",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Forte Pietralata",
+      "url": "https://it.wikipedia.org/wiki/Forte_Pietralata"
+    }
   ]
 }

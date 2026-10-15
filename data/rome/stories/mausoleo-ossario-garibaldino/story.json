@@ -138,5 +138,11 @@
       "personId": "edoardo-negri-de-salvi",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Mausoleo Ossario Garibaldino",
+      "url": "https://it.wikipedia.org/wiki/Mausoleo_Ossario_Garibaldino"
+    }
   ]
 }

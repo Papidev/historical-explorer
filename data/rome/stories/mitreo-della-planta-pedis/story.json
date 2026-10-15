@@ -53,5 +53,11 @@
       "personId": "valerian-emperor",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Mitreo della Planta Pedis",
+      "url": "https://it.wikipedia.org/wiki/Mitreo_della_Planta_Pedis"
+    }
   ]
 }

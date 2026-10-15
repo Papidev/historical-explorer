@@ -138,5 +138,11 @@
       "personId": "st-phanie-guerzoni",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Cattedrale dei Sacri Cuori di Gesù e Maria",
+      "url": "https://it.wikipedia.org/wiki/Cattedrale_dei_Sacri_Cuori_di_Ges%C3%B9_e_Maria"
+    }
   ]
 }

@@ -47,5 +47,11 @@
       }
     ]
   },
-  "relatedPeople": []
+  "relatedPeople": [],
+  "wikipediaSources": [
+    {
+      "title": "Colombario costantiniano",
+      "url": "https://it.wikipedia.org/wiki/Colombario_costantiniano"
+    }
+  ]
 }

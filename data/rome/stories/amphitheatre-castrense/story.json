@@ -82,5 +82,11 @@
       "personId": "tienne-dup-rac",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Amphitheatrum Castrense",
+      "url": "https://en.wikipedia.org/wiki/Amphitheatrum_Castrense"
+    }
   ]
 }

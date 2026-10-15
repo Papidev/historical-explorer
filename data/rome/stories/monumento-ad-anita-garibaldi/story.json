@@ -162,5 +162,11 @@
       "personId": "carlo-fontana-scultore",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Monumento ad Anita Garibaldi",
+      "url": "https://it.wikipedia.org/wiki/Monumento_ad_Anita_Garibaldi"
+    }
   ]
 }
