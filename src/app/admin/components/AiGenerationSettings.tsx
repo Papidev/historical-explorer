@@ -54,7 +54,8 @@ export const AiGenerationSettings = ({
               const mode = checked ? "cloud" : "local";
               selectionRef.current = {
                 mode,
-                model: selectedAiModelByMode[mode] || getModeOption(aiModeOptions, mode).defaultModel,
+                model:
+                  selectedAiModelByMode[mode] || getModeOption(aiModeOptions, mode).defaultModel,
               };
               setSelectedAiMode(mode);
             }}

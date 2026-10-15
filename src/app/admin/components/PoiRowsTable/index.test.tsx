@@ -23,6 +23,38 @@ afterEach(() => {
 afterAll(() => server.close());
 
 describe("POI actions", () => {
+  it("keeps search available when expanding the table and restores generation controls", async () => {
+    const user = userEvent.setup();
+    render(
+      <PoiRowsTable
+        rows={[]}
+        globalArtifacts={[]}
+        aiSelectionRef={{ current: { mode: "local", model: "test-model" } }}
+        generateDraftStoryAction={async () => {}}
+        generateDraftStoriesAction={async () => []}
+        refreshStoryContentAction={async () => {}}
+        resolveRelatedPeopleAction={async () => {}}
+        refreshMainImageCandidatesAction={async () => {}}
+        refreshPoiTypesAction={async () => {}}
+        selectMainImageCandidateAction={async () => {}}
+      />,
+    );
+
+    await user.type(screen.getByRole("searchbox", { name: "Search POIs by name" }), "Aqueduct");
+    await user.click(screen.getByRole("button", { name: "Expand table" }));
+    expect(screen.getByRole("button", { name: "Restore layout" })).toHaveAttribute(
+      "aria-pressed",
+      "true",
+    );
+    expect(screen.getByRole("searchbox", { name: "Search POIs by name" })).toHaveValue("Aqueduct");
+    expect(screen.getByRole("group", { name: "Show status" })).toBeVisible();
+    expect(screen.queryByRole("spinbutton", { name: "Stories per run" })).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Restore layout" }));
+    expect(screen.getByRole("spinbutton", { name: "Stories per run" })).toBeVisible();
+    expect(screen.getByRole("searchbox", { name: "Search POIs by name" })).toHaveValue("Aqueduct");
+  });
+
   it.each([true, false])(
     "keeps a missing Wikipedia source error in its Wikipedia cell (log available: %s)",
     async (hasLog) => {

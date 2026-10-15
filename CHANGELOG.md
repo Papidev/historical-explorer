@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.6.1
+
+### Patch Changes
+
+- Give the admin POI table more space with compact controls and an expanded view, and keep type mapping notifications at the bottom of the viewport.
+
 ## 0.6.0
 
 ### Minor Changes

@@ -97,7 +97,10 @@ export const AdminDashboard = ({
         }
         className="flex min-h-0 flex-1 flex-col"
       >
-        <TabList aria-label="Admin content" className="mb-2 flex shrink-0 gap-8 border-b border-gray-200">
+        <TabList
+          aria-label="Admin content"
+          className="mb-2 flex shrink-0 gap-8 border-b border-gray-200"
+        >
           {["POIs", "People", "Type mappings"].map((label) => (
             <Tab
               key={label}
