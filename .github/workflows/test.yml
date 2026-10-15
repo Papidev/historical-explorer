@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
     inputs:
       release_base:
-        description: Main commit used to prepare the dependency release
+        description: Base commit for the release check
         required: true
         type: string
 
@@ -67,6 +67,10 @@ jobs:
         env:
           RELEASE_BASE: ${{ inputs.release_base || github.event.pull_request.base.sha || github.event.before }}
         run: pnpm release:check "$RELEASE_BASE"
+
+      - name: Test release policy
+        if: steps.changes.outputs.run_checks == 'true'
+        run: node --test scripts/check-release.tests.mjs
 
       - name: Lint
         if: steps.changes.outputs.run_checks == 'true'
