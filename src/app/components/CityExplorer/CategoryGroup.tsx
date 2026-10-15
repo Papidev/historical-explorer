@@ -1,5 +1,4 @@
 import { useId, useState } from "react";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import type { Poi } from "@/types/Poi";
 import {
   DEFAULT_POI_CATEGORY_DEFINITIONS,
@@ -40,7 +39,7 @@ export const CategoryGroup = ({
     <div
       className={
         category === "Churches & cathedrals"
-          ? "rounded-lg border border-yellow-300 bg-yellow-50 p-2 text-yellow-950"
+          ? "-mx-2 rounded-lg bg-yellow-50 p-2 text-yellow-950 ring-1 ring-yellow-300"
           : undefined
       }
     >
@@ -55,24 +54,18 @@ export const CategoryGroup = ({
             children.some(({ name }) => selectedCategories.includes(name))
           }
           onToggle={() => onToggleCategory(category)}
+          disclosure={
+            children.length
+              ? {
+                  expanded,
+                  controls: subcategoriesId,
+                  label: `${expanded ? "Hide" : "Show"} subcategories for ${definitions.find((definition) => definition.id === category)?.name ?? category}`,
+                  onToggle: () => setExpanded(!expanded),
+                }
+              : undefined
+          }
         />
-        {children.length > 0 ? (
-          <button
-            type="button"
-            aria-label={`${expanded ? "Hide" : "Show"} subcategories for ${definitions.find((definition) => definition.id === category)?.name ?? category}`}
-            aria-expanded={expanded}
-            aria-controls={subcategoriesId}
-            onClick={() => setExpanded(!expanded)}
-            className="flex size-7 shrink-0 cursor-pointer items-center justify-center rounded text-zinc-400 transition-colors hover:bg-zinc-100 hover:text-zinc-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-700"
-          >
-            <ChevronDownIcon
-              aria-hidden="true"
-              className={`size-4 transition-transform ${expanded ? "rotate-180" : ""}`}
-            />
-          </button>
-        ) : (
-          <span aria-hidden="true" className="w-7 shrink-0" />
-        )}
+        {!children.length && <span aria-hidden="true" className="w-7 shrink-0" />}
       </div>
       {children.length > 0 && (
         <div

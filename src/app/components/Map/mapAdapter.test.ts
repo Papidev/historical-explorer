@@ -155,6 +155,43 @@ describe("createMapLibreAdapter", () => {
 
   afterEach(cleanup);
 
+  it("retains selection when markers are created again and restores category styling when cleared", () => {
+    const adapter = createMapLibreAdapter({ center: [12.481, 41.889], zoom: 15 });
+    const container = document.createElement("div");
+    document.body.append(container);
+    adapter.updateSelectedPoi("forum-boarium");
+    adapter.mount(container);
+    adapter.updatePois(pois);
+
+    expect(
+      screen.getByRole("button", { name: "Open details for Forum Boarium", pressed: true }),
+    ).toHaveClass("selected-poi-marker");
+    adapter.updateSelectedPoi("cloisters-of-bramante");
+    expect(
+      screen.getByRole("button", { name: "Open details for Forum Boarium", pressed: false }),
+    ).not.toHaveClass("selected-poi-marker");
+    expect(
+      screen.getByRole("button", { name: "Open details for Cloisters of Bramante", pressed: true }),
+    ).toHaveClass("selected-poi-marker", "religious-site-marker");
+
+    adapter.updatePois([pois[1]]);
+    expect(
+      screen.getByRole("button", { name: "Open details for Cloisters of Bramante", pressed: true }),
+    ).toHaveClass("selected-poi-marker");
+    adapter.updateSelectedPoi(null);
+    expect(
+      screen.getByRole("button", {
+        name: "Open details for Cloisters of Bramante",
+        pressed: false,
+      }),
+    ).toHaveClass("religious-site-marker");
+    expect(
+      screen.getByRole("button", { name: "Open details for Cloisters of Bramante" }),
+    ).not.toHaveClass("selected-poi-marker");
+
+    adapter.destroy();
+  });
+
   it("shows the matching preview on mouse hover and keyboard focus", async () => {
     const adapter = createMapLibreAdapter({ center: [12.481, 41.889], zoom: 15 });
     const container = document.createElement("div");

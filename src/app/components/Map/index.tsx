@@ -10,6 +10,7 @@ type Props = {
   coordinates: [number, number];
   zoom: number;
   pois: Poi[];
+  selectedPoiId?: string | null;
   categoryDefinitions?: PoiCategoryDefinition[];
   onZoomChange?: (zoom: number) => void;
   onOpenPoiDetails?: (poiId: string) => void;
@@ -28,6 +29,7 @@ export const Map = ({
   coordinates,
   zoom,
   pois,
+  selectedPoiId = null,
   categoryDefinitions = DEFAULT_POI_CATEGORY_DEFINITIONS,
   onZoomChange,
   onOpenPoiDetails,
@@ -104,6 +106,10 @@ export const Map = ({
   useEffect(() => {
     adapterRef.current?.updatePois(pois, categoryDefinitions);
   }, [pois, categoryDefinitions]);
+
+  useEffect(() => {
+    adapterRef.current?.updateSelectedPoi(selectedPoiId);
+  }, [selectedPoiId]);
 
   return <div ref={containerRef} className="h-full w-full" />;
 };

@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.5.2
+
+### Patch Changes
+
+- Highlight the selected POI in green while keeping map previews above markers and preserving native marker borders. Improve the filters panel with a compact fixed header, aligned category rows, and full-row accordion controls separate from checkbox selection.
+
 ## 0.5.1
 
 ### Patch Changes

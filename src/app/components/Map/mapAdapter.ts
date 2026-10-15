@@ -29,6 +29,7 @@ export interface MapAdapter {
   mount: (container: HTMLDivElement) => void;
   updateView: (view: MapViewUpdate) => void;
   updatePois: (points: Poi[], definitions?: PoiCategoryDefinition[]) => void;
+  updateSelectedPoi: (poiId: string | null) => void;
   getZoom: () => number | null;
   setOnZoomChange: (handler: ((zoom: number) => void) | null) => void;
   setOnOpenPoiDetails: (handler: ((poiId: string) => void) | null) => void;
@@ -37,6 +38,7 @@ export interface MapAdapter {
 }
 
 type MarkerBinding = {
+  poiId: string;
   marker: Marker;
   removeListeners: () => void;
 };
@@ -44,6 +46,7 @@ type MarkerBinding = {
 export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
   let map: MapLibreMap | null = null;
   let markers: MarkerBinding[] = [];
+  let selectedPoiId: string | null = null;
   let previewPopup: maplibregl.Popup | null = null;
   let previewRoot: Root | null = null;
   let previewContainer: HTMLDivElement | null = null;
@@ -57,6 +60,13 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
   let onMapClick: (() => void) | null = null;
 
   const handleMapClick = () => onMapClick?.();
+
+  const updateMarkerSelection = () => {
+    markers.forEach(({ poiId, marker }) => {
+      marker.getElement().classList.toggle("selected-poi-marker", poiId === selectedPoiId);
+      marker.getElement().setAttribute("aria-pressed", String(poiId === selectedPoiId));
+    });
+  };
 
   const cancelPreviewClose = () => {
     if (previewCloseTimeout) {
@@ -150,6 +160,7 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
       const element = marker.getElement();
       let isTouchInteraction = false;
 
+      element.classList.add("poi-marker");
       if (isReligious) {
         // Scope styling to MapLibre’s generated marker; preserve its shape and shadow.
         element.classList.add("religious-site-marker");
@@ -203,6 +214,7 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
       element.addEventListener("keydown", handleKeyDown);
 
       return {
+        poiId: poi.id,
         marker,
         removeListeners: () => {
           element.removeEventListener("pointerdown", handlePointerDown);
@@ -215,6 +227,7 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
         },
       };
     });
+    updateMarkerSelection();
   };
 
   return {
@@ -238,6 +251,7 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
       previewContainer.addEventListener("focusout", handlePreviewFocusOut);
       previewRoot = createRoot(previewContainer);
       previewPopup = new maplibregl.Popup({
+        className: "poi-preview-popup",
         closeButton: false,
         closeOnClick: false,
         focusAfterOpen: false,
@@ -329,6 +343,10 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
       }
 
       setMarkers(points);
+    },
+    updateSelectedPoi(poiId) {
+      selectedPoiId = poiId;
+      updateMarkerSelection();
     },
     getZoom() {
       return map ? map.getZoom() : null;
