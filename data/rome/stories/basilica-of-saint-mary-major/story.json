@@ -208,5 +208,11 @@
       "personId": "pope-clement-viii",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Santa Maria Maggiore",
+      "url": "https://en.wikipedia.org/wiki/Santa_Maria_Maggiore"
+    }
   ]
 }

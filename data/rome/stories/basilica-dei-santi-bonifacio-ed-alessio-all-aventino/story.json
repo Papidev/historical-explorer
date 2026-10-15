@@ -239,5 +239,11 @@
       "personId": "st-thomas-of-canterbury",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Santi Bonifacio ed Alessio",
+      "url": "https://en.wikipedia.org/wiki/Santi_Bonifacio_ed_Alessio"
+    }
   ]
 }

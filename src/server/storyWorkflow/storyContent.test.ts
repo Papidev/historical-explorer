@@ -16,17 +16,62 @@ const validStoryContent = (): StoryContent => ({
 });
 
 describe("Story Content", () => {
-  it("shows clean names while preserving distinct Person IDs and source names", () => {
+  it("preserves Markdown and its format in the public Story, including mentioned people", () => {
     const content = validStoryContent();
+    content.textFormat = "markdown";
+    content.introduction.text =
+      "A temple beside the river.\n\n**John Smith** restored its *bronze doors*.";
+    content.topics.art = [
+      { id: "doors", description: "The **bronze doors** survive.", sourceIds: ["wikipedia"] },
+    ];
+    content.relatedPeople = [
+      { name: "John Smith", personId: "john-smith", sourceIds: ["wikipedia"] },
+    ];
+
+    expect(toPublicStoryContent(parseStoryContent(content, ["wikipedia"]))).toMatchObject({
+      textFormat: "markdown",
+      introduction: content.introduction.text,
+      topics: { art: [{ description: "The **bronze doors** survive." }] },
+      relatedPeople: [{ name: "John Smith", personId: "john-smith" }],
+    });
+    expect(toPublicStoryContent(validStoryContent())).not.toHaveProperty("textFormat");
+    expect(() => parseStoryContent({ ...content, textFormat: "mdx" }, ["wikipedia"])).toThrow();
+  });
+
+  it("keeps selective emphasis and only mentioned people with distinct Person IDs", () => {
+    const content = validStoryContent();
+    content.introduction.text += " JOHN  SMITH worked here. The annex was restored.";
+    content.introduction.emphasis = ["ancient cattle market"];
+    content.topics.design.push({
+      id: "temples",
+      description: "Temples stand beside the market.",
+      sourceIds: ["wikipedia"],
+      emphasis: ["Temples"],
+    });
+    content.topics.history.push({
+      id: "commission",
+      description: "Commissioned by Pope Innocent\u202fX.",
+      sourceIds: ["wikipedia"],
+    });
     content.relatedPeople = [
       { name: "John Smith (architect)", personId: "smith-architect", sourceIds: ["wikipedia"] },
       { name: "John Smith (explorer)", personId: "smith-explorer", sourceIds: ["wikipedia"] },
+      { name: "Filippo Baldinucci", personId: "filippo-baldinucci", sourceIds: ["wikipedia"] },
+      { name: "Pope Innocent X", personId: "pope-innocent-x", sourceIds: ["wikipedia"] },
+      { name: "Ann", personId: "ann", sourceIds: ["wikipedia"] },
     ];
     expect(toPublicStoryContent(content).relatedPeople).toEqual([
       { name: "John Smith", personId: "smith-architect" },
       { name: "John Smith", personId: "smith-explorer" },
+      { name: "Pope Innocent X", personId: "pope-innocent-x" },
     ]);
     expect(content.relatedPeople[0].name).toBe("John Smith (architect)");
+    expect(toPublicStoryContent(parseStoryContent(content, ["wikipedia"]))).toMatchObject({
+      introductionEmphasis: ["ancient cattle market"],
+      topics: {
+        design: [{ description: "Temples stand beside the market.", emphasis: ["Temples"] }],
+      },
+    });
   });
   it("accepts up to ten Related People without requiring Insight links", () => {
     const content = validStoryContent();
@@ -36,6 +81,7 @@ describe("Story Content", () => {
       sourceIds: ["wikipedia"],
     }));
     expect(parseStoryContent(content, ["wikipedia"])).toEqual(content);
+    expect(toPublicStoryContent(content)).not.toHaveProperty("introductionEmphasis");
     expect(() =>
       parseStoryContent(
         {
@@ -107,7 +153,7 @@ describe("Story Content", () => {
     expect(() => parseStoryContent(content, ["wikipedia"])).toThrow(message);
   });
 
-  it("rejects duplicate Insight IDs and unknown Sources", () => {
+  it("rejects duplicate Insight IDs, unknown Sources, and emphasis absent from the text", () => {
     const duplicate = validStoryContent();
     const insight = { id: "same-id", description: "An insight.", sourceIds: ["wikipedia"] };
     duplicate.topics.design.push(insight);
@@ -117,5 +163,17 @@ describe("Story Content", () => {
     const danglingSource = validStoryContent();
     danglingSource.relatedPeople.push({ name: "Unknown", sourceIds: ["unknown"] });
     expect(() => parseStoryContent(danglingSource, ["wikipedia"])).toThrow("unknown Source");
+
+    const invalidEmphasis = validStoryContent();
+    invalidEmphasis.introduction.emphasis = ["not in the text"];
+    expect(() => parseStoryContent(invalidEmphasis, ["wikipedia"])).toThrow("absent from its text");
+    invalidEmphasis.introduction.emphasis = [];
+    invalidEmphasis.topics.art.push({
+      id: "art",
+      description: "An artwork.",
+      sourceIds: ["wikipedia"],
+      emphasis: ["another artwork"],
+    });
+    expect(() => parseStoryContent(invalidEmphasis, ["wikipedia"])).toThrow("absent from its text");
   });
 });

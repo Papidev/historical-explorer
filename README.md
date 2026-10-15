@@ -11,7 +11,7 @@ pnpm install
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000). Installation activates Husky: staged files are formatted with Prettier and staged JS/TS checked/fixed with ESLint. Run `pnpm lint` before a PR.
+Open [http://localhost:3000](http://localhost:3000). Installation activates Husky: staged files are formatted with Prettier and staged JS/TS checked/fixed with ESLint. Select checks according to [Testing & Verification](AGENTS.md#testing--verification).
 
 | Route              | Purpose                              |
 | ------------------ | ------------------------------------ |
@@ -44,9 +44,12 @@ The initial tracked release establishes the existing `0.1.0` as the baseline;
 the increment requirement applies to subsequent application changes.
 Use `patch` for fixes and small content/UI updates, `minor` for new features, and
 `major` for incompatible changes. Internal documentation and changes limited to
-the CI/release automation files allowed by `scripts/check-release.mjs` do not
-require an increment. Dependency manifests and lockfile updates still require
-an application release. Versions remain `0.x` during initial development.
+GitHub Actions workflows (including action dependency updates) and the other
+CI/release automation files allowed by `scripts/check-release.mjs` do not
+require an increment. Changes limited to dependency sections in `package.json`
+and the pnpm lockfile also do not require an application release. Other manifest
+changes, such as scripts or engines, still require a release. Versions remain
+`0.x` during initial development.
 
 ```bash
 pnpm changeset
@@ -70,28 +73,19 @@ artifact. A release tag identifies its source commit and does not confirm that
 Vercel deployment succeeded. Preview deploys can have the same version with
 different commit SHAs. No npm publishing or additional secrets are required.
 
-Dependabot updates also produce a patch release of the application. The
-`Prepare Dependabot releases` workflow prepares and consumes an English
-Changeset automatically after the first CI run on a bot PR, and refreshes every open
-bot PR when `main` changes. Repeated runs preserve exactly one patch increment
-from current `main`. Dependency major versions do not automatically imply an
-application major release. Normal CI and review still apply before merging.
-The generated release commit includes `[skip ci]` to suppress the duplicate
-`pull_request` run that GitHub requires a maintainer to approve after a
-`GITHUB_TOKEN` push. The automation explicitly dispatches CI on the prepared
-release branch instead; `workflow_dispatch` is unaffected by `[skip ci]` and
-checks the release version, lint, tests, build, and production startup.
+Dependabot updates use the normal pull request CI without generating a Changeset,
+version bump, changelog entry, or release commit. CI still runs lint, tests,
+build, and production startup checks for package and lockfile updates. Dependency
+updates deploy with the existing app version; `/api/version` identifies each
+build by its commit SHA. Application changes included alongside dependency
+updates still require a release. Run `node --test scripts/check-release.tests.mjs`
+to verify the release policy against temporary Git repositories.
 
-No GitHub App or additional secrets are needed. A `workflow_run` job uses the
-built-in `GITHUB_TOKEN` to push the prepared release and explicitly dispatch CI
-on the updated branch. Dispatched CI runs have read-only permissions and do not
-trigger another preparation run. The privileged workflow executes only code
-and tooling from `main`, without sharing dependency caches with PR jobs; it
-treats PR changes as data. It supports package dependencies, the pnpm lockfile
-and GitHub Actions updates. Conflicting dependency changes or unrelated file
-changes stop preparation rather than overwrite work. The workflow can also be
-run manually to refresh existing PRs. Repository or organization restrictions
-on Actions write permissions still apply.
+The `Dependabot auto-merge` workflow enables squash auto-merge for verified
+Dependabot patch and minor updates; major updates require manual review.
+Enable **Allow auto-merge** in repository settings and require the `ci` status
+check on `main` so GitHub waits for CI before merging. Required reviews still
+apply. The workflow reads PR metadata without checking out or executing PR code.
 
 ### Public catalog deployment
 
@@ -126,7 +120,24 @@ Person records and Main Image Candidate artifacts are validated with Zod when re
 
 Person records, Story Content, and Main Image Candidate artifacts are also validated before saving. Story saves check only their referenced Person records; unresolved references remain valid drafts. Validation failures preserve previous content and checkpoints. Unreferenced People and images awaiting Story Content are retained for reuse and retry.
 
-Wikipedia Sources use a text snapshot and metadata with ID `wikipedia`, title, and URL. Generation validates Source References; admin displays them when local Sources exist, while public responses omit them.
+The allowed Wikipedia editions are English (`en`), Italian (`it`), French (`fr`), German (`de`), and Spanish (`es`), configured in `src/server/wikiPipeline/acquireWikipediaSources.ts`. Wikipedia acquisition combines English with the official languages of the POI's country that are in the allowed edition list, using Wikidata country (P17), official language (P37), Wikimedia language code (P424), and sitelinks. People also include the official languages of their countries of citizenship (P27) and retain the originating POI's Wikidata context for regeneration. Story and Person content remains English. Missing country/language metadata or unavailable editions produce warnings; generation continues with usable Sources and stops only when none is available. Local editions complement English; conflicting claims retain attribution or are omitted.
+
+The primary Wikipedia Source retains its text snapshot and metadata with ID `wikipedia`, title, and URL. Additional editions use IDs such as `wikipedia-it` and are saved in `<poi-id>.sources.json` beside the primary snapshot. Person additional Sources are stored in `<local-data>/generated/people/<person-id>.sources.json`, with reference metadata in the versioned Person record. Existing single-source records remain readable. Generation validates Source References; admin displays them when local Sources exist, while public responses omit them. Existing Stories and People are updated only by their generation/refresh actions; this rule does not regenerate saved content automatically.
+
+New Story Content uses `textFormat: "markdown"`. Write Markdown inside
+`introduction.text` and topic `description` strings: blank lines separate
+paragraphs, `**important detail**` applies the app’s colored bold style, and
+`*work title*` adds italics. Lists, links, headings, and block quotes are supported;
+React owns their styling. The Main Image stays separate; embedded images, HTML,
+and JSX are not rendered as Story elements. Generation favors short paragraphs
+and selective bold, without a fixed quota.
+
+Existing Stories without `textFormat` retain plain-text rendering and their
+optional `emphasis` arrays; no saved content is migrated automatically. When
+editing a Story to use Markdown, set `textFormat: "markdown"` at the top level
+and write emphasis directly as `**bold**` instead of using the legacy arrays.
+People descriptions remain plain text. See the
+[Story quality references](docs/product/story-quality.md).
 
 ## Editorial workflow
 
@@ -209,11 +220,17 @@ Story generation uses `jsonrepair` for malformed JSON, including stray quotes be
 
 The OpenFreeMap basemap shows cultural labels/icons: museums, monuments/memorials, castles/ruins, archaeology, worship, theatres, galleries, artworks, arts centres, and libraries. Other business/service/transit/sport POIs and generic attractions are hidden; roads, buildings, geographic labels, and curated markers remain.
 
+Religious sites use golden-yellow map markers with a dark outline and a matching dot in the category filters, including places that also have other categories.
+
 Filters and Stories open in panels over the map, with full-width panels on mobile and resizable panels on larger screens. Open filters with the Filters tab or swipe right from the map’s left edge. All available categories start selected. Categories are collapsed under **All categories** until expanded with its arrow; category and subcategory labels are ordered alphabetically. The selection summary shows All, None, or the number of selected available leaf categories without counting parents twice. Clearing **All categories** also expands the category list. The **All categories** checkbox clears all categories when checked, selects all when unchecked or partially selected, and shows a dash for partial selection. To show only museums, clear all categories and select Museum. Categories match with OR semantics; no categories selected means no POIs on the map or in the list. See [POI Categories](docs/poi-categories.md#visitor-filtering) for filtering rules and [Entity Discovery](docs/entity-discovery.md) for planned discovery features.
 
 The selected POI is stored in `?poiId=<id>`. Opening a different POI adds a browser-history entry; closing its Story, clicking the map, or excluding it through filters removes `poiId` in a new entry. Other query parameters and the URL fragment are preserved. Refresh and shared links reopen the selected Story; Back/Forward restore selection without reloading the map. If history restores a POI excluded by the current filters, all categories are selected so the restored place is visible. Unknown POI IDs leave the Story panel closed. Reopening the same POI does not add a duplicate history entry.
 
 Story loading feedback appears only after 200 ms, avoiding a brief loading-message flash for fast responses. Missing-content feedback appears only once the request finishes.
+
+Stories and Person details offer a quiet **Read on Wikipedia** link at the end of the content. It opens the cited English article when available, otherwise the first cited edition. **Other languages** expands a compact row of additional cited editions directly below the link. Every Wikipedia link opens in a new tab. Only acquired, cited article URLs are shown; missing links are omitted rather than guessed.
+
+Story saves retain `wikipediaSources` (article title and URL) in versioned Story Content, independently of local Source text. Person links use the Source metadata already in their versioned records. The generated public catalog includes these links, so production does not need local Sources. Older Stories without this optional metadata remain readable; existing Rome Stories have been populated from their saved Source metadata without regenerating their content.
 
 Public homepage, POI preview, Story, and Person images use `next/image` with responsive sizes and reserved layout space. Next.js resizes and caches images and serves WebP to supported browsers. The image optimizer accepts HTTPS Wikimedia Commons images from `thumb.wikimedia.org` and `upload.wikimedia.org`; query strings are allowed for Wikimedia's thumbnail metadata. Preview and Story image-error fallbacks remain available.
 
@@ -233,4 +250,4 @@ Licensed Tailwind Plus source is a local reference in gitignored `.tailwind-plus
 
 Track bugs, improvements, and future ideas in GitHub Issues and this repository's Cultural Atlas Project. Backlog status records an idea without scheduling implementation; conditional work retains its revisit conditions in the issue.
 
-[Product vision](docs/product/vision.md) · [Glossary](CONTEXT.md) · [Entity discovery](docs/entity-discovery.md)
+[Product vision](docs/product/vision.md) · [Story quality references](docs/product/story-quality.md) · [Glossary](CONTEXT.md) · [Entity discovery](docs/entity-discovery.md)

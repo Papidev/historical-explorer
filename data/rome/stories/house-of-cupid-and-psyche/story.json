@@ -87,5 +87,11 @@
       "personId": "psiche-mitologia",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Domus di Amore e Psiche",
+      "url": "https://it.wikipedia.org/wiki/Domus_di_Amore_e_Psiche"
+    }
   ]
 }

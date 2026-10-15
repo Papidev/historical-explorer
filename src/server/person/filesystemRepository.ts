@@ -51,15 +51,44 @@ export const createFilesystemPersonRepository = (
     },
     findByWikidataId: (wikidataId: string) =>
       repository.list().find((person) => person.wikidataId === wikidataId),
-    replace: (person: Person, source: PersonSource) => {
+    retainSourceContext: (personId: string, wikidataIds: string[]) => {
+      const person = repository.get(personId);
+      if (!person) throw new Error("Person not found.");
+      const context = [...new Set([...(person.sourceContextWikidataIds ?? []), ...wikidataIds])];
+      if (context.length === (person.sourceContextWikidataIds?.length ?? 0)) return;
+      writeAtomically(
+        personPath(personId),
+        `${JSON.stringify({ ...person, sourceContextWikidataIds: context }, null, 2)}\n`,
+      );
+    },
+    replace: (person: Person, source: PersonSource, additionalSources: PersonSource[] = []) => {
       personSchema.parse(person);
       writeAtomically(sourcePath(person.id), `${source.content.trim()}\n`);
+      if (additionalSources.length || person.additionalSources?.length) {
+        writeAtomically(
+          path.join(generatedPath(), `${person.id}.sources.json`),
+          `${JSON.stringify(additionalSources, null, 2)}\n`,
+        );
+      }
       writeAtomically(personPath(person.id), `${JSON.stringify(person, null, 2)}\n`);
     },
     readSource: (person: Person): PersonSource => ({
       ...person.source,
       content: readFileSync(sourcePath(person.id), "utf-8").trim(),
     }),
+    readSources: (person: Person): PersonSource[] => [
+      repository.readSource(person),
+      ...(person.additionalSources?.length
+        ? person.additionalSources.map((metadata) => {
+            const sources = JSON.parse(
+              readFileSync(path.join(generatedPath(), `${person.id}.sources.json`), "utf-8"),
+            ) as PersonSource[];
+            const source = sources.find(({ id }) => id === metadata.id);
+            if (!source) throw new Error(`Missing Person Source ${metadata.id}.`);
+            return { ...metadata, content: source.content };
+          })
+        : []),
+    ],
   };
 
   return repository;

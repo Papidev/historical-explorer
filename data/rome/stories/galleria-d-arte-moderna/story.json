@@ -157,5 +157,11 @@
       "personId": "arturo-dazzi",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Galleria Comunale d'Arte Moderna, Rome",
+      "url": "https://en.wikipedia.org/wiki/Galleria_Comunale_d'Arte_Moderna%2C_Rome"
+    }
   ]
 }

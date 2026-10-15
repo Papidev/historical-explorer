@@ -117,5 +117,11 @@
       "personId": "lenny-kravitz",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Angel of Grief",
+      "url": "https://en.wikipedia.org/wiki/Angel_of_Grief"
+    }
   ]
 }

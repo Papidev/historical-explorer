@@ -67,5 +67,11 @@
       "personId": "pietro-lombardi-architect",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Fontana dei Libri",
+      "url": "https://en.wikipedia.org/wiki/Fontana_dei_Libri"
+    }
   ]
 }

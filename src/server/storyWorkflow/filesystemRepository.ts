@@ -22,6 +22,7 @@ import type { StoryWorkflowRepository } from "./createStoryWorkflow";
 import {
   buildOutputFilePath,
   buildSourceMetadataFilePath,
+  buildAdditionalSourcesFilePath,
   getDefaultOutputDir,
 } from "@/server/wikiPipeline/io";
 import { sanitizePoiIdForFile } from "@/server/wikiPipeline/normalize";
@@ -29,6 +30,7 @@ import type { Source } from "./types";
 import { personRepository } from "@/server/person/filesystemRepository";
 import { mainImageCandidatesArtifactSchema } from "@/server/wikiPipeline/types";
 import { parseStoryContent } from "./storyContent";
+import { toWikipediaSources } from "@/server/wikipediaSources";
 
 const writeAtomically = (filePath: string, content: string) => {
   const temporaryFilePath = `${filePath}.tmp`;
@@ -43,27 +45,33 @@ const deleteFile = (filePath: string) => {
   }
 };
 
+const readSources = (city: string, poiId: string) => {
+  const sourceFilePath = buildOutputFilePath(getDefaultOutputDir(city), poiId);
+  const sourceMetadataFilePath = buildSourceMetadataFilePath(getDefaultOutputDir(city), poiId);
+  const sourceContent = existsSync(sourceFilePath)
+    ? readFileSync(sourceFilePath, "utf-8").trim()
+    : undefined;
+  const sourceMetadata = existsSync(sourceMetadataFilePath)
+    ? (JSON.parse(readFileSync(sourceMetadataFilePath, "utf-8")) as Omit<Source, "content">)
+    : undefined;
+  const sources: Source[] =
+    sourceContent && sourceMetadata ? [{ ...sourceMetadata, content: sourceContent }] : [];
+  const additionalSourcesPath = buildAdditionalSourcesFilePath(getDefaultOutputDir(city), poiId);
+  if (existsSync(additionalSourcesPath)) {
+    sources.push(...(JSON.parse(readFileSync(additionalSourcesPath, "utf-8")) as Source[]));
+  }
+  return sources;
+};
+
 export const createFilesystemStoryWorkflowRepository = (city: string): StoryWorkflowRepository => ({
   get: async (poiId) => {
-    const sourceFilePath = buildOutputFilePath(getDefaultOutputDir(city), poiId);
-    const sourceMetadataFilePath = buildSourceMetadataFilePath(getDefaultOutputDir(city), poiId);
-    const sourceContent = existsSync(sourceFilePath)
-      ? readFileSync(sourceFilePath, "utf-8").trim()
-      : undefined;
-    const sourceMetadata = existsSync(sourceMetadataFilePath)
-      ? (JSON.parse(readFileSync(sourceMetadataFilePath, "utf-8")) as Omit<Source, "content">)
-      : undefined;
-    const sources =
-      sourceContent && sourceMetadata ? [{ ...sourceMetadata, content: sourceContent }] : [];
-    const storyContent = readStoryContent(
-      city,
-      poiId,
-      sources.length > 0 ? sources.map((source) => source.id) : undefined,
-    )?.content;
+    const sources = readSources(city, poiId);
+    // A refreshed Source set may temporarily differ from the previous saved Story.
+    const storyContent = readStoryContent(city, poiId)?.content;
     const mainImageArtifact = readMainImageCandidateArtifact(city, poiId);
     const metadata = readGenerationMetadata(city)[sanitizePoiIdForFile(poiId)] ?? {};
     if (
-      !sourceContent &&
+      sources.length === 0 &&
       !storyContent &&
       !mainImageArtifact &&
       !metadata.wiki &&
@@ -92,15 +100,16 @@ export const createFilesystemStoryWorkflowRepository = (city: string): StoryWork
     };
   },
   replaceSources: async (poiId, sources, checkpoint) => {
-    if (sources.length !== 1) {
-      throw new Error("Filesystem Source persistence currently requires one Source.");
-    }
     const [source] = sources;
     if (!source) {
       throw new Error("A Source is required.");
     }
     const outputFilePath = buildOutputFilePath(getDefaultOutputDir(city), poiId);
     writeAtomically(outputFilePath, `${source.content.trim()}\n`);
+    writeAtomically(
+      buildAdditionalSourcesFilePath(getDefaultOutputDir(city), poiId),
+      `${JSON.stringify(sources.slice(1), null, 2)}\n`,
+    );
     writeAtomically(
       buildSourceMetadataFilePath(getDefaultOutputDir(city), poiId),
       `${JSON.stringify(
@@ -132,14 +141,35 @@ export const createFilesystemStoryWorkflowRepository = (city: string): StoryWork
     );
   },
   replaceStoryContent: async (poiId, storyContent, checkpoint, relatedPeopleCheckpoint) => {
-    parseStoryContent(storyContent, ["wikipedia"]);
+    const sources = readSources(city, poiId);
+    parseStoryContent(
+      storyContent,
+      sources.map(({ id }) => id),
+    );
     for (const { personId } of storyContent.relatedPeople) {
       if (personId && !personRepository.get(personId)) {
         throw new Error(`Story ${poiId} references missing Person ${personId}.`);
       }
     }
     const outputFilePath = buildStoryContentFilePath(city, poiId);
-    writeAtomically(outputFilePath, `${JSON.stringify(storyContent, null, 2)}\n`);
+    const sourceIds = new Set([
+      ...storyContent.introduction.sourceIds,
+      ...Object.values(storyContent.topics).flatMap((items) =>
+        items.flatMap(({ sourceIds }) => sourceIds),
+      ),
+      ...storyContent.relatedPeople.flatMap(({ sourceIds }) => sourceIds),
+    ]);
+    writeAtomically(
+      outputFilePath,
+      `${JSON.stringify(
+        {
+          ...storyContent,
+          wikipediaSources: toWikipediaSources(sources.filter(({ id }) => sourceIds.has(id))),
+        },
+        null,
+        2,
+      )}\n`,
+    );
     replaceGenerationCheckpoint(city, poiId, "storyContent", checkpoint);
     if (relatedPeopleCheckpoint) {
       replaceGenerationCheckpoint(city, poiId, "relatedPeople", relatedPeopleCheckpoint);
@@ -171,6 +201,7 @@ export const createFilesystemStoryWorkflowRepository = (city: string): StoryWork
   reset: async (poiId, sourceMissing) => {
     deleteFile(buildOutputFilePath(getDefaultOutputDir(city), poiId));
     deleteFile(buildSourceMetadataFilePath(getDefaultOutputDir(city), poiId));
+    deleteFile(buildAdditionalSourcesFilePath(getDefaultOutputDir(city), poiId));
     deleteFile(buildStoryContentFilePath(city, poiId));
     deleteFile(buildMainImageCandidateArtifactFilePath(city, poiId));
     deleteGenerationCheckpoints(city, poiId, ["wiki", "storyContent", "relatedPeople", "image"]);

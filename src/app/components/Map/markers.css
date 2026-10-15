@@ -1,0 +1,18 @@
+/* Recolor MapLibre's silhouette while preserving its native border and shadow. */
+@layer components {
+  .religious-site-marker svg g[fill="#facc15"] > path {
+    fill: var(--color-yellow-400);
+  }
+
+  .selected-poi-marker {
+    z-index: 1;
+  }
+
+  .selected-poi-marker svg g:is([fill="#3FB1CE"], [fill="#facc15"]) > path {
+    fill: #36a477;
+  }
+
+  .poi-preview-popup {
+    z-index: 2;
+  }
+}

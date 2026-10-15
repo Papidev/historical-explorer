@@ -82,6 +82,125 @@ afterEach(() => {
 });
 
 describe("People", () => {
+  it("resolves a Person through an available local link when the English edition is unreachable", async () => {
+    const repository = createRepository();
+    const people = createPeople({
+      repository,
+      fetchSnapshot: async (title, language) => {
+        if (language !== "it") throw new Error("English Wikipedia is unreachable.");
+        return { ...snapshot(title, "Q307"), language: "it" };
+      },
+      acquireSources: async ({ initialSource }) => ({ sources: [initialSource!], warnings: [] }),
+      generateContent: async () => content,
+      fetchImageCandidates: async () => [],
+    });
+    const result = await people.resolveAndGenerateMissing({
+      relatedPeople: [{ name: "Galileo Galilei", sourceIds: ["wikipedia"] }],
+      storySources: [
+        {
+          id: "wikipedia",
+          kind: "wikipedia",
+          title: "Monument",
+          url: "https://en.wikipedia.org/wiki/Monument",
+          content: "Galileo Galilei is depicted here.",
+          links: [
+            { title: "Galileo Galilei", label: "Galileo Galilei" },
+            { title: "Galileo Galilei", label: "Galileo Galilei", language: "it" },
+          ],
+        },
+      ],
+      ai: { mode: "local", model: "test-model" },
+    });
+    expect(result.failures).toEqual([]);
+    expect(result.sourceWarnings).toEqual([
+      expect.stringContaining("English Wikipedia is unreachable"),
+    ]);
+    expect(repository.get(result.relatedPeople[0].personId!)?.source.url).toBe(
+      "https://it.wikipedia.org/wiki/Galileo_Galilei",
+    );
+  });
+
+  it("generates and persists complementary editions while resolving one identity across languages", async () => {
+    const repository = createRepository();
+    const italian = {
+      id: "wikipedia-it",
+      kind: "wikipedia" as const,
+      title: "Artista",
+      url: "https://it.wikipedia.org/wiki/Artista",
+      content: "Dettagli italiani.",
+    };
+    const french = {
+      ...italian,
+      id: "wikipedia-fr",
+      title: "Artiste",
+      url: "https://fr.wikipedia.org/wiki/Artiste",
+      content: "Détails français.",
+    };
+    const people = createPeople({
+      repository,
+      fetchSnapshot: async (title, language) => ({
+        ...snapshot(title, "Q200"),
+        ...(language ? { language } : {}),
+      }),
+      acquireSources: async ({ initialSource, countryProperty, contextWikidataIds }) => {
+        expect(countryProperty).toBe("P27");
+        expect(contextWikidataIds).toEqual(["Q100"]);
+        return { sources: [initialSource!, italian, french], warnings: [] };
+      },
+      generateContent: async (_person, sources) => {
+        expect(sources.map(({ id }) => id)).toEqual(["wikipedia", "wikipedia-it", "wikipedia-fr"]);
+        return {
+          ...content,
+          curiosities: [{ text: "An Italian detail.", sourceIds: ["wikipedia-it"] }],
+        };
+      },
+      fetchImageCandidates: async () => [],
+    });
+    const result = await people.resolveAndGenerateMissing({
+      relatedPeople: [{ name: "Artist", sourceIds: ["wikipedia", "wikipedia-it"] }],
+      storySources: [
+        {
+          id: "wikipedia",
+          kind: "wikipedia",
+          wikidataId: "Q100",
+          title: "Monument",
+          url: "https://en.wikipedia.org/wiki/Monument",
+          content: "Artist worked here.",
+          links: [
+            { title: "Artist", label: "Artist" },
+            { title: "Artista", label: "Artist", language: "it" },
+          ],
+        },
+      ],
+      ai: { mode: "local", model: "test-model" },
+    });
+    expect(result.failures).toEqual([]);
+    expect(result.relatedPeople).toHaveLength(1);
+    const person = repository.get(result.relatedPeople[0].personId!)!;
+    expect(repository.readSources(person).map(({ id }) => id)).toEqual([
+      "wikipedia",
+      "wikipedia-it",
+      "wikipedia-fr",
+    ]);
+    await people.regenerate({ personId: person.id, ai: { mode: "local", model: "test-model" } });
+    expect(repository.get(person.id)?.content.curiosities[0].sourceIds).toEqual(["wikipedia-it"]);
+    await people.resolveAndGenerateMissing({
+      relatedPeople: [{ name: "Artist", personId: person.id, sourceIds: ["wikipedia"] }],
+      storySources: [
+        {
+          id: "wikipedia",
+          kind: "wikipedia",
+          wikidataId: "Q300",
+          title: "Another monument",
+          url: "https://en.wikipedia.org/wiki/Another_monument",
+          content: "Artist also worked here.",
+        },
+      ],
+      ai: { mode: "local", model: "test-model" },
+    });
+    expect(repository.get(person.id)?.sourceContextWikidataIds).toEqual(["Q100", "Q300"]);
+  });
+
   it("regenerates saved content while preserving identity, image, and source", async () => {
     const repository = createRepository("hercules");
     const original = repository.get("hercules")!;
@@ -101,6 +220,7 @@ describe("People", () => {
     expect(repository.readSource(original).content).toBe("Stored source");
     repository.replace({ ...original, image: image(true) }, repository.readSource(original));
     const people = createPeople({
+      acquireSources: async ({ initialSource }) => ({ sources: [initialSource!], warnings: [] }),
       repository,
       now: () => new Date("2026-10-03T10:00:00.000Z"),
       generateContent: async (person, sources, config) => {
@@ -131,6 +251,7 @@ describe("People", () => {
     const original = repository.get("hercules");
     let fail = true;
     const people = createPeople({
+      acquireSources: async ({ initialSource }) => ({ sources: [initialSource!], warnings: [] }),
       repository,
       generateContent: async () => {
         if (fail) throw new Error("Generation failed");
@@ -149,6 +270,7 @@ describe("People", () => {
   it("keeps the Italian edition for Related People links and their saved source", async () => {
     const repository = createRepository();
     const people = createPeople({
+      acquireSources: async ({ initialSource }) => ({ sources: [initialSource!], warnings: [] }),
       repository,
       fetchSnapshot: async (title, language) => {
         expect(title).toBe("Galileo Galilei");
@@ -189,6 +311,7 @@ describe("People", () => {
     const repository = createRepository();
     let generations = 0;
     const people = createPeople({
+      acquireSources: async ({ initialSource }) => ({ sources: [initialSource!], warnings: [] }),
       repository,
       fetchSnapshot: async () => snapshot("Hercules", "Q123"),
       generateContent: async () => {
@@ -233,6 +356,7 @@ describe("People", () => {
   it("allocates distinct IDs when different People with the same name finish concurrently", async () => {
     const repository = createRepository();
     const people = createPeople({
+      acquireSources: async ({ initialSource }) => ({ sources: [initialSource!], warnings: [] }),
       repository,
       fetchSnapshot: async (title) => snapshot(title, title.endsWith("architect)") ? "Q1" : "Q2"),
       generateContent: async () => content,
@@ -268,6 +392,7 @@ describe("People", () => {
   it("merges source links redirected to the same canonical Wikipedia article", async () => {
     const repository = createRepository();
     const people = createPeople({
+      acquireSources: async ({ initialSource }) => ({ sources: [initialSource!], warnings: [] }),
       repository,
       fetchSnapshot: async () => snapshot("John Smith (architect)", "Q100"),
       generateContent: async () => content,
@@ -300,6 +425,7 @@ describe("People", () => {
   it("does not create a Person from a disambiguation page alone", async () => {
     const repository = createRepository();
     const people = createPeople({
+      acquireSources: async ({ initialSource }) => ({ sources: [initialSource!], warnings: [] }),
       repository,
       fetchSnapshot: async (title) => ({ ...snapshot(title, "Q100"), isDisambiguation: true }),
       generateContent: async () => {
@@ -332,6 +458,7 @@ describe("People", () => {
       const repository = createRepository();
       const fetchedTitles: string[] = [];
       const people = createPeople({
+        acquireSources: async ({ initialSource }) => ({ sources: [initialSource!], warnings: [] }),
         repository,
         fetchSnapshot: async (requestedTitle) => {
           fetchedTitles.push(requestedTitle);
@@ -376,6 +503,7 @@ describe("People", () => {
     const repository = createRepository();
     let requestedName: string | undefined;
     const people = createPeople({
+      acquireSources: async ({ initialSource }) => ({ sources: [initialSource!], warnings: [] }),
       repository,
       fetchSnapshot: async (requestedTitle) => {
         expect(requestedTitle).toBe(title);
@@ -412,6 +540,7 @@ describe("People", () => {
   it("resolves a saved reference again when its Person ID has no stored Person", async () => {
     const repository = createRepository();
     const people = createPeople({
+      acquireSources: async ({ initialSource }) => ({ sources: [initialSource!], warnings: [] }),
       repository,
       fetchSnapshot: async (title) => snapshot(title, "Q100"),
       generateContent: async () => content,
@@ -441,6 +570,7 @@ describe("People", () => {
       | { mode: "local" | "cloud"; provider: "ollama" | "gemini"; model: string }
       | undefined;
     const people = createPeople({
+      acquireSources: async ({ initialSource }) => ({ sources: [initialSource!], warnings: [] }),
       repository,
       fetchSnapshot: async (title) => snapshot(title, "Q100"),
       generateContent: async (_person, _sources, config) => {
@@ -481,6 +611,7 @@ describe("People", () => {
     const repository = createRepository();
     const generatedSources: string[] = [];
     const people = createPeople({
+      acquireSources: async ({ initialSource }) => ({ sources: [initialSource!], warnings: [] }),
       repository,
       fetchSnapshot: async (title) => snapshot(title, "Q100"),
       generateContent: async (_person, sources) => {
@@ -547,6 +678,7 @@ describe("People", () => {
   ])("resolves the sourced name variant %s to %s", async (name, title) => {
     const fetchedTitles: string[] = [];
     const people = createPeople({
+      acquireSources: async ({ initialSource }) => ({ sources: [initialSource!], warnings: [] }),
       repository: createRepository(),
       fetchSnapshot: async (title) => {
         fetchedTitles.push(title);
@@ -580,6 +712,7 @@ describe("People", () => {
   it("prefers an exact identity and keeps distinct resolved people with the same name", async () => {
     const fetchedTitles: string[] = [];
     const people = createPeople({
+      acquireSources: async ({ initialSource }) => ({ sources: [initialSource!], warnings: [] }),
       repository: createRepository("smith-artist", "smith-explorer"),
       fetchSnapshot: async (title) => {
         fetchedTitles.push(title);
@@ -623,6 +756,7 @@ describe("People", () => {
 
   it("keeps ambiguous normalized matches unresolved and never matches a surname alone", async () => {
     const people = createPeople({
+      acquireSources: async ({ initialSource }) => ({ sources: [initialSource!], warnings: [] }),
       repository: createRepository(),
       fetchSnapshot: async (title) => snapshot(title, title === "Alexander I" ? "Q100" : "Q101"),
     });
@@ -669,6 +803,7 @@ describe("People", () => {
     const fetchedTitles: string[] = [];
     const progress: string[] = [];
     const people = createPeople({
+      acquireSources: async ({ initialSource }) => ({ sources: [initialSource!], warnings: [] }),
       repository,
       fetchSnapshot: async (title) => {
         fetchedTitles.push(title);
@@ -716,6 +851,7 @@ describe("People", () => {
   it("preserves an existing Person ID when an unresolved duplicate comes first", async () => {
     const progress: string[] = [];
     const people = createPeople({
+      acquireSources: async ({ initialSource }) => ({ sources: [initialSource!], warnings: [] }),
       repository: createRepository("innocent-x"),
       fetchSnapshot: async () => {
         throw new Error("Resolved People must not be fetched again.");
@@ -744,6 +880,7 @@ describe("People", () => {
   it("leaves missing, ambiguous, and identity-less references unresolved", async () => {
     const repository = createRepository();
     const people = createPeople({
+      acquireSources: async ({ initialSource }) => ({ sources: [initialSource!], warnings: [] }),
       repository,
       fetchSnapshot: async (title) => snapshot(title),
       generateContent: async () => content,
@@ -800,6 +937,7 @@ describe("People", () => {
     const repository = createRepository();
     let generationCount = 0;
     const people = createPeople({
+      acquireSources: async ({ initialSource }) => ({ sources: [initialSource!], warnings: [] }),
       repository,
       fetchSnapshot: async (title) => snapshot(title, "Q100"),
       generateContent: async () => {
@@ -845,6 +983,7 @@ describe("People", () => {
     const repository = createRepository();
     const progress: string[] = [];
     const people = createPeople({
+      acquireSources: async ({ initialSource }) => ({ sources: [initialSource!], warnings: [] }),
       repository,
       fetchSnapshot: async (title) => {
         if (title === "Alfredo Energici")
@@ -888,6 +1027,7 @@ describe("People", () => {
   it("does not persist a partial Person when generation fails", async () => {
     const repository = createRepository();
     const people = createPeople({
+      acquireSources: async ({ initialSource }) => ({ sources: [initialSource!], warnings: [] }),
       repository,
       fetchSnapshot: async (title) => snapshot(title, "Q100"),
       generateContent: async () => {
@@ -921,6 +1061,7 @@ describe("People", () => {
   it("resolves a Person without an optional image when image discovery is rate limited", async () => {
     const repository = createRepository();
     const people = createPeople({
+      acquireSources: async ({ initialSource }) => ({ sources: [initialSource!], warnings: [] }),
       repository,
       fetchSnapshot: async (title) => snapshot(title, "Q100"),
       generateContent: async () => content,
@@ -955,6 +1096,7 @@ describe("People", () => {
     const repository = createRepository("resolved");
     const fetchedTitles: string[] = [];
     const people = createPeople({
+      acquireSources: async ({ initialSource }) => ({ sources: [initialSource!], warnings: [] }),
       repository,
       fetchSnapshot: async (title) => {
         fetchedTitles.push(title);

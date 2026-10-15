@@ -1,6 +1,7 @@
 import { mainImageCandidateSchema, type MainImageCandidate } from "@/server/wikiPipeline/types";
 import { getPersonDisplayName } from "@/utils/getPersonDisplayName";
 import { z } from "zod";
+import { toWikipediaSources, type WikipediaSource } from "@/server/wikipediaSources";
 
 const sourceIdsSchema = z.array(z.string().min(1)).min(1);
 
@@ -44,6 +45,15 @@ export type PersonSource = {
   content: string;
 };
 
+const sourceMetadataSchema = z
+  .object({
+    id: z.string().min(1),
+    kind: z.literal("wikipedia"),
+    title: z.string().min(1),
+    url: z.url(),
+  })
+  .strict();
+
 export const personSchema = z
   .object({
     id: z.string().min(1),
@@ -52,20 +62,16 @@ export const personSchema = z
     wikipediaTitle: z.string().min(1),
     content: personContentSchema,
     image: mainImageCandidateSchema.optional(),
-    source: z
-      .object({
-        id: z.string().min(1),
-        kind: z.literal("wikipedia"),
-        title: z.string().min(1),
-        url: z.url(),
-      })
-      .strict(),
+    source: sourceMetadataSchema,
+    additionalSources: z.array(sourceMetadataSchema).optional(),
+    sourceContextWikidataIds: z.array(z.string().min(1)).optional(),
     generation: z
       .object({
         aiMode: z.enum(["local", "cloud"]),
         aiProvider: z.enum(["ollama", "gemini"]),
         aiModel: z.string().min(1),
         completedAt: z.iso.datetime(),
+        sourceWarnings: z.array(z.string()).optional(),
       })
       .strict(),
   })
@@ -77,7 +83,10 @@ export const personSchema = z
     ] as const) {
       blocks.forEach((block, index) => {
         block.sourceIds.forEach((sourceId, sourceIndex) => {
-          if (sourceId !== person.source.id) {
+          if (
+            sourceId !== person.source.id &&
+            !person.additionalSources?.some(({ id }) => id === sourceId)
+          ) {
             context.addIssue({
               code: "custom",
               path: ["content", field, index, "sourceIds", sourceIndex],
@@ -92,6 +101,7 @@ export const personSchema = z
 export type Person = z.infer<typeof personSchema>;
 
 export type PublicPerson = {
+  wikipediaSources?: WikipediaSource[];
   id: string;
   name: string;
   description: [string, string];
@@ -102,6 +112,13 @@ export type PublicPerson = {
 };
 
 export const toPublicPerson = (person: Person): PublicPerson => ({
+  wikipediaSources: toWikipediaSources(
+    [person.source, ...(person.additionalSources ?? [])].filter(({ id }) =>
+      [...person.content.description, ...person.content.curiosities].some(({ sourceIds }) =>
+        sourceIds.includes(id),
+      ),
+    ),
+  ),
   id: person.id,
   name: getPersonDisplayName(person.name),
   description: person.content.description.map(({ text }) => text) as [string, string],

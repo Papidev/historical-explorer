@@ -185,5 +185,11 @@
       "personId": "lothar-i",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Catacombs of Commodilla",
+      "url": "https://en.wikipedia.org/wiki/Catacombs_of_Commodilla"
+    }
   ]
 }

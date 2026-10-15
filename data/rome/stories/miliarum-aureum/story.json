@@ -57,5 +57,11 @@
       "personId": "christian-h-lsen",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Milliarium Aureum",
+      "url": "https://en.wikipedia.org/wiki/Milliarium_Aureum"
+    }
   ]
 }

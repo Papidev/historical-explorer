@@ -152,5 +152,11 @@
       "personId": "hugh-o-neill-earl-of-tyrone",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "San Pietro in Montorio",
+      "url": "https://en.wikipedia.org/wiki/San_Pietro_in_Montorio"
+    }
   ]
 }

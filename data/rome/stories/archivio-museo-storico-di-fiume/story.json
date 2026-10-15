@@ -67,5 +67,11 @@
       "personId": "riccardo-zanella",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Archivio museo storico di Fiume",
+      "url": "https://it.wikipedia.org/wiki/Archivio_museo_storico_di_Fiume"
+    }
   ]
 }

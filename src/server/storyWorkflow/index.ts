@@ -11,6 +11,9 @@ import {
 import { resolvePageForPoi } from "@/server/wikiPipeline/resolve";
 import { wikiTextToPlainText } from "@/server/wikiPipeline/wikiText";
 import { people } from "@/server/person";
+import { acquireWikipediaSources } from "@/server/wikiPipeline/acquireWikipediaSources";
+import { throwIfGenerationCancelled } from "@/server/generationCancellation";
+import type { Source } from "./types";
 
 export const createStoryWorkflowForCity = (city: string) =>
   createStoryWorkflow({
@@ -24,18 +27,17 @@ export const createStoryWorkflowForCity = (city: string) =>
     acquireSources: async (pointOfInterest, previousSources) => {
       console.info(`[wiki] Fetching Wikipedia text for ${pointOfInterest.id}.`);
       const previous = previousSources?.find(({ kind }) => kind === "wikipedia");
-      const page = previous
-        ? {
-            title: previous.title,
-            language:
-              new URL(previous.url).hostname === "it.wikipedia.org"
-                ? ("it" as const)
-                : ("en" as const),
-          }
-        : (await resolvePageForPoi(pointOfInterest)).selected;
-      const snapshot = await fetchWikiSnapshot(page.title, page.language);
-      return [
-        {
+      let initialSource: Source | undefined;
+      const warnings: string[] = [];
+      try {
+        const page = previous
+          ? {
+              title: previous.title,
+              language: new URL(previous.url).hostname.split(".")[0],
+            }
+          : (await resolvePageForPoi(pointOfInterest)).selected;
+        const snapshot = await fetchWikiSnapshot(page.title, page.language);
+        initialSource = {
           id: "wikipedia",
           kind: "wikipedia",
           title: snapshot.title,
@@ -43,8 +45,17 @@ export const createStoryWorkflowForCity = (city: string) =>
           url: buildWikipediaPageUrl(snapshot.title, page.language),
           content: wikiTextToPlainText(snapshot.fullText),
           links: snapshot.links,
-        },
-      ];
+        };
+      } catch (error) {
+        throwIfGenerationCancelled();
+        if (!pointOfInterest.sourceHints.wikidata) throw error;
+        warnings.push(`The initial Wikipedia article could not be acquired: ${String(error)}`);
+      }
+      const acquired = await acquireWikipediaSources({
+        wikidataId: initialSource?.wikidataId ?? pointOfInterest.sourceHints.wikidata,
+        initialSource,
+      });
+      return { sources: acquired.sources, warnings: [...warnings, ...acquired.warnings] };
     },
     generateMainImageCandidates: async (pointOfInterest, wikipediaTitle, wikipediaLanguage) => {
       console.info(`[wiki-images] Generating Main Image Candidates for ${pointOfInterest.id}.`);

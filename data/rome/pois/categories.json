@@ -19,7 +19,8 @@
     ],
     "basilica-of-saint-paul-outside-the-walls": [
       "Basilica",
-      "Church"
+      "Church",
+      "Churches & cathedrals"
     ],
     "torre-valca": [
       "Tower",
@@ -223,7 +224,7 @@
     "aviator": [],
     "bartolomeo-pinelli": [],
     "pedestal-of-colossus-of-nero": [
-      "Statue"
+      "Monument"
     ],
     "basilica-costantiniana-di-ostia": [],
     "basilica-cristiana-iii-i-4": [],
@@ -297,7 +298,6 @@
     ],
     "basilica-di-santa-prassede": [
       "Basilica",
-      "Work of art",
       "Church"
     ],
     "basilica-of-st-pudentiana": [
@@ -387,7 +387,6 @@
     "casa-dell-ercole-bambino-ostia-antica-rii-vi-3-4": [],
     "casa-delle-volte-dipinte": [],
     "casa-di-augusto": [
-      "Roman house",
       "Archaeological Site"
     ],
     "casa-di-diana": [
@@ -520,7 +519,8 @@
     ],
     "cesare-pascarella": [],
     "chiesa-dei-santi-vincenzo-e-anastasio": [
-      "Church"
+      "Church",
+      "Churches & cathedrals"
     ],
     "the-church-of-domine-quo-vadis": [
       "Church"
@@ -547,7 +547,6 @@
     ],
     "chiesa-di-sant-onofrio-al-gianicolo": [
       "Church",
-      "Architectural ensemble",
       "Abbey",
       "Churches & cathedrals"
     ],
@@ -652,8 +651,7 @@
     ],
     "column-of-marcus-aurelius": [
       "Monument",
-      "Archaeological Site",
-      "Statue"
+      "Archaeological Site"
     ],
     "colonna-onoraria": [],
     "colonna-romana": [],
@@ -683,14 +681,12 @@
     "domus-and-mitreo-delle-pareti-dipinte-iii-i-6": [],
     "domus-annorum": [],
     "domus-augustana-peristilio": [
-      "Roman house",
       "Archaeological Site",
       "Palace"
     ],
     "domus-aurea": [
       "Archaeological Site",
       "Palace",
-      "Roman house",
       "Museum"
     ],
     "domus-del-pozzo-v-iii-3": [],
@@ -699,20 +695,16 @@
     ],
     "domus-del-serapeo-iii-xvii-3": [],
     "domus-della-fortuna-annonaria-v-ii-8": [
-      "Archaeological Site",
-      "Roman house"
+      "Archaeological Site"
     ],
     "domus-delle-colonne-iv-iii-1": [],
     "domus-delle-gorgoni-i-xiii-6": [
-      "Roman house",
       "Archaeological Site"
     ],
     "house-of-cupid-and-psyche": [
-      "Roman house",
       "Archaeological Site"
     ],
     "domus-di-apuleio-ii-viii-5": [
-      "Roman house",
       "Archaeological Site"
     ],
     "domus-di-aufidia-cornelia": [],
@@ -722,7 +714,6 @@
     "domus-romane-di-palazzo-valentini": [],
     "domus-rustica": [],
     "domus-severiana": [
-      "Roman house",
       "Archaeological Site",
       "Palace"
     ],
@@ -738,7 +729,6 @@
     "elisa-toscano": [],
     "elsa-morante": [],
     "emelyn-eldredge-story": [
-      "Statue",
       "Monument"
     ],
     "emma-carelli": [],
@@ -747,8 +737,7 @@
     "enzo-fioritto": [],
     "eps-historic-site-the-goldfish-fountain-of-the-physics-institute-of-panisperna-street": [],
     "equus-traiani": [
-      "Statue",
-      "Work of art"
+      "Monument"
     ],
     "eradicazione-della-peste-bovina": [],
     "ercole-rosa": [],
@@ -806,8 +795,7 @@
       "Archaeological Site"
     ],
     "foro-olitorio": [
-      "Archaeological Site",
-      "Square"
+      "Archaeological Site"
     ],
     "forte-antenne": [
       "Fort"
@@ -897,7 +885,7 @@
     "giacomo-matteotti-monumenti": [],
     "giardino-pantalica": [],
     "giordano-bruno": [
-      "Statue"
+      "Monument"
     ],
     "giordano-bruno-monument": [],
     "giorgiana-masi": [],
@@ -940,7 +928,6 @@
     "mausoleo-di-tor-di-quinto": [],
     "basilica-costantiniana": [
       "Garden",
-      "Park",
       "Archaeological Site"
     ],
     "mausoleo-mutilati-e-invalidi-di-guerra-sezione-di-roma": [],
@@ -963,24 +950,19 @@
     "mino-erasmo-damato": [],
     "miracle-water": [],
     "mitreo-barberini": [
-      "Archaeological Site",
-      "Temple"
+      "Archaeological Site"
     ],
     "mitreo-dei-serpenti-v-vi-6": [
-      "Temple",
       "Archaeological Site"
     ],
     "mithraeum-of-felicissimus": [
-      "Temple",
       "Archaeological Site"
     ],
     "mitreo-della-planta-pedis": [
-      "Temple",
       "Archaeological Site"
     ],
     "mitreo-delle-sette-porte-iv-v-13": [
-      "Archaeological Site",
-      "Temple"
+      "Archaeological Site"
     ],
     "mitreo-delle-sette-sfere-ii-viii-6": [],
     "mithraeum-at-the-baths-of-mithra": [],
@@ -989,19 +971,15 @@
     "monte-testaccio": [],
     "monteverde": [],
     "monumento-a-carlo-alberto": [
-      "Statue",
-      "Work of art"
+      "Monument"
     ],
     "monumento-a-cavour": [],
     "monumento-a-enrico-toti": [],
     "monumento-a-garibaldi": [
-      "Statue",
-      "Work of art",
       "Monument"
     ],
     "monumento-a-giovanni-paolo-ii": [
-      "Monument",
-      "Statue"
+      "Monument"
     ],
     "monumento-a-giuseppe-mazzini": [
       "Monument"
@@ -1015,9 +993,7 @@
     "monumento-a-terenzio-mamiani-della-rovere": [],
     "monumento-ad-anita-garibaldi": [
       "Monument",
-      "Grave",
-      "Statue",
-      "Work of art"
+      "Grave"
     ],
     "monumento-ai-caduti": [],
     "monumento-ai-caduti-2": [],
@@ -1052,6 +1028,14 @@
     "tomb-of-the-festoons": [],
     "monumento-funerario-del-frontespizio": [],
     "monumento-funerario-hilarus-fuscus": [],
-    "monumento-funerario-rabirii": []
+    "monumento-funerario-rabirii": [],
+    "porta-salaria": [
+      "Arch",
+      "Archaeological Site"
+    ],
+    "porta-san-giovanni": [
+      "Arch",
+      "Archaeological Site"
+    ]
   }
 }

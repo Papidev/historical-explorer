@@ -13,6 +13,7 @@ import {
 type Config = { mode: "local" | "cloud"; provider: "ollama" | "gemini"; model: string };
 
 const systemPrompt = `Create concise, source-grounded content for a historical, mythological, or imaginary person.
+Read all supplied Wikipedia editions, including non-English text, as complementary Sources. Preserve useful details found only in local editions and cite the specific Source IDs supporting each block. When Sources disagree, preserve attribution and uncertainty or omit the disputed claim; do not assume English is more authoritative.
 Return only data matching the provided JSON schema.
 The top-level object must contain description and curiosities, plus optional birthDate and deathDate. description must be an array of exactly two objects containing text and sourceIds. curiosities must be an array of objects containing text and sourceIds. Each date must contain year and precision, plus optional month and day. Use sourceIds as arrays of supplied Source ID strings.
 

@@ -1,0 +1,106 @@
+{
+  "id": "herodias",
+  "name": "Herodias",
+  "wikidataId": "Q230091",
+  "wikipediaTitle": "Herodias",
+  "content": {
+    "description": [
+      {
+        "text": "Herodias (c. 15 BC – after AD 39) was a princess of the Herodian dynasty of Judaea, the daughter of Aristobulus IV and Berenice and the full sister of Herod Agrippa I, Herod V, Aristobulus Minor and Mariamne III. She was first married to Herod II, a half‑uncle, with whom she had a daughter, Salome, before divorcing him and later marrying Herod Antipas, the tetrarch of Galilee.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      },
+      {
+        "text": "Herodias is most famously linked to the execution of John the Baptist; according to the Gospels, her daughter’s dance at a banquet prompted Herod Antipas to order John’s beheading. The marriage to Antipas also sparked a war with Nabatea, and after Antipas was accused of conspiracy by Agrippa I, the couple was exiled to Gaul, where Antipas died and Herodias’ fate is uncertain. In medieval Europe she was associated with witch lore, and her story has inspired numerous operas, plays and paintings.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "In medieval Europe, Herodias became a symbol of witchcraft, believed to lead supernatural gatherings of witches.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Herodias has been portrayed in many operas and plays, including Oscar Wilde’s play *Salome*, Richard Strauss’s opera *Salome*, Jules Massenet’s *Hérodiade*, and several others.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Her daughter Salome’s dance at Herod Antipas’s banquet is the event that led to John the Baptist’s execution.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Herodias was married to Herod Philip (Herod Filippo) before her marriage to Herod Antipas.",
+        "sourceIds": [
+          "wikipedia-it"
+        ]
+      },
+      {
+        "text": "After Antipas was exiled to Lugdunum (modern Lyon) in Gaul, Herodias accompanied him, but her ultimate fate after his death is unknown.",
+        "sourceIds": [
+          "wikipedia-it"
+        ]
+      },
+      {
+        "text": "Herodias was a princess of the Herodian dynasty and a sister of Herod Agrippa I, a prominent ruler of Judea.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": -15,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 39,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Herodias_medal.svg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Herodias_medal.svg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Herodias_medal.svg/960px-Herodias_medal.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Herodias_medal.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Georges Reverdy",
+    "author": "Georges Reverdy",
+    "width": 500,
+    "height": 500,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Herodias",
+    "url": "https://en.wikipedia.org/wiki/Herodias"
+  },
+  "additionalSources": [
+    {
+      "id": "wikipedia-it",
+      "kind": "wikipedia",
+      "title": "Erodiade",
+      "url": "https://it.wikipedia.org/wiki/Erodiade"
+    }
+  ],
+  "sourceContextWikidataIds": [
+    "Q2104896"
+  ],
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-14T22:03:39.082Z"
+  }
+}

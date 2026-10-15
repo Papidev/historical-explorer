@@ -91,5 +91,11 @@
       "personId": "stendhal",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Monte Testaccio",
+      "url": "https://en.wikipedia.org/wiki/Monte_Testaccio"
+    }
   ]
 }

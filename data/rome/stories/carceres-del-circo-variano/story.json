@@ -88,5 +88,11 @@
       "personId": "antinous",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Circus Varianus",
+      "url": "https://en.wikipedia.org/wiki/Circus_Varianus"
+    }
   ]
 }

@@ -122,5 +122,11 @@
       "personId": "bede",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Colossus of Nero",
+      "url": "https://en.wikipedia.org/wiki/Colossus_of_Nero"
+    }
   ]
 }

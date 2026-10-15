@@ -1,5 +1,7 @@
 import type { HistoryInsight, PublicStoryContent } from "@/server/storyWorkflow";
 import { Topic } from "@/app/components/Topic/Topic";
+import { StoryText } from "@/app/components/StoryText";
+import { WikipediaLinks } from "@/app/components/WikipediaLinks";
 
 const toOrdinal = (value: number) => {
   const remainder = value % 100;
@@ -58,7 +60,21 @@ export const StoryContent = ({
 
   return (
     <div className="mt-4 space-y-6 text-base leading-[1.7] text-zinc-800">
-      <p>{content.introduction}</p>
+      {content.textFormat === "markdown" ? (
+        <StoryText text={content.introduction} textFormat={content.textFormat} />
+      ) : (
+        <div className="space-y-4">
+          {content.introduction
+            .split(/\r?\n\s*\r?\n/)
+            .map((paragraph) => paragraph.trim())
+            .filter(Boolean)
+            .map((paragraph, index) => (
+              <p key={index} className="whitespace-pre-line">
+                <StoryText text={paragraph} emphasis={content.introductionEmphasis} />
+              </p>
+            ))}
+        </div>
+      )}
       {period ? (
         <dl className="grid gap-2 rounded-lg bg-amber-50 p-3 text-sm">
           <div>
@@ -71,24 +87,47 @@ export const StoryContent = ({
         <section className="rounded-xl bg-orange-50/55 px-4 py-3 ring-1 ring-orange-950/5">
           <h3 className="text-sm font-semibold tracking-wide text-zinc-950 uppercase">History</h3>
           <ul className="mt-3 list-disc space-y-3 pl-5 marker:text-orange-400">
-            {history.map(({ description, time }, index) => (
+            {history.map(({ description, time, emphasis }, index) => (
               <li key={`history-${index}`} className="pl-1">
                 {time ? (
                   <p className="text-sm font-semibold text-orange-700">
                     {formatHistoricalTime(time)}
                   </p>
                 ) : null}
-                <p>{description}</p>
+                {content.textFormat === "markdown" ? (
+                  <StoryText text={description} textFormat={content.textFormat} />
+                ) : (
+                  <p>
+                    <StoryText text={description} emphasis={emphasis} />
+                  </p>
+                )}
               </li>
             ))}
           </ul>
         </section>
       ) : null}
       <Topic
-        title="Design"
-        insights={content.topics.design.map(({ description }) => description)}
+        title="Architecture"
+        insights={content.topics.design.map(({ description, emphasis }, index) => (
+          <StoryText
+            key={index}
+            text={description}
+            emphasis={emphasis}
+            textFormat={content.textFormat}
+          />
+        ))}
       />
-      <Topic title="Art" insights={content.topics.art.map(({ description }) => description)} />
+      <Topic
+        title="Art"
+        insights={content.topics.art.map(({ description, emphasis }, index) => (
+          <StoryText
+            key={index}
+            text={description}
+            emphasis={emphasis}
+            textFormat={content.textFormat}
+          />
+        ))}
+      />
       {content.relatedPeople.length > 0 ? (
         <section className="rounded-xl bg-sky-50/55 px-4 py-3 ring-1 ring-sky-950/5">
           <h3 className="text-sm font-semibold tracking-wide text-zinc-950 uppercase">
@@ -116,6 +155,7 @@ export const StoryContent = ({
           </ul>
         </section>
       ) : null}
+      <WikipediaLinks sources={content.wikipediaSources} />
     </div>
   );
 };

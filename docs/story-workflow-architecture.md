@@ -23,6 +23,8 @@ Within full Draft Story generation, the order is fixed:
 3. Preserve an eligible current image, or select the first licensed and attributed candidate.
 4. Generate Story Content and resolve Related People.
 
+Allowed editions are en, it, fr, de, and es. Source acquisition combines English Wikipedia with editions in the official languages of the POI's country that are in the allowed edition list, resolved through Wikidata P17, P37, P424, and entity sitelinks. The shared acquisition module also supports Person citizenship (P27) plus originating POI country context. Editions must identify the same Wikidata entity. Missing editions or incomplete language metadata produce persisted source warnings and a partial full-generation result; available Sources still feed generation. Each edition retains a distinct Source ID. Existing primary text/metadata snapshots stay readable; additional Sources are saved separately without migrating existing artifacts.
+
 Callers cannot reorder or skip steps. Full generation uses private implementation functions because its failure policy differs from independent artifact actions.
 
 ## Interface

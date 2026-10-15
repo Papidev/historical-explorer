@@ -62,5 +62,11 @@
       "personId": "ovidio",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Fonte di Anna Perenna",
+      "url": "https://it.wikipedia.org/wiki/Fonte_di_Anna_Perenna"
+    }
   ]
 }

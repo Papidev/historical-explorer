@@ -5,7 +5,12 @@ import {
 import { jsonrepair } from "jsonrepair";
 import { logAiResponseFailure, readAiResponse } from "@/server/aiResponseLog";
 import type { PoiInput } from "@/server/wikiPipeline/types";
-import { parseStoryContent, storyContentJsonSchema, type StoryContent } from "./storyContent";
+import {
+  getMentionedRelatedPeople,
+  parseStoryContent,
+  storyContentJsonSchema,
+  type StoryContent,
+} from "./storyContent";
 import type { Source } from "./types";
 
 type AiGenerationConfig = {
@@ -33,14 +38,21 @@ type GeminiGenerateContentResponse = {
   };
 };
 
-const systemPrompt = `Create concise, source-grounded Story Content for a cultural POI.
+const systemPrompt = `Create descriptive, source-grounded Story Content for a cultural POI.
 Return only data matching the provided JSON schema.
-The top-level object must contain exactly introduction, topics, and relatedPeople. introduction must contain text and sourceIds. topics must contain history, design, and art arrays. Every topic item must contain id, description, and sourceIds; only history items may additionally contain time. A time value must always be an object, never a number or string: use {"startYear": 312, "precision": "exact", "granularity": "year"} for a year, or use granularity "century" for a century. Include endYear only when the Source supports a range; it is optional for a single century. Every relatedPeople item must contain only name and sourceIds. Use sourceIds as arrays of supplied Source ID strings. Never return source, history, design, art, visitorInsights, or people as top-level fields.
+Read all supplied Wikipedia editions as complementary Sources, including non-English text. Write the Story in English regardless of Source language. Preserve useful details found only in local editions. Do not assume English is more authoritative; when Sources disagree, preserve attribution and uncertainty or omit the disputed claim rather than silently choosing a version. Cite the specific Source IDs that support each block.
+The top-level object must contain exactly textFormat, introduction, topics, and relatedPeople. Set textFormat to "markdown". introduction must contain text and sourceIds. topics must contain history, design, and art arrays. Every topic item must contain id, description, and sourceIds. Use Markdown inside introduction.text and topic descriptions; omit the legacy emphasis field. Only history items may additionally contain time. A time value must always be an object, never a number or string: use {"startYear": 312, "precision": "exact", "granularity": "year"} for a year, or use granularity "century" for a century. Include endYear only when the Source supports a range; it is optional for a single century. Every relatedPeople item must contain only name and sourceIds. Use sourceIds as arrays of supplied Source ID strings. Never return source, history, design, art, visitorInsights, or people as top-level fields.
 
-The introduction must identify what the POI is and why it matters.
+The introduction must give a developed, self-contained description of what and where the POI is, its spaces or structure, and interesting features, works, or objects it contains. Give readers a substantial first understanding, with depth proportionate to the supplied Sources rather than a fixed length. Describe interesting details on their own merits; the Story does not need a single central theme.
+Write the introduction and topic descriptions in short paragraphs, each developing one coherent idea. Prefer a paragraph break after a sentence when it introduces a distinct idea, shifts focus, or gives the reader a useful pause. Keep closely connected sentences together; punctuation alone is not a reason to break, and periods in abbreviations or numbers are not sentence boundaries. Separate paragraphs with a blank line (encoded as \\n\\n in the JSON string). This is an editorial preference, not a requirement to break after every sentence or pad brief text to force multiple paragraphs.
 Use only the optional Story Topics history, design, and art. Omit unsupported topics by returning an empty array. Each Visitor Insight must contain one useful, independent idea rather than a complete article summary.
+Concise means avoiding filler and repetition, not compressing every idea into a single sentence. When the Sources are rich, develop the strongest ideas in short paragraphs with enough context to explain the events, the stakes, and their significance for this place. Include motives and consequences only when explicitly supported by the Sources; preserve uncertainty and attribution.
+Prioritize distinctive, source-supported episodes that explain the POI's cultural meaning, including disputes, attempts to remove or preserve it, changes in use, and revealing artistic details. Do not reduce History to a list of dates or Art to a list of names. Prefer events and details about this POI; omit facts about other places unless they directly help explain it. Develop worthwhile details in readable paragraphs rather than reducing them to disconnected facts; there is no fixed number of insights. Do not pad sparse Sources or invent a missing episode from general knowledge.
+Select Related People only from people explicitly named in the introduction or topic descriptions you write. Mention each retained person's full name at least once in that text, omitting any parenthetical Wikipedia disambiguation suffix. Do not select people mentioned only in the Sources, and do not add incidental people to the Story just to populate Related People. Return an empty relatedPeople array when the Story names no relevant people.
 
-Use plain contemporary English. Do not use Markdown, HTML, JSX, headings, bullets, promotional language, poetic narration, or invented facts. Use only Source IDs supplied in the input. Include each person only once. For each Related Person, use the exact Wikipedia link title supplied in Source links as the name, rather than adding honorifics or inventing a different spelling; omit people mentioned only in the prose without a personal Wikipedia link. Select at most ten people who are most significant to understanding the POI, ordered from most to least significant. A person may be historical, mythological, or imaginary. Return only each person's name and supporting Source IDs; do not describe or classify the relationship.
+Use Markdown **bold** selectively in the introduction and topic descriptions to help readers recognize an important feature, orient themselves, or find a worthwhile detail while scanning. There is no quota: a paragraph or Story may have no bold text. Do not bold names, dates, first words, or generic terms automatically. Use *italics* when useful, for example for the title of a work. Keep paragraphs as the default; use a list or link only when it adds clear reading value. Keep each person's full name together in the visible text, rather than formatting individual words separately.
+
+Use plain contemporary English. Use Markdown for text formatting. Do not use HTML, JSX, embedded images, headings that duplicate Story sections, promotional language, poetic narration, or invented facts. The Main Image is handled separately. Use only Source IDs supplied in the input. Include each person only once. For each Related Person, use the exact Wikipedia link title supplied in Source links as the name, rather than adding honorifics or inventing a different spelling; omit people mentioned only in the prose without a personal Wikipedia link. Select at most ten people who are most significant to understanding the POI, ordered from most to least significant. A person may be historical, mythological, or imaginary. Return only each person's name and supporting Source IDs; do not describe or classify the relationship.
 
 For History, include structured time only when the Source supports it. Use negative years for BC/BCE, positive years for AD/CE, and never use year zero. Preserve approximate dates and century granularity. Never invent a missing range boundary. Omit time when the Source does not support a date. Order dated History Insights from oldest to newest and place undated History Insights after them.`;
 
@@ -129,7 +141,10 @@ const parseGeneratedContent = (content: string, sources: Source[]) => {
     console.warn("[story-content] Recovered malformed JSON and validated the Story schema.");
   return {
     ...storyContent,
-    relatedPeople: storyContent.relatedPeople.map(({ name, sourceIds }) => ({ name, sourceIds })),
+    relatedPeople: getMentionedRelatedPeople(storyContent).map(({ name, sourceIds }) => ({
+      name,
+      sourceIds,
+    })),
   };
 };
 

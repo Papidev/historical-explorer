@@ -37,7 +37,7 @@ An app-owned grouping shared across cities, with a singular name, used to filter
 _Avoid_: POI Type, Wikidata category
 
 **POI Subcategory**:
-A **POI Category** nested directly under a broader parent **POI Category**. Its **POIs** also belong to the parent's discovery scope; Cathedral, Basilica, and Church are subcategories of Churches & cathedrals. Discovery scopes within that group are disjoint and follow the place naming rules.
+A **POI Category** nested directly under a broader parent **POI Category**. Its **POIs** also belong to the parent's discovery scope; Cathedral, Basilica, Church, Abbey, Baptistery, and Temple are subcategories of Religious sites. Cathedral, Basilica, and Church discovery scopes follow the place naming and precedence rules.
 _Avoid_: POI Type, Wikidata subclass
 
 **POI Type Mapping**:
@@ -81,7 +81,7 @@ The structured, source-grounded content that supplies the **Visitor Experience**
 _Avoid_: Story body, Markdown, MDX, rendered page
 
 **Story Introduction**:
-The required plain-text opening of **Story Content** that gives the visitor a concise orientation to the **POI**.
+The required opening of **Story Content** that gives the visitor a concise orientation to the **POI**.
 _Avoid_: Summary, title, lead Markdown
 
 **Story Topic**:
@@ -145,10 +145,12 @@ _Avoid_: Production output, AI output
 - A POI has at most one current Draft Story and one visitor-facing Story, each belonging to that POI. A Story combines Story Content and one Main Image.
 - Draft Story Generation starts from an existing POI and creates or replaces draft content, Sources, and image candidates. Regenerating content or candidates remains automated generation; reviewing content and selecting an image are Story Curation.
 - A Draft Story contains Story Content and one or more Sources; its selected image and candidates may be missing while generation is incomplete.
-- Story Content is plain text with a required introduction, optional supported history/design/art topics, and Related People. Topics express content semantics; React components control presentation and need not expose one section per topic.
+- Story Content has a required introduction, optional supported history/design/art topics, and Related People. Its introduction and topic descriptions support Markdown for readable paragraphs and selective emphasis; existing plain-text Stories remain valid. Topics express content semantics; React components control presentation and need not expose one section per topic.
 - Publish only the strongest few source-supported ideas rather than a complete article summary. Prefer visible details when they convey the cultural meaning. Dated history insights run oldest to newest, followed by undated insights.
 - Retain Sources and resolvable Source References for editorial review. Sources, Editorial Notes, AI reasoning, and processing metadata remain hidden from the default Visitor Experience.
+- Related People must be explicitly named in the Story Introduction or a Visitor Insight. Generated Stories mention each retained person's full display name at least once; people mentioned only in Sources are excluded. The public catalog also excludes people whose full display name is absent from the Story text.
 - Wikipedia, Wikidata, and Wikimedia Commons provide the initial source material; story text currently starts from Wikipedia. MDX and configurable React renderers remain future decisions.
+- Allowed Wikipedia editions are English, Italian, French, German, and Spanish. Acquire Wikipedia in English and the official languages of the POI's country that are in the allowed edition list. Related People also include the official languages of their countries of citizenship; retain the POI country context when regenerating a Person. Match editions through Wikidata identity, deduplicate languages, and write visitor content in English. Missing editions or country/language metadata produce warnings; usable Sources still support generation. Apply the same country-context principle when adding other linked entities.
 - Generation order, persistence, retries, and failure behavior are defined in [Story Workflow Architecture](docs/story-workflow-architecture.md).
 
 ### People

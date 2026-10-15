@@ -1,13 +1,14 @@
 {
   "introduction": {
-    "text": "Casal Rotondo is the largest surviving circular ancient Roman mausoleum on the Appian Way, southeast of Rome, Italy. It is significant as a rare example of Roman funerary architecture and for its later medieval use as a farmhouse and watchtower.",
-    "sourceIds": ["wikipedia"]
+    "text": "Casal Rotondo is a Roman mausoleum on the Appian Way, southeast of Rome, near the sixth mile of the ancient road. Built around 30 BC, it is a circular tomb about 27 metres across, topped by a later farmhouse that gave the monument its name. The site was also used as a lookout along the road. Beside the tomb, a brick wall assembled by archaeologist Luigi Canina displays an inscription and sculptural fragments found nearby. The inscription led to a proposed identification of the tomb's owner, but that connection is disputed.",
+    "sourceIds": ["wikipedia"],
+    "emphasis": ["Roman mausoleum", "later farmhouse"]
   },
   "topics": {
     "history": [
       {
         "id": "construction",
-        "description": "The mausoleum was constructed around 30 BCE at the sixth mile of the Appian Way.",
+        "description": "Built around 30 BC near the sixth mile of the Appian Way, the mausoleum belonged to a stretch of road lined with tombs.",
         "sourceIds": ["wikipedia"],
         "time": {
           "startYear": -30,
@@ -16,26 +17,22 @@
         }
       },
       {
-        "id": "canina-inscription",
-        "description": "In the mid‑18th century, Luigi Canina interpreted an epigraphic fragment as evidence that the monument was built by Marcus Aurelius Cotta Maximus Messalinus for his father Marcus Valerius Messalla Corvinus.",
-        "sourceIds": ["wikipedia"],
-        "time": {
-          "startYear": 1700,
-          "precision": "approximate",
-          "granularity": "century"
-        }
-      },
-      {
         "id": "savelli-watchtower",
-        "description": "A medieval farmhouse was built atop the mausoleum by the Savelli family, serving as a watchtower along the Appian Way.",
+        "description": "The farmhouse built above the ancient remains gave Casal Rotondo its name. The site was also used as a lookout along the Appian Way.",
         "sourceIds": ["wikipedia"]
       }
     ],
     "design": [
       {
-        "id": "design",
-        "description": "The mausoleum is a large circular structure with a diameter of 27 m, originally featuring a conical roof, frieze ornamentation, and seating encircling its base.",
+        "id": "design-circular-tomb",
+        "description": "The ancient tomb is circular, with a diameter of about 27 metres. The later farmhouse stands on top of its surviving structure.",
         "sourceIds": ["wikipedia"]
+      },
+      {
+        "id": "canina-inscription",
+        "description": "Archaeologist Luigi Canina assembled the nearby display of fragments. An inscription naming Cotta once suggested a connection to the family of Messalla Corvinus. That interpretation is disputed: the fragment is thought to come from a smaller neighbouring tomb.",
+        "sourceIds": ["wikipedia"],
+        "emphasis": ["interpretation is disputed"]
       }
     ],
     "art": []
@@ -45,16 +42,12 @@
       "name": "Luigi Canina",
       "personId": "luigi-canina",
       "sourceIds": ["wikipedia"]
-    },
+    }
+  ],
+  "wikipediaSources": [
     {
-      "name": "Marcus Aurelius Cotta Maximus Messalinus",
-      "personId": "marcus-aurelius-cotta-maximus-messalinus",
-      "sourceIds": ["wikipedia"]
-    },
-    {
-      "name": "Marcus Valerius Messalla Corvinus",
-      "personId": "marcus-valerius-messalla-corvinus",
-      "sourceIds": ["wikipedia"]
+      "title": "Casal Rotondo",
+      "url": "https://en.wikipedia.org/wiki/Casal_Rotondo"
     }
   ]
 }

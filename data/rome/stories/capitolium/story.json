@@ -149,5 +149,11 @@
       "personId": "vulcano",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Capitolium (Ostia)",
+      "url": "https://it.wikipedia.org/wiki/Capitolium_(Ostia)"
+    }
   ]
 }

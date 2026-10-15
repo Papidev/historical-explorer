@@ -210,5 +210,11 @@
       "personId": "tsung-dao-lee",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Santa Maria degli Angeli e dei Martiri",
+      "url": "https://en.wikipedia.org/wiki/Santa_Maria_degli_Angeli_e_dei_Martiri"
+    }
   ]
 }

@@ -101,5 +101,11 @@
       "personId": "gianni-alemanno",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Forte Bravetta",
+      "url": "https://it.wikipedia.org/wiki/Forte_Bravetta"
+    }
   ]
 }

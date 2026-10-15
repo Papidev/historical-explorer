@@ -107,7 +107,6 @@ export const CityExplorer = ({
         className="z-30 touch-pan-y lg:w-[var(--panel-width,22rem)]"
       >
         <Sidebar
-          citySlug={citySlug}
           categoryDefinitions={categoryDefinitions}
           pois={pois}
           visiblePois={visiblePois}
@@ -165,6 +164,8 @@ export const CityExplorer = ({
           coordinates={coordinates}
           zoom={zoom}
           pois={visiblePois}
+          selectedPoiId={selectedPoiId}
+          categoryDefinitions={categoryDefinitions}
           onZoomChange={setZoom}
           onOpenPoiDetails={openPoi}
           onMapClick={() => selectPoi(null)}

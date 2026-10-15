@@ -1,5 +1,53 @@
 # historical-explorer
 
+## 0.6.0
+
+### Minor Changes
+
+- Add discreet Wikipedia links to Stories and People, with additional cited languages in a compact disclosure and every article opening in a new tab. Preserve source URLs in versioned content so links remain available in production without local Source snapshots.
+
+## 0.5.2
+
+### Patch Changes
+
+- Highlight the selected POI in green while keeping map previews above markers and preserving native marker borders. Improve the filters panel with a compact fixed header, aligned category rows, and full-row accordion controls separate from checkbox selection.
+
+## 0.5.1
+
+### Patch Changes
+
+- Prefer meaningful paragraph breaks in generated Story introductions and topic descriptions, and preserve newly generated Rome gate content and related People.
+
+## 0.5.0
+
+### Minor Changes
+
+- Add Markdown formatting to Story introductions and topic descriptions, with spaced paragraphs, selective highlighted bold, italics, lists, and links. Preserve existing plain-text Stories and their emphasis metadata.
+
+## 0.4.0
+
+### Minor Changes
+
+- Generate English Stories and People from complementary Wikipedia editions in English, Italian, French, German, and Spanish, selected using the countries of the POI and Person. Preserve source references and continue with available editions when others are missing. Retain only Related People named in the Story text, develop meaningful source-supported details, and rename the Design section to Architecture.
+
+## 0.3.0
+
+### Minor Changes
+
+- Add optional, selectively chosen bold and warm-colored emphasis to Story introductions and topic items. Enrich three Rome reference Stories and update editorial guidance for descriptive, source-grounded content.
+
+## 0.2.8
+
+### Patch Changes
+
+- Refine POI categories and manual type mappings for monuments, gardens, religious sites, and archaeological sites.
+
+## 0.2.7
+
+### Patch Changes
+
+- Group religious sites under one category and identify them with yellow map markers and matching category filters.
+
 ## 0.2.6
 
 ### Patch Changes

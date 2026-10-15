@@ -50,5 +50,11 @@
       "personId": "fabius-pictor",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Ficana",
+      "url": "https://en.wikipedia.org/wiki/Ficana"
+    }
   ]
 }

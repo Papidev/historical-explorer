@@ -169,5 +169,11 @@
       "personId": "chigi-family",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Fontana dell'Acqua Acetosa (Rome)",
+      "url": "https://en.wikipedia.org/wiki/Fontana_dell'Acqua_Acetosa_(Rome)"
+    }
   ]
 }

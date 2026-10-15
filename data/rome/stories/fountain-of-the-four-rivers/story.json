@@ -47,5 +47,11 @@
       "personId": "filippo-baldinucci",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Fontana dei Quattro Fiumi",
+      "url": "https://en.wikipedia.org/wiki/Fontana_dei_Quattro_Fiumi"
+    }
   ]
 }

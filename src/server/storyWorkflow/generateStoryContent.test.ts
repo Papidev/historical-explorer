@@ -40,8 +40,9 @@ const sources: Source[] = [
 ];
 
 const generated = {
+  textFormat: "markdown",
   introduction: {
-    text: "Forum Boarium was Rome's ancient cattle market.",
+    text: "Forum Boarium was Rome's **ancient cattle market**.\n\nIts temples stand beside the river.",
     sourceIds: ["wikipedia"],
   },
   topics: { history: [], design: [], art: [] },
@@ -71,22 +72,25 @@ describe("Story Content AI adapters", () => {
       6,
       "repair-tiberius",
       "Repaired by Emperor Tiberius in 37 AD.",
+      5,
     ],
     [
       "acqua-vergine-stringified-topics.json",
       7,
       "history2",
       "Repair under Emperor Tiberius in 37 AD.",
+      6,
     ],
     [
       "san-saba-malformed.json",
       11,
       "history3",
       "In 768, Antipope Constantine II was held prisoner in the monastery before being killed by the Lombards.",
+      3,
     ],
   ])(
     "recovers the recorded response %s without changing its insights",
-    async (fixture, count, id, description) => {
+    async (fixture, count, id, description, peopleCount) => {
       const response = JSON.parse(
         readFileSync(
           path.join(originalDirectory, `src/server/storyWorkflow/fixtures/${fixture}`),
@@ -112,7 +116,7 @@ describe("Story Content AI adapters", () => {
         sourceIds: ["wikipedia"],
         time: { startYear: fixture === "san-saba-malformed.json" ? 768 : 37 },
       });
-      expect(result.relatedPeople).toHaveLength(10);
+      expect(result.relatedPeople).toHaveLength(peopleCount);
       expect(requests).toBe(1);
     },
   );
@@ -252,14 +256,21 @@ describe("Story Content AI adapters", () => {
     expect(existsSync(path.join("data", "generated", "ai-response-failures"))).toBe(false);
   });
 
-  it("discards Person IDs supplied by AI so names must pass real identity resolution", async () => {
+  it("retains only mentioned people and discards AI Person IDs before identity resolution", async () => {
     server.use(
       http.post("http://localhost:11434/api/chat", () =>
         HttpResponse.json({
           message: {
             content: JSON.stringify({
               ...generated,
-              relatedPeople: [{ name: "Hercules", personId: "Hercules", sourceIds: ["wikipedia"] }],
+              introduction: {
+                ...generated.introduction,
+                text: `${generated.introduction.text} The temple is dedicated to Hercules.`,
+              },
+              relatedPeople: [
+                { name: "Hercules", personId: "Hercules", sourceIds: ["wikipedia"] },
+                { name: "Filippo Baldinucci", sourceIds: ["wikipedia"] },
+              ],
             }),
           },
         }),

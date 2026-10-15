@@ -7,37 +7,53 @@
     "description": [
       {
         "text": "Giacomo del Duca was an Italian sculptor and architect who worked during the late Renaissance and Mannerist period, mainly in Rome. He is best remembered for his collaboration with Michelangelo on the tomb of Pope Julius II, where he helped sculpt and construct the monument in a truncated form compared to the original design.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "After a prolific career in Rome, del Duca returned to Sicily in 1588, settling in Messina where he completed several late‑Mannerist structures such as San Giovanni dei Gerolamini and the Loggia dei Mercanti, and he died there in 1604.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "curiosities": [
       {
         "text": "He assisted Michelangelo in the sculpture and construction of the tomb of Pope Julius II, which was finished in a highly truncated state relative to the original design.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "Del Duca modified Michelangelo’s plans for buildings on the Capitoline Hill, one of Rome’s most famous and highest of the seven hills.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He participated in the decoration of Porta Pia in 1562.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He helped design the church of Santa Maria in Trivio in 1575.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He sculpted the tomb of Elena Savelli in 1570 in San Giovanni in Laterano.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He is a character in Manuel Mujica Láinez’s novel Bomarzo, which explores the Orsini family and its sacred grove of monsters.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "birthDate": {
@@ -60,5 +76,8 @@
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-10-10T17:27:58.728Z"
-  }
+  },
+  "sourceContextWikidataIds": [
+    "Q2104896"
+  ]
 }

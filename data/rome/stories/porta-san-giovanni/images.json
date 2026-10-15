@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "commonsFileName": "Porta_San_Giovanni_Roma_2.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Porta_San_Giovanni_Roma_2.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Porta_San_Giovanni_Roma_2.JPG/960px-Porta_San_Giovanni_Roma_2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Porta_San_Giovanni_Roma_2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "LPLT",
+      "author": "LPLT",
+      "width": 1950,
+      "height": 1300,
+      "discoveredVia": "wikidata-p18",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Joseph_Rebell_-_Die_Porta_San_Giovanni_gegen_Frascati_-_5818_-_Österreichische_Galerie_Belvedere.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Joseph_Rebell_-_Die_Porta_San_Giovanni_gegen_Frascati_-_5818_-_%C3%96sterreichische_Galerie_Belvedere.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Joseph_Rebell_-_Die_Porta_San_Giovanni_gegen_Frascati_-_5818_-_%C3%96sterreichische_Galerie_Belvedere.jpg/960px-Joseph_Rebell_-_Die_Porta_San_Giovanni_gegen_Frascati_-_5818_-_%C3%96sterreichische_Galerie_Belvedere.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Joseph_Rebell_-_Die_Porta_San_Giovanni_gegen_Frascati_-_5818_-_%C3%96sterreichische_Galerie_Belvedere.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Josef Rebell",
+      "author": "Josef Rebell",
+      "width": 3508,
+      "height": 2361,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Niels_Bredal_-_Parti_fra_Rom_med_udsigt_til_Porta_San_Giovanni_-_1880.png",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Niels_Bredal_-_Parti_fra_Rom_med_udsigt_til_Porta_San_Giovanni_-_1880.png",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Niels_Bredal_-_Parti_fra_Rom_med_udsigt_til_Porta_San_Giovanni_-_1880.png/960px-Niels_Bredal_-_Parti_fra_Rom_med_udsigt_til_Porta_San_Giovanni_-_1880.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/37/Niels_Bredal_-_Parti_fra_Rom_med_udsigt_til_Porta_San_Giovanni_-_1880.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "Niels Bredal",
+      "author": "Niels Bredal",
+      "width": 2227,
+      "height": 1392,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Porta_San_Giovanni_Roma_2.JPG"
+}

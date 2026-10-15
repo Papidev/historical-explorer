@@ -38,7 +38,7 @@ before running the required checks and publishing the PR:
 - Run `pnpm release:version` to consume pending changesets. Include the generated `package.json` version and `CHANGELOG.md` in the PR; an unconsumed changeset is not release-ready.
 - Apply the documentation and CI/release automation exemptions in [Application versions](../../../README.md#application-versions); dependency manifests and lockfiles still require a release.
 - Reuse an already prepared increment rather than bumping twice. If another release merged, regenerate from the updated base and preserve its changelog history.
-- Run `pnpm release:check origin/main` and resolve failures before opening or updating the PR.
+- Run `pnpm release:check origin/main` when application, dependency, version, changelog, or release automation changes make release validation relevant; skip it for documentation or agent-instruction-only updates.
 - Preserve `0.1.0` for the initial tracked release. Subsequent application PRs require one increment unless covered by the documented exemptions.
 
 ## GitHub Access
@@ -85,4 +85,4 @@ conversation history, and release bookkeeping that is already clear from the dif
 When using the GitHub connector, pass actual newlines and leave a blank line before
 Markdown lists. Link the originating issue and use a closing keyword when appropriate.
 
-The local checks required by [AGENTS.md](../../../AGENTS.md) must pass before opening a PR or marking it ready for review.
+Choose local verification using [Testing & Verification](../../../AGENTS.md#testing--verification). Opening a PR or marking it ready for review does not require a blanket test, type-check, lint, format, or build run.

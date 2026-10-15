@@ -127,5 +127,11 @@
       "personId": "anna-fraentzel-celli",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Casale della Cervelletta",
+      "url": "https://it.wikipedia.org/wiki/Casale_della_Cervelletta"
+    }
   ]
 }

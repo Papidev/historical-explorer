@@ -219,5 +219,11 @@
       "personId": "pope-sixtus-v",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Sant'Andrea della Valle",
+      "url": "https://en.wikipedia.org/wiki/Sant'Andrea_della_Valle"
+    }
   ]
 }

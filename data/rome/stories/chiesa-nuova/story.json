@@ -301,5 +301,11 @@
       "personId": "barocci",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Santa Maria in Vallicella",
+      "url": "https://en.wikipedia.org/wiki/Santa_Maria_in_Vallicella"
+    }
   ]
 }

@@ -2,12 +2,16 @@
 
 import { useEffect, useRef } from "react";
 import type { Poi } from "@/types/Poi";
+import { DEFAULT_POI_CATEGORY_DEFINITIONS, type PoiCategoryDefinition } from "@/types/PoiCategory";
+import "./markers.css";
 import { createMapLibreAdapter, MapAdapter } from "./mapAdapter";
 
 type Props = {
   coordinates: [number, number];
   zoom: number;
   pois: Poi[];
+  selectedPoiId?: string | null;
+  categoryDefinitions?: PoiCategoryDefinition[];
   onZoomChange?: (zoom: number) => void;
   onOpenPoiDetails?: (poiId: string) => void;
   onMapClick?: () => void;
@@ -21,7 +25,16 @@ type MapHandlers = {
 
 const ZOOM_EPSILON = 0.001;
 
-export const Map = ({ coordinates, zoom, pois, onZoomChange, onOpenPoiDetails, onMapClick }: Props) => {
+export const Map = ({
+  coordinates,
+  zoom,
+  pois,
+  selectedPoiId = null,
+  categoryDefinitions = DEFAULT_POI_CATEGORY_DEFINITIONS,
+  onZoomChange,
+  onOpenPoiDetails,
+  onMapClick,
+}: Props) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const adapterRef = useRef<MapAdapter | null>(null);
   const lastZoomFromMapRef = useRef<number | null>(null);
@@ -91,8 +104,12 @@ export const Map = ({ coordinates, zoom, pois, onZoomChange, onOpenPoiDetails, o
   }, [zoom]);
 
   useEffect(() => {
-    adapterRef.current?.updatePois(pois);
-  }, [pois]);
+    adapterRef.current?.updatePois(pois, categoryDefinitions);
+  }, [pois, categoryDefinitions]);
+
+  useEffect(() => {
+    adapterRef.current?.updateSelectedPoi(selectedPoiId);
+  }, [selectedPoiId]);
 
   return <div ref={containerRef} className="h-full w-full" />;
 };

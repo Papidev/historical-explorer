@@ -88,6 +88,10 @@ describe("public catalog", () => {
       "Forum Boarium",
     );
     expect(catalog.getStoryContent("rome", "basilica-costantiniana-di-s-agnese")).toBeUndefined();
+    expect(catalog.getStoryContent("rome", "fountain-of-the-four-rivers")?.relatedPeople).toEqual([
+      { name: "Gian Lorenzo Bernini", personId: "gian-lorenzo-bernini" },
+      { name: "Pope Innocent X", personId: "pope-innocent-x" },
+    ]);
     expect(new Set(snapshot.people.map(({ id }) => id))).toEqual(
       new Set(
         snapshot.pois.flatMap(({ storyContent }) =>
@@ -96,9 +100,13 @@ describe("public catalog", () => {
       ),
     );
     for (const { storyContent } of snapshot.pois) {
+      expect(storyContent.wikipediaSources?.length).toBeGreaterThan(0);
       for (const { personId } of storyContent.relatedPeople) {
         expect(catalog.getPerson(personId!)).toBeDefined();
       }
+    }
+    for (const person of snapshot.people) {
+      expect(person.wikipediaSources?.length).toBeGreaterThan(0);
     }
     expect(JSON.stringify(snapshot)).not.toMatch(/"(?:sourceIds|generation|isProposed)":/);
   });

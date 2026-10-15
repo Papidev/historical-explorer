@@ -126,5 +126,11 @@
       "personId": "federico-hermanin",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Galleria nazionale d'arte antica di palazzo Corsini",
+      "url": "https://it.wikipedia.org/wiki/Galleria_nazionale_d'arte_antica_di_palazzo_Corsini"
+    }
   ]
 }

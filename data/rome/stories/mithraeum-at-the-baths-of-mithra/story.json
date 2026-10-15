@@ -20,5 +20,11 @@
       }
     ]
   },
-  "relatedPeople": []
+  "relatedPeople": [],
+  "wikipediaSources": [
+    {
+      "title": "Mitreo delle Terme del Mitra",
+      "url": "https://it.wikipedia.org/wiki/Mitreo_delle_Terme_del_Mitra"
+    }
+  ]
 }

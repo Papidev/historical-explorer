@@ -46,5 +46,11 @@
       "personId": "orsini-family",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Castello di Corcolle",
+      "url": "https://it.wikipedia.org/wiki/Castello_di_Corcolle"
+    }
   ]
 }

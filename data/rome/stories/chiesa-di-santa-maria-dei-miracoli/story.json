@@ -177,5 +177,11 @@
       "personId": "pericle-fazzini",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Chiesa di Santa Maria dei Miracoli (Roma)",
+      "url": "https://it.wikipedia.org/wiki/Chiesa_di_Santa_Maria_dei_Miracoli_(Roma)"
+    }
   ]
 }

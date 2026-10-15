@@ -118,5 +118,11 @@
       "personId": "pope-alexander-vii",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Lateran Baptistery",
+      "url": "https://en.wikipedia.org/wiki/Lateran_Baptistery"
+    }
   ]
 }

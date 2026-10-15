@@ -145,6 +145,64 @@ const createDependencies = (overrides: Partial<StoryWorkflowDependencies> = {}) 
 };
 
 describe("Story Workflow Interface", () => {
+  it("continues with available Sources and reports source warnings in the result and checkpoint", async () => {
+    const warning = "Italian Wikipedia is unavailable.";
+    const { dependencies, snapshots } = createDependencies({
+      acquireSources: async () => ({ sources: [source], warnings: [warning] }),
+    });
+    const progress: string[] = [];
+    await expect(
+      createStoryWorkflow(dependencies).draftStory.generate({
+        poiId: pointOfInterest.id,
+        ai: { mode: "local", model: "test-model" },
+        onProgress: (message) => progress.push(message),
+      }),
+    ).resolves.toMatchObject({ storyContent: "generated", sourceWarnings: [warning] });
+    expect(progress).toContain(warning);
+    expect(snapshots.get(pointOfInterest.id)?.generation.sources?.sourceWarnings).toEqual([
+      warning,
+    ]);
+  });
+
+  it("persists multiple Sources and their references without requiring them for publication", async () => {
+    const originalWorkingDirectory = process.cwd();
+    const directory = mkdtempSync(path.join(tmpdir(), "multiple-story-sources-"));
+    try {
+      process.chdir(directory);
+      const repository = createFilesystemStoryWorkflowRepository("rome");
+      const italian = {
+        ...source,
+        id: "wikipedia-it",
+        url: "https://it.wikipedia.org/wiki/Foro_Boario",
+        content: "Fonte italiana.",
+      };
+      const checkpoint = { durationMs: 1, completedAt: "2026-08-22T10:00:00.000Z" };
+      await repository.replaceSources(pointOfInterest.id, [source, italian], checkpoint);
+      const content = storyContent();
+      content.introduction.sourceIds = ["wikipedia-it"];
+      await repository.replaceStoryContent(pointOfInterest.id, content, checkpoint);
+      expect((await repository.get(pointOfInterest.id))?.sources).toEqual([source, italian]);
+      expect((await repository.get(pointOfInterest.id))?.storyContent?.wikipediaSources).toEqual([
+        { title: italian.title, url: italian.url },
+      ]);
+      // Partial reacquisition must leave the previous Story readable until its replacement is ready.
+      await repository.replaceSources(pointOfInterest.id, [source], checkpoint);
+      expect((await repository.get(pointOfInterest.id))?.storyContent).toEqual({
+        ...content,
+        wikipediaSources: [{ title: italian.title, url: italian.url }],
+      });
+      await repository.replaceStoryContent(pointOfInterest.id, storyContent(), checkpoint);
+      expect((await repository.get(pointOfInterest.id))?.storyContent?.wikipediaSources).toEqual([
+        { title: source.title, url: source.url },
+      ]);
+      await repository.reset(pointOfInterest.id);
+      expect(await repository.get(pointOfInterest.id)).toBeUndefined();
+    } finally {
+      process.chdir(originalWorkingDirectory);
+      rmSync(directory, { recursive: true, force: true });
+    }
+  });
+
   it("owns the full generation order and returns a stable domain result", async () => {
     const order: string[] = [];
     const imageSourceTitles: Array<string | undefined> = [];

@@ -45,5 +45,11 @@
       "personId": "malcolm-munthe",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Castello di Lunghezza",
+      "url": "https://en.wikipedia.org/wiki/Castello_di_Lunghezza"
+    }
   ]
 }
