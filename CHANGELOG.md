@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.6.0
+
+### Minor Changes
+
+- Add discreet Wikipedia links to Stories and People, with additional cited languages in a compact disclosure and every article opening in a new tab. Preserve source URLs in versioned content so links remain available in production without local Source snapshots.
+
 ## 0.5.2
 
 ### Patch Changes
