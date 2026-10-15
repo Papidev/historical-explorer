@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.6.1
+
+### Patch Changes
+
+- Add the Villa POI category, classify Domus Aurea as a villa, and extend villa and fountain type mappings.
+
 ## 0.6.0
 
 ### Minor Changes

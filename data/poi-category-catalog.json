@@ -10,14 +10,19 @@
       "name": "Cathedral",
       "label": "Cathedrals",
       "parent": "Churches & cathedrals",
-      "supersedes": ["Basilica", "Church"]
+      "supersedes": [
+        "Basilica",
+        "Church"
+      ]
     },
     {
       "id": "Basilica",
       "name": "Basilica",
       "label": "Basilicas",
       "parent": "Churches & cathedrals",
-      "supersedes": ["Church"]
+      "supersedes": [
+        "Church"
+      ]
     },
     {
       "id": "Church",
@@ -132,6 +137,10 @@
     {
       "id": "Grave",
       "name": "Grave"
+    },
+    {
+      "id": "Villa",
+      "name": "Villa"
     }
   ],
   "deletedNames": [

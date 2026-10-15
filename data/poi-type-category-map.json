@@ -1,117 +1,301 @@
 {
   "version": 1,
   "mappings": {
-    "Q2977": ["Cathedral"],
+    "Q2977": [
+      "Cathedral"
+    ],
     "Q2887138": [],
-    "Q7362268": ["Amphitheatre"],
-    "Q839954": ["Archaeological Site"],
-    "Q13218676": ["Aqueduct"],
-    "Q33506": ["Museum"],
-    "Q92107": ["Castle"],
-    "Q3822604": ["Mausoleum"],
-    "Q162875": ["Mausoleum"],
-    "Q124936": ["Basilica"],
-    "Q2713379": ["Basilica"],
-    "Q317557": ["Church"],
-    "Q15487029": ["Basilica"],
-    "Q334383": ["Church", "Churches & cathedrals"],
-    "Q97588309": ["Church"],
-    "Q120560": ["Basilica"],
-    "Q143912": ["Arch"],
-    "Q1088552": ["Church"],
-    "Q174782": ["Square"],
-    "Q16970": ["Church"],
+    "Q7362268": [
+      "Amphitheatre"
+    ],
+    "Q839954": [
+      "Archaeological Site"
+    ],
+    "Q13218676": [
+      "Aqueduct"
+    ],
+    "Q33506": [
+      "Museum"
+    ],
+    "Q92107": [
+      "Castle"
+    ],
+    "Q3822604": [
+      "Mausoleum"
+    ],
+    "Q162875": [
+      "Mausoleum"
+    ],
+    "Q124936": [
+      "Basilica"
+    ],
+    "Q2713379": [
+      "Basilica"
+    ],
+    "Q317557": [
+      "Church"
+    ],
+    "Q15487029": [
+      "Basilica"
+    ],
+    "Q334383": [
+      "Church",
+      "Churches & cathedrals"
+    ],
+    "Q97588309": [
+      "Church"
+    ],
+    "Q120560": [
+      "Basilica"
+    ],
+    "Q143912": [
+      "Arch"
+    ],
+    "Q1088552": [
+      "Church"
+    ],
+    "Q174782": [
+      "Square"
+    ],
+    "Q16970": [
+      "Church"
+    ],
     "Q2065736": [],
     "Q1492823": [],
     "Q14752696": [],
     "Q3748441": [],
-    "Q16560": ["Palace"],
+    "Q16560": [
+      "Palace"
+    ],
     "Q110288055": [],
-    "Q12518": ["Tower"],
+    "Q12518": [
+      "Tower"
+    ],
     "Q840482": [],
-    "Q474": ["Aqueduct"],
-    "Q97621821": ["Archaeological Site"],
-    "Q697295": ["Archaeological Site"],
+    "Q474": [
+      "Aqueduct"
+    ],
+    "Q97621821": [
+      "Archaeological Site"
+    ],
+    "Q697295": [
+      "Archaeological Site"
+    ],
     "Q162633": [],
-    "Q166118": ["Archive"],
-    "Q7328910": ["Museum"],
-    "Q207694": ["Museum"],
+    "Q166118": [
+      "Archive"
+    ],
+    "Q7328910": [
+      "Museum"
+    ],
+    "Q207694": [
+      "Museum"
+    ],
     "Q1400264": [],
     "Q1110992": [],
-    "Q97662266": ["Museum"],
-    "Q1966910": ["Museum"],
-    "Q614316": ["Museum"],
-    "Q17431399": ["Museum"],
+    "Q97662266": [
+      "Museum"
+    ],
+    "Q1966910": [
+      "Museum"
+    ],
+    "Q614316": [
+      "Museum"
+    ],
+    "Q17431399": [
+      "Museum"
+    ],
     "Q814254": [],
-    "Q109607": ["Archaeological Site"],
-    "Q492255": ["Arch"],
-    "Q3363945": ["Archaeological Site"],
-    "Q3867560": ["Museum"],
-    "Q124830411": ["Museum"],
-    "Q15661340": ["Archaeological Site"],
-    "Q26883973": ["Monument"],
-    "Q1649443": ["Church", "Churches & cathedrals"],
+    "Q109607": [
+      "Archaeological Site"
+    ],
+    "Q492255": [
+      "Arch"
+    ],
+    "Q3363945": [
+      "Archaeological Site"
+    ],
+    "Q3867560": [
+      "Museum"
+    ],
+    "Q124830411": [
+      "Museum"
+    ],
+    "Q15661340": [
+      "Archaeological Site"
+    ],
+    "Q26883973": [
+      "Monument"
+    ],
+    "Q1649443": [
+      "Church",
+      "Churches & cathedrals"
+    ],
     "Q684740": [],
-    "Q82117": ["Arch"],
-    "Q79007": ["Street"],
-    "Q1128397": ["Abbey", "Churches & cathedrals"],
-    "Q163687": ["Basilica", "Churches & cathedrals"],
+    "Q82117": [
+      "Arch"
+    ],
+    "Q79007": [
+      "Street"
+    ],
+    "Q1128397": [
+      "Abbey",
+      "Churches & cathedrals"
+    ],
+    "Q163687": [
+      "Basilica",
+      "Churches & cathedrals"
+    ],
     "Q112132548": [],
     "Q112132522": [],
-    "Q92755865": ["Museum"],
-    "Q210077": ["Baptistery"],
-    "Q381885": ["Mausoleum"],
-    "Q385994": ["Library"],
-    "Q11834910": ["Library"],
-    "Q867143": ["Archaeological Site"],
-    "Q44539": ["Archaeological Site"],
-    "Q108325": ["Church", "Churches & cathedrals"],
+    "Q92755865": [
+      "Museum"
+    ],
+    "Q210077": [
+      "Baptistery"
+    ],
+    "Q381885": [
+      "Mausoleum"
+    ],
+    "Q385994": [
+      "Library"
+    ],
+    "Q11834910": [
+      "Library"
+    ],
+    "Q867143": [
+      "Archaeological Site"
+    ],
+    "Q44539": [
+      "Archaeological Site"
+    ],
+    "Q108325": [
+      "Church",
+      "Churches & cathedrals"
+    ],
     "Q477396": [],
-    "Q2651004": ["Palace"],
-    "Q782970": ["Archaeological Site"],
-    "Q21752084": ["Archaeological Site"],
-    "Q118987801": ["Museum"],
-    "Q19860854": ["Archaeological Site"],
+    "Q2651004": [
+      "Palace"
+    ],
+    "Q782970": [
+      "Archaeological Site"
+    ],
+    "Q21752084": [
+      "Archaeological Site"
+    ],
+    "Q118987801": [
+      "Museum"
+    ],
+    "Q19860854": [
+      "Archaeological Site"
+    ],
     "Q13406463": [],
     "Q838948": [],
-    "Q124830213": ["Museum"],
-    "Q3329412": ["Museum"],
-    "Q23413": ["Castle"],
-    "Q172896": ["Archaeological Site"],
+    "Q124830213": [
+      "Museum"
+    ],
+    "Q3329412": [
+      "Museum"
+    ],
+    "Q23413": [
+      "Castle"
+    ],
+    "Q172896": [
+      "Archaeological Site"
+    ],
     "Q131263": [],
-    "Q39614": ["Cemetery"],
-    "Q2087181": ["Museum"],
-    "Q1662089": ["Museum"],
-    "Q56395672": ["Church", "Churches & cathedrals"],
-    "Q811165": ["Churches & cathedrals", "Cathedral", "Basilica", "Church", "Abbey"],
-    "Q675824": ["Mausoleum"],
-    "Q1930585": ["Monument"],
-    "Q179700": ["Monument"],
-    "Q16735822": ["Museum"],
-    "Q112132573": ["Museum"],
-    "Q136351774": ["Palace"],
-    "Q111698786": ["Monument"],
-    "Q860861": ["Monument"],
-    "Q483453": ["Fountain"],
-    "Q1785071": ["Fort"],
+    "Q39614": [
+      "Cemetery"
+    ],
+    "Q2087181": [
+      "Museum"
+    ],
+    "Q1662089": [
+      "Museum"
+    ],
+    "Q56395672": [
+      "Church",
+      "Churches & cathedrals"
+    ],
+    "Q811165": [
+      "Churches & cathedrals",
+      "Cathedral",
+      "Basilica",
+      "Church",
+      "Abbey"
+    ],
+    "Q675824": [
+      "Mausoleum"
+    ],
+    "Q1930585": [
+      "Monument"
+    ],
+    "Q179700": [
+      "Monument"
+    ],
+    "Q16735822": [
+      "Museum"
+    ],
+    "Q112132573": [
+      "Museum"
+    ],
+    "Q136351774": [
+      "Palace"
+    ],
+    "Q111698786": [
+      "Monument"
+    ],
+    "Q860861": [
+      "Monument"
+    ],
+    "Q483453": [
+      "Fountain"
+    ],
+    "Q1785071": [
+      "Fort"
+    ],
     "Q179049": [],
     "Q473972": [],
-    "Q121076356": ["Museum"],
+    "Q121076356": [
+      "Museum"
+    ],
     "Q27916659": [],
-    "Q1107656": ["Garden"],
-    "Q22698": ["Garden"],
-    "Q1151014": ["Archaeological Site"],
-    "Q5003624": ["Monument"],
-    "Q4989906": ["Monument"],
-    "Q173387": ["Grave"],
-    "Q1779653": ["Monument"],
+    "Q1107656": [
+      "Garden"
+    ],
+    "Q22698": [
+      "Garden"
+    ],
+    "Q1151014": [
+      "Archaeological Site"
+    ],
+    "Q5003624": [
+      "Monument"
+    ],
+    "Q4989906": [
+      "Monument"
+    ],
+    "Q173387": [
+      "Grave"
+    ],
+    "Q1779653": [
+      "Monument"
+    ],
     "Q1497375": [],
     "Q838858": [],
     "Q3951623": [],
     "Q12292478": [],
     "Q962715": [],
-    "Q156849": ["Archaeological Site"],
-    "Q3936952": []
+    "Q156849": [
+      "Archaeological Site"
+    ],
+    "Q3936952": [],
+    "Q252021": [
+      "Villa"
+    ],
+    "Q43483": [
+      "Fountain"
+    ]
   },
   "origins": {
     "Q3748441": "manual",
@@ -205,7 +389,8 @@
     "Q12292478": "manual",
     "Q962715": "manual",
     "Q156849": "manual",
-    "Q3936952": "manual"
+    "Q3936952": "manual",
+    "Q43483": "manual"
   },
   "reasons": {
     "Q16560": "\"palace\" denotes a grand residence not covered by existing categories, so a new top‑level category \"Palace\" is created.",
