@@ -40,7 +40,7 @@ export const BatchGeneration = ({
   } = useBatchGeneration({ rows, aiSelectionRef, action, disabled, onRunningChange });
 
   return (
-    <div className="border-b border-gray-200 px-4 py-3 text-sm">
+    <div className="shrink-0 border-b border-gray-200 px-4 py-2 text-sm">
       <form
         className="flex flex-wrap items-center gap-3"
         onSubmit={(event) => {
@@ -76,18 +76,23 @@ export const BatchGeneration = ({
           onStop={stop}
         />
       </form>
-      <p className="mt-2 text-xs text-gray-500">
-        {rows.length} POIs without Story Content, across all pages and filters. Generates one at a
-        time; POI errors do not stop the queue.
-      </p>
-      <p className="mt-1 text-xs text-gray-500">
-        POIs that fail before Story Content generation starts do not use the limit.
-      </p>
-      <p className="mt-1 text-xs text-gray-500">
-        The queue is saved in this browser. Reopen this admin page to resume after closing it or
-        restarting the computer. Generations pause while the computer is off. The story limit does
-        not guarantee an Ollama usage budget.
-      </p>
+      <details className="mt-2 text-xs text-gray-500">
+        <summary className="cursor-pointer">
+          {rows.length} POIs without Story Content · Queue details
+        </summary>
+        <p className="mt-2 text-xs text-gray-500">
+          {rows.length} POIs without Story Content, across all pages and filters. Generates one at a
+          time; POI errors do not stop the queue.
+        </p>
+        <p className="mt-1 text-xs text-gray-500">
+          POIs that fail before Story Content generation starts do not use the limit.
+        </p>
+        <p className="mt-1 text-xs text-gray-500">
+          The queue is saved in this browser. Reopen this admin page to resume after closing it or
+          restarting the computer. Generations pause while the computer is off. The story limit does
+          not guarantee an Ollama usage budget.
+        </p>
+      </details>
       {isPaused ? (
         <button
           type="button"

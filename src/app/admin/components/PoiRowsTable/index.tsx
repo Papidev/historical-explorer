@@ -28,8 +28,10 @@ const ColumnHeader = ({
   description: string;
   versioned: boolean;
 }) => (
-  <div>
-    <p className="text-xs font-semibold tracking-[0.08em] text-gray-600 uppercase">{title}</p>
+  <details>
+    <summary className="cursor-pointer text-xs font-semibold tracking-[0.08em] text-gray-600 uppercase">
+      {title}
+    </summary>
     <p
       title={path}
       className="mt-1 max-w-full truncate font-mono text-[0.6875rem] leading-snug text-gray-400 normal-case"
@@ -48,7 +50,7 @@ const ColumnHeader = ({
       </span>
       <p className="mt-1 text-gray-500">{description}</p>
     </div>
-  </div>
+  </details>
 );
 
 export const PoiRowsTable = ({
@@ -75,6 +77,7 @@ export const PoiRowsTable = ({
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => {
   const tableScrollRef = useRef<HTMLDivElement>(null);
+  const [isExpanded, setIsExpanded] = useState(false);
   const [runningIds, setRunningIds] = useState<string[]>([]);
   const [page, setPage] = useState(0);
   const [search, setSearch] = useState("");
@@ -184,22 +187,26 @@ export const PoiRowsTable = ({
       {actionToast ? (
         <ActionToast toast={actionToast} onDismiss={() => setActionToast(null)} />
       ) : null}
-      <section className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-gray-950/10">
-        <GlobalArtifacts artifacts={globalArtifacts} onSelectPanel={setSelectedPanel} />
-        <BatchGeneration
-          rows={rows.filter((row) => row.rawPoi && !row.storyContent)}
-          aiSelectionRef={aiSelectionRef}
-          action={generateDraftStoriesAction}
-          disabled={Boolean(progress) || runningIds.length > 0}
-          onRunningChange={(ids) => {
-            setRunningIds(ids);
-            if (ids.length) tableScrollRef.current?.scrollTo?.({ top: 0 });
-          }}
-        />
+      <section
+        className={`flex min-h-0 flex-1 flex-col overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-gray-950/10 ${isExpanded ? "fixed inset-2 z-20" : ""}`}
+      >
+        <div hidden={isExpanded} className="shrink-0">
+          <GlobalArtifacts artifacts={globalArtifacts} onSelectPanel={setSelectedPanel} />
+          <BatchGeneration
+            rows={rows.filter((row) => row.rawPoi && !row.storyContent)}
+            aiSelectionRef={aiSelectionRef}
+            action={generateDraftStoriesAction}
+            disabled={Boolean(progress) || runningIds.length > 0}
+            onRunningChange={(ids) => {
+              setRunningIds(ids);
+              if (ids.length) tableScrollRef.current?.scrollTo?.({ top: 0 });
+            }}
+          />
+        </div>
         <div
           role="group"
           aria-label="Show status"
-          className="flex flex-wrap items-center gap-x-5 gap-y-2 border-b border-gray-200 px-4 py-3 text-sm"
+          className="flex shrink-0 flex-wrap items-center gap-x-3 gap-y-2 border-b border-gray-200 px-4 py-2 text-sm"
         >
           <Search
             value={search}
@@ -208,6 +215,14 @@ export const PoiRowsTable = ({
               setPage(0);
             }}
           />
+          <button
+            type="button"
+            aria-pressed={isExpanded}
+            onClick={() => setIsExpanded((current) => !current)}
+            className="cursor-pointer rounded-md border border-gray-300 px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50"
+          >
+            {isExpanded ? "Restore layout" : "Expand table"}
+          </button>
           <span className="font-semibold text-gray-800">Show status</span>
           {Object.entries(statusGroupStyles).map(([value, { label, filter, checkbox }]) => (
             <div

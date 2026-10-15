@@ -107,11 +107,12 @@
     "Q1779653": ["Monument"],
     "Q1497375": [],
     "Q838858": [],
-    "Q3951623": [],
+    "Q3951623": ["Archaeological Site"],
     "Q12292478": [],
     "Q962715": [],
     "Q156849": ["Archaeological Site"],
-    "Q3936952": []
+    "Q3936952": [],
+    "Q43483": ["Fountain"]
   },
   "origins": {
     "Q3748441": "manual",
@@ -205,7 +206,8 @@
     "Q12292478": "manual",
     "Q962715": "manual",
     "Q156849": "manual",
-    "Q3936952": "manual"
+    "Q3936952": "manual",
+    "Q43483": "manual"
   },
   "reasons": {
     "Q16560": "\"palace\" denotes a grand residence not covered by existing categories, so a new top‑level category \"Palace\" is created.",
