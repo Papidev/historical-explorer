@@ -33,43 +33,48 @@ export const AiGenerationSettings = ({
   const selectedAiModel = selectedAiModelByMode[selectedAiMode] || selectedModeOption.defaultModel;
 
   return (
-    <fieldset className="rounded-lg border border-black/10 bg-white px-3 pb-3 shadow-xs">
-      <legend className="px-1 text-xs font-semibold tracking-wide text-black/55 uppercase">
-        AI generation
-      </legend>
-      <div className="flex flex-wrap items-end gap-x-4 gap-y-3">
-        <Toggle
-          checked={selectedAiMode === "cloud"}
-          description={`(${selectedModeOption.providerLabel}, ${
-            selectedAiMode === "cloud" ? "paid" : "free"
-          })`}
-          id="cloud-mode"
-          label="Cloud mode"
-          name="cloud-mode"
-          onChange={(checked) => {
-            const mode = checked ? "cloud" : "local";
-            selectionRef.current = {
-              mode,
-              model: selectedAiModelByMode[mode] || getModeOption(aiModeOptions, mode).defaultModel,
-            };
-            setSelectedAiMode(mode);
-          }}
-        />
-        <div className="min-w-72">
-          <ListboxSelect
-            label={`Story and People model · ${selectedAiMode === "cloud" ? "Cloud" : "Local"}`}
-            value={selectedAiModel}
-            onChange={(model) => {
-              selectionRef.current = { mode: selectedAiMode, model };
-              setSelectedAiModelByMode({
-                ...selectedAiModelByMode,
-                [selectedAiMode]: model,
-              });
+    <details className="rounded-lg border border-black/10 bg-white px-3 py-2 shadow-xs">
+      <summary className="cursor-pointer text-xs font-medium text-black/70">
+        AI settings · {selectedModeOption.providerLabel} · {selectedAiModel}
+      </summary>
+      <fieldset className="mt-3">
+        <legend className="px-1 text-xs font-semibold tracking-wide text-black/55 uppercase">
+          AI generation
+        </legend>
+        <div className="flex flex-wrap items-end gap-x-4 gap-y-3">
+          <Toggle
+            checked={selectedAiMode === "cloud"}
+            description={`(${selectedModeOption.providerLabel}, ${
+              selectedAiMode === "cloud" ? "paid" : "free"
+            })`}
+            id="cloud-mode"
+            label="Cloud mode"
+            name="cloud-mode"
+            onChange={(checked) => {
+              const mode = checked ? "cloud" : "local";
+              selectionRef.current = {
+                mode,
+                model: selectedAiModelByMode[mode] || getModeOption(aiModeOptions, mode).defaultModel,
+              };
+              setSelectedAiMode(mode);
             }}
-            options={selectedModeOption.modelOptions}
           />
+          <div className="min-w-72">
+            <ListboxSelect
+              label={`Story and People model · ${selectedAiMode === "cloud" ? "Cloud" : "Local"}`}
+              value={selectedAiModel}
+              onChange={(model) => {
+                selectionRef.current = { mode: selectedAiMode, model };
+                setSelectedAiModelByMode({
+                  ...selectedAiModelByMode,
+                  [selectedAiMode]: model,
+                });
+              }}
+              options={selectedModeOption.modelOptions}
+            />
+          </div>
         </div>
-      </div>
-    </fieldset>
+      </fieldset>
+    </details>
   );
 };

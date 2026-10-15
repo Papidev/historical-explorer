@@ -54,6 +54,8 @@ describe("AI Generation settings", () => {
       );
 
       const user = userEvent.setup();
+      expect(screen.getByText(/AI settings ·/)).toHaveTextContent(defaultModel);
+      await user.click(screen.getByText(/AI settings ·/));
       expect(screen.getByText(defaultModel)).toBeVisible();
       expect(screen.queryByText("People model · Local")).not.toBeInTheDocument();
       for (const model of ["gpt-oss:120b-cloud", "gpt-oss:20b-cloud"]) {
