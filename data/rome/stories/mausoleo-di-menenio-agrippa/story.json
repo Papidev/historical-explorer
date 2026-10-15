@@ -68,5 +68,11 @@
       "personId": "agrippa-menenio-lanato",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Mausoleo di Menenio Agrippa",
+      "url": "https://it.wikipedia.org/wiki/Mausoleo_di_Menenio_Agrippa"
+    }
   ]
 }

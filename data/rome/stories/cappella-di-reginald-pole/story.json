@@ -52,5 +52,11 @@
       "personId": "enrico-viii-d-inghilterra",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Cappella di Reginald Pole",
+      "url": "https://it.wikipedia.org/wiki/Cappella_di_Reginald_Pole"
+    }
   ]
 }

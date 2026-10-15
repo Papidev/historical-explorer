@@ -57,5 +57,11 @@
       "personId": "genio-divinit",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Domus del Protiro",
+      "url": "https://it.wikipedia.org/wiki/Domus_del_Protiro"
+    }
   ]
 }

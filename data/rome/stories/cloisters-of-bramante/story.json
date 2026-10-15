@@ -47,5 +47,11 @@
       "personId": "raphael",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Chiostro del Bramante",
+      "url": "https://en.wikipedia.org/wiki/Chiostro_del_Bramante"
+    }
   ]
 }

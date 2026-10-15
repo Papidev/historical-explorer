@@ -102,5 +102,11 @@
       "personId": "eusebius-of-caesarea",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Arch of Constantine",
+      "url": "https://en.wikipedia.org/wiki/Arch_of_Constantine"
+    }
   ]
 }

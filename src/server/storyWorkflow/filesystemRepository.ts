@@ -30,6 +30,7 @@ import type { Source } from "./types";
 import { personRepository } from "@/server/person/filesystemRepository";
 import { mainImageCandidatesArtifactSchema } from "@/server/wikiPipeline/types";
 import { parseStoryContent } from "./storyContent";
+import { toWikipediaSources } from "@/server/wikipediaSources";
 
 const writeAtomically = (filePath: string, content: string) => {
   const temporaryFilePath = `${filePath}.tmp`;
@@ -140,9 +141,10 @@ export const createFilesystemStoryWorkflowRepository = (city: string): StoryWork
     );
   },
   replaceStoryContent: async (poiId, storyContent, checkpoint, relatedPeopleCheckpoint) => {
+    const sources = readSources(city, poiId);
     parseStoryContent(
       storyContent,
-      readSources(city, poiId).map(({ id }) => id),
+      sources.map(({ id }) => id),
     );
     for (const { personId } of storyContent.relatedPeople) {
       if (personId && !personRepository.get(personId)) {
@@ -150,7 +152,24 @@ export const createFilesystemStoryWorkflowRepository = (city: string): StoryWork
       }
     }
     const outputFilePath = buildStoryContentFilePath(city, poiId);
-    writeAtomically(outputFilePath, `${JSON.stringify(storyContent, null, 2)}\n`);
+    const sourceIds = new Set([
+      ...storyContent.introduction.sourceIds,
+      ...Object.values(storyContent.topics).flatMap((items) =>
+        items.flatMap(({ sourceIds }) => sourceIds),
+      ),
+      ...storyContent.relatedPeople.flatMap(({ sourceIds }) => sourceIds),
+    ]);
+    writeAtomically(
+      outputFilePath,
+      `${JSON.stringify(
+        {
+          ...storyContent,
+          wikipediaSources: toWikipediaSources(sources.filter(({ id }) => sourceIds.has(id))),
+        },
+        null,
+        2,
+      )}\n`,
+    );
     replaceGenerationCheckpoint(city, poiId, "storyContent", checkpoint);
     if (relatedPeopleCheckpoint) {
       replaceGenerationCheckpoint(city, poiId, "relatedPeople", relatedPeopleCheckpoint);

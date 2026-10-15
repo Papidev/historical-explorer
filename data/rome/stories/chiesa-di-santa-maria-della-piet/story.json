@@ -214,5 +214,11 @@
       "personId": "giacinto-gimignani",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Santa Maria della Pietà in Camposanto dei Teutonici",
+      "url": "https://en.wikipedia.org/wiki/Santa_Maria_della_Piet%C3%A0_in_Camposanto_dei_Teutonici"
+    }
   ]
 }

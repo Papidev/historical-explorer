@@ -151,5 +151,11 @@
       "personId": "rodolfo-lanciani",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Castello di Isola Farnese",
+      "url": "https://it.wikipedia.org/wiki/Castello_di_Isola_Farnese"
+    }
   ]
 }

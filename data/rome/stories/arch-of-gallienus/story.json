@@ -88,5 +88,11 @@
       "personId": "gallienus",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Porta Esquilina",
+      "url": "https://en.wikipedia.org/wiki/Porta_Esquilina"
+    }
   ]
 }

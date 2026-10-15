@@ -117,5 +117,11 @@
       "personId": "adam",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Column of the Immaculate Conception, Rome",
+      "url": "https://en.wikipedia.org/wiki/Column_of_the_Immaculate_Conception%2C_Rome"
+    }
   ]
 }

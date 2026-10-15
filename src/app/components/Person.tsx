@@ -1,5 +1,6 @@
 import type { PublicPerson } from "@/server/person";
 import Image from "next/image";
+import { WikipediaLinks } from "@/app/components/WikipediaLinks";
 
 const formatDate = (date: NonNullable<PublicPerson["birthDate"]>) => {
   const year = `${Math.abs(date.year)} ${date.year < 0 ? "BC" : "AD"}`;
@@ -59,5 +60,6 @@ export const Person = ({ person }: { person: PublicPerson }) => (
         </ul>
       </section>
     ) : null}
+    <WikipediaLinks sources={person.wikipediaSources} />
   </article>
 );

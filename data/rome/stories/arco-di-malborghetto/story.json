@@ -125,5 +125,11 @@
       "personId": "maxentius",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Arch of Malborghetto",
+      "url": "https://en.wikipedia.org/wiki/Arch_of_Malborghetto"
+    }
   ]
 }

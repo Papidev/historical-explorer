@@ -100,9 +100,13 @@ describe("public catalog", () => {
       ),
     );
     for (const { storyContent } of snapshot.pois) {
+      expect(storyContent.wikipediaSources?.length).toBeGreaterThan(0);
       for (const { personId } of storyContent.relatedPeople) {
         expect(catalog.getPerson(personId!)).toBeDefined();
       }
+    }
+    for (const person of snapshot.people) {
+      expect(person.wikipediaSources?.length).toBeGreaterThan(0);
     }
     expect(JSON.stringify(snapshot)).not.toMatch(/"(?:sourceIds|generation|isProposed)":/);
   });

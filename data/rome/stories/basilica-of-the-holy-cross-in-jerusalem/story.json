@@ -255,5 +255,11 @@
       "personId": "pope-alexander-ii",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Santa Croce in Gerusalemme",
+      "url": "https://en.wikipedia.org/wiki/Santa_Croce_in_Gerusalemme"
+    }
   ]
 }

@@ -192,5 +192,11 @@
       "personId": "nicola-canali",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Sant'Onofrio, Rome",
+      "url": "https://en.wikipedia.org/wiki/Sant'Onofrio%2C_Rome"
+    }
   ]
 }

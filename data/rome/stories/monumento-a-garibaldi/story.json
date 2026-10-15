@@ -82,5 +82,11 @@
       "personId": "ettore-ferrari",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Monument to Garibaldi (Rome)",
+      "url": "https://en.wikipedia.org/wiki/Monument_to_Garibaldi_(Rome)"
+    }
   ]
 }

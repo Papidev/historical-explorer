@@ -35,5 +35,11 @@
       "personId": "vittorio-emanuele-ii",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Forte Monte Mario (Rome)",
+      "url": "https://en.wikipedia.org/wiki/Forte_Monte_Mario_(Rome)"
+    }
   ]
 }

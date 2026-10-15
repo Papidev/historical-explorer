@@ -213,5 +213,11 @@
       "personId": "antonio-canova",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "San Marco Evangelista al Campidoglio, Rome",
+      "url": "https://en.wikipedia.org/wiki/San_Marco_Evangelista_al_Campidoglio%2C_Rome"
+    }
   ]
 }

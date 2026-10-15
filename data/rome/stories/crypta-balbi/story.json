@@ -46,5 +46,11 @@
       "personId": "lucio-cornelio-balbo-minore",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Crypta Balbi",
+      "url": "https://it.wikipedia.org/wiki/Crypta_Balbi"
+    }
   ]
 }

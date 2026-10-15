@@ -229,5 +229,11 @@
       "personId": "torquato-tasso",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Biblioteca di archeologia e storia dell'arte",
+      "url": "https://it.wikipedia.org/wiki/Biblioteca_di_archeologia_e_storia_dell'arte"
+    }
   ]
 }

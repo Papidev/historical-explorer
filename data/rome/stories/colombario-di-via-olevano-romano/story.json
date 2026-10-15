@@ -52,5 +52,11 @@
       }
     ]
   },
-  "relatedPeople": []
+  "relatedPeople": [],
+  "wikipediaSources": [
+    {
+      "title": "Colombario di via Olevano Romano",
+      "url": "https://it.wikipedia.org/wiki/Colombario_di_via_Olevano_Romano"
+    }
+  ]
 }

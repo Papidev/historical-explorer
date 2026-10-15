@@ -217,5 +217,11 @@
       "personId": "piccirilli-brothers",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Accademia di San Luca",
+      "url": "https://en.wikipedia.org/wiki/Accademia_di_San_Luca"
+    }
   ]
 }

@@ -47,5 +47,11 @@
       "personId": "pope-john-paul-ii",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Statue of Pope John Paul II, Rome",
+      "url": "https://en.wikipedia.org/wiki/Statue_of_Pope_John_Paul_II%2C_Rome"
+    }
   ]
 }

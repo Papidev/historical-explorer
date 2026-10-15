@@ -1,5 +1,6 @@
 import { getPersonDisplayName } from "@/utils/getPersonDisplayName";
 import { z } from "zod";
+import { wikipediaSourceSchema, type WikipediaSource } from "@/server/wikipediaSources";
 
 const sourceIdsSchema = z.array(z.string().min(1)).min(1);
 const emphasisSchema = z.array(z.string().trim().min(1)).optional();
@@ -75,6 +76,7 @@ const relatedPersonSchema = z
 
 const storyContentStructureSchema = z
   .object({
+    wikipediaSources: z.array(wikipediaSourceSchema).optional(),
     textFormat: z.literal("markdown").optional(),
     introduction: z
       .object({
@@ -95,7 +97,7 @@ const storyContentStructureSchema = z
   .strict();
 
 export const storyContentJsonSchema = z.toJSONSchema(
-  storyContentStructureSchema.extend({
+  storyContentStructureSchema.omit({ wikipediaSources: true }).extend({
     textFormat: z.literal("markdown"),
     relatedPeople: z.array(relatedPersonSchema.omit({ personId: true })).max(10),
   }),
@@ -193,6 +195,7 @@ export const parseStoryContent = (value: unknown, sourceIds?: string[]) => {
 };
 
 export type PublicStoryContent = {
+  wikipediaSources?: WikipediaSource[];
   textFormat?: "markdown";
   introduction: string;
   introductionEmphasis?: string[];
@@ -205,6 +208,9 @@ export type PublicStoryContent = {
 };
 
 export const toPublicStoryContent = (storyContent: StoryContent): PublicStoryContent => ({
+  ...(storyContent.wikipediaSources?.length
+    ? { wikipediaSources: storyContent.wikipediaSources }
+    : {}),
   ...(storyContent.textFormat ? { textFormat: storyContent.textFormat } : {}),
   introduction: storyContent.introduction.text,
   ...(storyContent.introduction.emphasis?.length

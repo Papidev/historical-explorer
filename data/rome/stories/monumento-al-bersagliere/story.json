@@ -117,5 +117,11 @@
       "personId": "enrico-toti",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Monument to the Bersagliere, Porta Pia",
+      "url": "https://en.wikipedia.org/wiki/Monument_to_the_Bersagliere%2C_Porta_Pia"
+    }
   ]
 }

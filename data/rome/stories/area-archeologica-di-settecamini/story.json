@@ -58,5 +58,11 @@
       }
     ]
   },
-  "relatedPeople": []
+  "relatedPeople": [],
+  "wikipediaSources": [
+    {
+      "title": "Settecamini archaeological area",
+      "url": "https://en.wikipedia.org/wiki/Settecamini_archaeological_area"
+    }
+  ]
 }

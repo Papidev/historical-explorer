@@ -152,5 +152,11 @@
       "personId": "jessie-white",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Monumento a Giuseppe Mazzini (Roma)",
+      "url": "https://it.wikipedia.org/wiki/Monumento_a_Giuseppe_Mazzini_(Roma)"
+    }
   ]
 }

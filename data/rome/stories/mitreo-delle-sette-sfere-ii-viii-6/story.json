@@ -74,5 +74,11 @@
       "personId": "pope-pius-vii",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Mitreo delle Sette Sfere",
+      "url": "https://it.wikipedia.org/wiki/Mitreo_delle_Sette_Sfere"
+    }
   ]
 }

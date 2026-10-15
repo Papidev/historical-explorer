@@ -1,6 +1,7 @@
 import type { HistoryInsight, PublicStoryContent } from "@/server/storyWorkflow";
 import { Topic } from "@/app/components/Topic/Topic";
 import { StoryText } from "@/app/components/StoryText";
+import { WikipediaLinks } from "@/app/components/WikipediaLinks";
 
 const toOrdinal = (value: number) => {
   const remainder = value % 100;
@@ -154,6 +155,7 @@ export const StoryContent = ({
           </ul>
         </section>
       ) : null}
+      <WikipediaLinks sources={content.wikipediaSources} />
     </div>
   );
 };

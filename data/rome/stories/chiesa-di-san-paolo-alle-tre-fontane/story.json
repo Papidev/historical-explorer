@@ -137,5 +137,11 @@
       "personId": "pope-pius-ix",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "San Paolo alle Tre Fontane",
+      "url": "https://en.wikipedia.org/wiki/San_Paolo_alle_Tre_Fontane"
+    }
   ]
 }

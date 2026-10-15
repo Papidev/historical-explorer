@@ -113,5 +113,11 @@
       "personId": "jan-hus",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Monument to Giordano Bruno",
+      "url": "https://en.wikipedia.org/wiki/Monument_to_Giordano_Bruno"
+    }
   ]
 }

@@ -81,5 +81,11 @@
       "personId": "g-nter-grass",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Casa di Goethe",
+      "url": "https://en.wikipedia.org/wiki/Casa_di_Goethe"
+    }
   ]
 }

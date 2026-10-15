@@ -93,5 +93,11 @@
       "personId": "adolfo-antonio-su-rez-rivera",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Nostra Signora di Guadalupe a Monte Mario",
+      "url": "https://en.wikipedia.org/wiki/Nostra_Signora_di_Guadalupe_a_Monte_Mario"
+    }
   ]
 }

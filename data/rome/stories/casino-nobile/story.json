@@ -124,5 +124,11 @@
       "personId": "francesco-podesti",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Casino Nobile",
+      "url": "https://it.wikipedia.org/wiki/Casino_Nobile"
+    }
   ]
 }

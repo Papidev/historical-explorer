@@ -147,5 +147,11 @@
       "personId": "michelangelo-cerquozzi",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Galleria Spada",
+      "url": "https://en.wikipedia.org/wiki/Galleria_Spada"
+    }
   ]
 }

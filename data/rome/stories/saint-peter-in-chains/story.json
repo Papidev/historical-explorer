@@ -174,5 +174,11 @@
       "personId": "domenichino",
       "sourceIds": ["wikipedia"]
     }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "San Pietro in Vincoli",
+      "url": "https://en.wikipedia.org/wiki/San_Pietro_in_Vincoli"
+    }
   ]
 }
