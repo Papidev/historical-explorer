@@ -1,11 +1,38 @@
 import type { GeoJson } from "@/server/wikiPipeline/types";
+import { fetchWikimediaJson } from "@/server/wikiPipeline/fetchWikimediaJson";
 
-export const linkWikidata = (catalog: GeoJson, poiId: string, wikidataId: string): GeoJson => {
+export const linkWikidata = async (
+  catalog: GeoJson,
+  poiId: string,
+  wikidataId: string,
+): Promise<GeoJson> => {
   if (!/^Q[1-9]\d*$/.test(wikidataId)) throw new Error("Invalid Wikidata ID.");
   const poi = catalog.features?.find((feature) => feature.id === poiId);
   if (!poi) throw new Error(`POI ${poiId} was not found.`);
-  if (poi.wikidataId && poi.wikidataId !== wikidataId)
-    throw new Error("The Wikipedia page has a conflicting Wikidata ID.");
+  if (poi.wikidataId && poi.wikidataId !== wikidataId) {
+    const url = new URL("https://www.wikidata.org/w/api.php");
+    url.searchParams.set("action", "wbgetentities");
+    url.searchParams.set("ids", `${poi.wikidataId}|${wikidataId}`);
+    url.searchParams.set("props", "info");
+    url.searchParams.set("format", "json");
+    const data = await fetchWikimediaJson<{
+      entities?: Record<string, { id?: string; missing?: string }>;
+    }>(url);
+    const previous = data.entities?.[poi.wikidataId];
+    const incoming = data.entities?.[wikidataId];
+    if (
+      !previous?.id ||
+      !incoming?.id ||
+      previous.missing !== undefined ||
+      incoming.missing !== undefined ||
+      !/^Q[1-9]\d*$/.test(incoming.id)
+    ) {
+      throw new Error("Could not verify the conflicting Wikidata identities.");
+    }
+    if (previous.id !== incoming.id)
+      throw new Error("The Wikipedia page has a conflicting Wikidata ID.");
+    wikidataId = incoming.id;
+  }
   return {
     ...catalog,
     features: catalog.features?.map((feature) =>

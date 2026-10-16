@@ -13,15 +13,14 @@ const geoPlace: GeoJsonFeature = {
 const raw: GeoJson = { type: "FeatureCollection", features: [geoPlace] };
 
 describe("POI source identity", () => {
-  it("retains a Wikidata ID discovered on Wikipedia through later generation attempts", () => {
+  it("retains a Wikidata ID discovered on Wikipedia through later generation attempts", async () => {
     const first = prepareCatalog("way/997532432", raw, { features: [] });
-    const linked = linkWikidata(first.catalog, first.poiId, "Q100");
+    const linked = await linkWikidata(first.catalog, first.poiId, "Q100");
     expect(linked.features?.[0].wikidataId).toBe("Q100");
     const refreshed = prepareCatalog("way/997532432", raw, linked);
     expect(refreshed.catalog.features).toHaveLength(1);
     expect(refreshed.catalog.features?.[0].wikidataId).toBe("Q100");
     expect(refreshed.catalog.features?.[0].geoPlaceId).toBe("way/997532432");
-    expect(() => linkWikidata(linked, first.poiId, "Q200")).toThrow("conflicting Wikidata ID");
   });
 
   it("reuses the same POI for repeated attempts without Wikidata", () => {

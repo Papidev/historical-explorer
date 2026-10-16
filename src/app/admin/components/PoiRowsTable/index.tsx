@@ -224,6 +224,18 @@ export const PoiRowsTable = ({
             {isExpanded ? "Restore layout" : "Expand table"}
           </button>
           <span className="font-semibold text-gray-800">Show status</span>
+          <label className="flex cursor-pointer items-center gap-2 rounded-md border border-gray-300 px-2.5 py-1.5 text-gray-700">
+            <input
+              type="checkbox"
+              checked={visibleStatusGroups.length === Object.keys(statusGroupStyles).length}
+              onChange={(event) => {
+                setPage(0);
+                setVisibleStatusGroups(event.target.checked ? Object.keys(statusGroupStyles) : []);
+              }}
+              className="size-4 cursor-pointer accent-gray-700"
+            />
+            All
+          </label>
           {Object.entries(statusGroupStyles).map(([value, { label, filter, checkbox }]) => (
             <div
               key={value}

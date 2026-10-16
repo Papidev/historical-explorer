@@ -906,7 +906,7 @@ describe("POI actions", () => {
     expect(screen.queryByText("Errors", { exact: true })).not.toBeInTheDocument();
   });
 
-  it.each(["pagination", "search", "status filters", "status name selection"])(
+  it.each(["pagination", "search", "status filters", "status name selection", "all statuses"])(
     "handles POI %s across pages",
     async (scenario) => {
       render(
@@ -973,6 +973,26 @@ describe("POI actions", () => {
         }),
       ).toBeDisabled();
       expect(screen.queryByText("Pending 99", { exact: true })).not.toBeInTheDocument();
+      if (scenario === "all statuses") {
+        expect(screen.getByRole("checkbox", { name: "All" })).toBeChecked();
+        await user.click(screen.getByRole("button", { name: "Needs source" }));
+        expect(screen.getByRole("checkbox", { name: "All" })).not.toBeChecked();
+        expect(screen.queryByText("Pending POI")).not.toBeInTheDocument();
+        await user.click(screen.getByRole("checkbox", { name: "All" }));
+        expect(screen.getByText("Showing 1–50 of 103 POIs")).toBeInTheDocument();
+        expect(screen.getByText("Failed POI")).toBeInTheDocument();
+        expect(screen.getByText("Pending POI")).toBeInTheDocument();
+        expect(screen.getByText("Source POI")).toBeInTheDocument();
+        await user.click(screen.getByRole("checkbox", { name: "All" }));
+        expect(screen.getByText("No POIs match the selected statuses.")).toBeInTheDocument();
+        await user.click(screen.getByRole("checkbox", { name: "All" }));
+        await user.click(screen.getByRole("checkbox", { name: "Complete" }));
+        expect(screen.getByRole("checkbox", { name: "All" })).not.toBeChecked();
+        await user.click(screen.getByRole("checkbox", { name: "Complete" }));
+        expect(screen.getByRole("checkbox", { name: "All" })).toBeChecked();
+
+        return;
+      }
       if (scenario === "pagination") {
         await user.click(
           within(screen.getByRole("navigation", { name: "POI pagination" })).getByRole("button", {

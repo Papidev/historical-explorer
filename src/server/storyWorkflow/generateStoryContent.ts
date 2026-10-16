@@ -3,6 +3,7 @@ import {
   throwIfGenerationCancelled,
 } from "@/server/generationCancellation";
 import { jsonrepair } from "jsonrepair";
+import { fetchOllamaResponse } from "@/server/fetchOllamaResponse";
 import { logAiResponseFailure, readAiResponse } from "@/server/aiResponseLog";
 import type { PoiInput } from "@/server/wikiPipeline/types";
 import {
@@ -227,7 +228,7 @@ const generateWithOllama = async (
   const attempts = mode === "cloud" ? 2 : 1;
 
   for (let attempt = 0; attempt < attempts; attempt += 1) {
-    const response = await fetchWithGenerationCancellation(`${getOllamaBaseUrl()}/api/chat`, {
+    const response = await fetchOllamaResponse(`${getOllamaBaseUrl()}/api/chat`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
