@@ -31,6 +31,34 @@ afterEach(() => {
 afterAll(() => server.close());
 
 describe("Person generation", () => {
+  it("recovers a transient Ollama 502 without regenerating the prompt", async () => {
+    const requests: unknown[] = [];
+    server.use(
+      http.post("http://localhost:11434/api/chat", async ({ request }) => {
+        requests.push(await request.json());
+        return requests.length === 1
+          ? HttpResponse.json({ error: "connection reset by peer" }, { status: 502 })
+          : HttpResponse.json({ message: { content: JSON.stringify(generated) } });
+      }),
+    );
+    await expect(
+      generatePerson(
+        { name: "Felice Barnabei", wikidataId: "Q100" },
+        [
+          {
+            id: "wikipedia",
+            kind: "wikipedia",
+            title: "Felice Barnabei",
+            url: "https://en.wikipedia.org/wiki/Felice_Barnabei",
+            content: "Source content",
+          },
+        ],
+        { mode: "cloud", provider: "ollama", model: "test-model" },
+      ),
+    ).resolves.toEqual(generated);
+    expect(requests).toHaveLength(2);
+    expect(requests[1]).toEqual(requests[0]);
+  });
   it("reports the Ollama error when the configured model is missing", async () => {
     server.use(
       http.post("http://localhost:11434/api/chat", () =>

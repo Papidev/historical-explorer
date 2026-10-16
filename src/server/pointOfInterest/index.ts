@@ -54,7 +54,11 @@ export const pointOfInterest: PointOfInterestModule = {
     return { poiId };
   },
   linkWikidata: async ({ poiId, wikidataId }) => {
-    writeCatalog(linkWikidata(parseGeoJson(catalogPath), poiId, wikidataId));
+    const catalog = parseGeoJson(catalogPath);
+    const linked = await linkWikidata(catalog, poiId, wikidataId);
+    if (JSON.stringify(catalog) !== JSON.stringify(parseGeoJson(catalogPath)))
+      throw new Error("The POI catalog changed while checking Wikidata. Retry linking.");
+    writeCatalog(linked);
   },
   reset: async ({ poiId }) => {
     if (existsSync(catalogPath)) {

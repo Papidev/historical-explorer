@@ -1,10 +1,16 @@
 # historical-explorer
 
-## 0.6.3
+## 0.6.4
 
 ### Patch Changes
 
 - Polish the Rome header and discovery panel. Keep a single native MapLibre navigation control with a live numeric zoom level beside the Story drawer, and preserve the open Story when using map controls. Update the Porta San Giovanni Story.
+
+## 0.6.3
+
+### Patch Changes
+
+- Add an All checkbox for admin status filters. Resolve ambiguous Related People by excluding non-human Wikidata candidates, show remaining identity candidates in errors, recognize confirmed Wikidata redirects when linking POIs, and retry temporary Ollama gateway failures.
 
 ## 0.6.2
 

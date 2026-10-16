@@ -3,6 +3,7 @@ import {
   throwIfGenerationCancelled,
 } from "@/server/generationCancellation";
 import { logAiResponseFailure, readAiResponse } from "@/server/aiResponseLog";
+import { fetchOllamaResponse } from "@/server/fetchOllamaResponse";
 import {
   personContentJsonSchema,
   personContentSchema,
@@ -125,7 +126,7 @@ export const generatePerson = async (
   for (let attempt = 0; attempt < attempts; attempt += 1) {
     let response: Response;
     try {
-      response = await fetchWithGenerationCancellation(
+      response = await fetchOllamaResponse(
         `${process.env.OLLAMA_BASE_URL ?? "http://localhost:11434"}/api/chat`,
         {
           method: "POST",

@@ -6,16 +6,12 @@ import type {
   Source,
 } from "@/server/storyWorkflow";
 import { fetchMainImageCandidates } from "@/server/storyWorkflow/mainImageCandidates";
-import { fetchWikiSnapshot } from "@/server/wikiPipeline/fetchWiki";
+import { fetchPersonSnapshot } from "./fetchPersonSnapshot";
 import { buildWikipediaPageUrl } from "@/server/wikiPipeline/io";
 import { getPersonDisplayName } from "@/utils/getPersonDisplayName";
 import { acquireWikipediaSources } from "@/server/wikiPipeline/acquireWikipediaSources";
 import { toCitySlug } from "@/server/wikiPipeline/normalize";
-import type {
-  MainImageCandidate,
-  WikiSnapshot,
-  WikipediaLanguage,
-} from "@/server/wikiPipeline/types";
+import type { MainImageCandidate, WikiSnapshot } from "@/server/wikiPipeline/types";
 import { wikiTextToPlainText } from "@/server/wikiPipeline/wikiText";
 import { personRepository, type PersonRepository } from "./filesystemRepository";
 import { generatePerson } from "./generatePerson";
@@ -94,7 +90,7 @@ const getProvider = (ai: AiSelection): "ollama" | "gemini" =>
 type PersonDependencies = {
   acquireSources: typeof acquireWikipediaSources;
   repository: PersonRepository;
-  fetchSnapshot: (title: string, language?: WikipediaLanguage) => Promise<WikiSnapshot>;
+  fetchSnapshot: typeof fetchPersonSnapshot;
   generateContent: (
     person: { name: string; wikidataId: string },
     sources: PersonSource[],
@@ -225,7 +221,7 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
   const dependencies: PersonDependencies = {
     acquireSources: acquireWikipediaSources,
     repository: personRepository,
-    fetchSnapshot: fetchWikiSnapshot,
+    fetchSnapshot: fetchPersonSnapshot,
     generateContent: generatePerson,
     fetchImageCandidates: fetchMainImageCandidates,
     now: () => new Date(),
@@ -374,6 +370,10 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
               const snapshot = await dependencies.fetchSnapshot(link.title, link.language);
               if (snapshot.isDisambiguation) {
                 onProgress?.(`Ignoring ${link.title}: Wikipedia disambiguation page.`);
+              } else if (snapshot.isHuman === false) {
+                onProgress?.(
+                  `Ignoring ${link.title}: Wikidata classifies this article as non-human.`,
+                );
               } else {
                 const key =
                   snapshot.wikidataId ??
@@ -412,7 +412,13 @@ export const createPeople = (overrides: Partial<PersonDependencies> = {}) => {
             resolved.push({ name: person.name, sourceIds: person.sourceIds });
             failures.push({
               name: person.name,
-              message: "Multiple Wikipedia links match this name; the identity is ambiguous.",
+              message:
+                "Multiple Wikipedia links match this name; the identity is ambiguous. Candidates: " +
+                Array.from(
+                  matchingSnapshots.values(),
+                  (candidate) =>
+                    `${candidate.title} (${buildWikipediaPageUrl(candidate.title, candidate.language)})`,
+                ).join("; "),
             });
             onProgress?.(`Could not match ${person.name} to one Wikipedia link.`);
             continue;
