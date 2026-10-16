@@ -35,14 +35,18 @@ export const BatchProgressRun = ({
             "inline-flex shrink-0 items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium",
             status === "running"
               ? "bg-violet-50 text-violet-700"
-              : status === "failed"
-                ? "bg-red-50 text-red-700"
-                : status === "partial" ||
-                    status === "waiting" ||
-                    status === "unknown" ||
-                    status === "cancelled"
-                  ? "bg-amber-50 text-amber-800"
-                  : "bg-emerald-50 text-emerald-700",
+              : status === "partial" &&
+                  !state.progress?.failedSteps?.length &&
+                  !run.result?.failedSteps?.length
+                ? "bg-gray-100 text-gray-700"
+                : status === "failed"
+                  ? "bg-red-50 text-red-700"
+                  : status === "partial" ||
+                      status === "waiting" ||
+                      status === "unknown" ||
+                      status === "cancelled"
+                    ? "bg-amber-50 text-amber-800"
+                    : "bg-emerald-50 text-emerald-700",
           )}
         >
           <span
@@ -63,7 +67,9 @@ export const BatchProgressRun = ({
                   : status === "failed"
                     ? "Failed"
                     : status === "partial"
-                      ? "Completed with issues"
+                      ? state.progress?.failedSteps?.length || run.result?.failedSteps?.length
+                        ? "Completed with issues"
+                        : "Completed with notes"
                       : "Completed"}
         </span>
       </div>
