@@ -79,7 +79,7 @@ describe("POI actions", () => {
     expect(within(screen.getAllByRole("row")[1]).getByText("Place 0")).toBeVisible();
   });
 
-  it("keeps search available when expanding the table and restores generation controls", async () => {
+  it("keeps search, status filters and generation controls available together", async () => {
     const user = userEvent.setup();
     render(
       <PoiRowsTable
@@ -97,20 +97,9 @@ describe("POI actions", () => {
     );
 
     await user.type(screen.getByRole("searchbox", { name: "Search POIs by name" }), "Aqueduct");
-    await user.click(screen.getByRole("button", { name: "Expand table" }));
-    expect(screen.getByRole("button", { name: "Restore layout" })).toHaveAttribute(
-      "aria-pressed",
-      "true",
-    );
     expect(screen.getByRole("searchbox", { name: "Search POIs by name" })).toHaveValue("Aqueduct");
     expect(screen.getByRole("group", { name: "Show status" })).toBeVisible();
-    expect(
-      screen.queryByRole("button", { name: "Start automatic generation" }),
-    ).not.toBeInTheDocument();
-
-    await user.click(screen.getByRole("button", { name: "Restore layout" }));
     expect(screen.getByRole("button", { name: "Start automatic generation" })).toBeVisible();
-    expect(screen.getByRole("searchbox", { name: "Search POIs by name" })).toHaveValue("Aqueduct");
   });
 
   it("generates a single row without starting automatic generation", async () => {
