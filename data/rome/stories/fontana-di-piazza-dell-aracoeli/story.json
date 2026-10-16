@@ -1,0 +1,193 @@
+{
+  "textFormat": "markdown",
+  "introduction": {
+    "text": "The **Fontana di Piazza d'Aracoeli** is a Renaissance fountain situated at the foot of the Capitoline Hill in Rome, in the small square that bears its name. Commissioned by Pope Sixtus V in 1589, it was designed by Giacomo della Porta and constructed by Andrea Brasca, Pietro Gucci and Pace Naldini. The fountain features a circular basin with two opposing bulges, a central marble block supporting a goblet‑shaped canister, and a basin above it holding four putti pouring water from amphoras. The upper level bears the heraldic symbol of the papal family, while later additions incorporated the Chigi coat of arms and trimonium. Over the centuries the fountain has been modified: the lower steps were replaced by a large pool in the early 18th century, and the surrounding area was altered during the 1930s for the construction of the Vittoriano.",
+    "sourceIds": [
+      "wikipedia",
+      "wikipedia-it"
+    ]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "history-1587",
+        "description": "In 1587 the restoration and reinstatement of the ancient Aqua Alexandrina—renamed Acqua Felice after Pope Sixtus V—was completed, providing water for new fountains including the Fontana di Piazza d'Aracoeli.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ],
+        "time": {
+          "startYear": 1587,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-1589",
+        "description": "In 1589 Pope Sixtus V commissioned Giacomo della Porta to design the fountain, which was then constructed by Andrea Brasca, Pietro Gucci and Pace Naldini.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ],
+        "time": {
+          "startYear": 1589,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-chigi",
+        "description": "Between 1655 and 1667, Pope Alexander VII added the Chigi family coat of arms and trimonium to the fountain's balustrade.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ],
+        "time": {
+          "startYear": 1655,
+          "precision": "exact",
+          "endYear": 1667,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "history-clementi",
+        "description": "During the papacy of Clement XI in the early 18th century, the two lower steps were removed and replaced by a large pool surrounded by stone columns linked by iron bars, a configuration that remains today.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ],
+        "time": {
+          "startYear": 1700,
+          "precision": "approximate",
+          "endYear": 1799,
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "history-1930s",
+        "description": "In the 1930s, the square was partially demolished for the construction of the Vittoriano, leaving only two sides of the original fountain.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ],
+        "time": {
+          "startYear": 1930,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "design-structure",
+        "description": "The fountain consists of a circular basin with two opposing bulges that give it an oval shape, set on three steps and surrounded by a narrow pool that collects the water.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      },
+      {
+        "id": "design-central",
+        "description": "At the centre of the basin sits a cubic marble block with mascarons, supporting a goblet‑shaped canister topped by a basin that holds four putti pouring water from amphoras.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      },
+      {
+        "id": "design-heraldry",
+        "description": "The balustrade originally bore the coats of arms of the Roman People, later embellished with the Chigi family emblem and the papal heraldic symbol.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      },
+      {
+        "id": "design-modifications",
+        "description": "The lower steps were replaced by a large pool in the early 18th century, and the surrounding area was altered during the 1930s for the Vittoriano.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      },
+      {
+        "id": "design-relations",
+        "description": "The fountain shares design elements such as mascarons and simple basins with Giacomo della Porta's Fontana del Pianto.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      }
+    ],
+    "art": [
+      {
+        "id": "art-putti",
+        "description": "Four putti, positioned in a basin above the central canister, pour water from amphoras, creating a playful visual effect.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      },
+      {
+        "id": "art-mascarons",
+        "description": "Mascarons adorn the basin and the central marble block, adding a decorative sculptural element typical of Renaissance fountains.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      },
+      {
+        "id": "art-heraldry",
+        "description": "The fountain features the papal heraldic symbol on the upper level and, later, the Chigi family coat of arms and trimonium.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      },
+      {
+        "id": "art-marble",
+        "description": "The central cubic marble block and the goblet‑shaped canister are crafted from marble, showcasing the material's use in Renaissance public art.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Giacomo della Porta",
+      "personId": "giacomo-della-porta",
+      "sourceIds": [
+        "wikipedia",
+        "wikipedia-it"
+      ]
+    },
+    {
+      "name": "Pope Sixtus V",
+      "personId": "pope-sixtus-v",
+      "sourceIds": [
+        "wikipedia",
+        "wikipedia-it"
+      ]
+    },
+    {
+      "name": "Pope Alexander VII",
+      "personId": "pope-alexander-vii",
+      "sourceIds": [
+        "wikipedia",
+        "wikipedia-it"
+      ]
+    }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Fontana di Piazza d'Aracoeli",
+      "url": "https://en.wikipedia.org/wiki/Fontana_di_Piazza_d'Aracoeli"
+    },
+    {
+      "title": "Fontana di piazza d'Aracoeli",
+      "url": "https://it.wikipedia.org/wiki/Fontana_di_piazza_d'Aracoeli"
+    }
+  ]
+}

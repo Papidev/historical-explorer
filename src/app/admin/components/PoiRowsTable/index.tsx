@@ -16,6 +16,7 @@ import { Row } from "./Row";
 import type { Actions } from "./RowTypes";
 import { GlobalArtifacts } from "./GlobalArtifacts";
 import { statusGroupStyles } from "./statusGroupStyles";
+import { ListboxSelect } from "@/app/components/ui/ListboxSelect";
 
 const ColumnHeader = ({
   title,
@@ -81,6 +82,7 @@ export const PoiRowsTable = ({
   const [runningIds, setRunningIds] = useState<string[]>([]);
   const [page, setPage] = useState(0);
   const [search, setSearch] = useState("");
+  const [sortOrder, setSortOrder] = useState("default");
   const [selectedPanel, setSelectedPanel] = useState<SelectedPanel | null>(null);
   const [progress, setProgress] = useOptimistic<{
     poiId: string;
@@ -118,6 +120,16 @@ export const PoiRowsTable = ({
         )),
   );
   const currentPage = Math.min(page, Math.max(0, Math.ceil(visibleRows.length / 50) - 1));
+
+  if (sortOrder !== "default") {
+    visibleRows.sort((left, right) => {
+      if (!left.lastGenerationAt) return right.lastGenerationAt ? 1 : 0;
+      if (!right.lastGenerationAt) return -1;
+      return sortOrder === "newest"
+        ? Date.parse(right.lastGenerationAt) - Date.parse(left.lastGenerationAt)
+        : Date.parse(left.lastGenerationAt) - Date.parse(right.lastGenerationAt);
+    });
+  }
 
   const runSingleAction = async (
     poiId: string,
@@ -215,6 +227,21 @@ export const PoiRowsTable = ({
               setPage(0);
             }}
           />
+          <div className="w-full sm:w-60">
+            <ListboxSelect
+              label="Sort POIs"
+              value={sortOrder}
+              onChange={(value) => {
+                setSortOrder(value);
+                setPage(0);
+              }}
+              options={[
+                { value: "default", label: "Status and name" },
+                { value: "newest", label: "Newest generation first" },
+                { value: "oldest", label: "Oldest generation first" },
+              ]}
+            />
+          </div>
           <button
             type="button"
             aria-pressed={isExpanded}

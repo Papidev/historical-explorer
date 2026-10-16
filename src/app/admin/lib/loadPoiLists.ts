@@ -393,8 +393,26 @@ export const loadPoiLists = async () => {
               latestDraftRun.errorMessage?.includes(
                 "no valid English Wikipedia tag or Wikidata English sitelink",
               ))));
+      const generationDates = [
+        lastRun?.at,
+        ...Object.values(generationMetadata[toRowKey(row.id)] ?? {}).flatMap((checkpoint) =>
+          typeof checkpoint === "object" ? [checkpoint?.completedAt] : [],
+        ),
+        ...Object.values(
+          snapshots.find((snapshot) => snapshot.poiId === row.id)?.generation ?? {},
+        ).map((checkpoint) => checkpoint?.completedAt),
+        types && !types.error && existsSync(poiTypesPath)
+          ? statSync(poiTypesPath).mtime.toISOString()
+          : undefined,
+      ]
+        .filter((date): date is string => Boolean(date))
+        .map((date) => Date.parse(date))
+        .filter(Number.isFinite);
       return {
         ...row,
+        lastGenerationAt: generationDates.length
+          ? new Date(Math.max(...generationDates)).toISOString()
+          : undefined,
         sourcePending,
         poiTypes: types,
         ...(sourcePending

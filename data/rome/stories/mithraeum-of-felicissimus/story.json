@@ -1,0 +1,106 @@
+{
+  "textFormat": "markdown",
+  "introduction": {
+    "text": "The Mitreo del felicissimo (V,IX,1) was a Mithraic sanctuary located in region V of Ostia, south of the decumano massimo and reachable via via degli Augustali. The structure was originally a 2nd‑century building that was rebuilt in the second half of the 3rd century.\n\nIts entrance was deliberately offset from the sacellum’s axis, and a niche once housed a torchbearer statue, a feature designed to conceal the rites from passersby. Inside, an altar—now lost—stood at the rear, while podi for the faithful lined the walls.\n\n**The floor was a black‑and‑white tessellated mosaic** divided into seven panels, each illustrating the symbols of the seven grades of Mithraic initiation. The final panel bears the dedication inscription *FELICISSIMVS / EX VOTO F(ecit)*, indicating that the sanctuary was dedicated by a slave named Felicissimo.\n\nThe site offers a rare glimpse into the spread of Mithraism in Ostia, the adaptation of Roman religious architecture, and the cosmological symbolism that guided initiates toward the divine.",
+    "sourceIds": [
+      "wikipedia"
+    ]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "construction",
+        "description": "The sanctuary was constructed in the second half of the 3rd century within a building that originally dated to the 2nd century.",
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 200,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "entrance",
+        "description": "The entrance was offset from the sacellum’s axis to conceal rituals, featuring a niche that once held a torchbearer statue.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "floor",
+        "description": "The floor was a black‑and‑white tessellated mosaic divided into seven panels, each representing a Mithraic grade.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "altar",
+        "description": "An altar, now lost, was located at the rear of the sanctuary.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "art": [
+      {
+        "id": "panel1",
+        "description": "Panel I shows a caduceus, the winged staff of Mercury, and a raven, the herald of the sun, representing the lowest Mithraic grade.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "panel2",
+        "description": "Panel II contains a diadem with a crescent, symbol of Venus, and a lamp of the nymphus grade, illustrating the second grade.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "panel3",
+        "description": "Panel III depicts a helmet of Mars and a spear, with a purse, illustrating the military grade of the Mithraic initiates.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "panel4",
+        "description": "Panel IV features a thunderbolt of Jupiter, a possible hoe or ladle, and a sistrum, linking the lion grade to the Magna Mater.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "panel5",
+        "description": "Panel V shows a crescent moon, the evening star Hesperos, and a sword of Perseus, symbolizing the lunar grade.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "panel6",
+        "description": "Panel VI presents a sun‑shining corona, a whip for golden horses, and a torch of Phosphoros, representing the Heliodromus grade.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "panel7",
+        "description": "Panel VII contains a pruning knife of Saturn, a frieze of the highest grade, and a magic staff, culminating the initiation path.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ]
+  },
+  "relatedPeople": [],
+  "wikipediaSources": [
+    {
+      "title": "Mitreo di Felicissimo",
+      "url": "https://it.wikipedia.org/wiki/Mitreo_di_Felicissimo"
+    }
+  ]
+}
