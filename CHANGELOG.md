@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.6.5
+
+### Patch Changes
+
+- Simplify automatic Story generation with start/pause controls and no numeric limit. Finish the current POI before pausing, retain diagnostic logs, remove saved queue restoration, and compact the table toolbar and pagination footer.
+
 ## 0.6.4
 
 ### Patch Changes
