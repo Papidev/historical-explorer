@@ -1,8 +1,6 @@
 import { getLocalDataDirectory } from "@/server/localData";
-import {
-  fetchWithGenerationCancellation,
-  throwIfGenerationCancelled,
-} from "@/server/generationCancellation";
+import { throwIfGenerationCancelled } from "@/server/generationCancellation";
+import { fetchWikimediaJson } from "@/server/wikiPipeline/fetchWikimediaJson";
 import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { findPoiInGeoJson, getDefaultInputPath } from "@/server/wikiPipeline/io";
@@ -32,14 +30,10 @@ const fetchEntities = async (ids: string[], props: string) => {
   url.searchParams.set("languages", "en");
   url.searchParams.set("format", "json");
 
-  const response = await fetchWithGenerationCancellation(url);
-  if (!response.ok) {
-    throw new Error(`Wikidata returned HTTP ${response.status}.`);
-  }
-  const data = (await response.json()) as {
+  const data = await fetchWikimediaJson<{
     entities?: Record<string, WikidataEntity>;
     error?: { info?: string };
-  };
+  }>(url);
   if (data.error || !data.entities) {
     throw new Error(data.error?.info ?? "Wikidata returned no entities.");
   }

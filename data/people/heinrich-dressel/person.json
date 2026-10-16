@@ -7,25 +7,35 @@
     "description": [
       {
         "text": "Heinrich Dressel was born on 16 June 1845 in Germany and pursued classical studies under the guidance of Theodor Mommsen in Berlin. He earned his doctorate from the University of Göttingen in 1874 with a thesis titled \"De Isidori Originum fontibus,\" which established his reputation as a meticulous scholar of Latin epigraphy.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "In 1878 Dressel joined the German Archaeological Institute in Rome as a professor, and two decades later he was appointed director of the Münzkabinett in Berlin. His career was marked by significant contributions to the study of Latin inscriptions, the typology of ancient amphorae, and the field of numismatics, culminating in the Royal Numismatic Society medal in 1908.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "curiosities": [
       {
         "text": "Dressel discovered the Duenos inscription in 1880 on the Quirinal Hill in Rome, one of the earliest known Old Latin texts, which has been variously dated from the 7th to the 5th century BC.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He developed a typology for classifying ancient amphorae based on pioneering excavations at Monte Testaccio in Rome, providing a systematic framework still used by archaeologists today.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "In recognition of his work in numismatics, Dressel was awarded the medal of the Royal Numismatic Society in 1908.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "birthDate": {
@@ -65,5 +75,8 @@
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-10-12T22:49:34.214Z"
-  }
+  },
+  "sourceContextWikidataIds": [
+    "Q781595"
+  ]
 }

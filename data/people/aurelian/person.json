@@ -1,0 +1,101 @@
+{
+  "id": "aurelian",
+  "name": "Aurelian",
+  "wikidataId": "Q46780",
+  "wikipediaTitle": "Aurelian",
+  "content": {
+    "description": [
+      {
+        "text": "Aurelian rose to the purple during the Crisis of the Third Century, after the deaths of Claudius Gothicus and his brother Quintillus. He was acclaimed emperor by the legions in Sirmium in 270 and quickly defeated the Gallic and Palmyrene usurpers, reuniting the Roman Empire for the first time since the crisis began. His military successes earned him the title Restitutor Orbis, and he is remembered for his decisive victories over the Alamanni, Goths, Vandals, and the Palmyrene Empire under Zenobia.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      },
+      {
+        "text": "Beyond his battlefield achievements, Aurelian enacted significant administrative and religious reforms. He introduced the cult of Sol Invictus as the state religion, built the Aurelian Walls to protect Rome, and restructured the monetary system to curb inflation. His reign ended abruptly in 275 when he was assassinated by his own generals in Thrace, a fate that underscored the volatility of the era.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Aurelian Walls, constructed during his reign, still encircle the historic center of Rome.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      },
+      {
+        "text": "Aurelian established Sol Invictus as the official state cult, making the sun god the central deity of the empire.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      },
+      {
+        "text": "He was murdered by his own generals in Thrace in 275, a rare example of an emperor being killed by his military commanders.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "His title Restitutor Orbis, meaning 'Restorer of the World', reflected his success in reuniting the fragmented empire.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": 214,
+      "month": 9,
+      "day": 9,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 275,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "INC-1859-a_Ауреус_Аврелиан_ок._270-275_гг._(аверс).png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:INC-1859-a_%D0%90%D1%83%D1%80%D0%B5%D1%83%D1%81_%D0%90%D0%B2%D1%80%D0%B5%D0%BB%D0%B8%D0%B0%D0%BD_%D0%BE%D0%BA._270-275_%D0%B3%D0%B3._(%D0%B0%D0%B2%D0%B5%D1%80%D1%81).png",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/INC-1859-a_%D0%90%D1%83%D1%80%D0%B5%D1%83%D1%81_%D0%90%D0%B2%D1%80%D0%B5%D0%BB%D0%B8%D0%B0%D0%BD_%D0%BE%D0%BA._270-275_%D0%B3%D0%B3._%28%D0%B0%D0%B2%D0%B5%D1%80%D1%81%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/INC-1859-a_%D0%90%D1%83%D1%80%D0%B5%D1%83%D1%81_%D0%90%D0%B2%D1%80%D0%B5%D0%BB%D0%B8%D0%B0%D0%BD_%D0%BE%D0%BA._270-275_%D0%B3%D0%B3._%28%D0%B0%D0%B2%D0%B5%D1%80%D1%81%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "АНО «Международный нумизматический клуб»",
+    "author": "АНО «Международный нумизматический клуб»",
+    "width": 511,
+    "height": 480,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Aurelian",
+    "url": "https://en.wikipedia.org/wiki/Aurelian"
+  },
+  "additionalSources": [
+    {
+      "id": "wikipedia-it",
+      "kind": "wikipedia",
+      "title": "Aureliano",
+      "url": "https://it.wikipedia.org/wiki/Aureliano"
+    }
+  ],
+  "sourceContextWikidataIds": [
+    "Q1657663"
+  ],
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-16T12:30:26.909Z",
+    "sourceWarnings": [
+      "No official languages were found for country Q1747689."
+    ]
+  }
+}

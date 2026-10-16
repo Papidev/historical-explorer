@@ -1,0 +1,104 @@
+{
+  "id": "belisarius",
+  "name": "Belisarius",
+  "wikidataId": "Q174943",
+  "wikipediaTitle": "Belisarius",
+  "content": {
+    "description": [
+      {
+        "text": "Flavius Belisarius, born around 500 in the fortified town of Germaneia (modern Sapareva Banya, Bulgaria), rose from a guard in the imperial household of Justin I to become one of the most celebrated generals of the Byzantine Empire. Under Emperor Justinian I he led the successful Vandalic War, conquering the North African kingdom in nine months, and later commanded the Gothic War, capturing Rome and holding the city against a much larger Gothic army. His tactical ingenuity was evident at the Battle of Dara, where he used trenches and feints to defeat a larger Persian force, and he was also noted for his use of deception to repel the Persians at Callinicum and the Huns at Melantias.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      },
+      {
+        "text": "Beyond his battlefield exploits, Belisarius played a pivotal political role. He suppressed the Nika riots in 532, personally entering the Hippodrome to arrest the rebel leader Hypatius. His personal life was marked by controversy: his wife Antonina was rumored to have had an affair with her adopted son, a claim recorded in Procopius’s Secret History. In 562 he was tried for conspiracy against Justinian but was later pardoned. A medieval legend, now considered apocryphal, claimed that Justinian had ordered him blinded and made him a beggar, a story that has survived in later artistic depictions.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Belisarius commanded a personal bucellarii regiment of about 7,000 elite heavy cavalry, which formed the core of all his armies.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "At the Battle of Dara he used trenches and feints to lure the Persian forces into a trap, securing a decisive victory.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "During the Nika riots he entered the Hippodrome to arrest the rebel leader Hypatius, helping to restore imperial order.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "His wife Antonina was alleged to have had an affair with her adopted son, a claim made by Procopius in his Secret History.",
+        "sourceIds": [
+          "wikipedia-it"
+        ]
+      },
+      {
+        "text": "A medieval legend claimed that Emperor Justinian had ordered Belisarius blinded and made him a beggar, a story that modern scholars consider apocryphal.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": 500,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 565,
+      "month": 3,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Meister_von_San_Vitale_in_Ravenna_013.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Meister_von_San_Vitale_in_Ravenna_013.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Meister_von_San_Vitale_in_Ravenna_013.jpg/960px-Meister_von_San_Vitale_in_Ravenna_013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/91/Meister_von_San_Vitale_in_Ravenna_013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Meister von San Vitale in Ravenna",
+    "author": "Meister von San Vitale in Ravenna",
+    "width": 1576,
+    "height": 1888,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Belisarius",
+    "url": "https://en.wikipedia.org/wiki/Belisarius"
+  },
+  "additionalSources": [
+    {
+      "id": "wikipedia-it",
+      "kind": "wikipedia",
+      "title": "Belisario",
+      "url": "https://it.wikipedia.org/wiki/Belisario"
+    }
+  ],
+  "sourceContextWikidataIds": [
+    "Q1657663"
+  ],
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-16T12:31:31.590Z",
+    "sourceWarnings": [
+      "Official language Q36387 has no usable Wikimedia language code."
+    ]
+  }
+}

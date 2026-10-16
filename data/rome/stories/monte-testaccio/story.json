@@ -1,14 +1,20 @@
 {
+  "textFormat": "markdown",
   "introduction": {
-    "text": "Monte Testaccio is an artificial mound in Rome made almost entirely of broken olive oil amphorae. It is one of the largest spoil heaps in the ancient world and provides a unique record of Rome's imperial oil trade and state distribution system.",
-    "sourceIds": ["wikipedia"]
+    "text": "Monte Testaccio is an artificial mound in Rome, located just east of the Tiber near the Horrea Galbae.  The hill rises to about 35 m and covers roughly 2 ha, making it one of the largest spoil heaps in the ancient world.\n\nIt is composed almost entirely of broken amphorae—over 53 million fragments, most of which were olive‑oil vessels from the Spanish region of Baetica.  The sheer volume of oil, estimated at 6 billion litres, reflects the scale of Rome’s state‑sponsored olive‑oil trade.\n\nExcavations show that the mound was built in a deliberate, terraced fashion, with retaining walls of intact amphorae and lime sprinkled over the sherds to neutralise odours.  The organisation suggests a state administrative authority overseeing the disposal.\n\nAfter the dumping ceased in the late 3rd century, the hill became a popular recreational site in the 19th century, hosting festivals, jousts, and the October gatherings described by Stendhal.  During the 1849 siege of Rome, Giuseppe Garibaldi commanded a gun battery on its summit, and the hill was also used as a symbolic representation of Golgotha on Good Friday, a tradition that still leaves a cross on the peak.\n\nThe first archaeological investigation was led by the German archaeologist Heinrich Dressel in 1872, whose work laid the foundation for later studies.",
+    "sourceIds": [
+      "wikipedia",
+      "wikipedia-it"
+    ]
   },
   "topics": {
     "history": [
       {
-        "id": "construction",
-        "description": "Monte Testaccio was constructed as a structured waste disposal for olive oil amphorae, with terraces and retaining walls, and was used from around AD 140 to 250.",
-        "sourceIds": ["wikipedia"],
+        "id": "creation",
+        "description": "Monte Testaccio was built as a structured waste dump for broken olive‑oil amphorae, with deposits dated from roughly 140 AD to 250 AD, reflecting the peak of Rome’s olive‑oil imports.",
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 140,
           "precision": "approximate",
@@ -17,60 +23,61 @@
         }
       },
       {
-        "id": "peak-imports",
-        "description": "At its peak, Rome imported up to 130,000 amphorae per year, representing about 7.5 million liters of olive oil annually.",
-        "sourceIds": ["wikipedia"],
-        "time": {
-          "startYear": 200,
-          "precision": "approximate",
-          "endYear": 250,
-          "granularity": "year"
-        }
-      },
-      {
-        "id": "end-dumping",
-        "description": "Dumping of amphorae ceased after about the 260s.",
-        "sourceIds": ["wikipedia"],
+        "id": "cessation",
+        "description": "The dumping of amphorae ceased around the 260s, possibly due to the relocation of the city’s quays and the introduction of a new amphora type.",
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 260,
           "precision": "approximate",
-          "endYear": 260,
           "granularity": "year"
         }
       },
       {
-        "id": "military-use",
-        "description": "In 1849, the hill was used as a gun battery under Giuseppe Garibaldi during the defence of Rome.",
-        "sourceIds": ["wikipedia"],
+        "id": "recreation",
+        "description": "In the 19th century the hill became a popular recreational spot, hosting festivals, jousts, and the annual October gatherings described by Stendhal and other travelers.",
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 1800,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "religious",
+        "description": "On Good Friday the hill was symbolically turned into a representation of Golgotha, with a cross placed on the summit that remains to this day.",
+        "sourceIds": [
+          "wikipedia"
+        ],
+        "time": {
+          "startYear": 1800,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "military",
+        "description": "During the 1849 siege of Rome, the summit was used as a gun battery commanded by Giuseppe Garibaldi, illustrating its strategic value.",
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1849,
           "precision": "exact",
-          "endYear": 1849,
           "granularity": "year"
         }
-      },
-      {
-        "id": "archaeology",
-        "description": "The first archaeological investigation began in 1872 by Heinrich Dressel, with further work in the 1980s and 1994.",
-        "sourceIds": ["wikipedia"],
-        "time": {
-          "startYear": 1872,
-          "precision": "approximate",
-          "endYear": 1994,
-          "granularity": "year"
-        }
-      },
-      {
-        "id": "religious-significance",
-        "description": "The hill was used on Good Friday to represent Golgotha during papal processions.",
-        "sourceIds": ["wikipedia"]
       }
     ],
     "design": [
       {
-        "id": "terraces",
-        "description": "The mound consists of a series of level terraces with retaining walls made of intact amphorae filled with sherds, and lime was sprinkled over the broken pots.",
-        "sourceIds": ["wikipedia"]
+        "id": "structure",
+        "description": "The mound consists of several terraces built with retaining walls of intact amphorae filled with sherds, and lime was sprinkled over the broken pots to neutralise odours, indicating a highly organised construction process.",
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "art": []
@@ -79,23 +86,34 @@
     {
       "name": "Heinrich Dressel",
       "personId": "heinrich-dressel",
-      "sourceIds": ["wikipedia"]
+      "sourceIds": [
+        "wikipedia",
+        "wikipedia-it"
+      ]
     },
     {
       "name": "Giuseppe Garibaldi",
       "personId": "giuseppe-garibaldi",
-      "sourceIds": ["wikipedia"]
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Stendhal",
       "personId": "stendhal",
-      "sourceIds": ["wikipedia"]
+      "sourceIds": [
+        "wikipedia"
+      ]
     }
   ],
   "wikipediaSources": [
     {
       "title": "Monte Testaccio",
       "url": "https://en.wikipedia.org/wiki/Monte_Testaccio"
+    },
+    {
+      "title": "Monte Testaccio",
+      "url": "https://it.wikipedia.org/wiki/Monte_Testaccio"
     }
   ]
 }

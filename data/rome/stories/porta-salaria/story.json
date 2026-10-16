@@ -1,0 +1,231 @@
+{
+  "textFormat": "markdown",
+  "introduction": {
+    "text": "**Porta Salaria** was a gate of Rome’s Aurelian Walls that once guarded the northern approach along the Via Salaria. The gate, built in the 3rd century (271–275 AD) by Emperor Aurelian, consisted of a single archway flanked by two semi‑circular towers and a passage that linked the *Via Salaria nova* to the older *Via Salaria vetus*.\n\nInside the walls, the Horti Sallustiani lay just beyond the gate, while the towers incorporated earlier funerary monuments from the nearby Sepulcreto Salario.\n\nThe gate survived for more than a millennium, witnessing the Goth king Alaric I’s entry in 410 AD, the 537 siege by Witigis, and the 1870 Capture of Rome.\n\nIt was rebuilt in 1873 after artillery damage, but was finally demolished in 1921 to make way for Piazza Fiume.\n\nArchaeological work during the demolition uncovered tombs, a copy of the sepulchre of Quintus Sulpicius Maximus, and the only surviving suspended latrine of the walls.",
+    "sourceIds": [
+      "wikipedia",
+      "wikipedia-it"
+    ]
+  },
+  "topics": {
+    "history": [
+      {
+        "id": "construction",
+        "description": "The gate was erected between 271 AD and 275 AD as part of Emperor Aurelian’s Aurelian Walls, incorporating pre‑existing structures to speed construction.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ],
+        "time": {
+          "startYear": 271,
+          "precision": "approximate",
+          "endYear": 275,
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "restoration-honorius",
+        "description": "In the early 5th century, Emperor Honorius strengthened the arch in opus mixtum and added three large windows above it.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ],
+        "time": {
+          "startYear": 400,
+          "precision": "approximate",
+          "granularity": "century"
+        }
+      },
+      {
+        "id": "sack-alaric",
+        "description": "On 24 August 410 AD, the Goth king Alaric I entered Rome through Porta Salaria, initiating the Sack of Rome.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ],
+        "time": {
+          "startYear": 410,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "siege-witigis",
+        "description": "In 537 AD, the area between Porta Salaria and the Castro Pretorio became the scene of the siege by Goth king Witigis against the Byzantine troops of Belisarius.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ],
+        "time": {
+          "startYear": 537,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "capture-rome",
+        "description": "During the Capture of Rome on 20 September 1870, artillery fire damaged Porta Salaria, leading to its demolition the following year.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ],
+        "time": {
+          "startYear": 1870,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "rebuild-venvignani",
+        "description": "In 1873, the gate was rebuilt under the design of architect Virginio Vespignani, restoring its original appearance.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ],
+        "time": {
+          "startYear": 1873,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "demolition-1921",
+        "description": "The gate was finally demolished in 1921 to open the area for road traffic, and the site is now occupied by Piazza Fiume.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ],
+        "time": {
+          "startYear": 1921,
+          "precision": "exact",
+          "granularity": "year"
+        }
+      }
+    ],
+    "design": [
+      {
+        "id": "structure",
+        "description": "Porta Salaria featured a single archway topped by a curtain of brick, flanked by two semi‑circular towers of differing sizes— the western tower (≈9.20 m diameter) and the eastern tower (≈7.60 m). The towers incorporated earlier tombs from the Sepulcreto Salario, whose travertine facings are still visible on the brick walls.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      },
+      {
+        "id": "windows-opus-mix",
+        "description": "During Honorius’s restoration, the arch was reinforced with opus mixtum and three arched windows were opened above it, a feature that remained largely unchanged until demolition.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      },
+      {
+        "id": "latrine",
+        "description": "The western wall of the gate preserves the only surviving suspended latrine of the Aurelian Walls, a semicylindrical projection resting on two travertine shelves.",
+        "sourceIds": [
+          "wikipedia-it"
+        ]
+      },
+      {
+        "id": "dogana",
+        "description": "Near the gate a stone of the 175 thousand‑dinar customs duty was found, indicating the presence of a customs office at the gate.",
+        "sourceIds": [
+          "wikipedia-it"
+        ]
+      }
+    ],
+    "art": [
+      {
+        "id": "sepulchre-maximus",
+        "description": "The demolition uncovered the sepulchre of Quintus Sulpicius Maximus, an 11‑year‑old boy who had received a Greek‑language prize in 94 AD; a copy of this monument now stands in Piazza Fiume.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      },
+      {
+        "id": "tomb-cornelia",
+        "description": "Other tombs from the 1st century BC, including the circular tomb of Cornelia L. Scipionis f. Vatieni, were also uncovered beneath the gate’s towers.",
+        "sourceIds": [
+          "wikipedia-it"
+        ]
+      },
+      {
+        "id": "copy-piazza",
+        "description": "A copy of the original sepulchre of Quintus Sulpicius Maximus is displayed in Piazza Fiume, while the original remains in the Musei Capitolini.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      }
+    ]
+  },
+  "relatedPeople": [
+    {
+      "name": "Aurelian",
+      "personId": "aurelian",
+      "sourceIds": [
+        "wikipedia",
+        "wikipedia-it"
+      ]
+    },
+    {
+      "name": "Honorius",
+      "personId": "honorius-emperor",
+      "sourceIds": [
+        "wikipedia",
+        "wikipedia-it"
+      ]
+    },
+    {
+      "name": "Alaric I",
+      "personId": "alaric",
+      "sourceIds": [
+        "wikipedia",
+        "wikipedia-it"
+      ]
+    },
+    {
+      "name": "Witigis",
+      "personId": "vitige",
+      "sourceIds": [
+        "wikipedia",
+        "wikipedia-it"
+      ]
+    },
+    {
+      "name": "Belisarius",
+      "personId": "belisarius",
+      "sourceIds": [
+        "wikipedia",
+        "wikipedia-it"
+      ]
+    },
+    {
+      "name": "Virginio Vespignani",
+      "personId": "virginio-vespignani",
+      "sourceIds": [
+        "wikipedia",
+        "wikipedia-it"
+      ]
+    },
+    {
+      "name": "Quintus Sulpicius Maximus",
+      "personId": "quintus-sulpicius-maximus",
+      "sourceIds": [
+        "wikipedia",
+        "wikipedia-it"
+      ]
+    }
+  ],
+  "wikipediaSources": [
+    {
+      "title": "Porta Salaria",
+      "url": "https://en.wikipedia.org/wiki/Porta_Salaria"
+    },
+    {
+      "title": "Porta Salaria",
+      "url": "https://it.wikipedia.org/wiki/Porta_Salaria"
+    }
+  ]
+}

@@ -21,6 +21,7 @@ type GenerationOutcome = {
   failedSteps?: string[];
   relatedPeopleFailureCount?: number;
   errors?: Array<{ stage: string; message: string; name?: string }>;
+  sourceWarnings?: string[];
 };
 
 export type GenerationLogEntry = GenerationRun &
@@ -110,6 +111,7 @@ export const withGenerationRun = async <T>(
           ...error,
           message: sanitizeErrorMessage(error.message),
         })),
+        sourceWarnings: entry.sourceWarnings?.map(sanitizeErrorMessage),
         runId,
         at: new Date().toISOString(),
       });

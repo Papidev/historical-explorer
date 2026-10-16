@@ -1,0 +1,75 @@
+{
+  "id": "quintus-sulpicius-maximus",
+  "name": "Quintus Sulpicius Maximus",
+  "wikidataId": "Q72981031",
+  "wikipediaTitle": "Quintus Sulpicius Maximus",
+  "content": {
+    "description": [
+      {
+        "text": "Quintus Sulpicius Maximus, born around 81 CE, was a Roman boy poet whose life and work are known only through a single memorial stele.  The son of a freedman of Greek descent, he mastered the Greek language almost perfectly and entered the third edition of the Ludi Capitolini in 94 CE, where he competed in an improvisation contest that required the composition of a poem in Ancient Greek on the myth of Phaethon.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "His poem, preserved on a memorial stele that originally stood on the Porta Salaria and is now housed in the Centrale Montemartini, is the only surviving example of juvenilia from the ancient Roman world.  According to the inscription, the 12‑year‑old Quintus died of overwork shortly after the competition, a tragic end that has made his brief career a poignant illustration of the pressures of Roman education.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "The Ludi Capitolini, in which Quintus competed, were founded by Emperor Domitian in 86 CE to celebrate the restoration of the Temple of Jupiter Optimus Maximus.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Quintus’s poem was composed in Ancient Greek, reflecting his exceptional command of the language despite his Roman upbringing.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "The memorial stele that preserves his work was originally erected on the Porta Salaria and has been relocated to the Centrale Montemartini museum.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Quintus’s death at the age of 12, attributed to overwork, highlights the intense demands placed on young scholars in the Roman Empire.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": 81,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 94,
+      "precision": "approximate"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Quintus Sulpicius Maximus",
+    "url": "https://en.wikipedia.org/wiki/Quintus_Sulpicius_Maximus"
+  },
+  "sourceContextWikidataIds": [
+    "Q1657663"
+  ],
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-16T12:33:00.865Z",
+    "sourceWarnings": [
+      "No official languages were found for country Q1747689.",
+      "No it Wikipedia article is linked to this entity."
+    ]
+  }
+}
