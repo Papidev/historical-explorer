@@ -12,14 +12,15 @@ export const Pagination = ({
 }) => (
   <nav
     aria-label="POI pagination"
-    className="flex items-center justify-between gap-4 border-t border-gray-200 px-4 py-3 text-sm text-gray-600"
+    className="flex shrink-0 items-center justify-between gap-3 border-t border-gray-200 px-4 py-1.5 text-xs text-gray-600"
   >
     <p aria-live="polite">
       Showing {page * 50 + 1}–{Math.min((page + 1) * 50, totalRows)} of {totalRows} POIs
     </p>
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-2">
       <IconButton
         label="Previous page"
+        size="small"
         disabled={page === 0}
         onClick={() => onPageChange(page - 1)}
       >
@@ -30,6 +31,7 @@ export const Pagination = ({
       </span>
       <IconButton
         label="Next page"
+        size="small"
         disabled={(page + 1) * 50 >= totalRows}
         onClick={() => onPageChange(page + 1)}
       >
