@@ -1,19 +1,30 @@
 {
+  "textFormat": "markdown",
   "introduction": {
-    "text": "Porta San Giovanni is a single grand arch that forms part of Rome's Aurelian Wall, named after the nearby Archbasilica of Saint John Lateran. Built for Pope Gregory XIII and probably designed by either Giacomo della Porta or Giacomo del Duca, the gate was inaugurated in 1574 to improve traffic flow to southern Italy and to replace the older Porta Asinaria. Its design favours the aesthetic of a villa entrance rather than a defensive structure, featuring pronounced rustication, a large bearded head on the external face, and a commemorative Latin inscription. The arch provides access to Via Campana (now Via Appia Nuova) and is associated with the now largely forgotten Roman tradition of the Notte di San Giovanni, a festival that once celebrated a witches' Sabbath on the Lateran meadows. In 1926 the surrounding Appio‑Latino quarter was built and fornici were opened on the gate's sides to accommodate modern traffic.",
+    "text": "**Porta San Giovanni** is a single‑arch gate in Rome’s Aurelian Wall, situated just outside the Archbasilica of Saint John Lateran. Built for **Pope Gregory XIII** in 1574, the gate was designed by the architect **Giacomo della Porta**—though some sources credit **Giacomo del Duca**, who had worked with Michelangelo on Porta Pia.\n\nThe structure is more reminiscent of a villa entrance than a defensive work: it lacks side towers, ramparts, and battlements, and is marked by pronounced rustication and a large bearded head that crowns the arch on its external face.\n\nAbove the arch a commemorative inscription records the pope’s patronage and the year of construction. The gate opens onto Via Campana (today Via Appia Nuova), a road that for its first three miles follows the ancient Via Asinaria and then the Via Labicana, and whose name reflects both its destination in Campania and the surrounding Roman Campagna.\n\nIn addition to its architectural significance, the gate has long been associated with the now‑forgotten **Notte di San Giovanni** festival, in which Romans once celebrated on 23 June with fireworks, rattles, and the symbolic eating of slugs to reconcile disputes.\n\nThe modern Appio‑Latino quarter, created in 1926 by demolishing surrounding houses and vineyards, and the fornici (traffic lanes) opened at the gate’s sides that same year, remain visible today.",
     "sourceIds": [
       "wikipedia",
       "wikipedia-it"
-    ],
-    "emphasis": [
-      "single grand arch"
     ]
   },
   "topics": {
     "history": [
       {
-        "id": "history-1574",
-        "description": "The gate was inaugurated in 1574 as part of a reorganisation of the Lateran area to improve traffic flow to southern Italy, and its opening led to the closure of the older Porta Asinaria.",
+        "id": "closureOfPortaAsinaria",
+        "description": "Its opening led to the definitive closure of the neighbouring Porta Asinaria, an older Aurelian gate that had become unusable by the 1570s due to rising road levels.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ],
+        "time": {
+          "startYear": 1570,
+          "precision": "approximate",
+          "granularity": "year"
+        }
+      },
+      {
+        "id": "construction",
+        "description": "The gate was inaugurated in 1574 as part of Pope Gregory XIII’s reorganisation of the Lateran area to accommodate increased traffic to and from southern Italy.",
         "sourceIds": [
           "wikipedia",
           "wikipedia-it"
@@ -25,8 +36,8 @@
         }
       },
       {
-        "id": "history-1926",
-        "description": "In 1926 the modern Appio‑Latino quarter was created outside the gate, and fornici were opened on its sides to improve traffic.",
+        "id": "modernization1926",
+        "description": "In 1926 the modern Appio‑Latino quarter was created by demolishing surrounding houses, vineyards, and inns, and fornici were opened at the gate’s sides to improve traffic flow.",
         "sourceIds": [
           "wikipedia",
           "wikipedia-it"
@@ -38,24 +49,16 @@
         }
       },
       {
-        "id": "history-architect",
-        "description": "The arch is attributed to either Giacomo della Porta or Giacomo del Duca, both of whom had worked with Michelangelo on Porta Pia; the confusion arises because contemporary chronicles mention only a famous architect named Giacomo.",
+        "id": "trafficReorganisation",
+        "description": "The gate was built to facilitate traffic to and from southern Italy, reflecting the broader reorganisation of the Lateran area.",
         "sourceIds": [
           "wikipedia",
           "wikipedia-it"
         ]
       },
       {
-        "id": "history-della-porta-death",
-        "description": "According to popular tradition, Giacomo della Porta died near the gate from indigestion after a trip to the Castelli Romani.",
-        "sourceIds": [
-          "wikipedia",
-          "wikipedia-it"
-        ]
-      },
-      {
-        "id": "history-notte-san-giovanni",
-        "description": "The gate is linked to the now largely disappeared Roman tradition of the Notte di San Giovanni (23 June), when a legend of Herodias' witches' Sabbath was celebrated with a festival and the custom of eating slugs.",
+        "id": "traditionNotteSanGiovanni",
+        "description": "The gate is linked to the now‑forgotten Notte di San Giovanni festival, where Romans once celebrated with fireworks and the symbolic eating of slugs to reconcile disputes.",
         "sourceIds": [
           "wikipedia",
           "wikipedia-it"
@@ -64,49 +67,45 @@
     ],
     "design": [
       {
-        "id": "design-architecture",
-        "description": "The gate is designed more like the entrance to a villa than a defensive work, lacking side towers, ramparts, and battlements, and featuring pronounced rustication and a simple decorative scheme with a large bearded head on the external side.",
+        "id": "architecturalStyle",
+        "description": "The gate is a single grand arch that resembles a villa entrance rather than a defensive structure; it lacks side towers, ramparts, and battlements, and features pronounced rustication.",
         "sourceIds": [
           "wikipedia",
           "wikipedia-it"
-        ],
-        "emphasis": [
-          "bearded head"
         ]
       },
       {
-        "id": "design-inscription",
-        "description": "A commemorative inscription above the arch records Pope Gregory XIII's construction of the gate in 1574.",
+        "id": "decorativeHead",
+        "description": "A large bearded head crowns the arch on its external side, serving as the main decorative element.",
         "sourceIds": [
           "wikipedia",
           "wikipedia-it"
-        ],
-        "emphasis": [
-          "commemorative inscription"
+        ]
+      },
+      {
+        "id": "commemorativeInscription",
+        "description": "Above the arch a Latin inscription commemorates Pope Gregory XIII’s patronage and the year of construction.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
         ]
       }
     ],
     "art": [
       {
-        "id": "art-bearded-head",
-        "description": "A large bearded head atop the arch serves as the primary decorative element.",
+        "id": "beardedHead",
+        "description": "The bearded head sculpture on the arch’s external face is a notable artistic feature of the gate.",
         "sourceIds": [
           "wikipedia",
           "wikipedia-it"
-        ],
-        "emphasis": [
-          "bearded head"
         ]
       },
       {
-        "id": "art-inscription",
-        "description": "The Latin inscription above the arch commemorates the construction of the gate by Pope Gregory XIII in 1574.",
+        "id": "inscriptionArt",
+        "description": "The Latin inscription above the arch is also considered an artistic element, combining text and stonework.",
         "sourceIds": [
           "wikipedia",
           "wikipedia-it"
-        ],
-        "emphasis": [
-          "Latin inscription"
         ]
       }
     ]
@@ -131,14 +130,6 @@
     {
       "name": "Giacomo del Duca",
       "personId": "jacopo-del-duca",
-      "sourceIds": [
-        "wikipedia",
-        "wikipedia-it"
-      ]
-    },
-    {
-      "name": "Herodias",
-      "personId": "herodias",
       "sourceIds": [
         "wikipedia",
         "wikipedia-it"
