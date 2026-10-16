@@ -35,9 +35,8 @@ Read `docs/agents/domain.md` before domain exploration.
 ## Worktree Lifecycle
 
 - When creating a worktree, copy environment files, uncommitted versioned content under `data/`, `.tailwind-plus/`, Catalyst references, and other local libraries/assets. The app accesses generated local data directly in the shared external directory; keep those files outside worktrees and `data/public/` local to each checkout. See [Data layout](README.md#data-layout) for configuration and shared-data behavior. Verify the local resources before starting work.
-- After the task is complete and its PR is confirmed merged, stop the application and any task processes started from that worktree, including their child processes. Identify processes by their association with the worktree and leave applications running from other checkouts alone.
-- Worktree cleanup does not require separate backups of local resources or generated data.
-- Once processes are stopped, remove the entire task worktree and its registration; use the Codex archive tool for managed worktrees. A completed task with a merged PR must leave no running application or worktree directory behind.
+- After the task is complete and its PR is confirmed merged, stop processes started from that worktree, including child processes, and archive it using the Codex archive tool. Leave processes from other checkouts running.
+- Worktree cleanup does not require separate backups of local resources or generated data. Do not create `.worktree-backups/` or other backup directories inside the repository.
 
 ## Tooling & Commands
 
