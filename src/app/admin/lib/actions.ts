@@ -46,10 +46,7 @@ const toRelatedPeopleWarning = (
         : "Generated with incomplete Wikipedia Sources",
       ...(sourceWarnings.length ? { details: sourceWarnings.join("\n") } : {}),
     },
-    failedSteps: [
-      ...(failures.length ? ["Related People"] : []),
-      ...(sourceWarnings.length ? ["Wikipedia Sources"] : []),
-    ],
+    failedSteps: failures.length ? ["Related People"] : [],
   };
 };
 
@@ -66,16 +63,11 @@ export const refreshStoryContent = async (formData: FormData) =>
           storyWorkflow.storyContent.generate({ poiId, ai, onProgress }),
         ),
       ({ failures, sourceWarnings = [] }) => ({
-        status: failures.length || sourceWarnings.length ? "partial" : "success",
-        failedSteps: [
-          ...(failures.length ? ["relatedPeople"] : []),
-          ...(sourceWarnings.length ? ["sources"] : []),
-        ],
+        status: failures.length ? "partial" : "success",
+        failedSteps: failures.length ? ["relatedPeople"] : [],
         relatedPeopleFailureCount: failures.length,
-        errors: [
-          ...failures.map(({ name, message }) => ({ stage: "relatedPeople", name, message })),
-          ...sourceWarnings.map((message) => ({ stage: "sources", message })),
-        ],
+        errors: failures.map(({ name, message }) => ({ stage: "relatedPeople", name, message })),
+        sourceWarnings,
       }),
     );
     return toRelatedPeopleWarning(result.failures, result.sourceWarnings);
@@ -164,16 +156,11 @@ export const resolveRelatedPeople = async (formData: FormData) =>
           storyWorkflow.relatedPeople.resolve({ poiId, ai, onProgress }),
         ),
       ({ failures, sourceWarnings = [] }) => ({
-        status: failures.length || sourceWarnings.length ? "partial" : "success",
-        failedSteps: [
-          ...(failures.length ? ["relatedPeople"] : []),
-          ...(sourceWarnings.length ? ["sources"] : []),
-        ],
+        status: failures.length ? "partial" : "success",
+        failedSteps: failures.length ? ["relatedPeople"] : [],
         relatedPeopleFailureCount: failures.length,
-        errors: [
-          ...failures.map(({ name, message }) => ({ stage: "relatedPeople", name, message })),
-          ...sourceWarnings.map((message) => ({ stage: "sources", message })),
-        ],
+        errors: failures.map(({ name, message }) => ({ stage: "relatedPeople", name, message })),
+        sourceWarnings,
       }),
     );
     return toRelatedPeopleWarning(result.failures, result.sourceWarnings);

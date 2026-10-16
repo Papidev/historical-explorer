@@ -90,6 +90,36 @@ describe("POI types", () => {
     expect(poiTypes.get(pointOfInterest.id)).toEqual({ types: [] });
   });
 
+  it("retries temporary Wikidata rate limits for claims and labels", async () => {
+    const poiTypes = createModule();
+    const requests = new Map<string, number>();
+    server.use(
+      http.get("https://www.wikidata.org/w/api.php", ({ request }) => {
+        const props = new URL(request.url).searchParams.get("props")!;
+        requests.set(props, (requests.get(props) ?? 0) + 1);
+        if (requests.get(props) === 1)
+          return new HttpResponse(null, { status: 429, headers: { "Retry-After": "0" } });
+        return HttpResponse.json({
+          entities:
+            props === "claims"
+              ? {
+                  Q100: {
+                    claims: { P31: [{ mainsnak: { datavalue: { value: { id: "Q16970" } } } }] },
+                  },
+                }
+              : { Q16970: { labels: { en: { value: "church building" } } } },
+        });
+      }),
+    );
+    await expect(poiTypes.refresh(pointOfInterest.id)).resolves.toEqual({
+      types: [{ id: "Q16970", label: "church building" }],
+    });
+    expect(poiTypes.get(pointOfInterest.id)).toEqual({
+      types: [{ id: "Q16970", label: "church building" }],
+    });
+    expect(Object.fromEntries(requests)).toEqual({ claims: 2, labels: 2 });
+  });
+
   it("reports a missing Wikidata ID without requesting data", async () => {
     const poiTypes = createModule({ ...pointOfInterest, sourceHints: {} });
 
@@ -98,6 +128,37 @@ describe("POI types", () => {
       skipped: "no-wikidata-id",
     });
     expect(poiTypes.get(pointOfInterest.id)).toBeUndefined();
+  });
+
+  it("reports persistent rate limits after three attempts and preserves saved types", async () => {
+    const poiTypes = createModule();
+    server.use(
+      http.get("https://www.wikidata.org/w/api.php", ({ request }) =>
+        HttpResponse.json({
+          entities:
+            new URL(request.url).searchParams.get("props") === "claims"
+              ? {
+                  Q100: {
+                    claims: { P31: [{ mainsnak: { datavalue: { value: { id: "Q16970" } } } }] },
+                  },
+                }
+              : { Q16970: { labels: { en: { value: "church building" } } } },
+        }),
+      ),
+    );
+    await poiTypes.refresh(pointOfInterest.id);
+    let requests = 0;
+    server.use(
+      http.get("https://www.wikidata.org/w/api.php", () => {
+        requests += 1;
+        return new HttpResponse(null, { status: 429, headers: { "Retry-After": "0" } });
+      }),
+    );
+    const result = await poiTypes.refresh(pointOfInterest.id);
+    expect(requests).toBe(3);
+    expect(result.types).toEqual([{ id: "Q16970", label: "church building" }]);
+    expect(result.error).toContain("429");
+    expect(poiTypes.get(pointOfInterest.id)).toEqual(result);
   });
 
   it("keeps saved types when Wikidata fails", async () => {

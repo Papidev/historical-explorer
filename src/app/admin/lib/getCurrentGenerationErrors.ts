@@ -25,6 +25,9 @@ export const getCurrentGenerationErrors = (
         : (run.errors ?? []);
     return errors
       .filter(({ stage }) => {
+        // Completed runs used to store non-blocking source warnings as errors.
+        // Actual source acquisition failures are recorded as failed runs.
+        if (run.event === "completed" && stage === "sources") return false;
         const completedAt = metadata[checkpointSteps[stage]]?.completedAt;
         if (completedAt && Date.parse(completedAt) > Date.parse(run.at)) return false;
         return !runs.some(

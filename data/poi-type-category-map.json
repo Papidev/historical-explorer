@@ -292,11 +292,14 @@
       "Archaeological Site"
     ],
     "Q3936952": [],
-    "Q252021": [
-      "Villa"
-    ],
     "Q43483": [
       "Fountain"
+    ],
+    "Q10460934": [
+      "Archaeological Site"
+    ],
+    "Q252021": [
+      "Villa"
     ]
   },
   "origins": {
@@ -392,7 +395,8 @@
     "Q962715": "manual",
     "Q156849": "manual",
     "Q3936952": "manual",
-    "Q43483": "manual"
+    "Q43483": "manual",
+    "Q10460934": "automatic"
   },
   "reasons": {
     "Q16560": "\"palace\" denotes a grand residence not covered by existing categories, so a new top‑level category \"Palace\" is created.",
@@ -451,6 +455,7 @@
     "Q1107656": "No existing category matches 'garden'; created new top-level category.",
     "Q5003624": "The type \"memorial\" corresponds to the existing category \"Monument\".",
     "Q4989906": "The type 'monument' directly corresponds to the existing category 'Monument'.",
-    "Q173387": "The type 'grave' refers to a burial site, which is not represented by existing categories; a new category 'Grave' is created."
+    "Q173387": "The type 'grave' refers to a burial site, which is not represented by existing categories; a new category 'Grave' is created.",
+    "Q10460934": "An artificial hill is a type of archaeological site, so it can be classified under the existing 'Archaeological Site' category."
   }
 }

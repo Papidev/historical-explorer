@@ -6,13 +6,13 @@
   "content": {
     "description": [
       {
-        "text": "Quintus Sulpicius Maximus, born around 81 CE, was the son of a freedman of Greek descent, Quintius Sulpicius Eugramus. Growing up in a household that prized language, Quintus mastered Ancient Greek with remarkable fluency, a skill that set him apart in Roman society. In 94 CE he entered the third edition of the Ludi Capitolini, a festival founded by Emperor Domitian in 86 CE to honor the restored Temple of Jupiter Optimus Maximus. The competition featured an improvisation round in which participants had to compose a poem in Greek on the myth of Phaethon, and Quintus was chosen to perform.",
+        "text": "Quintus Sulpicius Maximus, born around 81 CE, was a Roman boy poet whose life and work are known only through a single memorial stele.  The son of a freedman of Greek descent, he mastered the Greek language almost perfectly and entered the third edition of the Ludi Capitolini in 94 CE, where he competed in an improvisation contest that required the composition of a poem in Ancient Greek on the myth of Phaethon.",
         "sourceIds": [
           "wikipedia"
         ]
       },
       {
-        "text": "Quintus’s poem, preserved on a memorial stele that once stood on the Porta Salaria and now resides in the Centrale Montemartini, is the only surviving example of Roman juvenilia. The inscription, catalogued as IGUR III 1336, records that the 12‑year‑old died of overwork shortly after the contest, a tragic reminder of the intense pressures placed on young scholars in the Roman elite. Scholars such as J. Raleigh Nelson and Brian J. Wright have examined the text, noting its linguistic parallels to the New Testament and its significance for understanding early Roman literary culture.",
+        "text": "His poem, preserved on a memorial stele that originally stood on the Porta Salaria and is now housed in the Centrale Montemartini, is the only surviving example of juvenilia from the ancient Roman world.  According to the inscription, the 12‑year‑old Quintus died of overwork shortly after the competition, a tragic end that has made his brief career a poignant illustration of the pressures of Roman education.",
         "sourceIds": [
           "wikipedia"
         ]
@@ -20,25 +20,25 @@
     ],
     "curiosities": [
       {
-        "text": "Quintus’s poem is the only known example of juvenilia from the ancient Roman world.",
+        "text": "The Ludi Capitolini, in which Quintus competed, were founded by Emperor Domitian in 86 CE to celebrate the restoration of the Temple of Jupiter Optimus Maximus.",
         "sourceIds": [
           "wikipedia"
         ]
       },
       {
-        "text": "The 12‑year‑old died of overwork shortly after the competition, according to his memorial.",
+        "text": "Quintus’s poem was composed in Ancient Greek, reflecting his exceptional command of the language despite his Roman upbringing.",
         "sourceIds": [
           "wikipedia"
         ]
       },
       {
-        "text": "The memorial stele that preserves his poem was originally erected on the Porta Salaria and is now housed in the Centrale Montemartini.",
+        "text": "The memorial stele that preserves his work was originally erected on the Porta Salaria and has been relocated to the Centrale Montemartini museum.",
         "sourceIds": [
           "wikipedia"
         ]
       },
       {
-        "text": "The Ludi Capitolini, in which Quintus competed, was founded by Domitian in 86 CE to celebrate the restoration of the Temple of Jupiter Optimus Maximus.",
+        "text": "Quintus’s death at the age of 12, attributed to overwork, highlights the intense demands placed on young scholars in the Roman Empire.",
         "sourceIds": [
           "wikipedia"
         ]
@@ -50,7 +50,7 @@
     },
     "deathDate": {
       "year": 94,
-      "precision": "exact"
+      "precision": "approximate"
     }
   },
   "source": {
@@ -66,7 +66,7 @@
     "aiMode": "cloud",
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
-    "completedAt": "2026-10-15T22:38:18.916Z",
+    "completedAt": "2026-10-16T12:33:00.865Z",
     "sourceWarnings": [
       "No official languages were found for country Q1747689.",
       "No it Wikipedia article is linked to this entity."

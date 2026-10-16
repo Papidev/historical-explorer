@@ -7,33 +7,47 @@
     "description": [
       {
         "text": "Born on 4 July 1807 in Nice, Giuseppe Garibaldi grew up in a maritime family and later worked as a sailor and teacher in the Ottoman Empire. He joined the Young Italy movement, participated in the failed 1834 Piedmont insurrection, and fled to South America where he fought in the Ragamuffin War and the Uruguayan Civil War, earning the nickname \"Hero of the Two Worlds\" for his campaigns on both continents.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "Returning to Italy in 1848, Garibaldi led the Hunters of the Alps and the Expedition of the Thousand, conquering Sicily and southern Italy and helping to unify the country. He later commanded the Army of the Vosges during the Franco‑Prussian War, was a prominent Freemason, and died on 2 June 1882 on the island of Caprera.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "curiosities": [
       {
         "text": "He was known as the \"Hero of the Two Worlds\" because of his military enterprises in South America and Europe.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "Garibaldi was a Freemason and was elected Grand Master of the Grand Orient of Italy.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "His wife Anita, a gaucho, taught him gaucho culture and they had four children together.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "A grandson was named William in honour of Admiral William Brown, who had helped Garibaldi escape from Argentine forces.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He was offered a commission in the United States Army by Abraham Lincoln but declined the offer.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "birthDate": {
@@ -73,5 +87,8 @@
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-10-12T22:50:01.805Z"
-  }
+  },
+  "sourceContextWikidataIds": [
+    "Q781595"
+  ]
 }

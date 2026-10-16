@@ -6,14 +6,14 @@
   "content": {
     "description": [
       {
-        "text": "Aurelian, born on 9 September around 214 in the province of Moesia Superior, rose from a modest background to become Roman emperor in 270. After a distinguished military career that began in 235, he defeated a series of barbarian groups—including the Alamanni, Goths, Vandals, Juthungi, Sarmatians, and Carpi—and re‑united the fractured empire by conquering the Palmyrene Empire in 273 and the Gallic Empire in 274. His reign earned him the title Restitutor Orbis, “Restorer of the World,” for restoring the empire’s territorial integrity.",
+        "text": "Aurelian rose to the purple during the Crisis of the Third Century, after the deaths of Claudius Gothicus and his brother Quintillus. He was acclaimed emperor by the legions in Sirmium in 270 and quickly defeated the Gallic and Palmyrene usurpers, reuniting the Roman Empire for the first time since the crisis began. His military successes earned him the title Restitutor Orbis, and he is remembered for his decisive victories over the Alamanni, Goths, Vandals, and the Palmyrene Empire under Zenobia.",
         "sourceIds": [
           "wikipedia",
           "wikipedia-it"
         ]
       },
       {
-        "text": "Beyond battlefield success, Aurelian enacted sweeping reforms: he abandoned the costly province of Dacia, introduced new coinage to curb inflation, and established the cult of Sol Invictus to unify religious practice. He also ordered the construction of the Aurelian Walls, a massive fortification that still surrounds Rome’s historic center. His reign ended abruptly in 275 when he was murdered by his own generals in Thrace while preparing for a campaign against the Sassanids.",
+        "text": "Beyond his battlefield achievements, Aurelian enacted significant administrative and religious reforms. He introduced the cult of Sol Invictus as the state religion, built the Aurelian Walls to protect Rome, and restructured the monetary system to curb inflation. His reign ended abruptly in 275 when he was assassinated by his own generals in Thrace, a fate that underscored the volatility of the era.",
         "sourceIds": [
           "wikipedia",
           "wikipedia-it"
@@ -22,27 +22,37 @@
     ],
     "curiosities": [
       {
-        "text": "Aurelian was the first emperor to be officially hailed as \"dominus et deus\" (master and god) in Roman inscriptions, a title that would not appear again until Constantine.",
+        "text": "The Aurelian Walls, constructed during his reign, still encircle the historic center of Rome.",
         "sourceIds": [
-          "wikipedia"
-        ]
-      },
-      {
-        "text": "The Aurelian Walls, built under his orders, are the only surviving Roman defensive walls that completely encircle a city.",
-        "sourceIds": [
-          "wikipedia"
-        ]
-      },
-      {
-        "text": "Aurelian’s introduction of the Sol Invictus cult in 274 led to the adoption of December 25 as a Roman festival, a date that later influenced the Christian celebration of Christmas.",
-        "sourceIds": [
+          "wikipedia",
           "wikipedia-it"
+        ]
+      },
+      {
+        "text": "Aurelian established Sol Invictus as the official state cult, making the sun god the central deity of the empire.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      },
+      {
+        "text": "He was murdered by his own generals in Thrace in 275, a rare example of an emperor being killed by his military commanders.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "His title Restitutor Orbis, meaning 'Restorer of the World', reflected his success in reuniting the fragmented empire.",
+        "sourceIds": [
+          "wikipedia"
         ]
       }
     ],
     "birthDate": {
       "year": 214,
-      "precision": "approximate"
+      "month": 9,
+      "day": 9,
+      "precision": "exact"
     },
     "deathDate": {
       "year": 275,
@@ -83,7 +93,7 @@
     "aiMode": "cloud",
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
-    "completedAt": "2026-10-15T22:35:18.940Z",
+    "completedAt": "2026-10-16T12:30:26.909Z",
     "sourceWarnings": [
       "No official languages were found for country Q1747689."
     ]

@@ -6,39 +6,47 @@
   "content": {
     "description": [
       {
-        "text": "Flavius Belisarius was born around 500, probably in the town of Germaneia (modern Sapareva Banya, Bulgaria), a fortified settlement in the borders of Thrace and Paeonia. He entered the imperial guard of Emperor Justin I as a young soldier and rose through the ranks to become a senior guard of Emperor Justinian I. In 532 he played a decisive role in suppressing the Nika riots, entering the Hippodrome and helping to quell the rebellion that threatened to topple the emperor.",
+        "text": "Flavius Belisarius, born around 500 in the fortified town of Germaneia (modern Sapareva Banya, Bulgaria), rose from a guard in the imperial household of Justin I to become one of the most celebrated generals of the Byzantine Empire. Under Emperor Justinian I he led the successful Vandalic War, conquering the North African kingdom in nine months, and later commanded the Gothic War, capturing Rome and holding the city against a much larger Gothic army. His tactical ingenuity was evident at the Battle of Dara, where he used trenches and feints to defeat a larger Persian force, and he was also noted for his use of deception to repel the Persians at Callinicum and the Huns at Melantias.",
         "sourceIds": [
-          "wikipedia"
+          "wikipedia",
+          "wikipedia-it"
         ]
       },
       {
-        "text": "Belisarius is best remembered for his campaigns that restored large parts of the former Western Roman Empire to Byzantine control. He defeated the Vandals in North Africa in 533–534, capturing Carthage and forcing the Vandal king Gelimer into captivity. He then led the Gothic War in Italy from 535 to 540, capturing Rome in 536 and holding the city against the Gothic king Vitiges for a year. His skill in deception, disciplined troops, and benevolent treatment of civilians earned him the triumph and the consulship in 535, and he is regarded as one of the greatest commanders of the Byzantine Empire.",
+        "text": "Beyond his battlefield exploits, Belisarius played a pivotal political role. He suppressed the Nika riots in 532, personally entering the Hippodrome to arrest the rebel leader Hypatius. His personal life was marked by controversy: his wife Antonina was rumored to have had an affair with her adopted son, a claim recorded in Procopius’s Secret History. In 562 he was tried for conspiracy against Justinian but was later pardoned. A medieval legend, now considered apocryphal, claimed that Justinian had ordered him blinded and made him a beggar, a story that has survived in later artistic depictions.",
         "sourceIds": [
-          "wikipedia"
+          "wikipedia",
+          "wikipedia-it"
         ]
       }
     ],
     "curiosities": [
       {
-        "text": "He was awarded a triumph and the honor of consul in 535.",
+        "text": "Belisarius commanded a personal bucellarii regiment of about 7,000 elite heavy cavalry, which formed the core of all his armies.",
         "sourceIds": [
           "wikipedia"
         ]
       },
       {
-        "text": "He was known for his benevolent treatment of civilians, which helped win local support during his campaigns.",
+        "text": "At the Battle of Dara he used trenches and feints to lure the Persian forces into a trap, securing a decisive victory.",
         "sourceIds": [
           "wikipedia"
         ]
       },
       {
-        "text": "He was accused of conspiracy against Emperor Justinian in 562 but was later pardoned.",
+        "text": "During the Nika riots he entered the Hippodrome to arrest the rebel leader Hypatius, helping to restore imperial order.",
         "sourceIds": [
           "wikipedia"
         ]
       },
       {
-        "text": "A medieval legend claimed that Justinian had him blinded and made him a beggar, but modern scholars consider this apocryphal.",
+        "text": "His wife Antonina was alleged to have had an affair with her adopted son, a claim made by Procopius in his Secret History.",
+        "sourceIds": [
+          "wikipedia-it"
+        ]
+      },
+      {
+        "text": "A medieval legend claimed that Emperor Justinian had ordered Belisarius blinded and made him a beggar, a story that modern scholars consider apocryphal.",
         "sourceIds": [
           "wikipedia"
         ]
@@ -50,7 +58,8 @@
     },
     "deathDate": {
       "year": 565,
-      "precision": "approximate"
+      "month": 3,
+      "precision": "exact"
     }
   },
   "image": {
@@ -87,7 +96,7 @@
     "aiMode": "cloud",
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
-    "completedAt": "2026-10-15T22:36:23.211Z",
+    "completedAt": "2026-10-16T12:31:31.590Z",
     "sourceWarnings": [
       "Official language Q36387 has no usable Wikimedia language code."
     ]
