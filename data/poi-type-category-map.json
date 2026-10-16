@@ -306,6 +306,9 @@
     ],
     "Q112132534": [
       "Museum"
+    ],
+    "Q10855061": [
+      "Archaeological Site"
     ]
   },
   "origins": {
@@ -404,7 +407,8 @@
     "Q43483": "manual",
     "Q10460934": "automatic",
     "Q13360570": "automatic",
-    "Q112132534": "automatic"
+    "Q112132534": "automatic",
+    "Q10855061": "manual"
   },
   "reasons": {
     "Q16560": "\"palace\" denotes a grand residence not covered by existing categories, so a new top‑level category \"Palace\" is created.",

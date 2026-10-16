@@ -86,7 +86,6 @@ export const PoiRowsTable = ({
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => {
   const tableScrollRef = useRef<HTMLDivElement>(null);
-  const [isExpanded, setIsExpanded] = useState(false);
   const [runningIds, setRunningIds] = useState<string[]>([]);
   const { page, search, sort: sortOrder, statuses: visibleStatusGroups } = pagination.query;
   const [selectedPanel, setSelectedPanel] = useState<SelectedPanel | null>(null);
@@ -186,10 +185,8 @@ export const PoiRowsTable = ({
       {actionToast ? (
         <ActionToast toast={actionToast} onDismiss={() => setActionToast(null)} />
       ) : null}
-      <section
-        className={`flex min-h-0 flex-1 flex-col overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-gray-950/10 ${isExpanded ? "fixed inset-2 z-20" : ""}`}
-      >
-        <div hidden={isExpanded} className="shrink-0">
+      <section className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-gray-950/10">
+        <div className="shrink-0">
           <GlobalArtifacts artifacts={globalArtifacts} onSelectPanel={setSelectedPanel} />
           <BatchGeneration
             rows={generationRows}
@@ -213,30 +210,8 @@ export const PoiRowsTable = ({
               onQueryChange({ search: value });
             }}
           />
-          <div className="w-full sm:w-60">
-            <ListboxSelect
-              label="Sort POIs"
-              value={sortOrder}
-              onChange={(value) => {
-                onQueryChange({ sort: value });
-              }}
-              options={[
-                { value: "default", label: "Status and name" },
-                { value: "newest", label: "Newest generation first" },
-                { value: "oldest", label: "Oldest generation first" },
-              ]}
-            />
-          </div>
-          <button
-            type="button"
-            aria-pressed={isExpanded}
-            onClick={() => setIsExpanded((current) => !current)}
-            className="cursor-pointer rounded-md border border-gray-300 px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50"
-          >
-            {isExpanded ? "Restore layout" : "Expand table"}
-          </button>
           <span className="font-semibold text-gray-800">Show status</span>
-          <label className="flex cursor-pointer items-center gap-2 rounded-md border border-gray-300 px-2.5 py-1.5 text-gray-700">
+          <label className="flex cursor-pointer items-center gap-2 rounded-md border border-violet-200 bg-violet-50 px-2.5 py-1.5 text-violet-900">
             <input
               type="checkbox"
               checked={visibleStatusGroups.length === Object.keys(statusGroupStyles).length}
@@ -245,7 +220,7 @@ export const PoiRowsTable = ({
                   statuses: event.target.checked ? Object.keys(statusGroupStyles) : [],
                 });
               }}
-              className="size-4 cursor-pointer accent-gray-700"
+              className="size-4 cursor-pointer accent-violet-600"
             />
             All
           </label>
@@ -281,6 +256,20 @@ export const PoiRowsTable = ({
               </button>
             </div>
           ))}
+          <div className="ml-auto grid w-full grid-cols-[auto_minmax(0,1fr)] items-center gap-2 sm:w-80 [&>div]:mt-0">
+            <ListboxSelect
+              label="Sort POIs"
+              value={sortOrder}
+              onChange={(value) => {
+                onQueryChange({ sort: value });
+              }}
+              options={[
+                { value: "default", label: "Status and name" },
+                { value: "newest", label: "Newest generation first" },
+                { value: "oldest", label: "Oldest generation first" },
+              ]}
+            />
+          </div>
         </div>
         <div
           aria-busy={isLoading}

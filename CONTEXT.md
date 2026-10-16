@@ -20,6 +20,14 @@ Explicit approval is a possible future evolution, not a current requirement or a
 An app-ready place or object on the map that may have metadata and a story.
 _Avoid_: Clean POI, polished POI, transformed POI, spot, location, attraction
 
+**POI Marker**:
+The interactive symbol representing a **POI** on the visitor map, from which visitors can discover the place and open its **Story**.
+_Avoid_: Pin, dot
+
+**POI Preview**:
+The compact summary associated with a **POI Marker**, showing the place's name, thumbnail, and short descriptor, with an action to open its **Story**. It appears when hovering over or focusing the marker.
+_Avoid_: Tooltip, POI popup, Story
+
 **Geo Place**:
 The geographic representation of a place from a source dataset before irrelevant fields are removed and it becomes a **POI**.
 _Avoid_: Raw POI, Raw Place, Raw Location, Raw feature, source feature

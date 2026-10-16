@@ -1,5 +1,23 @@
 # historical-explorer
 
+## 0.8.0
+
+### Minor Changes
+
+- Paginate the admin POI and People tables on the server, preserving global search, POI filters and sorting, independent URL state, and automatic generation across the catalog.
+
+## 0.7.0
+
+### Minor Changes
+
+- Add newest/oldest generation sorting to admin POIs, keep missing checkpoint dates from interrupting catalog loading, and show non-blocking Wikipedia source warnings as completion notes. Correct the Seven Spheres Mithraeum identity and save updated Rome Stories, People source contexts, and POI classifications.
+
+## 0.6.6
+
+### Patch Changes
+
+- Fix map preview cleanup errors by rendering POI previews within the page's React tree.
+
 ## 0.6.5
 
 ### Patch Changes

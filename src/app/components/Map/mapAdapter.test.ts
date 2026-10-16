@@ -2,7 +2,8 @@
 
 import "@testing-library/jest-dom/vitest";
 import userEvent from "@testing-library/user-event";
-import { cleanup, screen, waitFor, within } from "@testing-library/react";
+import { createElement, StrictMode } from "react";
+import { act, cleanup, render, screen, waitFor, within } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import type { Poi } from "@/types/Poi";
 
@@ -116,6 +117,7 @@ vi.mock("maplibre-gl", () => {
 });
 
 import { createMapLibreAdapter } from "./mapAdapter";
+import { Map } from "./index";
 
 const pois: Poi[] = [
   {
@@ -142,10 +144,10 @@ const pois: Poi[] = [
 const dispatchPointerEvent = (element: HTMLElement, type: string, pointerType: string) => {
   const event = new Event(type);
   Object.defineProperty(event, "pointerType", { value: pointerType });
-  element.dispatchEvent(event);
+  act(() => element.dispatchEvent(event));
 };
 
-describe("createMapLibreAdapter", () => {
+describe("Map and its MapLibre adapter", () => {
   beforeEach(() => {
     document.body.innerHTML = "";
     mapLibreFakes.maps.length = 0;
@@ -154,6 +156,38 @@ describe("createMapLibreAdapter", () => {
   });
 
   afterEach(cleanup);
+
+  it("cleans up previews during Strict Mode replay and React unmount without lifecycle errors", async () => {
+    const consoleError = vi.spyOn(console, "error");
+    try {
+      const view = render(
+        createElement(
+          StrictMode,
+          null,
+          createElement(Map, { coordinates: [12.481, 41.889], zoom: 15, pois }),
+        ),
+      );
+      dispatchPointerEvent(
+        screen.getByRole("button", { name: "Open details for Forum Boarium" }),
+        "pointerenter",
+        "mouse",
+      );
+      expect(await screen.findByRole("heading", { name: "Forum Boarium" })).toBeInTheDocument();
+
+      view.unmount();
+
+      await waitFor(() => {
+        expect(mapLibreFakes.popups.every(({ element }) => !element?.hasChildNodes())).toBe(true);
+      });
+      expect(mapLibreFakes.maps.length).toBe(2);
+      expect(mapLibreFakes.maps.every(({ removed }) => removed)).toBe(true);
+      expect(consoleError.mock.calls.flat().join(" ")).not.toContain(
+        "Attempted to synchronously unmount a root",
+      );
+    } finally {
+      consoleError.mockRestore();
+    }
+  });
 
   it("keeps the selected Story open when clicking map controls", async () => {
     const user = userEvent.setup();
@@ -216,11 +250,7 @@ describe("createMapLibreAdapter", () => {
   });
 
   it("shows the matching preview on mouse hover and keyboard focus", async () => {
-    const adapter = createMapLibreAdapter({ center: [12.481, 41.889], zoom: 15 });
-    const container = document.createElement("div");
-    document.body.append(container);
-    adapter.mount(container);
-    adapter.updatePois(pois);
+    render(createElement(Map, { coordinates: [12.481, 41.889], zoom: 15, pois }));
 
     expect(mapLibreFakes.markers[0].color).toBeUndefined();
     expect(mapLibreFakes.markers[1].color).toBe("#facc15");
@@ -235,32 +265,32 @@ describe("createMapLibreAdapter", () => {
       expect(screen.queryByRole("heading", { name: "Forum Boarium" })).not.toBeInTheDocument(),
     );
 
-    mapLibreFakes.markers[1].element.focus();
+    act(() => mapLibreFakes.markers[1].element.focus());
     expect(
       await screen.findByRole("heading", { name: "Cloisters of Bramante" }),
     ).toBeInTheDocument();
 
-    mapLibreFakes.markers[1].element.blur();
+    act(() => mapLibreFakes.markers[1].element.blur());
     await waitFor(() =>
       expect(
         screen.queryByRole("heading", { name: "Cloisters of Bramante" }),
       ).not.toBeInTheDocument(),
     );
-
-    adapter.destroy();
   });
 
   it("keeps the preview open while moving to the card and opens details from it", async () => {
     const user = userEvent.setup();
     const onOpenPoiDetails = vi.fn();
     const onMapClick = vi.fn();
-    const adapter = createMapLibreAdapter({ center: [12.481, 41.889], zoom: 15 });
-    const container = document.createElement("div");
-    document.body.append(container);
-    adapter.setOnOpenPoiDetails(onOpenPoiDetails);
-    adapter.setOnMapClick(onMapClick);
-    adapter.mount(container);
-    adapter.updatePois(pois);
+    render(
+      createElement(Map, {
+        coordinates: [12.481, 41.889],
+        zoom: 15,
+        pois,
+        onOpenPoiDetails,
+        onMapClick,
+      }),
+    );
 
     dispatchPointerEvent(mapLibreFakes.markers[0].element, "pointerenter", "mouse");
     expect(await screen.findByRole("heading", { name: "Forum Boarium" })).toBeInTheDocument();
@@ -278,28 +308,30 @@ describe("createMapLibreAdapter", () => {
     expect(onOpenPoiDetails).toHaveBeenCalledWith("forum-boarium");
     expect(onMapClick).not.toHaveBeenCalled();
     expect(mapLibreFakes.popups[0].isOpen).toBe(false);
-
-    adapter.destroy();
   });
 
   it("opens details directly on click, touch, Enter, and Space", async () => {
     const user = userEvent.setup();
     const openedPoiIds: string[] = [];
-    const adapter = createMapLibreAdapter({ center: [12.481, 41.889], zoom: 15 });
-    const container = document.createElement("div");
-    document.body.append(container);
-    adapter.setOnOpenPoiDetails((poiId) => openedPoiIds.push(poiId));
-    adapter.mount(container);
-    adapter.updatePois(pois);
+    render(
+      createElement(Map, {
+        coordinates: [12.481, 41.889],
+        zoom: 15,
+        pois,
+        onOpenPoiDetails: (poiId) => openedPoiIds.push(poiId),
+      }),
+    );
     const [firstMarker, secondMarker] = mapLibreFakes.markers;
 
     await user.click(firstMarker.element);
     dispatchPointerEvent(secondMarker.element, "pointerdown", "touch");
-    secondMarker.element.focus();
-    secondMarker.element.click();
-    firstMarker.element.focus();
+    act(() => {
+      secondMarker.element.focus();
+      secondMarker.element.click();
+      firstMarker.element.focus();
+    });
     await user.keyboard("{Enter}");
-    secondMarker.element.focus();
+    act(() => secondMarker.element.focus());
     await user.keyboard(" ");
 
     expect(openedPoiIds).toEqual([
@@ -309,11 +341,9 @@ describe("createMapLibreAdapter", () => {
       "cloisters-of-bramante",
     ]);
     expect(mapLibreFakes.popups[0].isOpen).toBe(false);
-
-    adapter.destroy();
   });
 
-  it("removes marker listeners and the React preview when destroyed", () => {
+  it("removes marker listeners and closes the popup when destroyed", () => {
     const onOpenPoiDetails = vi.fn();
     const adapter = createMapLibreAdapter({ center: [12.481, 41.889], zoom: 15 });
     const container = document.createElement("div");
