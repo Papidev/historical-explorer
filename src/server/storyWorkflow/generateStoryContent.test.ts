@@ -66,6 +66,25 @@ afterEach(() => {
 afterAll(() => server.close());
 
 describe("Story Content AI adapters", () => {
+  it("recovers a transient Ollama 502 while generating a Story", async () => {
+    let requests = 0;
+    server.use(
+      http.post("http://localhost:11434/api/chat", () => {
+        requests += 1;
+        return requests === 1
+          ? new HttpResponse(null, { status: 502 })
+          : HttpResponse.json({ message: { content: JSON.stringify(generated) } });
+      }),
+    );
+    await expect(
+      generateStoryContent(pointOfInterest, sources, {
+        mode: "cloud",
+        provider: "ollama",
+        model: "test-model",
+      }),
+    ).resolves.toEqual(generated);
+    expect(requests).toBe(2);
+  });
   it.each([
     [
       "acqua-vergine-malformed.json",

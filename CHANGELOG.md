@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.6.3
+
+### Patch Changes
+
+- Add an All checkbox for admin status filters. Resolve ambiguous Related People by excluding non-human Wikidata candidates, show remaining identity candidates in errors, recognize confirmed Wikidata redirects when linking POIs, and retry temporary Ollama gateway failures.
+
 ## 0.6.2
 
 ### Patch Changes

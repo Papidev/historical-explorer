@@ -14,7 +14,7 @@ After Story generation, resolve names against preserved Wikipedia Source links. 
 
 1. Match link titles and labels after normalizing Unicode, whitespace, underscores, and section anchors.
 2. If no exact match exists, tolerate accents, apostrophe/dash variants, honorific prefixes, and disambiguation suffixes when the generated name has no qualifier.
-3. Exclude disambiguation pages and merge redirects to the same canonical article. Proceed only when one personal article remains; do not use partial-name or spelling-distance guesses.
+3. Exclude disambiguation pages and candidates whose non-deprecated Wikidata `instance of` (P31) statements identify no human (Q5). Missing type statements leave the candidate in consideration. Merge redirects to the same canonical article and editions with the same Wikidata ID. Proceed only when one candidate remains; do not use partial-name or spelling-distance guesses. Ambiguity failures list the remaining article titles and Wikipedia URLs for review.
 4. Merge repeated names/aliases for the same unique link, preserving Source IDs and existing Person IDs. Keep distinct resolved IDs separate; retrying saved references also deduplicates them.
 5. Exclude names with no matching link or nonexistent pages, including on retry. Log missing pages as skipped rather than failed.
 6. Reuse a Person with the same Wikidata ID; otherwise acquire its Wikipedia Source and generate using the selected Story model. Existing People are never regenerated as a side effect.

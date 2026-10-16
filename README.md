@@ -204,6 +204,8 @@ The Ollama Cloud dropdown includes `gpt-oss:20b-cloud` and `gpt-oss:120b-cloud`,
 
 Ollama Cloud does not support schema-constrained output. Story Content and new People include their schemas in the prompt and retry once when a response fails JSON or domain validation. Both use the selected Cloud model.
 
+Ollama Story and Person requests retry HTTP 502, 503, and 504 up to twice, with short delays. HTTP 429 and 402 still stop generation through the existing quota handling. Cancellation prevents further retry requests.
+
 ## Diagnostics
 
 Local `<local-data>/rome/generated/generation-logs/day-*.jsonl` records start/completion/failure with shared run IDs. Seven daily slots rotate, overwriting data when reused after seven days. Admin shows latest-run errors beside artifacts and Related People errors in the People drawer. Known credentials are redacted; stack traces stay in the console. Logs stay outside the repository and are not a durable cross-machine/deployment audit.
