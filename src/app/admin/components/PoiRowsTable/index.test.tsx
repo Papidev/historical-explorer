@@ -3,24 +3,82 @@
 import "@testing-library/jest-dom/vitest";
 import { act, cleanup, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
+import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from "vitest";
 import { http, HttpResponse } from "msw";
 import { setupServer } from "msw/node";
 import type { AdminActionResult } from "../../lib/types";
-import { PoiRowsTable } from "./index";
+import { PoiRowsTable } from "./testProvider";
 import { RelatedPeopleDrawer } from "./RelatedPeopleDrawer";
 
 const server = setupServer();
 
-beforeAll(() => server.listen({ onUnhandledRequest: "error" }));
+beforeAll(() => {
+  server.listen({ onUnhandledRequest: "error" });
+  // jsdom has no layout observer for Headless UI's option selection.
+  vi.stubGlobal(
+    "ResizeObserver",
+    class {
+      observe = () => {};
+      unobserve = () => {};
+      disconnect = () => {};
+    },
+  );
+});
 afterEach(() => {
   cleanup();
   server.resetHandlers();
   localStorage.clear();
 });
-afterAll(() => server.close());
+afterAll(() => {
+  server.close();
+  vi.unstubAllGlobals();
+});
 
 describe("POI actions", () => {
+  it("sorts generation dates across pages and keeps undated POIs last", async () => {
+    const user = userEvent.setup();
+    render(
+      <PoiRowsTable
+        rows={Array.from({ length: 51 }, (_, index) => ({
+          id: `poi-${index}`,
+          rawPoi: { id: `poi-${index}`, name: `Place ${index}`, featureIndex: index },
+          lastGenerationAt:
+            index === 0 ? undefined : new Date(Date.UTC(2026, 8, index)).toISOString(),
+        }))}
+        globalArtifacts={[]}
+        aiSelectionRef={{ current: { mode: "local", model: "test-model" } }}
+        generateDraftStoryAction={async () => {}}
+        generateDraftStoriesAction={async () => []}
+        refreshStoryContentAction={async () => {}}
+        resolveRelatedPeopleAction={async () => {}}
+        refreshMainImageCandidatesAction={async () => {}}
+        refreshPoiTypesAction={async () => {}}
+        selectMainImageCandidateAction={async () => {}}
+      />,
+    );
+    expect(within(screen.getAllByRole("row")[1]).getByText("Place 0")).toBeVisible();
+    await user.click(screen.getByRole("button", { name: "Next page" }));
+    expect(screen.getByText("Showing 51–51 of 51 POIs")).toBeVisible();
+    await user.click(screen.getByRole("button", { name: /Sort POIs/ }));
+    await user.click(screen.getByRole("option", { name: "Newest generation first" }));
+    expect(screen.getByText("Showing 1–50 of 51 POIs")).toBeVisible();
+    expect(within(screen.getAllByRole("row")[1]).getByText("Place 50")).toBeVisible();
+    expect(screen.queryByText("Place 0", { exact: true })).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Next page" }));
+    expect(within(screen.getAllByRole("row")[1]).getByText("Place 0")).toBeVisible();
+    await user.click(screen.getByRole("button", { name: /Sort POIs/ }));
+    await user.click(screen.getByRole("option", { name: "Oldest generation first" }));
+    expect(within(screen.getAllByRole("row")[1]).getByText("Place 1")).toBeVisible();
+    expect(screen.queryByText("Place 0", { exact: true })).not.toBeInTheDocument();
+    await user.type(screen.getByRole("searchbox", { name: "Search POIs by name" }), "Place 50");
+    expect(screen.getByText("Showing 1–1 of 1 POIs")).toBeVisible();
+    expect(within(screen.getAllByRole("row")[1]).getByText("Place 50")).toBeVisible();
+    await user.clear(screen.getByRole("searchbox", { name: "Search POIs by name" }));
+    await user.click(screen.getByRole("button", { name: /Sort POIs/ }));
+    await user.click(screen.getByRole("option", { name: "Status and name" }));
+    expect(within(screen.getAllByRole("row")[1]).getByText("Place 0")).toBeVisible();
+  });
+
   it("keeps search available when expanding the table and restores generation controls", async () => {
     const user = userEvent.setup();
     render(

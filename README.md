@@ -141,7 +141,9 @@ People descriptions remain plain text. See the
 
 ## Editorial workflow
 
-Admin has **POIs**, **People**, and **Type mappings** tabs. POIs has 50 rows per page; status/search apply across all pages and reset pagination. Name search is case-insensitive across original and generated names.
+Admin has **POIs**, **People**, and **Type mappings** tabs. POIs and People have 50 rows per page, selected on the server after search, filters, and sorting. Search, POI status/sort controls, and independent page numbers are stored in the URL; changing search or filters resets that table to its first page. POI name search is case-insensitive across original and generated names; People search matches display names and retains alphabetical order. Only the requested pages reach the browser, alongside a lightweight ID/name list for automatic generation across all POIs without Story Content. The server still reads the local catalog to compute global filters, counts, and Person links.
+
+**Sort POIs** keeps the default status/name order or sorts by newest/oldest generation activity across all POI steps, including failed attempts. Sorting applies before pagination and keeps POIs without a recorded generation date last. Dates use local checkpoints and the recent run log.
 
 Empty rows are **To do**. Attempted/generated rows with outstanding work/errors are **Needs attention**. **Needs source** keeps generated POIs and acquired Types visible, with missing-source/error details that persist after the toast closes and neutral placeholders without generation controls for unavailable artifacts.
 
