@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.7.1
+
+### Patch Changes
+
+- Ignore local worktree backups and simplify worktree cleanup instructions.
+
 ## 0.7.0
 
 ### Minor Changes
