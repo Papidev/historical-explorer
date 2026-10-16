@@ -8,18 +8,26 @@ import type { AdminAction, AdminPerson } from "../../lib/types";
 import { ActionToast, getActionError, type Toast } from "../ActionToast";
 import { SubmitButton } from "../SubmitButton";
 import { AiProgressDialog } from "../PoiRowsTable/AiProgressDialog";
+import { Pagination } from "../PoiRowsTable/Pagination";
+import type { TablePage, TableQuery } from "../../lib/tableQueries";
 import { Detail } from "./Detail";
 
 export const PeopleTable = ({
   people,
+  pagination,
+  onQueryChange,
+  isLoading = false,
   aiSelectionRef,
   regeneratePersonAction,
 }: {
   people: AdminPerson[];
+  pagination: TablePage<AdminPerson>;
+  onQueryChange: (query: Partial<TableQuery>) => void;
+  isLoading?: boolean;
   aiSelectionRef: RefObject<AiSelection>;
   regeneratePersonAction: AdminAction;
 }) => {
-  const [search, setSearch] = useState("");
+  const { search, page } = pagination.query;
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [runningId, setRunningId] = useState<string | null>(null);
   const isRunningRef = useRef(false);
@@ -30,9 +38,6 @@ export const PeopleTable = ({
     isFinished: boolean;
     isOpen: boolean;
   } | null>(null);
-  const filteredPeople = people.filter(({ name }) =>
-    name.toLocaleLowerCase("en").includes(search.trim().toLocaleLowerCase("en")),
-  );
   const selectedPerson = people.find(({ id }) => id === selectedId);
 
   return (
@@ -42,20 +47,20 @@ export const PeopleTable = ({
     >
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-gray-200 p-4">
         <p className="text-sm text-gray-600" aria-live="polite">
-          {filteredPeople.length} of {people.length} generated People
+          {pagination.filteredTotal} of {pagination.total} generated People
         </p>
         <label>
           <span className="sr-only">Search People by name</span>
           <input
             type="search"
             value={search}
-            onChange={(event) => setSearch(event.target.value)}
+            onChange={(event) => onQueryChange({ search: event.target.value })}
             placeholder="Search People by name"
             className="w-full rounded-md border border-gray-300 px-3 py-1.5 text-sm focus:outline-2 focus:outline-indigo-600 sm:w-64"
           />
         </label>
       </div>
-      <div className="min-h-0 flex-1 overflow-auto">
+      <div aria-busy={isLoading} className="min-h-0 flex-1 overflow-auto">
         <table className="w-full text-left text-sm">
           <thead className="sticky top-0 bg-gray-50 text-xs text-gray-600 uppercase">
             <tr>
@@ -77,7 +82,7 @@ export const PeopleTable = ({
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-200">
-            {filteredPeople.map((person) => (
+            {people.map((person) => (
               <tr key={person.id}>
                 <td className="px-4 py-3">
                   {person.image ? (
@@ -170,12 +175,23 @@ export const PeopleTable = ({
             ))}
           </tbody>
         </table>
-        {filteredPeople.length === 0 ? (
+        {people.length === 0 ? (
           <p className="p-6 text-sm text-gray-500">
-            {people.length ? "No People match your search." : "No People have been generated yet."}
+            {pagination.total
+              ? "No People match your search."
+              : "No People have been generated yet."}
           </p>
         ) : null}
       </div>
+      {pagination.filteredTotal > 0 ? (
+        <Pagination
+          label="People"
+          page={page}
+          totalRows={pagination.filteredTotal}
+          disabled={isLoading}
+          onPageChange={(page) => onQueryChange({ page })}
+        />
+      ) : null}
       {selectedPerson ? (
         <Detail person={selectedPerson} onClose={() => setSelectedId(null)} />
       ) : null}

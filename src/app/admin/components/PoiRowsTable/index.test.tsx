@@ -7,7 +7,7 @@ import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from "vitest
 import { http, HttpResponse } from "msw";
 import { setupServer } from "msw/node";
 import type { AdminActionResult } from "../../lib/types";
-import { PoiRowsTable } from "./index";
+import { PoiRowsTable } from "./testProvider";
 import { RelatedPeopleDrawer } from "./RelatedPeopleDrawer";
 
 const server = setupServer();

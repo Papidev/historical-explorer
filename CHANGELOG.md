@@ -1,10 +1,16 @@
 # historical-explorer
 
-## 0.7.1
+## 0.8.1
 
 ### Patch Changes
 
 - Ignore local worktree backups and simplify worktree cleanup instructions.
+
+## 0.8.0
+
+### Minor Changes
+
+- Paginate the admin POI and People tables on the server, preserving global search, POI filters and sorting, independent URL state, and automatic generation across the catalog.
 
 ## 0.7.0
 
