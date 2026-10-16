@@ -1,7 +1,5 @@
 "use client";
 
-import { createElement } from "react";
-import { createRoot, type Root } from "react-dom/client";
 import maplibregl, { Map as MapLibreMap, Marker, type ExpressionSpecification } from "maplibre-gl";
 import type { Poi } from "@/types/Poi";
 import {
@@ -9,7 +7,6 @@ import {
   matchesPoiCategory,
   type PoiCategoryDefinition,
 } from "@/types/PoiCategory";
-import { PoiPreviewCard } from "./PoiPreviewCard";
 
 const MAP_STYLE_URL = "https://tiles.openfreemap.org/styles/liberty";
 const PREVIEW_CLOSE_DELAY_MS = 180;
@@ -24,6 +21,12 @@ export type MapViewUpdate = {
   zoom?: number;
 };
 
+export type MapPreview = {
+  poi: Poi;
+  container: HTMLDivElement;
+  onOpenDetails: () => void;
+};
+
 export interface MapAdapter {
   mount: (container: HTMLDivElement) => void;
   updateView: (view: MapViewUpdate) => void;
@@ -33,6 +36,7 @@ export interface MapAdapter {
   setOnZoomChange: (handler: ((zoom: number) => void) | null) => void;
   setOnOpenPoiDetails: (handler: ((poiId: string) => void) | null) => void;
   setOnMapClick: (handler: (() => void) | null) => void;
+  setOnPreviewChange: (handler: ((preview: MapPreview | null) => void) | null) => void;
   destroy: () => void;
 }
 
@@ -47,7 +51,6 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
   let markers: MarkerBinding[] = [];
   let selectedPoiId: string | null = null;
   let previewPopup: maplibregl.Popup | null = null;
-  let previewRoot: Root | null = null;
   let previewContainer: HTMLDivElement | null = null;
   let activePreviewPoiId: string | null = null;
   let previewCloseTimeout: ReturnType<typeof setTimeout> | null = null;
@@ -57,6 +60,7 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
   let onZoomChange: ((zoom: number) => void) | null = null;
   let onOpenPoiDetails: ((poiId: string) => void) | null = null;
   let onMapClick: (() => void) | null = null;
+  let onPreviewChange: ((preview: MapPreview | null) => void) | null = null;
 
   const handleMapClick = (event: MouseEvent) => {
     if (event.target instanceof Element && event.target.closest(".maplibregl-ctrl")) return;
@@ -84,6 +88,9 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
 
     cancelPreviewClose();
     previewPopup?.remove();
+    if (activePreviewPoiId !== null) {
+      onPreviewChange?.(null);
+    }
     activePreviewPoiId = null;
   };
 
@@ -105,22 +112,20 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
   };
 
   const openPreview = (poi: Poi) => {
-    if (!map || !previewPopup || !previewRoot) {
+    if (!map || !previewPopup || !previewContainer) {
       return;
     }
 
     cancelPreviewClose();
     activePreviewPoiId = poi.id;
-    previewRoot.render(
-      createElement(PoiPreviewCard, {
-        key: poi.id,
-        poi,
-        onOpenDetails: () => {
-          closePreview();
-          onOpenPoiDetails?.(poi.id);
-        },
-      }),
-    );
+    onPreviewChange?.({
+      poi,
+      container: previewContainer,
+      onOpenDetails: () => {
+        closePreview();
+        onOpenPoiDetails?.(poi.id);
+      },
+    });
     previewPopup.setLngLat([poi.coordinates.lng, poi.coordinates.lat]).addTo(map);
     const popupElement = previewPopup.getElement();
     const popupContent = popupElement.querySelector<HTMLElement>(".maplibregl-popup-content");
@@ -273,7 +278,6 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
       previewContainer.addEventListener("pointerleave", handlePreviewPointerLeave);
       previewContainer.addEventListener("focusin", handlePreviewFocusIn);
       previewContainer.addEventListener("focusout", handlePreviewFocusOut);
-      previewRoot = createRoot(previewContainer);
       previewPopup = new maplibregl.Popup({
         className: "poi-preview-popup",
         closeButton: false,
@@ -384,6 +388,9 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
     setOnMapClick(handler) {
       onMapClick = handler;
     },
+    setOnPreviewChange(handler) {
+      onPreviewChange = handler;
+    },
     destroy() {
       map?.getContainer().removeEventListener("click", handleMapClick);
       removeMarkers();
@@ -391,8 +398,6 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
       previewContainer?.removeEventListener("pointerleave", handlePreviewPointerLeave);
       previewContainer?.removeEventListener("focusin", handlePreviewFocusIn);
       previewContainer?.removeEventListener("focusout", handlePreviewFocusOut);
-      previewRoot?.unmount();
-      previewRoot = null;
       previewContainer = null;
       previewPopup?.remove();
       previewPopup = null;
