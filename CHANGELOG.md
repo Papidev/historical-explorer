@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.6.6
+
+### Patch Changes
+
+- Fix map preview cleanup errors by rendering POI previews within the page's React tree.
+
 ## 0.6.5
 
 ### Patch Changes
