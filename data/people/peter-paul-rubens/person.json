@@ -7,29 +7,41 @@
     "description": [
       {
         "text": "Sir Peter Paul Rubens (28 June 1577 – 30 May 1640) was a Flemish artist and diplomat whose Baroque style celebrated movement, colour, and sensuality, and whose compositions drew on classical and Christian themes.  His work ranged from grand altarpieces and mythological scenes to intimate portraits, and he was celebrated for his ability to blend the dramatic intensity of the Counter‑Reformation with the dynamism of Italian masters such as Titian and Caravaggio.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "Beyond painting, Rubens ran a prolific workshop in Antwerp that produced thousands of works and trained a generation of artists, most famously Anthony van Dyck.  He also served as a diplomat for the Spanish Habsburgs, negotiating on behalf of the Spanish Netherlands and England, and was knighted by both Philip IV of Spain and Charles I of England for his services.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "curiosities": [
       {
         "text": "Rubens was knighted by both Philip IV of Spain and Charles I of England, a rare honour for a painter.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He designed the last significant woodcuts before the 19th‑century revival of the technique, leaving a lasting influence on printmaking.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "Rubens was a prolific designer of cartoons for Flemish tapestry workshops and of frontispieces for publishers in Antwerp, expanding his artistic reach beyond canvas.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He was a polyglot, writing in Italian, Dutch, French, Spanish, and Latin, which facilitated his diplomatic missions across Europe.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "birthDate": {
@@ -69,5 +81,8 @@
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-10-10T17:24:55.258Z"
-  }
+  },
+  "sourceContextWikidataIds": [
+    "Q841506"
+  ]
 }

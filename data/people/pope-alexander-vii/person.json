@@ -7,21 +7,29 @@
     "description": [
       {
         "text": "Fabio Chigi, later Pope Alexander VII, was born in Siena on 13 February 1599. He studied philosophy, law and theology at the University of Siena and entered the diplomatic service of the Holy See, serving as vice‑papal legate in Ferrara and as Inquisitor of Malta. He was ordained a priest in 1634, became Bishop of Nardò in 1635 and later Bishop of Imola. His diplomatic skill earned him the post of Secretary of State in 1651 and the rank of cardinal in 1652, before he was elected pope on 7 April 1655 after a lengthy conclave.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "During his reign he pursued a program of urban renewal in Rome, commissioning works by Bernini and Cortona and redesigning major streets and squares, including the colonnade of St. Peter's Square. He also reinforced the Jesuit order and issued the Index Librorum Prohibitorum, which listed heliocentric works such as those by Copernicus and Galileo. Although he initially opposed nepotism, he eventually brought his relatives into the curia, a move that marked a shift from his earlier stance.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "curiosities": [
       {
         "text": "Alexander VII commissioned Gian Lorenzo Bernini to design the iconic colonnade that surrounds St. Peter's Square, a landmark of Baroque architecture.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He issued the Index Librorum Prohibitorum, which included the heliocentric works of Copernicus and Galileo, reinforcing the Church’s opposition to the theory.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "birthDate": {
@@ -61,5 +69,8 @@
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-10-10T17:31:26.778Z"
-  }
+  },
+  "sourceContextWikidataIds": [
+    "Q3747442"
+  ]
 }

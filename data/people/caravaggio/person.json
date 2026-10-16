@@ -7,25 +7,35 @@
     "description": [
       {
         "text": "Caravaggio was an Italian painter born in Milan in 1571, known for his dramatic use of chiaroscuro and realistic depiction of human emotion. He trained in Milan, moved to Rome, and became a central figure in the Baroque movement. He was also known for his volatile personality, including a murder that forced him to flee Rome.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "During the last years of his life he travelled between Naples, Malta, and Sicily, producing works such as the Beheading of Saint John the Baptist and The Seven Works of Mercy. He died in 1610 on his way back to Rome, likely from fever or wounds sustained in a brawl. His legacy influenced artists such as Rubens, Rembrandt, and Bernini.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "curiosities": [
       {
         "text": "Caravaggio pioneered the technique of tenebrism, using stark contrasts of light and shadow to heighten drama.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He was briefly inducted as a Knight of the Order of St. John in Malta, a rare honor for a painter.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "Caravaggio's paintings were often completed directly on canvas without preparatory drawings, a practice that was unusual for the time.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "birthDate": {
@@ -65,5 +75,8 @@
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-10-10T22:20:05.048Z"
-  }
+  },
+  "sourceContextWikidataIds": [
+    "Q841506"
+  ]
 }
