@@ -16,7 +16,6 @@ import { DrawerTab } from "@/app/components/ui/DrawerTab";
 import { Drawer } from "@/app/components/ui/Drawer";
 import type { Poi } from "@/types/Poi";
 import { Map } from "@/app/components/Map";
-import { MapZoomControl } from "@/app/components/Map/MapZoomControl";
 import { PoiDetailsDrawer } from "@/app/components/PoiDetailsDrawer";
 
 type Props = {
@@ -159,7 +158,6 @@ export const CityExplorer = ({
             className={selectedPoi ? "hidden md:block" : undefined}
           />
         )}
-        <MapZoomControl zoom={zoom} onChange={setZoom} />
         <Map
           coordinates={coordinates}
           zoom={zoom}
@@ -169,6 +167,8 @@ export const CityExplorer = ({
           onZoomChange={setZoom}
           onOpenPoiDetails={openPoi}
           onMapClick={() => selectPoi(null)}
+          controlsRightInset={selectedPoi ? (detailsWidth ?? 448) : 0}
+          hideControlsOnMobile={sidebarVisible || Boolean(selectedPoi)}
         />
         <PoiDetailsDrawer
           citySlug={citySlug}

@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type CSSProperties } from "react";
 import type { Poi } from "@/types/Poi";
 import { DEFAULT_POI_CATEGORY_DEFINITIONS, type PoiCategoryDefinition } from "@/types/PoiCategory";
 import "./markers.css";
+import "./controls.css";
 import { createMapLibreAdapter, MapAdapter } from "./mapAdapter";
 
 type Props = {
@@ -15,6 +16,8 @@ type Props = {
   onZoomChange?: (zoom: number) => void;
   onOpenPoiDetails?: (poiId: string) => void;
   onMapClick?: () => void;
+  controlsRightInset?: number;
+  hideControlsOnMobile?: boolean;
 };
 
 type MapHandlers = {
@@ -34,6 +37,8 @@ export const Map = ({
   onZoomChange,
   onOpenPoiDetails,
   onMapClick,
+  controlsRightInset = 0,
+  hideControlsOnMobile = false,
 }: Props) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const adapterRef = useRef<MapAdapter | null>(null);
@@ -111,5 +116,12 @@ export const Map = ({
     adapterRef.current?.updateSelectedPoi(selectedPoiId);
   }, [selectedPoiId]);
 
-  return <div ref={containerRef} className="h-full w-full" />;
+  return (
+    <div
+      ref={containerRef}
+      className="city-map h-full w-full"
+      data-controls-covered={hideControlsOnMobile}
+      style={{ "--map-controls-right-inset": `${controlsRightInset}px` } as CSSProperties}
+    />
+  );
 };

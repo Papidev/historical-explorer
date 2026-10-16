@@ -155,6 +155,29 @@ describe("createMapLibreAdapter", () => {
 
   afterEach(cleanup);
 
+  it("keeps the selected Story open when clicking map controls", async () => {
+    const user = userEvent.setup();
+    const onMapClick = vi.fn();
+    const adapter = createMapLibreAdapter({ center: [12.481, 41.889], zoom: 15 });
+    const container = document.createElement("div");
+    document.body.append(container);
+    adapter.setOnMapClick(onMapClick);
+    adapter.mount(container);
+    const controls = document.createElement("div");
+    controls.className = "maplibregl-ctrl";
+    const zoomIn = document.createElement("button");
+    zoomIn.textContent = "Zoom in";
+    controls.append(zoomIn);
+    container.append(controls);
+
+    await user.click(screen.getByRole("button", { name: "Zoom in" }));
+    expect(onMapClick).not.toHaveBeenCalled();
+
+    await user.click(container);
+    expect(onMapClick).toHaveBeenCalledOnce();
+    adapter.destroy();
+  });
+
   it("retains selection when markers are created again and restores category styling when cleared", () => {
     const adapter = createMapLibreAdapter({ center: [12.481, 41.889], zoom: 15 });
     const container = document.createElement("div");
