@@ -28,6 +28,38 @@ const entities = {
 };
 
 describe("Wikipedia editions", () => {
+  it("keeps usable Person sources when a historical country has no official languages", async () => {
+    server.use(
+      http.get("https://www.wikidata.org/w/api.php", ({ request }) => {
+        const ids = new URL(request.url).searchParams.get("ids")!.split("|");
+        return HttpResponse.json({
+          entities: Object.fromEntries(
+            ids.map((id) => [
+              id,
+              id === "Q200"
+                ? { claims: { P27: [{ mainsnak: { datavalue: { value: { id: "Q1747689" } } } }] } }
+                : { claims: {} },
+            ]),
+          ),
+        });
+      }),
+    );
+    const source = {
+      id: "wikipedia",
+      kind: "wikipedia" as const,
+      title: "Aurelian",
+      url: "https://en.wikipedia.org/wiki/Aurelian",
+      content: "A usable biography.",
+    };
+    const result = await acquireWikipediaSources({
+      wikidataId: "Q200",
+      countryProperty: "P27",
+      initialSource: source,
+    });
+    expect(result.sources).toEqual([source]);
+    expect(result.warnings).toEqual(["No official languages were found for country Q1747689."]);
+  });
+
   it("excludes editions outside the allowed list, including a previously saved primary edition", async () => {
     const requestedLanguages: string[] = [];
     server.use(

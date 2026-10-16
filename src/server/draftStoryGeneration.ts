@@ -38,7 +38,7 @@ export const createDraftStoryGeneration =
     onStoryContentStarted?: () => void;
     resume?: boolean;
   }) => {
-    const { issues } = await dependencies.recordRun(
+    const { issues, sourceWarnings } = await dependencies.recordRun(
       { city: "rome", operation: "draftStory.generate", geoPlaceId, ai },
       async () => {
         onProgress?.("Creating the Point of Interest.");
@@ -98,13 +98,6 @@ export const createDraftStoryGeneration =
               }
             },
           });
-          issues.push(
-            ...(result.sourceWarnings ?? []).map((message) => ({
-              stage: "sources" as const,
-              label: "Wikipedia Sources",
-              message,
-            })),
-          );
           if (result.mainImageCandidates === "failed") {
             issues.push({
               stage: "mainImageCandidates",
@@ -124,24 +117,30 @@ export const createDraftStoryGeneration =
           return {
             poiId,
             issues,
+            sourceWarnings: result.sourceWarnings ?? [],
             relatedPeopleFailureCount: result.relatedPeopleFailures.length,
           };
         });
       },
-      ({ poiId, issues, relatedPeopleFailureCount }) => ({
+      ({ poiId, issues, sourceWarnings, relatedPeopleFailureCount }) => ({
         poiId,
         status: issues.length ? "partial" : "success",
         failedSteps: [...new Set(issues.map(({ stage }) => stage))],
         relatedPeopleFailureCount,
         errors: issues.map(({ stage, name, message }) => ({ stage, name, message })),
+        sourceWarnings,
       }),
     );
     const failedSteps = [...new Set(issues.map(({ label }) => label))];
-    return issues.length
+    return issues.length || sourceWarnings.length
       ? {
           failedSteps,
-          warning:
-            failedSteps.length === 1 && failedSteps[0] === "POI Type Mappings"
+          warning: !issues.length
+            ? {
+                title: "Draft generated with source warnings",
+                details: sourceWarnings.join("\n"),
+              }
+            : failedSteps.length === 1 && failedSteps[0] === "POI Type Mappings"
               ? {
                   title: "Story generated; some category mappings remain unmapped",
                   description: "Retry classification from Type mappings.",
@@ -150,7 +149,7 @@ export const createDraftStoryGeneration =
               : {
                   title: "Draft generated with issues",
                   description: `Failed steps: ${failedSteps.join(", ")}.`,
-                  details: issues.map(({ message }) => message).join("\n"),
+                  details: [...issues.map(({ message }) => message), ...sourceWarnings].join("\n"),
                 },
         }
       : undefined;

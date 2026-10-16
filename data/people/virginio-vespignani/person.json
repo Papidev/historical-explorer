@@ -1,0 +1,128 @@
+{
+  "id": "virginio-vespignani",
+  "name": "Virginio Vespignani",
+  "wikidataId": "Q3560791",
+  "wikipediaTitle": "Virginio Vespignani",
+  "content": {
+    "description": [
+      {
+        "text": "Virginio Vespignani was born in Rome on 12 February 1808 into a noble family, the youngest of five children of Count Giovan Francesco Vespignani and Maria Teresa Sarnani. As a young draughtsman he illustrated archaeological publications, collaborating with Luigi Rossini on a work about the antiquities of Pompeii and later contributing plates to Edward Dodwell’s treatise I sette colli di Roma (1829). He trained under the neoclassical architect Luigi Poletti, and from 1837 to 1869 he worked with him on the reconstruction of the Basilica of Saint Paul Outside the Walls, a project he continued after Poletti’s death in 1869; three sides of the quadriporticus were finished to his designs in 1893, after his own death.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      },
+      {
+        "text": "Vespignani was a favourite of Pope Pius IX, and the papal reign supplied him with numerous commissions that showcased his mastery of historical revival styles. Among his most celebrated works are the Church of the Madonna dell’Archetto (1851) in the Trevi district, the façade of Porta Pia (1852–68) that borrowed motifs from the Arch of Titus, and the reconstruction of Porta San Pancrazio (1857) in the Aurelian Walls. He also restored several Roman churches, including San Carlo ai Catinari (1861) and San Lorenzo fuori le mura (1864–70) in collaboration with Giovanni Battista de Rossi, and designed the glass and cast‑iron Serra all’Orto Botanico (1855). In recognition of his civic contributions, Rome awarded him a gold medal in 1855 for his work during the third cholera pandemic, and he served as city architect, president of the Accademia di San Luca, and a knight of the Order of St. Sylvester and the Order of Christ.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He illustrated the Antiquities of Pompeii together with Luigi Rossini, contributing to the popularization of Roman archaeology.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He provided illustrations for Edward Dodwell’s treatise I sette colli di Roma (London, 1829).",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He was knighted in the Order of St. Sylvester and the Order of Christ for his architectural achievements.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "In 1855 Rome awarded him a gold medal for his work during the third cholera pandemic.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He served as city architect of Rome and was president of the Accademia di San Luca.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He designed the glass and cast‑iron Serra all’Orto Botanico in 1855, showcasing his versatility with modern materials.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He restored Palazzo Bruschi‑Falgari in Tarquinia, now the Biblioteca Vincenzo Cardarelli, adding a new Great Hall and Gallery.",
+        "sourceIds": [
+          "wikipedia-it"
+        ]
+      },
+      {
+        "text": "He continued Giuseppe Valadier’s original plan for the Campo Verano cemetery, completing the church, the first part of the “Pincetto” and the quadriportico d’ingresso in 1880.",
+        "sourceIds": [
+          "wikipedia-it"
+        ]
+      },
+      {
+        "text": "His tomb monument in Campo Verano was erected by his son Francesco, who followed in his architectural footsteps.",
+        "sourceIds": [
+          "wikipedia-it"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": 1808,
+      "month": 2,
+      "day": 12,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1882,
+      "month": 12,
+      "day": 4,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Virginio_vespignani.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Virginio_vespignani.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Virginio_vespignani.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Virginio_vespignani.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Lexrepublica",
+    "author": "Lexrepublica",
+    "width": 300,
+    "height": 417,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Virginio Vespignani",
+    "url": "https://en.wikipedia.org/wiki/Virginio_Vespignani"
+  },
+  "additionalSources": [
+    {
+      "id": "wikipedia-it",
+      "kind": "wikipedia",
+      "title": "Virginio Vespignani",
+      "url": "https://it.wikipedia.org/wiki/Virginio_Vespignani"
+    }
+  ],
+  "sourceContextWikidataIds": [
+    "Q1657663"
+  ],
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-16T12:32:46.005Z"
+  }
+}

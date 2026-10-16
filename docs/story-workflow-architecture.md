@@ -10,9 +10,9 @@ The browser labels an empty row **Generate** and a populated row **Refresh**. Bo
 
 1. Call `pointOfInterest.generate({ geoPlaceId })` to create/replace the POI, retaining its stable ID.
 2. Call `storyWorkflow.draftStory.generate({ poiId, ai })` with a Sources-acquired callback.
-3. Once Sources are saved, link the discovered Wikidata identity, refresh POI Types, and classify unmapped types before image and content generation continue. Type acquisition or classification failure does not stop Story generation.
+3. Once Sources are saved, link the discovered Wikidata identity, refresh POI Types, and classify unmapped types before image and content generation continue. Type acquisition or classification failure does not stop Story generation. POI Type requests use the shared Wikimedia retry policy: up to three attempts, honoring Retry-After for HTTP 429 and retaining saved types if acquisition still fails.
 
-Single and batch generation use the same coordination module. One issue list supplies run-log status/errors and Curator warnings/failed steps, including classification failures. The Adapter uses those warnings to finish progress as partial and revalidates affected cities when classification changes their categories, even if a later Story step fails.
+Single and batch generation use the same coordination module. One issue list supplies run-log status/errors and Curator warnings/failed steps, including classification failures. Non-blocking source warnings are stored separately in the run log and do not count as errors or failed steps. The Adapter uses those warnings to finish progress as partial and revalidates affected cities when classification changes their categories, even if a later Story step fails.
 
 The POI Module owns Geo Place access, cleaning, ID allocation, external identifiers, and catalog persistence. Its `reset({ poiId })` removes derived catalog state while preserving the Geo Place; Refresh never invokes reset.
 
@@ -23,7 +23,7 @@ Within full Draft Story generation, the order is fixed:
 3. Preserve an eligible current image, or select the first licensed and attributed candidate.
 4. Generate Story Content and resolve Related People.
 
-Allowed editions are en, it, fr, de, and es. Source acquisition combines English Wikipedia with editions in the official languages of the POI's country that are in the allowed edition list, resolved through Wikidata P17, P37, P424, and entity sitelinks. The shared acquisition module also supports Person citizenship (P27) plus originating POI country context. Editions must identify the same Wikidata entity. Missing editions or incomplete language metadata produce persisted source warnings and a partial full-generation result; available Sources still feed generation. Each edition retains a distinct Source ID. Existing primary text/metadata snapshots stay readable; additional Sources are saved separately without migrating existing artifacts.
+Allowed editions are en, it, fr, de, and es. Source acquisition combines English Wikipedia with editions in the official languages of the POI's country that are in the allowed edition list, resolved through Wikidata P17, P37, P424, and entity sitelinks. The shared acquisition module also supports Person citizenship (P27) plus originating POI country context. Editions must identify the same Wikidata entity. Missing editions or incomplete language metadata produce persisted source warnings and a Curator warning; available Sources still feed generation. Runs with only source warnings are logged as successful. Older completed-run source warnings are excluded from the current error list without rewriting historical logs. Each edition retains a distinct Source ID. Existing primary text/metadata snapshots stay readable; additional Sources are saved separately without migrating existing artifacts.
 
 Callers cannot reorder or skip steps. Full generation uses private implementation functions because its failure policy differs from independent artifact actions.
 

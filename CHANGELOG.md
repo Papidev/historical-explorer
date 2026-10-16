@@ -1,5 +1,13 @@
 # historical-explorer
 
+## 0.6.2
+
+### Patch Changes
+
+- Add the Villa POI category and classify Domus Aurea as a villa.
+- Keep non-blocking Wikipedia source warnings separate from generation errors and retry temporary Wikidata rate limits when acquiring POI types.
+- Update generated Stories, People, and POI categories.
+
 ## 0.6.1
 
 ### Patch Changes

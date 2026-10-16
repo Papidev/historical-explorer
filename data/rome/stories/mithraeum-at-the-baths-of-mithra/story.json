@@ -1,22 +1,58 @@
 {
+  "textFormat": "markdown",
   "introduction": {
-    "text": "The Mitreo delle Terme del Mitra was a Mithraic sanctuary located in the western corner of the Baths of the Mithra in Ostia, Rome. It is significant because it offers insight into the spread of Mithraism in the Roman Empire and the architectural features of early Mithraic temples.",
-    "sourceIds": ["wikipedia"]
+    "text": "The **Mitreo delle Terme del Mitra** was a Mithraeum—an underground sanctuary for the mystery cult of Mithras—situated in the northwest corner of the Baths of the Mithra in Ostia, just north‑west of the Forum. The sanctuary was accessed via an external staircase that led into a small vestibule before entering the main cultic chamber.\n\nThe interior measured roughly 15.4 m by 4.6 m, with a vaulted ceiling reaching 2.1 m at its highest point. Two square skylights pierced the dome, one centered and one in the south, allowing daylight to illuminate the scene of Mithras slaying the bull. A shallow red‑painted niche on the eastern wall, 0.6 m square, likely once held a relief or inscription.\n\nThe floor was laid with bricks, and the sanctuary contained a low podium divided by a pre‑existing opus latericium arch. At the southern end of the podium stood two small brick pillars topped with truncated tuff pyramids, a reference to the rock from which Mithras was said to have emerged. Small niches along the vertical axis of the podium probably held two tuff altars.\n\nA marble statue of Mithras, 170 cm tall, was found in situ on a diagonal base behind the podium. The statue’s head was illuminated through a skylight, and its missing sword blade and frigidon were likely made of metal. The bull’s chest bore an inscription: *KRITΩΝ / AΘHNAIOΣ / EΠOIEI*—“Kriton of Athens made it.” The statue’s head, the bull’s head, and a fragment of Mithras’ arm were later found in a drainage channel, presumably discarded by Christians.\n\nThese details illustrate the sanctuary’s role as a space for Mithraic rites, its architectural integration with the baths, and the later Christian desecration that left fragments of its central iconography.",
+    "sourceIds": [
+      "wikipedia"
+    ]
   },
   "topics": {
-    "history": [],
+    "history": [
+      {
+        "id": "h1",
+        "description": "The sanctuary was excavated in the 20th century, and the marble statue of Mithras was recovered and is now housed in the Museo Archeologico Ostiense.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "h2",
+        "description": "Fragments of the statue’s head, bull’s head, and a limb were found in a drainage channel, evidence that Christians removed or destroyed parts of the cult’s iconography.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
     "design": [
       {
-        "id": "design1",
-        "description": "The sanctuary measured 15.37 by 4.55 meters, with a vaulted ceiling 2.10 meters high. It consisted of an entrance hall and a main cult chamber, separated by a wall with an eastern door leading to a service area. The vault featured two square skylights, one at the center and one in the south, illuminating the statue of Mithra. The interior included a low podium with a reinforced arch, small Tuscan pillars, and niches that likely held small altar slabs.",
-        "sourceIds": ["wikipedia"]
+        "id": "d1",
+        "description": "The Mithraeum’s layout consists of a vestibule leading to a main cultic chamber with a vaulted ceiling and two skylights, creating a daylight-lit interior that emphasizes the central scene of Mithras killing the bull.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "d2",
+        "description": "Architectural features such as the opus latericium arch, brick pillars topped with tuff pyramids, and shallow niches suggest a deliberate symbolic connection to the rock (saxigenus) associated with Mithras’ origin.",
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "art": [
       {
-        "id": "art1",
-        "description": "A marble statue of Mithra, 170 cm tall, originally stood in the sanctuary. The statue depicted Mithra holding a knife, with a frieze and metallic rays, though the knife and frieze are missing. Fragments of the statue, including the head of the bull and parts of Mithra's head and arm, were found in a drainage channel, likely discarded by Christians.",
-        "sourceIds": ["wikipedia"]
+        "id": "a1",
+        "description": "The central marble statue of Mithras, 170 cm tall, originally included a sword and a frigidon; its head was illuminated by a skylight, underscoring the dramatic illumination of the cultic scene.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "a2",
+        "description": "An inscription on the bull’s chest—*KRITΩΝ / AΘHNAIOΣ / EΠOIEI*—attributed the work to *Kriton of Athens*, indicating the involvement of a Greek artisan in the sanctuary’s decoration.",
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ]
   },

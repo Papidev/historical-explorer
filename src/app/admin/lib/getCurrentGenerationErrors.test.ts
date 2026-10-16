@@ -15,6 +15,25 @@ const failure: GenerationLogEntry = {
 };
 
 describe("current generation errors", () => {
+  it("does not show non-blocking source warnings from a completed run as errors", () => {
+    expect(
+      getCurrentGenerationErrors([
+        {
+          ...failure,
+          event: "completed",
+          status: "partial",
+          errors: [
+            {
+              stage: "sources",
+              message: "Aurelian: No official languages were found for country Q1747689.",
+            },
+            { stage: "poiTypes", message: "Wikidata returned HTTP 429." },
+          ],
+        },
+      ]),
+    ).toMatchObject([{ stage: "poiTypes" }]);
+  });
+
   it("hides an old failure when Story Content was subsequently saved", () => {
     expect(
       getCurrentGenerationErrors([failure], {
