@@ -18,41 +18,52 @@ import {
 } from "./lib/actions";
 import { getInitialAiSelection, loadAiModeOptions } from "./lib/aiModels";
 import { loadPoiLists } from "./lib/loadPoiLists";
+import { getPoiTablePage, getPeopleTablePage, readTableQuery } from "./lib/tableQueries";
 
 import { createPoiTypeMappings } from "@/server/poiTypeMappings";
 
 export const dynamic = "force-dynamic";
 
-export default async function AdminPage() {
+const AdminPage = async ({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) => {
   if (process.env.NODE_ENV === "production") notFound();
 
   const { rows, globalArtifacts, error } = await loadPoiLists();
+  const params = await searchParams;
   const aiModeOptions = await loadAiModeOptions();
   const initialAiSelection = await getInitialAiSelection();
 
+  const people = personRepository
+    .list()
+    .map((person) => ({
+      ...toPublicPerson(person),
+      linkedPois: rows
+        .filter((row) =>
+          row.storyContent?.relatedPeople.some(({ personId }) => personId === person.id),
+        )
+        .map((row) => ({
+          id: row.id,
+          name: row.transformedPoi?.name ?? row.rawPoi?.name ?? row.id,
+        }))
+        .sort((a, b) => a.name.localeCompare(b.name, "en")),
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name, "en"));
+
   return (
     <AdminDashboard
-      rows={rows}
+      poiPage={getPoiTablePage(rows, readTableQuery(params, "poi"))}
+      generationRows={rows
+        .filter((row) => row.rawPoi && !row.storyContent)
+        .map(({ id, rawPoi }) => ({ id, rawPoi }))}
       typeMappings={createPoiTypeMappings().getCatalog()}
       saveTypeMappingAction={saveTypeMapping}
       classifyTypeMappingsAction={classifyTypeMappings}
       categoryActions={{ save: savePoiCategory, delete: deletePoiCategory, move: movePoiCategory }}
       poiError={error}
-      people={personRepository
-        .list()
-        .map((person) => ({
-          ...toPublicPerson(person),
-          linkedPois: rows
-            .filter((row) =>
-              row.storyContent?.relatedPeople.some(({ personId }) => personId === person.id),
-            )
-            .map((row) => ({
-              id: row.id,
-              name: row.transformedPoi?.name ?? row.rawPoi?.name ?? row.id,
-            }))
-            .sort((a, b) => a.name.localeCompare(b.name, "en")),
-        }))
-        .sort((a, b) => a.name.localeCompare(b.name, "en"))}
+      peoplePage={getPeopleTablePage(people, readTableQuery(params, "people"))}
       regeneratePersonAction={regeneratePerson}
       globalArtifacts={globalArtifacts}
       aiModeOptions={aiModeOptions}
@@ -65,4 +76,6 @@ export default async function AdminPage() {
       selectMainImageCandidateAction={selectMainImageCandidate}
     />
   );
-}
+};
+
+export default AdminPage;

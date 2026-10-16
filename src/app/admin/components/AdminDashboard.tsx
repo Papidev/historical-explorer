@@ -17,16 +17,19 @@ import type { AiModeOption, AiSelection } from "../lib/aiModels";
 import type { AdminAction, AdminArtifact, AdminPoiRow, AdminPerson } from "../lib/types";
 import { generateDraftStories } from "../lib/generateDraftStories";
 import { AiGenerationSettings } from "./AiGenerationSettings";
+import type { TablePage } from "../lib/tableQueries";
+import { useTableNavigation } from "./useTableNavigation";
 import { PoiRowsTable } from "./PoiRowsTable";
 
 export const AdminDashboard = ({
-  rows,
+  poiPage,
+  generationRows,
   typeMappings,
   saveTypeMappingAction,
   classifyTypeMappingsAction,
   categoryActions,
   poiError,
-  people,
+  peoplePage,
   regeneratePersonAction,
   globalArtifacts,
   aiModeOptions,
@@ -38,13 +41,14 @@ export const AdminDashboard = ({
   refreshPoiTypesAction,
   selectMainImageCandidateAction,
 }: {
-  rows: AdminPoiRow[];
+  poiPage: TablePage<AdminPoiRow>;
+  generationRows: AdminPoiRow[];
   typeMappings: TypeMappingCatalog;
   saveTypeMappingAction: SaveTypeMapping;
   classifyTypeMappingsAction: ClassifyTypeMappings;
   categoryActions: CategoryActions;
   poiError: string | null;
-  people: AdminPerson[];
+  peoplePage: TablePage<AdminPerson>;
   regeneratePersonAction: AdminAction;
   globalArtifacts: AdminArtifact[];
   aiModeOptions: readonly AiModeOption[];
@@ -57,6 +61,8 @@ export const AdminDashboard = ({
   selectMainImageCandidateAction: (formData: FormData) => Promise<void>;
 }) => {
   const router = useRouter();
+  const poiNavigation = useTableNavigation(poiPage.query, "poi");
+  const peopleNavigation = useTableNavigation(peoplePage.query, "people");
   const aiSelectionRef = useRef(initialAiSelection);
   const searchParams = useSearchParams();
   const unmappedTypes = typeMappings.types.filter((type) => type.categories === undefined).length;
@@ -89,12 +95,19 @@ export const AdminDashboard = ({
         />
       </header>
       <TabGroup
-        defaultIndex={
+        selectedIndex={
           searchParams.get("section") === "type-mappings" ||
           searchParams.get("prototype") === "type-mappings"
             ? 2
-            : 0
+            : searchParams.get("section") === "people"
+              ? 1
+              : 0
         }
+        onChange={(index) => {
+          const params = new URLSearchParams(searchParams.toString());
+          params.set("section", ["pois", "people", "type-mappings"][index]);
+          router.replace(`/admin?${params}`, { scroll: false });
+        }}
         className="flex min-h-0 flex-1 flex-col"
       >
         <TabList
@@ -109,9 +122,9 @@ export const AdminDashboard = ({
               {label}
               <span className="rounded-full bg-gray-100 px-2 py-0.5 text-xs">
                 {label === "POIs"
-                  ? rows.length
+                  ? poiPage.total
                   : label === "People"
-                    ? people.length
+                    ? peoplePage.total
                     : typeMappings.types.length}
               </span>
               {label === "Type mappings" && unmappedTypes > 0 && (
@@ -133,7 +146,11 @@ export const AdminDashboard = ({
               </p>
             ) : (
               <PoiRowsTable
-                rows={rows}
+                rows={poiPage.items}
+                generationRows={generationRows}
+                pagination={{ ...poiPage, query: poiNavigation.query }}
+                onQueryChange={poiNavigation.update}
+                isLoading={poiNavigation.isPending}
                 globalArtifacts={globalArtifacts}
                 aiSelectionRef={aiSelectionRef}
                 generateDraftStoryAction={generateDraftStoryAction}
@@ -152,7 +169,10 @@ export const AdminDashboard = ({
           </TabPanel>
           <TabPanel unmount={false} className="flex min-h-0 flex-1 flex-col">
             <PeopleTable
-              people={people}
+              people={peoplePage.items}
+              pagination={{ ...peoplePage, query: peopleNavigation.query }}
+              onQueryChange={peopleNavigation.update}
+              isLoading={peopleNavigation.isPending}
               aiSelectionRef={aiSelectionRef}
               regeneratePersonAction={regeneratePersonAction}
             />

@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.8.0
+
+### Minor Changes
+
+- Paginate the admin POI and People tables on the server, preserving global search, POI filters and sorting, independent URL state, and automatic generation across the catalog.
+
 ## 0.7.0
 
 ### Minor Changes

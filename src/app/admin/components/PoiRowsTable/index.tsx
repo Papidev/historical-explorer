@@ -8,7 +8,6 @@ import { Search } from "./Search";
 import type { RefObject } from "react";
 import type { AiSelection } from "../../lib/aiModels";
 import type { AdminAction, AdminBatchAction, AdminArtifact, AdminPoiRow } from "../../lib/types";
-import { getPoiRowStatusGroup } from "../../lib/getPoiRowStatusGroup";
 import { ActionToast, getActionError, type Toast } from "../ActionToast";
 import { AiProgressDialog } from "./AiProgressDialog";
 import { Preview, type SelectedPanel } from "./Preview";
@@ -16,6 +15,7 @@ import { Row } from "./Row";
 import type { Actions } from "./RowTypes";
 import { GlobalArtifacts } from "./GlobalArtifacts";
 import { statusGroupStyles } from "./statusGroupStyles";
+import type { TablePage, TableQuery } from "../../lib/tableQueries";
 import { ListboxSelect } from "@/app/components/ui/ListboxSelect";
 
 const ColumnHeader = ({
@@ -56,6 +56,10 @@ const ColumnHeader = ({
 
 export const PoiRowsTable = ({
   rows,
+  generationRows,
+  pagination,
+  onQueryChange,
+  isLoading = false,
   globalArtifacts,
   aiSelectionRef,
   generateDraftStoryAction,
@@ -67,6 +71,10 @@ export const PoiRowsTable = ({
   selectMainImageCandidateAction,
 }: {
   rows: AdminPoiRow[];
+  generationRows: AdminPoiRow[];
+  pagination: TablePage<AdminPoiRow>;
+  onQueryChange: (query: Partial<TableQuery>) => void;
+  isLoading?: boolean;
   globalArtifacts: AdminArtifact[];
   aiSelectionRef: RefObject<Pick<AiSelection, "mode" | "model">>;
   generateDraftStoryAction: AdminAction;
@@ -79,18 +87,13 @@ export const PoiRowsTable = ({
 }) => {
   const tableScrollRef = useRef<HTMLDivElement>(null);
   const [runningIds, setRunningIds] = useState<string[]>([]);
-  const [page, setPage] = useState(0);
-  const [search, setSearch] = useState("");
-  const [sortOrder, setSortOrder] = useState("default");
+  const { page, search, sort: sortOrder, statuses: visibleStatusGroups } = pagination.query;
   const [selectedPanel, setSelectedPanel] = useState<SelectedPanel | null>(null);
   const [progress, setProgress] = useOptimistic<{
     poiId: string;
     description: string;
   } | null>(null);
   const [actionToast, setActionToast] = useState<Toast | null>(null);
-  const [visibleStatusGroups, setVisibleStatusGroups] = useState<string[]>(
-    Object.keys(statusGroupStyles),
-  );
   const [aiProgressDialog, setAiProgressDialog] = useState<{
     runId: string;
     title: string;
@@ -106,29 +109,13 @@ export const PoiRowsTable = ({
     refreshPoiTypes: refreshPoiTypesAction,
   };
   const searchText = search.trim().toLocaleLowerCase("en");
-  const runningRows = runningIds.flatMap((id) =>
-    rows.filter((row) => (row.rawPoi?.id ?? row.id) === id),
-  );
-  const visibleRows = rows.filter(
-    (row) =>
-      !runningIds.includes(row.rawPoi?.id ?? row.id) &&
-      visibleStatusGroups.includes(getPoiRowStatusGroup(row)) &&
-      (!searchText ||
-        [row.rawPoi?.name, row.transformedPoi?.name].some((name) =>
-          name?.toLocaleLowerCase("en").includes(searchText),
-        )),
-  );
-  const currentPage = Math.min(page, Math.max(0, Math.ceil(visibleRows.length / 50) - 1));
-
-  if (sortOrder !== "default") {
-    visibleRows.sort((left, right) => {
-      if (!left.lastGenerationAt) return right.lastGenerationAt ? 1 : 0;
-      if (!right.lastGenerationAt) return -1;
-      return sortOrder === "newest"
-        ? Date.parse(right.lastGenerationAt) - Date.parse(left.lastGenerationAt)
-        : Date.parse(left.lastGenerationAt) - Date.parse(right.lastGenerationAt);
-    });
-  }
+  const runningRows = runningIds.flatMap((id) => {
+    const row =
+      rows.find((row) => (row.rawPoi?.id ?? row.id) === id) ??
+      generationRows.find((row) => row.rawPoi?.id === id);
+    return row ? [row] : [];
+  });
+  const visibleRows = rows.filter((row) => !runningIds.includes(row.rawPoi?.id ?? row.id));
 
   const runSingleAction = async (
     poiId: string,
@@ -202,7 +189,7 @@ export const PoiRowsTable = ({
         <div className="shrink-0">
           <GlobalArtifacts artifacts={globalArtifacts} onSelectPanel={setSelectedPanel} />
           <BatchGeneration
-            rows={rows.filter((row) => row.rawPoi && !row.storyContent)}
+            rows={generationRows}
             aiSelectionRef={aiSelectionRef}
             action={generateDraftStoriesAction}
             disabled={Boolean(progress) || runningIds.length > 0}
@@ -220,8 +207,7 @@ export const PoiRowsTable = ({
           <Search
             value={search}
             onChange={(value) => {
-              setSearch(value);
-              setPage(0);
+              onQueryChange({ search: value });
             }}
           />
           <span className="font-semibold text-gray-800">Show status</span>
@@ -230,8 +216,9 @@ export const PoiRowsTable = ({
               type="checkbox"
               checked={visibleStatusGroups.length === Object.keys(statusGroupStyles).length}
               onChange={(event) => {
-                setPage(0);
-                setVisibleStatusGroups(event.target.checked ? Object.keys(statusGroupStyles) : []);
+                onQueryChange({
+                  statuses: event.target.checked ? Object.keys(statusGroupStyles) : [],
+                });
               }}
               className="size-4 cursor-pointer accent-violet-600"
             />
@@ -249,12 +236,11 @@ export const PoiRowsTable = ({
                 aria-label={label}
                 checked={visibleStatusGroups.includes(value)}
                 onChange={(event) => {
-                  setPage(0);
-                  setVisibleStatusGroups((current) =>
-                    event.target.checked
-                      ? [...current, value]
-                      : current.filter((group) => group !== value),
-                  );
+                  onQueryChange({
+                    statuses: event.target.checked
+                      ? [...visibleStatusGroups, value]
+                      : visibleStatusGroups.filter((group) => group !== value),
+                  });
                 }}
                 className={`size-4 cursor-pointer ${checkbox}`}
               />
@@ -262,8 +248,7 @@ export const PoiRowsTable = ({
                 type="button"
                 title={`Show only ${label}`}
                 onClick={() => {
-                  setPage(0);
-                  setVisibleStatusGroups([value]);
+                  onQueryChange({ statuses: [value] });
                 }}
                 className="cursor-pointer rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2"
               >
@@ -276,8 +261,7 @@ export const PoiRowsTable = ({
               label="Sort POIs"
               value={sortOrder}
               onChange={(value) => {
-                setSortOrder(value);
-                setPage(0);
+                onQueryChange({ sort: value });
               }}
               options={[
                 { value: "default", label: "Status and name" },
@@ -288,10 +272,11 @@ export const PoiRowsTable = ({
           </div>
         </div>
         <div
+          aria-busy={isLoading}
           ref={tableScrollRef}
           className="min-h-0 min-w-0 flex-1 overflow-auto [&_[role=tooltip]]:right-0 [&_[role=tooltip]]:left-auto [&_[role=tooltip]]:translate-x-0"
         >
-          {rows.length === 0 ? (
+          {pagination.total === 0 ? (
             <p className="px-4 py-4 text-sm text-black/55">No POIs available.</p>
           ) : visibleRows.length === 0 && runningRows.length === 0 ? (
             <p className="px-4 py-4 text-sm text-black/55">
@@ -380,10 +365,7 @@ export const PoiRowsTable = ({
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200 bg-white">
-                {[
-                  ...runningRows,
-                  ...visibleRows.slice(currentPage * 50, (currentPage + 1) * 50),
-                ].map((row) => (
+                {[...runningRows, ...visibleRows].map((row) => (
                   <Row
                     key={row.rawPoi?.id ?? row.id}
                     row={row}
@@ -408,8 +390,13 @@ export const PoiRowsTable = ({
             </table>
           )}
         </div>
-        {visibleRows.length > 0 ? (
-          <Pagination page={currentPage} totalRows={visibleRows.length} onPageChange={setPage} />
+        {pagination.filteredTotal > 0 ? (
+          <Pagination
+            page={page}
+            totalRows={pagination.filteredTotal}
+            disabled={isLoading}
+            onPageChange={(page) => onQueryChange({ page })}
+          />
         ) : null}
       </section>
       {selectedPanel ? (
