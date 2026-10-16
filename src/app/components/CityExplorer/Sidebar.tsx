@@ -1,5 +1,5 @@
 import { useId, useState } from "react";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import { ArrowUpRightIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import type { Poi } from "@/types/Poi";
 import {
   DEFAULT_POI_CATEGORY_DEFINITIONS,
@@ -39,14 +39,19 @@ export const Sidebar = ({
   return (
     <aside
       aria-label="Discover places"
-      className="flex h-full w-full shrink-0 flex-col overflow-hidden border-r border-zinc-200 bg-white text-zinc-900"
+      className="flex h-full w-full shrink-0 flex-col overflow-hidden border-r border-zinc-900/10 bg-zinc-50 text-zinc-900"
     >
-      <div className="flex shrink-0 items-center justify-between gap-2 border-b border-zinc-100 bg-white px-4 py-2">
-        <h2 className="text-lg font-semibold">Filters</h2>
+      <div className="flex shrink-0 items-start justify-between gap-2 border-b border-zinc-900/10 px-5 py-4">
+        <div>
+          <h2 className="font-serif text-2xl tracking-tight">Explore the city</h2>
+          <p className="mt-2 text-xs leading-5 text-zinc-500">
+            Choose a place on the map or follow your curiosity below.
+          </p>
+        </div>
         <DrawerCloseButton label="Close filters" onClick={onClose} />
       </div>
       <div className="min-h-0 flex-1 overflow-y-auto p-4">
-        <fieldset className="space-y-2">
+        <fieldset className="space-y-2 rounded-xl border border-zinc-200 bg-white px-3 py-1">
           <legend className="sr-only">Category filters</legend>
           <div className="flex items-center gap-2">
             <input
@@ -121,7 +126,7 @@ export const Sidebar = ({
               ))}
           </div>
         </fieldset>
-        <p role="status" className="mt-6 border-t border-zinc-200 pt-4 text-sm font-semibold">
+        <p role="status" className="mt-6 px-1 text-xs font-semibold tracking-wide text-zinc-500">
           {visiblePois.length} {visiblePois.length === 1 ? "place" : "places"} to explore
         </p>
         {!visiblePois.length && (
@@ -131,7 +136,7 @@ export const Sidebar = ({
               : "Select a category to explore places."}
           </p>
         )}
-        <ul className="mt-2 space-y-1">
+        <ul className="mt-3 space-y-2">
           {visiblePois.map((poi) => (
             <li key={poi.id}>
               <button
@@ -139,18 +144,24 @@ export const Sidebar = ({
                 aria-label={poi.name}
                 aria-pressed={selectedPoiId === poi.id}
                 onClick={() => onOpenPoi(poi.id)}
-                className={`block w-full cursor-pointer rounded-lg px-2 py-2 text-left text-sm hover:bg-rose-50 ${selectedPoiId === poi.id ? "bg-rose-50 ring-1 ring-rose-200" : ""}`}
+                className={`group flex w-full cursor-pointer items-center gap-3 rounded-xl border p-3 text-left transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-800 ${selectedPoiId === poi.id ? "border-green-300 bg-green-50" : "border-zinc-200/80 bg-white hover:border-zinc-400"}`}
               >
-                <span className="font-medium">{poi.name}</span>
-                <span className="mt-1 block text-xs text-zinc-500">
-                  {poi.categories
-                    ?.map(
-                      (id) =>
-                        categoryDefinitions.find((category) => category.id === id)?.name ?? id,
-                    )
-                    .sort((a, b) => a.localeCompare(b, "en"))
-                    .join(" · ") || "Uncategorized"}
+                <span className="min-w-0 flex-1">
+                  <span className="block font-serif text-lg leading-snug">{poi.name}</span>
+                  <span className="mt-1.5 block text-xs leading-5 text-zinc-500">
+                    {poi.categories
+                      ?.map(
+                        (id) =>
+                          categoryDefinitions.find((category) => category.id === id)?.name ?? id,
+                      )
+                      .sort((a, b) => a.localeCompare(b, "en"))
+                      .join(" · ") || "Uncategorized"}
+                  </span>
                 </span>
+                <ArrowUpRightIcon
+                  aria-hidden="true"
+                  className={`size-4 shrink-0 ${selectedPoiId === poi.id ? "text-green-700" : "text-zinc-400 group-hover:text-zinc-800"}`}
+                />
               </button>
             </li>
           ))}

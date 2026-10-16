@@ -3,7 +3,6 @@
 import { createElement } from "react";
 import { createRoot, type Root } from "react-dom/client";
 import maplibregl, { Map as MapLibreMap, Marker, type ExpressionSpecification } from "maplibre-gl";
-import "maplibre-gl/dist/maplibre-gl.css";
 import type { Poi } from "@/types/Poi";
 import {
   DEFAULT_POI_CATEGORY_DEFINITIONS,
@@ -59,7 +58,10 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
   let onOpenPoiDetails: ((poiId: string) => void) | null = null;
   let onMapClick: (() => void) | null = null;
 
-  const handleMapClick = () => onMapClick?.();
+  const handleMapClick = (event: MouseEvent) => {
+    if (event.target instanceof Element && event.target.closest(".maplibregl-ctrl")) return;
+    onMapClick?.();
+  };
 
   const updateMarkerSelection = () => {
     markers.forEach(({ poiId, marker }) => {
@@ -243,7 +245,29 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
         zoom: initialView.zoom,
       });
 
-      map.addControl(new maplibregl.NavigationControl(), "top-right");
+      const navigationControl = new maplibregl.NavigationControl();
+      const zoomValue = document.createElement("output");
+      zoomValue.className = "map-zoom-value";
+      zoomValue.setAttribute("aria-label", "Zoom level");
+      const updateZoomValue = () => {
+        if (map) zoomValue.value = map.getZoom().toFixed(2);
+      };
+      map.addControl(
+        {
+          onAdd: (map) => {
+            const container = navigationControl.onAdd(map);
+            container.append(zoomValue);
+            updateZoomValue();
+            map.on("zoom", updateZoomValue);
+            return container;
+          },
+          onRemove: () => {
+            map?.off("zoom", updateZoomValue);
+            navigationControl.onRemove();
+          },
+        },
+        "top-right",
+      );
       previewContainer = document.createElement("div");
       previewContainer.addEventListener("pointerenter", handlePreviewPointerEnter);
       previewContainer.addEventListener("pointerleave", handlePreviewPointerLeave);

@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.6.4
+
+### Patch Changes
+
+- Polish the Rome header and discovery panel. Keep a single native MapLibre navigation control with a live numeric zoom level beside the Story drawer, and preserve the open Story when using map controls. Update the Porta San Giovanni Story.
+
 ## 0.6.3
 
 ### Patch Changes
