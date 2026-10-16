@@ -30,9 +30,7 @@ export const BatchProgressDialog = ({
           <div className="shrink-0 border-b border-gray-200 px-5 py-5 sm:px-6">
             <DialogTitle className="text-lg font-semibold text-gray-900">Story queue</DialogTitle>
             <p className="mt-1 text-sm text-gray-500">
-              {started} of {total} Story generations completed
-              {" · "}
-              {runs.filter(({ isFinished }) => isFinished).length} POIs processed
+              {started} of {total} POIs processed
             </p>
           </div>
           <div
