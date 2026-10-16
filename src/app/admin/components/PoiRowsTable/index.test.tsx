@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 
 import "@testing-library/jest-dom/vitest";
-import { act, cleanup, render, screen, within } from "@testing-library/react";
+import { act, cleanup, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 import { http, HttpResponse } from "msw";
@@ -79,12 +79,14 @@ describe("POI actions", () => {
       />,
     );
     const user = userEvent.setup();
-    await user.click(screen.getByRole("button", { name: "Generate", exact: true }));
-    await user.click(screen.getByRole("button", { name: "Confirm", exact: true }));
+    await user.click(screen.getByRole("button", { name: "Generate" }));
+    await user.click(screen.getByRole("button", { name: "Confirm" }));
     expect(submitted).toHaveLength(1);
     expect(submitted[0].get("geoPlaceId")).toBe("aqueduct");
     expect(submitted[0].get("aiModel")).toBe("test-model");
-    expect(screen.getByRole("button", { name: "Start automatic generation" })).toBeEnabled();
+    await waitFor(() =>
+      expect(screen.getByRole("button", { name: "Start automatic generation" })).toBeEnabled(),
+    );
   });
 
   it.each([true, false])(
