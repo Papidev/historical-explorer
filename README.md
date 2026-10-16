@@ -143,6 +143,8 @@ People descriptions remain plain text. See the
 
 Admin has **POIs**, **People**, and **Type mappings** tabs. POIs has 50 rows per page; status/search apply across all pages and reset pagination. Name search is case-insensitive across original and generated names.
 
+**Sort POIs** keeps the default status/name order or sorts by newest/oldest generation activity across all POI steps, including failed attempts. Sorting applies before pagination and keeps POIs without a recorded generation date last. Dates use local checkpoints and the recent run log.
+
 Empty rows are **To do**. Attempted/generated rows with outstanding work/errors are **Needs attention**. **Needs source** keeps generated POIs and acquired Types visible, with missing-source/error details that persist after the toast closes and neutral placeholders without generation controls for unavailable artifacts.
 
 **Generate** (empty row) and **Refresh** (existing row) recreate POI metadata, acquire Wikipedia, retain discovered Wikidata identity, refresh Types when available, generate image candidates, and generate structured Story Content/Related People. Preview, Refresh, and Delete are available for Story Content; commit reviewed artifacts.

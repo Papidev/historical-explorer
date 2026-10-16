@@ -43,7 +43,7 @@ const toRelatedPeopleWarning = (
     warning: {
       title: failures.length
         ? "Some Related People remain unresolved"
-        : "Generated with incomplete Wikipedia Sources",
+        : "Content generated using available Wikipedia sources",
       ...(sourceWarnings.length ? { details: sourceWarnings.join("\n") } : {}),
     },
     failedSteps: failures.length ? ["Related People"] : [],

@@ -94,6 +94,7 @@ export type GenerationError = {
 
 export type AdminPoiRow = {
   id: string;
+  lastGenerationAt?: string;
   sourcePending?: boolean;
   lastGenerationRun?: {
     operation: string;

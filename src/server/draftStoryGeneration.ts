@@ -137,7 +137,7 @@ export const createDraftStoryGeneration =
           failedSteps,
           warning: !issues.length
             ? {
-                title: "Draft generated with source warnings",
+                title: "Story generated using available Wikipedia sources",
                 details: sourceWarnings.join("\n"),
               }
             : failedSteps.length === 1 && failedSteps[0] === "POI Type Mappings"

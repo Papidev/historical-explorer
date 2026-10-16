@@ -66,13 +66,14 @@
     "title": "Giacomo della Porta",
     "url": "https://en.wikipedia.org/wiki/Giacomo_della_Porta"
   },
+  "sourceContextWikidataIds": [
+    "Q2104896",
+    "Q3747442"
+  ],
   "generation": {
     "aiMode": "cloud",
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-09-26T00:55:27.595Z"
-  },
-  "sourceContextWikidataIds": [
-    "Q2104896"
-  ]
+  }
 }
