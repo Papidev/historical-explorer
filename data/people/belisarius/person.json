@@ -1,0 +1,95 @@
+{
+  "id": "belisarius",
+  "name": "Belisarius",
+  "wikidataId": "Q174943",
+  "wikipediaTitle": "Belisarius",
+  "content": {
+    "description": [
+      {
+        "text": "Flavius Belisarius was born around 500, probably in the town of Germaneia (modern Sapareva Banya, Bulgaria), a fortified settlement in the borders of Thrace and Paeonia. He entered the imperial guard of Emperor Justin I as a young soldier and rose through the ranks to become a senior guard of Emperor Justinian I. In 532 he played a decisive role in suppressing the Nika riots, entering the Hippodrome and helping to quell the rebellion that threatened to topple the emperor.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Belisarius is best remembered for his campaigns that restored large parts of the former Western Roman Empire to Byzantine control. He defeated the Vandals in North Africa in 533–534, capturing Carthage and forcing the Vandal king Gelimer into captivity. He then led the Gothic War in Italy from 535 to 540, capturing Rome in 536 and holding the city against the Gothic king Vitiges for a year. His skill in deception, disciplined troops, and benevolent treatment of civilians earned him the triumph and the consulship in 535, and he is regarded as one of the greatest commanders of the Byzantine Empire.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He was awarded a triumph and the honor of consul in 535.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He was known for his benevolent treatment of civilians, which helped win local support during his campaigns.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He was accused of conspiracy against Emperor Justinian in 562 but was later pardoned.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "A medieval legend claimed that Justinian had him blinded and made him a beggar, but modern scholars consider this apocryphal.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": 500,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 565,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "Meister_von_San_Vitale_in_Ravenna_013.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Meister_von_San_Vitale_in_Ravenna_013.jpg",
+    "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Meister_von_San_Vitale_in_Ravenna_013.jpg/960px-Meister_von_San_Vitale_in_Ravenna_013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/91/Meister_von_San_Vitale_in_Ravenna_013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "Meister von San Vitale in Ravenna",
+    "author": "Meister von San Vitale in Ravenna",
+    "width": 1576,
+    "height": 1888,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Belisarius",
+    "url": "https://en.wikipedia.org/wiki/Belisarius"
+  },
+  "additionalSources": [
+    {
+      "id": "wikipedia-it",
+      "kind": "wikipedia",
+      "title": "Belisario",
+      "url": "https://it.wikipedia.org/wiki/Belisario"
+    }
+  ],
+  "sourceContextWikidataIds": [
+    "Q1657663"
+  ],
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-15T22:36:23.211Z",
+    "sourceWarnings": [
+      "Official language Q36387 has no usable Wikimedia language code."
+    ]
+  }
+}

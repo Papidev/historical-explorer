@@ -1,0 +1,91 @@
+{
+  "id": "aurelian",
+  "name": "Aurelian",
+  "wikidataId": "Q46780",
+  "wikipediaTitle": "Aurelian",
+  "content": {
+    "description": [
+      {
+        "text": "Aurelian, born on 9 September around 214 in the province of Moesia Superior, rose from a modest background to become Roman emperor in 270. After a distinguished military career that began in 235, he defeated a series of barbarian groups—including the Alamanni, Goths, Vandals, Juthungi, Sarmatians, and Carpi—and re‑united the fractured empire by conquering the Palmyrene Empire in 273 and the Gallic Empire in 274. His reign earned him the title Restitutor Orbis, “Restorer of the World,” for restoring the empire’s territorial integrity.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      },
+      {
+        "text": "Beyond battlefield success, Aurelian enacted sweeping reforms: he abandoned the costly province of Dacia, introduced new coinage to curb inflation, and established the cult of Sol Invictus to unify religious practice. He also ordered the construction of the Aurelian Walls, a massive fortification that still surrounds Rome’s historic center. His reign ended abruptly in 275 when he was murdered by his own generals in Thrace while preparing for a campaign against the Sassanids.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Aurelian was the first emperor to be officially hailed as \"dominus et deus\" (master and god) in Roman inscriptions, a title that would not appear again until Constantine.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "The Aurelian Walls, built under his orders, are the only surviving Roman defensive walls that completely encircle a city.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Aurelian’s introduction of the Sol Invictus cult in 274 led to the adoption of December 25 as a Roman festival, a date that later influenced the Christian celebration of Christmas.",
+        "sourceIds": [
+          "wikipedia-it"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": 214,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 275,
+      "precision": "approximate"
+    }
+  },
+  "image": {
+    "commonsFileName": "INC-1859-a_Ауреус_Аврелиан_ок._270-275_гг._(аверс).png",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:INC-1859-a_%D0%90%D1%83%D1%80%D0%B5%D1%83%D1%81_%D0%90%D0%B2%D1%80%D0%B5%D0%BB%D0%B8%D0%B0%D0%BD_%D0%BE%D0%BA._270-275_%D0%B3%D0%B3._(%D0%B0%D0%B2%D0%B5%D1%80%D1%81).png",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/INC-1859-a_%D0%90%D1%83%D1%80%D0%B5%D1%83%D1%81_%D0%90%D0%B2%D1%80%D0%B5%D0%BB%D0%B8%D0%B0%D0%BD_%D0%BE%D0%BA._270-275_%D0%B3%D0%B3._%28%D0%B0%D0%B2%D0%B5%D1%80%D1%81%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/INC-1859-a_%D0%90%D1%83%D1%80%D0%B5%D1%83%D1%81_%D0%90%D0%B2%D1%80%D0%B5%D0%BB%D0%B8%D0%B0%D0%BD_%D0%BE%D0%BA._270-275_%D0%B3%D0%B3._%28%D0%B0%D0%B2%D0%B5%D1%80%D1%81%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC BY-SA 4.0",
+    "attribution": "АНО «Международный нумизматический клуб»",
+    "author": "АНО «Международный нумизматический клуб»",
+    "width": 511,
+    "height": 480,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Aurelian",
+    "url": "https://en.wikipedia.org/wiki/Aurelian"
+  },
+  "additionalSources": [
+    {
+      "id": "wikipedia-it",
+      "kind": "wikipedia",
+      "title": "Aureliano",
+      "url": "https://it.wikipedia.org/wiki/Aureliano"
+    }
+  ],
+  "sourceContextWikidataIds": [
+    "Q1657663"
+  ],
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-15T22:35:18.940Z",
+    "sourceWarnings": [
+      "No official languages were found for country Q1747689."
+    ]
+  }
+}

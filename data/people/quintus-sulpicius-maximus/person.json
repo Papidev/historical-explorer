@@ -1,0 +1,75 @@
+{
+  "id": "quintus-sulpicius-maximus",
+  "name": "Quintus Sulpicius Maximus",
+  "wikidataId": "Q72981031",
+  "wikipediaTitle": "Quintus Sulpicius Maximus",
+  "content": {
+    "description": [
+      {
+        "text": "Quintus Sulpicius Maximus, born around 81 CE, was the son of a freedman of Greek descent, Quintius Sulpicius Eugramus. Growing up in a household that prized language, Quintus mastered Ancient Greek with remarkable fluency, a skill that set him apart in Roman society. In 94 CE he entered the third edition of the Ludi Capitolini, a festival founded by Emperor Domitian in 86 CE to honor the restored Temple of Jupiter Optimus Maximus. The competition featured an improvisation round in which participants had to compose a poem in Greek on the myth of Phaethon, and Quintus was chosen to perform.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Quintus’s poem, preserved on a memorial stele that once stood on the Porta Salaria and now resides in the Centrale Montemartini, is the only surviving example of Roman juvenilia. The inscription, catalogued as IGUR III 1336, records that the 12‑year‑old died of overwork shortly after the contest, a tragic reminder of the intense pressures placed on young scholars in the Roman elite. Scholars such as J. Raleigh Nelson and Brian J. Wright have examined the text, noting its linguistic parallels to the New Testament and its significance for understanding early Roman literary culture.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "Quintus’s poem is the only known example of juvenilia from the ancient Roman world.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "The 12‑year‑old died of overwork shortly after the competition, according to his memorial.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "The memorial stele that preserves his poem was originally erected on the Porta Salaria and is now housed in the Centrale Montemartini.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "The Ludi Capitolini, in which Quintus competed, was founded by Domitian in 86 CE to celebrate the restoration of the Temple of Jupiter Optimus Maximus.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": 81,
+      "precision": "approximate"
+    },
+    "deathDate": {
+      "year": 94,
+      "precision": "exact"
+    }
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Quintus Sulpicius Maximus",
+    "url": "https://en.wikipedia.org/wiki/Quintus_Sulpicius_Maximus"
+  },
+  "sourceContextWikidataIds": [
+    "Q1657663"
+  ],
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-15T22:38:18.916Z",
+    "sourceWarnings": [
+      "No official languages were found for country Q1747689.",
+      "No it Wikipedia article is linked to this entity."
+    ]
+  }
+}
