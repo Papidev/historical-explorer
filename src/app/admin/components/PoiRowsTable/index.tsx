@@ -227,7 +227,7 @@ export const PoiRowsTable = ({
               setPage(0);
             }}
           />
-          <div className="w-full sm:w-60">
+          <div className="grid w-full grid-cols-[auto_minmax(0,1fr)] items-center gap-2 sm:w-80 [&>div]:mt-0">
             <ListboxSelect
               label="Sort POIs"
               value={sortOrder}
@@ -259,7 +259,7 @@ export const PoiRowsTable = ({
                 setPage(0);
                 setVisibleStatusGroups(event.target.checked ? Object.keys(statusGroupStyles) : []);
               }}
-              className="size-4 cursor-pointer accent-gray-700"
+              className="size-4 cursor-pointer accent-violet-600"
             />
             All
           </label>
