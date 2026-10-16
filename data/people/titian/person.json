@@ -7,21 +7,29 @@
     "description": [
       {
         "text": "Tiziano Vecellio, known as Titian, was born around 1488–1490 in Pieve di Cadore near Belluno, a small town under Venetian rule. He trained under several masters, including Sebastiano Zuccato, Gentile Bellini, Giovanni Bellini, and Giorgione, before establishing his own distinctive style that blended vibrant colour, expressive brushwork, and a keen sense of composition. His early works already show a mastery of portraiture, landscape, and mythological themes that would become hallmarks of his career.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "Titian’s reputation grew rapidly, and he became the most sought‑after painter of the Venetian school, attracting commissions from the Republic, northern Italian princes, the Habsburgs, and the papacy. He was appointed First Painter to the Most Serene Republic of Venice after Giovanni Bellini’s death, and later served as court painter to Charles V, producing iconic altarpieces, portraits, and mythological scenes that influenced generations of artists. His late works, such as the Venus of Urbino and the Danaë, showcase a mature colourito that remains celebrated for its sensuality and technical mastery.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "curiosities": [
       {
         "text": "Titian’s painting methods, especially his use of colour, profoundly influenced not only late Italian Renaissance painters but also future Western artists.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He was appointed First Painter to the Most Serene Republic of Venice upon the death of Giovanni Bellini, a position that elevated his status beyond that of a mere tradesman.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "birthDate": {
@@ -59,5 +67,8 @@
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-10-11T00:39:08.713Z"
-  }
+  },
+  "sourceContextWikidataIds": [
+    "Q841506"
+  ]
 }

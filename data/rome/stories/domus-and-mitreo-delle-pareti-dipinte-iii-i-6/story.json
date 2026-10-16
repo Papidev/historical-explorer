@@ -1,48 +1,55 @@
 {
+  "textFormat": "markdown",
   "introduction": {
-    "text": "The Mitreo delle Pareti Dipinte (III,I,6) was a Mithraeum in Ostia, a Roman city on the coast, notable for its wall paintings depicting Mithraic iconography.",
-    "sourceIds": ["wikipedia"]
+    "text": "The **Mitreo delle Pareti Dipinte (III,I,6)** was a Mithraeum situated in the third region of the ancient Roman city of Ostia, within a private **domus**. The sanctuary opened from a small vestibule into a 14 × 4 m **cella** that was divided by two short walls into a front and a rear section, each furnished with benches for initiates. The rear floor was paved with travertine, while the front floor featured a stepped marble altar with a niche at the top, built in opus vittatum and decorated with marble.\n\nIn front of the masonry altar stood a marble altar with reliefs, including a bust of **Sol‑Mithras** flanked by the assistants **Cautes** and **Cautopates**. A small round well, covered with a marble lid, was positioned in front of the altar.\n\nThe walls of the cella were painted with figures related to Mithraic worship: the two assistants **Cautes** and **Cautopates**, a cloaked male, a javelin‑bearing male, and the goddess **Venus**.\n\nTwo cippi were found in the temple: one bearing the name of **Aulus Aemilius Antoninus** and another a dedication by **Caius Caelius Ermeros**.",
+    "sourceIds": [
+      "wikipedia"
+    ]
   },
   "topics": {
     "history": [
       {
         "id": "history1",
-        "description": "The Mitreo delle Pareti Dipinte was a Mithraeum located in region III of Ostia, a Roman city on the coast.",
-        "sourceIds": ["wikipedia"]
+        "description": "The Mithraeum was part of a private domus in Ostia's third region, as evidenced by the discovery of two cippi bearing the names of Aulus Aemilius Antoninus and Caius Caelius Ermeros.",
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "design": [
       {
         "id": "design1",
-        "description": "The Mithraeum consisted of a small vestibule leading to a cella measuring 14 by 4 metres, divided by two walls into front and rear sections, each with benches for initiates. The rear floor was decorated with travertine, the front with a stepped marble altar built in opus vittatum.",
-        "sourceIds": ["wikipedia"]
+        "description": "The sanctuary comprised a small vestibule leading to a 14 × 4 m cella divided by two short walls into a front and rear section, each furnished with benches for initiates. The rear floor was paved with travertine, while the front floor featured a stepped marble altar with a niche at the top, built in opus vittatum and decorated with marble.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "design2",
+        "description": "A marble altar with reliefs, including a bust of Sol‑Mithras flanked by Cautes and Cautopates, and a small round well covered with a marble lid, were positioned in front of the masonry altar.",
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "art": [
       {
         "id": "art1",
-        "description": "Wall paintings include figures of Mithra (Sol-Mithras) with a bust, the lunar symbols, the attendants Cautes and Cautopates, a figure with a cloak, a figure with a javelin, and Venus.",
-        "sourceIds": ["wikipedia"]
+        "description": "The walls were painted with figures related to Mithraic worship: the two assistants Cautes and Cautopates, a cloaked male, a javelin‑bearing male, and the goddess Venus.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "id": "art2",
+        "description": "The marble altar bore reliefs depicting Sol‑Mithras with lunar crescents, suggesting illumination from a lamp in a cavity behind the altar.",
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ]
   },
-  "relatedPeople": [
-    {
-      "name": "Mitra (divinità)",
-      "personId": "mitra-divinit",
-      "sourceIds": ["wikipedia"]
-    },
-    {
-      "name": "Cautes e Cautopates",
-      "personId": "cautes-e-cautopates",
-      "sourceIds": ["wikipedia"]
-    },
-    {
-      "name": "Venere (divinità)",
-      "personId": "venus-mythology",
-      "sourceIds": ["wikipedia"]
-    }
-  ],
+  "relatedPeople": [],
   "wikipediaSources": [
     {
       "title": "Mitreo delle Pareti Dipinte",

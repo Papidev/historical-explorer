@@ -300,6 +300,15 @@
     ],
     "Q252021": [
       "Villa"
+    ],
+    "Q13360570": [
+      "Monument"
+    ],
+    "Q112132534": [
+      "Museum"
+    ],
+    "Q10855061": [
+      "Archaeological Site"
     ]
   },
   "origins": {
@@ -396,7 +405,10 @@
     "Q156849": "manual",
     "Q3936952": "manual",
     "Q43483": "manual",
-    "Q10460934": "automatic"
+    "Q10460934": "automatic",
+    "Q13360570": "automatic",
+    "Q112132534": "automatic",
+    "Q10855061": "manual"
   },
   "reasons": {
     "Q16560": "\"palace\" denotes a grand residence not covered by existing categories, so a new top‑level category \"Palace\" is created.",
@@ -456,6 +468,8 @@
     "Q5003624": "The type \"memorial\" corresponds to the existing category \"Monument\".",
     "Q4989906": "The type 'monument' directly corresponds to the existing category 'Monument'.",
     "Q173387": "The type 'grave' refers to a burial site, which is not represented by existing categories; a new category 'Grave' is created.",
-    "Q10460934": "An artificial hill is a type of archaeological site, so it can be classified under the existing 'Archaeological Site' category."
+    "Q10460934": "An artificial hill is a type of archaeological site, so it can be classified under the existing 'Archaeological Site' category.",
+    "Q13360570": "The type 'milliarium' refers to a Roman milestone, which is a type of monument.",
+    "Q112132534": "The type describes a building that functions as a museum dedicated to military history, so it fits the existing 'Museum' category."
   }
 }

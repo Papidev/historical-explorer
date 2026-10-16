@@ -183,6 +183,60 @@ describe("AI progress dialog", () => {
     },
   );
 
+  it.each(["single", "queue"])(
+    "shows source-only warnings as notes in the %s dialog",
+    async (mode) => {
+      server.use(
+        http.get("/api/admin/ai-progress/:runId", () =>
+          HttpResponse.json({
+            status: "partial",
+            startedAt: "2026-09-25T00:00:00.000Z",
+            failedSteps: [],
+            entries: [
+              {
+                at: "2026-09-25T00:00:01.000Z",
+                message: "No en Wikipedia article is linked to this entity.",
+              },
+              {
+                at: "2026-09-25T00:00:02.000Z",
+                message: "Content generated using available Wikipedia sources",
+              },
+            ],
+          }),
+        ),
+      );
+      render(
+        mode === "single" ? (
+          <AiProgressDialog
+            runId="123"
+            title="Generating Story Content"
+            isFinished
+            onClose={() => {}}
+          />
+        ) : (
+          <BatchProgressDialog
+            runs={[{ geoPlaceId: "church", progressId: "123", name: "Church", isFinished: true }]}
+            error={null}
+            onClose={() => {}}
+          />
+        ),
+      );
+      expect(await screen.findByText("Completed with notes")).toBeVisible();
+      if (mode === "queue") {
+        await userEvent.setup().click(screen.getByRole("button", { name: "Show log for Church" }));
+      }
+      expect(await screen.findByRole("status")).toHaveTextContent("Completed with notes");
+      expect(screen.getByRole("status")).toHaveTextContent(
+        "Content generated using available Wikipedia sources",
+      );
+      expect(screen.getByRole("log")).toHaveTextContent(
+        "No en Wikipedia article is linked to this entity.",
+      );
+      expect(screen.queryByRole("alert")).not.toBeInTheDocument();
+      expect(screen.queryByText("Completed with issues")).not.toBeInTheDocument();
+    },
+  );
+
   it("lists every failed step in a partial generation", async () => {
     server.use(
       http.get("/api/admin/ai-progress/:runId", () =>
@@ -205,6 +259,7 @@ describe("AI progress dialog", () => {
     );
 
     expect(await screen.findByRole("alert")).toHaveTextContent("Main Image Candidates");
+    expect(screen.getByRole("alert")).toHaveTextContent("Completed with issues");
     expect(screen.getByRole("alert")).toHaveTextContent("Related People");
   });
 

@@ -21,11 +21,13 @@ export const AiProgressLog = ({
       ) : null}
       {status === "partial" || status === "failed" || status === "waiting" ? (
         <div
-          role="alert"
+          role={status === "partial" && !progress?.failedSteps?.length ? "status" : "alert"}
           className={`mt-4 rounded-lg border px-4 py-3 text-sm ${
             status === "failed"
               ? "border-red-300 bg-red-50 text-red-950"
-              : "border-amber-300 bg-amber-50 text-amber-950"
+              : status === "partial" && !progress?.failedSteps?.length
+                ? "border-gray-200 bg-gray-50 text-gray-800"
+                : "border-amber-300 bg-amber-50 text-amber-950"
           }`}
         >
           <p className="font-semibold">
@@ -33,7 +35,9 @@ export const AiProgressLog = ({
               ? "Generation failed"
               : status === "waiting"
                 ? "Waiting for a source"
-                : "Completed with issues"}
+                : progress?.failedSteps?.length
+                  ? "Completed with issues"
+                  : "Completed with notes"}
           </p>
           {progress?.failedSteps?.length ? (
             <ul className="mt-2 list-disc space-y-1 pl-5">

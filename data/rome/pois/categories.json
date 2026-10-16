@@ -678,7 +678,9 @@
     "diocesi-di-porto-santa-rufina-curia-vescovile": [],
     "dionisio-romeo-chiodi": [],
     "divorum": [],
-    "domus-and-mitreo-delle-pareti-dipinte-iii-i-6": [],
+    "domus-and-mitreo-delle-pareti-dipinte-iii-i-6": [
+      "Archaeological Site"
+    ],
     "domus-annorum": [],
     "domus-augustana-peristilio": [
       "Archaeological Site",
@@ -900,8 +902,14 @@
     "giunti": [],
     "giuseppe-aurelio-costanzo": [],
     "mausoleo-di-aquilio-regolo": [],
-    "mausoleo-di-campo-barbarico": [],
-    "mausoleo-di-costanza": [],
+    "mausoleo-di-campo-barbarico": [
+      "Archaeological Site",
+      "Mausoleum"
+    ],
+    "mausoleo-di-costanza": [
+      "Church",
+      "Mausoleum"
+    ],
     "mausoleum-of-helena": [
       "Archaeological Site",
       "Mausoleum"
@@ -932,7 +940,10 @@
       "Archaeological Site"
     ],
     "mausoleo-mutilati-e-invalidi-di-guerra-sezione-di-roma": [],
-    "mausoleo-ossario-garibaldino": [],
+    "mausoleo-ossario-garibaldino": [
+      "Archaeological Site",
+      "Museum"
+    ],
     "mausoleo-romano": [],
     "mausoleo-romano-2": [],
     "memorial-irm-dulce": [],
@@ -946,7 +957,10 @@
     "metropoliz-maam": [],
     "miac-museo-italiano-dell-audiovisivo-e-del-cinema": [],
     "michael-collins": [],
-    "miliarum-aureum": [],
+    "miliarum-aureum": [
+      "Archaeological Site",
+      "Monument"
+    ],
     "militari-deceduti-per-causa-di-servizio": [],
     "mino-erasmo-damato": [],
     "miracle-water": [],
@@ -965,7 +979,9 @@
     "mitreo-delle-sette-porte-iv-v-13": [
       "Archaeological Site"
     ],
-    "mitreo-delle-sette-sfere-ii-viii-6": [],
+    "mitreo-delle-sette-sfere-ii-viii-6": [
+      "Archaeological Site"
+    ],
     "mithraeum-at-the-baths-of-mithra": [
       "Archaeological Site"
     ],

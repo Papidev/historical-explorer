@@ -7,29 +7,41 @@
     "description": [
       {
         "text": "Felice Piergentile, later known as Pope Sixtus V, was born on 13 December 1521 in Grottammare, a small fishing village in the Papal States.  From a humble background he entered the Franciscan order at the age of nine, taking the name Fra Felice, and pursued a rigorous theological education that led to his ordination as a deacon and eventually to his appointment as a cardinal by Pope Pius V in 1570.  His reputation for scholarly diligence and austere preaching earned him the nickname Cardinal Montalto, and his political acumen secured his election to the papacy on 24 April 1585, where he adopted the name Sixtus V in honor of his Franciscan predecessor.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "During his brief but energetic pontificate, Sixtus V launched an ambitious program of urban renewal that reshaped Rome’s streets, aqueducts, and public buildings.  He commissioned the construction of the Acqua Felice aqueduct, opened six new streets, and demolished antiquities such as Trajan’s Column to repurpose their stone for Christian monuments.  His reforms extended beyond the city: he excommunicated King Henry IV of France and renewed the excommunication of Queen Elizabeth I of England, while issuing the Sixtine Vulgate in 1590 and the Sixtine Septuagint in 1587.  Sixtus also reorganized the Roman Curia, limiting the College of Cardinals to seventy and establishing fifteen congregations, and he created 33 new cardinals during his reign.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "curiosities": [
       {
         "text": "Sixtus V was the last pope elected from a poor background until Pope Pius X in 1903, making his rise to the papacy a notable example of social mobility within the Catholic hierarchy.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He personally supervised the printing of an improved edition of Jerome’s Vulgate, a project that reflected his commitment to textual accuracy and doctrinal uniformity.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "Sixtus’s urban reforms included the demolition of the Septizodium of Septimius Severus to obtain building materials, illustrating his willingness to sacrifice ancient Roman heritage for the construction of new Christian monuments.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "In 1588 he issued the bull *Effraenatum*, extending the penalty of excommunication to any form of contraception or abortion at any stage of fetal development, a significant shift in Church disciplinary policy.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "birthDate": {
@@ -69,5 +81,8 @@
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-10-01T23:53:39.268Z"
-  }
+  },
+  "sourceContextWikidataIds": [
+    "Q3747442"
+  ]
 }

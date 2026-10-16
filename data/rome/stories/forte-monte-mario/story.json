@@ -1,45 +1,68 @@
 {
+  "textFormat": "markdown",
   "introduction": {
-    "text": "Forte Monte Mario is one of Rome's 15 forts, built between 1877 and 1891, and remains in use by the Italian military.",
-    "sourceIds": ["wikipedia"]
+    "text": "**Forte Monte Mario** is one of Rome’s 15 nineteenth‑century forts, built between 1877 and 1882 on the slopes of Monte Mario. The 8.4‑hectare complex sits at the third kilometre of Via Trionfale in the Della Vittoria quarter and today houses active military units. A distinctive feature is the tower that marks the *Meridiano di Roma*—the first meridian used in Italian cartography from 1872 for almost a century.",
+    "sourceIds": [
+      "wikipedia",
+      "wikipedia-it"
+    ]
   },
   "topics": {
     "history": [
       {
-        "id": "construction-start",
-        "description": "Construction of Forte Monte Mario began in 1877.",
-        "sourceIds": ["wikipedia"],
+        "id": "meridianTower",
+        "description": "The fort’s tower marks the *Meridiano di Roma*, the first meridian adopted by Italian cartography in 1872 and used for nearly a century.",
+        "sourceIds": [
+          "wikipedia-it"
+        ],
         "time": {
-          "startYear": 1877,
-          "precision": "exact",
+          "startYear": 1872,
+          "precision": "approximate",
           "granularity": "year"
         }
       },
       {
-        "id": "construction-completion",
-        "description": "Construction of Forte Monte Mario was completed in 1882.",
-        "sourceIds": ["wikipedia"],
+        "id": "construction",
+        "description": "Construction of Forte Monte Mario began in 1877 and was completed in 1882, covering an area of 8.4 ha on Monte Mario.",
+        "sourceIds": [
+          "wikipedia",
+          "wikipedia-it"
+        ],
         "time": {
-          "startYear": 1882,
+          "startYear": 1877,
           "precision": "exact",
+          "endYear": 1882,
           "granularity": "year"
         }
+      },
+      {
+        "id": "currentUse",
+        "description": "Today the fort remains occupied by military units.",
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
-    "design": [],
+    "design": [
+      {
+        "id": "meridianTowerDesign",
+        "description": "The tower at the fort’s summit serves as a geodetic marker for the *Meridiano di Roma*, a key reference line in Italian mapping.",
+        "sourceIds": [
+          "wikipedia-it"
+        ]
+      }
+    ],
     "art": []
   },
-  "relatedPeople": [
-    {
-      "name": "Victor Emmanuel II of Italy",
-      "personId": "vittorio-emanuele-ii",
-      "sourceIds": ["wikipedia"]
-    }
-  ],
+  "relatedPeople": [],
   "wikipediaSources": [
     {
       "title": "Forte Monte Mario (Rome)",
       "url": "https://en.wikipedia.org/wiki/Forte_Monte_Mario_(Rome)"
+    },
+    {
+      "title": "Forte Monte Mario",
+      "url": "https://it.wikipedia.org/wiki/Forte_Monte_Mario"
     }
   ]
 }

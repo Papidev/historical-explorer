@@ -1,14 +1,24 @@
 {
+  "wikipediaSources": [
+    {
+      "title": "Galleria Borghese",
+      "url": "https://en.wikipedia.org/wiki/Galleria_Borghese"
+    }
+  ],
   "introduction": {
     "text": "The Galleria Borghese is an art gallery in Rome housed in the former Villa Borghese Pinciana. It is renowned for its extensive collection of Baroque masterpieces, including works by Caravaggio, Bernini, Canova, Raphael and Titian, and for its historic architecture that reflects the patronage of the Borghese family.",
-    "sourceIds": ["wikipedia"]
+    "sourceIds": [
+      "wikipedia"
+    ]
   },
   "topics": {
     "history": [
       {
         "id": "history1",
         "description": "The Borghese collection was begun by Cardinal Scipione Borghese, nephew of Pope Paul V, during the papacy of 1605–1621.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1605,
           "precision": "approximate",
@@ -19,7 +29,9 @@
       {
         "id": "history2",
         "description": "In 1644, John Evelyn described the villa as an “Elysium of delight” with elaborate fountains and a vivarium.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1644,
           "precision": "exact",
@@ -29,7 +41,9 @@
       {
         "id": "history3",
         "description": "Marcantonio IV Borghese (1730–1800) began redesigning the gardens into an English landscape style and renovated the villa’s interior.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1730,
           "precision": "approximate",
@@ -40,7 +54,9 @@
       {
         "id": "history4",
         "description": "Around 1775, Antonio Asprucci was commissioned to replace outdated tapestries and reorganise the villa’s sculptures.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1775,
           "precision": "exact",
@@ -50,7 +66,9 @@
       {
         "id": "history5",
         "description": "In 1808, Prince Camillo Borghese sold the Roman sculptures and antiquities to Napoleon’s emperor.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1808,
           "precision": "exact",
@@ -60,7 +78,9 @@
       {
         "id": "history6",
         "description": "The villa and its estate were sold to the Italian government in 1902.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1902,
           "precision": "exact",
@@ -70,41 +90,55 @@
       {
         "id": "history7",
         "description": "The Borghese Gladiator, a celebrated sculpture since the 1620s, is now housed in the Louvre.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "design": [
       {
         "id": "design1",
         "description": "The villa was designed by Flaminio Ponzio based on sketches by Scipione Borghese, with a portico featuring spolia from the Arch of Claudius.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "id": "design2",
         "description": "The Salone’s ceiling features a trompe‑l’œil fresco by Mariano Rossi depicting Marcus Furius Camillus, while the room’s walls are adorned with grotteschi by Pietro Rotari and animal motifs by Venceslaus Peter Boemo.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "id": "design3",
         "description": "The villa’s gardens were transformed into an English landscape garden under Antonio Asprucci, replacing earlier formal layouts.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "art": [
       {
         "id": "art1",
         "description": "The gallery houses a significant Caravaggio collection, including “Boy with a Basket of Fruit”, “Young Sick Bacchus”, and “Saint Jerome Writing.”",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "id": "art2",
         "description": "Bernini’s sculptures are prominently displayed, such as “Apollo and Daphne”, “Rape of Proserpine”, and “David.”",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "id": "art3",
         "description": "Renaissance and early Baroque paintings by Raphael, Titian, and Peter Paul Rubens are featured, including Raphael’s “Entombment of Christ” and Titian’s “Sacred and Profane Love.”",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ]
   },
@@ -112,57 +146,72 @@
     {
       "name": "Scipione Borghese",
       "personId": "scipione-borghese",
-      "sourceIds": ["wikipedia"]
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Pope Paul V",
-      "sourceIds": ["wikipedia"]
+      "personId": "papa-paolo-v",
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Flaminio Ponzio",
       "personId": "flaminio-ponzio",
-      "sourceIds": ["wikipedia"]
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Michelangelo Merisi da Caravaggio",
       "personId": "caravaggio",
-      "sourceIds": ["wikipedia"]
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Gian Lorenzo Bernini",
       "personId": "gian-lorenzo-bernini",
-      "sourceIds": ["wikipedia"]
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Antonio Canova",
       "personId": "antonio-canova",
-      "sourceIds": ["wikipedia"]
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Raphael",
       "personId": "raphael",
-      "sourceIds": ["wikipedia"]
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Titian",
       "personId": "titian",
-      "sourceIds": ["wikipedia"]
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Peter Paul Rubens",
       "personId": "peter-paul-rubens",
-      "sourceIds": ["wikipedia"]
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Camillo Borghese",
       "personId": "camillo-borghese",
-      "sourceIds": ["wikipedia"]
-    }
-  ],
-  "wikipediaSources": [
-    {
-      "title": "Galleria Borghese",
-      "url": "https://en.wikipedia.org/wiki/Galleria_Borghese"
+      "sourceIds": [
+        "wikipedia"
+      ]
     }
   ]
 }

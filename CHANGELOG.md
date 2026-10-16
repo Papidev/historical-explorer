@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.7.0
+
+### Minor Changes
+
+- Add newest/oldest generation sorting to admin POIs, keep missing checkpoint dates from interrupting catalog loading, and show non-blocking Wikipedia source warnings as completion notes. Correct the Seven Spheres Mithraeum identity and save updated Rome Stories, People source contexts, and POI classifications.
+
 ## 0.6.6
 
 ### Patch Changes

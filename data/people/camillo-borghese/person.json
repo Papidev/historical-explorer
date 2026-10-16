@@ -7,25 +7,35 @@
     "description": [
       {
         "text": "Camillo Filippo Ludovico Borghese was born in Rome on 19 July 1775 as the son of Marcantonio Borghese, a pro‑Napoleon noble. In 1803 he married Pauline Bonaparte, the younger sister of Emperor Napoleon, which brought him a flurry of imperial titles and a close, though politically fraught, relationship with the French ruler.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "After his marriage, Borghese served in the French army, rising to the rank of brigade general and later becoming the overall military commander in Piedmont. He was forced to sell his extensive art collection in 1807 for about 3 million francs, a move that transferred many works to the Louvre. Following Napoleon’s fall, he fled France, lost the titles granted by the emperor, and spent his later years in Florence, where he died on 9 May 1832.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "curiosities": [
       {
         "text": "Borghese was made a Prince of the French Empire and received the Grand Eagle of the Legion of Honour in 1805.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He sold his art collection for around 3 million francs in 1807, a sum that was significant enough to be noted in contemporary accounts.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "Borghese served as grand dignitary and governor general of Piedmont, overseeing the regions of Piedmont, Genoa and Parma during the Napoleonic Wars.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "birthDate": {
@@ -65,5 +75,8 @@
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-10-11T00:39:19.506Z"
-  }
+  },
+  "sourceContextWikidataIds": [
+    "Q841506"
+  ]
 }
