@@ -6,6 +6,9 @@ import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } 
 import { http, HttpResponse } from "msw";
 import { setupServer } from "msw/node";
 import type { Poi } from "@/types/Poi";
+const cameraUpdates = vi.hoisted(
+  () => [] as Array<{ center?: [number, number]; offset?: [number, number] }>,
+);
 vi.mock("maplibre-gl", () => {
   class Map {
     container: HTMLDivElement;
@@ -16,7 +19,9 @@ vi.mock("maplibre-gl", () => {
     }
 
     addControl() {}
-    easeTo() {}
+    easeTo(view: { center?: [number, number]; offset?: [number, number] }) {
+      cameraUpdates.push(view);
+    }
     getZoom() {
       return 15;
     }
@@ -124,10 +129,21 @@ const server = setupServer(
   ),
 );
 const nativeFetch = globalThis.fetch;
-beforeEach(() => window.history.replaceState(null, "", "/rome"));
+beforeEach(() => {
+  window.history.replaceState(null, "", "/rome");
+  cameraUpdates.length = 0;
+});
 beforeAll(() => {
   vi.stubGlobal("fetch", (input: string | URL | Request, init?: RequestInit) =>
     nativeFetch(typeof input === "string" ? new URL(input, "http://localhost") : input, init),
+  );
+  vi.stubGlobal(
+    "ResizeObserver",
+    class {
+      observe() {}
+      unobserve() {}
+      disconnect() {}
+    },
   );
   server.listen({ onUnhandledRequest: "error" });
 });
@@ -896,5 +912,137 @@ describe("category filter tree", () => {
       "All",
     );
     expect(screen.getByRole("status")).toHaveTextContent("6 places");
+  });
+});
+
+describe("visitor place search", () => {
+  it("matches names regardless of case or accents, updates suggestions and supports keyboard selection", async () => {
+    const user = userEvent.setup();
+    render(
+      <CityExplorer
+        citySlug="rome"
+        coordinates={[12, 41]}
+        initialZoom={15}
+        pois={[
+          ...pois,
+          {
+            ...pois[0],
+            id: "cafe",
+            name: "Café Museum",
+            address: "Via Ostiense",
+            coordinates: { lng: 12.5, lat: 41.8 },
+          },
+          { ...pois[0], id: "cafe-two", name: "Café Museum", address: "Trastevere" },
+        ]}
+      />,
+    );
+    const search = screen.getByRole("combobox", { name: "Search" });
+    expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
+    await user.type(search, "CAFE");
+    expect(await screen.findByRole("option", { name: /Café Museum.*Via Ostiense/ })).toBeVisible();
+    expect(screen.getByRole("option", { name: /Café Museum.*Trastevere/ })).toBeVisible();
+    expect(screen.getAllByRole("option")).toHaveLength(2);
+    await user.keyboard("{ArrowDown}{ArrowUp}{Enter}");
+    expect(await screen.findByRole("heading", { name: "Café Museum" })).toBeVisible();
+    expect(
+      screen.getByRole("button", { name: "Open details for Café Museum", pressed: true }),
+    ).toHaveClass("selected-poi-marker");
+    expect(cameraUpdates.at(-1)).toEqual({ center: [12.5, 41.8], offset: [-48, 0] });
+    expect(new URLSearchParams(window.location.search).get("poiId")).toBe("cafe");
+    expect(search).toHaveValue("");
+    expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
+
+    // Searching for the same place again must focus it even if its coordinates have not changed.
+    const historyLength = window.history.length;
+    cameraUpdates.length = 0;
+    await user.type(search, "cafe");
+    await user.click(await screen.findByRole("option", { name: /Café Museum.*Via Ostiense/ }));
+    expect(cameraUpdates).toEqual([{ center: [12.5, 41.8], offset: [-48, 0] }]);
+    expect(window.history.length).toBe(historyLength);
+  });
+
+  it("shows no matches without searching outside the supplied public catalog and dismisses with Escape", async () => {
+    const user = userEvent.setup();
+    render(<CityExplorer citySlug="rome" coordinates={[12, 41]} initialZoom={15} pois={pois} />);
+    const search = screen.getByRole("combobox", { name: "Search" });
+    await user.type(search, "unpublished place");
+    expect(await screen.findByText("No places match your search.")).toBeVisible();
+    expect(screen.queryByRole("option")).not.toBeInTheDocument();
+    await user.clear(search);
+    await user.type(search, "museum");
+    expect(await screen.findAllByRole("option")).toHaveLength(2);
+    await user.keyboard("{Escape}");
+    expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
+    expect(search).toHaveValue("");
+    expect(new URLSearchParams(window.location.search).has("poiId")).toBe(false);
+  });
+
+  it("opens an excluded search result without changing filters or their count, then removes its marker on close", async () => {
+    const user = userEvent.setup();
+    render(<CityExplorer citySlug="rome" coordinates={[12, 41]} initialZoom={15} pois={pois} />);
+    await user.click(screen.getByRole("checkbox", { name: "All categories" }));
+    await user.click(screen.getByRole("checkbox", { name: "Museum" }));
+    const search = screen.getByRole("combobox", { name: "Search" });
+    await user.type(search, "A Church");
+    await user.click(await screen.findByRole("option", { name: /A Church\s*Rome/ }));
+    expect(await screen.findByRole("heading", { name: "A Church" })).toBeVisible();
+    expect(screen.getByText("This place is excluded by your active filters.")).toBeVisible();
+    expect(screen.getByRole("checkbox", { name: "Museum" })).toBeChecked();
+    expect(screen.getByRole("checkbox", { name: "Religious sites" })).not.toBeChecked();
+    expect(screen.getByRole("status")).toHaveTextContent("2 places");
+    expect(
+      screen.getByRole("button", { name: "Open details for A Church", pressed: true }),
+    ).toBeVisible();
+    expect(await screen.findByText("A real story response.")).toBeVisible();
+    await user.click(screen.getByRole("button", { name: "Close" }));
+    expect(
+      screen.queryByRole("button", { name: "Open details for A Church" }),
+    ).not.toBeInTheDocument();
+    expect(screen.getByRole("checkbox", { name: "Museum" })).toBeChecked();
+    expect(screen.getByRole("status")).toHaveTextContent("2 places");
+  });
+
+  it("replaces the previous search exception and keeps ordinary marker selections subject to filters", async () => {
+    const user = userEvent.setup();
+    render(<CityExplorer citySlug="rome" coordinates={[12, 41]} initialZoom={15} pois={pois} />);
+    await user.click(screen.getByRole("checkbox", { name: "All categories" }));
+    const search = screen.getByRole("combobox", { name: "Search" });
+    await user.type(search, "A Church");
+    await user.click(await screen.findByRole("option", { name: /A Church\s*Rome/ }));
+    await user.type(search, "A Museum");
+    await user.click(await screen.findByRole("option", { name: /A Museum\s*Rome/ }));
+    expect(
+      screen.queryByRole("button", { name: "Open details for A Church" }),
+    ).not.toBeInTheDocument();
+    expect(
+      screen.getByRole("button", { name: "Open details for A Museum", pressed: true }),
+    ).toBeVisible();
+    expect(screen.getByRole("status")).toHaveTextContent("0 places");
+    expect(screen.getByRole("checkbox", { name: "All categories" })).not.toBeChecked();
+    await user.click(screen.getByRole("checkbox", { name: "Religious sites" }));
+    expect(screen.getByText("This place is excluded by your active filters.")).toBeVisible();
+    await user.click(screen.getByRole("button", { name: "Open details for A Church" }));
+    expect(await screen.findByRole("heading", { name: "A Church" })).toBeVisible();
+    expect(
+      screen.queryByRole("button", { name: "Open details for A Museum" }),
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByText("This place is excluded by your active filters."),
+    ).not.toBeInTheDocument();
+    expect(screen.getByRole("checkbox", { name: "Museum" })).not.toBeChecked();
+  });
+
+  it("closes mobile discovery after selecting a suggestion and leaves the map centered on return", async () => {
+    window.innerWidth = 390;
+    const user = userEvent.setup();
+    render(<CityExplorer citySlug="rome" coordinates={[12, 41]} initialZoom={15} pois={pois} />);
+    await user.click(screen.getByRole("button", { name: "Open filters" }));
+    await user.type(screen.getByRole("combobox", { name: "Search" }), "museum");
+    await user.click(await screen.findByRole("option", { name: /A Museum\s*Rome/ }));
+    expect(await screen.findByRole("heading", { name: "A Museum" })).toBeVisible();
+    expect(screen.queryByRole("combobox", { name: "Search" })).not.toBeInTheDocument();
+    expect(cameraUpdates.at(-1)).toEqual({ center: [12, 41], offset: [0, 0] });
+    await user.click(screen.getByRole("button", { name: "Close" }));
+    expect(screen.getByRole("button", { name: "Open filters" })).toBeVisible();
   });
 });

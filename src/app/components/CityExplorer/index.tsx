@@ -58,6 +58,12 @@ export const CityExplorer = ({
   const { selectedPoiId, selectPoi } = useSelectedPoi(initialSelectedPoiId);
   const [previousSelectedPoiId, setPreviousSelectedPoiId] = useState(selectedPoiId);
   const [openRequestId, setOpenRequestId] = useState(0);
+  const [searchPoiId, setSearchPoiId] = useState<string | null>(null);
+  const [focusRequest, setFocusRequest] = useState<{
+    poi: Poi;
+    leftInset: number;
+    rightInset: number;
+  }>();
   const visiblePois = pois.filter(
     (poi) =>
       selectedCategories.length > 0 &&
@@ -67,11 +73,13 @@ export const CityExplorer = ({
         )),
   );
   const selectedPoi = selectedPoiId
-    ? visiblePois.find((poi) => poi.id === selectedPoiId)
+    ? (searchPoiId === selectedPoiId ? pois : visiblePois).find((poi) => poi.id === selectedPoiId)
     : undefined;
+  const searchExcluded = Boolean(selectedPoi && !visiblePois.includes(selectedPoi));
   if (selectedPoiId !== previousSelectedPoiId) {
     setPreviousSelectedPoiId(selectedPoiId);
     setOpenRequestId((current) => current + 1);
+    if (searchPoiId !== selectedPoiId) setSearchPoiId(null);
     if (selectedPoiId && !selectedPoi && pois.some((poi) => poi.id === selectedPoiId)) {
       setSelectedCategories(null);
     }
@@ -80,6 +88,7 @@ export const CityExplorer = ({
     setSelectedCategories(next);
     if (
       selectedPoi &&
+      searchPoiId !== selectedPoiId &&
       (!next.length ||
         (!availableCategories.every((category) => next.includes(category)) &&
           !next.some((category) =>
@@ -142,6 +151,15 @@ export const CityExplorer = ({
           }}
           onToggleAll={() => updateCategories(allCategoriesSelected ? [] : availableCategories)}
           onOpenPoi={openPoi}
+          onSearchPoi={(poi) => {
+            setSearchPoiId(poi.id);
+            openPoi(poi.id);
+            setFocusRequest({
+              poi,
+              leftInset: sidebarVisible && isDesktop ? (sidebarWidth ?? 352) : 0,
+              rightInset: detailsWidth ?? 448,
+            });
+          }}
           onClose={() => setSidebarOpen(false)}
         />
         <PanelResizeHandle edge="right" label="Resize filters panel" onResize={setSidebarWidth} />
@@ -161,7 +179,8 @@ export const CityExplorer = ({
         <Map
           coordinates={coordinates}
           zoom={zoom}
-          pois={visiblePois}
+          pois={searchExcluded && selectedPoi ? [...visiblePois, selectedPoi] : visiblePois}
+          focusRequest={focusRequest}
           selectedPoiId={selectedPoiId}
           categoryDefinitions={categoryDefinitions}
           onZoomChange={setZoom}
@@ -174,6 +193,7 @@ export const CityExplorer = ({
           citySlug={citySlug}
           openRequestId={openRequestId}
           poi={selectedPoi}
+          excludedByFilters={searchExcluded}
           width={detailsWidth}
           onResize={setDetailsWidth}
           onClose={() => selectPoi(null)}

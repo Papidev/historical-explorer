@@ -19,6 +19,7 @@ export const PoiDetailsDrawer = ({
   poi: selectedPoi,
   width,
   onResize,
+  excludedByFilters = false,
 }: {
   citySlug: string;
   onClose: () => void;
@@ -26,6 +27,7 @@ export const PoiDetailsDrawer = ({
   poi?: Poi;
   width?: number;
   onResize?: (width: number) => void;
+  excludedByFilters?: boolean;
 }) => {
   const [poi, setPoi] = useState(selectedPoi);
   if (selectedPoi && selectedPoi !== poi) setPoi(selectedPoi);
@@ -88,6 +90,11 @@ export const PoiDetailsDrawer = ({
               </h2>
             </div>
             <div className="px-5 py-4 text-sm leading-6 text-black/80">
+              {excludedByFilters && (
+                <p className="mb-4 rounded-lg bg-amber-50 px-3 py-2 text-sm text-amber-900">
+                  This place is excluded by your active filters.
+                </p>
+              )}
               {selectedPersonId ? (
                 isPersonLoading ? (
                   <p className="text-black/60">Loading person...</p>
