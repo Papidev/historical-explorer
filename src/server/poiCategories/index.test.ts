@@ -294,12 +294,13 @@ describe("shared curator type mappings", () => {
         "Church",
         "Museum",
         "Churches & cathedrals",
+        "Arts & Culture",
       ]);
     expect(
       createPoiTypeMappings(dataDirectory)
         .getCatalog()
         .types.find((type) => type.id === "Q999999")?.categories,
-    ).toEqual(["Church", "Museum", "Churches & cathedrals"]);
+    ).toEqual(["Church", "Museum", "Churches & cathedrals", "Arts & Culture"]);
     for (const city of ["rome", "another-city"])
       createPoiCategoriesForCity(city, dataDirectory).rebuild();
     for (const city of ["rome", "another-city"])
@@ -307,6 +308,7 @@ describe("shared curator type mappings", () => {
         "Church",
         "Museum",
         "Churches & cathedrals",
+        "Arts & Culture",
       ]);
     mappings.save("Q999999", []);
     expect(mappings.getCatalog().types.find((type) => type.id === "Q999999")?.categories).toEqual(
@@ -376,10 +378,10 @@ it("keeps Curator rules through a real source-type refresh", async () => {
     onRefresh: createPoiCategoriesForCity("rome", dataDirectory).refresh,
   });
   await types.refresh("unmapped-type");
-  expect(readCategories()["unmapped-type"]).toEqual(["Museum"]);
+  expect(readCategories()["unmapped-type"]).toEqual(["Museum", "Arts & Culture"]);
   expect(
     createPoiTypeMappings(dataDirectory)
       .getCatalog()
       .types.find((type) => type.id === "Q999999")?.categories,
-  ).toEqual(["Museum"]);
+  ).toEqual(["Museum", "Arts & Culture"]);
 });

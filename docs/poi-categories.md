@@ -6,9 +6,9 @@ Status: direct-type mapping, visitor sidebar (#59), and shared Curator edits (#6
 
 POI Types are Wikidata source classifications; Categories are an editable app-owned vocabulary shared across cities, separate from Story Content. Membership may reflect current or historical nature/function and does not promise current use, opening hours, or access. A Story/category difference may reflect a change of use.
 
-Category names are singular; visitor labels may be plural. The initial vocabulary is Religious sites, Cathedral, Basilica, Church, Museum, Castle, Mausoleum, Aqueduct, Amphitheatre, Arch, Square, and Archaeological Site.
+Category names are singular where applicable; visitor labels may be plural. The initial vocabulary includes Religion, Arts & Culture, Other places, Cathedral, Basilica, Church, Museum, Castle, Mausoleum, Aqueduct, Amphitheatre, Arch, Square, and Archaeological Site.
 
-The hierarchy has two levels. Each child has one top-level parent; categories with children cannot be nested. Religious sites contains Cathedral, Basilica, Church, Abbey, Baptistery, and Temple. The original parent ID `Churches & cathedrals` remains stable. This hierarchy is independent of Wikidata's.
+The hierarchy has two levels. Each child has one top-level parent; categories with children cannot be nested. Religion contains Cathedral, Basilica, Church, Abbey, Baptistery, and Temple. Arts & Culture contains Museum, Library, Archive, and Academy. Other places contains the remaining categories, including Castle, Archaeological Site, Square, and Garden. The Religion parent retains its original ID `Churches & cathedrals`. This hierarchy is independent of Wikidata's.
 
 In Manage categories, drag a child or top-level leaf onto a parent, or onto Top level to detach it. Moving preserves IDs and selected children, updates shared rules to the new parent, and removes the old parent assignment when none of its children remain assigned. Renaming preserves IDs and assignments; AI-created categories start at the top level.
 
@@ -47,7 +47,7 @@ The discovery sidebar is collapsible on mobile. All available categories start s
 | Clear all categories      | Show no POIs on the map or in the list.                   |
 | Exclude the open POI      | Close its detail and clear selection.                     |
 
-Active category subsets exclude uncategorized POIs. Religious child scopes are disjoint. For legacy mapped religious types, catalog naming determines the scope:
+Active category subsets exclude uncategorized POIs. Religion child scopes are disjoint. For legacy mapped religious types, catalog naming determines the scope:
 
 - Basilica in the name selects Basilica, even for a cathedral.
 - Cathedral requires Cathedral or Cattedrale, case-insensitive.
@@ -59,7 +59,7 @@ The planned name-search visibility exception is described in [Entity Discovery](
 
 ## Map colors
 
-Religious sites use golden-yellow markers with a dark outline. The visitor filters show a matching dot, yellow parent/child checkboxes, and a pale yellow background around the entire group, including expanded subcategories. Any POI matching that parent uses yellow, including places that also belong to other categories. Other markers retain the default map color. Category membership, including historical religious use, determines the color; it does not imply current worship or access.
+Religion uses golden-yellow markers with a dark outline, Arts & Culture uses green markers, and Other places uses the default blue markers. The visitor filters keep neutral group backgrounds and blue selection checkboxes; a small pin to the right of each parent checkbox matches its map-marker color. Any POI matching Religion uses yellow, including places that also belong to other categories. Arts & Culture takes precedence over Other places when both apply. Category membership, including historical religious use, determines the color; it does not imply current worship or access.
 
 ## Curator workflow
 

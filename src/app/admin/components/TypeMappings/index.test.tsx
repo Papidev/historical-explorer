@@ -105,7 +105,7 @@ it("lets the Curator assign several categories, reload, ignore and clear a share
   const user = userEvent.setup();
   const view = render(<CatalogProvider />);
   expect(screen.getByRole("button", { name: /church building[\s\S]*Q16970/ })).toHaveTextContent(
-    "Church, Religious sites",
+    "Church, Religion",
   );
   await user.click(screen.getByRole("checkbox", { name: "Museum" }));
   await user.click(screen.getByRole("button", { name: "Save categories" }));
@@ -122,6 +122,7 @@ it("lets the Curator assign several categories, reload, ignore and clear a share
       "Church",
       "Churches & cathedrals",
       "Museum",
+      "Arts & Culture",
     ]);
   view.unmount();
   render(<CatalogProvider />);
@@ -191,7 +192,7 @@ it("automatically creates a shared category with the selected AI, then lets the 
                 id: "Q12518",
                 decision: "mapped",
                 categoryIds: [],
-                newCategoryNames: ["Tower"],
+                newCategoryNames: ["Watchtower"],
                 reason: "A distinct architectural type.",
               },
             ],
@@ -227,19 +228,22 @@ it("automatically creates a shared category with the selected AI, then lets the 
         name: /^tower/,
       }),
     );
-    expect(screen.getByRole("checkbox", { name: "Tower" })).toBeChecked();
+    expect(screen.getByRole("checkbox", { name: "Watchtower" })).toBeChecked();
     expect(screen.queryByText("A distinct architectural type.")).not.toBeInTheDocument();
-    await user.click(screen.getByText("Manage categories (16)"));
-    await user.clear(screen.getByRole("textbox", { name: "Name for Tower" }));
-    await user.type(screen.getByRole("textbox", { name: "Name for Tower" }), "Observation tower");
-    await user.click(screen.getByRole("button", { name: "Rename Tower" }));
+    await user.click(screen.getByText(/^Manage categories/));
+    await user.clear(screen.getByRole("textbox", { name: "Name for Watchtower" }));
+    await user.type(
+      screen.getByRole("textbox", { name: "Name for Watchtower" }),
+      "Observation tower",
+    );
+    await user.click(screen.getByRole("button", { name: "Rename Watchtower" }));
     await waitFor(() => expect(screen.getByRole("status")).toHaveTextContent("Category saved"));
     await waitFor(() =>
       expect(screen.queryByRole("button", { name: "Working…" })).not.toBeInTheDocument(),
     );
     expect(await screen.findByRole("checkbox", { name: "Observation tower" })).toBeChecked();
     for (const city of ["rome", "florence"])
-      expect(createPoiCategoriesForCity(city, directory).getAll().tower).toEqual(["Tower"]);
+      expect(createPoiCategoriesForCity(city, directory).getAll().tower).toEqual(["Watchtower"]);
     await user.click(
       within(screen.getByRole("listitem", { name: "Category Observation tower" })).getByRole(
         "button",
@@ -273,15 +277,15 @@ it("automatically creates a shared category with the selected AI, then lets the 
 it("shows two category levels and saves all children when their parent is selected", async () => {
   const user = userEvent.setup();
   const view = render(<CatalogProvider />);
-  const children = screen.getByRole("group", { name: "Child categories of Religious sites" });
+  const children = screen.getByRole("group", { name: "Child categories of Religion" });
   expect(
     within(children)
       .getAllByRole("checkbox")
       .map((checkbox) => (checkbox as HTMLInputElement).labels?.[0].textContent?.trim()),
   ).toEqual(["Abbey", "Baptistery", "Basilica", "Cathedral", "Church", "Temple"]);
   expect(within(children).getByRole("checkbox", { name: "Church" })).toBeChecked();
-  await user.click(screen.getByRole("checkbox", { name: "Religious sites" }));
-  await user.click(screen.getByRole("checkbox", { name: "Religious sites" }));
+  await user.click(screen.getByRole("checkbox", { name: "Religion" }));
+  await user.click(screen.getByRole("checkbox", { name: "Religion" }));
   for (const name of ["Church", "Basilica", "Cathedral"])
     expect(within(children).getByRole("checkbox", { name })).toBeChecked();
   await user.click(screen.getByRole("button", { name: "Save categories" }));
@@ -306,15 +310,15 @@ it("shows two category levels and saves all children when their parent is select
   render(<CatalogProvider />);
   expect(screen.getByRole("checkbox", { name: "Cathedral" })).toBeChecked();
   await user.click(screen.getByRole("checkbox", { name: "Basilica" }));
-  expect(screen.getByRole("checkbox", { name: "Religious sites" })).toBeChecked();
+  expect(screen.getByRole("checkbox", { name: "Religion" })).toBeChecked();
   expect(screen.getByRole("checkbox", { name: "Church" })).toBeChecked();
   expect(screen.getByRole("checkbox", { name: "Cathedral" })).toBeChecked();
-  await user.click(screen.getByRole("checkbox", { name: "Religious sites" }));
+  await user.click(screen.getByRole("checkbox", { name: "Religion" }));
   for (const name of ["Church", "Basilica", "Cathedral"])
     expect(screen.getByRole("checkbox", { name })).not.toBeChecked();
-  await user.click(screen.getByText("Manage categories (15)"));
+  await user.click(screen.getByText(/^Manage categories/));
   expect(
-    within(screen.getByRole("list", { name: "Child categories of Religious sites" })).getByRole(
+    within(screen.getByRole("list", { name: "Child categories of Religion" })).getByRole(
       "textbox",
       { name: "Name for Cathedral" },
     ),
@@ -347,9 +351,9 @@ it("expands a parent-only assignment before persisting it across cities", () => 
 it("assigns a child's parent without its siblings and preserves that subset after saving", async () => {
   const user = userEvent.setup();
   const view = render(<CatalogProvider />);
-  await user.click(screen.getByRole("checkbox", { name: "Religious sites" }));
+  await user.click(screen.getByRole("checkbox", { name: "Religion" }));
   await user.click(screen.getByRole("checkbox", { name: "Basilica" }));
-  expect(screen.getByRole("checkbox", { name: "Religious sites" })).toBeChecked();
+  expect(screen.getByRole("checkbox", { name: "Religion" })).toBeChecked();
   expect(screen.getByRole("checkbox", { name: "Church" })).not.toBeChecked();
   expect(screen.getByRole("checkbox", { name: "Cathedral" })).not.toBeChecked();
   await user.click(screen.getByRole("button", { name: "Save categories" }));
@@ -364,50 +368,52 @@ it("assigns a child's parent without its siblings and preserves that subset afte
   view.unmount();
   render(<CatalogProvider />);
   expect(screen.getByRole("checkbox", { name: "Basilica" })).toBeChecked();
-  expect(screen.getByRole("checkbox", { name: "Religious sites" })).toBeChecked();
+  expect(screen.getByRole("checkbox", { name: "Religion" })).toBeChecked();
   expect(screen.getByRole("checkbox", { name: "Church" })).not.toBeChecked();
   expect(screen.getByRole("checkbox", { name: "Cathedral" })).not.toBeChecked();
   await user.click(screen.getByRole("checkbox", { name: "Basilica" }));
-  expect(screen.getByRole("checkbox", { name: "Religious sites" })).not.toBeChecked();
+  expect(screen.getByRole("checkbox", { name: "Religion" })).not.toBeChecked();
 });
 
 it("moves a child into another parent by drag and drop and retains its saved assignments", async () => {
   const user = userEvent.setup();
   const view = render(<CatalogProvider />);
-  await user.click(screen.getByText("Manage categories (15)"));
+  await user.click(screen.getByText(/^Manage categories/));
   expect(screen.queryByText("Parent for Church")).not.toBeInTheDocument();
   fireEvent.dragStart(screen.getByRole("button", { name: "Drag Church" }), {
     dataTransfer: { setData: () => {}, effectAllowed: "move" },
   });
-  fireEvent.dragOver(screen.getByRole("listitem", { name: "Category Museum" }), {
+  fireEvent.dragOver(screen.getByRole("listitem", { name: "Category Arts & Culture" }), {
     dataTransfer: { dropEffect: "move" },
   });
-  fireEvent.drop(screen.getByRole("listitem", { name: "Category Museum" }));
+  fireEvent.drop(screen.getByRole("listitem", { name: "Category Arts & Culture" }));
   await waitFor(() => expect(screen.getByRole("status")).toHaveTextContent("Category moved"));
   await waitFor(() =>
     expect(screen.queryByRole("button", { name: "Working…" })).not.toBeInTheDocument(),
   );
   expect(
-    within(await screen.findByRole("list", { name: "Child categories of Museum" })).getByRole(
-      "textbox",
-      { name: "Name for Church" },
-    ),
+    within(
+      await screen.findByRole("list", { name: "Child categories of Arts & Culture" }),
+    ).getByRole("textbox", { name: "Name for Church" }),
   ).toBeVisible();
   expect(screen.getByRole("checkbox", { name: "Church" })).toBeChecked();
-  expect(screen.getByRole("checkbox", { name: "Museum" })).toBeChecked();
-  expect(screen.getByRole("checkbox", { name: "Religious sites" })).not.toBeChecked();
+  expect(screen.getByRole("checkbox", { name: "Arts & Culture" })).toBeChecked();
+  expect(screen.getByRole("checkbox", { name: "Religion" })).not.toBeChecked();
   for (const city of ["rome", "florence"])
     expect(createPoiCategoriesForCity(city, directory).getAll().church).toEqual([
       "Church",
-      "Museum",
+      "Arts & Culture",
     ]);
   view.unmount();
   render(<CatalogProvider />);
-  await user.click(screen.getByText("Manage categories (15)"));
+  await user.click(screen.getByText(/^Manage categories/));
   expect(
-    within(screen.getByRole("list", { name: "Child categories of Museum" })).getByRole("button", {
-      name: "Drag Church",
-    }),
+    within(screen.getByRole("list", { name: "Child categories of Arts & Culture" })).getByRole(
+      "button",
+      {
+        name: "Drag Church",
+      },
+    ),
   ).toBeVisible();
   fireEvent.dragStart(screen.getByRole("button", { name: "Drag Church" }), {
     dataTransfer: { setData: () => {}, effectAllowed: "move" },
@@ -415,17 +421,20 @@ it("moves a child into another parent by drag and drop and retains its saved ass
   fireEvent.drop(screen.getByRole("group", { name: "Top-level category drop area" }));
   await waitFor(() =>
     expect(
-      screen.queryByRole("list", { name: "Child categories of Museum" }),
+      within(screen.getByRole("list", { name: "Child categories of Arts & Culture" })).queryByRole(
+        "button",
+        { name: "Drag Church" },
+      ),
     ).not.toBeInTheDocument(),
   );
   expect(createPoiTypeMappings(directory).getCatalog().types[0].categories).toEqual(["Church"]);
-  expect(screen.getByRole("checkbox", { name: "Museum" })).not.toBeChecked();
+  expect(screen.getByRole("checkbox", { name: "Arts & Culture" })).not.toBeChecked();
 });
 
 it("cancels deletion through the admin confirmation modal without changing the category", async () => {
   const user = userEvent.setup();
   render(<CatalogProvider />);
-  await user.click(screen.getByText("Manage categories (15)"));
+  await user.click(screen.getByText(/^Manage categories/));
   await user.click(
     within(screen.getByRole("listitem", { name: "Category Museum" })).getByRole("button", {
       name: "Delete",

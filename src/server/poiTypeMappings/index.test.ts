@@ -17,7 +17,7 @@ const rules = [
     id: "Q12518",
     decision: "mapped",
     categoryIds: [],
-    newCategoryNames: ["Tower"],
+    newCategoryNames: ["Watchtower"],
     reason: "A distinct architectural place type.",
   },
   {
@@ -99,16 +99,19 @@ it("uses the selected AI, reuses categories and creates shared categories only f
     updatedPois: 4,
   });
   for (const city of ["rome", "florence"]) {
-    expect(createPoiCategoriesForCity(city, directory).getAll().tower).toEqual(["Tower"]);
-    expect(createPoiCategoriesForCity(city, directory).getAll().museum).toEqual(["Museum"]);
+    expect(createPoiCategoriesForCity(city, directory).getAll().tower).toEqual(["Watchtower"]);
+    expect(createPoiCategoriesForCity(city, directory).getAll().museum).toEqual([
+      "Museum",
+      "Arts & Culture",
+    ]);
     createPoiCategoriesForCity(city, directory).rebuild();
-    expect(createPoiCategoriesForCity(city, directory).getAll().tower).toEqual(["Tower"]);
+    expect(createPoiCategoriesForCity(city, directory).getAll().tower).toEqual(["Watchtower"]);
   }
   const reloaded = createPoiTypeMappings(directory).getCatalog();
   expect(reloaded.types.find((type) => type.id === "Q12518")).toMatchObject({
     origin: "automatic",
     reason: rules[0].reason,
-    categories: ["Tower"],
+    categories: ["Watchtower"],
   });
   expect(reloaded.types.find((type) => type.id === "Q16970")?.categories).toEqual(["Church"]);
   expect(reloaded.types.find((type) => type.id === "Q999")?.categories).toEqual([]);
@@ -121,16 +124,16 @@ it("uses the selected AI, reuses categories and creates shared categories only f
 
 it("renames without changing identities, deletes across cities and protects corrections from regeneration", async () => {
   const repository = createPoiTypeMappings(directory);
-  repository.saveCategory(null, "Tower");
-  repository.save("Q12518", ["Tower"]);
-  repository.saveCategory("Tower", "Observation tower");
+  repository.saveCategory(null, "Watchtower");
+  repository.save("Q12518", ["Watchtower"]);
+  repository.saveCategory("Watchtower", "Observation tower");
   expect(
-    repository.getCatalog().categories?.find((category) => category.id === "Tower")?.name,
+    repository.getCatalog().categories?.find((category) => category.id === "Watchtower")?.name,
   ).toBe("Observation tower");
   expect(repository.getCatalog().types.find((type) => type.id === "Q12518")?.categories).toEqual([
-    "Tower",
+    "Watchtower",
   ]);
-  repository.deleteCategory("Tower");
+  repository.deleteCategory("Watchtower");
   for (const city of ["rome", "florence"])
     expect(createPoiCategoriesForCity(city, directory).getAll().tower).toEqual([]);
   expect(repository.getCatalog().types.find((type) => type.id === "Q12518")).toMatchObject({
@@ -157,9 +160,9 @@ it("keeps manual edits made while the AI is responding", async () => {
     categories: [],
     origin: "manual",
   });
-  expect(repository.getCatalog().categories?.some((category) => category.name === "Tower")).toBe(
-    false,
-  );
+  expect(
+    repository.getCatalog().categories?.some((category) => category.name === "Watchtower"),
+  ).toBe(false);
 });
 
 it("leaves uncertain types unmapped and lets the AI explicitly ignore a broad type", async () => {
@@ -202,7 +205,7 @@ it("rejects invalid AI output without changing rules or categories", async () =>
   await expect(createPoiTypeMappings(directory).classify(ai)).rejects.toThrow("unknown category");
   expect(readFileSync(path.join(directory, "poi-type-category-map.json"), "utf-8")).toBe(before);
   expect(
-    readPoiCategoryCatalog(directory).categories.some((category) => category.id === "Tower"),
+    readPoiCategoryCatalog(directory).categories.some((category) => category.id === "Watchtower"),
   ).toBe(false);
 });
 
@@ -290,18 +293,18 @@ it("assigns only the parent and selected child for a leaf-only rule, including A
 it("moves a child between parents and to the top level without losing shared type assignments", () => {
   const repository = createPoiTypeMappings(directory);
   repository.save("Q16970", ["Church"]);
-  expect(repository.moveCategory("Church", "Museum")).toMatchObject({ updatedPois: 10 });
+  expect(repository.moveCategory("Church", "Arts & Culture")).toMatchObject({ updatedPois: 10 });
   expect(
     repository.getCatalog().categories?.find((category) => category.id === "Church")?.parent,
-  ).toBe("Museum");
+  ).toBe("Arts & Culture");
   expect(repository.getCatalog().types.find((type) => type.id === "Q16970")?.categories).toEqual([
     "Church",
-    "Museum",
+    "Arts & Culture",
   ]);
   for (const city of ["rome", "florence"])
     expect(createPoiCategoriesForCity(city, directory).getAll().church).toEqual([
       "Church",
-      "Museum",
+      "Arts & Culture",
     ]);
   expect(repository.getCatalog().types.find((type) => type.id === "Q999")?.categories).toEqual([]);
   repository.moveCategory("Church", null);
@@ -341,11 +344,17 @@ it("deletes a parent and all its children across shared rules and city POIs", ()
     categories: undefined,
     origin: "manual",
   });
-  expect(catalog.types.find((type) => type.id === "Q12518")?.categories).toEqual(["Museum"]);
+  expect(catalog.types.find((type) => type.id === "Q12518")?.categories).toEqual([
+    "Museum",
+    "Arts & Culture",
+  ]);
   expect(catalog.types.find((type) => type.id === "Q999")?.categories).toEqual([]);
   for (const city of ["rome", "florence"]) {
     expect(createPoiCategoriesForCity(city, directory).getAll().church).toEqual([]);
-    expect(createPoiCategoriesForCity(city, directory).getAll().tower).toEqual(["Museum"]);
+    expect(createPoiCategoriesForCity(city, directory).getAll().tower).toEqual([
+      "Museum",
+      "Arts & Culture",
+    ]);
   }
 });
 

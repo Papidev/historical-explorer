@@ -4,12 +4,20 @@
     fill: var(--color-yellow-400);
   }
 
+  .arts-culture-marker svg g[fill="#10b981"] > path {
+    fill: var(--color-emerald-500);
+  }
+
   .selected-poi-marker {
     z-index: 1;
   }
 
-  .selected-poi-marker svg g:is([fill="#3FB1CE"], [fill="#facc15"]) > path {
+  .selected-poi-marker svg g:is([fill="#3FB1CE"], [fill="#facc15"], [fill="#10b981"]) > path {
     fill: #36a477;
+  }
+
+  .selected-poi-marker.arts-culture-marker svg g[fill="#10b981"] > path {
+    fill: var(--color-emerald-800);
   }
 
   .poi-preview-popup {

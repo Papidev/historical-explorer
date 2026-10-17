@@ -162,7 +162,14 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
         "Churches & cathedrals",
         categoryDefinitions,
       );
-      const marker = new maplibregl.Marker(isReligious ? { color: "#facc15" } : undefined)
+      const isArtsAndCulture = matchesPoiCategory(
+        poi.categories,
+        "Arts & Culture",
+        categoryDefinitions,
+      );
+      const marker = new maplibregl.Marker(
+        isReligious ? { color: "#facc15" } : isArtsAndCulture ? { color: "#10b981" } : undefined,
+      )
         .setLngLat([poi.coordinates.lng, poi.coordinates.lat])
         .addTo(map as MapLibreMap);
       const element = marker.getElement();
@@ -172,6 +179,8 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
       if (isReligious) {
         // Scope styling to MapLibre’s generated marker; preserve its shape and shadow.
         element.classList.add("religious-site-marker");
+      } else if (isArtsAndCulture) {
+        element.classList.add("arts-culture-marker");
       }
       element.style.cursor = "pointer";
       element.tabIndex = 0;

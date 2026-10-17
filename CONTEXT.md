@@ -45,7 +45,7 @@ An app-owned grouping shared across cities, with a singular name, used to filter
 _Avoid_: POI Type, Wikidata category
 
 **POI Subcategory**:
-A **POI Category** nested directly under a broader parent **POI Category**. Its **POIs** also belong to the parent's discovery scope; Cathedral, Basilica, Church, Abbey, Baptistery, and Temple are subcategories of Religious sites. Cathedral, Basilica, and Church discovery scopes follow the place naming and precedence rules.
+A **POI Category** nested directly under a broader parent **POI Category**. Its **POIs** also belong to the parent's discovery scope; Cathedral, Basilica, Church, Abbey, Baptistery, and Temple are subcategories of Religion, Museum, Library, Archive, and Academy belong to Arts & Culture, and the remaining categories belong to Other places. Cathedral, Basilica, and Church discovery scopes follow the place naming and precedence rules.
 _Avoid_: POI Type, Wikidata subclass
 
 **POI Type Mapping**:
