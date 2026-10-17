@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.9.0
+
+### Minor Changes
+
+- Add name search for published places with keyboard-accessible suggestions and map navigation. Keep active filters unchanged when opening an excluded search result, and compact discovery headers and drawer close controls.
+
 ## 0.8.1
 
 ### Patch Changes
