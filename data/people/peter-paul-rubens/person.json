@@ -76,13 +76,14 @@
     "title": "Peter Paul Rubens",
     "url": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens"
   },
+  "sourceContextWikidataIds": [
+    "Q841506",
+    "Q2031901"
+  ],
   "generation": {
     "aiMode": "cloud",
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-10-10T17:24:55.258Z"
-  },
-  "sourceContextWikidataIds": [
-    "Q841506"
-  ]
+  }
 }

@@ -1,5 +1,6 @@
 import { parseEnglishWikipediaTitle } from "./normalize";
 import { fetchWikimediaJson } from "./fetchWikimediaJson";
+import { isInvalidPoiIdentity } from "./isInvalidPoiIdentity";
 import type { PoiInput, ResolvedPage, WikipediaLanguage } from "./types";
 
 const WIKIDATA_API = "https://www.wikidata.org/w/api.php";
@@ -18,16 +19,20 @@ const resolveViaWikidata = async (wikidataId: string) => {
   const url = new URL(WIKIDATA_API);
   url.searchParams.set("action", "wbgetentities");
   url.searchParams.set("ids", wikidataId);
-  url.searchParams.set("props", "sitelinks");
+  url.searchParams.set("props", "sitelinks|claims");
   url.searchParams.set("sitefilter", "enwiki|itwiki");
   url.searchParams.set("format", "json");
   const data = await fetchWikimediaJson<{
     entities?: Record<
       string,
-      { sitelinks?: { enwiki?: { title?: string }; itwiki?: { title?: string } } }
+      {
+        sitelinks?: { enwiki?: { title?: string }; itwiki?: { title?: string } };
+        claims?: NonNullable<Parameters<typeof isInvalidPoiIdentity>[0]>["claims"];
+      }
     >;
   }>(url);
-  return data.entities?.[wikidataId]?.sitelinks;
+  const entity = data.entities?.[wikidataId];
+  return { sitelinks: entity?.sitelinks, isInvalid: isInvalidPoiIdentity(entity) };
 };
 
 const normalizeTitle = (title: string) =>
@@ -116,8 +121,17 @@ const findPage = async (
   const data = await fetchWikimediaJson<{ query?: { pages?: WikipediaPage[] } }>(url);
   const page = data.query?.pages?.[0];
   if (poiCoordinates && (!page || !isNearbyPlace(page, poiCoordinates))) return undefined;
+  if (
+    page?.pageprops?.wikibase_item &&
+    (await resolveViaWikidata(page.pageprops.wikibase_item)).isInvalid
+  )
+    return undefined;
   return page && !page.missing && page.title && page.pageprops?.disambiguation === undefined
-    ? { title: page.title, englishTitle: page.langlinks?.find(({ lang }) => lang === "en")?.title }
+    ? {
+        title: page.title,
+        englishTitle: page.langlinks?.find(({ lang }) => lang === "en")?.title,
+        wikidataId: page.pageprops?.wikibase_item,
+      }
     : undefined;
 };
 
@@ -191,23 +205,26 @@ const searchByCoordinates = async (poi: PoiInput): Promise<ResolvedPage | undefi
     ...new Set(nearbyPages.flatMap(({ wikidataId }) => (wikidataId ? [wikidataId] : []))),
   ];
   const namesById = new Map<string, string[]>();
+  const invalidIds = new Set<string>();
   for (let index = 0; index < ids.length; index += 50) {
     const url = new URL(WIKIDATA_API);
     url.searchParams.set("action", "wbgetentities");
     url.searchParams.set("ids", ids.slice(index, index + 50).join("|"));
-    url.searchParams.set("props", "labels|aliases");
+    url.searchParams.set("props", "labels|aliases|claims");
     url.searchParams.set("languages", "en|it");
     url.searchParams.set("format", "json");
     const data = await fetchWikimediaJson<{
       entities?: Record<
         string,
         {
+          claims?: NonNullable<Parameters<typeof isInvalidPoiIdentity>[0]>["claims"];
           labels?: Record<string, { value: string }>;
           aliases?: Record<string, Array<{ value: string }>>;
         }
       >;
     }>(url);
     for (const [id, entity] of Object.entries(data.entities ?? {})) {
+      if (isInvalidPoiIdentity(entity)) invalidIds.add(id);
       namesById.set(id, [
         ...Object.values(entity.labels ?? {}).map(({ value }) => value),
         ...Object.values(entity.aliases ?? {})
@@ -219,6 +236,7 @@ const searchByCoordinates = async (poi: PoiInput): Promise<ResolvedPage | undefi
 
   const matches = new Map<string, (typeof nearbyPages)[number]>();
   for (const page of nearbyPages) {
+    if (invalidIds.has(page.wikidataId ?? "")) continue;
     if (
       [page.title, page.englishTitle, ...(namesById.get(page.wikidataId ?? "") ?? [])].some(
         (name) => name && normalizeTitle(name) === normalizeTitle(poi.name),
@@ -239,6 +257,7 @@ const searchByCoordinates = async (poi: PoiInput): Promise<ResolvedPage | undefi
       selected: {
         title: page.englishTitle ?? page.title,
         language: page.englishTitle ? "en" : page.language,
+        wikidataId: page.wikidataId,
       },
     };
   }
@@ -246,22 +265,30 @@ const searchByCoordinates = async (poi: PoiInput): Promise<ResolvedPage | undefi
 
 export const resolvePageForPoi = async (poi: PoiInput): Promise<ResolvedPage> => {
   const englishTagTitle = parseEnglishWikipediaTitle(poi.sourceHints.wikipedia);
-  if (englishTagTitle) {
+  const englishTag = englishTagTitle ? await findPage(englishTagTitle, "en") : undefined;
+  if (englishTag) {
     return {
       method: "wikipedia_tag_en",
-      candidates: [{ title: englishTagTitle, source: "wikipedia_tag_en" }],
-      selected: { title: englishTagTitle },
+      candidates: [{ title: englishTag.title, source: "wikipedia_tag_en" }],
+      selected: { title: englishTag.title, wikidataId: englishTag.wikidataId },
     };
   }
 
-  const sitelinks = poi.sourceHints.wikidata
+  const entity = poi.sourceHints.wikidata
     ? await resolveViaWikidata(poi.sourceHints.wikidata)
     : undefined;
-  if (sitelinks?.enwiki?.title) {
+  const sitelinks = entity?.isInvalid ? undefined : entity?.sitelinks;
+  const englishLinked = sitelinks?.enwiki?.title
+    ? await findPage(sitelinks.enwiki.title, "en")
+    : undefined;
+  if (englishLinked) {
     return {
       method: "wikidata_enwiki",
-      candidates: [{ title: sitelinks.enwiki.title, source: "wikidata_enwiki" }],
-      selected: { title: sitelinks.enwiki.title },
+      candidates: [{ title: englishLinked.title, source: "wikidata_enwiki" }],
+      selected: {
+        title: englishLinked.title,
+        wikidataId: englishLinked.wikidataId ?? poi.sourceHints.wikidata,
+      },
     };
   }
 
@@ -278,6 +305,7 @@ export const resolvePageForPoi = async (poi: PoiInput): Promise<ResolvedPage> =>
       selected: {
         title: linkedItalian.englishTitle ?? linkedItalian.title,
         language: linkedItalian.englishTitle ? "en" : "it",
+        wikidataId: linkedItalian.wikidataId,
       },
     };
   }
@@ -287,7 +315,7 @@ export const resolvePageForPoi = async (poi: PoiInput): Promise<ResolvedPage> =>
     return {
       method: "name_enwiki",
       candidates: [{ title: english.title, source: "name_enwiki" }],
-      selected: { title: english.title },
+      selected: { title: english.title, wikidataId: english.wikidataId },
     };
   }
 
@@ -300,6 +328,7 @@ export const resolvePageForPoi = async (poi: PoiInput): Promise<ResolvedPage> =>
       selected: {
         title: italian.englishTitle ?? italian.title,
         language: italian.englishTitle ? "en" : "it",
+        wikidataId: italian.wikidataId,
       },
     };
   }

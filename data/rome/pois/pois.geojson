@@ -2683,12 +2683,13 @@
     },
     {
       "id": "basilica-hilariana",
-      "wikidataId": "Q3959538",
+      "wikidataId": "Q25348890",
       "type": "Feature",
       "properties": {
         "name": "Basilica Hilariana",
         "website": "http://archeoroma.beniculturali.it/en/node/148",
-        "wikipedia": "it:Basiliche civili antiche di Roma"
+        "wikipedia": "en:Basilica Hilariana",
+        "wikimedia_commons": "Category:Basilica Hilariana (Rome)"
       },
       "geometry": {
         "type": "Point",
@@ -5954,12 +5955,9 @@
     },
     {
       "id": "criptoportico-neroniano",
-      "wikidataId": "Q660398",
       "type": "Feature",
       "properties": {
-        "name": "Criptoportico Neroniano",
-        "wikimedia_commons": "Category:Cryptoporticus",
-        "wikipedia": "it:Criptoportico"
+        "name": "Criptoportico Neroniano"
       },
       "geometry": {
         "type": "Point",

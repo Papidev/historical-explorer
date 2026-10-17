@@ -7,33 +7,47 @@
     "description": [
       {
         "text": "Pier Donato Cesi (1522–1586) was an Italian Catholic Cardinal from the noble Cesi family, the older brother of Bishop Angelo Cesi, and was elevated to the cardinalate in 1570. He served as Cardinal‑Priest of Santa Barbara, later of San Vitale, and finally of Sant’Anastasia in 1584.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "Beyond his ecclesiastical duties, Cesi was a patron of the arts and a collector. In 1565 he and his brother Cardinal Ottavio Cesi purchased the Palazzo Armellini in Borgo, and he oversaw its renovation by Martino Longhi the Elder between 1570 and 1588, while also amassing a large antiques collection and a substantial library in his palace.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "curiosities": [
       {
         "text": "He bought the Palazzo Armellini in Borgo with his brother in 1565 and supervised its renovation by Martino Longhi the Elder from 1570 to 1588.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "Cesi was an avid art lover who hosted a large antiques collection and a large library in his palace.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He was nominated at the Papal conclave of 1585 but was not elected to the papacy.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "While bishop, he was the principal co‑consecrator of Filippo Maria Campeggi, Coadjutor Bishop of Feltre (1559), and of Giulio Sauli, Bishop of Brugnato (1566).",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He is sometimes referred to as Pier Donato Cesi, seniore, to distinguish him from his relative Pier Donato Cesi iuniore (1583–1656).",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "birthDate": {
@@ -69,5 +83,8 @@
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-10-10T23:46:57.523Z"
-  }
+  },
+  "sourceContextWikidataIds": [
+    "Q2031901"
+  ]
 }

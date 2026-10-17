@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.9.1
+
+### Patch Changes
+
+- Reject Wikimedia collections and generic concepts as POI sources, revalidate saved sources before resuming generation, and correct affected Rome content.
+
 ## 0.9.0
 
 ### Minor Changes

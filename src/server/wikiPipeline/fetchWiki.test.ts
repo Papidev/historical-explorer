@@ -57,7 +57,7 @@ describe("Wikipedia source acquisition", () => {
       }),
       http.get("https://www.wikidata.org/w/api.php", ({ request }) => {
         const url = new URL(request.url);
-        expect(url.searchParams.get("props")).toBe("labels|aliases");
+        expect(url.searchParams.get("props")).toBe("labels|aliases|claims");
         return HttpResponse.json({
           entities: Object.fromEntries(
             (url.searchParams.get("ids") ?? "").split("|").map((id) => [
@@ -398,6 +398,10 @@ describe("Wikipedia source acquisition", () => {
 
   it("prefers an existing English Wikidata link without searching by name", async () => {
     server.use(
+      http.get("https://en.wikipedia.org/w/api.php", ({ request }) => {
+        expect(new URL(request.url).searchParams.get("titles")).toBe("Roman aqueduct");
+        return HttpResponse.json({ query: { pages: [{ title: "Roman aqueduct" }] } });
+      }),
       http.get("https://www.wikidata.org/w/api.php", ({ request }) => {
         expect(new URL(request.url).searchParams.get("ids")).toBe("Q100");
         return HttpResponse.json({

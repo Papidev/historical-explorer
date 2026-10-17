@@ -81,5 +81,8 @@
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-09-18T23:38:37.195Z"
-  }
+  },
+  "sourceContextWikidataIds": [
+    "Q2031901"
+  ]
 }

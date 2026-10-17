@@ -306,7 +306,7 @@ describe("Story Workflow Interface", () => {
       }),
     ).resolves.toMatchObject({ relatedPeople: "resolved" });
     expect(generations).toBe(1);
-    expect(sourceRequests).toBe(1);
+    expect(sourceRequests).toBe(3);
     expect(imageRequests).toBe(1);
   });
 

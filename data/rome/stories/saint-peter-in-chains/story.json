@@ -1,14 +1,24 @@
 {
+  "wikipediaSources": [
+    {
+      "title": "San Pietro in Vincoli",
+      "url": "https://en.wikipedia.org/wiki/San_Pietro_in_Vincoli"
+    }
+  ],
   "introduction": {
     "text": "The Basilica di San Pietro in Vincoli, also known as Saint Peter in Chains, is a Roman Catholic titular church and minor basilica in Rome that houses the relic of the chains that bound Saint Peter and Michelangelo's famous statue of Moses. It is significant for its religious relics, Renaissance art, and architectural history.",
-    "sourceIds": ["wikipedia"]
+    "sourceIds": [
+      "wikipedia"
+    ]
   },
   "topics": {
     "history": [
       {
         "id": "history1",
         "description": "Reconstruction on older foundations between 432 and 440 to house the chains relic of Saint Peter.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 432,
           "precision": "approximate",
@@ -19,7 +29,9 @@
       {
         "id": "history2",
         "description": "Consecrated in 439 by Pope Sixtus III.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 439,
           "precision": "exact",
@@ -29,7 +41,9 @@
       {
         "id": "history6",
         "description": "7th‑century mosaic of Saint Sebastian in the third altar of the left aisle.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 600,
           "precision": "approximate",
@@ -40,7 +54,9 @@
       {
         "id": "history3",
         "description": "Major rebuilding by Cardinal Giuliano della Rovere from 1471 to 1503, including the front portico and cloister.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1471,
           "precision": "approximate",
@@ -51,7 +67,9 @@
       {
         "id": "history4",
         "description": "Vault lowered in 1705 under architect Francesco Fontana.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1705,
           "precision": "exact",
@@ -61,7 +79,9 @@
       {
         "id": "history5",
         "description": "1876 archaeological discovery of tombs of the seven Maccabean martyrs.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1876,
           "precision": "exact",
@@ -73,59 +93,81 @@
       {
         "id": "design1",
         "description": "Front portico added in 1475, attributed to Baccio Pontelli.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "id": "design2",
         "description": "Cloister built between 1493 and 1503, attributed to Giuliano da Sangallo.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "id": "design3",
         "description": "18th‑century coffered ceiling frescoed by Giovanni Battista Parodi in 1706.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "id": "design4",
         "description": "Vault lowered in 1705 by Francesco Fontana.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "art": [
       {
         "id": "art1",
         "description": "Michelangelo's statue of Moses (1515), originally part of Pope Julius II's tomb.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "id": "art2",
         "description": "Canvases of Saint Augustine and St Margaret by Guercino.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "id": "art3",
         "description": "Monument of Cardinal Girolamo Agucchi designed by Domenichino.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "id": "art4",
         "description": "Deposition altarpiece by Cristoforo Roncalli.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "id": "art5",
         "description": "Tomb of Cardinal Nicholas of Kues with relief by Andrea Bregno.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "id": "art6",
         "description": "Tomb monument of Cardinal Cinzio Aldobrandini (1705–07) by Carlo Francesco Bizzaccheri.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "id": "art7",
         "description": "7th‑century mosaic of Saint Sebastian.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ]
   },
@@ -133,52 +175,65 @@
     {
       "name": "Michelangelo",
       "personId": "michelangelo-buonarroti",
-      "sourceIds": ["wikipedia"]
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Pope Julius II",
-      "sourceIds": ["wikipedia"]
+      "personId": "giuliano-della-rovere",
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Giuliano della Rovere",
       "personId": "giuliano-della-rovere",
-      "sourceIds": ["wikipedia"]
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Pope Sixtus III",
       "personId": "pope-sixtus-iii",
-      "sourceIds": ["wikipedia"]
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Pope Adrian I",
       "personId": "pope-adrian-i",
-      "sourceIds": ["wikipedia"]
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Baccio Pontelli",
       "personId": "baccio-pontelli",
-      "sourceIds": ["wikipedia"]
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Giuliano da Sangallo",
       "personId": "giuliano-da-sangallo",
-      "sourceIds": ["wikipedia"]
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Guercino",
       "personId": "guercino",
-      "sourceIds": ["wikipedia"]
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Domenichino",
       "personId": "domenichino",
-      "sourceIds": ["wikipedia"]
-    }
-  ],
-  "wikipediaSources": [
-    {
-      "title": "San Pietro in Vincoli",
-      "url": "https://en.wikipedia.org/wiki/San_Pietro_in_Vincoli"
+      "sourceIds": [
+        "wikipedia"
+      ]
     }
   ]
 }

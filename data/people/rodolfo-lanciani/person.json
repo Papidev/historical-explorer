@@ -7,25 +7,35 @@
     "description": [
       {
         "text": "Rodolfo Lanciani was an Italian engineer, archaeologist and historian who grew up in a noble family from Monticelli and studied philosophy, mathematics and engineering at the University of Rome. He became a central figure in the excavation and documentation of ancient Rome, serving as secretary of the Commissione Archeologica Comunale from its foundation in 1872 and later as engineer of the Direzione Generale dei Musei e Scavi at the Ministry of Public Education.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "Lanciani is best known for his monumental works on the topography of Rome, including the 1:1000 scale plan *Forma Urbis Romae* (1893‑1901) and the multi‑volume *Storia degli Scavi di Roma* (1902‑1912). These publications remain valuable resources for scholars and travelers alike. He also held the title of senator of the Kingdom of Italy from 1911 and was a founder of the Società romana di storia patria.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "curiosities": [
       {
         "text": "He was appointed senator of the Kingdom of Italy on 3 June 1911.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "The town of Guidonia Montecelio dedicated its Civic Museum to him, located in the former Convent of San Michele.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "His 1:1000 scale plan *Forma Urbis Romae* includes all known Roman monuments up to the 6th century and also overlays modern streets and buildings.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "deathDate": {
@@ -59,5 +69,8 @@
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-10-10T20:42:47.534Z"
-  }
+  },
+  "sourceContextWikidataIds": [
+    "Q2901253"
+  ]
 }

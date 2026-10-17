@@ -1,3 +1,44 @@
 {
-  "candidates": []
+  "candidates": [
+    {
+      "commonsFileName": "Basilica_Hilariana_mosaic.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Basilica_Hilariana_mosaic.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Basilica_Hilariana_mosaic.jpg/960px-Basilica_Hilariana_mosaic.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Basilica_Hilariana_mosaic.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Carlo Dell'Orto",
+      "author": "Carlo Dell'Orto",
+      "width": 4608,
+      "height": 3456,
+      "discoveredVia": "commons-category",
+      "isProposed": true
+    },
+    {
+      "commonsFileName": "Celio_-_Villa_Celimontana_1822.JPG",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Celio_-_Villa_Celimontana_1822.JPG",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Celio_-_Villa_Celimontana_1822.JPG/960px-Celio_-_Villa_Celimontana_1822.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Celio_-_Villa_Celimontana_1822.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Lalupa",
+      "author": "Lalupa",
+      "width": 2272,
+      "height": 1704,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    },
+    {
+      "commonsFileName": "Villa_Celimontana_802.jpg",
+      "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Villa_Celimontana_802.jpg",
+      "thumbnailUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Villa_Celimontana_802.jpg/960px-Villa_Celimontana_802.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Villa_Celimontana_802.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "attribution": "m/m",
+      "author": "m/m",
+      "width": 1269,
+      "height": 1600,
+      "discoveredVia": "commons-category",
+      "isProposed": false
+    }
+  ],
+  "selectedCommonsFileName": "Basilica_Hilariana_mosaic.jpg"
 }

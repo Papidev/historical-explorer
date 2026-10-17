@@ -30603,10 +30603,7 @@
         "historic": "archaeological_site",
         "historic:civilization": "ancient_roman",
         "name": "Criptoportico Neroniano",
-        "name:de": "Kryptoportikus des Nero",
-        "wikidata": "Q660398",
-        "wikimedia_commons": "Category:Cryptoporticus",
-        "wikipedia": "it:Criptoportico"
+        "name:de": "Kryptoportikus des Nero"
       },
       "geometry": {
         "type": "Point",
@@ -32488,8 +32485,9 @@
         "historic": "archaeological_site",
         "name": "Basilica Hilariana",
         "website": "http://archeoroma.beniculturali.it/en/node/148",
-        "wikidata": "Q3959538",
-        "wikipedia": "it:Basiliche civili antiche di Roma"
+        "wikidata": "Q25348890",
+        "wikipedia": "en:Basilica Hilariana",
+        "wikimedia_commons": "Category:Basilica Hilariana (Rome)"
       },
       "geometry": {
         "type": "Point",

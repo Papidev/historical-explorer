@@ -7,25 +7,35 @@
     "description": [
       {
         "text": "Baccio Pontelli was born around 1449 in Florence, where he learned the art of wood inlay and marquetry in the workshop of Giuliano and Benedetto da Maiano. His early career was shaped by a trip to Urbino between 1480 and 1482, during which he worked on the Studiolo of Duke Federico de Montefeltro and absorbed the influence of Francesco di Giorgio Martini.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "Later he moved to Rome, where he served as an architect during Pope Sixtus IV’s urban renewal program. His contributions included supervising construction on Santa Aurea, the Ponte Sisto, the hospital of Santo Spirito in Sassia, the church of Sant'Agostino, the facade of Santa Maria del Popolo, San Pietro in Vincoli, and Santi Apostoli, and he is credited with the design of the Sistine Chapel. In his final years he worked on military fortresses in the Marche region and in the Kingdom of Naples, and he died around 1494 in Urbino, where he was buried in the church of St. Dominic.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "curiosities": [
       {
         "text": "Pontelli is credited with designing the Sistine Chapel, a project that later became famous for Michelangelo’s frescoes.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He played a key role in the construction of the Ponte Sisto, a bridge that still carries traffic across the Tiber in Rome.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "After his death, a nephew placed an epitaph in 1577 in the church of St. Dominic in Urbino, where Pontelli was interred.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "birthDate": {
@@ -61,5 +71,8 @@
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-10-10T02:22:21.409Z"
-  }
+  },
+  "sourceContextWikidataIds": [
+    "Q542070"
+  ]
 }

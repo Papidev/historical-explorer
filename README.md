@@ -43,7 +43,7 @@ increment before merging, so Vercel deploys the prepared version from `main`.
 The initial tracked release establishes the existing `0.1.0` as the baseline;
 the increment requirement applies to subsequent application changes.
 Use `patch` for fixes and small content/UI updates, `minor` for new features, and
-`major` for incompatible changes. Internal documentation and changes limited to
+`major` for incompatible changes. Internal documentation, `.gitignore`, and changes limited to
 GitHub Actions workflows (including action dependency updates) and the other
 CI/release automation files allowed by `scripts/check-release.mjs` do not
 require an increment. Changes limited to dependency sections in `package.json`
@@ -148,6 +148,8 @@ Admin has **POIs**, **People**, and **Type mappings** tabs. POIs and People have
 Empty rows are **To do**. Attempted/generated rows with outstanding work/errors are **Needs attention**. **Needs source** keeps generated POIs and acquired Types visible, with missing-source/error details that persist after the toast closes and neutral placeholders without generation controls for unavailable artifacts.
 
 **Generate** (empty row) and **Refresh** (existing row) recreate POI metadata, acquire Wikipedia, retain discovered Wikidata identity, refresh Types when available, generate image candidates, and generate structured Story Content/Related People. Preview, Refresh, and Delete are available for Story Content; commit reviewed artifacts.
+
+Imported Wikipedia and Wikidata links are checked for lists, categories, and disambiguation pages before use. Source acquisition resolves the current POI references again; resuming generation rechecks Sources, and a changed Source identity requires new Story Content before retrying Related People.
 
 Temporary refresh errors preserve existing artifacts. If no unambiguous English/Italian Wikipedia page resolves, remove the POI's Source, Story, and image candidates and mark it waiting for a Source; shared People and logs remain. See [Story Workflow Architecture](docs/story-workflow-architecture.md).
 

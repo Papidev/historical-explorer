@@ -7,25 +7,35 @@
     "description": [
       {
         "text": "Giuliano da Sangallo, born around 1445 in Florence, began his career as a joiner’s apprentice before catching the eye of Lorenzo de’ Medici. His skill in woodworking and his study of classical architecture led Lorenzo to commission him for military fortifications in Castellina, where Giuliano successfully defended the town against the Duke of Calabria. This early success cemented a lifelong partnership with the Medici, who repeatedly turned to him for both secular and religious projects.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "During the late 15th century Giuliano designed several landmark buildings, including the Medici Villa at Poggio a Caiano, the Greek‑cross Santa Maria delle Carceri, and a castle for the King of Naples that was never completed. He later assisted in the design of St. Peter’s Basilica and helped Michelangelo finish the Sistine Chapel ceiling, although he was not chosen to lead the basilica’s construction. Giuliano died in Florence in 1516, leaving a legacy that lives on through his sketchbook and the influence he had on contemporaries such as Raphael and Leonardo da Vinci.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "curiosities": [
       {
         "text": "Giuliano was sometimes called Giuliano da San Gallo after he built a church for Augustinian monks, a nickname that Lorenzo de’ Medici popularized.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "His design of Santa Maria delle Carceri employed a Greek‑cross plan, a layout that had not been widely used in the Renaissance before his work.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "Giuliano’s sketchbook, now housed in Siena, contains detailed drawings of artillery, cathedral domes, and existing medieval structures, showing his broad architectural interests.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "birthDate": {
@@ -61,5 +71,8 @@
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-10-10T02:22:36.348Z"
-  }
+  },
+  "sourceContextWikidataIds": [
+    "Q542070"
+  ]
 }
