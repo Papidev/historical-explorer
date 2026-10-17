@@ -68,7 +68,7 @@ export const Sidebar = ({
                 if (allCategoriesSelected) setExpanded(true);
                 onToggleAll();
               }}
-              className="size-4 cursor-pointer accent-rose-700"
+              className="size-4 cursor-pointer accent-sky-700"
             />
             <button
               type="button"
@@ -76,7 +76,7 @@ export const Sidebar = ({
               aria-expanded={expanded}
               aria-controls={categoriesId}
               onClick={() => setExpanded(!expanded)}
-              className="flex min-h-11 min-w-0 flex-1 cursor-pointer items-center gap-2 rounded text-left text-sm font-semibold transition-colors hover:bg-zinc-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-700"
+              className="flex min-h-11 min-w-0 flex-1 cursor-pointer items-center gap-2 rounded text-left text-sm font-semibold transition-colors hover:bg-zinc-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700"
             >
               <span className="flex-1">All categories</span>
               <span
@@ -114,7 +114,11 @@ export const Sidebar = ({
           >
             {categoryDefinitions
               .filter((category) => !category.parent)
-              .sort((a, b) => (a.label ?? a.name).localeCompare(b.label ?? b.name, "en"))
+              .sort(
+                (a, b) =>
+                  Number(a.id === "Other places") - Number(b.id === "Other places") ||
+                  (a.label ?? a.name).localeCompare(b.label ?? b.name, "en"),
+              )
               .map((category) => (
                 <CategoryGroup
                   key={category.id}

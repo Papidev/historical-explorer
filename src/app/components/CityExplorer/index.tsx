@@ -183,6 +183,7 @@ export const CityExplorer = ({
           focusRequest={focusRequest}
           selectedPoiId={selectedPoiId}
           categoryDefinitions={categoryDefinitions}
+          selectedCategories={selectedCategories}
           onZoomChange={setZoom}
           onOpenPoiDetails={openPoi}
           onMapClick={() => selectPoi(null)}

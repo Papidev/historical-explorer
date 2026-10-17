@@ -2,9 +2,11 @@
 
 import maplibregl, { Map as MapLibreMap, Marker, type ExpressionSpecification } from "maplibre-gl";
 import type { Poi } from "@/types/Poi";
+import { categoryMarkerColors } from "@/app/components/categoryMarkerColors";
 import {
   DEFAULT_POI_CATEGORY_DEFINITIONS,
   matchesPoiCategory,
+  type PoiCategory,
   type PoiCategoryDefinition,
 } from "@/types/PoiCategory";
 
@@ -30,7 +32,11 @@ export type MapPreview = {
 export interface MapAdapter {
   mount: (container: HTMLDivElement) => void;
   updateView: (view: MapViewUpdate) => void;
-  updatePois: (points: Poi[], definitions?: PoiCategoryDefinition[]) => void;
+  updatePois: (
+    points: Poi[],
+    definitions?: PoiCategoryDefinition[],
+    selectedCategories?: PoiCategory[],
+  ) => void;
   updateSelectedPoi: (poiId: string | null) => void;
   focusPoi: (request: { poi: Poi; leftInset: number; rightInset: number }) => void;
   getZoom: () => number | null;
@@ -58,6 +64,7 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
   let isLoaded = false;
   let pendingPois: Poi[] | null = null;
   let categoryDefinitions = DEFAULT_POI_CATEGORY_DEFINITIONS;
+  let selectedCategories: PoiCategory[] | undefined;
   let onZoomChange: ((zoom: number) => void) | null = null;
   let onOpenPoiDetails: ((poiId: string) => void) | null = null;
   let onMapClick: (() => void) | null = null;
@@ -157,21 +164,43 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
 
     removeMarkers();
     markers = points.map((poi) => {
-      const isReligious = matchesPoiCategory(
-        poi.categories,
-        "Churches & cathedrals",
-        categoryDefinitions,
+      const matchingColors = categoryMarkerColors.filter(({ category }) =>
+        matchesPoiCategory(poi.categories, category, categoryDefinitions),
       );
-      const marker = new maplibregl.Marker(isReligious ? { color: "#facc15" } : undefined)
+      const markerColor =
+        matchingColors.find(({ category }) =>
+          selectedCategories?.some(
+            (selected) =>
+              (selected === category ||
+                categoryDefinitions.some(
+                  ({ id, parent }) => id === selected && parent === category,
+                )) &&
+              matchesPoiCategory(poi.categories, selected, categoryDefinitions),
+          ),
+        ) ?? matchingColors[0];
+      const marker = new maplibregl.Marker({ color: markerColor?.marker, scale: 1.15 })
         .setLngLat([poi.coordinates.lng, poi.coordinates.lat])
         .addTo(map as MapLibreMap);
       const element = marker.getElement();
+      const markerCenter = element.querySelector('circle[fill="#FFFFFF"]');
+      if (markerCenter && markerColor) {
+        const icon = document.createElementNS("http://www.w3.org/2000/svg", "image");
+        icon.setAttribute("href", markerColor.icon);
+        icon.setAttribute("x", "-2.5");
+        icon.setAttribute("y", "-2.5");
+        icon.setAttribute("width", "16");
+        icon.setAttribute("height", "16");
+        icon.setAttribute("aria-hidden", "true");
+        markerCenter.parentElement?.replaceChildren(icon);
+      }
       let isTouchInteraction = false;
 
       element.classList.add("poi-marker");
-      if (isReligious) {
+      if (markerColor?.category === "Churches & cathedrals") {
         // Scope styling to MapLibre’s generated marker; preserve its shape and shadow.
         element.classList.add("religious-site-marker");
+      } else if (markerColor?.category === "Arts & Culture") {
+        element.classList.add("arts-culture-marker");
       }
       element.style.cursor = "pointer";
       element.tabIndex = 0;
@@ -360,8 +389,9 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
 
       map.easeTo(nextView);
     },
-    updatePois(points, definitions = DEFAULT_POI_CATEGORY_DEFINITIONS) {
+    updatePois(points, definitions = DEFAULT_POI_CATEGORY_DEFINITIONS, selection) {
       categoryDefinitions = definitions;
+      selectedCategories = selection;
       if (!map) {
         return;
       }

@@ -1,13 +1,10 @@
 export const POI_TOP_LEVEL_CATEGORIES = [
   "Churches & cathedrals",
-  "Museum",
-  "Castle",
-  "Mausoleum",
-  "Aqueduct",
-  "Amphitheatre",
-  "Arch",
-  "Square",
-  "Archaeological Site",
+  "Arts & Culture",
+  "Architecture",
+  "Public Spaces",
+  "Memorials",
+  "Other places",
 ] as const;
 
 export const POI_SUBCATEGORIES = [
@@ -22,9 +19,33 @@ export const POI_SUBCATEGORIES = [
   { name: "Abbey", label: "Abbeys", parent: "Churches & cathedrals", supersedes: [] },
   { name: "Baptistery", label: "Baptisteries", parent: "Churches & cathedrals", supersedes: [] },
   { name: "Temple", label: "Temples", parent: "Churches & cathedrals", supersedes: [] },
+  { name: "Museum", label: "Museums", parent: "Arts & Culture", supersedes: [] },
+  { name: "Library", label: "Libraries", parent: "Arts & Culture", supersedes: [] },
+  { name: "Archive", label: "Archives", parent: "Arts & Culture", supersedes: [] },
+  { name: "Academy", label: "Academies", parent: "Arts & Culture", supersedes: [] },
+  { name: "Castle", parent: "Architecture", supersedes: [] },
+  { name: "Mausoleum", parent: "Memorials", supersedes: [] },
+  { name: "Aqueduct", parent: "Architecture", supersedes: [] },
+  { name: "Amphitheatre", parent: "Architecture", supersedes: [] },
+  { name: "Arch", parent: "Architecture", supersedes: [] },
+  { name: "Square", parent: "Public Spaces", supersedes: [] },
+  { name: "Archaeological Site", parent: "Other places", supersedes: [] },
+  { name: "Palace", parent: "Architecture", supersedes: [] },
+  { name: "Tower", parent: "Architecture", supersedes: [] },
+  { name: "Guild", parent: "Other places", supersedes: [] },
+  { name: "Lost sculpture", parent: "Other places", supersedes: [] },
+  { name: "Street", parent: "Public Spaces", supersedes: [] },
+  { name: "Cemetery", parent: "Memorials", supersedes: [] },
+  { name: "Monument", parent: "Memorials", supersedes: [] },
+  { name: "Fountain", parent: "Public Spaces", supersedes: [] },
+  { name: "Fort", parent: "Architecture", supersedes: [] },
+  { name: "Garden", parent: "Public Spaces", supersedes: [] },
+  { name: "Park", parent: "Public Spaces", supersedes: [] },
+  { name: "Grave", parent: "Memorials", supersedes: [] },
+  { name: "Villa", parent: "Architecture", supersedes: [] },
 ] as const satisfies readonly {
   name: string;
-  label: string;
+  label?: string;
   parent: (typeof POI_TOP_LEVEL_CATEGORIES)[number];
   supersedes: readonly string[];
 }[];
@@ -49,13 +70,16 @@ export const POI_CATEGORY_PARENTS = Object.fromEntries(
 ) as Partial<Record<PoiCategory, (typeof POI_TOP_LEVEL_CATEGORIES)[number]>>;
 
 export const POI_CATEGORY_LABELS = Object.fromEntries(
-  POI_SUBCATEGORIES.map(({ name, label }) => [name, label]),
+  POI_SUBCATEGORIES.filter((category) => "label" in category).map(({ name, label }) => [
+    name,
+    label,
+  ]),
 ) as Partial<Record<PoiCategory, string>>;
 
 export const DEFAULT_POI_CATEGORY_DEFINITIONS: PoiCategoryDefinition[] = POI_CATEGORIES.map(
   (id) => ({
     id,
-    name: id === "Churches & cathedrals" ? "Religious sites" : id,
+    name: id === "Churches & cathedrals" ? "Religion" : id,
     ...(POI_CATEGORY_LABELS[id] ? { label: POI_CATEGORY_LABELS[id] } : {}),
     ...(POI_CATEGORY_PARENTS[id] ? { parent: POI_CATEGORY_PARENTS[id] } : {}),
     ...(POI_SUBCATEGORIES.find((category) => category.name === id)

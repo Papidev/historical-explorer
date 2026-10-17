@@ -1,5 +1,7 @@
 import { useId } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import { MapPinIcon } from "@heroicons/react/24/solid";
+import { categoryMarkerColors } from "@/app/components/categoryMarkerColors";
 import {
   DEFAULT_POI_CATEGORY_DEFINITIONS,
   type PoiCategory,
@@ -30,21 +32,12 @@ export const CategoryOption = ({
 }) => {
   const inputId = useId();
   const definition = definitions.find((definition) => definition.id === category);
+  const markerColor = categoryMarkerColors.find(({ category: id }) => id === category);
   const label = definition?.label ?? definition?.name ?? category;
   const content = (
     <>
-      <span
-        className={`flex flex-1 items-center gap-2 ${
-          category === "Churches & cathedrals" ? "font-semibold" : ""
-        }`}
-      >
+      <span className={`flex flex-1 items-center gap-1.5 ${disclosure ? "font-semibold" : ""}`}>
         {label}
-        {category === "Churches & cathedrals" && (
-          <span
-            aria-hidden="true"
-            className="size-3.5 shrink-0 rounded-full border border-yellow-900 bg-yellow-400"
-          />
-        )}
       </span>
       {definition?.parent && (
         <span id={`${category}-parent`} className="sr-only">
@@ -61,7 +54,9 @@ export const CategoryOption = ({
     </>
   );
   return (
-    <div className="flex flex-1 items-center gap-2 text-sm">
+    <div
+      className={`flex flex-1 items-center gap-2 ${definition?.parent ? "text-[15px]" : "text-sm"}`}
+    >
       <input
         id={inputId}
         type="checkbox"
@@ -72,12 +67,26 @@ export const CategoryOption = ({
           if (input) input.indeterminate = indeterminate;
         }}
         onChange={onToggle}
-        className={`size-4 cursor-pointer ${
-          category === "Churches & cathedrals" || definition?.parent === "Churches & cathedrals"
-            ? "accent-yellow-400"
-            : "accent-rose-700"
-        }`}
+        className="size-4 cursor-pointer accent-sky-700"
       />
+      {disclosure && (
+        <span aria-hidden="true" className="relative size-8 shrink-0">
+          <MapPinIcon
+            className={`size-8 drop-shadow-sm ${markerColor?.pinClass ?? "text-[#3FB1CE]"}`}
+          />
+          <span
+            className={`absolute top-[4px] left-[6px] flex size-5 items-center justify-center rounded-full bg-current ${markerColor?.pinClass ?? "text-[#3FB1CE]"}`}
+          >
+            {/* Static category SVG shared with MapLibre's generated markers. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={markerColor?.icon ?? "/icons/categories/other.svg"}
+              alt=""
+              className="size-4"
+            />
+          </span>
+        </span>
+      )}
       {disclosure ? (
         <button
           type="button"
@@ -85,7 +94,7 @@ export const CategoryOption = ({
           aria-expanded={disclosure.expanded}
           aria-controls={disclosure.controls}
           onClick={disclosure.onToggle}
-          className="flex min-h-7 min-w-0 flex-1 cursor-pointer items-center gap-2 rounded text-left text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-700"
+          className="flex min-h-7 min-w-0 flex-1 cursor-pointer items-center gap-2 rounded text-left text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700"
         >
           {content}
           <span className="flex size-7 shrink-0 items-center justify-center text-zinc-400">

@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.9.2
+
+### Patch Changes
+
+- Group place filters into six parent categories with matching colors and solid icons in the sidebar and map markers, and improve subcategory spacing and selection visibility.
+
 ## 0.9.1
 
 ### Patch Changes

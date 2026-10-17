@@ -3,26 +3,41 @@
   "categories": [
     {
       "id": "Churches & cathedrals",
-      "name": "Religious sites"
+      "name": "Religion"
+    },
+    {
+      "id": "Arts & Culture",
+      "name": "Arts & Culture"
+    },
+    {
+      "id": "Architecture",
+      "name": "Architecture"
+    },
+    {
+      "id": "Public Spaces",
+      "name": "Public Spaces"
+    },
+    {
+      "id": "Memorials",
+      "name": "Memorials"
+    },
+    {
+      "id": "Other places",
+      "name": "Other places"
     },
     {
       "id": "Cathedral",
       "name": "Cathedral",
       "label": "Cathedrals",
       "parent": "Churches & cathedrals",
-      "supersedes": [
-        "Basilica",
-        "Church"
-      ]
+      "supersedes": ["Basilica", "Church"]
     },
     {
       "id": "Basilica",
       "name": "Basilica",
       "label": "Basilicas",
       "parent": "Churches & cathedrals",
-      "supersedes": [
-        "Church"
-      ]
+      "supersedes": ["Church"]
     },
     {
       "id": "Church",
@@ -33,114 +48,145 @@
     },
     {
       "id": "Museum",
-      "name": "Museum"
+      "name": "Museum",
+      "label": "Museums",
+      "parent": "Arts & Culture"
     },
     {
       "id": "Castle",
-      "name": "Castle"
+      "name": "Castle",
+      "parent": "Architecture"
     },
     {
       "id": "Mausoleum",
-      "name": "Mausoleum"
+      "name": "Mausoleum",
+      "parent": "Memorials"
     },
     {
       "id": "Aqueduct",
-      "name": "Aqueduct"
+      "name": "Aqueduct",
+      "parent": "Architecture"
     },
     {
       "id": "Amphitheatre",
-      "name": "Amphitheatre"
+      "name": "Amphitheatre",
+      "parent": "Architecture"
     },
     {
       "id": "Arch",
-      "name": "Arch"
+      "name": "Arch",
+      "parent": "Architecture"
     },
     {
       "id": "Square",
-      "name": "Square"
+      "name": "Square",
+      "parent": "Public Spaces"
     },
     {
       "id": "Archaeological Site",
-      "name": "Archaeological Site"
+      "name": "Archaeological Site",
+      "parent": "Other places"
     },
     {
       "id": "Palace",
-      "name": "Palace"
+      "name": "Palace",
+      "parent": "Architecture"
     },
     {
       "id": "Abbey",
       "name": "Abbey",
+      "label": "Abbeys",
       "parent": "Churches & cathedrals"
     },
     {
       "id": "Tower",
-      "name": "Tower"
+      "name": "Tower",
+      "parent": "Architecture"
     },
     {
       "id": "Academy",
-      "name": "Academy"
+      "name": "Academy",
+      "label": "Academies",
+      "parent": "Arts & Culture"
     },
     {
       "id": "Archive",
-      "name": "Archive"
+      "name": "Archive",
+      "label": "Archives",
+      "parent": "Arts & Culture"
     },
     {
       "id": "Guild",
-      "name": "Guild"
+      "name": "Guild",
+      "parent": "Other places"
     },
     {
       "id": "Lost sculpture",
-      "name": "Lost sculpture"
+      "name": "Lost sculpture",
+      "parent": "Other places"
     },
     {
       "id": "Street",
-      "name": "Street"
+      "name": "Street",
+      "parent": "Public Spaces"
     },
     {
       "id": "Baptistery",
       "name": "Baptistery",
+      "label": "Baptisteries",
       "parent": "Churches & cathedrals"
     },
     {
       "id": "Library",
-      "name": "Library"
+      "name": "Library",
+      "label": "Libraries",
+      "parent": "Arts & Culture"
     },
     {
       "id": "Temple",
       "name": "Temple",
+      "label": "Temples",
       "parent": "Churches & cathedrals"
     },
     {
       "id": "Cemetery",
-      "name": "Cemetery"
+      "name": "Cemetery",
+      "parent": "Memorials"
     },
     {
       "id": "Monument",
-      "name": "Monument"
+      "name": "Monument",
+      "parent": "Memorials"
     },
     {
       "id": "Fountain",
-      "name": "Fountain"
+      "name": "Fountain",
+      "parent": "Public Spaces"
     },
     {
       "id": "Fort",
-      "name": "Fort"
+      "name": "Fort",
+      "parent": "Architecture"
     },
     {
       "id": "Garden",
-      "name": "Garden"
+      "name": "Garden",
+      "parent": "Public Spaces"
     },
     {
       "id": "Park",
-      "name": "Park"
+      "name": "Park",
+      "parent": "Public Spaces"
     },
     {
       "id": "Grave",
-      "name": "Grave"
+      "name": "Grave",
+      "parent": "Memorials"
     },
     {
       "id": "Villa",
-      "name": "Villa"
+      "name": "Villa",
+      "parent": "Architecture"
     }
   ],
   "deletedNames": [
