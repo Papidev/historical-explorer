@@ -52,6 +52,7 @@ if (current.version === previous.version && !initialRelease) {
         [
           "README.md",
           "AGENTS.md",
+          ".gitignore",
           ".changeset/README.md",
           ".github/dependabot.yml",
           "scripts/check-release.mjs",

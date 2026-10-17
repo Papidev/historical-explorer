@@ -43,7 +43,7 @@ increment before merging, so Vercel deploys the prepared version from `main`.
 The initial tracked release establishes the existing `0.1.0` as the baseline;
 the increment requirement applies to subsequent application changes.
 Use `patch` for fixes and small content/UI updates, `minor` for new features, and
-`major` for incompatible changes. Internal documentation and changes limited to
+`major` for incompatible changes. Internal documentation, `.gitignore`, and changes limited to
 GitHub Actions workflows (including action dependency updates) and the other
 CI/release automation files allowed by `scripts/check-release.mjs` do not
 require an increment. Changes limited to dependency sections in `package.json`
