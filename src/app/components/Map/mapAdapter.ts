@@ -178,10 +178,21 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
               matchesPoiCategory(poi.categories, selected, categoryDefinitions),
           ),
         ) ?? matchingColors[0];
-      const marker = new maplibregl.Marker(markerColor ? { color: markerColor.marker } : undefined)
+      const marker = new maplibregl.Marker({ color: markerColor?.marker, scale: 1.15 })
         .setLngLat([poi.coordinates.lng, poi.coordinates.lat])
         .addTo(map as MapLibreMap);
       const element = marker.getElement();
+      const markerCenter = element.querySelector('circle[fill="#FFFFFF"]');
+      if (markerCenter && markerColor) {
+        const icon = document.createElementNS("http://www.w3.org/2000/svg", "image");
+        icon.setAttribute("href", markerColor.icon);
+        icon.setAttribute("x", "-2.5");
+        icon.setAttribute("y", "-2.5");
+        icon.setAttribute("width", "16");
+        icon.setAttribute("height", "16");
+        icon.setAttribute("aria-hidden", "true");
+        markerCenter.parentElement?.replaceChildren(icon);
+      }
       let isTouchInteraction = false;
 
       element.classList.add("poi-marker");

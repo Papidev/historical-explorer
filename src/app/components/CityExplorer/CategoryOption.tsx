@@ -70,10 +70,22 @@ export const CategoryOption = ({
         className="size-4 cursor-pointer accent-sky-700"
       />
       {disclosure && (
-        <MapPinIcon
-          aria-hidden="true"
-          className={`size-8 shrink-0 drop-shadow-sm ${markerColor?.pinClass ?? "text-[#3FB1CE]"}`}
-        />
+        <span aria-hidden="true" className="relative size-8 shrink-0">
+          <MapPinIcon
+            className={`size-8 drop-shadow-sm ${markerColor?.pinClass ?? "text-[#3FB1CE]"}`}
+          />
+          <span
+            className={`absolute top-[4px] left-[6px] flex size-5 items-center justify-center rounded-full bg-current ${markerColor?.pinClass ?? "text-[#3FB1CE]"}`}
+          >
+            {/* Static category SVG shared with MapLibre's generated markers. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={markerColor?.icon ?? "/icons/categories/other.svg"}
+              alt=""
+              className="size-4"
+            />
+          </span>
+        </span>
       )}
       {disclosure ? (
         <button
