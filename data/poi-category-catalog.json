@@ -10,6 +10,18 @@
       "name": "Arts & Culture"
     },
     {
+      "id": "Architecture",
+      "name": "Architecture"
+    },
+    {
+      "id": "Public Spaces",
+      "name": "Public Spaces"
+    },
+    {
+      "id": "Memorials",
+      "name": "Memorials"
+    },
+    {
       "id": "Other places",
       "name": "Other places"
     },
@@ -43,32 +55,32 @@
     {
       "id": "Castle",
       "name": "Castle",
-      "parent": "Other places"
+      "parent": "Architecture"
     },
     {
       "id": "Mausoleum",
       "name": "Mausoleum",
-      "parent": "Other places"
+      "parent": "Memorials"
     },
     {
       "id": "Aqueduct",
       "name": "Aqueduct",
-      "parent": "Other places"
+      "parent": "Architecture"
     },
     {
       "id": "Amphitheatre",
       "name": "Amphitheatre",
-      "parent": "Other places"
+      "parent": "Architecture"
     },
     {
       "id": "Arch",
       "name": "Arch",
-      "parent": "Other places"
+      "parent": "Architecture"
     },
     {
       "id": "Square",
       "name": "Square",
-      "parent": "Other places"
+      "parent": "Public Spaces"
     },
     {
       "id": "Archaeological Site",
@@ -78,7 +90,7 @@
     {
       "id": "Palace",
       "name": "Palace",
-      "parent": "Other places"
+      "parent": "Architecture"
     },
     {
       "id": "Abbey",
@@ -89,7 +101,7 @@
     {
       "id": "Tower",
       "name": "Tower",
-      "parent": "Other places"
+      "parent": "Architecture"
     },
     {
       "id": "Academy",
@@ -116,7 +128,7 @@
     {
       "id": "Street",
       "name": "Street",
-      "parent": "Other places"
+      "parent": "Public Spaces"
     },
     {
       "id": "Baptistery",
@@ -139,42 +151,42 @@
     {
       "id": "Cemetery",
       "name": "Cemetery",
-      "parent": "Other places"
+      "parent": "Memorials"
     },
     {
       "id": "Monument",
       "name": "Monument",
-      "parent": "Other places"
+      "parent": "Memorials"
     },
     {
       "id": "Fountain",
       "name": "Fountain",
-      "parent": "Other places"
+      "parent": "Public Spaces"
     },
     {
       "id": "Fort",
       "name": "Fort",
-      "parent": "Other places"
+      "parent": "Architecture"
     },
     {
       "id": "Garden",
       "name": "Garden",
-      "parent": "Other places"
+      "parent": "Public Spaces"
     },
     {
       "id": "Park",
       "name": "Park",
-      "parent": "Other places"
+      "parent": "Public Spaces"
     },
     {
       "id": "Grave",
       "name": "Grave",
-      "parent": "Other places"
+      "parent": "Memorials"
     },
     {
       "id": "Villa",
       "name": "Villa",
-      "parent": "Other places"
+      "parent": "Architecture"
     }
   ],
   "deletedNames": [

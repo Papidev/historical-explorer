@@ -3,7 +3,11 @@
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { createPortal } from "react-dom";
 import type { Poi } from "@/types/Poi";
-import { DEFAULT_POI_CATEGORY_DEFINITIONS, type PoiCategoryDefinition } from "@/types/PoiCategory";
+import {
+  DEFAULT_POI_CATEGORY_DEFINITIONS,
+  type PoiCategory,
+  type PoiCategoryDefinition,
+} from "@/types/PoiCategory";
 import "./markers.css";
 import "./controls.css";
 import { createMapLibreAdapter, type MapAdapter, type MapPreview } from "./mapAdapter";
@@ -15,6 +19,7 @@ type Props = {
   pois: Poi[];
   selectedPoiId?: string | null;
   categoryDefinitions?: PoiCategoryDefinition[];
+  selectedCategories?: PoiCategory[];
   onZoomChange?: (zoom: number) => void;
   onOpenPoiDetails?: (poiId: string) => void;
   onMapClick?: () => void;
@@ -37,6 +42,7 @@ export const Map = ({
   pois,
   selectedPoiId = null,
   categoryDefinitions = DEFAULT_POI_CATEGORY_DEFINITIONS,
+  selectedCategories,
   onZoomChange,
   onOpenPoiDetails,
   onMapClick,
@@ -116,8 +122,8 @@ export const Map = ({
   }, [zoom]);
 
   useEffect(() => {
-    adapterRef.current?.updatePois(pois, categoryDefinitions);
-  }, [pois, categoryDefinitions]);
+    adapterRef.current?.updatePois(pois, categoryDefinitions, selectedCategories);
+  }, [pois, categoryDefinitions, selectedCategories]);
 
   useEffect(() => {
     adapterRef.current?.updateSelectedPoi(selectedPoiId);

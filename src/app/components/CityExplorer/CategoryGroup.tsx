@@ -65,7 +65,7 @@ export const CategoryGroup = ({
         <div
           id={subcategoriesId}
           hidden={!expanded}
-          className="mt-1 ml-5 space-y-1.5 border-l border-zinc-200 pr-9 pl-3"
+          className="mt-1 ml-5 space-y-2 border-l border-zinc-200 pr-9 pl-3"
         >
           {children.map(({ name, count }) => (
             <CategoryOption

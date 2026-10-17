@@ -1,6 +1,7 @@
 import { useId } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { MapPinIcon } from "@heroicons/react/24/solid";
+import { categoryMarkerColors } from "@/app/components/categoryMarkerColors";
 import {
   DEFAULT_POI_CATEGORY_DEFINITIONS,
   type PoiCategory,
@@ -31,6 +32,7 @@ export const CategoryOption = ({
 }) => {
   const inputId = useId();
   const definition = definitions.find((definition) => definition.id === category);
+  const markerColor = categoryMarkerColors.find(({ category: id }) => id === category);
   const label = definition?.label ?? definition?.name ?? category;
   const content = (
     <>
@@ -52,7 +54,9 @@ export const CategoryOption = ({
     </>
   );
   return (
-    <div className="flex flex-1 items-center gap-2 text-sm">
+    <div
+      className={`flex flex-1 items-center gap-2 ${definition?.parent ? "text-[15px]" : "text-sm"}`}
+    >
       <input
         id={inputId}
         type="checkbox"
@@ -65,18 +69,10 @@ export const CategoryOption = ({
         onChange={onToggle}
         className="size-4 cursor-pointer accent-sky-700"
       />
-      {(category === "Churches & cathedrals" ||
-        category === "Arts & Culture" ||
-        category === "Other places") && (
+      {disclosure && (
         <MapPinIcon
           aria-hidden="true"
-          className={`size-8 shrink-0 drop-shadow-sm ${
-            category === "Churches & cathedrals"
-              ? "text-yellow-400"
-              : category === "Arts & Culture"
-                ? "text-emerald-500"
-                : "text-[#3FB1CE]"
-          }`}
+          className={`size-8 shrink-0 drop-shadow-sm ${markerColor?.pinClass ?? "text-[#3FB1CE]"}`}
         />
       )}
       {disclosure ? (

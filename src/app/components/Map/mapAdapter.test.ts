@@ -249,10 +249,26 @@ describe("Map and its MapLibre adapter", () => {
     adapter.destroy();
   });
 
+  it("colors a place shared by two groups with the active group's color", () => {
+    const adapter = createMapLibreAdapter({ center: [12.481, 41.889], zoom: 15 });
+    const container = document.createElement("div");
+    document.body.append(container);
+    adapter.mount(container);
+    const sharedPoi = { ...pois[1], categories: ["Museum", "Castle"] };
+
+    adapter.updatePois([sharedPoi], undefined, ["Architecture", "Castle"]);
+    expect(mapLibreFakes.markers.at(-1)?.color).toBe("#ea580c");
+
+    adapter.updatePois([sharedPoi], undefined, ["Arts & Culture", "Museum"]);
+    expect(mapLibreFakes.markers.at(-1)?.color).toBe("#10b981");
+
+    adapter.destroy();
+  });
+
   it("shows the matching preview on mouse hover and keyboard focus", async () => {
     render(createElement(Map, { coordinates: [12.481, 41.889], zoom: 15, pois }));
 
-    expect(mapLibreFakes.markers[0].color).toBeUndefined();
+    expect(mapLibreFakes.markers[0].color).toBe("#3FB1CE");
     expect(mapLibreFakes.markers[1].color).toBe("#facc15");
     expect(mapLibreFakes.markers[1].element).toHaveClass("religious-site-marker");
     expect(mapLibreFakes.markers[0].element).toHaveStyle({ cursor: "pointer" });

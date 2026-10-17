@@ -12,12 +12,8 @@
     z-index: 1;
   }
 
-  .selected-poi-marker svg g:is([fill="#3FB1CE"], [fill="#facc15"], [fill="#10b981"]) > path {
-    fill: #36a477;
-  }
-
-  .selected-poi-marker.arts-culture-marker svg g[fill="#10b981"] > path {
-    fill: var(--color-emerald-800);
+  .selected-poi-marker svg g[fill]:not([fill="#000000"]):not([fill="none"]) > path {
+    filter: brightness(0.75);
   }
 
   .poi-preview-popup {

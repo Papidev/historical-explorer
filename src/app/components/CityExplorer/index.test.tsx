@@ -158,7 +158,7 @@ afterAll(() => {
 });
 
 describe("visitor category filtering", () => {
-  it("groups the remaining categories under Other places", async () => {
+  it("groups architectural, public, memorial, and remaining places", async () => {
     const user = userEvent.setup();
     render(
       <CityExplorer
@@ -167,30 +167,35 @@ describe("visitor category filtering", () => {
         initialZoom={15}
         pois={[
           ...pois,
-          {
-            city: "Rome",
-            coordinates: { lat: 41, lng: 12 },
-            funFacts: [],
-            id: "castle",
-            name: "A Castle",
-            categories: ["Castle"],
-          },
+          ...["Castle", "Square", "Monument", "Archaeological Site"].map((category) => ({
+            ...pois[0],
+            id: category,
+            name: `A ${category}`,
+            categories: [category],
+          })),
         ]}
       />,
     );
 
     await user.click(screen.getByRole("button", { name: "Show categories" }));
-    expect(screen.getByRole("checkbox", { name: "Other places" })).toBeChecked();
-    await user.click(screen.getByRole("button", { name: "Show subcategories for Other places" }));
-    expect(screen.getByRole("checkbox", { name: "Castle" })).toBeChecked();
+    for (const [parent, child] of [
+      ["Architecture", "Castle"],
+      ["Public Spaces", "Square"],
+      ["Memorials", "Monument"],
+      ["Other places", "Archaeological Site"],
+    ]) {
+      expect(screen.getByRole("checkbox", { name: parent })).toBeChecked();
+      await user.click(screen.getByRole("button", { name: `Show subcategories for ${parent}` }));
+      expect(screen.getByRole("checkbox", { name: child })).toBeChecked();
+    }
 
     await user.click(screen.getByRole("checkbox", { name: "Other places" }));
-    expect(screen.getByRole("checkbox", { name: "Castle" })).not.toBeChecked();
-    expect(screen.getByRole("status")).toHaveTextContent("3 places");
+    expect(screen.getByRole("checkbox", { name: "Archaeological Site" })).not.toBeChecked();
+    expect(screen.getByRole("status")).toHaveTextContent("6 places");
 
-    await user.click(screen.getByRole("checkbox", { name: "Castle" }));
+    await user.click(screen.getByRole("checkbox", { name: "Archaeological Site" }));
     expect(screen.getByRole("checkbox", { name: "Other places" })).toBeChecked();
-    expect(screen.getByRole("status")).toHaveTextContent("5 places");
+    expect(screen.getByRole("status")).toHaveTextContent("8 places");
   });
 
   it("opens subcategories from the category row while keeping checkbox selection separate", async () => {

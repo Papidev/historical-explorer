@@ -6,9 +6,9 @@ Status: direct-type mapping, visitor sidebar (#59), and shared Curator edits (#6
 
 POI Types are Wikidata source classifications; Categories are an editable app-owned vocabulary shared across cities, separate from Story Content. Membership may reflect current or historical nature/function and does not promise current use, opening hours, or access. A Story/category difference may reflect a change of use.
 
-Category names are singular where applicable; visitor labels may be plural. The initial vocabulary includes Religion, Arts & Culture, Other places, Cathedral, Basilica, Church, Museum, Castle, Mausoleum, Aqueduct, Amphitheatre, Arch, Square, and Archaeological Site.
+Category names are singular where applicable; visitor labels may be plural. The initial vocabulary includes Religion, Arts & Culture, Architecture, Public Spaces, Memorials, Other places, Cathedral, Basilica, Church, Museum, Castle, Mausoleum, Aqueduct, Amphitheatre, Arch, Square, and Archaeological Site.
 
-The hierarchy has two levels. Each child has one top-level parent; categories with children cannot be nested. Religion contains Cathedral, Basilica, Church, Abbey, Baptistery, and Temple. Arts & Culture contains Museum, Library, Archive, and Academy. Other places contains the remaining categories, including Castle, Archaeological Site, Square, and Garden. The Religion parent retains its original ID `Churches & cathedrals`. This hierarchy is independent of Wikidata's.
+The hierarchy has two levels. Each child has one top-level parent; categories with children cannot be nested. Religion contains Cathedral, Basilica, Church, Abbey, Baptistery, and Temple. Arts & Culture contains Museum, Library, Archive, and Academy. Architecture contains Castle, Palace, Villa, Fort, Tower, Arch, Amphitheatre, and Aqueduct. Public Spaces contains Square, Street, Fountain, Garden, and Park. Memorials contains Cemetery, Grave, Mausoleum, and Monument. Other places contains categories without a clearer group, including Archaeological Site, Guild, and Lost sculpture. The Religion parent retains its original ID `Churches & cathedrals`. This hierarchy is independent of Wikidata's.
 
 In Manage categories, drag a child or top-level leaf onto a parent, or onto Top level to detach it. Moving preserves IDs and selected children, updates shared rules to the new parent, and removes the old parent assignment when none of its children remain assigned. Renaming preserves IDs and assignments; AI-created categories start at the top level.
 
@@ -59,7 +59,7 @@ The planned name-search visibility exception is described in [Entity Discovery](
 
 ## Map colors
 
-Religion uses golden-yellow markers with a dark outline, Arts & Culture uses green markers, and Other places uses the default blue markers. The visitor filters keep neutral group backgrounds and blue selection checkboxes; a small pin to the right of each parent checkbox matches its map-marker color. Any POI matching Religion uses yellow, including places that also belong to other categories. Arts & Culture takes precedence over Other places when both apply. Category membership, including historical religious use, determines the color; it does not imply current worship or access.
+Each parent has a distinct marker color: Religion yellow, Arts & Culture green, Architecture orange, Memorials violet, Public Spaces rose, and Other places blue. The visitor filters keep neutral group backgrounds and blue selection checkboxes; the pin to the right of each parent checkbox matches its map-marker color. When a POI belongs to multiple groups, its marker uses the first matching selected group in that order, or the first matching group when no selected group applies. Selected markers darken while keeping their category hue. Category membership, including historical religious use, determines the color; it does not imply current worship or access.
 
 ## Curator workflow
 
