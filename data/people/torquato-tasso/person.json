@@ -7,21 +7,29 @@
     "description": [
       {
         "text": "Torquato Tasso was born on 11 March 1544 in Sorrento, a small town in the Kingdom of Naples. His father, Bernardo Tasso, was a courtier and poet who served the Sanseverino family, and his mother, Porzia de' Rossi, came from a Tuscan noble lineage. From a young age he was educated by Jesuits and later studied law at the University of Padua, but his passion for poetry led him to write his first epic, Rinaldo, in 1562, and to begin the monumental work that would become the Gerusalemme liberata.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "The completion of the Gerusalemme liberata in 1575 brought Tasso both acclaim and suspicion. His intense religious devotion and the epic's Christian triumph over the Saracens drew the attention of the Inquisition, and in 1576 he was imprisoned in the Ospedale di Sant'Anna in Ferrara for seven years. During this confinement he continued to write, producing the Discorsi dell'arte poetica and many lyrical poems, while his reputation as a tormented genius grew, influencing later Romantic writers such as Goethe and Leopardi.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "curiosities": [
       {
         "text": "Tasso's Gerusalemme liberata was first published in 1581 and was immediately translated into several languages, gaining widespread popularity across Europe.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "Tasso spent seven years in the Ospedale di Sant'Anna in Ferrara, where he was confined by the duke Alfonso II, a period that profoundly shaped his later religious poetry.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "birthDate": {
@@ -61,5 +69,8 @@
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-10-10T20:46:51.926Z"
-  }
+  },
+  "sourceContextWikidataIds": [
+    "Q2901253"
+  ]
 }

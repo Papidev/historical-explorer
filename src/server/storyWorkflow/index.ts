@@ -8,7 +8,7 @@ import {
   findPoiInGeoJson,
   getDefaultInputPath,
 } from "@/server/wikiPipeline/io";
-import { resolvePageForPoi } from "@/server/wikiPipeline/resolve";
+import { resolvePageForPoi, WikipediaSourceMissingError } from "@/server/wikiPipeline/resolve";
 import { wikiTextToPlainText } from "@/server/wikiPipeline/wikiText";
 import { people } from "@/server/person";
 import { acquireWikipediaSources } from "@/server/wikiPipeline/acquireWikipediaSources";
@@ -24,19 +24,16 @@ export const createStoryWorkflowForCity = (city: string) =>
         return undefined;
       }
     },
-    acquireSources: async (pointOfInterest, previousSources) => {
+    acquireSources: async (pointOfInterest) => {
       console.info(`[wiki] Fetching Wikipedia text for ${pointOfInterest.id}.`);
-      const previous = previousSources?.find(({ kind }) => kind === "wikipedia");
+      const page = (await resolvePageForPoi(pointOfInterest)).selected;
       let initialSource: Source | undefined;
       const warnings: string[] = [];
       try {
-        const page = previous
-          ? {
-              title: previous.title,
-              language: new URL(previous.url).hostname.split(".")[0],
-            }
-          : (await resolvePageForPoi(pointOfInterest)).selected;
         const snapshot = await fetchWikiSnapshot(page.title, page.language);
+        if (snapshot.isDisambiguation) throw new WikipediaSourceMissingError(pointOfInterest.id);
+        if (page.wikidataId && snapshot.wikidataId !== page.wikidataId)
+          throw new Error("The Wikipedia article identity changed during acquisition.");
         initialSource = {
           id: "wikipedia",
           kind: "wikipedia",
@@ -48,11 +45,11 @@ export const createStoryWorkflowForCity = (city: string) =>
         };
       } catch (error) {
         throwIfGenerationCancelled();
-        if (!pointOfInterest.sourceHints.wikidata) throw error;
+        if (error instanceof WikipediaSourceMissingError || !page.wikidataId) throw error;
         warnings.push(`The initial Wikipedia article could not be acquired: ${String(error)}`);
       }
       const acquired = await acquireWikipediaSources({
-        wikidataId: initialSource?.wikidataId ?? pointOfInterest.sourceHints.wikidata,
+        wikidataId: initialSource?.wikidataId ?? page.wikidataId,
         initialSource,
       });
       return { sources: acquired.sources, warnings: [...warnings, ...acquired.warnings] };

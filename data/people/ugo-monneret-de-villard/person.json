@@ -7,53 +7,77 @@
     "description": [
       {
         "text": "Ugo Monneret de Villard was born in Milan to a Bolognese family that had moved from Piedmont during the French Revolution. He studied at the Politecnico di Milano and, in 1913, became the institution’s first professor of medieval archaeology, while also teaching the history of architecture until 1924.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "After establishing himself in Milan, Monneret travelled extensively on behalf of the Italian Ministry of Foreign Affairs, visiting Egypt, India, Central Asia and other parts of Africa and Asia. His fieldwork produced a prolific body of work on Nubia, Coptic and Muslim art, and he eventually donated his extensive archive to the Biblioteca di Archeologia e Storia dell’Arte in Rome, housed in Palazzo Venezia.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "curiosities": [
       {
         "text": "He was the first university lecturer of medieval archaeology at the Politecnico di Milano.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "His travels for the Ministry of Foreign Affairs took him from Egypt to India and across Central Asia.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "The archive he amassed was donated to the Biblioteca di Archeologia e Storia dell’Arte in Rome.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He authored a study on the church of Santa Barbara in Old Cairo.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He wrote about the necropolis of Aswan and the cemetery of Sakinya.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He investigated the monasteries of Saint Simeon near Aswan and in Wadi en‑Natrun.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He produced research on the ancient city of Aksum and its topography.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He examined the paintings on the ceiling of the Cappella Palatina in Palermo.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He explored the legends of the Magi in his work on oriental legends.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He studied the influence of Islam in Europe during the 12th and 13th centuries.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ]
   },
@@ -81,5 +105,8 @@
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-10-10T20:46:15.282Z"
-  }
+  },
+  "sourceContextWikidataIds": [
+    "Q2901253"
+  ]
 }

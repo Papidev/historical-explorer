@@ -98,6 +98,25 @@ const selectDraftMainImage = (candidates: MainImageCandidate[], currentCommonsFi
   )?.commonsFileName ??
   candidates.find((candidate) => candidate.license && candidate.attribution)?.commonsFileName;
 
+const sourcesMatchPoi = (sources: Source[], poi: PoiInput) =>
+  sources.every(
+    (source) =>
+      !poi.sourceHints.wikidata ||
+      !source.wikidataId ||
+      source.wikidataId === poi.sourceHints.wikidata,
+  );
+
+const sourcesMatch = (previous: Source[], current: Source[]) =>
+  previous.every((source) =>
+    current.some(
+      (candidate) =>
+        candidate.id === source.id &&
+        (source.wikidataId && candidate.wikidataId
+          ? source.wikidataId === candidate.wikidataId
+          : source.url === candidate.url),
+    ),
+  );
+
 export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): StoryWorkflow => {
   const now = dependencies.now ?? (() => new Date());
 
@@ -149,7 +168,10 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
     const previous = await dependencies.repository.get(pointOfInterest.id);
     let candidates: MainImageCandidate[];
     try {
-      const source = (sources ?? previous?.sources)?.find(({ kind }) => kind === "wikipedia");
+      const availableSources = sources ?? previous?.sources ?? [];
+      const source = sourcesMatchPoi(availableSources, pointOfInterest)
+        ? availableSources.find(({ kind }) => kind === "wikipedia")
+        : undefined;
       candidates = await dependencies.generateMainImageCandidates(
         pointOfInterest,
         source?.title,
@@ -294,15 +316,15 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
         onStoryContentStarted,
         resume,
       }) => {
-        const saved = resume ? await dependencies.repository.get(poiId) : undefined;
+        let saved = resume ? await dependencies.repository.get(poiId) : undefined;
         onProgress?.("Finding the Point of Interest.");
         let pointOfInterest = await findPointOfInterest(poiId, dependencies);
+        if (saved && !sourcesMatchPoi(saved.sources, pointOfInterest)) saved = undefined;
         onProgress?.("Fetching Wikipedia Sources.");
         let sources: Source[];
         try {
-          sources = saved?.sources.length
-            ? saved.sources
-            : await acquireAndPersistSources(pointOfInterest, undefined, onProgress);
+          sources = await acquireAndPersistSources(pointOfInterest, undefined, onProgress);
+          if (saved && !sourcesMatch(saved.sources, sources)) saved = undefined;
         } catch (error) {
           throwIfGenerationCancelled();
           if (error instanceof StoryWorkflowError && error.code === "source-not-found") {
@@ -417,15 +439,32 @@ export const createStoryWorkflow = (dependencies: StoryWorkflowDependencies): St
             retryable: true,
           });
         }
-        if (snapshot.sources.length === 0) onProgress?.("Fetching the missing Wikipedia Source.");
-        const sources =
-          snapshot.sources.length > 0
-            ? snapshot.sources
-            : await acquireAndPersistSources(
-                await findPointOfInterest(poiId, dependencies),
-                undefined,
-                onProgress,
-              );
+        if (!sourcesMatchPoi(snapshot.sources, await findPointOfInterest(poiId, dependencies))) {
+          throw new StoryWorkflowError({
+            code: "sources-unavailable",
+            stage: "sources",
+            retryable: false,
+            cause: new Error(
+              "The POI identity changed. Regenerate Story Content before resolving People.",
+            ),
+          });
+        }
+        onProgress?.("Checking the current Wikipedia Sources.");
+        const sources = await acquireAndPersistSources(
+          await findPointOfInterest(poiId, dependencies),
+          undefined,
+          onProgress,
+        );
+        if (!sourcesMatch(snapshot.sources, sources)) {
+          throw new StoryWorkflowError({
+            code: "sources-unavailable",
+            stage: "sources",
+            retryable: false,
+            cause: new Error(
+              "The Source identity changed. Regenerate Story Content before resolving People.",
+            ),
+          });
+        }
         const resolution = await dependencies.resolveRelatedPeople({
           relatedPeople: snapshot.storyContent.relatedPeople,
           sources,

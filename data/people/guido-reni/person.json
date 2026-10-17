@@ -7,33 +7,47 @@
     "description": [
       {
         "text": "Guido Reni was born in Bologna on 4 November 1575 into a family of musicians. He began his artistic training at the age of nine in the studio of Denis Calvaert, where he worked alongside future masters such as Albani and Domenichino. By his early twenties the trio had joined the Accademia degli Incamminati, the progressive academy founded by Ludovico Carracci, and Reni quickly became a leading figure in the Bolognese School that would later flourish in Rome.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "Reni’s career was marked by a series of high‑profile commissions in Rome, Naples, and his native city. He painted the monumental fresco L’Aurora for Cardinal Scipione Borghese’s pavilion, earning 247 scudi and 54 baiocchi, and later produced a celebrated depiction of the Archangel Michael that sparked a legend in which he portrayed Satan with the face of Cardinal Pamphilj. Despite his success, Reni was a compulsive gambler whose debts forced him to produce hurried copies of his own works, and he died in Bologna on 18 August 1642.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "curiosities": [
       {
         "text": "Reni painted the subject of Saint Sebastian six times, with the 1615 version distinguished by the use of lapis lazuli in the sky, a costly pigment that indicates a commission from a papal court.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "Rumours circulated that local Neapolitan painters conspired to poison Reni during a brief stay in Naples, a fear that led him to leave the city quickly.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "The fresco L’Aurora was paid for with 247 scudi and 54 baiocchi, a record that shows the financial value of his work in early 17th‑century Rome.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "Reni’s gambling addiction is said to have caused him to rush the completion of several paintings, producing multiple copies in his workshop to recoup losses.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "A legend claims that Reni painted Satan with the facial features of Cardinal Giovanni Battista Pamphilj in the Archangel Michael commission, an act of revenge for a slight.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "birthDate": {
@@ -73,5 +87,8 @@
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-10-10T17:21:53.035Z"
-  }
+  },
+  "sourceContextWikidataIds": [
+    "Q2031901"
+  ]
 }

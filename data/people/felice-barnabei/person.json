@@ -1,0 +1,119 @@
+{
+  "id": "felice-barnabei",
+  "name": "Felice Barnabei",
+  "wikidataId": "Q1402954",
+  "wikipediaTitle": "Felice Barnabei",
+  "content": {
+    "description": [
+      {
+        "text": "Felice Barnabei was born in Castelli in 1842 and received his early schooling in Montorio al Vomano and at the Barnabite college in Teramo, where he also studied drawing with Pasquale Della Monica. He continued his studies at the Accademia di belle arti in Florence and at the Scuola Normale in Pisa, graduating in letters in 1865. From 1865 to 1875 he taught Greek and Latin at the Convitto Nazionale in Naples while pursuing his archaeological interests in epigraphy and topography, earning a reputation that led to his inclusion in Angelo De Gubernatis’s Dizionario degli scrittori contemporanei in 1879.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "In 1875 Barnabei joined the Direzione generale dei musei e degli scavi as secretary to Giuseppe Fiorelli, later succeeding Fiorelli as director general in 1896. He was instrumental in launching the periodical Notizie degli scavi di antichità, in establishing the Musei nazionali di antichità in Rome, and in founding the Museo internazionale delle ceramiche di Faenza (1912), the Museo di Villa Giulia, and the Museo nazionale romano alle Terme di Diocleziano. He also served as a deputy in the Italian Parliament for five legislatures, was appointed to the Consiglio di Stato in 1907, and discovered three inscriptions on Monte Giove that may refer to a Latin colony. Barnabei died in Rome on 29 October 1922.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "curiosities": [
+      {
+        "text": "He discovered three inscriptions on Monte Giove, two of which may refer to a Latin colony and a third dedicated to consul Paolo Fabio Massimo.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Barnabei founded the Museo internazionale delle ceramiche di Faenza in 1912, a museum that remains in operation today.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He was a founding member and editor of the periodical Notizie degli scavi di antichità.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He served as a deputy in the Italian Parliament for five legislatures, representing Teramo and later Atri.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "In 1907 he was appointed to the Consiglio di Stato and later became president of the Consiglio superiore delle antichità e belle arti.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He was a member of the Accademia delle scienze di Torino from 28 April 1895.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "Barnabei founded the school d'arte ceramica in Castelli in 1906.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "He was a member of the Accademia dei Lincei.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      },
+      {
+        "text": "In 1914 he became a delegate of the Istituto storico italiano representing Abruzzo.",
+        "sourceIds": [
+          "wikipedia"
+        ]
+      }
+    ],
+    "birthDate": {
+      "year": 1842,
+      "precision": "exact"
+    },
+    "deathDate": {
+      "year": 1922,
+      "month": 10,
+      "day": 29,
+      "precision": "exact"
+    }
+  },
+  "image": {
+    "commonsFileName": "Felice_Barnabei.jpg",
+    "commonsPageUrl": "https://commons.wikimedia.org/wiki/File:Felice_Barnabei.jpg",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Felice_Barnabei.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Felice_Barnabei.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "attribution": "non specificato",
+    "author": "non specificato",
+    "width": 350,
+    "height": 476,
+    "discoveredVia": "wikidata-p18",
+    "isProposed": true
+  },
+  "source": {
+    "id": "wikipedia",
+    "kind": "wikipedia",
+    "title": "Felice Barnabei",
+    "url": "https://it.wikipedia.org/wiki/Felice_Barnabei"
+  },
+  "sourceContextWikidataIds": [
+    "Q2901253"
+  ],
+  "generation": {
+    "aiMode": "cloud",
+    "aiProvider": "ollama",
+    "aiModel": "gpt-oss:20b-cloud",
+    "completedAt": "2026-10-17T00:19:07.144Z",
+    "sourceWarnings": [
+      "No en Wikipedia article is linked to this entity."
+    ]
+  }
+}

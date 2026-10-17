@@ -7,17 +7,23 @@
     "description": [
       {
         "text": "Giuliano della Rovere was born on 5 December 1443 in Albisola near Savona, the son of Raffaello della Rovere and Theodora Manerola.  Educated by his uncle, the Franciscan minister general, he entered the Church and was made a cardinal in 1471, a rapid rise that reflected the nepotism of the era.  In 1503 he was elected pope, taking the name Julius II, and began a reign that would last until his death in 1513.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "As pope, Julius II earned the nickname “Warrior Pope” for his active military campaigns against the French, the Venetians, and the Borgias, while simultaneously patronising the arts.  He commissioned the rebuilding of St. Peter’s Basilica, the creation of the Raphael Rooms, and the founding of the Swiss Guard in 1506, a body that still protects the pope today.  His reign also saw the establishment of the Vatican Museums and the initiation of the Fifth Lateran Council, cementing his legacy as a powerful political and cultural leader of the High Renaissance.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "curiosities": [
       {
         "text": "He founded the Swiss Guard in 1506, which remains the papal bodyguard to this day.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "birthDate": {
@@ -57,5 +63,8 @@
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-10-10T02:22:00.550Z"
-  }
+  },
+  "sourceContextWikidataIds": [
+    "Q542070"
+  ]
 }

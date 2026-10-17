@@ -70,13 +70,14 @@
     "title": "Pope Gregory XIII",
     "url": "https://en.wikipedia.org/wiki/Pope_Gregory_XIII"
   },
+  "sourceContextWikidataIds": [
+    "Q2104896",
+    "Q2031901"
+  ],
   "generation": {
     "aiMode": "cloud",
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-10-10T23:47:15.030Z"
-  },
-  "sourceContextWikidataIds": [
-    "Q2104896"
-  ]
+  }
 }

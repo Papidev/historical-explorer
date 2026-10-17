@@ -7,21 +7,29 @@
     "description": [
       {
         "text": "Giulio Quirino Giglioli was born in Rome on 25 March 1886 and studied classical literature at the University of Rome, where he earned a doctorate in 1910 with a thesis on the decorations of the statue of Zeus at Olympia.  He began his career as an assistant in the department of archaeology and ancient art history, and soon became involved in the archaeological exhibition at the Diocletian Baths, for which he prepared the catalogue.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "During the interwar years Giglioli held a series of academic and political posts, including professor of archaeology at the universities of Turin, Pisa and Rome, assessor for fine arts in the city of Rome, and director of the Museum of Roman Civilization.  He also served as a member of the national legislature for the National Fascist Party, but later opposed certain fascist policies such as the demolition of the Meta Sudans and the sale of the Discobolo Lancellotti to the Nazis, and he helped protect Jews from deportation.  After the war he was reinstated, founded the journal Archeologia Classica, and died in Rome on 11 November 1957.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "curiosities": [
       {
         "text": "Giglioli was the driving force behind the creation of the Museum of Roman Civilization, which opened in 1927 and later became the Museum of Roman Civilization.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He opposed the 1934 demolition of the Meta Sudans and worked to safeguard Jews from deportation during the fascist regime.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "birthDate": {
@@ -61,5 +69,8 @@
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-10-10T20:46:24.062Z"
-  }
+  },
+  "sourceContextWikidataIds": [
+    "Q2901253"
+  ]
 }

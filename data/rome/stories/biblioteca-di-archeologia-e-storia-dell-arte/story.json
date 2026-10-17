@@ -1,14 +1,24 @@
 {
+  "wikipediaSources": [
+    {
+      "title": "Biblioteca di archeologia e storia dell'arte",
+      "url": "https://it.wikipedia.org/wiki/Biblioteca_di_archeologia_e_storia_dell'arte"
+    }
+  ],
   "introduction": {
     "text": "The Biblioteca di Archeologia e Storia dell'Arte in Rome is Italy's largest library dedicated to art history and archaeology, serving scholars, students, and the public with a vast collection of rare books, manuscripts, and archival material.",
-    "sourceIds": ["wikipedia"]
+    "sourceIds": [
+      "wikipedia"
+    ]
   },
   "topics": {
     "history": [
       {
         "id": "h1",
         "description": "Founded in 1918 as the Istituto nazionale di archeologia e storia dell'arte, with the aim of promoting studies in archaeology and art history.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1918,
           "precision": "exact",
@@ -18,7 +28,9 @@
       {
         "id": "h2",
         "description": "Inaugurated on 4 June 1922, the institute also incorporated the former library of the Direzione generale delle antichità e belle arti.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1922,
           "precision": "exact",
@@ -28,7 +40,9 @@
       {
         "id": "h3",
         "description": "In 1926, the library received the Louis Gonse collection of travel books and the Rodolfo Kanzler collection of theatrical posters.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1926,
           "precision": "exact",
@@ -38,7 +52,9 @@
       {
         "id": "h4",
         "description": "In 1929, the library acquired the Rodolfo Lanciani collection of Roman topography materials.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1929,
           "precision": "exact",
@@ -48,7 +64,9 @@
       {
         "id": "h5",
         "description": "After Corrado Ricci's death in 1934, his personal library of about 4,500 volumes was donated to the library.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1934,
           "precision": "exact",
@@ -58,7 +76,9 @@
       {
         "id": "h6",
         "description": "In 1939, due to the impending war, the library was temporarily moved to the Farnesina.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1939,
           "precision": "exact",
@@ -68,7 +88,9 @@
       {
         "id": "h7",
         "description": "In 1955, the library acquired the Ugo Monneret de Villard collection of Oriental archaeology and art history.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1955,
           "precision": "exact",
@@ -78,7 +100,9 @@
       {
         "id": "h8",
         "description": "In 1958, the library received the Giulio Quirino Giglioli collection of Roman and provincial art and archaeology.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1958,
           "precision": "exact",
@@ -88,7 +112,9 @@
       {
         "id": "h9",
         "description": "In 1967, a decree established the library as a state public library, increasing its acquisition budget.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1967,
           "precision": "exact",
@@ -98,7 +124,9 @@
       {
         "id": "h10",
         "description": "In 1971, the Attilio Rossi collection of over 5,200 volumes was donated to the library.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1971,
           "precision": "exact",
@@ -108,7 +136,9 @@
       {
         "id": "h11",
         "description": "In 1985, the library partially closed for renovations.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1985,
           "precision": "exact",
@@ -118,7 +148,9 @@
       {
         "id": "h12",
         "description": "In 1990, the library fully closed for extensive renovations.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1990,
           "precision": "exact",
@@ -128,7 +160,9 @@
       {
         "id": "h13",
         "description": "The library reopened to the public on 1 July 1993.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1993,
           "precision": "exact",
@@ -138,7 +172,9 @@
       {
         "id": "h14",
         "description": "In 1995, the library's name was changed to its current title.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1995,
           "precision": "exact",
@@ -148,7 +184,9 @@
       {
         "id": "h15",
         "description": "In 1998, the library joined the National Library Service (SBN).",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 1998,
           "precision": "exact",
@@ -158,7 +196,9 @@
       {
         "id": "h16",
         "description": "Since 2 November 2020, the library has been part of Istituto VIVE, a special autonomy institute of the Ministry of Culture.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 2020,
           "precision": "exact",
@@ -168,7 +208,9 @@
       {
         "id": "h17",
         "description": "In December 2021, construction began to relocate the library to Palazzo di San Felice, designed by Mario Botta.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 2021,
           "precision": "exact",
@@ -178,7 +220,9 @@
       {
         "id": "h18",
         "description": "From mid to late 2025, visitors can tour the construction site of the new library.",
-        "sourceIds": ["wikipedia"],
+        "sourceIds": [
+          "wikipedia"
+        ],
         "time": {
           "startYear": 2025,
           "precision": "exact",
@@ -193,47 +237,58 @@
     {
       "name": "Benedetto Croce",
       "personId": "benedetto-croce",
-      "sourceIds": ["wikipedia"]
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Corrado Ricci",
       "personId": "corrado-ricci",
-      "sourceIds": ["wikipedia"]
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Rodolfo Lanciani",
       "personId": "rodolfo-lanciani",
-      "sourceIds": ["wikipedia"]
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Felice Barnabei",
-      "sourceIds": ["wikipedia"]
+      "personId": "felice-barnabei",
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Ugo Monneret de Villard",
       "personId": "ugo-monneret-de-villard",
-      "sourceIds": ["wikipedia"]
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Giulio Quirino Giglioli",
       "personId": "giulio-quirino-giglioli",
-      "sourceIds": ["wikipedia"]
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Mario Botta",
       "personId": "mario-botta",
-      "sourceIds": ["wikipedia"]
+      "sourceIds": [
+        "wikipedia"
+      ]
     },
     {
       "name": "Torquato Tasso",
       "personId": "torquato-tasso",
-      "sourceIds": ["wikipedia"]
-    }
-  ],
-  "wikipediaSources": [
-    {
-      "title": "Biblioteca di archeologia e storia dell'arte",
-      "url": "https://it.wikipedia.org/wiki/Biblioteca_di_archeologia_e_storia_dell'arte"
+      "sourceIds": [
+        "wikipedia"
+      ]
     }
   ]
 }

@@ -313,7 +313,9 @@
       "Churches & cathedrals",
       "Archaeological Site"
     ],
-    "basilica-hilariana": [],
+    "basilica-hilariana": [
+      "Archaeological Site"
+    ],
     "basilica-iulia": [
       "Archaeological Site"
     ],

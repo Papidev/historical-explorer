@@ -149,6 +149,8 @@ Empty rows are **To do**. Attempted/generated rows with outstanding work/errors 
 
 **Generate** (empty row) and **Refresh** (existing row) recreate POI metadata, acquire Wikipedia, retain discovered Wikidata identity, refresh Types when available, generate image candidates, and generate structured Story Content/Related People. Preview, Refresh, and Delete are available for Story Content; commit reviewed artifacts.
 
+Imported Wikipedia and Wikidata links are checked for lists, categories, and disambiguation pages before use. Source acquisition resolves the current POI references again; resuming generation rechecks Sources, and a changed Source identity requires new Story Content before retrying Related People.
+
 Temporary refresh errors preserve existing artifacts. If no unambiguous English/Italian Wikipedia page resolves, remove the POI's Source, Story, and image candidates and mark it waiting for a Source; shared People and logs remain. See [Story Workflow Architecture](docs/story-workflow-architecture.md).
 
 People supports alphabetical browsing, thumbnails, name search, and Linked POIs details derived from saved Story references. **Regenerate** uses the saved Source and selected model, preserving identity, image, and links. See [Person Architecture](docs/person-architecture.md).

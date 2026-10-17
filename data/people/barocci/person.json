@@ -7,29 +7,41 @@
     "description": [
       {
         "text": "Federico Barocci, born around 1535 in Urbino, began his artistic journey apprenticing under his sculptor father and later with the painter Battista Franco Veneziano. His early exposure to the Mannerist style of the Zuccari studio in Rome helped shape a dynamic approach that blended dramatic composition with a subtle, almost ethereal, use of color.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "After returning to Urbino, Barocci produced a series of altarpieces that earned him the patronage of Duke Francesco Maria II della Rovere. His mature works, such as the Visitation and Presentation of the Virgin for the Capuchin order, foreshadowed the Baroque movement and left a lasting influence on artists like Peter Paul Rubens, who drew inspiration from Barocci’s emotive brushwork.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "curiosities": [
       {
         "text": "Barocci was nicknamed Il Baroccio, a playful reference to his surname that later echoed the name of the Baroque period.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He pioneered the use of pastel studies, producing the earliest surviving examples of this medium and demonstrating a soft, opalescent rendering that anticipated later Baroque techniques.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "During his second stay in Rome, Barocci fell ill and suspected that a salad he ate had been poisoned by jealous rivals, a claim that illustrates the intense artistic rivalries of the time.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "Peter Paul Rubens is known to have made a sketch of Barocci’s Martyrdom of St Vitale, indicating the direct influence of Barocci’s dramatic compositions on the Flemish master.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "birthDate": {
@@ -67,5 +79,8 @@
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-10-10T23:48:09.373Z"
-  }
+  },
+  "sourceContextWikidataIds": [
+    "Q2031901"
+  ]
 }

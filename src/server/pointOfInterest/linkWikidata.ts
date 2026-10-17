@@ -1,4 +1,5 @@
 import type { GeoJson } from "@/server/wikiPipeline/types";
+import { isInvalidPoiIdentity } from "@/server/wikiPipeline/isInvalidPoiIdentity";
 import { fetchWikimediaJson } from "@/server/wikiPipeline/fetchWikimediaJson";
 
 export const linkWikidata = async (
@@ -13,10 +14,17 @@ export const linkWikidata = async (
     const url = new URL("https://www.wikidata.org/w/api.php");
     url.searchParams.set("action", "wbgetentities");
     url.searchParams.set("ids", `${poi.wikidataId}|${wikidataId}`);
-    url.searchParams.set("props", "info");
+    url.searchParams.set("props", "info|claims");
     url.searchParams.set("format", "json");
     const data = await fetchWikimediaJson<{
-      entities?: Record<string, { id?: string; missing?: string }>;
+      entities?: Record<
+        string,
+        {
+          id?: string;
+          missing?: string;
+          claims?: NonNullable<Parameters<typeof isInvalidPoiIdentity>[0]>["claims"];
+        }
+      >;
     }>(url);
     const previous = data.entities?.[poi.wikidataId];
     const incoming = data.entities?.[wikidataId];
@@ -29,7 +37,11 @@ export const linkWikidata = async (
     ) {
       throw new Error("Could not verify the conflicting Wikidata identities.");
     }
-    if (previous.id !== incoming.id)
+    if (isInvalidPoiIdentity(incoming))
+      throw new Error(
+        "A POI cannot be linked to a Wikimedia collection or generic concept.",
+      );
+    if (previous.id !== incoming.id && !isInvalidPoiIdentity(previous))
       throw new Error("The Wikipedia page has a conflicting Wikidata ID.");
     wikidataId = incoming.id;
   }

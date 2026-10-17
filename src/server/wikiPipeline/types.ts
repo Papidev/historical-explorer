@@ -56,6 +56,7 @@ export type ResolvedPage = {
   candidates: ResolutionCandidate[];
   selected: {
     title: string;
+    wikidataId?: string;
     language?: WikipediaLanguage;
   };
 };

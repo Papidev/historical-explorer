@@ -7,29 +7,41 @@
     "description": [
       {
         "text": "Mario Botta was born in Mendrisio in 1943, the only son of Luigi and Maria Botta.  His early years were marked by the absence of his father, who left the family when Mario was seven and whom Mario would meet only once, at the age of twenty‑five.  At fifteen he began an apprenticeship as a draughtsman with Luigi Camenisch and Tita Carloni in Lugano, and by the age of eighteen he had already completed his first building, the parish house in Genestrerio (1961‑1963).",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "After completing his studies at the Liceo Artistico di Milano and the Istituto Universitario di Architettura di Venezia—where he was taught by Carlo Scarpa and Giuseppe Mazzariol and came into contact with Le Corbusier and Louis I. Kahn—Botta opened his own studio in Lugano in 1970.  His work, characterised by rigorous pragmatism, geometric volumes and a dialogue with the landscape, has earned him a reputation as a leading figure of the Ticinese school of architecture.  In 2023 he was honoured with the Premio Piranesi Prix de Rome à la carrière for his lifetime contribution to contemporary architectural culture.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "curiosities": [
       {
         "text": "Botta’s first architectural commission was a parish house he designed at the age of eighteen, a project that set the tone for his later focus on religious and community buildings.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He introduced the truncated‑cylinder typology in the Church of San Giovanni Battista in Mogno (1996), a design that would later be echoed in the Cathedral of the Resurrection in Évry, France.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "Botta’s father left the family when Mario was seven, and the architect would not see him again until he was twenty‑five, a personal experience that has been noted as influencing the emotional depth of his work.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "In 2023, Botta received the prestigious Premio Piranesi Prix de Rome à la carrière, recognising the breadth of his architectural output and his impact on the global architectural discourse.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "birthDate": {
@@ -61,5 +73,8 @@
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-10-10T20:46:37.174Z"
-  }
+  },
+  "sourceContextWikidataIds": [
+    "Q2901253"
+  ]
 }

@@ -7,29 +7,41 @@
     "description": [
       {
         "text": "Onorio Longhi was an Italian architect born in 1568 in Viggiù, Lombardy. He began his career assisting his father, Martino Longhi the Elder, and inherited his father's commissions after the elder's death in 1591. Longhi was known as a ruthless figure and a companion of Caravaggio, and in 1606 he was tried for homicide in Rome, leading to his exile.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "After returning to Lombardy, Longhi completed several unfinished plans for the Duomo of Milan and other churches. A papal amnesty in 1611 allowed him to return to Rome, where he designed the first plan for the Milanese national church San Carlo al Corso, later finished by his son and Pietro da Cortona. He also designed Santa Maria Liberatrice in the Roman Forum, which was later destroyed during excavations that uncovered Santa Maria Antiqua, and the Santoro Chapel in St. John Lateran. He died in Rome in 1619.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "curiosities": [
       {
         "text": "He was tried for homicide in Rome in 1606.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He was a companion of Caravaggio.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "He designed the first plan for San Carlo al Corso, a Milanese national church in Rome.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       },
       {
         "text": "Santa Maria Liberatrice was destroyed during excavations that uncovered Santa Maria Antiqua.",
-        "sourceIds": ["wikipedia"]
+        "sourceIds": [
+          "wikipedia"
+        ]
       }
     ],
     "birthDate": {
@@ -65,5 +77,8 @@
     "aiProvider": "ollama",
     "aiModel": "gpt-oss:20b-cloud",
     "completedAt": "2026-10-10T23:47:46.410Z"
-  }
+  },
+  "sourceContextWikidataIds": [
+    "Q2031901"
+  ]
 }
