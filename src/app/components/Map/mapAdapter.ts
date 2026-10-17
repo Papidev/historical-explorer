@@ -32,6 +32,7 @@ export interface MapAdapter {
   updateView: (view: MapViewUpdate) => void;
   updatePois: (points: Poi[], definitions?: PoiCategoryDefinition[]) => void;
   updateSelectedPoi: (poiId: string | null) => void;
+  focusPoi: (request: { poi: Poi; leftInset: number; rightInset: number }) => void;
   getZoom: () => number | null;
   setOnZoomChange: (handler: ((zoom: number) => void) | null) => void;
   setOnOpenPoiDetails: (handler: ((poiId: string) => void) | null) => void;
@@ -375,6 +376,15 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
     updateSelectedPoi(poiId) {
       selectedPoiId = poiId;
       updateMarkerSelection();
+    },
+    focusPoi({ poi, leftInset, rightInset }) {
+      if (!map) return;
+      closePreview();
+      map.easeTo({
+        center: [poi.coordinates.lng, poi.coordinates.lat],
+        // Mobile Stories cover the map; keep the place centered for the return to it.
+        offset: window.innerWidth >= 768 ? [(leftInset - rightInset) / 2, 0] : [0, 0],
+      });
     },
     getZoom() {
       return map ? map.getZoom() : null;

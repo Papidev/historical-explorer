@@ -20,6 +20,7 @@ type Props = {
   onMapClick?: () => void;
   controlsRightInset?: number;
   hideControlsOnMobile?: boolean;
+  focusRequest?: { poi: Poi; leftInset: number; rightInset: number };
 };
 
 type MapHandlers = {
@@ -41,6 +42,7 @@ export const Map = ({
   onMapClick,
   controlsRightInset = 0,
   hideControlsOnMobile = false,
+  focusRequest,
 }: Props) => {
   const [preview, setPreview] = useState<MapPreview | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -120,6 +122,10 @@ export const Map = ({
   useEffect(() => {
     adapterRef.current?.updateSelectedPoi(selectedPoiId);
   }, [selectedPoiId]);
+
+  useEffect(() => {
+    if (focusRequest) adapterRef.current?.focusPoi(focusRequest);
+  }, [focusRequest]);
 
   return (
     <>
