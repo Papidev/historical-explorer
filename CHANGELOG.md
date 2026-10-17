@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.8.1
+
+### Patch Changes
+
+- Ignore local worktree backups and simplify worktree cleanup instructions.
+
 ## 0.8.0
 
 ### Minor Changes

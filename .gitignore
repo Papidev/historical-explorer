@@ -34,6 +34,7 @@
 # misc
 .DS_Store
 *.pem
+/.worktree-backups/
 
 # debug
 npm-debug.log*
