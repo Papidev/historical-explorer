@@ -44,17 +44,15 @@ export const HomeHeroPrototype = ({ cover, variant }: Props) => {
             className="absolute inset-0 bg-linear-to-t from-zinc-950/70 via-transparent to-transparent"
             aria-hidden="true"
           />
-          <div
-            className={
-              variant === "a"
-                ? "absolute top-12 right-6 left-24 text-white"
-                : "absolute right-6 bottom-7 left-6 text-white"
-            }
-          >
-            <p className="text-xs font-medium tracking-[0.2em] uppercase">
-              The first city in our atlas
+          <div className="absolute right-6 bottom-7 left-6 text-white">
+            {variant !== "a" && (
+              <p className="text-xs font-medium tracking-[0.2em] uppercase">
+                The first city in our atlas
+              </p>
+            )}
+            <p className="mt-2 font-serif text-4xl sm:text-5xl">
+              Rome
             </p>
-            <p className="mt-2 font-serif text-4xl sm:text-5xl">Rome</p>
             <p className="mt-2 flex items-center gap-2 text-sm text-zinc-100">
               <MapPinIcon className="size-4" aria-hidden="true" />
               {cover.poi.name}
