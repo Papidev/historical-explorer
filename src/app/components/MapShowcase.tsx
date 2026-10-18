@@ -28,7 +28,11 @@ export const MapShowcase = () => (
       </Link>
     </div>
     <figure>
-      <div className="overflow-x-auto rounded-2xl border border-zinc-900/10 bg-white shadow-sm">
+      <Link
+        href="/rome"
+        aria-label="Explore Rome on the map"
+        className="block overflow-x-auto rounded-2xl border border-zinc-900/10 bg-white shadow-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800"
+      >
         <Image
           src="/rome-map-preview.jpg"
           alt="Cultural Atlas map of Rome with markers and a preview of Castel Sant’Angelo"
@@ -36,7 +40,7 @@ export const MapShowcase = () => (
           height={900}
           className="h-auto w-full min-w-180"
         />
-      </div>
+      </Link>
       <figcaption className="mt-3 text-right text-xs leading-5 text-zinc-500">
         Map: OpenFreeMap · © OpenMapTiles ·{" "}
         <a
