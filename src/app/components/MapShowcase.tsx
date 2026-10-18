@@ -31,7 +31,7 @@ export const MapShowcase = () => (
       <Link
         href="/rome"
         aria-label="Explore Rome on the map"
-        className="block overflow-x-auto rounded-2xl border border-zinc-900/10 bg-white shadow-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800"
+        className="block cursor-pointer overflow-x-auto rounded-2xl border border-zinc-900/10 bg-white shadow-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800"
       >
         <Image
           src="/rome-map-preview.jpg"
