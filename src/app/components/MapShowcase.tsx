@@ -16,7 +16,8 @@ export const MapShowcase = () => (
           Explore Rome on the map
         </h2>
         <p className="mt-3 max-w-xl text-sm leading-6 text-zinc-600">
-          Choose a place to see what makes it worth a closer look.
+          Open a place&apos;s Story for a quick sense of what makes it interesting. Each Story links
+          to Wikipedia if you want to explore further.
         </p>
       </div>
       <Link
@@ -29,7 +30,7 @@ export const MapShowcase = () => (
     <figure>
       <div className="overflow-x-auto rounded-2xl border border-zinc-900/10 bg-white shadow-sm">
         <Image
-          src="/prototype-rome-map-wide.jpg"
+          src="/rome-map-preview.jpg"
           alt="Cultural Atlas map of Rome with markers and a preview of Castel Sant’Angelo"
           width={1700}
           height={900}
