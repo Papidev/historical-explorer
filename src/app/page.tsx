@@ -9,8 +9,16 @@ import Image from "next/image";
 import Link from "next/link";
 import catalog from "../../data/public/catalog.json";
 import { WorkInProgressBadge } from "@/app/components/ui/WorkInProgressBadge";
+import { HomeHeroPrototype } from "@/app/components/HomeHeroPrototype";
+import { PrototypeSwitcher } from "@/app/components/HomeHeroPrototype/PrototypeSwitcher";
+import { MapShowcase } from "@/app/components/HomeHeroPrototype/MapShowcase";
 
-const Home = () => {
+type Props = {
+  searchParams: Promise<{ variant?: string }>;
+};
+
+const Home = async ({ searchParams }: Props) => {
+  const variant = (await searchParams).variant;
   const cover =
     catalog.pois.find(({ poi }) => poi.id === "castle-of-the-holy-angel") ?? catalog.pois[0];
   const discoveries = ["piazza-navona", "cloisters-of-bramante", "forum-boarium"]
@@ -73,46 +81,55 @@ const Home = () => {
             <p className="mt-4 text-sm text-zinc-500">From your doorstep, or from anywhere.</p>
           </div>
 
-          {cover && (
-            <figure className="relative">
-              <div className="relative aspect-4/5 overflow-hidden rounded-t-[10rem] rounded-b-2xl bg-zinc-200 sm:aspect-5/4 lg:aspect-4/5">
-                <Image
-                  src={cover.mainImage.thumbnailUrl}
-                  alt={cover.poi.name}
-                  fill
-                  preload
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="object-cover"
-                />
-                <div
-                  className="absolute inset-0 bg-linear-to-t from-zinc-950/80 via-transparent to-transparent"
-                  aria-hidden="true"
-                />
-                <div className="absolute right-6 bottom-7 left-6 text-white sm:right-8 sm:left-8">
-                  <p className="text-xs font-medium tracking-[0.2em] text-zinc-100 uppercase">
-                    The first city in our atlas
-                  </p>
-                  <p className="mt-2 font-serif text-5xl sm:text-6xl">Rome</p>
-                  <p className="mt-3 flex items-center gap-2 text-sm text-zinc-200">
-                    <MapPinIcon className="size-4" aria-hidden="true" />
-                    {cover.poi.name}
-                  </p>
+          {cover &&
+          process.env.NODE_ENV !== "production" &&
+          variant &&
+          ["a", "b", "c"].includes(variant) ? (
+            <HomeHeroPrototype cover={cover} variant={variant as "a" | "b" | "c"} />
+          ) : (
+            cover && (
+              <figure className="relative">
+                <div className="relative aspect-4/5 overflow-hidden rounded-t-[10rem] rounded-b-2xl bg-zinc-200 sm:aspect-5/4 lg:aspect-4/5">
+                  <Image
+                    src={cover.mainImage.thumbnailUrl}
+                    alt={cover.poi.name}
+                    fill
+                    preload
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                  <div
+                    className="absolute inset-0 bg-linear-to-t from-zinc-950/80 via-transparent to-transparent"
+                    aria-hidden="true"
+                  />
+                  <div className="absolute right-6 bottom-7 left-6 text-white sm:right-8 sm:left-8">
+                    <p className="text-xs font-medium tracking-[0.2em] text-zinc-100 uppercase">
+                      The first city in our atlas
+                    </p>
+                    <p className="mt-2 font-serif text-5xl sm:text-6xl">Rome</p>
+                    <p className="mt-3 flex items-center gap-2 text-sm text-zinc-200">
+                      <MapPinIcon className="size-4" aria-hidden="true" />
+                      {cover.poi.name}
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <figcaption className="mt-3 text-right text-xs leading-5 text-zinc-500">
-                Photo: {cover.mainImage.attribution} ·{" "}
-                <a
-                  href={cover.mainImage.commonsPageUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-sm underline decoration-zinc-300 underline-offset-2 hover:text-zinc-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-800"
-                >
-                  {cover.mainImage.license} ↗
-                </a>
-              </figcaption>
-            </figure>
+                <figcaption className="mt-3 text-right text-xs leading-5 text-zinc-500">
+                  Photo: {cover.mainImage.attribution} ·{" "}
+                  <a
+                    href={cover.mainImage.commonsPageUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-sm underline decoration-zinc-300 underline-offset-2 hover:text-zinc-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-800"
+                  >
+                    {cover.mainImage.license} ↗
+                  </a>
+                </figcaption>
+              </figure>
+            )
           )}
         </section>
+
+        {process.env.NODE_ENV !== "production" && variant === "a" && <MapShowcase />}
 
         <section
           aria-label="How to explore"
@@ -223,6 +240,7 @@ const Home = () => {
           <AppVersion />
         </div>
       </footer>
+      {process.env.NODE_ENV !== "production" && <PrototypeSwitcher variant={variant} />}
     </div>
   );
 };
