@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.9.3
+
+### Patch Changes
+
+- Show a concise Story preview and a large Rome map on the homepage, and explain that visitors can explore further on Wikipedia.
+
 ## 0.9.2
 
 ### Patch Changes

@@ -1,14 +1,11 @@
 import { AppVersion } from "@/app/components/ui/AppVersion";
-import {
-  ArrowRightIcon,
-  ArrowUpRightIcon,
-  GlobeAltIcon,
-  MapPinIcon,
-} from "@heroicons/react/24/outline";
+import { ArrowRightIcon, ArrowUpRightIcon, GlobeAltIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import catalog from "../../data/public/catalog.json";
 import { WorkInProgressBadge } from "@/app/components/ui/WorkInProgressBadge";
+import { HomeHeroStory } from "@/app/components/HomeHeroStory";
+import { MapShowcase } from "@/app/components/MapShowcase";
 
 const Home = () => {
   const cover =
@@ -53,8 +50,8 @@ const Home = () => {
               Every place has a <span className="text-zinc-800 italic">story.</span>
             </h1>
             <p className="mt-6 max-w-md text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">
-              Discover the art, history, and people behind the places on the map. A few meaningful
-              details can change the way you see a city.
+              Get the essence of a place at a glance. Discover the art, history, and people that
+              make it interesting, then explore further on Wikipedia whenever you want.
             </p>
             <p className="mt-6 max-w-md text-base leading-7 text-zinc-600">
               <span className="font-semibold text-zinc-900">Our atlas begins in Rome.</span> More
@@ -73,46 +70,10 @@ const Home = () => {
             <p className="mt-4 text-sm text-zinc-500">From your doorstep, or from anywhere.</p>
           </div>
 
-          {cover && (
-            <figure className="relative">
-              <div className="relative aspect-4/5 overflow-hidden rounded-t-[10rem] rounded-b-2xl bg-zinc-200 sm:aspect-5/4 lg:aspect-4/5">
-                <Image
-                  src={cover.mainImage.thumbnailUrl}
-                  alt={cover.poi.name}
-                  fill
-                  preload
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="object-cover"
-                />
-                <div
-                  className="absolute inset-0 bg-linear-to-t from-zinc-950/80 via-transparent to-transparent"
-                  aria-hidden="true"
-                />
-                <div className="absolute right-6 bottom-7 left-6 text-white sm:right-8 sm:left-8">
-                  <p className="text-xs font-medium tracking-[0.2em] text-zinc-100 uppercase">
-                    The first city in our atlas
-                  </p>
-                  <p className="mt-2 font-serif text-5xl sm:text-6xl">Rome</p>
-                  <p className="mt-3 flex items-center gap-2 text-sm text-zinc-200">
-                    <MapPinIcon className="size-4" aria-hidden="true" />
-                    {cover.poi.name}
-                  </p>
-                </div>
-              </div>
-              <figcaption className="mt-3 text-right text-xs leading-5 text-zinc-500">
-                Photo: {cover.mainImage.attribution} ·{" "}
-                <a
-                  href={cover.mainImage.commonsPageUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-sm underline decoration-zinc-300 underline-offset-2 hover:text-zinc-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-800"
-                >
-                  {cover.mainImage.license} ↗
-                </a>
-              </figcaption>
-            </figure>
-          )}
+          {cover && <HomeHeroStory cover={cover} />}
         </section>
+
+        <MapShowcase />
 
         <section
           aria-label="How to explore"
@@ -127,7 +88,7 @@ const Home = () => {
             {
               number: "02",
               title: "Look a little closer",
-              description: "Read a short story. Notice a detail you might have missed.",
+              description: "Notice what makes it interesting in a few short details.",
             },
             {
               number: "03",
