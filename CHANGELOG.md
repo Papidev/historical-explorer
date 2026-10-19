@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.9.5
+
+### Patch Changes
+
+- Refresh the homepage Rome map screenshot with more visible places, an Ara Pacis preview, and the Castel Sant’Angelo detail drawer.
+
 ## 0.9.4
 
 ### Patch Changes

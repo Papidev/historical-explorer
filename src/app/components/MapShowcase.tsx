@@ -34,8 +34,8 @@ export const MapShowcase = () => (
         className="block cursor-pointer overflow-x-auto rounded-2xl border border-zinc-900/10 bg-white shadow-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800"
       >
         <Image
-          src="/rome-map-preview.jpg"
-          alt="Cultural Atlas map of Rome with markers and a preview of Castel Sant’Angelo"
+          src="/rome-map-showcase-ara-pacis.jpg"
+          alt="Cultural Atlas map of Rome with place markers, an Ara Pacis preview, and the Castel Sant’Angelo detail panel open"
           width={1700}
           height={900}
           className="h-auto w-full min-w-180"
