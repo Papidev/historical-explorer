@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import type { WikipediaSource } from "@/server/wikipediaSources";
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { Fragment } from "react";
@@ -18,6 +19,13 @@ export const WikipediaLinks = ({ sources }: { sources?: WikipediaSource[] }) => 
         aria-label={`${primary.title} on Wikipedia (opens in a new tab)`}
         className="inline-flex min-h-8 items-center rounded-sm text-zinc-500 underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 pointer-coarse:min-h-11"
       >
+        <Image
+          src="/icons/wikipedia-w.svg"
+          alt=""
+          width={28}
+          height={28}
+          className="mr-1 shrink-0"
+        />
         Read on Wikipedia
         <ArrowTopRightOnSquareIcon className="ml-1.5 size-3.5" aria-hidden="true" />
       </a>
