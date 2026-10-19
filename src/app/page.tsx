@@ -108,6 +108,59 @@ const Home = () => {
           ))}
         </section>
 
+        <section
+          aria-labelledby="shared-knowledge-title"
+          className="grid gap-5 border-b border-zinc-900/15 py-10 sm:py-14 lg:grid-cols-[1fr_1.5fr] lg:gap-16"
+        >
+          <div>
+            <p className="text-xs font-semibold tracking-[0.2em] text-zinc-800 uppercase">
+              Behind the Stories
+            </p>
+            <h2
+              id="shared-knowledge-title"
+              className="mt-3 max-w-sm font-serif text-3xl tracking-tight sm:text-4xl"
+            >
+              Built on shared knowledge.
+            </h2>
+          </div>
+          <div className="max-w-2xl space-y-4 text-base leading-7 text-zinc-600">
+            <p>
+              This atlas draws on the remarkable work behind{" "}
+              <a
+                href="https://www.wikipedia.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-sm text-zinc-800 underline decoration-zinc-400 underline-offset-4 hover:text-zinc-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-800"
+              >
+                Wikipedia
+              </a>
+              ,{" "}
+              <a
+                href="https://www.wikidata.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-sm text-zinc-800 underline decoration-zinc-400 underline-offset-4 hover:text-zinc-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-800"
+              >
+                Wikidata
+              </a>
+              , and{" "}
+              <a
+                href="https://commons.wikimedia.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-sm text-zinc-800 underline decoration-zinc-400 underline-offset-4 hover:text-zinc-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-800"
+              >
+                Wikimedia Commons
+              </a>
+              : articles, structured knowledge, and images that help us understand each place.
+            </p>
+            <p>
+              We use AI as an assistant to prepare Story drafts and suggest possible connections
+              between places and people. The sources remain the foundation of what we share.
+            </p>
+          </div>
+        </section>
+
         {discoveries.length > 0 && (
           <section aria-labelledby="discoveries-title" className="py-12 sm:py-16">
             <div className="mb-7 flex flex-wrap items-end justify-between gap-4">

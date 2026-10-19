@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.9.4
+
+### Patch Changes
+
+- Credit Wikipedia, Wikidata, and Wikimedia Commons on the homepage, explain AI's supporting role, and add Wikipedia's icon to Story links.
+
 ## 0.9.3
 
 ### Patch Changes
