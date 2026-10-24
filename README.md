@@ -263,3 +263,7 @@ Licensed Tailwind Plus source is a local reference in gitignored `.tailwind-plus
 Track bugs, improvements, and future ideas in GitHub Issues and this repository's Cultural Atlas Project. Backlog status records an idea without scheduling implementation; conditional work retains its revisit conditions in the issue.
 
 [Product vision](docs/product/vision.md) · [Story quality references](docs/product/story-quality.md) · [Glossary](CONTEXT.md) · [Entity discovery](docs/entity-discovery.md)
+
+## Admin content API
+
+The server exposes Bearer-authenticated v1 catalog, Story and Person writes and admin baseline reads, independently of the existing visitor catalog. See [configuration, contract and verification](docs/admin-content-api.md). Runtime database credentials stay on the server. Deployment and live writes require the remaining Vercel connection verification documented there.
