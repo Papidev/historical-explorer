@@ -213,6 +213,21 @@ export const publishedPersonSchema = z
   });
 
 export type PublishedSource = z.infer<typeof publishedSourceSchema>;
+
+// Lightweight display fields for the existing visitor preview, without loading Stories.
+export const publishedCityPreviewSchema = publishedCityMapSchema.safeExtend({
+  pois: z.array(
+    publishedPoiSummarySchema.extend({
+      mainImage: publishedImageSchema.nullable(),
+      introduction: z.string(),
+      wikidataId: z.string().nullable().optional(),
+    }),
+  ),
+  removedPois: z
+    .array(z.object({ id: z.uuid(), wikidataId: z.string().nullable().optional() }))
+    .optional(),
+});
+export type PublishedCityPreview = z.infer<typeof publishedCityPreviewSchema>;
 export type PublishedImage = z.infer<typeof publishedImageSchema>;
 export type PublishedPoiSummary = z.infer<typeof publishedPoiSummarySchema>;
 export type PublishedCategory = z.infer<typeof publishedCategorySchema>;

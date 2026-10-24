@@ -1,6 +1,7 @@
 import type { PublicPerson } from "@/server/person";
 import Image from "next/image";
 import { WikipediaLinks } from "@/app/components/WikipediaLinks";
+import { StoryText } from "@/app/components/StoryText";
 
 const formatDate = (date: NonNullable<PublicPerson["birthDate"]>) => {
   const year = `${Math.abs(date.year)} ${date.year < 0 ? "BC" : "AD"}`;
@@ -47,7 +48,9 @@ export const Person = ({ person }: { person: PublicPerson }) => (
     ) : null}
     <div className="space-y-4">
       {person.description.map((paragraph) => (
-        <p key={paragraph}>{paragraph}</p>
+        <div key={paragraph}>
+          <StoryText text={paragraph} textFormat={person.textFormat} />
+        </div>
       ))}
     </div>
     {person.curiosities.length > 0 ? (
@@ -55,7 +58,9 @@ export const Person = ({ person }: { person: PublicPerson }) => (
         <h3 className="text-sm font-semibold tracking-wide text-zinc-950 uppercase">Curiosities</h3>
         <ul className="mt-3 list-disc space-y-3 pl-5 marker:text-sky-400">
           {person.curiosities.map((curiosity) => (
-            <li key={curiosity}>{curiosity}</li>
+            <li key={curiosity}>
+              <StoryText text={curiosity} textFormat={person.textFormat} />
+            </li>
           ))}
         </ul>
       </section>

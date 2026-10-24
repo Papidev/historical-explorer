@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from "react";
 import type { PublicStoryContent } from "@/server/storyWorkflow";
+import type { PublishedPoiDetail } from "@/server/content/publishedContent";
 
 type StoryContentState = {
   content: PublicStoryContent | null;
+  detail?: PublishedPoiDetail | null;
   isLoading: boolean;
   showLoading: boolean;
   poiId: string | null;
@@ -46,9 +48,11 @@ export const usePoiStoryContent = ({ citySlug, poiId }: { citySlug: string; poiI
 
         const payload = (await response.json()) as {
           storyContent?: PublicStoryContent | null;
+          detail?: PublishedPoiDetail;
         };
         setState({
           content: payload.storyContent ?? null,
+          detail: payload.detail ?? null,
           isLoading: false,
           showLoading: false,
           poiId,
@@ -72,6 +76,7 @@ export const usePoiStoryContent = ({ citySlug, poiId }: { citySlug: string; poiI
 
   return {
     content: state.poiId === poiId ? state.content : null,
+    detail: state.poiId === poiId ? state.detail : null,
     isLoading: Boolean(poiId) && (state.poiId !== poiId || state.isLoading),
     showLoading: state.poiId === poiId && state.showLoading,
   };

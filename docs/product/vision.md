@@ -15,7 +15,7 @@ The map includes places with historical, artistic, architectural, archaeological
 
 The map is the discovery entry point; the Story explains why a place matters. Selecting a marker should show a lightweight preview with the POI name, thumbnail, short descriptor, and an action to open the Story.
 
-A POI appears only when it has workflow-generated, valid versioned Story Content, a selected Main Image with source, rights, license, and attribution, and saved records for every retained Related Person. Imported places and metadata-only POIs remain internal. Successfully saving complete, valid content automatically publishes its new version, without a separate approval phase or publish action.
+A POI appears only when it has workflow-generated, valid versioned Story Content and saved records for every retained Related Person. Images must carry source, rights, license, and attribution; a successful result with no eligible image remains publishable and uses an image placeholder. Imported places and metadata-only POIs remain internal. Successfully saving complete, valid content automatically publishes its new version, without a separate approval phase or publish action.
 
 An approval phase may be introduced in a later step. Its rules are not yet defined, and it is not part of the current publication workflow.
 

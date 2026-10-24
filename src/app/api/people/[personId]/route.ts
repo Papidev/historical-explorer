@@ -1,12 +1,16 @@
-import { NextResponse } from "next/server";
+import { visitorContent } from "@/server/visitorContent";
+import { createVisitorHandler } from "@/server/visitorContent/handler";
 import { publicCatalog } from "@/server/publicCatalog";
 
 export const GET = async (
-  _request: Request,
+  request: Request,
   { params }: { params: Promise<{ personId: string }> },
 ) => {
   const { personId } = await params;
-  return NextResponse.json({
-    person: publicCatalog.getPerson(personId) ?? null,
-  });
+  const query = new URL(request.url).searchParams;
+  return createVisitorHandler(visitorContent, publicCatalog).getPerson(
+    personId,
+    query.get("city") ?? undefined,
+    query.get("poiId") ?? undefined,
+  );
 };
