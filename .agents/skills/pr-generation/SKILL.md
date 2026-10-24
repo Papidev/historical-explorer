@@ -65,22 +65,33 @@ Keep the title concise and scoped to the PR's main change.
 
 ## Body
 
-Write for a human reviewer who has not read the conversation. Start with a short
-paragraph explaining the problem and the resulting user experience in plain English.
-Use a concrete before/after example when it makes the change clearer.
+Use this format for every PR in this repository, including when the generic `pr`
+skill is also loaded. These body conventions take precedence over its template.
 
-Prefer short bulleted lists for changes and verification. Use Markdown to make the
-body easy to scan: bold for key behavior, links for issues, and inline code for
-technical identifiers. Group changes under headings by type, such as Features,
-Fixes, Refactoring, Documentation, or Maintenance. Include only relevant categories;
-use one heading when all changes share a type. Keep emphasis selective.
-Group related behavior rather than listing every file, implementation step, or test.
-Include technical details only when they explain a decision, tradeoff, or risk.
+Start with a short paragraph explaining the purpose and resulting behavior in
+plain English for a reviewer who has not read the conversation.
 
-Summarize verification in a short sentence. Explain what important behavior was
-verified instead of listing routine commands. Include screenshots, configuration
-changes, or limitations only when they help review the change. Omit placeholders,
-conversation history, and release bookkeeping that is already clear from the diff.
+Use these sections when relevant:
+
+- **Changes**: short bullets explaining what changed and why it matters. Group
+  related behavior rather than listing every file or implementation step.
+- **Verification**: short bullets describing the checks actually performed and
+  what they verified. Include relevant skipped checks and material limitations.
+  For documentation-only changes, a brief diff-review statement is enough.
+
+Combine headings, short paragraphs and bullet lists; the description need not be
+only bullets. Scale the detail to the change and omit empty sections. Use familiar
+words, explain technical terms when needed, and keep emphasis selective. Include
+screenshots or diagrams only when they materially help explain the change.
+
+Describe changes directly. Do not add Before/After, Merge Danger or Remaining Work
+sections unless the user explicitly requests them. Explain any material risk or
+limitation plainly alongside the relevant change or verification result, without
+labels such as door, blast radius or operational gate. Keep future plans out of the
+PR body unless they are necessary to understand the implemented scope.
+
+Omit placeholders, conversation history and release bookkeeping already clear
+from the diff.
 
 When using the GitHub connector, pass actual newlines and leave a blank line before
 Markdown lists. Link the originating issue and use a closing keyword when appropriate.
