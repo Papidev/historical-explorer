@@ -1,6 +1,6 @@
 # Admin content API
 
-The public Next.js server implements [Admin content API v1](admin-write-api-contract.md) at `/api/admin/content/v1`. Local admin Node clients use a dedicated Bearer credential; there is no user login, browser credential or CORS integration. Visitor routes and the build-generated public catalog continue to use their existing read paths. Online saves do not change the current visitor site or invalidate its caches.
+The public Next.js server implements [Admin content API v1](admin-write-api-contract.md) at `/api/admin/content/v1`. Local admin Node clients use a dedicated Bearer credential; there is no user login, browser credential or CORS integration. Successfully saving complete, valid content publishes its new version automatically; no separate approval or publish action is required. Visitor routes still read the build-generated public catalog, so the current site does not yet display those online versions or invalidate its caches after a save. This is a pending read-path integration, not a separate publication phase.
 
 ## Origin and schema compatibility
 
