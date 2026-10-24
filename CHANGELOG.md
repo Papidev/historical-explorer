@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.10.0
+
+### Minor Changes
+
+- Add Bearer-authenticated admin content APIs for catalog synchronization, Story and Person saves, and online version baselines, while preserving the existing visitor reads.
+
 ## 0.9.5
 
 ### Patch Changes

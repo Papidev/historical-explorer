@@ -1,0 +1,492 @@
+// Adapted from Papidev/historical-explorer-backend, commit 2b7b203cb2ba35dadd5a36d6b0ea6eb1bf971b1d.
+import { createHash, randomUUID } from "node:crypto";
+import type { Pool, PoolClient } from "pg";
+import { z } from "zod";
+import {
+  publishedCityMapSchema,
+  publishedPersonSchema,
+  publishedPoiDetailSchema,
+  publishedPoiSummarySchema,
+} from "./publishedContent";
+
+const generationSchema = z
+  .object({
+    provider: z.string().trim().min(1),
+    model: z.string().trim().min(1),
+    completedAt: z.iso.datetime(),
+  })
+  .strict();
+export const wikipediaPageSchema = z
+  .object({
+    language: z.string().regex(/^[a-z][a-z0-9-]*$/),
+    pageId: z.number().int().positive(),
+    title: z.string().min(1),
+    url: z.url(),
+    wikidataId: z
+      .string()
+      .regex(/^Q[1-9]\d*$/)
+      .optional(),
+  })
+  .strict();
+
+export const personWriteSchema = z
+  .object({
+    profileVersion: z.uuid().toLowerCase(),
+    wikidataId: z.string().regex(/^Q[1-9]\d*$/),
+    person: publishedPersonSchema,
+    generation: generationSchema,
+  })
+  .strict();
+
+export const personUpdateSchema = personWriteSchema.extend({
+  expectedProfileVersion: z.uuid().toLowerCase(),
+});
+
+const catalogPoiSchema = publishedPoiSummarySchema.omit({ city: true, categoryIds: true }).extend({
+  wikidataId: z
+    .string()
+    .regex(/^Q[1-9]\d*$/)
+    .optional(),
+  osmIds: z.array(z.string().min(1)),
+  wikipediaPages: z
+    .array(wikipediaPageSchema)
+    .refine(
+      (pages) =>
+        new Set(pages.map(({ language, pageId }) => `${language}:${pageId}`)).size === pages.length,
+      { message: "Duplicate Wikipedia page identity." },
+    ),
+});
+
+export const catalogBaselineSchema = z
+  .object({
+    city: publishedPoiSummarySchema.shape.city,
+    revision: z.uuid().toLowerCase().nullable(),
+    pois: z.array(catalogPoiSchema.extend({ inputRevision: z.uuid().toLowerCase() })),
+  })
+  .strict();
+
+export const personBaselineSchema = z
+  .object({
+    personId: z.string().min(1),
+    wikidataId: z.string().regex(/^Q[1-9]\d*$/),
+    profileVersion: z.uuid().toLowerCase(),
+  })
+  .strict();
+
+export const poiBaselineSchema = catalogPoiSchema
+  .omit({ id: true, coordinates: true, osmIds: true })
+  .extend({
+    poiId: z.uuid().toLowerCase(),
+    city: publishedPoiSummarySchema.shape.city,
+    inputRevision: z.uuid().toLowerCase(),
+    publicationId: z.uuid().toLowerCase().nullable(),
+    relatedPeople: z.array(personBaselineSchema),
+  });
+
+export const storyWriteSchema = z
+  .object({
+    inputRevision: z.uuid().toLowerCase(),
+    expectedPublicationId: z.uuid().toLowerCase().nullable(),
+    detail: publishedPoiDetailSchema,
+    generation: generationSchema,
+    people: z.array(personWriteSchema),
+  })
+  .strict()
+  .refine(
+    ({ detail, people }) =>
+      new Set(people.map(({ person }) => person.id)).size === people.length &&
+      people.every(({ person }) =>
+        detail.story.relatedPeople.some(({ personId }) => personId === person.id),
+      ),
+    { message: "Supplied profiles must uniquely belong to the Story's Related People." },
+  );
+
+export const catalogWriteSchema = z
+  .object({
+    city: publishedPoiSummarySchema.shape.city,
+    revision: z.uuid().toLowerCase(),
+    expectedRevision: z.uuid().toLowerCase().nullable(),
+    pois: z.array(catalogPoiSchema),
+  })
+  .strict()
+  .refine(({ pois }) => new Set(pois.map(({ id }) => id)).size === pois.length, {
+    message: "Duplicate catalog POI ID.",
+  });
+
+export class ContentWriteError extends Error {
+  constructor(
+    readonly reason: "obsolete" | "conflict" | "invalid",
+    message: string,
+  ) {
+    super(message);
+    this.name = "ContentWriteError";
+  }
+}
+
+const canonicalValue = (value: unknown): unknown =>
+  Array.isArray(value)
+    ? value.map(canonicalValue)
+    : value && typeof value === "object"
+      ? Object.fromEntries(
+          Object.entries(value)
+            .sort(([left], [right]) => left.localeCompare(right))
+            .map(([key, item]) => [key, canonicalValue(item)]),
+        )
+      : value;
+const digest = (value: unknown) =>
+  createHash("sha256")
+    .update(JSON.stringify(canonicalValue(value)))
+    .digest("hex");
+const sourceIdentities = (pages: Array<{ language: string; pageId: number }>) =>
+  pages
+    .map(({ language, pageId }) => ({ language, pageId }))
+    .sort(
+      (left, right) => left.language.localeCompare(right.language) || left.pageId - right.pageId,
+    );
+
+const transaction = async <T>(pool: Pool, work: (client: PoolClient) => Promise<T>): Promise<T> => {
+  const client = await pool.connect();
+  let discard = false;
+  try {
+    await client.query("BEGIN");
+    const result = await work(client);
+    await client.query("COMMIT");
+    return result;
+  } catch (error) {
+    try {
+      await client.query("ROLLBACK");
+    } catch {
+      discard = true;
+    }
+    throw error;
+  } finally {
+    client.release(discard);
+  }
+};
+
+export const createPostgresContent = (pool: Pool) => ({
+  synchronizeCatalog: async (value: unknown) => {
+    const input = catalogWriteSchema.parse(value);
+    const requestDigest = digest(input);
+    return transaction(pool, async (client) => {
+      await client.query(
+        "INSERT INTO content.city_catalogs(city) VALUES ($1) ON CONFLICT DO NOTHING",
+        [input.city],
+      );
+      const {
+        rows: [catalog],
+      } = await client.query(
+        "SELECT revision, request_digest FROM content.city_catalogs WHERE city = $1 FOR UPDATE",
+        [input.city],
+      );
+      if (catalog.revision === input.revision) {
+        if (catalog.request_digest !== requestDigest)
+          throw new ContentWriteError("invalid", "Catalog revision reused for different content.");
+        return "already-saved" as const;
+      }
+      if (catalog.revision !== input.expectedRevision)
+        throw new ContentWriteError(
+          "conflict",
+          "Catalog has changed since this operation was prepared.",
+        );
+      const { rows: previous } = await client.query(
+        "SELECT id, input_revision, input_digest, removed_at FROM content.pois WHERE city = $1 ORDER BY id FOR UPDATE",
+        [input.city],
+      );
+      for (const poi of [...input.pois].sort((left, right) => left.id.localeCompare(right.id))) {
+        const inputDigest = digest({
+          name: poi.name,
+          wikidataId: poi.wikidataId ?? null,
+          pages: sourceIdentities(poi.wikipediaPages),
+        });
+        const existing = previous.find(({ id }) => id === poi.id);
+        const result = await client.query(
+          `INSERT INTO content.pois
+          (id, city, name, latitude, longitude, wikidata_id, osm_ids, wikipedia_pages, input_revision, input_digest)
+          VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+          ON CONFLICT (id) DO UPDATE SET name = EXCLUDED.name, latitude = EXCLUDED.latitude,
+            longitude = EXCLUDED.longitude, wikidata_id = EXCLUDED.wikidata_id, osm_ids = EXCLUDED.osm_ids,
+            wikipedia_pages = EXCLUDED.wikipedia_pages, input_revision = EXCLUDED.input_revision,
+            input_digest = EXCLUDED.input_digest, removed_at = NULL
+          WHERE content.pois.city = EXCLUDED.city`,
+          [
+            poi.id,
+            input.city,
+            poi.name,
+            poi.coordinates.lat,
+            poi.coordinates.lng,
+            poi.wikidataId ?? null,
+            poi.osmIds,
+            JSON.stringify(poi.wikipediaPages),
+            existing && !existing.removed_at && existing.input_digest === inputDigest
+              ? existing.input_revision
+              : randomUUID(),
+            inputDigest,
+          ],
+        );
+        if (result.rowCount !== 1)
+          throw new ContentWriteError("conflict", "POI identity already belongs to another city.");
+      }
+      const removed = previous
+        .filter(({ id, removed_at }) => !removed_at && !input.pois.some((poi) => poi.id === id))
+        .map(({ id }) => id);
+      if (removed.length) {
+        const { rows: people } = await client.query(
+          `SELECT id FROM content.people WHERE id IN
+          (SELECT person_id FROM content.poi_people WHERE poi_id = ANY($1::uuid[])) ORDER BY id FOR UPDATE`,
+          [removed],
+        );
+        await client.query("DELETE FROM content.published_stories WHERE poi_id = ANY($1::uuid[])", [
+          removed,
+        ]);
+        await client.query("DELETE FROM content.poi_categories WHERE poi_id = ANY($1::uuid[])", [
+          removed,
+        ]);
+        await client.query(
+          "UPDATE content.pois SET removed_at = now(), input_revision = gen_random_uuid() WHERE id = ANY($1::uuid[])",
+          [removed],
+        );
+        await client.query(
+          `DELETE FROM content.people p WHERE id = ANY($1::text[])
+          AND NOT EXISTS (SELECT FROM content.poi_people r WHERE r.person_id = p.id)`,
+          [people.map(({ id }) => id)],
+        );
+      }
+      await client.query(
+        "UPDATE content.city_catalogs SET revision = $2, request_digest = $3 WHERE city = $1",
+        [input.city, input.revision, requestDigest],
+      );
+      return "saved" as const;
+    });
+  },
+
+  saveStory: async (value: unknown) => {
+    const input = storyWriteSchema.parse(value);
+    const requestDigest = digest(input);
+    return transaction(pool, async (client) => {
+      const {
+        rows: [poi],
+      } = await client.query("SELECT * FROM content.pois WHERE id = $1 FOR UPDATE", [
+        input.detail.id,
+      ]);
+      if (
+        !poi ||
+        poi.removed_at ||
+        poi.input_revision !== input.inputRevision ||
+        poi.city !== input.detail.city ||
+        poi.name !== input.detail.name
+      )
+        throw new ContentWriteError("obsolete", "POI removed or generation inputs changed.");
+      if (
+        digest(sourceIdentities(input.detail.sources)) !==
+        digest(sourceIdentities(poi.wikipedia_pages))
+      )
+        throw new ContentWriteError(
+          "invalid",
+          "Publication Sources do not match the catalog's Wikipedia page identities.",
+        );
+      const {
+        rows: [current],
+      } = await client.query(
+        "SELECT publication_id, request_digest FROM content.published_stories WHERE poi_id = $1",
+        [poi.id],
+      );
+      if (current?.publication_id === input.detail.publicationId) {
+        if (current.request_digest !== requestDigest)
+          throw new ContentWriteError("invalid", "Publication ID reused for different content.");
+        return "already-saved" as const;
+      }
+      if ((current?.publication_id ?? null) !== input.expectedPublicationId)
+        throw new ContentWriteError(
+          "conflict",
+          "A newer Story or image selection is already published.",
+        );
+      for (const reference of [...input.detail.story.relatedPeople].sort((left, right) =>
+        left.personId.localeCompare(right.personId),
+      )) {
+        const candidate = input.people.find(({ person }) => person.id === reference.personId);
+        if (candidate) {
+          await client.query(
+            `INSERT INTO content.people
+            (id, wikidata_id, profile_version, name, content, sources, generation, request_digest)
+            VALUES ($1,$2,$3,$4,$5,$6,$7,$8) ON CONFLICT (id) DO NOTHING`,
+            [
+              candidate.person.id,
+              candidate.wikidataId,
+              candidate.profileVersion,
+              candidate.person.name,
+              JSON.stringify(candidate.person.content),
+              JSON.stringify(candidate.person.sources),
+              JSON.stringify(candidate.generation),
+              digest(candidate),
+            ],
+          );
+        }
+        const {
+          rows: [person],
+        } = await client.query(
+          "SELECT id, wikidata_id FROM content.people WHERE id = $1 FOR UPDATE",
+          [reference.personId],
+        );
+        if (!person)
+          throw new ContentWriteError("invalid", `Missing Person Profile ${reference.personId}.`);
+        if (candidate && person.wikidata_id !== candidate.wikidataId)
+          throw new ContentWriteError(
+            "conflict",
+            "Person identity does not match its saved profile.",
+          );
+      }
+      const { relatedPeople, ...content } = input.detail.story;
+      await client.query(
+        `INSERT INTO content.published_stories
+        (poi_id, publication_id, name, input_revision, content, sources, gallery, main_image_id, generation, request_digest)
+        VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+        ON CONFLICT (poi_id) DO UPDATE SET publication_id = EXCLUDED.publication_id, name = EXCLUDED.name,
+          input_revision = EXCLUDED.input_revision, content = EXCLUDED.content, sources = EXCLUDED.sources,
+          gallery = EXCLUDED.gallery, main_image_id = EXCLUDED.main_image_id, generation = EXCLUDED.generation,
+          request_digest = EXCLUDED.request_digest, published_at = now()`,
+        [
+          poi.id,
+          input.detail.publicationId,
+          input.detail.name,
+          input.inputRevision,
+          JSON.stringify(content),
+          JSON.stringify(input.detail.sources),
+          JSON.stringify(input.detail.gallery),
+          input.detail.mainImageId,
+          JSON.stringify({
+            ...input.generation,
+            inputs: {
+              poiId: poi.id,
+              city: poi.city,
+              name: poi.name,
+              wikidataId: poi.wikidata_id,
+              wikipediaPages: sourceIdentities(poi.wikipedia_pages),
+              inputRevision: poi.input_revision,
+            },
+          }),
+          requestDigest,
+        ],
+      );
+      await client.query("DELETE FROM content.poi_people WHERE poi_id = $1", [poi.id]);
+      for (const [position, person] of relatedPeople.entries())
+        await client.query(
+          "INSERT INTO content.poi_people(poi_id, person_id, name, position, source_ids) VALUES ($1,$2,$3,$4,$5)",
+          [poi.id, person.personId, person.name, position, person.sourceIds],
+        );
+      return "saved" as const;
+    });
+  },
+
+  savePerson: async (value: unknown) => {
+    const input = personUpdateSchema.parse(value);
+    const requestDigest = digest(input);
+    return transaction(pool, async (client) => {
+      const {
+        rows: [person],
+      } = await client.query("SELECT * FROM content.people WHERE id = $1 FOR UPDATE", [
+        input.person.id,
+      ]);
+      if (!person) throw new ContentWriteError("obsolete", "Person Profile was removed.");
+      if (person.wikidata_id !== input.wikidataId)
+        throw new ContentWriteError("conflict", "Person Wikidata identity changed.");
+      if (person.profile_version === input.profileVersion) {
+        if (person.request_digest !== requestDigest)
+          throw new ContentWriteError("invalid", "Person version reused for different content.");
+        return "already-saved" as const;
+      }
+      if (person.profile_version !== input.expectedProfileVersion)
+        throw new ContentWriteError("conflict", "A newer Person Profile is already saved.");
+      await client.query(
+        `UPDATE content.people SET profile_version = $2, name = $3, content = $4,
+        sources = $5, generation = $6, request_digest = $7, updated_at = now() WHERE id = $1`,
+        [
+          input.person.id,
+          input.profileVersion,
+          input.person.name,
+          JSON.stringify(input.person.content),
+          JSON.stringify(input.person.sources),
+          JSON.stringify(input.generation),
+          requestDigest,
+        ],
+      );
+      return "saved" as const;
+    });
+  },
+
+  getCatalogBaseline: async (city: string) => {
+    const {
+      rows: [result],
+    } = await pool.query(
+      `SELECT
+      (SELECT revision FROM content.city_catalogs WHERE city = $1) AS revision,
+      COALESCE((SELECT jsonb_agg(jsonb_strip_nulls(jsonb_build_object(
+        'id', id, 'name', name, 'coordinates', jsonb_build_object('lat', latitude, 'lng', longitude),
+        'wikidataId', wikidata_id, 'osmIds', osm_ids, 'wikipediaPages', wikipedia_pages,
+        'inputRevision', input_revision)) ORDER BY id)
+        FROM content.pois WHERE city = $1 AND removed_at IS NULL), '[]'::jsonb) AS pois`,
+      [publishedPoiSummarySchema.shape.city.parse(city)],
+    );
+    return catalogBaselineSchema.parse({ city, ...result });
+  },
+
+  getPoiBaseline: async (poiId: string) => {
+    const {
+      rows: [result],
+    } = await pool.query(
+      `SELECT
+      jsonb_strip_nulls(jsonb_build_object('poiId', p.id, 'city', p.city, 'name', p.name,
+        'wikidataId', p.wikidata_id, 'wikipediaPages', p.wikipedia_pages, 'inputRevision', p.input_revision))
+      || jsonb_build_object('publicationId', s.publication_id, 'relatedPeople',
+        COALESCE((SELECT jsonb_agg(jsonb_build_object('personId', r.person_id,
+          'wikidataId', person.wikidata_id, 'profileVersion', person.profile_version) ORDER BY r.position)
+          FROM content.poi_people r JOIN content.people person ON person.id = r.person_id
+          WHERE r.poi_id = p.id), '[]'::jsonb)) AS response
+      FROM content.pois p LEFT JOIN content.published_stories s ON s.poi_id = p.id
+      WHERE p.id = $1 AND p.removed_at IS NULL`,
+      [z.uuid().toLowerCase().parse(poiId)],
+    );
+    return result ? poiBaselineSchema.parse(result.response) : undefined;
+  },
+
+  getPersonBaseline: async (personId: string) => {
+    const {
+      rows: [result],
+    } = await pool.query(
+      `SELECT id AS "personId", wikidata_id AS "wikidataId",
+      profile_version AS "profileVersion" FROM content.people WHERE id = $1`,
+      [personId],
+    );
+    return result ? personBaselineSchema.parse(result) : undefined;
+  },
+
+  getCity: async (city: string) => {
+    const {
+      rows: [result],
+    } = await pool.query(
+      `SELECT
+      COALESCE((SELECT jsonb_agg(response ORDER BY id) FROM content.visitor_pois WHERE city = $1), '[]'::jsonb) AS pois,
+      COALESCE((SELECT jsonb_agg(response ORDER BY id) FROM content.visitor_categories), '[]'::jsonb) AS categories`,
+      [publishedPoiSummarySchema.shape.city.parse(city)],
+    );
+    return publishedCityMapSchema.parse({
+      city,
+      pois: result.pois,
+      categoryDefinitions: result.categories,
+    });
+  },
+  getStory: async (poiId: string) => {
+    const {
+      rows: [result],
+    } = await pool.query("SELECT response FROM content.visitor_stories WHERE id = $1", [
+      z.uuid().parse(poiId),
+    ]);
+    return result ? publishedPoiDetailSchema.parse(result.response) : undefined;
+  },
+  getPerson: async (personId: string) => {
+    const {
+      rows: [result],
+    } = await pool.query("SELECT response FROM content.visitor_people WHERE id = $1", [personId]);
+    return result ? publishedPersonSchema.parse(result.response) : undefined;
+  },
+});
