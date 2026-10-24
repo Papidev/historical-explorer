@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Drawer } from "@/app/components/ui/Drawer";
 import { PanelResizeHandle } from "@/app/components/ui/PanelResizeHandle";
-import { ArrowLeftIcon } from "@heroicons/react/24/outline";
+import { ArrowLeftIcon, PhotoIcon } from "@heroicons/react/24/outline";
 import type { Poi } from "@/types/Poi";
 import { StoryContent } from "@/app/components/StoryContent";
 import { DrawerCloseButton } from "@/app/components/ui/DrawerCloseButton";
@@ -38,8 +38,13 @@ export const PoiDetailsDrawer = ({
   }>();
   const selectedPersonId =
     selectedPerson?.openRequestId === openRequestId ? selectedPerson.id : undefined;
-  const { content, isLoading, showLoading } = usePoiStoryContent({ citySlug, poiId: poi?.id });
-  const { person, isLoading: isPersonLoading } = usePerson(selectedPersonId);
+  const { content, detail, isLoading, showLoading } = usePoiStoryContent({
+    citySlug,
+    poiId: poi?.id,
+  });
+  const mainImage = detail?.gallery.find(({ id }) => id === detail.mainImageId);
+  const mainImageUrl = detail ? mainImage?.thumbnailUrl : content ? poi?.mainImageUrl : undefined;
+  const { person, isLoading: isPersonLoading } = usePerson(selectedPersonId, citySlug, poi?.id);
 
   return (
     <Drawer
@@ -62,16 +67,36 @@ export const PoiDetailsDrawer = ({
             <div className="absolute top-4 right-4 z-10">
               <DrawerCloseButton onClick={onClose} />
             </div>
-            {!selectedPersonId && poi.mainImageUrl && poi.mainImageUrl !== failedMainImageUrl ? (
-              <div className="relative aspect-video w-full shrink-0 overflow-hidden bg-zinc-100">
-                <Image
-                  src={poi.mainImageUrl}
-                  alt={`Main image of ${poi.name}`}
-                  fill
-                  sizes={`(min-width: 768px) ${width ?? 448}px, 100vw`}
-                  className="object-cover"
-                  onError={() => setFailedMainImageUrl(poi.mainImageUrl ?? null)}
-                />
+            {!selectedPersonId && mainImageUrl && mainImageUrl !== failedMainImageUrl ? (
+              <figure>
+                <div className="relative aspect-video w-full shrink-0 overflow-hidden bg-zinc-100">
+                  <Image
+                    src={mainImageUrl}
+                    alt={`Main image of ${detail?.name ?? poi.name}`}
+                    fill
+                    sizes={`(min-width: 768px) ${width ?? 448}px, 100vw`}
+                    className="object-cover"
+                    onError={() => setFailedMainImageUrl(mainImageUrl)}
+                  />
+                </div>
+                {mainImage && (
+                  <figcaption className="px-5 py-2 text-xs text-zinc-500">
+                    {mainImage.attribution} ·{" "}
+                    <a
+                      href={mainImage.commonsPageUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline underline-offset-2"
+                    >
+                      {mainImage.license} ↗
+                    </a>
+                  </figcaption>
+                )}
+              </figure>
+            ) : !selectedPersonId && detail ? (
+              <div className="flex aspect-video items-center justify-center gap-2 bg-zinc-100 text-sm text-zinc-500">
+                <PhotoIcon className="size-6" aria-hidden="true" />
+                Image unavailable
               </div>
             ) : null}
             <div className="border-b border-black/10 px-5 py-4 pr-16">
@@ -86,7 +111,7 @@ export const PoiDetailsDrawer = ({
                 </button>
               ) : null}
               <h2 className="text-2xl leading-tight font-semibold text-black">
-                {selectedPersonId ? (person?.name ?? "Person") : poi.name}
+                {selectedPersonId ? (person?.name ?? "Person") : (detail?.name ?? poi.name)}
               </h2>
             </div>
             <div className="px-5 py-4 text-sm leading-6 text-black/80">
@@ -103,7 +128,7 @@ export const PoiDetailsDrawer = ({
                 ) : (
                   <p className="text-black/60">This person is unavailable.</p>
                 )
-              ) : poi.shortDescription ? (
+              ) : !detail && poi.shortDescription ? (
                 <p>{poi.shortDescription}</p>
               ) : null}
               {!selectedPersonId &&
@@ -114,14 +139,49 @@ export const PoiDetailsDrawer = ({
                 ) : content ? (
                   <StoryContent
                     content={content}
-                    period={poi.period}
+                    period={detail ? undefined : poi.period}
                     onOpenPerson={(personId) => setSelectedPerson({ id: personId, openRequestId })}
                   />
                 ) : (
-                  <p className="mt-4 text-black/60">
-                    No additional content is available for this point.
-                  </p>
+                  <p className="mt-4 text-black/60">This place is unavailable.</p>
                 ))}
+              {!selectedPersonId && detail && detail.gallery.length > 1 && (
+                <details className="mt-6 border-t border-zinc-200 pt-4">
+                  <summary className="cursor-pointer font-semibold">More images</summary>
+                  <div className="mt-4 space-y-4">
+                    {detail.gallery
+                      .filter(({ id }) => id !== detail.mainImageId)
+                      .map((image) => (
+                        <figure key={image.id}>
+                          <a
+                            href={image.originalImageUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Image
+                              src={image.thumbnailUrl}
+                              alt={`${detail.name}: ${image.id}`}
+                              width={image.width ?? 800}
+                              height={image.height ?? 600}
+                              className="h-auto w-full rounded-lg"
+                            />
+                          </a>
+                          <figcaption className="mt-2 text-xs text-zinc-500">
+                            {image.attribution} ·{" "}
+                            <a
+                              href={image.commonsPageUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="underline underline-offset-2"
+                            >
+                              {image.license} ↗
+                            </a>
+                          </figcaption>
+                        </figure>
+                      ))}
+                  </div>
+                </details>
+              )}
             </div>
           </div>
         </>

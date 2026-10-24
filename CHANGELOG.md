@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.11.0
+
+### Minor Changes
+
+- Show published online Stories, image galleries and linked People on the Rome map, retaining local-only POIs while using the complete online version for matching places. Cache online reads for up to 60 seconds and keep the homepage unchanged.
+
 ## 0.10.0
 
 ### Minor Changes

@@ -90,6 +90,51 @@ describe.skipIf(!process.env.HISTORICAL_EXPLORER_TEST_DATABASE_URL)(
       });
     });
 
+    it("loads published previews with the selected image and hides removed POIs", async () => {
+      const write = example();
+      const catalog = await prepare([write]);
+      expect((await repository.getCityPreviews("rome")).pois).toEqual([]);
+      await repository.saveStory(write);
+      expect((await repository.getCityPreviews("rome")).pois).toEqual([
+        {
+          id: write.detail.id,
+          city: "rome",
+          name: "Colosseum",
+          coordinates: write.detail.coordinates,
+          categoryIds: [],
+          wikidataId: "Q10285",
+          mainImage: null,
+          introduction: "A Roman amphitheatre.",
+        },
+      ]);
+      const image = {
+        id: "Colosseum.jpg",
+        commonsPageUrl: "https://commons.wikimedia.org/wiki/File:Colosseum.jpg",
+        thumbnailUrl: "https://upload.wikimedia.org/wikipedia/commons/example.jpg",
+        originalImageUrl: "https://upload.wikimedia.org/wikipedia/commons/example.jpg",
+        license: "CC BY-SA 4.0",
+        attribution: "Example photographer",
+      };
+      write.expectedPublicationId = write.detail.publicationId;
+      write.detail.publicationId = randomUUID();
+      write.detail.gallery = [image];
+      write.detail.mainImageId = image.id;
+      await repository.saveStory(write);
+      expect((await repository.getCityPreviews("rome")).pois[0].mainImage).toEqual(image);
+      await repository.synchronizeCatalog({
+        ...catalog,
+        expectedRevision: catalog.revision,
+        revision: randomUUID(),
+        pois: [],
+      });
+      expect((await repository.getCityPreviews("rome")).pois).toEqual([]);
+      expect((await repository.getCityPreviews("rome")).removedPois).toEqual([
+        { id: write.detail.id, wikidataId: "Q10285" },
+      ]);
+      expect(await repository.getStory(write.detail.id)).toBeUndefined();
+      expect(await repository.getPerson("vespasian")).toBeUndefined();
+    });
+
     it("permits no Related People and rejects invalid data before persistence", async () => {
       const write = example();
       await prepare([write]);

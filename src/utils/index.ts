@@ -110,6 +110,7 @@ const asPoi = (feature: GeoJsonFeature, index: number, fallbackCity: string): Po
 
   return {
     id: rawId,
+    ...(feature.wikidataId ? { wikidataId: feature.wikidataId } : {}),
     name,
     city,
     coordinates: { lat, lng },

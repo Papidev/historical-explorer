@@ -8,6 +8,7 @@ import { setupServer } from "msw/node";
 import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from "vitest";
 import type { Poi } from "@/types/Poi";
 import { PoiDetailsDrawer } from "./PoiDetailsDrawer";
+import { exampleStoryWrite } from "@/server/content/__fixtures__/writes";
 
 const server = setupServer();
 const nativeFetch = globalThis.fetch;
@@ -147,5 +148,70 @@ describe("POI details person navigation", () => {
 
     expect(screen.getByRole("heading", { name: "Forum Boarium" })).toBeInTheDocument();
     expect(screen.getByText("A visitor-facing introduction.")).toBeInTheDocument();
+  });
+});
+
+describe("online Story details", () => {
+  it("shows an image placeholder, online Markdown and a linked Person", async () => {
+    const detail = exampleStoryWrite().detail;
+    detail.story.introduction.text = "Built under **Vespasian**.";
+    server.use(
+      http.get("*/api/pois/rome/forum-boarium/dialog-content", () =>
+        HttpResponse.json({
+          detail,
+          storyContent: {
+            ...storyContent,
+            introduction: "Built under **Vespasian**.",
+            textFormat: "markdown",
+            relatedPeople: [{ name: "Vespasian", personId: "vespasian" }],
+          },
+        }),
+      ),
+      http.get("*/api/people/vespasian", () =>
+        HttpResponse.json({
+          person: {
+            id: "vespasian",
+            name: "Vespasian",
+            textFormat: "markdown",
+            description: ["A **Roman** emperor.", "He commissioned the amphitheatre."],
+            curiosities: [],
+          },
+        }),
+      ),
+    );
+    const user = userEvent.setup();
+    render(<PoiDetailsDrawer citySlug="rome" poi={poi} onClose={() => {}} />);
+    expect(await screen.findByText("Image unavailable")).toBeInTheDocument();
+    expect(screen.getByText("Vespasian", { selector: "strong" })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Vespasian" }));
+    expect(await screen.findByText("Roman", { selector: "strong" })).toBeInTheDocument();
+  });
+
+  it("shows the selected online image's attribution and additional gallery images", async () => {
+    const detail = exampleStoryWrite().detail;
+    detail.gallery = ["First.jpg", "Second.jpg"].map((id) => ({
+      id,
+      commonsPageUrl: `https://commons.wikimedia.org/wiki/File:${id}`,
+      thumbnailUrl: `https://upload.wikimedia.org/wikipedia/commons/${id}`,
+      originalImageUrl: `https://upload.wikimedia.org/wikipedia/commons/${id}`,
+      license: "CC BY-SA 4.0",
+      attribution: id === "First.jpg" ? "Main photographer" : "Gallery photographer",
+    }));
+    detail.mainImageId = "First.jpg";
+    server.use(
+      http.get("*/api/pois/rome/forum-boarium/dialog-content", () =>
+        HttpResponse.json({ detail, storyContent }),
+      ),
+    );
+    const user = userEvent.setup();
+    render(<PoiDetailsDrawer citySlug="rome" poi={poi} onClose={() => {}} />);
+    expect(await screen.findByAltText("Main image of Colosseum")).toHaveAttribute(
+      "src",
+      expect.stringContaining("First.jpg"),
+    );
+    expect(screen.getByText(/Main photographer/)).toBeInTheDocument();
+    await user.click(screen.getByText("More images"));
+    expect(screen.getByAltText("Colosseum: Second.jpg")).toBeVisible();
+    expect(screen.getByText(/Gallery photographer/)).toBeVisible();
   });
 });

@@ -1,3 +1,6 @@
+import { connection } from "next/server";
+import { visitorContent } from "@/server/visitorContent";
+import { mergeVisitorCity } from "@/server/visitorContent/mergeCity";
 import { publicCatalog } from "@/server/publicCatalog";
 import { CityExplorer } from "@/app/components/CityExplorer";
 
@@ -6,9 +9,23 @@ type Props = {
 };
 
 export const RomeMap = async ({ initialSelectedPoiId }: Props = {}) => {
-  const pois = publicCatalog.getPois("rome");
+  await connection();
+  const city = await visitorContent.getCity("rome").catch(() => null);
+  if (!city)
+    return (
+      <p role="status" className="p-6 text-zinc-600">
+        Places are temporarily unavailable. Please try again later.
+      </p>
+    );
+  const { pois, categoryDefinitions, aliases } = mergeVisitorCity(city, publicCatalog);
+  if (!pois.length)
+    return (
+      <p role="status" className="p-6 text-zinc-600">
+        No published places are available yet.
+      </p>
+    );
   const initialSelectedPoi = initialSelectedPoiId
-    ? pois.find((poi) => poi.id === initialSelectedPoiId)
+    ? pois.find((poi) => poi.id === (aliases[initialSelectedPoiId] ?? initialSelectedPoiId))
     : undefined;
   const coordinates: [number, number] = initialSelectedPoi
     ? [initialSelectedPoi.coordinates.lng, initialSelectedPoi.coordinates.lat]
@@ -19,7 +36,7 @@ export const RomeMap = async ({ initialSelectedPoiId }: Props = {}) => {
   return (
     <CityExplorer
       citySlug="rome"
-      categoryDefinitions={publicCatalog.getCategoryDefinitions()}
+      categoryDefinitions={categoryDefinitions}
       coordinates={coordinates}
       initialZoom={15}
       initialSelectedPoiId={initialSelectedPoi?.id ?? null}
