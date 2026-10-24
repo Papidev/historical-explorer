@@ -12,7 +12,7 @@ A POI appears on the visitor map only when it has:
 
 A Story may have no Related People. Imported places and metadata-only POIs remain internal. Curators may edit generated content.
 
-Successfully saving complete, valid content automatically publishes its new version. There is no separate approval phase or publish action. A pending or failed save leaves the previous published version current.
+Successfully saving complete, valid content automatically publishes its new version. There is currently no separate approval phase or publish action. A pending or failed save leaves the previous published version current. An approval phase is a possible later evolution; its rules are not yet defined.
 
 ## Language
 
