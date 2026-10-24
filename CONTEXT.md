@@ -10,9 +10,9 @@ A POI appears on the visitor map only when it has:
 - a selected **Main Image** with source, author or rights status, license, and attribution;
 - saved **Person** records for every retained **Related Person**.
 
-A Story may have no Related People. Imported places and metadata-only POIs remain internal. Curators may edit generated content; updates reach the public site through deployment.
+A Story may have no Related People. Imported places and metadata-only POIs remain internal. Curators may edit generated content.
 
-Explicit approval is a possible future evolution, not a current requirement or a prerequisite for new discovery paths. Draft and published content currently share the same stored structure without separate approval states. If approval is introduced, it would cover both the Story Content and selected Main Image.
+Successfully saving complete, valid content automatically publishes its new version. There is currently no separate approval phase or publish action. A pending or failed save leaves the previous published version current. An approval phase is a possible later evolution; its rules are not yet defined.
 
 ## Language
 
@@ -79,6 +79,10 @@ _Avoid_: Visitor narrative, curated content, story metadata
 **Story**:
 The source-grounded visitor-facing explanation for one **POI**, including **Story Content** and a main image.
 _Avoid_: POI Story, Visitor Narrative, article, summary, description, AI text, Markdown
+
+**Publication**:
+Establishing complete, valid content as the current version for the **Visitor Experience**, automatically when it is successfully saved.
+_Avoid_: Approval, separate publishing step
 
 **Draft Story**:
 A source-grounded story for one **POI** being prepared or reviewed editorially.

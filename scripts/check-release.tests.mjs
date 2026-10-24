@@ -39,6 +39,19 @@ for (const scenario of [
     files: { ".github/workflows/test.yml": "name: Updated CI\n" },
     success: true,
   },
+  {
+    name: "domain documentation update",
+    files: { "CONTEXT.md": "# Domain\n\nSaving complete content publishes it.\n" },
+    success: true,
+  },
+  {
+    name: "domain documentation and source change",
+    files: {
+      "CONTEXT.md": "# Domain\n\nSaving complete content publishes it.\n",
+      "src/app.ts": "export const value = 2;\n",
+    },
+    success: false,
+  },
   { name: "package script change", package: { scripts: { build: "other-build" } }, success: false },
   { name: "package engine change", package: { engines: { node: "26.x" } }, success: false },
   {

@@ -15,7 +15,9 @@ The map includes places with historical, artistic, architectural, archaeological
 
 The map is the discovery entry point; the Story explains why a place matters. Selecting a marker should show a lightweight preview with the POI name, thumbnail, short descriptor, and an action to open the Story.
 
-A POI appears only when it has workflow-generated, valid versioned Story Content, a selected Main Image with source, rights, license, and attribution, and saved records for every retained Related Person. Imported places and metadata-only POIs remain internal. Explicit approval is a possible future evolution, not a current requirement; content reaches the public site through deployment.
+A POI appears only when it has workflow-generated, valid versioned Story Content, a selected Main Image with source, rights, license, and attribution, and saved records for every retained Related Person. Imported places and metadata-only POIs remain internal. Successfully saving complete, valid content automatically publishes its new version, without a separate approval phase or publish action.
+
+An approval phase may be introduced in a later step. Its rules are not yet defined, and it is not part of the current publication workflow.
 
 “Insight” means cultural content shown to the visitor. Unpublished proposals are draft content; internal rationale is Editorial Notes. Sources, processing metadata, AI reasoning, and Editorial Notes stay out of the default visitor experience. A quiet Wikipedia link at the end of Story and Person details supports optional deeper reading in a new tab. Other cited language editions remain behind a compact disclosure so the app’s content stays primary.
 

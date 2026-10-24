@@ -51,6 +51,7 @@ if (current.version === previous.version && !initialRelease) {
           )) ||
         [
           "README.md",
+          "CONTEXT.md",
           "AGENTS.md",
           ".gitignore",
           ".changeset/README.md",
