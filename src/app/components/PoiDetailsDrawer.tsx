@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
+import { PoiGalleryPrototype } from "@/app/components/PoiGalleryPrototype";
 import Image from "next/image";
 import { Drawer } from "@/app/components/ui/Drawer";
 import { PanelResizeHandle } from "@/app/components/ui/PanelResizeHandle";
@@ -78,6 +79,11 @@ export const PoiDetailsDrawer = ({
                     className="object-cover"
                     onError={() => setFailedMainImageUrl(mainImageUrl)}
                   />
+                  {process.env.NODE_ENV !== "production" && detail && (
+                    <Suspense>
+                      <PoiGalleryPrototype key={detail.id} detail={detail} />
+                    </Suspense>
+                  )}
                 </div>
                 {mainImage && (
                   <figcaption className="px-5 py-2 text-xs text-zinc-500">

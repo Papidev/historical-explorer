@@ -9,6 +9,7 @@
   "scripts": {
     "deps:install": "pnpm install --frozen-lockfile",
     "dev": "pnpm catalog:build && next dev",
+    "prototype:gallery": "pnpm dev",
     "build": "pnpm catalog:build && next build",
     "test": "pnpm catalog:build && vitest run",
     "start": "next start",
