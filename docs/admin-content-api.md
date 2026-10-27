@@ -1,10 +1,10 @@
 # Admin content API
 
-The public Next.js server implements [Admin content API v1](admin-write-api-contract.md) at `/api/admin/content/v1`. Local admin Node clients use a dedicated Bearer credential; there is no user login, browser credential or CORS integration. Visitor routes and the build-generated public catalog continue to use their existing read paths. Online saves do not change the current visitor site or invalidate its caches.
+The public Next.js server implements [Admin content API v1](admin-write-api-contract.md) at `/api/admin/content/v1`. Local admin Node clients use a dedicated Bearer credential; there is no user login, browser credential or CORS integration. Successfully saving complete, valid content publishes its new version automatically; no separate approval or publish action is required. The Rome map and its detail APIs prefer online publications through `src/server/visitorContent`, with a hard 60-second server cache. The map merges eligible local-only POIs; online identity and removal metadata keep duplicates and removed local copies out of the map. Saves do not actively invalidate that cache; new requests observe updates after expiry. A matching online publication is authoritative: its failures or missing fields never select local content. The homepage retains its existing build-generated catalog. See [visitor content deployment](../README.md#visitor-content-deployment).
 
 ## Origin and schema compatibility
 
-The repository, publication validators and PostgreSQL transaction tests were adapted from `Papidev/historical-explorer-backend` at commit `2b7b203cb2ba35dadd5a36d6b0ea6eb1bf971b1d`. The v1 contract comes from commit `d7b058953812857031bba5eafe431f1ac59c907d`. The private implementation is unchanged. API schemas live separately from legacy local workflow schemas so their compatibility behavior cannot weaken strict API validation or change existing visitor reads.
+The repository, publication validators and PostgreSQL transaction tests were adapted from `Papidev/historical-explorer-backend` at commit `2b7b203cb2ba35dadd5a36d6b0ea6eb1bf971b1d`. The v1 contract comes from commit `d7b058953812857031bba5eafe431f1ac59c907d`. The private implementation is unchanged. API schemas live separately from legacy local workflow schemas so their compatibility behavior cannot weaken strict API validation or weaken the published-only visitor boundary.
 
 `src/server/content/__fixtures__/001-content.sql` is an exact copy of the existing private SQL, used only to bootstrap a disposable local test database. SHA-256: `527937488927da52d7574e1ff28ae297e96b70418285a6142c35b5201704ea95`. There is no runtime migration runner or migration command. Do not apply this fixture online; the online schema already exists.
 
@@ -64,4 +64,4 @@ Final local verification: **69 tests passed**, TypeScript passed, ESLint passed 
 2. In the actual Vercel runtime/region, collect fresh, reused and after-idle read-only samples with this same configuration. Exercise authenticated baseline GETs across cold and warm instances; fail the gate if connection failures persist. Inspect Supabase and Vercel logs without exposing credentials.
 3. Test writes only against an explicitly isolated database/catalog, including unknown commit outcomes and identical retries. Do not run replacement operations against the live Rome catalog as a connectivity check.
 
-No visitor cutover, migration, live data change, deploy, or private-client/outbox integration is included.
+The original admin API slice included no visitor cutover, migration, live data change, deploy, or private-client/outbox integration. Visitor read integration is now documented in the README; the historical verification above is not a deployment confirmation.

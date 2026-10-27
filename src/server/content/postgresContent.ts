@@ -4,6 +4,7 @@ import type { Pool, PoolClient } from "pg";
 import { z } from "zod";
 import {
   publishedCityMapSchema,
+  publishedCityPreviewSchema,
   publishedPersonSchema,
   publishedPoiDetailSchema,
   publishedPoiSummarySchema,
@@ -473,6 +474,32 @@ export const createPostgresContent = (pool: Pool) => ({
       city,
       pois: result.pois,
       categoryDefinitions: result.categories,
+    });
+  },
+  getCityPreviews: async (city: string) => {
+    const {
+      rows: [result],
+    } = await pool.query(
+      `SELECT
+      COALESCE((SELECT jsonb_agg(p.response || jsonb_build_object(
+        'wikidataId', identity.wikidata_id,
+        'introduction', s.response #>> '{story,introduction,text}',
+        'mainImage', (SELECT image FROM jsonb_array_elements(s.response->'gallery') image
+          WHERE image->>'id' = s.response->>'mainImageId')
+      ) ORDER BY p.id)
+      FROM content.visitor_pois p JOIN content.visitor_stories s ON s.id = p.id
+      JOIN content.pois identity ON identity.id = p.id
+      WHERE p.city = $1), '[]'::jsonb) AS pois,
+      COALESCE((SELECT jsonb_agg(response ORDER BY id) FROM content.visitor_categories), '[]'::jsonb) AS categories,
+      COALESCE((SELECT jsonb_agg(jsonb_build_object('id', id, 'wikidataId', wikidata_id) ORDER BY id)
+        FROM content.pois WHERE city = $1 AND removed_at IS NOT NULL), '[]'::jsonb) AS removed`,
+      [publishedPoiSummarySchema.shape.city.parse(city)],
+    );
+    return publishedCityPreviewSchema.parse({
+      city,
+      pois: result.pois,
+      categoryDefinitions: result.categories,
+      removedPois: result.removed,
     });
   },
   getStory: async (poiId: string) => {
