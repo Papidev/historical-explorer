@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { PoiImageGallery } from "@/app/components/PoiImageGallery";
 import Image from "next/image";
 import { Drawer } from "@/app/components/ui/Drawer";
 import { PanelResizeHandle } from "@/app/components/ui/PanelResizeHandle";
@@ -78,6 +79,14 @@ export const PoiDetailsDrawer = ({
                     className="object-cover"
                     onError={() => setFailedMainImageUrl(mainImageUrl)}
                   />
+                  {selectedPoi && detail && (
+                    <PoiImageGallery
+                      key={`${detail.id}-${openRequestId}`}
+                      images={detail.gallery}
+                      mainImageId={detail.mainImageId}
+                      name={detail.name}
+                    />
+                  )}
                 </div>
                 {mainImage && (
                   <figcaption className="px-5 py-2 text-xs text-zinc-500">
@@ -145,43 +154,6 @@ export const PoiDetailsDrawer = ({
                 ) : (
                   <p className="mt-4 text-black/60">This place is unavailable.</p>
                 ))}
-              {!selectedPersonId && detail && detail.gallery.length > 1 && (
-                <details className="mt-6 border-t border-zinc-200 pt-4">
-                  <summary className="cursor-pointer font-semibold">More images</summary>
-                  <div className="mt-4 space-y-4">
-                    {detail.gallery
-                      .filter(({ id }) => id !== detail.mainImageId)
-                      .map((image) => (
-                        <figure key={image.id}>
-                          <a
-                            href={image.originalImageUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <Image
-                              src={image.thumbnailUrl}
-                              alt={`${detail.name}: ${image.id}`}
-                              width={image.width ?? 800}
-                              height={image.height ?? 600}
-                              className="h-auto w-full rounded-lg"
-                            />
-                          </a>
-                          <figcaption className="mt-2 text-xs text-zinc-500">
-                            {image.attribution} ·{" "}
-                            <a
-                              href={image.commonsPageUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="underline underline-offset-2"
-                            >
-                              {image.license} ↗
-                            </a>
-                          </figcaption>
-                        </figure>
-                      ))}
-                  </div>
-                </details>
-              )}
             </div>
           </div>
         </>
