@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.11.1
+
+### Patch Changes
+
+- Open category filters by default and use consistent sidebar typography. Retry intermittent SSL negotiation failures in public content reads and sanitize errors shared by concurrent requests.
+
 ## 0.11.0
 
 ### Minor Changes
