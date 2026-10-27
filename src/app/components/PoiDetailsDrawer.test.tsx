@@ -187,7 +187,7 @@ describe("online Story details", () => {
     expect(await screen.findByText("Roman", { selector: "strong" })).toBeInTheDocument();
   });
 
-  it("shows the selected online image's attribution and additional gallery images", async () => {
+  it("opens additional images in the gallery without the old drawer section", async () => {
     const detail = exampleStoryWrite().detail;
     detail.gallery = ["First.jpg", "Second.jpg"].map((id) => ({
       id,
@@ -204,14 +204,18 @@ describe("online Story details", () => {
       ),
     );
     const user = userEvent.setup();
-    render(<PoiDetailsDrawer citySlug="rome" poi={poi} onClose={() => {}} />);
+    const { rerender } = render(<PoiDetailsDrawer citySlug="rome" poi={poi} onClose={() => {}} />);
     expect(await screen.findByAltText("Main image of Colosseum")).toHaveAttribute(
       "src",
       expect.stringContaining("First.jpg"),
     );
     expect(screen.getByText(/Main photographer/)).toBeInTheDocument();
-    await user.click(screen.getByText("More images"));
-    expect(screen.getByAltText("Colosseum: Second.jpg")).toBeVisible();
+    expect(screen.queryByText("More images")).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Open image gallery for Colosseum" }));
+    await user.click(screen.getByRole("button", { name: "Next photo" }));
+    expect(screen.getByRole("img", { name: "Colosseum — photo 2" })).toBeInTheDocument();
     expect(screen.getByText(/Gallery photographer/)).toBeVisible();
+    rerender(<PoiDetailsDrawer citySlug="rome" onClose={() => {}} />);
+    await waitFor(() => expect(screen.queryByRole("dialog")).not.toBeInTheDocument());
   });
 });

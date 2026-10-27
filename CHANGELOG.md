@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.12.0
+
+### Minor Changes
+
+- Open published POI images in a centered gallery with thumbnails, keyboard and swipe navigation, image credits, and explicit loading and retry states.
+
 ## 0.11.1
 
 ### Patch Changes
