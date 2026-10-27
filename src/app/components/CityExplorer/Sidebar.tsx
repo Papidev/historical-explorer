@@ -37,7 +37,7 @@ export const Sidebar = ({
   onSearchPoi: (poi: Poi) => void;
   onClose: () => void;
 }) => {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
   const categoriesId = useId();
   return (
     <aside
@@ -45,7 +45,7 @@ export const Sidebar = ({
       className="flex h-full w-full shrink-0 flex-col overflow-hidden border-r border-zinc-900/10 bg-zinc-50 text-zinc-900"
     >
       <div className="flex shrink-0 items-center justify-between gap-2 border-b border-zinc-900/10 px-4 py-2">
-        <h2 className="font-serif text-xl tracking-tight">Explore the city</h2>
+        <h2 className="text-xl font-semibold tracking-tight">Explore the city</h2>
         <DrawerCloseButton label="Close filters" onClick={onClose} transparent />
       </div>
       <div className="shrink-0 px-4 pt-3 pb-2">
@@ -152,7 +152,7 @@ export const Sidebar = ({
                 className={`group flex w-full cursor-pointer items-center gap-3 rounded-xl border p-3 text-left transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-800 ${selectedPoiId === poi.id ? "border-green-300 bg-green-50" : "border-zinc-200/80 bg-white hover:border-zinc-400"}`}
               >
                 <span className="min-w-0 flex-1">
-                  <span className="block font-serif text-lg leading-snug">{poi.name}</span>
+                  <span className="block text-lg leading-snug font-medium">{poi.name}</span>
                   <span className="mt-1.5 block text-xs leading-5 text-zinc-500">
                     {poi.categories
                       ?.map(

@@ -177,7 +177,6 @@ describe("visitor category filtering", () => {
       />,
     );
 
-    await user.click(screen.getByRole("button", { name: "Show categories" }));
     for (const [parent, child] of [
       ["Architecture", "Castle"],
       ["Public Spaces", "Square"],
@@ -201,7 +200,6 @@ describe("visitor category filtering", () => {
   it("opens subcategories from the category row while keeping checkbox selection separate", async () => {
     const user = userEvent.setup();
     render(<CityExplorer citySlug="rome" coordinates={[12, 41]} initialZoom={15} pois={pois} />);
-    await user.click(screen.getByRole("button", { name: "Show categories" }));
 
     await user.click(screen.getByText("Religion", { exact: true }));
     expect(screen.getByRole("checkbox", { name: "Churches" })).toBeChecked();
@@ -231,20 +229,27 @@ describe("visitor category filtering", () => {
     const user = userEvent.setup();
     render(<CityExplorer citySlug="rome" coordinates={[12, 41]} initialZoom={15} pois={pois} />);
 
-    await user.click(screen.getByText("All categories", { exact: true }));
     expect(screen.getByRole("button", { name: "Hide categories" })).toHaveAttribute(
       "aria-expanded",
       "true",
     );
+    expect(screen.getByRole("checkbox", { name: "Religion" })).toBeVisible();
+    expect(screen.queryByRole("checkbox", { name: "Churches" })).not.toBeInTheDocument();
     expect(screen.getByRole("checkbox", { name: "All categories" })).toBeChecked();
 
-    await user.click(screen.getByText("All", { exact: true }));
+    await user.click(screen.getByText("All categories", { exact: true }));
     expect(screen.getByRole("button", { name: "Show categories" })).toHaveAttribute(
       "aria-expanded",
       "false",
     );
     expect(screen.getByRole("checkbox", { name: "All categories" })).toBeChecked();
 
+    await user.click(screen.getByText("All", { exact: true }));
+    expect(screen.getByRole("button", { name: "Hide categories" })).toHaveAttribute(
+      "aria-expanded",
+      "true",
+    );
+    await user.click(screen.getByText("All categories", { exact: true }));
     screen.getByRole("button", { name: "Show categories" }).focus();
     await user.keyboard("{Enter}");
     expect(screen.getByRole("button", { name: "Hide categories" })).toHaveAttribute(
@@ -289,7 +294,6 @@ describe("visitor category filtering", () => {
     expect(screen.getByRole("button", { name: "Open filters" })).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Open filters" }));
     expect(screen.queryByRole("checkbox", { name: "Museums" })).not.toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Show categories" }));
     await user.click(screen.getByRole("button", { name: "Show subcategories for Arts & Culture" }));
     await user.click(screen.getByRole("button", { name: "Show subcategories for Religion" }));
     expect(screen.getByRole("status")).toHaveTextContent("4 places");
@@ -380,7 +384,6 @@ describe("visitor category filtering", () => {
     expect(screen.getByRole("button", { name: "Open filters" })).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Open filters" }));
     expect(screen.queryByRole("checkbox", { name: "Museums" })).not.toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Show categories" }));
     await user.click(screen.getByRole("button", { name: "Show subcategories for Arts & Culture" }));
     await user.click(screen.getByRole("button", { name: "Show subcategories for Religion" }));
     expect(screen.getByRole("heading", { name: "A Museum" })).toBeInTheDocument();
@@ -488,7 +491,6 @@ describe("visitor category filtering", () => {
         initialSelectedPoiId="basilica"
       />,
     );
-    await user.click(screen.getByRole("button", { name: "Show categories" }));
     await user.click(screen.getByRole("button", { name: "Show subcategories for Arts & Culture" }));
     expect(screen.getByRole("checkbox", { name: "Religion" })).toBeChecked();
     expect(screen.getByRole("checkbox", { name: "Museums" })).toBeChecked();
@@ -561,7 +563,6 @@ describe("visitor category filtering", () => {
   it("hides empty categories and subcategories, and collapsing preserves selection", async () => {
     const user = userEvent.setup();
     render(<CityExplorer citySlug="rome" coordinates={[12, 41]} initialZoom={15} pois={pois} />);
-    await user.click(screen.getByRole("button", { name: "Show categories" }));
     await user.click(screen.getByRole("button", { name: "Show subcategories for Arts & Culture" }));
     expect(screen.queryByRole("checkbox", { name: "Aqueduct" })).not.toBeInTheDocument();
     expect(screen.queryByRole("checkbox", { name: "Churches" })).not.toBeInTheDocument();
@@ -625,7 +626,6 @@ it("changes the visitor category-filter results after a Curator saves a shared t
         pois={pois.slice(0, 2).map((poi) => ({ ...poi, categories: categories.getAll()[poi.id] }))}
       />,
     );
-    await user.click(screen.getByRole("button", { name: "Show categories" }));
     await user.click(screen.getByRole("checkbox", { name: "Religion" }));
     expect(screen.getByRole("status")).toHaveTextContent("1 place");
     expect(
@@ -658,7 +658,6 @@ it("changes the visitor category-filter results after a Curator saves a shared t
         pois={pois.slice(0, 2).map((poi) => ({ ...poi, categories: categories.getAll()[poi.id] }))}
       />,
     );
-    await user.click(screen.getByRole("button", { name: "Show categories" }));
     await user.click(screen.getByRole("checkbox", { name: "Religion" }));
     expect(screen.getByRole("status")).toHaveTextContent("2 places");
     expect(screen.getByRole("button", { name: "Open details for A Church" })).toBeInTheDocument();
@@ -688,8 +687,7 @@ it("shows newly created categories and preserves filter membership when a catego
       categoryDefinitions={definitions}
     />,
   );
-  expect(screen.queryByRole("checkbox", { name: "A lookout" })).not.toBeInTheDocument();
-  await user.click(screen.getByRole("button", { name: "Show categories" }));
+  expect(screen.getByRole("checkbox", { name: "A lookout" })).toBeVisible();
   ["All categories", "A lookout", "Arts & Culture", "Religion"].forEach((name, index) =>
     expect(screen.getAllByRole("checkbox")[index]).toHaveAccessibleName(name),
   );
@@ -771,6 +769,7 @@ describe("category filter tree", () => {
         categoryDefinitions={treeDefinitions}
       />,
     );
+    await user.click(screen.getByRole("button", { name: "Hide categories" }));
     screen.getByRole("checkbox", { name: "All categories" }).focus();
     await user.keyboard(" ");
     expect(screen.getByRole("checkbox", { name: "All categories" })).not.toBeChecked();
@@ -805,8 +804,7 @@ describe("category filter tree", () => {
       />,
     );
     expect(screen.getByRole("checkbox", { name: "All categories" })).toBeChecked();
-    expect(screen.queryByRole("checkbox", { name: "Cultural places" })).not.toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Show categories" }));
+    expect(screen.getByRole("checkbox", { name: "Cultural places" })).toBeVisible();
     await user.click(
       screen.getByRole("button", { name: "Show subcategories for Cultural places" }),
     );
