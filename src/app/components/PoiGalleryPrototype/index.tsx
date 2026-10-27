@@ -64,7 +64,7 @@ export const PoiGalleryPrototype = ({ detail }: { detail: PublishedPoiDetail }) 
             ),
           )
         }
-        className="absolute inset-0 cursor-zoom-in focus-visible:outline-4 focus-visible:-outline-offset-4 focus-visible:outline-white"
+        className="absolute inset-0 cursor-pointer focus-visible:outline-4 focus-visible:-outline-offset-4 focus-visible:outline-white"
       >
         <span className="absolute right-4 bottom-4 flex items-center gap-2 rounded-full bg-black/65 px-3 py-2 text-xs font-medium text-white">
           <ArrowsPointingOutIcon className="size-4" />
@@ -88,9 +88,7 @@ export const PoiGalleryPrototype = ({ detail }: { detail: PublishedPoiDetail }) 
           }
         }}
       >
-        <DialogPanel
-          className={`fixed inset-0 flex flex-col pb-20 ${variant === "A" ? "bg-zinc-950 text-white" : "bg-white text-zinc-900"}`}
-        >
+        <DialogPanel className="fixed inset-0 flex flex-col bg-white pb-20 text-zinc-900">
           <header className="flex shrink-0 items-center justify-between gap-4 px-5 py-4 md:px-8">
             <div className="min-w-0">
               <DialogTitle className="truncate font-serif text-xl md:text-2xl">
