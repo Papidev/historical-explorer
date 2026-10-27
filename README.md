@@ -99,8 +99,6 @@ Person requests from the map include the parent `city` and `poiId` in `/api/peop
 
 Server instances cache online reads for at most 60 seconds, with a bounded in-memory cache and no background stale refresh. A page reload or newly opened detail sees changes after cache expiry; already-open screens do not update automatically. Missing publications are cached for the same interval. Browser API responses use `Cache-Control: no-store`. Database failures never select a local replacement: the map reports unavailable if it cannot establish online publication/removal state, and detail APIs return 503. Missing resources return 404. Map and detail requests can straddle publication updates; the detail remains authoritative.
 
-Public content reads briefly retry intermittent connection failures before reporting unavailable. This reduces temporary errors but does not resolve the underlying database connectivity issue.
-
 Deploy through Vercel's GitHub integration with production branch `main`. Branch pushes create previews; `main` updates deploy production. Once this integration is deployed, future complete online saves become visible after cache expiry without rebuilding the site. Local-only content and the homepage still require a build/deployment. `catalog:build` retains Wikidata identity for merging. No migration, data deletion or cleanup is included. A deployment rollback restores the earlier visitor read behavior without changing online data.
 
 ## Data layout
