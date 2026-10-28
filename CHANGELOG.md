@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
-- Prevent POI previews from flashing stale content when moving between map markers and from reattaching on repeated hover or focus.
+- Prevent POI previews from flashing stale content when moving between map markers and from reattaching on repeated hover or focus. Replace the Arts & Culture palette with a paintbrush and make the Religion icon white for consistency.
 
 ## 0.12.0
 
