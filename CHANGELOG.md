@@ -1,5 +1,11 @@
 # historical-explorer
 
+## 0.12.1
+
+### Patch Changes
+
+- Prevent POI previews from flashing stale content when moving between map markers and from reattaching on repeated hover or focus.
+
 ## 0.12.0
 
 ### Minor Changes

@@ -125,6 +125,8 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
     }
 
     cancelPreviewClose();
+    if (activePreviewPoiId === poi.id) return;
+    const isPreviewOpen = activePreviewPoiId !== null;
     activePreviewPoiId = poi.id;
     onPreviewChange?.({
       poi,
@@ -134,7 +136,8 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
         onOpenPoiDetails?.(poi.id);
       },
     });
-    previewPopup.setLngLat([poi.coordinates.lng, poi.coordinates.lat]).addTo(map);
+    previewPopup.setLngLat([poi.coordinates.lng, poi.coordinates.lat]);
+    if (!isPreviewOpen) previewPopup.addTo(map);
     const popupElement = previewPopup.getElement();
     const popupContent = popupElement.querySelector<HTMLElement>(".maplibregl-popup-content");
     popupElement.style.pointerEvents = "auto";

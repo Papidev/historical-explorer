@@ -10,7 +10,12 @@ import type { Poi } from "@/types/Poi";
 const mapLibreFakes = vi.hoisted(() => ({
   maps: [] as Array<{ container: HTMLDivElement; removed: boolean }>,
   markers: [] as Array<{ element: HTMLDivElement; removed: boolean; color?: string }>,
-  popups: [] as Array<{ element?: HTMLElement; isOpen: boolean }>,
+  popups: [] as Array<{
+    element?: HTMLElement;
+    isOpen: boolean;
+    positions: string[];
+    additions: number;
+  }>,
 }));
 
 vi.mock("maplibre-gl", () => {
@@ -77,6 +82,8 @@ vi.mock("maplibre-gl", () => {
     content = document.createElement("div");
     element?: HTMLElement;
     isOpen = false;
+    positions: string[] = [];
+    additions = 0;
 
     constructor() {
       this.content.className = "maplibregl-popup-content";
@@ -90,9 +97,11 @@ vi.mock("maplibre-gl", () => {
       return this;
     }
     setLngLat() {
+      this.positions.push(this.element?.textContent ?? "");
       return this;
     }
     addTo(map: Map) {
+      this.additions += 1;
       map.getContainer().append(this.container);
       this.isOpen = true;
       return this;
@@ -292,6 +301,36 @@ describe("Map and its MapLibre adapter", () => {
         screen.queryByRole("heading", { name: "Cloisters of Bramante" }),
       ).not.toBeInTheDocument(),
     );
+  });
+
+  it("updates preview content before positioning it at another marker", async () => {
+    render(createElement(Map, { coordinates: [12.481, 41.889], zoom: 15, pois }));
+
+    dispatchPointerEvent(mapLibreFakes.markers[0].element, "pointerenter", "mouse");
+    expect(await screen.findByRole("heading", { name: "Forum Boarium" })).toBeInTheDocument();
+    expect(mapLibreFakes.popups[0].positions.at(-1)).toContain("Forum Boarium");
+
+    dispatchPointerEvent(mapLibreFakes.markers[1].element, "pointerenter", "mouse");
+    expect(
+      await screen.findByRole("heading", { name: "Cloisters of Bramante" }),
+    ).toBeInTheDocument();
+    expect(mapLibreFakes.popups[0].positions.at(-1)).toContain("Cloisters of Bramante");
+    expect(mapLibreFakes.popups[0].positions.at(-1)).not.toContain("Forum Boarium");
+  });
+
+  it("keeps the same preview attached when its marker receives hover and focus again", async () => {
+    render(createElement(Map, { coordinates: [12.481, 41.889], zoom: 15, pois }));
+    const marker = mapLibreFakes.markers[0].element;
+
+    dispatchPointerEvent(marker, "pointerenter", "mouse");
+    expect(await screen.findByRole("heading", { name: "Forum Boarium" })).toBeInTheDocument();
+    const card = screen.getByRole("button", { name: /Main image of Forum Boarium/ });
+    dispatchPointerEvent(marker, "pointerleave", "mouse");
+    dispatchPointerEvent(marker, "pointerenter", "mouse");
+    act(() => marker.focus());
+
+    expect(screen.getByRole("button", { name: /Main image of Forum Boarium/ })).toBe(card);
+    expect(mapLibreFakes.popups[0].additions).toBe(1);
   });
 
   it("keeps the preview open while moving to the card and opens details from it", async () => {
