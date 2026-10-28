@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type CSSProperties } from "react";
-import { createPortal } from "react-dom";
+import { createPortal, flushSync } from "react-dom";
 import type { Poi } from "@/types/Poi";
 import {
   DEFAULT_POI_CATEGORY_DEFINITIONS,
@@ -74,7 +74,14 @@ export const Map = ({
     });
     adapter.setOnOpenPoiDetails((poiId) => handlersRef.current.onOpenPoiDetails?.(poiId));
     adapter.setOnMapClick(() => handlersRef.current.onMapClick?.());
-    adapter.setOnPreviewChange(setPreview);
+    adapter.setOnPreviewChange((nextPreview) => {
+      if (nextPreview) {
+        // MapLibre measures and positions the popup immediately after this callback.
+        flushSync(() => setPreview(nextPreview));
+      } else {
+        setPreview(null);
+      }
+    });
     adapter.mount(containerRef.current);
     adapterRef.current = adapter;
 
