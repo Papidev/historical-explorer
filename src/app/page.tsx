@@ -6,8 +6,14 @@ import catalog from "../../data/public/catalog.json";
 import { WorkInProgressNotice } from "@/app/components/ui/WorkInProgressNotice";
 import { HomeHeroStory } from "@/app/components/HomeHeroStory";
 import { MapShowcase } from "@/app/components/MapShowcase";
+import { LogoPrototype } from "@/app/components/LogoPrototype";
+import { PrototypeSwitcher } from "@/app/components/ui/PrototypeSwitcher";
+import { Specimen } from "@/app/components/LogoPrototype/Specimen";
 
-const Home = () => {
+const Home = async ({ searchParams }: { searchParams: Promise<{ variant?: string }> }) => {
+  const query = process.env.NODE_ENV !== "production" ? await searchParams : {};
+  const prototypeVariant =
+    query.variant === "A" || query.variant === "B" || query.variant === "C" ? query.variant : null;
   const cover =
     catalog.pois.find(({ poi }) => poi.id === "castle-of-the-holy-angel") ?? catalog.pois[0];
   const discoveries = ["piazza-navona", "cloisters-of-bramante", "forum-boarium"]
@@ -29,14 +35,21 @@ const Home = () => {
           aria-label="Mira home"
           className="flex items-center gap-2.5 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800"
         >
-          <span className="flex size-10 items-center justify-center rounded-full bg-yellow-100">
-            <GlobeAltIcon className="size-7 text-zinc-800" aria-hidden="true" />
-          </span>
-          <span className="text-lg font-semibold tracking-tight">Mira</span>
+          {prototypeVariant ? (
+            <LogoPrototype variant={prototypeVariant} />
+          ) : (
+            <>
+              <span className="flex size-10 items-center justify-center rounded-full bg-yellow-100">
+                <GlobeAltIcon className="size-7 text-zinc-800" aria-hidden="true" />
+              </span>
+              <span className="text-lg font-semibold tracking-tight">Mira</span>
+            </>
+          )}
         </Link>
       </header>
 
       <main id="main-content" className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+        {prototypeVariant && <Specimen variant={prototypeVariant} />}
         <section
           aria-labelledby="hero-title"
           className="grid items-center gap-10 py-10 sm:py-14 lg:grid-cols-2 lg:gap-16 lg:py-20"
@@ -235,6 +248,7 @@ const Home = () => {
         )}
       </main>
 
+      {prototypeVariant && <PrototypeSwitcher current={prototypeVariant} />}
       <footer className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 border-t border-zinc-900/15 px-5 py-6 text-xs text-zinc-500 sm:px-8 lg:px-12">
         <p>Mira · Art, history, and the places between.</p>
         <div className="flex items-center gap-3">
