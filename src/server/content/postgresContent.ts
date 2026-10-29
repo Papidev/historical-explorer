@@ -131,6 +131,25 @@ export const poiCategoriesWriteSchema = z
   })
   .strict();
 
+export const categoryCatalogCreateSchema = z
+  .object({
+    expectedStateDigest: z.string().regex(/^[a-f0-9]{64}$/),
+    name: z
+      .string()
+      .refine(
+        (name) =>
+          name.trim().replace(/\s+/g, " ").length >= 1 &&
+          name.trim().replace(/\s+/g, " ").length <= 80 &&
+          !/[<>\r\n]/.test(name),
+        { message: "Use a category name of 1–80 characters." },
+      ),
+  })
+  .strict();
+
+const categoryDefinitionsQuery = `SELECT COALESCE(jsonb_agg(jsonb_strip_nulls(jsonb_build_object(
+  'id', id, 'name', name, 'label', label, 'parentId', parent_id)) ORDER BY id COLLATE "C"),
+  '[]'::jsonb) AS definitions FROM content.categories`;
+
 const poiCategoriesBaselineSchema = z.object({
   poiId: z.uuid().toLowerCase(),
   inputRevision: z.uuid().toLowerCase(),
@@ -298,6 +317,42 @@ export const createPostgresContent = (pool: Pool) => ({
         [input.city, input.revision, requestDigest],
       );
       return "saved" as const;
+    });
+  },
+
+  getCategoryCatalog: async () => {
+    const {
+      rows: [row],
+    } = await pool.query(categoryDefinitionsQuery);
+    const definitions = z.array(publishedCategorySchema).parse(row.definitions);
+    return { definitions, stateDigest: digest(definitions) };
+  },
+
+  createCategory: async (value: unknown) => {
+    const input = categoryCatalogCreateSchema.parse(value);
+    const name = input.name.trim().replace(/\s+/g, " ");
+    return transaction(pool, async (client) => {
+      // Match per-POI writes, including insertions of previously absent definitions.
+      await client.query(
+        "LOCK TABLE content.categories, content.poi_categories IN SHARE ROW EXCLUSIVE MODE",
+      );
+      const {
+        rows: [row],
+      } = await client.query(categoryDefinitionsQuery);
+      const definitions = z.array(publishedCategorySchema).parse(row.definitions);
+      if (digest(definitions) !== input.expectedStateDigest)
+        throw new ContentWriteError(
+          "conflict",
+          "The category catalog changed. Reload before creating a category.",
+        );
+      if (
+        definitions.some(
+          (category) => category.id === name || category.name.toLowerCase() === name.toLowerCase(),
+        )
+      )
+        throw new ContentWriteError("invalid", "A category with this name or ID already exists.");
+      await client.query("INSERT INTO content.categories(id, name) VALUES ($1,$1)", [name]);
+      return { status: "saved" as const, definition: { id: name, name } };
     });
   },
 

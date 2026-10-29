@@ -1,5 +1,11 @@
 # mira-explorer
 
+## 0.14.0
+
+### Minor Changes
+
+- Add authenticated online category catalog reads and creation with conflict checks coordinated with POI category saves.
+
 ## 0.13.3
 
 ### Patch Changes
