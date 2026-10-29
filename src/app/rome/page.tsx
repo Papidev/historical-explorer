@@ -1,6 +1,6 @@
 import { AppVersion } from "@/app/components/ui/AppVersion";
 import { RefreshPoiCategories } from "@/app/components/RefreshPoiCategories";
-import { GlobeAltIcon } from "@heroicons/react/24/outline";
+import { MiraLogo } from "@/app/components/ui/MiraLogo";
 import { RomeMap } from "@/app/components/RomeMap";
 import { WorkInProgressNotice } from "@/app/components/ui/WorkInProgressNotice";
 import Link from "next/link";
@@ -26,10 +26,7 @@ const RomePage = async ({ searchParams }: Props) => {
             aria-label="Mira home"
             className="flex shrink-0 items-center gap-2.5 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800"
           >
-            <span className="flex size-10 items-center justify-center rounded-full bg-yellow-100">
-              <GlobeAltIcon className="size-7 text-zinc-800" aria-hidden="true" />
-            </span>
-            <span className="hidden text-lg font-semibold tracking-tight sm:inline">Mira</span>
+            <MiraLogo size="small" />
           </Link>
           <div className="min-w-0 border-l border-zinc-900/15 pl-4 md:pl-6">
             <h1 className="font-serif text-3xl tracking-tight md:text-4xl">Rome</h1>

@@ -1,5 +1,11 @@
 # mira-explorer
 
+## 0.13.3
+
+### Patch Changes
+
+- Introduce the Mira bird logo across the home, Rome map, admin, and browser icons, with light and dark palettes. Add restrained yellow accents and a prominent work-in-progress notice, and update the remaining atlas copy to Mira.
+
 ## 0.13.2
 
 ### Patch Changes

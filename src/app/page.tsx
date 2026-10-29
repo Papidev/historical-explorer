@@ -1,11 +1,12 @@
 import { AppVersion } from "@/app/components/ui/AppVersion";
-import { ArrowRightIcon, ArrowUpRightIcon, GlobeAltIcon } from "@heroicons/react/24/outline";
+import { ArrowRightIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import catalog from "../../data/public/catalog.json";
 import { WorkInProgressNotice } from "@/app/components/ui/WorkInProgressNotice";
 import { HomeHeroStory } from "@/app/components/HomeHeroStory";
 import { MapShowcase } from "@/app/components/MapShowcase";
+import { MiraLogo } from "@/app/components/ui/MiraLogo";
 
 const Home = () => {
   const cover =
@@ -29,10 +30,7 @@ const Home = () => {
           aria-label="Mira home"
           className="flex items-center gap-2.5 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800"
         >
-          <span className="flex size-10 items-center justify-center rounded-full bg-yellow-100">
-            <GlobeAltIcon className="size-7 text-zinc-800" aria-hidden="true" />
-          </span>
-          <span className="text-lg font-semibold tracking-tight">Mira</span>
+          <MiraLogo size="large" />
         </Link>
       </header>
 
@@ -236,7 +234,16 @@ const Home = () => {
       </main>
 
       <footer className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 border-t border-zinc-900/15 px-5 py-6 text-xs text-zinc-500 sm:px-8 lg:px-12">
-        <p>Mira · Art, history, and the places between.</p>
+        <div className="flex flex-wrap items-center gap-3">
+          <Link
+            href="/"
+            aria-label="Mira home"
+            className="rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800"
+          >
+            <MiraLogo size="small" />
+          </Link>
+          <p>Art, history, and the places between.</p>
+        </div>
         <div className="flex items-center gap-3">
           <p>Mira is taking shape. Begin with Rome.</p>
           <AppVersion />

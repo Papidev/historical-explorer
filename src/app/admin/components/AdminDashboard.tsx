@@ -1,6 +1,8 @@
 "use client";
 
 import { AppVersion } from "@/app/components/ui/AppVersion";
+import { MiraLogo } from "@/app/components/ui/MiraLogo";
+import Link from "next/link";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import { PeopleTable } from "./PeopleTable";
@@ -72,6 +74,13 @@ export const AdminDashboard = ({
       <header className="mb-2 flex shrink-0 flex-wrap items-center justify-between gap-2 border-b border-black/10 pb-2">
         <div>
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+            <Link
+              href="/"
+              aria-label="Mira home"
+              className="rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800"
+            >
+              <MiraLogo size="small" />
+            </Link>
             <h1 className="text-xl font-semibold text-black">Content Admin</h1>
             <AppVersion />
             <a
