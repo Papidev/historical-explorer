@@ -54,6 +54,8 @@ describe("content HTTP boundary before database access", () => {
     ["catalogs", "rome"],
     ["pois", "728cbdf6-2449-4991-99b0-75204603eaa0", "story"],
     ["pois", "728cbdf6-2449-4991-99b0-75204603eaa0", "baseline"],
+    ["pois", "728cbdf6-2449-4991-99b0-75204603eaa0", "categories"],
+    ["pois", "728cbdf6-2449-4991-99b0-75204603eaa0", "categories-baseline"],
     ["people", "a/b ?", "baseline"],
     ["people", "a/b ?"],
   ])("rejects unsupported methods with Allow on %j", async (...segments) => {
@@ -61,7 +63,11 @@ describe("content HTTP boundary before database access", () => {
     const response = await request(segments, undefined, { method: "POST" }).response;
     expect(response.status).toBe(405);
     expect(response.headers.get("allow")).toBe(
-      segments[0] === "catalogs" ? "GET, PUT" : segments[2] === "baseline" ? "GET" : "PUT",
+      segments[0] === "catalogs"
+        ? "GET, PUT"
+        : ["baseline", "categories-baseline"].includes(segments[2] ?? "")
+          ? "GET"
+          : "PUT",
     );
     expect(response.headers.get("cache-control")).toBe("no-store");
   });
@@ -144,6 +150,19 @@ describe("content HTTP boundary before database access", () => {
     const body = exampleStoryWrite();
     expect(
       (
+        await request(["pois", body.detail.id, "categories"], {
+          poiId: body.detail.publicationId,
+          inputRevision: body.inputRevision,
+          revision: body.detail.publicationId,
+          expectedRevision: null,
+          expectedStateDigest: "a".repeat(64),
+          categoryIds: [],
+          definitions: [],
+        }).response
+      ).status,
+    ).toBe(400);
+    expect(
+      (
         await request(["catalogs", "milan"], {
           city: "rome",
           revision: body.inputRevision,
@@ -164,6 +183,36 @@ describe("content HTTP boundary before database access", () => {
         }).response
       ).status,
     ).toBe(400);
+  });
+
+  it("validates strict category payloads and duplicates before database access", async () => {
+    vi.stubEnv("CONTENT_API_TOKEN", token);
+    const story = exampleStoryWrite();
+    const body = {
+      poiId: story.detail.id,
+      inputRevision: story.inputRevision,
+      revision: story.detail.publicationId,
+      expectedRevision: null,
+      expectedStateDigest: "a".repeat(64),
+      categoryIds: ["architecture"],
+      definitions: [{ id: "architecture", name: "Architecture" }],
+    };
+    for (const invalid of [
+      { ...body, extra: true },
+      { ...body, expectedStateDigest: "bad" },
+      { ...body, expectedRevision: undefined },
+      { ...body, categoryIds: ["architecture", "architecture"] },
+      { ...body, definitions: [...body.definitions, ...body.definitions] },
+      { ...body, definitions: [{ ...body.definitions[0], extra: true }] },
+    ]) {
+      const response = await request(["pois", body.poiId, "categories"], invalid).response;
+      expect(response.status).toBe(400);
+      expect(await response.json()).toMatchObject({ error: { code: "invalid" } });
+    }
+    const unauthorized = request(["pois", body.poiId, "categories"], body, { headers: {} });
+    expect((await unauthorized.response).status).toBe(401);
+    expect(unauthorized.input.bodyUsed).toBe(false);
+    expect((await request(["pois", "invalid", "categories-baseline"]).response).status).toBe(400);
   });
 
   it("enforces the body limit with and without Content-Length", async () => {
