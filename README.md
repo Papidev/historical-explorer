@@ -1,4 +1,4 @@
-# Cultural Atlas
+# Mira Explorer
 
 Next.js 16 + React 19 visit companion for history, art, and culture. The map helps visitors choose a place; its Story explains why it matters.
 
@@ -266,7 +266,7 @@ Licensed Tailwind Plus source is a local reference in gitignored `.tailwind-plus
 
 ## Documentation
 
-Track bugs, improvements, and future ideas in GitHub Issues and this repository's Cultural Atlas Project. Backlog status records an idea without scheduling implementation; conditional work retains its revisit conditions in the issue.
+Track bugs, improvements, and future ideas in GitHub Issues and the shared [Mira Project](https://github.com/users/Papidev/projects/2). [Mira Explorer](https://github.com/Papidev/mira-explorer) owns the public app, map, and content read/write APIs; [Mira Admin](https://github.com/Papidev/mira-admin) owns the private admin and editorial generation workflows. The Project's Prodotto view covers both repositories; Explorer and Admin show repository-specific work. Backlog status records an idea without scheduling implementation; conditional work retains its revisit conditions in the issue. See [issue tracker conventions](docs/agents/issue-tracker.md) for cross-repository work.
 
 [Product vision](docs/product/vision.md) · [Story quality references](docs/product/story-quality.md) · [Glossary](CONTEXT.md) · [Entity discovery](docs/entity-discovery.md)
 
