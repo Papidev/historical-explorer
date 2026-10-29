@@ -1,4 +1,4 @@
-// Adapted from Papidev/historical-explorer-backend, commit 2b7b203cb2ba35dadd5a36d6b0ea6eb1bf971b1d.
+// Adapted from Papidev/mira-admin, commit 2b7b203cb2ba35dadd5a36d6b0ea6eb1bf971b1d.
 import { z } from "zod";
 
 const sourceIds = z.array(z.string().min(1)).min(1);

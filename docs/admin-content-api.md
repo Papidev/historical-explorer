@@ -4,7 +4,7 @@ The public Next.js server implements [Admin content API v1](admin-write-api-cont
 
 ## Origin and schema compatibility
 
-The repository, publication validators and PostgreSQL transaction tests were adapted from `Papidev/historical-explorer-backend` at commit `2b7b203cb2ba35dadd5a36d6b0ea6eb1bf971b1d`. The v1 contract comes from commit `d7b058953812857031bba5eafe431f1ac59c907d`. The private implementation is unchanged. API schemas live separately from legacy local workflow schemas so their compatibility behavior cannot weaken strict API validation or weaken the published-only visitor boundary.
+The repository, publication validators and PostgreSQL transaction tests were adapted from `Papidev/mira-admin` at commit `2b7b203cb2ba35dadd5a36d6b0ea6eb1bf971b1d`. The v1 contract comes from commit `d7b058953812857031bba5eafe431f1ac59c907d`. The private implementation is unchanged. API schemas live separately from legacy local workflow schemas so their compatibility behavior cannot weaken strict API validation or weaken the published-only visitor boundary.
 
 `src/server/content/__fixtures__/001-content.sql` is an exact copy of the existing private SQL, used only to bootstrap a disposable local test database. SHA-256: `527937488927da52d7574e1ff28ae297e96b70418285a6142c35b5201704ea95`. There is no runtime migration runner or migration command. Do not apply this fixture online; the online schema already exists.
 

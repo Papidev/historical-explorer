@@ -22,13 +22,11 @@ const RomePage = async ({ searchParams }: Props) => {
         <div className="flex min-w-0 items-center gap-4 md:gap-6">
           <Link
             href="/"
-            aria-label="Cultural Atlas home"
+            aria-label="Mira home"
             className="flex shrink-0 items-center gap-2.5 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800"
           >
             <GlobeAltIcon className="size-7 text-zinc-800" aria-hidden="true" />
-            <span className="hidden text-lg font-semibold tracking-tight sm:inline">
-              Cultural Atlas
-            </span>
+            <span className="hidden text-lg font-semibold tracking-tight sm:inline">Mira</span>
           </Link>
           <div className="min-w-0 border-l border-zinc-900/15 pl-4 md:pl-6">
             <h1 className="font-serif text-3xl tracking-tight md:text-4xl">Rome</h1>

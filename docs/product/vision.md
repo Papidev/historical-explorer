@@ -1,6 +1,6 @@
-# Cultural Atlas — Product Vision
+# Mira — Product Vision
 
-Cultural Atlas helps visitors understand places through concise discoveries across art, history, and culture. It works during a visit and when exploring from home; physical presence is not required.
+Mira helps visitors understand places through concise discoveries across art, history, and culture. It works during a visit and when exploring from home; physical presence is not required.
 
 ## Product philosophy
 
