@@ -80,6 +80,10 @@ jobs:
         if: steps.changes.outputs.run_checks == 'true'
         run: pnpm test
 
+      - name: Test content API against isolated PostgreSQL
+        if: steps.changes.outputs.run_checks == 'true'
+        run: pnpm test:content-database
+
       - name: Build
         if: steps.changes.outputs.run_checks == 'true'
         run: pnpm build
