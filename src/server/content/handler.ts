@@ -2,6 +2,7 @@ import {
   createPostgresContent,
   catalogWriteSchema,
   personUpdateSchema,
+  poiCategoriesWriteSchema,
   storyWriteSchema,
 } from "./postgresContent";
 import { publishedPoiSummarySchema } from "./publishedContent";
@@ -24,7 +25,9 @@ export const createContentHandler =
       const [resource, identity, action] = segments;
       const catalog = resource === "catalogs" && segments.length === 2;
       const poi =
-        resource === "pois" && segments.length === 3 && ["story", "baseline"].includes(action);
+        resource === "pois" &&
+        segments.length === 3 &&
+        ["story", "baseline", "categories", "categories-baseline"].includes(action);
       const person =
         resource === "people" &&
         (segments.length === 2 || (segments.length === 3 && action === "baseline"));
@@ -34,7 +37,11 @@ export const createContentHandler =
           "not-found",
           "The requested content endpoint does not exist.",
         );
-      const allow = catalog ? "GET, PUT" : action === "baseline" ? "GET" : "PUT";
+      const allow = catalog
+        ? "GET, PUT"
+        : ["baseline", "categories-baseline"].includes(action)
+          ? "GET"
+          : "PUT";
       if (!allow.split(", ").includes(request.method))
         return contentJson(
           { error: { code: "invalid", message: "This method is not supported." } },
@@ -54,7 +61,9 @@ export const createContentHandler =
         const result = catalog
           ? await repository.getCatalogBaseline(id)
           : poi
-            ? await repository.getPoiBaseline(id)
+            ? action === "categories-baseline"
+              ? await repository.getPoiCategoriesBaseline(id)
+              : await repository.getPoiBaseline(id)
             : await repository.getPersonBaseline(id);
         if (!result)
           throw new ContentHttpError(404, "not-found", "The requested baseline does not exist.");
@@ -66,6 +75,12 @@ export const createContentHandler =
         if (input.city !== id)
           throw new ContentHttpError(400, "invalid", "Route and body identities must match.");
         return contentJson({ status: await getRepository().synchronizeCatalog(input) });
+      }
+      if (poi && action === "categories") {
+        const input = parseContentInput(poiCategoriesWriteSchema, body);
+        if (input.poiId !== id)
+          throw new ContentHttpError(400, "invalid", "Route and body identities must match.");
+        return contentJson(await getRepository().savePoiCategories(input));
       }
       if (poi) {
         const input = parseContentInput(storyWriteSchema, body);
