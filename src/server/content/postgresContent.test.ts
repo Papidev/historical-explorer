@@ -5,6 +5,7 @@ import type { z } from "zod";
 import { createPostgresContent, type catalogWriteSchema } from "./postgresContent";
 import { readFile } from "node:fs/promises";
 import { createContentHandler } from "./handler";
+import { createCachedRead } from "../visitorContent/cache";
 import { exampleStoryWrite as example } from "./__fixtures__/writes";
 
 describe.skipIf(!process.env.HISTORICAL_EXPLORER_TEST_DATABASE_URL)(
@@ -27,6 +28,9 @@ describe.skipIf(!process.env.HISTORICAL_EXPLORER_TEST_DATABASE_URL)(
       await pool.query("DROP SCHEMA IF EXISTS content CASCADE");
       await pool.query(
         await readFile(new URL("./__fixtures__/001-content.sql", import.meta.url), "utf8"),
+      );
+      await pool.query(
+        await readFile(new URL("./schema/002-poi-category-writes.sql", import.meta.url), "utf8"),
       );
     });
     beforeEach(async () => {
@@ -69,6 +73,294 @@ describe.skipIf(!process.env.HISTORICAL_EXPLORER_TEST_DATABASE_URL)(
       }
       return catalog;
     };
+
+    const categoryWrite = async (write: ReturnType<typeof example>) => {
+      const baseline = (await repository.getPoiCategoriesBaseline(write.detail.id))!;
+      return {
+        poiId: baseline.poiId,
+        inputRevision: baseline.inputRevision,
+        revision: randomUUID(),
+        expectedRevision: baseline.revision,
+        expectedStateDigest: baseline.stateDigest,
+        categoryIds: ["amphitheatre"],
+        definitions: [
+          { id: "amphitheatre", name: "Amphitheatre", parentId: "architecture" },
+          { id: "architecture", name: "Architecture" },
+        ],
+      };
+    };
+
+    it("saves categories before publication and exposes them through all public relationships without changing content", async () => {
+      const write = example();
+      const other = example();
+      other.detail.id = randomUUID();
+      other.detail.publicationId = randomUUID();
+      await prepare([write, other]);
+      const input = await categoryWrite(write);
+      expect(await repository.savePoiCategories(input)).toEqual({
+        status: "saved",
+        revision: input.revision,
+      });
+      expect((await repository.getPoiCategoriesBaseline(write.detail.id))?.categoryIds).toEqual([
+        "amphitheatre",
+      ]);
+      expect((await repository.getCity("rome")).pois).toEqual([]);
+      expect(await repository.getStory(write.detail.id)).toBeUndefined();
+      write.detail.gallery = [
+        {
+          id: "Colosseum.jpg",
+          commonsPageUrl: "https://commons.wikimedia.org/wiki/File:Colosseum.jpg",
+          thumbnailUrl: "https://upload.wikimedia.org/wikipedia/commons/example.jpg",
+          originalImageUrl: "https://upload.wikimedia.org/wikipedia/commons/example.jpg",
+          license: "CC BY-SA 4.0",
+          attribution: "Example photographer",
+        },
+      ];
+      write.detail.mainImageId = "Colosseum.jpg";
+      await repository.saveStory(write);
+      await repository.saveStory(other);
+      let time = 0;
+      const cachedCity = createCachedRead(repository.getCity, () => time);
+      expect(
+        (await cachedCity("rome")).pois.find((poi) => poi.id === write.detail.id)?.categoryIds,
+      ).toEqual(["amphitheatre"]);
+      const story = await repository.getStory(write.detail.id);
+      const person = await repository.getPerson("vespasian");
+      const clear = { ...(await categoryWrite(write)), categoryIds: [], definitions: [] };
+      await repository.savePoiCategories(clear);
+      time = 59_999;
+      expect(
+        (await cachedCity("rome")).pois.find((poi) => poi.id === write.detail.id)?.categoryIds,
+      ).toEqual(["amphitheatre"]);
+      time = 60_000;
+      expect(
+        (await cachedCity("rome")).pois.find((poi) => poi.id === write.detail.id)?.categoryIds,
+      ).toEqual([]);
+      expect(await repository.getStory(write.detail.id)).toEqual({ ...story, categoryIds: [] });
+      expect(await repository.getPerson("vespasian")).toEqual({
+        ...person,
+        linkedPois: person!.linkedPois.map((poi) =>
+          poi.id === write.detail.id ? { ...poi, categoryIds: [] } : poi,
+        ),
+      });
+      expect(
+        (await repository.getCity("rome")).pois.every((poi) => poi.categoryIds.length === 0),
+      ).toBe(true);
+      await repository.savePoiCategories(await categoryWrite(other));
+      expect(
+        (await repository.getCityPreviews("rome")).pois.find((poi) => poi.id === other.detail.id)
+          ?.categoryIds,
+      ).toEqual(["amphitheatre"]);
+      expect((await repository.getStory(write.detail.id))?.categoryIds).toEqual([]);
+      // A later Story save still cannot replace independent categories.
+      other.expectedPublicationId = other.detail.publicationId;
+      other.detail.publicationId = randomUUID();
+      other.detail.categoryIds = [];
+      await repository.saveStory(other);
+      expect((await repository.getStory(other.detail.id))?.categoryIds).toEqual(["amphitheatre"]);
+      expect((await repository.getCity("rome")).categoryDefinitions).toEqual(
+        expect.arrayContaining(input.definitions),
+      );
+    });
+
+    it("acknowledges concurrent identical category retries and rejects changed payloads and superseded retries", async () => {
+      const write = example();
+      await prepare([write]);
+      const input = await categoryWrite(write);
+      expect(
+        (
+          await Promise.all([
+            repository.savePoiCategories(input),
+            repository.savePoiCategories(input),
+          ])
+        )
+          .map(({ status }) => status)
+          .sort(),
+      ).toEqual(["already-saved", "saved"]);
+      await expect(
+        repository.savePoiCategories({ ...input, categoryIds: [] }),
+      ).rejects.toMatchObject({ reason: "invalid" });
+      await pool.query(
+        "INSERT INTO content.categories(id, name) VALUES ('unrelated', 'Unrelated')",
+      );
+      expect(await repository.savePoiCategories(input)).toEqual({
+        status: "already-saved",
+        revision: input.revision,
+      });
+      await repository.savePoiCategories({
+        ...(await categoryWrite(write)),
+        categoryIds: [],
+        definitions: [],
+      });
+      await expect(repository.savePoiCategories(input)).rejects.toMatchObject({
+        reason: "conflict",
+      });
+    });
+
+    it("rejects competing category writes and stale shared-definition baselines", async () => {
+      const write = example();
+      const other = example();
+      other.detail.id = randomUUID();
+      await prepare([write, other]);
+      const input = await categoryWrite(write);
+      const stale = await categoryWrite(other);
+      const results = await Promise.allSettled([
+        repository.savePoiCategories(input),
+        repository.savePoiCategories({ ...input, revision: randomUUID(), categoryIds: [] }),
+      ]);
+      expect(results.filter(({ status }) => status === "fulfilled")).toHaveLength(1);
+      expect(results.find(({ status }) => status === "rejected")).toMatchObject({
+        reason: { reason: "conflict" },
+      });
+      await expect(repository.savePoiCategories(stale)).rejects.toMatchObject({
+        reason: "conflict",
+      });
+      const fresh = await categoryWrite(other);
+      await expect(
+        repository.savePoiCategories({
+          ...fresh,
+          definitions: [{ id: "architecture", name: "Changed" }],
+        }),
+      ).rejects.toMatchObject({ reason: "conflict" });
+      await pool.query("INSERT INTO content.poi_categories VALUES ($1, 'architecture')", [
+        other.detail.id,
+      ]);
+      await expect(repository.savePoiCategories(fresh)).rejects.toMatchObject({
+        reason: "conflict",
+      });
+    });
+
+    it("rejects duplicate categories, missing references and cyclic hierarchies without persisting definitions", async () => {
+      const write = example();
+      await prepare([write]);
+      const input = await categoryWrite(write);
+      for (const invalid of [
+        { ...input, categoryIds: ["amphitheatre", "amphitheatre"] },
+        { ...input, definitions: [...input.definitions, input.definitions[0]] },
+        { ...input, categoryIds: ["missing"] },
+        {
+          ...input,
+          definitions: [{ id: "amphitheatre", name: "Amphitheatre", parentId: "missing" }],
+        },
+        {
+          ...input,
+          definitions: [{ id: "amphitheatre", name: "Amphitheatre", parentId: "amphitheatre" }],
+        },
+        {
+          ...input,
+          definitions: [
+            input.definitions[0],
+            { id: "architecture", name: "Architecture", parentId: "amphitheatre" },
+          ],
+        },
+      ])
+        await expect(repository.savePoiCategories(invalid)).rejects.toThrow();
+      expect((await pool.query("SELECT FROM content.categories")).rowCount).toBe(0);
+      expect((await repository.getPoiCategoriesBaseline(write.detail.id))?.revision).toBeNull();
+    });
+
+    it("rolls back definitions, replacement assignments and retry metadata after a late database failure", async () => {
+      const write = example();
+      await prepare([write]);
+      await repository.savePoiCategories(await categoryWrite(write));
+      const baseline = await repository.getPoiCategoriesBaseline(write.detail.id);
+      const input = {
+        ...(await categoryWrite(write)),
+        categoryIds: ["new"],
+        definitions: [{ id: "new", name: "New" }],
+      };
+      await pool.query(
+        "ALTER TABLE content.poi_category_writes ADD CONSTRAINT test_reject_revision CHECK (revision <> '" +
+          input.revision +
+          "'::uuid)",
+      );
+      try {
+        await expect(repository.savePoiCategories(input)).rejects.toMatchObject({ code: "23514" });
+        expect(await repository.getPoiCategoriesBaseline(write.detail.id)).toEqual(baseline);
+      } finally {
+        await pool.query(
+          "ALTER TABLE content.poi_category_writes DROP CONSTRAINT test_reject_revision",
+        );
+      }
+      expect(await repository.savePoiCategories(input)).toEqual({
+        status: "saved",
+        revision: input.revision,
+      });
+    });
+
+    it("rejects missing, removed and changed-input POIs even for a committed retry", async () => {
+      const write = example();
+      const catalog = await prepare([write]);
+      const input = await categoryWrite(write);
+      await expect(
+        repository.savePoiCategories({ ...input, poiId: randomUUID() }),
+      ).rejects.toMatchObject({ reason: "obsolete" });
+      await expect(
+        repository.savePoiCategories({ ...input, inputRevision: randomUUID() }),
+      ).rejects.toMatchObject({ reason: "obsolete" });
+      await repository.savePoiCategories(input);
+      await repository.synchronizeCatalog({
+        ...catalog,
+        expectedRevision: catalog.revision,
+        revision: randomUUID(),
+        pois: [],
+      });
+      expect(await repository.getPoiCategoriesBaseline(write.detail.id)).toBeUndefined();
+      await expect(repository.savePoiCategories(input)).rejects.toMatchObject({
+        reason: "obsolete",
+      });
+      const removed = await repository.getCatalogBaseline("rome");
+      await repository.synchronizeCatalog({
+        ...catalog,
+        expectedRevision: removed.revision,
+        revision: randomUUID(),
+      });
+      await expect(repository.savePoiCategories(input)).rejects.toMatchObject({
+        reason: "obsolete",
+      });
+      expect((await repository.getPoiCategoriesBaseline(write.detail.id))?.revision).toBeNull();
+    });
+
+    it("serves authenticated category baselines, writes and retries through the HTTP contract", async () => {
+      const write = example();
+      await prepare([write]);
+      const handle = createContentHandler(() => repository);
+      const call = (action: string, body?: unknown) =>
+        handle(
+          new Request(
+            "http://localhost/api/admin/content/v1/pois/" + write.detail.id + "/" + action,
+            {
+              method: body ? "PUT" : "GET",
+              headers: {
+                authorization: `Bearer ${process.env.CONTENT_API_TOKEN}`,
+                "content-type": "application/json",
+              },
+              ...(body ? { body: JSON.stringify(body) } : {}),
+            },
+          ),
+          { params: Promise.resolve({ segments: ["pois", write.detail.id, action] }) },
+        );
+      const baseline = await call("categories-baseline");
+      expect(baseline.headers.get("cache-control")).toBe("no-store");
+      expect(await baseline.json()).toMatchObject({
+        poiId: write.detail.id,
+        revision: null,
+        categoryIds: [],
+        definitions: [],
+      });
+      const input = await categoryWrite(write);
+      expect(await (await call("categories", input)).json()).toEqual({
+        status: "saved",
+        revision: input.revision,
+      });
+      expect(await (await call("categories", input)).json()).toEqual({
+        status: "already-saved",
+        revision: input.revision,
+      });
+      const conflict = await call("categories", { ...input, revision: randomUUID() });
+      expect(conflict.status).toBe(409);
+      expect(await conflict.json()).toMatchObject({ error: { code: "conflict" } });
+    });
 
     it("publishes a complete Story with a placeholder and composes both relationship directions", async () => {
       const write = example();
@@ -445,6 +737,14 @@ describe.skipIf(!process.env.HISTORICAL_EXPLORER_TEST_DATABASE_URL)(
         max: 1,
       });
       try {
+        const categories = await categoryWrite(write);
+        expect(await createPostgresContent(writer).savePoiCategories(categories)).toEqual({
+          status: "saved",
+          revision: categories.revision,
+        });
+        expect(
+          await createPostgresContent(writer).getPoiCategoriesBaseline(write.detail.id),
+        ).toMatchObject({ revision: categories.revision });
         expect(await createPostgresContent(writer).saveStory(write)).toBe("saved");
         expect((await createPostgresContent(writer).getStory(write.detail.id))?.publicationId).toBe(
           write.detail.publicationId,

@@ -273,3 +273,5 @@ Track bugs, improvements, and future ideas in GitHub Issues and the shared [Mira
 ## Admin content API
 
 The server exposes Bearer-authenticated v1 catalog, Story and Person writes and admin baseline reads, independently of the existing visitor catalog. See [configuration, contract and verification](docs/admin-content-api.md). Runtime database credentials stay on the server. Deployment and live writes require the remaining Vercel connection verification documented there.
+
+POI categories have independent baseline and save endpoints, including for unpublished POIs. Apply the additive category-write schema before deploying this server version; see the [category API contract and deployment order](docs/admin-content-api.md#poi-category-persistence-v1-additive-extension) and [private-client handoff](docs/poi-categories-client-handoff.md).

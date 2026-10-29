@@ -1,6 +1,6 @@
 # Admin content API v1
 
-Mirrored from private repository commit `d7b058953812857031bba5eafe431f1ac59c907d`; only reference links are adapted. Implementation and verification notes: [Admin content API](admin-content-api.md).
+Mirrored from private repository commit `d7b058953812857031bba5eafe431f1ac59c907d`; only reference links are adapted. Implementation and verification notes: [Admin content API](admin-content-api.md). The additive POI category endpoints and their schema/deployment prerequisites are specified in [POI category persistence](admin-content-api.md#poi-category-persistence-v1-additive-extension); this extension leaves the original six operations unchanged.
 
 Contract prepared on 2026-10-23 for coordinated implementation in the private admin repository and public `Papidev/mira-explorer` repository. This document defines the interface; no endpoint is implemented by this change.
 
@@ -118,4 +118,4 @@ Do not connect current mixed-stage files directly to these APIs. Whole-Draft com
 3. Private repository: implement completed-result provenance, durable pending operations and the Node HTTP client. Test with MSW that an unknown response retries the identical operation, semantic conflicts stop automatic retries, and startup/manual retries never call generation.
 4. Run an explicitly configured end-to-end test against isolated data. No live catalog replacement, migration, deletion or visitor cutover is authorized by this contract.
 
-Use separate linked PRs. The private client PR names the public API PR and the v1 contract it requires. Before deploying the public routes, compare shared valid/invalid JSON fixtures in both repositories so validators and HTTP behavior agree. Visitor APIs/caching and independent category/gallery edits remain later slices.
+Use separate linked PRs. The private client PR names the public API PR and the v1 contract it requires. Before deploying the public routes, compare shared valid/invalid JSON fixtures in both repositories so validators and HTTP behavior agree. Visitor reads are now integrated. Independent POI category persistence is defined in the linked additive extension; global category operations and independent gallery edits remain separate slices.

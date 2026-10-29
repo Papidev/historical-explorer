@@ -3,6 +3,7 @@ import { createHash, randomUUID } from "node:crypto";
 import type { Pool, PoolClient } from "pg";
 import { z } from "zod";
 import {
+  publishedCategorySchema,
   publishedCityMapSchema,
   publishedCityPreviewSchema,
   publishedPersonSchema,
@@ -113,6 +114,41 @@ export const catalogWriteSchema = z
   .refine(({ pois }) => new Set(pois.map(({ id }) => id)).size === pois.length, {
     message: "Duplicate catalog POI ID.",
   });
+
+export const poiCategoriesWriteSchema = z
+  .object({
+    poiId: z.uuid().toLowerCase(),
+    inputRevision: z.uuid().toLowerCase(),
+    revision: z.uuid().toLowerCase(),
+    expectedRevision: z.uuid().toLowerCase().nullable(),
+    expectedStateDigest: z.string().regex(/^[a-f0-9]{64}$/),
+    categoryIds: publishedPoiSummarySchema.shape.categoryIds,
+    definitions: z
+      .array(publishedCategorySchema)
+      .refine((categories) => new Set(categories.map(({ id }) => id)).size === categories.length, {
+        message: "Duplicate category definition.",
+      }),
+  })
+  .strict();
+
+const poiCategoriesBaselineSchema = z.object({
+  poiId: z.uuid().toLowerCase(),
+  inputRevision: z.uuid().toLowerCase(),
+  revision: z.uuid().toLowerCase().nullable(),
+  categoryIds: publishedPoiSummarySchema.shape.categoryIds,
+  definitions: z.array(publishedCategorySchema),
+});
+
+// One statement gives baseline callers one MVCC snapshot, even during concurrent writes.
+const categoriesBaselineQuery = `SELECT p.id AS "poiId", p.input_revision AS "inputRevision",
+  w.revision,
+  COALESCE((SELECT jsonb_agg(category_id ORDER BY category_id COLLATE "C")
+    FROM content.poi_categories WHERE poi_id = p.id), '[]'::jsonb) AS "categoryIds",
+  COALESCE((SELECT jsonb_agg(jsonb_strip_nulls(jsonb_build_object(
+    'id', id, 'name', name, 'label', label, 'parentId', parent_id)) ORDER BY id COLLATE "C")
+    FROM content.categories), '[]'::jsonb) AS definitions
+  FROM content.pois p LEFT JOIN content.poi_category_writes w ON w.poi_id = p.id
+  WHERE p.id = $1 AND p.removed_at IS NULL`;
 
 export class ContentWriteError extends Error {
   constructor(
@@ -232,6 +268,10 @@ export const createPostgresContent = (pool: Pool) => ({
         .filter(({ id, removed_at }) => !removed_at && !input.pois.some((poi) => poi.id === id))
         .map(({ id }) => id);
       if (removed.length) {
+        await client.query(
+          "DELETE FROM content.poi_category_writes WHERE poi_id = ANY($1::uuid[])",
+          [removed],
+        );
         const { rows: people } = await client.query(
           `SELECT id FROM content.people WHERE id IN
           (SELECT person_id FROM content.poi_people WHERE poi_id = ANY($1::uuid[])) ORDER BY id FOR UPDATE`,
@@ -258,6 +298,95 @@ export const createPostgresContent = (pool: Pool) => ({
         [input.city, input.revision, requestDigest],
       );
       return "saved" as const;
+    });
+  },
+
+  getPoiCategoriesBaseline: async (poiId: string) => {
+    const {
+      rows: [row],
+    } = await pool.query(categoriesBaselineQuery, [z.uuid().toLowerCase().parse(poiId)]);
+    if (!row) return undefined;
+    const baseline = poiCategoriesBaselineSchema.parse(row);
+    return { ...baseline, stateDigest: digest(baseline) };
+  },
+
+  savePoiCategories: async (value: unknown) => {
+    const input = poiCategoriesWriteSchema.parse(value);
+    const requestDigest = digest(input);
+    return transaction(pool, async (client) => {
+      const {
+        rows: [poi],
+      } = await client.query(
+        "SELECT input_revision, removed_at FROM content.pois WHERE id = $1 FOR UPDATE",
+        [input.poiId],
+      );
+      if (!poi || poi.removed_at || poi.input_revision !== input.inputRevision)
+        throw new ContentWriteError("obsolete", "POI removed or classification inputs changed.");
+      // Transaction-scoped locks also cover absent definitions and concurrent insertions.
+      await client.query(
+        "LOCK TABLE content.categories, content.poi_categories IN SHARE ROW EXCLUSIVE MODE",
+      );
+      const {
+        rows: [current],
+      } = await client.query(
+        "SELECT revision, request_digest FROM content.poi_category_writes WHERE poi_id = $1",
+        [input.poiId],
+      );
+      if (current?.revision === input.revision) {
+        if (current.request_digest !== requestDigest)
+          throw new ContentWriteError("invalid", "Category revision reused for different content.");
+        return { status: "already-saved" as const, revision: input.revision };
+      }
+      if ((current?.revision ?? null) !== input.expectedRevision)
+        throw new ContentWriteError("conflict", "POI categories have changed.");
+      const {
+        rows: [row],
+      } = await client.query(categoriesBaselineQuery, [input.poiId]);
+      const baseline = poiCategoriesBaselineSchema.parse(row);
+      if (digest(baseline) !== input.expectedStateDigest)
+        throw new ContentWriteError(
+          "conflict",
+          "Category definitions or assignments have changed.",
+        );
+      const definitions = new Map(baseline.definitions.map((category) => [category.id, category]));
+      for (const category of input.definitions) {
+        const existing = definitions.get(category.id);
+        if (existing && digest(existing) !== digest(category))
+          throw new ContentWriteError(
+            "conflict",
+            "Existing category definitions cannot be replaced here.",
+          );
+        definitions.set(category.id, category);
+      }
+      if (input.categoryIds.some((id) => !definitions.has(id)))
+        throw new ContentWriteError("invalid", "Unknown assigned category.");
+      for (const category of definitions.values()) {
+        const visited = new Set([category.id]);
+        let parentId = category.parentId;
+        while (parentId) {
+          if (!definitions.has(parentId) || visited.has(parentId))
+            throw new ContentWriteError("invalid", "Missing category parent or hierarchy cycle.");
+          visited.add(parentId);
+          parentId = definitions.get(parentId)?.parentId;
+        }
+      }
+      for (const category of input.definitions)
+        await client.query(
+          "INSERT INTO content.categories(id, name, label, parent_id) VALUES ($1,$2,$3,$4) ON CONFLICT (id) DO NOTHING",
+          [category.id, category.name, category.label ?? null, category.parentId ?? null],
+        );
+      await client.query("DELETE FROM content.poi_categories WHERE poi_id = $1", [input.poiId]);
+      for (const categoryId of input.categoryIds)
+        await client.query(
+          "INSERT INTO content.poi_categories(poi_id, category_id) VALUES ($1,$2)",
+          [input.poiId, categoryId],
+        );
+      await client.query(
+        `INSERT INTO content.poi_category_writes(poi_id, revision, request_digest) VALUES ($1,$2,$3)
+        ON CONFLICT (poi_id) DO UPDATE SET revision = EXCLUDED.revision, request_digest = EXCLUDED.request_digest`,
+        [input.poiId, input.revision, requestDigest],
+      );
+      return { status: "saved" as const, revision: input.revision };
     });
   },
 

@@ -1,5 +1,11 @@
 # mira-explorer
 
+## 0.13.0
+
+### Minor Changes
+
+- Add authenticated POI category baselines and independent category saves with conflict detection and safe retries.
+
 ## 0.12.2
 
 ### Patch Changes
