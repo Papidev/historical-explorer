@@ -36,6 +36,25 @@ is under `docs/` or is `README.md` or `AGENTS.md`. The required `ci` check still
 completes successfully. Other changes and manually dispatched runs use the full
 CI workflow.
 
+### Excluding your browser from Web Analytics
+
+To exclude your own visits, open the deployed site and run this in the browser console:
+
+```js
+localStorage.setItem("va-disable", "true");
+```
+
+Reload the page. Future analytics events are discarded while this flag is set.
+This applies only to that browser profile and origin; repeat it on other browsers,
+devices, or domains. Clearing site data removes the exclusion. Previously collected
+visits remain in the analytics data.
+
+To enable tracking again, run:
+
+```js
+localStorage.removeItem("va-disable");
+```
+
 ### Application versions
 
 Application releases use Changesets. Each application PR includes one version
