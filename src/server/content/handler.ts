@@ -1,6 +1,7 @@
 import {
   createPostgresContent,
   catalogWriteSchema,
+  categoryCatalogCreateSchema,
   personUpdateSchema,
   poiCategoriesWriteSchema,
   storyWriteSchema,
@@ -23,6 +24,21 @@ export const createContentHandler =
       authenticateContentRequest(request);
       const { segments } = await context.params;
       const [resource, identity, action] = segments;
+      if (resource === "categories" && segments.length === 1) {
+        if (request.method === "GET")
+          return contentJson(await getRepository().getCategoryCatalog());
+        if (request.method !== "PUT")
+          return contentJson(
+            { error: { code: "invalid", message: "This method is not supported." } },
+            405,
+            { Allow: "GET, PUT" },
+          );
+        const input = parseContentInput(
+          categoryCatalogCreateSchema,
+          await readContentBody(request),
+        );
+        return contentJson(await getRepository().createCategory(input));
+      }
       const catalog = resource === "catalogs" && segments.length === 2;
       const poi =
         resource === "pois" &&

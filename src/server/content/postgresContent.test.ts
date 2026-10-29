@@ -90,6 +90,82 @@ describe.skipIf(!process.env.HISTORICAL_EXPLORER_TEST_DATABASE_URL)(
       };
     };
 
+    it("reads and creates the authoritative category catalog through authenticated HTTP without publishing POIs", async () => {
+      const write = example();
+      await prepare([write]);
+      const send = (body?: unknown) =>
+        createContentHandler(() => repository)(
+          new Request("http://localhost/api/admin/content/v1/categories", {
+            method: body === undefined ? "GET" : "PUT",
+            headers: {
+              authorization: `Bearer ${process.env.CONTENT_API_TOKEN}`,
+              "content-type": "application/json",
+            },
+            ...(body === undefined ? {} : { body: JSON.stringify(body) }),
+          }),
+          { params: Promise.resolve({ segments: ["categories"] }) },
+        );
+      const initial = await (await send()).json();
+      expect(initial.definitions).toEqual([]);
+      const created = await send({
+        name: "  Cultural   venue ",
+        expectedStateDigest: initial.stateDigest,
+      });
+      expect(created.status).toBe(200);
+      expect(await created.json()).toEqual({
+        status: "saved",
+        definition: { id: "Cultural venue", name: "Cultural venue" },
+      });
+      const fresh = await createPostgresContent(pool).getCategoryCatalog();
+      expect(fresh.definitions).toEqual([{ id: "Cultural venue", name: "Cultural venue" }]);
+      expect(fresh.stateDigest).not.toBe(initial.stateDigest);
+      expect((await repository.getPoiCategoriesBaseline(write.detail.id))?.categoryIds).toEqual([]);
+      expect((await repository.getCity("rome")).pois).toEqual([]);
+      expect(
+        (await send({ name: "Another", expectedStateDigest: initial.stateDigest })).status,
+      ).toBe(409);
+      expect(
+        (await send({ name: "cultural venue", expectedStateDigest: fresh.stateDigest })).status,
+      ).toBe(400);
+      expect(await repository.getCategoryCatalog()).toEqual(fresh);
+    });
+
+    it("allows only one concurrent category creation against the same catalog version", async () => {
+      const baseline = await repository.getCategoryCatalog();
+      const outcomes = await Promise.allSettled(
+        ["Museum", "Theatre"].map((name) =>
+          repository.createCategory({
+            name,
+            expectedStateDigest: baseline.stateDigest,
+          }),
+        ),
+      );
+      expect(outcomes.filter(({ status }) => status === "fulfilled")).toHaveLength(1);
+      expect(outcomes.filter(({ status }) => status === "rejected")).toHaveLength(1);
+      expect((await repository.getCategoryCatalog()).definitions).toHaveLength(1);
+    });
+
+    it("coordinates catalog creation with pending per-POI category writes in both directions", async () => {
+      const write = example();
+      await prepare([write]);
+      const pending = await categoryWrite(write);
+      const before = await repository.getCategoryCatalog();
+      await repository.createCategory({ name: "Museum", expectedStateDigest: before.stateDigest });
+      await expect(repository.savePoiCategories(pending)).rejects.toMatchObject({
+        reason: "conflict",
+      });
+      const after = await repository.getCategoryCatalog();
+      await repository.savePoiCategories(await categoryWrite(write));
+      await expect(
+        repository.createCategory({ name: "Theatre", expectedStateDigest: after.stateDigest }),
+      ).rejects.toMatchObject({ reason: "conflict" });
+      expect((await repository.getCategoryCatalog()).definitions.map(({ id }) => id)).toEqual([
+        "Museum",
+        "amphitheatre",
+        "architecture",
+      ]);
+    });
+
     it("saves categories before publication and exposes them through all public relationships without changing content", async () => {
       const write = example();
       const other = example();

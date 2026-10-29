@@ -149,3 +149,25 @@ Private repository implementation checklist:
 6. Add MSW client tests for both success statuses, response-revision mismatch, unknown commit followed by identical retry, conflict/obsolete retention, unavailable endpoints and stale local input fingerprints. Share valid/invalid payload cases with the public tests before enabling the client. The global categories panel (rename/reparent/delete/mappings/bulk changes) remains separate work; future global writers must participate in category concurrency/revision handling rather than modifying assignments behind a current retry acknowledgement.
 
 Local server tests exercise unpublished saves, public reads/cache expiry, non-category content preservation, strict request identities, duplicates/missing references/cycles, rollback after a late database failure, concurrent retries/competing operations, shared-definition conflicts, removed/restored POIs and writer permissions. The database tests load both schema files only in a disposable loopback database.
+
+
+## Authoritative category catalog
+
+Admin #38 uses authenticated `GET /api/admin/content/v1/categories` to read all
+accepted definitions and hierarchy as `{ definitions, stateDigest }`. The digest
+versions the canonical definitions, sorted by ID. `PUT` on the same route accepts
+`{ name, expectedStateDigest }` and returns `{ status: "saved", definition }`.
+Names follow the existing Admin validation (1–80 characters after whitespace
+normalization, no angle brackets or line breaks). Creation uses the normalized
+name as a stable ID, rejects case-insensitive duplicate names and ID collisions,
+and rejects stale definitions with HTTP 409. The endpoint creates top-level
+categories only; rename, move and delete have separate implementation issues.
+
+The transaction uses the same category locks as per-POI assignment writes.
+Creating a definition invalidates pending per-POI baselines; definitions inserted
+by those writes invalidate an older catalog baseline. Existing assignments and
+publication state remain unchanged. Reads use the existing writer credential;
+visitor category responses retain their current shape. No new schema migration
+or data import is required. Deploy this API before the corresponding Admin client.
+A client with an uncertain save acknowledgement must read accepted definitions
+before another edit rather than replay a creation against a refreshed baseline.

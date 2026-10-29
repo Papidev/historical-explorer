@@ -52,6 +52,7 @@ describe("content HTTP boundary before database access", () => {
 
   it.each([
     ["catalogs", "rome"],
+    ["categories"],
     ["pois", "728cbdf6-2449-4991-99b0-75204603eaa0", "story"],
     ["pois", "728cbdf6-2449-4991-99b0-75204603eaa0", "baseline"],
     ["pois", "728cbdf6-2449-4991-99b0-75204603eaa0", "categories"],
@@ -63,7 +64,7 @@ describe("content HTTP boundary before database access", () => {
     const response = await request(segments, undefined, { method: "POST" }).response;
     expect(response.status).toBe(405);
     expect(response.headers.get("allow")).toBe(
-      segments[0] === "catalogs"
+      ["catalogs", "categories"].includes(segments[0])
         ? "GET, PUT"
         : ["baseline", "categories-baseline"].includes(segments[2] ?? "")
           ? "GET"
@@ -297,5 +298,25 @@ describe("verified server database configuration", () => {
     expect(() =>
       contentDatabaseConfig({ ...environment, CONTENT_DATABASE_CA: undefined }),
     ).toThrow();
+  });
+});
+
+describe("category catalog HTTP validation", () => {
+  it("authenticates reads and creation before database access", async () => {
+    vi.stubEnv("CONTENT_API_TOKEN", token);
+    for (const body of [undefined, { name: "Museum", expectedStateDigest: "a".repeat(64) }]) {
+      expect((await request(["categories"], body, { headers: {} }).response).status).toBe(401);
+    }
+  });
+  it.each([
+    { name: "Museum" },
+    { name: " ", expectedStateDigest: "a".repeat(64) },
+    { name: "<bad>", expectedStateDigest: "a".repeat(64) },
+    { name: "line\nbreak", expectedStateDigest: "a".repeat(64) },
+    { name: "x".repeat(81), expectedStateDigest: "a".repeat(64) },
+    { name: "Museum", expectedStateDigest: "a".repeat(64), parentId: "other" },
+  ])("rejects malformed creation input before database access: %j", async (input) => {
+    vi.stubEnv("CONTENT_API_TOKEN", token);
+    expect((await request(["categories"], input).response).status).toBe(400);
   });
 });
