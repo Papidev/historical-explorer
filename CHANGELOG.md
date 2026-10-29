@@ -1,5 +1,11 @@
 # mira-explorer
 
+## 0.13.2
+
+### Patch Changes
+
+- Allow browsers to opt out of Web Analytics using the va-disable localStorage flag.
+
 ## 0.13.1
 
 ### Patch Changes
