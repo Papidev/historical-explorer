@@ -3,7 +3,7 @@ import { ArrowRightIcon, ArrowUpRightIcon, GlobeAltIcon } from "@heroicons/react
 import Image from "next/image";
 import Link from "next/link";
 import catalog from "../../data/public/catalog.json";
-import { WorkInProgressBadge } from "@/app/components/ui/WorkInProgressBadge";
+import { WorkInProgressNotice } from "@/app/components/ui/WorkInProgressNotice";
 import { HomeHeroStory } from "@/app/components/HomeHeroStory";
 import { MapShowcase } from "@/app/components/MapShowcase";
 
@@ -16,6 +16,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-zinc-50 text-zinc-900">
+      <WorkInProgressNotice />
       <a
         href="#main-content"
         className="sr-only rounded-lg bg-white p-3 focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-20"
@@ -33,7 +34,6 @@ const Home = () => {
           </span>
           <span className="text-lg font-semibold tracking-tight">Mira</span>
         </Link>
-        <WorkInProgressBadge />
       </header>
 
       <main id="main-content" className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">

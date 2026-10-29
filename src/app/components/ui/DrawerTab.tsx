@@ -25,7 +25,7 @@ export const DrawerTab = ({
   >
     <span
       className={clsx(
-        "absolute top-1/2 flex w-10 -translate-y-1/2 flex-col items-center gap-3 border border-rose-700 bg-rose-700 py-4 text-white shadow-md group-hover:bg-rose-800 group-focus-visible:ring-2 group-focus-visible:ring-rose-600",
+        "absolute top-1/2 flex w-10 -translate-y-1/2 flex-col items-center gap-3 border border-yellow-300 bg-yellow-300 py-4 text-zinc-900 shadow-md group-hover:bg-yellow-400 group-focus-visible:ring-2 group-focus-visible:ring-zinc-800",
         side === "left" ? "left-0 rounded-r-xl border-l-0" : "right-0 rounded-l-xl border-r-0",
       )}
     >
