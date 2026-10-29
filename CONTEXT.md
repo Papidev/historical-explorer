@@ -1,6 +1,6 @@
-# Cultural Atlas
+# Mira
 
-Cultural Atlas helps visitors understand cities through concise discoveries across history, art, and culture. This document defines the domain vocabulary and core rules; see the [product vision](docs/product/vision.md) for product goals.
+Mira helps visitors understand cities through concise discoveries across history, art, and culture. This document defines the domain vocabulary and core rules; see the [product vision](docs/product/vision.md) for product goals.
 
 ## Publication
 
@@ -33,7 +33,7 @@ The geographic representation of a place from a source dataset before irrelevant
 _Avoid_: Raw POI, Raw Place, Raw Location, Raw feature, source feature
 
 **POI ID**:
-A stable, human-readable identifier assigned by Cultural Atlas to a **POI**, independent of identifiers from external sources.
+A stable, human-readable identifier assigned by Mira to a **POI**, independent of identifiers from external sources.
 _Avoid_: Wikidata ID, content slug
 
 **POI Type**:
@@ -109,7 +109,7 @@ Internal rationale, selection explanations, review comments, and generation note
 _Avoid_: Insight, Visitor Insight
 
 **Person**:
-A historical, mythological, or imaginary individual represented once in Cultural Atlas, with an internal ID, external identity, source-grounded description, and optional curiosities, dates, and image.
+A historical, mythological, or imaginary individual represented once in Mira, with an internal ID, external identity, source-grounded description, and optional curiosities, dates, and image.
 _Avoid_: Person Profile, Cultural Figure, character, biography article
 
 **Related Person**:

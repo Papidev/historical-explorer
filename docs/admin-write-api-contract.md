@@ -2,13 +2,13 @@
 
 Mirrored from private repository commit `d7b058953812857031bba5eafe431f1ac59c907d`; only reference links are adapted. Implementation and verification notes: [Admin content API](admin-content-api.md).
 
-Contract prepared on 2026-10-23 for coordinated implementation in the private admin repository and public `Papidev/historical-explorer` repository. This document defines the interface; no endpoint is implemented by this change.
+Contract prepared on 2026-10-23 for coordinated implementation in the private admin repository and public `Papidev/mira-explorer` repository. This document defines the interface; no endpoint is implemented by this change.
 
-Read with [the architecture](https://github.com/Papidev/historical-explorer-backend/blob/d7b058953812857031bba5eafe431f1ac59c907d/docs/admin-architecture.md), [storage design](https://github.com/Papidev/historical-explorer-backend/blob/d7b058953812857031bba5eafe431f1ac59c907d/docs/online-storage-design.md), and [published content contract](https://github.com/Papidev/historical-explorer-backend/blob/d7b058953812857031bba5eafe431f1ac59c907d/docs/published-content-contract.md).
+Read with [the architecture](https://github.com/Papidev/mira-admin/blob/d7b058953812857031bba5eafe431f1ac59c907d/docs/admin-architecture.md), [storage design](https://github.com/Papidev/mira-admin/blob/d7b058953812857031bba5eafe431f1ac59c907d/docs/online-storage-design.md), and [published content contract](https://github.com/Papidev/mira-admin/blob/d7b058953812857031bba5eafe431f1ac59c907d/docs/published-content-contract.md).
 
 ## Ownership and deployment
 
-Historical Explorer is already deployed on Vercel. Its public repository owns the Next.js routes, authentication, PostgreSQL access, transactions and visitor reads. The private repository owns generation, durable local pending operations, the HTTP client and admin UI. The admin can remain local permanently. It does not need a public incoming endpoint.
+Mira Explorer is already deployed on Vercel. Its public repository owns the Next.js routes, authentication, PostgreSQL access, transactions and visitor reads. The private repository owns generation, durable local pending operations, the HTTP client and admin UI. The admin can remain local permanently. It does not need a public incoming endpoint.
 
 During development Next.js can also run locally against an explicitly configured database. Production admin requests go from local Node to the deployed HTTPS API. Vercel holds database credentials; local Node holds only its API credential. Neither secret enters the React renderer.
 

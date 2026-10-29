@@ -2,7 +2,7 @@ import {
   fetchWithGenerationCancellation,
   throwIfGenerationCancelled,
 } from "@/server/generationCancellation";
-const userAgent = "CulturalAtlas/0.1";
+const userAgent = "Mira/0.1";
 
 export const fetchWikimediaJson = async <T>(url: URL): Promise<T> => {
   let lastError: unknown;

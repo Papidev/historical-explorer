@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Cultural Atlas",
+  title: "Mira",
   description: "Explore cities through history, art, and culture.",
 };
 

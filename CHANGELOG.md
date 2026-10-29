@@ -1,4 +1,10 @@
-# historical-explorer
+# mira-explorer
+
+## 0.12.2
+
+### Patch Changes
+
+- Rename the public product branding and repository references to Mira.
 
 ## 0.12.1
 

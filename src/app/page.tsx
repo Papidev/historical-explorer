@@ -25,11 +25,11 @@ const Home = () => {
       <header className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-6 sm:px-8 lg:px-12">
         <Link
           href="/"
-          aria-label="Cultural Atlas home"
+          aria-label="Mira home"
           className="flex items-center gap-2.5 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800"
         >
           <GlobeAltIcon className="size-7 text-zinc-800" aria-hidden="true" />
-          <span className="text-lg font-semibold tracking-tight">Cultural Atlas</span>
+          <span className="text-lg font-semibold tracking-tight">Mira</span>
         </Link>
         <WorkInProgressBadge />
       </header>
@@ -231,7 +231,7 @@ const Home = () => {
       </main>
 
       <footer className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 border-t border-zinc-900/15 px-5 py-6 text-xs text-zinc-500 sm:px-8 lg:px-12">
-        <p>Cultural Atlas · Art, history, and the places between.</p>
+        <p>Mira · Art, history, and the places between.</p>
         <div className="flex items-center gap-3">
           <p>An atlas in the making. Begin with Rome.</p>
           <AppVersion />

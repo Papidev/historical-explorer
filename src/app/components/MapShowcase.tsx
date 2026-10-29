@@ -35,7 +35,7 @@ export const MapShowcase = () => (
       >
         <Image
           src="/rome-map-showcase-ara-pacis.jpg"
-          alt="Cultural Atlas map of Rome with place markers, an Ara Pacis preview, and the Castel Sant’Angelo detail panel open"
+          alt="Mira map of Rome with place markers, an Ara Pacis preview, and the Castel Sant’Angelo detail panel open"
           width={1700}
           height={900}
           className="h-auto w-full min-w-180"

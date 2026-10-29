@@ -1,7 +1,7 @@
 # Story quality references
 
 These working references turn the [product vision](vision.md) into concrete
-editorial examples. They follow the [Rome Story audit in #116](https://github.com/Papidev/historical-explorer/issues/116).
+editorial examples. They follow the [Rome Story audit in #116](https://github.com/Papidev/mira-explorer/issues/116).
 
 On 14 October 2026 the product owner selected all three examples below and
 clarified the goal: describe the place and its interesting features, including
@@ -10,7 +10,7 @@ The owner also asked for richer introductions as a general criterion for every
 Story, demonstrated here in the three references; rewriting the rest of the
 existing catalog is outside this task.
 The revised texts and checklist remain subject to the review in
-[#117](https://github.com/Papidev/historical-explorer/issues/117).
+[#117](https://github.com/Papidev/mira-explorer/issues/117).
 
 ## Review checklist
 
@@ -65,7 +65,7 @@ The revised texts and checklist remain subject to the review in
 These are content examples, not a fixed template or a requirement to give every
 place the same depth. The Source References in their JSON remain `wikipedia`;
 the saved Source locations and hashes are recorded in
-[#113](https://github.com/Papidev/historical-explorer/issues/113).
+[#113](https://github.com/Papidev/mira-explorer/issues/113).
 
 ## Evidence and deliberate omissions
 

@@ -1,4 +1,4 @@
-# Cultural Atlas
+# Mira Explorer
 
 Next.js 16 + React 19 visit companion for history, art, and culture. The map helps visitors choose a place; its Story explains why it matters.
 
@@ -105,7 +105,7 @@ Deploy through Vercel's GitHub integration with production branch `main`. Branch
 
 Versioned Stories, People, POIs, and category metadata live under `data/` in each checkout. Local Sources, acquired Types, checkpoints, AI progress, and diagnostic logs are read and written directly under `~/.local/share/historical-explorer`, shared by the main checkout and every worktree. No migration or setup command is needed for new worktrees. `data/public/` stays in each checkout because its build snapshot depends on that branch’s versioned content.
 
-`<local-data>` below means that shared external directory. Set `HISTORICAL_EXPLORER_LOCAL_DATA_DIR` in `.env.local` or the shell to override it; use the same absolute path in every checkout. Changing it selects another store without moving files. Edits and deletions of shared Sources and checkpoints affect all checkouts. Map requests merge online publications with the build-generated catalog; the homepage uses the generated catalog. Builds do not require database connectivity, local Sources or AI credentials.
+`<local-data>` below means that shared external directory. Set `HISTORICAL_EXPLORER_LOCAL_DATA_DIR` in `.env.local` or the shell to override it; use the same absolute path in every checkout. Changing it selects another store without moving files. Legacy environment variables, storage paths, database roles, and saved queue identifiers retain their existing names for compatibility; they are not product or repository names. Edits and deletions of shared Sources and checkpoints affect all checkouts. Map requests merge online publications with the build-generated catalog; the homepage uses the generated catalog. Builds do not require database connectivity, local Sources or AI credentials.
 
 | Artifact                           | Location                                                 |
 | ---------------------------------- | -------------------------------------------------------- |
@@ -266,7 +266,7 @@ Licensed Tailwind Plus source is a local reference in gitignored `.tailwind-plus
 
 ## Documentation
 
-Track bugs, improvements, and future ideas in GitHub Issues and this repository's Cultural Atlas Project. Backlog status records an idea without scheduling implementation; conditional work retains its revisit conditions in the issue.
+Track bugs, improvements, and future ideas in GitHub Issues and the shared [Mira Project](https://github.com/users/Papidev/projects/2). [Mira Explorer](https://github.com/Papidev/mira-explorer) owns the public app, map, and content read/write APIs; [Mira Admin](https://github.com/Papidev/mira-admin) owns the private admin and editorial generation workflows. The Project's Prodotto view covers both repositories; Explorer and Admin show repository-specific work. Backlog status records an idea without scheduling implementation; conditional work retains its revisit conditions in the issue. See [issue tracker conventions](docs/agents/issue-tracker.md) for cross-repository work.
 
 [Product vision](docs/product/vision.md) · [Story quality references](docs/product/story-quality.md) · [Glossary](CONTEXT.md) · [Entity discovery](docs/entity-discovery.md)
 

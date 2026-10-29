@@ -1,11 +1,11 @@
 # AGENTS – Implementation Notes
 
-## Historical Explorer GitHub account
+## Mira GitHub account
 
-For `Papidev/historical-explorer`, its main checkout, and every existing or future worktree, always authenticate GitHub operations as `Papidev`.
+For `Papidev/mira-explorer` and `Papidev/mira-admin`, their main checkouts, and every existing or future worktree, always authenticate GitHub operations as `Papidev`.
 
 - For every shell invocation that performs repository or Project operations with `gh`, obtain the stored account token with `papidev_token="$(env -u GH_TOKEN -u GITHUB_TOKEN gh auth token --hostname github.com --user Papidev)" || exit 1`, then require a nonempty token with `[ -n "$papidev_token" ] || exit 1`. Prefix every subsequent repository or Project `gh` command with `GH_TOKEN="$papidev_token"`.
-- Before repository or Project operations, verify `GH_TOKEN="$papidev_token" gh api user --jq .login` returns `Papidev`. If the authenticated account differs, switch to `Papidev` with `env -u GH_TOKEN -u GITHUB_TOKEN gh auth switch --hostname github.com --user Papidev`, reload its stored token using the command above, and verify the identity again before proceeding. Use `--repo Papidev/historical-explorer` for commands that accept it.
+- Before repository or Project operations, verify `GH_TOKEN="$papidev_token" gh api user --jq .login` returns `Papidev`. If the authenticated account differs, switch to `Papidev` with `env -u GH_TOKEN -u GITHUB_TOKEN gh auth switch --hostname github.com --user Papidev`, reload its stored token using the command above, and verify the identity again before proceeding. Use `--repo Papidev/mira-explorer` for commands in this repository that accept it; use `--repo Papidev/mira-admin` for admin repository work.
 - Account selection must be explicit per command: the globally active account may change in another session. Use another GitHub tool only when its authenticated identity is verified as `Papidev`.
 - Request `gh auth refresh -s project` only after verifying that the credentials actually used belong to `Papidev` and lack the required Project permission. Never print or save token values.
 
@@ -17,7 +17,7 @@ For `Papidev/historical-explorer`, its main checkout, and every existing or futu
 
 ### Issue tracker
 
-Track work in GitHub Issues and the Cultural Atlas Project.
+Track work in GitHub Issues and the shared Mira Project.
 Read `docs/agents/issue-tracker.md` before issue tracker operations.
 
 ### Domain docs
@@ -103,8 +103,8 @@ Update `AGENTS.md` only with important stuff that cannot be clearly/quickly deri
 - Before opening any PR, commit and include all uncommitted Stories, People, and POI metadata present in its branch checkout, including modified tracked files and untracked files that are not ignored by Git. Verify that none remains only local, so merging the branch preserves its content. Respect `.gitignore`; never force-add ignored files. Apply this rule in every checkout, including worktrees, without separate backups.
 - Before opening application PRs, follow [Application versions](README.md#application-versions): prepare an English Changeset, consume it into exactly one version increment and changelog entry relative to current `main`, and regenerate after alignment if another release merged. Internal documentation, GitHub Actions workflows (including action dependency updates), and the other CI/release automation files allowed by `scripts/check-release.mjs` are exempt; changes limited to dependency sections in `package.json` and the pnpm lockfile are also exempt. Other manifest changes and application changes accompanying dependency updates still require a release. Dependabot uses normal pull request CI without generated release commits.
 
-- Track bugs, improvements, and future ideas in GitHub Issues and the repository's Cultural Atlas Project. Search existing issues before creating one; retain unresolved decisions and revisit conditions in the issue body. Markdown documents explain product and architecture decisions.
-- Whenever creating an issue, add it to the Cultural Atlas GitHub Project associated with this repository, assign Status and Area, and verify the placement before reporting completion. Default to Backlog. If Project access is unavailable, report the missing placement explicitly.
+- Track bugs, improvements, and future ideas in GitHub Issues and the shared Mira Project. Search existing issues before creating one; retain unresolved decisions and revisit conditions in the issue body. Markdown documents explain product and architecture decisions.
+- Whenever creating an issue, add it to the [Mira GitHub Project](https://github.com/users/Papidev/projects/2) shared by both repositories, assign Status and Area, and verify the placement before reporting completion. Default to Backlog. If Project access is unavailable, report the missing placement explicitly.
 - Every new issue, including bugs and backlog ideas, must have an assigned milestone. Review existing milestones and assign the best matching one when creating the issue; verify the assignment before reporting completion. If none fits, agree a new milestone with the product owner before creating the issue. Backlog status or a milestone proposed only in the body does not satisfy this requirement. Report the assigned milestone and its rationale.
 - Use short, imperative commit subjects ("Add Alexandria map data"). Keep formatting-only commits separate from feature work so reviewers can skim diffs quickly.
 - For push/publish requests, use the repo-local `push-branch` skill to decide whether a generic local branch should be renamed before creating the remote branch.
