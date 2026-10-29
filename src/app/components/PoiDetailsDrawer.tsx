@@ -108,7 +108,7 @@ export const PoiDetailsDrawer = ({
                 Image unavailable
               </div>
             ) : null}
-            <div className="border-b border-black/10 px-5 py-4 pr-16">
+            <div className="border-b border-yellow-200 bg-yellow-50/50 px-5 py-4 pr-16">
               {selectedPersonId ? (
                 <button
                   type="button"

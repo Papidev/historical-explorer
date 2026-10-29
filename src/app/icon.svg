@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="8 8 66 66" fill="none">
+  <style>
+    .body { fill: #18181b; }
+    .wing { fill: #ffdf20; }
+    .eye { fill: #fefce8; }
+    .legs { stroke: #18181b; }
+    .spark { stroke: #f0b100; }
+    @media (prefers-color-scheme: dark) {
+      .body { fill: #fdc700; }
+      .wing, .eye { fill: #18181b; }
+      .legs { stroke: #d08700; }
+      .spark { stroke: #fe9a00; }
+    }
+  </style>
+  <path class="body" d="M13 49c8 1 11-5 17-16 4-8 9-12 16-12 8 0 13 7 11 15l12 5-13 4c-4 10-14 17-24 16-9-1-14-5-19-12Z"/>
+  <path class="wing" d="M24 45c8-5 17-6 24-3-3 10-11 15-19 11"/>
+  <circle class="eye" cx="49" cy="31" r="2.2"/>
+  <path class="legs" d="m35 61-3 10m15-13 3 12m-23 2h10m9-1h9" stroke-width="2.5" stroke-linecap="round"/>
+  <path class="spark" d="m59 18 3-6m4 13 7-2" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

@@ -67,7 +67,7 @@ export const CategoryOption = ({
           if (input) input.indeterminate = indeterminate;
         }}
         onChange={onToggle}
-        className="size-4 cursor-pointer accent-sky-700"
+        className="size-4 cursor-pointer accent-yellow-700"
       />
       {disclosure && (
         <span aria-hidden="true" className="relative size-8 shrink-0">

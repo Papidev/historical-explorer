@@ -1,8 +1,8 @@
 import { AppVersion } from "@/app/components/ui/AppVersion";
 import { RefreshPoiCategories } from "@/app/components/RefreshPoiCategories";
-import { GlobeAltIcon } from "@heroicons/react/24/outline";
+import { MiraLogo } from "@/app/components/ui/MiraLogo";
 import { RomeMap } from "@/app/components/RomeMap";
-import { WorkInProgressBadge } from "@/app/components/ui/WorkInProgressBadge";
+import { WorkInProgressNotice } from "@/app/components/ui/WorkInProgressNotice";
 import Link from "next/link";
 
 type Props = {
@@ -17,6 +17,7 @@ const RomePage = async ({ searchParams }: Props) => {
 
   return (
     <main className="flex h-dvh flex-col bg-zinc-50 text-zinc-900">
+      <WorkInProgressNotice />
       <RefreshPoiCategories city="rome" />
       <header className="flex shrink-0 items-center justify-between gap-3 border-b border-zinc-900/15 px-4 py-3 md:gap-6 md:px-6 md:py-4">
         <div className="flex min-w-0 items-center gap-4 md:gap-6">
@@ -25,8 +26,7 @@ const RomePage = async ({ searchParams }: Props) => {
             aria-label="Mira home"
             className="flex shrink-0 items-center gap-2.5 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800"
           >
-            <GlobeAltIcon className="size-7 text-zinc-800" aria-hidden="true" />
-            <span className="hidden text-lg font-semibold tracking-tight sm:inline">Mira</span>
+            <MiraLogo size="small" />
           </Link>
           <div className="min-w-0 border-l border-zinc-900/15 pl-4 md:pl-6">
             <h1 className="font-serif text-3xl tracking-tight md:text-4xl">Rome</h1>
@@ -36,9 +36,6 @@ const RomePage = async ({ searchParams }: Props) => {
           </div>
         </div>
         <div className="flex shrink-0 items-center gap-2 md:gap-3">
-          <span className="hidden md:inline-flex">
-            <WorkInProgressBadge />
-          </span>
           <span className="hidden sm:inline-flex">
             <AppVersion />
           </span>

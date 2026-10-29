@@ -68,7 +68,7 @@ export const Sidebar = ({
                 if (allCategoriesSelected) setExpanded(true);
                 onToggleAll();
               }}
-              className="size-4 cursor-pointer accent-sky-700"
+              className="size-4 cursor-pointer accent-yellow-700"
             />
             <button
               type="button"
@@ -149,7 +149,7 @@ export const Sidebar = ({
                 aria-label={poi.name}
                 aria-pressed={selectedPoiId === poi.id}
                 onClick={() => onOpenPoi(poi.id)}
-                className={`group flex w-full cursor-pointer items-center gap-3 rounded-xl border p-3 text-left transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-800 ${selectedPoiId === poi.id ? "border-green-300 bg-green-50" : "border-zinc-200/80 bg-white hover:border-zinc-400"}`}
+                className={`group flex w-full cursor-pointer items-center gap-3 rounded-xl border p-3 text-left transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-800 ${selectedPoiId === poi.id ? "border-yellow-300 bg-yellow-50" : "border-zinc-200/80 bg-white hover:border-yellow-300"}`}
               >
                 <span className="min-w-0 flex-1">
                   <span className="block text-lg leading-snug font-medium">{poi.name}</span>
@@ -165,7 +165,7 @@ export const Sidebar = ({
                 </span>
                 <ArrowUpRightIcon
                   aria-hidden="true"
-                  className={`size-4 shrink-0 ${selectedPoiId === poi.id ? "text-green-700" : "text-zinc-400 group-hover:text-zinc-800"}`}
+                  className={`size-4 shrink-0 ${selectedPoiId === poi.id ? "text-yellow-800" : "text-zinc-400 group-hover:text-zinc-800"}`}
                 />
               </button>
             </li>

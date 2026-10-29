@@ -36,7 +36,7 @@ export const Search = ({ pois, onSelect }: { pois: Poi[]; onSelect: (poi: Poi) =
           placeholder="Search by name"
           displayValue={() => ""}
           onChange={(event) => setQuery(event.target.value)}
-          className="block min-h-11 w-full rounded-lg bg-white py-2.5 pr-3 pl-10 text-base text-zinc-900 outline-1 -outline-offset-1 outline-zinc-300 placeholder:text-zinc-400 focus:outline-2 focus:-outline-offset-2 focus:outline-rose-700 sm:text-sm"
+          className="block min-h-11 w-full rounded-lg bg-white py-2.5 pr-3 pl-10 text-base text-zinc-900 outline-1 -outline-offset-1 outline-zinc-300 placeholder:text-zinc-400 focus:outline-2 focus:-outline-offset-2 focus:outline-yellow-700 sm:text-sm"
         />
       </div>
       <ComboboxOptions
@@ -50,7 +50,7 @@ export const Search = ({ pois, onSelect }: { pois: Poi[]; onSelect: (poi: Poi) =
           <ComboboxOption
             key={poi.id}
             value={poi}
-            className="group cursor-pointer rounded-md px-3 py-2.5 text-zinc-900 select-none data-focus:bg-rose-50 data-focus:outline-hidden"
+            className="group cursor-pointer rounded-md px-3 py-2.5 text-zinc-900 select-none data-focus:bg-yellow-100 data-focus:outline-hidden"
           >
             <span className="block text-sm font-medium">{poi.name}</span>
             <span className="mt-1 block text-xs text-zinc-500">

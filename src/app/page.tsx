@@ -1,11 +1,12 @@
 import { AppVersion } from "@/app/components/ui/AppVersion";
-import { ArrowRightIcon, ArrowUpRightIcon, GlobeAltIcon } from "@heroicons/react/24/outline";
+import { ArrowRightIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import catalog from "../../data/public/catalog.json";
-import { WorkInProgressBadge } from "@/app/components/ui/WorkInProgressBadge";
+import { WorkInProgressNotice } from "@/app/components/ui/WorkInProgressNotice";
 import { HomeHeroStory } from "@/app/components/HomeHeroStory";
 import { MapShowcase } from "@/app/components/MapShowcase";
+import { MiraLogo } from "@/app/components/ui/MiraLogo";
 
 const Home = () => {
   const cover =
@@ -16,6 +17,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-zinc-50 text-zinc-900">
+      <WorkInProgressNotice />
       <a
         href="#main-content"
         className="sr-only rounded-lg bg-white p-3 focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-20"
@@ -28,10 +30,8 @@ const Home = () => {
           aria-label="Mira home"
           className="flex items-center gap-2.5 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800"
         >
-          <GlobeAltIcon className="size-7 text-zinc-800" aria-hidden="true" />
-          <span className="text-lg font-semibold tracking-tight">Mira</span>
+          <MiraLogo size="large" />
         </Link>
-        <WorkInProgressBadge />
       </header>
 
       <main id="main-content" className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
@@ -41,25 +41,28 @@ const Home = () => {
         >
           <div>
             <p className="flex items-center gap-3 text-xs font-semibold tracking-[0.2em] text-zinc-800 uppercase">
-              <span className="h-px w-8 bg-zinc-800" aria-hidden="true" />A closer look at places
+              <span className="h-0.5 w-8 bg-yellow-400" aria-hidden="true" />A closer look at places
             </p>
             <h1
               id="hero-title"
               className="mt-6 max-w-xl font-serif text-5xl leading-[1.08] tracking-tight text-zinc-900 sm:text-6xl lg:text-7xl"
             >
-              Every place has a <span className="text-zinc-800 italic">story.</span>
+              Every place has a{" "}
+              <span className="text-zinc-800 italic underline decoration-yellow-300 decoration-4 underline-offset-8">
+                story.
+              </span>
             </h1>
             <p className="mt-6 max-w-md text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">
               Get the essence of a place at a glance. Discover the art, history, and people that
               make it interesting, then explore further on Wikipedia whenever you want.
             </p>
             <p className="mt-6 max-w-md text-base leading-7 text-zinc-600">
-              <span className="font-semibold text-zinc-900">Our atlas begins in Rome.</span> More
-              cities will follow.
+              <span className="font-semibold text-zinc-900">Mira begins in Rome.</span> More cities
+              will follow.
             </p>
             <Link
               href="/rome"
-              className="group mt-6 inline-flex items-center gap-6 rounded-full bg-zinc-800 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800"
+              className="group mt-6 inline-flex items-center gap-6 rounded-full bg-yellow-300 px-6 py-3.5 text-sm font-semibold text-zinc-900 transition-colors hover:bg-yellow-400 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800"
             >
               Explore Rome
               <ArrowRightIcon
@@ -125,7 +128,7 @@ const Home = () => {
           </div>
           <div className="max-w-2xl space-y-4 text-base leading-7 text-zinc-600">
             <p>
-              This atlas draws on the remarkable work behind{" "}
+              Mira draws on the remarkable work behind{" "}
               <a
                 href="https://www.wikipedia.org/"
                 target="_blank"
@@ -201,7 +204,7 @@ const Home = () => {
                         sizes="(min-width: 640px) 33vw, 100vw"
                         className="object-cover motion-safe:transition-transform motion-safe:duration-500 motion-safe:group-hover:scale-105"
                       />
-                      <span className="absolute right-3 bottom-3 flex size-9 items-center justify-center rounded-full bg-zinc-50 text-zinc-900">
+                      <span className="absolute right-3 bottom-3 flex size-9 items-center justify-center rounded-full bg-yellow-100 text-zinc-900">
                         <ArrowUpRightIcon className="size-5" aria-hidden="true" />
                       </span>
                     </div>
@@ -231,9 +234,18 @@ const Home = () => {
       </main>
 
       <footer className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 border-t border-zinc-900/15 px-5 py-6 text-xs text-zinc-500 sm:px-8 lg:px-12">
-        <p>Mira · Art, history, and the places between.</p>
+        <div className="flex flex-wrap items-center gap-3">
+          <Link
+            href="/"
+            aria-label="Mira home"
+            className="rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800"
+          >
+            <MiraLogo size="small" />
+          </Link>
+          <p>Art, history, and the places between.</p>
+        </div>
         <div className="flex items-center gap-3">
-          <p>An atlas in the making. Begin with Rome.</p>
+          <p>Mira is taking shape. Begin with Rome.</p>
           <AppVersion />
         </div>
       </footer>
