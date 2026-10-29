@@ -1,5 +1,11 @@
 # mira-explorer
 
+## 0.13.1
+
+### Patch Changes
+
+- Add Vercel Web Analytics to track page views across the application.
+
 ## 0.13.0
 
 ### Minor Changes

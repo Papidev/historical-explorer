@@ -1,6 +1,6 @@
 {
   "name": "mira-explorer",
-  "version": "0.13.0",
+  "version": "0.13.1",
   "private": true,
   "packageManager": "pnpm@10.18.0",
   "engines": {
@@ -26,6 +26,7 @@
   "dependencies": {
     "@headlessui/react": "2.2.10",
     "@heroicons/react": "2.2.0",
+    "@vercel/analytics": "^2.0.1",
     "@vercel/functions": "^3.10.3",
     "clsx": "^2.1.1",
     "jsonrepair": "^3.15.0",
