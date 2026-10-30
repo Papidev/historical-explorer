@@ -151,6 +151,14 @@ export const categoryCatalogRenameSchema = categoryCatalogCreateSchema.extend({
   id: publishedCategorySchema.shape.id,
 });
 
+export const categoryCatalogMoveSchema = z
+  .object({
+    id: publishedCategorySchema.shape.id,
+    parentId: publishedCategorySchema.shape.id.nullable(),
+    expectedStateDigest: z.string().regex(/^[a-f0-9]{64}$/),
+  })
+  .strict();
+
 export const poiTypesAcquisitionSchema = z
   .object({
     wikidataId: z
@@ -717,6 +725,140 @@ export const createPostgresContent = (pool: Pool) => ({
         name,
       ]);
       return { status: "saved" as const, definition: { ...category, name, label: name } };
+    });
+  },
+
+  moveCategory: async (value: unknown) => {
+    const input = categoryCatalogMoveSchema.parse(value);
+    return transaction(pool, async (client) => {
+      await lockCategories(client);
+      const baseline = await readTypeRules(client);
+      if (digest(baseline.definitions) !== input.expectedStateDigest)
+        throw new ContentWriteError(
+          "conflict",
+          "The category catalog changed. Reload before moving a category.",
+        );
+      const category = baseline.definitions.find(({ id }) => id === input.id);
+      if (!category) throw new ContentWriteError("invalid", "Category not found.");
+      if (input.parentId === input.id)
+        throw new ContentWriteError("invalid", "A category cannot contain itself.");
+      if (input.parentId !== null) {
+        const target = baseline.definitions.find(({ id }) => id === input.parentId);
+        if (!target) throw new ContentWriteError("invalid", "Parent category not found.");
+        if (target.parentId || baseline.definitions.some(({ parentId }) => parentId === input.id))
+          throw new ContentWriteError("invalid", "Only two category levels are supported.");
+      }
+      const definition = { ...category, parentId: input.parentId ?? undefined };
+      if ((category.parentId ?? null) === input.parentId)
+        return { status: "saved" as const, definition };
+      const previousDefinitions = baseline.definitions.map(({ parentId, ...entry }) => ({
+        ...entry,
+        parent: parentId,
+      }));
+      // Preserve selected children, and retain the previous parent only when a sibling remains.
+      const moveSelection = (selected: string[]) => [
+        ...new Set([
+          ...selected.filter(
+            (id) =>
+              id !== category.parentId ||
+              baseline.definitions.some(
+                (child) =>
+                  child.id !== input.id &&
+                  child.parentId === category.parentId &&
+                  selected.includes(child.id),
+              ),
+          ),
+          ...(input.parentId ? [input.parentId] : []),
+        ]),
+      ];
+      await client.query("UPDATE content.categories SET parent_id = $2 WHERE id = $1", [
+        input.id,
+        input.parentId,
+      ]);
+      for (const rule of baseline.rules) {
+        const selected = expandCategorySelection(rule.categoryIds, previousDefinitions);
+        if (!selected.includes(input.id)) continue;
+        await client.query(
+          `UPDATE content.type_category_rules SET category_ids = $2, origin = 'manual',
+          reason = NULL, revision = $3, updated_at = now() WHERE type_id = $1`,
+          [rule.typeId, JSON.stringify(moveSelection(selected)), randomUUID()],
+        );
+      }
+      const { rows: affected } = await client.query<{ id: string }>(
+        `SELECT p.id FROM content.pois p
+        WHERE EXISTS (SELECT FROM content.poi_categories c WHERE c.poi_id = p.id AND c.category_id = $1)
+        ORDER BY p.id FOR UPDATE`,
+        [input.id],
+      );
+      for (const { id } of affected) {
+        const { rows: assignments } = await client.query<{ category_id: string; derived: boolean }>(
+          `SELECT c.category_id, d.poi_id IS NOT NULL AS derived FROM content.poi_categories c
+          LEFT JOIN content.poi_type_category_assignments d USING (poi_id, category_id)
+          WHERE c.poi_id = $1 ORDER BY c.category_id COLLATE "C"`,
+          [id],
+        );
+        // Persisted POI memberships are explicit; do not expand a parent into new siblings.
+        const selected = assignments.map(({ category_id }) => category_id);
+        const categoryIds = moveSelection(selected);
+        for (const removed of selected.filter((value) => !categoryIds.includes(value))) {
+          await client.query(
+            "DELETE FROM content.poi_type_category_assignments WHERE poi_id = $1 AND category_id = $2",
+            [id, removed],
+          );
+          await client.query(
+            "DELETE FROM content.poi_categories WHERE poi_id = $1 AND category_id = $2",
+            [id, removed],
+          );
+        }
+        for (const added of categoryIds.filter((value) => !selected.includes(value))) {
+          await client.query(
+            "INSERT INTO content.poi_categories(poi_id, category_id) VALUES ($1,$2)",
+            [id, added],
+          );
+          // A newly implied parent follows the moved child's ownership. Existing independent
+          // assignments remain independent; this operation does not reconcile legacy provenance.
+          if (assignments.some((entry) => entry.category_id === input.id && entry.derived))
+            await client.query(
+              "INSERT INTO content.poi_type_category_assignments(poi_id, category_id) VALUES ($1,$2)",
+              [id, added],
+            );
+        }
+        await client.query(
+          `INSERT INTO content.poi_category_writes(poi_id, revision, request_digest) VALUES ($1,$2,$3)
+          ON CONFLICT (poi_id) DO UPDATE SET revision = EXCLUDED.revision, request_digest = EXCLUDED.request_digest`,
+          [id, randomUUID(), digest({ categoryIds, move: input })],
+        );
+      }
+      // A rule selecting only the destination parent also gains its new child under
+      // the existing parent-selection semantics. Recalculate only acquisitions whose
+      // rule scope changed, preserving independent assignments through the usual writer.
+      const accepted = await readTypeRules(client);
+      const definitions = accepted.definitions.map(({ parentId, ...entry }) => ({
+        ...entry,
+        parent: parentId,
+      }));
+      const changedTypes = baseline.rules
+        .filter((rule) => {
+          const next = accepted.rules.find(({ typeId }) => typeId === rule.typeId)!;
+          return (
+            JSON.stringify(
+              expandCategorySelection(rule.categoryIds, previousDefinitions).sort(),
+            ) !== JSON.stringify(expandCategorySelection(next.categoryIds, definitions).sort())
+          );
+        })
+        .map(({ typeId }) => typeId);
+      if (changedTypes.length) {
+        const { rows } = await client.query<{ id: string }>(
+          `SELECT p.id FROM content.pois p
+          JOIN content.poi_type_acquisitions a ON a.poi_id = p.id AND a.input_revision = p.input_revision
+          WHERE p.removed_at IS NULL AND a.acquisition->>'wikidataId' IS NOT DISTINCT FROM p.wikidata_id
+          AND EXISTS (SELECT FROM jsonb_array_elements(a.acquisition->'types') t WHERE t->>'id' = ANY($1::text[]))
+          ORDER BY p.id FOR UPDATE OF p`,
+          [changedTypes],
+        );
+        for (const { id } of rows) await recalculateTypeCategories(client, id, accepted);
+      }
+      return { status: "saved" as const, definition };
     });
   },
 

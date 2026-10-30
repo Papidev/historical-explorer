@@ -3,6 +3,7 @@ import {
   catalogWriteSchema,
   categoryCatalogCreateSchema,
   categoryCatalogRenameSchema,
+  categoryCatalogMoveSchema,
   personUpdateSchema,
   poiCategoriesWriteSchema,
   storyWriteSchema,
@@ -41,6 +42,20 @@ export const createContentHandler =
           await readContentBody(request),
         );
         return contentJson(await getRepository().saveTypeCategoryRule(input));
+      }
+      if (resource === "categories" && segments.length === 3 && action === "move") {
+        if (request.method !== "PUT")
+          return contentJson(
+            { error: { code: "invalid", message: "This method is not supported." } },
+            405,
+            { Allow: "PUT" },
+          );
+        const input = parseContentInput(
+          categoryCatalogMoveSchema.omit({ id: true }),
+          await readContentBody(request),
+        );
+        const id = parseContentInput(publishedCategorySchema.shape.id, identity);
+        return contentJson(await getRepository().moveCategory({ ...input, id }));
       }
       if (resource === "categories" && segments.length === 2) {
         if (request.method !== "PUT")

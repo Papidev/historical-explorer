@@ -119,3 +119,32 @@ Do not connect current mixed-stage files directly to these APIs. Whole-Draft com
 4. Run an explicitly configured end-to-end test against isolated data. No live catalog replacement, migration, deletion or visitor cutover is authorized by this contract.
 
 Use separate linked PRs. The private client PR names the public API PR and the v1 contract it requires. Before deploying the public routes, compare shared valid/invalid JSON fixtures in both repositories so validators and HTTP behavior agree. Visitor reads are now integrated. Independent POI category persistence is defined in the linked additive extension; global category operations and independent gallery edits remain separate slices.
+
+### Shared category moves (#35)
+
+`PUT /api/admin/content/v1/categories/:id/move` accepts only
+`{ parentId: string | null, expectedStateDigest }`, where `null` means top level.
+It returns `{ status: "saved", definition }`. It retains stable IDs and names,
+rejects missing parents, self-parenting and nesting a parent or using a child as
+a parent, preserving the current two-level limit. A stale definitions digest
+conflicts; an unchanged parent is a no-op.
+
+One transaction uses the shared category locks to change the parent, update
+affected rules with fresh revisions and manual origin (clearing their old AI
+reasons), and adjust persisted POI memberships across cities, including POIs
+without Stories. Selected children remain selected; the new parent is included,
+and the previous parent is removed only when no other selected child remains.
+Rules expand against the previous hierarchy before moving so their child subsets
+are retained. Explicit POI memberships are adjusted without expanding new siblings.
+Accepted acquisitions whose rule scope changes are recalculated in the same transaction,
+including rules that select only the destination parent and therefore include its new child.
+Existing independent assignments retain their ownership; a newly implied parent
+follows the moved child's contribution ownership. No legacy provenance reconciliation
+is performed. Changed POI category revisions and definition/rule digests invalidate
+older writes. Stories, People, acquisitions and publication versions are untouched.
+
+Admin re-reads accepted definitions before moving. Uncertain acknowledgements are
+checked against the accepted parent, ID and unchanged name/label; failure never
+becomes local success. Fresh Admin installations read the accepted hierarchy online.
+Visitor filtering uses the new hierarchy at the existing 60-second cache boundary.
+No schema migration or production catalog cleanup is part of this implementation.

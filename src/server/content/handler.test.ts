@@ -78,6 +78,28 @@ describe("content HTTP boundary before database access", () => {
     expect(response.headers.get("cache-control")).toBe("no-store");
   });
 
+  it("authenticates and validates category moves before database access", async () => {
+    vi.stubEnv("CONTENT_API_TOKEN", token);
+    const input = { parentId: null, expectedStateDigest: "a".repeat(64) };
+    const segments = ["categories", "arena", "move"];
+    expect((await request(segments, input, { headers: {} }).response).status).toBe(401);
+    const unsupported = await request(segments, undefined).response;
+    expect(unsupported.status).toBe(405);
+    expect(unsupported.headers.get("allow")).toBe("PUT");
+    for (const body of [
+      { parentId: null },
+      { ...input, parentId: "" },
+      { ...input, parentId: 1 },
+      { ...input, id: "other" },
+      { ...input, name: "Changed" },
+      { expectedStateDigest: input.expectedStateDigest },
+    ])
+      expect((await request(segments, body).response).status).toBe(400);
+    expect((await request(["categories", "arena", "move", "extra"], input).response).status).toBe(
+      404,
+    );
+  });
+
   it("authenticates and validates category renames before database access", async () => {
     vi.stubEnv("CONTENT_API_TOKEN", token);
     const input = { name: "Arena", expectedStateDigest: "a".repeat(64) };
