@@ -5,6 +5,7 @@ import type { z } from "zod";
 import { createPostgresContent, type catalogWriteSchema } from "./postgresContent";
 import { readFile } from "node:fs/promises";
 import { createContentHandler } from "./handler";
+import { matchesPoiCategory } from "@/types/PoiCategory";
 import { createCachedRead } from "../visitorContent/cache";
 import { exampleStoryWrite as example } from "./__fixtures__/writes";
 
@@ -35,10 +36,13 @@ describe.skipIf(!process.env.HISTORICAL_EXPLORER_TEST_DATABASE_URL)(
       await pool.query(
         await readFile(new URL("./schema/003-poi-type-acquisitions.sql", import.meta.url), "utf8"),
       );
+      await pool.query(
+        await readFile(new URL("./schema/004-type-category-rules.sql", import.meta.url), "utf8"),
+      );
     });
     beforeEach(async () => {
       await pool.query(
-        "TRUNCATE content.city_catalogs, content.categories, content.people CASCADE",
+        "TRUNCATE content.type_category_rules, content.city_catalogs, content.categories, content.people CASCADE",
       );
     });
     afterAll(async () => {
@@ -92,6 +96,339 @@ describe.skipIf(!process.env.HISTORICAL_EXPLORER_TEST_DATABASE_URL)(
         },
       };
     };
+
+    const saveRule = async (typeId: string, categories: string[] | null) =>
+      repository.saveTypeCategoryRule({
+        typeId,
+        categories,
+        revision: randomUUID(),
+        expectedStateDigest: (await repository.getTypeCategoryRules()).stateDigest,
+      });
+
+    it("atomically changes multiple acquired POIs, preserves independent categories and filters visitors without publishing drafts", async () => {
+      const published = example();
+      const draft = example();
+      draft.detail.id = randomUUID();
+      const unrelated = example();
+      unrelated.detail.id = randomUUID();
+      await prepare([published, draft, unrelated]);
+      await repository.saveStory(published);
+      await repository.savePoiCategories(await categoryWrite(published));
+      for (const write of [published, draft])
+        await repository.savePoiTypes(await typesWrite(write.detail.id));
+      await repository.savePoiTypes({
+        ...(await typesWrite(unrelated.detail.id)),
+        acquisition: {
+          ...(await typesWrite(unrelated.detail.id)).acquisition,
+          types: [{ id: "Q2", label: "unrelated" }],
+        },
+      });
+      await pool.query("INSERT INTO content.categories(id,name) VALUES ('new','New')");
+      const unrelatedBefore = await repository.getPoiCategoriesBaseline(unrelated.detail.id);
+      const storyBefore = await repository.getStory(published.detail.id);
+      const handle = createContentHandler(() => repository);
+      const call = (body?: unknown) =>
+        handle(
+          new Request("http://localhost/api/admin/content/v1/type-rules", {
+            method: body ? "PUT" : "GET",
+            headers: {
+              authorization: `Bearer ${process.env.CONTENT_API_TOKEN}`,
+              "content-type": "application/json",
+            },
+            ...(body ? { body: JSON.stringify(body) } : {}),
+          }),
+          { params: Promise.resolve({ segments: ["type-rules"] }) },
+        );
+      const baseline = await (await call()).json();
+      expect(baseline.rules).toEqual([]);
+      const response = await call({
+        typeId: "Q1",
+        categories: ["new"],
+        revision: randomUUID(),
+        expectedStateDigest: baseline.stateDigest,
+      });
+      expect(response.status).toBe(200);
+      expect(await response.json()).toMatchObject({ status: "saved", affectedPois: 2 });
+      for (const write of [published, draft])
+        expect((await repository.getPoiCategoriesBaseline(write.detail.id))?.categoryIds).toContain(
+          "new",
+        );
+      expect(
+        (await repository.getPoiCategoriesBaseline(published.detail.id))?.categoryIds,
+      ).toContain("amphitheatre");
+      expect(await repository.getPoiCategoriesBaseline(unrelated.detail.id)).toEqual(
+        unrelatedBefore,
+      );
+      expect(await repository.getStory(draft.detail.id)).toBeUndefined();
+      const city = await repository.getCity("rome");
+      expect(
+        city.pois
+          .filter(({ categoryIds }) =>
+            matchesPoiCategory(
+              categoryIds,
+              "new",
+              city.categoryDefinitions.map(({ parentId, ...category }) => ({
+                ...category,
+                parent: parentId,
+              })),
+            ),
+          )
+          .map(({ id }) => id),
+      ).toEqual([published.detail.id]);
+      const visitor = await repository.getStory(published.detail.id);
+      expect(visitor?.story).toEqual(storyBefore?.story);
+      expect(JSON.stringify(visitor)).not.toMatch(/typeId|updatedAt|manual/);
+      expect((await createPostgresContent(pool).getTypeCategoryRules()).rules).toMatchObject([
+        { typeId: "Q1", origin: "manual", decision: "mapped", categoryIds: ["new"] },
+      ]);
+      await saveRule("Q1", []);
+      expect(
+        (await repository.getPoiCategoriesBaseline(published.detail.id))?.categoryIds,
+      ).not.toContain("new");
+      expect(
+        (await repository.getPoiCategoriesBaseline(published.detail.id))?.categoryIds,
+      ).toContain("amphitheatre");
+      expect((await repository.getTypeCategoryRules()).rules[0]).toMatchObject({
+        decision: "ignored",
+        origin: "manual",
+      });
+      await saveRule("Q1", null);
+      expect((await repository.getTypeCategoryRules()).rules[0]).toMatchObject({
+        decision: "unmapped",
+        origin: "manual",
+        categoryIds: [],
+      });
+    });
+
+    it("recalculates acquisitions against current rules and invalidates pending per-POI requests even when categories are unchanged", async () => {
+      const write = example();
+      await prepare([write]);
+      await repository.savePoiCategories(await categoryWrite(write));
+      await pool.query("INSERT INTO content.categories(id,name) VALUES ('new','New')");
+      await repository.savePoiTypes(await typesWrite(write.detail.id));
+      await saveRule("Q1", ["new"]);
+      const pending = await categoryWrite(write);
+      await saveRule("Q1", ["new"]);
+      await expect(repository.savePoiCategories(pending)).rejects.toMatchObject({
+        reason: "conflict",
+      });
+      const acquisition = await typesWrite(write.detail.id);
+      await repository.savePoiTypes({
+        ...acquisition,
+        acquisition: { ...acquisition.acquisition, types: [] },
+      });
+      expect(
+        (await repository.getPoiCategoriesBaseline(write.detail.id))?.categoryIds,
+      ).not.toContain("new");
+      await repository.savePoiTypes(await typesWrite(write.detail.id));
+      expect((await repository.getPoiCategoriesBaseline(write.detail.id))?.categoryIds).toContain(
+        "new",
+      );
+    });
+
+    it("rejects stale rule/catalog forms and invalid categories without changing accepted rules or assignments", async () => {
+      const write = example();
+      const catalog = await prepare([write]);
+      await repository.savePoiCategories(await categoryWrite(write));
+      await pool.query("INSERT INTO content.categories(id,name) VALUES ('new','New')");
+      await repository.savePoiTypes(await typesWrite(write.detail.id));
+      const input = {
+        typeId: "Q1",
+        categories: ["new"],
+        revision: randomUUID(),
+        expectedStateDigest: (await repository.getTypeCategoryRules()).stateDigest,
+      };
+      const categories = await repository.getPoiCategoriesBaseline(write.detail.id);
+      await expect(
+        repository.saveTypeCategoryRule({ ...input, categories: ["unknown"] }),
+      ).rejects.toMatchObject({ reason: "invalid" });
+      expect((await repository.getTypeCategoryRules()).rules).toEqual([]);
+      expect(await repository.getPoiCategoriesBaseline(write.detail.id)).toEqual(categories);
+      await repository.synchronizeCatalog({
+        ...catalog,
+        revision: randomUUID(),
+        expectedRevision: catalog.revision,
+        pois: catalog.pois.map((poi) => ({ ...poi, name: "Changed inputs" })),
+      });
+      await expect(repository.saveTypeCategoryRule(input)).rejects.toMatchObject({
+        reason: "conflict",
+      });
+    });
+
+    it("rejects a stale catalog revision even when only coordinates changed", async () => {
+      const write = example();
+      const catalog = await prepare([write]);
+      await repository.savePoiTypes(await typesWrite(write.detail.id));
+      const expectedStateDigest = (await repository.getTypeCategoryRules()).stateDigest;
+      await repository.synchronizeCatalog({
+        ...catalog,
+        expectedRevision: catalog.revision,
+        revision: randomUUID(),
+        pois: catalog.pois.map((poi) => ({ ...poi, coordinates: { lat: 42, lng: 12 } })),
+      });
+      await expect(
+        repository.saveTypeCategoryRule({
+          typeId: "Q1",
+          categories: [],
+          revision: randomUUID(),
+          expectedStateDigest,
+        }),
+      ).rejects.toMatchObject({ reason: "conflict" });
+      expect((await repository.getTypeCategoryRules()).rules).toEqual([]);
+    });
+
+    it("rolls back the rule and every assignment if recalculation of a later POI fails", async () => {
+      const first = example();
+      const second = example();
+      second.detail.id = randomUUID();
+      await prepare([first, second]);
+      await repository.savePoiCategories(await categoryWrite(first));
+      await pool.query("INSERT INTO content.categories(id,name) VALUES ('new','New')");
+      for (const write of [first, second])
+        await repository.savePoiTypes(await typesWrite(write.detail.id));
+      const before = await repository.getTypeCategoryRules();
+      const categories = await Promise.all(
+        [first, second].map((write) => repository.getPoiCategoriesBaseline(write.detail.id)),
+      );
+      // Test-only database constraint fails after an earlier POI has been changed within the same transaction.
+      const lastId = [first.detail.id, second.detail.id].sort().at(-1)!;
+      await pool.query(
+        `ALTER TABLE content.poi_type_category_assignments ADD CONSTRAINT test_recalculation_failure CHECK (poi_id <> '${lastId}'::uuid)`,
+      );
+      try {
+        await expect(saveRule("Q1", ["new"])).rejects.toThrow();
+      } finally {
+        await pool.query(
+          "ALTER TABLE content.poi_type_category_assignments DROP CONSTRAINT test_recalculation_failure",
+        );
+      }
+      expect(await repository.getTypeCategoryRules()).toEqual(before);
+      expect(
+        await Promise.all(
+          [first, second].map((write) => repository.getPoiCategoriesBaseline(write.detail.id)),
+        ),
+      ).toEqual(categories);
+    });
+
+    it("serializes simultaneous rule, acquisition and per-POI writes without restoring obsolete assignments", async () => {
+      const write = example();
+      await prepare([write]);
+      await repository.savePoiCategories(await categoryWrite(write));
+      await pool.query("INSERT INTO content.categories(id,name) VALUES ('new','New')");
+      await repository.savePoiTypes(await typesWrite(write.detail.id));
+      const expectedStateDigest = (await repository.getTypeCategoryRules()).stateDigest;
+      const writes = await Promise.allSettled([
+        repository.saveTypeCategoryRule({
+          typeId: "Q1",
+          categories: ["new"],
+          revision: randomUUID(),
+          expectedStateDigest,
+        }),
+        repository.saveTypeCategoryRule({
+          typeId: "Q1",
+          categories: [],
+          revision: randomUUID(),
+          expectedStateDigest,
+        }),
+      ]);
+      expect(writes.filter(({ status }) => status === "fulfilled")).toHaveLength(1);
+      expect(writes.find(({ status }) => status === "rejected")).toMatchObject({
+        reason: { reason: "conflict" },
+      });
+      const pending = await categoryWrite(write);
+      const acquisition = await typesWrite(write.detail.id);
+      const results = await Promise.allSettled([
+        repository.savePoiCategories(pending),
+        repository.savePoiTypes(acquisition),
+      ]);
+      expect(results[1].status).toBe("fulfilled");
+      const rule = (await repository.getTypeCategoryRules()).rules[0];
+      const categories = (await repository.getPoiCategoriesBaseline(write.detail.id))!.categoryIds;
+      expect(categories.includes("new")).toBe(rule.decision === "mapped");
+      await expect(repository.savePoiCategories(pending)).rejects.toMatchObject({
+        reason: "conflict",
+      });
+    });
+
+    it("keeps categories supplied by another accepted rule when a shared type is ignored", async () => {
+      const write = example();
+      await prepare([write]);
+      await pool.query("INSERT INTO content.categories(id,name) VALUES ('new','New')");
+      const acquisition = await typesWrite(write.detail.id);
+      await repository.savePoiTypes({
+        ...acquisition,
+        acquisition: {
+          ...acquisition.acquisition,
+          types: [
+            { id: "Q1", label: "first" },
+            { id: "Q2", label: "second" },
+          ],
+        },
+      });
+      await saveRule("Q1", ["new"]);
+      await saveRule("Q2", ["new"]);
+      await saveRule("Q1", []);
+      expect((await repository.getPoiCategoriesBaseline(write.detail.id))?.categoryIds).toEqual([
+        "new",
+      ]);
+      await saveRule("Q2", null);
+      expect((await repository.getPoiCategoriesBaseline(write.detail.id))?.categoryIds).toEqual([]);
+    });
+
+    it("rolls back an acquisition and its category revision when recalculation fails", async () => {
+      const write = example();
+      await prepare([write]);
+      await pool.query("INSERT INTO content.categories(id,name) VALUES ('new','New')");
+      await repository.savePoiTypes(await typesWrite(write.detail.id));
+      await saveRule("Q1", ["new"]);
+      const before = await repository.getPoiTypes(write.detail.id);
+      const categories = await repository.getPoiCategoriesBaseline(write.detail.id);
+      await pool.query(
+        "ALTER TABLE content.poi_category_writes ADD CONSTRAINT test_acquisition_failure CHECK (revision = '" +
+          categories!.revision +
+          "'::uuid) NOT VALID",
+      );
+      try {
+        await expect(repository.savePoiTypes(await typesWrite(write.detail.id))).rejects.toThrow();
+      } finally {
+        await pool.query(
+          "ALTER TABLE content.poi_category_writes DROP CONSTRAINT test_acquisition_failure",
+        );
+      }
+      expect(await repository.getPoiTypes(write.detail.id)).toEqual(before);
+      expect(await repository.getPoiCategoriesBaseline(write.detail.id)).toEqual(categories);
+    });
+
+    it("does not let a freshly prepared legacy category replacement override accepted online rules", async () => {
+      const write = example();
+      await prepare([write]);
+      await repository.savePoiCategories(await categoryWrite(write));
+      await repository.savePoiTypes(await typesWrite(write.detail.id));
+      await saveRule("Q1", []);
+      await expect(repository.savePoiCategories(await categoryWrite(write))).rejects.toMatchObject({
+        reason: "conflict",
+      });
+    });
+
+    it("retains hierarchy expansion and name-dependent interpretation during online recalculation", async () => {
+      const write = example();
+      write.detail.name = "Basilica Example";
+      await prepare([write]);
+      await pool.query(`INSERT INTO content.categories(id,name,parent_id) VALUES
+        ('Churches & cathedrals','Churches & cathedrals',NULL),
+        ('Church','Church','Churches & cathedrals'), ('Cathedral','Cathedral','Churches & cathedrals'),
+        ('Basilica','Basilica','Churches & cathedrals')`);
+      await repository.savePoiTypes(await typesWrite(write.detail.id));
+      await saveRule("Q1", ["Churches & cathedrals"]);
+      expect((await repository.getTypeCategoryRules()).rules[0].categoryIds).toEqual(
+        expect.arrayContaining(["Church", "Cathedral", "Basilica"]),
+      );
+      expect((await repository.getPoiCategoriesBaseline(write.detail.id))?.categoryIds).toEqual([
+        "Basilica",
+        "Church",
+        "Churches & cathedrals",
+      ]);
+    });
 
     it("persists acquisitions through authenticated HTTP, reloads them and preserves visitor content and categories", async () => {
       const write = example();
@@ -961,6 +1298,10 @@ describe.skipIf(!process.env.HISTORICAL_EXPLORER_TEST_DATABASE_URL)(
         await expect(client.query("SELECT FROM content.pois")).rejects.toMatchObject({
           code: "42501",
         });
+        for (const table of ["type_category_rules", "poi_type_category_assignments"])
+          await expect(client.query(`SELECT FROM content.${table}`)).rejects.toMatchObject({
+            code: "42501",
+          });
         await expect(client.query("DELETE FROM content.published_stories")).rejects.toMatchObject({
           code: "42501",
         });
@@ -990,6 +1331,17 @@ describe.skipIf(!process.env.HISTORICAL_EXPLORER_TEST_DATABASE_URL)(
         expect(await createPostgresContent(writer).saveStory(write)).toBe("saved");
         expect((await createPostgresContent(writer).getStory(write.detail.id))?.publicationId).toBe(
           write.detail.publicationId,
+        );
+        await createPostgresContent(writer).savePoiTypes(await typesWrite(write.detail.id));
+        await createPostgresContent(writer).saveTypeCategoryRule({
+          typeId: "Q1",
+          categories: ["architecture"],
+          revision: randomUUID(),
+          expectedStateDigest: (await createPostgresContent(writer).getTypeCategoryRules())
+            .stateDigest,
+        });
+        expect((await createPostgresContent(writer).getTypeCategoryRules()).rules[0].origin).toBe(
+          "manual",
         );
         await expect(
           writer.query("CREATE TABLE content.forbidden(id integer)"),
