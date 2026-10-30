@@ -146,6 +146,67 @@ export const categoryCatalogCreateSchema = z
   })
   .strict();
 
+export const poiTypesAcquisitionSchema = z
+  .object({
+    wikidataId: z
+      .string()
+      .regex(/^Q[1-9]\d*$/)
+      .nullable(),
+    types: z
+      .array(
+        z.object({ id: z.string().regex(/^Q[1-9]\d*$/), label: z.string().trim().min(1) }).strict(),
+      )
+      .max(1000)
+      .refine((types) => new Set(types.map(({ id }) => id)).size === types.length),
+    skipped: z.boolean(),
+    acquiredAt: z.iso.datetime(),
+  })
+  .strict()
+  .refine(
+    ({ wikidataId, skipped, types }) =>
+      wikidataId === null ? skipped && types.length === 0 : !skipped,
+    { message: "Only POIs without Wikidata identity may skip acquisition." },
+  );
+
+export const poiTypesWriteSchema = z
+  .object({
+    poiId: z.uuid().toLowerCase(),
+    inputRevision: z.uuid().toLowerCase(),
+    revision: z.uuid().toLowerCase(),
+    expectedRevision: z.uuid().toLowerCase().nullable(),
+    acquisition: poiTypesAcquisitionSchema,
+  })
+  .strict();
+
+export const poiTypesBaselineSchema = z
+  .object({
+    poiId: z.uuid().toLowerCase(),
+    city: publishedPoiSummarySchema.shape.city,
+    name: z.string().min(1),
+    wikidataId: z
+      .string()
+      .regex(/^Q[1-9]\d*$/)
+      .nullable(),
+    wikipediaPages: z.array(wikipediaPageSchema),
+    inputRevision: z.uuid().toLowerCase(),
+    revision: z.uuid().toLowerCase().nullable(),
+    acquisition: poiTypesAcquisitionSchema.nullable(),
+  })
+  .strict()
+  .refine(
+    (state) =>
+      !state.acquisition ||
+      (state.revision !== null && state.acquisition.wikidataId === state.wikidataId),
+    { message: "Accepted acquisition does not match the POI identity or revision." },
+  );
+
+const poiTypesQuery = `SELECT p.id AS "poiId", p.city, p.name, p.wikidata_id AS "wikidataId",
+  p.wikipedia_pages AS "wikipediaPages", p.input_revision AS "inputRevision", w.revision,
+  CASE WHEN w.input_revision = p.input_revision AND w.acquisition->>'wikidataId' IS NOT DISTINCT FROM p.wikidata_id
+    THEN w.acquisition ELSE NULL END AS acquisition
+  FROM content.pois p LEFT JOIN content.poi_type_acquisitions w ON w.poi_id = p.id
+  WHERE p.removed_at IS NULL`;
+
 const categoryDefinitionsQuery = `SELECT COALESCE(jsonb_agg(jsonb_strip_nulls(jsonb_build_object(
   'id', id, 'name', name, 'label', label, 'parentId', parent_id)) ORDER BY id COLLATE "C"),
   '[]'::jsonb) AS definitions FROM content.categories`;
@@ -317,6 +378,67 @@ export const createPostgresContent = (pool: Pool) => ({
         [input.city, input.revision, requestDigest],
       );
       return "saved" as const;
+    });
+  },
+
+  getPoiTypes: async (poiId: string) => {
+    const {
+      rows: [row],
+    } = await pool.query(`${poiTypesQuery} AND p.id = $1`, [z.uuid().parse(poiId)]);
+    return row ? poiTypesBaselineSchema.parse(row) : undefined;
+  },
+
+  getCityPoiTypes: async (city: string) => {
+    const { rows } = await pool.query(`${poiTypesQuery} AND p.city = $1 ORDER BY p.id`, [
+      publishedPoiSummarySchema.shape.city.parse(city),
+    ]);
+    return z.array(poiTypesBaselineSchema).parse(rows);
+  },
+
+  savePoiTypes: async (value: unknown) => {
+    const input = poiTypesWriteSchema.parse(value);
+    const requestDigest = digest(input);
+    return transaction(pool, async (client) => {
+      const {
+        rows: [poi],
+      } = await client.query(
+        "SELECT input_revision, wikidata_id, removed_at FROM content.pois WHERE id = $1 FOR UPDATE",
+        [input.poiId],
+      );
+      if (
+        !poi ||
+        poi.removed_at ||
+        poi.input_revision !== input.inputRevision ||
+        poi.wikidata_id !== input.acquisition.wikidataId
+      )
+        throw new ContentWriteError("obsolete", "POI removed or acquisition inputs changed.");
+      const {
+        rows: [current],
+      } = await client.query(
+        "SELECT revision, request_digest FROM content.poi_type_acquisitions WHERE poi_id = $1",
+        [input.poiId],
+      );
+      if (current?.revision === input.revision) {
+        if (current.request_digest !== requestDigest)
+          throw new ContentWriteError(
+            "invalid",
+            "Acquisition revision reused for different content.",
+          );
+        return { status: "already-saved" as const, revision: input.revision };
+      }
+      if ((current?.revision ?? null) !== input.expectedRevision)
+        throw new ContentWriteError(
+          "conflict",
+          "The accepted acquisition changed. Reload before refreshing types.",
+        );
+      await client.query(
+        `INSERT INTO content.poi_type_acquisitions(poi_id, input_revision, revision, request_digest, acquisition)
+        VALUES ($1,$2,$3,$4,$5) ON CONFLICT (poi_id) DO UPDATE SET
+        input_revision = EXCLUDED.input_revision, revision = EXCLUDED.revision,
+        request_digest = EXCLUDED.request_digest, acquisition = EXCLUDED.acquisition`,
+        [input.poiId, input.inputRevision, input.revision, requestDigest, input.acquisition],
+      );
+      return { status: "saved" as const, revision: input.revision };
     });
   },
 

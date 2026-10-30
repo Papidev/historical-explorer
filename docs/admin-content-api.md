@@ -150,7 +150,6 @@ Private repository implementation checklist:
 
 Local server tests exercise unpublished saves, public reads/cache expiry, non-category content preservation, strict request identities, duplicates/missing references/cycles, rollback after a late database failure, concurrent retries/competing operations, shared-definition conflicts, removed/restored POIs and writer permissions. The database tests load both schema files only in a disposable loopback database.
 
-
 ## Authoritative category catalog
 
 Admin #38 uses authenticated `GET /api/admin/content/v1/categories` to read all
@@ -171,3 +170,35 @@ visitor category responses retain their current shape. No new schema migration
 or data import is required. Deploy this API before the corresponding Admin client.
 A client with an uncertain save acknowledgement must read accepted definitions
 before another edit rather than replay a creation against a refreshed baseline.
+
+## POI Wikidata acquisitions v1 (additive extension)
+
+[Admin #39](https://github.com/Papidev/mira-admin/issues/39) adds authenticated
+`GET/PUT /pois/:poiId/types` and `GET /catalogs/:city/types` under the content v1
+prefix. The single-POI response contains `poiId`, `city`, `name`, nullable
+`wikidataId`, `wikipediaPages`, `inputRevision`, nullable acquisition `revision` and
+nullable `acquisition`. City reads return an array from a single database snapshot.
+Removed POIs are excluded. After catalog input changes the old acquisition is
+hidden; its revision is retained for the next compare-and-replace operation.
+
+A write contains `poiId`, `inputRevision`, a fresh UUID `revision`, nullable
+`expectedRevision`, and `acquisition`: `{ wikidataId, types: [{ id, label }],
+skipped, acquiredAt }`. IDs must be unique Wikidata Q IDs. `skipped: true` is valid
+only without a Wikidata identity and with no types. A successful zero-type result
+for an identified POI uses `skipped: false`. Acquisition failures are not writes.
+The response is `{ status: "saved" | "already-saved", revision }`.
+
+The transaction locks the catalog POI, checks its active identity and input revision,
+compares acquisition revisions and stores an idempotency digest. Reused revisions
+with different content are invalid. Stale identity/input or removal is obsolete;
+concurrent acquisitions conflict. External Wikidata requests stay outside transactions.
+Acquisition storage does not alter existing category assignments, Stories, People
+or visitor publication. Editorial acquisitions are not exposed by visitor APIs.
+
+Deployment order: separately approve/apply `schema/003-poi-type-acquisitions.sql`
+with the schema owner, deploy this API, then deploy the linked Admin client. The
+schema is additive and grants access only to the writer role; it imports nothing.
+No production migration or activation is part of this implementation. Online shared
+rules and atomic assignment recalculation follow in Admin #40; automatic generation
+integration follows in #41. Keep local artifacts until the separately approved
+comparison/import operation in #42.

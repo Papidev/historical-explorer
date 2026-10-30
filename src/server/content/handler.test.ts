@@ -53,6 +53,8 @@ describe("content HTTP boundary before database access", () => {
   it.each([
     ["catalogs", "rome"],
     ["categories"],
+    ["catalogs", "rome", "types"],
+    ["pois", "728cbdf6-2449-4991-99b0-75204603eaa0", "types"],
     ["pois", "728cbdf6-2449-4991-99b0-75204603eaa0", "story"],
     ["pois", "728cbdf6-2449-4991-99b0-75204603eaa0", "baseline"],
     ["pois", "728cbdf6-2449-4991-99b0-75204603eaa0", "categories"],
@@ -64,13 +66,42 @@ describe("content HTTP boundary before database access", () => {
     const response = await request(segments, undefined, { method: "POST" }).response;
     expect(response.status).toBe(405);
     expect(response.headers.get("allow")).toBe(
-      ["catalogs", "categories"].includes(segments[0])
-        ? "GET, PUT"
-        : ["baseline", "categories-baseline"].includes(segments[2] ?? "")
-          ? "GET"
-          : "PUT",
+      segments[2] === "types" && segments[0] === "catalogs"
+        ? "GET"
+        : segments[2] === "types" || ["catalogs", "categories"].includes(segments[0])
+          ? "GET, PUT"
+          : ["baseline", "categories-baseline"].includes(segments[2] ?? "")
+            ? "GET"
+            : "PUT",
     );
     expect(response.headers.get("cache-control")).toBe("no-store");
+  });
+
+  it("validates acquisition identities and states before database access", async () => {
+    vi.stubEnv("CONTENT_API_TOKEN", token);
+    const poiId = "728cbdf6-2449-4991-99b0-75204603eaa0";
+    const input = {
+      poiId,
+      inputRevision: poiId,
+      revision: poiId,
+      expectedRevision: null,
+      acquisition: {
+        wikidataId: "Q1",
+        types: [],
+        skipped: false,
+        acquiredAt: new Date().toISOString(),
+      },
+    };
+    for (const body of [
+      { ...input, poiId: "728cbdf6-2449-4991-99b0-75204603eaa1" },
+      { ...input, acquisition: { ...input.acquisition, skipped: true } },
+      { ...input, acquisition: { ...input.acquisition, wikidataId: null } },
+      { ...input, acquisition: { ...input.acquisition, error: "failure" } },
+    ]) {
+      expect((await request(["pois", poiId, "types"], body).response).status).toBe(400);
+    }
+    expect((await request(["pois", "invalid", "types"]).response).status).toBe(400);
+    expect((await request(["catalogs", "Rome", "types"]).response).status).toBe(400);
   });
 
   it("rejects malformed JSON, unsupported encoding, invalid routes and strict nested fields", async () => {
