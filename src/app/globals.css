@@ -7,6 +7,9 @@
 }
 
 @theme inline {
+  --color-brand: var(--color-yellow-400);
+  --color-brand-action: var(--color-yellow-300);
+  --color-brand-soft: var(--color-yellow-100);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter, Inter, sans-serif);

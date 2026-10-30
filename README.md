@@ -24,7 +24,9 @@ The home hero and wordmark keep their larger display sizes. Controls retain Inte
 
 Markdown in Stories and biographies uses Tailwind Typography (`prose prose-zinc`) in `StoryText/Markdown.tsx`. The plugin owns paragraph, list, quote, and link spacing; local modifiers retain Mira's fonts and accent colors. Keep `prose` scoped to rendered Markdown so it does not restyle the surrounding cards, metadata, or controls.
 
-The short yellow stroke below the detail drawer title is an approved Mira brand motif. Reuse it sparingly below important page, panel, or section titles to give them emphasis on a neutral background. Prefer this restrained accent over a full-width tinted title band; do not add it to every heading. Match the drawer reference: `mt-3 block h-1 w-10 rounded-full bg-yellow-400`, left-aligned with the title, with `aria-hidden="true"` because it is decorative.
+Mira's primary brand color is yellow, supported by white and zinc neutrals. The theme in `src/app/globals.css` defines `brand` (`yellow-400`) for signature strokes and accents, `brand-action` (`yellow-300`) for primary action backgrounds, and `brand-soft` (`yellow-100`) for subtle backgrounds such as the discovery-card arrow circle. Use zinc-dark text and icons on these backgrounds; primary actions use `brand` on hover. These roles share the same yellow family without requiring the same intensity everywhere.
+
+The short yellow stroke below the detail drawer title is an approved Mira brand motif. Reuse it sparingly below important page, panel, or section titles to give them emphasis on a neutral background. Prefer this restrained accent over a full-width tinted title band; do not add it to every heading. Match the drawer reference: `mt-3 block h-1 w-10 rounded-full bg-brand`, left-aligned with the title, with `aria-hidden="true"` because it is decorative.
 
 ## Getting Started
 

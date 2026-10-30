@@ -24,7 +24,7 @@ const Home = () => {
       >
         Skip to content
       </a>
-      <header className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-6 sm:px-8 lg:px-12">
+      <header className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 pt-6 pb-2 sm:px-8 lg:px-12">
         <Link
           href="/"
           aria-label="Mira home"
@@ -37,18 +37,19 @@ const Home = () => {
       <main id="main-content" className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
         <section
           aria-labelledby="hero-title"
-          className="grid items-center gap-10 pt-6 pb-10 sm:pt-10 sm:pb-14 lg:grid-cols-2 lg:gap-16 lg:pt-14 lg:pb-20"
+          className="grid items-center gap-10 pt-2 pb-10 sm:pt-4 sm:pb-14 lg:grid-cols-2 lg:gap-16 lg:pt-6 lg:pb-20"
         >
           <div>
             <p className="flex items-center gap-3 text-xs/5 font-semibold tracking-[0.2em] text-zinc-800 uppercase">
-              <span className="h-0.5 w-8 bg-yellow-400" aria-hidden="true" />A closer look at places
+              <span className="bg-brand h-1 w-10 shrink-0 rounded-full" aria-hidden="true" />A
+              closer look at places
             </p>
             <h1
               id="hero-title"
               className="mt-6 max-w-xl font-serif text-5xl leading-[1.08] tracking-tight text-zinc-900 sm:text-6xl lg:text-7xl"
             >
               Every place has a{" "}
-              <span className="text-zinc-800 italic underline decoration-yellow-300 decoration-4 underline-offset-8">
+              <span className="decoration-brand text-zinc-800 italic underline decoration-4 underline-offset-8">
                 story.
               </span>
             </h1>
@@ -62,7 +63,7 @@ const Home = () => {
             </p>
             <Link
               href="/rome"
-              className="group mt-6 inline-flex items-center gap-6 rounded-full bg-yellow-300 px-6 py-3.5 text-sm font-semibold text-zinc-900 transition-colors hover:bg-yellow-400 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800"
+              className="group bg-brand-action hover:bg-brand mt-6 inline-flex items-center gap-6 rounded-full px-6 py-3.5 text-sm font-semibold text-zinc-900 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800"
             >
               Explore Rome
               <ArrowRightIcon
@@ -177,6 +178,7 @@ const Home = () => {
                 >
                   One city. Many stories.
                 </h2>
+                <span aria-hidden="true" className="bg-brand mt-3 block h-1 w-10 rounded-full" />
               </div>
               <Link
                 href="/rome"
@@ -204,7 +206,7 @@ const Home = () => {
                         sizes="(min-width: 640px) 33vw, 100vw"
                         className="object-cover motion-safe:transition-transform motion-safe:duration-500 motion-safe:group-hover:scale-105"
                       />
-                      <span className="absolute right-3 bottom-3 flex size-9 items-center justify-center rounded-full bg-yellow-100 text-zinc-900">
+                      <span className="bg-brand-soft absolute right-3 bottom-3 flex size-9 items-center justify-center rounded-full text-zinc-900">
                         <ArrowUpRightIcon className="size-5" aria-hidden="true" />
                       </span>
                     </div>
@@ -233,18 +235,18 @@ const Home = () => {
         )}
       </main>
 
-      <footer className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 border-t border-zinc-900/15 px-5 py-6 text-xs text-zinc-500 sm:px-8 lg:px-12">
-        <div className="flex flex-wrap items-center gap-3">
+      <footer className="mx-auto flex max-w-7xl flex-wrap items-baseline justify-between gap-3 border-t border-zinc-900/15 px-5 py-6 text-xs text-zinc-500 sm:px-8 lg:px-12">
+        <div className="flex flex-wrap items-baseline gap-3">
           <Link
             href="/"
             aria-label="Mira home"
-            className="rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800"
+            className="inline-flex items-baseline rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800"
           >
             <MiraLogo size="small" />
           </Link>
           <p>Art, history, and the places between.</p>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-baseline gap-3">
           <p>Mira is taking shape. Begin with Rome.</p>
           <AppVersion />
         </div>
