@@ -78,6 +78,25 @@ describe("content HTTP boundary before database access", () => {
     expect(response.headers.get("cache-control")).toBe("no-store");
   });
 
+  it("authenticates and validates category renames before database access", async () => {
+    vi.stubEnv("CONTENT_API_TOKEN", token);
+    const input = { name: "Arena", expectedStateDigest: "a".repeat(64) };
+    expect((await request(["categories", "arena"], input, { headers: {} }).response).status).toBe(
+      401,
+    );
+    const unsupported = await request(["categories", "arena"], undefined, { method: "GET" })
+      .response;
+    expect(unsupported.status).toBe(405);
+    expect(unsupported.headers.get("allow")).toBe("PUT");
+    for (const body of [
+      { name: "Arena" },
+      { ...input, name: "<bad>" },
+      { ...input, id: "other" },
+      { ...input, parentId: "other" },
+    ])
+      expect((await request(["categories", "arena"], body).response).status).toBe(400);
+  });
+
   it("validates rule states, categories and revision preconditions before database access", async () => {
     vi.stubEnv("CONTENT_API_TOKEN", token);
     const valid = {

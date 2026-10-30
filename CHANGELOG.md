@@ -1,5 +1,11 @@
 # mira-explorer
 
+## 0.18.0
+
+### Minor Changes
+
+- Add an authenticated category rename operation that preserves category identity and POI assignments while updating visitor filter names.
+
 ## 0.17.2
 
 ### Patch Changes

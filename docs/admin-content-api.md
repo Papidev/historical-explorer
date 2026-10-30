@@ -247,7 +247,6 @@ local mapping fallback is used. Existing untracked assignments are preserved unt
 Separately approve/apply the additive schema before deploying Explorer, then update
 Admin. This slice authorizes no production migration, import or activation.
 
-
 ### Automatic type rules (Admin #41)
 
 `PUT /type-rules` accepts optional `origin: "automatic"`, a required trimmed
@@ -264,3 +263,23 @@ must be resolved by reading the accepted rule revision and content before anothe
 No Wikidata/model request runs inside the transaction. Deploy this API extension
 before the paired Admin client. It requires the existing #40 schema and adds no new
 migration, production import or activation.
+
+## Shared category rename (#34)
+
+[Admin #34](https://github.com/Papidev/mira-admin/issues/34) adds authenticated
+`PUT /api/admin/content/v1/categories/:categoryId` with JSON
+`{ name, expectedStateDigest }`. Use the digest from `GET /categories` and encode
+the stable category ID as a URL segment. The response is
+`{ status: "saved", definition: { id, name, label, parentId? } }`.
+
+Names use the existing 1–80 character validation and whitespace normalization;
+case-insensitive duplicate names are rejected. Only name and label change. IDs,
+hierarchy, POI assignments, rules, Stories and People are preserved. The transaction
+uses the same category locks as assignment/rule writers and compares the complete
+category-definition digest. Stale requests conflict, including older assignment or
+rule operations that captured the previous name. A lost acknowledgement requires
+an accepted-state read; do not replay an old rename against a refreshed digest.
+
+Visitor filters receive the renamed definition through existing reads after their
+60-second cache boundary. No new schema, import or Story regeneration is needed.
+Deploy Explorer before the Admin client. Moves and deletions remain separate.

@@ -5,6 +5,7 @@ import type { z } from "zod";
 import { createPostgresContent, type catalogWriteSchema } from "./postgresContent";
 import { readFile } from "node:fs/promises";
 import { createContentHandler } from "./handler";
+import { toVisitorCity } from "../visitorContent/adapters";
 import { matchesPoiCategory } from "@/types/PoiCategory";
 import { createCachedRead } from "../visitorContent/cache";
 import { exampleStoryWrite as example } from "./__fixtures__/writes";
@@ -729,6 +730,154 @@ describe.skipIf(!process.env.HISTORICAL_EXPLORER_TEST_DATABASE_URL)(
         (await send({ name: "cultural venue", expectedStateDigest: fresh.stateDigest })).status,
       ).toBe(400);
       expect(await repository.getCategoryCatalog()).toEqual(fresh);
+    });
+
+    it("renames through authenticated HTTP without changing content or assignments, and refreshes visitor filters after 60 seconds", async () => {
+      const write = example();
+      await prepare([write]);
+      await repository.savePoiCategories(await categoryWrite(write));
+      await repository.saveStory(write);
+      const story = await repository.getStory(write.detail.id);
+      const person = await repository.getPerson("vespasian");
+      const assignments = await repository.getPoiCategoriesBaseline(write.detail.id);
+      let time = 0;
+      const cached = createCachedRead(repository.getCityPreviews, () => time);
+      expect(toVisitorCity(await cached("rome")).categoryDefinitions).toContainEqual({
+        id: "amphitheatre",
+        name: "Amphitheatre",
+        parent: "architecture",
+      });
+      const baseline = await repository.getCategoryCatalog();
+      const response = await createContentHandler(() => repository)(
+        new Request("http://localhost/api/admin/content/v1/categories/amphitheatre", {
+          method: "PUT",
+          headers: {
+            authorization: `Bearer ${process.env.CONTENT_API_TOKEN}`,
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({
+            name: "  Roman   arena ",
+            expectedStateDigest: baseline.stateDigest,
+          }),
+        }),
+        { params: Promise.resolve({ segments: ["categories", "amphitheatre"] }) },
+      );
+      expect(response.status).toBe(200);
+      expect(await response.json()).toEqual({
+        status: "saved",
+        definition: {
+          id: "amphitheatre",
+          name: "Roman arena",
+          label: "Roman arena",
+          parentId: "architecture",
+        },
+      });
+      expect((await createPostgresContent(pool).getCategoryCatalog()).definitions).toContainEqual({
+        id: "amphitheatre",
+        name: "Roman arena",
+        label: "Roman arena",
+        parentId: "architecture",
+      });
+      expect(await repository.getStory(write.detail.id)).toEqual(story);
+      expect(await repository.getPerson("vespasian")).toEqual(person);
+      const after = await repository.getPoiCategoriesBaseline(write.detail.id);
+      expect(after).toMatchObject({
+        poiId: assignments!.poiId,
+        inputRevision: assignments!.inputRevision,
+        revision: assignments!.revision,
+        categoryIds: assignments!.categoryIds,
+      });
+      expect(after!.stateDigest).not.toBe(assignments!.stateDigest);
+      time = 59_999;
+      expect(
+        toVisitorCity(await cached("rome")).categoryDefinitions.find(
+          ({ id }) => id === "amphitheatre",
+        )?.name,
+      ).toBe("Amphitheatre");
+      time = 60_000;
+      const visitor = toVisitorCity(await cached("rome"));
+      expect(visitor.categoryDefinitions).toContainEqual({
+        id: "amphitheatre",
+        name: "Roman arena",
+        label: "Roman arena",
+        parent: "architecture",
+      });
+      expect(visitor.pois[0].categories).toEqual(["amphitheatre"]);
+    });
+
+    it("rejects invalid, duplicate and stale renames and preserves definitions", async () => {
+      const write = example();
+      await prepare([write]);
+      await repository.savePoiCategories(await categoryWrite(write));
+      const baseline = await repository.getCategoryCatalog();
+      for (const name of ["", " ", "<bad>", "a\nb", "x".repeat(81), "architecture"])
+        await expect(
+          repository.renameCategory({
+            id: "amphitheatre",
+            name,
+            expectedStateDigest: baseline.stateDigest,
+          }),
+        ).rejects.toBeDefined();
+      await expect(
+        repository.renameCategory({
+          id: "missing",
+          name: "New",
+          expectedStateDigest: baseline.stateDigest,
+        }),
+      ).rejects.toMatchObject({ reason: "invalid" });
+      expect(await repository.getCategoryCatalog()).toEqual(baseline);
+      await repository.renameCategory({
+        id: "architecture",
+        name: "Structures",
+        expectedStateDigest: baseline.stateDigest,
+      });
+      await expect(
+        repository.renameCategory({
+          id: "amphitheatre",
+          name: "New",
+          expectedStateDigest: baseline.stateDigest,
+        }),
+      ).rejects.toMatchObject({ reason: "conflict" });
+    });
+
+    it("serializes competing renames and prevents older POI and rule writes from restoring a name", async () => {
+      const write = example();
+      await prepare([write]);
+      await repository.savePoiCategories(await categoryWrite(write));
+      const pending = await categoryWrite(write);
+      const rules = await repository.getTypeCategoryRules();
+      const baseline = await repository.getCategoryCatalog();
+      const results = await Promise.allSettled(
+        ["Arena", "Stadium"].map((name) =>
+          repository.renameCategory({
+            id: "amphitheatre",
+            name,
+            expectedStateDigest: baseline.stateDigest,
+          }),
+        ),
+      );
+      expect(results.filter(({ status }) => status === "fulfilled")).toHaveLength(1);
+      expect(results.filter(({ status }) => status === "rejected")).toHaveLength(1);
+      await expect(repository.savePoiCategories(pending)).rejects.toMatchObject({
+        reason: "conflict",
+      });
+      await expect(
+        repository.saveTypeCategoryRule({
+          typeId: "Q1",
+          categories: ["amphitheatre"],
+          revision: randomUUID(),
+          expectedStateDigest: rules.stateDigest,
+        }),
+      ).rejects.toMatchObject({ reason: "conflict" });
+      // Refreshing the assignment baseline alone still cannot submit an old definition.
+      const fresh = (await repository.getPoiCategoriesBaseline(write.detail.id))!;
+      await expect(
+        repository.savePoiCategories({ ...pending, expectedStateDigest: fresh.stateDigest }),
+      ).rejects.toMatchObject({ reason: "conflict" });
+      expect(
+        (await repository.getCategoryCatalog()).definitions.find(({ id }) => id === "amphitheatre")
+          ?.name,
+      ).not.toBe("Amphitheatre");
     });
 
     it("allows only one concurrent category creation against the same catalog version", async () => {

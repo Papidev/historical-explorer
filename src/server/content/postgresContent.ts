@@ -147,6 +147,10 @@ export const categoryCatalogCreateSchema = z
   })
   .strict();
 
+export const categoryCatalogRenameSchema = categoryCatalogCreateSchema.extend({
+  id: publishedCategorySchema.shape.id,
+});
+
 export const poiTypesAcquisitionSchema = z
   .object({
     wikidataId: z
@@ -682,6 +686,37 @@ export const createPostgresContent = (pool: Pool) => ({
         throw new ContentWriteError("invalid", "A category with this name or ID already exists.");
       await client.query("INSERT INTO content.categories(id, name) VALUES ($1,$1)", [name]);
       return { status: "saved" as const, definition: { id: name, name } };
+    });
+  },
+
+  renameCategory: async (value: unknown) => {
+    const input = categoryCatalogRenameSchema.parse(value);
+    const name = input.name.trim().replace(/\s+/g, " ");
+    return transaction(pool, async (client) => {
+      await lockCategories(client);
+      const {
+        rows: [row],
+      } = await client.query(categoryDefinitionsQuery);
+      const definitions = z.array(publishedCategorySchema).parse(row.definitions);
+      if (digest(definitions) !== input.expectedStateDigest)
+        throw new ContentWriteError(
+          "conflict",
+          "The category catalog changed. Reload before renaming a category.",
+        );
+      const category = definitions.find(({ id }) => id === input.id);
+      if (!category) throw new ContentWriteError("invalid", "Category not found.");
+      if (
+        definitions.some(
+          (category) =>
+            category.id !== input.id && category.name.toLowerCase() === name.toLowerCase(),
+        )
+      )
+        throw new ContentWriteError("invalid", "A category with this name already exists.");
+      await client.query("UPDATE content.categories SET name = $2, label = $2 WHERE id = $1", [
+        input.id,
+        name,
+      ]);
+      return { status: "saved" as const, definition: { ...category, name, label: name } };
     });
   },
 

@@ -2,13 +2,14 @@ import {
   createPostgresContent,
   catalogWriteSchema,
   categoryCatalogCreateSchema,
+  categoryCatalogRenameSchema,
   personUpdateSchema,
   poiCategoriesWriteSchema,
   storyWriteSchema,
   poiTypesWriteSchema,
   typeCategoryRuleWriteSchema,
 } from "./postgresContent";
-import { publishedPoiSummarySchema } from "./publishedContent";
+import { publishedCategorySchema, publishedPoiSummarySchema } from "./publishedContent";
 import {
   authenticateContentRequest,
   contentErrorResponse,
@@ -40,6 +41,20 @@ export const createContentHandler =
           await readContentBody(request),
         );
         return contentJson(await getRepository().saveTypeCategoryRule(input));
+      }
+      if (resource === "categories" && segments.length === 2) {
+        if (request.method !== "PUT")
+          return contentJson(
+            { error: { code: "invalid", message: "This method is not supported." } },
+            405,
+            { Allow: "PUT" },
+          );
+        const input = parseContentInput(
+          categoryCatalogRenameSchema.omit({ id: true }),
+          await readContentBody(request),
+        );
+        const id = parseContentInput(publishedCategorySchema.shape.id, identity);
+        return contentJson(await getRepository().renameCategory({ ...input, id }));
       }
       if (resource === "categories" && segments.length === 1) {
         if (request.method === "GET")
