@@ -105,6 +105,104 @@ describe.skipIf(!process.env.HISTORICAL_EXPLORER_TEST_DATABASE_URL)(
         expectedStateDigest: (await repository.getTypeCategoryRules()).stateDigest,
       });
 
+    it("persists automatic origin, reason and new definitions atomically with multi-POI assignments", async () => {
+      const writes = [example(), example()];
+      writes[1].detail.id = randomUUID();
+      await prepare(writes);
+      for (const write of writes) await repository.savePoiTypes(await typesWrite(write.detail.id));
+      const input = {
+        typeId: "Q1",
+        categories: ["Arena"],
+        origin: "automatic",
+        reason: "Direct arena type.",
+        definitions: [{ id: "Arena", name: "Arena" }],
+        revision: randomUUID(),
+        expectedStateDigest: (await repository.getTypeCategoryRules()).stateDigest,
+      };
+      const response = await createContentHandler(() => repository)(
+        new Request("http://localhost/api/admin/content/v1/type-rules", {
+          method: "PUT",
+          headers: {
+            Authorization: `Bearer ${process.env.CONTENT_API_TOKEN}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(input),
+        }),
+        { params: Promise.resolve({ segments: ["type-rules"] }) },
+      );
+      expect(response.status).toBe(200);
+      expect(await response.json()).toMatchObject({ revision: input.revision, affectedPois: 2 });
+      expect((await repository.getTypeCategoryRules()).rules[0]).toMatchObject({
+        typeId: "Q1",
+        origin: "automatic",
+        reason: "Direct arena type.",
+        categoryIds: ["Arena"],
+      });
+      for (const write of writes) {
+        expect((await repository.getPoiCategoriesBaseline(write.detail.id))?.categoryIds).toContain(
+          "Arena",
+        );
+        expect(await repository.getStory(write.detail.id)).toBeUndefined();
+      }
+    });
+
+    it.each(["mapped", "ignored", "unmapped"])(
+      "protects manual %s decisions from automatic replacement",
+      async (decision) => {
+        const write = example();
+        await prepare([write]);
+        await repository.savePoiTypes(await typesWrite(write.detail.id));
+        await pool.query(
+          "INSERT INTO content.categories(id,name) VALUES ('Amphitheatre','Amphitheatre')",
+        );
+        await saveRule(
+          "Q1",
+          decision === "unmapped" ? null : decision === "ignored" ? [] : ["Amphitheatre"],
+        );
+        const before = await repository.getTypeCategoryRules();
+        await expect(
+          repository.saveTypeCategoryRule({
+            typeId: "Q1",
+            categories: ["Arena"],
+            origin: "automatic",
+            reason: "AI suggestion",
+            definitions: [{ id: "Arena", name: "Arena" }],
+            revision: randomUUID(),
+            expectedStateDigest: before.stateDigest,
+          }),
+        ).rejects.toMatchObject({ reason: "conflict" });
+        expect(await repository.getTypeCategoryRules()).toEqual(before);
+      },
+    );
+
+    it("rejects stale AI results after an acquisition changes and rolls back invalid new definitions", async () => {
+      const write = example();
+      await prepare([write]);
+      await repository.savePoiTypes(await typesWrite(write.detail.id));
+      const input = {
+        typeId: "Q1",
+        categories: ["Arena"],
+        origin: "automatic",
+        reason: "Arena type",
+        definitions: [{ id: "Arena", name: "Arena" }],
+        revision: randomUUID(),
+        expectedStateDigest: (await repository.getTypeCategoryRules()).stateDigest,
+      };
+      await repository.savePoiTypes(await typesWrite(write.detail.id));
+      await expect(repository.saveTypeCategoryRule(input)).rejects.toMatchObject({
+        reason: "conflict",
+      });
+      const before = await repository.getTypeCategoryRules();
+      await expect(
+        repository.saveTypeCategoryRule({
+          ...input,
+          categories: ["unknown"],
+          expectedStateDigest: before.stateDigest,
+        }),
+      ).rejects.toMatchObject({ reason: "invalid" });
+      expect(await repository.getTypeCategoryRules()).toEqual(before);
+    });
+
     it("atomically changes multiple acquired POIs, preserves independent categories and filters visitors without publishing drafts", async () => {
       const published = example();
       const draft = example();

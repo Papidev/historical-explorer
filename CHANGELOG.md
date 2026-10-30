@@ -1,5 +1,11 @@
 # mira-explorer
 
+## 0.17.0
+
+### Minor Changes
+
+- Accept automatic type classification reasons and new category definitions with atomic POI assignment updates, preserving manual decisions and rejecting stale results.
+
 ## 0.16.0
 
 ### Minor Changes

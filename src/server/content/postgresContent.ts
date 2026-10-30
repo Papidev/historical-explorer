@@ -220,8 +220,16 @@ export const typeCategoryRuleWriteSchema = z
     categories: publishedPoiSummarySchema.shape.categoryIds.nullable(),
     revision: z.uuid().toLowerCase(),
     expectedStateDigest: z.string().regex(/^[a-f0-9]{64}$/),
+    origin: z.literal("automatic").optional(),
+    reason: z.string().trim().min(1).max(4000).optional(),
+    definitions: z.array(publishedCategorySchema).max(20).optional(),
   })
-  .strict();
+  .strict()
+  .refine((value) =>
+    value.origin === "automatic"
+      ? Boolean(value.reason)
+      : value.reason === undefined && value.definitions === undefined,
+  );
 
 // One MVCC snapshot covers rules, definitions and affected-catalog inputs, even on a fresh install.
 const typeRulesQuery = `SELECT
@@ -571,6 +579,34 @@ export const createPostgresContent = (pool: Pool) => ({
           "conflict",
           "Rules, category definitions or catalog inputs changed.",
         );
+      const existing = baseline.rules.find(({ typeId }) => typeId === input.typeId);
+      if (
+        input.origin === "automatic" &&
+        existing &&
+        (existing.origin === "manual" || existing.decision !== "unmapped")
+      )
+        throw new ContentWriteError(
+          "conflict",
+          "Automatic classification cannot replace an accepted decision.",
+        );
+      for (const definition of input.definitions ?? []) {
+        const name = definition.name.trim().replace(/\s+/g, " ");
+        if (
+          definition.id !== name ||
+          definition.parentId ||
+          definition.label ||
+          !name ||
+          name.length > 80 ||
+          /[<>\r\n]/.test(definition.name) ||
+          baseline.definitions.some(
+            (category) =>
+              category.id === name || category.name.toLowerCase() === name.toLowerCase(),
+          )
+        )
+          throw new ContentWriteError("invalid", "Invalid or duplicate automatic category.");
+        await client.query("INSERT INTO content.categories(id, name) VALUES ($1,$1)", [name]);
+        baseline.definitions.push({ id: name, name });
+      }
       if (
         input.categories?.some((id) => !baseline.definitions.some((category) => category.id === id))
       )
@@ -596,15 +632,17 @@ export const createPostgresContent = (pool: Pool) => ({
               })),
             );
       await client.query(
-        `INSERT INTO content.type_category_rules(type_id, decision, category_ids, origin, revision)
-        VALUES ($1,$2,$3,'manual',$4) ON CONFLICT (type_id) DO UPDATE SET decision = EXCLUDED.decision,
-        category_ids = EXCLUDED.category_ids, origin = 'manual', reason = NULL,
+        `INSERT INTO content.type_category_rules(type_id, decision, category_ids, origin, revision, reason)
+        VALUES ($1,$2,$3,$5,$4,$6) ON CONFLICT (type_id) DO UPDATE SET decision = EXCLUDED.decision,
+        category_ids = EXCLUDED.category_ids, origin = EXCLUDED.origin, reason = EXCLUDED.reason,
         revision = EXCLUDED.revision, updated_at = now()`,
         [
           input.typeId,
           input.categories === null ? "unmapped" : categoryIds.length ? "mapped" : "ignored",
           JSON.stringify(categoryIds),
           input.revision,
+          input.origin ?? "manual",
+          input.reason ?? null,
         ],
       );
       const accepted = await readTypeRules(client);

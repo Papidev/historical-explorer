@@ -246,3 +246,21 @@ local mapping fallback is used. Existing untracked assignments are preserved unt
 
 Separately approve/apply the additive schema before deploying Explorer, then update
 Admin. This slice authorizes no production migration, import or activation.
+
+
+### Automatic type rules (Admin #41)
+
+`PUT /type-rules` accepts optional `origin: "automatic"`, a required trimmed
+`reason` (1–4,000 characters) for automatic requests, and up to 20 new top-level
+`definitions`. Each new definition has equal ID/name, a unique name/ID, and no
+parent or label. Manual requests omit these fields. Existing `categories` semantics
+remain: nonempty maps, `[]` ignores, and `null` records unmapped.
+
+The existing expected state digest must match before any write. Automatic requests
+cannot replace manual, mapped or ignored rules. New definitions, rule metadata and
+all derived affected-POI assignments commit in the same transaction, or all roll back.
+The acknowledgement retains `{ status, revision, affectedPois }`; an uncertain result
+must be resolved by reading the accepted rule revision and content before another edit.
+No Wikidata/model request runs inside the transaction. Deploy this API extension
+before the paired Admin client. It requires the existing #40 schema and adds no new
+migration, production import or activation.
