@@ -3,10 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const MapShowcase = () => (
-  <section
-    aria-labelledby="map-showcase-title"
-    className="border-t border-zinc-900/15 py-12 sm:py-16"
-  >
+  <section aria-labelledby="map-showcase-title" className="border-brand/70 border-t py-12 sm:py-16">
     <div className="mb-7 flex flex-wrap items-end justify-between gap-5">
       <div>
         <p className="text-xs/5 font-semibold tracking-[0.2em] text-zinc-800 uppercase">
@@ -15,6 +12,7 @@ export const MapShowcase = () => (
         <h2 id="map-showcase-title" className="mt-3 font-serif text-3xl tracking-tight sm:text-4xl">
           Explore Rome on the map
         </h2>
+        <span aria-hidden="true" className="bg-brand mt-3 block h-1 w-10 rounded-full" />
         <p className="mt-3 max-w-xl text-sm/6 text-zinc-600">
           Open a place&apos;s Story for a quick sense of what makes it interesting. Each Story links
           to Wikipedia if you want to explore further.

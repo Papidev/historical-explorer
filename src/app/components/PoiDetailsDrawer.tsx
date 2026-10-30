@@ -122,7 +122,7 @@ export const PoiDetailsDrawer = ({
               <h2 className="font-serif text-2xl/7 tracking-tight text-black">
                 {selectedPersonId ? (person?.name ?? "Person") : (detail?.name ?? poi.name)}
               </h2>
-              <span aria-hidden="true" className="mt-3 block h-1 w-10 rounded-full bg-yellow-400" />
+              <span aria-hidden="true" className="bg-brand mt-3 block h-1 w-10 rounded-full" />
             </div>
             <div className="px-5 py-4 text-sm/6 text-black/80">
               {excludedByFilters && (
