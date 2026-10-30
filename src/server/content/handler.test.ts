@@ -53,6 +53,7 @@ describe("content HTTP boundary before database access", () => {
   it.each([
     ["catalogs", "rome"],
     ["categories"],
+    ["type-rules"],
     ["catalogs", "rome", "types"],
     ["pois", "728cbdf6-2449-4991-99b0-75204603eaa0", "types"],
     ["pois", "728cbdf6-2449-4991-99b0-75204603eaa0", "story"],
@@ -68,13 +69,38 @@ describe("content HTTP boundary before database access", () => {
     expect(response.headers.get("allow")).toBe(
       segments[2] === "types" && segments[0] === "catalogs"
         ? "GET"
-        : segments[2] === "types" || ["catalogs", "categories"].includes(segments[0])
+        : segments[2] === "types" || ["catalogs", "categories", "type-rules"].includes(segments[0])
           ? "GET, PUT"
           : ["baseline", "categories-baseline"].includes(segments[2] ?? "")
             ? "GET"
             : "PUT",
     );
     expect(response.headers.get("cache-control")).toBe("no-store");
+  });
+
+  it("validates rule states, categories and revision preconditions before database access", async () => {
+    vi.stubEnv("CONTENT_API_TOKEN", token);
+    const valid = {
+      typeId: "Q1",
+      categories: [],
+      revision: "728cbdf6-2449-4991-99b0-75204603eaa0",
+      expectedStateDigest: "a".repeat(64),
+    };
+    for (const invalid of [
+      { ...valid, typeId: "bad" },
+      { ...valid, categories: ["same", "same"] },
+      { ...valid, revision: "bad" },
+      { ...valid, expectedStateDigest: undefined },
+      { ...valid, origin: "automatic" },
+    ]) {
+      expect((await request(["type-rules"], invalid).response).status).toBe(400);
+    }
+    expect(
+      (
+        await request(["type-rules"], valid, { headers: { authorization: "Bearer wrong" } })
+          .response
+      ).status,
+    ).toBe(401);
   });
 
   it("validates acquisition identities and states before database access", async () => {

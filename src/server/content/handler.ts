@@ -6,6 +6,7 @@ import {
   poiCategoriesWriteSchema,
   storyWriteSchema,
   poiTypesWriteSchema,
+  typeCategoryRuleWriteSchema,
 } from "./postgresContent";
 import { publishedPoiSummarySchema } from "./publishedContent";
 import {
@@ -25,6 +26,21 @@ export const createContentHandler =
       authenticateContentRequest(request);
       const { segments } = await context.params;
       const [resource, identity, action] = segments;
+      if (resource === "type-rules" && segments.length === 1) {
+        if (request.method === "GET")
+          return contentJson(await getRepository().getTypeCategoryRules());
+        if (request.method !== "PUT")
+          return contentJson(
+            { error: { code: "invalid", message: "This method is not supported." } },
+            405,
+            { Allow: "GET, PUT" },
+          );
+        const input = parseContentInput(
+          typeCategoryRuleWriteSchema,
+          await readContentBody(request),
+        );
+        return contentJson(await getRepository().saveTypeCategoryRule(input));
+      }
       if (resource === "categories" && segments.length === 1) {
         if (request.method === "GET")
           return contentJson(await getRepository().getCategoryCatalog());
