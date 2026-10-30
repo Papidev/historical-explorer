@@ -1,6 +1,7 @@
 // Adapted from Papidev/mira-admin, commit 2b7b203cb2ba35dadd5a36d6b0ea6eb1bf971b1d.
 import { createHash, randomUUID } from "node:crypto";
 import type { Pool, PoolClient } from "pg";
+import { derivePoiCategories, expandCategorySelection } from "./categoryInterpretation";
 import { z } from "zod";
 import {
   publishedCategorySchema,
@@ -200,6 +201,44 @@ export const poiTypesBaselineSchema = z
     { message: "Accepted acquisition does not match the POI identity or revision." },
   );
 
+export const typeCategoryRuleSchema = z
+  .object({
+    typeId: z.string().regex(/^Q[1-9]\d*$/),
+    decision: z.enum(["mapped", "ignored", "unmapped"]),
+    categoryIds: publishedPoiSummarySchema.shape.categoryIds,
+    origin: z.enum(["manual", "automatic", "initial"]),
+    reason: z.string().optional(),
+    revision: z.uuid().toLowerCase(),
+    updatedAt: z.iso.datetime(),
+  })
+  .strict()
+  .refine(({ decision, categoryIds }) => (decision === "mapped") === Boolean(categoryIds.length));
+
+export const typeCategoryRuleWriteSchema = z
+  .object({
+    typeId: typeCategoryRuleSchema.shape.typeId,
+    categories: publishedPoiSummarySchema.shape.categoryIds.nullable(),
+    revision: z.uuid().toLowerCase(),
+    expectedStateDigest: z.string().regex(/^[a-f0-9]{64}$/),
+  })
+  .strict();
+
+// One MVCC snapshot covers rules, definitions and affected-catalog inputs, even on a fresh install.
+const typeRulesQuery = `SELECT
+  COALESCE((SELECT jsonb_agg(jsonb_strip_nulls(jsonb_build_object(
+    'typeId', type_id, 'decision', decision, 'categoryIds', category_ids, 'origin', origin,
+    'reason', reason, 'revision', revision, 'updatedAt', to_char(updated_at AT TIME ZONE 'UTC',
+      'YYYY-MM-DD"T"HH24:MI:SS.US"Z"'))) ORDER BY type_id COLLATE "C")
+    FROM content.type_category_rules), '[]'::jsonb) AS rules,
+  (SELECT COALESCE(jsonb_agg(jsonb_strip_nulls(jsonb_build_object(
+    'id', id, 'name', name, 'label', label, 'parentId', parent_id)) ORDER BY id COLLATE "C"),
+    '[]'::jsonb) FROM content.categories) AS definitions,
+  COALESCE((SELECT jsonb_agg(jsonb_build_array(city, revision) ORDER BY city COLLATE "C")
+    FROM content.city_catalogs), '[]'::jsonb) AS catalogs,
+  COALESCE((SELECT jsonb_agg(jsonb_build_array(p.id, p.input_revision, a.revision) ORDER BY p.id)
+    FROM content.pois p LEFT JOIN content.poi_type_acquisitions a ON a.poi_id = p.id
+    WHERE p.removed_at IS NULL), '[]'::jsonb) AS inputs`;
+
 const poiTypesQuery = `SELECT p.id AS "poiId", p.city, p.name, p.wikidata_id AS "wikidataId",
   p.wikipedia_pages AS "wikipediaPages", p.input_revision AS "inputRevision", w.revision,
   CASE WHEN w.input_revision = p.input_revision AND w.acquisition->>'wikidataId' IS NOT DISTINCT FROM p.wikidata_id
@@ -281,11 +320,77 @@ const transaction = async <T>(pool: Pool, work: (client: PoolClient) => Promise<
   }
 };
 
+// Acquire this before POI/city row locks in every category, acquisition and catalog writer.
+// This also serializes absent rules and definitions without per-process mutexes.
+const lockCategories = (client: PoolClient) =>
+  client.query("LOCK TABLE content.categories, content.poi_categories IN SHARE ROW EXCLUSIVE MODE");
+const readTypeRules = async (client: Pick<Pool, "query"> | PoolClient) => {
+  const {
+    rows: [row],
+  } = await client.query(typeRulesQuery);
+  return {
+    rules: z.array(typeCategoryRuleSchema).parse(row.rules),
+    definitions: z.array(publishedCategorySchema).parse(row.definitions),
+    stateDigest: digest(row),
+  };
+};
+const recalculateTypeCategories = async (
+  client: PoolClient,
+  poiId: string,
+  baseline: Awaited<ReturnType<typeof readTypeRules>>,
+) => {
+  const {
+    rows: [poi],
+  } = await client.query(`${poiTypesQuery} AND p.id = $1`, [poiId]);
+  const acquisition = poi?.acquisition
+    ? poiTypesAcquisitionSchema.parse(poi.acquisition)
+    : undefined;
+  const categoryIds = derivePoiCategories(
+    acquisition?.types ?? [],
+    Object.fromEntries(
+      baseline.rules
+        .filter(({ decision }) => decision === "mapped")
+        .map(({ typeId, categoryIds }) => [typeId, categoryIds]),
+    ),
+    baseline.definitions.map(({ parentId, ...category }) => ({ ...category, parent: parentId })),
+    poi.name,
+  );
+  // Preserve assignments outside the previous rule-derived set, including pre-activation assignments.
+  await client.query(
+    `DELETE FROM content.poi_categories c USING content.poi_type_category_assignments d
+    WHERE c.poi_id = $1 AND d.poi_id = c.poi_id AND d.category_id = c.category_id`,
+    [poiId],
+  );
+  await client.query("DELETE FROM content.poi_type_category_assignments WHERE poi_id = $1", [
+    poiId,
+  ]);
+  for (const categoryId of categoryIds) {
+    // A category already present outside the derived set remains independently assigned.
+    const added = await client.query(
+      `INSERT INTO content.poi_categories(poi_id, category_id) VALUES ($1,$2)
+      ON CONFLICT DO NOTHING RETURNING category_id`,
+      [poiId, categoryId],
+    );
+    if (added.rowCount)
+      await client.query(
+        "INSERT INTO content.poi_type_category_assignments(poi_id, category_id) VALUES ($1,$2)",
+        [poiId, categoryId],
+      );
+  }
+  // Advance even when the result is unchanged: old pending writes must not undo accepted inputs.
+  await client.query(
+    `INSERT INTO content.poi_category_writes(poi_id, revision, request_digest) VALUES ($1,$2,$3)
+    ON CONFLICT (poi_id) DO UPDATE SET revision = EXCLUDED.revision, request_digest = EXCLUDED.request_digest`,
+    [poiId, randomUUID(), digest({ categoryIds, stateDigest: baseline.stateDigest })],
+  );
+};
+
 export const createPostgresContent = (pool: Pool) => ({
   synchronizeCatalog: async (value: unknown) => {
     const input = catalogWriteSchema.parse(value);
     const requestDigest = digest(input);
     return transaction(pool, async (client) => {
+      await lockCategories(client);
       await client.query(
         "INSERT INTO content.city_catalogs(city) VALUES ($1) ON CONFLICT DO NOTHING",
         [input.city],
@@ -349,6 +454,10 @@ export const createPostgresContent = (pool: Pool) => ({
         .map(({ id }) => id);
       if (removed.length) {
         await client.query(
+          "DELETE FROM content.poi_type_category_assignments WHERE poi_id = ANY($1::uuid[])",
+          [removed],
+        );
+        await client.query(
           "DELETE FROM content.poi_category_writes WHERE poi_id = ANY($1::uuid[])",
           [removed],
         );
@@ -399,6 +508,7 @@ export const createPostgresContent = (pool: Pool) => ({
     const input = poiTypesWriteSchema.parse(value);
     const requestDigest = digest(input);
     return transaction(pool, async (client) => {
+      await lockCategories(client);
       const {
         rows: [poi],
       } = await client.query(
@@ -438,7 +548,68 @@ export const createPostgresContent = (pool: Pool) => ({
         request_digest = EXCLUDED.request_digest, acquisition = EXCLUDED.acquisition`,
         [input.poiId, input.inputRevision, input.revision, requestDigest, input.acquisition],
       );
+      const rules = await readTypeRules(client);
+      if (rules.rules.length) await recalculateTypeCategories(client, input.poiId, rules);
       return { status: "saved" as const, revision: input.revision };
+    });
+  },
+
+  getTypeCategoryRules: () => readTypeRules(pool),
+
+  saveTypeCategoryRule: async (value: unknown) => {
+    const input = typeCategoryRuleWriteSchema.parse(value);
+    return transaction(pool, async (client) => {
+      await lockCategories(client);
+      const baseline = await readTypeRules(client);
+      if (baseline.rules.some((rule) => rule.revision === input.revision))
+        throw new ContentWriteError(
+          "invalid",
+          "Rule revision already used. Reload accepted state before editing.",
+        );
+      if (baseline.stateDigest !== input.expectedStateDigest)
+        throw new ContentWriteError(
+          "conflict",
+          "Rules, category definitions or catalog inputs changed.",
+        );
+      if (
+        input.categories?.some((id) => !baseline.definitions.some((category) => category.id === id))
+      )
+        throw new ContentWriteError("invalid", "Unknown rule category.");
+      const { rows: affected } = await client.query(
+        `SELECT p.id FROM content.pois p
+        JOIN content.poi_type_acquisitions a ON a.poi_id = p.id AND a.input_revision = p.input_revision
+        WHERE p.removed_at IS NULL AND a.acquisition->>'wikidataId' IS NOT DISTINCT FROM p.wikidata_id
+          AND a.acquisition->'types' @> $1::jsonb ORDER BY p.id FOR UPDATE OF p`,
+        [JSON.stringify([{ id: input.typeId }])],
+      );
+      // Existing rules may still be edited after the last occurrence disappears from the catalog.
+      if (!affected.length && !baseline.rules.some(({ typeId }) => typeId === input.typeId))
+        throw new ContentWriteError("invalid", "This type has no accepted acquisition or rule.");
+      const categoryIds =
+        input.categories === null
+          ? []
+          : expandCategorySelection(
+              input.categories,
+              baseline.definitions.map(({ parentId, ...category }) => ({
+                ...category,
+                parent: parentId,
+              })),
+            );
+      await client.query(
+        `INSERT INTO content.type_category_rules(type_id, decision, category_ids, origin, revision)
+        VALUES ($1,$2,$3,'manual',$4) ON CONFLICT (type_id) DO UPDATE SET decision = EXCLUDED.decision,
+        category_ids = EXCLUDED.category_ids, origin = 'manual', reason = NULL,
+        revision = EXCLUDED.revision, updated_at = now()`,
+        [
+          input.typeId,
+          input.categories === null ? "unmapped" : categoryIds.length ? "mapped" : "ignored",
+          JSON.stringify(categoryIds),
+          input.revision,
+        ],
+      );
+      const accepted = await readTypeRules(client);
+      for (const { id } of affected) await recalculateTypeCategories(client, id, accepted);
+      return { status: "saved" as const, revision: input.revision, affectedPois: affected.length };
     });
   },
 
@@ -455,9 +626,7 @@ export const createPostgresContent = (pool: Pool) => ({
     const name = input.name.trim().replace(/\s+/g, " ");
     return transaction(pool, async (client) => {
       // Match per-POI writes, including insertions of previously absent definitions.
-      await client.query(
-        "LOCK TABLE content.categories, content.poi_categories IN SHARE ROW EXCLUSIVE MODE",
-      );
+      await lockCategories(client);
       const {
         rows: [row],
       } = await client.query(categoryDefinitionsQuery);
@@ -491,6 +660,7 @@ export const createPostgresContent = (pool: Pool) => ({
     const input = poiCategoriesWriteSchema.parse(value);
     const requestDigest = digest(input);
     return transaction(pool, async (client) => {
+      await lockCategories(client);
       const {
         rows: [poi],
       } = await client.query(
@@ -499,10 +669,6 @@ export const createPostgresContent = (pool: Pool) => ({
       );
       if (!poi || poi.removed_at || poi.input_revision !== input.inputRevision)
         throw new ContentWriteError("obsolete", "POI removed or classification inputs changed.");
-      // Transaction-scoped locks also cover absent definitions and concurrent insertions.
-      await client.query(
-        "LOCK TABLE content.categories, content.poi_categories IN SHARE ROW EXCLUSIVE MODE",
-      );
       const {
         rows: [current],
       } = await client.query(
@@ -524,6 +690,14 @@ export const createPostgresContent = (pool: Pool) => ({
         throw new ContentWriteError(
           "conflict",
           "Category definitions or assignments have changed.",
+        );
+      const {
+        rows: [types],
+      } = await client.query(`${poiTypesQuery} AND p.id = $1`, [input.poiId]);
+      if (types?.acquisition)
+        throw new ContentWriteError(
+          "conflict",
+          "Accepted acquisitions use online rules. Legacy category replacements cannot override them.",
         );
       const definitions = new Map(baseline.definitions.map((category) => [category.id, category]));
       for (const category of input.definitions) {

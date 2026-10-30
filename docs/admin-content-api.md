@@ -202,3 +202,47 @@ No production migration or activation is part of this implementation. Online sha
 rules and atomic assignment recalculation follow in Admin #40; automatic generation
 integration follows in #41. Keep local artifacts until the separately approved
 comparison/import operation in #42.
+
+## Shared type rules and atomic categories (#40)
+
+Explorer owns the additive `004-type-category-rules.sql` prerequisite. It stores
+shared editorial rules and the POI assignments contributed by those rules, with
+writer-only access and no backfill or runtime migration.
+
+- `GET /type-rules` returns `{ rules, definitions, stateDigest }` from one MVCC
+  snapshot. Each rule has `typeId`, `decision` (`mapped`, `ignored`, `unmapped`),
+  `categoryIds`, `origin`, optional `reason`, `revision` and `updatedAt`. Missing
+  rules remain distinct from explicit manual unmapped rules. The digest covers
+  rules, category definitions, city catalog revisions and active POI input/acquisition revisions.
+- `PUT /type-rules` accepts `{ typeId, categories, revision, expectedStateDigest }`.
+  A nonempty category list maps the type; `[]` ignores it; `null` persists a manual
+  reset to unmapped. The type must occur in a valid accepted acquisition or already
+  have an online rule. Unknown categories and reused current rule revisions are
+  invalid. A stale digest conflicts. The response is
+  `{ status: "saved", revision, affectedPois }`. An uncertain acknowledgement must
+  be reconciled with a GET of the submitted rule revision before another edit.
+
+The rule transaction identifies every affected active catalog POI from persisted
+acquisitions whose input revision and Wikidata identity still match. It recalculates
+using all accepted rules, existing hierarchy expansion and POI-name interpretation,
+preserving independently assigned categories. Every affected POI's category revision
+advances even if its resulting categories are unchanged. Rule and assignment changes
+roll back together on any failure. Accepted acquisition updates now run the same
+recalculation before committing. No external service is called inside the transaction.
+
+Catalog, acquisition, category-definition and per-POI category writers acquire the
+same table locks before city/POI row locks. Old per-POI requests conflict after a
+recalculation. Legacy whole-category replacements are also rejected for POIs with
+accepted online acquisitions, so a fresh legacy classification cannot override rules;
+complete Draft enrichment moves to this authority in #41. POIs without an accepted
+acquisition retain their existing per-POI API. Explicit category exceptions remain
+separate Explorer #61 work.
+
+Rule metadata is absent from visitor views and inaccessible to the reader role.
+Existing visitor category filtering/cache semantics are unchanged. No Story, Person
+or publication is created or regenerated. A fresh rules table is empty; no seed or
+local mapping fallback is used. Existing untracked assignments are preserved until
+#42's separately approved provenance comparison/import.
+
+Separately approve/apply the additive schema before deploying Explorer, then update
+Admin. This slice authorizes no production migration, import or activation.

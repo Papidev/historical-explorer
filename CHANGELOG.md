@@ -1,5 +1,11 @@
 # mira-explorer
 
+## 0.16.0
+
+### Minor Changes
+
+- Persist shared type rules and atomically recalculate category assignments for affected catalog POIs and accepted acquisition updates.
+
 ## 0.15.0
 
 ### Minor Changes
