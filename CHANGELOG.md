@@ -1,5 +1,11 @@
 # mira-explorer
 
+## 0.17.2
+
+### Patch Changes
+
+- Refine homepage spacing and yellow brand accents, improve filter checkbox contrast, and add distinctive navigation arrows to discovery and map preview cards.
+
 ## 0.17.1
 
 ### Patch Changes
