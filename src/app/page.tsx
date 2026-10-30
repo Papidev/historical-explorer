@@ -1,5 +1,5 @@
 import { AppVersion } from "@/app/components/ui/AppVersion";
-import { ArrowRightIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import { ArrowLongRightIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import catalog from "../../data/public/catalog.json";
@@ -207,8 +207,14 @@ const Home = () => {
                         sizes="(min-width: 640px) 33vw, 100vw"
                         className="object-cover motion-safe:transition-transform motion-safe:duration-500 motion-safe:group-hover:scale-105"
                       />
-                      <span className="bg-brand-soft absolute right-3 bottom-3 flex size-9 items-center justify-center rounded-full text-zinc-900">
-                        <ArrowUpRightIcon className="size-5" aria-hidden="true" />
+                      <span
+                        aria-hidden="true"
+                        className="bg-brand group-hover:bg-brand-action absolute right-3 bottom-3 flex size-10 items-center justify-center rounded-tl-2xl rounded-tr-md rounded-br-2xl rounded-bl-md text-zinc-900 shadow-sm transition-colors"
+                      >
+                        <ArrowLongRightIcon
+                          className="size-7 -rotate-45 motion-safe:transition-transform motion-safe:group-hover:translate-x-0.5 motion-safe:group-hover:-translate-y-0.5"
+                          strokeWidth={1.5}
+                        />
                       </span>
                     </div>
                     <h3 className="mt-4 font-serif text-2xl/7 tracking-tight group-hover:text-zinc-800">

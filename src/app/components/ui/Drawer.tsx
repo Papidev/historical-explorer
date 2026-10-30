@@ -35,7 +35,7 @@ export const Drawer = ({
       aria-hidden={!open}
       inert={!open}
       className={clsx(
-        "border-brand/70 inset-y-0 z-20 bg-white transition-transform duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none",
+        "inset-y-0 z-20 border-black/10 bg-white transition-transform duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none",
         side === "left"
           ? "left-0 border-r data-closed:-translate-x-full"
           : "right-0 border-l data-closed:translate-x-full",

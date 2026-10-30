@@ -1,5 +1,5 @@
 import { useId } from "react";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import { CheckIcon, ChevronDownIcon, MinusIcon } from "@heroicons/react/24/outline";
 import { MapPinIcon } from "@heroicons/react/24/solid";
 import { categoryMarkerColors } from "@/app/components/categoryMarkerColors";
 import {
@@ -55,7 +55,7 @@ export const CategoryOption = ({
   );
   return (
     <div
-      className={`flex flex-1 items-center gap-2 ${definition?.parent ? "text-[15px]" : "text-sm"}`}
+      className={`relative flex flex-1 items-center gap-2 ${definition?.parent ? "text-[15px]" : "text-sm"}`}
     >
       <input
         id={inputId}
@@ -67,8 +67,19 @@ export const CategoryOption = ({
           if (input) input.indeterminate = indeterminate;
         }}
         onChange={onToggle}
-        className="size-4 cursor-pointer accent-yellow-700"
+        className="peer size-4.5 shrink-0 cursor-pointer appearance-none rounded-sm border border-zinc-500 bg-white checked:border-blue-900 indeterminate:border-blue-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-800 forced-colors:appearance-auto"
       />
+      <CheckIcon
+        aria-hidden="true"
+        strokeWidth={3}
+        className="pointer-events-none absolute top-1/2 left-0.5 hidden size-3.5 -translate-y-1/2 text-blue-900 peer-checked:block peer-indeterminate:hidden forced-colors:hidden"
+      />
+      <MinusIcon
+        aria-hidden="true"
+        strokeWidth={3}
+        className="pointer-events-none absolute top-1/2 left-0.5 hidden size-3.5 -translate-y-1/2 text-blue-900 peer-indeterminate:block forced-colors:hidden"
+      />
+
       {disclosure && (
         <span aria-hidden="true" className="relative size-8 shrink-0">
           <MapPinIcon

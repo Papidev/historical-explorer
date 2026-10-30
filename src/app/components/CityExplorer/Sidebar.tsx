@@ -1,5 +1,10 @@
 import { useId, useState } from "react";
-import { ArrowUpRightIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
+import {
+  CheckIcon,
+  ChevronDownIcon,
+  ChevronRightIcon,
+  MinusIcon,
+} from "@heroicons/react/24/outline";
 import type { Poi } from "@/types/Poi";
 import {
   DEFAULT_POI_CATEGORY_DEFINITIONS,
@@ -42,9 +47,9 @@ export const Sidebar = ({
   return (
     <aside
       aria-label="Discover places"
-      className="border-brand/70 flex h-full w-full shrink-0 flex-col overflow-hidden border-r bg-zinc-50 text-zinc-900"
+      className="flex h-full w-full shrink-0 flex-col overflow-hidden border-r border-zinc-900/10 bg-zinc-50 text-zinc-900"
     >
-      <div className="border-brand/70 flex shrink-0 items-start justify-between gap-2 border-b px-4 py-3">
+      <div className="flex shrink-0 items-start justify-between gap-2 border-b border-zinc-900/10 px-4 py-3">
         <div>
           <h2 className="font-serif text-2xl/7 tracking-tight">Explore the city</h2>
           <span aria-hidden="true" className="bg-brand mt-3 block h-1 w-10 rounded-full" />
@@ -57,7 +62,7 @@ export const Sidebar = ({
       <div className="min-h-0 flex-1 overflow-y-auto px-4 pt-2 pb-4">
         <fieldset className="space-y-2 rounded-xl border border-zinc-200 bg-white px-3 py-1">
           <legend className="sr-only">Category filters</legend>
-          <div className="flex items-center gap-2">
+          <div className="relative flex items-center gap-2">
             <input
               type="checkbox"
               aria-label="All categories"
@@ -71,8 +76,19 @@ export const Sidebar = ({
                 if (allCategoriesSelected) setExpanded(true);
                 onToggleAll();
               }}
-              className="size-4 cursor-pointer accent-yellow-700"
+              className="peer size-4.5 shrink-0 cursor-pointer appearance-none rounded-sm border border-zinc-500 bg-white checked:border-blue-900 indeterminate:border-blue-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-800 forced-colors:appearance-auto"
             />
+            <CheckIcon
+              aria-hidden="true"
+              strokeWidth={3}
+              className="pointer-events-none absolute top-1/2 left-0.5 hidden size-3.5 -translate-y-1/2 text-blue-900 peer-checked:block peer-indeterminate:hidden forced-colors:hidden"
+            />
+            <MinusIcon
+              aria-hidden="true"
+              strokeWidth={3}
+              className="pointer-events-none absolute top-1/2 left-0.5 hidden size-3.5 -translate-y-1/2 text-blue-900 peer-indeterminate:block forced-colors:hidden"
+            />
+
             <button
               type="button"
               aria-label={`${expanded ? "Hide" : "Show"} categories`}
@@ -166,9 +182,9 @@ export const Sidebar = ({
                       .join(" · ") || "Uncategorized"}
                   </span>
                 </span>
-                <ArrowUpRightIcon
+                <ChevronRightIcon
                   aria-hidden="true"
-                  className={`size-4 shrink-0 ${selectedPoiId === poi.id ? "text-yellow-800" : "text-zinc-400 group-hover:text-zinc-800"}`}
+                  className="size-5 shrink-0 text-zinc-500 transition-colors group-hover:text-zinc-900"
                 />
               </button>
             </li>
