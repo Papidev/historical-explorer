@@ -8,7 +8,23 @@ The shared `MiraLogo` component supplies the bird and local Fraunces wordmark in
 
 Frozen logo alternatives A and the original C are preserved in `artifacts/logo-studies/`. The complete comparison prototype and the palette decision are archived on [`feat/mira-logo-prototype-archive`](https://github.com/Papidev/mira-explorer/tree/feat/mira-logo-prototype-archive) at `eb34c6f`; prototype controls are excluded from the application.
 
-Typography uses two bundled families: Inter (`font-sans`) for body text and controls, and local Fraunces (`font-serif`) for the wordmark and display titles. Both are configured once in the root layout. Use `text-3xl sm:text-4xl` for section titles, `text-2xl` for card and detail titles, `text-base leading-7` for introductory copy, `text-sm leading-6` for supporting copy, and `text-xs` for captions. The home hero and wordmark keep their larger display sizes. System monospace is reserved for technical identifiers and logs in the admin.
+Typography uses two bundled families: Inter (`font-sans`) for body text and controls, and local Fraunces (`font-serif`) for the wordmark and display titles. Both are configured once in the root layout. Public screens share these roles using standard Tailwind utilities:
+
+| Role | Utilities |
+| --- | --- |
+| Section title | `font-serif text-3xl tracking-tight sm:text-4xl` |
+| Card, panel, and detail title | `font-serif text-2xl/7 tracking-tight` |
+| Map popover title | `font-serif text-xl/6 tracking-tight` |
+| Body and Story text | `text-base/7` |
+| Supporting copy and metadata | `text-sm/6` |
+| Caption | `text-xs/5` |
+| Section label | `text-xs/5 font-semibold tracking-[0.2em] uppercase` |
+
+The home hero and wordmark keep their larger display sizes. Controls retain Inter and their compact sizing. System monospace is reserved for technical identifiers and logs in the admin.
+
+Markdown in Stories and biographies uses Tailwind Typography (`prose prose-zinc`) in `StoryText/Markdown.tsx`. The plugin owns paragraph, list, quote, and link spacing; local modifiers retain Mira's fonts and accent colors. Keep `prose` scoped to rendered Markdown so it does not restyle the surrounding cards, metadata, or controls.
+
+The short yellow stroke below the detail drawer title is an approved Mira brand motif. Reuse it sparingly below important page, panel, or section titles to give them emphasis on a neutral background. Prefer this restrained accent over a full-width tinted title band; do not add it to every heading. Match the drawer reference: `mt-3 block h-1 w-10 rounded-full bg-yellow-400`, left-aligned with the title, with `aria-hidden="true"` because it is decorative.
 
 ## Getting Started
 

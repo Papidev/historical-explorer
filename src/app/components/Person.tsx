@@ -10,7 +10,7 @@ const formatDate = (date: NonNullable<PublicPerson["birthDate"]>) => {
 };
 
 export const Person = ({ person }: { person: PublicPerson }) => (
-  <article className="space-y-6 text-base leading-[1.7] text-zinc-800">
+  <article className="space-y-6 text-base/7 text-zinc-800">
     {person.image ? (
       <figure className="overflow-hidden rounded-xl bg-zinc-100">
         <div className="relative h-72">
@@ -23,7 +23,7 @@ export const Person = ({ person }: { person: PublicPerson }) => (
           />
         </div>
         {person.image.attribution ? (
-          <figcaption className="px-3 py-2 text-xs text-zinc-500">
+          <figcaption className="px-3 py-2 text-xs/5 text-zinc-500">
             {person.image.attribution}
             {person.image.license ? ` · ${person.image.license}` : ""}
           </figcaption>
@@ -31,7 +31,7 @@ export const Person = ({ person }: { person: PublicPerson }) => (
       </figure>
     ) : null}
     {person.birthDate || person.deathDate ? (
-      <dl className="grid grid-cols-2 gap-3 rounded-lg bg-amber-50 p-3 text-sm">
+      <dl className="grid grid-cols-2 gap-3 rounded-lg bg-amber-50 p-3 text-sm/6">
         {person.birthDate ? (
           <div>
             <dt className="font-semibold">Born</dt>
@@ -55,7 +55,9 @@ export const Person = ({ person }: { person: PublicPerson }) => (
     </div>
     {person.curiosities.length > 0 ? (
       <section className="rounded-xl bg-sky-50/55 px-4 py-3 ring-1 ring-sky-950/5">
-        <h3 className="text-sm font-semibold tracking-wide text-zinc-950 uppercase">Curiosities</h3>
+        <h3 className="text-xs/5 font-semibold tracking-[0.2em] text-zinc-950 uppercase">
+          Curiosities
+        </h3>
         <ul className="mt-3 list-disc space-y-3 pl-5 marker:text-sky-400">
           {person.curiosities.map((curiosity) => (
             <li key={curiosity}>

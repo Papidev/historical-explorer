@@ -59,7 +59,7 @@ export const StoryContent = ({
   });
 
   return (
-    <div className="mt-4 space-y-6 text-base leading-[1.7] text-zinc-800">
+    <div className="mt-4 space-y-6 text-base/7 text-zinc-800">
       {content.textFormat === "markdown" ? (
         <StoryText text={content.introduction} textFormat={content.textFormat} />
       ) : (
@@ -76,7 +76,7 @@ export const StoryContent = ({
         </div>
       )}
       {period ? (
-        <dl className="grid gap-2 rounded-lg bg-amber-50 p-3 text-sm">
+        <dl className="grid gap-2 rounded-lg bg-amber-50 p-3 text-sm/6">
           <div>
             <dt className="font-semibold text-zinc-950">Period</dt>
             <dd>{period}</dd>
@@ -85,7 +85,9 @@ export const StoryContent = ({
       ) : null}
       {history.length > 0 ? (
         <section className="rounded-xl bg-orange-50/55 px-4 py-3 ring-1 ring-orange-950/5">
-          <h3 className="text-sm font-semibold tracking-wide text-zinc-950 uppercase">History</h3>
+          <h3 className="text-xs/5 font-semibold tracking-[0.2em] text-zinc-950 uppercase">
+            History
+          </h3>
           <ul className="mt-3 list-disc space-y-3 pl-5 marker:text-orange-400">
             {history.map(({ description, time, emphasis }, index) => (
               <li key={`history-${index}`} className="pl-1">
@@ -130,7 +132,7 @@ export const StoryContent = ({
       />
       {content.relatedPeople.length > 0 ? (
         <section className="rounded-xl bg-sky-50/55 px-4 py-3 ring-1 ring-sky-950/5">
-          <h3 className="text-sm font-semibold tracking-wide text-zinc-950 uppercase">
+          <h3 className="text-xs/5 font-semibold tracking-[0.2em] text-zinc-950 uppercase">
             Related People
           </h3>
           <ul className="mt-3 space-y-3">

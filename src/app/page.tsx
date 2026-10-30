@@ -40,7 +40,7 @@ const Home = () => {
           className="grid items-center gap-10 pt-6 pb-10 sm:pt-10 sm:pb-14 lg:grid-cols-2 lg:gap-16 lg:pt-14 lg:pb-20"
         >
           <div>
-            <p className="flex items-center gap-3 text-xs font-semibold tracking-[0.2em] text-zinc-800 uppercase">
+            <p className="flex items-center gap-3 text-xs/5 font-semibold tracking-[0.2em] text-zinc-800 uppercase">
               <span className="h-0.5 w-8 bg-yellow-400" aria-hidden="true" />A closer look at places
             </p>
             <h1
@@ -52,11 +52,11 @@ const Home = () => {
                 story.
               </span>
             </h1>
-            <p className="mt-6 max-w-md text-base leading-7 text-zinc-600">
+            <p className="mt-6 max-w-md text-base/7 text-zinc-600">
               Get the essence of a place at a glance. Discover the art, history, and people that
               make it interesting, then explore further on Wikipedia whenever you want.
             </p>
-            <p className="mt-6 max-w-md text-base leading-7 text-zinc-600">
+            <p className="mt-6 max-w-md text-base/7 text-zinc-600">
               <span className="font-semibold text-zinc-900">Mira begins in Rome.</span> More cities
               will follow.
             </p>
@@ -105,7 +105,7 @@ const Home = () => {
               </span>
               <div>
                 <h2 className="text-sm font-semibold">{title}</h2>
-                <p className="mt-2 max-w-xs text-sm leading-6 text-zinc-600">{description}</p>
+                <p className="mt-2 max-w-xs text-sm/6 text-zinc-600">{description}</p>
               </div>
             </div>
           ))}
@@ -116,7 +116,7 @@ const Home = () => {
           className="grid gap-5 border-b border-zinc-900/15 py-10 sm:py-14 lg:grid-cols-[1fr_1.5fr] lg:gap-16"
         >
           <div>
-            <p className="text-xs font-semibold tracking-[0.2em] text-zinc-800 uppercase">
+            <p className="text-xs/5 font-semibold tracking-[0.2em] text-zinc-800 uppercase">
               Behind the Stories
             </p>
             <h2
@@ -126,7 +126,7 @@ const Home = () => {
               Built on shared knowledge.
             </h2>
           </div>
-          <div className="max-w-2xl space-y-4 text-base leading-7 text-zinc-600">
+          <div className="max-w-2xl space-y-4 text-base/7 text-zinc-600">
             <p>
               Mira draws on the remarkable work behind{" "}
               <a
@@ -168,7 +168,7 @@ const Home = () => {
           <section aria-labelledby="discoveries-title" className="py-12 sm:py-16">
             <div className="mb-7 flex flex-wrap items-end justify-between gap-4">
               <div>
-                <p className="text-xs font-semibold tracking-[0.2em] text-zinc-800 uppercase">
+                <p className="text-xs/5 font-semibold tracking-[0.2em] text-zinc-800 uppercase">
                   Start with a little curiosity
                 </p>
                 <h2
@@ -208,14 +208,14 @@ const Home = () => {
                         <ArrowUpRightIcon className="size-5" aria-hidden="true" />
                       </span>
                     </div>
-                    <h3 className="mt-4 font-serif text-2xl tracking-tight group-hover:text-zinc-800">
+                    <h3 className="mt-4 font-serif text-2xl/7 tracking-tight group-hover:text-zinc-800">
                       {poi.name}
                     </h3>
-                    <p className="mt-2 line-clamp-3 text-sm leading-6 text-zinc-600">
+                    <p className="mt-2 line-clamp-3 text-sm/6 text-zinc-600">
                       {poi.previewDescription}
                     </p>
                   </Link>
-                  <p className="mt-3 text-xs leading-5 text-zinc-500">
+                  <p className="mt-3 text-xs/5 text-zinc-500">
                     Photo: {mainImage.attribution} ·{" "}
                     <a
                       href={mainImage.commonsPageUrl}
