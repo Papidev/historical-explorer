@@ -1,7 +1,7 @@
 import ReactMarkdown from "react-markdown";
 
 export const Markdown = ({ text }: { text: string }) => (
-  <div className="space-y-4">
+  <div className="prose prose-zinc prose-headings:font-serif prose-headings:tracking-tight prose-a:cursor-pointer prose-a:text-sky-800 prose-a:decoration-sky-300 prose-a:underline-offset-4 prose-a:hover:text-sky-950 prose-strong:font-semibold prose-strong:text-amber-900 prose-blockquote:border-amber-300 max-w-none text-base/7 text-zinc-800">
     <ReactMarkdown
       allowedElements={[
         "p",
@@ -22,25 +22,6 @@ export const Markdown = ({ text }: { text: string }) => (
       ]}
       unwrapDisallowed
       components={{
-        strong: ({ children }) => (
-          <strong className="font-semibold text-amber-900">{children}</strong>
-        ),
-        a: ({ href, children }) => (
-          <a
-            href={href}
-            className="cursor-pointer text-sky-800 underline decoration-sky-300 underline-offset-4 hover:text-sky-950"
-          >
-            {children}
-          </a>
-        ),
-        ul: ({ children }) => <ul className="list-disc space-y-2 pl-5">{children}</ul>,
-        ol: ({ children }) => <ol className="list-decimal space-y-2 pl-5">{children}</ol>,
-        li: ({ children }) => <li className="space-y-2 pl-1">{children}</li>,
-        blockquote: ({ children }) => (
-          <blockquote className="space-y-4 border-l-2 border-amber-300 pl-4 italic">
-            {children}
-          </blockquote>
-        ),
         h1: ({ children }) => <h4 className="text-lg font-semibold text-zinc-950">{children}</h4>,
         h2: ({ children }) => <h4 className="text-lg font-semibold text-zinc-950">{children}</h4>,
         h3: ({ children }) => <h4 className="font-semibold text-zinc-950">{children}</h4>,

@@ -1,5 +1,11 @@
 # mira-explorer
 
+## 0.17.1
+
+### Patch Changes
+
+- Unify Mira typography across public pages, align and enlarge the bird wordmark, and use the bird favicon. Style Story Markdown with Tailwind Typography and refine POI preview and drawer titles with a restrained yellow accent.
+
 ## 0.17.0
 
 ### Minor Changes

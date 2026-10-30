@@ -71,10 +71,10 @@ export const PoiImageGallery = ({
           <DialogPanel className="flex h-[90dvh] max-h-[56rem] w-full max-w-6xl flex-col overflow-hidden rounded-2xl bg-white text-zinc-900 shadow-2xl">
             <header className="flex shrink-0 items-center justify-between gap-4 px-5 py-4 md:px-8">
               <div className="min-w-0">
-                <DialogTitle className="truncate font-serif text-xl md:text-2xl">
+                <DialogTitle className="truncate font-serif text-2xl/7 tracking-tight">
                   {name}
                 </DialogTitle>
-                <p className="mt-1 text-xs text-zinc-500" aria-live="polite">
+                <p className="mt-1 text-xs/5 text-zinc-500" aria-live="polite">
                   Photo {(index ?? 0) + 1} of {images.length}
                 </p>
               </div>

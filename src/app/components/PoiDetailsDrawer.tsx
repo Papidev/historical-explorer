@@ -89,7 +89,7 @@ export const PoiDetailsDrawer = ({
                   )}
                 </div>
                 {mainImage && (
-                  <figcaption className="px-5 py-2 text-xs text-zinc-500">
+                  <figcaption className="px-5 py-2 text-xs/5 text-zinc-500">
                     {mainImage.attribution} ·{" "}
                     <a
                       href={mainImage.commonsPageUrl}
@@ -108,7 +108,7 @@ export const PoiDetailsDrawer = ({
                 Image unavailable
               </div>
             ) : null}
-            <div className="border-b border-yellow-200 bg-yellow-50/50 px-5 py-4 pr-16">
+            <div className="px-5 py-4 pr-16">
               {selectedPersonId ? (
                 <button
                   type="button"
@@ -119,11 +119,12 @@ export const PoiDetailsDrawer = ({
                   <span className="truncate">Back to {poi.name}</span>
                 </button>
               ) : null}
-              <h2 className="text-2xl leading-tight font-semibold text-black">
+              <h2 className="font-serif text-2xl/7 tracking-tight text-black">
                 {selectedPersonId ? (person?.name ?? "Person") : (detail?.name ?? poi.name)}
               </h2>
+              <span aria-hidden="true" className="mt-3 block h-1 w-10 rounded-full bg-yellow-400" />
             </div>
-            <div className="px-5 py-4 text-sm leading-6 text-black/80">
+            <div className="px-5 py-4 text-sm/6 text-black/80">
               {excludedByFilters && (
                 <p className="mb-4 rounded-lg bg-amber-50 px-3 py-2 text-sm text-amber-900">
                   This place is excluded by your active filters.

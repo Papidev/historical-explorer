@@ -9,13 +9,13 @@ export const MapShowcase = () => (
   >
     <div className="mb-7 flex flex-wrap items-end justify-between gap-5">
       <div>
-        <p className="text-xs font-semibold tracking-[0.2em] text-zinc-800 uppercase">
+        <p className="text-xs/5 font-semibold tracking-[0.2em] text-zinc-800 uppercase">
           Find a place. Follow its story.
         </p>
         <h2 id="map-showcase-title" className="mt-3 font-serif text-3xl tracking-tight sm:text-4xl">
           Explore Rome on the map
         </h2>
-        <p className="mt-3 max-w-xl text-sm leading-6 text-zinc-600">
+        <p className="mt-3 max-w-xl text-sm/6 text-zinc-600">
           Open a place&apos;s Story for a quick sense of what makes it interesting. Each Story links
           to Wikipedia if you want to explore further.
         </p>
@@ -41,7 +41,7 @@ export const MapShowcase = () => (
           className="h-auto w-full min-w-180"
         />
       </Link>
-      <figcaption className="mt-3 text-right text-xs leading-5 text-zinc-500">
+      <figcaption className="mt-3 text-right text-xs/5 text-zinc-500">
         Map: OpenFreeMap · © OpenMapTiles ·{" "}
         <a
           href="https://www.openstreetmap.org/copyright"

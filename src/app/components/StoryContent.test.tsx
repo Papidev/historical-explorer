@@ -23,13 +23,13 @@ describe("StoryContent", () => {
     );
 
     expect(html).toContain("<p>The temple stands beside the river.</p>");
-    expect(html).toContain('<strong class="font-semibold text-amber-900">bronze doors</strong>');
+    expect(html).toContain("<strong>bronze doors</strong>");
     expect(html).toContain("<em>ancient columns</em>");
     expect(html).toContain('href="https://example.com/temple"');
-    expect(html).toContain('<strong class="font-semibold text-amber-900">restoration</strong>');
+    expect(html).toContain("<strong>restoration</strong>");
     expect(html).toContain("<p>It reopened later.</p>");
-    expect(html).toContain('<ul class="list-disc space-y-2 pl-5">');
-    expect(html).toContain('<ol class="list-decimal space-y-2 pl-5">');
+    expect(html).toContain("<ul>");
+    expect(html).toContain("<ol>");
     expect(html).toContain('<h4 class="text-lg font-semibold text-zinc-950">Details</h4>');
     expect(html).not.toContain("<p><div");
     expect(html).not.toContain("**");

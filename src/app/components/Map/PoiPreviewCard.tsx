@@ -42,9 +42,9 @@ export const PoiPreviewCard = ({ poi, onOpenDetails }: Props) => {
         <div className="pointer-events-none absolute inset-0 ring-1 ring-black/10 ring-inset" />
       </div>
       <div className="p-4">
-        <h3 className="text-base/6 font-semibold text-zinc-900">{poi.name}</h3>
+        <h3 className="font-serif text-xl/6 tracking-tight text-zinc-900">{poi.name}</h3>
         {description ? (
-          <p className="mt-1 line-clamp-3 text-xs/4 text-zinc-600">{description}</p>
+          <p className="mt-1 line-clamp-3 text-sm/6 text-zinc-600">{description}</p>
         ) : null}
       </div>
     </button>

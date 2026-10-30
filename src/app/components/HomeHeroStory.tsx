@@ -24,7 +24,7 @@ export const HomeHeroStory = ({ cover }: Props) => (
           aria-hidden="true"
         />
         <div className="absolute right-6 bottom-7 left-6 text-white">
-          <p className="mt-2 font-serif text-4xl sm:text-5xl">Rome</p>
+          <p className="mt-2 font-serif text-3xl tracking-tight sm:text-4xl">Rome</p>
           <p className="mt-2 flex items-center gap-2 text-sm text-zinc-100">
             <MapPinIcon className="size-4" aria-hidden="true" />
             {cover.poi.name}
@@ -36,13 +36,13 @@ export const HomeHeroStory = ({ cover }: Props) => (
         href={`/rome?poiId=${encodeURIComponent(cover.poi.id)}`}
         className="group absolute right-0 bottom-0 left-6 rounded-2xl border border-zinc-900/10 bg-white p-5 shadow-xl transition-colors hover:bg-zinc-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800 sm:left-auto sm:w-80"
       >
-        <span className="text-xs font-semibold tracking-[0.16em] text-zinc-600 uppercase">
+        <span className="text-xs/5 font-semibold tracking-[0.2em] text-zinc-600 uppercase">
           A story behind the place
         </span>
-        <span className="mt-2 block font-serif text-2xl text-zinc-900">
+        <span className="mt-2 block font-serif text-2xl/7 tracking-tight text-zinc-900">
           From mausoleum to fortress
         </span>
-        <span className="mt-2 block text-sm leading-6 text-zinc-600">
+        <span className="mt-2 block text-sm/6 text-zinc-600">
           Built for Hadrian, the castle later became a papal refuge connected to the Vatican by a
           fortified passage.
         </span>
@@ -55,7 +55,7 @@ export const HomeHeroStory = ({ cover }: Props) => (
         </span>
       </Link>
     </div>
-    <figcaption className="mt-3 text-right text-xs leading-5 text-zinc-500">
+    <figcaption className="mt-3 text-right text-xs/5 text-zinc-500">
       Photo: {cover.mainImage.attribution} ·{" "}
       <a
         href={cover.mainImage.commonsPageUrl}
