@@ -20,11 +20,11 @@ const RomePage = async ({ searchParams }: Props) => {
       <WorkInProgressNotice />
       <RefreshPoiCategories city="rome" />
       <header className="flex shrink-0 items-center justify-between gap-3 border-b border-zinc-900/15 px-4 py-3 md:gap-6 md:px-6 md:py-4">
-        <div className="flex min-w-0 items-start gap-4 md:gap-6">
+        <div className="flex min-w-0 items-baseline gap-4 md:gap-6">
           <Link
             href="/"
             aria-label="Mira home"
-            className="flex shrink-0 items-center gap-2.5 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800"
+            className="flex shrink-0 items-baseline gap-2.5 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-800"
           >
             <MiraLogo size="medium" />
           </Link>

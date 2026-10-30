@@ -16,7 +16,7 @@ export const MiraLogo = ({
     aria-label="Mira"
     className={clsx(
       fraunces.className,
-      "inline-flex items-center gap-[0.13em] font-medium tracking-[-0.055em]",
+      "inline-flex items-baseline gap-[0.13em] font-medium tracking-[-0.055em]",
       { small: "text-2xl", medium: "text-4xl sm:text-[2.5rem]", large: "text-5xl sm:text-6xl" }[
         size
       ],
