@@ -1,5 +1,11 @@
 # mira-explorer
 
+## 0.19.0
+
+### Minor Changes
+
+- Add authenticated category hierarchy moves with atomic rule and POI assignment updates, preserving selected children and the visitor filter freshness boundary.
+
 ## 0.18.0
 
 ### Minor Changes

@@ -283,3 +283,16 @@ an accepted-state read; do not replay an old rename against a refreshed digest.
 Visitor filters receive the renamed definition through existing reads after their
 60-second cache boundary. No new schema, import or Story regeneration is needed.
 Deploy Explorer before the Admin client. Moves and deletions remain separate.
+
+## Shared category moves
+
+`PUT /api/admin/content/v1/categories/:id/move` accepts `{ parentId, expectedStateDigest }`,
+where `null` detaches a leaf to the top level. It preserves stable IDs and names,
+retains the two-level hierarchy limit, and atomically adjusts affected shared rules,
+POI parent associations and category revisions using the existing category locks.
+Selected children and unrelated assignments are preserved; parent assignments follow
+remaining selected children. Existing independent ownership is retained, without
+legacy contribution reconciliation. Admin reloads accepted state after an uncertain
+acknowledgement. Visitor hierarchy and filters refresh at the existing 60-second
+cache boundary; Story/Person regeneration and a new schema migration are not needed.
+Deploy this API before the matching Mira Admin client (Papidev/mira-admin#35).

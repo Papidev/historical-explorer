@@ -732,6 +732,308 @@ describe.skipIf(!process.env.HISTORICAL_EXPLORER_TEST_DATABASE_URL)(
       expect(await repository.getCategoryCatalog()).toEqual(fresh);
     });
 
+    it("moves a shared category through authenticated HTTP and updates visitor filtering at the freshness boundary", async () => {
+      const write = example();
+      await prepare([write]);
+      await repository.savePoiCategories(await categoryWrite(write));
+      await repository.createCategory({
+        name: "Culture",
+        expectedStateDigest: (await repository.getCategoryCatalog()).stateDigest,
+      });
+      await repository.savePoiTypes(await typesWrite(write.detail.id));
+      await saveRule("Q1", ["amphitheatre"]);
+      await repository.saveStory(write);
+      const story = await repository.getStory(write.detail.id);
+      const person = await repository.getPerson("vespasian");
+      const before = (await repository.getPoiCategoriesBaseline(write.detail.id))!;
+      const oldRules = await repository.getTypeCategoryRules();
+      let time = 0;
+      const cached = createCachedRead(repository.getCityPreviews, () => time);
+      expect(toVisitorCity(await cached("rome")).categoryDefinitions).toContainEqual({
+        id: "amphitheatre",
+        name: "Amphitheatre",
+        parent: "architecture",
+      });
+      const response = await createContentHandler(() => repository)(
+        new Request("http://localhost/api/admin/content/v1/categories/amphitheatre/move", {
+          method: "PUT",
+          headers: {
+            authorization: `Bearer ${process.env.CONTENT_API_TOKEN}`,
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({
+            parentId: "Culture",
+            expectedStateDigest: (await repository.getCategoryCatalog()).stateDigest,
+          }),
+        }),
+        { params: Promise.resolve({ segments: ["categories", "amphitheatre", "move"] }) },
+      );
+      expect(response.status).toBe(200);
+      expect(await response.json()).toEqual({
+        status: "saved",
+        definition: { id: "amphitheatre", name: "Amphitheatre", parentId: "Culture" },
+      });
+      expect((await createPostgresContent(pool).getCategoryCatalog()).definitions).toContainEqual({
+        id: "amphitheatre",
+        name: "Amphitheatre",
+        parentId: "Culture",
+      });
+      const after = (await repository.getPoiCategoriesBaseline(write.detail.id))!;
+      expect(after.categoryIds).toEqual(["Culture", "amphitheatre"]);
+      expect(after.revision).not.toBe(before.revision);
+      expect(after.stateDigest).not.toBe(before.stateDigest);
+      const rule = (await repository.getTypeCategoryRules()).rules[0];
+      expect(rule).toMatchObject({ categoryIds: ["amphitheatre", "Culture"], origin: "manual" });
+      expect(rule.revision).not.toBe(oldRules.rules[0].revision);
+      expect(await repository.getStory(write.detail.id)).toEqual({
+        ...story,
+        categoryIds: after.categoryIds,
+      });
+      expect(await repository.getPerson("vespasian")).toEqual({
+        ...person,
+        linkedPois: person!.linkedPois.map((poi) => ({ ...poi, categoryIds: after.categoryIds })),
+      });
+      time = 59_999;
+      expect(
+        toVisitorCity(await cached("rome")).categoryDefinitions.find(
+          ({ id }) => id === "amphitheatre",
+        )?.parent,
+      ).toBe("architecture");
+      time = 60_000;
+      const visitor = toVisitorCity(await cached("rome"));
+      expect(visitor.categoryDefinitions.find(({ id }) => id === "amphitheatre")?.parent).toBe(
+        "Culture",
+      );
+      expect(
+        matchesPoiCategory(visitor.pois[0].categories, "Culture", visitor.categoryDefinitions),
+      ).toBe(true);
+      expect(
+        matchesPoiCategory(visitor.pois[0].categories, "architecture", visitor.categoryDefinitions),
+      ).toBe(false);
+      // A later type refresh retains the accepted organization.
+      await repository.savePoiTypes(await typesWrite(write.detail.id));
+      expect((await repository.getPoiCategoriesBaseline(write.detail.id))!.categoryIds).toEqual(
+        after.categoryIds,
+      );
+    });
+
+    it("preserves siblings, independent categories and ownership across cities and POIs without Stories", async () => {
+      const first = example(),
+        second = example();
+      second.detail.id = randomUUID();
+      await prepare([first, second]);
+      const input = await categoryWrite(first);
+      input.definitions.push(
+        { id: "tower", name: "Tower", parentId: "architecture" },
+        { id: "culture", name: "Culture" },
+        { id: "independent", name: "Independent" },
+      );
+      input.categoryIds = ["amphitheatre", "tower", "architecture", "independent", "culture"];
+      await repository.savePoiCategories(input);
+      await repository.savePoiCategories({
+        ...(await categoryWrite(second)),
+        categoryIds: ["amphitheatre", "architecture"],
+      });
+      await pool.query("INSERT INTO content.city_catalogs(city) VALUES ('milan')");
+      await pool.query("UPDATE content.pois SET city = 'milan' WHERE id = $1", [second.detail.id]);
+      await pool.query(
+        "INSERT INTO content.poi_type_category_assignments VALUES ($1,'amphitheatre'),($1,'architecture'),($2,'amphitheatre'),($2,'architecture')",
+        [first.detail.id, second.detail.id],
+      );
+      const revision = randomUUID();
+      await pool.query(
+        `INSERT INTO content.type_category_rules(type_id,decision,category_ids,origin,revision,reason)
+        VALUES ('Q1','mapped','["architecture"]','automatic',$1,'Old reason'),('Q2','ignored','[]','manual',$2,NULL),('Q3','unmapped','[]','manual',$3,NULL)`,
+        [revision, randomUUID(), randomUUID()],
+      );
+      const rules = await repository.getTypeCategoryRules();
+      await repository.moveCategory({
+        id: "amphitheatre",
+        parentId: "culture",
+        expectedStateDigest: (await repository.getCategoryCatalog()).stateDigest,
+      });
+      expect((await repository.getPoiCategoriesBaseline(first.detail.id))!.categoryIds).toEqual([
+        "amphitheatre",
+        "architecture",
+        "culture",
+        "independent",
+        "tower",
+      ]);
+      expect((await repository.getPoiCategoriesBaseline(second.detail.id))!.categoryIds).toEqual([
+        "amphitheatre",
+        "culture",
+      ]);
+      const accepted = await repository.getTypeCategoryRules();
+      expect(accepted.rules[0]).toMatchObject({
+        categoryIds: ["architecture", "amphitheatre", "tower", "culture"],
+        origin: "manual",
+      });
+      expect(accepted.rules[0].reason).toBeUndefined();
+      expect(accepted.rules.slice(1)).toEqual(rules.rules.slice(1));
+      expect(
+        (
+          await pool.query(
+            "SELECT FROM content.poi_type_category_assignments WHERE poi_id=$1 AND category_id='culture'",
+            [first.detail.id],
+          )
+        ).rowCount,
+      ).toBe(0);
+      expect(
+        (
+          await pool.query(
+            "SELECT FROM content.poi_type_category_assignments WHERE poi_id=$1 AND category_id='culture'",
+            [second.detail.id],
+          )
+        ).rowCount,
+      ).toBe(1);
+      expect(await repository.getStory(first.detail.id)).toBeUndefined();
+      expect(await repository.getStory(second.detail.id)).toBeUndefined();
+      await repository.moveCategory({
+        id: "amphitheatre",
+        parentId: null,
+        expectedStateDigest: (await repository.getCategoryCatalog()).stateDigest,
+      });
+      expect((await repository.getPoiCategoriesBaseline(second.detail.id))!.categoryIds).toEqual([
+        "amphitheatre",
+      ]);
+    });
+
+    it("updates the derived scope of a destination-parent-only rule immediately and after reacquisition", async () => {
+      const writes = [example(), example()];
+      writes[1].detail.id = randomUUID();
+      await prepare(writes);
+      await repository.savePoiCategories(await categoryWrite(writes[0]));
+      await repository.createCategory({
+        name: "Culture",
+        expectedStateDigest: (await repository.getCategoryCatalog()).stateDigest,
+      });
+      await repository.savePoiTypes(await typesWrite(writes[0].detail.id));
+      const acquisition = await typesWrite(writes[1].detail.id);
+      acquisition.acquisition.types = [{ id: "Q2", label: "cultural place" }];
+      await repository.savePoiTypes(acquisition);
+      await saveRule("Q1", ["amphitheatre"]);
+      await saveRule("Q2", ["Culture"]);
+      expect((await repository.getPoiCategoriesBaseline(writes[1].detail.id))!.categoryIds).toEqual(
+        ["Culture"],
+      );
+      await repository.moveCategory({
+        id: "amphitheatre",
+        parentId: "Culture",
+        expectedStateDigest: (await repository.getCategoryCatalog()).stateDigest,
+      });
+      const after = (await repository.getPoiCategoriesBaseline(writes[1].detail.id))!;
+      expect(after.categoryIds).toEqual(["Culture", "amphitheatre"]);
+      const refreshed = await typesWrite(writes[1].detail.id);
+      refreshed.acquisition.types = acquisition.acquisition.types;
+      await repository.savePoiTypes(refreshed);
+      expect((await repository.getPoiCategoriesBaseline(writes[1].detail.id))!.categoryIds).toEqual(
+        after.categoryIds,
+      );
+    });
+
+    it("rejects invalid or stale moves, leaves no-ops untouched and serializes competing global writes", async () => {
+      const write = example();
+      await prepare([write]);
+      await repository.savePoiCategories(await categoryWrite(write));
+      await repository.createCategory({
+        name: "Culture",
+        expectedStateDigest: (await repository.getCategoryCatalog()).stateDigest,
+      });
+      const baseline = await repository.getCategoryCatalog();
+      const assignments = await repository.getPoiCategoriesBaseline(write.detail.id);
+      for (const [id, parentId] of [
+        ["missing", null],
+        ["amphitheatre", "missing"],
+        ["amphitheatre", "amphitheatre"],
+        ["Culture", "amphitheatre"],
+        ["architecture", "Culture"],
+      ])
+        await expect(
+          repository.moveCategory({ id, parentId, expectedStateDigest: baseline.stateDigest }),
+        ).rejects.toMatchObject({ reason: "invalid" });
+      await repository.moveCategory({
+        id: "amphitheatre",
+        parentId: "architecture",
+        expectedStateDigest: baseline.stateDigest,
+      });
+      expect(await repository.getCategoryCatalog()).toEqual(baseline);
+      expect(await repository.getPoiCategoriesBaseline(write.detail.id)).toEqual(assignments);
+      const pending = await categoryWrite(write);
+      const rules = await repository.getTypeCategoryRules();
+      const outcomes = await Promise.allSettled([
+        repository.moveCategory({
+          id: "amphitheatre",
+          parentId: "Culture",
+          expectedStateDigest: baseline.stateDigest,
+        }),
+        repository.renameCategory({
+          id: "amphitheatre",
+          name: "Arena",
+          expectedStateDigest: baseline.stateDigest,
+        }),
+      ]);
+      expect(outcomes.filter(({ status }) => status === "fulfilled")).toHaveLength(1);
+      expect(outcomes.filter(({ status }) => status === "rejected")).toHaveLength(1);
+      await expect(
+        repository.moveCategory({
+          id: "amphitheatre",
+          parentId: null,
+          expectedStateDigest: baseline.stateDigest,
+        }),
+      ).rejects.toMatchObject({ reason: "conflict" });
+      await expect(repository.savePoiCategories(pending)).rejects.toMatchObject({
+        reason: "conflict",
+      });
+      await expect(
+        repository.saveTypeCategoryRule({
+          typeId: "Q1",
+          categories: ["amphitheatre"],
+          revision: randomUUID(),
+          expectedStateDigest: rules.stateDigest,
+        }),
+      ).rejects.toMatchObject({ reason: "conflict" });
+    });
+
+    it("rolls back hierarchy, rules, contributions and memberships when any assignment update fails", async () => {
+      const write = example();
+      await prepare([write]);
+      await repository.savePoiCategories(await categoryWrite(write));
+      await repository.savePoiTypes(await typesWrite(write.detail.id));
+      await saveRule("Q1", ["amphitheatre"]);
+      const baseline = await repository.getCategoryCatalog();
+      const rules = await repository.getTypeCategoryRules();
+      const assignments = await repository.getPoiCategoriesBaseline(write.detail.id);
+      const derived = (
+        await pool.query("SELECT * FROM content.poi_type_category_assignments ORDER BY category_id")
+      ).rows;
+      await pool.query(
+        `ALTER TABLE content.poi_category_writes ADD CONSTRAINT test_move_revision CHECK (revision = '${assignments!.revision}')`,
+      );
+      try {
+        await expect(
+          repository.moveCategory({
+            id: "amphitheatre",
+            parentId: null,
+            expectedStateDigest: baseline.stateDigest,
+          }),
+        ).rejects.toBeDefined();
+      } finally {
+        await pool.query(
+          "ALTER TABLE content.poi_category_writes DROP CONSTRAINT test_move_revision",
+        );
+      }
+      expect(await repository.getCategoryCatalog()).toEqual(baseline);
+      expect(await repository.getTypeCategoryRules()).toEqual(rules);
+      expect(await repository.getPoiCategoriesBaseline(write.detail.id)).toEqual(assignments);
+      expect(
+        (
+          await pool.query(
+            "SELECT * FROM content.poi_type_category_assignments ORDER BY category_id",
+          )
+        ).rows,
+      ).toEqual(derived);
+    });
+
     it("renames through authenticated HTTP without changing content or assignments, and refreshes visitor filters after 60 seconds", async () => {
       const write = example();
       await prepare([write]);
