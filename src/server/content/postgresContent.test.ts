@@ -32,6 +32,9 @@ describe.skipIf(!process.env.HISTORICAL_EXPLORER_TEST_DATABASE_URL)(
       await pool.query(
         await readFile(new URL("./schema/002-poi-category-writes.sql", import.meta.url), "utf8"),
       );
+      await pool.query(
+        await readFile(new URL("./schema/003-poi-type-acquisitions.sql", import.meta.url), "utf8"),
+      );
     });
     beforeEach(async () => {
       await pool.query(
@@ -73,6 +76,169 @@ describe.skipIf(!process.env.HISTORICAL_EXPLORER_TEST_DATABASE_URL)(
       }
       return catalog;
     };
+
+    const typesWrite = async (poiId: string) => {
+      const baseline = (await repository.getPoiTypes(poiId))!;
+      return {
+        poiId,
+        inputRevision: baseline.inputRevision,
+        expectedRevision: baseline.revision,
+        revision: randomUUID(),
+        acquisition: {
+          wikidataId: baseline.wikidataId,
+          types: [{ id: "Q1", label: "arena" }],
+          skipped: false,
+          acquiredAt: new Date().toISOString(),
+        },
+      };
+    };
+
+    it("persists acquisitions through authenticated HTTP, reloads them and preserves visitor content and categories", async () => {
+      const write = example();
+      await prepare([write]);
+      await repository.saveStory(write);
+      await repository.savePoiCategories(await categoryWrite(write));
+      const visitor = await repository.getCity("rome");
+      const categories = await repository.getPoiCategoriesBaseline(write.detail.id);
+      const body = await typesWrite(write.detail.id);
+      const handle = createContentHandler(() => repository);
+      const call = (segments: string[], input?: unknown) =>
+        handle(
+          new Request("http://localhost/api/admin/content/v1/" + segments.join("/"), {
+            method: input ? "PUT" : "GET",
+            headers: {
+              authorization: `Bearer ${process.env.CONTENT_API_TOKEN}`,
+              "content-type": "application/json",
+            },
+            ...(input ? { body: JSON.stringify(input) } : {}),
+          }),
+          { params: Promise.resolve({ segments }) },
+        );
+      expect(await (await call(["pois", body.poiId, "types"], body)).json()).toEqual({
+        status: "saved",
+        revision: body.revision,
+      });
+      expect(await (await call(["pois", body.poiId, "types"])).json()).toMatchObject({
+        acquisition: body.acquisition,
+        revision: body.revision,
+      });
+      expect(await (await call(["catalogs", "rome", "types"])).json()).toHaveLength(1);
+      expect((await createPostgresContent(pool).getPoiTypes(body.poiId))?.acquisition).toEqual(
+        body.acquisition,
+      );
+      expect(await repository.savePoiTypes(body)).toEqual({
+        status: "already-saved",
+        revision: body.revision,
+      });
+      await expect(
+        repository.savePoiTypes({ ...body, acquisition: { ...body.acquisition, types: [] } }),
+      ).rejects.toMatchObject({ reason: "invalid" });
+      expect(await repository.getCity("rome")).toEqual(visitor);
+      expect(await repository.getPoiCategoriesBaseline(body.poiId)).toEqual(categories);
+    });
+
+    it("distinguishes never acquired, successful empty and skipped states without publishing a POI", async () => {
+      const write = example();
+      const catalog = await prepare([write]);
+      expect((await repository.getPoiTypes(write.detail.id))?.acquisition).toBeNull();
+      const body = await typesWrite(write.detail.id);
+      await repository.savePoiTypes({ ...body, acquisition: { ...body.acquisition, types: [] } });
+      expect((await repository.getPoiTypes(body.poiId))?.acquisition).toMatchObject({
+        types: [],
+        skipped: false,
+      });
+      delete catalog.pois[0].wikidataId;
+      await repository.synchronizeCatalog({
+        ...catalog,
+        expectedRevision: catalog.revision,
+        revision: randomUUID(),
+      });
+      expect((await repository.getPoiTypes(body.poiId))?.acquisition).toBeNull();
+      const skipped = await typesWrite(body.poiId);
+      await repository.savePoiTypes({
+        ...skipped,
+        acquisition: { ...skipped.acquisition, types: [], skipped: true },
+      });
+      expect((await repository.getCityPoiTypes("rome"))[0].acquisition).toMatchObject({
+        wikidataId: null,
+        types: [],
+        skipped: true,
+      });
+      expect((await repository.getCity("rome")).pois).toEqual([]);
+      expect((await repository.getPoiCategoriesBaseline(body.poiId))?.categoryIds).toEqual([]);
+    });
+
+    it("rejects stale, conflicting and malformed acquisitions and leaves the accepted result intact", async () => {
+      const write = example();
+      const catalog = await prepare([write]);
+      const body = await typesWrite(write.detail.id);
+      const outcomes = await Promise.allSettled([
+        repository.savePoiTypes(body),
+        repository.savePoiTypes({ ...body, revision: randomUUID() }),
+      ]);
+      expect(outcomes.filter(({ status }) => status === "fulfilled")).toHaveLength(1);
+      expect(outcomes.filter(({ status }) => status === "rejected")).toHaveLength(1);
+      const before = await repository.getPoiTypes(body.poiId);
+      for (const acquisition of [
+        { ...body.acquisition, types: [...body.acquisition.types, ...body.acquisition.types] },
+        { ...body.acquisition, skipped: true },
+        { ...body.acquisition, wikidataId: null },
+        { ...body.acquisition, error: "Wikidata failed" },
+        { ...body.acquisition, types: [{ id: "wrong", label: "bad" }] },
+      ])
+        await expect(repository.savePoiTypes({ ...body, acquisition })).rejects.toThrow();
+      await expect(
+        repository.savePoiTypes({
+          ...body,
+          acquisition: { ...body.acquisition, wikidataId: "Q2" },
+        }),
+      ).rejects.toMatchObject({ reason: "obsolete" });
+      expect(await repository.getPoiTypes(body.poiId)).toEqual(before);
+      catalog.pois[0].name = "Changed input";
+      const revision = randomUUID();
+      await repository.synchronizeCatalog({
+        ...catalog,
+        expectedRevision: catalog.revision,
+        revision,
+      });
+      await expect(repository.savePoiTypes(body)).rejects.toMatchObject({ reason: "obsolete" });
+      expect((await repository.getPoiTypes(body.poiId))?.acquisition).toBeNull();
+      await repository.synchronizeCatalog({
+        ...catalog,
+        expectedRevision: revision,
+        revision: randomUUID(),
+        pois: [],
+      });
+      await expect(repository.savePoiTypes(body)).rejects.toMatchObject({ reason: "obsolete" });
+      expect(await repository.getPoiTypes(body.poiId)).toBeUndefined();
+      expect(await repository.getCityPoiTypes("rome")).toEqual([]);
+    });
+
+    it("allows only the writer to store acquisitions and never exposes them through visitor views", async () => {
+      const write = example();
+      await prepare([write]);
+      const body = await typesWrite(write.detail.id);
+      const client = await pool.connect();
+      try {
+        await client.query("SET ROLE historical_explorer_writer");
+        await createPostgresContent(client as unknown as Pool).getPoiTypes(body.poiId);
+        await client.query("INSERT INTO content.poi_type_acquisitions VALUES ($1,$2,$3,$4,$5)", [
+          body.poiId,
+          body.inputRevision,
+          body.revision,
+          "digest",
+          body.acquisition,
+        ]);
+        await client.query("SET ROLE historical_explorer_reader");
+        await expect(
+          client.query("SELECT * FROM content.poi_type_acquisitions"),
+        ).rejects.toMatchObject({ code: "42501" });
+      } finally {
+        await client.query("RESET ROLE");
+        client.release();
+      }
+      expect((await repository.getCity("rome")).pois).toEqual([]);
+    });
 
     const categoryWrite = async (write: ReturnType<typeof example>) => {
       const baseline = (await repository.getPoiCategoriesBaseline(write.detail.id))!;

@@ -1,5 +1,11 @@
 # mira-explorer
 
+## 0.15.0
+
+### Minor Changes
+
+- Persist accepted POI Wikidata type acquisitions through the authenticated content API, with revision and catalog identity checks and no changes to visitor publication or category assignments.
+
 ## 0.14.0
 
 ### Minor Changes

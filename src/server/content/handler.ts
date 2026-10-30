@@ -5,6 +5,7 @@ import {
   personUpdateSchema,
   poiCategoriesWriteSchema,
   storyWriteSchema,
+  poiTypesWriteSchema,
 } from "./postgresContent";
 import { publishedPoiSummarySchema } from "./publishedContent";
 import {
@@ -39,11 +40,21 @@ export const createContentHandler =
         );
         return contentJson(await getRepository().createCategory(input));
       }
+      if (resource === "catalogs" && segments.length === 3 && action === "types") {
+        if (request.method !== "GET")
+          return contentJson(
+            { error: { code: "invalid", message: "This method is not supported." } },
+            405,
+            { Allow: "GET" },
+          );
+        const city = parseContentInput(publishedPoiSummarySchema.shape.city, identity);
+        return contentJson(await getRepository().getCityPoiTypes(city));
+      }
       const catalog = resource === "catalogs" && segments.length === 2;
       const poi =
         resource === "pois" &&
         segments.length === 3 &&
-        ["story", "baseline", "categories", "categories-baseline"].includes(action);
+        ["story", "baseline", "categories", "categories-baseline", "types"].includes(action);
       const person =
         resource === "people" &&
         (segments.length === 2 || (segments.length === 3 && action === "baseline"));
@@ -53,11 +64,14 @@ export const createContentHandler =
           "not-found",
           "The requested content endpoint does not exist.",
         );
-      const allow = catalog
-        ? "GET, PUT"
-        : ["baseline", "categories-baseline"].includes(action)
-          ? "GET"
-          : "PUT";
+      const allow =
+        poi && action === "types"
+          ? "GET, PUT"
+          : catalog
+            ? "GET, PUT"
+            : ["baseline", "categories-baseline"].includes(action)
+              ? "GET"
+              : "PUT";
       if (!allow.split(", ").includes(request.method))
         return contentJson(
           { error: { code: "invalid", message: "This method is not supported." } },
@@ -77,9 +91,11 @@ export const createContentHandler =
         const result = catalog
           ? await repository.getCatalogBaseline(id)
           : poi
-            ? action === "categories-baseline"
-              ? await repository.getPoiCategoriesBaseline(id)
-              : await repository.getPoiBaseline(id)
+            ? action === "types"
+              ? await repository.getPoiTypes(id)
+              : action === "categories-baseline"
+                ? await repository.getPoiCategoriesBaseline(id)
+                : await repository.getPoiBaseline(id)
             : await repository.getPersonBaseline(id);
         if (!result)
           throw new ContentHttpError(404, "not-found", "The requested baseline does not exist.");
@@ -91,6 +107,12 @@ export const createContentHandler =
         if (input.city !== id)
           throw new ContentHttpError(400, "invalid", "Route and body identities must match.");
         return contentJson({ status: await getRepository().synchronizeCatalog(input) });
+      }
+      if (poi && action === "types") {
+        const input = parseContentInput(poiTypesWriteSchema, body);
+        if (input.poiId !== id)
+          throw new ContentHttpError(400, "invalid", "Route and body identities must match.");
+        return contentJson(await getRepository().savePoiTypes(input));
       }
       if (poi && action === "categories") {
         const input = parseContentInput(poiCategoriesWriteSchema, body);
