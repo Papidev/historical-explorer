@@ -1,8 +1,5 @@
 import clsx from "clsx";
-import localFont from "next/font/local";
 import { Bird } from "./Bird";
-
-const fraunces = localFont({ src: "./Fraunces.ttf", display: "swap", weight: "500" });
 
 export const MiraLogo = ({
   size = "medium",
@@ -15,8 +12,7 @@ export const MiraLogo = ({
     role="img"
     aria-label="Mira"
     className={clsx(
-      fraunces.className,
-      "inline-flex items-baseline gap-[0.13em] font-medium tracking-[-0.055em]",
+      "inline-flex items-baseline gap-[0.13em] font-serif font-medium tracking-[-0.055em]",
       { small: "text-2xl", medium: "text-4xl sm:text-[2.5rem]", large: "text-5xl sm:text-6xl" }[
         size
       ],

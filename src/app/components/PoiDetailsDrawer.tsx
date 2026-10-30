@@ -119,7 +119,7 @@ export const PoiDetailsDrawer = ({
                   <span className="truncate">Back to {poi.name}</span>
                 </button>
               ) : null}
-              <h2 className="text-2xl leading-tight font-semibold text-black">
+              <h2 className="font-serif text-2xl leading-tight tracking-tight text-black">
                 {selectedPersonId ? (person?.name ?? "Person") : (detail?.name ?? poi.name)}
               </h2>
             </div>

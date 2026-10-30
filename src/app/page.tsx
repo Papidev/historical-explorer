@@ -52,7 +52,7 @@ const Home = () => {
                 story.
               </span>
             </h1>
-            <p className="mt-6 max-w-md text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">
+            <p className="mt-6 max-w-md text-base leading-7 text-zinc-600">
               Get the essence of a place at a glance. Discover the art, history, and people that
               make it interesting, then explore further on Wikipedia whenever you want.
             </p>
@@ -208,7 +208,7 @@ const Home = () => {
                         <ArrowUpRightIcon className="size-5" aria-hidden="true" />
                       </span>
                     </div>
-                    <h3 className="mt-4 font-serif text-2xl group-hover:text-zinc-800">
+                    <h3 className="mt-4 font-serif text-2xl tracking-tight group-hover:text-zinc-800">
                       {poi.name}
                     </h3>
                     <p className="mt-2 line-clamp-3 text-sm leading-6 text-zinc-600">

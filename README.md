@@ -8,6 +8,8 @@ The shared `MiraLogo` component supplies the bird and local Fraunces wordmark in
 
 Frozen logo alternatives A and the original C are preserved in `artifacts/logo-studies/`. The complete comparison prototype and the palette decision are archived on [`feat/mira-logo-prototype-archive`](https://github.com/Papidev/mira-explorer/tree/feat/mira-logo-prototype-archive) at `eb34c6f`; prototype controls are excluded from the application.
 
+Typography uses two bundled families: Inter (`font-sans`) for body text and controls, and local Fraunces (`font-serif`) for the wordmark and display titles. Both are configured once in the root layout. Use `text-3xl sm:text-4xl` for section titles, `text-2xl` for card and detail titles, `text-base leading-7` for introductory copy, `text-sm leading-6` for supporting copy, and `text-xs` for captions. The home hero and wordmark keep their larger display sizes. System monospace is reserved for technical identifiers and logs in the admin.
+
 ## Getting Started
 
 Use **pnpm only**.
