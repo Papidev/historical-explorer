@@ -42,10 +42,13 @@ export const Sidebar = ({
   return (
     <aside
       aria-label="Discover places"
-      className="flex h-full w-full shrink-0 flex-col overflow-hidden border-r border-zinc-900/10 bg-zinc-50 text-zinc-900"
+      className="border-brand/70 flex h-full w-full shrink-0 flex-col overflow-hidden border-r bg-zinc-50 text-zinc-900"
     >
-      <div className="flex shrink-0 items-center justify-between gap-2 border-b border-zinc-900/10 px-4 py-2">
-        <h2 className="font-serif text-2xl/7 tracking-tight">Explore the city</h2>
+      <div className="border-brand/70 flex shrink-0 items-start justify-between gap-2 border-b px-4 py-3">
+        <div>
+          <h2 className="font-serif text-2xl/7 tracking-tight">Explore the city</h2>
+          <span aria-hidden="true" className="bg-brand mt-3 block h-1 w-10 rounded-full" />
+        </div>
         <DrawerCloseButton label="Close filters" onClick={onClose} transparent />
       </div>
       <div className="shrink-0 px-4 pt-3 pb-2">

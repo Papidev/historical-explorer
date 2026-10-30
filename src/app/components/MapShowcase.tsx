@@ -3,10 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const MapShowcase = () => (
-  <section
-    aria-labelledby="map-showcase-title"
-    className="border-t border-zinc-900/15 py-12 sm:py-16"
-  >
+  <section aria-labelledby="map-showcase-title" className="border-brand/70 border-t py-12 sm:py-16">
     <div className="mb-7 flex flex-wrap items-end justify-between gap-5">
       <div>
         <p className="text-xs/5 font-semibold tracking-[0.2em] text-zinc-800 uppercase">

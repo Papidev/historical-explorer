@@ -81,7 +81,7 @@ const Home = () => {
 
         <section
           aria-label="How to explore"
-          className="grid gap-7 border-y border-zinc-900/15 py-8 sm:grid-cols-3 sm:gap-8"
+          className="border-brand/70 grid gap-7 border-y py-8 sm:grid-cols-3 sm:gap-8"
         >
           {[
             {
@@ -114,7 +114,7 @@ const Home = () => {
 
         <section
           aria-labelledby="shared-knowledge-title"
-          className="grid gap-5 border-b border-zinc-900/15 py-10 sm:py-14 lg:grid-cols-[1fr_1.5fr] lg:gap-16"
+          className="border-brand/70 grid gap-5 border-b py-10 sm:py-14 lg:grid-cols-[1fr_1.5fr] lg:gap-16"
         >
           <div>
             <p className="text-xs/5 font-semibold tracking-[0.2em] text-zinc-800 uppercase">
@@ -126,6 +126,7 @@ const Home = () => {
             >
               Built on shared knowledge.
             </h2>
+            <span aria-hidden="true" className="bg-brand mt-3 block h-1 w-10 rounded-full" />
           </div>
           <div className="max-w-2xl space-y-4 text-base/7 text-zinc-600">
             <p>
@@ -235,7 +236,7 @@ const Home = () => {
         )}
       </main>
 
-      <footer className="mx-auto flex max-w-7xl flex-wrap items-baseline justify-between gap-3 border-t border-zinc-900/15 px-5 py-6 text-xs text-zinc-500 sm:px-8 lg:px-12">
+      <footer className="border-brand/70 mx-auto flex max-w-7xl flex-wrap items-baseline justify-between gap-3 border-t px-5 py-6 text-xs text-zinc-500 sm:px-8 lg:px-12">
         <div className="flex flex-wrap items-baseline gap-3">
           <Link
             href="/"
