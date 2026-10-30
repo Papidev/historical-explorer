@@ -305,3 +305,13 @@ Accepted Wikidata type acquisitions have authenticated single-POI and city reloa
 endpoints. They persist empty and skipped results independently of categories and
 visitor publication. Apply the additive acquisition schema separately before API
 and Admin deployment; see the [acquisition API extension](docs/admin-content-api.md#poi-wikidata-acquisitions-v1-additive-extension).
+
+
+Automatic editorial rule writes on the authenticated content API accept an automatic
+origin, classification reason and optional new top-level definitions. The rule writer
+checks the captured rules/category/catalog/acquisition digest and preserves manual and
+already mapped or ignored decisions. Definitions, rules and derived assignments for
+all affected active acquired POIs commit together. This API extension supports Mira
+Admin #41; deploy it before the corresponding Admin client. It needs the existing
+`004-type-category-rules.sql` prerequisite and no further migration. No production
+import or activation is performed by this change.
