@@ -1,5 +1,12 @@
 # mira-explorer
 
+## 0.20.0
+
+### Minor Changes
+
+- Persist category deletion from Mira Admin, retaining unrelated assignments and preventing automatic recreation of deleted categories.
+- Prefer English, then Italian Wikipedia titles for public POI names, and improve drawer loading feedback and map preview presentation.
+
 ## 0.19.0
 
 ### Minor Changes

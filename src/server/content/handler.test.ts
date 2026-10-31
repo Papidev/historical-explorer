@@ -78,6 +78,22 @@ describe("content HTTP boundary before database access", () => {
     expect(response.headers.get("cache-control")).toBe("no-store");
   });
 
+  it("authenticates and validates category deletion before database access", async () => {
+    vi.stubEnv("CONTENT_API_TOKEN", token);
+    const segments = ["categories", "arena", "delete"];
+    const input = { expectedStateDigest: "a".repeat(64) };
+    expect((await request(segments, input, { headers: {} }).response).status).toBe(401);
+    expect((await request(segments, undefined).response).status).toBe(405);
+    for (const body of [
+      {},
+      { expectedStateDigest: "bad" },
+      { ...input, id: "other" },
+      { ...input, children: false },
+    ])
+      expect((await request(segments, body).response).status).toBe(400);
+    expect((await request([...segments, "extra"], input).response).status).toBe(404);
+  });
+
   it("authenticates and validates category moves before database access", async () => {
     vi.stubEnv("CONTENT_API_TOKEN", token);
     const input = { parentId: null, expectedStateDigest: "a".repeat(64) };

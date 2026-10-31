@@ -337,3 +337,12 @@ all affected active acquired POIs commit together. This API extension supports M
 Admin #41; deploy it before the corresponding Admin client. It needs the existing
 `004-type-category-rules.sql` prerequisite and no further migration. No production
 import or activation is performed by this change.
+
+Category deletion (Admin #36) removes a category and its children, their rule and POI
+assignments, while preserving Stories and People. Apply the additive
+[`005-deleted-category-names.sql`](src/server/content/schema/005-deleted-category-names.sql)
+with separate schema-owner approval before deploying this API version, then update
+Admin. This prerequisite also applies to rule reads and writes, which include deleted
+names in their snapshot to prevent automatic recreation. See the
+[deletion contract](docs/admin-content-api.md#shared-category-deletion-admin-36).
+No production deletion or migration is performed by this implementation.
