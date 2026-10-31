@@ -12,6 +12,17 @@ import {
   publishedPoiSummarySchema,
 } from "./publishedContent";
 
+// Display names are resolved on reads so existing publications need no regeneration.
+const poiDisplayNameSql = `COALESCE((
+  SELECT NULLIF(btrim(page->>'title'), '')
+  FROM jsonb_array_elements(identity.wikipedia_pages) page
+  WHERE page->>'language' IN ('en', 'it') AND NULLIF(btrim(page->>'title'), '') IS NOT NULL
+    AND (identity.wikidata_id IS NULL OR page->>'wikidataId' IS NULL
+      OR page->>'wikidataId' = identity.wikidata_id)
+  ORDER BY CASE page->>'language' WHEN 'en' THEN 0 ELSE 1 END
+  LIMIT 1
+), identity.name)`;
+
 const generationSchema = z
   .object({
     provider: z.string().trim().min(1),
@@ -1313,7 +1324,9 @@ export const createPostgresContent = (pool: Pool) => ({
       rows: [result],
     } = await pool.query(
       `SELECT
-      COALESCE((SELECT jsonb_agg(response ORDER BY id) FROM content.visitor_pois WHERE city = $1), '[]'::jsonb) AS pois,
+      COALESCE((SELECT jsonb_agg(p.response || jsonb_build_object('name', ${poiDisplayNameSql}) ORDER BY p.id)
+        FROM content.visitor_pois p JOIN content.pois identity ON identity.id = p.id
+        WHERE p.city = $1), '[]'::jsonb) AS pois,
       COALESCE((SELECT jsonb_agg(response ORDER BY id) FROM content.visitor_categories), '[]'::jsonb) AS categories`,
       [publishedPoiSummarySchema.shape.city.parse(city)],
     );
@@ -1330,6 +1343,7 @@ export const createPostgresContent = (pool: Pool) => ({
       `SELECT
       COALESCE((SELECT jsonb_agg(p.response || jsonb_build_object(
         'wikidataId', identity.wikidata_id,
+        'name', ${poiDisplayNameSql},
         'introduction', s.response #>> '{story,introduction,text}',
         'mainImage', (SELECT image FROM jsonb_array_elements(s.response->'gallery') image
           WHERE image->>'id' = s.response->>'mainImageId')
@@ -1352,9 +1366,12 @@ export const createPostgresContent = (pool: Pool) => ({
   getStory: async (poiId: string) => {
     const {
       rows: [result],
-    } = await pool.query("SELECT response FROM content.visitor_stories WHERE id = $1", [
-      z.uuid().parse(poiId),
-    ]);
+    } = await pool.query(
+      `SELECT p.response || jsonb_build_object('name', ${poiDisplayNameSql}) AS response
+       FROM content.visitor_stories p JOIN content.pois identity ON identity.id = p.id
+       WHERE p.id = $1`,
+      [z.uuid().parse(poiId)],
+    );
     return result ? publishedPoiDetailSchema.parse(result.response) : undefined;
   },
   getPerson: async (personId: string) => {

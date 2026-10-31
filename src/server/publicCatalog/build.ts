@@ -9,6 +9,7 @@ import { readMainImageCandidateArtifact } from "@/server/storyWorkflow/mainImage
 import { parseStoryContent, toPublicStoryContent } from "@/server/storyWorkflow/storyContent";
 import type { DraftStorySnapshot } from "@/server/storyWorkflow/types";
 import type { PublicCatalog } from "./types";
+import { getPoiDisplayName } from "@/utils/getPoiDisplayName";
 
 export const buildPublicCatalog = async () => {
   const snapshots = new Map<string, DraftStorySnapshot>();
@@ -56,7 +57,7 @@ export const buildPublicCatalog = async () => {
       continue;
     }
     catalog.pois.push({
-      poi,
+      poi: { ...poi, name: getPoiDisplayName(poi.name, storyContent.wikipediaSources) },
       storyContent: toPublicStoryContent(storyContent),
       mainImage: {
         thumbnailUrl: image.thumbnailUrl,

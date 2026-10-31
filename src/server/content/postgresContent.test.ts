@@ -1753,6 +1753,46 @@ describe.skipIf(!process.env.HISTORICAL_EXPLORER_TEST_DATABASE_URL)(
       });
     });
 
+    it("displays English, then Italian Wikipedia titles and finally catalog names on every public read", async () => {
+      const write = example();
+      write.detail.name = '"Statua parlante" Abate Luigi';
+      const catalog = await prepare([write]);
+      await repository.saveStory(write);
+      const pages = [
+        {
+          language: "it",
+          pageId: 1102873,
+          title: "Abate Luigi",
+          url: "https://it.wikipedia.org/wiki/Abate_Luigi",
+        },
+        {
+          language: "en",
+          pageId: 16605182,
+          title: "Abbot Luigi",
+          url: "https://en.wikipedia.org/wiki/Abbot_Luigi",
+        },
+      ];
+      for (const [wikipediaPages, expected] of [
+        [pages, "Abbot Luigi"],
+        [pages.slice(0, 1), "Abate Luigi"],
+        [[{ ...pages[1], wikidataId: "Q999" }], write.detail.name],
+        [[], write.detail.name],
+      ] as const) {
+        // Change only display metadata; the Story publication remains the original one.
+        await pool.query("UPDATE content.pois SET wikipedia_pages = $2::jsonb WHERE id = $1", [
+          write.detail.id,
+          JSON.stringify(wikipediaPages),
+        ]);
+        expect((await repository.getCity("rome")).pois[0].name).toBe(expected);
+        expect((await repository.getCityPreviews("rome")).pois[0].name).toBe(expected);
+        expect(await repository.getStory(write.detail.id)).toMatchObject({
+          name: expected,
+          publicationId: write.detail.publicationId,
+        });
+      }
+      expect((await repository.getPoiBaseline(write.detail.id))?.name).toBe(catalog.pois[0].name);
+    });
+
     it("loads published previews with the selected image and hides removed POIs", async () => {
       const write = example();
       const catalog = await prepare([write]);

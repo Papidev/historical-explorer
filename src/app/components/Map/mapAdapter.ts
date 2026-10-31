@@ -146,7 +146,7 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
       popupContent.style.borderRadius = "var(--radius-xl)";
       popupContent.style.background = "transparent";
       popupContent.style.padding = "0";
-      popupContent.style.boxShadow = "none";
+      popupContent.style.boxShadow = "var(--shadow-xl)";
       popupContent.style.pointerEvents = "auto";
     }
   };
@@ -312,7 +312,7 @@ export const createMapLibreAdapter = (initialView: MapView): MapAdapter => {
       previewContainer.addEventListener("focusin", handlePreviewFocusIn);
       previewContainer.addEventListener("focusout", handlePreviewFocusOut);
       previewPopup = new maplibregl.Popup({
-        className: "poi-preview-popup",
+        className: "poi-preview-popup cursor-pointer",
         closeButton: false,
         closeOnClick: false,
         focusAfterOpen: false,

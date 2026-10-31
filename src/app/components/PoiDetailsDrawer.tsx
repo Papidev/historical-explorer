@@ -64,6 +64,20 @@ export const PoiDetailsDrawer = ({
           {onResize ? (
             <PanelResizeHandle edge="left" label="Resize details panel" onResize={onResize} />
           ) : null}
+          {(selectedPersonId ? isPersonLoading : isLoading && showLoading) ? (
+            <div
+              role="status"
+              className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center"
+            >
+              <span
+                aria-hidden="true"
+                className="border-brand/20 border-t-brand size-8 animate-spin rounded-full border-3 motion-reduce:animate-none"
+              />
+              <span className="sr-only">
+                {selectedPersonId ? "Loading person..." : "Loading place..."}
+              </span>
+            </div>
+          ) : null}
           <div key={poi.id} className="h-full overflow-y-auto">
             <div className="absolute top-4 right-4 z-10">
               <DrawerCloseButton onClick={onClose} />
@@ -131,9 +145,7 @@ export const PoiDetailsDrawer = ({
                 </p>
               )}
               {selectedPersonId ? (
-                isPersonLoading ? (
-                  <p className="text-black/60">Loading person...</p>
-                ) : person ? (
+                isPersonLoading ? null : person ? (
                   <Person person={person} />
                 ) : (
                   <p className="text-black/60">This person is unavailable.</p>
@@ -142,11 +154,7 @@ export const PoiDetailsDrawer = ({
                 <p>{poi.shortDescription}</p>
               ) : null}
               {!selectedPersonId &&
-                (isLoading ? (
-                  showLoading ? (
-                    <p className="mt-4 text-black/60">Loading additional content...</p>
-                  ) : null
-                ) : content ? (
+                (isLoading ? null : content ? (
                   <StoryContent
                     content={content}
                     period={detail ? undefined : poi.period}

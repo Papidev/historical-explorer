@@ -323,5 +323,6 @@ Admin re-reads before deletion and checks lost/invalid acknowledgements against 
 absence of the complete confirmed scope. The UI lists affected children before
 confirmation. Visitor definitions/memberships refresh at the existing 60-second
 boundary. Tests use disposable data. Apply schema 005 with separate approval, deploy
-Explorer, then Admin; no production deletion, migration or live verification was
-performed. The owner deferred live verification to the next suitable opportunity.
+Explorer, then Admin. Schema 005 was applied and independently verified on
+2026-10-31, with all 11 existing content tables unchanged. No production category
+deletion was performed. The owner deferred live functional verification to the next suitable opportunity.

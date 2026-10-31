@@ -2,12 +2,18 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import snapshot from "../../../data/public/catalog.json";
 import type { PublicCatalog } from "./types";
+import { getPoiDisplayName } from "@/utils/getPoiDisplayName";
 
 export const createPublicCatalog = (readCatalog: () => PublicCatalog) => ({
   getCategoryDefinitions: () => readCatalog().categoryDefinitions,
   getPois: (city: string) => {
     const catalog = readCatalog();
-    return city === catalog.city ? catalog.pois.map(({ poi }) => poi) : [];
+    return city === catalog.city
+      ? catalog.pois.map(({ poi, storyContent }) => ({
+          ...poi,
+          name: getPoiDisplayName(poi.name, storyContent.wikipediaSources),
+        }))
+      : [];
   },
   getStoryContent: (city: string, poiId: string) => {
     const catalog = readCatalog();
