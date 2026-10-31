@@ -296,3 +296,32 @@ legacy contribution reconciliation. Admin reloads accepted state after an uncert
 acknowledgement. Visitor hierarchy and filters refresh at the existing 60-second
 cache boundary; Story/Person regeneration and a new schema migration are not needed.
 Deploy this API before the matching Mira Admin client (Papidev/mira-admin#35).
+
+## Shared category deletion (Admin #36)
+
+
+`PUT /api/admin/content/v1/categories/:id/delete` accepts only
+`{ expectedStateDigest }` and returns `{ status: "saved", deletedIds }`.
+The captured definitions digest fixes the confirmed scope: deleting a parent also
+deletes its direct children; deleting a leaf preserves its siblings.
+
+The shared category lock covers definitions, rule revisions, POI memberships and
+contribution ownership in one transaction. Affected rules become manual, lose old
+AI reasons, retain unrelated selections and become `unmapped` when emptied.
+Derived parents disappear when their last selected child is deleted; independent
+parent assignments remain independent. Active accepted acquisitions are recalculated;
+unpublished POIs and other cities are included. Older rule/category writes cannot
+restore deleted definitions. Stories, People and publication versions are preserved.
+
+Explorer's additive `005-deleted-category-names.sql` stores removed IDs, names and
+labels. Automatic category creation rejects these names case-insensitively. The
+rules baseline includes `deletedNames`, also covered by its digest; Admin supplies
+these names to classification. Local recovery artifacts are retained unchanged;
+the current Types screen reads the accepted online rules and definitions.
+
+Admin re-reads before deletion and checks lost/invalid acknowledgements against the
+absence of the complete confirmed scope. The UI lists affected children before
+confirmation. Visitor definitions/memberships refresh at the existing 60-second
+boundary. Tests use disposable data. Apply schema 005 with separate approval, deploy
+Explorer, then Admin; no production deletion, migration or live verification was
+performed. The owner deferred live verification to the next suitable opportunity.

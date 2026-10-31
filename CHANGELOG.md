@@ -1,5 +1,11 @@
 # mira-explorer
 
+## 0.20.0
+
+### Minor Changes
+
+- Persist category deletion from Mira Admin, retaining unrelated assignments and preventing automatic recreation of deleted categories.
+
 ## 0.19.0
 
 ### Minor Changes

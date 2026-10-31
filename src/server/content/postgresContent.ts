@@ -151,6 +151,13 @@ export const categoryCatalogRenameSchema = categoryCatalogCreateSchema.extend({
   id: publishedCategorySchema.shape.id,
 });
 
+export const categoryCatalogDeleteSchema = z
+  .object({
+    id: publishedCategorySchema.shape.id,
+    expectedStateDigest: z.string().regex(/^[a-f0-9]{64}$/),
+  })
+  .strict();
+
 export const categoryCatalogMoveSchema = z
   .object({
     id: publishedCategorySchema.shape.id,
@@ -253,6 +260,7 @@ const typeRulesQuery = `SELECT
   (SELECT COALESCE(jsonb_agg(jsonb_strip_nulls(jsonb_build_object(
     'id', id, 'name', name, 'label', label, 'parentId', parent_id)) ORDER BY id COLLATE "C"),
     '[]'::jsonb) FROM content.categories) AS definitions,
+  COALESCE((SELECT jsonb_agg(name ORDER BY name COLLATE "C") FROM content.deleted_category_names), '[]'::jsonb) AS "deletedNames",
   COALESCE((SELECT jsonb_agg(jsonb_build_array(city, revision) ORDER BY city COLLATE "C")
     FROM content.city_catalogs), '[]'::jsonb) AS catalogs,
   COALESCE((SELECT jsonb_agg(jsonb_build_array(p.id, p.input_revision, a.revision) ORDER BY p.id)
@@ -351,6 +359,7 @@ const readTypeRules = async (client: Pick<Pool, "query"> | PoolClient) => {
   return {
     rules: z.array(typeCategoryRuleSchema).parse(row.rules),
     definitions: z.array(publishedCategorySchema).parse(row.definitions),
+    deletedNames: z.array(z.string()).parse(row.deletedNames),
     stateDigest: digest(row),
   };
 };
@@ -610,6 +619,7 @@ export const createPostgresContent = (pool: Pool) => ({
           !name ||
           name.length > 80 ||
           /[<>\r\n]/.test(definition.name) ||
+          baseline.deletedNames.some((deleted) => deleted.toLowerCase() === name.toLowerCase()) ||
           baseline.definitions.some(
             (category) =>
               category.id === name || category.name.toLowerCase() === name.toLowerCase(),
@@ -862,6 +872,137 @@ export const createPostgresContent = (pool: Pool) => ({
     });
   },
 
+  deleteCategory: async (value: unknown) => {
+    const input = categoryCatalogDeleteSchema.parse(value);
+    return transaction(pool, async (client) => {
+      await lockCategories(client);
+      const baseline = await readTypeRules(client);
+      if (digest(baseline.definitions) !== input.expectedStateDigest)
+        throw new ContentWriteError(
+          "conflict",
+          "The category catalog changed. Reload before deleting a category.",
+        );
+      if (!baseline.definitions.some(({ id }) => id === input.id))
+        throw new ContentWriteError("invalid", "Category not found.");
+      const removed = baseline.definitions.filter(
+        ({ id, parentId }) => id === input.id || parentId === input.id,
+      );
+      const ids = removed.map(({ id }) => id);
+      const definitions = baseline.definitions.map(({ parentId, ...entry }) => ({
+        ...entry,
+        parent: parentId,
+      }));
+      for (const rule of baseline.rules) {
+        const selected = expandCategorySelection(rule.categoryIds, definitions);
+        if (!selected.some((id) => ids.includes(id))) continue;
+        const remaining = selected.filter(
+          (id) =>
+            !ids.includes(id) &&
+            !removed.some(
+              (child) =>
+                child.parentId === id &&
+                selected.includes(child.id) &&
+                !baseline.definitions.some(
+                  (sibling) =>
+                    !ids.includes(sibling.id) &&
+                    sibling.parentId === id &&
+                    selected.includes(sibling.id),
+                ),
+            ),
+        );
+        await client.query(
+          `UPDATE content.type_category_rules SET category_ids = $2,
+          decision = $3, origin = 'manual', reason = NULL, revision = $4, updated_at = now() WHERE type_id = $1`,
+          [
+            rule.typeId,
+            JSON.stringify(remaining),
+            remaining.length ? "mapped" : "unmapped",
+            randomUUID(),
+          ],
+        );
+      }
+      const { rows: affected } = await client.query<{ id: string }>(
+        `SELECT p.id FROM content.pois p
+        WHERE EXISTS (SELECT FROM content.poi_categories c WHERE c.poi_id = p.id AND c.category_id = ANY($1::text[]))
+        ORDER BY p.id FOR UPDATE`,
+        [ids],
+      );
+      for (const { id } of affected) {
+        const { rows: assignments } = await client.query<{ category_id: string; derived: boolean }>(
+          `SELECT c.category_id, d.poi_id IS NOT NULL AS derived FROM content.poi_categories c
+          LEFT JOIN content.poi_type_category_assignments d USING (poi_id, category_id) WHERE c.poi_id = $1`,
+          [id],
+        );
+        const categoryIds = assignments
+          .filter(
+            (entry) =>
+              !ids.includes(entry.category_id) &&
+              !(
+                entry.derived &&
+                removed.some(
+                  (child) =>
+                    child.parentId === entry.category_id &&
+                    assignments.some((assigned) => assigned.category_id === child.id) &&
+                    !baseline.definitions.some(
+                      (sibling) =>
+                        !ids.includes(sibling.id) &&
+                        sibling.parentId === entry.category_id &&
+                        assignments.some((assigned) => assigned.category_id === sibling.id),
+                    ),
+                )
+              ),
+          )
+          .map(({ category_id }) => category_id);
+        const deleted = assignments
+          .filter(({ category_id }) => !categoryIds.includes(category_id))
+          .map(({ category_id }) => category_id);
+        await client.query(
+          "DELETE FROM content.poi_type_category_assignments WHERE poi_id = $1 AND category_id = ANY($2::text[])",
+          [id, deleted],
+        );
+        await client.query(
+          "DELETE FROM content.poi_categories WHERE poi_id = $1 AND category_id = ANY($2::text[])",
+          [id, deleted],
+        );
+        await client.query(
+          `INSERT INTO content.poi_category_writes(poi_id, revision, request_digest) VALUES ($1,$2,$3)
+          ON CONFLICT (poi_id) DO UPDATE SET revision = EXCLUDED.revision, request_digest = EXCLUDED.request_digest`,
+          [id, randomUUID(), digest({ categoryIds, delete: input })],
+        );
+      }
+      for (const category of removed)
+        for (const name of [
+          category.id,
+          category.name,
+          ...(category.label ? [category.label] : []),
+        ])
+          await client.query(
+            "INSERT INTO content.deleted_category_names(name) VALUES ($1) ON CONFLICT DO NOTHING",
+            [name],
+          );
+      await client.query("DELETE FROM content.categories WHERE id = ANY($1::text[])", [ids]);
+      const accepted = await readTypeRules(client);
+      const changedTypes = baseline.rules
+        .filter(
+          (rule) =>
+            accepted.rules.find(({ typeId }) => typeId === rule.typeId)?.revision !== rule.revision,
+        )
+        .map(({ typeId }) => typeId);
+      if (changedTypes.length) {
+        const { rows } = await client.query<{ id: string }>(
+          `SELECT p.id FROM content.pois p
+          JOIN content.poi_type_acquisitions a ON a.poi_id = p.id AND a.input_revision = p.input_revision
+          WHERE p.removed_at IS NULL AND a.acquisition->>'wikidataId' IS NOT DISTINCT FROM p.wikidata_id
+          AND EXISTS (SELECT FROM jsonb_array_elements(a.acquisition->'types') t WHERE t->>'id' = ANY($1::text[]))
+          ORDER BY p.id FOR UPDATE OF p`,
+          [changedTypes],
+        );
+        for (const { id } of rows) await recalculateTypeCategories(client, id, accepted);
+      }
+      return { status: "saved" as const, deletedIds: ids };
+    });
+  },
+
   getPoiCategoriesBaseline: async (poiId: string) => {
     const {
       rows: [row],
@@ -915,7 +1056,18 @@ export const createPostgresContent = (pool: Pool) => ({
           "Accepted acquisitions use online rules. Legacy category replacements cannot override them.",
         );
       const definitions = new Map(baseline.definitions.map((category) => [category.id, category]));
+      const { rows: deleted } = await client.query<{ name: string }>(
+        "SELECT name FROM content.deleted_category_names",
+      );
       for (const category of input.definitions) {
+        if (
+          !baseline.definitions.some(({ id }) => id === category.id) &&
+          deleted.some(({ name }) => name.toLowerCase() === category.id.toLowerCase())
+        )
+          throw new ContentWriteError(
+            "conflict",
+            "Deleted categories cannot be restored by an assignment request.",
+          );
         const existing = definitions.get(category.id);
         if (existing && digest(existing) !== digest(category))
           throw new ContentWriteError(
